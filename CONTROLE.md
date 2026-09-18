@@ -60,3 +60,9 @@ De oorspronkelijke bronbestanden zijn niet gewijzigd. De website is lokaal besch
 - Terug herstelt een gefilterde begrippenlijst en de leespositie onderaan een les. Terug en vooruit bij dezelfde tentamencasus behouden de nieuwste opgeslagen uitwerking, ook bij meerdere eerdere bezoeken.
 - tests/navigation.cjs controleert daarnaast afzonderlijke history-entries, leesstappen, tijdelijke invoer, radiokeuzes met correcte feedback, focus en leespositie. Alle reken-, bron-, catalogus- en navigatietests slagen.
 - Alle gemaakte appbestanden en werkbestanden staan binnen sra-interactief, herkenbaar door 00 - GEMAAKT MET CODEX.md. De ZIP's staan in output; eerdere downloads en tijdelijke referentiecheckouts staan in tmp. Oorspronkelijke cursusbestanden buiten deze map zijn ongewijzigd.
+
+## Terugknop bij het kruimelpad
+
+- De terugknop staat voor Home in het kruimelpad van de inhoud, op dezelfde plek als de aangewezen regel Home / Tentamens oefenen.
+- Dezelfde knop en historie blijven behouden bij paginaovergangen. Geen dubbele knop in de bovenbalk. Op de eerste bezochte apppagina is de knop verborgen omdat daar nog geen vorige apppagina is.
+- Desktop en 320 pixels gecontroleerd: leesbare tekst Terug, geen pagina-overloop, correct terug naar Home en geen consolefouten. De bestaande tests voor leespositie, invoer en notities slagen.

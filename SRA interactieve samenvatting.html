@@ -1005,11 +1005,14 @@ dialog.sra-term-popup::backdrop { background: #172b255e; }
 .term-hint{font-size:.86rem;color:#526477;margin:12px 0 22px}.term-hint span{border-bottom:1px dotted #5991b7;color:#0066b8}
 .formula-guide{max-width:1000px;margin:auto}.formula-guide>header{margin-bottom:24px}.formula-guide-card{background:white;border:1px solid #dce4ec;border-radius:8px;margin:20px 0;padding:24px 28px}.formula-guide-card>h2{margin-top:0;font-size:1.3rem}.formula-guide-card h3{font-size:1.02rem;margin-top:24px}
 .formula-guide-card table{width:100%}.formula-guide-card .formula{margin:18px 0}
-body.study-shell #history-back{display:flex;align-items:center;gap:5px;font:13px Arial,sans-serif;padding:7px 9px;white-space:nowrap;min-width:0}
+body.study-shell #history-back{display:inline-flex;align-items:center;gap:5px;flex:none;font:inherit;font-weight:600;color:inherit;background:transparent;border:0;border-right:1px solid #d9d6df;border-radius:0;margin:0;padding:7px 14px 7px 0;white-space:nowrap;min-width:0;min-height:32px;cursor:pointer}
+body.study-shell #history-back:hover{color:#006c47;text-decoration:underline;text-underline-offset:3px}
+body.study-shell #history-back:focus-visible{outline:2px solid #2786da;outline-offset:3px}
+.sra-exam-dashboard>.sra-breadcrumb{height:auto;min-height:32px}
 body.study-shell #history-back[hidden]{display:none}
 .glossary-term h2 .sra-term{text-align:left}.glossary-term .term-open-hint{color:#627580;font-size:.8rem;margin-bottom:0}
 @media(max-width:680px){.lesson-start{grid-template-columns:1fr;gap:18px;padding:18px}.formula-guide-card{padding:18px 16px}.formula-guide>header h1{font-size:1.6rem}}
-@media(max-width:420px){#history-back span{display:none}body.study-shell #history-back{font-size:19px;padding:6px}.term-hint{line-height:1.5}}
+@media(max-width:420px){body.study-shell #history-back{padding-right:10px}.term-hint{line-height:1.5}}
 @media print{#history-back,.term-hint{display:none!important}}
 
 </style>
@@ -1025,7 +1028,6 @@ body.study-shell #history-back[hidden]{display:none}
   <header class="topbar study-topbar">
     <a class="brand study-brand" href="#home" aria-label="SRA hoofdpagina">SRA <span class="brand-sub">LEER- EN OEFENOMGEVING</span></a>
     <div class="top-tools study-controls">
-      <button id="history-back" type="button" aria-label="Terug naar vorige pagina" title="Terug naar je vorige leespositie" hidden>← <span>Terug</span></button>
       <button id="calc-open" aria-label="Rekenmachine openen" title="Rekenmachine"><svg class="calc-icon" aria-hidden="true" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="1" width="14" height="21" rx="1"/><path d="M6 5h8v4H6zM6 12h2m2 0h2m2 0h1M6 15h2m2 0h2m2 0h1M6 18h2m2 0h2m2 0h1"/></svg></button>
       <div class="study-font-group" role="group" aria-label="Tekstgrootte">
         <button id="font-minus" title="Kleinere letters" aria-label="Kleinere letters">A−</button>
@@ -1054,7 +1056,7 @@ body.study-shell #history-back[hidden]{display:none}
   </nav>
   <div class="layout">
     <aside id="sidebar" aria-label="Lessen"></aside>
-    <main id="main" tabindex="-1"><noscript><h1>SRA-samenvatting</h1><p>Voor de interactieve lessen is JavaScript nodig. Je kunt de volledige uitleg en alle antwoorden ook lezen in de <a href="SRA leesversie.html">zelfstandige leesversie</a>.</p></noscript></main>
+    <main id="main" tabindex="-1"><button id="history-back" type="button" aria-label="Terug naar vorige pagina" title="Terug naar je vorige leespositie" hidden>← <span>Terug</span></button><noscript><h1>SRA-samenvatting</h1><p>Voor de interactieve lessen is JavaScript nodig. Je kunt de volledige uitleg en alle antwoorden ook lezen in de <a href="SRA leesversie.html">zelfstandige leesversie</a>.</p></noscript></main>
   </div>
   <div id="toast" role="status" aria-live="polite"></div>
   <dialog id="question-overview" class="study-overview-dialog" aria-labelledby="question-overview-title">
@@ -8391,6 +8393,7 @@ window.SRA = {
  'use strict';
  const C=window.SRA,KEY='sra-learning-v1',LESSONS=C.lessons;
  const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const historyBack=$('#history-back');
  const metric=(value,label)=>`<div class="metric"><b>${esc(value)}</b><span>${esc(label)}</span></div>`;
  const validIds=new Set(LESSONS.map(l=>l.id)),questionMap=new Map(LESSONS.flatMap(l=>l.questions.map(q=>[q.id,q])));
  let state={version:1,read:[],answers:{},notes:{},font:16},storageAvailable=true,sidebarLessonId=null;
@@ -8559,6 +8562,13 @@ window.SRA = {
   $('#tools-menu').open=false;
   let current=null;
   if(tab==='home')renderHome();else if(tab==='leren')renderLearning();else if(tab==='les')current=renderLesson(parts[1]);else if(tab==='formules')current=renderFormulas(parts[1]);else if(tab==='oefenen')renderPractice(parts[1],parts[2]);else if(tab==='begrippen')renderGlossary();else if(tab==='tentamen')renderExams(parts[1]);else if(tab==='voortgang')renderProgress();else renderSources();
+  let trail=$('#main .sra-breadcrumb');
+  if(!trail){
+   const host=$('#main .sra-home')||$('#main');
+   host.insertAdjacentHTML('afterbegin',tab==='home'?'<nav class="sra-breadcrumb" aria-label="Kruimelpad"><span>Home</span></nav>':breadcrumb($('#main h1').textContent));
+   trail=$('#main .sra-breadcrumb');
+  }
+  trail.prepend(historyBack);
   if(current)renderSidebar(current);else $('#sidebar').innerHTML='';
   if(current&&current!==sidebarLessonId)showCurrentSidebarLesson();
   sidebarLessonId=current;
@@ -8582,7 +8592,7 @@ window.SRA = {
  $('#calc-keys').onclick=e=>{const k=e.target.closest('[data-key]')?.dataset.key;if(!k)return;const input=$('#calc-expression');if(k==='C'){input.value='';$('#calc-result').textContent='0';}else if(k==='⌫'){input.value=input.value.slice(0,-1);}else if(k==='=')calculate();else input.value+=k;};$('#calc-expression').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();calculate();}};
  $('.skip').onclick=e=>{e.preventDefault();$('#main').focus();};
  window.SRATerms.init($('#main'),C.terms,C.sources);
- window.SRANavigation.init($('#main'),$('#history-back'));
+ window.SRANavigation.init($('#main'),historyBack);
  window.addEventListener('hashchange',()=>route());applyFont();route(false);if(!storageAvailable)toast('Browseropslag is niet beschikbaar. Je kunt voortgang handmatig exporteren.');
 })();
 
