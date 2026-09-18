@@ -32,7 +32,7 @@ if not args.without_sources:
                      + '. Gebruik --without-sources voor een clone zonder de lokale cursus-PDF\'s.')
 
 payload = dict(lessons=build_content.lessons, sources=build_content.sources,
-               glossary=build_content.glossary, examCases=build_content.exam_cases)
+               glossary=build_content.glossary, examCases=build_content.exam_cases, terms=build_content.TERMS)
 (root/'data').mkdir(exist_ok=True)
 (root/'data/course.js').write_text('window.SRA = '+json.dumps(payload,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 if not args.without_sources:
@@ -53,7 +53,7 @@ for name in re.findall(r'<link rel="stylesheet" href="([^"]+)">',base):
         raise ValueError('Stylesheet staat buiten de app: '+name)
     portable=portable.replace(f'<link rel="stylesheet" href="{name}">','<style>\n'+path.read_text(encoding='utf-8')+'\n</style>')
 presentation_css=(root/'css/presentation.css').read_text(encoding='utf-8')
-for name in ['data/course.js','js/math.js','js/labs.js','js/app.js']:
+for name in ['data/course.js','js/math.js','js/labs.js','js/terms.js','js/navigation.js','js/app.js']:
     script=(root/name).read_text(encoding='utf-8').replace('</script','<\\/script')
     portable=portable.replace(f'<script defer src="{name}"></script>','')
     portable=portable.replace('</body>',f'<script>\n{script}\n</script>\n</body>')
@@ -66,7 +66,12 @@ for l in build_content.lessons:parts.append(f'<li><a href="#{l["id"]}">{e(l["tit
 parts.append('</ol>')
 for i,l in enumerate(build_content.lessons):
     parts.append(f'<article id="{l["id"]}"><h2>{i+1}. {e(l["title"])}</h2><p>{e(l["intro"])}</p>')
+    for heading, items in [('Dit heb je vooraf nodig', l['prerequisites']), ('Dit ga je leren', l['goals'])]:
+        parts.append('<h3>'+heading+'</h3><ul>'+''.join('<li>'+e(item)+'</li>' for item in items)+'</ul>')
     for s in l['sections']:parts.append(f'<h3>{e(s["title"])}</h3>{s["html"]}')
+    parts.append('<details><summary>Formules bij dit onderwerp uitgelegd</summary>')
+    for guide in l['formulaGuide']:parts.append(f'<h3>{e(guide["title"])}</h3>{guide["html"]}')
+    parts.append('</details>')
     parts.append(f'<h3>{e(l["example"]["title"])}</h3><ol>')
     parts.extend('<li>'+e(s)+'</li>' for s in l['example']['steps'])
     parts.append('</ol><h3>Hier gaat het vaak mis</h3><ul>')
@@ -82,12 +87,12 @@ for i,l in enumerate(build_content.lessons):
 parts.append('<style>'+presentation_css+'</style></html>')
 (root/'SRA leesversie.html').write_text('\n'.join(parts),encoding='utf-8')
 
-output=workspace/'output';output.mkdir(exist_ok=True)
+output=root/'output';output.mkdir(exist_ok=True)
 zip_name = 'SRA interactieve samenvatting zonder bronbestanden.zip' if args.without_sources else 'SRA interactieve samenvatting.zip'
 with zipfile.ZipFile(output/zip_name,'w',zipfile.ZIP_DEFLATED) as z:
     for p in root.rglob('*'):
         relative = p.relative_to(root)
-        if not p.is_file() or any(x in relative.parts for x in ['__pycache__','.git','tmp','node_modules']):
+        if not p.is_file() or any(x in relative.parts for x in ['__pycache__','.git','tmp','node_modules','output']):
             continue
         if args.without_sources and (relative.parts[0] == 'bronnen' or p.suffix.lower() == '.pdf'):
             continue

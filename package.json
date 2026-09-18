@@ -6,7 +6,7 @@
   "scripts": {
     "build": "python scripts/package.py --without-sources",
     "build:full": "python scripts/package.py",
-    "test": "node tests/validate.cjs && node tests/labs.cjs",
+    "test": "node tests/validate.cjs && node tests/labs.cjs && node tests/terms.cjs && node tests/navigation.cjs",
     "test:sources": "node tests/validate.cjs --sources"
   }
 }

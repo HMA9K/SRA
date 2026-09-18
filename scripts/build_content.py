@@ -330,9 +330,12 @@ for item in lessons:
 
 from presentation import enhance
 enhance(lessons)
+from terminology import TERMS
+from lesson_guides import enhance_guides
+enhance_guides(lessons)
 
 if __name__ == '__main__':
     (ROOT/'data').mkdir(parents=True,exist_ok=True)
-    payload=dict(lessons=lessons,sources=sources,glossary=glossary,examCases=exam_cases)
+    payload=dict(lessons=lessons,sources=sources,glossary=glossary,examCases=exam_cases,terms=TERMS)
     (ROOT/'data'/'course.js').write_text('window.SRA = '+json.dumps(payload,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
     print(f'{len(lessons)} lessen; {sum(len(l["questions"]) for l in lessons)} begripchecks; {len(exam_cases)} tentamenroutes')
