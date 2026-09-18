@@ -1,0 +1,8 @@
+{
+  "name": "@hma9k/study-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frameworkvrije gedeelde vormgeving voor studie-apps, gebaseerd op CAFA2",
+  "files": ["tokens.css", "shell.css", "provenance.json", "README.md"],
+  "style": "shell.css"
+}
