@@ -7,7 +7,21 @@ Een leerroute vanaf nulkennis naar de voorgeschreven onderwerpen van Sampling & 
 - **SRA interactieve samenvatting.html**: zelfstandig openen op een computer. Stijlen, lessen en scripts zitten in dit bestand. De map `bronnen` moet ernaast blijven voor bronlinks.
 - **index.html**: dezelfde app, met losse bestanden voor onderhoud en hosting.
 - **SRA leesversie.html**: alle uitleg en checks zonder scripts. Geschikt voor een bestandsvoorvertoning die scripts blokkeert.
-- De ZIP in de bovenliggende outputmap bevat de app en lokale bronbestanden. Pak deze eerst volledig uit.
+- De ZIP in de map `output` binnen deze projectmap bevat de app en lokale bronbestanden. Pak deze eerst volledig uit.
+
+## Herkenbare werkmap
+
+Alle gemaakte appbestanden, downloads en werkbestanden staan bij elkaar in `sra-interactief` binnen de oorspronkelijke SRA-map. Het bestand `00 - GEMAAKT MET CODEX.md` markeert deze map herkenbaar. De originele cursusdocumenten blijven buiten deze werkmap. `bronnen` bevat lokale kopieën en staat buiten Git. `output` bevat de twee ZIP-versies; `tmp` bevat tijdelijke controles en referentiecheckouts.
+
+## Begrippen, kennisstart en formules
+
+Elke les begint met verwachte voorkennis en leerdoelen. SRA bouwt voort op SET; de kennisstart is voorlopig geformuleerd vanuit de aanwezige SRA-bronnen. SET-bestanden zijn nog niet toegevoegd.
+
+De 189 vaktermen openen een compact venster met betekenis, eigen voorbeeld en bron. Het venster navigeert niet naar een andere les. De begrippenlijst zoekt ook op aliassen en betekenis. Formules uitgelegd opent per onderwerp een aparte pagina met toepassing, symbolen, berekening, interpretatie en valkuilen.
+
+De knop Terug gebruikt de browsergeschiedenis en herstelt leespositie, geopende uitleg, voorbeeldstappen en tijdelijke invoer binnen de geopende app. Ook Vooruit van de browser werkt. Opgeslagen tentamennotities behouden altijd de nieuwste versie. Een herladen pagina start een nieuwe navigatiesessie; de gewone leer- en tentamenvoortgang blijft bewaard.
+
+Catalogus: `scripts/terminology.py`. Kennisstart en formules: `scripts/lesson_guides.py`. Navigatie: `js/navigation.js`. Begrippenvensters: `js/terms.js`.
 
 ## Inhoud
 

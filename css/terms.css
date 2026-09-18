@@ -1,0 +1,104 @@
+/* BELRE3-inspired inline uitleg: herkenbare termen, rustige uitleg naast de stof. */
+.sra-term,
+body.study-shell .sra-term {
+  display: inline;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+  color: #0066b8;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #5991b7;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  vertical-align: baseline;
+  white-space: normal;
+  overflow-wrap: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.sra-term:hover,
+body.study-shell .sra-term:hover { color: #004c8a; background: #edf5fc; text-decoration-style: solid; }
+.sra-term:focus-visible,
+body.study-shell .sra-term:focus-visible { outline: 2px solid #2786da; outline-offset: 3px; background: #edf5fc; }
+
+dialog.sra-term-popup {
+  width: 520px;
+  max-width: calc(100vw - 28px);
+  max-height: min(84dvh, 740px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid #c8ddd1;
+  border-left: 4px solid #008859;
+  border-radius: 7px;
+  background: #fff;
+  color: #233c33;
+  box-shadow: 0 16px 60px #17282035;
+  font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  overflow: hidden;
+}
+dialog.sra-term-popup[open] { display: flex; flex-direction: column; }
+dialog.sra-term-popup::backdrop { background: #172b255e; }
+.sra-term-head {
+  display: flex;
+  flex: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 19px 20px 16px;
+  border-bottom: 1px solid #dce8df;
+  background: #f4faf5;
+}
+.sra-term-head h2 { margin: 2px 0 0; color: #1f513b; font-size: 1.22rem; font-weight: 700; line-height: 1.4; letter-spacing: 0; }
+.sra-term-close {
+  display: grid;
+  place-items: center;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  margin: -2px -4px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #426250;
+  font: 28px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+.sra-term-close:hover { background: #e3eee6; }
+.sra-term-close:focus-visible,
+.sra-term-popup a:focus-visible { outline: 2px solid #2786da; outline-offset: 3px; }
+.sra-term-content { min-height: 0; padding: 20px; overflow: auto; overscroll-behavior: contain; }
+.sra-term-popup .sra-term-definition { margin: 0; font-size: .98rem; line-height: 1.7; white-space: pre-line; }
+.sra-term-example { margin-top: 20px; padding: 14px 16px; border-left: 3px solid #8eb9a0; border-radius: 0 4px 4px 0; background: #f4f8f5; }
+.sra-term-popup h3 { margin: 0 0 7px; font-size: .79rem; font-weight: 700; line-height: 1.4; letter-spacing: .03em; color: #35624a; }
+.sra-term-example p { margin: 0; font-size: .9rem; line-height: 1.65; white-space: pre-line; }
+.sra-term-sources { margin-top: 22px; padding-top: 16px; border-top: 1px solid #e2e9e5; }
+.sra-term-sources ul { margin: 0; padding: 0 0 0 17px; }
+.sra-term-sources li { margin: 5px 0; padding: 0; font-size: .77rem; line-height: 1.55; color: #647268; overflow-wrap: anywhere; }
+.sra-term-sources a { color: #26704b; text-decoration: underline; text-underline-offset: 2px; }
+.sra-term-footer { margin-top: 20px; padding-top: 16px; border-top: 1px solid #e2e9e5; }
+.sra-term-lesson { display: inline-block; padding: 3px 0; color: #14633e; font-size: .85rem; font-weight: 700; text-decoration: none; }
+.sra-term-lesson:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 520px) {
+  dialog.sra-term-popup { max-height: 86dvh; }
+  .sra-term-head { padding: 17px 16px 14px; gap: 12px; }
+  .sra-term-head h2 { font-size: 1.14rem; }
+  .sra-term-content { padding: 17px 16px; }
+  .sra-term-example { padding: 12px; }
+}
+@media print {
+  .sra-term, body.study-shell .sra-term { color: inherit; text-decoration: none; background: transparent; }
+  dialog.sra-term-popup { display: none !important; }
+}

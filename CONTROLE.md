@@ -50,3 +50,13 @@ De oorspronkelijke bronbestanden zijn niet gewijzigd. De website is lokaal besch
 - Diagnostiek: maximale trechtersterkte blijft binnen de grafiek; normaliteitsplot/histogram, y-uitbijter, afstanden en Durbin-Watson geven geen ongeldige uitvoer. Hulp-R² = 0,9 geeft VIF = 10 en wordt niet als grensoverschrijding gemeld.
 - Nieuwe rekentests controleren cursusplanningsformule, afronding, geneste modellen, voorspellingsbanden, VIF en MSPR. De gewone tests vereisen geen lokale bron-PDF's; de afzonderlijke broncontrole controleert aanwezigheid en PDF-headers.
 - Een tijdelijke clone zonder bronnen is gebouwd en getest. De bronloze ZIP bevat ook geen oude PDF's; de complete lokale ZIP blijft apart bestaan. Geen browserconsolefouten in de gecontroleerde nieuwe routes.
+
+## Begrippen, kennisstart, formulepagina's en terugnavigatie
+
+- 189 begrippen met 530 expliciete aliases. Elke canonical term en alias is getest op volledige herkenning naar de juiste definitie, met bron- en lesdekking voor alle 19 lessen. Beta en SE zijn hoofdlettergevoelig; gewone losse formuleletters blijven intact.
+- Elke les heeft verwachte voorkennis en leerdoelen. SET is benoemd als basis; er is geen SET-map geraadpleegd. 19 aparte formulepagina's bevatten 25 uitlegblokken en 67 geldige native MathML-formules. De bronverwijzingen blijven bij het onderwerp staan.
+- Alle 19 formulepagina's op 360 pixels en alle 19 lessen op 320 pixels gecontroleerd: geen horizontale pagina-overloop, geen ongeldige rekenuitvoer of consolefouten. Bestaande MathML- en SVG-inhoud bevat geen automatisch ingevoegde termknoppen; geen dubbel geneste termknoppen.
+- Compact begrippenvenster op desktop en mobiel bekeken. Geen lesnavigatie in het venster. Escape sluit en herstelt focus. Termen in een antwoordlabel veranderen de radiokeuze niet; termen in een samenvattingsregel veranderen de uitklapstatus niet. Termen blijven aanwezig na wijzigingen in de regressietool.
+- Terug herstelt een gefilterde begrippenlijst en de leespositie onderaan een les. Terug en vooruit bij dezelfde tentamencasus behouden de nieuwste opgeslagen uitwerking, ook bij meerdere eerdere bezoeken.
+- tests/navigation.cjs controleert daarnaast afzonderlijke history-entries, leesstappen, tijdelijke invoer, radiokeuzes met correcte feedback, focus en leespositie. Alle reken-, bron-, catalogus- en navigatietests slagen.
+- Alle gemaakte appbestanden en werkbestanden staan binnen sra-interactief, herkenbaar door 00 - GEMAAKT MET CODEX.md. De ZIP's staan in output; eerdere downloads en tijdelijke referentiecheckouts staan in tmp. Oorspronkelijke cursusbestanden buiten deze map zijn ongewijzigd.

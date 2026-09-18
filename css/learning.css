@@ -1,0 +1,12 @@
+/* Kennisstart, formulepagina's en terugnavigatie. Gemaakt met Codex. */
+.lesson-start{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:#f5f8fb;border:1px solid #dce4ec;border-radius:8px;padding:22px 26px;margin:24px 0}
+.lesson-start h2{font-size:1.08rem;margin:0 0 10px}.lesson-start ul{margin:0;padding-left:20px}.lesson-start li{margin:5px 0}
+.term-hint{font-size:.86rem;color:#526477;margin:12px 0 22px}.term-hint span{border-bottom:1px dotted #5991b7;color:#0066b8}
+.formula-guide{max-width:1000px;margin:auto}.formula-guide>header{margin-bottom:24px}.formula-guide-card{background:white;border:1px solid #dce4ec;border-radius:8px;margin:20px 0;padding:24px 28px}.formula-guide-card>h2{margin-top:0;font-size:1.3rem}.formula-guide-card h3{font-size:1.02rem;margin-top:24px}
+.formula-guide-card table{width:100%}.formula-guide-card .formula{margin:18px 0}
+body.study-shell #history-back{display:flex;align-items:center;gap:5px;font:13px Arial,sans-serif;padding:7px 9px;white-space:nowrap;min-width:0}
+body.study-shell #history-back[hidden]{display:none}
+.glossary-term h2 .sra-term{text-align:left}.glossary-term .term-open-hint{color:#627580;font-size:.8rem;margin-bottom:0}
+@media(max-width:680px){.lesson-start{grid-template-columns:1fr;gap:18px;padding:18px}.formula-guide-card{padding:18px 16px}.formula-guide>header h1{font-size:1.6rem}}
+@media(max-width:420px){#history-back span{display:none}body.study-shell #history-back{font-size:19px;padding:6px}.term-hint{line-height:1.5}}
+@media print{#history-back,.term-hint{display:none!important}}

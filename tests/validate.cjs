@@ -56,7 +56,7 @@ const away=M.predict({n:30,b0:7.159,b1:.099,x0:300,xbar:228.1,sx:30,se:1.25506,t
 const ols=M.ols([1,2,3,4],[3,5,7,9]);close(ols.b0,1);close(ols.b1,2);close(ols.sse,0);
 close(M.calc('3740*(636-97185/165)'),175780);close(M.calc('sqrt(16)+2^3'),12);close(M.calc('2,5 * 4'),10);close(M.calc('exp(ln(16))'),16);close(M.calc('-2^2'),-4);close(M.calc('2^-2'),.25);
 for(const invalid of ['1/0','sqrt(-1)','alert(1)','2+','()','2**3','ln(0)'])assert.throws(()=>M.calc(invalid));
-for(const file of ['js/math.js','js/labs.js','js/app.js','data/course.js'])new vm.Script(fs.readFileSync(path.join(root,file),'utf8'),{filename:file});
+for(const file of ['js/math.js','js/labs.js','js/app.js','js/terms.js','js/navigation.js','data/course.js'])new vm.Script(fs.readFileSync(path.join(root,file),'utf8'),{filename:file});
 assert.ok(fs.readFileSync(path.join(root,'SRA interactieve samenvatting.html'),'utf8').includes('window.SRA ='));
 console.log('OK: 19 lessen, 57 checks, bronpaden, syntax en statistische berekeningen (incl. officiële 2024/2025-casussen).');
 console.log(checkSourceFiles?'OK: alle lokale bron-PDF\'s zijn aanwezig en hebben een PDF-header.':'Bron-PDF\'s zijn optioneel; controleer lokale exemplaren met npm run test:sources.');
