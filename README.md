@@ -19,7 +19,7 @@ Elke les begint met verwachte voorkennis en leerdoelen. SRA bouwt voort op SET; 
 
 De 189 vaktermen openen een compact venster met betekenis, eigen voorbeeld en bron. Het venster navigeert niet naar een andere les. De begrippenlijst zoekt ook op aliassen en betekenis. Formules uitgelegd opent per onderwerp een aparte pagina met toepassing, symbolen, berekening, interpretatie en valkuilen.
 
-De knop Terug gebruikt de browsergeschiedenis en herstelt leespositie, geopende uitleg, voorbeeldstappen en tijdelijke invoer binnen de geopende app. Ook Vooruit van de browser werkt. Opgeslagen tentamennotities behouden altijd de nieuwste versie. Een herladen pagina start een nieuwe navigatiesessie; de gewone leer- en tentamenvoortgang blijft bewaard.
+De knop Terug staat voor Home in het kruimelpad en gebruikt de browsergeschiedenis en herstelt leespositie, geopende uitleg, voorbeeldstappen en tijdelijke invoer binnen de geopende app. Ook Vooruit van de browser werkt. Opgeslagen tentamennotities behouden altijd de nieuwste versie. Een herladen pagina start een nieuwe navigatiesessie; de gewone leer- en tentamenvoortgang blijft bewaard.
 
 Catalogus: `scripts/terminology.py`. Kennisstart en formules: `scripts/lesson_guides.py`. Navigatie: `js/navigation.js`. Begrippenvensters: `js/terms.js`.
 

@@ -2,6 +2,7 @@
  'use strict';
  const C=window.SRA,KEY='sra-learning-v1',LESSONS=C.lessons;
  const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const historyBack=$('#history-back');
  const metric=(value,label)=>`<div class="metric"><b>${esc(value)}</b><span>${esc(label)}</span></div>`;
  const validIds=new Set(LESSONS.map(l=>l.id)),questionMap=new Map(LESSONS.flatMap(l=>l.questions.map(q=>[q.id,q])));
  let state={version:1,read:[],answers:{},notes:{},font:16},storageAvailable=true,sidebarLessonId=null;
@@ -170,6 +171,13 @@
   $('#tools-menu').open=false;
   let current=null;
   if(tab==='home')renderHome();else if(tab==='leren')renderLearning();else if(tab==='les')current=renderLesson(parts[1]);else if(tab==='formules')current=renderFormulas(parts[1]);else if(tab==='oefenen')renderPractice(parts[1],parts[2]);else if(tab==='begrippen')renderGlossary();else if(tab==='tentamen')renderExams(parts[1]);else if(tab==='voortgang')renderProgress();else renderSources();
+  let trail=$('#main .sra-breadcrumb');
+  if(!trail){
+   const host=$('#main .sra-home')||$('#main');
+   host.insertAdjacentHTML('afterbegin',tab==='home'?'<nav class="sra-breadcrumb" aria-label="Kruimelpad"><span>Home</span></nav>':breadcrumb($('#main h1').textContent));
+   trail=$('#main .sra-breadcrumb');
+  }
+  trail.prepend(historyBack);
   if(current)renderSidebar(current);else $('#sidebar').innerHTML='';
   if(current&&current!==sidebarLessonId)showCurrentSidebarLesson();
   sidebarLessonId=current;
@@ -193,6 +201,6 @@
  $('#calc-keys').onclick=e=>{const k=e.target.closest('[data-key]')?.dataset.key;if(!k)return;const input=$('#calc-expression');if(k==='C'){input.value='';$('#calc-result').textContent='0';}else if(k==='⌫'){input.value=input.value.slice(0,-1);}else if(k==='=')calculate();else input.value+=k;};$('#calc-expression').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();calculate();}};
  $('.skip').onclick=e=>{e.preventDefault();$('#main').focus();};
  window.SRATerms.init($('#main'),C.terms,C.sources);
- window.SRANavigation.init($('#main'),$('#history-back'));
+ window.SRANavigation.init($('#main'),historyBack);
  window.addEventListener('hashchange',()=>route());applyFont();route(false);if(!storageAvailable)toast('Browseropslag is niet beschikbaar. Je kunt voortgang handmatig exporteren.');
 })();
