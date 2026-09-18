@@ -1,0 +1,39 @@
+/* study-ui 1.0.0. Herkomst: provenance.json. Geen globale lettergrootte. */
+body.study-shell {
+  --study-purple: #444159;
+  --study-green: #008859;
+  --study-green-dark: #006c47;
+  --study-orange: #ff6900;
+  --study-answered: #09a598;
+  --study-ink: #17364e;
+  --study-title: #5b535e;
+  --study-muted: #62616b;
+  --study-border: #e5e9ec;
+  --study-surface: #fff;
+  --study-canvas: #fafafa;
+  --study-subtle: #f9f9f9;
+  --study-radius: 2px;
+  --study-header-height: 64px;
+  --study-nav-height: 48px;
+  --study-sidebar-width: 272px;
+  --study-font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --study-content-font-size: 16px;
+  --study-control-font-size: 14px;
+  --study-control-line-height: 1.3;
+  --study-focus: #2786da;
+  --study-full-bg: #b5dcc7;
+  --study-full-border: #008000;
+  --study-partial-bg: #fcdda0;
+  --study-partial-border: #ba903c;
+  --study-zero-bg: #fac7bf;
+  --study-zero-border: #d12626;
+  --study-ungraded-bg: #f1f1f1;
+  --study-ungraded-border: #aab0b6;
+}
+
+@media (max-width: 680px) {
+  body.study-shell {
+    --study-header-height: 58px;
+    --study-control-font-size: 13px;
+  }
+}

@@ -1,0 +1,23 @@
+/* Controls and explanations for the SRA experiments. Numerical data remains
+   available beside every chart; a small screen scrolls the chart, not the page. */
+.lab-slider label{display:block;line-height:1.5}
+.lab-slider-pair{display:grid;grid-template-columns:minmax(70px,1fr) 100px;align-items:center;gap:12px}
+.lab-slider-pair input[type=range]{width:100%;min-width:0;border:0;background:transparent;cursor:ew-resize}
+.lab-slider-pair input[type=number]{font-variant-numeric:tabular-nums;text-align:right;padding:8px;font-size:.9rem}
+.lab-range-hint{font-size:.68rem;color:#596d67;line-height:1.45}
+.lab-mode-fields{display:contents}
+.lab-interpretation{border-left:3px solid #008859;background:#fff;padding:14px 16px;margin:18px 0;color:#2b5145}
+.lab-interpretation>strong{font-size:.83rem}.lab-interpretation p{margin:5px 0 0;line-height:1.65}
+.lab-try{padding:12px 15px;background:#fff7e9;border:1px solid #ead7b6;border-radius:3px}
+.lab-route{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;counter-reset:route}
+.lab-route li{padding:16px;background:white;border:1px solid #cbdcd5;margin:0;font-size:.88rem;min-width:0}
+.lab-route li>span{display:block;text-transform:uppercase;color:#57776c;font-size:.72rem;font-weight:bold;letter-spacing:.03em;margin-bottom:8px}
+.lab-route li strong{font-size:1rem;display:block;color:#194d3a}
+.lab-tail-schema{display:flex;width:100%;height:32px;border:1px solid #8c969b;margin:18px 0 10px;overflow:hidden}
+.lab-tail-schema .tail{background:#df8740}.lab-tail-schema .middle{background:#5cb399}
+.lab-tail-labels{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.78rem}
+.lab .chart-scroll svg:not(.chart-responsive){min-width:580px}
+.lab .chart-scroll svg text{font-size:14px}
+@media(max-width:1000px){.lab-slider-pair{grid-template-columns:minmax(45px,1fr) 86px;gap:8px}}
+@media(max-width:760px){.lab-grid:has(.lab-slider){grid-template-columns:1fr}.lab-slider-pair{grid-template-columns:minmax(100px,1fr) 105px;gap:18px}.lab-range-hint{font-size:.73rem}.lab-route{grid-template-columns:1fr}.lab-interpretation{padding:12px}.lab-tail-labels{font-size:.74rem}}
+@media print{.lab-slider-pair input[type=range]{display:none}.lab-mode-fields[hidden]{display:none}}

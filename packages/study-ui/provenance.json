@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "package": "@hma9k/study-ui",
+  "version": "1.0.0",
+  "source": {
+    "repository": "https://github.com/HMA9K/CAFA2",
+    "commit": "382add0fb67ed503438876e40dbba46497e02c02",
+    "url": "https://github.com/HMA9K/CAFA2/tree/382add0fb67ed503438876e40dbba46497e02c02",
+    "files": ["css/app.css", "css/exams.css", "css/exam-document.css", "css/exam-experience.css", "css/practice-upgrades.css", "css/question-overview.css"]
+  },
+  "adaptation": "Afgeleide, begrensde componentstijlen; geen ongewijzigde kopie van CAFA2. Toegevoegd: gedeelde tokens, expliciete componentklassen, mobiele tabelrijen met toegankelijke kolomkoppen en een compact vragenoverzicht met maximaal twee kolommen op mobiel. SRA houdt de eigen lettergrootte en statistiekpresentatie.",
+  "status": "Lokale distributie. Geen zelfstandige GitHub-repository of npm-publicatie. CAFA2 is niet omgebouwd tot afnemer."
+}

@@ -1,0 +1,12 @@
+{
+  "name": "sra-interactieve-samenvatting",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SRA vanaf nul: interactieve samenvatting op basis van het aangeleverde cursusmateriaal",
+  "scripts": {
+    "build": "python scripts/package.py --without-sources",
+    "build:full": "python scripts/package.py",
+    "test": "node tests/validate.cjs && node tests/labs.cjs",
+    "test:sources": "node tests/validate.cjs --sources"
+  }
+}
