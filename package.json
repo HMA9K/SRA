@@ -6,7 +6,11 @@
   "scripts": {
     "build": "python scripts/package.py --without-sources",
     "build:full": "python scripts/package.py",
-    "test": "node tests/validate.cjs && node tests/labs.cjs && node tests/terms.cjs && node tests/navigation.cjs",
-    "test:sources": "node tests/validate.cjs --sources"
+    "test": "node tests/validate.cjs && node tests/labs.cjs && node tests/labs-interactions.cjs && node tests/lab-layout.cjs && node tests/math-t.cjs && node tests/terms.cjs && node tests/formula-help.cjs && node tests/navigation.cjs && node tests/exams.cjs && node tests/mc.cjs && node tests/explanations.cjs && node tests/answer-feedback.cjs && node tests/cirrus.cjs && node tests/case-panel.cjs && node tests/cirrus-isolation.cjs && node tests/inline-help.cjs && node tests/course-completion.cjs && node tests/answer-audit.cjs && node tests/calculator.cjs && node tests/theme.cjs",
+    "test:answers": "node tests/answer-feedback.cjs",
+    "test:sources": "node tests/validate.cjs --sources && node tests/exams.cjs --sources && node tests/cirrus.cjs --sources",
+    "test:styles": "python tests/cirrus-styles.py && python tests/dark-styles.py",
+    "test:audit": "python tests/exam-answer-calculations.py && node tests/answer-audit.cjs",
+    "test:patterns": "python tests/question-patterns.py && python tests/question-explanations.py"
   }
 }

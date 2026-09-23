@@ -1,0 +1,31 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const source=fs.readFileSync('vendor/study-ui/theme.js','utf8');
+function fixture({dark=false,stored=null,blocked=false}={}){
+ const events={},windowEvents={},writes=[],labels=[{textContent:''}],choices=['light','dark','auto'].map(value=>({dataset:{themeChoice:value},setAttribute(key,value){this[key]=value;}}));
+ let mediaChange,focused=false;
+ const menu={open:false,querySelector:()=>({focus(){focused=true;}})},html={dataset:{studyStorage:'sra-display-session-v1'},style:{}},media={matches:dark,addEventListener(type,callback){mediaChange=callback;}};
+ const document={documentElement:html,readyState:'loading',querySelectorAll:selector=>selector==='[data-theme-choice]'?choices:labels,getElementById:()=>menu,querySelector:()=>null,addEventListener(type,callback){events[type]=callback;}};
+ const session=new Map(stored?[['sra-display-session-v1',stored]]:[]);
+ const window={document,matchMedia:()=>media,sessionStorage:{getItem:key=>{if(blocked)throw Error('blocked');return session.get(key);},setItem(key,value){if(blocked)throw Error('blocked');writes.push([key,value]);session.set(key,value);}},addEventListener(type,callback){windowEvents[type]=callback;},dispatchEvent(){}};
+ vm.runInNewContext(source,{window,CustomEvent:class {constructor(type,data){Object.assign(this,{type,...data});}}});
+ return {api:window.StudyTheme,html,labels,choices,writes,events,windowEvents,menu,session,get focused(){return focused;},system(value){media.matches=value;mediaChange();}};
+}
+let f=fixture({dark:true});assert.equal(f.html.dataset.studyTheme,'dark');assert.equal(f.api.getMode(),'auto');assert.equal(f.writes.length,0);
+f.api.setMode('light');assert.equal(f.html.dataset.studyTheme,'light');assert.equal(f.labels[0].textContent,'Aan');assert.equal(f.choices[0]['aria-pressed'],'true');
+f.system(true);assert.equal(f.html.dataset.studyTheme,'light','Handmatige keuze houdt voorrang op apparaatwijzigingen.');
+const reload=fixture({dark:true,stored:f.session.get('sra-display-session-v1')});assert.equal(reload.api.getMode(),'light');
+f.api.setMode('auto');f.system(false);assert.equal(f.html.dataset.studyTheme,'light');f.system(true);assert.equal(f.html.dataset.studyTheme,'dark');
+f.api.setMode('invalid');assert.equal(f.api.getMode(),'auto');assert.equal(f.choices.filter(c=>c['aria-pressed']==='true').length,1);
+f.menu.open=true;f.events.keydown({key:'Escape'});assert.equal(f.menu.open,false);assert.ok(f.focused);
+f.menu.open=true;f.windowEvents.hashchange();assert.equal(f.menu.open,false);assert.equal(f.api.getMode(),'auto');
+f.menu.open=true;f.events.click({target:{closest:()=>null}});assert.equal(f.menu.open,false);
+assert.equal(fixture({stored:'invalid'}).api.getMode(),'auto');assert.equal(fixture().api.getMode(),'auto','Een nieuwe sessie begint automatisch.');
+assert.ok(f.writes.length>0);
+assert.ok(f.writes.every(([key])=>key==='sra-display-session-v1'),'Thema schrijft uitsluitend naar eigen sessievoorkeur.');
+f=fixture({blocked:true});f.api.setMode('dark');assert.equal(f.html.dataset.studyTheme,'dark','Het menu werkt ook zonder browseropslag.');
+const index=fs.readFileSync('index.html','utf8'),portable=fs.readFileSync('SRA interactieve samenvatting.html','utf8');
+assert.ok(index.indexOf('vendor/study-ui/theme.js')<index.indexOf('rel="stylesheet"'),'Thema wordt voor de eerste opmaak ingesteld.');
+assert.ok(portable.indexOf('root.StudyTheme=')<portable.indexOf('<body'),'Zelfstandige HTML stelt het thema ook voor het tekenen in.');
+for(const file of ['header.css','theme.css','theme.js'])assert.equal(fs.readFileSync('vendor/study-ui/'+file,'utf8'),fs.readFileSync('packages/study-ui/'+file,'utf8'));
+assert.ok(index.includes('id="tools-menu"'));assert.ok(index.includes('LEER- EN OEFENOMGEVING'));
+console.log('OK: systeemvoorkeur, drie modi, sessie/herladen, nieuwe sessie, opslagfouten, Escape/buitenklik/navigatie, gedeelde kop en zelfstandige HTML.');

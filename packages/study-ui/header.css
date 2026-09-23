@@ -1,0 +1,43 @@
+/* Shared header, based on CAFA2 css/exams.css and css/exam-document.css. */
+body.study-shell .study-topbar{display:block;position:sticky;top:0;z-index:90;height:auto;min-height:64px;width:100%;padding:0;margin:0;background:#444159;color:#fff;box-shadow:0 1px 2px #0003;font:14px/1.42 Arial,sans-serif}
+body.study-shell .study-topbar,body.study-shell .study-topbar *{box-sizing:border-box}
+body.study-shell .study-topbar .bar-inner{display:flex;align-items:center;justify-content:space-between;max-width:none;min-height:64px;width:100%;margin:0;padding:5px 18px;gap:8px}
+body.study-shell .study-topbar .study-brand{display:inline-flex;align-items:center;align-self:auto;gap:0;font:700 46px/1 Arial,sans-serif;letter-spacing:-1.6px;color:#fff;text-decoration:none;white-space:nowrap;flex:none}
+body.study-shell .study-topbar .study-brand>svg{width:34px;height:42px;margin-right:-1px;flex:none}
+body.study-shell .study-topbar .brand-sub{display:block;font:400 9px/1 Arial,sans-serif;letter-spacing:.09em;color:#fff9;margin-left:14px;padding:0;border:0}
+body.study-shell .study-topbar .top-controls{display:flex;align-items:center;justify-content:flex-end;flex:0 1 auto;flex-wrap:wrap;min-width:0;gap:14px;margin:0}
+body.study-shell .study-topbar .top-controls>button,body.study-shell .study-topbar .font-group button{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:inherit;border:0;border-radius:2px;min-width:32px;min-height:36px;height:36px;padding:3px 7px;font:13px/1 Arial,sans-serif;cursor:pointer}
+body.study-shell .study-topbar #calc-open{order:-2;margin:0;padding:3px 7px;min-width:32px;height:38px}
+body.study-shell .study-topbar .calc-icon{width:18px;height:21px;display:block}
+body.study-shell .study-topbar .top-controls button:hover{background:#ffffff18}
+body.study-shell .study-topbar .font-group{display:flex;gap:0;align-items:center}
+body.study-shell .study-topbar .font-group button{min-width:27px;padding:3px;font-size:18px}
+body.study-shell .study-topbar #font-minus{font-size:16px}
+body.study-shell .study-topbar #font-plus{font-size:20px}
+body.study-shell .study-topbar .cafa-profile{display:flex;align-items:center;gap:42px;margin-left:30px;color:#f4f4f5;font:700 14px/1 Arial,sans-serif;white-space:nowrap}
+body.study-shell .study-topbar .cafa-profile svg{width:40px;height:40px;flex:none}
+body.study-shell .study-topbar [hidden]{display:none!important}
+/* Same return-button shape wherever the router places the existing control. */
+body.study-shell #history-back{display:inline-flex;align-items:center;gap:4px;background:var(--study-surface,#fff);color:var(--study-muted,#58677a);border:1px solid var(--study-line,#d9e2eb);border-radius:6px;padding:7px 11px;min-height:35px;font:13px/1.25 Arial,sans-serif;white-space:nowrap;cursor:pointer;margin:0}
+body.study-shell #history-back[hidden]{display:none!important}
+body.study-shell .mc-backbar{min-height:46px;padding:5px 20px}
+body.study-shell .study-page-title h1,body.study-shell .mc-page-title{letter-spacing:0}
+@media(max-width:900px){body.study-shell .study-topbar .brand-sub{display:none}body.study-shell .study-topbar .top-controls{gap:8px}body.study-shell .study-topbar .cafa-profile{gap:12px;margin-left:8px}}
+@media(max-width:760px){body.study-shell .study-topbar .cafa-profile{display:none}body.study-shell .study-topbar .top-controls{gap:5px}}
+@media(max-width:680px){body.study-shell .study-topbar{min-height:58px}body.study-shell .study-topbar .bar-inner{min-height:58px;padding:8px 10px;gap:8px;flex-wrap:wrap}body.study-shell .study-topbar .study-brand{font-size:33px}body.study-shell .study-topbar .study-brand>svg{width:26px;height:35px}body.study-shell .study-topbar .top-controls{flex:1;flex-wrap:wrap}body.study-shell .study-topbar .font-group button{min-width:24px}body.study-shell .study-topbar #calc-open{order:0}body.study-shell .mc-backbar{padding:5px 9px}}
+@media(max-width:380px){body.study-shell .study-topbar .top-controls{flex-basis:100%}body.study-shell .study-topbar .study-brand{align-self:flex-start}}
+@media print{body.study-shell .study-topbar,body.study-shell #history-back{display:none!important}}
+
+/* Back, primary navigation and tools share one sticky row. */
+body.study-shell .study-navigation-row{position:sticky;top:var(--study-header-height,64px);z-index:39;display:flex;align-items:stretch;min-width:0;min-height:var(--study-nav-height,48px);background:var(--study-surface,#fff);border-bottom:1px solid var(--study-line,#d9e2eb)}
+body.study-shell .study-navigation-row[hidden],body.study-shell #study-returnbar[hidden]{display:none!important}
+body.study-shell #study-returnbar{display:flex;align-items:center;flex:none;min-height:var(--study-nav-height,48px);padding:5px 14px}
+body.study-shell .study-navigation-row>.topnav{position:static;top:auto;flex:1;min-width:0;align-items:center;border-bottom:0}
+body.study-shell .study-navigation-row .sra-primary-links{align-self:stretch;scrollbar-width:none}
+body.study-shell .study-navigation-row .sra-primary-links::-webkit-scrollbar{display:none}
+body.study-shell .study-navigation-row .sra-primary-links>a{border-top:2px solid transparent}
+body.study-shell .study-navigation-row:has(#study-returnbar:not([hidden]))>.topnav{padding-left:0}
+body.study-shell #sidebar{top:calc(var(--study-header-height,64px) + var(--study-nav-height,48px));height:calc(100dvh - var(--study-header-height,64px) - var(--study-nav-height,48px))}
+body.study-shell .lab{--lab-sticky-top:calc(var(--study-header-height,64px) + var(--study-nav-height,48px) + 10px)}
+@media(max-width:680px){body.study-shell #study-returnbar{padding:5px 6px}body.study-shell #history-back>span{display:none}body.study-shell #history-back{justify-content:center;min-width:35px;padding:7px}}
+@media print{body.study-shell .study-navigation-row{display:none!important}}

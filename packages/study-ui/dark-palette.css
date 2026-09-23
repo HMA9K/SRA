@@ -1,0 +1,29 @@
+/* Semantic colours complete the literal-colour conversion; source pages stay intact. */
+html[data-study-theme=dark],html[data-study-theme=dark] body.study-shell{--ink:#e1eaf0;--text:#e1eaf0;--muted:#a8b8c4;--line:#354852;--paper:#152129;--wash:#10191f;--bg:#10191f;--purple:#283143;--green:#13856a;--green-dark:#07543c;--danger:#f0aaa7;--bad:#f0aaa7;--study-purple:#283143;--study-green:#13856a;--study-green-dark:#70dec0;--study-surface:#152129;--study-canvas:#10191f;--study-subtle:#10191f;--study-wash:#10191f;--study-ink:#e5edf3;--study-muted:#a7b7c3;--study-title:#d7c7da;--study-line:#354852;--study-border:#354852;--study-accent:#70dec0;--study-focus:#8dcaec;--study-full-bg:#163f30;--study-full-border:#4fbd9a;--study-partial-bg:#40331e;--study-partial-border:#c7a263;--study-zero-bg:#45282a;--study-zero-border:#d29493;--study-ungraded-bg:#202c35;--study-ungraded-border:#73828d}
+html[data-study-theme=dark] body{background:#10191f;color:#e1eaf0}
+html[data-study-theme=dark] body.study-shell .study-topbar{background:#283143;color:#f0f7fc}
+html[data-study-theme=dark] body.study-shell .study-topbar .study-brand{color:#f0f7fc}
+html[data-study-theme=dark] body.study-shell .study-topbar .brand-sub{color:#f0f7fc99}
+html[data-study-theme=dark] input,html[data-study-theme=dark] select,html[data-study-theme=dark] textarea,html[data-study-theme=dark] [contenteditable=true]{color:#e0e9f0;background-color:#13212a;caret-color:#c6efe1}
+html[data-study-theme=dark] .btn.primary,html[data-study-theme=dark] .study-btn.primary,html[data-study-theme=dark] body.study-shell .study-btn.primary{background:#07674a;border-color:#299576;color:#fff}
+html[data-study-theme=dark] .study-theme-menu button{color:var(--study-ink);background:var(--study-wash)}
+html[data-study-theme=dark] .mc-options label:has(input:checked) .mc-letter{color:#fff;background:#514267}
+html[data-study-theme=dark] .sra-term,html[data-study-theme=dark] [data-formula-help]{color:#b8e3fa}
+html[data-study-theme=dark] body.study-shell .lab svg text{fill:#c6d4de}
+html[data-study-theme=dark] .lab svg :is([stroke="#ddd"],[stroke="#e5e7eb"],[stroke="#e2e7eb"],[stroke="#edf0f2"],[stroke="#e4e9ed"]){stroke:#354852}
+html[data-study-theme=dark] .lab svg [stroke="#444159"]{stroke:#b7acd8}
+html[data-study-theme=dark] .lab svg [fill="#444159"]{fill:#b7acd8}
+html[data-study-theme=dark] .lab svg [stroke="#008859"]{stroke:#67d4ac}
+html[data-study-theme=dark] .lab svg [fill="#008859"]{fill:#67d4ac}
+html[data-study-theme=dark] .lab svg [stroke="#c85209"]{stroke:#edaa70}
+html[data-study-theme=dark] .lab svg [fill="#c85209"]{fill:#edaa70}
+html[data-study-theme=dark] .lab svg [stroke="#176fad"]{stroke:#88c4ef}
+html[data-study-theme=dark] .lab svg [fill="#176fad"]{fill:#88c4ef}
+html[data-study-theme=dark] body.study-shell .lab .key{border-color:#67d4ac}
+html[data-study-theme=dark] body.study-shell .lab .key.dot{background:#b7acd8}
+html[data-study-theme=dark] body.study-shell .lab .key.residual{border-color:#edaa70}
+/* Inline legend colours describe the same series as the SVG attributes. */
+html[data-study-theme=dark] body.study-shell .lab .key[style*="#008859"]{border-color:#67d4ac!important}
+html[data-study-theme=dark] body.study-shell .lab .key[style*="#444159"]{border-color:#b7acd8!important}
+html[data-study-theme=dark] body.study-shell .lab .key[style*="#c85209"]{border-color:#edaa70!important}
+html[data-study-theme=dark] body.study-shell .lab .key[style*="#176fad"]{border-color:#88c4ef!important}

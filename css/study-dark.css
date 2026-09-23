@@ -1,0 +1,1310 @@
+@media screen {
+/* Generated from the CAFA2 paint compiler; see scripts/build_study_dark.py. */
+/* css/app.css */
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) a{color:#8dece3}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) button:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) a:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) summary:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) input:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) textarea:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) select:focus-visible{outline:3px solid #76542d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) h1,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) h2,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) h3{color:#e0ebf2}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .skip{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .topbar{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .brand{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .brand-mark{background:#15212917;border:1px solid #3b4a5445}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .brand-sub{color:#b0a7d3;border-left:1px solid #3b4a5435}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .top-tools button{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .top-tools button:hover{background:#15212920}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #calc-open{border-left:1px solid #3b4a5440}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .topnav{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .topnav a{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .topnav a[aria-current="page"]{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #menu-toggle{background:#152129;color:var(--study-ink)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #sidebar{background:#161c2c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .side-head{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .track{background:#1c2127}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .phase-title{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-link{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-link:hover{background:#191d29}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-link[aria-current="page"]{background:#182a23;border-color:#346f54;color:#8decca}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-no{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-link.mastered .lesson-no{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .read-dot{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .eyebrow{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .eyebrow .pill{background:#1a2822}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lead{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .jump a{border:1px solid #414762;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .goals{background:#191f29}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .goals ul{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .section{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .section summary{color:#e0ebf2}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .section summary::after{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .section-number{color:#adbdc9;background:#1e1c26}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula{color:#a9b0d0;background:#161d2c;border-left:3px solid #414a62}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) th,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) td{border:1px solid #45485e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) th{background:#1b1d27;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) tr:nth-child(even) td{background:#161d2c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .note{background:#2c2216}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .example{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .block-label{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .steps li{border-top:1px solid #424261}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .steps li:before{background:#172b23;color:#8decca}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .step-placeholder{border:1px dashed #404a63}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .btn{border:1px solid #434c60;background:#152129;color:var(--study-ink)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .btn:hover{background:#19291f}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .btn.primary{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .pitfalls{background:#2c2316}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .pitfalls h2{color:#ecbc8d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab{background:#182a28;border:1px solid #3c6761}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .field{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .field input,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .field select,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) select,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) input[type="search"]{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-result{border-top:1px solid #3a695f}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .metric{background:#152129;border:1px solid #416256}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .metric b{color:#8fead3}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .metric span{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab svg{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab svg text{fill:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-error{background:#2c1616;color:#e69499}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .question{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .answer{border:1px solid #424861}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .answer:hover{background:#161f2c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .answer:has(input:checked){background:#182b1f}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .feedback{background:#172c20;color:#98e2c3}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .feedback.wrong{background:#2c1f16;color:#ecb28d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .reading-state{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .card{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .glossary-term{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .empty{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .notes{border:1px solid #3f4964;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .rubric{background:#1b2720;border:1px solid #42614e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chip{background:#192029;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-status{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) dialog{box-shadow:0 20px 80px #01030440}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) dialog::backdrop{background:#212b3877}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .dialog-head{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .dialog-head h2{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .calc-body input{border:1px solid #3f4964}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .calc-keys button{border:1px solid #424a61;background:#1a1e28}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .calc-keys button[data-key="="]{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #toast{background:#212b38;color:#f0f7fc;box-shadow:0 3px 25px #01030422}
+@media (max-width:760px){html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #sidebar{box-shadow:8px 10px 30px #01030420}}
+/* vendor/study-ui/tokens.css */
+
+/* vendor/study-ui/shell.css */
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-topbar{color:#f0f7fc;box-shadow:0 1px 2px #01030433}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-brand{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-brand small,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-brand .brand-sub{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-controls a,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-controls button{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-controls a:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-controls button:hover{background:#15212918}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-profile{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-nav [aria-current="page"]{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-table .study-btn.primary{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-btn{color:var(--study-ink)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-btn:hover{background:#19291f}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-btn.primary{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-result-row{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell a.study-result-row:hover{background:#172b25}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-dialog{color:#e0ebf2}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-dialog::backdrop{background:#212b38bb}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-head{border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-head button{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-remaining strong{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-item{color:#e0ebf2}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-item:hover{background:#182b25}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-item[aria-current]:not([aria-current="false"]){background:#182b25}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-number{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-divider::before{background:#121e25}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-footer{border-top:1px solid #3b4a54;background:#121e25}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-overview-range{border:1px solid #3b4a54;background:#121e25;color:#95c7e5}
+/* css/sra-layout.css */
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .brand-sub{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell #sidebar{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .lesson-bottom{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .lesson-bottom .btn.primary{background:#152129;color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-breadcrumb{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .dashboard-filter{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .dashboard-filter select{background:#152129;border:2px solid #2d5476;color:#a0bfd9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .dashboard-section-title{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .study-table small{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-results{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .result-group h2{background:#152129;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .result-lesson{border-bottom:1px solid #44535f}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .result-lesson>summary{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .result-lesson>summary:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .result-question>summary:hover{background:#1a2923}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .result-expanded{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .result-question{border-top:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .result-answer{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-case-question{background:#121e25;border:1px solid #3b4a54;color:#99c1e1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-answer-split{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-answer-model .rubric{background:#152129;border-color:#3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-resizer{background:#152129;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-resizer:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-resizer:focus-visible{background:#182b23;outline:2px solid #2d7660}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .case-bottom{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-tools-menu[open]>summary{background:#1d1f26;color:var(--study-ink)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-tools-panel{background:#152129;box-shadow:0 8px 24px #01030420}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .study-nav .sra-tools-panel a:hover{background:#182b25}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-side-back{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-home-intro h1{color:var(--study-ink)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-home-choice{background:#152129;border:1px solid #3b4a54;box-shadow:0 2px 8px #01030408}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-home-choice:hover{box-shadow:0 6px 20px #01030410}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-choice-icon{color:var(--study-ink);background:#1c1a28}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-home-choice h2{color:var(--study-ink)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-choice-count{background:#1c2027;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-choice-action{border-top:1px solid #45455e;color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-phase,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-phase-no{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-item:hover{background:#192922}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase>details>summary{color:var(--study-ink)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase li a:hover{background:#192922}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-heading h2{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-paper{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-question-identity{color:#94c2e6}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-question-number{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-question-position strong{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-question .question .actions .study-btn{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-question-help summary{color:var(--study-ink)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-footer{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-practice-footer .study-btn{border:2px solid #3b4a54;color:#adbdc9;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-practice-footer .study-btn.primary{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body[data-page="tentamen"] .study-page-title{border-bottom:1px solid #3b4a54;box-shadow:0 1px 2px #01030408}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body[data-page="tentamen"] .study-page-title h1{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-exam-dashboard{color:#98c2e2}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-dashboard>.sra-breadcrumb{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-view select{border:2px solid #2d5476;color:#a0bfd9;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-exam-dashboard>.sra-exam-section>h2,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-exam-dashboard>.sra-exam-source-section>h2{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-table-wrap{border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-exam-table thead th{color:#adbdc9;background:#152129;border-color:#3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-exam-table tbody td{border-color:#3b4a54;color:#99c1e1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-exam-table small{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-empty{background:#152129;border:1px solid #3b4a54;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-resources{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-resources a{color:#99c1e1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-help p{color:#adbdc9}
+/* css/presentation.css */
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-row{border-bottom:1px solid #35486e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-label{color:#b1b7c9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .math-scroll:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .table-scroll:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-scroll:focus-visible{outline:3px solid #76542d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .symbols{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .symbols summary{color:#aebacb}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) caption{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) table.numeric{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) table.numeric th[scope="row"]{background:#161a2c;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) table.numeric tfoot td,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) table.numeric tfoot th{border-top:2px solid #3b4a54;background:#17212c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .table-hint{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .table-detail>summary{color:#abcfc6}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .calculation-table td:last-child{color:#8fead3}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-figure{background:#152129;border:1px solid #416256}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-figure figcaption{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab svg text{fill:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-legend{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .key{border-top:3px solid #2d765d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .key.dot{background:#212b38}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .key.residual{border-color:#76492d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-note{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .variance-bar{background:#2c2416;border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .variance-bar span{background:#0e8159}
+/* css/labs.css */
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-range-hint{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-control-note{color:#b0cac1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab input[readonly]{background:#1c2621;color:#b0cac1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-interpretation{border-left:3px solid #2d765d;background:#152129;color:#a8d1c4}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-try{background:#2c2416;border:1px solid #765b2d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-route li{background:#152129;border:1px solid #426254}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-route li>span{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-route li strong{color:#9bdfc6}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-tail-schema{border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-tail-schema .tail{background:#a65a1c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-tail-schema .middle{background:#212b38}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-controls-heading{color:#a7d2c4}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-controls .field:focus-within{background:#152129;border-color:#406356}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-output{background:#152129;border:1px solid #3e6557;border-top:3px solid #2d765d;box-shadow:0 5px 16px #0103040a}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-output-head{border-bottom:1px solid #416252;background:#1a281f}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-output-head label{color:#abcec1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-output-head select{color:#a2d8c5}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-output-context{color:#a9d1c3}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-live .metric{background:#1b2820}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-live .metric b{color:#8deccc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-all-results{border-top:1px solid #3d6658}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-all-results>summary{color:#a9d1c3}
+/* css/terms.css */
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-term{color:#8dc2ec;text-decoration-color:#a3c2d7}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-term:hover{color:#8dc2ec;background:#16222c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-term:focus-visible{outline:2px solid #2d5476;background:#16222c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-popup{border:1px solid #3e654f;border-left:4px solid #2d765d;background:#152129;color:#abcec2;box-shadow:0 16px 60px #01030435}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-head{border-bottom:1px solid #416249;background:#182a1b}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-head h2{color:#9fdac0}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-close{color:#b0cabb}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-close:hover{background:#1b271e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-close:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-popup a:focus-visible{outline:2px solid #2d5476}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-example{border-left:3px solid #3e654e;background:#1c271e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-popup h3{color:#a9d0bb}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-sources{border-top:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-sources li{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-sources a{color:#9cddbd}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-footer{border-top:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-lesson{color:#91e9bf}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-popup{border:1px solid #426153;box-shadow:0 4px 16px #01030420}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-popup .sra-term-head{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term-popup details>summary{color:#b1c9ba}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) [data-sra-term][aria-expanded="true"],html[data-study-theme=dark]:not(:has(body.cirrus-mode)) [data-formula-help][aria-expanded="true"]{background:#1a2820}
+/* css/formula-help.css */
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) math [data-formula-help],html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-text-component{color:#8dc7ec}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) math [data-formula-help]:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-text-component:hover{background:#16242c;color:#8dc5ec}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) math [data-formula-help]:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-text-component:focus-visible{outline:2px solid #2d5776;background:#16242c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-help-hint{color:#afbdca}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-help-source a{color:#9cddbd}
+/* css/learning.css */
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-reference-topic{border:1px solid #39526a;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-reference-topic>summary{color:#a5d4c7}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-reference-topic[open]>summary{border-bottom:1px solid #39526a;background:#1b2722}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-reference-topic>summary span{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-reference-topic>summary .formula-reference-action{color:#8deccc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-reference-topic>summary:focus-visible{outline:2px solid #2d5776}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-reference-content .formula-guide-card{border-bottom:1px solid #39526a}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-start{background:#16212c;border:1px solid #39526a}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .term-hint{color:#b0bcc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .term-hint span{border-bottom:1px dotted #315872;color:#8dc2ec}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-guide-card{background:#152129;border:1px solid #39526a}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell #history-back{border-right:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell #history-back:hover{color:#8deccc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell #history-back:focus-visible{outline:2px solid #2d5476}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .glossary-term .term-open-hint{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .answer:has(input:checked){border-color:#3b4a54;background:#1f1a28}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .answer.is-correct:has(input:checked){border-color:#2d765d;background:#162c20}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .answer.is-incorrect:has(input:checked){border-color:#764c2d;background:#2c2116}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .question-pattern,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .question-trap{border-left:3px solid #2d765d;background:#172b23}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .question-trap{border-left-color:#765d2d;background:#2c2516}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .answer-reasons{border-top:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .question-feedback .feedback{color:#99c1e1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .question-feedback .feedback h3{color:#8deccc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .question-feedback .feedback.wrong h3{color:#ecc28d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .saved-exam-notes section+section{border-top:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .direct-check-option{color:#adbdc9}
+/* css/exams.css */
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry{background:#152129;border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry h2{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-welcome{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-paper{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-runner-head{color:#99c1e1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-question-id>span:first-child{background:#ae5113;color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-work h2 span{color:#ec8d8d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-document-hint,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-answer>p{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-document-controls{background:#1e1e25}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-document-controls select{background:#152129;border:1px solid #3b4a54;color:#99c1e1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-original-page{background:#152129;border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-source-text{border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-answer textarea{border:1px solid #3b4a54;color:#99c1e1;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-answer details{border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-footer{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-footer>span{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-overview li{border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-overview li:last-child{border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-overview a{color:#99c1e1;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-overview a[aria-current]{background:#172b21;outline:2px solid #2d765d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis>header h2{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis .jump{background:#152129;border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-table{background:#152129;border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-table th,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-table td{border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-table th{background:#1e1c26;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-weight-bar{color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-weight-bar>span{background:#0e8159}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-weight-bar>span+span{background:#212b38}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-filter select{border:1px solid #3b4a54;background:#152129;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-sources{background:#1e1d26;border:1px solid #4b4360}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis a{color:#8deccc}
+/* css/mc.css */
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home{border:1px solid #454d5e;background:#152129;color:#99c1e1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home-head{border-bottom:1px solid #454d5e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home-head h1{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home-head p{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home-options{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-main-card{background:#152129;border:1px solid #3b4a54;border-top:3px solid #48455e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-group-number{background:#ae5413;color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-group-row h2{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-group-description{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-score{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-subtopics>summary{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-subtopics>summary span{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-list{border-top:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-card{border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-card h4{color:#99c1e1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-card p{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-stats b{color:#8deccc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home-note{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-backup>summary{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-page{color:#99c1e1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-page .mc-backbar{background:#152129;border-bottom:1px solid #454d5e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-page-title{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-position b{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-meta{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-source>summary{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help>details{border:1px solid #454261;background:#1b1b27}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help summary::after{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-help-icon{color:#f0f7fc;background:#212b38}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help a{color:#8deccc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help .mc-symbol-note{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-option>label{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-option>label:hover{border-color:#3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-option>label:has(input:focus-visible){outline:2px solid #4d455e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-option-heading{background:#152129;border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-letter{border:1px solid #3b5068;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-option-hint{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-options label:has(input:checked){border-color:#3b4a54;background:#1f1a28}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-options label:has(input:checked) .mc-letter{background:#212b38;border-color:#4d455e;color:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-options label.is-correct:has(input:checked){border-color:#2d765d;background:#162c20}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-options label.is-incorrect:has(input:checked){border-color:#764c2d;background:#2c2116}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #mc-choice-status{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-runner .sra-exam-footer{background:#152129;border-top:1px solid #444d5f;box-shadow:0 -2px 8px #01030403}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>#mc-count{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>.study-btn{border-color:#3b4a54;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>.study-btn:last-child{border-color:#2d765d;color:#8deccb}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-mark-control:has(input:checked){background:#21172c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-feedback{border:1px solid #3c6754;background:#182a1e;color:#99c1e1}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-feedback.is-incorrect{border-color:#76592d;background:#2c2616}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-feedback h3{color:#8deccc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-feedback.is-incorrect h3{color:#ecc28d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-recognition,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-trap{border-left:3px solid #2d765d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-trap{border-left-color:#765d2d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-attempt-note,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-sources{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-sources a{color:#8deccc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-recognition-steps strong{color:#99e1c9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-result-list details{border:1px solid #3b4a54;background:#152129}
+/* css/cirrus.css */
+html[data-study-theme=dark] body.cirrus-mode a{color:#8dcaec}
+html[data-study-theme=dark] body.cirrus-mode button:focus-visible,html[data-study-theme=dark] body.cirrus-mode a:focus-visible,html[data-study-theme=dark] body.cirrus-mode label:focus-visible,html[data-study-theme=dark] body.cirrus-mode summary:focus-visible{outline:2px solid #76562d}
+html[data-study-theme=dark] body.cirrus-mode h1,html[data-study-theme=dark] body.cirrus-mode h2,html[data-study-theme=dark] body.cirrus-mode h3{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .topbar{color:#f0f7fc;box-shadow:0 1px 2px #01030433}
+html[data-study-theme=dark] body.cirrus-mode .brand{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .brand small{color:#f0f7fc99}
+html[data-study-theme=dark] body.cirrus-mode .top-controls a,html[data-study-theme=dark] body.cirrus-mode .top-controls button,html[data-study-theme=dark] body.cirrus-mode .font-step label{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .top-controls a:hover,html[data-study-theme=dark] body.cirrus-mode .top-controls button:hover,html[data-study-theme=dark] body.cirrus-mode .font-step label:hover{background:#15212918}
+html[data-study-theme=dark] body.cirrus-mode .top-controls a.home-link{border-right:1px solid #3b4a5433}
+html[data-study-theme=dark] body.cirrus-mode .top-score{color:#f0f7fcdd}
+html[data-study-theme=dark] body.cirrus-mode .frame{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .home-head{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .home-sub{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .topic-card{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .topic-n{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .topic-description{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .btn{background:#152129;color:var(--study-ink)}
+html[data-study-theme=dark] body.cirrus-mode .btn.primary{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .btn.secondary{color:var(--study-accent)}
+html[data-study-theme=dark] body.cirrus-mode .notice{background:#16242c;border:1px solid #2d5276}
+html[data-study-theme=dark] body.cirrus-mode .subtle{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .home-options select{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .home-help summary{color:var(--study-ink)}
+html[data-study-theme=dark] body.cirrus-mode .ov-item{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .ov-item:hover{background:#1c2426;border-color:#3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .ov-num{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .legend{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .question-header{background:#121e25}
+html[data-study-theme=dark] body.cirrus-mode .qidentity{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .qnum{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .question-count{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .fact dt{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .source summary{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .source-content{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .source-content strong{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .mode-switch label{border:1px solid #3b4a54;color:var(--study-ink);background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .instruction{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .views button{background:#152129;border:1px solid #3b4a54;color:var(--study-ink)}
+html[data-study-theme=dark] body.cirrus-mode .views button.active{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .option{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .option-header{background:#152129;border-bottom:1px solid #45525e}
+html[data-study-theme=dark] body.cirrus-mode .bubble{border:1px solid #425261;background:#152129;color:#a0bbd9}
+html[data-study-theme=dark] body.cirrus-mode .select-hint{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .journal th{background:#121e25;border:1px solid #3b4a54;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .journal td{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .journal-caption{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .data-table th{background:#121e25;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .data-table th,html[data-study-theme=dark] body.cirrus-mode .data-table td{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .stock-mobile h4{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .choice-status{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .review>summary{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .review[open]>summary{background:#0e8159}
+html[data-study-theme=dark] body.cirrus-mode .feedback-part.good b{color:var(--study-accent)}
+html[data-study-theme=dark] body.cirrus-mode .no-choice{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .model-caption{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .pattern{background:#172b23}
+html[data-study-theme=dark] body.cirrus-mode .pattern>b{color:var(--study-accent)}
+html[data-study-theme=dark] body.cirrus-mode .related a{border:1px solid #3b4a54;background:#152129;color:#a7d3bf}
+html[data-study-theme=dark] body.cirrus-mode .score-note{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .own-editor{border:1px solid #3b4a54;background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .entry-table th{background:#121e25;border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .entry-table td{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .entry-table input{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .self-grades span{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-info{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .question-nav{background:#152129;box-shadow:0 -2px 6px #01030404}
+html[data-study-theme=dark] body.cirrus-mode .flag-label{color:var(--study-ink)}
+html[data-study-theme=dark] body.cirrus-mode .flagbox:checked~.question-nav .flag-label{color:#ecb68d;background:#2c2116}
+html[data-study-theme=dark] body.cirrus-mode .stat{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .stat b{color:var(--study-ink)}
+html[data-study-theme=dark] body.cirrus-mode .stat span{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .result-row{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .result-row .result-status{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .result-row .good{background:#162c1c;color:#8decbb}
+html[data-study-theme=dark] body.cirrus-mode .result-row .bad{background:#2c1616;color:#e89292}
+html[data-study-theme=dark] body.cirrus-mode .overview-dialog,html[data-study-theme=dark] body.cirrus-mode .calculator-dialog,html[data-study-theme=dark] body.cirrus-mode .finish-dialog{border:1px solid #3b4a54;box-shadow:0 10px 60px #01030444;color:#e0ebf2;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode dialog::backdrop{background:#212b38bb}
+html[data-study-theme=dark] body.cirrus-mode .dialog-close{background:#152129;color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .dialog-footer{background:#121e25;border-top:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .calc-display{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .calc-expression{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .calc-output{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .calc-memory{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .calc-keys{background:#121e25}
+html[data-study-theme=dark] body.cirrus-mode .calc-keys button{border:1px solid #3b4a54;background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .calc-keys button.mem{background:#121e25}
+html[data-study-theme=dark] body.cirrus-mode .calc-keys button.operator{background:#121e25;color:#a1d9c0}
+html[data-study-theme=dark] body.cirrus-mode .calc-keys button.equals{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .calc-help{color:#adbdc9;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-1:checked~.mode-switch label[for="mc-kap-1"],html[data-study-theme=dark] body.cirrus-mode #own-kap-1:checked~.mode-switch label[for="own-kap-1"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-1-0:checked~.options #option-kap-1-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-1-1:checked~.options #option-kap-1-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-1-2:checked~.options #option-kap-1-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-1-3:checked~.options #option-kap-1-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-2:checked~.mode-switch label[for="mc-kap-2"],html[data-study-theme=dark] body.cirrus-mode #own-kap-2:checked~.mode-switch label[for="own-kap-2"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-2-0:checked~.options #option-kap-2-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-2-1:checked~.options #option-kap-2-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-2-2:checked~.options #option-kap-2-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-2-3:checked~.options #option-kap-2-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-3:checked~.mode-switch label[for="mc-kap-3"],html[data-study-theme=dark] body.cirrus-mode #own-kap-3:checked~.mode-switch label[for="own-kap-3"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-3-0:checked~.options #option-kap-3-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-3-1:checked~.options #option-kap-3-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-3-2:checked~.options #option-kap-3-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-3-3:checked~.options #option-kap-3-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-4:checked~.mode-switch label[for="mc-kap-4"],html[data-study-theme=dark] body.cirrus-mode #own-kap-4:checked~.mode-switch label[for="own-kap-4"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-4-0:checked~.options #option-kap-4-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-4-1:checked~.options #option-kap-4-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-4-2:checked~.options #option-kap-4-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-4-3:checked~.options #option-kap-4-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-5:checked~.mode-switch label[for="mc-kap-5"],html[data-study-theme=dark] body.cirrus-mode #own-kap-5:checked~.mode-switch label[for="own-kap-5"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-5-0:checked~.options #option-kap-5-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-5-1:checked~.options #option-kap-5-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-5-2:checked~.options #option-kap-5-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-5-3:checked~.options #option-kap-5-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-6:checked~.mode-switch label[for="mc-kap-6"],html[data-study-theme=dark] body.cirrus-mode #own-kap-6:checked~.mode-switch label[for="own-kap-6"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-6-0:checked~.options #option-kap-6-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-6-1:checked~.options #option-kap-6-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-6-2:checked~.options #option-kap-6-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-6-3:checked~.options #option-kap-6-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-7:checked~.mode-switch label[for="mc-kap-7"],html[data-study-theme=dark] body.cirrus-mode #own-kap-7:checked~.mode-switch label[for="own-kap-7"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-7-0:checked~.options #option-kap-7-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-7-1:checked~.options #option-kap-7-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-7-2:checked~.options #option-kap-7-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-7-3:checked~.options #option-kap-7-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-8:checked~.mode-switch label[for="mc-kap-8"],html[data-study-theme=dark] body.cirrus-mode #own-kap-8:checked~.mode-switch label[for="own-kap-8"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-8-0:checked~.options #option-kap-8-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-8-1:checked~.options #option-kap-8-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-8-2:checked~.options #option-kap-8-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-8-3:checked~.options #option-kap-8-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-9:checked~.mode-switch label[for="mc-kap-9"],html[data-study-theme=dark] body.cirrus-mode #own-kap-9:checked~.mode-switch label[for="own-kap-9"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-9-0:checked~.options #option-kap-9-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-9-1:checked~.options #option-kap-9-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-9-2:checked~.options #option-kap-9-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-9-3:checked~.options #option-kap-9-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-10:checked~.mode-switch label[for="mc-kap-10"],html[data-study-theme=dark] body.cirrus-mode #own-kap-10:checked~.mode-switch label[for="own-kap-10"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-10-0:checked~.options #option-kap-10-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-10-1:checked~.options #option-kap-10-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-10-2:checked~.options #option-kap-10-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-10-3:checked~.options #option-kap-10-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-11:checked~.mode-switch label[for="mc-kap-11"],html[data-study-theme=dark] body.cirrus-mode #own-kap-11:checked~.mode-switch label[for="own-kap-11"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-11-0:checked~.options #option-kap-11-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-11-1:checked~.options #option-kap-11-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-11-2:checked~.options #option-kap-11-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-11-3:checked~.options #option-kap-11-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-12:checked~.mode-switch label[for="mc-kap-12"],html[data-study-theme=dark] body.cirrus-mode #own-kap-12:checked~.mode-switch label[for="own-kap-12"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-12-0:checked~.options #option-kap-12-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-12-1:checked~.options #option-kap-12-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-12-2:checked~.options #option-kap-12-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-12-3:checked~.options #option-kap-12-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-13:checked~.mode-switch label[for="mc-kap-13"],html[data-study-theme=dark] body.cirrus-mode #own-kap-13:checked~.mode-switch label[for="own-kap-13"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-13-0:checked~.options #option-kap-13-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-13-1:checked~.options #option-kap-13-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-13-2:checked~.options #option-kap-13-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-13-3:checked~.options #option-kap-13-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-14:checked~.mode-switch label[for="mc-kap-14"],html[data-study-theme=dark] body.cirrus-mode #own-kap-14:checked~.mode-switch label[for="own-kap-14"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-14-0:checked~.options #option-kap-14-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-14-1:checked~.options #option-kap-14-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-14-2:checked~.options #option-kap-14-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-14-3:checked~.options #option-kap-14-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-15:checked~.mode-switch label[for="mc-kap-15"],html[data-study-theme=dark] body.cirrus-mode #own-kap-15:checked~.mode-switch label[for="own-kap-15"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-15-0:checked~.options #option-kap-15-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-15-1:checked~.options #option-kap-15-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-15-2:checked~.options #option-kap-15-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-15-3:checked~.options #option-kap-15-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-16:checked~.mode-switch label[for="mc-kap-16"],html[data-study-theme=dark] body.cirrus-mode #own-kap-16:checked~.mode-switch label[for="own-kap-16"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-16-0:checked~.options #option-kap-16-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-16-1:checked~.options #option-kap-16-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-16-2:checked~.options #option-kap-16-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-16-3:checked~.options #option-kap-16-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-17:checked~.mode-switch label[for="mc-kap-17"],html[data-study-theme=dark] body.cirrus-mode #own-kap-17:checked~.mode-switch label[for="own-kap-17"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-17-0:checked~.options #option-kap-17-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-17-1:checked~.options #option-kap-17-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-17-2:checked~.options #option-kap-17-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-17-3:checked~.options #option-kap-17-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-18:checked~.mode-switch label[for="mc-kap-18"],html[data-study-theme=dark] body.cirrus-mode #own-kap-18:checked~.mode-switch label[for="own-kap-18"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-18-0:checked~.options #option-kap-18-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-18-1:checked~.options #option-kap-18-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-18-2:checked~.options #option-kap-18-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-18-3:checked~.options #option-kap-18-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-19:checked~.mode-switch label[for="mc-kap-19"],html[data-study-theme=dark] body.cirrus-mode #own-kap-19:checked~.mode-switch label[for="own-kap-19"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-19-0:checked~.options #option-kap-19-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-19-1:checked~.options #option-kap-19-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-19-2:checked~.options #option-kap-19-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-19-3:checked~.options #option-kap-19-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-20:checked~.mode-switch label[for="mc-kap-20"],html[data-study-theme=dark] body.cirrus-mode #own-kap-20:checked~.mode-switch label[for="own-kap-20"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-20-0:checked~.options #option-kap-20-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-20-1:checked~.options #option-kap-20-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-20-2:checked~.options #option-kap-20-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-20-3:checked~.options #option-kap-20-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-21:checked~.mode-switch label[for="mc-kap-21"],html[data-study-theme=dark] body.cirrus-mode #own-kap-21:checked~.mode-switch label[for="own-kap-21"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-21-0:checked~.options #option-kap-21-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-21-1:checked~.options #option-kap-21-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-21-2:checked~.options #option-kap-21-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-21-3:checked~.options #option-kap-21-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-22:checked~.mode-switch label[for="mc-kap-22"],html[data-study-theme=dark] body.cirrus-mode #own-kap-22:checked~.mode-switch label[for="own-kap-22"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-22-0:checked~.options #option-kap-22-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-22-1:checked~.options #option-kap-22-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-22-2:checked~.options #option-kap-22-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-22-3:checked~.options #option-kap-22-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-23:checked~.mode-switch label[for="mc-kap-23"],html[data-study-theme=dark] body.cirrus-mode #own-kap-23:checked~.mode-switch label[for="own-kap-23"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-23-0:checked~.options #option-kap-23-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-23-1:checked~.options #option-kap-23-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-23-2:checked~.options #option-kap-23-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-23-3:checked~.options #option-kap-23-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-24:checked~.mode-switch label[for="mc-kap-24"],html[data-study-theme=dark] body.cirrus-mode #own-kap-24:checked~.mode-switch label[for="own-kap-24"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-24-0:checked~.options #option-kap-24-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-24-1:checked~.options #option-kap-24-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-24-2:checked~.options #option-kap-24-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-24-3:checked~.options #option-kap-24-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-25:checked~.mode-switch label[for="mc-kap-25"],html[data-study-theme=dark] body.cirrus-mode #own-kap-25:checked~.mode-switch label[for="own-kap-25"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-25-0:checked~.options #option-kap-25-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-25-1:checked~.options #option-kap-25-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-25-2:checked~.options #option-kap-25-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-25-3:checked~.options #option-kap-25-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-26:checked~.mode-switch label[for="mc-kap-26"],html[data-study-theme=dark] body.cirrus-mode #own-kap-26:checked~.mode-switch label[for="own-kap-26"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-26-0:checked~.options #option-kap-26-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-26-1:checked~.options #option-kap-26-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-26-2:checked~.options #option-kap-26-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-26-3:checked~.options #option-kap-26-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-27:checked~.mode-switch label[for="mc-kap-27"],html[data-study-theme=dark] body.cirrus-mode #own-kap-27:checked~.mode-switch label[for="own-kap-27"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-27-0:checked~.options #option-kap-27-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-27-1:checked~.options #option-kap-27-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-27-2:checked~.options #option-kap-27-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-27-3:checked~.options #option-kap-27-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-28:checked~.mode-switch label[for="mc-kap-28"],html[data-study-theme=dark] body.cirrus-mode #own-kap-28:checked~.mode-switch label[for="own-kap-28"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-28-0:checked~.options #option-kap-28-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-28-1:checked~.options #option-kap-28-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-28-2:checked~.options #option-kap-28-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-28-3:checked~.options #option-kap-28-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-29:checked~.mode-switch label[for="mc-kap-29"],html[data-study-theme=dark] body.cirrus-mode #own-kap-29:checked~.mode-switch label[for="own-kap-29"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-29-0:checked~.options #option-kap-29-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-29-1:checked~.options #option-kap-29-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-29-2:checked~.options #option-kap-29-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-29-3:checked~.options #option-kap-29-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-kap-30:checked~.mode-switch label[for="mc-kap-30"],html[data-study-theme=dark] body.cirrus-mode #own-kap-30:checked~.mode-switch label[for="own-kap-30"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-30-0:checked~.options #option-kap-30-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-30-1:checked~.options #option-kap-30-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-30-2:checked~.options #option-kap-30-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-kap-30-3:checked~.options #option-kap-30-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-1:checked~.mode-switch label[for="mc-val-1"],html[data-study-theme=dark] body.cirrus-mode #own-val-1:checked~.mode-switch label[for="own-val-1"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-1-0:checked~.options #option-val-1-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-1-1:checked~.options #option-val-1-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-1-2:checked~.options #option-val-1-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-1-3:checked~.options #option-val-1-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-2:checked~.mode-switch label[for="mc-val-2"],html[data-study-theme=dark] body.cirrus-mode #own-val-2:checked~.mode-switch label[for="own-val-2"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-2-0:checked~.options #option-val-2-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-2-1:checked~.options #option-val-2-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-2-2:checked~.options #option-val-2-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-2-3:checked~.options #option-val-2-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-3:checked~.mode-switch label[for="mc-val-3"],html[data-study-theme=dark] body.cirrus-mode #own-val-3:checked~.mode-switch label[for="own-val-3"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-3-0:checked~.options #option-val-3-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-3-1:checked~.options #option-val-3-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-3-2:checked~.options #option-val-3-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-3-3:checked~.options #option-val-3-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-4:checked~.mode-switch label[for="mc-val-4"],html[data-study-theme=dark] body.cirrus-mode #own-val-4:checked~.mode-switch label[for="own-val-4"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-4-0:checked~.options #option-val-4-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-4-1:checked~.options #option-val-4-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-4-2:checked~.options #option-val-4-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-4-3:checked~.options #option-val-4-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-5:checked~.mode-switch label[for="mc-val-5"],html[data-study-theme=dark] body.cirrus-mode #own-val-5:checked~.mode-switch label[for="own-val-5"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-5-0:checked~.options #option-val-5-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-5-1:checked~.options #option-val-5-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-5-2:checked~.options #option-val-5-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-5-3:checked~.options #option-val-5-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-6:checked~.mode-switch label[for="mc-val-6"],html[data-study-theme=dark] body.cirrus-mode #own-val-6:checked~.mode-switch label[for="own-val-6"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-6-0:checked~.options #option-val-6-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-6-1:checked~.options #option-val-6-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-6-2:checked~.options #option-val-6-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-6-3:checked~.options #option-val-6-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-7:checked~.mode-switch label[for="mc-val-7"],html[data-study-theme=dark] body.cirrus-mode #own-val-7:checked~.mode-switch label[for="own-val-7"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-7-0:checked~.options #option-val-7-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-7-1:checked~.options #option-val-7-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-7-2:checked~.options #option-val-7-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-7-3:checked~.options #option-val-7-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-8:checked~.mode-switch label[for="mc-val-8"],html[data-study-theme=dark] body.cirrus-mode #own-val-8:checked~.mode-switch label[for="own-val-8"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-8-0:checked~.options #option-val-8-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-8-1:checked~.options #option-val-8-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-8-2:checked~.options #option-val-8-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-8-3:checked~.options #option-val-8-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-9:checked~.mode-switch label[for="mc-val-9"],html[data-study-theme=dark] body.cirrus-mode #own-val-9:checked~.mode-switch label[for="own-val-9"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-9-0:checked~.options #option-val-9-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-9-1:checked~.options #option-val-9-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-9-2:checked~.options #option-val-9-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-9-3:checked~.options #option-val-9-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-10:checked~.mode-switch label[for="mc-val-10"],html[data-study-theme=dark] body.cirrus-mode #own-val-10:checked~.mode-switch label[for="own-val-10"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-10-0:checked~.options #option-val-10-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-10-1:checked~.options #option-val-10-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-10-2:checked~.options #option-val-10-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-10-3:checked~.options #option-val-10-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-11:checked~.mode-switch label[for="mc-val-11"],html[data-study-theme=dark] body.cirrus-mode #own-val-11:checked~.mode-switch label[for="own-val-11"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-11-0:checked~.options #option-val-11-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-11-1:checked~.options #option-val-11-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-11-2:checked~.options #option-val-11-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-11-3:checked~.options #option-val-11-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-12:checked~.mode-switch label[for="mc-val-12"],html[data-study-theme=dark] body.cirrus-mode #own-val-12:checked~.mode-switch label[for="own-val-12"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-12-0:checked~.options #option-val-12-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-12-1:checked~.options #option-val-12-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-12-2:checked~.options #option-val-12-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-12-3:checked~.options #option-val-12-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-13:checked~.mode-switch label[for="mc-val-13"],html[data-study-theme=dark] body.cirrus-mode #own-val-13:checked~.mode-switch label[for="own-val-13"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-13-0:checked~.options #option-val-13-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-13-1:checked~.options #option-val-13-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-13-2:checked~.options #option-val-13-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-13-3:checked~.options #option-val-13-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-14:checked~.mode-switch label[for="mc-val-14"],html[data-study-theme=dark] body.cirrus-mode #own-val-14:checked~.mode-switch label[for="own-val-14"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-14-0:checked~.options #option-val-14-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-14-1:checked~.options #option-val-14-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-14-2:checked~.options #option-val-14-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-14-3:checked~.options #option-val-14-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-15:checked~.mode-switch label[for="mc-val-15"],html[data-study-theme=dark] body.cirrus-mode #own-val-15:checked~.mode-switch label[for="own-val-15"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-15-0:checked~.options #option-val-15-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-15-1:checked~.options #option-val-15-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-15-2:checked~.options #option-val-15-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-15-3:checked~.options #option-val-15-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-16:checked~.mode-switch label[for="mc-val-16"],html[data-study-theme=dark] body.cirrus-mode #own-val-16:checked~.mode-switch label[for="own-val-16"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-16-0:checked~.options #option-val-16-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-16-1:checked~.options #option-val-16-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-16-2:checked~.options #option-val-16-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-16-3:checked~.options #option-val-16-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-17:checked~.mode-switch label[for="mc-val-17"],html[data-study-theme=dark] body.cirrus-mode #own-val-17:checked~.mode-switch label[for="own-val-17"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-17-0:checked~.options #option-val-17-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-17-1:checked~.options #option-val-17-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-17-2:checked~.options #option-val-17-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-17-3:checked~.options #option-val-17-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-18:checked~.mode-switch label[for="mc-val-18"],html[data-study-theme=dark] body.cirrus-mode #own-val-18:checked~.mode-switch label[for="own-val-18"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-18-0:checked~.options #option-val-18-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-18-1:checked~.options #option-val-18-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-18-2:checked~.options #option-val-18-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-18-3:checked~.options #option-val-18-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-19:checked~.mode-switch label[for="mc-val-19"],html[data-study-theme=dark] body.cirrus-mode #own-val-19:checked~.mode-switch label[for="own-val-19"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-19-0:checked~.options #option-val-19-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-19-1:checked~.options #option-val-19-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-19-2:checked~.options #option-val-19-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-19-3:checked~.options #option-val-19-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-20:checked~.mode-switch label[for="mc-val-20"],html[data-study-theme=dark] body.cirrus-mode #own-val-20:checked~.mode-switch label[for="own-val-20"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-20-0:checked~.options #option-val-20-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-20-1:checked~.options #option-val-20-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-20-2:checked~.options #option-val-20-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-20-3:checked~.options #option-val-20-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-21:checked~.mode-switch label[for="mc-val-21"],html[data-study-theme=dark] body.cirrus-mode #own-val-21:checked~.mode-switch label[for="own-val-21"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-21-0:checked~.options #option-val-21-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-21-1:checked~.options #option-val-21-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-21-2:checked~.options #option-val-21-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-21-3:checked~.options #option-val-21-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-22:checked~.mode-switch label[for="mc-val-22"],html[data-study-theme=dark] body.cirrus-mode #own-val-22:checked~.mode-switch label[for="own-val-22"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-22-0:checked~.options #option-val-22-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-22-1:checked~.options #option-val-22-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-22-2:checked~.options #option-val-22-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-22-3:checked~.options #option-val-22-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-23:checked~.mode-switch label[for="mc-val-23"],html[data-study-theme=dark] body.cirrus-mode #own-val-23:checked~.mode-switch label[for="own-val-23"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-23-0:checked~.options #option-val-23-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-23-1:checked~.options #option-val-23-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-23-2:checked~.options #option-val-23-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-23-3:checked~.options #option-val-23-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-24:checked~.mode-switch label[for="mc-val-24"],html[data-study-theme=dark] body.cirrus-mode #own-val-24:checked~.mode-switch label[for="own-val-24"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-24-0:checked~.options #option-val-24-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-24-1:checked~.options #option-val-24-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-24-2:checked~.options #option-val-24-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-24-3:checked~.options #option-val-24-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-25:checked~.mode-switch label[for="mc-val-25"],html[data-study-theme=dark] body.cirrus-mode #own-val-25:checked~.mode-switch label[for="own-val-25"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-25-0:checked~.options #option-val-25-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-25-1:checked~.options #option-val-25-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-25-2:checked~.options #option-val-25-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-25-3:checked~.options #option-val-25-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-26:checked~.mode-switch label[for="mc-val-26"],html[data-study-theme=dark] body.cirrus-mode #own-val-26:checked~.mode-switch label[for="own-val-26"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-26-0:checked~.options #option-val-26-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-26-1:checked~.options #option-val-26-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-26-2:checked~.options #option-val-26-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-26-3:checked~.options #option-val-26-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-27:checked~.mode-switch label[for="mc-val-27"],html[data-study-theme=dark] body.cirrus-mode #own-val-27:checked~.mode-switch label[for="own-val-27"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-27-0:checked~.options #option-val-27-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-27-1:checked~.options #option-val-27-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-27-2:checked~.options #option-val-27-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-27-3:checked~.options #option-val-27-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-28:checked~.mode-switch label[for="mc-val-28"],html[data-study-theme=dark] body.cirrus-mode #own-val-28:checked~.mode-switch label[for="own-val-28"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-28-0:checked~.options #option-val-28-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-28-1:checked~.options #option-val-28-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-28-2:checked~.options #option-val-28-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-28-3:checked~.options #option-val-28-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-29:checked~.mode-switch label[for="mc-val-29"],html[data-study-theme=dark] body.cirrus-mode #own-val-29:checked~.mode-switch label[for="own-val-29"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-29-0:checked~.options #option-val-29-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-29-1:checked~.options #option-val-29-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-29-2:checked~.options #option-val-29-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-29-3:checked~.options #option-val-29-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-val-30:checked~.mode-switch label[for="mc-val-30"],html[data-study-theme=dark] body.cirrus-mode #own-val-30:checked~.mode-switch label[for="own-val-30"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-30-0:checked~.options #option-val-30-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-30-1:checked~.options #option-val-30-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-30-2:checked~.options #option-val-30-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-val-30-3:checked~.options #option-val-30-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-1:checked~.mode-switch label[for="mc-nvw-1"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-1:checked~.mode-switch label[for="own-nvw-1"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-1-0:checked~.options #option-nvw-1-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-1-1:checked~.options #option-nvw-1-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-1-2:checked~.options #option-nvw-1-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-1-3:checked~.options #option-nvw-1-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-2:checked~.mode-switch label[for="mc-nvw-2"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-2:checked~.mode-switch label[for="own-nvw-2"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-2-0:checked~.options #option-nvw-2-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-2-1:checked~.options #option-nvw-2-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-2-2:checked~.options #option-nvw-2-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-2-3:checked~.options #option-nvw-2-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-3:checked~.mode-switch label[for="mc-nvw-3"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-3:checked~.mode-switch label[for="own-nvw-3"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-3-0:checked~.options #option-nvw-3-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-3-1:checked~.options #option-nvw-3-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-3-2:checked~.options #option-nvw-3-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-3-3:checked~.options #option-nvw-3-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-4:checked~.mode-switch label[for="mc-nvw-4"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-4:checked~.mode-switch label[for="own-nvw-4"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-4-0:checked~.options #option-nvw-4-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-4-1:checked~.options #option-nvw-4-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-4-2:checked~.options #option-nvw-4-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-4-3:checked~.options #option-nvw-4-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-5:checked~.mode-switch label[for="mc-nvw-5"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-5:checked~.mode-switch label[for="own-nvw-5"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-5-0:checked~.options #option-nvw-5-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-5-1:checked~.options #option-nvw-5-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-5-2:checked~.options #option-nvw-5-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-5-3:checked~.options #option-nvw-5-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-6:checked~.mode-switch label[for="mc-nvw-6"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-6:checked~.mode-switch label[for="own-nvw-6"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-6-0:checked~.options #option-nvw-6-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-6-1:checked~.options #option-nvw-6-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-6-2:checked~.options #option-nvw-6-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-6-3:checked~.options #option-nvw-6-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-7:checked~.mode-switch label[for="mc-nvw-7"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-7:checked~.mode-switch label[for="own-nvw-7"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-7-0:checked~.options #option-nvw-7-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-7-1:checked~.options #option-nvw-7-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-7-2:checked~.options #option-nvw-7-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-7-3:checked~.options #option-nvw-7-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-8:checked~.mode-switch label[for="mc-nvw-8"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-8:checked~.mode-switch label[for="own-nvw-8"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-8-0:checked~.options #option-nvw-8-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-8-1:checked~.options #option-nvw-8-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-8-2:checked~.options #option-nvw-8-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-8-3:checked~.options #option-nvw-8-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-9:checked~.mode-switch label[for="mc-nvw-9"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-9:checked~.mode-switch label[for="own-nvw-9"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-9-0:checked~.options #option-nvw-9-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-9-1:checked~.options #option-nvw-9-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-9-2:checked~.options #option-nvw-9-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-9-3:checked~.options #option-nvw-9-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-10:checked~.mode-switch label[for="mc-nvw-10"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-10:checked~.mode-switch label[for="own-nvw-10"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-10-0:checked~.options #option-nvw-10-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-10-1:checked~.options #option-nvw-10-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-10-2:checked~.options #option-nvw-10-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-10-3:checked~.options #option-nvw-10-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-11:checked~.mode-switch label[for="mc-nvw-11"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-11:checked~.mode-switch label[for="own-nvw-11"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-11-0:checked~.options #option-nvw-11-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-11-1:checked~.options #option-nvw-11-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-11-2:checked~.options #option-nvw-11-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-11-3:checked~.options #option-nvw-11-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-12:checked~.mode-switch label[for="mc-nvw-12"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-12:checked~.mode-switch label[for="own-nvw-12"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-12-0:checked~.options #option-nvw-12-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-12-1:checked~.options #option-nvw-12-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-12-2:checked~.options #option-nvw-12-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-12-3:checked~.options #option-nvw-12-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-13:checked~.mode-switch label[for="mc-nvw-13"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-13:checked~.mode-switch label[for="own-nvw-13"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-13-0:checked~.options #option-nvw-13-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-13-1:checked~.options #option-nvw-13-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-13-2:checked~.options #option-nvw-13-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-13-3:checked~.options #option-nvw-13-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-14:checked~.mode-switch label[for="mc-nvw-14"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-14:checked~.mode-switch label[for="own-nvw-14"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-14-0:checked~.options #option-nvw-14-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-14-1:checked~.options #option-nvw-14-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-14-2:checked~.options #option-nvw-14-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-14-3:checked~.options #option-nvw-14-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-15:checked~.mode-switch label[for="mc-nvw-15"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-15:checked~.mode-switch label[for="own-nvw-15"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-15-0:checked~.options #option-nvw-15-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-15-1:checked~.options #option-nvw-15-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-15-2:checked~.options #option-nvw-15-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-15-3:checked~.options #option-nvw-15-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-16:checked~.mode-switch label[for="mc-nvw-16"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-16:checked~.mode-switch label[for="own-nvw-16"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-16-0:checked~.options #option-nvw-16-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-16-1:checked~.options #option-nvw-16-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-16-2:checked~.options #option-nvw-16-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-16-3:checked~.options #option-nvw-16-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-17:checked~.mode-switch label[for="mc-nvw-17"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-17:checked~.mode-switch label[for="own-nvw-17"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-17-0:checked~.options #option-nvw-17-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-17-1:checked~.options #option-nvw-17-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-17-2:checked~.options #option-nvw-17-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-17-3:checked~.options #option-nvw-17-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-18:checked~.mode-switch label[for="mc-nvw-18"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-18:checked~.mode-switch label[for="own-nvw-18"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-18-0:checked~.options #option-nvw-18-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-18-1:checked~.options #option-nvw-18-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-18-2:checked~.options #option-nvw-18-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-18-3:checked~.options #option-nvw-18-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-19:checked~.mode-switch label[for="mc-nvw-19"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-19:checked~.mode-switch label[for="own-nvw-19"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-19-0:checked~.options #option-nvw-19-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-19-1:checked~.options #option-nvw-19-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-19-2:checked~.options #option-nvw-19-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-19-3:checked~.options #option-nvw-19-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-20:checked~.mode-switch label[for="mc-nvw-20"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-20:checked~.mode-switch label[for="own-nvw-20"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-20-0:checked~.options #option-nvw-20-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-20-1:checked~.options #option-nvw-20-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-20-2:checked~.options #option-nvw-20-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-20-3:checked~.options #option-nvw-20-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-21:checked~.mode-switch label[for="mc-nvw-21"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-21:checked~.mode-switch label[for="own-nvw-21"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-21-0:checked~.options #option-nvw-21-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-21-1:checked~.options #option-nvw-21-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-21-2:checked~.options #option-nvw-21-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-21-3:checked~.options #option-nvw-21-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-22:checked~.mode-switch label[for="mc-nvw-22"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-22:checked~.mode-switch label[for="own-nvw-22"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-22-0:checked~.options #option-nvw-22-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-22-1:checked~.options #option-nvw-22-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-22-2:checked~.options #option-nvw-22-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-22-3:checked~.options #option-nvw-22-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-23:checked~.mode-switch label[for="mc-nvw-23"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-23:checked~.mode-switch label[for="own-nvw-23"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-23-0:checked~.options #option-nvw-23-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-23-1:checked~.options #option-nvw-23-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-23-2:checked~.options #option-nvw-23-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-23-3:checked~.options #option-nvw-23-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-24:checked~.mode-switch label[for="mc-nvw-24"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-24:checked~.mode-switch label[for="own-nvw-24"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-24-0:checked~.options #option-nvw-24-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-24-1:checked~.options #option-nvw-24-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-24-2:checked~.options #option-nvw-24-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-24-3:checked~.options #option-nvw-24-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-25:checked~.mode-switch label[for="mc-nvw-25"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-25:checked~.mode-switch label[for="own-nvw-25"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-25-0:checked~.options #option-nvw-25-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-25-1:checked~.options #option-nvw-25-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-25-2:checked~.options #option-nvw-25-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-25-3:checked~.options #option-nvw-25-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-26:checked~.mode-switch label[for="mc-nvw-26"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-26:checked~.mode-switch label[for="own-nvw-26"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-26-0:checked~.options #option-nvw-26-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-26-1:checked~.options #option-nvw-26-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-26-2:checked~.options #option-nvw-26-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-26-3:checked~.options #option-nvw-26-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-27:checked~.mode-switch label[for="mc-nvw-27"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-27:checked~.mode-switch label[for="own-nvw-27"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-27-0:checked~.options #option-nvw-27-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-27-1:checked~.options #option-nvw-27-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-27-2:checked~.options #option-nvw-27-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-27-3:checked~.options #option-nvw-27-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-28:checked~.mode-switch label[for="mc-nvw-28"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-28:checked~.mode-switch label[for="own-nvw-28"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-28-0:checked~.options #option-nvw-28-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-28-1:checked~.options #option-nvw-28-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-28-2:checked~.options #option-nvw-28-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-28-3:checked~.options #option-nvw-28-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-29:checked~.mode-switch label[for="mc-nvw-29"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-29:checked~.mode-switch label[for="own-nvw-29"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-29-0:checked~.options #option-nvw-29-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-29-1:checked~.options #option-nvw-29-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-29-2:checked~.options #option-nvw-29-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-29-3:checked~.options #option-nvw-29-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-nvw-30:checked~.mode-switch label[for="mc-nvw-30"],html[data-study-theme=dark] body.cirrus-mode #own-nvw-30:checked~.mode-switch label[for="own-nvw-30"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-30-0:checked~.options #option-nvw-30-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-30-1:checked~.options #option-nvw-30-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-30-2:checked~.options #option-nvw-30-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-nvw-30-3:checked~.options #option-nvw-30-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-1:checked~.mode-switch label[for="mc-hk-1"],html[data-study-theme=dark] body.cirrus-mode #own-hk-1:checked~.mode-switch label[for="own-hk-1"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-1-0:checked~.options #option-hk-1-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-1-1:checked~.options #option-hk-1-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-1-2:checked~.options #option-hk-1-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-1-3:checked~.options #option-hk-1-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-2:checked~.mode-switch label[for="mc-hk-2"],html[data-study-theme=dark] body.cirrus-mode #own-hk-2:checked~.mode-switch label[for="own-hk-2"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-2-0:checked~.options #option-hk-2-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-2-1:checked~.options #option-hk-2-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-2-2:checked~.options #option-hk-2-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-2-3:checked~.options #option-hk-2-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-3:checked~.mode-switch label[for="mc-hk-3"],html[data-study-theme=dark] body.cirrus-mode #own-hk-3:checked~.mode-switch label[for="own-hk-3"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-3-0:checked~.options #option-hk-3-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-3-1:checked~.options #option-hk-3-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-3-2:checked~.options #option-hk-3-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-3-3:checked~.options #option-hk-3-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-4:checked~.mode-switch label[for="mc-hk-4"],html[data-study-theme=dark] body.cirrus-mode #own-hk-4:checked~.mode-switch label[for="own-hk-4"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-4-0:checked~.options #option-hk-4-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-4-1:checked~.options #option-hk-4-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-4-2:checked~.options #option-hk-4-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-4-3:checked~.options #option-hk-4-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-5:checked~.mode-switch label[for="mc-hk-5"],html[data-study-theme=dark] body.cirrus-mode #own-hk-5:checked~.mode-switch label[for="own-hk-5"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-5-0:checked~.options #option-hk-5-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-5-1:checked~.options #option-hk-5-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-5-2:checked~.options #option-hk-5-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-5-3:checked~.options #option-hk-5-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-6:checked~.mode-switch label[for="mc-hk-6"],html[data-study-theme=dark] body.cirrus-mode #own-hk-6:checked~.mode-switch label[for="own-hk-6"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-6-0:checked~.options #option-hk-6-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-6-1:checked~.options #option-hk-6-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-6-2:checked~.options #option-hk-6-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-6-3:checked~.options #option-hk-6-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-7:checked~.mode-switch label[for="mc-hk-7"],html[data-study-theme=dark] body.cirrus-mode #own-hk-7:checked~.mode-switch label[for="own-hk-7"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-7-0:checked~.options #option-hk-7-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-7-1:checked~.options #option-hk-7-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-7-2:checked~.options #option-hk-7-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-7-3:checked~.options #option-hk-7-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-8:checked~.mode-switch label[for="mc-hk-8"],html[data-study-theme=dark] body.cirrus-mode #own-hk-8:checked~.mode-switch label[for="own-hk-8"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-8-0:checked~.options #option-hk-8-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-8-1:checked~.options #option-hk-8-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-8-2:checked~.options #option-hk-8-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-8-3:checked~.options #option-hk-8-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-9:checked~.mode-switch label[for="mc-hk-9"],html[data-study-theme=dark] body.cirrus-mode #own-hk-9:checked~.mode-switch label[for="own-hk-9"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-9-0:checked~.options #option-hk-9-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-9-1:checked~.options #option-hk-9-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-9-2:checked~.options #option-hk-9-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-9-3:checked~.options #option-hk-9-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-10:checked~.mode-switch label[for="mc-hk-10"],html[data-study-theme=dark] body.cirrus-mode #own-hk-10:checked~.mode-switch label[for="own-hk-10"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-10-0:checked~.options #option-hk-10-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-10-1:checked~.options #option-hk-10-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-10-2:checked~.options #option-hk-10-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-10-3:checked~.options #option-hk-10-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-11:checked~.mode-switch label[for="mc-hk-11"],html[data-study-theme=dark] body.cirrus-mode #own-hk-11:checked~.mode-switch label[for="own-hk-11"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-11-0:checked~.options #option-hk-11-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-11-1:checked~.options #option-hk-11-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-11-2:checked~.options #option-hk-11-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-11-3:checked~.options #option-hk-11-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-12:checked~.mode-switch label[for="mc-hk-12"],html[data-study-theme=dark] body.cirrus-mode #own-hk-12:checked~.mode-switch label[for="own-hk-12"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-12-0:checked~.options #option-hk-12-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-12-1:checked~.options #option-hk-12-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-12-2:checked~.options #option-hk-12-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-12-3:checked~.options #option-hk-12-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-13:checked~.mode-switch label[for="mc-hk-13"],html[data-study-theme=dark] body.cirrus-mode #own-hk-13:checked~.mode-switch label[for="own-hk-13"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-13-0:checked~.options #option-hk-13-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-13-1:checked~.options #option-hk-13-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-13-2:checked~.options #option-hk-13-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-13-3:checked~.options #option-hk-13-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-14:checked~.mode-switch label[for="mc-hk-14"],html[data-study-theme=dark] body.cirrus-mode #own-hk-14:checked~.mode-switch label[for="own-hk-14"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-14-0:checked~.options #option-hk-14-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-14-1:checked~.options #option-hk-14-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-14-2:checked~.options #option-hk-14-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-14-3:checked~.options #option-hk-14-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-15:checked~.mode-switch label[for="mc-hk-15"],html[data-study-theme=dark] body.cirrus-mode #own-hk-15:checked~.mode-switch label[for="own-hk-15"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-15-0:checked~.options #option-hk-15-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-15-1:checked~.options #option-hk-15-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-15-2:checked~.options #option-hk-15-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-15-3:checked~.options #option-hk-15-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-16:checked~.mode-switch label[for="mc-hk-16"],html[data-study-theme=dark] body.cirrus-mode #own-hk-16:checked~.mode-switch label[for="own-hk-16"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-16-0:checked~.options #option-hk-16-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-16-1:checked~.options #option-hk-16-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-16-2:checked~.options #option-hk-16-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-16-3:checked~.options #option-hk-16-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-17:checked~.mode-switch label[for="mc-hk-17"],html[data-study-theme=dark] body.cirrus-mode #own-hk-17:checked~.mode-switch label[for="own-hk-17"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-17-0:checked~.options #option-hk-17-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-17-1:checked~.options #option-hk-17-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-17-2:checked~.options #option-hk-17-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-17-3:checked~.options #option-hk-17-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-18:checked~.mode-switch label[for="mc-hk-18"],html[data-study-theme=dark] body.cirrus-mode #own-hk-18:checked~.mode-switch label[for="own-hk-18"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-18-0:checked~.options #option-hk-18-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-18-1:checked~.options #option-hk-18-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-18-2:checked~.options #option-hk-18-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-18-3:checked~.options #option-hk-18-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-19:checked~.mode-switch label[for="mc-hk-19"],html[data-study-theme=dark] body.cirrus-mode #own-hk-19:checked~.mode-switch label[for="own-hk-19"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-19-0:checked~.options #option-hk-19-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-19-1:checked~.options #option-hk-19-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-19-2:checked~.options #option-hk-19-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-19-3:checked~.options #option-hk-19-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-20:checked~.mode-switch label[for="mc-hk-20"],html[data-study-theme=dark] body.cirrus-mode #own-hk-20:checked~.mode-switch label[for="own-hk-20"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-20-0:checked~.options #option-hk-20-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-20-1:checked~.options #option-hk-20-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-20-2:checked~.options #option-hk-20-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-20-3:checked~.options #option-hk-20-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-21:checked~.mode-switch label[for="mc-hk-21"],html[data-study-theme=dark] body.cirrus-mode #own-hk-21:checked~.mode-switch label[for="own-hk-21"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-21-0:checked~.options #option-hk-21-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-21-1:checked~.options #option-hk-21-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-21-2:checked~.options #option-hk-21-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-21-3:checked~.options #option-hk-21-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-22:checked~.mode-switch label[for="mc-hk-22"],html[data-study-theme=dark] body.cirrus-mode #own-hk-22:checked~.mode-switch label[for="own-hk-22"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-22-0:checked~.options #option-hk-22-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-22-1:checked~.options #option-hk-22-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-22-2:checked~.options #option-hk-22-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-22-3:checked~.options #option-hk-22-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-23:checked~.mode-switch label[for="mc-hk-23"],html[data-study-theme=dark] body.cirrus-mode #own-hk-23:checked~.mode-switch label[for="own-hk-23"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-23-0:checked~.options #option-hk-23-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-23-1:checked~.options #option-hk-23-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-23-2:checked~.options #option-hk-23-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-23-3:checked~.options #option-hk-23-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-24:checked~.mode-switch label[for="mc-hk-24"],html[data-study-theme=dark] body.cirrus-mode #own-hk-24:checked~.mode-switch label[for="own-hk-24"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-24-0:checked~.options #option-hk-24-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-24-1:checked~.options #option-hk-24-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-24-2:checked~.options #option-hk-24-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-24-3:checked~.options #option-hk-24-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-25:checked~.mode-switch label[for="mc-hk-25"],html[data-study-theme=dark] body.cirrus-mode #own-hk-25:checked~.mode-switch label[for="own-hk-25"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-25-0:checked~.options #option-hk-25-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-25-1:checked~.options #option-hk-25-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-25-2:checked~.options #option-hk-25-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-25-3:checked~.options #option-hk-25-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-26:checked~.mode-switch label[for="mc-hk-26"],html[data-study-theme=dark] body.cirrus-mode #own-hk-26:checked~.mode-switch label[for="own-hk-26"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-26-0:checked~.options #option-hk-26-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-26-1:checked~.options #option-hk-26-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-26-2:checked~.options #option-hk-26-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-26-3:checked~.options #option-hk-26-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-27:checked~.mode-switch label[for="mc-hk-27"],html[data-study-theme=dark] body.cirrus-mode #own-hk-27:checked~.mode-switch label[for="own-hk-27"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-27-0:checked~.options #option-hk-27-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-27-1:checked~.options #option-hk-27-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-27-2:checked~.options #option-hk-27-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-27-3:checked~.options #option-hk-27-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-28:checked~.mode-switch label[for="mc-hk-28"],html[data-study-theme=dark] body.cirrus-mode #own-hk-28:checked~.mode-switch label[for="own-hk-28"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-28-0:checked~.options #option-hk-28-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-28-1:checked~.options #option-hk-28-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-28-2:checked~.options #option-hk-28-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-28-3:checked~.options #option-hk-28-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-29:checked~.mode-switch label[for="mc-hk-29"],html[data-study-theme=dark] body.cirrus-mode #own-hk-29:checked~.mode-switch label[for="own-hk-29"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-29-0:checked~.options #option-hk-29-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-29-1:checked~.options #option-hk-29-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-29-2:checked~.options #option-hk-29-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-29-3:checked~.options #option-hk-29-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #mc-hk-30:checked~.mode-switch label[for="mc-hk-30"],html[data-study-theme=dark] body.cirrus-mode #own-hk-30:checked~.mode-switch label[for="own-hk-30"]{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-30-0:checked~.options #option-hk-30-0 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-30-1:checked~.options #option-hk-30-1 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-30-2:checked~.options #option-hk-30-2 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode #a-hk-30-3:checked~.options #option-hk-30-3 .bubble{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor{color:#e0ebf2;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-toolbar{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-toolgroup{border-right:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-button,html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-select{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-select{background:#152129;border-color:#3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-button:hover:not(:disabled){background:#1c2226;border-color:#3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-button[aria-pressed=true]{color:#8deccc;background:#182b23;border-color:#376c56}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-button:focus-visible,html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-select:focus-visible,html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-field input:focus-visible{outline:2px solid #2d5476}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-content{background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-content:focus{border-color:#2d5276;box-shadow:inset 0 0 0 1px #010304}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-content:empty:before{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-content blockquote{border-left:3px solid #45525e;background:#1b1f27}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-content pre{background:#1c1f26}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-content td,html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-content th{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-content th{background:#1c2127}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-count{color:#8deccc}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-status{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-panel{background:#1a2822}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-panel .cae-button{background:#152129;border-color:#3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-field{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor .cae-field input{border:1px solid #3b4a54;background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor.is-expanded{border:1px solid #3b4a54;box-shadow:0 0 0 20px #010304,0 10px 60px #01030433}
+html[data-study-theme=dark] body.cirrus-mode .cafa-answer-editor.is-readonly .cae-content{background:#1b2127;border-color:#3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-position{color:#98c0e1}
+html[data-study-theme=dark] body.cirrus-mode .exam-position strong{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-cirrus-actions .btn{border:2px solid #3b4a54;background:#152129;color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-cirrus-actions .btn[data-exam-action="submit"]{border-color:#2d765d;color:#8deccb}
+html[data-study-theme=dark] body.cirrus-mode .exam-cirrus-actions .btn[aria-pressed="true"]{background:#2c2416;border-color:#76592d}
+html[data-study-theme=dark] body.cirrus-mode .exam-document td,html[data-study-theme=dark] body.cirrus-mode .exam-document th{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-document th{background:#1e1c27}
+html[data-study-theme=dark] body.cirrus-mode .exam-modal-head{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-review-case{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-review-case summary{color:var(--study-ink)}
+html[data-study-theme=dark] body.cirrus-mode .exam-switch select{border:1px solid #3b4a54;background:#152129;color:var(--study-ink)}
+html[data-study-theme=dark] body.cirrus-mode .exam-meta-strip{background:#1e1b28;border:1px solid #494261;color:var(--study-ink)}
+html[data-study-theme=dark] body.cirrus-mode .exam-meta-strip strong{color:var(--study-accent)}
+html[data-study-theme=dark] body.cirrus-mode .exam-table-wrap{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-table th{background:#1e1e25;color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-name{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .exam-pill{color:#8deccb;background:#172b21}
+html[data-study-theme=dark] body.cirrus-mode .exam-empty{background:#152129;border:1px dashed #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-banner{border:1px solid #3d6651;background:#162c1f}
+html[data-study-theme=dark] body.cirrus-mode .exam-paper{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-instructions{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-extra{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-clock{border-left:1px solid #3b4a5440}
+html[data-study-theme=dark] body.cirrus-mode .exam-clock span{color:#b5afcb}
+html[data-study-theme=dark] body.cirrus-mode .exam-clock.is-urgent strong{color:#eccf8d}
+html[data-study-theme=dark] body.cirrus-mode .exam-work-head{background:#1e1929}
+html[data-study-theme=dark] body.cirrus-mode .exam-progress button{border:1px solid #3b4a54;color:#adbdc9;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-progress button.is-answered{background:#172b21;border-color:#396a52;color:#8deccb}
+html[data-study-theme=dark] body.cirrus-mode .exam-progress button.is-marked::after{color:#ecc38d}
+html[data-study-theme=dark] body.cirrus-mode .exam-answer-label{color:var(--study-ink)}
+html[data-study-theme=dark] body.cirrus-mode .exam-options label{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-options label:has(input:checked){background:#162c20}
+html[data-study-theme=dark] body.cirrus-mode .exam-save-status.is-error{color:#eb8f8f}
+html[data-study-theme=dark] body.cirrus-mode .exam-warning{background:#2c2616;border:1px solid #76622d;color:#ecce8d}
+html[data-study-theme=dark] body.cirrus-mode .exam-review-answer{background:#152129;border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-review-answer th,html[data-study-theme=dark] body.cirrus-mode .exam-review-answer td{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-solution{background:#182a21;border:1px solid #3b694f}
+html[data-study-theme=dark] body.cirrus-mode .exam-dialog{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-dialog::backdrop{background:#212b3880}
+html[data-study-theme=dark] body.cirrus-mode .exam-dashboard-title{background:#152129;border-bottom:1px solid #3b4a54;box-shadow:0 1px 2px #01030408}
+html[data-study-theme=dark] body.cirrus-mode .exam-dashboard-title h1{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-dashboard-content{color:#98c2e2}
+html[data-study-theme=dark] body.cirrus-mode .exam-breadcrumb{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode.exam-dashboard .exam-switch select{border:2px solid #2d5476;color:#a0bfd9}
+html[data-study-theme=dark] body.cirrus-mode.exam-dashboard .exam-section h2{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode.exam-dashboard .exam-table-wrap{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode.exam-dashboard .exam-table th{color:#adbdc9;background:#152129;border-color:#3b4a54}
+html[data-study-theme=dark] body.cirrus-mode.exam-dashboard .exam-table td{border-color:#3b4a54;color:#99c1e1}
+html[data-study-theme=dark] body.cirrus-mode.exam-dashboard .exam-name{color:#99c1e1}
+html[data-study-theme=dark] body.cirrus-mode.exam-dashboard .exam-table .exam-sub{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode.exam-dashboard .exam-empty-cell{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-empty-row{background:#152129;border:1px solid #3b4a54;color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-results-filters{border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-results-filters select{background:#152129;color:#99c1e1;border:2px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-dashboard-help .exam-local-note{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-runner-title{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode.exam-running .exam-work-head{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-question-identity{color:#98c2e2}
+html[data-study-theme=dark] body.cirrus-mode .exam-question-identity .qnum{background:#ae5113;color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode.exam-running .exam-question-body{color:#99c1e1}
+html[data-study-theme=dark] body.cirrus-mode.exam-running .exam-answer-label{color:#99c1e1}
+html[data-study-theme=dark] body.cirrus-mode.exam-running .exam-footer{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-overview-section h3{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-source-document{color:#e0ebf2;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-source-document h2,html[data-study-theme=dark] body.cirrus-mode .exam-source-document h3,html[data-study-theme=dark] body.cirrus-mode .exam-source-document h4{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .exam-source-document table{color:#e0ebf2;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-source-document td,html[data-study-theme=dark] body.cirrus-mode .exam-source-document th{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-source-document caption{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .exam-source-points,html[data-study-theme=dark] body.cirrus-mode .exam-source-document .exam-source-points{color:#ec8d8d}
+html[data-study-theme=dark] body.cirrus-mode .exam-source-document .stock-matrix{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .exam-source-document .stock-matrix th,html[data-study-theme=dark] body.cirrus-mode .exam-source-document .stock-matrix td{border-color:#3b4a54;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-solution{background:#152129;border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .exam-solution > summary{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode.exam-running .exam-question-top h2{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .exam-review-case{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-clock{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .exam-time-badge{border:1px solid #76642e;background:#2c2716}
+html[data-study-theme=dark] body.cirrus-mode .exam-clock .exam-time-badge span{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .exam-clock .exam-time-badge strong{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .exam-clock.is-urgent .exam-time-badge{background:#2c2416;border-color:#765a2d}
+html[data-study-theme=dark] body.cirrus-mode .exam-clock.is-urgent .exam-time-badge strong{color:#ecb08d}
+html[data-study-theme=dark] body.cirrus-mode .cafa-profile{color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode.exam-running .exam-question-top h2{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode.exam-running .exam-question-body{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .journal-table{border:2px solid #3b4a54;background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .journal-table th,html[data-study-theme=dark] body.cirrus-mode .journal-table td{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .journal-table th{background:#121e25}
+html[data-study-theme=dark] body.cirrus-mode .journal-table input{border:1px solid #3b4a54;background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .journal-table input:focus{outline:2px solid #2d5476}
+html[data-study-theme=dark] body.cirrus-mode .exam-results-panel{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .result-tabs{background:#152129;border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .result-tabs .btn{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .result-tabs .btn[aria-selected="true"]{border-bottom-color:#3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .result-summary .small{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .result-answers h2{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .result-list-head{border-top:3px solid #3b4a54;border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .result-group h3{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .result-score{border:1px solid #3b4a54;background:#121e25;color:#9dc2dc}
+html[data-study-theme=dark] body.cirrus-mode .result-score.full{background:#182a20}
+html[data-study-theme=dark] body.cirrus-mode .result-score.zero{background:#2c1916}
+html[data-study-theme=dark] body.cirrus-mode .result-score.partial{background:#2c2516;border-color:#765e2d}
+html[data-study-theme=dark] body.cirrus-mode .result-question.exam-review-item{border-bottom:1px solid #44535f}
+html[data-study-theme=dark] body.cirrus-mode .result-question>summary{background:#152129;color:#96c4e3}
+html[data-study-theme=dark] body.cirrus-mode .result-question>summary:hover,html[data-study-theme=dark] body.cirrus-mode .result-question>summary:focus-visible{background:#172b25}
+html[data-study-theme=dark] body.cirrus-mode .result-expanded{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-review-answer{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .result-bottom-actions{border-top:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .self-score input{border:1px solid #3b4a54;background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .self-score [data-score-saved]{color:#8decc9}
+html[data-study-theme=dark] body.cirrus-mode .score-report{border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .score-report th,html[data-study-theme=dark] body.cirrus-mode .score-report td{border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .score-report thead th{background:#152129;color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .report-track{background:#121e25}
+html[data-study-theme=dark] body.cirrus-mode .report-track i{background:#0e815e}
+html[data-study-theme=dark] body.cirrus-mode .report-legend{color:#8decd0}
+html[data-study-theme=dark] body.cirrus-mode .review-feedback-banner{background:#161c2c;color:#99c1e1}
+html[data-study-theme=dark] body.cirrus-mode .review-detail-main{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .review-toolbar{background:#121e25}
+html[data-study-theme=dark] body.cirrus-mode .review-toolbar select{background:#152129;color:#99c1e1}
+html[data-study-theme=dark] body.cirrus-mode .review-prompt{background:#121e25;border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .review-prompt .exam-source-question{color:#95c5e4}
+html[data-study-theme=dark] body.cirrus-mode .review-scoring{background:#152129;border:1px solid #3b4a54;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .review-resizer{color:#adbdc9;background:#1d1d25}
+html[data-study-theme=dark] body.cirrus-mode .review-resizer:hover,html[data-study-theme=dark] body.cirrus-mode .review-resizer:focus-visible{background:#182b23;outline:2px solid #2d7660}
+html[data-study-theme=dark] body.cirrus-mode .review-sidebar{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .review-side-tabs{border-bottom:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .review-side-tabs button{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .review-side-tabs button[aria-selected="true"]{border-bottom-color:#2d7660;color:#8deccb}
+html[data-study-theme=dark] body.cirrus-mode .review-side-content h2{color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode #overview-dialog.compact-overview-dialog,html[data-study-theme=dark] body.cirrus-mode #exam-info-dialog.compact-overview-dialog{color:#e0ebf2;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-dialog::backdrop{background:rgba(33,43,56,.72)}
+html[data-study-theme=dark] body.cirrus-mode #overview-dialog.compact-overview-dialog .dialog-header,html[data-study-theme=dark] body.cirrus-mode #exam-info-dialog.compact-overview-dialog .exam-modal-head{border-bottom:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode #overview-dialog.compact-overview-dialog .dialog-header h2,html[data-study-theme=dark] body.cirrus-mode #exam-info-dialog.compact-overview-dialog .exam-modal-head h2{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode #overview-dialog.compact-overview-dialog .dialog-close,html[data-study-theme=dark] body.cirrus-mode #exam-info-dialog.compact-overview-dialog .exam-modal-head [data-close-info]{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-remaining strong{background:#ae5313;color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-item{background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-item:hover{background:#182b25}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-item:focus-visible{outline:2px solid #2d5576}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-number{background:#ae5313;color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-item.is-answered .compact-overview-number{background:#119d91}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-divider:before{background:#121e25}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-flag{color:#adbdc9;background:#152129}
+html[data-study-theme=dark] body.cirrus-mode #overview-dialog.compact-overview-dialog .dialog-footer,html[data-study-theme=dark] body.cirrus-mode .compact-overview-footer{border-top:1px solid #3b4a54;background:#121e25}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-range{border:1px solid #3b4a54;background:#121e25;color:#95c7e5}
+html[data-study-theme=dark] body.cirrus-mode .compact-overview-dialog .compact-overview-footer .btn.primary,html[data-study-theme=dark] body.cirrus-mode #overview-dialog.compact-overview-dialog .dialog-footer .btn.primary{background:#0e815e;color:#f0f7fc;border:1px solid #2d7660}
+/* css/cirrus-integration.css */
+html[data-study-theme=dark] .sra-formula-entry{background:#1d1b27;border:1px solid #494261;color:#adbdc9}
+html[data-study-theme=dark] .formula-topic{background:#152129;border:1px solid #48455e}
+html[data-study-theme=dark] .formula-topic:hover{border-color:#2d765d}
+html[data-study-theme=dark] .formula-topic p{color:#adbdc9}
+html[data-study-theme=dark] .formula-topic>span{color:#8deccc}
+html[data-study-theme=dark] body.cirrus-mode .skip{background:#152129}
+html[data-study-theme=dark] body.cirrus-mode .exam-question-identity .btn{border:2px solid #3b4a54;background:#152129;color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .exam-inline-feedback{border:1px solid #3d6655;border-left:4px solid #2d765d;background:#182a21;color:#abcec1}
+html[data-study-theme=dark] body.cirrus-mode .exam-inline-feedback h3{color:#97e3ca}
+html[data-study-theme=dark] body.cirrus-mode .exam-inline-feedback>.exam-source-document{background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.cirrus-mode .exam-practice-duration input{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body #calculator{border:1px solid #3b4a54;background:#152129;color:#e0ebf2;box-shadow:0 6px 28px #01030440}
+html[data-study-theme=dark] body #calculator .calc-head{background:#212b38;color:#f0f7fc}
+html[data-study-theme=dark] body #calculator .calc-head button:hover{background:#15212920}
+html[data-study-theme=dark] body #calculator :focus-visible{outline:2px solid #2d765d}
+html[data-study-theme=dark] body #calculator .calc-head button:focus-visible{outline:2px solid #3b4a54}
+html[data-study-theme=dark] body #calculator input{border:1px solid #444b5f;background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body #calculator .calc-keys button{border:1px solid #45495e;background:#1d2026;color:#e0ebf2}
+html[data-study-theme=dark] body #calculator .calc-keys button:hover{background:#1b1f27}
+html[data-study-theme=dark] body #calculator .calc-keys button[data-key="="]{background:#0e8159;color:#f0f7fc;border-color:#2d765d}
+html[data-study-theme=dark] body #calculator .calc-help{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode #toast{background:#212b38;color:#f0f7fc}
+html[data-study-theme=dark] body.cirrus-mode .exam-results-panel{background:#152129;border:1px solid #3b4a54}
+html[data-study-theme=dark] body.cirrus-mode .result-summary .small{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .result-list-head{border:1px solid #45535e}
+html[data-study-theme=dark] body.cirrus-mode .result-group{border-left:1px solid #45535e;border-right:1px solid #45535e}
+html[data-study-theme=dark] body.cirrus-mode .result-question.exam-review-item{background:#152129;border-bottom:1px solid #45535e}
+html[data-study-theme=dark] body.cirrus-mode .result-question:hover,html[data-study-theme=dark] body.cirrus-mode .result-question:focus-within{background:#172b27}
+html[data-study-theme=dark] body.cirrus-mode .result-question>summary:focus-visible{outline:2px solid #2d7660}
+html[data-study-theme=dark] body.cirrus-mode .result-score{border:2px solid #3b4a54;background:#121e25}
+html[data-study-theme=dark] body.cirrus-mode .result-score.full{background:#182a21;border-color:#2d762d}
+html[data-study-theme=dark] body.cirrus-mode .result-score.partial{background:#2c2416;border-color:#755f2e}
+html[data-study-theme=dark] body.cirrus-mode .result-score.zero{background:#2c1816;border-color:#762d2d}
+html[data-study-theme=dark] body.cirrus-mode .result-expanded h4{color:#abc2cf}
+html[data-study-theme=dark] body.cirrus-mode .result-inline-answer{background:#152129;border:1px solid #45535e;color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .result-inline-actions .btn{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .result-print{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode .report-legend{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode #exam-app .answer-audit{border:1px solid #76612d;border-left:4px solid #765f2d;background:#2c2516;color:#cac2af}
+html[data-study-theme=dark] body.cirrus-mode #exam-app .answer-audit .answer-audit-meta{color:#adbdc9}
+html[data-study-theme=dark] body.cirrus-mode #exam-app .answer-audit-checked{border-color:#445f4e;border-left-color:#3c6747;background:#1a281d}
+/* vendor/study-ui/header.css */
+html[data-study-theme=dark] body.study-shell .study-topbar{background:#212b38;color:#f0f7fc;box-shadow:0 1px 2px #01030433}
+html[data-study-theme=dark] body.study-shell .study-topbar .study-brand{color:#f0f7fc}
+html[data-study-theme=dark] body.study-shell .study-topbar .brand-sub{color:#f0f7fc99}
+html[data-study-theme=dark] body.study-shell .study-topbar .top-controls button:hover{background:#15212918}
+html[data-study-theme=dark] body.study-shell .study-topbar .cafa-profile{color:#f0f7fc}
+html[data-study-theme=dark] body.study-shell #history-back{background:var(--study-surface,#152129);color:var(--study-muted,#adbdc9);border:1px solid var(--study-line,#38526b)}
+html[data-study-theme=dark] body.study-shell .study-navigation-row{background:var(--study-surface,#152129);border-bottom:1px solid var(--study-line,#38526b)}
+/* vendor/study-ui/theme.css */
+html[data-study-theme=dark] body.study-shell .study-theme-control>summary{border:1px solid #3b4a5455}
+html[data-study-theme=dark] body.study-shell .study-theme-menu{box-shadow:0 12px 40px #01030436}
+@media (max-width:760px){html[data-study-theme=dark] body.study-shell .study-theme-control>summary{border-color:#3b4a5444}}
+/* Semantic colours complete the literal-colour conversion; source pages stay intact. */
+html[data-study-theme=dark],html[data-study-theme=dark] body.study-shell{--ink:#e1eaf0;--text:#e1eaf0;--muted:#a8b8c4;--line:#354852;--paper:#152129;--wash:#10191f;--bg:#10191f;--purple:#283143;--green:#13856a;--green-dark:#07543c;--danger:#f0aaa7;--bad:#f0aaa7;--study-purple:#283143;--study-green:#13856a;--study-green-dark:#70dec0;--study-surface:#152129;--study-canvas:#10191f;--study-subtle:#10191f;--study-wash:#10191f;--study-ink:#e5edf3;--study-muted:#a7b7c3;--study-title:#d7c7da;--study-line:#354852;--study-border:#354852;--study-accent:#70dec0;--study-focus:#8dcaec;--study-full-bg:#163f30;--study-full-border:#4fbd9a;--study-partial-bg:#40331e;--study-partial-border:#c7a263;--study-zero-bg:#45282a;--study-zero-border:#d29493;--study-ungraded-bg:#202c35;--study-ungraded-border:#73828d}
+html[data-study-theme=dark] body{background:#10191f;color:#e1eaf0}
+html[data-study-theme=dark] body.study-shell .study-topbar{background:#283143;color:#f0f7fc}
+html[data-study-theme=dark] body.study-shell .study-topbar .study-brand{color:#f0f7fc}
+html[data-study-theme=dark] body.study-shell .study-topbar .brand-sub{color:#f0f7fc99}
+html[data-study-theme=dark] input,html[data-study-theme=dark] select,html[data-study-theme=dark] textarea,html[data-study-theme=dark] [contenteditable=true]{color:#e0e9f0;background-color:#13212a;caret-color:#c6efe1}
+html[data-study-theme=dark] .btn.primary,html[data-study-theme=dark] .study-btn.primary,html[data-study-theme=dark] body.study-shell .study-btn.primary{background:#07674a;border-color:#299576;color:#fff}
+html[data-study-theme=dark] .study-theme-menu button{color:var(--study-ink);background:var(--study-wash)}
+html[data-study-theme=dark] .mc-options label:has(input:checked) .mc-letter{color:#fff;background:#514267}
+html[data-study-theme=dark] .sra-term,html[data-study-theme=dark] [data-formula-help]{color:#b8e3fa}
+html[data-study-theme=dark] body.study-shell .lab svg text{fill:#c6d4de}
+html[data-study-theme=dark] .lab svg :is([stroke="#ddd"],[stroke="#e5e7eb"],[stroke="#e2e7eb"],[stroke="#edf0f2"],[stroke="#e4e9ed"]){stroke:#354852}
+html[data-study-theme=dark] .lab svg [stroke="#444159"]{stroke:#b7acd8}
+html[data-study-theme=dark] .lab svg [fill="#444159"]{fill:#b7acd8}
+html[data-study-theme=dark] .lab svg [stroke="#008859"]{stroke:#67d4ac}
+html[data-study-theme=dark] .lab svg [fill="#008859"]{fill:#67d4ac}
+html[data-study-theme=dark] .lab svg [stroke="#c85209"]{stroke:#edaa70}
+html[data-study-theme=dark] .lab svg [fill="#c85209"]{fill:#edaa70}
+html[data-study-theme=dark] .lab svg [stroke="#176fad"]{stroke:#88c4ef}
+html[data-study-theme=dark] .lab svg [fill="#176fad"]{fill:#88c4ef}
+html[data-study-theme=dark] body.study-shell .lab .key{border-color:#67d4ac}
+html[data-study-theme=dark] body.study-shell .lab .key.dot{background:#b7acd8}
+html[data-study-theme=dark] body.study-shell .lab .key.residual{border-color:#edaa70}
+/* Inline legend colours describe the same series as the SVG attributes. */
+html[data-study-theme=dark] body.study-shell .lab .key[style*="#008859"]{border-color:#67d4ac!important}
+html[data-study-theme=dark] body.study-shell .lab .key[style*="#444159"]{border-color:#b7acd8!important}
+html[data-study-theme=dark] body.study-shell .lab .key[style*="#c85209"]{border-color:#edaa70!important}
+html[data-study-theme=dark] body.study-shell .lab .key[style*="#176fad"]{border-color:#88c4ef!important}
+
+}

@@ -1,0 +1,169 @@
+/* Gemaakt met Codex: koppeling van CAFA2-componenten aan de SRA-leeromgeving. */
+.sra-home-choices{grid-template-columns:repeat(4,minmax(0,1fr))}
+.sra-formula-entry{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;padding:22px 26px;background:#eeedf4;border:1px solid #d9d6e3;border-radius:8px;text-decoration:none;color:#444159;line-height:1.7}
+.sra-formula-entry strong{font-size:19px}.sra-formula-entry>span:last-child{font-size:28px}
+.formula-overview{max-width:1200px;margin:auto}.formula-topic-group{margin:32px 0}.formula-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.formula-topic{display:block;padding:22px;background:#fff;border:1px solid #dedde6;border-radius:6px;text-decoration:none;color:inherit}.formula-topic:hover{border-color:#008859}.formula-topic h3{font-size:18px}.formula-topic p{color:#636170;font-size:14px}.formula-topic>span{color:#006c47;font-weight:600}.formula-guide #formule-rekenblad{scroll-margin-top:120px}
+/* Only integration adapters belong here. Buttons, papers, tables, clocks and
+   exam navigation use the unmodified CAFA2 rules in cirrus.css. */
+html:has(body.cirrus-mode){--base:var(--sra-cirrus-font,14px)}
+body.cirrus-mode .skip{position:fixed;left:12px;top:-70px;padding:12px;background:#fff;z-index:100}
+body.cirrus-mode .skip:focus{top:8px}
+body.cirrus-mode .sra-cirrus-source{display:block;width:100%;height:auto;margin:8px 0 20px}
+body.cirrus-mode .sra-source-enlarge{display:block;max-width:100%;cursor:zoom-in}
+body.cirrus-mode .exam-info-dialog .exam-source-document{max-width:none}
+/* Dezelfde casusknop boven bij het vraagnummer en onder bij de navigatie. */
+body.cirrus-mode .exam-question-identity .btn{border:2px solid #615365;border-radius:1px;background:white;color:#615365;min-height:32px;padding:5px 9px;font-size:14px;font-weight:700}
+@media(max-width:680px){
+ body.cirrus-mode.exam-running .exam-work-head{flex-wrap:wrap}
+ body.cirrus-mode .exam-question-identity .btn{font-size:12px;padding:5px 7px;min-height:36px}
+}
+body.cirrus-mode .exam-review-title{margin:18px 12px;font-size:1.4rem}
+/* De casus blijft naast de vraag; bediening wijzigt alleen de weergave. */
+body.cirrus-mode .exam-case-layout{display:grid;grid-template-columns:minmax(0,var(--exam-case-width,33.333333%)) 14px minmax(0,1fr);align-items:start;--exam-case-top:calc(var(--study-header-height,58px) + var(--study-return-h,46px) + 12px)}
+body.cirrus-mode .exam-case-layout.is-case-hidden{grid-template-columns:minmax(0,1fr)}
+body.cirrus-mode.exam-running .exam-case-layout>.exam-question-body{min-width:0;padding:12px 28px 32px}
+body.cirrus-mode .exam-case-panel{position:sticky;top:var(--exam-case-top);max-height:var(--case-available-height,calc(100dvh - 370px));min-width:0;padding:18px 20px;overflow:auto;overscroll-behavior:contain;background:var(--study-surface);color:var(--study-ink);border:1px solid var(--study-line)}
+body.cirrus-mode .exam-case-panel>h2{font-size:16px;line-height:1.4;margin:0 0 16px;color:inherit}
+body.cirrus-mode .exam-case-panel>.exam-source-document{max-width:none;margin:0;padding:0;line-height:1.5;background:transparent;color:inherit}
+body.cirrus-mode .exam-case-panel .sra-cirrus-source{margin:0 0 18px}
+body.cirrus-mode .exam-case-resizer{align-self:stretch;position:relative;cursor:col-resize;touch-action:none;min-height:120px;background:var(--study-wash);border-inline:1px solid var(--study-line)}
+body.cirrus-mode .exam-case-resizer::after{content:'';position:sticky;display:block;top:calc(var(--exam-case-top) + 100px);width:4px;height:48px;margin:100px auto 0;border-radius:4px;background:var(--study-muted)}
+body.cirrus-mode .exam-case-resizer:hover::after,body.cirrus-mode .exam-case-resizer:focus-visible::after{background:var(--study-accent)}
+body.cirrus-mode .exam-case-resizer:focus-visible{outline:3px solid var(--study-accent);outline-offset:-3px}
+body.cirrus-mode .exam-case-layout.is-resizing{user-select:none;cursor:col-resize}
+body.cirrus-mode .exam-case-layout>[hidden],body.cirrus-mode [data-exam-action="section"][hidden]{display:none!important}
+body.cirrus-mode [data-exam-action="section"][aria-pressed="true"]{box-shadow:inset 0 -3px var(--study-accent)}
+@media(max-width:760px){
+ body.cirrus-mode .exam-case-layout{display:flex;flex-direction:column}
+ body.cirrus-mode .exam-case-panel{position:static;order:-1;width:100%;max-height:45dvh;padding:16px;border-inline:0;border-top:0}
+ body.cirrus-mode .exam-case-resizer{display:none}
+ body.cirrus-mode.exam-running .exam-case-layout>.exam-question-body{width:100%;padding:16px}
+}
+@media print{body.cirrus-mode .exam-case-layout{display:block}body.cirrus-mode .exam-case-resizer{display:none}body.cirrus-mode .exam-case-panel{position:static;max-height:none;overflow:visible}}
+body.cirrus-mode .exam-inline-feedback{margin-top:18px;padding:20px;border:1px solid #c3dbd1;border-left:4px solid #008859;background:#f4faf7;color:#243e34;overflow-wrap:anywhere}
+body.cirrus-mode .exam-inline-feedback h3{margin:0 0 12px;color:#16513e;font-size:1.05rem}
+body.cirrus-mode .exam-inline-feedback>.exam-source-document{max-width:none;margin:16px 0;padding:16px;background:white;color:#212121;text-align:left}
+body.cirrus-mode .exam-inline-feedback .self-score{margin-bottom:0}
+body.cirrus-mode .exam-inline-feedback .self-score input{max-width:100%}
+@media(max-width:680px){
+ body.cirrus-mode .exam-inline-feedback{padding:14px 12px}
+ body.cirrus-mode .exam-inline-feedback>.exam-source-document{padding:12px}
+ body.cirrus-mode.exam-running .exam-footer{padding-bottom:max(12px,env(safe-area-inset-bottom));gap:10px}
+ body.cirrus-mode.exam-running .exam-cirrus-actions{flex-wrap:wrap;gap:6px}
+}
+body.cirrus-mode .exam-practice-duration{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:20px 0 10px}
+body.cirrus-mode .exam-practice-duration input{width:110px;min-height:42px;padding:8px 10px;border:1px solid #cbd5d5;border-radius:2px;color:inherit;background:white}
+body.cirrus-mode #history-back{display:inline-flex;align-items:center;gap:4px;margin-right:14px;padding:0;border:0;background:transparent;color:inherit;font-size:11px;line-height:1.4;cursor:pointer}
+body.cirrus-mode #history-back:hover{text-decoration:underline}
+/* De rekenmachine blijft beschikbaar terwijl de les- en tentamenstijlen wisselen. */
+body #calculator{position:fixed;z-index:10010;display:flex;flex-direction:column;box-sizing:border-box;width:304px;max-width:var(--calc-max-width,calc(100vw - 16px));max-height:var(--calc-max-height,calc(100dvh - 16px));margin:0;padding:0;border:1px solid #a9a5b6;border-radius:8px;background:white;color:#292735;box-shadow:0 6px 28px #24203340;overflow:hidden;font:14px/1.45 Arial,sans-serif}
+body #calculator[hidden],body #calculator [hidden]{display:none!important}
+body #calculator *,body #calculator *::before,body #calculator *::after{box-sizing:border-box}
+body #calculator .calc-head{display:flex;align-items:center;justify-content:space-between;gap:2px;flex:0 0 auto;min-height:44px;padding:0 4px 0 2px;background:#444159;color:#fff}
+body #calculator .calc-head h2{flex:1;min-width:0;margin:0;font-size:14px;line-height:1.3;color:inherit}
+body #calculator .calc-head button{border:0;border-radius:3px;background:transparent;color:inherit;min-height:38px;padding:4px 8px;font:inherit}
+body #calculator #calc-move{width:100%;display:flex;align-items:center;gap:7px;text-align:left;font-weight:700;cursor:grab;touch-action:none;user-select:none}
+body #calculator #calc-move>span{font-size:23px;font-weight:400}
+body #calculator.is-dragging #calc-move{cursor:grabbing}
+body #calculator .calc-window-actions{display:flex;flex:0 0 auto;align-items:center}
+body #calculator .calc-window-actions button{min-width:36px;font-size:23px;line-height:1;cursor:pointer}
+body #calculator .calc-head button:hover{background:#ffffff20}
+body #calculator :focus-visible{outline:2px solid #006c47;outline-offset:2px}
+body #calculator .calc-head button:focus-visible{outline:2px solid #fff;outline-offset:-3px}
+body #calculator .calc-body{padding:12px;min-height:0;overflow:auto;overscroll-behavior:contain}
+body #calculator .calc-body label{display:block;font-size:12px;margin:0 0 4px}
+body #calculator input{display:block;width:100%;padding:8px;border:1px solid #b9becd;border-radius:4px;background:#fff;color:#292735;font:16px/1.3 Arial,sans-serif}
+body #calculator output{display:block;min-height:45px;padding:8px 2px;text-align:right;font-size:22px;line-height:1.35;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+body #calculator .calc-keys{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:0;padding:0;background:transparent}
+body #calculator .calc-keys button{height:auto;min-height:38px;min-width:0;padding:5px;border:1px solid #d1d3dd;border-radius:4px;background:#f5f6f8;color:#292735;font:16px/1.25 Arial,sans-serif;cursor:pointer}
+body #calculator .calc-keys button:hover{background:#e7eaf0}
+body #calculator .calc-keys button[data-key="="]{background:#008859;color:white;border-color:#008859}
+body #calculator .calc-help{margin:10px 0 0;padding:0;background:transparent;color:#676374;font-size:11px;line-height:1.45}
+@media print{body #calculator{display:none!important}}
+body.cirrus-mode #toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:100;background:#34364a;color:white;font-size:.83rem;border-radius:8px;padding:12px 20px;max-width:90vw;pointer-events:none;opacity:0}
+body.cirrus-mode #toast.show{opacity:1}
+@media(max-width:1100px){.sra-home-choices{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.sra-home-choices,.formula-topic-grid{grid-template-columns:1fr}.sra-formula-entry{padding:20px}}
+
+/* Gemaakt met Codex: resultaten afgestemd op de aangeleverde Cirrus-inzage.
+   Alleen het resultatenoverzicht; de beoordelingspagina houdt zijn twee panelen. */
+body.cirrus-mode:has(.exam-results-panel) #main{max-width:none;width:100%;padding:18px 20px 28px}
+body.cirrus-mode:has(.exam-results-panel) .exam-page-head{margin:30px 8px 26px;padding:0}
+body.cirrus-mode:has(.exam-results-panel) .exam-eyebrow{display:none}
+body.cirrus-mode:has(.exam-results-panel) .exam-page-head h1{font-size:26px;margin:0;line-height:1.3}
+body.cirrus-mode .exam-results-panel{position:relative;margin:0;background:#fff;border:1px solid #e5e7e9}
+body.cirrus-mode .result-tabs{gap:30px;padding:0 16px}
+body.cirrus-mode .result-tabs .btn{padding:18px 16px;min-height:52px}
+body.cirrus-mode .result-summary{padding:32px 24px 12px}
+body.cirrus-mode .result-summary>div{gap:100px;font-size:12px}
+body.cirrus-mode .result-summary .small{font-size:11px;margin:12px 0 0;color:#686871;max-width:1000px}
+body.cirrus-mode .result-answers{padding:0 24px 28px}
+body.cirrus-mode .result-answers h2{margin:18px 12px;font-size:16px}
+body.cirrus-mode .result-list-head{padding:20px 5% 20px 52px;border:1px solid #e5e9ec;border-top-width:2px;font-size:14px}
+body.cirrus-mode .result-group{border-left:1px solid #e5e9ec;border-right:1px solid #e5e9ec}
+body.cirrus-mode .result-group h3{padding:24px 5% 14px 10px;font-size:14px;min-height:70px}
+body.cirrus-mode .result-question.exam-review-item{background:#f9f9f9;border-bottom:1px solid #e5e9ec;transition:background-color .12s ease}
+body.cirrus-mode .result-question>summary{gap:18px;padding:14px 5% 14px 14px;background:transparent;min-height:58px;font-size:13px}
+body.cirrus-mode .result-number{flex-basis:28px;font-size:12px;font-weight:400}
+body.cirrus-mode .result-question-text{line-height:1.4}
+body.cirrus-mode .result-question>summary:hover{background:transparent}
+body.cirrus-mode .result-question:hover,body.cirrus-mode .result-question:focus-within{background:#d9efea}
+body.cirrus-mode .result-question>summary:focus-visible{outline:2px solid #008b61;outline-offset:-2px;background:transparent}
+/* Afmetingen en kleuren gemeten in de aangeleverde Cirrus-resultatenpagina. */
+body.cirrus-mode .result-score{display:inline-flex;align-items:center;justify-content:center;gap:4px;box-sizing:border-box;width:100px;min-width:100px;height:36px;padding:5px 0;border:2px solid #aab0b6;border-radius:3px;box-shadow:none;background:#f1f1f1;font-size:15px;line-height:22px}
+body.cirrus-mode .result-score.full{background:#b1dac6;border-color:#008000}
+body.cirrus-mode .result-score.partial{background:#fbdba0;border-color:#c3a565}
+body.cirrus-mode .result-score.zero{background:#f7bfb9;border-color:#ff0000}
+body.cirrus-mode .result-score.ungraded{font-size:11px}
+body.cirrus-mode .result-expanded{padding:0 5% 22px 94px;background:transparent}
+body.cirrus-mode .result-expanded h4{font-size:13px;margin:0 0 24px;color:#334c59}
+body.cirrus-mode .result-inline-answer{background:#f9f9f9;border:1px solid #e5e9ec;border-radius:0;padding:20px 16px;color:#4c5660;overflow-wrap:anywhere}
+body.cirrus-mode .result-inline-answer .exam-source-document{max-width:none;margin:0;padding:0;background:transparent;font-size:13px;line-height:1.5}
+body.cirrus-mode .result-inline-answer .exam-source-document p{margin:0 0 10px}
+body.cirrus-mode .result-inline-answer .exam-source-document p:last-child{margin-bottom:0}
+body.cirrus-mode .result-inline-answer .sra-cirrus-source{width:auto;max-width:100%;max-height:none;margin:0}
+body.cirrus-mode .result-inline-actions{margin-top:12px}
+body.cirrus-mode .result-inline-actions .btn{font-size:11px;min-height:28px;padding:4px 8px;font-weight:400;background:transparent;color:#52616a}
+body.cirrus-mode .report-actions{position:absolute;right:18px;top:77px;padding:0}
+body.cirrus-mode .result-print{min-height:30px;width:32px;padding:5px;border:0;background:transparent;color:#4c5053}
+body.cirrus-mode .result-print svg{width:20px;height:20px}
+body.cirrus-mode .score-report-scroll{margin:12px 24px 0}
+body.cirrus-mode .score-report th,body.cirrus-mode .score-report td{padding:18px 18px;height:64px;font-size:12px;vertical-align:middle}
+body.cirrus-mode .score-report thead th{height:44px;padding:12px 18px;font-size:12px}
+body.cirrus-mode .score-report th:first-child{width:42%}
+body.cirrus-mode .score-report th.report-child{padding-left:32px}
+body.cirrus-mode .score-report td:last-child{width:21%}
+body.cirrus-mode .report-progress-label{font-size:10px;margin-bottom:8px}
+body.cirrus-mode .report-progress-label strong{font-size:16px}
+body.cirrus-mode .report-track{height:6px;margin:0 5px}
+body.cirrus-mode .report-track i{width:13px;height:13px;top:-3.5px}
+body.cirrus-mode .report-legend{margin:12px 24px 34px;font-size:11px;color:#41505c}
+body.cirrus-mode .result-bottom-actions{padding:18px 24px}
+@media(max-width:680px){
+ body.cirrus-mode:has(.exam-results-panel) #main{padding:14px 8px}
+ body.cirrus-mode:has(.exam-results-panel) .exam-page-head{margin:22px 4px}
+ body.cirrus-mode:has(.exam-results-panel) .exam-page-head h1{font-size:21px}
+ body.cirrus-mode .result-tabs{gap:12px;padding:0 4px}
+ body.cirrus-mode .result-summary{padding:24px 14px 12px}
+ body.cirrus-mode .result-summary>div{gap:16px;flex-wrap:wrap}
+ body.cirrus-mode .result-answers{padding:0 8px 20px}
+ body.cirrus-mode .result-group h3{padding:18px 8px 12px;gap:10px;font-size:13px}
+ body.cirrus-mode .result-list-head{padding:16px 8px 16px 30px;font-size:12px}
+ body.cirrus-mode .result-question>summary{gap:8px;padding:12px 8px;align-items:start}
+ body.cirrus-mode .result-number{flex-basis:17px}
+ body.cirrus-mode .result-score{width:80px;min-width:80px;height:32px;padding:3px 0;font-size:12px}
+ body.cirrus-mode .result-score.ungraded{font-size:10px}
+ body.cirrus-mode .result-expanded{padding:0 12px 18px 40px}
+ body.cirrus-mode .result-expanded h4{margin-bottom:14px}
+ body.cirrus-mode .result-inline-answer{padding:12px}
+ body.cirrus-mode .score-report-scroll{margin:12px}
+ body.cirrus-mode .report-actions{right:10px;top:69px}
+}
+@media print{body.cirrus-mode .result-inline-actions{display:none}body.cirrus-mode .result-question{break-inside:avoid}}
+/* Afzonderlijke inhoudscontrole naast het ongewijzigde bronantwoord. */
+body.cirrus-mode #exam-app .answer-audit {margin:0 0 1rem;padding:1rem;border:1px solid #cfb77e;border-left:4px solid #93690e;border-radius:6px;background:#fff9ec;color:#302b20;overflow-wrap:anywhere;}
+body.cirrus-mode #exam-app .answer-audit h3 {margin:0 0 .6rem;font-size:1rem;}
+body.cirrus-mode #exam-app .answer-audit p {margin:.5rem 0;line-height:1.55;}
+body.cirrus-mode #exam-app .answer-audit .answer-audit-meta {font-size:.8rem;color:#625b4d;}
+body.cirrus-mode #exam-app .answer-audit-checked {border-color:#b4c9bc;border-left-color:#41704d;background:#f4f9f5;}
+body.cirrus-mode #exam-app .answer-audit summary {cursor:pointer;font-weight:600;}

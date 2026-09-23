@@ -1,18 +1,19 @@
-# study-ui 1.0.0
+# study-ui 1.1.1
 
 Een kleine distributie van CSS voor de algemene vormgeving van studie-apps. Gebaseerd op [CAFA2, commit 382add0](https://github.com/HMA9K/CAFA2/tree/382add0fb67ed503438876e40dbba46497e02c02), inclusief het compacte vragenoverzicht. De exacte herkomst staat in `provenance.json`.
 
-Dit pakket heeft geen framework, JavaScript, externe lettertypen of netwerkverbinding nodig. De distributie is lokaal; er bestaat binnen deze oplevering nog geen afzonderlijke gedeelde repository. CAFA2 gebruikt dit pakket nog niet.
+De kop en lichtmodus volgen daarnaast de gepubliceerde CAFA2-versie van 23 september 2026. Het pakket gebruikt gewone CSS en een klein zelfstandig themascript, zonder framework, externe lettertypen of netwerkverbinding. De distributie is lokaal; er bestaat binnen deze oplevering nog geen afzonderlijke gedeelde repository. CAFA2 gebruikt dit pakket nog niet.
 
 ## Gebruiken
 
-Laad `tokens.css` gevolgd door `shell.css` en geef de body de class `study-shell`. Voeg de onderstaande componentklassen toe aan de bijbehorende bestaande elementen. Vakspecifieke CSS volgt na de gedeelde bestanden en mag tokens expliciet overschrijven.
+Laad `theme.js` direct in de head, vóór de stylesheets, en geef het html-element een eigen `data-study-storage`-sleutel. Laad `tokens.css` gevolgd door `shell.css` en geef de body de class `study-shell`. Laad `header.css`, `theme.css` en de door `scripts/build_study_dark.py` opgebouwde donkere kleuren als laatste, ook in de tentamenmodus. Voeg de onderstaande componentklassen toe aan de bijbehorende bestaande elementen. Vakspecifieke CSS volgt na de gedeelde bestanden en mag tokens expliciet overschrijven.
 
 ```html
 <link rel="stylesheet" href="vendor/study-ui/tokens.css">
 <link rel="stylesheet" href="vendor/study-ui/shell.css">
 <body class="study-shell">
   <header class="study-topbar">
+    <div class="bar-inner">
     <a class="study-brand" href="#start">SRA <small>SAMENVATTING</small></a>
     <div class="study-controls">
       <div class="study-font-group" role="group" aria-label="Tekstgrootte">
@@ -21,13 +22,14 @@ Laad `tokens.css` gevolgd door `shell.css` en geef de body de class `study-shell
         <button data-font="1" aria-label="Grotere letters">A+</button>
       </div>
     </div>
+    </div>
   </header>
 </body>
 ```
 
 | Component | Contract |
 |---|---|
-| `study-topbar` | De flexcontainer van de paarse header; directe kinderen zijn merk en bediening. |
+| `study-topbar` | De sticky header met een `bar-inner`-flexcontainer voor merk en bediening. |
 | `study-brand` | Merknaam als link, optioneel SVG en `small` voor toelichting. |
 | `study-controls` | Groep headerknoppen; gedrag blijft onderdeel van de app. |
 | `study-font-group` | A−/A/A+ met `data-font` of SRA's bestaande knop-ID's. `hidden` wordt gerespecteerd. |
@@ -55,7 +57,9 @@ De tabel wordt op schermen tot 680 px in rijen weergegeven. Gebruik de component
 
 `--study-*` zijn de gedeelde ontwerptokens. `--study-content-font-size` documenteert de basis van 16 px, maar het pakket wijzigt de root-lettergrootte niet. De app beheert de leesgrootte. De header is standaard 64 px, mobiel 58 px; een afnemer met extra headerregels moet zijn eigen navigatiepositie afstemmen op de werkelijke hoogte.
 
-De CSS levert alleen vormgeving. Routing, knopfuncties, opslag en labels blijven verantwoordelijkheid van de afnemer.
+`theme.js` verzorgt Aan, Uit en Automatisch, bewaart een handmatige keuze in sessionStorage en volgt bij Automatisch de apparaatinstelling. Het script meet ook de werkelijke headerhoogte voor de navigatie en grafieken. Zie `index.html` voor de toegankelijke dropdownmarkup. Antwoorden, voortgang, routering en overige knopfuncties blijven bij de app.
+
+`dark-palette.css` bevat semantische kleurcorrecties voor de kleurcompiler. De compiler vertaalt alleen kleuren en laat indeling, afbeeldingen en afdrukstijlen intact.
 
 ## Bijwerken
 
@@ -72,4 +76,4 @@ Een uitgecheckte toekomstige gedeelde release kan als lokale bron worden gebruik
 python scripts/sync_layout.py --source 'C:\Projects\study-ui'
 ```
 
-Er worden uitsluitend twee CSS-bestanden en een controlemanifest naar `vendor/study-ui` geschreven. Voeg het bronpakket en de gesynchroniseerde distributie toe aan versiebeheer. Lees [de gezamenlijke werkwijze](../../docs/gedeelde-layout.md) voor releases over meerdere repositories.
+Er worden vier CSS-bestanden, het themascript en een controlemanifest naar `vendor/study-ui` geschreven. Voeg het bronpakket en de gesynchroniseerde distributie toe aan versiebeheer. Lees [de gezamenlijke werkwijze](../../docs/gedeelde-layout.md) voor releases over meerdere repositories.

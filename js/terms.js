@@ -10,7 +10,7 @@
   const WORD = /[\p{L}\p{N}\p{M}_]/u;
   const HYPHEN = /[\u2010\u2011\u2012\u2013\u2212]/u;
   const APOSTROPHE = /[\u2018\u2019\u02bc]/u;
-  const SKIP = 'script,style,noscript,template,input,textarea,select,option,optgroup,button,a,nav,code,pre,kbd,samp,math,svg,canvas,iframe,object,embed,[role="button"],[contenteditable="true"],[contenteditable=""],[contenteditable="plaintext-only"],[aria-hidden="true"],[data-no-terms],[data-sra-term],.sr-only,.sra-term-popup';
+  const SKIP = 'script,style,noscript,template,input,textarea,select,option,optgroup,button,a,nav,code,pre,kbd,samp,math,svg,canvas,iframe,object,embed,[role="button"],[contenteditable="true"],[contenteditable=""],[contenteditable="plaintext-only"],[aria-hidden="true"],[data-no-terms],[data-sra-term],[data-formula-help],.formula-help-hint,.sr-only,.sra-term-popup';
   const HTML_NAMESPACE = 'http://www.w3.org/1999/xhtml';
 
   function catalogEntries(terms) {
@@ -112,8 +112,6 @@
   let sources = {};
   let observer = null;
   let popup = null;
-  let trigger = null;
-  let restoreOnClose = true;
   let queued = new Set();
   let scheduled = null;
   let active = false;
@@ -133,7 +131,10 @@
 
   function ensurePopup() {
     if (popup && popup.ownerDocument === documentRef && popup.isConnected) return;
-    popup = element('dialog', 'sra-term-popup');
+    popup = element('div', 'sra-term-popup');
+    popup.hidden = true;
+    popup.setAttribute('role','dialog');
+    popup.setAttribute('aria-modal','false');
     popup.id = 'sra-term-popup';
     popup.setAttribute('aria-labelledby', 'sra-term-title');
     popup.setAttribute('aria-describedby', 'sra-term-definition');
@@ -143,22 +144,10 @@
     const closeButton = element('button', 'sra-term-close', '×');
     closeButton.type = 'button';
     closeButton.setAttribute('aria-label', 'Uitleg sluiten');
-    closeButton.autofocus = true;
     closeButton.addEventListener('click', () => close());
     head.append(title, closeButton);
     const content = element('div', 'sra-term-content');
     popup.append(head, content);
-    popup.addEventListener('close', () => {
-      const previous = trigger;
-      trigger = null;
-      if (restoreOnClose && previous && previous.isConnected) previous.focus({ preventScroll: true });
-      restoreOnClose = true;
-    });
-    popup.addEventListener('click', event => {
-      if (event.target !== popup) return;
-      const rect = popup.getBoundingClientRect();
-      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) close();
-    });
     documentRef.body.append(popup);
   }
 
@@ -173,13 +162,13 @@
     definition.id = 'sra-term-definition';
     content.append(definition);
     if (term.example) {
-      const example = element('section', 'sra-term-example');
-      example.append(element('h3', '', 'Voorbeeld'), element('p', '', term.example));
+      const example = element('details', 'sra-term-example');
+      example.append(element('summary', '', 'Voorbeeld'), element('p', '', term.example));
       content.append(example);
     }
     if (Array.isArray(term.refs) && term.refs.length) {
-      const references = element('section', 'sra-term-sources');
-      references.append(element('h3', '', 'Bronnen'));
+      const references = element('details', 'sra-term-sources');
+      references.append(element('summary', '', 'Bronnen'));
       const list = element('ul');
       for (const ref of term.refs) {
         if (!ref || typeof ref.source !== 'string') continue;
@@ -201,16 +190,11 @@
         content.append(references);
       }
     }
-    trigger = from;
-    restoreOnClose = true;
-    if (!popup.open) popup.showModal();
-    popup.querySelector('.sra-term-close').focus({ preventScroll: true });
+    global.SRAInlineHelp.open(popup, from);
   }
 
   function close(options) {
-    if (!popup || !popup.open) return;
-    restoreOnClose = !options || options.restoreFocus !== false;
-    popup.close();
+    global.SRAInlineHelp?.close(popup, !options || options.restoreFocus !== false);
   }
 
   function termTarget(event) {

@@ -1,0 +1,98 @@
+[
+  {
+    "file": "boek-basis.pdf",
+    "firstOriginalPdfPage": 110,
+    "lastOriginalPdfPage": 117,
+    "pages": 8,
+    "bytes": 1713329,
+    "sha256": "776484590863e53ae1a169163a78ec838b3466328f7af61ef9c639001e95850f"
+  },
+  {
+    "file": "boek-h8a.pdf",
+    "firstOriginalPdfPage": 219,
+    "lastOriginalPdfPage": 228,
+    "pages": 10,
+    "bytes": 2249986,
+    "sha256": "f5141fd811f150b9e7a7566abd0ff34f1369e67afe53d16c6a744ddefd0a8345"
+  },
+  {
+    "file": "boek-h8b.pdf",
+    "firstOriginalPdfPage": 229,
+    "lastOriginalPdfPage": 238,
+    "pages": 10,
+    "bytes": 2187205,
+    "sha256": "9a1882e8b9b95a62c2f86c68aa11058436385c220578c2fb9bb4dad229434c00"
+  },
+  {
+    "file": "boek-h8c.pdf",
+    "firstOriginalPdfPage": 239,
+    "lastOriginalPdfPage": 250,
+    "pages": 12,
+    "bytes": 2536403,
+    "sha256": "133f9344c509f83a3b355cc9a085ed0664ac0bb3391145ba900bc4ca1f1ed336"
+  },
+  {
+    "file": "boek-h9a.pdf",
+    "firstOriginalPdfPage": 251,
+    "lastOriginalPdfPage": 266,
+    "pages": 16,
+    "bytes": 3840150,
+    "sha256": "18d9d5f15a54ff041ccf267cbedb84f6f356a443c8f89753b1414f58c9b022c3"
+  },
+  {
+    "file": "boek-h9b.pdf",
+    "firstOriginalPdfPage": 267,
+    "lastOriginalPdfPage": 277,
+    "pages": 11,
+    "bytes": 2216178,
+    "sha256": "73c11c757db2b64a71e276cca1d120ed69d7c6708a56da7bb9ae45550b3cde6e"
+  },
+  {
+    "file": "boek-h9c.pdf",
+    "firstOriginalPdfPage": 278,
+    "lastOriginalPdfPage": 290,
+    "pages": 13,
+    "bytes": 2440198,
+    "sha256": "23710f8f177d80eef7b1747b47ff8391d60bc9934be7e48a37a9f90c5dcfd89a"
+  },
+  {
+    "file": "boek-h9d.pdf",
+    "firstOriginalPdfPage": 291,
+    "lastOriginalPdfPage": 304,
+    "pages": 14,
+    "bytes": 2422683,
+    "sha256": "b76011011f9abbd5bb2603c974049de39136f4ad39308adffe309e3aa5b53ca8"
+  },
+  {
+    "file": "boek-h10a.pdf",
+    "firstOriginalPdfPage": 305,
+    "lastOriginalPdfPage": 318,
+    "pages": 14,
+    "bytes": 2217316,
+    "sha256": "d121372a828b8847c9492090bbfa09c176ae42901c6058c39391565f528044c6"
+  },
+  {
+    "file": "boek-h10b.pdf",
+    "firstOriginalPdfPage": 321,
+    "lastOriginalPdfPage": 331,
+    "pages": 11,
+    "bytes": 1869254,
+    "sha256": "aa8ed237a99403cac1a61b3c923bed84dc06f9260d98a081010a8492bef4e64c"
+  },
+  {
+    "file": "boek-h10c.pdf",
+    "firstOriginalPdfPage": 332,
+    "lastOriginalPdfPage": 341,
+    "pages": 10,
+    "bytes": 1579430,
+    "sha256": "5e5ab5257ef4df6d06ed4e9b85dc8f30189f90bd27b47814bc9d388c6fbf530d"
+  },
+  {
+    "file": "set-basis.pdf",
+    "firstOriginalPdfPage": 3,
+    "lastOriginalPdfPage": 7,
+    "pages": 5,
+    "bytes": 172767,
+    "sha256": "6030e807669916d39f47fc25559ebf8851e8d10a727e0cb85f90ec1c250fc3f7"
+  }
+]

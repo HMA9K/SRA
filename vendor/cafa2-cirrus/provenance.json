@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/HMA9K/CAFA2",
+  "commit": "639f4c2e8adf2f26d7e1992aadb52b8fbb9e3d42",
+  "files": {
+    "css/answer-editor.css": "0f60c1a7786ed2efcbc4559245086131354e6eb85ec1b6a4b9766dc3bcdfa232",
+    "css/app.css": "a2c30e4d89465290e0b652431694859ec525caca72fc93210309e707bbb4da57",
+    "css/exam-document.css": "924cecd937aed32a7b5a2d5dbfdc64c81d0270c6644df50cb97c4bad265ad899",
+    "css/exam-experience.css": "7776cb29daf6a5ed2c9924d89b83c0ebae502a1ffd0623ffbf79dba53786ebb8",
+    "css/exams.css": "9e07ea42d3bc9141e7bd6897f1a2d84be40c8f56782ae10b99df5fc4188ecd0d",
+    "css/question-overview.css": "7b57f6607e1aca5e8ea051457d0bfee7867038a6212a0916034f15e1da6a5da6",
+    "js/answer-editor.js": "be0b0f01f5bb56de3d59dcd959ac562fecde44bd3bd5c6c423944083a5f22e86",
+    "js/exam-engine.js": "35330d64e346bad2ec7e16b3d235872e09a9bbef97f565d22a9213f3270cc55e",
+    "js/exams.js": "786a68cb7a9be63de3a3415024087a3e1b646adaeaaec005591d907cd1ab3d37"
+  }
+}

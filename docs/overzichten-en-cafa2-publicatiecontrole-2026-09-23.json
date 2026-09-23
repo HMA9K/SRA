@@ -1,0 +1,100 @@
+{
+  "date": "2026-09-23",
+  "SRA": "bc621e09-c501-4454-a1f1-1066504ed959",
+  "CAFA2": "ac2ccc4e-05ea-444c-a1dd-bc6e600589a4",
+  "cafaCommit": "95081d67bfbb094f2f4f5e923b2b24c2f0e98ccf",
+  "checks": [
+    {
+      "app": "SRA",
+      "file": "index.html",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "97a68689e69c1ac2e0ec0991ffb5f86841767171c0670cc01c0f94f61dd3a675"
+    },
+    {
+      "app": "SRA",
+      "file": "css/mc.css",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "55f8416cd9f3701059ab587e2b9c8276a4cde5121103073802e216f41af7318e"
+    },
+    {
+      "app": "SRA",
+      "file": "vendor/study-ui/header.css",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "2c01aefbd4394e881c9bbe6d4041843b6b41a52751603962a2a3ed59cefba78d"
+    },
+    {
+      "app": "SRA",
+      "file": "css/study-dark.css",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "0660f5a3002955c09f3975fba4d9278c168a278da240573178418b4c2f97bc20"
+    },
+    {
+      "app": "SRA",
+      "file": "js/app.js",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "a57055bb8fb5175da3e0f3f13962e94802a314af2a05f69a1cbe4e23fe20cf52"
+    },
+    {
+      "app": "SRA",
+      "file": "js/mc.js",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "b843767a106a69d31d20d773976e4de665c02e76e7b147914ca0db7ca8d5379c"
+    },
+    {
+      "app": "SRA",
+      "file": "SRA interactieve samenvatting.html",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "1efc09c2117f2cc9aa4be12e5b7567d068b01edf955e361ab33ad934743e1a1e"
+    },
+    {
+      "app": "CAFA2",
+      "file": "index.html",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "0d3e1a4e65d28d25f52d8b859e88f3f20e3ee56cf3c8652885a4c9800951a407"
+    },
+    {
+      "app": "CAFA2",
+      "file": "samenvatting.html",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "097fd0ff4314b3c1269d26e43ea2c009e2c9aadf60c85042b32e19f4399d79af"
+    },
+    {
+      "app": "CAFA2",
+      "file": "js/bootstrap.js",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "80c980c75895f0c14965ea89f25cb63e8747f02e7d1692ac37ccb926659253c5"
+    },
+    {
+      "app": "CAFA2",
+      "file": "js/study-shell.js",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "f001c8e601272f9627bf3037dcb9641d44397b55698512c46db5c4a0a8fc925d"
+    },
+    {
+      "app": "CAFA2",
+      "file": "css/study-ui.css",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "f751e8c6e47d3975c897cb9492836bff5a82e56edb2dd89b6497f0defd70f903"
+    },
+    {
+      "app": "CAFA2",
+      "file": "fallback/kapitaalbelangen.html",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "434fa0071046449f3864bc1177990886728e2a9d6d44f5a22b609bdbf717ca73"
+    }
+  ],
+  "liveNavigation": "Oefenen -> Meer/Begrippen -> Meer/Bronnen -> Vorige pagina/Begrippen -> Vorige pagina/Oefenen: geslaagd; geen browserfouten."
+}

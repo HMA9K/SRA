@@ -1,0 +1,42 @@
+{
+  "deployment": "b848d259-0405-46fd-95f4-934029a84ed2",
+  "status": "success",
+  "checks": [
+    {
+      "file": "index.html",
+      "http": 200,
+      "same_content": true,
+      "sha256": "19a5cbcb0c47c3a38f12462177a41f73e27f07eb18e6362b0b11011500588f6e"
+    },
+    {
+      "file": "js/mc.js",
+      "http": 200,
+      "same_content": true,
+      "sha256": "2865ac08884b041c8d81136940054c77eb651a831996b328439e4b856210c8c0"
+    },
+    {
+      "file": "css/mc.css",
+      "http": 200,
+      "same_content": true,
+      "sha256": "a574035a32d0c93860e43b3b03314cfc1fed6c062bd7e0f4c913a286d24d03ab"
+    },
+    {
+      "file": "data/mc.js",
+      "http": 200,
+      "same_content": true,
+      "sha256": "8e15db40eed01fdf0314b3d505fb4f935078495cf7a8eb82dc1220b666ef8172"
+    },
+    {
+      "file": "data/course.js",
+      "http": 200,
+      "same_content": true,
+      "sha256": "89499616883dd70d11181e85f2bf6c3aa08fb3bde4f417d9e2ec655576b62a9a"
+    },
+    {
+      "file": "SRA interactieve samenvatting.html",
+      "http": 200,
+      "same_content": true,
+      "sha256": "1fbdc84a2b7f5885701e04de4e11abc5a9a0396758579adab023a1f4d2777b4d"
+    }
+  ]
+}

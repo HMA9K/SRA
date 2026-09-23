@@ -125,7 +125,7 @@ lesson('stratificatie','Stratificatie en allocatie','Schatten',
  [('formules','Formules 25–29, PDF-pagina 2',2),('exam2025','Vraag 4–6, PDF-pagina 1–2 en 11–12',12)],[
  ('N₁ = 600, N₂ = 400 en n = 100. Wat is evenredig n₁?',['50','60','40'],1,'600/1.000 × 100 = 60.'),
  ('Twee onafhankelijke strata hebben standaardfouten 3 en 4. Gecombineerd?',['7','25','5'],2,'√(3² + 4²) = 5.'),
- ('Wat is de steekproefvariantie van een integraal gecontroleerd topstratum?',['Nul','Gelijk aan de boekwaarde','Onbekend'],0,'Alle elementen zijn gecontroleerd; er is geen steekproefonzekerheid voor dat stratum.')],lab='strata',exam='exam2025:2:Vraag 4–6')
+ ('Wat is de steekproefvariantie van het geschatte totaal van een integraal gecontroleerd topstratum?',['Nul','Gelijk aan de boekwaarde','Onbekend'],0,'Alle elementen zijn gecontroleerd; er is geen steekproefonzekerheid voor dat stratum.')],lab='strata',exam='exam2025:2:Vraag 4–6')
 
 lesson('regressielijn','Regressie: een lijn door gegevens','Regressie',
  'Regressie beschrijft hoe een uitkomst y samenhangt met een verklarende variabele x. De lijn voorspelt; de residuen laten zien wat de lijn mist.',
@@ -186,7 +186,7 @@ lesson('voorspellen','Van regressielijn naar voorspellingsinterval','Regressie',
  ('Eerst de puntvoorspelling','<p>x₀ is de nieuwe waarde van x waarvoor je iets wilt weten. Vul die in: ŷ₀ = b₀ + b₁x₀. Controleer de eenheden. Zijn bedragen in duizenden euro’s uitgedrukt, dan is de voorspelling dat ook.</p><p><strong>Interpolatie</strong> is voorspellen binnen het onderzochte x-gebied. <strong>Extrapolatie</strong> is voorspellen daarbuiten. Het oorspronkelijke verband hoeft buiten het waargenomen gebied niet door te lopen. Onderzoek eerst het relevante bereik en de regressieaannames.</p>'),
  ('Waarom staat er een 1 onder de wortel?','<div class="formula">ŷ₀ ± t × s<sub>e</sub> × √[1 + 1/n + (x₀−x̄)² / ((n−1)s²<sub>x</sub>)]</div><p>De eerste <strong>1</strong> staat voor de extra spreiding van één nieuwe waarneming rond de lijn. De term 1/n hoort bij de onzekerheid van de geschatte lijn. De laatste term vergroot de marge wanneer x₀ ver van x̄ ligt. Daarom is het individuele voorspellingsinterval het smalst bij x₀ = x̄.</p><p>Dit is het <strong>voorspellingsinterval voor één nieuwe waarneming</strong> uit formule 50. Het interval voor de gemiddelde respons bij x₀ mist die eerste 1 en is smaller. Lees dus eerst wat er precies wordt voorspeld. Gebruik voor enkelvoudige regressie df = n − 2 en s_e = √MSE.</p>'),
  ('Een werkelijke uitkomst vergelijken','<p>Ligt de gerealiseerde y buiten het interval, dan is dat aanleiding voor nader onderzoek. Het is geen automatisch bewijs van een fout of fraude. Controleer eerst de invoer, modelaannames en of de situatie vergelijkbaar is met de gegevens waarop het model is geschat.</p>')],
- ('Tentamen 28 oktober 2024, vraag 13',['Gegeven: ŷ = 7,159 + 0,099x; x₀ = x̄ = 228,1; n = 30; s_e = 1,25506.','Puntvoorspelling: 7,159 + 0,099×228,1 = 29,7409.','Omdat x₀ = x̄ is de laatste term onder de wortel nul.','Bij 95% en df = 28 is t = 2,048. Marge = 2,048 × 1,25506 × √(1 + 1/30) ≈ 2,61.','De officiële uitwerking geeft na afronding [27,1; 32,4].']),
+ ('Tentamen 28 oktober 2024, vraag 13: gemiddelde of individu?',['Gegeven: ŷ = 7,159 + 0,099x; x₀ = x̄ = 228,1; n = 30; s_e = 1,25506.','Puntvoorspelling: 7,159 + 0,099×228,1 = 29,7409. Omdat x₀ = x̄ is de laatste term onder de wortel nul.','De opgave vraagt het gemiddelde. Bij 95% en df = 28 is t = 2,048; de marge voor dat gemiddelde is 2,048 × 1,25506 / √30 ≈ 0,4693.','Het interval voor de gemiddelde respons is [29,2716; 30,2102]. Naar buiten op één decimaal afgerond: [29,2; 30,3].','Het officiële antwoordmodel gebruikt wél de extra 1 en berekent daardoor het bredere individuele interval [27,1; 32,4]. Dat antwoord past bij één nieuwe persoon, maar niet bij het woord gemiddelde in de vraag.']),
  ['Gebruik bij een individuele voorspelling de eerste 1 onder de wortel.','s_e is √MSE, niet MSE zelf.'],
  [('formules','Formule 50, PDF-pagina 3',3),('attentie','Voorspelling, PDF-pagina 6',6),('exam2024','Vraag 13, PDF-pagina 5',5)],[
  ('Waar is het voorspellingsinterval het smalst?',['Bij x₀ = x̄','Bij x₀ = 0, altijd','Zo ver mogelijk van x̄'],0,'Dan is de term (x₀ − x̄)² nul.'),
@@ -333,6 +333,10 @@ enhance(lessons)
 from terminology import TERMS
 from lesson_guides import enhance_guides
 enhance_guides(lessons)
+from course_completion import enhance as complete_course
+complete_course(lessons, sources)
+from question_explanations import enrich_basic
+enrich_basic(lessons)
 
 if __name__ == '__main__':
     (ROOT/'data').mkdir(parents=True,exist_ok=True)

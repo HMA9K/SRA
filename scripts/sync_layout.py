@@ -9,7 +9,7 @@ import re
 import sys
 
 APP_ROOT = Path(__file__).resolve().parents[1]
-ASSETS = ("tokens.css", "shell.css")
+ASSETS = ("tokens.css", "shell.css", "header.css", "theme.css", "theme.js")
 MANIFEST_NAME = "manifest.json"
 
 

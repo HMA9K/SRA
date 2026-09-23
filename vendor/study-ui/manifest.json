@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "package": "@hma9k/study-ui",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "sourceCommit": "382add0fb67ed503438876e40dbba46497e02c02",
   "sourceRepository": "https://github.com/HMA9K/CAFA2",
   "sourceUrl": "https://github.com/HMA9K/CAFA2/tree/382add0fb67ed503438876e40dbba46497e02c02",
@@ -11,6 +11,15 @@
     },
     "shell.css": {
       "sha256": "18136e0bf6319f582a6ac7a085193235f02c8aae9db8f18675f745cc856a57c2"
+    },
+    "header.css": {
+      "sha256": "d091b4cb358d6c119a9c134cee39f9a86e6cee7521b34415cca2ad7b685cef6c"
+    },
+    "theme.css": {
+      "sha256": "176d83f96820050119b20abf105e5ae9440167b66f9339c4f0a1c8cb7d80485a"
+    },
+    "theme.js": {
+      "sha256": "0aa83ba58794cf58e757e14c1ae7f65c691bec405225489c5addd01155b88cc7"
     }
   }
 }

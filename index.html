@@ -1,25 +1,47 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl" data-study-storage="sra-display-session-v1">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#444159">
-  <meta name="description" content="Leer Sampling & Regression Analysis vanaf de basis, met interactieve uitleg, berekeningen en routes naar de tentamens.">
+  <meta name="color-scheme" content="light dark">
+  <script src="vendor/study-ui/theme.js"></script>
+  <meta name="description" content="Leer Sampling & Regression Analysis met uitleg, oefenvragen en volledige tentamens.">
   <title>SRA · Begrijpen, oefenen, toepassen</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="vendor/study-ui/tokens.css">
-  <link rel="stylesheet" href="vendor/study-ui/shell.css">
-  <link rel="stylesheet" href="css/sra-layout.css">
-  <link rel="stylesheet" href="css/presentation.css">
-  <link rel="stylesheet" href="css/labs.css">
-  <link rel="stylesheet" href="css/terms.css">
-  <link rel="stylesheet" href="css/learning.css">
+  <link rel="stylesheet" href="css/app.css" data-study-style>
+  <link rel="stylesheet" href="vendor/study-ui/tokens.css" data-study-style>
+  <link rel="stylesheet" href="vendor/study-ui/shell.css" data-study-style>
+  <link rel="stylesheet" href="css/sra-layout.css" data-study-style>
+  <link rel="stylesheet" href="css/presentation.css" data-study-style>
+  <link rel="stylesheet" href="css/labs.css" data-study-style>
+  <link rel="stylesheet" href="css/terms.css" data-study-style>
+  <link rel="stylesheet" href="css/formula-help.css" data-study-style>
+  <link rel="stylesheet" href="css/learning.css" data-study-style>
+  <link rel="stylesheet" href="css/exams.css" data-study-style>
+  <link rel="stylesheet" href="css/mc.css" data-study-style>
+  <link rel="stylesheet" href="css/cirrus.css">
+  <link rel="stylesheet" href="css/cirrus-integration.css">
+  <link rel="stylesheet" href="vendor/study-ui/header.css">
+  <link rel="stylesheet" href="vendor/study-ui/theme.css">
+  <link rel="stylesheet" href="css/study-dark.css">
   <script defer src="data/course.js"></script>
+  <script defer src="data/exams.js"></script>
+  <script defer src="data/mc.js"></script>
   <script defer src="js/math.js"></script>
+  <script defer src="js/lab-layout.js"></script>
   <script defer src="js/labs.js"></script>
+  <script defer src="js/inline-help.js"></script>
   <script defer src="js/terms.js"></script>
+  <script defer src="js/formula-help.js"></script>
   <script defer src="js/navigation.js"></script>
+  <script defer src="js/exams.js"></script>
+  <script defer src="js/mc-state.js"></script>
+  <script defer src="js/mc.js"></script>
+  <script defer src="vendor/cafa2-cirrus/js/exam-engine.js"></script>
+  <script defer src="vendor/cafa2-cirrus/js/answer-editor.js"></script>
+  <script defer src="data/cirrus-exams.js"></script>
+  <script defer src="js/cirrus.js"></script>
   <script defer src="js/app.js"></script>
 <script data-goatcounter="https://sra.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
@@ -27,37 +49,46 @@
 <noscript><img src="https://sra.goatcounter.com/count?p=/SRA&amp;t=SRA" alt="" style="position:absolute;left:-9999px"></noscript>
   <a class="skip" href="#main">Direct naar de inhoud</a>
   <header class="topbar study-topbar">
-    <a class="brand study-brand" href="#home" aria-label="SRA hoofdpagina">SRA <span class="brand-sub">LEER- EN OEFENOMGEVING</span></a>
-    <div class="top-tools study-controls">
-      <button id="calc-open" aria-label="Rekenmachine openen" title="Rekenmachine"><svg class="calc-icon" aria-hidden="true" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="1" width="14" height="21" rx="1"/><path d="M6 5h8v4H6zM6 12h2m2 0h2m2 0h1M6 15h2m2 0h2m2 0h1M6 18h2m2 0h2m2 0h1"/></svg></button>
-      <div class="study-font-group" role="group" aria-label="Tekstgrootte">
-        <button id="font-minus" title="Kleinere letters" aria-label="Kleinere letters">A−</button>
-        <button id="font-reset" title="Standaardletters" aria-label="Standaardletters" hidden>A</button>
-        <button id="font-plus" title="Grotere letters" aria-label="Grotere letters">A+</button>
+    <div class="bar-inner">
+    <a class="brand study-brand cafa-wordmark" href="#home" aria-label="SRA hoofdpagina"><svg class="sra-wordmark-initial" viewBox="0 0 38 44" aria-hidden="true"><text x="1" y="39" fill="currentColor" font-family="Arial,sans-serif" font-size="51" font-weight="700" letter-spacing="0">S</text><path fill="#ff720c" d="M3 5h12v12H3Z"/><path fill="none" stroke="#444159" stroke-width="2.7" d="m5 10 3 3 6-7"/></svg><span>RA</span><small class="brand-sub">LEER- EN OEFENOMGEVING</small></a>
+    <div class="top-tools study-controls top-controls">
+      <button id="calc-open" data-calc aria-label="Rekenmachine openen" aria-controls="calculator" aria-expanded="false" title="Rekenmachine"><svg class="calc-icon" aria-hidden="true" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="1" width="14" height="21" rx="1"/><path d="M6 5h8v4H6zM6 12h2m2 0h2m2 0h1M6 15h2m2 0h2m2 0h1M6 18h2m2 0h2m2 0h1"/></svg></button>
+      <details id="study-theme-control" class="study-theme-control"><summary aria-label="Lichtmodus wijzigen"><span aria-hidden="true">◐</span><span class="study-theme-word">Lichtmodus</span><span data-theme-label>Automatisch</span></summary><div class="study-theme-menu"><p>Lichtmodus</p><div role="group" aria-label="Lichtmodus"><button type="button" data-theme-choice="light" aria-pressed="false">Aan <small>Licht</small></button><button type="button" data-theme-choice="dark" aria-pressed="false">Uit <small>Donker</small></button><button type="button" data-theme-choice="auto" aria-pressed="true">Automatisch <small>Volg apparaat</small></button></div><p class="study-theme-hint">Automatisch is de standaard. Een handmatige keuze geldt voor deze browsersessie.</p></div></details>
+      <div class="study-font-group font-group" role="group" aria-label="Tekstgrootte">
+        <button id="font-minus" data-font="-1" title="Kleinere letters" aria-label="Kleinere letters">A−</button>
+        <button id="font-reset" data-font="0" title="Standaardletters" aria-label="Standaardletters" hidden>A</button>
+        <button id="font-plus" data-font="1" title="Grotere letters" aria-label="Grotere letters">A+</button>
       </div>
-      <span class="study-profile"><svg aria-hidden="true" viewBox="0 0 40 40" fill="currentColor"><path fill-rule="evenodd" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 7a7 7 0 1 1 0 14 7 7 0 0 1 0-14ZM7 32c1-6 6-9 13-9s12 3 13 9a17 17 0 0 1-26 0Z"/></svg><span>Anoniem</span></span>
+      <span class="study-profile cafa-profile"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#f4f4f5"/><circle cx="20" cy="15" r="7" fill="#444159"/><path d="M8 31c1-10 23-10 24 0a17 17 0 0 1-24 0Z" fill="#444159"/></svg><span>Anoniem</span></span>
+    </div>
     </div>
   </header>
+  <div class="study-navigation-row">
+  <nav id="study-returnbar" aria-label="Terug naar je leeractiviteit" hidden><button id="history-back" type="button" aria-label="Terug naar vorige pagina" title="Terug naar je vorige leespositie" hidden>← <span>Vorige pagina</span></button></nav>
   <nav class="topnav study-nav sra-navigation" aria-label="Hoofdnavigatie">
     <button id="menu-toggle" aria-label="Leerroute openen of sluiten" aria-expanded="false" aria-controls="sidebar" hidden>☰ <span>Leerroute</span></button>
     <div class="sra-primary-links">
       <a href="#home" data-nav="home">Home</a>
       <a href="#leren" data-nav="leren">Leren</a>
-      <a href="#oefenen" data-nav="oefenen">Oefenvragen</a>
+      <a href="#tentamen/mc" data-nav="oefenen">Oefenvragen</a>
+      <a href="#tentamen/analyse" data-nav="analyse">Tentamenanalyse</a>
       <a href="#tentamen" data-nav="tentamen">Tentamens</a>
     </div>
     <details class="sra-tools-menu" id="tools-menu">
       <summary aria-label="Hulpmiddelen openen">Meer <span aria-hidden="true">⌄</span></summary>
       <div class="sra-tools-panel">
+        <a href="#tentamen/analyse" data-nav="analyse">Tentamenanalyse</a>
+        <a href="#formules" data-nav="formules">Formuleoverzicht</a>
         <a href="#voortgang" data-nav="voortgang">Voortgang</a>
         <a href="#begrippen" data-nav="begrippen">Begrippen</a>
         <a href="#bronnen" data-nav="bronnen">Bronnen</a>
       </div>
     </details>
   </nav>
+  </div>
   <div class="layout">
     <aside id="sidebar" aria-label="Lessen"></aside>
-    <main id="main" tabindex="-1"><button id="history-back" type="button" aria-label="Terug naar vorige pagina" title="Terug naar je vorige leespositie" hidden>← <span>Terug</span></button><noscript><h1>SRA-samenvatting</h1><p>Voor de interactieve lessen is JavaScript nodig. Je kunt de volledige uitleg en alle antwoorden ook lezen in de <a href="SRA leesversie.html">zelfstandige leesversie</a>.</p></noscript></main>
+    <main id="main" tabindex="-1"><noscript><h1>SRA-samenvatting</h1><p>Voor de interactieve lessen is JavaScript nodig. Je kunt de volledige uitleg en alle antwoorden ook lezen in de <a href="SRA leesversie.html">zelfstandige leesversie</a>.</p></noscript></main>
   </div>
   <div id="toast" role="status" aria-live="polite"></div>
   <dialog id="question-overview" class="study-overview-dialog" aria-labelledby="question-overview-title">
@@ -65,15 +96,17 @@
     <div id="question-overview-content" class="study-overview-body"></div>
     <form method="dialog" class="study-overview-footer"><span id="question-overview-range" class="study-overview-range"></span><button type="submit" class="study-btn primary">Sluiten</button></form>
   </dialog>
+  <div id="exam-announcement" class="sr-only" role="status" aria-live="polite"></div>
+  <dialog id="exam-submit-dialog" class="exam-dialog" aria-labelledby="exam-submit-title"><h2 id="exam-submit-title">Toets voltooien</h2><p data-exam-submit-summary></p><p>Na inleveren kun je deze poging bekijken en zelf nakijken. Je kunt later een nieuwe poging starten.</p><div class="actions"><button type="button" class="btn" data-exam-cancel-submit>Verder werken</button><button type="button" class="btn primary" data-exam-confirm-submit>Definitief inleveren</button></div></dialog>
   <dialog id="confirmation" aria-labelledby="confirm-title">
     <form method="dialog">
       <div class="dialog-head"><h2 id="confirm-title">Voortgang wijzigen</h2></div>
       <div class="calc-body"><p id="confirm-message"></p><div class="actions"><button class="btn" value="cancel" autofocus>Annuleren</button><button class="btn primary" value="confirm">Bevestigen</button></div></div>
     </form>
   </dialog>
-  <dialog id="calculator" aria-labelledby="calc-title">
-    <form method="dialog" class="dialog-head"><h2 id="calc-title">Rekenmachine</h2><button class="icon-button" aria-label="Rekenmachine sluiten">×</button></form>
-    <div class="calc-body"><label for="calc-expression">Berekening</label><input id="calc-expression" inputmode="text" autocomplete="off" placeholder="Bijv. 3740 * (636 - 97185 / 165)"><output id="calc-result" aria-live="polite">0</output><div id="calc-keys" class="calc-keys"></div><p class="muted">Gebruik punt of komma voor decimalen, zonder duizendtallen. √, ln, exp en machten zijn beschikbaar.</p></div>
-  </dialog>
+  <section id="calculator" role="region" aria-labelledby="calc-title" hidden>
+    <header class="calc-head"><h2 id="calc-title"><button id="calc-move" type="button" aria-label="Rekenmachine verplaatsen" title="Sleep de rekenmachine of verplaats met de pijltoetsen. Home zet hem terug."><span aria-hidden="true">⠿</span> Rekenmachine</button></h2><div class="calc-window-actions"><button id="calc-minimize" type="button" aria-label="Rekenmachine inklappen" aria-controls="calc-body" aria-expanded="true" title="Inklappen">−</button><button id="calc-close" type="button" aria-label="Rekenmachine sluiten" title="Sluiten">×</button></div></header>
+    <div id="calc-body" class="calc-body"><label for="calc-expression">Berekening</label><input id="calc-expression" inputmode="text" autocomplete="off" placeholder="Bijv. 3740 * (636 - 97185 / 165)"><output id="calc-result" aria-live="polite">0</output><div id="calc-keys" class="calc-keys"></div><p class="calc-help">Sleep de kop om ruimte te maken. Je kunt de vraag blijven lezen en beantwoorden. Punt of komma voor decimalen, zonder duizendtallen.</p></div>
+  </section>
 </body>
 </html>

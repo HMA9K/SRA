@@ -25,11 +25,11 @@ Catalogus: `scripts/terminology.py`. Kennisstart en formules: `scripts/lesson_gu
 
 ## Inhoud
 
-19 lessen, 57 begripchecks, 19 interactieve reken-/onderzoeksbladen, een begrippenlijst en 6 routes naar concrete tentamenvragen. Stapsgewijs geopende voorbeelden, lokale voortgang, aparte eerste/laatste pogingen, export/import, tentamenaantekeningen en een rekenmachine.
+19 lessen, 57 begripchecks, 134 meerkeuzevragen, 19 interactieve reken-/onderzoeksbladen, een begrippenlijst en 10 volledige tentamens met 224 vragen. Stapsgewijs geopende voorbeelden, lokale voortgang, aparte eerste/laatste pogingen, export/import, tentamenuitwerkingen en een rekenmachine.
 
-De cijfers bij de checks zijn geen tentamencijfer. De routes bij oktober 2024 zijn reconstructies uit het beschikbare antwoordmodel en worden zo gelabeld. Het volledige tentamen van maart 2025 wordt geopend als oorspronkelijke PDF, niet nagebouwd als automatische examenafname.
+De cijfers bij de checks zijn geen tentamencijfer. Volledige tentamens gebruiken de oorspronkelijke vragen, casussen, tabellen en antwoordmodellen. Open antwoorden worden met het officiële model vergeleken en door de student zelf beoordeeld.
 
-De hoofdpagina geeft drie keuzes: **Leren**, **Oefenvragen maken** en **Tentamens oefenen**. Leren opent het lesoverzicht; alleen binnen een les verschijnt de onderwerpenlijst. Oefenvragen opent een aparte oefenomgeving met keuze per onderdeel of les, één vraag tegelijk en een link naar de bijbehorende uitleg. Beide gebruiken dezelfde opgeslagen begripchecks. Tentamens opent het dashboard in de CAFA2/Cirrus-vormgeving, met de zes beschikbare oefenroutes. Iedere route heeft een eigen uitwerking en een verstelbaar paneel met controlepunten. Op mobiel staan de panelen onder elkaar. Voortgang, begrippen en bronnen staan bij de hulpmiddelen.
+De hoofdpagina geeft vier keuzes: **Leren**, **Oefenvragen**, **Tentamenanalyse** en **Tentamens**. Oefenvragen biedt per onderwerp zes vragen met oplopende moeilijkheid. De begripchecks uit de lessen blijven ook afzonderlijk bereikbaar. Naast iedere controleknop staat de keuze om een antwoord direct na aanklikken na te kijken; deze voorkeur geldt voor beide omgevingen en blijft bewaard. De toelichting verschijnt onder het gekozen antwoord, met rekenstappen, patroonherkenning, valkuilen en uitleg per antwoordmogelijkheid. Tentamens gebruikt de CAFA2-bediening met één vraag per scherm, een antwoordeditor en de knoppen Overzicht, Sectie, Introductie, Markeren en Toets voltooien. Het antwoordmodel verschijnt onder de eigen uitwerking. De oude oefenroutes zijn verwijderd; bestaande links openen de bijbehorende volledige tentamenvraag. Oude aantekeningen blijven beschikbaar bij Voortgang.
 
 Elke les bevat een eigen onderzoek. De grafieken reageren op invoer en tonen naast de afbeelding ook rekenwaarden en een interpretatie. Bij de eerste les en de tentamenaanpak helpt een interactief schema bij het maken van keuzes. Demonstratiegegevens zijn herkenbaar; het wijzigen van zulke gegevens verandert de oorspronkelijke cursusbronnen niet.
 
@@ -57,24 +57,33 @@ tests/validate.cjs
 bronnen/                 lokale kopieën, niet gevolgd in Git
 ```
 
-Inhoud aanpassen in `scripts/build_content.py`. Met Node.js en Python 3 beschikbaar kun je vanuit een gewone clone `npm test` en `npm run build` uitvoeren. Er zijn geen npm-afhankelijkheden om te installeren. Deze bouwmodus maakt de data, zelfstandige HTML, leesversie en een ZIP zonder bronbestanden. De app heeft geen externe libraries, fonts of netwerkdiensten nodig.
+Inhoud aanpassen in `scripts/build_content.py`. De brongebonden aanvullingen en extra oefenvragen staan in `scripts/course_completion.py` en `scripts/completion_questions.py`. Installeer voor het bouwen eerst de Python-kleurparser met `python -m pip install -r requirements-build.txt`. Met Node.js en Python 3 beschikbaar kun je vanuit een gewone clone `npm test` en `npm run build` uitvoeren. Er zijn geen npm-afhankelijkheden om te installeren. Deze bouwmodus maakt de data, zelfstandige HTML, leesversie en een ZIP zonder bronbestanden. De app heeft geen externe libraries, fonts of netwerkdiensten nodig.
+
+Maak bij een nieuwe lokale opbouw eerst de boek- en SET-uitsneden met `python scripts/prepare_completion_sources.py`. Dat vereist het oorspronkelijke boek in de SRA-map en `Attentiepunten SET V23.pdf` in de naastgelegen SET-studiemap zoals in dat script vastgelegd.
 
 Gebruik lokaal `npm run build:full` (of `python scripts/package.py`) wanneer de oorspronkelijke SRA-projectbestanden een map hoger staan. Deze opdracht kopieert ook de bronnen en maakt de complete ZIP. De bronloze en complete ZIP hebben verschillende namen, zodat de complete lokale oplevering behouden blijft. De bronloze ZIP neemt ook eventueel aanwezige oude PDF's niet mee.
 
 ## Controleren
 
-De formulepresentatie staat in `scripts/presentation.py` en `css/presentation.css`: 60 vergelijkingen met native MathML, zonder downloads of externe lettertypen. Breuken, wortels, machten en indices werken ook in de zelfstandige leesversie. Per les is de betekenis van de symbolen uitklapbaar. Rekenbladen tonen uitgelijnde decimalen, tussenstappen, tabelkoppen en totalen. Grafieken passen zich aan de beschikbare breedte aan; brede formules en tabellen hebben een eigen schuifgebied.
+De formulepresentatie staat in `scripts/presentation.py` en `css/presentation.css`: vergelijkingen met native MathML, zonder downloads of externe lettertypen. Breuken, wortels, machten en indices werken ook in de zelfstandige leesversie. Per les is de betekenis van de symbolen uitklapbaar. Rekenbladen tonen uitgelijnde decimalen, tussenstappen, tabelkoppen en totalen. Grafieken passen zich aan de beschikbare breedte aan; brede formules en tabellen hebben een eigen schuifgebied.
 
 `npm test` controleert de leerdataset, de koppeling van alle 19 labs, de bronpaden en de statistische rekenfuncties tegen onafhankelijk berekende waarden en de officiële uitwerkingen. `npm run test:sources` controleert aanvullend de aanwezigheid en PDF-headers van de lokale bronbestanden. De lokale browsercontrole omvat desktop, mobiel, navigatie, checks, voortgang en rekenbladen.
 
 ## Opslag
 
-Alle antwoorden en aantekeningen staan in `localStorage` onder `sra-learning-v1`. Export/import maakt verplaatsen naar een ander apparaat mogelijk. Bij geweigerde browseropslag blijft de sessie werken en kan de voortgang worden geëxporteerd. Geen analytics, login of verzending van persoonsgegevens.
+Antwoorden en aantekeningen staan in lokale browseropslag: lessen onder `sra-learning-v1`, MC onder `sra-mc-v1` en Cirrus-pogingen onder `sra-cirrus-exams-v1`. Export/import maakt verplaatsen naar een ander apparaat mogelijk. Bij geweigerde browseropslag blijft de sessie werken en kan de voortgang worden geëxporteerd. De app heeft geen login. De onlineversie gebruikt de reeds ingestelde Cloudflare Web Analytics voor bezoekstatistieken.
 
 ## Publicatie
 
-De broncode staat in [HMA9K/SRA](https://github.com/HMA9K/SRA). De site is statisch; hosting en een publieke website zijn afzonderlijke stappen. De bron-PDF's zijn lokale kopieën, worden door `.gitignore` uitgesloten en staan niet in de repository. De interactieve uitleg en tools werken zonder deze PDF's; de links naar oorspronkelijke documenten vereisen de bijbehorende lokale `bronnen`-map. Kies bij eventuele websitepublicatie passende toegankelijke bronlinks. De complete ZIP is bedoeld als lokale oplevering met documenten.
+De broncode staat in [HMA9K/SRA](https://github.com/HMA9K/SRA). De bron-PDF's worden door `.gitignore` uitgesloten. Alleen de repository publiceren levert daarom geen complete tentamenomgeving op. `python scripts/build_site.py` maakt na de gewone build een publiceerbaar pakket in `output/site`, met controles op de benodigde bronbestanden. Publiceer uitsluitend die uitvoermap. Werkbestanden, Git, tools en het volledige studieboek worden niet opgenomen. `404.html` voorkomt dat een ontbrekende documentlink als een ongeformatteerde kopie van de app wordt geopend.
 
 ## Bronnen en inhoudelijke keuzes
 
 De bronregistratie staat in `data/course.js` en de app. Per les zijn PDF-pagina's en waar mogelijk formulenummers genoemd. De cursusgrenzen en afrondingsafspraken volgen het onderwijsprogramma, het formuleblad en de recente uitwerkingen. Bronverschillen worden expliciet getoond (tweezijdige Sig., de individuele meervoudige t-toets, het teken van R en vraag 20 van maart 2025). Het volledige boek blijft in de oorspronkelijke projectmap.
+
+
+De [afronding en dekkingsmatrix van 20 september](docs/afronding-sra-2026-09-20.md) beschrijven de inhoudelijke aanvullingen, bronafbakening en uitgevoerde controles.
+
+### Kop en lichtmodus
+
+Alle interactieve pagina’s delen de CAFA2-kop, met het vinkje op de S en de ondertitel LEER- EN OEFENOMGEVING. Lichtmodus biedt Aan, Uit en Automatisch; een handmatige keuze geldt voor de browsersessie. Automatisch volgt het apparaat. De bestaande Meer-navigatie blijft beschikbaar. De gedeelde bestanden staan in `packages/study-ui` versie 1.1.0.

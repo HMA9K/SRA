@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-23",
+  "deployment": "493385b2-266a-4e77-998c-7f34a7b30f80",
+  "production": "https://sra-2xt.pages.dev/",
+  "files": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "1af873ff064097ec67222999f44a674cc14c3e8bb9e8d7f0367f4efe3ad6fc53",
+      "bytes": 10160
+    },
+    {
+      "file": "vendor/study-ui/header.css",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "a961eebb300c0563af530ce97c7d38c5539851038feb32b4f75e4cf46db88c09",
+      "bytes": 4181
+    },
+    {
+      "file": "vendor/study-ui/theme.css",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "176d83f96820050119b20abf105e5ae9440167b66f9339c4f0a1c8cb7d80485a",
+      "bytes": 2687
+    },
+    {
+      "file": "vendor/study-ui/theme.js",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "0aa83ba58794cf58e757e14c1ae7f65c691bec405225489c5addd01155b88cc7",
+      "bytes": 2308
+    },
+    {
+      "file": "css/study-dark.css",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "a0e712fe054f785e9b06385381397b11be0452eb1e50b7773feb36601937bfa7",
+      "bytes": 158092
+    },
+    {
+      "file": "SRA interactieve samenvatting.html",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "9473e25789cc7950c4109a4ecc2a0a69285395a0e422edae9d36319a6e8052df",
+      "bytes": 2765281
+    }
+  ]
+}

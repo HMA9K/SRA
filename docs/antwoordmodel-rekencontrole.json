@@ -1,0 +1,674 @@
+[
+  {
+    "question": "20200323/3",
+    "calculation": "standaardafwijking fout",
+    "value": 2920.7211857515535,
+    "expected": 2920.721,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20200323/3",
+    "calculation": "foutbovengrens",
+    "value": 3717000,
+    "expected": 3717000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20200323/6",
+    "calculation": "ratio-totaal onafgerond",
+    "value": 178135009.31098697,
+    "expected": 178135009.31,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20200323/7",
+    "calculation": "ratio-ondergrens",
+    "value": 177564000,
+    "expected": 177564000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20200323/11",
+    "calculation": "stratumvarianties",
+    "value": 303034006.8642958,
+    "expected": 303034007,
+    "tolerance": 2
+  },
+  {
+    "question": "20200323/11",
+    "calculation": "ondergrens",
+    "value": 178128000,
+    "expected": 178128000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20200323/16",
+    "calculation": "R-kwadraat",
+    "value": 0.7459648344334129,
+    "expected": 0.7459648,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20200323/18",
+    "calculation": "F zonder tussentijds afronden",
+    "value": 55.79279475982533,
+    "expected": 55.792795,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20200323/20",
+    "calculation": "individuele bovengrens",
+    "value": 2.5680204638394875,
+    "expected": 2.56802,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20211101/1",
+    "calculation": "standaardafwijking",
+    "value": 385.0,
+    "expected": 385,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20211101/1",
+    "calculation": "puntschatting",
+    "value": 1271420,
+    "expected": 1271420,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20211101/1",
+    "calculation": "ondergrens naar buiten",
+    "value": 1159000,
+    "expected": 1159000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20211101/1",
+    "calculation": "bovengrens naar buiten",
+    "value": 1383000,
+    "expected": 1383000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20211101/2",
+    "calculation": "extra steekproef",
+    "value": 198,
+    "expected": 198,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20211101/3",
+    "calculation": "ondergrens",
+    "value": 1549000,
+    "expected": 1549000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20211101/7",
+    "calculation": "puntschatting",
+    "value": 24076000.0,
+    "expected": 24076000,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20211101/7",
+    "calculation": "ondergrens naar buiten",
+    "value": 23851000,
+    "expected": 23851000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20211101/7",
+    "calculation": "bovengrens naar buiten",
+    "value": 24301000,
+    "expected": 24301000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20211101/9",
+    "calculation": "TotalSS uit afgeronde s",
+    "value": 37.601423999999994,
+    "expected": 37.601424,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20220316/1",
+    "calculation": "totaal",
+    "value": 10565625.0,
+    "expected": 10565625,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20220316/2",
+    "calculation": "bovengrens",
+    "value": 12270000,
+    "expected": 12270000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20220316/3",
+    "calculation": "benodigde steekproef",
+    "value": 3402,
+    "expected": 3402,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20220316/5",
+    "calculation": "verschilschatting",
+    "value": 10726465.625,
+    "expected": 10726465.625,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20220316/5",
+    "calculation": "bovengrens",
+    "value": 10768000,
+    "expected": 10768000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20220316/8",
+    "calculation": "bovengrens uit gegeven afgeronde marges",
+    "value": 300553.88838927675,
+    "expected": 300553.8884,
+    "tolerance": 0.0001
+  },
+  {
+    "question": "20220316/10",
+    "calculation": "correct R-kwadraat",
+    "value": 0.525625,
+    "expected": 0.525625,
+    "tolerance": 1e-07
+  },
+  {
+    "question": "20220316/23",
+    "calculation": "korting man",
+    "value": 1126.326,
+    "expected": 1126.326,
+    "tolerance": 1e-05
+  },
+  {
+    "question": "20221031/2",
+    "calculation": "ratio",
+    "value": 0.8092,
+    "expected": 0.8092,
+    "tolerance": 1e-07
+  },
+  {
+    "question": "20221031/2",
+    "calculation": "bovengrens",
+    "value": 46648951.91581904,
+    "expected": 46648953,
+    "tolerance": 20
+  },
+  {
+    "question": "20221031/4",
+    "calculation": "puntschatting",
+    "value": 13140000.0,
+    "expected": 13140000,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20221031/4",
+    "calculation": "ondergrens naar buiten",
+    "value": 9514000,
+    "expected": 9514000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20221031/4",
+    "calculation": "bovengrens naar buiten",
+    "value": 16766000,
+    "expected": 16766000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20221031/6",
+    "calculation": "puntschatting",
+    "value": 11864850.0,
+    "expected": 11864850,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20221031/6",
+    "calculation": "ondergrens naar buiten",
+    "value": 10282000,
+    "expected": 10282000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20221031/6",
+    "calculation": "bovengrens naar buiten",
+    "value": 13448000,
+    "expected": 13448000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20221031/13",
+    "calculation": "extra prijs",
+    "value": 342.28,
+    "expected": 342.28,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20221031/15",
+    "calculation": "SSE",
+    "value": 184480.91300000006,
+    "expected": 184480.913,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20221031/15",
+    "calculation": "MSE",
+    "value": 6361.4107931034505,
+    "expected": 6361.410793,
+    "tolerance": 1e-05
+  },
+  {
+    "question": "20221031/15",
+    "calculation": "R-kwadraat",
+    "value": 0.79561275873018,
+    "expected": 0.795613,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20221031/15",
+    "calculation": "F",
+    "value": 112.88752595234604,
+    "expected": 112.8875,
+    "tolerance": 0.0001
+  },
+  {
+    "question": "20230315/1",
+    "calculation": "puntschatting",
+    "value": 9190728.31217977,
+    "expected": 9190728.25,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20230315/1",
+    "calculation": "ondergrens naar buiten",
+    "value": 9181000,
+    "expected": 9181000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20230315/1",
+    "calculation": "bovengrens naar buiten",
+    "value": 9201000,
+    "expected": 9201000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20230315/5",
+    "calculation": "puntschatting",
+    "value": 5587966.0,
+    "expected": 5587966,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20230315/5",
+    "calculation": "ondergrens naar buiten",
+    "value": 5458100,
+    "expected": 5458100,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20230315/5",
+    "calculation": "bovengrens naar buiten",
+    "value": 5717800,
+    "expected": 5717800,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20230315/14",
+    "calculation": "residuele standaardafwijking",
+    "value": 16.920283685565085,
+    "expected": 16.920284,
+    "tolerance": 1e-05
+  },
+  {
+    "question": "20230315/16",
+    "calculation": "puntschatting",
+    "value": 152.68900000000002,
+    "expected": 152.689,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20230315/16",
+    "calculation": "ondergrens naar buiten",
+    "value": 123,
+    "expected": 123,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20230315/16",
+    "calculation": "bovengrens naar buiten",
+    "value": 182,
+    "expected": 182,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20231030/2",
+    "calculation": "MPU-ondergrens",
+    "value": 1042000,
+    "expected": 1042000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20231030/4",
+    "calculation": "verschil-ondergrens",
+    "value": 1131000,
+    "expected": 1131000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20231030/5",
+    "calculation": "extra steekproef",
+    "value": 50,
+    "expected": 50,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20231030/7",
+    "calculation": "puntschatting",
+    "value": 360747,
+    "expected": 360747,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20231030/7",
+    "calculation": "ondergrens naar buiten",
+    "value": 331900,
+    "expected": 331900,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20231030/7",
+    "calculation": "bovengrens naar buiten",
+    "value": 389600,
+    "expected": 389600,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20231030/12",
+    "calculation": "puntschatting",
+    "value": 137.55,
+    "expected": 137.55,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20231030/12",
+    "calculation": "ondergrens naar buiten",
+    "value": 93,
+    "expected": 93,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20231030/12",
+    "calculation": "bovengrens naar buiten",
+    "value": 183,
+    "expected": 183,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20231030/21",
+    "calculation": "hartritme",
+    "value": 139.417,
+    "expected": 139.417,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20240318/1",
+    "calculation": "standaardafwijking",
+    "value": 572.0,
+    "expected": 572,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20240318/1",
+    "calculation": "MPU-ondergrens",
+    "value": 43623000,
+    "expected": 43623000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20240318/3",
+    "calculation": "ratio-ondergrens",
+    "value": 39283000,
+    "expected": 39283000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20240318/7",
+    "calculation": "puntschatting",
+    "value": 6410600.0,
+    "expected": 6410600,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20240318/7",
+    "calculation": "ondergrens naar buiten",
+    "value": 6286000,
+    "expected": 6286000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20240318/7",
+    "calculation": "bovengrens naar buiten",
+    "value": 6535000,
+    "expected": 6535000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20240318/12",
+    "calculation": "SSE",
+    "value": 843027783,
+    "expected": 843027783,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20240318/12",
+    "calculation": "MSE",
+    "value": 879987.2473903967,
+    "expected": 879987.24739,
+    "tolerance": 1e-05
+  },
+  {
+    "question": "20240318/12",
+    "calculation": "F",
+    "value": 15706.459285617637,
+    "expected": 15706.459286,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20240318/14",
+    "calculation": "logvoorspelling",
+    "value": 11846.587233249069,
+    "expected": 11846.587233,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20240318/15",
+    "calculation": "puntschatting",
+    "value": 12880.210000000003,
+    "expected": 12880.21,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20240318/15",
+    "calculation": "ondergrens naar buiten",
+    "value": 11000,
+    "expected": 11000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20240318/15",
+    "calculation": "bovengrens naar buiten",
+    "value": 14800,
+    "expected": 14800,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20240318/17",
+    "calculation": "raw-residu gedeeld door s_e",
+    "value": 3.4630642496953348,
+    "expected": 3.463064,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20240318/22",
+    "calculation": "meervoudige voorspelling",
+    "value": 12617.158999999998,
+    "expected": 12617.159,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20241028/1",
+    "calculation": "puntschatting",
+    "value": 1784652.93867547,
+    "expected": 1784652.9,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20241028/1",
+    "calculation": "ondergrens naar buiten",
+    "value": 1775200,
+    "expected": 1775200,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20241028/1",
+    "calculation": "bovengrens naar buiten",
+    "value": 1794100,
+    "expected": 1794100,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20241028/2",
+    "calculation": "extra steekproef",
+    "value": 341,
+    "expected": 341,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20241028/6",
+    "calculation": "puntschatting",
+    "value": 6517650.0,
+    "expected": 6517650,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20241028/6",
+    "calculation": "ondergrens naar buiten",
+    "value": 6370000,
+    "expected": 6370000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20241028/6",
+    "calculation": "bovengrens naar buiten",
+    "value": 6660000,
+    "expected": 6660000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20241028/9",
+    "calculation": "juiste SSE",
+    "value": 44.10500000000002,
+    "expected": 44.105,
+    "tolerance": 1e-07
+  },
+  {
+    "question": "20241028/10",
+    "calculation": "F",
+    "value": 857.846865434758,
+    "expected": 857.846865,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20241028/13",
+    "calculation": "correct gemiddelde-ondergrens",
+    "value": 29.27161808988335,
+    "expected": 29.271615,
+    "tolerance": 1e-05
+  },
+  {
+    "question": "20241028/13",
+    "calculation": "correct gemiddelde-bovengrens",
+    "value": 30.21018191011665,
+    "expected": 30.210185,
+    "tolerance": 1e-05
+  },
+  {
+    "question": "20250317/3",
+    "calculation": "puntschatting",
+    "value": 1804220.0,
+    "expected": 1804220,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20250317/3",
+    "calculation": "ondergrens naar buiten",
+    "value": 1790000,
+    "expected": 1790000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20250317/3",
+    "calculation": "bovengrens naar buiten",
+    "value": 1820000,
+    "expected": 1820000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20250317/6",
+    "calculation": "puntschatting",
+    "value": 171083,
+    "expected": 171083,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20250317/6",
+    "calculation": "ondergrens naar buiten",
+    "value": 165400,
+    "expected": 165400,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20250317/6",
+    "calculation": "bovengrens naar buiten",
+    "value": 176800,
+    "expected": 176800,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20250317/8",
+    "calculation": "verklaarde variatie",
+    "value": 0.4651240000000001,
+    "expected": 0.465124,
+    "tolerance": 1e-07
+  },
+  {
+    "question": "20250317/19",
+    "calculation": "WO-HBO",
+    "value": 365.322,
+    "expected": 365.322,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20250317/20",
+    "calculation": "salaris onafgerond",
+    "value": 5617.705,
+    "expected": 5617.705,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20250317/20",
+    "calculation": "salaris hele euro",
+    "value": 5618,
+    "expected": 5618,
+    "tolerance": 0.01
+  }
+]

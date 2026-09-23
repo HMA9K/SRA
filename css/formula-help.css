@@ -1,0 +1,11 @@
+/* Gemaakt met Codex: interactieve MathML zonder gewijzigde formulegeometrie. */
+math [data-formula-help],.formula-text-component{color:#0066a7;cursor:pointer;text-decoration:underline dotted #7b9db6;text-underline-offset:4px}
+math [data-formula-help]:hover,.formula-text-component:hover{background:#e8f3fa;color:#004b80}
+math [data-formula-help]:focus-visible,.formula-text-component:focus-visible{outline:2px solid #1873b6;outline-offset:3px;background:#e8f3fa;border-radius:2px}
+math [data-formula-help][role="group"]{color:inherit;text-decoration:none}
+math [data-formula-help][role="group"]:hover{background:transparent}
+.formula-help-hint{font-size:.85rem;color:#506478;margin:12px 0 22px}
+.formula-help-popup .formula-help-definition{font-size:14px;margin:0;line-height:1.6}
+.formula-help-popup .formula-help-source{margin:9px 0 0;font-size:11px;line-height:1.5}
+.formula-help-source a{color:#26704b}
+@media print{math [data-formula-help],.formula-text-component{color:inherit;text-decoration:none}.formula-help-hint,.formula-help-popup{display:none!important}}

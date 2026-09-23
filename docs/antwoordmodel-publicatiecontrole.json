@@ -1,0 +1,56 @@
+{
+  "deployment": "6554f426-8189-4984-89f7-19fb4131d243",
+  "published": "2026-09-20T13:29:45.101537Z",
+  "checks": [
+    {
+      "file": "js/cirrus.js",
+      "status": 200,
+      "equal": true,
+      "sha256": "6b51fe659a507c906f5b912d49e57019470ed5778aafc80cf4e6599208dce7fe"
+    },
+    {
+      "file": "css/cirrus-integration.css",
+      "status": 200,
+      "equal": true,
+      "sha256": "00407933431f135a8986879d7d3178cf8cfb91af802e50be1e37228713da6bbf"
+    },
+    {
+      "file": "data/cirrus-exams.js",
+      "status": 200,
+      "equal": true,
+      "sha256": "4868b4adb5381e665e899d10f86c24d79f3fabf05a6f84e57b90f8deefcf8e01"
+    },
+    {
+      "file": "data/exams.js",
+      "status": 200,
+      "equal": true,
+      "sha256": "9f898407b9504ac99bd62d864bb440388ce0c0750089a43a931479d2e47e4f1e"
+    },
+    {
+      "file": "data/answer-audit.json",
+      "status": 200,
+      "equal": true,
+      "sha256": "e993ea8ba82a2cc2287361703bd6777fca6cbe47360071aa1f9ce0bf0a3c7a18"
+    },
+    {
+      "file": "data/course.js",
+      "status": 200,
+      "equal": true,
+      "sha256": "ea7b0e42a704d2c46db3952fea2a3809be1f862937185ee4c52f5b4b56463c8f"
+    },
+    {
+      "file": "SRA interactieve samenvatting.html",
+      "status": 200,
+      "equal": false,
+      "sha256": "005f1da368930e4f4752e9f0e299e2cc787117649ba5a18da237cdb465935266",
+      "content_equal": true,
+      "provider_injection": "Cloudflare Pages Analytics"
+    },
+    {
+      "file": "SRA leesversie.html",
+      "status": 200,
+      "equal": true,
+      "sha256": "79305cf7eeb05070d87c6c9b4eb3b181546beed30e7ab6fb209db590d43d0434"
+    }
+  ]
+}

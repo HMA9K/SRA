@@ -1,0 +1,53 @@
+{
+  "deployment": "0c1b1864-4714-4680-ba22-967c847d4f96",
+  "checks": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "content_equal": true,
+      "sha256": "ccbef0c0ba92ed68e1673dedbbc4d5a7527a1cee2676d72d693393b1682ee6e8"
+    },
+    {
+      "file": "js/app.js",
+      "status": 200,
+      "content_equal": true,
+      "sha256": "7827fba2a2890425e4fc6d9b5cc0e4d306cb58a6b34e2623acd426f9515f0a10"
+    },
+    {
+      "file": "js/mc.js",
+      "status": 200,
+      "content_equal": true,
+      "sha256": "38f8be5f19d05ce5e4001105614e944f68526eb6ee630bf18ee55e5de1178ebb"
+    },
+    {
+      "file": "css/cirrus-integration.css",
+      "status": 200,
+      "content_equal": true,
+      "sha256": "abca3431a16a9ad2eb8efb7045fdf0fd68ec1adabf67f1e6a2e41fd06b2cd9a8"
+    },
+    {
+      "file": "css/learning.css",
+      "status": 200,
+      "content_equal": true,
+      "sha256": "de49aac6926e07c43d3903818a1b35ac801b886979fe5c6852e6a8df654734e7"
+    },
+    {
+      "file": "css/mc.css",
+      "status": 200,
+      "content_equal": true,
+      "sha256": "76aa1ddb6a7f61276c561382aefb7cc7ff5798adbe0ba1831c435f1bc0382b34"
+    },
+    {
+      "file": "data/mc.js",
+      "status": 200,
+      "content_equal": true,
+      "sha256": "8e15db40eed01fdf0314b3d505fb4f935078495cf7a8eb82dc1220b666ef8172"
+    },
+    {
+      "file": "data/course.js",
+      "status": 200,
+      "content_equal": true,
+      "sha256": "89499616883dd70d11181e85f2bf6c3aa08fb3bde4f417d9e2ec655576b62a9a"
+    }
+  ]
+}

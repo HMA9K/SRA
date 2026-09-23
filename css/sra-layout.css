@@ -1,6 +1,7 @@
 /* SRA-specific integration of the shared Study UI shell. Mathematical content
    keeps its own readable type size and horizontal overflow containers. */
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.study-shell .bar-inner{display:contents}
 body.study-shell{--purple:var(--study-purple);--green:var(--study-green);--green-dark:var(--study-green-dark);--ink:var(--study-ink);--muted:var(--study-muted);--line:var(--study-border);--bg:var(--study-canvas);--radius:var(--study-radius)}
 body.study-shell .topbar{height:var(--study-header-height)}
 body.study-shell .brand{gap:14px}

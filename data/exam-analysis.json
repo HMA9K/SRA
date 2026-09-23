@@ -1,0 +1,1070 @@
+{
+  "methode": "Alle tien beschikbare tentamendata; negen verschillende vraagverzamelingen. Maart en juni 2020 bevatten dezelfde vragen en tellen voor themafrequenties eenmaal. Expliciete vragen/deelvragen; thema’s overlappen; geen puntentoerekening per thema.",
+  "frequenties": {
+    "Betrouwbaarheidsinterval steekproef": 9,
+    "Stratificatie": 9,
+    "Verklaarde variatie / modelvergelijking": 9,
+    "Hypothesen / significantie": 9,
+    "Uitschieters / invloed": 9,
+    "Normaliteit": 9,
+    "Heteroscedasticiteit": 8,
+    "Multicollineariteit": 9,
+    "Variabelenselectie": 9,
+    "Niet-lineaire modellen": 7,
+    "Voorspellingsinterval regressie": 5,
+    "Benodigde steekproefomvang": 4
+  },
+  "tentamens": [
+    {
+      "datum": "23-03-2020",
+      "bron": "2020-03_SRA_Tentamen.pdf",
+      "uitwerking": "2020-03_SRA_Uitwerkingen.pdf",
+      "aantal_vragen": 28,
+      "punten": {
+        "1": 1,
+        "2": 3,
+        "3": 7,
+        "4": 2,
+        "5": 1,
+        "6": 2,
+        "7": 5,
+        "8": 2,
+        "9": 2,
+        "10": 4,
+        "11": 6,
+        "12": 2,
+        "13": 3,
+        "14": 10,
+        "15": 2,
+        "16": 3,
+        "17": 7,
+        "18": 4,
+        "19": 3,
+        "20": 6,
+        "21": 3,
+        "22": 3,
+        "23": 3,
+        "24": 3,
+        "25": 3,
+        "26": 3,
+        "27": 3,
+        "28": 4
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          3,
+          7,
+          11
+        ],
+        "Stratificatie": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          16,
+          18,
+          27
+        ],
+        "Hypothesen / significantie": [
+          15,
+          17,
+          21,
+          28
+        ],
+        "Uitschieters / invloed": [
+          14
+        ],
+        "Normaliteit": [
+          17
+        ],
+        "Heteroscedasticiteit": [
+          17
+        ],
+        "Multicollineariteit": [
+          13,
+          22,
+          26
+        ],
+        "Variabelenselectie": [
+          25
+        ],
+        "Niet-lineaire modellen": [
+          23,
+          24
+        ],
+        "Voorspellingsinterval regressie": [
+          20
+        ],
+        "Benodigde steekproefomvang": []
+      },
+      "duur_minuten": 150,
+      "herstart_nummering": true,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 · Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 11,
+          "description": "Verschilschatter en quotiëntschatter; eenzijdige grenzen; stratificatie en evenredige allocatie bij hypotheken."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 · Enkelvoudige regressie",
+          "points": 40,
+          "firstQuestion": 12,
+          "lastQuestion": 20,
+          "description": "Cross-sectieanalyse, uitschieters en invloed; significantie, R², normaliteit, homoscedasticiteit, ANOVA en eenzijdig voorspellen."
+        },
+        {
+          "id": "opgave-3",
+          "number": 3,
+          "title": "Opgave 3 · Meervoudige regressie",
+          "points": 25,
+          "firstQuestion": 21,
+          "lastQuestion": 28,
+          "description": "Multicollineariteit, transformaties, achterwaartse eliminatie, VIF, adjusted R² en significantie van coëfficiënten."
+        }
+      ],
+      "bronopmerkingen": [
+        {
+          "questions": [
+            17
+          ],
+          "text": "De verwijzing naar Afbeelding 9 bij homoscedasticiteit in dit antwoordmodel betreft Afbeelding 8 in de opgaven. De uitwerking van juni 2020 gebruikt die juiste verwijzing."
+        }
+      ]
+    },
+    {
+      "datum": "26-06-2020",
+      "bron": "2020-06_SRA_Tentamen.pdf",
+      "uitwerking": "2020-06_SRA_Uitwerkingen.pdf",
+      "aantal_vragen": 28,
+      "punten": {
+        "1": 1,
+        "2": 3,
+        "3": 7,
+        "4": 2,
+        "5": 1,
+        "6": 2,
+        "7": 5,
+        "8": 2,
+        "9": 2,
+        "10": 4,
+        "11": 6,
+        "12": 2,
+        "13": 3,
+        "14": 10,
+        "15": 2,
+        "16": 3,
+        "17": 7,
+        "18": 4,
+        "19": 3,
+        "20": 6,
+        "21": 3,
+        "22": 3,
+        "23": 3,
+        "24": 3,
+        "25": 3,
+        "26": 3,
+        "27": 3,
+        "28": 4
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          3,
+          7,
+          11
+        ],
+        "Stratificatie": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          16,
+          18,
+          27
+        ],
+        "Hypothesen / significantie": [
+          15,
+          17,
+          21,
+          28
+        ],
+        "Uitschieters / invloed": [
+          14
+        ],
+        "Normaliteit": [
+          17
+        ],
+        "Heteroscedasticiteit": [
+          17
+        ],
+        "Multicollineariteit": [
+          13,
+          22,
+          26
+        ],
+        "Variabelenselectie": [
+          25
+        ],
+        "Niet-lineaire modellen": [
+          23,
+          24
+        ],
+        "Voorspellingsinterval regressie": [
+          20
+        ],
+        "Benodigde steekproefomvang": []
+      },
+      "duur_minuten": 150,
+      "herstart_nummering": true,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 · Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 11,
+          "description": "Verschilschatter en quotiëntschatter; eenzijdige grenzen; stratificatie en evenredige allocatie bij hypotheken."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 · Enkelvoudige regressie",
+          "points": 40,
+          "firstQuestion": 12,
+          "lastQuestion": 20,
+          "description": "Cross-sectieanalyse, uitschieters en invloed; significantie, R², normaliteit, homoscedasticiteit, ANOVA en eenzijdig voorspellen."
+        },
+        {
+          "id": "opgave-3",
+          "number": 3,
+          "title": "Opgave 3 · Meervoudige regressie",
+          "points": 25,
+          "firstQuestion": 21,
+          "lastQuestion": 28,
+          "description": "Multicollineariteit, transformaties, achterwaartse eliminatie, VIF, adjusted R² en significantie van coëfficiënten."
+        }
+      ],
+      "duplicateOf": "20200323"
+    },
+    {
+      "datum": "01-11-2021",
+      "bron": "20211101_Opgaven SRA.pdf",
+      "uitwerking": "20211101_Uitwerkingen SRA.pdf",
+      "aantal_vragen": 21,
+      "punten": {
+        "1": 7,
+        "2": 4,
+        "3": 7,
+        "4": 2,
+        "5": 2,
+        "6": 4,
+        "7": 9,
+        "8": 3,
+        "9": 4,
+        "10": 4,
+        "11": 8,
+        "12": 3,
+        "13": 9,
+        "14": 7,
+        "15": 3,
+        "16": 3,
+        "17": 4,
+        "18": 5,
+        "19": 7,
+        "20": 2,
+        "21": 3
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          1,
+          3,
+          7
+        ],
+        "Stratificatie": [
+          5,
+          6,
+          7
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          15,
+          16
+        ],
+        "Hypothesen / significantie": [
+          19
+        ],
+        "Uitschieters / invloed": [
+          13
+        ],
+        "Normaliteit": [
+          14,
+          20
+        ],
+        "Heteroscedasticiteit": [
+          14
+        ],
+        "Multicollineariteit": [
+          11,
+          18
+        ],
+        "Variabelenselectie": [
+          17
+        ],
+        "Niet-lineaire modellen": [
+          15
+        ],
+        "Voorspellingsinterval regressie": [],
+        "Benodigde steekproefomvang": [
+          2
+        ]
+      },
+      "duur_minuten": 150,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 · Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 7,
+          "description": "MPU en ratio; omvang; gestratificeerde verschilschatter."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 · Regressie",
+          "points": 65,
+          "firstQuestion": 8,
+          "lastQuestion": 21,
+          "description": "Modelaannames, uitschieters, R², modelkeuze, VIF en t-toets."
+        }
+      ]
+    },
+    {
+      "datum": "16-03-2022",
+      "bron": "20220316_Opgaven SRA.pdf",
+      "uitwerking": "20220316_Uitwerkingen SRA.pdf",
+      "aantal_vragen": 23,
+      "punten": {
+        "1": 2,
+        "2": 5,
+        "3": 4,
+        "4": 1,
+        "5": 10,
+        "6": 2,
+        "7": 3,
+        "8": 8,
+        "9": 4,
+        "10": 3,
+        "11": 4,
+        "12": 4,
+        "13": 6,
+        "14": 5,
+        "15": 4,
+        "16": 4,
+        "17": 2,
+        "18": 6,
+        "19": 3,
+        "20": 3,
+        "21": 4,
+        "22": 4,
+        "23": 9
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          2,
+          5,
+          8
+        ],
+        "Stratificatie": [
+          7,
+          8
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          10,
+          13
+        ],
+        "Hypothesen / significantie": [
+          9,
+          18
+        ],
+        "Uitschieters / invloed": [
+          14,
+          15
+        ],
+        "Normaliteit": [
+          16
+        ],
+        "Heteroscedasticiteit": [
+          17
+        ],
+        "Multicollineariteit": [
+          11,
+          20
+        ],
+        "Variabelenselectie": [
+          22
+        ],
+        "Niet-lineaire modellen": [
+          13
+        ],
+        "Voorspellingsinterval regressie": [],
+        "Benodigde steekproefomvang": [
+          3
+        ]
+      },
+      "duur_minuten": 150,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 · Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 8,
+          "description": "MPU en verschil; omvang; stratificatie en interval."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 · Regressie",
+          "points": 65,
+          "firstQuestion": 9,
+          "lastQuestion": 23,
+          "description": "Modelkeuze, logaritmisch model, diagnose, t-toets en voorspellen."
+        }
+      ]
+    },
+    {
+      "datum": "31-10-2022",
+      "bron": "20221031_SRA_Opgaven.pdf",
+      "uitwerking": "20221031_SRA_Uitwerkingen.pdf",
+      "aantal_vragen": 16,
+      "punten": {
+        "1": 1,
+        "2": 9,
+        "3": 1,
+        "4": 10,
+        "5": 4,
+        "6": 9,
+        "7": 1,
+        "8": 4,
+        "9": 9,
+        "10": 12,
+        "11": 8,
+        "12": 3,
+        "13": 9,
+        "14": 6,
+        "15": 10,
+        "16": 4
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          2,
+          4,
+          6
+        ],
+        "Stratificatie": [
+          5,
+          6,
+          7
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          10,
+          12,
+          15
+        ],
+        "Hypothesen / significantie": [
+          8,
+          10,
+          16
+        ],
+        "Uitschieters / invloed": [
+          11,
+          14
+        ],
+        "Normaliteit": [
+          13
+        ],
+        "Heteroscedasticiteit": [],
+        "Multicollineariteit": [
+          9,
+          10
+        ],
+        "Variabelenselectie": [
+          13
+        ],
+        "Niet-lineaire modellen": [
+          12
+        ],
+        "Voorspellingsinterval regressie": [],
+        "Benodigde steekproefomvang": []
+      },
+      "duur_minuten": 150,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 · Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 7,
+          "description": "Ratio en MPU; stratificatie en interval."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 · Regressie",
+          "points": 65,
+          "firstQuestion": 8,
+          "lastQuestion": 16,
+          "description": "Deel A: meervoudig model (45 p). Deel B: enkelvoudig model (20 p). ANOVA, diagnose en toetsing."
+        }
+      ]
+    },
+    {
+      "datum": "15-03-2023",
+      "bron": "20230315_SRA_Opgaven.pdf",
+      "uitwerking": "20230315_SRA_Uitwerkingen.pdf",
+      "aantal_vragen": 19,
+      "punten": {
+        "1": 13,
+        "2": 3,
+        "3": 5,
+        "4": 5,
+        "5": 9,
+        "6": 4,
+        "7": 6,
+        "8": 2,
+        "9": 3,
+        "10": 2,
+        "11": 5,
+        "12": 9,
+        "13": 5,
+        "14": 2,
+        "15": 5,
+        "16": 7,
+        "17": 6,
+        "18": 4,
+        "19": 5
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          1,
+          5
+        ],
+        "Stratificatie": [
+          3,
+          4,
+          5
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          10,
+          17,
+          19
+        ],
+        "Hypothesen / significantie": [
+          8,
+          15
+        ],
+        "Uitschieters / invloed": [
+          11,
+          12
+        ],
+        "Normaliteit": [
+          13
+        ],
+        "Heteroscedasticiteit": [
+          13
+        ],
+        "Multicollineariteit": [
+          17
+        ],
+        "Variabelenselectie": [
+          18
+        ],
+        "Niet-lineaire modellen": [
+          10
+        ],
+        "Voorspellingsinterval regressie": [
+          16
+        ],
+        "Benodigde steekproefomvang": []
+      },
+      "duur_minuten": 150,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 · Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 5,
+          "description": "Regressieschatter; grenzen en allocatie van strata; interval."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 · Regressie",
+          "points": 65,
+          "firstQuestion": 6,
+          "lastQuestion": 19,
+          "description": "Diagnose, modelvergelijking, t-toets, voorspellingsinterval en variabelenselectie."
+        }
+      ]
+    },
+    {
+      "datum": "30-10-2023",
+      "bron": "20231030_SRA_Opgaven.pdf",
+      "uitwerking": "20231030 SRA_Uitwerkingen.pdf",
+      "aantal_vragen": 22,
+      "punten": {
+        "1": 2,
+        "2": 6,
+        "3": 3,
+        "4": 5,
+        "5": 5,
+        "6": 5,
+        "7": 9,
+        "8": 5,
+        "9": 3,
+        "10": 3,
+        "11": 4,
+        "12": 7,
+        "13": 3,
+        "14": 8,
+        "15": 6,
+        "16": 3,
+        "17": 3,
+        "18": 3,
+        "19": 3,
+        "20": 8,
+        "21": 3,
+        "22": 3
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          2,
+          4,
+          7
+        ],
+        "Stratificatie": [
+          6,
+          7
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          10,
+          17,
+          18
+        ],
+        "Hypothesen / significantie": [
+          20
+        ],
+        "Uitschieters / invloed": [
+          14
+        ],
+        "Normaliteit": [
+          15,
+          22
+        ],
+        "Heteroscedasticiteit": [
+          15
+        ],
+        "Multicollineariteit": [
+          8,
+          19
+        ],
+        "Variabelenselectie": [
+          16,
+          17
+        ],
+        "Niet-lineaire modellen": [],
+        "Voorspellingsinterval regressie": [
+          12
+        ],
+        "Benodigde steekproefomvang": [
+          5
+        ]
+      },
+      "duur_minuten": 150,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 · Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 7,
+          "description": "MPU en verschil; omvang; stratificatie en interval."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 · Regressie",
+          "points": 65,
+          "firstQuestion": 8,
+          "lastQuestion": 22,
+          "description": "Correlaties, voorspellen, diagnose, selectie, adjusted R² en t-toets."
+        }
+      ]
+    },
+    {
+      "datum": "18-03-2024",
+      "bron": "20240318 SRA Opgaven.pdf",
+      "uitwerking": "20240318 SRA Uitwerkingen.pdf",
+      "aantal_vragen": 24,
+      "punten": {
+        "1": 7,
+        "2": 2,
+        "3": 8,
+        "4": 2,
+        "5": 3,
+        "6": 4,
+        "7": 9,
+        "8": 4,
+        "9": 3,
+        "10": 3,
+        "11": 3,
+        "12": 4,
+        "13": 3,
+        "14": 5,
+        "15": 6,
+        "16": 6,
+        "17": 5,
+        "18": 3,
+        "19": 5,
+        "20": 3,
+        "21": 3,
+        "22": 3,
+        "23": 3,
+        "24": 3
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          1,
+          3,
+          7
+        ],
+        "Stratificatie": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          8,
+          12,
+          13,
+          23
+        ],
+        "Hypothesen / significantie": [
+          11
+        ],
+        "Uitschieters / invloed": [
+          17,
+          18
+        ],
+        "Normaliteit": [
+          19
+        ],
+        "Heteroscedasticiteit": [
+          19
+        ],
+        "Multicollineariteit": [
+          9,
+          10,
+          20
+        ],
+        "Variabelenselectie": [
+          21
+        ],
+        "Niet-lineaire modellen": [
+          13,
+          14
+        ],
+        "Voorspellingsinterval regressie": [
+          15
+        ],
+        "Benodigde steekproefomvang": []
+      },
+      "duur_minuten": 150,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 · Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 7,
+          "description": "MPU en ratio; stratificatie, allocatie en interval."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 · Regressie",
+          "points": 65,
+          "firstQuestion": 8,
+          "lastQuestion": 24,
+          "description": "ANOVA, lineair/logaritmisch voorspellen, interval, OLS, diagnose en dummyvariabelen."
+        }
+      ]
+    },
+    {
+      "datum": "28-10-2024",
+      "bron": "20241028 SRA Opgaven.pdf",
+      "uitwerking": "20241028_SRA_uitwerkingen.pdf",
+      "aantal_vragen": 18,
+      "punten": {
+        "1": 10,
+        "2": 4,
+        "3": 4,
+        "4": 2,
+        "5": 5,
+        "6": 7,
+        "7": 3,
+        "8": 6,
+        "9": 6,
+        "10": 6,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "14": 7,
+        "15": 7,
+        "16": 3,
+        "17": 3,
+        "18": 6
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          1,
+          6
+        ],
+        "Stratificatie": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          9,
+          10,
+          16
+        ],
+        "Hypothesen / significantie": [
+          8,
+          10,
+          17
+        ],
+        "Uitschieters / invloed": [
+          11
+        ],
+        "Normaliteit": [
+          12
+        ],
+        "Heteroscedasticiteit": [
+          12
+        ],
+        "Multicollineariteit": [
+          18
+        ],
+        "Variabelenselectie": [
+          15
+        ],
+        "Niet-lineaire modellen": [],
+        "Voorspellingsinterval regressie": [
+          13
+        ],
+        "Benodigde steekproefomvang": [
+          2
+        ]
+      },
+      "duur_minuten": null,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 · Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 7,
+          "description": "Regressieschatter; omvang; stratificatie en interval."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 · Regressie",
+          "points": 65,
+          "firstQuestion": 8,
+          "lastQuestion": 18,
+          "description": "Deel A: enkelvoudig (46 p). Deel B: meervoudig (19 p). ANOVA, diagnose, interval, OLS en VIF."
+        }
+      ],
+      "bronopmerkingen": [
+        {
+          "questions": [
+            9,
+            10
+          ],
+          "text": "Drukfout in de opgaven: de ANOVA-tabel op pagina 3 vermeldt 4,105 bij Residual SS. Op pagina 4 en in het officiële antwoordmodel staat 44,105; ook 1.395,367 − 1.351,262 = 44,105. Gebruik 44,105 bij het nakijken."
+        },
+        {
+          "questions": [
+            11
+          ],
+          "text": "Figuurnummers in het antwoordmodel verschillen van de opgaven: Afbeelding 10 in het antwoord is Afbeelding 5 (gestandaardiseerde residuen); Afbeelding 11 is Afbeelding 6 (Cook’s Distance)."
+        },
+        {
+          "questions": [
+            13
+          ],
+          "text": "Bronverschil: de vraag noemt het gemiddelde, maar het officiële antwoord berekent een individueel voorspellingsinterval en gebruikt daarom een extra 1 onder de wortel. Voor een interval van de gemiddelde respons vervalt die 1. De verwijzing naar Afbeelding 3 in het antwoordmodel betreft Afbeelding 9 in de opgaven."
+        },
+        {
+          "questions": [
+            16
+          ],
+          "text": "De verwijzingen naar Afbeelding 3 en 13 in het antwoordmodel betreffen Afbeelding 9 en 12 in de opgaven."
+        },
+        {
+          "questions": [
+            17,
+            18
+          ],
+          "text": "De verwijzing naar Afbeelding 15 in het antwoordmodel betreft Afbeelding 14 in de opgaven."
+        }
+      ],
+      "antwoord_grenzen": {
+        "7": "Uitwerking SRA241028 opgave regressie",
+        "14": "Deel B: meervoudige regressie"
+      }
+    },
+    {
+      "datum": "17-03-2025",
+      "bron": "20250317 SRA _Opgaven+uitwerkingen.pdf",
+      "uitwerking": null,
+      "aantal_vragen": 25,
+      "punten": {
+        "1": 2,
+        "2": 1,
+        "3": 11,
+        "4": 5,
+        "5": 6,
+        "6": 10,
+        "7": 2,
+        "8": 2,
+        "9": 4,
+        "10": 3,
+        "11": 3,
+        "12": 2,
+        "13": 6,
+        "14": 4,
+        "15": 4,
+        "16": 3,
+        "17": 2,
+        "18": 3,
+        "19": 3,
+        "20": 3,
+        "21": 7,
+        "22": 4,
+        "23": 3,
+        "24": 3,
+        "25": 4
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          3,
+          6
+        ],
+        "Stratificatie": [
+          4,
+          5,
+          6
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          7,
+          8,
+          11
+        ],
+        "Hypothesen / significantie": [
+          9,
+          21
+        ],
+        "Uitschieters / invloed": [
+          13,
+          14
+        ],
+        "Normaliteit": [
+          15,
+          24
+        ],
+        "Heteroscedasticiteit": [
+          16
+        ],
+        "Multicollineariteit": [
+          23
+        ],
+        "Variabelenselectie": [
+          22
+        ],
+        "Niet-lineaire modellen": [
+          11,
+          12
+        ],
+        "Voorspellingsinterval regressie": [],
+        "Benodigde steekproefomvang": []
+      },
+      "duur_minuten": null,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 · Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 6,
+          "description": "Verschilschatter; stratificatie en MPU per stratum."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 · Regressie",
+          "points": 65,
+          "firstQuestion": 7,
+          "lastQuestion": 25,
+          "description": "Modelkwaliteit, transformaties, diagnose, dummyvariabelen, voorspellen en toetsen."
+        }
+      ],
+      "vraag_paginas": 10,
+      "antwoord_vanaf_pagina": 11
+    }
+  ]
+}

@@ -1,4 +1,6 @@
 /* Kennisstart, formulepagina's en terugnavigatie. Gemaakt met Codex. */
+.formula-reference-list{display:grid;gap:12px}.formula-reference-topic{border:1px solid #dce4ec;border-radius:8px;background:#fff;min-width:0}.formula-reference-topic>summary{display:list-item;list-style:disclosure-closed;list-style-position:inside;padding:20px 24px;cursor:pointer;color:#244b40}.formula-reference-topic[open]>summary{list-style:disclosure-open;list-style-position:inside;border-bottom:1px solid #dce4ec;background:#f2f7f5}.formula-reference-topic>summary strong{font-size:1.05rem}.formula-reference-topic>summary span{display:block;margin:6px 0 0 18px;font-size:.87rem;color:#586575;line-height:1.5}.formula-reference-topic>summary .formula-reference-action{color:#006c47;font-weight:600}.formula-reference-topic[open]>summary .formula-reference-action{display:none}.formula-reference-topic>summary:focus-visible{outline:2px solid #1873b6;outline-offset:3px}.formula-reference-content{padding:0 20px 20px}.formula-reference-content .formula-guide-card{border:0;border-radius:0;padding:16px 4px;margin:0;border-bottom:1px solid #dce4ec}.formula-reference-content .actions{margin-top:18px}.formula-reference-sources{font-size:.8rem;line-height:1.7}.formula-reference-topic .math-scroll{max-width:100%}
+@media(max-width:680px){.formula-reference-topic>summary{padding:16px}.formula-reference-content{padding:0 14px 16px}}
 .lesson-start{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:#f5f8fb;border:1px solid #dce4ec;border-radius:8px;padding:22px 26px;margin:24px 0}
 .lesson-start h2{font-size:1.08rem;margin:0 0 10px}.lesson-start ul{margin:0;padding-left:20px}.lesson-start li{margin:5px 0}
 .term-hint{font-size:.86rem;color:#526477;margin:12px 0 22px}.term-hint span{border-bottom:1px dotted #5991b7;color:#0066b8}
@@ -13,3 +15,27 @@ body.study-shell #history-back[hidden]{display:none}
 @media(max-width:680px){.lesson-start{grid-template-columns:1fr;gap:18px;padding:18px}.formula-guide-card{padding:18px 16px}.formula-guide>header h1{font-size:1.6rem}}
 @media(max-width:420px){body.study-shell #history-back{padding-right:10px}.term-hint{line-height:1.5}}
 @media print{#history-back,.term-hint{display:none!important}}
+
+/* Antwoord en controle blijven bij elkaar, ook bij lange uitleg op mobiel. */
+body.study-shell .question .answers{grid-template-columns:minmax(0,1fr)}
+.answer-option{min-width:0}.answer-option>.answer{margin:0}
+body.study-shell .answer:has(input:checked){border-color:#777087;background:#f3f1f7}
+body.study-shell .answer.is-correct:has(input:checked){border-color:#008859;background:#edf8f2}
+body.study-shell .answer.is-incorrect:has(input:checked){border-color:#ad6631;background:#fff6ed}
+.question-feedback[hidden]{display:none}.answer-option .question-feedback{margin:8px 0 12px}
+.question-feedback .feedback{margin:0;padding:20px 24px}.question-feedback h3{font-size:1.08rem;margin:0 0 12px}
+.question-feedback h4{font-size:1rem;margin:22px 0 8px}.question-feedback p,.question-feedback li{line-height:1.7}
+.question-feedback p{margin:10px 0}.question-feedback li+li{margin-top:8px}.question-feedback ol{padding-left:22px}
+.question-pattern,.question-trap{padding:1px 14px 8px;border-left:3px solid #008859;margin:20px 0 0;background:#f3faf7}
+.question-trap{border-left-color:#b78421;background:#fffaf0}.question-pattern h4,.question-trap h4{margin-top:10px}
+.question-recognition{margin:12px 0 6px}.question-recognition dt{font-weight:700;margin-top:12px;line-height:1.5}.question-recognition dd{margin:3px 0 0;line-height:1.7;overflow-wrap:anywhere}.question-recognition ul{margin:0;padding-left:20px}.question-recognition li+li{margin-top:4px}
+.answer-reasons{margin-top:20px;border-top:1px solid #d7ddd9;padding-top:12px}
+.answer-reasons>summary{cursor:pointer;font-weight:600;line-height:1.5}.question-sources{font-size:.78rem;overflow-wrap:anywhere}
+.question-feedback .feedback p>strong{display:inline}.question-feedback .feedback{color:#17364e}.question-feedback .feedback h3{color:#006c47}.question-feedback .feedback.wrong h3{color:#845315}
+.saved-exam-notes>summary{cursor:pointer;font-weight:600}.saved-exam-notes section+section{border-top:1px solid #dedde0;margin-top:20px;padding-top:12px}.saved-exam-note{white-space:pre-wrap;overflow-wrap:anywhere}
+.question-check-actions{align-items:center;gap:12px 20px}
+body.study-shell .direct-check-option{display:flex;align-items:center;gap:9px;font-size:.87rem;line-height:1.45;cursor:pointer;color:#444159;min-height:42px;max-width:100%}
+.direct-check-option input{width:18px;height:18px;flex:0 0 18px;accent-color:#008859;margin:0}
+@media(max-width:680px){.question-feedback .feedback{padding:16px}.question-check-actions{gap:8px 14px}.question-feedback h3{font-size:1rem}}
+body.study-shell .study-nav .sra-tools-panel>a[data-nav="analyse"]{display:none}
+@media(max-width:680px){body.study-shell .study-nav .sra-primary-links>a[data-nav="analyse"]{display:none}body.study-shell .study-nav .sra-tools-panel>a[data-nav="analyse"]{display:block}}

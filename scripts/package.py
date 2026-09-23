@@ -8,6 +8,7 @@ import zipfile
 import hashlib
 import re
 import build_content
+import build_mc
 
 root = Path(__file__).resolve().parents[1]
 workspace = root.parent
@@ -31,6 +32,13 @@ if not args.without_sources:
         parser.error('Bronbestanden ontbreken: ' + ', '.join(missing)
                      + '. Gebruik --without-sources voor een clone zonder de lokale cursus-PDF\'s.')
 
+if not args.without_sources:
+    import build_exams
+    build_exams.build()
+    import build_cirrus_data
+    build_cirrus_data.build()
+
+build_mc.build()
 payload = dict(lessons=build_content.lessons, sources=build_content.sources,
                glossary=build_content.glossary, examCases=build_content.exam_cases, terms=build_content.TERMS)
 (root/'data').mkdir(exist_ok=True)
@@ -41,19 +49,23 @@ if not args.without_sources:
         shutil.copy2(original, destination)
 
 manifest=json.loads((root/'vendor/study-ui/manifest.json').read_text(encoding='utf-8'))
-for name in ('tokens.css','shell.css'):
+for name in manifest['files']:
     actual=hashlib.sha256((root/'vendor/study-ui'/name).read_bytes()).hexdigest()
     if actual!=manifest['files'][name]['sha256']:
         raise ValueError('De gedeelde layout is gewijzigd buiten het bronpakket. Voer scripts/sync_layout.py uit.')
 base=(root/'index.html').read_text(encoding='utf-8')
+import build_study_dark
+build_study_dark.build()
 portable=base
-for name in re.findall(r'<link rel="stylesheet" href="([^"]+)">',base):
+portable=portable.replace('<script src="vendor/study-ui/theme.js"></script>', '<script>\n'+(root/'vendor/study-ui/theme.js').read_text(encoding='utf-8')+'\n</script>')
+for tag, name, attributes in re.findall(r'(<link rel="stylesheet" href="([^"]+)"([^>]*)>)',base):
     path=(root/name).resolve()
     if not path.is_relative_to(root):
         raise ValueError('Stylesheet staat buiten de app: '+name)
-    portable=portable.replace(f'<link rel="stylesheet" href="{name}">','<style>\n'+path.read_text(encoding='utf-8')+'\n</style>')
+    # Preserve stylesheet isolation when the portable app embeds CSS inline.
+    portable=portable.replace(tag,'<style'+attributes+'>\n'+path.read_text(encoding='utf-8')+'\n</style>')
 presentation_css=(root/'css/presentation.css').read_text(encoding='utf-8')
-for name in ['data/course.js','js/math.js','js/labs.js','js/terms.js','js/navigation.js','js/app.js']:
+for name in ['data/course.js','data/exams.js','data/mc.js','js/math.js','js/lab-layout.js','js/labs.js','js/inline-help.js','js/terms.js','js/formula-help.js','js/navigation.js','js/exams.js','js/mc-state.js','js/mc.js','vendor/cafa2-cirrus/js/exam-engine.js','vendor/cafa2-cirrus/js/answer-editor.js','data/cirrus-exams.js','js/cirrus.js','js/app.js']:
     script=(root/name).read_text(encoding='utf-8').replace('</script','<\\/script')
     portable=portable.replace(f'<script defer src="{name}"></script>','')
     portable=portable.replace('</body>',f'<script>\n{script}\n</script>\n</body>')
@@ -78,7 +90,23 @@ for i,l in enumerate(build_content.lessons):
     parts.extend('<li>'+e(s)+'</li>' for s in l['pitfalls'])
     parts.append('</ul><h3>Check je begrip</h3>')
     for q in l['questions']:
-        parts.append('<p><strong>'+e(q['prompt'])+'</strong></p><ol type="A">'+''.join('<li>'+e(o)+'</li>' for o in q['options'])+'</ol><details><summary>Antwoord en uitleg</summary><p>'+e(q['options'][q['correct']])+'. '+e(q['explanation'])+'</p></details>')
+        parts.append('<p><strong>'+e(q['prompt'])+'</strong></p><ol type="A">'+''.join('<li>'+e(o)+'</li>' for o in q['options'])+'</ol><details><summary>Antwoord en uitleg</summary><p>'+e(q['options'][q['correct']])+'.'+(' '+e(q['explanation']) if not q.get('steps') else '')+'</p>')
+        if q.get('steps'):
+            parts.append('<h4>Zo werk je het uit</h4><ol>'+''.join('<li>'+e(step)+'</li>' for step in q['steps'])+'</ol>')
+        if q.get('recognition'):
+            parts.append('<h4>Patroonherkenning</h4><dl>')
+            for key, label in [('signals', 'Dit herken je in de vraag'), ('meaning', 'Dit betekent het'), ('approach', 'Zo kies je de aanpak'), ('answer', 'Dit moet je antwoord bevatten')]:
+                value = q['recognition'][key]
+                detail = '<ul>'+''.join('<li>'+e(item)+'</li>' for item in value)+'</ul>' if isinstance(value, list) else e(value)
+                parts.append('<dt><strong>'+label+'</strong></dt><dd>'+detail+'</dd>')
+            parts.append('</dl>')
+        elif q.get('pattern'):
+            parts.append('<h4>Patroonherkenning</h4><p>'+e(q['pattern'])+'</p>')
+        if q.get('trap'):
+            parts.append('<h4>Let op deze valkuil</h4><p>'+e(q['trap'])+'</p>')
+        if q.get('optionExplanations'):
+            parts.append('<h4>De antwoordmogelijkheden</h4>'+''.join('<p><strong>'+e(option)+'</strong><br>'+e(reason)+'</p>' for option,reason in zip(q['options'],q['optionExplanations'])))
+        parts.append('</details>')
     parts.append('<h3>Bronnen</h3><ul>')
     for ref in l['refs']:
         s=build_content.sources[ref['source']]
@@ -92,12 +120,12 @@ zip_name = 'SRA interactieve samenvatting zonder bronbestanden.zip' if args.with
 with zipfile.ZipFile(output/zip_name,'w',zipfile.ZIP_DEFLATED) as z:
     for p in root.rglob('*'):
         relative = p.relative_to(root)
-        if not p.is_file() or any(x in relative.parts for x in ['__pycache__','.git','tmp','node_modules','output']):
+        if not p.is_file() or any(x in relative.parts for x in ['__pycache__','.git','tmp','node_modules','output','source-excerpts']):
             continue
         if args.without_sources and (relative.parts[0] == 'bronnen' or p.suffix.lower() == '.pdf'):
             continue
         z.write(p,Path('SRA')/relative)
-print(f'{len(build_content.lessons)} lessen, {sum(len(l["questions"]) for l in build_content.lessons)} checks, {len(build_content.exam_cases)} tentamenroutes')
+print(f'{len(build_content.lessons)} lessen, {sum(len(l["questions"]) for l in build_content.lessons)} checks, {len(json.loads((root/"data/exam-analysis.json").read_text(encoding="utf8"))["tentamens"])} tentamendata en tentamenanalyse')
 print('Modulaire website, zelfstandige HTML, leesversie en ZIP gereed.')
 if args.without_sources:
     print('Bron-PDF\'s zijn niet opgenomen. Bronverwijzingen blijven beschikbaar voor eigen lokale exemplaren.')
