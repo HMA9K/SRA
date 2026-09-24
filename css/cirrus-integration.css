@@ -56,6 +56,7 @@ body.cirrus-mode .exam-practice-duration input{width:110px;min-height:42px;paddi
 body.cirrus-mode #history-back{display:inline-flex;align-items:center;gap:4px;margin-right:14px;padding:0;border:0;background:transparent;color:inherit;font-size:11px;line-height:1.4;cursor:pointer}
 body.cirrus-mode #history-back:hover{text-decoration:underline}
 body.study-shell #question-return-links{display:flex;align-items:center;gap:8px}
+body.study-shell #study-returnbar:has(#question-return-links:not([hidden])){gap:8px}
 body.study-shell #question-return-links[hidden]{display:none!important}
 body.study-shell #question-return-links a{display:inline-flex;align-items:center;min-height:35px;padding:7px 11px;border:1px solid var(--study-line,#d9e2eb);border-radius:6px;color:var(--study-muted,#58677a);background:var(--study-surface,#fff);text-decoration:none;font:13px/1.25 Arial,sans-serif;white-space:nowrap}
 body.study-shell #question-return-links a:hover{color:var(--study-ink);border-color:var(--study-ink)}
