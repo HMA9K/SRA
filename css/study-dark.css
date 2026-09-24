@@ -1247,6 +1247,7 @@ html[data-study-theme=dark] body.cirrus-mode .exam-inline-feedback{border:1px so
 html[data-study-theme=dark] body.cirrus-mode .exam-inline-feedback h3{color:#97e3ca}
 html[data-study-theme=dark] body.cirrus-mode .exam-inline-feedback>.exam-source-document{background:#152129;color:#e0ebf2}
 html[data-study-theme=dark] body.cirrus-mode .exam-practice-duration input{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark] body.study-shell #question-return-links a{border:1px solid var(--study-line,#38526b);color:var(--study-muted,#adbdc9);background:var(--study-surface,#152129)}
 html[data-study-theme=dark] body #calculator{border:1px solid #3b4a54;background:#152129;color:#e0ebf2;box-shadow:0 6px 28px #01030440}
 html[data-study-theme=dark] body #calculator .calc-head{background:#212b38;color:#f0f7fc}
 html[data-study-theme=dark] body #calculator .calc-head button:hover{background:#15212920}

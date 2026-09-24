@@ -208,8 +208,11 @@
    host.insertAdjacentHTML('afterbegin',tab==='home'?'<nav class="sra-breadcrumb" aria-label="Kruimelpad"><span>Home</span></nav>':breadcrumb($('#main h1')?.textContent||'Tentamens oefenen'));
    trail=$('#main .sra-breadcrumb');
   }
-  $('#study-returnbar').hidden=historyBack.hidden;
-  $('.study-navigation-row').hidden=historyBack.hidden&&$('.sra-navigation').hidden;
+  const questionView=document.body.classList.contains('exam-running')||!!$('#main').querySelector?.('.mc-page, .sra-practice-runner, .sra-exam-runner');
+  $('#question-return-links').hidden=!questionView;
+  if(questionView){historyBack.hidden=true;$('.sra-navigation').hidden=true;}
+  $('#study-returnbar').hidden=!questionView&&historyBack.hidden;
+  $('.study-navigation-row').hidden=!questionView&&historyBack.hidden&&$('.sra-navigation').hidden;
   if(current)renderSidebar(current);else $('#sidebar').innerHTML='';
   if(current&&current!==sidebarLessonId)showCurrentSidebarLesson();
   sidebarLessonId=current;

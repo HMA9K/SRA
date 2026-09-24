@@ -10,10 +10,10 @@ const server=http.createServer((req,res)=>{const rel=decodeURIComponent(new URL(
  const parts=page.getByRole('region',{name:'Oefenen per deel',exact:true}),subjects=page.getByRole('region',{name:'Oefenen per onderwerp',exact:true});
  const samplingPart=()=>parts.locator('.mc-part-card').filter({has:page.locator('a.primary[href^="#tentamen/mc/hoofd-steekproeven/"]')});
  async function checkOverview(){
-  assert.equal(await parts.locator('.mc-part-card').count(),5);assert.equal(await subjects.locator('.mc-main-card').count(),19);assert.equal(await subjects.locator('.mc-topic-group').count(),5);
+  assert.equal(await parts.locator('.mc-part-card').count(),4);assert.equal(await subjects.locator('.mc-main-card').count(),19);assert.equal(await subjects.locator('.mc-topic-group').count(),5);
   assert.ok(await parts.evaluate((n,other)=>!!(n.compareDocumentPosition(other)&Node.DOCUMENT_POSITION_FOLLOWING),await subjects.elementHandle()),'Oefenen per deel staat voor oefenen per onderwerp');
   assert.equal(await parts.getByRole('heading',{name:'Oefenen per deel',level:2,exact:true}).count(),1);assert.equal(await subjects.getByRole('heading',{name:'Oefenen per onderwerp',level:2,exact:true}).count(),1);
-  assert.equal(await parts.locator('.mc-part-card h3').count(),5);assert.equal(await subjects.locator('.mc-topic-group-head h3').count(),5);assert.equal(await subjects.locator('.mc-main-card h4').count(),19);
+  assert.equal(await parts.locator('.mc-part-card h3').count(),4);assert.equal(await subjects.locator('.mc-topic-group-head h3').count(),5);assert.equal(await subjects.locator('.mc-main-card h4').count(),19);
   const basis=subjects.locator('.mc-topic-group').first();assert.match(await basis.innerText(),/basis/i);assert.deepEqual(await basis.locator('[data-topic]').evaluateAll(nodes=>nodes.map(n=>n.dataset.topic)),['beginnen','rekenen','onzekerheid']);
  }
  let toggles=0;
@@ -42,6 +42,6 @@ const server=http.createServer((req,res)=>{const rel=decodeURIComponent(new URL(
  await subjects.locator('[data-topic="mpu"]').getByRole('link',{name:'Overzicht',exact:true}).click();await page.locator('.mc-result-list>details').first().locator(':scope>summary').click();await page.getByRole('link',{name:'Open vraag 1',exact:true}).click();
  assert.match(page.url(),/#tentamen\/mc\/mpu\/1$/);assert.equal(await page.locator('#mc-prompt').innerText(),first.prompt);assert.ok(await page.locator('[data-direct-check]').isChecked());assert.ok(await page.locator('[data-mc-feedback="'+first.correct+'"] .is-correct').isVisible(),'Het antwoord uit de groepsreeks blijft bij hetzelfde deelonderwerp zichtbaar');
  await page.goto(base+'/SRA%20interactieve%20samenvatting.html#tentamen/mc');await page.locator('.mc-main-card').first().waitFor();await checkOverview();assert.ok(await page.locator('.topic-exam-toggle').count()>8);
- assert.deepEqual(errors,[]);console.log(JSON.stringify({ok:true,viewports:[1366,768,390,320],toggles,checks:'Eerst 5 delen en daarna 19 onderwerpen, basislabel, koppenhiërarchie, stabiele kaarten/paginahoogte/scrollpositie, toetsenbord, lichte/donkere weergave, groep starten en hervatten, gedeeld antwoord bij deelonderwerp, directe feedback en zelfstandige HTML',screenshots:out}));
+ assert.deepEqual(errors,[]);console.log(JSON.stringify({ok:true,viewports:[1366,768,390,320],toggles,checks:'Eerst 4 delen en daarna 19 onderwerpen, basislabel, koppenhiërarchie, stabiele kaarten/paginahoogte/scrollpositie, toetsenbord, lichte/donkere weergave, groep starten en hervatten, gedeeld antwoord bij deelonderwerp, directe feedback en zelfstandige HTML',screenshots:out}));
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}})().catch(e=>{console.error(e);process.exitCode=1;});
 

@@ -55,6 +55,10 @@ body.cirrus-mode .exam-practice-duration{display:flex;align-items:center;gap:16p
 body.cirrus-mode .exam-practice-duration input{width:110px;min-height:42px;padding:8px 10px;border:1px solid #cbd5d5;border-radius:2px;color:inherit;background:white}
 body.cirrus-mode #history-back{display:inline-flex;align-items:center;gap:4px;margin-right:14px;padding:0;border:0;background:transparent;color:inherit;font-size:11px;line-height:1.4;cursor:pointer}
 body.cirrus-mode #history-back:hover{text-decoration:underline}
+body.study-shell #question-return-links{display:flex;align-items:center;gap:8px}
+body.study-shell #question-return-links[hidden]{display:none!important}
+body.study-shell #question-return-links a{display:inline-flex;align-items:center;min-height:35px;padding:7px 11px;border:1px solid var(--study-line,#d9e2eb);border-radius:6px;color:var(--study-muted,#58677a);background:var(--study-surface,#fff);text-decoration:none;font:13px/1.25 Arial,sans-serif;white-space:nowrap}
+body.study-shell #question-return-links a:hover{color:var(--study-ink);border-color:var(--study-ink)}
 /* De rekenmachine blijft beschikbaar terwijl de les- en tentamenstijlen wisselen. */
 body #calculator{position:fixed;z-index:10010;display:flex;flex-direction:column;box-sizing:border-box;width:304px;max-width:var(--calc-max-width,calc(100vw - 16px));max-height:var(--calc-max-height,calc(100dvh - 16px));margin:0;padding:0;border:1px solid #a9a5b6;border-radius:8px;background:white;color:#292735;box-shadow:0 6px 28px #24203340;overflow:hidden;font:14px/1.45 Arial,sans-serif}
 body #calculator[hidden],body #calculator [hidden]{display:none!important}

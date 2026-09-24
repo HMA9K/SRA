@@ -54,8 +54,8 @@ for(const group of groups){
 const home=ui.render(),partsStart=home.indexOf('aria-labelledby="mc-parts-title"'),subjectsStart=home.indexOf('aria-labelledby="mc-subjects-title"');
 assert.ok(partsStart>=0&&subjectsStart>partsStart,'Het overzicht biedt eerst oefenen per deel en daarna oefenen per onderwerp.');
 const parts=home.slice(partsStart,subjectsStart),subjects=home.slice(subjectsStart);
-assert.equal((parts.match(/class="mc-part-card"/g)||[]).length,5);assert.equal((subjects.match(/class="mc-main-card"/g)||[]).length,19);assert.equal((subjects.match(/class="mc-topic-group"/g)||[]).length,5);
-for(const group of groups)assert.ok(parts.includes(`href="#tentamen/mc/${group.id}/1"`),'Elk deel start de bestaande groepsreeks.');
+assert.equal((parts.match(/class="mc-part-card"/g)||[]).length,4);assert.equal((subjects.match(/class="mc-main-card"/g)||[]).length,19);assert.equal((subjects.match(/class="mc-topic-group"/g)||[]).length,5);
+for(const group of groups.filter(g=>g.id!=='hoofd-tentamen'))assert.ok(parts.includes(`href="#tentamen/mc/${group.id}/1"`),'Elk deel start de bestaande groepsreeks.');
 assert.equal((home.match(/<details class="mc-subtopics">/g)||[]).length,0,'Alle deelonderwerpen zijn direct zichtbaar.');
 assert.ok(home.indexOf('data-topic="stratificatie"')<home.indexOf('data-topic="steekproefomvang"'),'Stratificatie komt voor uitbreiding van de steekproef in hoofdstuk 8.');
 assert.ok(!home.includes('class="mc-levels"'),'Moeilijkheid wordt niet meer als drie tegels getoond.');
@@ -82,4 +82,4 @@ assert.ok(html.includes('&lt;signaal&gt; &amp; gegeven'));assert.ok(!html.includ
 delete richQuestion.recognition;assert.ok(richUI.render(richData.topics[0].id,'1').includes(richQuestion.pattern.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')));
 for(const file of ['js/mc.js','js/mc-state.js','js/exams.js','js/app.js'])new vm.Script(fs.readFileSync(path.join(root,file),'utf8'),{filename:file});
 const portable=fs.readFileSync(path.join(root,'SRA interactieve samenvatting.html'),'utf8');assert.ok(portable.includes('window.SRAMCData ='));assert.ok(portable.includes('window.SRAMC='));
-console.log('OK: 134 vragen, eerst 5 delen en daarna 19 gegroepeerde onderwerpen, gedeelde voortgang en markeringen, juiste les/bronnen, herkenning na nakijken, rekenantwoorden, eerste poging, herladen, back-up en opslagfouten.');
+console.log('OK: 134 vragen, eerst 4 delen en daarna 19 gegroepeerde onderwerpen, gedeelde voortgang en markeringen, juiste les/bronnen, herkenning na nakijken, rekenantwoorden, eerste poging, herladen, back-up en opslagfouten.');
