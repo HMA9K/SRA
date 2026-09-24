@@ -8,7 +8,7 @@
 .mc-home-options p{margin:0}
 .mc-home-options .direct-check-option{font-size:12px;min-height:28px;padding:0}
 .mc-main-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:12px;margin:14px 0}
-.mc-main-card{background:#fff;border:1px solid #d2d5da;border-top:3px solid #444159;min-width:0;padding:14px;display:flex;flex-direction:column}
+.mc-main-card,.mc-part-card{background:#fff;border:1px solid #d2d5da;border-top:3px solid #444159;min-width:0;padding:14px;display:flex;flex-direction:column}
 .mc-group-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .mc-group-number{display:grid;place-items:center;width:25px;height:25px;flex:none;background:#ff720c;color:#fff;font-size:12px;font-weight:700}
 .mc-group-row h2{font-size:16px;line-height:1.35;color:#444159;margin:0;letter-spacing:0}
@@ -26,14 +26,27 @@
 .mc-topic-card h4{margin:0 0 4px;font-size:13px;font-weight:600;line-height:1.4;color:#17364e}
 .mc-topic-card p{margin:0;color:#666370;font-size:11px}
 .mc-topic-card .study-btn{flex-shrink:0}
+/* Two distinct practice levels, matching CAFA2: whole parts, then topics. */
+.mc-parts{margin-top:22px}
+.mc-parts>h2{font-size:15px;margin:0 0 8px;color:#444159;letter-spacing:0}
+.mc-section-intro,.mc-topic-group-note{font-size:12px;line-height:1.6;margin:0 0 12px}
+.mc-part-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.mc-part-card .mc-group-row h3{font-size:16px;line-height:1.35;letter-spacing:0;color:#444159;margin:0}
+.mc-part-card .mc-group-description{flex:1}
+.mc-subjects{margin:28px 0 24px;border-top:1px solid #dde0e6;padding-top:22px}
+.mc-subjects>h2{font-size:18px;line-height:1.4;color:#444159;margin:0 0 8px;letter-spacing:0}
+.mc-counting-rule{padding:12px;border:1px solid #dde0e6;margin:14px 0;font-size:12px;line-height:1.6}
+.mc-counting-rule>summary{cursor:pointer;font-weight:600}
+.mc-counting-rule p{margin:10px 0;max-width:85ch}
+@media(max-width:540px){.mc-part-grid{grid-template-columns:minmax(0,1fr);gap:8px}.mc-part-card{padding:11px 12px;border-top-width:2px}.mc-part-card .mc-group-row h3{font-size:15px}}
 /* Book sections with directly available topic cards, matching CAFA2. */
 .mc-topic-groups{margin:20px 0 24px}
 .mc-topic-group+.mc-topic-group{margin-top:28px}
 .mc-topic-group-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;border-bottom:1px solid #dde0e6;padding-bottom:8px;margin-bottom:12px}
-.mc-topic-group-head h2{font-size:14px;font-weight:600;letter-spacing:0;color:#625b67;margin:0}
+.mc-topic-group-head h3{font-size:14px;font-weight:600;letter-spacing:0;color:#625b67;margin:0}
 .mc-topic-group-head .study-btn{min-height:28px;font-size:11px;padding:4px 8px}
 .mc-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;gap:12px}
-.mc-topic-grid .mc-group-row h3{font-size:14px;line-height:1.4;letter-spacing:0;color:#444159;margin:0}
+.mc-topic-grid .mc-group-row h4{font-size:14px;line-height:1.4;letter-spacing:0;color:#444159;margin:0}
 .mc-topic-grid .mc-group-description{flex:1;min-height:2.7em}
 .mc-home .topic-exam-frequency{margin:0 0 14px;font-size:12px}
 .mc-home .topic-exam-label{font-size:12px;font-weight:600;margin:0 0 3px}
@@ -47,7 +60,7 @@
 .mc-home .topic-exam-note{font-size:11px;color:#666370;margin:8px 0 0;line-height:1.5}
 .mc-home .topic-exam-uncounted{margin:0;line-height:1.5;color:#666370}
 .mc-frequency-note{font-size:12px;color:#625b67;margin:14px 0;max-width:90ch;line-height:1.6}
-@media(max-width:540px){.mc-topic-grid{grid-template-columns:minmax(0,1fr);gap:8px}.mc-topic-group+.mc-topic-group{margin-top:22px}.mc-topic-group-head h2{font-size:13px}}
+@media(max-width:540px){.mc-topic-grid{grid-template-columns:minmax(0,1fr);gap:8px}.mc-topic-group+.mc-topic-group{margin-top:22px}.mc-topic-group-head h3{font-size:13px}}
 .mc-stats{display:flex;gap:8px 20px;flex-wrap:wrap;padding:12px 0 0;font-size:11px}
 .mc-stats b{color:#006c47}
 .mc-home-note{font-size:11px;color:#666370;margin:10px 0}

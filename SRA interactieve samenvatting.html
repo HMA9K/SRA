@@ -1219,7 +1219,7 @@ body.study-shell .sra-exam-dashboard>.sra-exam-section+.sra-exam-section{margin-
 .mc-home-options p{margin:0}
 .mc-home-options .direct-check-option{font-size:12px;min-height:28px;padding:0}
 .mc-main-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:12px;margin:14px 0}
-.mc-main-card{background:#fff;border:1px solid #d2d5da;border-top:3px solid #444159;min-width:0;padding:14px;display:flex;flex-direction:column}
+.mc-main-card,.mc-part-card{background:#fff;border:1px solid #d2d5da;border-top:3px solid #444159;min-width:0;padding:14px;display:flex;flex-direction:column}
 .mc-group-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .mc-group-number{display:grid;place-items:center;width:25px;height:25px;flex:none;background:#ff720c;color:#fff;font-size:12px;font-weight:700}
 .mc-group-row h2{font-size:16px;line-height:1.35;color:#444159;margin:0;letter-spacing:0}
@@ -1237,14 +1237,27 @@ body.study-shell .sra-exam-dashboard>.sra-exam-section+.sra-exam-section{margin-
 .mc-topic-card h4{margin:0 0 4px;font-size:13px;font-weight:600;line-height:1.4;color:#17364e}
 .mc-topic-card p{margin:0;color:#666370;font-size:11px}
 .mc-topic-card .study-btn{flex-shrink:0}
+/* Two distinct practice levels, matching CAFA2: whole parts, then topics. */
+.mc-parts{margin-top:22px}
+.mc-parts>h2{font-size:15px;margin:0 0 8px;color:#444159;letter-spacing:0}
+.mc-section-intro,.mc-topic-group-note{font-size:12px;line-height:1.6;margin:0 0 12px}
+.mc-part-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.mc-part-card .mc-group-row h3{font-size:16px;line-height:1.35;letter-spacing:0;color:#444159;margin:0}
+.mc-part-card .mc-group-description{flex:1}
+.mc-subjects{margin:28px 0 24px;border-top:1px solid #dde0e6;padding-top:22px}
+.mc-subjects>h2{font-size:18px;line-height:1.4;color:#444159;margin:0 0 8px;letter-spacing:0}
+.mc-counting-rule{padding:12px;border:1px solid #dde0e6;margin:14px 0;font-size:12px;line-height:1.6}
+.mc-counting-rule>summary{cursor:pointer;font-weight:600}
+.mc-counting-rule p{margin:10px 0;max-width:85ch}
+@media(max-width:540px){.mc-part-grid{grid-template-columns:minmax(0,1fr);gap:8px}.mc-part-card{padding:11px 12px;border-top-width:2px}.mc-part-card .mc-group-row h3{font-size:15px}}
 /* Book sections with directly available topic cards, matching CAFA2. */
 .mc-topic-groups{margin:20px 0 24px}
 .mc-topic-group+.mc-topic-group{margin-top:28px}
 .mc-topic-group-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;border-bottom:1px solid #dde0e6;padding-bottom:8px;margin-bottom:12px}
-.mc-topic-group-head h2{font-size:14px;font-weight:600;letter-spacing:0;color:#625b67;margin:0}
+.mc-topic-group-head h3{font-size:14px;font-weight:600;letter-spacing:0;color:#625b67;margin:0}
 .mc-topic-group-head .study-btn{min-height:28px;font-size:11px;padding:4px 8px}
 .mc-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;gap:12px}
-.mc-topic-grid .mc-group-row h3{font-size:14px;line-height:1.4;letter-spacing:0;color:#444159;margin:0}
+.mc-topic-grid .mc-group-row h4{font-size:14px;line-height:1.4;letter-spacing:0;color:#444159;margin:0}
 .mc-topic-grid .mc-group-description{flex:1;min-height:2.7em}
 .mc-home .topic-exam-frequency{margin:0 0 14px;font-size:12px}
 .mc-home .topic-exam-label{font-size:12px;font-weight:600;margin:0 0 3px}
@@ -1258,7 +1271,7 @@ body.study-shell .sra-exam-dashboard>.sra-exam-section+.sra-exam-section{margin-
 .mc-home .topic-exam-note{font-size:11px;color:#666370;margin:8px 0 0;line-height:1.5}
 .mc-home .topic-exam-uncounted{margin:0;line-height:1.5;color:#666370}
 .mc-frequency-note{font-size:12px;color:#625b67;margin:14px 0;max-width:90ch;line-height:1.6}
-@media(max-width:540px){.mc-topic-grid{grid-template-columns:minmax(0,1fr);gap:8px}.mc-topic-group+.mc-topic-group{margin-top:22px}.mc-topic-group-head h2{font-size:13px}}
+@media(max-width:540px){.mc-topic-grid{grid-template-columns:minmax(0,1fr);gap:8px}.mc-topic-group+.mc-topic-group{margin-top:22px}.mc-topic-group-head h3{font-size:13px}}
 .mc-stats{display:flex;gap:8px 20px;flex-wrap:wrap;padding:12px 0 0;font-size:11px}
 .mc-stats b{color:#006c47}
 .mc-home-note{font-size:11px;color:#666370;margin:10px 0}
@@ -3074,7 +3087,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home-head{border-bot
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home-head h1{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home-head p{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home-options{color:#adbdc9}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-main-card{background:#152129;border:1px solid #3b4a54;border-top:3px solid #48455e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-main-card,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-part-card{background:#152129;border:1px solid #3b4a54;border-top:3px solid #48455e}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-group-number{background:#ae5413;color:#f0f7fc}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-group-row h2{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-group-description{color:#adbdc9}
@@ -3085,9 +3098,14 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-list{border-to
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-card{border-bottom:1px solid #3b4a54}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-card h4{color:#99c1e1}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-card p{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-parts>h2{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-part-card .mc-group-row h3{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-subjects{border-top:1px solid #454d5e}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-subjects>h2{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-counting-rule{border:1px solid #454d5e}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-group-head{border-bottom:1px solid #454d5e}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-group-head h2{color:#adbdc9}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-grid .mc-group-row h3{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-group-head h3{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-topic-grid .mc-group-row h4{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home .topic-exam-toggle:focus-visible{outline:2px solid #2d765d}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home .topic-exam-note{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home .topic-exam-uncounted{color:#adbdc9}
@@ -27514,10 +27532,10 @@ window.SRAMCExamFrequency = {
  const S=window.SRAMCState.create(D,storage);let ctx;
  const topicByQuestion=new Map(D.topics.flatMap(t=>t.questions.map(q=>[q.id,t])));
  const groups=[
-  {id:'hoofd-basis',phase:'Basis',title:'Basis statistiek',description:'Populatie en steekproef, kengetallen, kans en betrouwbaarheid.'},
-  {id:'hoofd-steekproeven',phase:'Schatten',title:'Steekproeven en schatten',description:'Schatters kiezen, onzekerheid berekenen, steekproefomvang en stratificatie.'},
-  {id:'hoofd-regressie',phase:'Regressie',title:'Regressie en toetsen',description:'Regressielijnen, ANOVA, hypothesen, modeldiagnostiek en voorspellen.'},
-  {id:'hoofd-modelbouw',phase:'Verdieping',title:'Meervoudige regressie en modelbouw',description:'Dummyvariabelen, transformaties, modelkeuze, multicollineariteit en validatie.'},
+  {id:'hoofd-basis',phase:'Basis',title:'Basis statistiek',description:'Voorbereiding op SRA: populatie en steekproef, kengetallen, kans en betrouwbaarheid.'},
+  {id:'hoofd-steekproeven',phase:'Schatten',title:'Steekproeven en schatten',description:'Hoofdstuk 8: schatters, onzekerheid, stratificatie en steekproefomvang.'},
+  {id:'hoofd-regressie',phase:'Regressie',title:'Regressie en toetsen',description:'Hoofdstuk 9: regressielijnen, ANOVA, hypothesen, modeldiagnostiek en voorspellen.'},
+  {id:'hoofd-modelbouw',phase:'Verdieping',title:'Meervoudige regressie en modelbouw',description:'Hoofdstuk 10: dummyvariabelen, transformaties, modelkeuze, multicollineariteit en validatie.'},
   {id:'hoofd-tentamen',phase:'Tentamen',title:'Tentamenaanpak',description:'Vraagtypen herkennen en een volledig, onderbouwd tentamenantwoord opbouwen.'}
  ].map(g=>{const topics=D.topics.filter(t=>t.phase===g.phase);return {...g,topics,questions:topics.flatMap(t=>t.questions).sort((a,b)=>a.level-b.level)};}).filter(g=>g.questions.length);
  const route=(t,part)=>`#tentamen/mc/${t.id}${part?'/'+part:''}`;
@@ -27533,9 +27551,10 @@ window.SRAMCExamFrequency = {
   if(!f||f.status!=='counted')return `<div class="topic-exam-frequency"><p class="topic-exam-label">Voorkomen onderwerp:</p><p class="topic-exam-uncounted">Niet afzonderlijk geteld</p>${f?.note?`<p class="topic-exam-note">${esc(f.note)}</p>`:''}</div>`;
   return `<div class="topic-exam-frequency"><p class="topic-exam-label">Voorkomen onderwerp:</p><button type="button" class="topic-exam-toggle" aria-expanded="false" aria-controls="mc-exams-${esc(t.id)}" aria-label="${f.count} van ${data.examCount} ${esc(data.examLabel)}: ${esc(t.title)}">${f.count} van ${data.examCount} ${esc(data.examLabel)}</button><p class="topic-exam-codes" id="mc-exams-${esc(t.id)}" hidden>${f.exams.map(e=>`<span><a href="${esc(e.href)}" target="_blank" rel="noopener">${esc(e.label)}</a></span>`).join(' · ')||'Geen'}</p>${f.note?`<p class="topic-exam-note">${esc(f.note)}</p>`:''}</div>`;
  }
- function groupCards(results){let index=0;return `<div class="mc-topic-groups">${groups.map((g,i)=>`<section class="mc-topic-group" aria-labelledby="${g.id}-title"><header class="mc-topic-group-head"><h2 id="${g.id}-title">${groupLabels[i]}</h2>${link(results?'Groepsresultaten':'Oefen hele groep',results?route(g,'resultaat'):start(g))}</header><div class="mc-topic-grid">${g.topics.slice().sort((a,b)=>topicOrder.indexOf(a.id)-topicOrder.indexOf(b.id)).map(t=>{const s=S.summary(t);return `<article class="mc-main-card" data-topic="${esc(t.id)}"><div class="mc-group-row"><span class="mc-group-number" aria-hidden="true">${++index}</span><h3>${esc(t.title)}</h3></div><p class="mc-group-description">${esc(t.approach)}</p>${examDetails(t)}<div class="mc-group-footer"><p class="mc-topic-score">${s.done} / ${s.total} beantwoord · ${s.correct} goed</p><div class="actions">${link(results?'Resultaten':s.done?'Verder':'Start',results?route(t,'resultaat'):start(t),true)}${link('Overzicht',route(t,'resultaat'))}</div></div></article>`;}).join('')}</div></section>`).join('')}</div>`;}
+ function partCards(results){return `<section class="mc-parts" aria-labelledby="mc-parts-title"><h2 id="mc-parts-title">Oefenen per deel</h2><p class="mc-section-intro">Oefen alle onderwerpen van een deel samen in één oefenreeks.</p><div class="mc-part-grid">${groups.map((g,index)=>{const s=S.summary(g);return `<article class="mc-part-card" data-group="${g.id}"><div class="mc-group-row"><span class="mc-group-number" aria-hidden="true">${index+1}</span><h3>${esc(g.title)}</h3></div><p class="mc-group-description">${esc(g.description)}</p><div class="mc-group-footer"><p class="mc-topic-score">${s.done} / ${s.total} beantwoord · ${s.correct} goed</p><div class="actions">${link(results?'Resultaten':s.done?'Verder':'Start',results?route(g,'resultaat'):start(g),true)}${link('Overzicht',route(g,'resultaat'))}</div></div></article>`;}).join('')}</div></section>`;}
+ function groupCards(results){let index=0;return `<div class="mc-topic-groups">${groups.map((g,i)=>`<section class="mc-topic-group" aria-labelledby="${g.id}-title"><header class="mc-topic-group-head"><h3 id="${g.id}-title">${groupLabels[i]}</h3></header>${i===0?'<p class="mc-topic-group-note">Onderwerpen 1–3 vormen de basiskennis die je nodig hebt voor de hoofdstukken 8, 9 en 10 hieronder.</p>':''}<div class="mc-topic-grid">${g.topics.slice().sort((a,b)=>topicOrder.indexOf(a.id)-topicOrder.indexOf(b.id)).map(t=>{const s=S.summary(t);return `<article class="mc-main-card" data-topic="${esc(t.id)}"><div class="mc-group-row"><span class="mc-group-number" aria-hidden="true">${++index}</span><h4>${esc(t.title)}</h4></div><p class="mc-group-description">${esc(t.approach)}</p>${examDetails(t)}<div class="mc-group-footer"><p class="mc-topic-score">${s.done} / ${s.total} beantwoord · ${s.correct} goed</p><div class="actions">${link(results?'Resultaten':s.done?'Verder':'Start',results?route(t,'resultaat'):start(t),true)}${link('Overzicht',route(t,'resultaat'))}</div></div></article>`;}).join('')}</div></section>`).join('')}</div>`;}
  function overview(results=false){
-  $('#main').innerHTML=`<section class="mc-home"><header class="mc-home-head"><h1>${results?'Voortgang oefenvragen':'Oefenvragen maken'}</h1><p>${groups.length} hoofdonderwerpen · ${D.topics.length} deelonderwerpen · ${S.summary().total} oefenvragen</p></header><div class="mc-home-body"><div class="mc-home-options"><p>Van basis naar gecombineerde tentamenvragen.</p><label class="direct-check-option"><input type="checkbox" id="mc-home-direct" data-direct-check ${window.SRAAnswerSettings.enabled()?'checked':''}> Direct nakijken bij antwoordkeuze</label></div>${groupCards(results)}<p class="mc-frequency-note">Volgorde: benodigde basis, boekhoofdstukken 8, 9 en 10, daarna tentamenaanpak. Voorkomen is geteld in negen unieke tentamens; maart en juni 2020 bevatten dezelfde vragen. Niet afzonderlijk geteld betekent dat er voor dit onderwerp geen aparte telling is. <a href="#tentamen/analyse">Bekijk de tentamenanalyse en telwijze</a>.</p><nav class="actions mc-home-links" aria-label="Verder in SRA">${link('Hoofdpagina','#home')}${link('Alle resultaten','#tentamen/mc/resultaten')}${link('Voortgang','#voortgang')}${link('Bronnen','#bronnen')}</nav>${stats()}<p class="mc-home-note">Voortgang wordt op dit apparaat bewaard.</p><details class="mc-backup" ${S.status()?'open':''}><summary>Zo werkt het en voortgang bewaren</summary><p>Start een onderwerp of oefen een hele groep. De vragen lopen op van makkelijk (begrippen), via gemiddeld (toepassen), naar moeilijk (combineren).</p><p>Je eerste gecontroleerde antwoord blijft bewaard wanneer je een vraag opnieuw maakt. Hoofdonderwerpen en deelonderwerpen gebruiken dezelfde voortgang.</p><div class="actions"><button class="study-btn" id="mc-export">Exporteer MC-voortgang</button><button class="study-btn" id="mc-import">Importeer MC-voortgang</button><input hidden type="file" accept="application/json,.json" id="mc-import-file"></div><p id="mc-storage-status" role="status">${esc(S.status())}</p></details></div></section>`;
+  $('#main').innerHTML=`<section class="mc-home"><header class="mc-home-head"><h1>${results?'Voortgang oefenvragen':'Oefenvragen maken'}</h1><p>${groups.length} delen · ${D.topics.length} onderwerpen · ${S.summary().total} oefenvragen</p></header><div class="mc-home-body"><div class="mc-home-options"><p>Van basis naar gecombineerde tentamenvragen.</p><label class="direct-check-option"><input type="checkbox" id="mc-home-direct" data-direct-check ${window.SRAAnswerSettings.enabled()?'checked':''}> Direct nakijken bij antwoordkeuze</label></div>${partCards(results)}<section class="mc-subjects" aria-labelledby="mc-subjects-title"><h2 id="mc-subjects-title">Oefenen per onderwerp</h2><p class="mc-section-intro">Kies één van de 19 onderwerpen hieronder. Je oefent met dezelfde vragen als bij de delen hierboven; je voortgang telt in beide overzichten mee.</p><details class="mc-counting-rule"><summary>Hoe is de tentamenfrequentie geteld?</summary><p>Een onderwerp telt eenmaal per uniek tentamen waarin het wordt gevraagd. Negen verschillende vraagverzamelingen zijn geteld; maart en juni 2020 bevatten dezelfde vragen. Onderwerpen kunnen overlappen. De telling geeft het voorkomen aan, geen puntenweging.</p><p>Niet afzonderlijk geteld betekent dat er voor dit onderwerp geen aparte telling is. De volgorde van de onderwerpen volgt de benodigde basis, boekhoofdstukken 8, 9 en 10 en de tentamenaanpak.</p><a href="#tentamen/analyse">Bekijk de tentamenanalyse en telwijze</a></details>${groupCards(results)}</section><nav class="actions mc-home-links" aria-label="Verder in SRA">${link('Hoofdpagina','#home')}${link('Alle resultaten','#tentamen/mc/resultaten')}${link('Voortgang','#voortgang')}${link('Bronnen','#bronnen')}</nav>${stats()}<p class="mc-home-note">Voortgang wordt op dit apparaat bewaard.</p><details class="mc-backup" ${S.status()?'open':''}><summary>Zo werkt het en voortgang bewaren</summary><p>Start een onderwerp of oefen een hele groep. De vragen lopen op van makkelijk (begrippen), via gemiddeld (toepassen), naar moeilijk (combineren).</p><p>Je eerste gecontroleerde antwoord blijft bewaard wanneer je een vraag opnieuw maakt. Hoofdonderwerpen en deelonderwerpen gebruiken dezelfde voortgang.</p><div class="actions"><button class="study-btn" id="mc-export">Exporteer MC-voortgang</button><button class="study-btn" id="mc-import">Importeer MC-voortgang</button><input hidden type="file" accept="application/json,.json" id="mc-import-file"></div><p id="mc-storage-status" role="status">${esc(S.status())}</p></details></div></section>`;
   $('#mc-home-direct').onchange=event=>window.SRAAnswerSettings.set(event.target.checked);
   document.querySelectorAll('.topic-exam-toggle').forEach(button=>button.onclick=()=>{const expanded=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(expanded));document.getElementById(button.getAttribute('aria-controls')).hidden=!expanded;});
   $('#mc-export').onclick=exportFile;$('#mc-import').onclick=()=>$('#mc-import-file').click();
