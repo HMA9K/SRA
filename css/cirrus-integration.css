@@ -33,9 +33,21 @@ body.cirrus-mode .exam-case-resizer:focus-visible{outline:3px solid var(--study-
 body.cirrus-mode .exam-case-layout.is-resizing{user-select:none;cursor:col-resize}
 body.cirrus-mode .exam-case-layout>[hidden],body.cirrus-mode [data-exam-action="section"][hidden]{display:none!important}
 body.cirrus-mode [data-exam-action="section"][aria-pressed="true"]{box-shadow:inset 0 -3px var(--study-accent)}
+/* Keep the exam controls in view while case and answer scroll independently. */
+@media screen and (min-width:761px){
+ body.cirrus-mode.exam-running:has(.exam-case-layout) #main{display:flex;flex-direction:column;height:calc(100dvh - var(--study-header-height,64px) - var(--study-nav-height,48px));min-height:0;overflow:hidden}
+ body.cirrus-mode.exam-running:has(.exam-case-layout) #exam-app{display:flex;flex:1 1 auto;flex-direction:column;min-height:0;padding-bottom:0}
+ body.cirrus-mode.exam-running:has(.exam-case-layout) #exam-app>.exam-runner-title{flex:none}
+ body.cirrus-mode.exam-running:has(.exam-case-layout) #exam-app>.frame{display:flex;flex:1 1 auto;flex-direction:column;min-height:0;overflow:hidden}
+ body.cirrus-mode.exam-running:has(.exam-case-layout) .exam-work-head,body.cirrus-mode.exam-running:has(.exam-case-layout) .exam-footer{flex:none}
+ body.cirrus-mode.exam-running:has(.exam-case-layout) .exam-footer{position:static}
+ body.cirrus-mode.exam-running:has(.exam-case-layout) .exam-case-layout{flex:1 1 auto;min-height:0;grid-template-rows:minmax(0,1fr);align-items:stretch;overflow:hidden}
+ body.cirrus-mode.exam-running:has(.exam-case-layout) .exam-case-panel{position:static;height:100%;max-height:none}
+ body.cirrus-mode.exam-running:has(.exam-case-layout) .exam-case-layout>.exam-question-body{height:100%;min-height:0;overflow:auto;overscroll-behavior:contain}
+}
 @media(max-width:760px){
  body.cirrus-mode .exam-case-layout{display:flex;flex-direction:column}
- body.cirrus-mode .exam-case-panel{position:static;order:-1;width:100%;max-height:45dvh;padding:16px;border-inline:0;border-top:0}
+ body.cirrus-mode .exam-case-panel{position:static;order:-1;width:100%;max-height:45dvh;padding:16px;border-inline:0;border-top:0;overscroll-behavior:auto}
  body.cirrus-mode .exam-case-resizer{display:none}
  body.cirrus-mode.exam-running .exam-case-layout>.exam-question-body{width:100%;padding:16px}
 }

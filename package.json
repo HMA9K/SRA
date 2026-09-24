@@ -13,6 +13,7 @@
     "test:audit": "python tests/exam-answer-calculations.py && node tests/answer-audit.cjs",
     "test:patterns": "python tests/question-patterns.py && python tests/question-explanations.py",
     "test:topics-browser": "node tests/topic-overview-browser.cjs",
+    "test:cirrus-scroll-browser": "node tests/cirrus-scroll-browser.cjs",
     "test:frequencies": "python scripts/build_mc_exam_frequency.py --check"
   }
 }

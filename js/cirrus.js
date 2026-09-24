@@ -86,7 +86,7 @@
     var a = document.createElement('a'); a.href=url; a.download='SRA-tentamenpogingen.json'; a.click();
     setTimeout(function () { URL.revokeObjectURL(url); },1000);
   }
-  function dropEditor() { if(caseResizeObserver){caseResizeObserver.disconnect();caseResizeObserver=null;} if (editor) { editor.destroy(); editor = null; } }
+  function dropEditor() { if (editor) { editor.destroy(); editor = null; } }
   function go(hash) { if (location.hash === '#' + hash) route(); else location.hash = hash; }
   function btn(text,action,primary,extra) { return '<button type="button" class="btn' + (primary?' primary':'') + '" data-exam-action="' + action + '" ' + (extra || '') + '>' + text + '</button>'; }
   function head(title,sub) { return '<div class="exam-page-head"><div><div class="exam-eyebrow">SRA · oefenomgeving</div><h1>' + esc(title) + '</h1>' + (sub?'<p>'+esc(sub)+'</p>':'') + '</div></div>'; }
@@ -148,22 +148,18 @@
   function answered(attempt,q) { return Engine.answeredCount({exam:{questions:[q]},answers:attempt.answers})>0; }
   function sectionFor(attempt,q) { return (attempt.exam.sections||[]).find(function(s){return s.id===q.sectionId;}); }
 
-  var casePreferences={open:true,width:100/3}, CASE_PREF_KEY='sra-exam-case-panel-v1',caseResizeObserver=null;
+  var casePreferences={open:true,width:100/3}, CASE_PREF_KEY='sra-exam-case-panel-v1';
+  var caseScrollPositions=Object.create(null);
   try {
     var storedCase=JSON.parse(sessionStorage.getItem(CASE_PREF_KEY)||'null');
     if(storedCase&&typeof storedCase.open==='boolean')casePreferences.open=storedCase.open;
     if(storedCase&&Number.isFinite(storedCase.width))casePreferences.width=Math.max(25,Math.min(60,storedCase.width));
   } catch(ignore) {}
   function saveCasePreferences(){try{sessionStorage.setItem(CASE_PREF_KEY,JSON.stringify(casePreferences));}catch(ignore){}}
-  function fitCasePanel(){
-    var panel=host.querySelector('#exam-case-panel');if(!panel||panel.hidden)return;
-    var rect=panel.getBoundingClientRect();if(!rect.width)return;
-    var footer=host.querySelector('.exam-footer'),bottom=footer?footer.getBoundingClientRect().height:0;
-    panel.style.setProperty('--case-available-height',Math.max(180,window.innerHeight-rect.top-bottom-16)+'px');
+  function rememberCaseScroll(){
+    var panel=host.querySelector('#exam-case-panel');
+    if(panel&&panel.dataset.caseKey)caseScrollPositions[panel.dataset.caseKey]=panel.scrollTop;
   }
-  function scheduleCaseFit(){window.requestAnimationFrame(fitCasePanel);}
-  window.addEventListener('resize',scheduleCaseFit);
-  window.addEventListener('scroll',scheduleCaseFit,{passive:true});
   function caseSection(attempt,q){
     // Saved attempts keep their original questions and answers; case excerpts are display data.
     var current=examById(attempt.exam.id),section=(current&&current.sections||attempt.exam.sections||[]).find(function(s){return s.id===q.sectionId;});
@@ -181,7 +177,6 @@
       button.setAttribute('aria-controls','exam-case-panel');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-pressed',String(open));
       button.removeAttribute('aria-haspopup');
     });
-    scheduleCaseFit();
   }
   function resizeCasePanel(value){casePreferences.width=Math.max(25,Math.min(60,value));updateCasePanel();}
   function mountCasePanel(attempt,q){
@@ -193,8 +188,10 @@
     handle.setAttribute('aria-controls','exam-case-panel');handle.setAttribute('aria-valuemin','25');handle.setAttribute('aria-valuemax','60');
     handle.title='Sleep naar rechts voor een bredere casus of naar links voor een smallere casus. Gebruik ook de pijltjestoetsen, Home en End.';
     var panel=document.createElement('aside');panel.id='exam-case-panel';panel.className='exam-case-panel';panel.setAttribute('aria-labelledby','exam-case-heading');
+    panel.dataset.caseKey=attempt.id+':'+section.id;
     panel.innerHTML='<h2 id="exam-case-heading">Casus · '+esc(section.title)+'</h2>'+documentHtml(attempt.exam,'case',section.caseHtml);
     layout.appendChild(panel);layout.appendChild(handle);layout.appendChild(body);
+    panel.scrollTop=caseScrollPositions[panel.dataset.caseKey]||0;
     handle.addEventListener('pointerdown',function(e){if(e.button!==0)return;e.preventDefault();handle.focus({preventScroll:true});handle.setPointerCapture(e.pointerId);handle.dataset.dragging='true';layout.classList.add('is-resizing');});
     handle.addEventListener('pointermove',function(e){if(handle.dataset.dragging!=='true')return;var rect=layout.getBoundingClientRect();if(rect.width)resizeCasePanel(100*(e.clientX-rect.left)/rect.width);});
     function endDrag(e){delete handle.dataset.dragging;layout.classList.remove('is-resizing');if(handle.hasPointerCapture(e.pointerId))handle.releasePointerCapture(e.pointerId);saveCasePreferences();}
@@ -204,7 +201,6 @@
       if(e.key==='ArrowLeft')value-=5;else if(e.key==='ArrowRight')value+=5;else if(e.key==='Home')value=25;else if(e.key==='End')value=60;else return;
       e.preventDefault();resizeCasePanel(value);saveCasePreferences();
     });
-    if(window.ResizeObserver){caseResizeObserver=new window.ResizeObserver(scheduleCaseFit);caseResizeObserver.observe(layout);var footer=host.querySelector('.exam-footer');if(footer)caseResizeObserver.observe(footer);}
     updateCasePanel();
   }
 
@@ -373,6 +369,7 @@
     if(!clock.hidden){var seconds=Engine.remainingSeconds(attempt);clock.querySelector('strong').textContent=attempt.pausedAt!=null?'Gepauzeerd':Engine.formatTime(seconds).replace(/ min$/,' minuten');clock.querySelector('.exam-time-badge > span').textContent=attempt.untimed?'Oefenmodus:':'Totaal resterende tijd:';clock.classList.toggle('is-urgent',seconds<=600);if(seconds<=600&&!announcedTen.has(attempt.id)){announcedTen.add(attempt.id);announce('Nog tien minuten of minder. De klok toont nu minuten en seconden.');}}
   }
   function route() {
+    rememberCaseScroll();
     dropEditor(); var parts=location.hash.slice(1).split('/'),kind=parts[0],id;
     try{id=decodeURIComponent(parts.slice(1).join('/'));}catch(e){id='';}
     var isExam=host.isConnected&&(['welkom','toets','inzage'].includes(kind)||(kind==='tentamen'&&(!id||id==='voltooid')));
@@ -451,5 +448,5 @@
   attempts().filter(function(a){return a.status==='active'&&Engine.remainingSeconds(a)===0;}).forEach(function(a){Object.assign(a,Engine.finishAttempt(a,{reason:'timeout'}));});
   if(!corrupt)save();
   setInterval(tick,1000);
-  window.SRACirrus={mount:function(){document.body.classList.add('cirrus-mode');document.getElementById('main').replaceChildren(host);route();},leave:function(){dropEditor();selectedAttempt=null;clock.hidden=true;document.body.classList.remove('cirrus-mode','exam-running','exam-dashboard','exam-surface');var d=document.getElementById('exam-info-dialog');if(d)d.close();},catalog:catalog,getAttempts:function(){return JSON.parse(JSON.stringify(attempts()));},storageKey:KEY};
+  window.SRACirrus={mount:function(){document.body.classList.add('cirrus-mode');document.getElementById('main').replaceChildren(host);route();},leave:function(){rememberCaseScroll();dropEditor();selectedAttempt=null;clock.hidden=true;document.body.classList.remove('cirrus-mode','exam-running','exam-dashboard','exam-surface');var d=document.getElementById('exam-info-dialog');if(d)d.close();},catalog:catalog,getAttempts:function(){return JSON.parse(JSON.stringify(attempts()));},storageKey:KEY};
 }());
