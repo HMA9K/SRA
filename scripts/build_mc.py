@@ -4,6 +4,7 @@ from pathlib import Path
 import build_content as C
 from question_explanations import APPLICATION, enrich_application, validate_question
 from question_patterns import validate_coverage
+from mc_guidance import attach_guidance
 
 ROOT=Path(__file__).resolve().parents[1]
 EXTRA={}
@@ -127,6 +128,7 @@ def make_topics():
     assert len(topics)==19 and sum(len(t['questions']) for t in topics)==134
     validate_coverage([q for topic in topics for q in topic['questions']])
     assert all([q['level'] for q in t['questions']]==sorted(q['level'] for q in t['questions']) for t in topics)
+    attach_guidance(topics)
     return topics
 
 

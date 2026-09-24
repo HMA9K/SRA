@@ -82,7 +82,27 @@ window.SRAMCData = {
             "approach": "Koppel n aan de werkelijk onderzochte posten en N aan alle posten.",
             "answer": "Een aantal onderzochte facturen, geen bedrag of populatieomvang."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Populatie, steekproef en schatting",
+            "focus": "Houd het aantal onderzochte posten en het aantal posten waarover je een uitspraak wilt doen uit elkaar.",
+            "rules": [
+              "N is het aantal posten in de volledige populatie; n is het aantal onderzochte posten. Een hoofdletter W duidt hier het werkelijke populatietotaal aan; een dakje betekent dat dit totaal wordt geschat.",
+              "Een schatting gebruikt steekproefgegevens om iets over de populatie te zeggen. Benoem eerst of een aantal, gemiddelde, totaal of onzekerheidsinterval wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "boek-h8a",
+                "page": 1,
+                "locator": "Boek p. 201; oorspronkelijke PDF p. 219"
+              },
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2-4: schatting, totaal en onzekerheid"
+              }
+            ]
+          }
         },
         {
           "id": "mc-beginnen-basis-2",
@@ -134,7 +154,27 @@ window.SRAMCData = {
             "approach": "Lees het dakje als “geschat uit gegevens”; het zegt niets over afronden.",
             "answer": "De betekenis van de notatie, niet een numerieke berekening."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Populatie, steekproef en schatting",
+            "focus": "Een geschatte grootheid is nog niet de onbekende werkelijke waarde. Bepaal op welke populatiegrootheid de uitspraak betrekking heeft.",
+            "rules": [
+              "N is het aantal posten in de volledige populatie; n is het aantal onderzochte posten. Een hoofdletter W duidt hier het werkelijke populatietotaal aan; een dakje betekent dat dit totaal wordt geschat.",
+              "Een schatting gebruikt steekproefgegevens om iets over de populatie te zeggen. Benoem eerst of een aantal, gemiddelde, totaal of onzekerheidsinterval wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "boek-h8a",
+                "page": 1,
+                "locator": "Boek p. 201; oorspronkelijke PDF p. 219"
+              },
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2-4: schatting, totaal en onzekerheid"
+              }
+            ]
+          }
         },
         {
           "id": "mc-beginnen-basis-3",
@@ -186,7 +226,27 @@ window.SRAMCData = {
             "approach": "Zoek de vraag die een onbekende populatiegrootheid wil benaderen.",
             "answer": "De vraag naar een geschatte waarde, eventueel met een onzekerheidsinterval."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Populatie, steekproef en schatting",
+            "focus": "Een geschatte grootheid is nog niet de onbekende werkelijke waarde. Bepaal op welke populatiegrootheid de uitspraak betrekking heeft.",
+            "rules": [
+              "N is het aantal posten in de volledige populatie; n is het aantal onderzochte posten. Een hoofdletter W duidt hier het werkelijke populatietotaal aan; een dakje betekent dat dit totaal wordt geschat.",
+              "Een schatting gebruikt steekproefgegevens om iets over de populatie te zeggen. Benoem eerst of een aantal, gemiddelde, totaal of onzekerheidsinterval wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "boek-h8a",
+                "page": 1,
+                "locator": "Boek p. 201; oorspronkelijke PDF p. 219"
+              },
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2-4: schatting, totaal en onzekerheid"
+              }
+            ]
+          }
         },
         {
           "id": "mc-beginnen-toepassing-1",
@@ -240,6 +300,26 @@ window.SRAMCData = {
             "meaning": "Een aselect steekproefgemiddelde wordt gebruikt om een totaal te schatten: MPU.",
             "approach": "Vermenigvuldig het gemiddelde met alle facturen N, niet met de onderzochte n.",
             "answer": "Een geschat totaalbedrag in euro, geen gemiddelde per factuur."
+          },
+          "guidance": {
+            "title": "Populatie, steekproef en schatting",
+            "focus": "Gebruik bij een populatietotaal het populatieaantal en het steekproefgemiddelde. Het steekproeftotaal beantwoordt een andere vraag.",
+            "rules": [
+              "N is het aantal posten in de volledige populatie; n is het aantal onderzochte posten. Een hoofdletter W duidt hier het werkelijke populatietotaal aan; een dakje betekent dat dit totaal wordt geschat.",
+              "Een schatting gebruikt steekproefgegevens om iets over de populatie te zeggen. Benoem eerst of een aantal, gemiddelde, totaal of onzekerheidsinterval wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "boek-h8a",
+                "page": 1,
+                "locator": "Boek p. 201; oorspronkelijke PDF p. 219"
+              },
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2-4: schatting, totaal en onzekerheid"
+              }
+            ]
           }
         },
         {
@@ -294,6 +374,26 @@ window.SRAMCData = {
             "meaning": "De selectie hangt van de factuurwaarde af en vertegenwoordigt dure facturen niet.",
             "approach": "Beoordeel de selectiegrond voordat je de grote steekproefomvang als voordeel ziet.",
             "answer": "Een kritiek op mogelijke selectiebias, niet alleen op het aantal controles."
+          },
+          "guidance": {
+            "title": "Populatie, steekproef en schatting",
+            "focus": "Controleer hoe de posten zijn gekozen. Selecteren op lage waarden kan systematisch afwijken van de hele populatie; een grotere selectieve steekproef neemt die vertekening niet vanzelf weg.",
+            "rules": [
+              "N is het aantal posten in de volledige populatie; n is het aantal onderzochte posten. Een hoofdletter W duidt hier het werkelijke populatietotaal aan; een dakje betekent dat dit totaal wordt geschat.",
+              "Een schatting gebruikt steekproefgegevens om iets over de populatie te zeggen. Benoem eerst of een aantal, gemiddelde, totaal of onzekerheidsinterval wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "boek-h8a",
+                "page": 1,
+                "locator": "Boek p. 201; oorspronkelijke PDF p. 219"
+              },
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2-4: schatting, totaal en onzekerheid"
+              }
+            ]
           }
         },
         {
@@ -348,6 +448,26 @@ window.SRAMCData = {
             "meaning": "Naast de puntschatting is ook de onzekerheid van het totaal gegeven.",
             "approach": "Bereken de marge t × standaardfout en plaats die aan beide kanten van Ŵ.",
             "answer": "Een geschat totaal met onder- en bovengrens, zonder zekerheid over de werkelijke waarde te claimen."
+          },
+          "guidance": {
+            "title": "Populatie, steekproef en schatting",
+            "focus": "De onzekerheid hoort bij de geschatte grootheid. Een interval voor het totaal zegt niet waar individuele posten liggen.",
+            "rules": [
+              "N is het aantal posten in de volledige populatie; n is het aantal onderzochte posten. Een hoofdletter W duidt hier het werkelijke populatietotaal aan; een dakje betekent dat dit totaal wordt geschat.",
+              "Een schatting gebruikt steekproefgegevens om iets over de populatie te zeggen. Benoem eerst of een aantal, gemiddelde, totaal of onzekerheidsinterval wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "boek-h8a",
+                "page": 1,
+                "locator": "Boek p. 201; oorspronkelijke PDF p. 219"
+              },
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2-4: schatting, totaal en onzekerheid"
+              }
+            ]
           }
         }
       ]
@@ -432,7 +552,22 @@ window.SRAMCData = {
             "approach": "Kwadrateer de afzonderlijke waarden en tel hun kwadraten op.",
             "answer": "Een som van kwadraten; onderscheid die van (Σw)²."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Som, spreiding en standaardfout",
+            "focus": "Let op de plaats van het kwadraat: schrijf bij een som van kwadraten eerst voor elke waarneming haar eigen kwadraat op.",
+            "rules": [
+              "Bij Σw² kwadrateer je iedere waarneming en tel je daarna op. Bij (Σw)² tel je eerst op en kwadrateer je de som. Dit zijn verschillende bewerkingen.",
+              "De steekproefvariantie is s² = [Σw² − (Σw)²/n]/(n − 1). De standaardafwijking s is de wortel van s² en heeft weer dezelfde eenheid als de waarnemingen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formule 1: steekproefvariantie; formule 4: onzekerheid van de schatting"
+              }
+            ]
+          }
         },
         {
           "id": "mc-rekenen-basis-2",
@@ -484,7 +619,22 @@ window.SRAMCData = {
             "approach": "Neem de vierkantswortel van de variantie en controleer de eenheid.",
             "answer": "Een spreidingsmaat in euro, de oorspronkelijke eenheid."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Som, spreiding en standaardfout",
+            "focus": "Een variantie heeft een gekwadrateerde eenheid. Neem de wortel om de standaardafwijking in de oorspronkelijke eenheid te krijgen.",
+            "rules": [
+              "Bij Σw² kwadrateer je iedere waarneming en tel je daarna op. Bij (Σw)² tel je eerst op en kwadrateer je de som. Dit zijn verschillende bewerkingen.",
+              "De steekproefvariantie is s² = [Σw² − (Σw)²/n]/(n − 1). De standaardafwijking s is de wortel van s² en heeft weer dezelfde eenheid als de waarnemingen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formule 1: steekproefvariantie; formule 4: onzekerheid van de schatting"
+              }
+            ]
+          }
         },
         {
           "id": "mc-rekenen-basis-3",
@@ -536,7 +686,22 @@ window.SRAMCData = {
             "approach": "Koppel de formule aan een standaardfout; let erop dat hier nog geen eindigheidscorrectie staat.",
             "answer": "Een uitleg van de onzekerheid van het gemiddelde, niet van een populatietotaal."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Som, spreiding en standaardfout",
+            "focus": "s beschrijft spreiding tussen posten. s/√n beschrijft, zonder eindigheidscorrectie, de standaardfout van het geschatte gemiddelde. Voor een populatietotaal komt daar een factor N bij.",
+            "rules": [
+              "Bij Σw² kwadrateer je iedere waarneming en tel je daarna op. Bij (Σw)² tel je eerst op en kwadrateer je de som. Dit zijn verschillende bewerkingen.",
+              "De steekproefvariantie is s² = [Σw² − (Σw)²/n]/(n − 1). De standaardafwijking s is de wortel van s² en heeft weer dezelfde eenheid als de waarnemingen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formule 1: steekproefvariantie; formule 4: onzekerheid van de schatting"
+              }
+            ]
+          }
         },
         {
           "id": "mc-rekenen-toepassing-1",
@@ -590,6 +755,21 @@ window.SRAMCData = {
             "meaning": "De spreiding moet uit de waarnemingen worden opgebouwd.",
             "approach": "Bepaal het gemiddelde, kwadrateer de afwijkingen en deel hun som door n − 1.",
             "answer": "Een variantie; neem geen wortel als s² gevraagd blijft."
+          },
+          "guidance": {
+            "title": "Som, spreiding en standaardfout",
+            "focus": "Bij een uit de steekproef geschat gemiddelde heeft de steekproefvariantie n − 1 in de noemer. Neem pas daarna een wortel als s wordt gevraagd.",
+            "rules": [
+              "Bij Σw² kwadrateer je iedere waarneming en tel je daarna op. Bij (Σw)² tel je eerst op en kwadrateer je de som. Dit zijn verschillende bewerkingen.",
+              "De steekproefvariantie is s² = [Σw² − (Σw)²/n]/(n − 1). De standaardafwijking s is de wortel van s² en heeft weer dezelfde eenheid als de waarnemingen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formule 1: steekproefvariantie; formule 4: onzekerheid van de schatting"
+              }
+            ]
           }
         },
         {
@@ -644,6 +824,21 @@ window.SRAMCData = {
             "meaning": "Dit zijn samenvattingen voor de rekenformule van de steekproefvariantie.",
             "approach": "Bereken s² = [Σw² − (Σw)²/n]/(n − 1), neem daarna de wortel en rond pas af.",
             "answer": "De standaardafwijking in oorspronkelijke eenheden op twee decimalen."
+          },
+          "guidance": {
+            "title": "Som, spreiding en standaardfout",
+            "focus": "Bij een uit de steekproef geschat gemiddelde heeft de steekproefvariantie n − 1 in de noemer. Neem pas daarna een wortel als s wordt gevraagd.",
+            "rules": [
+              "Bij Σw² kwadrateer je iedere waarneming en tel je daarna op. Bij (Σw)² tel je eerst op en kwadrateer je de som. Dit zijn verschillende bewerkingen.",
+              "De steekproefvariantie is s² = [Σw² − (Σw)²/n]/(n − 1). De standaardafwijking s is de wortel van s² en heeft weer dezelfde eenheid als de waarnemingen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formule 1: steekproefvariantie; formule 4: onzekerheid van de schatting"
+              }
+            ]
           }
         },
         {
@@ -698,6 +893,21 @@ window.SRAMCData = {
             "meaning": "Je moet de individuele spreiding onderscheiden van de onzekerheid van het gemiddelde.",
             "approach": "Behoud s als spreiding en bereken daarnaast s/√n als standaardfout.",
             "answer": "Een combinatie van beide maten met hun juiste betekenis."
+          },
+          "guidance": {
+            "title": "Som, spreiding en standaardfout",
+            "focus": "s beschrijft spreiding tussen posten. s/√n beschrijft, zonder eindigheidscorrectie, de standaardfout van het geschatte gemiddelde. Voor een populatietotaal komt daar een factor N bij.",
+            "rules": [
+              "Bij Σw² kwadrateer je iedere waarneming en tel je daarna op. Bij (Σw)² tel je eerst op en kwadrateer je de som. Dit zijn verschillende bewerkingen.",
+              "De steekproefvariantie is s² = [Σw² − (Σw)²/n]/(n − 1). De standaardafwijking s is de wortel van s² en heeft weer dezelfde eenheid als de waarnemingen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formule 1: steekproefvariantie; formule 4: onzekerheid van de schatting"
+              }
+            ]
           }
         }
       ]
@@ -792,7 +1002,27 @@ window.SRAMCData = {
             "approach": "Bepaal eerst α = 1 − betrouwbaarheid en neem daarna α/2.",
             "answer": "De overschrijdingskans aan één kant, niet de totale α."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Schatting, marge en interval",
+            "focus": "Zet betrouwbaarheid eerst om in α. Verdeel die resterende kans alleen over twee staarten wanneer twee grenzen worden gevraagd.",
+            "rules": [
+              "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
+              "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2 en 4: interval en standaardfout"
+              },
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "Afspraken over het gebruik van de tabellenbundel"
+              }
+            ]
+          }
         },
         {
           "id": "mc-onzekerheid-basis-2",
@@ -849,7 +1079,27 @@ window.SRAMCData = {
             "approach": "Gebruik breedte = 2E en halveer de gegeven afstand tussen de grenzen.",
             "answer": "Een halve intervalbreedte in euro."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Schatting, marge en interval",
+            "focus": "Breedte loopt van ondergrens tot bovengrens; de marge E loopt van de puntschatting tot één grens.",
+            "rules": [
+              "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
+              "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2 en 4: interval en standaardfout"
+              },
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "Afspraken over het gebruik van de tabellenbundel"
+              }
+            ]
+          }
         },
         {
           "id": "mc-onzekerheid-basis-3",
@@ -906,7 +1156,27 @@ window.SRAMCData = {
             "approach": "Kies de naast lagere beschikbare rij; interpoleer niet.",
             "answer": "De te gebruiken tabelrij, met behoud van de oorspronkelijk berekende df."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Schatting, marge en interval",
+            "focus": "Volgens de cursusafspraak kies je bij ontbrekende exacte vrijheidsgraden de eerst lagere beschikbare rij in de t-tabel. Bij df > 200 gebruik je echter de onderste rij van de tabel. Houd de staartkans hetzelfde.",
+            "rules": [
+              "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
+              "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2 en 4: interval en standaardfout"
+              },
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "Afspraken over het gebruik van de tabellenbundel"
+              }
+            ]
+          }
         },
         {
           "id": "mc-onzekerheid-toepassing-1",
@@ -965,6 +1235,26 @@ window.SRAMCData = {
             "meaning": "De totale overschrijdingskans ligt buiten het middengebied.",
             "approach": "Trek de betrouwbaarheid van 1 af en verdeel de rest gelijk over twee staarten.",
             "answer": "Een kans per staart, passend bij de kolom van een tweezijdige t-tabel."
+          },
+          "guidance": {
+            "title": "Schatting, marge en interval",
+            "focus": "Zet betrouwbaarheid eerst om in α. Verdeel die resterende kans alleen over twee staarten wanneer twee grenzen worden gevraagd.",
+            "rules": [
+              "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
+              "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2 en 4: interval en standaardfout"
+              },
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "Afspraken over het gebruik van de tabellenbundel"
+              }
+            ]
           }
         },
         {
@@ -1024,6 +1314,26 @@ window.SRAMCData = {
             "meaning": "Er wordt één grens voor het populatiegemiddelde gevraagd.",
             "approach": "Bereken gemiddelde + t × standaardfout met de gegeven eenzijdige t.",
             "answer": "Eén bovengrens; geen tweezijdig interval of grens voor iedere losse waarneming."
+          },
+          "guidance": {
+            "title": "Schatting, marge en interval",
+            "focus": "Gebruik voor een bovengrens de puntschatting plus de marge en de gegeven eenzijdige kritieke waarde.",
+            "rules": [
+              "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
+              "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2 en 4: interval en standaardfout"
+              },
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "Afspraken over het gebruik van de tabellenbundel"
+              }
+            ]
           }
         },
         {
@@ -1083,6 +1393,26 @@ window.SRAMCData = {
             "meaning": "Je zoekt een interval dat door afronding niet smaller wordt.",
             "approach": "Bereken Ŵ ± t × standaardfout; rond de ondergrens omlaag en de bovengrens omhoog.",
             "answer": "Twee grenzen in honderden euro, met de juiste afrondingsrichting."
+          },
+          "guidance": {
+            "title": "Schatting, marge en interval",
+            "focus": "Werk eerst de berekening uit met ongeronde tussenwaarden. Bij naar buiten afronden gaat de ondergrens omlaag en de bovengrens omhoog op de gevraagde eenheid.",
+            "rules": [
+              "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
+              "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2 en 4: interval en standaardfout"
+              },
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "Afspraken over het gebruik van de tabellenbundel"
+              }
+            ]
           }
         },
         {
@@ -1142,6 +1472,26 @@ window.SRAMCData = {
             "meaning": "Bij gelijke t en s moet de standaardfout kleiner worden.",
             "approach": "Kijk naar n in s/√n: meer waarnemingen verlagen deze onzekerheid.",
             "answer": "Een ingreep die de marge verkleint zonder het gekozen betrouwbaarheidsniveau te verlagen."
+          },
+          "guidance": {
+            "title": "Schatting, marge en interval",
+            "focus": "Bij gelijkblijvende betrouwbaarheid en spreiding vermindert een grotere geschikte steekproef de standaardfout. Afronden is geen statistische verbetering.",
+            "rules": [
+              "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
+              "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2 en 4: interval en standaardfout"
+              },
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "Afspraken over het gebruik van de tabellenbundel"
+              }
+            ]
           }
         }
       ]
@@ -1236,7 +1586,27 @@ window.SRAMCData = {
             "approach": "Gebruik Ŵ_MPU = Nw̄: aantal populatieposten maal bedrag per post.",
             "answer": "Een geschat werkelijk populatietotaal."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Directe schatter van een populatietotaal",
+            "focus": "Verwar de onderzochte n posten niet met alle N posten: de vraag gaat over het totale bedrag van de populatie.",
+            "rules": [
+              "De MPU-schatter gebruikt de werkelijke waarden: Ŵ = N × w̄. N hoort bij de hele populatie; w̄ en de spreiding s_w worden uit de steekproef bepaald.",
+              "De standaardfout van dit totaal is N × s_w/√n × √((N − n)/(N − 1)). Een interval volgt uit Ŵ ± t × standaardfout. Laat de eindigheidscorrectie alleen weg als dat is toegestaan of expliciet wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 1-5: directe schatter"
+              },
+              {
+                "source": "boek-basis",
+                "page": 1,
+                "locator": "Boek p. 92; oorspronkelijke PDF p. 110: voorwaarden en scheefheid"
+              }
+            ]
+          }
         },
         {
           "id": "mc-mpu-basis-2",
@@ -1293,7 +1663,27 @@ window.SRAMCData = {
             "approach": "MPU gebruikt werkelijke waarden w; zoek dus hun standaardafwijking s_w.",
             "answer": "De bijbehorende spreidingsmaat, geen spreiding van boekwaarden of controlefouten."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Directe schatter van een populatietotaal",
+            "focus": "Kies de spreiding van werkelijke waarden. MPU gebruikt geen verschil- of ratiocorrectie op een bekend boektotaal.",
+            "rules": [
+              "De MPU-schatter gebruikt de werkelijke waarden: Ŵ = N × w̄. N hoort bij de hele populatie; w̄ en de spreiding s_w worden uit de steekproef bepaald.",
+              "De standaardfout van dit totaal is N × s_w/√n × √((N − n)/(N − 1)). Een interval volgt uit Ŵ ± t × standaardfout. Laat de eindigheidscorrectie alleen weg als dat is toegestaan of expliciet wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 1-5: directe schatter"
+              },
+              {
+                "source": "boek-basis",
+                "page": 1,
+                "locator": "Boek p. 92; oorspronkelijke PDF p. 110: voorwaarden en scheefheid"
+              }
+            ]
+          }
         },
         {
           "id": "mc-mpu-basis-3",
@@ -1350,7 +1740,27 @@ window.SRAMCData = {
             "approach": "Vul n = N in √((N − n)/(N − 1)) in en bekijk de teller.",
             "answer": "Het gevolg voor correctiefactor en standaardfout, niet voor de spreiding tussen posten."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Directe schatter van een populatietotaal",
+            "focus": "Wanneer alle posten zijn gecontroleerd, resteert geen steekproefonzekerheid over hun totaal. De posten zelf kunnen nog steeds onderling verschillen.",
+            "rules": [
+              "De MPU-schatter gebruikt de werkelijke waarden: Ŵ = N × w̄. N hoort bij de hele populatie; w̄ en de spreiding s_w worden uit de steekproef bepaald.",
+              "De standaardfout van dit totaal is N × s_w/√n × √((N − n)/(N − 1)). Een interval volgt uit Ŵ ± t × standaardfout. Laat de eindigheidscorrectie alleen weg als dat is toegestaan of expliciet wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 1-5: directe schatter"
+              },
+              {
+                "source": "boek-basis",
+                "page": 1,
+                "locator": "Boek p. 92; oorspronkelijke PDF p. 110: voorwaarden en scheefheid"
+              }
+            ]
+          }
         },
         {
           "id": "mc-mpu-toepassing-1",
@@ -1409,6 +1819,26 @@ window.SRAMCData = {
             "meaning": "De standaardfout van een gemiddelde moet worden opgeschaald naar alle posten.",
             "approach": "Bereken eerst s_w/√n en vermenigvuldig daarna met N.",
             "answer": "Een standaardfout van het totaal, geen totaalschatting Nw̄."
+          },
+          "guidance": {
+            "title": "Directe schatter van een populatietotaal",
+            "focus": "Gevraagd is de standaardfout van het totaal, niet die van één post of alleen het gemiddelde. Volg de expliciete aanname over de eindigheidscorrectie.",
+            "rules": [
+              "De MPU-schatter gebruikt de werkelijke waarden: Ŵ = N × w̄. N hoort bij de hele populatie; w̄ en de spreiding s_w worden uit de steekproef bepaald.",
+              "De standaardfout van dit totaal is N × s_w/√n × √((N − n)/(N − 1)). Een interval volgt uit Ŵ ± t × standaardfout. Laat de eindigheidscorrectie alleen weg als dat is toegestaan of expliciet wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 1-5: directe schatter"
+              },
+              {
+                "source": "boek-basis",
+                "page": 1,
+                "locator": "Boek p. 92; oorspronkelijke PDF p. 110: voorwaarden en scheefheid"
+              }
+            ]
           }
         },
         {
@@ -1468,6 +1898,26 @@ window.SRAMCData = {
             "meaning": "Aselecte selectie en bruikbaarheid van de normale benadering zijn afzonderlijke voorwaarden.",
             "approach": "Beoordeel of de scheefheid de benadering problematisch maakt ondanks de omvangsvuistregel.",
             "answer": "Een voorwaardelijk oordeel over het interval, geen automatische garantie door n alleen."
+          },
+          "guidance": {
+            "title": "Directe schatter van een populatietotaal",
+            "focus": "Aselecte selectie en een grote n zijn belangrijk, maar bij een extreem scheve populatie kan een gebruikelijke omvangsgrens onvoldoende zijn voor de normale benadering.",
+            "rules": [
+              "De MPU-schatter gebruikt de werkelijke waarden: Ŵ = N × w̄. N hoort bij de hele populatie; w̄ en de spreiding s_w worden uit de steekproef bepaald.",
+              "De standaardfout van dit totaal is N × s_w/√n × √((N − n)/(N − 1)). Een interval volgt uit Ŵ ± t × standaardfout. Laat de eindigheidscorrectie alleen weg als dat is toegestaan of expliciet wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 1-5: directe schatter"
+              },
+              {
+                "source": "boek-basis",
+                "page": 1,
+                "locator": "Boek p. 92; oorspronkelijke PDF p. 110: voorwaarden en scheefheid"
+              }
+            ]
           }
         },
         {
@@ -1528,6 +1978,26 @@ window.SRAMCData = {
             "meaning": "Het middelpunt en de marge gebruiken verschillende gegevens.",
             "approach": "Neem Nw̄ als middelpunt en t × N × s_w/√n × correctiefactor als marge.",
             "answer": "Een onder- en bovengrens voor het werkelijke populatietotaal."
+          },
+          "guidance": {
+            "title": "Directe schatter van een populatietotaal",
+            "focus": "Bereken achtereenvolgens de puntschatting, standaardfout en marge. De eindigheidscorrectie hoort in de standaardfout, niet in de puntschatting.",
+            "rules": [
+              "De MPU-schatter gebruikt de werkelijke waarden: Ŵ = N × w̄. N hoort bij de hele populatie; w̄ en de spreiding s_w worden uit de steekproef bepaald.",
+              "De standaardfout van dit totaal is N × s_w/√n × √((N − n)/(N − 1)). Een interval volgt uit Ŵ ± t × standaardfout. Laat de eindigheidscorrectie alleen weg als dat is toegestaan of expliciet wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 1-5: directe schatter"
+              },
+              {
+                "source": "boek-basis",
+                "page": 1,
+                "locator": "Boek p. 92; oorspronkelijke PDF p. 110: voorwaarden en scheefheid"
+              }
+            ]
           }
         },
         {
@@ -1587,6 +2057,26 @@ window.SRAMCData = {
             "meaning": "Dit is integrale controle: n = N.",
             "approach": "Vermenigvuldig N met het gemiddelde en pas de eindigheidscorrectie voor n = N toe.",
             "answer": "Het totaal met nul steekproefonzekerheid; niet de uitspraak dat alle posten gelijk zijn."
+          },
+          "guidance": {
+            "title": "Directe schatter van een populatietotaal",
+            "focus": "Wanneer alle posten zijn gecontroleerd, resteert geen steekproefonzekerheid over hun totaal. De posten zelf kunnen nog steeds onderling verschillen.",
+            "rules": [
+              "De MPU-schatter gebruikt de werkelijke waarden: Ŵ = N × w̄. N hoort bij de hele populatie; w̄ en de spreiding s_w worden uit de steekproef bepaald.",
+              "De standaardfout van dit totaal is N × s_w/√n × √((N − n)/(N − 1)). Een interval volgt uit Ŵ ± t × standaardfout. Laat de eindigheidscorrectie alleen weg als dat is toegestaan of expliciet wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 1-5: directe schatter"
+              },
+              {
+                "source": "boek-basis",
+                "page": 1,
+                "locator": "Boek p. 92; oorspronkelijke PDF p. 110: voorwaarden en scheefheid"
+              }
+            ]
           }
         }
       ]
@@ -1671,7 +2161,27 @@ window.SRAMCData = {
             "approach": "Trek de werkelijke waarde van de boekwaarde af en behoud het teken.",
             "answer": "Een getekend verschil: positief is overwaardering, negatief onderwaardering."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Verschilschatter: teken en controledoel",
+            "focus": "Gebruik consequent boekwaarde min werkelijke waarde. Kies het teken vóór je de getallen invult.",
+            "rules": [
+              "In SRA is een verschil e = boekwaarde b − werkelijke waarde w. Een positief verschil is overwaardering; een negatief verschil betekent dat de werkelijke waarde hoger is.",
+              "Schat de totale werkelijke waarde met Ŵ_V = B − N × ē. Voor de onzekerheid gebruik je de spreiding van de verschillen s_e, niet de spreiding van de boekwaarden of de werkelijke waarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 6-11: verschildefinitie, schatting en spreiding"
+              },
+              {
+                "source": "slides",
+                "page": 20,
+                "locator": "PDF p. 20-22: toepassing en voorwaarden van de verschilschatter"
+              }
+            ]
+          }
         },
         {
           "id": "mc-verschil-basis-2",
@@ -1723,7 +2233,27 @@ window.SRAMCData = {
             "approach": "Vergelijk het aantal aangetroffen fouten met het cursusminimum van 30.",
             "answer": "Een oordeel of juist deze toepassingsvoorwaarde is vervuld."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Verschilschatter: teken en controledoel",
+            "focus": "De SRA-cursus gebruikt voor deze methode als aantalsvoorwaarde ten minste 30 fouten in de steekproef: posten waarvan de boekwaarde afwijkt van de werkelijke waarde (b ≠ w). Tel deze afwijkende posten, niet het totale aantal controles.",
+            "rules": [
+              "In SRA is een verschil e = boekwaarde b − werkelijke waarde w. Een positief verschil is overwaardering; een negatief verschil betekent dat de werkelijke waarde hoger is.",
+              "Schat de totale werkelijke waarde met Ŵ_V = B − N × ē. Voor de onzekerheid gebruik je de spreiding van de verschillen s_e, niet de spreiding van de boekwaarden of de werkelijke waarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 6-11: verschildefinitie, schatting en spreiding"
+              },
+              {
+                "source": "slides",
+                "page": 20,
+                "locator": "PDF p. 20-22: toepassing en voorwaarden van de verschilschatter"
+              }
+            ]
+          }
         },
         {
           "id": "mc-verschil-basis-3",
@@ -1775,7 +2305,27 @@ window.SRAMCData = {
             "approach": "Zoek een geringe spreiding s_e van b − w, niet alleen een kleine gemiddelde fout.",
             "answer": "Een verklaring waarom de standaardfout van de correctie klein kan zijn."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Verschilschatter: teken en controledoel",
+            "focus": "De nauwkeurigheid hangt af van de spreiding van de verschillen. Vergelijk die met de spreiding van werkelijke waarden bij MPU.",
+            "rules": [
+              "In SRA is een verschil e = boekwaarde b − werkelijke waarde w. Een positief verschil is overwaardering; een negatief verschil betekent dat de werkelijke waarde hoger is.",
+              "Schat de totale werkelijke waarde met Ŵ_V = B − N × ē. Voor de onzekerheid gebruik je de spreiding van de verschillen s_e, niet de spreiding van de boekwaarden of de werkelijke waarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 6-11: verschildefinitie, schatting en spreiding"
+              },
+              {
+                "source": "slides",
+                "page": 20,
+                "locator": "PDF p. 20-22: toepassing en voorwaarden van de verschilschatter"
+              }
+            ]
+          }
         },
         {
           "id": "mc-verschil-toepassing-1",
@@ -1829,6 +2379,26 @@ window.SRAMCData = {
             "meaning": "Het bekende boektotaal moet worden gecorrigeerd voor totale overwaardering.",
             "approach": "Schat de totale fout als Nē en trek die van B af.",
             "answer": "Een geschat werkelijk totaal B − Nē, niet alleen het foutbedrag."
+          },
+          "guidance": {
+            "title": "Verschilschatter: teken en controledoel",
+            "focus": "B betreft de hele populatie. Trek N maal het gemiddelde verschil af; bij een negatief gemiddeld verschil werkt de correctie juist verhogend.",
+            "rules": [
+              "In SRA is een verschil e = boekwaarde b − werkelijke waarde w. Een positief verschil is overwaardering; een negatief verschil betekent dat de werkelijke waarde hoger is.",
+              "Schat de totale werkelijke waarde met Ŵ_V = B − N × ē. Voor de onzekerheid gebruik je de spreiding van de verschillen s_e, niet de spreiding van de boekwaarden of de werkelijke waarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 6-11: verschildefinitie, schatting en spreiding"
+              },
+              {
+                "source": "slides",
+                "page": 20,
+                "locator": "PDF p. 20-22: toepassing en voorwaarden van de verschilschatter"
+              }
+            ]
           }
         },
         {
@@ -1883,6 +2453,26 @@ window.SRAMCData = {
             "meaning": "Een negatieve b − w duidt op onderwaardering in de boeken.",
             "approach": "Vul het minteken mee in B − Nē; werk de aftrekking van een negatief bedrag uit.",
             "answer": "Een geschat werkelijk totaal met het juiste teken van de correctie."
+          },
+          "guidance": {
+            "title": "Verschilschatter: teken en controledoel",
+            "focus": "B betreft de hele populatie. Trek N maal het gemiddelde verschil af; bij een negatief gemiddeld verschil werkt de correctie juist verhogend.",
+            "rules": [
+              "In SRA is een verschil e = boekwaarde b − werkelijke waarde w. Een positief verschil is overwaardering; een negatief verschil betekent dat de werkelijke waarde hoger is.",
+              "Schat de totale werkelijke waarde met Ŵ_V = B − N × ē. Voor de onzekerheid gebruik je de spreiding van de verschillen s_e, niet de spreiding van de boekwaarden of de werkelijke waarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 6-11: verschildefinitie, schatting en spreiding"
+              },
+              {
+                "source": "slides",
+                "page": 20,
+                "locator": "PDF p. 20-22: toepassing en voorwaarden van de verschilschatter"
+              }
+            ]
           }
         },
         {
@@ -1938,6 +2528,26 @@ window.SRAMCData = {
             "meaning": "De fout bepaalt zowel de correctie op het boektotaal als de onzekerheid daarvan.",
             "approach": "Gebruik B − Nē als middelpunt en t × N × s_e/√n als marge.",
             "answer": "Twee grenzen voor de werkelijke totale waarde, geen interval rond alleen ē."
+          },
+          "guidance": {
+            "title": "Verschilschatter: teken en controledoel",
+            "focus": "Gebruik s_V = N × s_e/√n wanneer de eindigheidscorrectie expliciet buiten beschouwing blijft. Vorm het interval rond B − Nē.",
+            "rules": [
+              "In SRA is een verschil e = boekwaarde b − werkelijke waarde w. Een positief verschil is overwaardering; een negatief verschil betekent dat de werkelijke waarde hoger is.",
+              "Schat de totale werkelijke waarde met Ŵ_V = B − N × ē. Voor de onzekerheid gebruik je de spreiding van de verschillen s_e, niet de spreiding van de boekwaarden of de werkelijke waarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 6-11: verschildefinitie, schatting en spreiding"
+              },
+              {
+                "source": "slides",
+                "page": 20,
+                "locator": "PDF p. 20-22: toepassing en voorwaarden van de verschilschatter"
+              }
+            ]
           }
         }
       ]
@@ -2012,7 +2622,27 @@ window.SRAMCData = {
             "approach": "Deel de som van de werkelijke waarden door de som van de boekwaarden.",
             "answer": "Een dimensieloze goedratio, niet haar omgekeerde of het foutaandeel."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Quotiëntschatter: verhouding en totaal",
+            "focus": "De teller en noemer moeten op dezelfde steekproef slaan: werkelijke waarde boven, boekwaarde onder.",
+            "rules": [
+              "De goedratio is q = Σw/Σb, berekend over dezelfde gecontroleerde posten. Gebruik de verhouding van de sommen; het ongewogen gemiddelde van afzonderlijke ratio’s hoeft niet gelijk te zijn.",
+              "De geschatte werkelijke waarde van de hele populatie is Ŵ_Q = q × B, met B het bekende boektotaal van de populatie. Een totale overwaardering is B − Ŵ_Q."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 12-17: quotiëntschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 1,
+                "locator": "Boek p. 211; oorspronkelijke PDF p. 229: verhouding tussen boekwaarde en werkelijke waarde"
+              }
+            ]
+          }
         },
         {
           "id": "mc-quotient-basis-2",
@@ -2059,7 +2689,27 @@ window.SRAMCData = {
             "approach": "Zoek het patroon waarbij kleine en grote posten relatief ongeveer evenveel afwijken.",
             "answer": "Een herkenning van relatieve afwijkingen als grond voor de schatterkeuze."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Quotiëntschatter: verhouding en totaal",
+            "focus": "Onderzoek of de afwijking vooral een vast bedrag of een vaste verhouding is. Vergelijk boekwaarde en werkelijke waarde van dezelfde post.",
+            "rules": [
+              "De goedratio is q = Σw/Σb, berekend over dezelfde gecontroleerde posten. Gebruik de verhouding van de sommen; het ongewogen gemiddelde van afzonderlijke ratio’s hoeft niet gelijk te zijn.",
+              "De geschatte werkelijke waarde van de hele populatie is Ŵ_Q = q × B, met B het bekende boektotaal van de populatie. Een totale overwaardering is B − Ŵ_Q."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 12-17: quotiëntschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 1,
+                "locator": "Boek p. 211; oorspronkelijke PDF p. 229: verhouding tussen boekwaarde en werkelijke waarde"
+              }
+            ]
+          }
         },
         {
           "id": "mc-quotient-basis-3",
@@ -2106,7 +2756,27 @@ window.SRAMCData = {
             "approach": "Vermenigvuldig q met B; gebruik 1 − q alleen bij een vraag naar de fout.",
             "answer": "Een geschat werkelijk totaalbedrag, geen overwaardering."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Quotiëntschatter: verhouding en totaal",
+            "focus": "Bereken q uit de gecontroleerde posten en pas deze vervolgens toe op B van de volledige populatie.",
+            "rules": [
+              "De goedratio is q = Σw/Σb, berekend over dezelfde gecontroleerde posten. Gebruik de verhouding van de sommen; het ongewogen gemiddelde van afzonderlijke ratio’s hoeft niet gelijk te zijn.",
+              "De geschatte werkelijke waarde van de hele populatie is Ŵ_Q = q × B, met B het bekende boektotaal van de populatie. Een totale overwaardering is B − Ŵ_Q."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 12-17: quotiëntschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 1,
+                "locator": "Boek p. 211; oorspronkelijke PDF p. 229: verhouding tussen boekwaarde en werkelijke waarde"
+              }
+            ]
+          }
         },
         {
           "id": "mc-quotient-toepassing-1",
@@ -2155,6 +2825,26 @@ window.SRAMCData = {
             "meaning": "Eerst moet een steekproefratio worden bepaald, daarna toegepast op de populatie.",
             "approach": "Bereken q = Σw/Σb en vervolgens Ŵ_Q = qB.",
             "answer": "Een geschat werkelijk populatietotaal in euro."
+          },
+          "guidance": {
+            "title": "Quotiëntschatter: verhouding en totaal",
+            "focus": "Bereken q uit de gecontroleerde posten en pas deze vervolgens toe op B van de volledige populatie.",
+            "rules": [
+              "De goedratio is q = Σw/Σb, berekend over dezelfde gecontroleerde posten. Gebruik de verhouding van de sommen; het ongewogen gemiddelde van afzonderlijke ratio’s hoeft niet gelijk te zijn.",
+              "De geschatte werkelijke waarde van de hele populatie is Ŵ_Q = q × B, met B het bekende boektotaal van de populatie. Een totale overwaardering is B − Ŵ_Q."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 12-17: quotiëntschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 1,
+                "locator": "Boek p. 211; oorspronkelijke PDF p. 229: verhouding tussen boekwaarde en werkelijke waarde"
+              }
+            ]
           }
         },
         {
@@ -2204,6 +2894,26 @@ window.SRAMCData = {
             "meaning": "Het relevante onderscheid is een vast bedrag tegenover een vaste verhouding.",
             "approach": "Vergelijk per post zowel b − w als w/b en herken welk patroon gelijk blijft.",
             "answer": "Het constante foutbedrag of de constante goedratio, als herkenningsgrond voor een passende schatter."
+          },
+          "guidance": {
+            "title": "Quotiëntschatter: verhouding en totaal",
+            "focus": "Onderzoek of de afwijking vooral een vast bedrag of een vaste verhouding is. Vergelijk boekwaarde en werkelijke waarde van dezelfde post.",
+            "rules": [
+              "De goedratio is q = Σw/Σb, berekend over dezelfde gecontroleerde posten. Gebruik de verhouding van de sommen; het ongewogen gemiddelde van afzonderlijke ratio’s hoeft niet gelijk te zijn.",
+              "De geschatte werkelijke waarde van de hele populatie is Ŵ_Q = q × B, met B het bekende boektotaal van de populatie. Een totale overwaardering is B − Ŵ_Q."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 12-17: quotiëntschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 1,
+                "locator": "Boek p. 211; oorspronkelijke PDF p. 229: verhouding tussen boekwaarde en werkelijke waarde"
+              }
+            ]
           }
         },
         {
@@ -2253,6 +2963,26 @@ window.SRAMCData = {
             "meaning": "Je zoekt het foutdeel van de boekwaarde, niet het goede deel.",
             "approach": "Bereken eerst 1 − q en pas dat aandeel toe op B.",
             "answer": "Een geschat totaal foutbedrag in euro."
+          },
+          "guidance": {
+            "title": "Quotiëntschatter: verhouding en totaal",
+            "focus": "Lees of de werkelijke waarde of juist de overwaardering wordt gevraagd. De overwaardering is het verschil tussen boektotaal en geschatte werkelijke waarde.",
+            "rules": [
+              "De goedratio is q = Σw/Σb, berekend over dezelfde gecontroleerde posten. Gebruik de verhouding van de sommen; het ongewogen gemiddelde van afzonderlijke ratio’s hoeft niet gelijk te zijn.",
+              "De geschatte werkelijke waarde van de hele populatie is Ŵ_Q = q × B, met B het bekende boektotaal van de populatie. Een totale overwaardering is B − Ŵ_Q."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 12-17: quotiëntschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 1,
+                "locator": "Boek p. 211; oorspronkelijke PDF p. 229: verhouding tussen boekwaarde en werkelijke waarde"
+              }
+            ]
           }
         }
       ]
@@ -2337,7 +3067,27 @@ window.SRAMCData = {
             "approach": "Bekijk de factor B − Nb̄ in b₁(B − Nb̄) voordat je verder rekent.",
             "answer": "De correctieterm; onderscheid die van de volledige schatting."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Regressieschatter met boekwaarden als hulpinformatie",
+            "focus": "De hulpinformatie corrigeert voor het verschil tussen het bekende boektotaal B en het uit de steekproef opgeschaalde boektotaal Nb̄. Werk dit verschil afzonderlijk uit.",
+            "rules": [
+              "De regressieschatter schat het totale W van de populatie. Zij corrigeert de directe schatting: Ŵ_R = Nw̄ + b₁(B − Nb̄), waarbij b₁ = R_bw × s_w/s_b.",
+              "Bij dezelfde gegevens is s_R = s_MPU × √(1 − R_bw²). Deze berekende standaardfout is kleiner dan of gelijk aan die van MPU en vervangt niet de controle van de toepassingsvoorwaarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 18-24: regressieschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 6,
+                "locator": "Boek p. 216; oorspronkelijke PDF p. 234: onzekerheid en voorwaarden"
+              }
+            ]
+          }
         },
         {
           "id": "mc-regressieschatter-basis-2",
@@ -2389,7 +3139,27 @@ window.SRAMCData = {
             "approach": "Bereken achtereenvolgens R², 1 − R² en √(1 − R²).",
             "answer": "Een vermenigvuldigingsfactor voor de standaardfout, niet R of R²."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Regressieschatter met boekwaarden als hulpinformatie",
+            "focus": "De vermenigvuldigingsfactor zet s_MPU om in s_R. Kwadrateer eerst R, trek af van 1 en neem daarna de wortel; de factor is niet R² zelf.",
+            "rules": [
+              "De regressieschatter schat het totale W van de populatie. Zij corrigeert de directe schatting: Ŵ_R = Nw̄ + b₁(B − Nb̄), waarbij b₁ = R_bw × s_w/s_b.",
+              "Bij dezelfde gegevens is s_R = s_MPU × √(1 − R_bw²). Deze berekende standaardfout is kleiner dan of gelijk aan die van MPU en vervangt niet de controle van de toepassingsvoorwaarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 18-24: regressieschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 6,
+                "locator": "Boek p. 216; oorspronkelijke PDF p. 234: onzekerheid en voorwaarden"
+              }
+            ]
+          }
         },
         {
           "id": "mc-regressieschatter-basis-3",
@@ -2441,7 +3211,27 @@ window.SRAMCData = {
             "approach": "Koppel W aan het totale bedrag en B aan de beschikbare hulpinformatie.",
             "answer": "Het schattingsdoel: een populatietotaal, geen voorspelling voor één persoon."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Regressieschatter met boekwaarden als hulpinformatie",
+            "focus": "Deze schattingsmethode gebruikt het verband tussen boekwaarde en werkelijke waarde om een populatietotaal te schatten. Dat is een ander doel dan een nieuwe individuele y voorspellen.",
+            "rules": [
+              "De regressieschatter schat het totale W van de populatie. Zij corrigeert de directe schatting: Ŵ_R = Nw̄ + b₁(B − Nb̄), waarbij b₁ = R_bw × s_w/s_b.",
+              "Bij dezelfde gegevens is s_R = s_MPU × √(1 − R_bw²). Deze berekende standaardfout is kleiner dan of gelijk aan die van MPU en vervangt niet de controle van de toepassingsvoorwaarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 18-24: regressieschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 6,
+                "locator": "Boek p. 216; oorspronkelijke PDF p. 234: onzekerheid en voorwaarden"
+              }
+            ]
+          }
         },
         {
           "id": "mc-regressieschatter-toepassing-1",
@@ -2495,6 +3285,26 @@ window.SRAMCData = {
             "meaning": "Dit zijn de onderdelen van de regressiehelling van werkelijk op geboekt.",
             "approach": "Gebruik b₁ = R_bw × s_w/s_b en zet de spreidingen niet omgekeerd.",
             "answer": "Een hellingscoëfficiënt in werkelijke waarde per eenheid boekwaarde."
+          },
+          "guidance": {
+            "title": "Regressieschatter met boekwaarden als hulpinformatie",
+            "focus": "De helling gebruikt correlatie maal de verhouding van de spreidingen: s_w staat boven s_b. Het teken komt uit de correlatie.",
+            "rules": [
+              "De regressieschatter schat het totale W van de populatie. Zij corrigeert de directe schatting: Ŵ_R = Nw̄ + b₁(B − Nb̄), waarbij b₁ = R_bw × s_w/s_b.",
+              "Bij dezelfde gegevens is s_R = s_MPU × √(1 − R_bw²). Deze berekende standaardfout is kleiner dan of gelijk aan die van MPU en vervangt niet de controle van de toepassingsvoorwaarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 18-24: regressieschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 6,
+                "locator": "Boek p. 216; oorspronkelijke PDF p. 234: onzekerheid en voorwaarden"
+              }
+            ]
           }
         },
         {
@@ -2549,6 +3359,26 @@ window.SRAMCData = {
             "meaning": "De vergelijking gaat over precisie bij een gelijk gekozen niveau.",
             "approach": "Verbind de kleinere marge met berekende precisie en controleer of de modelvoorwaarden passen.",
             "answer": "Een voorwaardelijk precisieoordeel, geen hogere betrouwbaarheid of gegarandeerde dekking."
+          },
+          "guidance": {
+            "title": "Regressieschatter met boekwaarden als hulpinformatie",
+            "focus": "Een smaller berekend interval bewijst op zichzelf niet dat de beoogde betrouwbaarheid wordt gehaald. De gegevens en toepassingsvoorwaarden moeten bij de methode passen.",
+            "rules": [
+              "De regressieschatter schat het totale W van de populatie. Zij corrigeert de directe schatting: Ŵ_R = Nw̄ + b₁(B − Nb̄), waarbij b₁ = R_bw × s_w/s_b.",
+              "Bij dezelfde gegevens is s_R = s_MPU × √(1 − R_bw²). Deze berekende standaardfout is kleiner dan of gelijk aan die van MPU en vervangt niet de controle van de toepassingsvoorwaarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 18-24: regressieschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 6,
+                "locator": "Boek p. 216; oorspronkelijke PDF p. 234: onzekerheid en voorwaarden"
+              }
+            ]
           }
         },
         {
@@ -2604,6 +3434,26 @@ window.SRAMCData = {
             "meaning": "Het verschil in boektotalen corrigeert de directe schatting van W.",
             "approach": "Bereken Nw̄ + b₁(B − Nb̄), met haakjes rond het hele verschil.",
             "answer": "De volledige regressieschatting van het werkelijke populatietotaal."
+          },
+          "guidance": {
+            "title": "Regressieschatter met boekwaarden als hulpinformatie",
+            "focus": "De hulpinformatie corrigeert voor het verschil tussen het bekende boektotaal B en het uit de steekproef opgeschaalde boektotaal Nb̄. Werk dit verschil afzonderlijk uit.",
+            "rules": [
+              "De regressieschatter schat het totale W van de populatie. Zij corrigeert de directe schatting: Ŵ_R = Nw̄ + b₁(B − Nb̄), waarbij b₁ = R_bw × s_w/s_b.",
+              "Bij dezelfde gegevens is s_R = s_MPU × √(1 − R_bw²). Deze berekende standaardfout is kleiner dan of gelijk aan die van MPU en vervangt niet de controle van de toepassingsvoorwaarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 18-24: regressieschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 6,
+                "locator": "Boek p. 216; oorspronkelijke PDF p. 234: onzekerheid en voorwaarden"
+              }
+            ]
           }
         },
         {
@@ -2658,6 +3508,26 @@ window.SRAMCData = {
             "meaning": "Het verband met boekwaarde vermindert volgens de behandelde formule de resterende onzekerheid.",
             "approach": "Vermenigvuldig de bestaande standaardfout met √(1 − R_bw²).",
             "answer": "Een standaardfout in dezelfde eenheid als de gegeven MPU-standaardfout."
+          },
+          "guidance": {
+            "title": "Regressieschatter met boekwaarden als hulpinformatie",
+            "focus": "De vermenigvuldigingsfactor zet s_MPU om in s_R. Kwadrateer eerst R, trek af van 1 en neem daarna de wortel; de factor is niet R² zelf.",
+            "rules": [
+              "De regressieschatter schat het totale W van de populatie. Zij corrigeert de directe schatting: Ŵ_R = Nw̄ + b₁(B − Nb̄), waarbij b₁ = R_bw × s_w/s_b.",
+              "Bij dezelfde gegevens is s_R = s_MPU × √(1 − R_bw²). Deze berekende standaardfout is kleiner dan of gelijk aan die van MPU en vervangt niet de controle van de toepassingsvoorwaarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 18-24: regressieschatter"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 6,
+                "locator": "Boek p. 216; oorspronkelijke PDF p. 234: onzekerheid en voorwaarden"
+              }
+            ]
           }
         }
       ]
@@ -2752,7 +3622,27 @@ window.SRAMCData = {
             "approach": "Neem het kleinste gehele aantal dat minstens de berekende n is.",
             "answer": "Een naar boven afgeronde totale steekproefomvang."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Benodigde omvang en extra controles",
+            "focus": "Een fractie van een controle is niet mogelijk. Rond het vereiste totale aantal omhoog; bereken de extra controles ten opzichte van wat al is gedaan.",
+            "rules": [
+              "E is de gewenste halve intervalbreedte. Gebruik de spreiding die bij de gekozen schatter hoort: s_w voor MPU, s_e voor verschil en s_q voor quotiënt. De kritieke t-waarde hangt af van de betrouwbaarheid, een- of tweezijdigheid en vrijheidsgraden.",
+              "De berekende omvang is een totaal. Rond dat aantal naar boven af en trek pas daarna de al gecontroleerde posten af als de uitbreiding wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 5 en 11: steekproefomvang; formule 17: onzekerheid quotiëntschatter"
+              },
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formule 24: omvang bij de regressieschatter"
+              }
+            ]
+          }
         },
         {
           "id": "mc-steekproefomvang-basis-2",
@@ -2809,7 +3699,27 @@ window.SRAMCData = {
             "approach": "Trek het al gecontroleerde aantal af van de totale behoefte.",
             "answer": "Het aantal extra controles, niet het nieuwe totaal."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Benodigde omvang en extra controles",
+            "focus": "Een fractie van een controle is niet mogelijk. Rond het vereiste totale aantal omhoog; bereken de extra controles ten opzichte van wat al is gedaan.",
+            "rules": [
+              "E is de gewenste halve intervalbreedte. Gebruik de spreiding die bij de gekozen schatter hoort: s_w voor MPU, s_e voor verschil en s_q voor quotiënt. De kritieke t-waarde hangt af van de betrouwbaarheid, een- of tweezijdigheid en vrijheidsgraden.",
+              "De berekende omvang is een totaal. Rond dat aantal naar boven af en trek pas daarna de al gecontroleerde posten af als de uitbreiding wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 5 en 11: steekproefomvang; formule 17: onzekerheid quotiëntschatter"
+              },
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formule 24: omvang bij de regressieschatter"
+              }
+            ]
+          }
         },
         {
           "id": "mc-steekproefomvang-basis-3",
@@ -2866,7 +3776,27 @@ window.SRAMCData = {
             "approach": "Selecteer de variantie van e = b − w in plaats van die van w of b.",
             "answer": "De passende foutvariantie s_e² voor de omvangsberekening."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Benodigde omvang en extra controles",
+            "focus": "Bij de verschilschatter bepaalt s_e² de benodigde omvang. Gebruik niet automatisch de variantie van alle werkelijke waarden.",
+            "rules": [
+              "E is de gewenste halve intervalbreedte. Gebruik de spreiding die bij de gekozen schatter hoort: s_w voor MPU, s_e voor verschil en s_q voor quotiënt. De kritieke t-waarde hangt af van de betrouwbaarheid, een- of tweezijdigheid en vrijheidsgraden.",
+              "De berekende omvang is een totaal. Rond dat aantal naar boven af en trek pas daarna de al gecontroleerde posten af als de uitbreiding wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 5 en 11: steekproefomvang; formule 17: onzekerheid quotiëntschatter"
+              },
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formule 24: omvang bij de regressieschatter"
+              }
+            ]
+          }
         },
         {
           "id": "mc-steekproefomvang-toepassing-1",
@@ -2925,6 +3855,26 @@ window.SRAMCData = {
             "meaning": "E is de marge aan één kant van het middelpunt.",
             "approach": "Halveer de totale breedte vóór je E kwadrateert in γ.",
             "answer": "De halve breedte die als invoer voor de omvangsformule dient."
+          },
+          "guidance": {
+            "title": "Benodigde omvang en extra controles",
+            "focus": "Zet een gevraagde totale intervalbreedte eerst om in E. De formule gebruikt de halve breedte.",
+            "rules": [
+              "E is de gewenste halve intervalbreedte. Gebruik de spreiding die bij de gekozen schatter hoort: s_w voor MPU, s_e voor verschil en s_q voor quotiënt. De kritieke t-waarde hangt af van de betrouwbaarheid, een- of tweezijdigheid en vrijheidsgraden.",
+              "De berekende omvang is een totaal. Rond dat aantal naar boven af en trek pas daarna de al gecontroleerde posten af als de uitbreiding wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 5 en 11: steekproefomvang; formule 17: onzekerheid quotiëntschatter"
+              },
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formule 24: omvang bij de regressieschatter"
+              }
+            ]
           }
         },
         {
@@ -2985,6 +3935,26 @@ window.SRAMCData = {
             "meaning": "Een maximale marge wordt teruggerekend naar benodigde totale omvang.",
             "approach": "Bereken eerst γ, daarna N/(1 + γ), en rond alleen de uiteindelijke n omhoog af.",
             "answer": "Een minimaal geheel aantal te controleren posten."
+          },
+          "guidance": {
+            "title": "Benodigde omvang en extra controles",
+            "focus": "Vul γ = E²/(t²Ns²) in met de spreiding van de opgegeven methode. Bereken daarna n = N/(1 + γ) en rond het totale n omhoog.",
+            "rules": [
+              "E is de gewenste halve intervalbreedte. Gebruik de spreiding die bij de gekozen schatter hoort: s_w voor MPU, s_e voor verschil en s_q voor quotiënt. De kritieke t-waarde hangt af van de betrouwbaarheid, een- of tweezijdigheid en vrijheidsgraden.",
+              "De berekende omvang is een totaal. Rond dat aantal naar boven af en trek pas daarna de al gecontroleerde posten af als de uitbreiding wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 5 en 11: steekproefomvang; formule 17: onzekerheid quotiëntschatter"
+              },
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formule 24: omvang bij de regressieschatter"
+              }
+            ]
           }
         },
         {
@@ -3044,6 +4014,26 @@ window.SRAMCData = {
             "meaning": "De minimumomvang en de uitbreiding zijn twee opeenvolgende stappen.",
             "approach": "Rond de totale behoefte eerst omhoog af en trek daarna bestaande controles af.",
             "answer": "Een geheel aantal aanvullende controles."
+          },
+          "guidance": {
+            "title": "Benodigde omvang en extra controles",
+            "focus": "Een fractie van een controle is niet mogelijk. Rond het vereiste totale aantal omhoog; bereken de extra controles ten opzichte van wat al is gedaan.",
+            "rules": [
+              "E is de gewenste halve intervalbreedte. Gebruik de spreiding die bij de gekozen schatter hoort: s_w voor MPU, s_e voor verschil en s_q voor quotiënt. De kritieke t-waarde hangt af van de betrouwbaarheid, een- of tweezijdigheid en vrijheidsgraden.",
+              "De berekende omvang is een totaal. Rond dat aantal naar boven af en trek pas daarna de al gecontroleerde posten af als de uitbreiding wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 5 en 11: steekproefomvang; formule 17: onzekerheid quotiëntschatter"
+              },
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formule 24: omvang bij de regressieschatter"
+              }
+            ]
           }
         },
         {
@@ -3103,6 +4093,26 @@ window.SRAMCData = {
             "meaning": "De planning gebruikt resterende spreiding s_q, niet de dimensieloze goedratio q.",
             "approach": "Vul s_q² in γ in, bereken N/(1 + γ) en rond de uitkomst naar boven af.",
             "answer": "Een minimale totale n; geen ratio of aanvullend aantal."
+          },
+          "guidance": {
+            "title": "Benodigde omvang en extra controles",
+            "focus": "Vul γ = E²/(t²Ns²) in met de spreiding van de opgegeven methode. Bereken daarna n = N/(1 + γ) en rond het totale n omhoog.",
+            "rules": [
+              "E is de gewenste halve intervalbreedte. Gebruik de spreiding die bij de gekozen schatter hoort: s_w voor MPU, s_e voor verschil en s_q voor quotiënt. De kritieke t-waarde hangt af van de betrouwbaarheid, een- of tweezijdigheid en vrijheidsgraden.",
+              "De berekende omvang is een totaal. Rond dat aantal naar boven af en trek pas daarna de al gecontroleerde posten af als de uitbreiding wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 5 en 11: steekproefomvang; formule 17: onzekerheid quotiëntschatter"
+              },
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formule 24: omvang bij de regressieschatter"
+              }
+            ]
           }
         }
       ]
@@ -3217,7 +4227,22 @@ window.SRAMCData = {
             "approach": "Bereken N₁/(N₁ + N₂) en vermenigvuldig dat aandeel met n.",
             "answer": "Het aantal controles voor stratum 1, niet de omvang van dat stratum."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Bij evenredige allocatie is het aandeel in de steekproef gelijk aan het aandeel in de populatie: nᵢ = n × Nᵢ/ΣNᵢ.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 25-29: allocatie en combinatie van strata"
+              }
+            ]
+          }
         },
         {
           "id": "mc-stratificatie-basis-3",
@@ -3284,7 +4309,22 @@ window.SRAMCData = {
             "approach": "Stel n_h = N_h: er resteert geen onzekerheid door steekproeftrekking binnen dit stratum.",
             "answer": "De variantiebijdrage aan de totaalschatting, niet de onderlinge spreiding van topstratumposten."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Integraal gecontroleerd betekent nᵢ = Nᵢ. Hierdoor is de eindigheidscorrectie nul; dit zegt niets over verschillen tussen de bedragen binnen dat stratum.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 25-29: allocatie en combinatie van strata"
+              }
+            ]
+          }
         },
         {
           "id": "mc-stratificatie-basis-2",
@@ -3351,7 +4391,22 @@ window.SRAMCData = {
             "approach": "Kwadrateer beide standaardfouten, tel op en neem de wortel.",
             "answer": "De gecombineerde standaardfout, niet de som van de twee standaardfouten."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Kwadrateer de standaardfouten, tel de varianties op en neem de wortel. Gebruik voor een totaalinterval één bijpassende kritieke t met de opgegeven effectieve vrijheidsgraden.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 25-29: allocatie en combinatie van strata"
+              }
+            ]
+          }
         },
         {
           "id": "mc-stratificatie-toepassing-1",
@@ -3420,6 +4475,21 @@ window.SRAMCData = {
             "meaning": "De gewone strata worden geschat; het gecontroleerde topstratum staat al vast.",
             "approach": "Bereken per gewoon stratum N_h × gemiddelde en tel het bekende toptotaal eenmaal erbij.",
             "answer": "Eén totaalbedrag voor alle strata samen."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Een bekend topstratumtotaal tel je eenmaal op. Het is geen steekproefgemiddelde dat opnieuw met een populatieaantal moet worden vermenigvuldigd.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 25-29: allocatie en combinatie van strata"
+              }
+            ]
           }
         },
         {
@@ -3489,6 +4559,26 @@ window.SRAMCData = {
             "meaning": "Je bepaalt grenzen op basis van de resterende boekwaarde, nog geen controleaantallen.",
             "approach": "Deel de resterende totale boekwaarde door het aantal strata voor het eerste streefbedrag.",
             "answer": "Een cumulatief bedrag voor de eerste grens, niet een gelijk aantal posten."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Bij grenzen via gelijke cumulatieve boekwaarde deel je het boektotaal zonder topstratum door het gewenste aantal strata. Zoek de cumulatieve doelen vervolgens in de klassetabel.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 25-29: allocatie en combinatie van strata"
+              },
+              {
+                "source": "boek-h8c",
+                "page": 1,
+                "locator": "Boek p. 221-232; oorspronkelijke PDF p. 239-250: grenzen en uitbreiding"
+              }
+            ]
           }
         },
         {
@@ -3558,6 +4648,21 @@ window.SRAMCData = {
             "meaning": "De optimale verdeling weegt zowel omvang als spreiding mee.",
             "approach": "Bereken gewichten N_hs_h en verdeel n naar elk gewicht gedeeld door hun som.",
             "answer": "Aantallen controles per stratum die samen n vormen."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Neyman gebruikt bij gelijke controlekosten de gewichten Nᵢsᵢ. Deel elk gewicht door de som van de gewichten en vermenigvuldig met de totale n.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 25-29: allocatie en combinatie van strata"
+              }
+            ]
           }
         },
         {
@@ -3628,6 +4733,21 @@ window.SRAMCData = {
             "meaning": "De intervalmarge vraagt eerst gecombineerde onzekerheid.",
             "approach": "Neem √(s₁² + s₂²), vermenigvuldig met t en zet de marge rond het gegeven totaal.",
             "answer": "Een interval voor alle strata samen; het bekende topstratum voegt geen steekproefvariantie toe."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Kwadrateer de standaardfouten, tel de varianties op en neem de wortel. Gebruik voor een totaalinterval één bijpassende kritieke t met de opgegeven effectieve vrijheidsgraden.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 25-29: allocatie en combinatie van strata"
+              }
+            ]
           }
         },
         {
@@ -3697,6 +4817,26 @@ window.SRAMCData = {
             "meaning": "De wortelmethode verwerkt per klasse zowel breedte als aantal posten.",
             "approach": "Bereken √(klassebreedte × frequentie) vóór je de klassebijdragen cumuleert.",
             "answer": "De bijdrage van deze klasse aan de wortelsom, niet de ruwe frequentie."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Bij de cumulatieve wortelmethode neem je per klasse √(klassebreedte × frequentie). Tel de wortels op; neem niet achteraf één wortel van de som van producten.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 25-29: allocatie en combinatie van strata"
+              },
+              {
+                "source": "boek-h8c",
+                "page": 1,
+                "locator": "Boek p. 221-232; oorspronkelijke PDF p. 239-250: grenzen en uitbreiding"
+              }
+            ]
           }
         },
         {
@@ -3766,6 +4906,26 @@ window.SRAMCData = {
             "meaning": "De gevraagde uitbreiding betreft alleen het verschil met het nieuwe minimum.",
             "approach": "Rond de totale stratumbehoefte naar boven af en trek het bestaande stratum-n af.",
             "answer": "Het extra aantal in dit stratum, met het nieuwe totaal als controle."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Maak onderscheid tussen de benodigde totale nᵢ en de uitbreiding binnen dat ene stratum. Rond het totaal eerst omhoog.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 25-29: allocatie en combinatie van strata"
+              },
+              {
+                "source": "boek-h8c",
+                "page": 1,
+                "locator": "Boek p. 221-232; oorspronkelijke PDF p. 239-250: grenzen en uitbreiding"
+              }
+            ]
           }
         },
         {
@@ -3835,6 +4995,26 @@ window.SRAMCData = {
             "meaning": "Van de maximaal toegestane totale variantie is al een deel in gebruik.",
             "approach": "Bereken (E/t)² en trek de varianties van de overige strata af.",
             "answer": "De maximaal toegestane variantiebijdrage van het aan te passen stratum."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "De maximaal toegestane totale variantie is (E/t)². Trek de variantiebijdragen van de overige strata daarvan af om de ruimte voor het aan te passen stratum te bepalen.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 25-29: allocatie en combinatie van strata"
+              },
+              {
+                "source": "boek-h8c",
+                "page": 1,
+                "locator": "Boek p. 221-232; oorspronkelijke PDF p. 239-250: grenzen en uitbreiding"
+              }
+            ]
           }
         }
       ]
@@ -3949,7 +5129,27 @@ window.SRAMCData = {
             "approach": "Vermenigvuldig de helling met x en tel de constante erbij op.",
             "answer": "Een voorspelde y-waarde, niet het residu of de helling."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Voorspelling, residu en kleinste kwadraten",
+            "focus": "De lijn levert een voorspelde y. Vul de gegeven x in en voer vermenigvuldiging vóór optelling uit.",
+            "rules": [
+              "De geschatte lijn is ŷ = b₀ + b₁x. Vul eerst x in om de voorspelling ŷ te bepalen. Het residu is e = y − ŷ, dus waarneming min voorspelling.",
+              "OLS kiest de coëfficiënten die de som van gekwadrateerde residuen (SSE) minimaliseren. Alleen de som van residuen vergelijken kan misleiden doordat positieve en negatieve fouten elkaar opheffen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 30-34: model, regressielijn en residuele variantie"
+              },
+              {
+                "source": "boek-h9a",
+                "page": 1,
+                "locator": "Boek p. 233 en verder; oorspronkelijke PDF p. 251 en verder"
+              }
+            ]
+          }
         },
         {
           "id": "mc-regressielijn-basis-2",
@@ -4016,7 +5216,27 @@ window.SRAMCData = {
             "approach": "Bereken e = y − ŷ en behoud het teken.",
             "answer": "Een getekende voorspelfout in de eenheid van y."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Voorspelling, residu en kleinste kwadraten",
+            "focus": "Het residu is waargenomen y min voorspelde ŷ. Een positief residu ligt boven de lijn, een negatief residu eronder.",
+            "rules": [
+              "De geschatte lijn is ŷ = b₀ + b₁x. Vul eerst x in om de voorspelling ŷ te bepalen. Het residu is e = y − ŷ, dus waarneming min voorspelling.",
+              "OLS kiest de coëfficiënten die de som van gekwadrateerde residuen (SSE) minimaliseren. Alleen de som van residuen vergelijken kan misleiden doordat positieve en negatieve fouten elkaar opheffen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 30-34: model, regressielijn en residuele variantie"
+              },
+              {
+                "source": "boek-h9a",
+                "page": 1,
+                "locator": "Boek p. 233 en verder; oorspronkelijke PDF p. 251 en verder"
+              }
+            ]
+          }
         },
         {
           "id": "mc-regressielijn-basis-3",
@@ -4083,7 +5303,27 @@ window.SRAMCData = {
             "approach": "Koppel OLS aan kwadraten van residuen en de som daarvan.",
             "answer": "Het te minimaliseren criterium, niet de gewone som van getekende residuen."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Voorspelling, residu en kleinste kwadraten",
+            "focus": "Het OLS-criterium vergelijkt gekwadrateerde fouten voor dezelfde gegevens. Tel de kwadraten, niet alleen de getekende residuen.",
+            "rules": [
+              "De geschatte lijn is ŷ = b₀ + b₁x. Vul eerst x in om de voorspelling ŷ te bepalen. Het residu is e = y − ŷ, dus waarneming min voorspelling.",
+              "OLS kiest de coëfficiënten die de som van gekwadrateerde residuen (SSE) minimaliseren. Alleen de som van residuen vergelijken kan misleiden doordat positieve en negatieve fouten elkaar opheffen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 30-34: model, regressielijn en residuele variantie"
+              },
+              {
+                "source": "boek-h9a",
+                "page": 1,
+                "locator": "Boek p. 233 en verder; oorspronkelijke PDF p. 251 en verder"
+              }
+            ]
+          }
         },
         {
           "id": "mc-regressielijn-toepassing-1",
@@ -4152,6 +5392,26 @@ window.SRAMCData = {
             "meaning": "Een voorspelling is hier een tussenstap naar de afwijking.",
             "approach": "Bereken eerst ŷ uit x en daarna y − ŷ.",
             "answer": "Het getekende residu, niet alleen de modelvoorspelling."
+          },
+          "guidance": {
+            "title": "Voorspelling, residu en kleinste kwadraten",
+            "focus": "Het residu is waargenomen y min voorspelde ŷ. Een positief residu ligt boven de lijn, een negatief residu eronder.",
+            "rules": [
+              "De geschatte lijn is ŷ = b₀ + b₁x. Vul eerst x in om de voorspelling ŷ te bepalen. Het residu is e = y − ŷ, dus waarneming min voorspelling.",
+              "OLS kiest de coëfficiënten die de som van gekwadrateerde residuen (SSE) minimaliseren. Alleen de som van residuen vergelijken kan misleiden doordat positieve en negatieve fouten elkaar opheffen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 30-34: model, regressielijn en residuele variantie"
+              },
+              {
+                "source": "boek-h9a",
+                "page": 1,
+                "locator": "Boek p. 233 en verder; oorspronkelijke PDF p. 251 en verder"
+              }
+            ]
           }
         },
         {
@@ -4221,6 +5481,26 @@ window.SRAMCData = {
             "meaning": "De vergelijking gaat om de som van gekwadrateerde fouten.",
             "approach": "Bereken voor elk model Σe²; laat positieve en negatieve fouten elkaar niet opheffen.",
             "answer": "Het model met de kleinste kwadratensom, met dat criterium als onderbouwing."
+          },
+          "guidance": {
+            "title": "Voorspelling, residu en kleinste kwadraten",
+            "focus": "Het OLS-criterium vergelijkt gekwadrateerde fouten voor dezelfde gegevens. Tel de kwadraten, niet alleen de getekende residuen.",
+            "rules": [
+              "De geschatte lijn is ŷ = b₀ + b₁x. Vul eerst x in om de voorspelling ŷ te bepalen. Het residu is e = y − ŷ, dus waarneming min voorspelling.",
+              "OLS kiest de coëfficiënten die de som van gekwadrateerde residuen (SSE) minimaliseren. Alleen de som van residuen vergelijken kan misleiden doordat positieve en negatieve fouten elkaar opheffen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 30-34: model, regressielijn en residuele variantie"
+              },
+              {
+                "source": "boek-h9a",
+                "page": 1,
+                "locator": "Boek p. 233 en verder; oorspronkelijke PDF p. 251 en verder"
+              }
+            ]
           }
         },
         {
@@ -4290,6 +5570,26 @@ window.SRAMCData = {
             "meaning": "Samenhang beschrijft gezamenlijk variëren, niet automatisch een oorzakelijk effect.",
             "approach": "Beperk de conclusie tot de waargenomen richting van de samenhang.",
             "answer": "Een verdedigbare associatie-uitspraak zonder bewezen causaliteit."
+          },
+          "guidance": {
+            "title": "Voorspelling, residu en kleinste kwadraten",
+            "focus": "Samenhang is geen bewijs van causaliteit en een gemiddelde tendens geldt niet noodzakelijk voor elk individu.",
+            "rules": [
+              "De geschatte lijn is ŷ = b₀ + b₁x. Vul eerst x in om de voorspelling ŷ te bepalen. Het residu is e = y − ŷ, dus waarneming min voorspelling.",
+              "OLS kiest de coëfficiënten die de som van gekwadrateerde residuen (SSE) minimaliseren. Alleen de som van residuen vergelijken kan misleiden doordat positieve en negatieve fouten elkaar opheffen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 30-34: model, regressielijn en residuele variantie"
+              },
+              {
+                "source": "boek-h9a",
+                "page": 1,
+                "locator": "Boek p. 233 en verder; oorspronkelijke PDF p. 251 en verder"
+              }
+            ]
           }
         },
         {
@@ -4359,6 +5659,26 @@ window.SRAMCData = {
             "meaning": "De onverklaarde variatie moet worden aangepast voor twee geschatte coëfficiënten.",
             "approach": "Bereken [(n − 1)/(n − 2)] × (1 − r²) × s_y².",
             "answer": "Een residuele variantie in y-eenheden², geen residuele standaardafwijking."
+          },
+          "guidance": {
+            "title": "Voorspelling, residu en kleinste kwadraten",
+            "focus": "Zonder ANOVA-uitvoer kun je bij enkelvoudige regressie formule 34 gebruiken: s_e² = (n − 1)/(n − 2) × (1 − r²) × s_y². Dit geeft een variantie, geen standaardafwijking.",
+            "rules": [
+              "De geschatte lijn is ŷ = b₀ + b₁x. Vul eerst x in om de voorspelling ŷ te bepalen. Het residu is e = y − ŷ, dus waarneming min voorspelling.",
+              "OLS kiest de coëfficiënten die de som van gekwadrateerde residuen (SSE) minimaliseren. Alleen de som van residuen vergelijken kan misleiden doordat positieve en negatieve fouten elkaar opheffen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 30-34: model, regressielijn en residuele variantie"
+              },
+              {
+                "source": "boek-h9a",
+                "page": 1,
+                "locator": "Boek p. 233 en verder; oorspronkelijke PDF p. 251 en verder"
+              }
+            ]
           }
         }
       ]
@@ -4443,7 +5763,22 @@ window.SRAMCData = {
             "approach": "Deel SSR door TotalSS en herken het verschil met het onverklaarde aandeel.",
             "answer": "Een verklaarde fractie of percentage, geen fout in de oorspronkelijke meeteenheid."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "ANOVA: verklaarde en onverklaarde variatie",
+            "focus": "Het verklaarde aandeel heeft TotalSS in de noemer. De niet-verklaarde fractie is 1 − R².",
+            "rules": [
+              "TotalSS = SSR + SSE. SSR is de verklaarde kwadratensom en SSE de resterende kwadratensom. Het verklaarde aandeel is R² = SSR/TotalSS.",
+              "Bij een model met constante is k het aantal verklarende variabelen; de constante telt niet mee in k. De vrijheidsgraden zijn k voor regressie, n − k − 1 voor residu en n − 1 voor totaal. MSE = SSE/(n − k − 1), MSR = SSR/k en F = MSR/MSE."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 35-43: variantieanalyse en globale F-toets"
+              }
+            ]
+          }
         },
         {
           "id": "mc-anova-basis-2",
@@ -4495,7 +5830,22 @@ window.SRAMCData = {
             "approach": "Gebruik n − k − 1; tel de constante niet nogmaals bij k.",
             "answer": "Het aantal vrijheidsgraden van de residuen."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "ANOVA: verklaarde en onverklaarde variatie",
+            "focus": "Trek voor residuele vrijheidsgraden zowel de k verklarende variabelen als de constante van n af.",
+            "rules": [
+              "TotalSS = SSR + SSE. SSR is de verklaarde kwadratensom en SSE de resterende kwadratensom. Het verklaarde aandeel is R² = SSR/TotalSS.",
+              "Bij een model met constante is k het aantal verklarende variabelen; de constante telt niet mee in k. De vrijheidsgraden zijn k voor regressie, n − k − 1 voor residu en n − 1 voor totaal. MSE = SSE/(n − k − 1), MSR = SSR/k en F = MSR/MSE."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 35-43: variantieanalyse en globale F-toets"
+              }
+            ]
+          }
         },
         {
           "id": "mc-anova-basis-3",
@@ -4547,7 +5897,22 @@ window.SRAMCData = {
             "approach": "Neem √MSE en controleer dat de eenheid teruggaat naar die van y.",
             "answer": "De residuele standaardafwijking, geen R² of standaardfout van een coëfficiënt."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "ANOVA: verklaarde en onverklaarde variatie",
+            "focus": "Std. Error of the Estimate is √MSE. R² betreft verklaarde variatie, niet het percentage exact voorspelde waarnemingen.",
+            "rules": [
+              "TotalSS = SSR + SSE. SSR is de verklaarde kwadratensom en SSE de resterende kwadratensom. Het verklaarde aandeel is R² = SSR/TotalSS.",
+              "Bij een model met constante is k het aantal verklarende variabelen; de constante telt niet mee in k. De vrijheidsgraden zijn k voor regressie, n − k − 1 voor residu en n − 1 voor totaal. MSE = SSE/(n − k − 1), MSR = SSR/k en F = MSR/MSE."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 35-43: variantieanalyse en globale F-toets"
+              }
+            ]
+          }
         },
         {
           "id": "mc-anova-toepassing-1",
@@ -4601,6 +5966,21 @@ window.SRAMCData = {
             "meaning": "Hieruit volgen de onverklaarde kwadratensom en het verklaarde aandeel.",
             "approach": "Gebruik SSE = TotalSS − SSR en R² = SSR/TotalSS.",
             "answer": "Een combinatie van een kwadratensom en een dimensieloos verklaard aandeel."
+          },
+          "guidance": {
+            "title": "ANOVA: verklaarde en onverklaarde variatie",
+            "focus": "Het verklaarde aandeel heeft TotalSS in de noemer. De niet-verklaarde fractie is 1 − R².",
+            "rules": [
+              "TotalSS = SSR + SSE. SSR is de verklaarde kwadratensom en SSE de resterende kwadratensom. Het verklaarde aandeel is R² = SSR/TotalSS.",
+              "Bij een model met constante is k het aantal verklarende variabelen; de constante telt niet mee in k. De vrijheidsgraden zijn k voor regressie, n − k − 1 voor residu en n − 1 voor totaal. MSE = SSE/(n − k − 1), MSR = SSR/k en F = MSR/MSE."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 35-43: variantieanalyse en globale F-toets"
+              }
+            ]
           }
         },
         {
@@ -4656,6 +6036,21 @@ window.SRAMCData = {
             "meaning": "F vergelijkt verklaarde en onverklaarde variatie per vrijheidsgraad.",
             "approach": "Bereken (SSR/k)/(SSE/(n − k − 1)).",
             "answer": "Een globale F-toetsingsgrootheid, nog zonder significantiebeslissing als grens of p ontbreekt."
+          },
+          "guidance": {
+            "title": "ANOVA: verklaarde en onverklaarde variatie",
+            "focus": "Bereken eerst de twee mean squares met hun eigen vrijheidsgraden. SSR/SSE rechtstreeks delen geeft niet de globale F.",
+            "rules": [
+              "TotalSS = SSR + SSE. SSR is de verklaarde kwadratensom en SSE de resterende kwadratensom. Het verklaarde aandeel is R² = SSR/TotalSS.",
+              "Bij een model met constante is k het aantal verklarende variabelen; de constante telt niet mee in k. De vrijheidsgraden zijn k voor regressie, n − k − 1 voor residu en n − 1 voor totaal. MSE = SSE/(n − k − 1), MSR = SSR/k en F = MSR/MSE."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 35-43: variantieanalyse en globale F-toets"
+              }
+            ]
           }
         },
         {
@@ -4710,6 +6105,21 @@ window.SRAMCData = {
             "meaning": "R² beschrijft een variatieaandeel, terwijl √MSE de residuele spreiding beschrijft.",
             "approach": "Vertaal R² naar verklaarde variatie en neem de wortel van MSE voor de salariseenheid.",
             "answer": "Twee onderscheiden interpretaties; geen individuele juistheidskans of causaliteitsbewijs."
+          },
+          "guidance": {
+            "title": "ANOVA: verklaarde en onverklaarde variatie",
+            "focus": "Std. Error of the Estimate is √MSE. R² betreft verklaarde variatie, niet het percentage exact voorspelde waarnemingen.",
+            "rules": [
+              "TotalSS = SSR + SSE. SSR is de verklaarde kwadratensom en SSE de resterende kwadratensom. Het verklaarde aandeel is R² = SSR/TotalSS.",
+              "Bij een model met constante is k het aantal verklarende variabelen; de constante telt niet mee in k. De vrijheidsgraden zijn k voor regressie, n − k − 1 voor residu en n − 1 voor totaal. MSE = SSE/(n − k − 1), MSR = SSR/k en F = MSR/MSE."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 35-43: variantieanalyse en globale F-toets"
+              }
+            ]
           }
         }
       ]
@@ -4834,7 +6244,32 @@ window.SRAMCData = {
             "approach": "Vertaal de richting naar β₁ < 0, niet naar een uitspraak over alleen de geschatte b₁.",
             "answer": "Een eenzijdige alternatieve hypothese over de populatieparameter."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "Formuleer de verwachte richting voor de populatiehelling, niet voor één losse waarneming.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 39-43: t- en F-toets"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 61-62: globale en individuele toets"
+              },
+              {
+                "source": "attentie",
+                "page": 4,
+                "locator": "PDF p. 4-5: hypothesen en conclusies"
+              }
+            ]
+          }
         },
         {
           "id": "mc-toetsen-basis-2",
@@ -4906,7 +6341,32 @@ window.SRAMCData = {
             "approach": "Vergelijk p rechtstreeks met α; halveer de p niet zonder eenzijdige vraag.",
             "answer": "H₀ wel of niet verwerpen op het gegeven significantieniveau."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "Vergelijk de volledige tweezijdige p met α. H₀ niet verwerpen is iets anders dan bewijzen dat H₀ waar is.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 39-43: t- en F-toets"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 61-62: globale en individuele toets"
+              },
+              {
+                "source": "attentie",
+                "page": 4,
+                "locator": "PDF p. 4-5: hypothesen en conclusies"
+              }
+            ]
+          }
         },
         {
           "id": "mc-toetsen-basis-3",
@@ -4978,7 +6438,32 @@ window.SRAMCData = {
             "approach": "Koppel verwerpen aan ten minste één niet-nulle helling; benoem geen specifieke variabele zonder t-toets.",
             "answer": "Een conclusie over het model als geheel, niet over iedere voorspeller afzonderlijk."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "De globale F toetst gezamenlijk of alle hellingen nul zijn. Een individuele t-toets gaat over één bijdrage gegeven de overige voorspellers; de conclusies hoeven niet gelijk te zijn.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 39-43: t- en F-toets"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 61-62: globale en individuele toets"
+              },
+              {
+                "source": "attentie",
+                "page": 4,
+                "locator": "PDF p. 4-5: hypothesen en conclusies"
+              }
+            ]
+          }
         },
         {
           "id": "mc-toetsen-toepassing-1",
@@ -5052,6 +6537,31 @@ window.SRAMCData = {
             "meaning": "De geschatte coëfficiënt wordt uitgedrukt in aantallen standaardfouten van nul.",
             "approach": "Bereken t = (B − 0)/Std. Error en behoud het teken.",
             "answer": "Een t-toetsingsgrootheid voor deze coëfficiënt."
+          },
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "Gebruik de B-coëfficiënt en haar eigen Std. Error uit dezelfde modelrij. De hypothese bepaalt welke nulwaarde je van B aftrekt.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 39-43: t- en F-toets"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 61-62: globale en individuele toets"
+              },
+              {
+                "source": "attentie",
+                "page": 4,
+                "locator": "PDF p. 4-5: hypothesen en conclusies"
+              }
+            ]
           }
         },
         {
@@ -5126,6 +6636,31 @@ window.SRAMCData = {
             "meaning": "De gevonden richting is tegengesteld aan de gevraagde stijging.",
             "approach": "Controleer eerst het teken; voor deze eenzijdige richting hoort 1 − p_tweezijdig/2 bij de p-waarde.",
             "answer": "Een toetsbeslissing over de gevraagde stijging, niet over een willekeurig verband."
+          },
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "Controleer de gevonden richting vóór je een eenzijdige p afleidt. Een klein tweezijdig p-getal bewijst geen stijging als de helling negatief is.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 39-43: t- en F-toets"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 61-62: globale en individuele toets"
+              },
+              {
+                "source": "attentie",
+                "page": 4,
+                "locator": "PDF p. 4-5: hypothesen en conclusies"
+              }
+            ]
           }
         },
         {
@@ -5200,6 +6735,31 @@ window.SRAMCData = {
             "meaning": "F toetst alle hellingen gezamenlijk; t toetst één bijdrage gegeven de andere voorspellers.",
             "approach": "Vergelijk de nulhypothesen voordat je de uitslagen tegenstrijdig noemt.",
             "answer": "Een uitleg waarom deze uitkomsten naast elkaar kunnen voorkomen."
+          },
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "De globale F toetst gezamenlijk of alle hellingen nul zijn. Een individuele t-toets gaat over één bijdrage gegeven de overige voorspellers; de conclusies hoeven niet gelijk te zijn.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 39-43: t- en F-toets"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 61-62: globale en individuele toets"
+              },
+              {
+                "source": "attentie",
+                "page": 4,
+                "locator": "PDF p. 4-5: hypothesen en conclusies"
+              }
+            ]
           }
         },
         {
@@ -5274,6 +6834,31 @@ window.SRAMCData = {
             "meaning": "De vraag betreft onzekerheid van de helling, niet de helling zelf.",
             "approach": "Bereken (s_y/s_x) × √((1 − r²)/(n − 2)).",
             "answer": "Een standaardfout van b₁, in dezelfde eenheid als de helling."
+          },
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "Bij enkelvoudige regressie: s_b1 = (s_y/s_x) × √((1 − r²)/(n − 2)). Verwar deze standaardfout niet met s_y of de residuele spreiding.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 39-43: t- en F-toets"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 61-62: globale en individuele toets"
+              },
+              {
+                "source": "attentie",
+                "page": 4,
+                "locator": "PDF p. 4-5: hypothesen en conclusies"
+              }
+            ]
           }
         },
         {
@@ -5348,6 +6933,31 @@ window.SRAMCData = {
             "meaning": "De correlatie wordt omgezet naar een getekende t met n − 2 vrijheidsgraden.",
             "approach": "Gebruik t = r√(n − 2)/√(1 − r²) en behoud het minteken van r.",
             "answer": "Een t-toetsingsgrootheid, geen R² of alleen absolute sterkte."
+          },
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "Voor H₀: ρ = 0 bij enkelvoudige regressie geldt t = r√(n − 2)/√(1 − r²). Het teken van r blijft behouden.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 39-43: t- en F-toets"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 61-62: globale en individuele toets"
+              },
+              {
+                "source": "attentie",
+                "page": 4,
+                "locator": "PDF p. 4-5: hypothesen en conclusies"
+              }
+            ]
           }
         },
         {
@@ -5422,6 +7032,36 @@ window.SRAMCData = {
             "meaning": "Een coëfficiëntinterval kan aan de bijbehorende toets tegen nul worden gekoppeld.",
             "approach": "Vorm b₁ ± t × s_b1 en controleer of nul binnen de grenzen ligt.",
             "answer": "Het interval plus de passende tweezijdige toetsbeslissing op hetzelfde niveau."
+          },
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "Het interval voor de populatiehelling is b₁ ± t × s_b1. Nul buiten het bijpassende tweezijdige interval betekent verwerping van H₀: β₁ = 0 op dat niveau.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 39-43: t- en F-toets"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 61-62: globale en individuele toets"
+              },
+              {
+                "source": "attentie",
+                "page": 4,
+                "locator": "PDF p. 4-5: hypothesen en conclusies"
+              },
+              {
+                "source": "boek-h9b",
+                "page": 7,
+                "locator": "Boek p. 255; oorspronkelijke PDF p. 273: interval van de helling"
+              }
+            ]
           }
         }
       ]
@@ -5546,7 +7186,27 @@ window.SRAMCData = {
             "approach": "Vergelijk n met 100: de cursus gebruikt ±2 bij n ≤ 100 en ±3 bij n > 100.",
             "answer": "Twee residugrenzen, geen Cook-grens of toets op normaliteit."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "De SRA-grenzen voor gestandaardiseerde residuen zijn ±2 bij n ≤ 100 en ±3 bij n > 100. Overschrijding duidt op een mogelijke uitbijter, niet meteen op een verwijderbesluit.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-49: regressiediagnostiek"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              }
+            ]
+          }
         },
         {
           "id": "mc-diagnostiek-basis-2",
@@ -5618,7 +7278,27 @@ window.SRAMCData = {
             "approach": "Koppel dit aan Cook’s Distance; een groot residu en een extreme x zijn afzonderlijke kenmerken.",
             "answer": "De diagnostische maat voor invloed op het model."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Cook’s Distance signaleert potentiële invloed. Onderzoek daarna de positie in het spreidingsdiagram en de casusoorzaak. Een grote waarde alleen rechtvaardigt geen automatische verwijdering.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-49: regressiediagnostiek"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              }
+            ]
+          }
         },
         {
           "id": "mc-diagnostiek-basis-3",
@@ -5690,7 +7370,27 @@ window.SRAMCData = {
             "approach": "Vergelijk p met α en verbind de beslissing expliciet aan de normaliteitsaanname.",
             "answer": "Een toetsconclusie over residunormaliteit, niet over verbandsterkte of constante variantie."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Bij normaliteit is H₀ dat de residuen normaal verdeeld zijn. Gebruik de gegeven toets; bij eigen keuze volgt SRA Shapiro-Wilk voor n ≤ 50 en Kolmogorov-Smirnov voor n > 50. Vergelijk p met de opgegeven α.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-49: regressiediagnostiek"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              }
+            ]
+          }
         },
         {
           "id": "mc-diagnostiek-toepassing-1",
@@ -5764,6 +7464,26 @@ window.SRAMCData = {
             "meaning": "De spreiding verandert langs het voorspelde niveau.",
             "approach": "Koppel een trechtervorm aan mogelijke heteroscedasticiteit en controleer die aanname verder.",
             "answer": "Een aanwijzing voor niet-constante residuvariantie, geen automatisch bewijs van causaliteit."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Homoscedasticiteit betekent constante spreiding van residuen. Let op de breedte van de residuwolk over x of de voorspelde waarden, niet alleen op het gemiddelde residu.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-49: regressiediagnostiek"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              }
+            ]
           }
         },
         {
@@ -5838,6 +7558,26 @@ window.SRAMCData = {
             "meaning": "De afwijking kan een structureel patroon weerspiegelen in plaats van een invoerfout.",
             "approach": "Onderzoek of een dummy het terugkerende effect inhoudelijk kan weergeven en beoordeel daarna de diagnostiek opnieuw.",
             "answer": "Een onderbouwde modelbeoordeling; verander of verwijder de waarneming niet alleen om haar afwijking."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Onderscheid een invoerfout, een eenmalige bijzondere oorzaak en een terugkerende omstandigheid. Een terugkerende omstandigheid kan aanleiding zijn om het model inhoudelijk uit te breiden.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-49: regressiediagnostiek"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              }
+            ]
           }
         },
         {
@@ -5912,6 +7652,26 @@ window.SRAMCData = {
             "meaning": "Onvoldoende bewijs tegen een aanname is geen bewijs dat de aanname waar is.",
             "approach": "Formuleer de conclusie als niet verwerpen van normaliteit op het gekozen niveau.",
             "answer": "Een beperkte toetsconclusie zonder normaliteit als bewezen feit te presenteren."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Bij normaliteit is H₀ dat de residuen normaal verdeeld zijn. Gebruik de gegeven toets; bij eigen keuze volgt SRA Shapiro-Wilk voor n ≤ 50 en Kolmogorov-Smirnov voor n > 50. Vergelijk p met de opgegeven α.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-49: regressiediagnostiek"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              }
+            ]
           }
         },
         {
@@ -5986,6 +7746,26 @@ window.SRAMCData = {
             "meaning": "Het punt kan de regressieschatting sterk beïnvloeden, maar hoeft niet fout te zijn.",
             "approach": "Onderzoek invoer, context en gevoeligheid van het model voordat je over uitsluiten beslist.",
             "answer": "Een gemotiveerde onderzoeksstap, geen automatische verwijdering."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Cook’s Distance signaleert potentiële invloed. Onderzoek daarna de positie in het spreidingsdiagram en de casusoorzaak. Een grote waarde alleen rechtvaardigt geen automatische verwijdering.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-49: regressiediagnostiek"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              }
+            ]
           }
         },
         {
@@ -6060,6 +7840,31 @@ window.SRAMCData = {
             "meaning": "Het vorige residu is een bekende extra voorspeller in het opnieuw geschatte model.",
             "approach": "Vul x_t en het vorige residu met hun tekens in alle termen van de vergelijking in.",
             "answer": "Een voorspelling voor tijdstip t, zonder een onbekend huidig residu te gebruiken."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Gebruik in de extra term het residu van de vorige periode met zijn eigen teken. Vul niet het huidige residu of de vorige voorspelling in.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-49: regressiediagnostiek"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              },
+              {
+                "source": "boek-h9d",
+                "page": 7,
+                "locator": "Boek p. 279-283; oorspronkelijke PDF p. 297-301: autocorrelatie"
+              }
+            ]
           }
         },
         {
@@ -6134,6 +7939,31 @@ window.SRAMCData = {
             "meaning": "d vergelijkt opeenvolgende verschillen met de totale residugrootte.",
             "approach": "Behoud de tijdsvolgorde; deel Σ(e_t − e_(t−1))² door Σe_t².",
             "answer": "De d-grootheid; een toetsbeslissing vraagt daarnaast passende tabelgrenzen."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Durbin-Watson deelt Σ(e_t − e_(t−1))² door Σe_t². De teller begint bij het tweede residu; de noemer omvat alle residuen.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-49: regressiediagnostiek"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              },
+              {
+                "source": "boek-h9d",
+                "page": 7,
+                "locator": "Boek p. 279-283; oorspronkelijke PDF p. 297-301: autocorrelatie"
+              }
+            ]
           }
         },
         {
@@ -6208,6 +8038,26 @@ window.SRAMCData = {
             "meaning": "Absolute residuen meten foutgrootte; samenhang met x wijst op veranderende spreiding.",
             "approach": "Vergelijk |t| met de kritieke grens en koppel de beslissing aan constante variantie.",
             "answer": "Een aanwijzing over heteroscedasticiteit, niet over autocorrelatie of een causaal x-effect."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Een correlatietoets tussen x en de absolute residuen onderzoekt samenhang tussen x en de foutgrootte. Vergelijk de absolute t met de tweezijdige kritieke grens en concludeer over de spreiding.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-49: regressiediagnostiek"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              }
+            ]
           }
         }
       ]
@@ -6292,7 +8142,27 @@ window.SRAMCData = {
             "approach": "Zoek waar de term (x₀ − x̄)² minimaal is.",
             "answer": "Een plaats op de x-as, geen betrouwbaarheidspercentage."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Voorspelling en voorspellingsinterval",
+            "focus": "De afstandsterm (x₀ − x̄)² wordt groter naarmate de nieuwe x verder van het steekproefgemiddelde ligt. Houd bij vergelijken het model en de overige gegevens gelijk.",
+            "rules": [
+              "Bepaal of één nieuwe waarneming of het gemiddelde bij x₀ wordt gevraagd. Voor één waarneming bevat de marge de extra term 1 onder de wortel: t × s_e × √(1 + 1/n + (x₀ − x̄)²/((n − 1)s_x²)).",
+              "Het interval is bij gelijk model het smalst rond x̄. Verder weg neemt de onzekerheid toe. Controleer bovendien of x₀ binnen het gebied ligt waarop het model is geschat."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 50: individuele voorspelling"
+              },
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "Voorspelling en nadere controle bij een afwijkende realisatie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-voorspellen-basis-2",
@@ -6344,7 +8214,27 @@ window.SRAMCData = {
             "approach": "Herken in de individuele formule de extra 1 onder de wortel bij gelijk model en niveau.",
             "answer": "Welk interval breder is en welke extra onzekerheid dat verklaart."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Voorspelling en voorspellingsinterval",
+            "focus": "Een interval voor één nieuwe waarneming omvat zowel onzekerheid in de geschatte lijn als individuele spreiding. Het interval voor het gemiddelde heeft die extra individuele spreiding niet.",
+            "rules": [
+              "Bepaal of één nieuwe waarneming of het gemiddelde bij x₀ wordt gevraagd. Voor één waarneming bevat de marge de extra term 1 onder de wortel: t × s_e × √(1 + 1/n + (x₀ − x̄)²/((n − 1)s_x²)).",
+              "Het interval is bij gelijk model het smalst rond x̄. Verder weg neemt de onzekerheid toe. Controleer bovendien of x₀ binnen het gebied ligt waarop het model is geschat."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 50: individuele voorspelling"
+              },
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "Voorspelling en nadere controle bij een afwijkende realisatie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-voorspellen-basis-3",
@@ -6396,7 +8286,27 @@ window.SRAMCData = {
             "approach": "Scheid het statistische signaal van een bewijs van fout of fraude.",
             "answer": "Een aanleiding voor onderzoek, zonder een ongefundeerde oorzakelijke conclusie."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Voorspelling en voorspellingsinterval",
+            "focus": "Een realisatie buiten het interval is een controlesignaal. Onderzoek gegevens, omstandigheden en modelaannamen voordat je een oorzaak concludeert.",
+            "rules": [
+              "Bepaal of één nieuwe waarneming of het gemiddelde bij x₀ wordt gevraagd. Voor één waarneming bevat de marge de extra term 1 onder de wortel: t × s_e × √(1 + 1/n + (x₀ − x̄)²/((n − 1)s_x²)).",
+              "Het interval is bij gelijk model het smalst rond x̄. Verder weg neemt de onzekerheid toe. Controleer bovendien of x₀ binnen het gebied ligt waarop het model is geschat."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 50: individuele voorspelling"
+              },
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "Voorspelling en nadere controle bij een afwijkende realisatie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-voorspellen-toepassing-1",
@@ -6450,6 +8360,26 @@ window.SRAMCData = {
             "meaning": "De voorspelling gebruikt een x buiten het waargenomen toepassingsgebied.",
             "approach": "Vergelijk de nieuwe x met de laagste en hoogste trainings-x en herken extrapolatie.",
             "answer": "Een kwalificatie van de voorspelling met aandacht voor onzekere geldigheid buiten het bereik."
+          },
+          "guidance": {
+            "title": "Voorspelling en voorspellingsinterval",
+            "focus": "Een voorspelling buiten het gebruikte x-bereik is extrapolatie. Dat de formule een getal oplevert, betekent niet dat het verband daar is onderbouwd.",
+            "rules": [
+              "Bepaal of één nieuwe waarneming of het gemiddelde bij x₀ wordt gevraagd. Voor één waarneming bevat de marge de extra term 1 onder de wortel: t × s_e × √(1 + 1/n + (x₀ − x̄)²/((n − 1)s_x²)).",
+              "Het interval is bij gelijk model het smalst rond x̄. Verder weg neemt de onzekerheid toe. Controleer bovendien of x₀ binnen het gebied ligt waarop het model is geschat."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 50: individuele voorspelling"
+              },
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "Voorspelling en nadere controle bij een afwijkende realisatie"
+              }
+            ]
           }
         },
         {
@@ -6504,6 +8434,26 @@ window.SRAMCData = {
             "meaning": "De nieuwe maand wordt beoordeeld met een vooraf geschat basismodel.",
             "approach": "Onderzoek de afwijking en haar context zonder de controlemaand stilzwijgend als training te gebruiken.",
             "answer": "Een passende onderzoeksstap; geen automatisch foutbewijs of vervanging door de voorspelling."
+          },
+          "guidance": {
+            "title": "Voorspelling en voorspellingsinterval",
+            "focus": "Een realisatie buiten het interval is een controlesignaal. Onderzoek gegevens, omstandigheden en modelaannamen voordat je een oorzaak concludeert.",
+            "rules": [
+              "Bepaal of één nieuwe waarneming of het gemiddelde bij x₀ wordt gevraagd. Voor één waarneming bevat de marge de extra term 1 onder de wortel: t × s_e × √(1 + 1/n + (x₀ − x̄)²/((n − 1)s_x²)).",
+              "Het interval is bij gelijk model het smalst rond x̄. Verder weg neemt de onzekerheid toe. Controleer bovendien of x₀ binnen het gebied ligt waarop het model is geschat."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 50: individuele voorspelling"
+              },
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "Voorspelling en nadere controle bij een afwijkende realisatie"
+              }
+            ]
           }
         },
         {
@@ -6559,6 +8509,26 @@ window.SRAMCData = {
             "meaning": "Dit is een individueel voorspellingsinterval in het centrum van de data.",
             "approach": "Gebruik de extra 1 voor individuele spreiding en bereken ŷ ± t s_e√(1 + 1/n).",
             "answer": "Twee grenzen voor één toekomstige waarneming, niet voor het groepsgemiddelde."
+          },
+          "guidance": {
+            "title": "Voorspelling en voorspellingsinterval",
+            "focus": "Bij x₀ = x̄ vervalt alleen de afstandsterm. Voor één nieuwe waarneming blijven 1 en 1/n onder de wortel staan.",
+            "rules": [
+              "Bepaal of één nieuwe waarneming of het gemiddelde bij x₀ wordt gevraagd. Voor één waarneming bevat de marge de extra term 1 onder de wortel: t × s_e × √(1 + 1/n + (x₀ − x̄)²/((n − 1)s_x²)).",
+              "Het interval is bij gelijk model het smalst rond x̄. Verder weg neemt de onzekerheid toe. Controleer bovendien of x₀ binnen het gebied ligt waarop het model is geschat."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 50: individuele voorspelling"
+              },
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "Voorspelling en nadere controle bij een afwijkende realisatie"
+              }
+            ]
           }
         },
         {
@@ -6613,6 +8583,26 @@ window.SRAMCData = {
             "meaning": "Alleen de afstandsterm in de voorspellingsonzekerheid neemt toe.",
             "approach": "Volg de term (x₀ − x̄)² in de intervalformule om het effect op de marge te bepalen.",
             "answer": "De richting van de verandering in intervalbreedte, niet een nieuw betrouwbaarheidsniveau."
+          },
+          "guidance": {
+            "title": "Voorspelling en voorspellingsinterval",
+            "focus": "De afstandsterm (x₀ − x̄)² wordt groter naarmate de nieuwe x verder van het steekproefgemiddelde ligt. Houd bij vergelijken het model en de overige gegevens gelijk.",
+            "rules": [
+              "Bepaal of één nieuwe waarneming of het gemiddelde bij x₀ wordt gevraagd. Voor één waarneming bevat de marge de extra term 1 onder de wortel: t × s_e × √(1 + 1/n + (x₀ − x̄)²/((n − 1)s_x²)).",
+              "Het interval is bij gelijk model het smalst rond x̄. Verder weg neemt de onzekerheid toe. Controleer bovendien of x₀ binnen het gebied ligt waarop het model is geschat."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 50: individuele voorspelling"
+              },
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "Voorspelling en nadere controle bij een afwijkende realisatie"
+              }
+            ]
           }
         }
       ]
@@ -6707,7 +8697,27 @@ window.SRAMCData = {
             "approach": "Tel de verklarende variabelen en laat de constante buiten k.",
             "answer": "Het aantal voorspellers voor de model- en vrijheidsgradenformules."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Meervoudige regressie: model en vergelijking",
+            "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+            "rules": [
+              "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
+              "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 51-54: model, adjusted R² en aantal variabelen"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: meervoudige regressie en uitvoer"
+              }
+            ]
+          }
         },
         {
           "id": "mc-meervoudig-basis-3",
@@ -6764,7 +8774,27 @@ window.SRAMCData = {
             "approach": "Koppel adjusted R² aan correctie voor het aantal voorspellers en waarnemingen.",
             "answer": "Een reden om de gecorrigeerde fitmaat te gebruiken bij passende modelvergelijkingen."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Meervoudige regressie: model en vergelijking",
+            "focus": "R² kan door toevoegen van variabelen stijgen zonder nuttige verbetering. Adjusted R² houdt rekening met n en k; vergelijk modellen voor dezelfde y en dezelfde waarnemingen.",
+            "rules": [
+              "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
+              "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 51-54: model, adjusted R² en aantal variabelen"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: meervoudige regressie en uitvoer"
+              }
+            ]
+          }
         },
         {
           "id": "mc-meervoudig-basis-1",
@@ -6821,7 +8851,27 @@ window.SRAMCData = {
             "approach": "Trek B_HBO van B_WO af, bij gelijk gehouden overige voorspellers.",
             "answer": "Het voorspelde groepsverschil WO − HBO, niet het verschil met de referentiegroep."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Meervoudige regressie: model en vergelijking",
+            "focus": "Vergelijk dummycoëfficiënten alleen binnen hetzelfde model en ten opzichte van dezelfde referentiecategorie. Bij gelijke overige kenmerken is het contrast B_groep2 − B_groep1.",
+            "rules": [
+              "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
+              "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 51-54: model, adjusted R² en aantal variabelen"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: meervoudige regressie en uitvoer"
+              }
+            ]
+          }
         },
         {
           "id": "mc-meervoudig-toepassing-1",
@@ -6880,6 +8930,26 @@ window.SRAMCData = {
             "meaning": "Groepslidmaatschap wordt via de dummy als extra modelterm verwerkt.",
             "approach": "Zet D op de code van de genoemde groep en vul zowel x als D in.",
             "answer": "Eén voorspelde y inclusief constante, continue bijdrage en groepsbijdrage."
+          },
+          "guidance": {
+            "title": "Meervoudige regressie: model en vergelijking",
+            "focus": "Vul voor iedere persoon haar of zijn eigen x-waarden en dummycodes in. Bereken bij een verschil twee voorspellingen of trek de modeltermen zorgvuldig van elkaar af.",
+            "rules": [
+              "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
+              "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 51-54: model, adjusted R² en aantal variabelen"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: meervoudige regressie en uitvoer"
+              }
+            ]
           }
         },
         {
@@ -6939,6 +9009,31 @@ window.SRAMCData = {
             "meaning": "Gestandaardiseerde coëfficiënten kunnen in absolute grootte binnen dat model worden vergeleken.",
             "approach": "Vergelijk |Beta| voor grootte en behoud het teken apart voor richting.",
             "answer": "De grootste absolute gestandaardiseerde coëfficiënt; geen eurovoorspelling of causale rangorde."
+          },
+          "guidance": {
+            "title": "Meervoudige regressie: model en vergelijking",
+            "focus": "Beta is een gestandaardiseerde coëfficiënt. Vergelijk teken en absolute grootte binnen hetzelfde model; Beta is niet de B waarmee je in oorspronkelijke eenheden voorspelt en bewijst geen causaliteit.",
+            "rules": [
+              "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
+              "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 51-54: model, adjusted R² en aantal variabelen"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: meervoudige regressie en uitvoer"
+              },
+              {
+                "source": "boek-h10c",
+                "page": 5,
+                "locator": "Boek p. 318; oorspronkelijke PDF p. 336: gestandaardiseerde coëfficiënten"
+              }
+            ]
           }
         },
         {
@@ -6998,6 +9093,26 @@ window.SRAMCData = {
             "meaning": "Het totale voorspelde verschil bevat meer dan alleen het dummy-effect.",
             "approach": "Bereken voorspelling B − voorspelling A, of tel b_x(x_B − x_A) en b_D(D_B − D_A) op.",
             "answer": "Een getekend totaalverschil; de gelijke constante valt weg."
+          },
+          "guidance": {
+            "title": "Meervoudige regressie: model en vergelijking",
+            "focus": "Vul voor iedere persoon haar of zijn eigen x-waarden en dummycodes in. Bereken bij een verschil twee voorspellingen of trek de modeltermen zorgvuldig van elkaar af.",
+            "rules": [
+              "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
+              "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 51-54: model, adjusted R² en aantal variabelen"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: meervoudige regressie en uitvoer"
+              }
+            ]
           }
         },
         {
@@ -7057,6 +9172,26 @@ window.SRAMCData = {
             "meaning": "De extra fit wordt afgewogen tegen extra modelomvang.",
             "approach": "Gebruik adjusted R² voor deze afweging en lees haar verandering apart van gewone R².",
             "answer": "Een onderbouwd fit-oordeel volgens deze maat, geen bewijs van causaliteit of universele modelkwaliteit."
+          },
+          "guidance": {
+            "title": "Meervoudige regressie: model en vergelijking",
+            "focus": "R² kan door toevoegen van variabelen stijgen zonder nuttige verbetering. Adjusted R² houdt rekening met n en k; vergelijk modellen voor dezelfde y en dezelfde waarnemingen.",
+            "rules": [
+              "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
+              "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 51-54: model, adjusted R² en aantal variabelen"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: meervoudige regressie en uitvoer"
+              }
+            ]
           }
         }
       ]
@@ -7161,7 +9296,27 @@ window.SRAMCData = {
             "approach": "Koppel y = ax^b aan ln(y) = ln(a) + b ln(x).",
             "answer": "De passende transformatie van zowel y als x."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Welke variabele is getransformeerd?",
+            "focus": "Bij een machtsmodel worden beide variabelen logaritmisch beschreven. Terugtransformeren levert een constante maal x tot een macht.",
+            "rules": [
+              "Logarithmic gebruikt ln(x) en laat y op de oorspronkelijke schaal. Exponential gebruikt ln(ŷ) met x. Power gebruikt zowel ln(ŷ) als ln(x). Lees dus eerst op welke schaal de vergelijking staat.",
+              "Terugtransformeren van ln(ŷ) doe je met exp: ŷ = exp(de volledige rechterkant). Het oorspronkelijke getal binnen ln moet positief zijn; de logwaarde zelf mag nul of negatief zijn."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 55-58: exponentieel, macht en logaritmisch"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: transformaties en meervoudige terugtransformatie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-transformaties-basis-2",
@@ -7223,7 +9378,27 @@ window.SRAMCData = {
             "approach": "Keer de natuurlijke logaritme om met exp op de volledige logvoorspelling.",
             "answer": "Een teruggetransformeerde voorspelling in de oorspronkelijke y-eenheid."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Welke variabele is getransformeerd?",
+            "focus": "Voer exp uit op de volledige voorspelde logwaarde. Terugtransformeer niet afzonderlijk alleen de constante of alleen de x-term.",
+            "rules": [
+              "Logarithmic gebruikt ln(x) en laat y op de oorspronkelijke schaal. Exponential gebruikt ln(ŷ) met x. Power gebruikt zowel ln(ŷ) als ln(x). Lees dus eerst op welke schaal de vergelijking staat.",
+              "Terugtransformeren van ln(ŷ) doe je met exp: ŷ = exp(de volledige rechterkant). Het oorspronkelijke getal binnen ln moet positief zijn; de logwaarde zelf mag nul of negatief zijn."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 55-58: exponentieel, macht en logaritmisch"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: transformaties en meervoudige terugtransformatie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-transformaties-aanvulling-domein",
@@ -7287,6 +9462,26 @@ window.SRAMCData = {
             "meaning": "Het domein van ln vraagt positieve invoer; de loguitkomst mag negatief zijn.",
             "approach": "Controleer x > 0 en beoordeel het teken van ln(x) niet als domeinvoorwaarde.",
             "answer": "Een ja/nee-oordeel over toegestane invoer met de juiste voorwaarde."
+          },
+          "guidance": {
+            "title": "Welke variabele is getransformeerd?",
+            "focus": "Controleer het oorspronkelijke argument van ln. Een positief getal kleiner dan 1 heeft een negatieve logwaarde, maar is wel toegestaan.",
+            "rules": [
+              "Logarithmic gebruikt ln(x) en laat y op de oorspronkelijke schaal. Exponential gebruikt ln(ŷ) met x. Power gebruikt zowel ln(ŷ) als ln(x). Lees dus eerst op welke schaal de vergelijking staat.",
+              "Terugtransformeren van ln(ŷ) doe je met exp: ŷ = exp(de volledige rechterkant). Het oorspronkelijke getal binnen ln moet positief zijn; de logwaarde zelf mag nul of negatief zijn."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 55-58: exponentieel, macht en logaritmisch"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: transformaties en meervoudige terugtransformatie"
+              }
+            ]
           }
         },
         {
@@ -7349,7 +9544,27 @@ window.SRAMCData = {
             "approach": "Neem exp van de verandering b₁ × 1 in de logvoorspelling.",
             "answer": "Een vermenigvuldigingsfactor, geen absoluut verschil van b₁ y-eenheden."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Welke variabele is getransformeerd?",
+            "focus": "In een exponentieel model is de factor per extra eenheid x gelijk aan exp(b₁). Dat is een vermenigvuldigingsfactor, geen vaste optelling op de y-schaal.",
+            "rules": [
+              "Logarithmic gebruikt ln(x) en laat y op de oorspronkelijke schaal. Exponential gebruikt ln(ŷ) met x. Power gebruikt zowel ln(ŷ) als ln(x). Lees dus eerst op welke schaal de vergelijking staat.",
+              "Terugtransformeren van ln(ŷ) doe je met exp: ŷ = exp(de volledige rechterkant). Het oorspronkelijke getal binnen ln moet positief zijn; de logwaarde zelf mag nul of negatief zijn."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 55-58: exponentieel, macht en logaritmisch"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: transformaties en meervoudige terugtransformatie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-transformaties-toepassing-1",
@@ -7413,6 +9628,26 @@ window.SRAMCData = {
             "meaning": "Het logaritmische model voorspelt y direct op de oorspronkelijke schaal.",
             "approach": "Bereken eerst ln(x) en vul dat in; exponentieer de uitkomst niet als y zelf ongelogd is.",
             "answer": "De voorspelde y-waarde in oorspronkelijke eenheden."
+          },
+          "guidance": {
+            "title": "Welke variabele is getransformeerd?",
+            "focus": "Als alleen x is gelogaritmeerd, blijft de voorspelde y op de oorspronkelijke schaal. Gebruik de natuurlijke logaritme uit de vergelijking.",
+            "rules": [
+              "Logarithmic gebruikt ln(x) en laat y op de oorspronkelijke schaal. Exponential gebruikt ln(ŷ) met x. Power gebruikt zowel ln(ŷ) als ln(x). Lees dus eerst op welke schaal de vergelijking staat.",
+              "Terugtransformeren van ln(ŷ) doe je met exp: ŷ = exp(de volledige rechterkant). Het oorspronkelijke getal binnen ln moet positief zijn; de logwaarde zelf mag nul of negatief zijn."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 55-58: exponentieel, macht en logaritmisch"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: transformaties en meervoudige terugtransformatie"
+              }
+            ]
           }
         },
         {
@@ -7477,6 +9712,26 @@ window.SRAMCData = {
             "meaning": "Invullen geeft eerst een voorspelling op de logschaal.",
             "approach": "Bereken de volledige lineaire combinatie en pas daarna exp toe op die hele som.",
             "answer": "Een teruggetransformeerde puntschatting, niet de tussenuitkomst ln(ŷ)."
+          },
+          "guidance": {
+            "title": "Welke variabele is getransformeerd?",
+            "focus": "Voer exp uit op de volledige voorspelde logwaarde. Terugtransformeer niet afzonderlijk alleen de constante of alleen de x-term.",
+            "rules": [
+              "Logarithmic gebruikt ln(x) en laat y op de oorspronkelijke schaal. Exponential gebruikt ln(ŷ) met x. Power gebruikt zowel ln(ŷ) als ln(x). Lees dus eerst op welke schaal de vergelijking staat.",
+              "Terugtransformeren van ln(ŷ) doe je met exp: ŷ = exp(de volledige rechterkant). Het oorspronkelijke getal binnen ln moet positief zijn; de logwaarde zelf mag nul of negatief zijn."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 55-58: exponentieel, macht en logaritmisch"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: transformaties en meervoudige terugtransformatie"
+              }
+            ]
           }
         },
         {
@@ -7541,6 +9796,26 @@ window.SRAMCData = {
             "meaning": "De verhouding tussen nieuwe en oude voorspelling wordt door de exponent bepaald.",
             "approach": "Deel a(2x)^b door ax^b; de voorfactor a valt weg.",
             "answer": "Een vermenigvuldigingsfactor voor ŷ, geen nieuwe absolute voorspelling."
+          },
+          "guidance": {
+            "title": "Welke variabele is getransformeerd?",
+            "focus": "In ŷ = a × x^b geeft vermenigvuldiging van x met c een factor c^b in de voorspelling.",
+            "rules": [
+              "Logarithmic gebruikt ln(x) en laat y op de oorspronkelijke schaal. Exponential gebruikt ln(ŷ) met x. Power gebruikt zowel ln(ŷ) als ln(x). Lees dus eerst op welke schaal de vergelijking staat.",
+              "Terugtransformeren van ln(ŷ) doe je met exp: ŷ = exp(de volledige rechterkant). Het oorspronkelijke getal binnen ln moet positief zijn; de logwaarde zelf mag nul of negatief zijn."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 55-58: exponentieel, macht en logaritmisch"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: transformaties en meervoudige terugtransformatie"
+              }
+            ]
           }
         },
         {
@@ -7605,6 +9880,26 @@ window.SRAMCData = {
             "meaning": "Terugtransformeren zet een som van logtermen om in een product van machten.",
             "approach": "Gebruik exp van de hele som, of schrijf a × x₁^b₁ × x₂^b₂; behoud negatieve exponenten.",
             "answer": "Eén voorspelling op de oorspronkelijke y-schaal."
+          },
+          "guidance": {
+            "title": "Welke variabele is getransformeerd?",
+            "focus": "Bij ln(ŷ) = b₀ + b₁ln(x₁) + b₂ln(x₂) wordt ŷ = exp(b₀) × x₁^b₁ × x₂^b₂. Een negatieve macht betekent delen.",
+            "rules": [
+              "Logarithmic gebruikt ln(x) en laat y op de oorspronkelijke schaal. Exponential gebruikt ln(ŷ) met x. Power gebruikt zowel ln(ŷ) als ln(x). Lees dus eerst op welke schaal de vergelijking staat.",
+              "Terugtransformeren van ln(ŷ) doe je met exp: ŷ = exp(de volledige rechterkant). Het oorspronkelijke getal binnen ln moet positief zijn; de logwaarde zelf mag nul of negatief zijn."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 55-58: exponentieel, macht en logaritmisch"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: transformaties en meervoudige terugtransformatie"
+              }
+            ]
           }
         }
       ]
@@ -7689,7 +9984,27 @@ window.SRAMCData = {
             "approach": "Gebruik VIF = 1/tolerance, niet 1 − tolerance.",
             "answer": "Een dimensieloze VIF-waarde."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Variabelenselectie en multicollineariteit",
+            "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+            "rules": [
+              "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
+              "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 59-63: VIF, toetsen en modelvergelijking"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: modelbouw en multicollineariteit"
+              }
+            ]
+          }
         },
         {
           "id": "mc-modelbouw-basis-2",
@@ -7741,7 +10056,27 @@ window.SRAMCData = {
             "approach": "Koppel starten met het volledige model en stapsgewijs verwijderen aan backward-selectie.",
             "answer": "De naam van de passende selectiemethode."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Variabelenselectie en multicollineariteit",
+            "focus": "Let op het beginpunt van de procedure: alle kandidaatvariabelen tegelijk, of juist één voor één toevoegen.",
+            "rules": [
+              "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
+              "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 59-63: VIF, toetsen en modelvergelijking"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: modelbouw en multicollineariteit"
+              }
+            ]
+          }
         },
         {
           "id": "mc-modelbouw-basis-3",
@@ -7793,7 +10128,27 @@ window.SRAMCData = {
             "approach": "Beoordeel de resterende effecten met uitvoer uit het gewijzigde model.",
             "answer": "Een verklaring waarom oude coëfficiënten en p-waarden niet klakkeloos door kunnen worden gebruikt."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Variabelenselectie en multicollineariteit",
+            "focus": "Een selectiebesluit verandert het geschatte model. Gebruik voor een volgende beslissing de nieuwe coëfficiënten en p-waarden, niet die van het vorige model.",
+            "rules": [
+              "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
+              "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 59-63: VIF, toetsen en modelvergelijking"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: modelbouw en multicollineariteit"
+              }
+            ]
+          }
         },
         {
           "id": "mc-modelbouw-toepassing-1",
@@ -7847,6 +10202,26 @@ window.SRAMCData = {
             "meaning": "Je moet eerst de maat omzetten en daarna het aangegeven criterium toepassen.",
             "approach": "Bereken 1/tolerance en vergelijk de VIF met de cursusgrens.",
             "answer": "De VIF én een oordeel over een multicollineariteitssignaal volgens die grens."
+          },
+          "guidance": {
+            "title": "Variabelenselectie en multicollineariteit",
+            "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+            "rules": [
+              "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
+              "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 59-63: VIF, toetsen en modelvergelijking"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: modelbouw en multicollineariteit"
+              }
+            ]
           }
         },
         {
@@ -7901,6 +10276,26 @@ window.SRAMCData = {
             "meaning": "Een partiële F-toets beoordeelt de extra verklaarde variatie van de toegevoegde voorspeller.",
             "approach": "Deel de SSR-toename per extra vrijheid door MSE_groot en vergelijk F met de gegeven grens.",
             "answer": "Een toetsingsgrootheid plus een conclusie over de extra bijdrage."
+          },
+          "guidance": {
+            "title": "Variabelenselectie en multicollineariteit",
+            "focus": "Voor één toegevoegde variabele in geneste modellen op dezelfde data is de partiële F gelijk aan (SSR_groot − SSR_klein)/MSE_groot. Gebruik het uitgebreide model in de noemer.",
+            "rules": [
+              "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
+              "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 59-63: VIF, toetsen en modelvergelijking"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: modelbouw en multicollineariteit"
+              }
+            ]
           }
         },
         {
@@ -7955,6 +10350,26 @@ window.SRAMCData = {
             "meaning": "De oude p-waarden horen bij een andere combinatie van voorspellers.",
             "approach": "Schat het resterende model opnieuw en gebruik zijn nieuwe uitvoer voor de volgende stap.",
             "answer": "De eerstvolgende modelbouwactie, geen keuze op basis van de oude rangorde."
+          },
+          "guidance": {
+            "title": "Variabelenselectie en multicollineariteit",
+            "focus": "Een selectiebesluit verandert het geschatte model. Gebruik voor een volgende beslissing de nieuwe coëfficiënten en p-waarden, niet die van het vorige model.",
+            "rules": [
+              "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
+              "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 59-63: VIF, toetsen en modelvergelijking"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: modelbouw en multicollineariteit"
+              }
+            ]
           }
         }
       ]
@@ -8029,7 +10444,27 @@ window.SRAMCData = {
             "approach": "Kwadrateer alle testfouten, tel ze op en deel door het aantal testwaarnemingen.",
             "answer": "Een gemiddelde kwadratische fout; geen trainingsnoemer n − k − 1."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
+            "focus": "Koppel iedere waarneming aan haar eigen voorspelling. Kwadrateer de fouten en deel de som door het aantal testwaarnemingen, niet door n − k − 1.",
+            "rules": [
+              "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
+              "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formule 64: gemiddelde kwadratische voorspelfout"
+              },
+              {
+                "source": "attentie",
+                "page": 8,
+                "locator": "PDF p. 8-9: validatie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-validatie-basis-2",
@@ -8076,7 +10511,27 @@ window.SRAMCData = {
             "approach": "Zoek de kolom B in Coefficients, inclusief de constante.",
             "answer": "De juiste tabel en kolom, geen Beta-kolom of ANOVA-waarde."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
+            "focus": "Voor de vergelijking lees je B in de Coefficients-tabel. Beta is gestandaardiseerd en de t- of Sig.-kolom is geen regressiecoëfficiënt.",
+            "rules": [
+              "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
+              "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formule 64: gemiddelde kwadratische voorspelfout"
+              },
+              {
+                "source": "attentie",
+                "page": 8,
+                "locator": "PDF p. 8-9: validatie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-validatie-basis-3",
@@ -8123,7 +10578,27 @@ window.SRAMCData = {
             "approach": "Keer Total df = n − 1 om tot n = Total df + 1.",
             "answer": "Het aantal gebruikte waarnemingen, zonder aftrek voor k."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
+            "focus": "De totale kwadratensom gebruikt afwijkingen rond een geschat gemiddelde. Daarom is Total df één kleiner dan n.",
+            "rules": [
+              "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
+              "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formule 64: gemiddelde kwadratische voorspelfout"
+              },
+              {
+                "source": "attentie",
+                "page": 8,
+                "locator": "PDF p. 8-9: validatie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-validatie-toepassing-1",
@@ -8172,6 +10647,26 @@ window.SRAMCData = {
             "meaning": "Eerst ontbreken de voorspelfouten; daarna volgt hun gemiddelde kwadraat.",
             "approach": "Bereken per testwaarneming y − ŷ, kwadrateer, tel op en deel door het aantal testwaarden.",
             "answer": "De MSPR op de testset, niet de som van fouten of de trainings-MSE."
+          },
+          "guidance": {
+            "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
+            "focus": "Koppel iedere waarneming aan haar eigen voorspelling. Kwadrateer de fouten en deel de som door het aantal testwaarnemingen, niet door n − k − 1.",
+            "rules": [
+              "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
+              "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formule 64: gemiddelde kwadratische voorspelfout"
+              },
+              {
+                "source": "attentie",
+                "page": 8,
+                "locator": "PDF p. 8-9: validatie"
+              }
+            ]
           }
         },
         {
@@ -8221,6 +10716,26 @@ window.SRAMCData = {
             "meaning": "De vergelijking gaat over generalisatie: prestaties op nieuwe gegevens.",
             "approach": "Vergelijk de foutmaten en onderzoek een duidelijke verslechtering buiten de training.",
             "answer": "Een signaal over voorspelprestatie, zonder één specifieke oorzaak of fraude als bewezen te stellen."
+          },
+          "guidance": {
+            "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
+            "focus": "Vergelijk trainingsfout en fout op ongebruikte testdata op dezelfde uitkomstschaal. Een veel grotere testfout is aanleiding om generaliseerbaarheid en modelkeuze te onderzoeken.",
+            "rules": [
+              "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
+              "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formule 64: gemiddelde kwadratische voorspelfout"
+              },
+              {
+                "source": "attentie",
+                "page": 8,
+                "locator": "PDF p. 8-9: validatie"
+              }
+            ]
           }
         },
         {
@@ -8270,6 +10785,26 @@ window.SRAMCData = {
             "meaning": "Die gegevens sturen de modelkeuze en zijn daardoor onderdeel van de selectie geworden.",
             "approach": "Beoordeel hoe de set feitelijk is gebruikt, niet alleen haar naam.",
             "answer": "Een oordeel over de onafhankelijkheid van de eindcontrole."
+          },
+          "guidance": {
+            "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
+            "focus": "Een testset die herhaaldelijk voor modelkeuze wordt gebruikt, beïnvloedt die keuze. Voor een onafhankelijke eindcontrole zijn nog niet gebruikte gegevens nodig.",
+            "rules": [
+              "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
+              "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formule 64: gemiddelde kwadratische voorspelfout"
+              },
+              {
+                "source": "attentie",
+                "page": 8,
+                "locator": "PDF p. 8-9: validatie"
+              }
+            ]
           }
         }
       ]
@@ -8344,7 +10879,27 @@ window.SRAMCData = {
             "approach": "Markeer eerst het vraagwerkwoord en de grootheid of beslissing die je moet opleveren.",
             "answer": "Een passende eerste aanpakstap voordat je een formule of tabel kiest."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Van de vraag naar een onderbouwd antwoord",
+            "focus": "Lees het werkwoord en het doel van de vraag voordat je een bekende formule kiest. Noteer welke grootheid of conclusie je uiteindelijk moet geven.",
+            "rules": [
+              "Benoem wat gevraagd wordt, selecteer de relevante casusgegevens en kies daarna de methode. Maak onderscheid tussen een totaal en een uitbreiding, een puntschatting en een interval, en een signaal en bewijs.",
+              "Een volledig antwoord bevat berekening of relevante uitvoer, een conclusie in de context van de casus en een eventuele vervolgactie. Alleen een formule noemen of een keuze aankruisen oefent niet de hele open uitwerking."
+            ],
+            "refs": [
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "PDF p. 4-5: toetsing en toepassing van de leerstof"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: bij analyses uitvoer, conclusie en remedie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-tentamen-basis-2",
@@ -8391,7 +10946,27 @@ window.SRAMCData = {
             "approach": "Verbind de gebruikte tabel of afbeelding aan een berekening of signaal, trek de conclusie en geef bij een probleem een onderbouwde remedie.",
             "answer": "Een onderbouwde diagnose met passende vervolgstap, geen los getal of ja/nee."
           },
-          "level": 1
+          "level": 1,
+          "guidance": {
+            "title": "Van de vraag naar een onderbouwd antwoord",
+            "focus": "Vermeld bij een diagnose de relevante tabel/grafiek en waarden, de conclusie, en waar nodig hypothesen en een passende remedie.",
+            "rules": [
+              "Benoem wat gevraagd wordt, selecteer de relevante casusgegevens en kies daarna de methode. Maak onderscheid tussen een totaal en een uitbreiding, een puntschatting en een interval, en een signaal en bewijs.",
+              "Een volledig antwoord bevat berekening of relevante uitvoer, een conclusie in de context van de casus en een eventuele vervolgactie. Alleen een formule noemen of een keuze aankruisen oefent niet de hele open uitwerking."
+            ],
+            "refs": [
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "PDF p. 4-5: toetsing en toepassing van de leerstof"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: bij analyses uitvoer, conclusie en remedie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-tentamen-basis-3",
@@ -8438,7 +11013,27 @@ window.SRAMCData = {
             "approach": "Beoordeel ook methodekeuze, tussenstappen en conclusie in complete tentamenopgaven.",
             "answer": "Een vervolgstap om toepassen te oefenen, geen garantie van beheersing door alleen check-scores."
           },
-          "level": 2
+          "level": 2,
+          "guidance": {
+            "title": "Van de vraag naar een onderbouwd antwoord",
+            "focus": "Goede begripchecks tonen niet automatisch dat je een open casus zelfstandig kunt uitwerken. Oefen ook gegevensselectie, berekening en onderbouwing zonder antwoordopties.",
+            "rules": [
+              "Benoem wat gevraagd wordt, selecteer de relevante casusgegevens en kies daarna de methode. Maak onderscheid tussen een totaal en een uitbreiding, een puntschatting en een interval, en een signaal en bewijs.",
+              "Een volledig antwoord bevat berekening of relevante uitvoer, een conclusie in de context van de casus en een eventuele vervolgactie. Alleen een formule noemen of een keuze aankruisen oefent niet de hele open uitwerking."
+            ],
+            "refs": [
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "PDF p. 4-5: toetsing en toepassing van de leerstof"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: bij analyses uitvoer, conclusie en remedie"
+              }
+            ]
+          }
         },
         {
           "id": "mc-tentamen-toepassing-1",
@@ -8487,6 +11082,26 @@ window.SRAMCData = {
             "meaning": "De vraag vraagt een onderbouwde beslissing over residunormaliteit.",
             "approach": "Noem de passende toets, vergelijk p met α en verbind de uitkomst aan de residuen.",
             "answer": "Een controleerbare toetsconclusie met uitvoerbewijs, geen losse ja/nee of R²."
+          },
+          "guidance": {
+            "title": "Van de vraag naar een onderbouwd antwoord",
+            "focus": "Vermeld bij een diagnose de relevante tabel/grafiek en waarden, de conclusie, en waar nodig hypothesen en een passende remedie.",
+            "rules": [
+              "Benoem wat gevraagd wordt, selecteer de relevante casusgegevens en kies daarna de methode. Maak onderscheid tussen een totaal en een uitbreiding, een puntschatting en een interval, en een signaal en bewijs.",
+              "Een volledig antwoord bevat berekening of relevante uitvoer, een conclusie in de context van de casus en een eventuele vervolgactie. Alleen een formule noemen of een keuze aankruisen oefent niet de hele open uitwerking."
+            ],
+            "refs": [
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "PDF p. 4-5: toetsing en toepassing van de leerstof"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: bij analyses uitvoer, conclusie en remedie"
+              }
+            ]
           }
         },
         {
@@ -8536,6 +11151,26 @@ window.SRAMCData = {
             "meaning": "De juiste tussenuitkomst is nog niet het gevraagde extra aantal.",
             "approach": "Trek het bestaande aantal van de totale behoefte af en controleer de optelsom terug.",
             "answer": "Extra controles met eventueel het nieuwe totaal ter verduidelijking."
+          },
+          "guidance": {
+            "title": "Van de vraag naar een onderbouwd antwoord",
+            "focus": "Bij uitbreiding vraagt men het nog te verrichten werk. Maak in het antwoord het onderscheid tussen vereist totaal en extra controles zichtbaar.",
+            "rules": [
+              "Benoem wat gevraagd wordt, selecteer de relevante casusgegevens en kies daarna de methode. Maak onderscheid tussen een totaal en een uitbreiding, een puntschatting en een interval, en een signaal en bewijs.",
+              "Een volledig antwoord bevat berekening of relevante uitvoer, een conclusie in de context van de casus en een eventuele vervolgactie. Alleen een formule noemen of een keuze aankruisen oefent niet de hele open uitwerking."
+            ],
+            "refs": [
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "PDF p. 4-5: toetsing en toepassing van de leerstof"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: bij analyses uitvoer, conclusie en remedie"
+              }
+            ]
           }
         },
         {
@@ -8585,6 +11220,26 @@ window.SRAMCData = {
             "meaning": "Een statistische grens beschrijft onzekerheid en bevat geen bewijs over intentie of oorzaak.",
             "approach": "Onderscheid een afwijkingssignaal van een inhoudelijke fraudeverklaring.",
             "answer": "Een beperkte statistische conclusie met aanleiding tot onderzoek, geen automatische fraudebeslissing."
+          },
+          "guidance": {
+            "title": "Van de vraag naar een onderbouwd antwoord",
+            "focus": "Een afwijkend resultaat wijst op nadere controle. Een statistisch interval kan op zichzelf geen specifieke oorzaak, zoals fraude, bewijzen.",
+            "rules": [
+              "Benoem wat gevraagd wordt, selecteer de relevante casusgegevens en kies daarna de methode. Maak onderscheid tussen een totaal en een uitbreiding, een puntschatting en een interval, en een signaal en bewijs.",
+              "Een volledig antwoord bevat berekening of relevante uitvoer, een conclusie in de context van de casus en een eventuele vervolgactie. Alleen een formule noemen of een keuze aankruisen oefent niet de hele open uitwerking."
+            ],
+            "refs": [
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "PDF p. 4-5: toetsing en toepassing van de leerstof"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: bij analyses uitvoer, conclusie en remedie"
+              }
+            ]
           }
         }
       ]

@@ -380,6 +380,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-total-group>h2{borde
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-total-row{border-bottom:1px solid var(--study-line,#38526b)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-total-row .mc-total-score{color:var(--study-muted,#adbdc9)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-result-list details{border:1px solid #3b4a54;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-guidance-sources{border-top:1px solid #454261}
 /* css/cirrus.css */
 html[data-study-theme=dark] body.cirrus-mode a{color:#8dcaec}
 html[data-study-theme=dark] body.cirrus-mode button:focus-visible,html[data-study-theme=dark] body.cirrus-mode a:focus-visible,html[data-study-theme=dark] body.cirrus-mode label:focus-visible,html[data-study-theme=dark] body.cirrus-mode summary:focus-visible{outline:2px solid #76562d}
@@ -1251,16 +1252,17 @@ html[data-study-theme=dark] body.cirrus-mode .exam-inline-feedback h3{color:#97e
 html[data-study-theme=dark] body.cirrus-mode .exam-inline-feedback>.exam-source-document{background:#152129;color:#e0ebf2}
 html[data-study-theme=dark] body.cirrus-mode .exam-practice-duration input{border:1px solid #3b4a54;background:#152129}
 html[data-study-theme=dark] body.study-shell #question-return-links a{border:1px solid var(--study-line,#38526b);color:var(--study-muted,#adbdc9);background:var(--study-surface,#152129)}
-html[data-study-theme=dark] body #calculator{border:1px solid #3b4a54;background:#152129;color:#e0ebf2;box-shadow:0 6px 28px #01030440}
-html[data-study-theme=dark] body #calculator .calc-head{background:#212b38;color:#f0f7fc}
-html[data-study-theme=dark] body #calculator .calc-head button:hover{background:#15212920}
-html[data-study-theme=dark] body #calculator :focus-visible{outline:2px solid #2d765d}
-html[data-study-theme=dark] body #calculator .calc-head button:focus-visible{outline:2px solid #3b4a54}
-html[data-study-theme=dark] body #calculator input{border:1px solid #444b5f;background:#152129;color:#e0ebf2}
-html[data-study-theme=dark] body #calculator .calc-keys button{border:1px solid #45495e;background:#1d2026;color:#e0ebf2}
-html[data-study-theme=dark] body #calculator .calc-keys button:hover{background:#1b1f27}
-html[data-study-theme=dark] body #calculator .calc-keys button[data-key="="]{background:#0e8159;color:#f0f7fc;border-color:#2d765d}
-html[data-study-theme=dark] body #calculator .calc-help{color:#adbdc9}
+html[data-study-theme=dark] body #calculator{border:1px solid #3b4a54;box-shadow:0 8px 30px #0103042e}
+html[data-study-theme=dark] body #calculator .calculator-float-head,html[data-study-theme=dark] body #calculator .calc-head{color:#f0f7fc}
+html[data-study-theme=dark] body #calculator .calculator-float-head button,html[data-study-theme=dark] body #calculator .calc-head button{color:#f0f7fc}
+html[data-study-theme=dark] body #calculator .calculator-float-head button:hover,html[data-study-theme=dark] body #calculator .calc-head button:hover{background:#15212920}
+html[data-study-theme=dark] body #calculator .calc-history-list li:last-child{background:#0e815909}
+html[data-study-theme=dark] body #calculator .calc-history-remove:hover{color:#e3969f;background:#9d25300d}
+html[data-study-theme=dark] body #calculator [data-calc-output]{color:#e6949b}
+html[data-study-theme=dark] body #calculator .calc-keys button:hover,html[data-study-theme=dark] body #calculator .calc-extra-keys button:hover{background:#0e815910}
+html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="="],html[data-study-theme=dark] body #calculator .calc-keys [data-key="="]{color:#f0f7fc}
+html[data-study-theme=dark] body #calculator .calculator-float-head button:focus-visible,html[data-study-theme=dark] body #calculator .calc-head button:focus-visible{outline-color:#3b4a54}
+html[data-study-theme=dark][data-study-theme=dark] body #calculator [data-calc-output]{color:#ec8d97}
 html[data-study-theme=dark] body.cirrus-mode #toast{background:#212b38;color:#f0f7fc}
 html[data-study-theme=dark] body.cirrus-mode .exam-results-panel{background:#152129;border:1px solid #3b4a54}
 html[data-study-theme=dark] body.cirrus-mode .result-summary .small{color:#adbdc9}

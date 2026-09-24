@@ -91,7 +91,7 @@
 .mc-question-help summary{cursor:pointer;display:flex;align-items:center;gap:10px;padding:13px;list-style:none;font-weight:600}
 .mc-question-help summary::-webkit-details-marker{display:none}
 .mc-question-help summary::after{content:'⌄';font-size:18px;margin-left:auto;color:#656073}
-.mc-question-help details[open] summary::after{content:'⌃'}
+.mc-question-help details[open]>summary::after{content:'⌃'}
 .mc-help-icon{width:22px;height:22px;display:inline-grid;place-items:center;flex-shrink:0;color:white;background:#444159;border-radius:50%;font:bold 15px Georgia,serif}
 .mc-question-help details>div{padding:0 16px 14px}
 .mc-question-help p{font-size:13px;margin:8px 0 16px}
@@ -227,3 +227,14 @@ html:has(.mc-page){scroll-padding-top:75px;scroll-padding-bottom:145px}
 
 @media(max-width:700px){.mc-home-head,.mc-home-body{padding:12px}.mc-main-card{padding:11px}.mc-group-row h2{font-size:15px}}
 @media(max-width:540px){.mc-home{width:calc(100% - 14px);margin:8px auto}.mc-main-groups{grid-template-columns:minmax(0,1fr);gap:8px}.mc-main-card{padding:11px 12px;border-top-width:2px}.mc-group-row{padding:0;gap:8px;margin-bottom:6px;align-items:center;flex-wrap:nowrap}.mc-group-number{width:25px;height:25px}.mc-group-description{font-size:12px;min-height:0;margin-bottom:9px}.mc-group-footer{align-items:center}.mc-subtopics>summary{padding:3px 0}.mc-topic-list{margin:8px 0 0}.mc-topic-card{padding:10px 0;gap:10px}.mc-home .mc-stats{gap:6px 14px}}
+
+/* Vraaggerichte regels en afzonderlijk uitklapbare bronplaatsen. */
+.mc-question-help .mc-guidance-title{font-size:14px;line-height:1.45;margin:4px 0 10px}
+.mc-question-help .mc-guidance-focus{font-weight:600;margin:0 0 12px}
+.mc-guidance-rules{padding-left:18px;margin:0 0 14px}
+.mc-guidance-rules li+li{margin-top:9px}
+.mc-guidance-sources{border-top:1px solid #d7d6e3;margin:12px 0}
+.mc-question-help .mc-guidance-sources>summary{padding:10px 0;font-size:12px;gap:6px}
+.mc-guidance-sources ul{padding-left:16px;margin:0 0 12px;font-size:11px;overflow-wrap:anywhere}
+.mc-guidance-sources li+li{margin-top:10px}
+.mc-guidance-sources li>span{display:block;margin-top:3px}

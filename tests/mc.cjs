@@ -11,6 +11,13 @@ for(const t of D.topics){
  for(const r of t.refs)assert.ok(C.sources[r.source]&&r.page>0);
  for(const q of t.questions){assert.ok(!all.has(q.id));all.set(q.id,q);assert.equal(new Set(q.options).size,q.options.length);assert.ok(q.correct>=0&&q.correct<q.options.length);assert.ok(q.steps.length&&q.steps.every(s=>s.trim().length>0));assert.ok(q.pattern.length>35&&q.trap.length>20);}
 }
+// Alle bestaande vragen krijgen specifieke hulp met herleidbare bronplaatsen.
+for(const q of all.values()){
+ assert.ok(q.guidance&&q.guidance.focus.length>30,q.id);
+ assert.ok(q.guidance.rules.length>=2,q.id);
+ assert.ok(q.guidance.refs.length>0,q.id);
+ for(const ref of q.guidance.refs){assert.ok(C.sources[ref.source],ref.source);assert.ok(Number.isInteger(ref.page)&&ref.page>0);assert.ok(ref.locator.length>5);}
+}
 const answer=id=>{const q=all.get(id);return q.options[q.correct];};
 // Onafhankelijke controles op rekenvragen, ongeacht de antwoordletter.
 assert.equal(answer('mc-beginnen-toepassing-1'),'€ '+(4000*70).toLocaleString('nl-NL'));
@@ -51,6 +58,12 @@ for(const group of groups){
  for(const item of group.questions)assert.equal(item,all.get(item.id));
  assert.ok(ui.render(group.id,String(group.questions.length)).includes(`href="#tentamen/mc/${group.id}/resultaat"`));
 }
+for(const topic of D.topics){for(let i=0;i<topic.questions.length;i++){
+ const q=topic.questions[i],rendered=ui.render(topic.id,String(i+1));
+ assert.ok(rendered.includes(q.guidance.focus.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')),q.id);
+ assert.ok(rendered.includes('<details class="mc-guidance-sources">'),q.id+' sources default collapsed');
+ for(const r of q.guidance.refs)assert.ok(rendered.includes('source:'+r.source+':'+r.page),q.id);
+}}
 const home=ui.render(),partsStart=home.indexOf('aria-labelledby="mc-parts-title"'),subjectsStart=home.indexOf('aria-labelledby="mc-subjects-title"');
 assert.ok(partsStart>=0&&subjectsStart>partsStart,'Het overzicht biedt eerst oefenen per deel en daarna oefenen per onderwerp.');
 const parts=home.slice(partsStart,subjectsStart),subjects=home.slice(subjectsStart);

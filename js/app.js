@@ -234,65 +234,139 @@
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.body.classList.remove('menu-open');$('#menu-toggle').setAttribute('aria-expanded','false');if($('#tools-menu').open){$('#tools-menu').open=false;$('#tools-menu summary').focus();}}});
  document.addEventListener('click',e=>{if(document.body.classList.contains('menu-open')&&!e.target.closest('#sidebar,#menu-toggle')){document.body.classList.remove('menu-open');$('#menu-toggle').setAttribute('aria-expanded','false');}if(!e.target.closest('#tools-menu'))$('#tools-menu').open=false;});
  function initCalculator(){
-  const panel=$('#calculator'),opener=$('#calc-open'),input=$('#calc-expression'),result=$('#calc-result'),body=$('#calc-body'),handle=$('#calc-move'),minimize=$('#calc-minimize');
-  let position=null,drag=null,returnFocus=opener;
-  const viewport=()=>{const v=window.visualViewport;return {x:v?.offsetLeft||0,y:v?.offsetTop||0,width:v?.width||document.documentElement.clientWidth,height:v?.height||window.innerHeight};};
+function setupHistoryCalculator(panel, opener, evaluate, options) {
+  const find = selector => panel.querySelector(selector);
+  const input=find('[data-calc-input]'), output=find('[data-calc-output]'), body=find('[data-calc-body]');
+  const historyBox=find('.calc-history'), historyList=find('.calc-history-list'), handle=find('[data-calc-move]');
+  const minimize=find('[data-calc-minimize]'), resizer=find('[data-calc-resize]'), compact=find('[data-calc-compact]');
+  const fmt=value=>Number(value.toPrecision(13)).toLocaleString('nl-NL',{maximumFractionDigits:12});
+  const raw=value=>String(Number(value.toPrecision(13)));
+  let entries=[], memory=0, lastValue=0, position=null, size=null, expandedSize=null, drag=null, sizing=null, returnFocus=opener;
+  let errorShown=false, storageOK=true;
+  const viewport=()=>{const v=window.visualViewport;return {x:v?.offsetLeft||0,y:v?.offsetTop||0,w:v?.width||document.documentElement.clientWidth,h:v?.height||innerHeight};};
+  const currentValue=()=>input.value.trim()?evaluate(input.value):lastValue;
+  try {
+    const stored=localStorage.getItem(options.storageKey);
+    const saved=JSON.parse(stored||'null');
+    if(saved){
+      entries=Array.isArray(saved.entries)?saved.entries.filter(e=>e&&typeof e.id==='string'&&typeof e.expression==='string'&&e.expression.length<=180&&Number.isFinite(e.value)):[];
+      memory=Number.isFinite(saved.memory)?saved.memory:0;
+      lastValue=Number.isFinite(saved.lastValue)?saved.lastValue:0;
+      input.value=typeof saved.formula==='string'?saved.formula.slice(0,180):'';
+      if(saved.size&&Number.isFinite(saved.size.w)&&Number.isFinite(saved.size.h))size={w:saved.size.w,h:saved.size.h};
+    } else if(options.legacyKey){
+      const old=JSON.parse(sessionStorage.getItem(options.legacyKey)||'{}');
+      input.value=typeof old.formula==='string'?old.formula.slice(0,180):'';
+      memory=Number.isFinite(old.memory)?old.memory:0;
+      if(old.justResult&&input.value)lastValue=evaluate(input.value);
+    }
+  } catch (_) {storageOK=false;}
+  function save(){
+    try{localStorage.setItem(options.storageKey,JSON.stringify({version:1,entries,memory,lastValue,formula:input.value,size}));storageOK=true;}
+    catch(_){storageOK=false;}
+    find('.calc-storage-note').textContent=storageOK?'Bewaard in deze browser':'Browseropslag niet beschikbaar';
+  }
+  function clearError(){errorShown=false;output.hidden=true;output.textContent='';input.removeAttribute('aria-invalid');}
+  function showError(message){errorShown=true;output.hidden=false;output.textContent=message;input.setAttribute('aria-invalid','true');}
+  function renderHistory(toEnd=false){
+    const previous=historyBox.scrollTop;
+    historyList.replaceChildren();
+    for(const entry of entries){
+      const row=document.createElement('li');row.dataset.calcHistoryId=entry.id;
+      const reuse=document.createElement('button');reuse.type='button';reuse.className='calc-history-reuse';reuse.dataset.calcHistoryReuse='';
+      reuse.setAttribute('aria-label','Hergebruik '+entry.expression+', uitkomst '+fmt(entry.value));reuse.title=entry.expression;
+      const expression=document.createElement('span');expression.className='calc-history-expression';expression.textContent=entry.expression;
+      const result=document.createElement('span');result.className='calc-history-value';result.textContent='= '+fmt(entry.value);
+      reuse.append(expression,result);
+      reuse.onclick=()=>{input.value=entry.expression;clearError();save();input.focus({preventScroll:true});input.setSelectionRange(input.value.length,input.value.length);};
+      const remove=document.createElement('button');remove.type='button';remove.className='calc-history-remove';remove.dataset.calcHistoryRemove='';remove.textContent='×';
+      remove.setAttribute('aria-label','Verwijder berekening '+entry.expression);remove.title='Deze berekening verwijderen';
+      remove.onclick=()=>{const index=entries.findIndex(e=>e.id===entry.id);entries=entries.filter(e=>e.id!==entry.id);renderHistory();save();const next=historyList.children[Math.min(index,entries.length-1)];(next?.querySelector('.calc-history-remove')||historyBox).focus({preventScroll:true});};
+      row.append(reuse,remove);historyList.append(row);
+    }
+    find('.calc-history-count').textContent=entries.length+' '+(entries.length===1?'regel':'regels');
+    find('.calc-history-empty').hidden=entries.length>0;
+    find('.calc-history-older').textContent=entries.length>4?'↑ Scroll voor oudere regels':'Laatste berekeningen';
+    historyBox.scrollTop=toEnd?historyBox.scrollHeight:previous;
+  }
+  function paint(){
+    const memoryLabel=find('.calc-memory');memoryLabel.textContent='M: '+fmt(memory);memoryLabel.title='Geheugen: '+fmt(memory);
+    const flag=find('.calc-memory-flag');if(flag)flag.hidden=memory===0;
+  }
+  function insert(text){
+    let start=input.selectionStart??input.value.length,end=input.selectionEnd??start;
+    if(!input.value&&/^[+*/^%]$/.test(text)){input.value=raw(lastValue);start=end=input.value.length;}
+    if(input.value.length-(end-start)+text.length>180)throw Error('Berekening te lang');
+    input.setRangeText(text,start,end,'end');
+  }
+  function calculate(){
+    if(!input.value.trim())return;
+    const expression=input.value,value=evaluate(expression);
+    entries.push({id:typeof crypto.randomUUID==='function'?crypto.randomUUID():Date.now()+'-'+Math.random(),expression,value});
+    lastValue=value;input.value='';renderHistory(true);
+  }
+  function perform(key){
+    clearError();const copy=find('.calc-copy-result');if(copy)copy.textContent='';
+    try{
+      if(key==='=')calculate();
+      else if(key==='C'){input.value='';lastValue=0;}
+      else if(key==='CE')input.value=input.value.replace(/(?:\d+(?:[.,]\d*)?|[.,]\d+)(?:[eE][+-]?\d+)?%?$/,'');
+      else if(key==='back'||key==='⌫'){let start=input.selectionStart??input.value.length,end=input.selectionEnd??start;if(start===end)start=Math.max(0,start-1);input.setRangeText('',start,end,'end');}
+      else if(key==='MC')memory=0;
+      else if(key==='MR')insert(memory<0?'('+raw(memory)+')':raw(memory));
+      else if(key==='MS')memory=currentValue();
+      else if(key==='M+'||key==='M-'){const next=memory+(key==='M+'?1:-1)*currentValue();if(!Number.isFinite(next))throw Error('Geheugen buiten bereik');memory=next;}
+      else if(['sqrt','square','reciprocal','sign'].includes(key)){
+        let value=currentValue();if(key==='sqrt'){if(value<0)throw Error('Geen reële wortel');value=Math.sqrt(value);}else if(key==='square')value*=value;else if(key==='reciprocal'){if(value===0)throw Error('Delen door nul');value=1/value;}else value=-value;
+        if(!Number.isFinite(value))throw Error('Ongeldige berekening');input.value=raw(value);lastValue=value;
+      }else if(/^(?:[0-9.,()+\-*/%^]|sqrt\(|ln\(|exp\()$/.test(key))insert(key);
+    }catch(error){showError(error.message);}
+    paint();save();
+  }
+  function applySize(){
+    const v=viewport();panel.style.maxWidth=Math.max(1,v.w-16)+'px';panel.style.maxHeight=Math.max(44,v.h-16)+'px';
+    if(size){panel.style.width=Math.min(Math.max(280,size.w),Math.max(1,v.w-16))+'px';panel.style.height=body.hidden?'auto':Math.min(Math.max(580,size.h),Math.max(44,v.h-16))+'px';}
+    else{panel.style.width='';panel.style.height='';}
+  }
   function place(next=position){
-   if(panel.hidden)return;
-   const v=viewport(),gap=8;
-   panel.style.setProperty('--calc-max-height',Math.max(48,v.height-gap*2)+'px');
-   panel.style.setProperty('--calc-max-width',Math.max(1,v.width-gap*2)+'px');
-   const rect=panel.getBoundingClientRect(),maxX=Math.max(v.x+gap,v.x+v.width-rect.width-gap),maxY=Math.max(v.y+gap,v.y+v.height-rect.height-gap);
-   if(!next)next={x:maxX,y:v.width<=600?maxY:v.y+104};
-   position={x:Math.max(v.x+gap,Math.min(maxX,next.x)),y:Math.max(v.y+gap,Math.min(maxY,next.y))};
-   panel.style.left=position.x+'px';panel.style.top=position.y+'px';
+    if(panel.hidden)return;
+    applySize();const v=viewport(),r=panel.getBoundingClientRect();
+    const maxX=Math.max(v.x+8,v.x+v.w-r.width-8),maxY=Math.max(v.y+8,v.y+v.h-r.height-8);
+    if(!next){const header=document.querySelector('.topbar,.reader-topbar,.study-header');next={x:maxX,y:Math.max(v.y+8,header?header.getBoundingClientRect().bottom+12:v.y+104)};}
+    position={x:Math.max(v.x+8,Math.min(maxX,next.x)),y:Math.max(v.y+8,Math.min(maxY,next.y))};
+    panel.style.left=position.x+'px';panel.style.top=position.y+'px';panel.style.right='auto';panel.style.bottom='auto';
   }
-  function collapse(collapsed){
-   body.hidden=collapsed;minimize.setAttribute('aria-expanded',String(!collapsed));
-   minimize.setAttribute('aria-label',collapsed?'Rekenmachine uitklappen':'Rekenmachine inklappen');minimize.title=collapsed?'Uitklappen':'Inklappen';minimize.textContent=collapsed?'+':'−';
-   place();
-  }
-  function close(){
-   const hadFocus=panel.contains(document.activeElement);
-   if(drag&&handle.hasPointerCapture(drag.id))handle.releasePointerCapture(drag.id);
-   panel.hidden=true;opener.setAttribute('aria-expanded','false');drag=null;panel.classList.remove('is-dragging');
-   if(hadFocus)(returnFocus?.isConnected?returnFocus:opener).focus({preventScroll:true});
-  }
-  opener.onclick=()=>{
-   if(!panel.contains(document.activeElement))returnFocus=document.activeElement;
-   panel.hidden=false;opener.setAttribute('aria-expanded','true');collapse(false);place();input.focus({preventScroll:true});
-  };
-  $('#calc-close').onclick=close;
-  minimize.onclick=()=>collapse(!body.hidden);
-  panel.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();close();}});
-  // Keyboard input outside this region always belongs to the question or page.
-  document.addEventListener('focusin',e=>{if(!panel.hidden&&!panel.contains(e.target))returnFocus=e.target;});
-  handle.addEventListener('pointerdown',e=>{
-   if(!e.isPrimary||e.button!==0)return;
-   const rect=panel.getBoundingClientRect();drag={id:e.pointerId,x:e.clientX-rect.left,y:e.clientY-rect.top};
-   handle.setPointerCapture(e.pointerId);panel.classList.add('is-dragging');
+  function expand(value){panel.classList.toggle('calc-collapsed',!value);body.hidden=!value;find('.calc-window-footer').hidden=!value;minimize.textContent=value?'−':'+';minimize.setAttribute('aria-expanded',String(value));minimize.setAttribute('aria-label',value?'Rekenmachine inklappen':'Rekenmachine uitklappen');place();}
+  function open(from=opener){returnFocus=from;panel.hidden=false;expand(true);opener.setAttribute('aria-expanded','true');place();renderHistory(true);if(window.matchMedia('(pointer: fine)').matches)input.focus({preventScroll:true});else panel.focus({preventScroll:true});}
+  function close(){const hadFocus=panel.contains(document.activeElement);if(drag&&handle.hasPointerCapture(drag.id))handle.releasePointerCapture(drag.id);if(sizing&&resizer.hasPointerCapture(sizing.id))resizer.releasePointerCapture(sizing.id);drag=null;sizing=null;panel.hidden=true;opener.setAttribute('aria-expanded','false');save();if(hadFocus)(returnFocus?.isConnected?returnFocus:opener).focus({preventScroll:true});}
+  find('[data-calc-close]').onclick=close;minimize.onclick=()=>expand(body.hidden);
+  compact.onclick=()=>{if(!expandedSize){const r=panel.getBoundingClientRect();expandedSize={w:r.width,h:r.height};size={w:280,h:680};compact.setAttribute('aria-label','Rekenmachine normale grootte');compact.title='Normale grootte';}else{size=expandedSize;expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';}expand(true);place();save();};
+  panel.querySelectorAll('[data-calc-key],[data-key]').forEach(button=>{button.addEventListener('pointerdown',e=>{if(e.button===0)e.preventDefault();});button.onclick=()=>perform(button.dataset.calcKey??button.dataset.key);});
+  input.oninput=()=>{clearError();save();};
+  panel.addEventListener('keydown',event=>{
+    if(event.key==='Escape'){event.preventDefault();event.stopPropagation();close();return;}
+    if(event.ctrlKey||event.metaKey||event.altKey||event.target.closest('[data-calc-move],[data-calc-resize],.calc-history'))return;
+    if(event.target===input){if(event.key==='Enter'||event.key==='='){event.preventDefault();perform('=');}return;}
+    if(event.key==='Enter'&&event.target.tagName==='BUTTON')return;
+    if(event.key==='Enter'||event.key==='='){event.preventDefault();perform('=');}else if(event.key==='Backspace'){event.preventDefault();perform('back');}else if(event.key==='Delete'){event.preventDefault();perform('C');}else if(/^[0-9()+\-*/%^,.]$/.test(event.key)){event.preventDefault();perform(event.key);}
   });
-  handle.addEventListener('pointermove',e=>{if(drag?.id===e.pointerId)place({x:e.clientX-drag.x,y:e.clientY-drag.y});});
-  const endDrag=e=>{if(drag?.id!==e.pointerId)return;drag=null;panel.classList.remove('is-dragging');if(handle.hasPointerCapture(e.pointerId))handle.releasePointerCapture(e.pointerId);};
-  handle.addEventListener('pointerup',endDrag);handle.addEventListener('pointercancel',endDrag);handle.addEventListener('lostpointercapture',endDrag);
-  handle.addEventListener('keydown',e=>{
-   const steps={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]},step=steps[e.key];
-   if(e.key==='Home'){e.preventDefault();place(null);}else if(step){e.preventDefault();const distance=e.shiftKey?40:10;place({x:position.x+step[0]*distance,y:position.y+step[1]*distance});}
-  });
-  window.addEventListener('resize',()=>place());window.visualViewport?.addEventListener('resize',()=>place());window.visualViewport?.addEventListener('scroll',()=>place());
-  if(window.ResizeObserver)new window.ResizeObserver(()=>place()).observe(panel);
-  const keys=['7','8','9','/','4','5','6','*','1','2','3','-','0','.','(',')','sqrt(','ln(','exp(','^','C','⌫','=','+'];
-  $('#calc-keys').innerHTML=keys.map(k=>`<button type="button" data-key="${esc(k)}"${k==='C'?' aria-label="Berekening wissen"':k==='⌫'?' aria-label="Laatste teken wissen"':''}>${esc(k==='sqrt('?'√':k==='ln('?'ln':k==='exp('?'exp':k)}</button>`).join('');
-  const calculate=()=>{try{result.textContent=window.SRAMath.calc(input.value).toLocaleString('nl-NL',{maximumSignificantDigits:12});}catch(error){result.textContent=error.message;}};
-  $('#calc-keys').onclick=e=>{
-   const k=e.target.closest('[data-key]')?.dataset.key;if(!k)return;
-   const start=input.selectionStart??input.value.length,end=input.selectionEnd??start;
-   if(k==='C'){input.value='';result.textContent='0';}else if(k==='=')calculate();else{
-    const from=k==='⌫'&&start===end?Math.max(0,start-1):start,text=k==='⌫'?'':k;
-    input.setRangeText(text,from,end,'end');
-   }
-  };
-  input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();calculate();}};
+  handle.addEventListener('pointerdown',event=>{if(event.button!==0)return;const r=panel.getBoundingClientRect();drag={id:event.pointerId,x:event.clientX-r.left,y:event.clientY-r.top};handle.setPointerCapture(event.pointerId);event.preventDefault();});
+  handle.addEventListener('pointermove',event=>{if(drag?.id===event.pointerId)place({x:event.clientX-drag.x,y:event.clientY-drag.y});});
+  const endDrag=event=>{if(drag?.id!==event.pointerId)return;drag=null;if(handle.hasPointerCapture(event.pointerId))handle.releasePointerCapture(event.pointerId);};handle.addEventListener('pointerup',endDrag);handle.addEventListener('pointercancel',endDrag);handle.addEventListener('lostpointercapture',endDrag);
+  handle.addEventListener('keydown',event=>{const delta={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[event.key];if(event.key==='Home'){event.preventDefault();position=null;place();}else if(delta){event.preventDefault();const r=panel.getBoundingClientRect();place({x:r.left+delta[0]*(event.shiftKey?4:1),y:r.top+delta[1]*(event.shiftKey?4:1)});}});
+  function resize(w,h){const v=viewport();size={w:Math.min(Math.max(280,w),Math.max(1,v.w-16)),h:Math.min(Math.max(580,h),Math.max(44,v.h-16))};expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';place();save();}
+  resizer.addEventListener('pointerdown',event=>{if(event.button!==0)return;const r=panel.getBoundingClientRect();sizing={id:event.pointerId,x:event.clientX,y:event.clientY,w:r.width,h:r.height};resizer.setPointerCapture(event.pointerId);event.preventDefault();});
+  resizer.addEventListener('pointermove',event=>{if(sizing?.id===event.pointerId)resize(sizing.w+event.clientX-sizing.x,sizing.h+event.clientY-sizing.y);});
+  const endResize=event=>{if(sizing?.id!==event.pointerId)return;sizing=null;if(resizer.hasPointerCapture(event.pointerId))resizer.releasePointerCapture(event.pointerId);};resizer.addEventListener('pointerup',endResize);resizer.addEventListener('pointercancel',endResize);resizer.addEventListener('lostpointercapture',endResize);
+  resizer.addEventListener('keydown',event=>{const delta={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[event.key];if(delta){event.preventDefault();const r=panel.getBoundingClientRect();resize(r.width+delta[0],r.height+delta[1]);}});
+  const copy=find('[data-copy-calc]');if(copy)copy.onclick=()=>{try{const value=raw(currentValue()).replace('.',',');if(navigator.clipboard?.writeText)navigator.clipboard.writeText(value).then(()=>find('.calc-copy-result').textContent='Gekopieerd',()=>find('.calc-copy-result').textContent='Uitkomst: '+value);else find('.calc-copy-result').textContent='Uitkomst: '+value;}catch(error){showError(error.message);}};
+  document.addEventListener('focusin',event=>{if(!panel.hidden&&!panel.contains(event.target))returnFocus=event.target;});
+  window.addEventListener('resize',()=>place());window.visualViewport?.addEventListener('resize',()=>place());window.visualViewport?.addEventListener('scroll',()=>place());window.addEventListener('pagehide',save);
+  renderHistory();paint();save();
+  return {open,close,perform,getState:()=>({formula:input.value,memory,history:entries.map(e=>({...e})),size,lastValue,errorShown})};
+}
+
+  const panel=$('#calculator'),opener=$('#calc-open');panel.tabIndex=-1;const api=setupHistoryCalculator(panel,opener,window.SRAMath.calc,{storageKey:'sra-calculator-history-v1'});opener.onclick=()=>api.open(opener);window.SRACalculator=api;
  }
  initCalculator();
  $('.skip').onclick=e=>{e.preventDefault();$('#main').focus();};

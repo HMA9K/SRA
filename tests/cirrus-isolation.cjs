@@ -113,6 +113,6 @@ for(const sheet of sheets)assert.ok(studyStyles.some(match=>normalized(match[2])
 for(const id of ['calc-open','calculator','calc-expression','calc-result','calc-keys','history-back']){
  assert.equal([...index.matchAll(new RegExp('id="'+id+'"','g'))].length,1,id+' blijft een uniek bereikbaar element');
 }
-assert.match(read('css/cirrus-integration.css'),/#calculator\s+input\{/,'Rekenmachine heeft een invoerstijl in Cirrus');
+assert.match(read('css/cirrus-integration.css'),/#calculator\s+\[data-calc-input\]\{/,'Rekenmachine heeft een invoerstijl in Cirrus');
 assert.match(read('css/cirrus-integration.css'),/#history-back\{/,'Terugknop heeft een eigen Cirrus-adapter');
 console.log('OK: les/dashboard/welkom/toets/inzage/MC/analyse-routeisolatie, mediaherstel, afzonderlijke lettergrootte en zelfstandige HTML.');
