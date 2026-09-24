@@ -56,6 +56,9 @@ assert.ok(partsStart>=0&&subjectsStart>partsStart,'Het overzicht biedt eerst oef
 const parts=home.slice(partsStart,subjectsStart),subjects=home.slice(subjectsStart);
 assert.equal((parts.match(/class="mc-part-card"/g)||[]).length,4);assert.equal((subjects.match(/class="mc-main-card"/g)||[]).length,19);assert.equal((subjects.match(/class="mc-topic-group"/g)||[]).length,5);
 for(const group of groups.filter(g=>g.id!=='hoofd-tentamen'))assert.ok(parts.includes(`href="#tentamen/mc/${group.id}/1"`),'Elk deel start de bestaande groepsreeks.');
+assert.equal(home.split('>Resultaten</a>').length-1,23,'Vier delen en negentien onderwerpen hebben direct Resultaten.');
+assert.ok(!home.includes('>Overzicht</a>'),'Geen verhullend Overzicht-label op kaarten.');
+const allResults=ui.render('resultaten');assert.equal((allResults.match(/data-result-topic=/g)||[]).length,19);assert.ok(allResults.includes('Alle MC-resultaten'));assert.ok(!allResults.includes('class="mc-part-card"'));assert.ok(!allResults.includes('id="mc-home-direct"'));
 assert.equal((home.match(/<details class="mc-subtopics">/g)||[]).length,0,'Alle deelonderwerpen zijn direct zichtbaar.');
 assert.ok(home.indexOf('data-topic="stratificatie"')<home.indexOf('data-topic="steekproefomvang"'),'Stratificatie komt voor uitbreiding van de steekproef in hoofdstuk 8.');
 assert.ok(!home.includes('class="mc-levels"'),'Moeilijkheid wordt niet meer als drie tegels getoond.');

@@ -20,7 +20,7 @@ const server=http.createServer((req,res)=>{const pathname=decodeURIComponent(new
   // The ordinary back control remains on reference pages and restores the question.
   if(sra)await page.evaluate(()=>location.hash='#bronnen');else{await page.locator('#study-tools-menu>summary').click();await page.locator('#study-tools-menu').getByRole('link',{name:'Bronnen',exact:true}).click();}
   await back.waitFor();assert.ok(await links.isHidden());await back.click();await checkQuestion();
-  await links.getByRole('link',{name:'Home',exact:true}).click();await page.waitForURL('**'+main);assert.ok(await links.isHidden());
+  await links.getByRole('link',{name:'Home',exact:true}).click();await page.waitForURL('**'+main);await links.waitFor({state:'hidden'});assert.ok(await links.isHidden());
   const resultRoutes=sra?['#tentamen/mc/mpu/resultaat','#tentamen/mc/hoofd-basis/resultaat','#tentamen/mc/resultaten']:['#resultaat-kap','#resultaat-val','#resultaat-nvw','#resultaat-hk','#resultaten','#onderwerp-resultaat-zeggenschap','#onderwerp-overzicht-zeggenschap'];
   // Follow a link so the app captures the page being left before testing Back.
   for(const resultRoute of resultRoutes){await page.evaluate(hash=>{const a=document.createElement('a');a.href=hash;document.body.append(a);a.click();a.remove();},resultRoute);await links.getByRole('link',{name:'Onderwerpen',exact:true}).waitFor();assert.ok(await back.isVisible());assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await back.click();await page.waitForURL('**'+main);await links.waitFor({state:'hidden'});}
@@ -33,7 +33,7 @@ const server=http.createServer((req,res)=>{const pathname=decodeURIComponent(new
   await page.screenshot({path:path.join(out,`${sra?'sra':'cafa2'}-exam-${width}.png`)});
   await links.getByRole('link',{name:'Onderwerpen',exact:true}).click();await page.locator(sra?'.mc-parts':'#practice-topic-cards').waitFor();assert.ok(await back.isVisible());await page.evaluate(hash=>location.hash=hash,attemptRoute);await checkQuestion();assert.ok(await page.locator('#exam-app [contenteditable="true"]').first().innerText().then(s=>s.includes('Bewaarde proefuitwerking')));assert.equal(await page.locator('[data-exam-action="mark"]').getAttribute('aria-pressed'),'true');
   await page.locator('[data-exam-action="submit"]').click();await page.locator('[data-exam-confirm-submit]').click();await page.waitForURL('**#inzage/**');await links.getByRole('link',{name:'Onderwerpen',exact:true}).waitFor();assert.ok(await back.isVisible());assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:path.join(out,(sra?'sra':'cafa2')+'-results-'+width+'.png')});
-  await links.getByRole('link',{name:'Home',exact:true}).click();await page.waitForURL('**'+main);assert.ok(await links.isHidden());
+  await links.getByRole('link',{name:'Home',exact:true}).click();await page.waitForURL('**'+main);await links.waitFor({state:'hidden'});assert.ok(await links.isHidden());
   if(sra&&!process.env.TEST_BASE_URL){await page.goto(base+'/SRA%20interactieve%20samenvatting.html'+question);await checkQuestion();}
   assert.deepEqual(errors,[]);await context.close();
  }

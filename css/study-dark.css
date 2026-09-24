@@ -376,6 +376,9 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-trap{border-left-col
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-attempt-note,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-sources{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-sources a{color:#8deccc}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-recognition-steps strong{color:#99e1c9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-total-group>h2{border-bottom:1px solid var(--study-line,#38526b)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-total-row{border-bottom:1px solid var(--study-line,#38526b)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-total-row .mc-total-score{color:var(--study-muted,#adbdc9)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-result-list details{border:1px solid #3b4a54;background:#152129}
 /* css/cirrus.css */
 html[data-study-theme=dark] body.cirrus-mode a{color:#8dcaec}

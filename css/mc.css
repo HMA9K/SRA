@@ -157,6 +157,14 @@
 .mc-recognition-steps strong{display:block;font-size:14px;color:#174e3c}
 .mc-recognition-steps p{margin:4px 0 0;overflow-wrap:anywhere}
 .mc-results{max-width:1200px;margin:auto}
+.mc-total-group{margin-top:28px}
+.mc-total-group>h2{font-size:17px;border-bottom:1px solid var(--study-line,#d9e2eb);padding-bottom:10px}
+.mc-total-list{list-style:none;margin:0;padding:0}
+.mc-total-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--study-line,#d9e2eb)}
+.mc-total-row h3{font-size:15px;margin:0 0 6px;overflow-wrap:anywhere}
+.mc-total-row p{font-size:13px;margin:3px 0;line-height:1.5}
+.mc-total-row .mc-total-score{color:var(--study-muted,#58677a);font-size:12px}
+@media(max-width:400px){.mc-total-row{grid-template-columns:minmax(0,1fr);gap:8px}.mc-total-row>.study-btn{justify-self:start}}
 .mc-results>h2{font-size:25px;letter-spacing:0}
 .mc-result-list{margin-top:24px}
 .mc-result-list details{border:1px solid #dedde0;background:white;margin-bottom:12px}
