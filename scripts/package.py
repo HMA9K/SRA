@@ -39,6 +39,8 @@ if not args.without_sources:
     build_cirrus_data.build()
 
 build_mc.build()
+import build_mc_exam_frequency
+build_mc_exam_frequency.build(check_sources=not args.without_sources)
 payload = dict(lessons=build_content.lessons, sources=build_content.sources,
                glossary=build_content.glossary, examCases=build_content.exam_cases, terms=build_content.TERMS)
 (root/'data').mkdir(exist_ok=True)
@@ -65,7 +67,7 @@ for tag, name, attributes in re.findall(r'(<link rel="stylesheet" href="([^"]+)"
     # Preserve stylesheet isolation when the portable app embeds CSS inline.
     portable=portable.replace(tag,'<style'+attributes+'>\n'+path.read_text(encoding='utf-8')+'\n</style>')
 presentation_css=(root/'css/presentation.css').read_text(encoding='utf-8')
-for name in ['data/course.js','data/exams.js','data/mc.js','js/math.js','js/lab-layout.js','js/labs.js','js/inline-help.js','js/terms.js','js/formula-help.js','js/navigation.js','js/exams.js','js/mc-state.js','js/mc.js','vendor/cafa2-cirrus/js/exam-engine.js','vendor/cafa2-cirrus/js/answer-editor.js','data/cirrus-exams.js','js/cirrus.js','js/app.js']:
+for name in ['data/course.js','data/exams.js','data/mc.js','data/mc-exam-frequency.js','js/math.js','js/lab-layout.js','js/labs.js','js/inline-help.js','js/terms.js','js/formula-help.js','js/navigation.js','js/exams.js','js/mc-state.js','js/mc.js','vendor/cafa2-cirrus/js/exam-engine.js','vendor/cafa2-cirrus/js/answer-editor.js','data/cirrus-exams.js','js/cirrus.js','js/app.js']:
     script=(root/name).read_text(encoding='utf-8').replace('</script','<\\/script')
     portable=portable.replace(f'<script defer src="{name}"></script>','')
     portable=portable.replace('</body>',f'<script>\n{script}\n</script>\n</body>')

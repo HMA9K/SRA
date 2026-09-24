@@ -51,8 +51,9 @@ for(const group of groups){
  for(const item of group.questions)assert.equal(item,all.get(item.id));
  assert.ok(ui.render(group.id,String(group.questions.length)).includes(`href="#tentamen/mc/${group.id}/resultaat"`));
 }
-const home=ui.render();assert.equal((home.match(/class="mc-main-card"/g)||[]).length,5);assert.equal((home.match(/class="mc-topic-card"/g)||[]).length,19);
-assert.equal((home.match(/<details class="mc-subtopics">/g)||[]).length,5,'Deelonderwerpen staan per hoofdonderwerp achter een uitklapbare keuze.');
+const home=ui.render();assert.equal((home.match(/class="mc-main-card"/g)||[]).length,19);assert.equal((home.match(/class="mc-topic-group"/g)||[]).length,5);
+assert.equal((home.match(/<details class="mc-subtopics">/g)||[]).length,0,'Alle deelonderwerpen zijn direct zichtbaar.');
+assert.ok(home.indexOf('data-topic="stratificatie"')<home.indexOf('data-topic="steekproefomvang"'),'Stratificatie komt voor uitbreiding van de steekproef in hoofdstuk 8.');
 assert.ok(!home.includes('class="mc-levels"'),'Moeilijkheid wordt niet meer als drie tegels getoond.');
 const regression=groups.find(g=>g.id==='hoofd-regressie'),anova=D.topics.find(t=>t.id==='anova'),aq=anova.questions[0],groupNumber=regression.questions.indexOf(aq)+1,aqWrong=(aq.correct+1)%aq.options.length;
 let html=ui.render(regression.id,String(groupNumber));assert.ok(html.includes('href="#les/anova"'));assert.ok(html.includes('<h2 class="mc-question-title">ANOVA en verklaarde variatie</h2>'));assert.ok(!html.includes('Patroonherkenning'));

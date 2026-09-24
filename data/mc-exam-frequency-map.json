@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "reviewed": "2026-09-24",
+  "method": "Expliciete vragen of deelvragen per inhoudelijk verschillend tentamen; een onderwerp telt per tentamen eenmaal. De verwijzingen zijn voorbeelden die het voorkomen aantonen, geen uitputtende opsomming van alle deelvragen. Onderwerpen kunnen overlappen. Dit is geen voorspelling van een volgend tentamen.",
+  "topics": {
+    "beginnen": {"note": "Basisbegrippen worden binnen andere opgaven gebruikt en zijn niet afzonderlijk geïnventariseerd."},
+    "rekenen": {"note": "Gemiddelde en spreiding worden binnen andere opgaven gebruikt en zijn niet afzonderlijk geïnventariseerd."},
+    "onzekerheid": {"note": "De algemene basis over kans, betrouwbaarheid en tabellen is niet afzonderlijk geïnventariseerd. Intervalvragen zijn bij de betreffende schatter of regressie opgenomen."},
+    "mpu": {
+      "scope": "Toepassing van de directe schatter, ook binnen strata, of een expliciete vergelijking met een andere schatter.",
+      "manual": {
+        "20200323": {"questions": [11], "reason": "Ondergrens uit gestratificeerde werkelijke waarden: directe schatter per stratum."},
+        "20211101": {"questions": [1, 2], "reason": "Voorraad Groningen zonder boekadministratie: interval op basis van werkelijke waarden en uitbreiding van de steekproef."},
+        "20220316": {"questions": [1, 2, 3, 6, 8], "reason": "Directe schatter, vergelijking met verschil en gestratificeerd totaal."},
+        "20221031": {"questions": [4, 5, 6], "reason": "Expliciet mean-per-unit, daarna directe schatting binnen twee strata."},
+        "20230315": {"questions": [5], "reason": "Gestratificeerd interval uit gemiddelden van werkelijke waarden."},
+        "20231030": {"questions": [2, 7], "reason": "Directe ondergrens en expliciet MPU per stratum in vraag 7."},
+        "20240318": {"questions": [1, 2, 6, 7], "reason": "Directe schatter, vergelijking met ratio en directe schatting binnen strata."},
+        "20241028": {"questions": [3, 5, 6], "reason": "Expliciete vergelijking met directe schatter en toepassing binnen strata."},
+        "20250317": {"questions": [5, 6], "reason": "Vraag 5 benoemt expliciet de MPU-schatter; vraag 6 vormt het bijbehorende interval."}
+      }
+    },
+    "verschil": {
+      "scope": "Toepassing, toepassingsvoorwaarden of expliciete vergelijking van de verschilschatter, ook binnen strata.",
+      "manual": {
+        "20200323": {"questions": [1, 2, 3, 4, 5, 7], "reason": "Toepassingsvoorwaarde, foutschatting, grens en vergelijking met de quotiëntschatter."},
+        "20211101": {"questions": [6, 7], "reason": "Probed BV gebruikt volgens de casus de verschilschatter binnen strata."},
+        "20220316": {"questions": [4, 5, 6], "reason": "Toepassingsvoorwaarde, bovengrens en vergelijking met de directe schatter."},
+        "20221031": {"questions": [1], "reason": "Expliciete vergelijking: waarom is de quotiëntschatter hier geschikter dan de verschilschatter?"},
+        "20231030": {"questions": [3, 4, 5], "reason": "Standaardafwijking van de verschillen, ondergrens en uitbreiding op basis van de verschilschatter."},
+        "20250317": {"questions": [1, 2, 3], "reason": "Voorkeur, toepassingsvoorwaarde en schattingsinterval met de verschilschatter."}
+      }
+    },
+    "quotient": {
+      "scope": "Toepassing, toepassingsvoorwaarden of expliciete vergelijking van de quotiëntschatter.",
+      "manual": {
+        "20200323": {"questions": [4, 5, 6, 7], "reason": "Vergelijking van schatters, goedratio en ondergrens met quotiëntschatter."},
+        "20211101": {"questions": [3, 4], "reason": "Filiaal Zwolle: ondergrens met quotiëntschatter en voorwaarde voor kleinere steekproef."},
+        "20221031": {"questions": [1, 2], "reason": "Voorkeur voor quotiëntschatter en bovengrens van werkelijke inkomens."},
+        "20240318": {"questions": [2, 3], "reason": "Nauwkeurigheid van de quotiëntschatter en ondergrens met dezelfde methode."}
+      }
+    },
+    "regressieschatter": {
+      "scope": "De regressieschatter voor een populatietotaal met boekwaarden als hulpinformatie.",
+      "manual": {
+        "20230315": {"questions": [1, 2], "reason": "Elkeukapp BV kiest expliciet de regressieschatter; interval en conclusie."},
+        "20241028": {"questions": [1, 2, 3], "reason": "Witgoedelectro BV kiest expliciet de regressieschatter; interval, omvang en vergelijking."}
+      }
+    },
+    "steekproefomvang": {"sourceThemes": ["Benodigde steekproefomvang"], "scope": "Berekening van de benodigde totale steekproefomvang of uitbreiding."},
+    "stratificatie": {"sourceThemes": ["Stratificatie"], "scope": "Stratificatie, allocatie of een gestratificeerde schatting."},
+    "regressielijn": {"note": "De basis van regressielijnen wordt binnen andere regressievragen gebruikt en is niet afzonderlijk geïnventariseerd."},
+    "anova": {"sourceThemes": ["Verklaarde variatie / modelvergelijking"], "scope": "Verklaarde variatie, ANOVA of vergelijking van modelkwaliteit."},
+    "toetsen": {"sourceThemes": ["Hypothesen / significantie"], "scope": "Expliciete hypothesen of significantietoetsing."},
+    "diagnostiek": {"sourceThemes": ["Uitschieters / invloed", "Normaliteit", "Heteroscedasticiteit"], "scope": "Ten minste één van: uitschieters, invloed, normaliteit of heteroscedasticiteit."},
+    "voorspellen": {"sourceThemes": ["Voorspellingsinterval regressie"], "scope": "Deze telling betreft uitsluitend regressie-intervallen. Losse puntvoorspellingen zijn niet afzonderlijk geïnventariseerd."},
+    "meervoudig": {
+      "scope": "Expliciete vragen over een meervoudig regressiemodel, waaronder coëfficiënten, dummyvariabelen, voorspellingen en modelvergelijking.",
+      "manual": {
+        "20200323": {"questions": [24, 28], "reason": "Transformatie bij meervoudige regressie en significantie van variabelen in het uiteindelijke model."},
+        "20211101": {"questions": [16, 18], "reason": "Vergelijking met meervoudige regressie en multicollineariteit in dit model."},
+        "20220316": {"questions": [21, 23], "reason": "Dummycoëfficiënt voor geslacht en voorspellingen met het meervoudige model."},
+        "20221031": {"questions": [10, 13], "reason": "Significantie en adjusted R² bij het model met meerdere tabletkenmerken; prijsverschil op basis van het model."},
+        "20230315": {"questions": [17, 19], "reason": "Toevoegen van meerdere variabelen en vergelijking met het model met alle variabelen."},
+        "20231030": {"questions": [17, 18, 21], "reason": "Meervoudige modellen vergelijken en voorspellen voor een vrouw met gegeven leeftijd en bloeddruk."},
+        "20240318": {"questions": [22, 23, 24], "reason": "Meervoudige puntvoorspelling, vergelijking met enkelvoudig model en dummycoëfficiënt voor geslacht."},
+        "20241028": {"questions": [16, 17, 18], "reason": "Meervoudig model met dummy geslacht vergelijken, toetsen en controleren."},
+        "20250317": {"questions": [19, 20], "reason": "Verschil tussen opleidingsdummy’s en puntvoorspelling met het meervoudige salarismodel."}
+      }
+    },
+    "transformaties": {"sourceThemes": ["Niet-lineaire modellen"], "scope": "Niet-lineaire modellen beoordelen of transformaties gebruiken."},
+    "modelbouw": {"sourceThemes": ["Multicollineariteit", "Variabelenselectie"], "scope": "Multicollineariteit of selectie van verklarende variabelen."},
+    "validatie": {"note": "Validatie en het lezen van SPSS-uitvoer vormen geen afzonderlijke categorie in de bestaande tentameninventarisatie."},
+    "tentamen": {"note": "Dit is een oefenroute voor de antwoordaanpak en geen afzonderlijk geteld tentamenonderwerp."}
+  }
+}
