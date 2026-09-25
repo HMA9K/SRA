@@ -25,6 +25,16 @@ body.cirrus-mode.exam-running .exam-case-layout>.exam-question-body{min-width:0;
 body.cirrus-mode .exam-case-panel{position:sticky;top:var(--exam-case-top);max-height:var(--case-available-height,calc(100dvh - 370px));min-width:0;padding:18px 20px;overflow:auto;overscroll-behavior:contain;background:var(--study-surface);color:var(--study-ink);border:1px solid var(--study-line)}
 body.cirrus-mode .exam-case-panel>h2{font-size:16px;line-height:1.4;margin:0 0 16px;color:inherit}
 body.cirrus-mode .exam-case-panel>.exam-source-document{max-width:none;margin:0;padding:0;line-height:1.5;background:transparent;color:inherit}
+body.cirrus-mode .exam-case-panel .exam-source-document p{margin:0 0 13px}
+body.cirrus-mode .exam-case-panel .exam-source-document h3{margin:20px 0 9px;font-size:16px}
+body.cirrus-mode .exam-case-panel .exam-source-document h4{margin:17px 0 6px;font-size:14px}
+body.cirrus-mode .exam-case-panel .exam-source-document table{display:table;width:max-content;min-width:100%;border-collapse:collapse;font-size:13px;line-height:1.35}
+body.cirrus-mode .exam-case-panel .exam-source-document table th,body.cirrus-mode .exam-case-panel .exam-source-document table td{padding:7px 9px;border:1px solid var(--study-line);text-align:left;vertical-align:top}
+body.cirrus-mode .exam-case-panel .exam-source-document table th{background:var(--study-wash);font-weight:700}
+body.cirrus-mode .exam-case-panel .exam-source-document table{margin:10px 0 18px}
+body.cirrus-mode .sra-case-table-scroll{max-width:100%;overflow-x:auto}
+body.cirrus-mode .sra-case-figure{margin:14px 0 22px;padding:10px;background:var(--study-surface);border:1px solid var(--study-line)}
+body.cirrus-mode .sra-case-figure .sra-cirrus-source{margin:0}
 body.cirrus-mode .exam-case-panel .sra-cirrus-source{margin:0 0 18px}
 body.cirrus-mode .exam-case-resizer{align-self:stretch;position:relative;cursor:col-resize;touch-action:none;min-height:120px;background:var(--study-wash);border-inline:1px solid var(--study-line)}
 body.cirrus-mode .exam-case-resizer::after{content:'';position:sticky;display:block;top:calc(var(--exam-case-top) + 100px);width:4px;height:48px;margin:100px auto 0;border-radius:4px;background:var(--study-muted)}

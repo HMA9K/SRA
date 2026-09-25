@@ -70,7 +70,8 @@ def build():
     from answer_audit import attach
     attach(exams)
     payload = dict(exams=exams, frequencies=frequencies)
-    (ROOT / 'data/exams.js').write_text('/* Gemaakt met Codex. Gegenereerd uit de originele SRA-bestanden. */\nwindow.SRAExamData = ' + json.dumps(payload, ensure_ascii=False) + ';\n', encoding='utf8')
+    with (ROOT / 'data/exams.js').open('w', encoding='utf8', newline='\n') as target:
+        target.write('/* Gemaakt met Codex. Gegenereerd uit de originele SRA-bestanden. */\nwindow.SRAExamData = ' + json.dumps(payload, ensure_ascii=False) + ';\n')
     print(f'{len(exams)} tentamens, {sum(len(e["questions"]) for e in exams)} vraagnummers; originele bronpagina’s en antwoordmodellen gereed.')
 
 

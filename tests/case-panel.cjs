@@ -14,6 +14,7 @@ function fixture(stored){
    addEventListener(k,f){handlers[k]=f;},focus(){},setPointerCapture:id=>captures.add(id),hasPointerCapture:id=>captures.has(id),releasePointerCapture:id=>captures.delete(id),
    emit(k,data={}){handlers[k]({button:0,pointerId:1,preventDefault(){},...data});},
    querySelector(selector){return node.children.find(n=>selector==='.exam-case-resizer'&&n.className==='exam-case-resizer')||null;},
+   querySelectorAll(){return [];},
    getBoundingClientRect(){return {left:100,right:1100,width:1000};}};
   nodes.push(node);return node;
  }
@@ -50,8 +51,15 @@ for(const exam of data.window.SRA_CIRRUS_EXAMS)for(const section of exam.section
  assert.doesNotMatch(section.caseHtml,/antwoord-|uitwerking|sectie-/,'Alleen losse casusuitsneden');
  assert.doesNotMatch(section.caseText,/^Vraag\s+\d+\s*[.:]?\s*\(\d+\s*punt/im,'Geen vraagtekst in de casus');
  assert.doesNotMatch(section.caseText,/Nyenrode|\bNBU\b|Business University/i,'Geen bronlogo of colofon');
+ assert.doesNotMatch(section.caseHtml,/src="bronnen\/tentamens\/\d{8}\/casus-/,'Geen paginabrede bronuitsneden in de casus');
+ assert.doesNotMatch(section.caseHtml,/�|bOentdroaunwksb|GZweozilelen|WDea ta icsc/,'Geen bekende PDF-extractiefouten');
  for(const match of section.caseHtml.matchAll(/src="([^"]+)"/g))assert.ok(fs.existsSync(path.join(root,match[1])),match[1]);
 }
+const june=data.window.SRA_CIRRUS_EXAMS.find(exam=>exam.id==='20200626');
+assert.equal((june.sections[0].caseHtml.match(/<table>/g)||[]).length,2);
+assert.match(june.sections[0].caseHtml,/<td>€ 178\.158\.000<\/td>/);
+assert.match(june.sections[0].caseHtml,/s<sub>q<\/sub>/);
+assert.equal((june.sections[1].caseHtml.match(/<figure/g)||[]).length,11);
 assert.doesNotMatch(source,/exam-question-context/);
 assert.match(read('scripts/integrate_cirrus.py'),/adapt_case_panel/);
 assert.match(read('css/cirrus-integration.css'),/grid-template-columns:minmax\(0,var\(--exam-case-width,33\.333333%\)\) 14px minmax\(0,1fr\)/,'De linker kolom gebruikt de casusbreedte');

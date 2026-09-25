@@ -34,7 +34,8 @@
     source.content.querySelectorAll('img').forEach(function(img){
       var src=img.getAttribute('src')||'', marker='SRA-SOURCE-IMAGE-'+images.length;
       if(/^bronnen\/tentamens\/\d{8}\/[a-z0-9-]+\.jpg$/.test(src)){
-        images.push('<a class="sra-source-enlarge" href="'+src+'" target="_blank" rel="noopener" aria-label="'+esc(img.alt)+' vergroten"><img class="sra-cirrus-source" loading="lazy" src="'+src+'" alt="'+esc(img.alt)+'"></a>');
+        var figure='<a class="sra-source-enlarge" href="'+src+'" target="_blank" rel="noopener" aria-label="'+esc(img.alt)+' vergroten"><img class="sra-cirrus-source" loading="lazy" src="'+src+'" alt="'+esc(img.alt)+'"></a>';
+        images.push(kind==='case'?'<figure class="sra-case-figure">'+figure+'</figure>':figure);
         img.replaceWith(document.createTextNode(marker));
       }else img.remove();
     });
@@ -190,6 +191,7 @@
     var panel=document.createElement('aside');panel.id='exam-case-panel';panel.className='exam-case-panel';panel.setAttribute('aria-labelledby','exam-case-heading');
     panel.dataset.caseKey=attempt.id+':'+section.id;
     panel.innerHTML='<h2 id="exam-case-heading">Casus · '+esc(section.title)+'</h2>'+documentHtml(attempt.exam,'case',section.caseHtml);
+    panel.querySelectorAll('table').forEach(function(table){var wrap=document.createElement('div');wrap.className='sra-case-table-scroll';table.before(wrap);wrap.append(table);});
     layout.appendChild(panel);layout.appendChild(handle);layout.appendChild(body);
     panel.scrollTop=caseScrollPositions[panel.dataset.caseKey]||0;
     handle.addEventListener('pointerdown',function(e){if(e.button!==0)return;e.preventDefault();handle.focus({preventScroll:true});handle.setPointerCapture(e.pointerId);handle.dataset.dragging='true';layout.classList.add('is-resizing');});
