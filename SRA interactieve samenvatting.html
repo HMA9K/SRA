@@ -743,6 +743,7 @@ body.study-shell .study-nav .sra-tools-panel a:hover{background:#edf7f4}
 .sra-learning-item:hover{background:#f1f8f5}
 .sra-learning-no{font-size:.8rem;color:var(--study-muted);font-variant-numeric:tabular-nums}
 .sra-learning-status{font-size:.76rem;color:var(--study-muted)}
+.sra-learning-status.is-read{color:var(--study-green-dark);font-weight:700}
 .sra-learning-name{min-width:0;line-height:1.5}
 .sra-practice-phase>header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px}
 .sra-practice-phase>header .study-btn{flex-shrink:0}
@@ -3003,6 +3004,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-choice-action{borde
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-phase,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase{background:#152129}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-phase-no{color:#f0f7fc}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-item:hover{background:#192922}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-status.is-read{color:var(--study-accent)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase>details>summary{color:var(--study-ink)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase li a:hover{background:#192922}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-heading h2{color:#adbdc9}
@@ -31556,7 +31558,7 @@ window.SRA_CIRRUS_EXAMS = [{"id": "20200323", "title": "SRA", "date": "2020-03-2
  }
  function renderLearning(){
   const next=LESSONS.find(l=>!state.read.includes(l.id))||LESSONS[0];
-  $('#main').innerHTML=`${pageHead('Leren')}<div class="sra-course-overview">${breadcrumb('Leren')}<header class="sra-mode-intro"><div><h2>De leerroute vanaf nul</h2><p>Volg de lessen van boven naar beneden. Elke les verbindt de uitleg met een voorbeeld, zelf onderzoeken en korte begripchecks.</p></div><a class="study-btn primary" href="#les/${next.id}">${state.read.length?'Verder leren':'Begin bij les 1'}</a></header><div class="sra-learning-phases">${phases.map((phase,i)=>{const lessons=LESSONS.filter(l=>l.phase===phase);return `<section class="sra-learning-phase"><header><span class="sra-phase-no">${i+1}</span><div><h2>${esc(phase)}</h2><p>${lessons.length} lessen</p></div></header><ol>${lessons.map(l=>`<li><a href="#les/${l.id}" class="sra-learning-item"><span class="sra-learning-no">${LESSONS.indexOf(l)+1}</span><span class="sra-learning-name">${esc(l.title)}</span><span class="sra-learning-status">${state.read.includes(l.id)?'Gelezen':'Nog te lezen'}</span><span aria-hidden="true">→</span></a></li>`).join('')}</ol></section>`;}).join('')}</div><p class="footer-note">Je kunt ook rechtstreeks een onderwerp kiezen. Wil je alleen vragen beantwoorden? Ga naar <a href="#oefenen">Oefenvragen maken</a>.</p></div>`;
+  $('#main').innerHTML=`${pageHead('Leren')}<div class="sra-course-overview">${breadcrumb('Leren')}<header class="sra-mode-intro"><div><h2>De leerroute vanaf nul</h2><p>Volg de lessen van boven naar beneden. Elke les verbindt de uitleg met een voorbeeld, zelf onderzoeken en korte begripchecks.</p></div><a class="study-btn primary" href="#les/${next.id}">${state.read.length?'Verder leren':'Begin bij les 1'}</a></header><div class="sra-learning-phases">${phases.map((phase,i)=>{const lessons=LESSONS.filter(l=>l.phase===phase);return `<section class="sra-learning-phase"><header><span class="sra-phase-no">${i+1}</span><div><h2>${esc(phase)}</h2><p>${lessons.length} lessen</p></div></header><ol>${lessons.map(l=>`<li><a href="#les/${l.id}" class="sra-learning-item"><span class="sra-learning-no">${LESSONS.indexOf(l)+1}</span><span class="sra-learning-name">${esc(l.title)}</span><span class="sra-learning-status${state.read.includes(l.id)?' is-read':''}">${state.read.includes(l.id)?'Gelezen':'Nog te lezen'}</span><span aria-hidden="true">→</span></a></li>`).join('')}</ol></section>`;}).join('')}</div><p class="footer-note">Je kunt ook rechtstreeks een onderwerp kiezen. Wil je alleen vragen beantwoorden? Ga naar <a href="#oefenen">Oefenvragen maken</a>.</p></div>`;
  }
  function practiceSet(scope){
   if(scope==='alles')return {scope,title:'Alle oefenvragen',items:allPracticeItems};

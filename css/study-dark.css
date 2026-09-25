@@ -151,6 +151,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-choice-action{borde
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-phase,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase{background:#152129}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-phase-no{color:#f0f7fc}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-item:hover{background:#192922}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-status.is-read{color:var(--study-accent)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase>details>summary{color:var(--study-ink)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase li a:hover{background:#192922}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-heading h2{color:#adbdc9}

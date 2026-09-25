@@ -134,6 +134,7 @@ body.study-shell .study-nav .sra-tools-panel a:hover{background:#edf7f4}
 .sra-learning-item:hover{background:#f1f8f5}
 .sra-learning-no{font-size:.8rem;color:var(--study-muted);font-variant-numeric:tabular-nums}
 .sra-learning-status{font-size:.76rem;color:var(--study-muted)}
+.sra-learning-status.is-read{color:var(--study-green-dark);font-weight:700}
 .sra-learning-name{min-width:0;line-height:1.5}
 .sra-practice-phase>header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px}
 .sra-practice-phase>header .study-btn{flex-shrink:0}
