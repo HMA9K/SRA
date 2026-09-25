@@ -39,7 +39,7 @@ def _add(id, term, aliases, definition, example, lesson, refs=None):
         'term': term,
         'aliases': aliases,
         'definition': definition,
-        'example': 'Didactisch voorbeeld (eigen): ' + example,
+        'example': example,
         'lesson': lesson,
         'refs': [dict(source=source, page=page, locator=locator)
                  for source, page, locator in (refs or _REFS[lesson])],

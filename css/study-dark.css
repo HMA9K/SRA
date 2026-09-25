@@ -117,6 +117,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .brand-
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell #sidebar{background:#152129}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .lesson-bottom{background:#152129}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .lesson-bottom .btn.primary{background:#152129;color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell #mark-read:hover{color:#f0f7fc}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-breadcrumb{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .dashboard-filter{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .dashboard-filter select{background:#152129;border:2px solid #2d5476;color:#a0bfd9}

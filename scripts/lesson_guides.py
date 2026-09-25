@@ -147,7 +147,7 @@ def _example(lesson: dict, indices: list[int] | None = None) -> dict:
 
 
 def _own_example(title: str, *steps: str) -> dict:
-    return {'title': 'Eigen rekenvoorbeeld: ' + title, 'steps': list(steps)}
+    return {'title': 'Voorbeeld: ' + title, 'steps': list(steps)}
 
 
 def _guides(lesson: dict) -> list[dict]:

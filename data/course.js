@@ -477,7 +477,7 @@ window.SRA = {
       "sections": [
         {
           "title": "SET-opfrisser: betrouwbaarheid, staarten en tabellen",
-          "html": "<p>Bij 95% tweezijdige betrouwbaarheid is α = 0,05 en ligt 0,025 in iedere staart. Bij een eenzijdige bovengrens ligt de volledige α = 0,05 in de rechterstaart. Betrouwbaarheid gaat over de dekking van de methode bij herhaalde steekproeven, niet over 95% van de losse waarnemingen.</p><p>De SET-attentiepunten gebruiken bij n/N &lt; 0,10 vaak geen eindigheidscorrectie en bij df &gt; 200 de oneindigrij. Het actuele SRA-formuleblad en de SRA-opgave zijn hier leidend: schatters bevatten de eindigheidscorrectie en regressie gebruikt eigen vrijheidsgraden. Neem een SET-vuistregel dus niet automatisch over.</p><h3>Eigen voorbeeld: alleen een bovengrens</h3><ol><li>Gegeven: gemiddelde 80, standaardfout 2, df = 24. Gevraagd: een 95%-bovengrens voor het populatiegemiddelde.</li><li>Gebruik de eenzijdige tabelwaarde t = 1,711, dus geen 0,025-staart.</li><li>Bovengrens = 80 + 1,711 × 2 = 83,422. Het eenzijdige interval is (−∞; 83,422].</li><li>Bij een eenzijdige ondergrens gebruik je 80 − 1,711 × 2 = 76,578 en [76,578; ∞). Een tweezijdig 95%-interval gebruikt een andere t-waarde.</li></ol>"
+          "html": "<p>Bij 95% tweezijdige betrouwbaarheid is α = 0,05 en ligt 0,025 in iedere staart. Bij een eenzijdige bovengrens ligt de volledige α = 0,05 in de rechterstaart. Betrouwbaarheid gaat over de dekking van de methode bij herhaalde steekproeven, niet over 95% van de losse waarnemingen.</p><p>De SET-attentiepunten gebruiken bij n/N &lt; 0,10 vaak geen eindigheidscorrectie en bij df &gt; 200 de oneindigrij. Het actuele SRA-formuleblad en de SRA-opgave zijn hier leidend: schatters bevatten de eindigheidscorrectie en regressie gebruikt eigen vrijheidsgraden. Neem een SET-vuistregel dus niet automatisch over.</p><h3>Voorbeeld: alleen een bovengrens</h3><ol><li>Gegeven: gemiddelde 80, standaardfout 2, df = 24. Gevraagd: een 95%-bovengrens voor het populatiegemiddelde.</li><li>Gebruik de eenzijdige tabelwaarde t = 1,711, dus geen 0,025-staart.</li><li>Bovengrens = 80 + 1,711 × 2 = 83,422. Het eenzijdige interval is (−∞; 83,422].</li><li>Bij een eenzijdige ondergrens gebruik je 80 − 1,711 × 2 = 76,578 en [76,578; ∞). Een tweezijdig 95%-interval gebruikt een andere t-waarde.</li></ol>"
         },
         {
           "title": "Van kans naar interval",
@@ -748,7 +748,7 @@ window.SRA = {
         }
       ],
       "example": {
-        "title": "Eigen rekenvoorbeeld: een voorraad van 1.000 artikelen",
+        "title": "Voorbeeld: een voorraad van 1.000 artikelen",
         "steps": [
           "Gegeven: N = 1.000, n = 100, w̄ = € 80, s_w = € 20. 95% tweezijdig: df = 99; gebruik tabelrij 90 en t = 1,987.",
           "Ŵ = 1.000 × 80 = € 80.000.",
@@ -967,7 +967,7 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "De directe totaalschatting met haar standaardfout",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik MPU wanneer je het populatietotaal rechtstreeks schat uit de gecontroleerde werkelijke waarden. Je hebt N, n, het steekproefgemiddelde en de spreiding van de werkelijke waarden nodig.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>N = populatieomvang; n = steekproefomvang; w̄ = gemiddelde werkelijke waarde; s_w = standaardafwijking; t = kritieke tabelwaarde. Het dakje op W betekent geschat. s_MPU is de standaardfout van het totale geschatte bedrag. Dat is niet dezelfde grootheid als s_w, de spreiding van individuele werkelijke waarden.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken w̄ en s_w uit de gecontroleerde werkelijke waarden.</li><li>Bereken het midden Ŵ_MPU = N × w̄.</li><li>Deel s_w door √n om de standaardfout van het gemiddelde te krijgen.</li><li>Vermenigvuldig met N en met √((N − n)/(N − 1)). Dit is s_MPU.</li><li>Kies de juiste t-waarde, bereken E = t × s_MPU en maak de twee intervalgrenzen.</li><li>Controleer dat de bedragen in het interval totalschattingen in euro zijn.</li></ol><h3>Eigen rekenvoorbeeld: een voorraad van 1.000 artikelen</h3><ol><li>Gegeven: N = 1.000, n = 100, w̄ = € 80, s_w = € 20. 95% tweezijdig: df = 99; gebruik tabelrij 90 en t = 1,987.</li><li>Ŵ = 1.000 × 80 = € 80.000.</li><li>Eindigheidscorrectie = √(900 / 999) ≈ 0,9492.</li><li>s_MPU = 1.000 × (20 / 10) × 0,9492 ≈ € 1.898,32.</li><li>Reken door met onafgeronde tussenwaarden: E ≈ 1,987 × 1.898,31599 = € 3.771,95. Interval ≈ [€ 76.228,05; € 83.771,95].</li></ol><p class=\"note\"><strong>Let op:</strong> Een grotere steekproef herstelt geen selectieve steekproeftrekking. Vergeet N niet bij de standaardfout van het totaal en gebruik niet de boekwaardespreiding s_b.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik MPU wanneer je het populatietotaal rechtstreeks schat uit de gecontroleerde werkelijke waarden. Je hebt N, n, het steekproefgemiddelde en de spreiding van de werkelijke waarden nodig.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>N = populatieomvang; n = steekproefomvang; w̄ = gemiddelde werkelijke waarde; s_w = standaardafwijking; t = kritieke tabelwaarde. Het dakje op W betekent geschat. s_MPU is de standaardfout van het totale geschatte bedrag. Dat is niet dezelfde grootheid als s_w, de spreiding van individuele werkelijke waarden.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken w̄ en s_w uit de gecontroleerde werkelijke waarden.</li><li>Bereken het midden Ŵ_MPU = N × w̄.</li><li>Deel s_w door √n om de standaardfout van het gemiddelde te krijgen.</li><li>Vermenigvuldig met N en met √((N − n)/(N − 1)). Dit is s_MPU.</li><li>Kies de juiste t-waarde, bereken E = t × s_MPU en maak de twee intervalgrenzen.</li><li>Controleer dat de bedragen in het interval totalschattingen in euro zijn.</li></ol><h3>Voorbeeld: een voorraad van 1.000 artikelen</h3><ol><li>Gegeven: N = 1.000, n = 100, w̄ = € 80, s_w = € 20. 95% tweezijdig: df = 99; gebruik tabelrij 90 en t = 1,987.</li><li>Ŵ = 1.000 × 80 = € 80.000.</li><li>Eindigheidscorrectie = √(900 / 999) ≈ 0,9492.</li><li>s_MPU = 1.000 × (20 / 10) × 0,9492 ≈ € 1.898,32.</li><li>Reken door met onafgeronde tussenwaarden: E ≈ 1,987 × 1.898,31599 = € 3.771,95. Interval ≈ [€ 76.228,05; € 83.771,95].</li></ol><p class=\"note\"><strong>Let op:</strong> Een grotere steekproef herstelt geen selectieve steekproeftrekking. Vergeet N niet bij de standaardfout van het totaal en gebruik niet de boekwaardespreiding s_b.</p>"
         }
       ]
     },
@@ -1218,7 +1218,7 @@ window.SRA = {
         }
       ],
       "example": {
-        "title": "Eigen voorbeeld: 95% van de boekwaarde",
+        "title": "Voorbeeld: 95% van de boekwaarde",
         "steps": [
           "Σw = € 19.000 en Σb = € 20.000: q = 0,95.",
           "Bij B = € 500.000 is Ŵ_Q = 0,95 × 500.000 = € 475.000.",
@@ -1396,7 +1396,7 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Een redelijk vaste verhouding gebruiken",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de quotiëntschatter wanneer werkelijke waarde en boekwaarde ongeveer evenredig samenhangen: bij grotere boekwaarden zijn de afwijkingen vooral procentueel vergelijkbaar. Je gebruikt de verhouding van de totale gecontroleerde waarden.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Goedratio</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Goedratio\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>q</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mo>∑</mo><mi>b</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>Q</mtext></msub><mo>=</mo><mi>q</mi><mo>×</mo><mi>B</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Resterende spreiding</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Resterende spreiding\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>q</mtext></msub><mo>=</mo><msqrt><msup><msub><mi>s</mi><mi>w</mi></msub><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mi>q</mi><msub><mi>R</mi><mi>bw</mi></msub><msub><mi>s</mi><mi>b</mi></msub><msub><mi>s</mi><mi>w</mi></msub></mrow><mo>+</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><msup><msub><mi>s</mi><mi>b</mi></msub><mn>2</mn></msup></mrow></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>Q</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mtext>q</mtext></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>q = goedratio; R_bw = correlatie tussen b en w; s_b en s_w = standaardafwijkingen; s_Q = standaardfout van het geschatte totaal. B is het boekwaardetotaal van de hele populatie. s_q is de resterende spreiding na de verhoudingcorrectie; n en N horen daarna in de standaardfout van het totaal.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken q = Σw / Σb. Controleer dat de gebruikte boekwaardesom niet nul is.</li><li>Vermenigvuldig q met B voor de geschatte totale werkelijke waarde.</li><li>Bereken de drie termen van s_q² zorgvuldig, inclusief het minteken van de middelste term.</li><li>Neem één wortel om s_q te krijgen. Vul vervolgens s_q in de standaardfoutformule in.</li><li>Als een interval gevraagd wordt: bepaal t en maak Ŵ_Q ± t × s_Q. Zonder N en n kun je uit het korte voorbeeld nog geen numerieke standaardfout van het totaal berekenen.</li></ol><h3>Eigen voorbeeld: 95% van de boekwaarde</h3><ol><li>Σw = € 19.000 en Σb = € 20.000: q = 0,95.</li><li>Bij B = € 500.000 is Ŵ_Q = 0,95 × 500.000 = € 475.000.</li><li>Stel s_w = 38, s_b = 40 en R_bw = 0,98. Dan s_q² = 38² − 2 × 0,95 × 0,98 × 40 × 38 + 0,95² × 40² = 57,76.</li><li>Dus s_q = 7,60. Vul deze spreiding samen met N en n in formule 17 in om de totale standaardfout te krijgen.</li></ol><p class=\"note\"><strong>Let op:</strong> Het gaat om Σw/Σb, niet om het ongewogen gemiddelde van de verhoudingen per post. Bij q = 0,95 is de geschatte werkelijke waarde 95% van B, niet een afwijking van 95%.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de quotiëntschatter wanneer werkelijke waarde en boekwaarde ongeveer evenredig samenhangen: bij grotere boekwaarden zijn de afwijkingen vooral procentueel vergelijkbaar. Je gebruikt de verhouding van de totale gecontroleerde waarden.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Goedratio</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Goedratio\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>q</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mo>∑</mo><mi>b</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>Q</mtext></msub><mo>=</mo><mi>q</mi><mo>×</mo><mi>B</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Resterende spreiding</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Resterende spreiding\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>q</mtext></msub><mo>=</mo><msqrt><msup><msub><mi>s</mi><mi>w</mi></msub><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mi>q</mi><msub><mi>R</mi><mi>bw</mi></msub><msub><mi>s</mi><mi>b</mi></msub><msub><mi>s</mi><mi>w</mi></msub></mrow><mo>+</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><msup><msub><mi>s</mi><mi>b</mi></msub><mn>2</mn></msup></mrow></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>Q</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mtext>q</mtext></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>q = goedratio; R_bw = correlatie tussen b en w; s_b en s_w = standaardafwijkingen; s_Q = standaardfout van het geschatte totaal. B is het boekwaardetotaal van de hele populatie. s_q is de resterende spreiding na de verhoudingcorrectie; n en N horen daarna in de standaardfout van het totaal.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken q = Σw / Σb. Controleer dat de gebruikte boekwaardesom niet nul is.</li><li>Vermenigvuldig q met B voor de geschatte totale werkelijke waarde.</li><li>Bereken de drie termen van s_q² zorgvuldig, inclusief het minteken van de middelste term.</li><li>Neem één wortel om s_q te krijgen. Vul vervolgens s_q in de standaardfoutformule in.</li><li>Als een interval gevraagd wordt: bepaal t en maak Ŵ_Q ± t × s_Q. Zonder N en n kun je uit het korte voorbeeld nog geen numerieke standaardfout van het totaal berekenen.</li></ol><h3>Voorbeeld: 95% van de boekwaarde</h3><ol><li>Σw = € 19.000 en Σb = € 20.000: q = 0,95.</li><li>Bij B = € 500.000 is Ŵ_Q = 0,95 × 500.000 = € 475.000.</li><li>Stel s_w = 38, s_b = 40 en R_bw = 0,98. Dan s_q² = 38² − 2 × 0,95 × 0,98 × 40 × 38 + 0,95² × 40² = 57,76.</li><li>Dus s_q = 7,60. Vul deze spreiding samen met N en n in formule 17 in om de totale standaardfout te krijgen.</li></ol><p class=\"note\"><strong>Let op:</strong> Het gaat om Σw/Σb, niet om het ongewogen gemiddelde van de verhoudingen per post. Bij q = 0,95 is de geschatte werkelijke waarde 95% van B, niet een afwijking van 95%.</p>"
         }
       ]
     },
@@ -1659,7 +1659,7 @@ window.SRA = {
         },
         {
           "title": "Omvang bij de quotiëntschatter",
-          "html": "<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Eigen voorbeeld bij slides PDF 34–36</h3><ol><li>N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.</li><li>γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.</li><li>n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.</li><li>Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.</li></ol>"
+          "html": "<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld bij slides PDF 34–36</h3><ol><li>N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.</li><li>γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.</li><li>n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.</li><li>Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.</li></ol>"
         },
         {
           "title": "Zelf oefenen met deze aanvulling",
@@ -1894,7 +1894,7 @@ window.SRA = {
         },
         {
           "title": "Omvang bij de quotiëntschatter",
-          "html": "<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Eigen voorbeeld bij slides PDF 34–36</h3><ol><li>N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.</li><li>γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.</li><li>n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.</li><li>Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.</li></ol>"
+          "html": "<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld bij slides PDF 34–36</h3><ol><li>N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.</li><li>γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.</li><li>n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.</li><li>Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.</li></ol>"
         }
       ],
       "completionVersion": "2026-09-20"
@@ -2250,7 +2250,7 @@ window.SRA = {
         }
       ],
       "example": {
-        "title": "Eigen voorbeeld: kosten en productie",
+        "title": "Voorbeeld: kosten en productie",
         "steps": [
           "Lijn: voorspelde kosten = 200 + 3 × productie.",
           "Bij x = 50 voorspelt de lijn 200 + 3×50 = 350.",
@@ -2508,7 +2508,7 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "De lijn berekenen, invullen en het residu lezen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik een enkelvoudige regressielijn om y te beschrijven of te voorspellen met één verklarende variabele x. De helling en constante kun je uit gegevens berekenen of uit de ongestandaardiseerde B-kolom van SPSS overnemen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Populatiemodel</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Populatiemodel\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>y</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>β</mi><mn>1</mn></msub><mi>x</mi></mrow><mo>+</mo><mi>ε</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Geschatte lijn</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Geschatte lijn\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Residu</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Residu\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mo>∑</mo><mrow><mi>x</mi><mi>y</mi></mrow><mo>−</mo><mrow><mi>n</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>y</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mrow><mrow><mrow><mrow><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><msup><msub><mi>s</mi><mi>x</mi></msub><mn>2</mn></msup></mrow></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Constante</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Constante\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>y</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>−</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>β = onbekende populatiecoëfficiënt; b = geschatte coëfficiënt; ŷ = voorspelde y; ε = storing; eᵢ = residu bij waarneming i. b₀ is de constante en b₁ de helling. x̄ en ȳ zijn de steekproefgemiddelden. s_x² is de steekproefvariantie van x. Een residu heeft dezelfde eenheid als y.</p><h3>Zo reken je stap voor stap</h3><ol><li>Leg vast wat x en y voorstellen en welke eenheden ze hebben.</li><li>Als je de lijn moet schatten: bereken b₁ met de totalen en de variantie van x; bereken daarna b₀ = ȳ − b₁x̄.</li><li>Als de coëfficiënten al gegeven zijn: schrijf ŷ = b₀ + b₁x op met de getallen uit B.</li><li>Vul de gevraagde x in om ŷ te krijgen.</li><li>Is de werkelijke y bekend? Bereken e = y − ŷ en interpreteer het teken. Een positief residu betekent dat de werkelijke y boven de voorspelling ligt.</li></ol><h3>Eigen voorbeeld: kosten en productie</h3><ol><li>Lijn: voorspelde kosten = 200 + 3 × productie.</li><li>Bij x = 50 voorspelt de lijn 200 + 3×50 = 350.</li><li>De werkelijke kosten zijn 380. Het residu is 380 − 350 = +30.</li><li>Bij één extra product stijgen de voorspelde kosten met 3 geldeenheden. De constante 200 is de voorspelling bij nul productie.</li></ol><p class=\"note\"><strong>Let op:</strong> De Beta-kolom bevat gestandaardiseerde coëfficiënten en hoort niet in de vergelijking in oorspronkelijke eenheden. Een residu y − ŷ heeft een andere betekenis dan een controleverschil b − w.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik een enkelvoudige regressielijn om y te beschrijven of te voorspellen met één verklarende variabele x. De helling en constante kun je uit gegevens berekenen of uit de ongestandaardiseerde B-kolom van SPSS overnemen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Populatiemodel</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Populatiemodel\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>y</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>β</mi><mn>1</mn></msub><mi>x</mi></mrow><mo>+</mo><mi>ε</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Geschatte lijn</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Geschatte lijn\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Residu</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Residu\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mo>∑</mo><mrow><mi>x</mi><mi>y</mi></mrow><mo>−</mo><mrow><mi>n</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>y</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mrow><mrow><mrow><mrow><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><msup><msub><mi>s</mi><mi>x</mi></msub><mn>2</mn></msup></mrow></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Constante</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Constante\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>y</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>−</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>β = onbekende populatiecoëfficiënt; b = geschatte coëfficiënt; ŷ = voorspelde y; ε = storing; eᵢ = residu bij waarneming i. b₀ is de constante en b₁ de helling. x̄ en ȳ zijn de steekproefgemiddelden. s_x² is de steekproefvariantie van x. Een residu heeft dezelfde eenheid als y.</p><h3>Zo reken je stap voor stap</h3><ol><li>Leg vast wat x en y voorstellen en welke eenheden ze hebben.</li><li>Als je de lijn moet schatten: bereken b₁ met de totalen en de variantie van x; bereken daarna b₀ = ȳ − b₁x̄.</li><li>Als de coëfficiënten al gegeven zijn: schrijf ŷ = b₀ + b₁x op met de getallen uit B.</li><li>Vul de gevraagde x in om ŷ te krijgen.</li><li>Is de werkelijke y bekend? Bereken e = y − ŷ en interpreteer het teken. Een positief residu betekent dat de werkelijke y boven de voorspelling ligt.</li></ol><h3>Voorbeeld: kosten en productie</h3><ol><li>Lijn: voorspelde kosten = 200 + 3 × productie.</li><li>Bij x = 50 voorspelt de lijn 200 + 3×50 = 350.</li><li>De werkelijke kosten zijn 380. Het residu is 380 − 350 = +30.</li><li>Bij één extra product stijgen de voorspelde kosten met 3 geldeenheden. De constante 200 is de voorspelling bij nul productie.</li></ol><p class=\"note\"><strong>Let op:</strong> De Beta-kolom bevat gestandaardiseerde coëfficiënten en hoort niet in de vergelijking in oorspronkelijke eenheden. Een residu y − ŷ heeft een andere betekenis dan een controleverschil b − w.</p>"
         },
         {
           "title": "Residuele variantie berekenen zonder ANOVA-tabel",
@@ -3066,7 +3066,7 @@ window.SRA = {
         },
         {
           "title": "Het gehele regressiemodel toetsen met F",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de globale F-toets om te onderzoeken of de verklarende variabelen gezamenlijk lineaire verklaringskracht hebben. Onder H₀ zijn alle k hellingscoëfficiënten nul.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Globale F-toets</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Globale F-toets\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mi>MSR</mi></mrow><mrow><mi>MSE</mi></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>MSR = SSR/k en MSE = SSE/(n − k − 1). De teller heeft k vrijheidsgraden en de noemer n − k − 1. De F-kritieke grens gebruikt de rechterstaart met kans α.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken MSR en MSE uit de ANOVA-tabel.</li><li>Deel MSR door MSE voor F.</li><li>Vergelijk F met de F-tabelgrens met beide vrijheidsgraden, of vergelijk de globale Sig. met α.</li><li>Concludeer bij verwerpen dat minstens één opgenomen hellingscoëfficiënt afwijkt van nul.</li></ol><h3>Eigen rekenvoorbeeld: de ANOVA-gegevens uit de bestaande les</h3><ol><li>Bij n = 30, k = 1, SSR = 1.351,262 en SSE = 44,105 is MSE = 44,105/28 ≈ 1,57518.</li><li>MSR = 1.351,262/1 = 1.351,262. Dus F ≈ 857,85.</li><li>Voor een formele conclusie hoort daarbij de gegeven α en de passende F-grens of globale p-waarde.</li></ol><p class=\"note\"><strong>Let op:</strong> Een significante globale F-toets maakt niet alle afzonderlijke coëfficiënten significant. Halveer α niet voor de rechterstaart van deze F-toets.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de globale F-toets om te onderzoeken of de verklarende variabelen gezamenlijk lineaire verklaringskracht hebben. Onder H₀ zijn alle k hellingscoëfficiënten nul.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Globale F-toets</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Globale F-toets\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mi>MSR</mi></mrow><mrow><mi>MSE</mi></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>MSR = SSR/k en MSE = SSE/(n − k − 1). De teller heeft k vrijheidsgraden en de noemer n − k − 1. De F-kritieke grens gebruikt de rechterstaart met kans α.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken MSR en MSE uit de ANOVA-tabel.</li><li>Deel MSR door MSE voor F.</li><li>Vergelijk F met de F-tabelgrens met beide vrijheidsgraden, of vergelijk de globale Sig. met α.</li><li>Concludeer bij verwerpen dat minstens één opgenomen hellingscoëfficiënt afwijkt van nul.</li></ol><h3>Voorbeeld: de ANOVA-gegevens uit de bestaande les</h3><ol><li>Bij n = 30, k = 1, SSR = 1.351,262 en SSE = 44,105 is MSE = 44,105/28 ≈ 1,57518.</li><li>MSR = 1.351,262/1 = 1.351,262. Dus F ≈ 857,85.</li><li>Voor een formele conclusie hoort daarbij de gegeven α en de passende F-grens of globale p-waarde.</li></ol><p class=\"note\"><strong>Let op:</strong> Een significante globale F-toets maakt niet alle afzonderlijke coëfficiënten significant. Halveer α niet voor de rechterstaart van deze F-toets.</p>"
         },
         {
           "title": "Toetsen en het interval voor de regressiehelling",
@@ -3108,11 +3108,11 @@ window.SRA = {
         },
         {
           "title": "Autocorrelatie corrigeren en opnieuw controleren",
-          "html": "<p>Bij eerste-orde autocorrelatie hangen opeenvolgende storingen samen. In het boek wordt de vorige storing meegenomen: ŷ_t = b₀ + b₁x_t + r₁e_(t−1). r₁ is de geschatte autocorrelatiecoëfficiënt; e_(t−1) is het residu van de vorige periode. De coëfficiënten worden bij de correctie opnieuw geschat.</p><h3>Boekmodel en eigen invulvoorbeeld</h3><ol><li>Het boek geeft na correctie: ŷ_t = 14,92 + 0,2154x_t + 0,6496e_(t−1).</li><li>Neem voor het invulvoorbeeld x_t = 20 en het vorige residu e_(t−1) = 1,5. De correctieterm is 0,6496 × 1,5 = 0,9744.</li><li>De voorspelling is 14,92 + 0,2154 × 20 + 0,9744 = 20,2024. Gebruik het vorige residu, niet het nog onbekende residu van de periode die je voorspelt.</li><li>Controleer de nieuwe residuen opnieuw. In het boek is de nieuwe Durbin-Watson d = 1,2048, net boven d_U = 1,20 en onder 4 − d_U. De toets toont op het gebruikte niveau geen autocorrelatie aan. Dat is geen bewijs dat iedere modelaanname klopt.</li></ol>"
+          "html": "<p>Bij eerste-orde autocorrelatie hangen opeenvolgende storingen samen. In het boek wordt de vorige storing meegenomen: ŷ_t = b₀ + b₁x_t + r₁e_(t−1). r₁ is de geschatte autocorrelatiecoëfficiënt; e_(t−1) is het residu van de vorige periode. De coëfficiënten worden bij de correctie opnieuw geschat.</p><h3>Boekmodel met voorbeeld</h3><ol><li>Het boek geeft na correctie: ŷ_t = 14,92 + 0,2154x_t + 0,6496e_(t−1).</li><li>Neem voor het invulvoorbeeld x_t = 20 en het vorige residu e_(t−1) = 1,5. De correctieterm is 0,6496 × 1,5 = 0,9744.</li><li>De voorspelling is 14,92 + 0,2154 × 20 + 0,9744 = 20,2024. Gebruik het vorige residu, niet het nog onbekende residu van de periode die je voorspelt.</li><li>Controleer de nieuwe residuen opnieuw. In het boek is de nieuwe Durbin-Watson d = 1,2048, net boven d_U = 1,20 en onder 4 − d_U. De toets toont op het gebruikte niveau geen autocorrelatie aan. Dat is geen bewijs dat iedere modelaanname klopt.</li></ol>"
         },
         {
           "title": "Diagnostische toetsingsgrootheden zelf berekenen",
-          "html": "<h3>Durbin-Watson uit residuen</h3><p>d = Σ(e_t − e_(t−1))² / Σe_t². De teller begint bij de tweede waarneming, want de eerste heeft geen voorganger in de reeks. De noemer bevat alle residuen. De tijdsvolgorde is essentieel.</p><p><strong>Eigen rekenvoorbeeld:</strong> voor residuen 1, 1, −1, −1 is de teller 0² + (−2)² + 0² = 4 en de noemer 1 + 1 + 1 + 1 = 4. Dus d = 1. Voor een toetsbeslissing zijn passende d_L en d_U uit de tabel nodig; dit kleine voorbeeld oefent alleen de berekening.</p><h3>ABSRES en heteroscedasticiteit</h3><p>Maak de absolute residuen |eᵢ| en bepaal hun correlatie met de verklarende variabele volgens de cursusdiagnose. Toets H₀: ρ = 0 met de correlatie-t-toets. Een significant verband is een aanwijzing dat de spreiding samenhangt met x. Controleer daarnaast het residudiagram; een niet-significante toets bewijst geen constante spreiding.</p><p><strong>Eigen voorbeeld:</strong> n = 22, r(x, |e|) = 0,50 geeft t = 0,50√20/√0,75 ≈ 2,582. Bij tweezijdig α = 0,05 en df = 20 is de grens 2,086. Onderzoek heteroscedasticiteit en een passende transformatie of gewogen regressie; controleer het aangepaste model opnieuw.</p>"
+          "html": "<h3>Durbin-Watson uit residuen</h3><p>d = Σ(e_t − e_(t−1))² / Σe_t². De teller begint bij de tweede waarneming, want de eerste heeft geen voorganger in de reeks. De noemer bevat alle residuen. De tijdsvolgorde is essentieel.</p><p><strong>Voorbeeld:</strong> voor residuen 1, 1, −1, −1 is de teller 0² + (−2)² + 0² = 4 en de noemer 1 + 1 + 1 + 1 = 4. Dus d = 1. Voor een toetsbeslissing zijn passende d_L en d_U uit de tabel nodig; dit kleine voorbeeld oefent alleen de berekening.</p><h3>ABSRES en heteroscedasticiteit</h3><p>Maak de absolute residuen |eᵢ| en bepaal hun correlatie met de verklarende variabele volgens de cursusdiagnose. Toets H₀: ρ = 0 met de correlatie-t-toets. Een significant verband is een aanwijzing dat de spreiding samenhangt met x. Controleer daarnaast het residudiagram; een niet-significante toets bewijst geen constante spreiding.</p><p><strong>Voorbeeld:</strong> n = 22, r(x, |e|) = 0,50 geeft t = 0,50√20/√0,75 ≈ 2,582. Bij tweezijdig α = 0,05 en df = 20 is de grens 2,086. Onderzoek heteroscedasticiteit en een passende transformatie of gewogen regressie; controleer het aangepaste model opnieuw.</p>"
         },
         {
           "title": "Zelf oefenen met deze aanvulling",
@@ -3409,11 +3409,11 @@ window.SRA = {
         },
         {
           "title": "Autocorrelatie corrigeren en opnieuw controleren",
-          "html": "<p>Bij eerste-orde autocorrelatie hangen opeenvolgende storingen samen. In het boek wordt de vorige storing meegenomen: ŷ_t = b₀ + b₁x_t + r₁e_(t−1). r₁ is de geschatte autocorrelatiecoëfficiënt; e_(t−1) is het residu van de vorige periode. De coëfficiënten worden bij de correctie opnieuw geschat.</p><h3>Boekmodel en eigen invulvoorbeeld</h3><ol><li>Het boek geeft na correctie: ŷ_t = 14,92 + 0,2154x_t + 0,6496e_(t−1).</li><li>Neem voor het invulvoorbeeld x_t = 20 en het vorige residu e_(t−1) = 1,5. De correctieterm is 0,6496 × 1,5 = 0,9744.</li><li>De voorspelling is 14,92 + 0,2154 × 20 + 0,9744 = 20,2024. Gebruik het vorige residu, niet het nog onbekende residu van de periode die je voorspelt.</li><li>Controleer de nieuwe residuen opnieuw. In het boek is de nieuwe Durbin-Watson d = 1,2048, net boven d_U = 1,20 en onder 4 − d_U. De toets toont op het gebruikte niveau geen autocorrelatie aan. Dat is geen bewijs dat iedere modelaanname klopt.</li></ol>"
+          "html": "<p>Bij eerste-orde autocorrelatie hangen opeenvolgende storingen samen. In het boek wordt de vorige storing meegenomen: ŷ_t = b₀ + b₁x_t + r₁e_(t−1). r₁ is de geschatte autocorrelatiecoëfficiënt; e_(t−1) is het residu van de vorige periode. De coëfficiënten worden bij de correctie opnieuw geschat.</p><h3>Boekmodel met voorbeeld</h3><ol><li>Het boek geeft na correctie: ŷ_t = 14,92 + 0,2154x_t + 0,6496e_(t−1).</li><li>Neem voor het invulvoorbeeld x_t = 20 en het vorige residu e_(t−1) = 1,5. De correctieterm is 0,6496 × 1,5 = 0,9744.</li><li>De voorspelling is 14,92 + 0,2154 × 20 + 0,9744 = 20,2024. Gebruik het vorige residu, niet het nog onbekende residu van de periode die je voorspelt.</li><li>Controleer de nieuwe residuen opnieuw. In het boek is de nieuwe Durbin-Watson d = 1,2048, net boven d_U = 1,20 en onder 4 − d_U. De toets toont op het gebruikte niveau geen autocorrelatie aan. Dat is geen bewijs dat iedere modelaanname klopt.</li></ol>"
         },
         {
           "title": "Diagnostische toetsingsgrootheden zelf berekenen",
-          "html": "<h3>Durbin-Watson uit residuen</h3><p>d = Σ(e_t − e_(t−1))² / Σe_t². De teller begint bij de tweede waarneming, want de eerste heeft geen voorganger in de reeks. De noemer bevat alle residuen. De tijdsvolgorde is essentieel.</p><p><strong>Eigen rekenvoorbeeld:</strong> voor residuen 1, 1, −1, −1 is de teller 0² + (−2)² + 0² = 4 en de noemer 1 + 1 + 1 + 1 = 4. Dus d = 1. Voor een toetsbeslissing zijn passende d_L en d_U uit de tabel nodig; dit kleine voorbeeld oefent alleen de berekening.</p><h3>ABSRES en heteroscedasticiteit</h3><p>Maak de absolute residuen |eᵢ| en bepaal hun correlatie met de verklarende variabele volgens de cursusdiagnose. Toets H₀: ρ = 0 met de correlatie-t-toets. Een significant verband is een aanwijzing dat de spreiding samenhangt met x. Controleer daarnaast het residudiagram; een niet-significante toets bewijst geen constante spreiding.</p><p><strong>Eigen voorbeeld:</strong> n = 22, r(x, |e|) = 0,50 geeft t = 0,50√20/√0,75 ≈ 2,582. Bij tweezijdig α = 0,05 en df = 20 is de grens 2,086. Onderzoek heteroscedasticiteit en een passende transformatie of gewogen regressie; controleer het aangepaste model opnieuw.</p>"
+          "html": "<h3>Durbin-Watson uit residuen</h3><p>d = Σ(e_t − e_(t−1))² / Σe_t². De teller begint bij de tweede waarneming, want de eerste heeft geen voorganger in de reeks. De noemer bevat alle residuen. De tijdsvolgorde is essentieel.</p><p><strong>Voorbeeld:</strong> voor residuen 1, 1, −1, −1 is de teller 0² + (−2)² + 0² = 4 en de noemer 1 + 1 + 1 + 1 = 4. Dus d = 1. Voor een toetsbeslissing zijn passende d_L en d_U uit de tabel nodig; dit kleine voorbeeld oefent alleen de berekening.</p><h3>ABSRES en heteroscedasticiteit</h3><p>Maak de absolute residuen |eᵢ| en bepaal hun correlatie met de verklarende variabele volgens de cursusdiagnose. Toets H₀: ρ = 0 met de correlatie-t-toets. Een significant verband is een aanwijzing dat de spreiding samenhangt met x. Controleer daarnaast het residudiagram; een niet-significante toets bewijst geen constante spreiding.</p><p><strong>Voorbeeld:</strong> n = 22, r(x, |e|) = 0,50 geeft t = 0,50√20/√0,75 ≈ 2,582. Bij tweezijdig α = 0,05 en df = 20 is de grens 2,086. Onderzoek heteroscedasticiteit en een passende transformatie of gewogen regressie; controleer het aangepaste model opnieuw.</p>"
         }
       ],
       "completionVersion": "2026-09-20"
@@ -3906,7 +3906,7 @@ window.SRA = {
         },
         {
           "title": "R² corrigeren voor het aantal verklarende variabelen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik adjusted R² wanneer je de verklaarde variatie wilt beoordelen met een correctie voor het aantal opgenomen verklarende variabelen. Het toevoegen van variabelen maakt gewone R² niet kleiner, maar kan adjusted R² wel verlagen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Gecorrigeerde verklaarde variatie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gecorrigeerde verklaarde variatie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><msup><mi>R</mi><mn>2</mn></msup><mtext>adj</mtext></msub><mo>=</mo><msup><mi>R</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><mrow><mi>k</mi><mrow><mo>(</mo><mn>1</mn><mo>−</mo><msup><mi>R</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow><mrow><mi>n</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>R² is de gewone verklaarde variatie. k telt de verklarende variabelen, zonder constante; n is het aantal gebruikte waarnemingen. n − k − 1 zijn de residuele vrijheidsgraden.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken 1 − R²: het niet-verklaarde aandeel.</li><li>Vermenigvuldig met k en deel door n − k − 1.</li><li>Trek deze correctie af van R².</li><li>Beoordeel de uitkomst naast inhoud, modelvoorwaarden en validatie.</li></ol><h3>Eigen rekenvoorbeeld: een correctie voor twee verklarende variabelen</h3><ol><li>Stel n = 30, k = 2 en R² = 0,80.</li><li>Correctie = 2 × (1 − 0,80)/(30 − 2 − 1) = 0,4/27 ≈ 0,01481.</li><li>Adjusted R² ≈ 0,78519. De correctie ligt hier onder de gewone R² van 0,80.</li></ol><p class=\"note\"><strong>Let op:</strong> Een hoge adjusted R² vervangt geen controle van aannamen en maakt een individueel effect nog niet significant.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik adjusted R² wanneer je de verklaarde variatie wilt beoordelen met een correctie voor het aantal opgenomen verklarende variabelen. Het toevoegen van variabelen maakt gewone R² niet kleiner, maar kan adjusted R² wel verlagen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Gecorrigeerde verklaarde variatie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gecorrigeerde verklaarde variatie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><msup><mi>R</mi><mn>2</mn></msup><mtext>adj</mtext></msub><mo>=</mo><msup><mi>R</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><mrow><mi>k</mi><mrow><mo>(</mo><mn>1</mn><mo>−</mo><msup><mi>R</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow><mrow><mi>n</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>R² is de gewone verklaarde variatie. k telt de verklarende variabelen, zonder constante; n is het aantal gebruikte waarnemingen. n − k − 1 zijn de residuele vrijheidsgraden.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken 1 − R²: het niet-verklaarde aandeel.</li><li>Vermenigvuldig met k en deel door n − k − 1.</li><li>Trek deze correctie af van R².</li><li>Beoordeel de uitkomst naast inhoud, modelvoorwaarden en validatie.</li></ol><h3>Voorbeeld: een correctie voor twee verklarende variabelen</h3><ol><li>Stel n = 30, k = 2 en R² = 0,80.</li><li>Correctie = 2 × (1 − 0,80)/(30 − 2 − 1) = 0,4/27 ≈ 0,01481.</li><li>Adjusted R² ≈ 0,78519. De correctie ligt hier onder de gewone R² van 0,80.</li></ol><p class=\"note\"><strong>Let op:</strong> Een hoge adjusted R² vervangt geen controle van aannamen en maakt een individueel effect nog niet significant.</p>"
         },
         {
           "title": "B en gestandaardiseerde Beta vergelijken",
@@ -3940,7 +3940,7 @@ window.SRA = {
         },
         {
           "title": "Een meervoudig logmodel terugtransformeren",
-          "html": "<p>Bij meerdere verklarende variabelen transformeer je de volledige voorspelde logwaarde terug. De constante wordt een vermenigvuldigingsfactor; coëfficiënten bij ln(x) worden machten van x.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Meervoudig machtsmodel</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Meervoudig machtsmodel\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><mo>×</mo><mrow><mi>ln</mi><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub><mo>×</mo><mrow><mi>ln</mi><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Terug naar de oorspronkelijke schaal</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Terug naar de oorspronkelijke schaal\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>)</mo></mrow></mrow><mo>×</mo><msup><msub><mi>x</mi><mn>1</mn></msub><msub><mi>b</mi><mn>1</mn></msub></msup><mo>×</mo><msup><msub><mi>x</mi><mn>2</mn></msub><msub><mi>b</mi><mn>2</mn></msub></msup></mrow></math></div></div></div><h3>Boekvoorbeeld GDP, p. 321</h3><p>ln(ŷ) = 9,080 + 0,353 ln(elect) − 0,434 ln(mort) wordt ŷ = exp(9,080) × elect<sup>0,353</sup> × mort<sup>−0,434</sup>. De constante factor is ongeveer 8.778. De negatieve macht kun je ook als delen door mort<sup>0,434</sup> schrijven.</p><h3>Eigen invulvoorbeeld bij die boekvergelijking</h3><ol><li>Neem elect = 100 en mort = 10, beide positief.</li><li>De voorspelde logwaarde is 9,080 + 0,353 × ln(100) − 0,434 × ln(10) ≈ 9,70630.</li><li>Terugtransformeren met de onafgeronde logwaarde geeft ongeveer 16.420,78. De productvorm geeft dezelfde uitkomst.</li><li>Bij verdubbeling van elect en gelijkblijvende mort verandert de teruggetransformeerde voorspelling met factor 2^0,353 ≈ 1,277. Het gaat dus niet om 0,353 extra oorspronkelijke eenheden.</li></ol><p class=\"note\">Dit is de directe terugtransformatie van de geschatte logwaarde volgens de cursus. Noem dit niet zonder aanvullende aannames het rekenkundige gemiddelde op de oorspronkelijke schaal. Bij een interval op logschaal transformeer je de twee grenzen afzonderlijk terug.</p>"
+          "html": "<p>Bij meerdere verklarende variabelen transformeer je de volledige voorspelde logwaarde terug. De constante wordt een vermenigvuldigingsfactor; coëfficiënten bij ln(x) worden machten van x.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Meervoudig machtsmodel</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Meervoudig machtsmodel\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><mo>×</mo><mrow><mi>ln</mi><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub><mo>×</mo><mrow><mi>ln</mi><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Terug naar de oorspronkelijke schaal</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Terug naar de oorspronkelijke schaal\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>)</mo></mrow></mrow><mo>×</mo><msup><msub><mi>x</mi><mn>1</mn></msub><msub><mi>b</mi><mn>1</mn></msub></msup><mo>×</mo><msup><msub><mi>x</mi><mn>2</mn></msub><msub><mi>b</mi><mn>2</mn></msub></msup></mrow></math></div></div></div><h3>Boekvoorbeeld GDP, p. 321</h3><p>ln(ŷ) = 9,080 + 0,353 ln(elect) − 0,434 ln(mort) wordt ŷ = exp(9,080) × elect<sup>0,353</sup> × mort<sup>−0,434</sup>. De constante factor is ongeveer 8.778. De negatieve macht kun je ook als delen door mort<sup>0,434</sup> schrijven.</p><h3>Voorbeeld bij die boekvergelijking</h3><ol><li>Neem elect = 100 en mort = 10, beide positief.</li><li>De voorspelde logwaarde is 9,080 + 0,353 × ln(100) − 0,434 × ln(10) ≈ 9,70630.</li><li>Terugtransformeren met de onafgeronde logwaarde geeft ongeveer 16.420,78. De productvorm geeft dezelfde uitkomst.</li><li>Bij verdubbeling van elect en gelijkblijvende mort verandert de teruggetransformeerde voorspelling met factor 2^0,353 ≈ 1,277. Het gaat dus niet om 0,353 extra oorspronkelijke eenheden.</li></ol><p class=\"note\">Dit is de directe terugtransformatie van de geschatte logwaarde volgens de cursus. Noem dit niet zonder aanvullende aannames het rekenkundige gemiddelde op de oorspronkelijke schaal. Bij een interval op logschaal transformeer je de twee grenzen afzonderlijk terug.</p>"
         },
         {
           "title": "R² vergelijken na een transformatie",
@@ -3952,7 +3952,7 @@ window.SRA = {
         }
       ],
       "example": {
-        "title": "Eigen voorbeeld: een machtsfunctie",
+        "title": "Voorbeeld: een machtsfunctie",
         "steps": [
           "ln(ŷ) = 1 + 0,5ln(x). Gevraagd: de voorspelling bij x = 16.",
           "ln(16) ≈ 2,772589. De voorspelde logwaarde is 1 + 0,5×2,772589 = 2,386294.",
@@ -4191,19 +4191,19 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Een logaritmisch model: alleen x wordt getransformeerd",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze vorm wanneer de geschatte vergelijking x via ln(x) opneemt, terwijl y in de oorspronkelijke eenheid blijft. Voor ln(x) moet x positief zijn.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Logaritmisch model</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Logaritmisch model\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>ln</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>ln is de natuurlijke logaritme, met grondtal e. b₀ en b₁ horen bij de regressie op ln(x). ŷ is in deze modelvorm al een voorspelling van y op de oorspronkelijke schaal.</p><h3>Zo reken je stap voor stap</h3><ol><li>Controleer dat x positief is en bereken ln(x).</li><li>Vermenigvuldig ln(x) met b₁ en tel b₀ op.</li><li>Stop op de y-schaal: hier hoeft geen exp op de einduitkomst te worden toegepast.</li><li>Bij verdubbeling van x neemt de voorspelde y toe met b₁ × ln(2), als deze modelvorm passend blijft.</li></ol><h3>Eigen rekenvoorbeeld: dezelfde getallen op de logaritmische schaal van x</h3><ol><li>Stel ŷ = 1 + 0,5ln(x) en x = 16.</li><li>ln(16) ≈ 2,772589, dus ŷ = 1 + 0,5 × 2,772589 ≈ 2,386294.</li><li>Deze 2,386294 is al de voorspelde y, geen voorspelde ln(y).</li></ol><p class=\"note\"><strong>Let op:</strong> Kijk welke variabele is getransformeerd. Alleen het voorkomen van ln in de vergelijking betekent niet dat je de hele uitkomst moet terugtransformeren.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze vorm wanneer de geschatte vergelijking x via ln(x) opneemt, terwijl y in de oorspronkelijke eenheid blijft. Voor ln(x) moet x positief zijn.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Logaritmisch model</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Logaritmisch model\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>ln</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>ln is de natuurlijke logaritme, met grondtal e. b₀ en b₁ horen bij de regressie op ln(x). ŷ is in deze modelvorm al een voorspelling van y op de oorspronkelijke schaal.</p><h3>Zo reken je stap voor stap</h3><ol><li>Controleer dat x positief is en bereken ln(x).</li><li>Vermenigvuldig ln(x) met b₁ en tel b₀ op.</li><li>Stop op de y-schaal: hier hoeft geen exp op de einduitkomst te worden toegepast.</li><li>Bij verdubbeling van x neemt de voorspelde y toe met b₁ × ln(2), als deze modelvorm passend blijft.</li></ol><h3>Voorbeeld: dezelfde getallen op de logaritmische schaal van x</h3><ol><li>Stel ŷ = 1 + 0,5ln(x) en x = 16.</li><li>ln(16) ≈ 2,772589, dus ŷ = 1 + 0,5 × 2,772589 ≈ 2,386294.</li><li>Deze 2,386294 is al de voorspelde y, geen voorspelde ln(y).</li></ol><p class=\"note\"><strong>Let op:</strong> Kijk welke variabele is getransformeerd. Alleen het voorkomen van ln in de vergelijking betekent niet dat je de hele uitkomst moet terugtransformeren.</p>"
         },
         {
           "title": "Een exponentieel model: terug van ln(y) naar y",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze vorm wanneer ln(y) lineair wordt verklaard uit x. Het formuleblad brengt de geschatte logwaarde terug met exp.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Lineaire vorm</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Lineaire vorm\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Terug naar y</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Terug naar y\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>exp(z) betekent e tot de macht z. De coëfficiënten b₀ en b₁ horen bij het model voor ln(y). Bij één extra eenheid x wordt de teruggetransformeerde voorspelling vermenigvuldigd met exp(b₁).</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken b₀ + b₁x. Dit is de voorspelde logwaarde.</li><li>Neem exp van de gehele uitkomst, dus exp(b₀ + b₁x).</li><li>Schrijf de voorspelling in de oorspronkelijke y-eenheid op.</li><li>Beoordeel de residuen van het gekozen model opnieuw; de transformatie garandeert geen goed model.</li></ol><h3>Eigen rekenvoorbeeld: een voorspelde logwaarde terugrekenen</h3><ol><li>Stel ln(ŷ) = 1 + 0,5x en x = 2.</li><li>De voorspelde logwaarde is 1 + 0,5 × 2 = 2.</li><li>Terug volgens het formuleblad: ŷ = exp(2) ≈ 7,3891.</li></ol><p class=\"note\"><strong>Let op:</strong> De waarde 2 is hier niet de voorspelde y. Gebruik exp en niet de inverse van de gewone logaritme met grondtal 10.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze vorm wanneer ln(y) lineair wordt verklaard uit x. Het formuleblad brengt de geschatte logwaarde terug met exp.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Lineaire vorm</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Lineaire vorm\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Terug naar y</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Terug naar y\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>exp(z) betekent e tot de macht z. De coëfficiënten b₀ en b₁ horen bij het model voor ln(y). Bij één extra eenheid x wordt de teruggetransformeerde voorspelling vermenigvuldigd met exp(b₁).</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken b₀ + b₁x. Dit is de voorspelde logwaarde.</li><li>Neem exp van de gehele uitkomst, dus exp(b₀ + b₁x).</li><li>Schrijf de voorspelling in de oorspronkelijke y-eenheid op.</li><li>Beoordeel de residuen van het gekozen model opnieuw; de transformatie garandeert geen goed model.</li></ol><h3>Voorbeeld: een voorspelde logwaarde terugrekenen</h3><ol><li>Stel ln(ŷ) = 1 + 0,5x en x = 2.</li><li>De voorspelde logwaarde is 1 + 0,5 × 2 = 2.</li><li>Terug volgens het formuleblad: ŷ = exp(2) ≈ 7,3891.</li></ol><p class=\"note\"><strong>Let op:</strong> De waarde 2 is hier niet de voorspelde y. Gebruik exp en niet de inverse van de gewone logaritme met grondtal 10.</p>"
         },
         {
           "title": "Een machtsmodel: zowel x als y heeft een logvorm",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik een machtsfunctie als het lineair geschatte model ln(y) verbindt met ln(x). De les en het formuleblad geven twee gelijkwaardige routes om terug te rekenen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Lineaire vorm</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Lineaire vorm\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>ln</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Machtsfunctie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Machtsfunctie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>)</mo></mrow></mrow><mo>×</mo><msup><mi>x</mi><msub><mi>b</mi><mn>1</mn></msub></msup></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>b₀ is de constante op de logschaal; exp(b₀) is de factor op de oorspronkelijke schaal. b₁ is de macht van x. De oorspronkelijke waarden x en y waarop je een logaritme toepast moeten positief zijn. De logwaarden zelf mogen nul of negatief zijn: ln(1) = 0 en ln(0,5) ≈ −0,693.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken ln(x) en vul die in bij b₀ + b₁ln(x).</li><li>Neem exp van deze voorspelde logwaarde.</li><li>Controleer desgewenst met exp(b₀) × x tot de macht b₁.</li><li>Bij verdubbeling van x verandert de teruggetransformeerde voorspelling met factor 2 tot de macht b₁.</li></ol><h3>Eigen voorbeeld: een machtsfunctie</h3><ol><li>ln(ŷ) = 1 + 0,5ln(x). Gevraagd: de voorspelling bij x = 16.</li><li>ln(16) ≈ 2,772589. De voorspelde logwaarde is 1 + 0,5×2,772589 = 2,386294.</li><li>Terugtransformeren: exp(2,386294) ≈ 10,8731.</li><li>De korte route geeft hetzelfde: exp(1) × 16^0,5 = 2,71828 × 4 = 10,8731.</li></ol><p class=\"note\"><strong>Let op:</strong> Verwar het machtsmodel niet met het exponentiële model. De inverse functie behoort volgens het onderwijsprogramma niet tot deze SRA-stof en wordt hier niet toegevoegd.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik een machtsfunctie als het lineair geschatte model ln(y) verbindt met ln(x). De les en het formuleblad geven twee gelijkwaardige routes om terug te rekenen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Lineaire vorm</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Lineaire vorm\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>ln</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Machtsfunctie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Machtsfunctie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>)</mo></mrow></mrow><mo>×</mo><msup><mi>x</mi><msub><mi>b</mi><mn>1</mn></msub></msup></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>b₀ is de constante op de logschaal; exp(b₀) is de factor op de oorspronkelijke schaal. b₁ is de macht van x. De oorspronkelijke waarden x en y waarop je een logaritme toepast moeten positief zijn. De logwaarden zelf mogen nul of negatief zijn: ln(1) = 0 en ln(0,5) ≈ −0,693.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken ln(x) en vul die in bij b₀ + b₁ln(x).</li><li>Neem exp van deze voorspelde logwaarde.</li><li>Controleer desgewenst met exp(b₀) × x tot de macht b₁.</li><li>Bij verdubbeling van x verandert de teruggetransformeerde voorspelling met factor 2 tot de macht b₁.</li></ol><h3>Voorbeeld: een machtsfunctie</h3><ol><li>ln(ŷ) = 1 + 0,5ln(x). Gevraagd: de voorspelling bij x = 16.</li><li>ln(16) ≈ 2,772589. De voorspelde logwaarde is 1 + 0,5×2,772589 = 2,386294.</li><li>Terugtransformeren: exp(2,386294) ≈ 10,8731.</li><li>De korte route geeft hetzelfde: exp(1) × 16^0,5 = 2,71828 × 4 = 10,8731.</li></ol><p class=\"note\"><strong>Let op:</strong> Verwar het machtsmodel niet met het exponentiële model. De inverse functie behoort volgens het onderwijsprogramma niet tot deze SRA-stof en wordt hier niet toegevoegd.</p>"
         },
         {
           "title": "Een meervoudig logmodel terugtransformeren",
-          "html": "<p>Bij meerdere verklarende variabelen transformeer je de volledige voorspelde logwaarde terug. De constante wordt een vermenigvuldigingsfactor; coëfficiënten bij ln(x) worden machten van x.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Meervoudig machtsmodel</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Meervoudig machtsmodel\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><mo>×</mo><mrow><mi>ln</mi><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub><mo>×</mo><mrow><mi>ln</mi><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Terug naar de oorspronkelijke schaal</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Terug naar de oorspronkelijke schaal\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>)</mo></mrow></mrow><mo>×</mo><msup><msub><mi>x</mi><mn>1</mn></msub><msub><mi>b</mi><mn>1</mn></msub></msup><mo>×</mo><msup><msub><mi>x</mi><mn>2</mn></msub><msub><mi>b</mi><mn>2</mn></msub></msup></mrow></math></div></div></div><h3>Boekvoorbeeld GDP, p. 321</h3><p>ln(ŷ) = 9,080 + 0,353 ln(elect) − 0,434 ln(mort) wordt ŷ = exp(9,080) × elect<sup>0,353</sup> × mort<sup>−0,434</sup>. De constante factor is ongeveer 8.778. De negatieve macht kun je ook als delen door mort<sup>0,434</sup> schrijven.</p><h3>Eigen invulvoorbeeld bij die boekvergelijking</h3><ol><li>Neem elect = 100 en mort = 10, beide positief.</li><li>De voorspelde logwaarde is 9,080 + 0,353 × ln(100) − 0,434 × ln(10) ≈ 9,70630.</li><li>Terugtransformeren met de onafgeronde logwaarde geeft ongeveer 16.420,78. De productvorm geeft dezelfde uitkomst.</li><li>Bij verdubbeling van elect en gelijkblijvende mort verandert de teruggetransformeerde voorspelling met factor 2^0,353 ≈ 1,277. Het gaat dus niet om 0,353 extra oorspronkelijke eenheden.</li></ol><p class=\"note\">Dit is de directe terugtransformatie van de geschatte logwaarde volgens de cursus. Noem dit niet zonder aanvullende aannames het rekenkundige gemiddelde op de oorspronkelijke schaal. Bij een interval op logschaal transformeer je de twee grenzen afzonderlijk terug.</p>"
+          "html": "<p>Bij meerdere verklarende variabelen transformeer je de volledige voorspelde logwaarde terug. De constante wordt een vermenigvuldigingsfactor; coëfficiënten bij ln(x) worden machten van x.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Meervoudig machtsmodel</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Meervoudig machtsmodel\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><mo>×</mo><mrow><mi>ln</mi><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub><mo>×</mo><mrow><mi>ln</mi><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Terug naar de oorspronkelijke schaal</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Terug naar de oorspronkelijke schaal\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>)</mo></mrow></mrow><mo>×</mo><msup><msub><mi>x</mi><mn>1</mn></msub><msub><mi>b</mi><mn>1</mn></msub></msup><mo>×</mo><msup><msub><mi>x</mi><mn>2</mn></msub><msub><mi>b</mi><mn>2</mn></msub></msup></mrow></math></div></div></div><h3>Boekvoorbeeld GDP, p. 321</h3><p>ln(ŷ) = 9,080 + 0,353 ln(elect) − 0,434 ln(mort) wordt ŷ = exp(9,080) × elect<sup>0,353</sup> × mort<sup>−0,434</sup>. De constante factor is ongeveer 8.778. De negatieve macht kun je ook als delen door mort<sup>0,434</sup> schrijven.</p><h3>Voorbeeld bij die boekvergelijking</h3><ol><li>Neem elect = 100 en mort = 10, beide positief.</li><li>De voorspelde logwaarde is 9,080 + 0,353 × ln(100) − 0,434 × ln(10) ≈ 9,70630.</li><li>Terugtransformeren met de onafgeronde logwaarde geeft ongeveer 16.420,78. De productvorm geeft dezelfde uitkomst.</li><li>Bij verdubbeling van elect en gelijkblijvende mort verandert de teruggetransformeerde voorspelling met factor 2^0,353 ≈ 1,277. Het gaat dus niet om 0,353 extra oorspronkelijke eenheden.</li></ol><p class=\"note\">Dit is de directe terugtransformatie van de geschatte logwaarde volgens de cursus. Noem dit niet zonder aanvullende aannames het rekenkundige gemiddelde op de oorspronkelijke schaal. Bij een interval op logschaal transformeer je de twee grenzen afzonderlijk terug.</p>"
         }
       ],
       "completionVersion": "2026-09-20"
@@ -4233,7 +4233,7 @@ window.SRA = {
         }
       ],
       "example": {
-        "title": "Eigen voorbeeld: overlap en extra bijdrage",
+        "title": "Voorbeeld: overlap en extra bijdrage",
         "steps": [
           "Tolerance = 0,08. Dan VIF = 1/0,08 = 12,5: boven de cursusgrens van 10.",
           "Vergelijk vervolgens twee geldige geneste modellen met één verschil: SSR_klein = 800, SSR_uitgebreid = 850 en MSE_uitgebreid = 10.",
@@ -4431,11 +4431,11 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Overlap tussen verklarende variabelen meten met VIF",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik VIF en tolerance om te beoordelen of verklarende variabelen onderling zoveel overlap vertonen dat hun afzonderlijke effecten moeilijk te onderscheiden zijn.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Variance Inflation Factor</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Variance Inflation Factor\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>VIF</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>Tolerance</mi><mi>i</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>1</mn><mo>−</mo><msup><msub><mi>R</mi><mi>i</mi></msub><mn>2</mn></msup></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Tolerance komt uit de Coefficients-uitvoer. Rᵢ² hoort bij een hulpregressie waarin xᵢ wordt verklaard uit de overige x-variabelen. VIF is het omgekeerde van tolerance; dit is niet de R² van het hoofdmodel met y.</p><h3>Zo reken je stap voor stap</h3><ol><li>Lees tolerance of VIF per verklarende variabele af.</li><li>Als alleen tolerance bekend is, deel 1 door die tolerance.</li><li>Vergelijk met de cursusvuistregel: VIF groter dan 10 is een probleemsignaal.</li><li>Onderzoek inhoudelijke overlap en schat een aangepast model opnieuw als een variabele wordt weggelaten.</li></ol><h3>Eigen voorbeeld: overlap en extra bijdrage</h3><ol><li>Tolerance = 0,08. Dan VIF = 1/0,08 = 12,5: boven de cursusgrens van 10.</li></ol><p class=\"note\"><strong>Let op:</strong> Correlatie van x met y is iets anders dan samenhang tussen de x-variabelen. Een automatisch selectieproces vervangt geen inhoudelijke keuze.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik VIF en tolerance om te beoordelen of verklarende variabelen onderling zoveel overlap vertonen dat hun afzonderlijke effecten moeilijk te onderscheiden zijn.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Variance Inflation Factor</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Variance Inflation Factor\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>VIF</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>Tolerance</mi><mi>i</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>1</mn><mo>−</mo><msup><msub><mi>R</mi><mi>i</mi></msub><mn>2</mn></msup></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Tolerance komt uit de Coefficients-uitvoer. Rᵢ² hoort bij een hulpregressie waarin xᵢ wordt verklaard uit de overige x-variabelen. VIF is het omgekeerde van tolerance; dit is niet de R² van het hoofdmodel met y.</p><h3>Zo reken je stap voor stap</h3><ol><li>Lees tolerance of VIF per verklarende variabele af.</li><li>Als alleen tolerance bekend is, deel 1 door die tolerance.</li><li>Vergelijk met de cursusvuistregel: VIF groter dan 10 is een probleemsignaal.</li><li>Onderzoek inhoudelijke overlap en schat een aangepast model opnieuw als een variabele wordt weggelaten.</li></ol><h3>Voorbeeld: overlap en extra bijdrage</h3><ol><li>Tolerance = 0,08. Dan VIF = 1/0,08 = 12,5: boven de cursusgrens van 10.</li></ol><p class=\"note\"><strong>Let op:</strong> Correlatie van x met y is iets anders dan samenhang tussen de x-variabelen. Een automatisch selectieproces vervangt geen inhoudelijke keuze.</p>"
         },
         {
           "title": "De extra bijdrage van één toegevoegde variabele toetsen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze F-verhouding om twee geneste modellen met precies één extra verklarende variabele te vergelijken. Beide modellen moeten dezelfde y en dezelfde waarnemingen gebruiken.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Eén extra variabele</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Eén extra variabele\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><msub><mi>SSR</mi><mtext>uitgebreid</mtext></msub><mo>−</mo><msub><mi>SSR</mi><mtext>klein</mtext></msub></mrow><mrow><msub><mi>MSE</mi><mtext>uitgebreid</mtext></msub></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>SSR_klein is de verklaarde kwadratensom van het kleine model. SSR_uitgebreid en MSE_uitgebreid horen bij het model met de extra variabele. De teller heeft hier één vrijheidsgraad; de noemer n − k_uitgebreid − 1.</p><h3>Zo reken je stap voor stap</h3><ol><li>Controleer eerst dat het uitgebreide model alle variabelen van het kleine model bevat, plus precies één extra variabele.</li><li>Trek SSR_klein af van SSR_uitgebreid.</li><li>Deel het verschil door MSE_uitgebreid.</li><li>Vergelijk de uitkomst met de passende F-grens of beoordeel de relevante toetsuitvoer.</li><li>Bij selectie op SPSS Sig. gebruik je de expliciet gegeven selectiegrens. Een al tweezijdige p-waarde wordt niet zonder reden met α/2 vergeleken.</li></ol><h3>Eigen voorbeeld: overlap en extra bijdrage</h3><ol><li>Vergelijk vervolgens twee geldige geneste modellen met één verschil: SSR_klein = 800, SSR_uitgebreid = 850 en MSE_uitgebreid = 10.</li><li>F = (850 − 800)/10 = 5.</li><li>Vergelijk 5 met de toepasselijke F-grens. Alleen deze berekening geeft nog geen conclusie over significantie zonder α en vrijheidsgraden.</li></ol><p class=\"note\"><strong>Let op:</strong> Deze formulevorm geldt voor één extra variabele. Voor meerdere extra variabelen moet de teller ook door hun aantal worden gedeeld. Vergelijk geen modellen op verschillende datasets alsof zij genest zijn.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze F-verhouding om twee geneste modellen met precies één extra verklarende variabele te vergelijken. Beide modellen moeten dezelfde y en dezelfde waarnemingen gebruiken.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Eén extra variabele</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Eén extra variabele\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><msub><mi>SSR</mi><mtext>uitgebreid</mtext></msub><mo>−</mo><msub><mi>SSR</mi><mtext>klein</mtext></msub></mrow><mrow><msub><mi>MSE</mi><mtext>uitgebreid</mtext></msub></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>SSR_klein is de verklaarde kwadratensom van het kleine model. SSR_uitgebreid en MSE_uitgebreid horen bij het model met de extra variabele. De teller heeft hier één vrijheidsgraad; de noemer n − k_uitgebreid − 1.</p><h3>Zo reken je stap voor stap</h3><ol><li>Controleer eerst dat het uitgebreide model alle variabelen van het kleine model bevat, plus precies één extra variabele.</li><li>Trek SSR_klein af van SSR_uitgebreid.</li><li>Deel het verschil door MSE_uitgebreid.</li><li>Vergelijk de uitkomst met de passende F-grens of beoordeel de relevante toetsuitvoer.</li><li>Bij selectie op SPSS Sig. gebruik je de expliciet gegeven selectiegrens. Een al tweezijdige p-waarde wordt niet zonder reden met α/2 vergeleken.</li></ol><h3>Voorbeeld: overlap en extra bijdrage</h3><ol><li>Vergelijk vervolgens twee geldige geneste modellen met één verschil: SSR_klein = 800, SSR_uitgebreid = 850 en MSE_uitgebreid = 10.</li><li>F = (850 − 800)/10 = 5.</li><li>Vergelijk 5 met de toepasselijke F-grens. Alleen deze berekening geeft nog geen conclusie over significantie zonder α en vrijheidsgraden.</li></ol><p class=\"note\"><strong>Let op:</strong> Deze formulevorm geldt voor één extra variabele. Voor meerdere extra variabelen moet de teller ook door hun aantal worden gedeeld. Vergelijk geen modellen op verschillende datasets alsof zij genest zijn.</p>"
         }
       ]
     },
@@ -4468,7 +4468,7 @@ window.SRA = {
         }
       ],
       "example": {
-        "title": "Eigen validatievoorbeeld",
+        "title": "Voorbeeld",
         "steps": [
           "Werkelijke testwaarden: 10, 14 en 20. Voorspellingen: 12, 13 en 17.",
           "Fouten y − ŷ: −2, 1 en 3. Kwadraten: 4, 1 en 9.",
@@ -4646,7 +4646,7 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "De voorspelfout op ongebruikte testgegevens meten",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik MSPR nadat het model met trainingsgegevens is geschat. Je beoordeelt hoe goed dat vaste model voorspelt op andere, niet voor de schatting gebruikte waarnemingen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Voorspelfout op de testset</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Voorspelfout op de testset\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSPR</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><msub><mi>n</mi><mtext>test</mtext></msub></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>n_test = aantal testwaarnemingen; yᵢ = werkelijk gemeten testwaarde; ŷᵢ = voorspelling met het model uit de trainingsset. De fout is werkelijk y minus voorspeld ŷ. Door te kwadrateren heffen positieve en negatieve fouten elkaar niet op. MSPR heeft de eenheid van y².</p><h3>Zo reken je stap voor stap</h3><ol><li>Houd het geschatte trainingsmodel vast en voorspel voor iedere testwaarneming de y.</li><li>Bereken per testwaarneming y − ŷ en kwadrateer die fout.</li><li>Tel de gekwadrateerde fouten op en deel door n_test.</li><li>Vergelijk MSPR met de trainings-MSE als aanwijzing voor hoe goed de trainingsprestatie overdraagbaar is.</li><li>Lees SPSS steeds per functie: Coefficients voor B en individuele toetsen, ANOVA voor MSE en globale F, Model Summary voor R² en adjusted R².</li></ol><h3>Eigen validatievoorbeeld</h3><ol><li>Werkelijke testwaarden: 10, 14 en 20. Voorspellingen: 12, 13 en 17.</li><li>Fouten y − ŷ: −2, 1 en 3. Kwadraten: 4, 1 en 9.</li><li>MSPR = (4 + 1 + 9)/3 = 14/3 ≈ 4,6667.</li><li>Als de trainings-MSE 1 is, zijn de fouten op de testset aanzienlijk groter. De training geeft dan een te gunstig beeld van de voorspelfout.</li></ol><p class=\"note\"><strong>Let op:</strong> De noemer is n_test, niet de residuele vrijheidsgraad van de training. Blijf je het model aanpassen op dezelfde testset, dan is die set niet meer een onafhankelijke eindcontrole.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik MSPR nadat het model met trainingsgegevens is geschat. Je beoordeelt hoe goed dat vaste model voorspelt op andere, niet voor de schatting gebruikte waarnemingen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Voorspelfout op de testset</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Voorspelfout op de testset\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSPR</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><msub><mi>n</mi><mtext>test</mtext></msub></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>n_test = aantal testwaarnemingen; yᵢ = werkelijk gemeten testwaarde; ŷᵢ = voorspelling met het model uit de trainingsset. De fout is werkelijk y minus voorspeld ŷ. Door te kwadrateren heffen positieve en negatieve fouten elkaar niet op. MSPR heeft de eenheid van y².</p><h3>Zo reken je stap voor stap</h3><ol><li>Houd het geschatte trainingsmodel vast en voorspel voor iedere testwaarneming de y.</li><li>Bereken per testwaarneming y − ŷ en kwadrateer die fout.</li><li>Tel de gekwadrateerde fouten op en deel door n_test.</li><li>Vergelijk MSPR met de trainings-MSE als aanwijzing voor hoe goed de trainingsprestatie overdraagbaar is.</li><li>Lees SPSS steeds per functie: Coefficients voor B en individuele toetsen, ANOVA voor MSE en globale F, Model Summary voor R² en adjusted R².</li></ol><h3>Voorbeeld</h3><ol><li>Werkelijke testwaarden: 10, 14 en 20. Voorspellingen: 12, 13 en 17.</li><li>Fouten y − ŷ: −2, 1 en 3. Kwadraten: 4, 1 en 9.</li><li>MSPR = (4 + 1 + 9)/3 = 14/3 ≈ 4,6667.</li><li>Als de trainings-MSE 1 is, zijn de fouten op de testset aanzienlijk groter. De training geeft dan een te gunstig beeld van de voorspelfout.</li></ol><p class=\"note\"><strong>Let op:</strong> De noemer is n_test, niet de residuele vrijheidsgraad van de training. Blijf je het model aanpassen op dezelfde testset, dan is die set niet meer een onafhankelijke eindcontrole.</p>"
         }
       ]
     },
@@ -5241,7 +5241,7 @@ window.SRA = {
         "populaties"
       ],
       "definition": "De volledige verzameling waarover je een uitspraak wilt doen. N is het aantal elementen in die verzameling.",
-      "example": "Didactisch voorbeeld (eigen): Alle 1.000 facturen van een onderneming vormen de populatie; N = 1.000.",
+      "example": "Alle 1.000 facturen van een onderneming vormen de populatie; N = 1.000.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5258,7 +5258,7 @@ window.SRA = {
         "populatiegrootte"
       ],
       "definition": "Het aantal elementen in de populatie, aangeduid met hoofdletter N. Het is een aantal, geen geldbedrag.",
-      "example": "Didactisch voorbeeld (eigen): Bij een voorraad van 2.500 artikelen is de populatieomvang 2.500, ongeacht hun waarde.",
+      "example": "Bij een voorraad van 2.500 artikelen is de populatieomvang 2.500, ongeacht hun waarde.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5275,7 +5275,7 @@ window.SRA = {
         "steekproeven"
       ],
       "definition": "De onderzochte selectie uit de populatie. Je gebruikt gegevens uit die selectie om iets over de hele populatie te schatten of te toetsen.",
-      "example": "Didactisch voorbeeld (eigen): Je controleert 100 van de 1.000 facturen; die 100 vormen de steekproef.",
+      "example": "Je controleert 100 van de 1.000 facturen; die 100 vormen de steekproef.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5296,7 +5296,7 @@ window.SRA = {
         "steekproefaantallen"
       ],
       "definition": "Het aantal onderzochte elementen, aangeduid met kleine letter n. Bij evaluatie gebruik je het werkelijk onderzochte aantal.",
-      "example": "Didactisch voorbeeld (eigen): Er waren 80 controles gepland, maar er zijn er 85 uitgevoerd. Voor de berekening gebruik je n = 85.",
+      "example": "Er waren 80 controles gepland, maar er zijn er 85 uitgevoerd. Voor de berekening gebruik je n = 85.",
       "lesson": "steekproefomvang",
       "refs": [
         {
@@ -5320,7 +5320,7 @@ window.SRA = {
         "aselecte steekproeven"
       ],
       "definition": "Een steekproef die met een toevalsprocedure wordt getrokken, zodat persoonlijke voorkeur de selectie niet bepaalt. De SRA-schatters veronderstellen een passende steekproeftrekking.",
-      "example": "Didactisch voorbeeld (eigen): Je loot factuurnummers in plaats van alleen eenvoudig te controleren facturen te kiezen.",
+      "example": "Je loot factuurnummers in plaats van alleen eenvoudig te controleren facturen te kiezen.",
       "lesson": "mpu",
       "refs": [
         {
@@ -5344,7 +5344,7 @@ window.SRA = {
         "verkeerde selectie"
       ],
       "definition": "Een selectie die bepaalde soorten elementen systematisch bevoordeelt. Een groter aantal controles verhelpt zo’n selectieprobleem niet automatisch.",
-      "example": "Didactisch voorbeeld (eigen): Alleen goedkope artikelen controleren geeft hier een te laag beeld van de gemiddelde voorraadwaarde.",
+      "example": "Alleen goedkope artikelen controleren geeft hier een te laag beeld van de gemiddelde voorraadwaarde.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5363,7 +5363,7 @@ window.SRA = {
         "observaties"
       ],
       "definition": "Eén vastgelegd onderzoeksgeval met de bijbehorende gemeten waarden. Leg vast of één geval bijvoorbeeld een artikel, persoon of tijdstip is.",
-      "example": "Didactisch voorbeeld (eigen): Eén werknemer met leeftijd 40 en salaris € 3.500 vormt één waarneming in een salarisbestand.",
+      "example": "Eén werknemer met leeftijd 40 en salaris € 3.500 vormt één waarneming in een salarisbestand.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5380,7 +5380,7 @@ window.SRA = {
         "variabelen"
       ],
       "definition": "Een kenmerk dat je per waarneming vastlegt en dat verschillende waarden kan aannemen.",
-      "example": "Didactisch voorbeeld (eigen): Leeftijd en salaris zijn twee variabelen die je voor dezelfde werknemers kunt meten.",
+      "example": "Leeftijd en salaris zijn twee variabelen die je voor dezelfde werknemers kunt meten.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5399,7 +5399,7 @@ window.SRA = {
         "populatieparameters"
       ],
       "definition": "Een meestal onbekend kenmerk van de populatie of het populatiemodel. Je schat het met gegevens uit een steekproef.",
-      "example": "Didactisch voorbeeld (eigen): De werkelijke gemiddelde waarde van alle artikelen is een parameter; het gemiddelde van 100 gecontroleerde artikelen schat die waarde.",
+      "example": "De werkelijke gemiddelde waarde van alle artikelen is een parameter; het gemiddelde van 100 gecontroleerde artikelen schat die waarde.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5416,7 +5416,7 @@ window.SRA = {
         "steekproefgrootheden"
       ],
       "definition": "Een getal dat je uit de steekproef berekent. De uitkomst kan anders zijn als je een andere steekproef trekt.",
-      "example": "Didactisch voorbeeld (eigen): Het gemiddelde van de gecontroleerde artikelen is een steekproefgrootheid.",
+      "example": "Het gemiddelde van de gecontroleerde artikelen is een steekproefgrootheid.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5434,7 +5434,7 @@ window.SRA = {
         "boekwaardetotaal"
       ],
       "definition": "De administratief geregistreerde waarde. In de schatters staat bᵢ voor een post en B voor het bekende boekwaardetotaal van de populatie.",
-      "example": "Didactisch voorbeeld (eigen): Een artikel staat voor € 100 in de administratie: de boekwaarde is € 100.",
+      "example": "Een artikel staat voor € 100 in de administratie: de boekwaarde is € 100.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5452,7 +5452,7 @@ window.SRA = {
         "werkelijk totaal"
       ],
       "definition": "De waarde die je voor het onderzoek wilt vaststellen. Bij geldbedragschattingen vergelijk je deze met de boekwaarde; het volledige werkelijke populatietotaal is meestal onbekend.",
-      "example": "Didactisch voorbeeld (eigen): Een artikel met boekwaarde € 100 blijkt na controle € 90 waard.",
+      "example": "Een artikel met boekwaarde € 100 blijkt na controle € 90 waard.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5470,7 +5470,7 @@ window.SRA = {
         "eenheden"
       ],
       "definition": "De schaal waarin een variabele is gemeten, zoals euro’s, jaren of centimeters. De eenheid bepaalt hoe je coëfficiënten en uitkomsten uitlegt.",
-      "example": "Didactisch voorbeeld (eigen): Een voorspelling van 3,5 betekent € 3.500 als de salarisvariabele in duizenden euro’s staat.",
+      "example": "Een voorspelling van 3,5 betekent € 3.500 als de salarisvariabele in duizenden euro’s staat.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -5490,7 +5490,7 @@ window.SRA = {
         "Mean"
       ],
       "definition": "De som van de waarden gedeeld door het aantal waarden. Een streep boven een letter geeft vaak dit gemiddelde aan.",
-      "example": "Didactisch voorbeeld (eigen): Bij 80, 100 en 120 is het gemiddelde (80 + 100 + 120) / 3 = 100.",
+      "example": "Bij 80, 100 en 120 is het gemiddelde (80 + 100 + 120) / 3 = 100.",
       "lesson": "rekenen",
       "refs": [
         {
@@ -5509,7 +5509,7 @@ window.SRA = {
         "sommatie"
       ],
       "definition": "Het teken Σ betekent: tel de aangegeven termen op. Let erop of je eerst kwadrateert of pas na het optellen.",
-      "example": "Didactisch voorbeeld (eigen): Bij 2 en 4 is Σw² = 4 + 16 = 20, maar (Σw)² = 6² = 36.",
+      "example": "Bij 2 en 4 is Σw² = 4 + 16 = 20, maar (Σw)² = 6² = 36.",
       "lesson": "rekenen",
       "refs": [
         {
@@ -5529,7 +5529,7 @@ window.SRA = {
         "gekwadrateerde"
       ],
       "definition": "Een getal vermenigvuldigd met zichzelf. Ook een negatief getal heeft een niet-negatief kwadraat.",
-      "example": "Didactisch voorbeeld (eigen): (−3)² = (−3) × (−3) = 9.",
+      "example": "(−3)² = (−3) × (−3) = 9.",
       "lesson": "rekenen",
       "refs": [
         {
@@ -5547,7 +5547,7 @@ window.SRA = {
         "worteltrekken"
       ],
       "definition": "De niet-negatieve waarde die, met zichzelf vermenigvuldigd, het getal onder het wortelteken oplevert.",
-      "example": "Didactisch voorbeeld (eigen): √225 = 15, want 15 × 15 = 225.",
+      "example": "√225 = 15, want 15 × 15 = 225.",
       "lesson": "rekenen",
       "refs": [
         {
@@ -5564,7 +5564,7 @@ window.SRA = {
         "spreiden"
       ],
       "definition": "Hoe sterk waarden van elkaar en van hun centrum verschillen. Standaardafwijking en variantie zijn manieren om die verschillen in een getal samen te vatten.",
-      "example": "Didactisch voorbeeld (eigen): 90, 100 en 110 hebben hetzelfde gemiddelde als 0, 100 en 200, maar veel minder spreiding.",
+      "example": "90, 100 en 110 hebben hetzelfde gemiddelde als 0, 100 en 200, maar veel minder spreiding.",
       "lesson": "rekenen",
       "refs": [
         {
@@ -5581,7 +5581,7 @@ window.SRA = {
         "afwijkingen van het gemiddelde"
       ],
       "definition": "De waarde van een waarneming minus het gemiddelde. Afwijkingen boven en onder het gemiddelde tellen samen op tot nul.",
-      "example": "Didactisch voorbeeld (eigen): Bij een gemiddelde van 100 is de afwijking van 80 gelijk aan −20.",
+      "example": "Bij een gemiddelde van 100 is de afwijking van 80 gelijk aan −20.",
       "lesson": "rekenen",
       "refs": [
         {
@@ -5600,7 +5600,7 @@ window.SRA = {
         "steekproefvarianties"
       ],
       "definition": "Een maat voor gekwadrateerde spreiding. De steekproefvariantie is de som van de gekwadrateerde afwijkingen van het gemiddelde, gedeeld door n − 1.",
-      "example": "Didactisch voorbeeld (eigen): Bij 90 en 110 is het gemiddelde 100 en s² = (100 + 100) / 1 = 200.",
+      "example": "Bij 90 en 110 is het gemiddelde 100 en s² = (100 + 100) / 1 = 200.",
       "lesson": "rekenen",
       "refs": [
         {
@@ -5621,7 +5621,7 @@ window.SRA = {
         "Std. dev"
       ],
       "definition": "De wortel uit de variantie. Zij beschrijft de spreiding van individuele waarden in dezelfde eenheid als die waarden.",
-      "example": "Didactisch voorbeeld (eigen): Een variantie van 225 euro² hoort bij een standaardafwijking van 15 euro.",
+      "example": "Een variantie van 225 euro² hoort bij een standaardafwijking van 15 euro.",
       "lesson": "rekenen",
       "refs": [
         {
@@ -5645,7 +5645,7 @@ window.SRA = {
         }
       ],
       "definition": "De spreiding van een schatter over mogelijke steekproeven. Zij beschrijft de onzekerheid van een schatting, niet de spreiding van individuele posten.",
-      "example": "Didactisch voorbeeld (eigen): Bij s = 20 en n = 100 is de standaardfout van het gemiddelde vóór eindigheidscorrectie 20 / √100 = 2.",
+      "example": "Bij s = 20 en n = 100 is de standaardfout van het gemiddelde vóór eindigheidscorrectie 20 / √100 = 2.",
       "lesson": "rekenen",
       "refs": [
         {
@@ -5669,7 +5669,7 @@ window.SRA = {
         "tussenuitkomsten"
       ],
       "definition": "Afronden voordat de hele berekening af is. Dit kan de einduitkomst veranderen; reken in SRA bij voorkeur verder met onafgeronde tussenwaarden.",
-      "example": "Didactisch voorbeeld (eigen): Gebruik een berekende standaardfout van 1.898,31599 in de volgende stap, ook als je 1.898,32 toont.",
+      "example": "Gebruik een berekende standaardfout van 1.898,31599 in de volgende stap, ook als je 1.898,32 toont.",
       "lesson": "rekenen",
       "refs": [
         {
@@ -5687,7 +5687,7 @@ window.SRA = {
         "kanswaarde"
       ],
       "definition": "Een getal tussen 0 en 1 dat aangeeft hoe waarschijnlijk een uitkomst of gebeurtenis is binnen het gebruikte kansmodel.",
-      "example": "Didactisch voorbeeld (eigen): Een kans van 0,05 is hetzelfde als 5%.",
+      "example": "Een kans van 0,05 is hetzelfde als 5%.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5711,7 +5711,7 @@ window.SRA = {
         "kansverdelingen"
       ],
       "definition": "Een beschrijving van welke waarden voorkomen of mogelijk zijn en hoe vaak of met welke kans dat gebeurt.",
-      "example": "Didactisch voorbeeld (eigen): Een verdeling kan laten zien dat de meeste waarden rond 100 liggen en slechts enkele rond 200.",
+      "example": "Een verdeling kan laten zien dat de meeste waarden rond 100 liggen en slechts enkele rond 200.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5736,7 +5736,7 @@ window.SRA = {
         "klokvorm"
       ],
       "definition": "Een symmetrische, klokvormige kansverdeling met veel waarden rond het gemiddelde en minder waarden verder daarvan af.",
-      "example": "Didactisch voorbeeld (eigen): Bij een gemiddelde van 100 liggen waarden 90 en 110 even ver van het midden van dezelfde normale verdeling.",
+      "example": "Bij een gemiddelde van 100 liggen waarden 90 en 110 even ver van het midden van dezelfde normale verdeling.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5759,7 +5759,7 @@ window.SRA = {
         "standaardnormale z-verdeling"
       ],
       "definition": "De normale verdeling op een gestandaardiseerde schaal, met gemiddelde 0 en standaardafwijking 1. Bij veel vrijheidsgraden nadert de t-verdeling deze vorm.",
-      "example": "Didactisch voorbeeld (eigen): Een z-waarde van 2 ligt twee standaardafwijkingen boven het gemiddelde.",
+      "example": "Een z-waarde van 2 ligt twee standaardafwijkingen boven het gemiddelde.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5783,7 +5783,7 @@ window.SRA = {
         "Student-t"
       ],
       "definition": "Een symmetrische verdeling die rekening houdt met onzekerheid door het schatten van spreiding. De vorm hangt af van de vrijheidsgraden; bij weinig vrijheidsgraden zijn de staarten zwaarder.",
-      "example": "Didactisch voorbeeld (eigen): Voor dezelfde betrouwbaarheid is bij weinig vrijheidsgraden doorgaans een grotere kritieke t nodig.",
+      "example": "Voor dezelfde betrouwbaarheid is bij weinig vrijheidsgraden doorgaans een grotere kritieke t nodig.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5809,7 +5809,7 @@ window.SRA = {
         "rechterstaart"
       ],
       "definition": "Het uiterste linker- of rechterdeel van een verdeling. De staartkans is de kans op uitkomsten in dat gebied.",
-      "example": "Didactisch voorbeeld (eigen): Een tweezijdig 95%-interval laat 2,5% in elke staart over.",
+      "example": "Een tweezijdig 95%-interval laat 2,5% in elke staart over.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5831,7 +5831,7 @@ window.SRA = {
         "betrouwbaarheidsniveau"
       ],
       "definition": "De gekozen dekking van een intervalmethode, 1 − α. Bij herhaalde geschikte steekproeven bevat ongeveer dit aandeel van de op dezelfde manier gemaakte intervallen de vaste werkelijke parameter.",
-      "example": "Didactisch voorbeeld (eigen): Bij een 95%-methode bevatten op lange termijn ongeveer 95 van 100 intervallen de werkelijke waarde.",
+      "example": "Bij een 95%-methode bevatten op lange termijn ongeveer 95 van 100 intervallen de werkelijke waarde.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5855,7 +5855,7 @@ window.SRA = {
         "schattingsintervallen"
       ],
       "definition": "Een onder- en bovengrens voor een onbekende parameter, gemaakt met een gekozen intervalmethode en betrouwbaarheid. Het is geen interval waarin datzelfde percentage individuele waarnemingen moet vallen.",
-      "example": "Didactisch voorbeeld (eigen): Een interval voor de totale voorraadwaarde is [€ 96.000; € 104.000], niet een bereik voor losse artikelen.",
+      "example": "Een interval voor de totale voorraadwaarde is [€ 96.000; € 104.000], niet een bereik voor losse artikelen.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5877,7 +5877,7 @@ window.SRA = {
         "puntschattingen"
       ],
       "definition": "Eén getal als schatting van een onbekende populatiewaarde. Een puntschatting alleen laat de onzekerheid nog niet zien.",
-      "example": "Didactisch voorbeeld (eigen): € 100.000 is de puntschatting van de totale voorraadwaarde.",
+      "example": "€ 100.000 is de puntschatting van de totale voorraadwaarde.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5904,7 +5904,7 @@ window.SRA = {
         "onnauwkeurigheid"
       ],
       "definition": "De afstand van de puntschatting tot één intervalgrens bij een symmetrisch interval. Deze marge E is de kritieke waarde maal de standaardfout.",
-      "example": "Didactisch voorbeeld (eigen): Een standaardfout van € 2.000 en kritieke t = 2 geven E = € 4.000.",
+      "example": "Een standaardfout van € 2.000 en kritieke t = 2 geven E = € 4.000.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5927,7 +5927,7 @@ window.SRA = {
         "totale intervalbreedte"
       ],
       "definition": "Het verschil tussen bovengrens en ondergrens. Bij een symmetrisch interval is de totale breedte tweemaal de marge E.",
-      "example": "Didactisch voorbeeld (eigen): Bij [96; 104] is de breedte 8 en de marge 4.",
+      "example": "Bij [96; 104] is de breedte 8 en de marge 4.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5950,7 +5950,7 @@ window.SRA = {
         "bovengrens"
       ],
       "definition": "De laagste en hoogste waarde van het berekende interval. Bij een symmetrisch interval trek je de marge van het midden af en tel je haar erbij op.",
-      "example": "Didactisch voorbeeld (eigen): Bij puntschatting 100 en marge 4 zijn de grenzen 96 en 104.",
+      "example": "Bij puntschatting 100 en marge 4 zijn de grenzen 96 en 104.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -5977,7 +5977,7 @@ window.SRA = {
         "F-grens"
       ],
       "definition": "Een grens uit de passende kansverdeling. Je kiest haar met de gewenste betrouwbaarheid of α, de toetsrichting en de juiste vrijheidsgraden.",
-      "example": "Didactisch voorbeeld (eigen): Gebruik een gegeven kritieke t van 2 om de standaardfout met 2 te vermenigvuldigen.",
+      "example": "Gebruik een gegeven kritieke t van 2 om de standaardfout met 2 te vermenigvuldigen.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -6002,7 +6002,7 @@ window.SRA = {
         "residual df"
       ],
       "definition": "Het aantal vrij variërende componenten nadat parameters zijn geschat. Bij steekproefvariantie is dit n − 1; bij regressieresiduen met k verklarende variabelen is het n − k − 1.",
-      "example": "Didactisch voorbeeld (eigen): Bij n = 50 en k = 3 zijn er 50 − 3 − 1 = 46 residuele vrijheidsgraden.",
+      "example": "Bij n = 50 en k = 3 zijn er 50 − 3 − 1 = 46 residuele vrijheidsgraden.",
       "lesson": "anova",
       "refs": [
         {
@@ -6025,7 +6025,7 @@ window.SRA = {
         "finite population correction"
       ],
       "definition": "De factor √((N − n)/(N − 1)) die de steekproefonzekerheid verkleint bij trekking zonder teruglegging uit een eindige populatie. Bij volledige controle wordt de factor nul.",
-      "example": "Didactisch voorbeeld (eigen): Als je alle 100 van de 100 posten controleert, is de resterende steekproefonzekerheid nul.",
+      "example": "Als je alle 100 van de 100 posten controleert, is de resterende steekproefonzekerheid nul.",
       "lesson": "mpu",
       "refs": [
         {
@@ -6048,7 +6048,7 @@ window.SRA = {
         "naar buiten afronden"
       ],
       "definition": "Een interval afronden zonder het smaller te maken: de ondergrens omlaag en de bovengrens omhoog, op de gevraagde afrondingseenheid.",
-      "example": "Didactisch voorbeeld (eigen): [€ 1.234; € 1.876] wordt op € 100 naar buiten [€ 1.200; € 1.900].",
+      "example": "[€ 1.234; € 1.876] wordt op € 100 naar buiten [€ 1.200; € 1.900].",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -6072,7 +6072,7 @@ window.SRA = {
         "schattingsmethoden"
       ],
       "definition": "Een rekenregel waarmee je uit steekproefgegevens een onbekende populatiewaarde schat. De uitkomst van de regel is de schatting.",
-      "example": "Didactisch voorbeeld (eigen): De regel N × steekproefgemiddelde is een schatter van het populatietotaal.",
+      "example": "De regel N × steekproefgemiddelde is een schatter van het populatietotaal.",
       "lesson": "mpu",
       "refs": [
         {
@@ -6097,7 +6097,7 @@ window.SRA = {
         "MPU-schatter"
       ],
       "definition": "De schatter die het gemiddelde van de gecontroleerde werkelijke waarden met N vermenigvuldigt. MPU betekent Mean Per Unit: gemiddelde per eenheid.",
-      "example": "Didactisch voorbeeld (eigen): Bij N = 1.000 en een steekproefgemiddelde van € 80 is Ŵ_MPU = € 80.000.",
+      "example": "Bij N = 1.000 en een steekproefgemiddelde van € 80 is Ŵ_MPU = € 80.000.",
       "lesson": "mpu",
       "refs": [
         {
@@ -6121,7 +6121,7 @@ window.SRA = {
         "verschil per post"
       ],
       "definition": "In de schattingslessen is dit boekwaarde minus werkelijke waarde: e = b − w. Een positieve e betekent dat de boekwaarde te hoog is. Deze e is iets anders dan een regressieresidu.",
-      "example": "Didactisch voorbeeld (eigen): Boekwaarde € 100 en werkelijke waarde € 90 geven e = +€ 10.",
+      "example": "Boekwaarde € 100 en werkelijke waarde € 90 geven e = +€ 10.",
       "lesson": "verschil",
       "refs": [
         {
@@ -6144,7 +6144,7 @@ window.SRA = {
         "verschilschattingen"
       ],
       "definition": "Een methode die de gemiddelde boekwaardefout naar de populatie doorrekent en van B aftrekt: Ŵ = B − Nē. Zij past bij ongeveer constante foutbedragen; de cursus noemt minstens 30 afwijkende posten als voorwaarde.",
-      "example": "Didactisch voorbeeld (eigen): Bij B = € 100.000, N = 1.000 en ē = € 10 wordt het geschatte werkelijke totaal € 90.000.",
+      "example": "Bij B = € 100.000, N = 1.000 en ē = € 10 wordt het geschatte werkelijke totaal € 90.000.",
       "lesson": "verschil",
       "refs": [
         {
@@ -6168,7 +6168,7 @@ window.SRA = {
         "verhouding van de sommen"
       ],
       "definition": "De verhouding van de som van werkelijke waarden tot de som van boekwaarden in de steekproef: q = Σw/Σb. Dit is niet in het algemeen het gemiddelde van losse postverhoudingen.",
-      "example": "Didactisch voorbeeld (eigen): Σw = € 19.000 en Σb = € 20.000 geven q = 0,95.",
+      "example": "Σw = € 19.000 en Σb = € 20.000 geven q = 0,95.",
       "lesson": "quotient",
       "refs": [
         {
@@ -6192,7 +6192,7 @@ window.SRA = {
         "ratioschatter"
       ],
       "definition": "Een methode die de goedratio met het bekende boekwaardetotaal vermenigvuldigt: Ŵ = qB. Zij past bij een ongeveer vaste verhouding; controleer ook de cursusvoorwaarde van minstens 30 afwijkende posten.",
-      "example": "Didactisch voorbeeld (eigen): Bij q = 0,95 en B = € 500.000 is het geschatte werkelijke totaal € 475.000.",
+      "example": "Bij q = 0,95 en B = € 500.000 is het geschatte werkelijke totaal € 475.000.",
       "lesson": "quotient",
       "refs": [
         {
@@ -6214,7 +6214,7 @@ window.SRA = {
         "regressieschatting"
       ],
       "definition": "De schatter van een populatietotaal die MPU corrigeert met het verschil tussen het bekende boekwaardetotaal B en de uit de steekproef doorgerekende boekwaarde Nb̄. Dit is een andere vraag dan een nieuwe y voorspellen.",
-      "example": "Didactisch voorbeeld (eigen): Als B en Nb̄ gelijk zijn, is de correctieterm b₁(B − Nb̄) nul.",
+      "example": "Als B en Nb̄ gelijk zijn, is de correctieterm b₁(B − Nb̄) nul.",
       "lesson": "regressieschatter",
       "refs": [
         {
@@ -6237,7 +6237,7 @@ window.SRA = {
         "boekwaardecorrectie"
       ],
       "definition": "Bij de regressieschatter is dit b₁(B − Nb̄): de aanpassing van de directe schatting met behulp van de bekende boekwaarden.",
-      "example": "Didactisch voorbeeld (eigen): Bij b₁ = 0,8 en B − Nb̄ = −€ 1.000 verlaagt de correctieterm de schatting met € 800.",
+      "example": "Bij b₁ = 0,8 en B − Nb̄ = −€ 1.000 verlaagt de correctieterm de schatting met € 800.",
       "lesson": "regressieschatter",
       "refs": [
         {
@@ -6261,7 +6261,7 @@ window.SRA = {
         "vereiste omvang"
       ],
       "definition": "De formulebladroute waarmee je vooraf de benodigde steekproefomvang berekent uit N, gewenste marge, passende variantie en kritieke t. De benodigde omvang wordt naar boven afgerond.",
-      "example": "Didactisch voorbeeld (eigen): Een berekende omvang van 520,122 vraagt minstens 521 controles.",
+      "example": "Een berekende omvang van 520,122 vraagt minstens 521 controles.",
       "lesson": "steekproefomvang",
       "refs": [
         {
@@ -6284,7 +6284,7 @@ window.SRA = {
         "tussenstap gamma"
       ],
       "definition": "De tussenuitkomst γ waarmee de cursus de omvangsformule schrijft als n = N/(1 + γ). γ hangt af van de gewenste marge en de variantie die bij de gekozen schatter hoort.",
-      "example": "Didactisch voorbeeld (eigen): Bij N = 1.000 en γ = 3 volgt n = 1.000 / 4 = 250.",
+      "example": "Bij N = 1.000 en γ = 3 volgt n = 1.000 / 4 = 250.",
       "lesson": "steekproefomvang",
       "refs": [
         {
@@ -6308,7 +6308,7 @@ window.SRA = {
         "extra controles"
       ],
       "definition": "Het aantal nog te controleren posten nadat je de totale vereiste omvang hebt bepaald. Trek het al gecontroleerde aantal af; de uitbreiding kan niet negatief zijn.",
-      "example": "Didactisch voorbeeld (eigen): Een vereiste omvang van 521 en 180 bestaande controles betekenen 341 extra controles.",
+      "example": "Een vereiste omvang van 521 en 180 bestaande controles betekenen 341 extra controles.",
       "lesson": "steekproefomvang",
       "refs": [
         {
@@ -6332,7 +6332,7 @@ window.SRA = {
         "gestratificeerde steekproef"
       ],
       "definition": "Een populatie verdelen in deelpopulaties en per groep steekproeven of controles uitvoeren. Relatief gelijksoortige groepen kunnen de precisie verbeteren.",
-      "example": "Didactisch voorbeeld (eigen): Verdeel voorraadartikelen in lage, middelhoge en hoge boekwaarden en schat elke groep afzonderlijk.",
+      "example": "Verdeel voorraadartikelen in lage, middelhoge en hoge boekwaarden en schat elke groep afzonderlijk.",
       "lesson": "stratificatie",
       "refs": [
         {
@@ -6357,7 +6357,7 @@ window.SRA = {
         "deelpopulaties"
       ],
       "definition": "Eén van de groepen waarin een populatie bij stratificatie is verdeeld. Elke groep heeft haar eigen omvang, gemiddelde en spreiding.",
-      "example": "Didactisch voorbeeld (eigen): Alle artikelen met boekwaarde van € 100 tot € 500 vormen één stratum.",
+      "example": "Alle artikelen met boekwaarde van € 100 tot € 500 vormen één stratum.",
       "lesson": "stratificatie",
       "refs": [
         {
@@ -6379,7 +6379,7 @@ window.SRA = {
         "topstrata"
       ],
       "definition": "Een apart stratum met bijvoorbeeld de posten boven een hoog grensbedrag. Bij integrale controle ken je de werkelijke waarde ervan en is er voor dat deel geen steekproefonzekerheid.",
-      "example": "Didactisch voorbeeld (eigen): Je controleert alle zeer dure machines en telt hun vastgestelde werkelijke waarde bij de overige schattingen op.",
+      "example": "Je controleert alle zeer dure machines en telt hun vastgestelde werkelijke waarde bij de overige schattingen op.",
       "lesson": "stratificatie",
       "refs": [
         {
@@ -6403,7 +6403,7 @@ window.SRA = {
         "volledige controle"
       ],
       "definition": "Alle elementen van de bedoelde populatie of groep controleren. Daardoor resteert voor die groep geen onzekerheid door steekproeftrekking.",
-      "example": "Didactisch voorbeeld (eigen): Van een topstratum met 12 posten controleer je alle 12.",
+      "example": "Van een topstratum met 12 posten controleer je alle 12.",
       "lesson": "stratificatie",
       "refs": [
         {
@@ -6427,7 +6427,7 @@ window.SRA = {
         "alloceren"
       ],
       "definition": "De verdeling van het beschikbare steekproefaantal over strata. Na afronden moeten de aantallen samen nog steeds het gewenste totaal vormen.",
-      "example": "Didactisch voorbeeld (eigen): Van 100 controles gaan er 60 naar stratum 1 en 40 naar stratum 2.",
+      "example": "Van 100 controles gaan er 60 naar stratum 1 en 40 naar stratum 2.",
       "lesson": "stratificatie",
       "refs": [
         {
@@ -6450,7 +6450,7 @@ window.SRA = {
         "proportionele allocatie"
       ],
       "definition": "De steekproef verdelen naar groepsomvang: nᵢ = (Nᵢ/N)n. De spreiding per groep speelt in deze verdeling geen rol.",
-      "example": "Didactisch voorbeeld (eigen): Een stratum met 60% van alle posten krijgt bij deze methode 60% van de controles.",
+      "example": "Een stratum met 60% van alle posten krijgt bij deze methode 60% van de controles.",
       "lesson": "stratificatie",
       "refs": [
         {
@@ -6473,7 +6473,7 @@ window.SRA = {
         "Neyman allocatie"
       ],
       "definition": "Bij gelijke kosten de controles verdelen in verhouding tot Nᵢsᵢ. Een grotere groep of een groep met meer spreiding krijgt dan meer controles.",
-      "example": "Didactisch voorbeeld (eigen): Twee even grote strata met spreiding 10 en 30 krijgen controles in de verhouding 1 op 3.",
+      "example": "Twee even grote strata met spreiding 10 en 30 krijgen controles in de verhouding 1 op 3.",
       "lesson": "stratificatie",
       "refs": [
         {
@@ -6497,7 +6497,7 @@ window.SRA = {
         "regressiemodellen"
       ],
       "definition": "Een model voor de samenhang tussen een uitkomst y en één of meer verklarende variabelen. Het model kan voorspellen, maar toont op zichzelf geen oorzaak-gevolgrelatie aan.",
-      "example": "Didactisch voorbeeld (eigen): Je beschrijft hoe voorspelde kosten samenhangen met productie.",
+      "example": "Je beschrijft hoe voorspelde kosten samenhangen met productie.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6520,7 +6520,7 @@ window.SRA = {
         "enkelvoudige lineaire regressie"
       ],
       "definition": "Regressie met één verklarende variabele. Bij een rechte lijn is de geschatte vergelijking ŷ = b₀ + b₁x.",
-      "example": "Didactisch voorbeeld (eigen): Voorspel kosten uitsluitend uit het aantal geproduceerde artikelen.",
+      "example": "Voorspel kosten uitsluitend uit het aantal geproduceerde artikelen.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6545,7 +6545,7 @@ window.SRA = {
         "Dependent Variable"
       ],
       "definition": "De uitkomst y die je met het model wilt beschrijven of voorspellen. Een meervoudig regressiemodel heeft nog steeds één afhankelijke variabele.",
-      "example": "Didactisch voorbeeld (eigen): In een salarisregressie is salaris de afhankelijke variabele.",
+      "example": "In een salarisregressie is salaris de afhankelijke variabele.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6571,7 +6571,7 @@ window.SRA = {
         "predictoren"
       ],
       "definition": "Een x-variabele die je in het model opneemt om verschillen in y te beschrijven. De naam betekent niet dat een causaal effect is aangetoond.",
-      "example": "Didactisch voorbeeld (eigen): Leeftijd kan een verklarende variabele zijn in een model voor salaris.",
+      "example": "Leeftijd kan een verklarende variabele zijn in een model voor salaris.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6595,7 +6595,7 @@ window.SRA = {
         "coëfficiënten"
       ],
       "definition": "Een getal in de regressievergelijking, zoals de constante of een helling. De geschatte coëfficiënten b worden uit de data berekend; de populatiecoëfficiënten β zijn onbekend.",
-      "example": "Didactisch voorbeeld (eigen): In ŷ = 200 + 3x zijn 200 en 3 de geschatte coëfficiënten.",
+      "example": "In ŷ = 200 + 3x zijn 200 en 3 de geschatte coëfficiënten.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6618,7 +6618,7 @@ window.SRA = {
         "Constant"
       ],
       "definition": "De voorspelde y wanneer alle verklarende variabelen nul zijn. Als nul buiten het onderzochte gebied ligt, heeft deze waarde niet vanzelf een praktische interpretatie.",
-      "example": "Didactisch voorbeeld (eigen): In ŷ = 200 + 3x is 200 de voorspelling bij x = 0.",
+      "example": "In ŷ = 200 + 3x is 200 de voorspelling bij x = 0.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6644,7 +6644,7 @@ window.SRA = {
         "slope"
       ],
       "definition": "De verandering in voorspelde y bij één extra eenheid x. In meervoudige regressie geldt dit bij gelijkblijvende overige opgenomen variabelen.",
-      "example": "Didactisch voorbeeld (eigen): Bij ŷ = 200 + 3x gaat de voorspelling met 3 omhoog als x van 50 naar 51 gaat.",
+      "example": "Bij ŷ = 200 + 3x gaat de voorspelling met 3 omhoog als x van 50 naar 51 gaat.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6668,7 +6668,7 @@ window.SRA = {
         "epsilon"
       ],
       "definition": "Het onbekende deel van y dat het populatiemodel niet verklaart. De storing ε is niet direct waarneembaar; na schatting bereken je residuen als benadering.",
-      "example": "Didactisch voorbeeld (eigen): Twee personen met dezelfde opgenomen kenmerken kunnen toch een ander salaris hebben.",
+      "example": "Twee personen met dezelfde opgenomen kenmerken kunnen toch een ander salaris hebben.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6692,7 +6692,7 @@ window.SRA = {
         "Unstandardized Residual"
       ],
       "definition": "De waargenomen y minus de door het geschatte model voorspelde ŷ: e = y − ŷ. Een positief residu betekent dat de waarneming boven de voorspelling ligt.",
-      "example": "Didactisch voorbeeld (eigen): Bij werkelijke kosten 380 en voorspelde kosten 350 is het residu +30.",
+      "example": "Bij werkelijke kosten 380 en voorspelde kosten 350 is het residu +30.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6716,7 +6716,7 @@ window.SRA = {
         "Ordinary Least Squares"
       ],
       "definition": "De methode die coëfficiënten kiest waarmee de som van de gekwadrateerde residuen zo klein mogelijk is.",
-      "example": "Didactisch voorbeeld (eigen): Vergelijk twee lijnen: OLS kiest de lijn met de laagste Σ(yᵢ − ŷᵢ)².",
+      "example": "Vergelijk twee lijnen: OLS kiest de lijn met de laagste Σ(yᵢ − ŷᵢ)².",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6740,7 +6740,7 @@ window.SRA = {
         "Unstandardized B"
       ],
       "definition": "Een geschatte coëfficiënt in de oorspronkelijke meeteenheden. Gebruik in SPSS de kolom B van Coefficients voor de gewone regressievergelijking.",
-      "example": "Didactisch voorbeeld (eigen): B = 30 bij leeftijd betekent 30 salariseenheden meer per extra jaar, bij gelijkblijvende andere kenmerken.",
+      "example": "B = 30 bij leeftijd betekent 30 salariseenheden meer per extra jaar, bij gelijkblijvende andere kenmerken.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6768,7 +6768,7 @@ window.SRA = {
         }
       ],
       "definition": "Een coëfficiënt nadat variabelen op een standaardafwijkingsschaal zijn uitgedrukt. SPSS noemt deze kolom Beta; gebruik haar niet in een vergelijking met de oorspronkelijke eenheden.",
-      "example": "Didactisch voorbeeld (eigen): Vul een Beta van 0,6 niet als eurocoëfficiënt in wanneer de vergelijking het salaris in euro’s moet voorspellen.",
+      "example": "Vul een Beta van 0,6 niet als eurocoëfficiënt in wanneer de vergelijking het salaris in euro’s moet voorspellen.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6794,7 +6794,7 @@ window.SRA = {
         "Pearson"
       ],
       "definition": "Pearsons r beschrijft richting en sterkte van lineaire samenhang en ligt tussen −1 en 1. Een r dicht bij nul sluit een krom verband niet uit.",
-      "example": "Didactisch voorbeeld (eigen): r = −0,8 wijst op een sterk dalend lineair verband; het bewijst geen oorzaak-gevolgrelatie.",
+      "example": "r = −0,8 wijst op een sterk dalend lineair verband; het bewijst geen oorzaak-gevolgrelatie.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6818,7 +6818,7 @@ window.SRA = {
         "oorzaak-gevolgrelatie"
       ],
       "definition": "Een oorzaak-gevolgrelatie. Een correlatie of regressie op zichzelf laat zo’n relatie niet zien; andere variabelen of groepsverschillen kunnen de samenhang beïnvloeden.",
-      "example": "Didactisch voorbeeld (eigen): Dat salaris met leeftijd samenhangt, toont op zichzelf niet aan dat één extra verjaardag het salaris veroorzaakt.",
+      "example": "Dat salaris met leeftijd samenhangt, toont op zichzelf niet aan dat één extra verjaardag het salaris veroorzaakt.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6844,7 +6844,7 @@ window.SRA = {
         "puntenwolk"
       ],
       "definition": "Een grafiek waarin elke waarneming een punt krijgt op de x- en y-as. Zo zie je de vorm, richting en spreiding van een verband en mogelijke groepen of uitschieters.",
-      "example": "Didactisch voorbeeld (eigen): Zet leeftijd horizontaal en salaris verticaal; iedere werknemer wordt één punt.",
+      "example": "Zet leeftijd horizontaal en salaris verticaal; iedere werknemer wordt één punt.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -6868,7 +6868,7 @@ window.SRA = {
         "ANOVA-tabel"
       ],
       "definition": "De tabel die de variatie in y bij gewone OLS-regressie met constante splitst in verklaarde en resterende variatie. De tabel bevat kwadratensommen, vrijheidsgraden, gemiddelde kwadratensommen en F.",
-      "example": "Didactisch voorbeeld (eigen): Een totale kwadratensom van 100 kan worden gesplitst in 80 verklaard en 20 resterend.",
+      "example": "Een totale kwadratensom van 100 kan worden gesplitst in 80 verklaard en 20 resterend.",
       "lesson": "anova",
       "refs": [
         {
@@ -6892,7 +6892,7 @@ window.SRA = {
         "SS"
       ],
       "definition": "Een som van gekwadrateerde afwijkingen. Welke afwijkingen worden gebruikt, bepaalt of het om totale, verklaarde of residuele variatie gaat.",
-      "example": "Didactisch voorbeeld (eigen): Residuen −2 en 3 leveren een residuele kwadratensom van 4 + 9 = 13.",
+      "example": "Residuen −2 en 3 leveren een residuele kwadratensom van 4 + 9 = 13.",
       "lesson": "anova",
       "refs": [
         {
@@ -6917,7 +6917,7 @@ window.SRA = {
         "totale variatie"
       ],
       "definition": "Σ(yᵢ − ȳ)²: alle gekwadrateerde afwijkingen van y ten opzichte van het gemiddelde. Bij gewone OLS met constante geldt TotalSS = SSR + SSE.",
-      "example": "Didactisch voorbeeld (eigen): Bij SSR = 80 en SSE = 20 is TotalSS = 100.",
+      "example": "Bij SSR = 80 en SSE = 20 is TotalSS = 100.",
       "lesson": "anova",
       "refs": [
         {
@@ -6941,7 +6941,7 @@ window.SRA = {
         "Regression Sum of Squares"
       ],
       "definition": "Σ(ŷᵢ − ȳ)²: het deel van de variatie dat de geschatte regressie verklaart. Gebruik de betekenis van de rij Regression in de SRA-ANOVA-tabel.",
-      "example": "Didactisch voorbeeld (eigen): Bij SSR = 80 en TotalSS = 100 verklaart het model 80% van de variatie.",
+      "example": "Bij SSR = 80 en TotalSS = 100 verklaart het model 80% van de variatie.",
       "lesson": "anova",
       "refs": [
         {
@@ -6966,7 +6966,7 @@ window.SRA = {
         "Sum of Squared Residuals"
       ],
       "definition": "Σ(yᵢ − ŷᵢ)²: de som van de gekwadrateerde residuen. OLS kiest de coëfficiënten die deze som minimaliseren.",
-      "example": "Didactisch voorbeeld (eigen): Residuen −2, 1 en 3 geven SSE = 4 + 1 + 9 = 14.",
+      "example": "Residuen −2, 1 en 3 geven SSE = 4 + 1 + 9 = 14.",
       "lesson": "anova",
       "refs": [
         {
@@ -6989,7 +6989,7 @@ window.SRA = {
         "MS"
       ],
       "definition": "Een kwadratensom gedeeld door de bijbehorende vrijheidsgraden. In ANOVA zijn MSR en MSE de waarden die je voor de F-verhouding gebruikt.",
-      "example": "Didactisch voorbeeld (eigen): Een SS van 80 met 2 vrijheidsgraden geeft MS = 40.",
+      "example": "Een SS van 80 met 2 vrijheidsgraden geeft MS = 40.",
       "lesson": "anova",
       "refs": [
         {
@@ -7011,7 +7011,7 @@ window.SRA = {
         "Mean Square Regression"
       ],
       "definition": "De verklaarde kwadratensom gedeeld door het aantal verklarende variabelen: SSR/k. Dit is de teller van de globale F-verhouding.",
-      "example": "Didactisch voorbeeld (eigen): SSR = 80 en k = 2 geven MSR = 40.",
+      "example": "SSR = 80 en k = 2 geven MSR = 40.",
       "lesson": "anova",
       "refs": [
         {
@@ -7037,7 +7037,7 @@ window.SRA = {
         "trainings-MSE"
       ],
       "definition": "De residuele kwadratensom gedeeld door de residuele vrijheidsgraden: SSE/(n − k − 1). De wortel is de geschatte residuele standaardfout.",
-      "example": "Didactisch voorbeeld (eigen): SSE = 112 en 28 residuele vrijheidsgraden geven MSE = 4.",
+      "example": "SSE = 112 en 28 residuele vrijheidsgraden geven MSE = 4.",
       "lesson": "anova",
       "refs": [
         {
@@ -7060,7 +7060,7 @@ window.SRA = {
         "standaardfout van het regressiemodel"
       ],
       "definition": "De wortel uit MSE, in de eenheid van y. Zij beschrijft de geschatte spreiding rond de regressielijn en wordt in het voorspellingsinterval gebruikt.",
-      "example": "Didactisch voorbeeld (eigen): MSE = 16 geeft Std. Error of the Estimate = 4.",
+      "example": "MSE = 16 geeft Std. Error of the Estimate = 4.",
       "lesson": "anova",
       "refs": [
         {
@@ -7085,7 +7085,7 @@ window.SRA = {
         "determinatiecoëfficiënt"
       ],
       "definition": "Het aandeel van de totale variatie in y dat het model verklaart: SSR/TotalSS. Het is niet het percentage waarnemingen dat exact goed voorspeld is.",
-      "example": "Didactisch voorbeeld (eigen): R² = 0,70 betekent 70% verklaarde variatie in y binnen de gebruikte gegevens.",
+      "example": "R² = 0,70 betekent 70% verklaarde variatie in y binnen de gebruikte gegevens.",
       "lesson": "anova",
       "refs": [
         {
@@ -7108,7 +7108,7 @@ window.SRA = {
         "hypotheses"
       ],
       "definition": "Een toetsbare uitspraak over een populatie of modelparameter. Bij een toets schrijf je een nulhypothese en een alternatief op voordat je de uitkomst beoordeelt.",
-      "example": "Didactisch voorbeeld (eigen): De uitspraak dat de populatiehelling nul is, kan als nulhypothese worden getoetst.",
+      "example": "De uitspraak dat de populatiehelling nul is, kan als nulhypothese worden getoetst.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7133,7 +7133,7 @@ window.SRA = {
         "H0"
       ],
       "definition": "De uitspraak waarvan je bij de toetsberekening uitgaat. Je verwerpt haar als de gegevens voldoende tegenbewijs geven volgens de vooraf gekozen toets.",
-      "example": "Didactisch voorbeeld (eigen): H₀: β₁ = 0 zegt dat de populatiehelling in het onderzochte model nul is.",
+      "example": "H₀: β₁ = 0 zegt dat de populatiehelling in het onderzochte model nul is.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7158,7 +7158,7 @@ window.SRA = {
         "H1"
       ],
       "definition": "De uitspraak waarvoor je met de toets bewijs zoekt. Zij kan een verschil in beide richtingen of juist een vooraf gekozen positieve of negatieve richting betreffen.",
-      "example": "Didactisch voorbeeld (eigen): H₁: β₁ < 0 past bij de vraag of het verband dalend is.",
+      "example": "H₁: β₁ < 0 past bij de vraag of het verband dalend is.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7182,7 +7182,7 @@ window.SRA = {
         "toetsstatistiek"
       ],
       "definition": "Een uit de steekproef berekend getal dat je met een toetsverdeling of kritieke grens vergelijkt, zoals t of F.",
-      "example": "Didactisch voorbeeld (eigen): Bij B = 6 en Std. Error = 2 is t = 6/2 = 3 voor een nulhypothese met coëfficiënt nul.",
+      "example": "Bij B = 6 en Std. Error = 2 is t = 6/2 = 3 voor een nulhypothese met coëfficiënt nul.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7208,7 +7208,7 @@ window.SRA = {
         "Sig"
       ],
       "definition": "De kans, uitgaande van H₀ en de toetsaannames, op een minstens zo extreme toetsingsuitkomst. Dit is niet de kans dat H₀ waar is. SPSS noemt deze waarde vaak Sig.",
-      "example": "Didactisch voorbeeld (eigen): Een tweezijdige p = 0,03 is kleiner dan α = 0,05; bij deze toets verwerp je H₀.",
+      "example": "Een tweezijdige p = 0,03 is kleiner dan α = 0,05; bij deze toets verwerp je H₀.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7232,7 +7232,7 @@ window.SRA = {
         "alpha"
       ],
       "definition": "De vooraf gekozen grens α voor de toets. Zij begrenst onder de toetsaannames het risico dat je een ware nulhypothese verwerpt.",
-      "example": "Didactisch voorbeeld (eigen): Bij α = 0,05 vergelijk je een tweezijdige p-waarde met 0,05, niet opnieuw met 0,025.",
+      "example": "Bij α = 0,05 vergelijk je een tweezijdige p-waarde met 0,05, niet opnieuw met 0,025.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7257,7 +7257,7 @@ window.SRA = {
         "significantie"
       ],
       "definition": "Een toetsuitkomst die volgens het gekozen α voldoende bewijs tegen H₀ geeft. Zij zegt op zichzelf niets over de praktische grootte van een verband of causaliteit.",
-      "example": "Didactisch voorbeeld (eigen): Een significant positieve helling kan nog steeds een kleine verandering in euro’s per jaar betekenen.",
+      "example": "Een significant positieve helling kan nog steeds een kleine verandering in euro’s per jaar betekenen.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7282,7 +7282,7 @@ window.SRA = {
         "eenzijdig interval"
       ],
       "definition": "Gericht op één kant: bij een toets een vooraf gekozen richting in H₁, bij een interval één relevante grens. Een tweezijdige SPSS-p mag voor een eenzijdige toets alleen worden gehalveerd als het teken bij H₁ past; anders gebruik je 1 − p/2.",
-      "example": "Didactisch voorbeeld (eigen): Bij H₁: β₁ > 0, positief B en tweezijdige p = 0,04 is de eenzijdige p = 0,02.",
+      "example": "Bij H₁: β₁ > 0, positief B en tweezijdige p = 0,04 is de eenzijdige p = 0,02.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7307,7 +7307,7 @@ window.SRA = {
         "tweezijdig interval"
       ],
       "definition": "Gericht op beide kanten: bij een toets afwijkingen in beide richtingen, bij een interval een onder- en bovengrens. Bij de symmetrische t-verdeling krijgt elke staart α/2; een al tweezijdige p vergelijk je met de totale α.",
-      "example": "Didactisch voorbeeld (eigen): H₁: β₁ ≠ 0 vraagt of de helling positief of negatief van nul afwijkt.",
+      "example": "H₁: β₁ ≠ 0 vraagt of de helling positief of negatief van nul afwijkt.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7330,7 +7330,7 @@ window.SRA = {
         "individuele t-toets"
       ],
       "definition": "De toets van één coëfficiënt met t = (bⱼ − βⱼ,₀)/s_bⱼ. Bij toetsing tegen nul wordt dit B/Std. Error. In regressie horen n − k − 1 vrijheidsgraden bij de toets.",
-      "example": "Didactisch voorbeeld (eigen): B = −6 en Std. Error = 2 geven t = −3 voor toetsing tegen nul.",
+      "example": "B = −6 en Std. Error = 2 geven t = −3 voor toetsing tegen nul.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7354,7 +7354,7 @@ window.SRA = {
         "globale toets"
       ],
       "definition": "De toets of alle hellingscoëfficiënten tegelijk nul zijn. F = MSR/MSE gebruikt k en n − k − 1 vrijheidsgraden. Een significante uitkomst wijst op minstens één niet-nulle helling.",
-      "example": "Didactisch voorbeeld (eigen): Een significante F bij drie x-variabelen betekent niet dat alle drie afzonderlijk significant zijn.",
+      "example": "Een significante F bij drie x-variabelen betekent niet dat alle drie afzonderlijk significant zijn.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7377,7 +7377,7 @@ window.SRA = {
         "verwerpingsgebied"
       ],
       "definition": "De toetsuitkomsten waarbij je H₀ verwerpt volgens de gekozen toetsrichting en α.",
-      "example": "Didactisch voorbeeld (eigen): Bij een linkse grens −1,70 ligt t = −3 in het kritieke gebied.",
+      "example": "Bij een linkse grens −1,70 ligt t = −3 in het kritieke gebied.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7402,7 +7402,7 @@ window.SRA = {
         "type I-fout"
       ],
       "definition": "Het risico een ware nulhypothese te verwerpen. α is niet de kans dat een al verworpen individuele hypothese toch waar blijkt.",
-      "example": "Didactisch voorbeeld (eigen): Je concludeert ten onrechte dat de populatiehelling afwijkt van nul terwijl zij in werkelijkheid nul is.",
+      "example": "Je concludeert ten onrechte dat de populatiehelling afwijkt van nul terwijl zij in werkelijkheid nul is.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7427,7 +7427,7 @@ window.SRA = {
         "type II-fout"
       ],
       "definition": "Het risico een onware nulhypothese niet te verwerpen. De waarde van dit risico is niet automatisch 1 − α.",
-      "example": "Didactisch voorbeeld (eigen): Er bestaat een populatieverband, maar de steekproef levert onvoldoende bewijs op om H₀ te verwerpen.",
+      "example": "Er bestaat een populatieverband, maar de steekproef levert onvoldoende bewijs op om H₀ te verwerpen.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7450,7 +7450,7 @@ window.SRA = {
         "onvoldoende bewijs"
       ],
       "definition": "De gegevens leveren bij de gekozen toets niet genoeg bewijs tegen H₀. Dit is geen bewijs dat H₀ waar is.",
-      "example": "Didactisch voorbeeld (eigen): p = 0,20 bij α = 0,05 betekent onvoldoende bewijs tegen H₀; niet dat geen enkel verband kan bestaan.",
+      "example": "p = 0,20 bij α = 0,05 betekent onvoldoende bewijs tegen H₀; niet dat geen enkel verband kan bestaan.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -7474,7 +7474,7 @@ window.SRA = {
         "crosssectionele gegevens"
       ],
       "definition": "Gegevens van verschillende personen, bedrijven of andere eenheden op ongeveer hetzelfde moment.",
-      "example": "Didactisch voorbeeld (eigen): De salarissen van 200 werknemers in dezelfde maand vormen crosssectiegegevens.",
+      "example": "De salarissen van 200 werknemers in dezelfde maand vormen crosssectiegegevens.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7498,7 +7498,7 @@ window.SRA = {
         "tijdsreeksen"
       ],
       "definition": "Waarnemingen die op opeenvolgende tijdstippen zijn gemeten. Hun tijdsvolgorde is relevant bij vertraging en autocorrelatie.",
-      "example": "Didactisch voorbeeld (eigen): De maandelijkse omzet van één onderneming gedurende drie jaar is een tijdreeks.",
+      "example": "De maandelijkse omzet van één onderneming gedurende drie jaar is een tijdreeks.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7522,7 +7522,7 @@ window.SRA = {
         "lag"
       ],
       "definition": "Een verband waarbij de relevante x eerder optreedt dan de bijbehorende y. De koppeling moet inhoudelijk passen bij de casus.",
-      "example": "Didactisch voorbeeld (eigen): Je onderzoekt of reclame-uitgaven in maand t − 1 samenhangen met omzet in maand t.",
+      "example": "Je onderzoekt of reclame-uitgaven in maand t − 1 samenhangen met omzet in maand t.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7547,7 +7547,7 @@ window.SRA = {
         "aannames"
       ],
       "definition": "Een voorwaarde waaronder de gebruikte modelberekeningen en gevolgtrekkingen passend zijn. SRA onderzoekt onder meer normaliteit, constante spreiding en autocorrelatie.",
-      "example": "Didactisch voorbeeld (eigen): Een hoge R² maakt een trechtervorm in de residuen niet onbelangrijk.",
+      "example": "Een hoge R² maakt een trechtervorm in de residuen niet onbelangrijk.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7571,7 +7571,7 @@ window.SRA = {
         "diagnoses"
       ],
       "definition": "Het onderzoeken van data, tabellen en residuen om te beoordelen of het regressiemodel bruikbaar is en welke problemen nader onderzoek vragen.",
-      "example": "Didactisch voorbeeld (eigen): Je bekijkt uitbijters, normaliteit en veranderende spreiding voordat je het voorspellingsinterval gebruikt.",
+      "example": "Je bekijkt uitbijters, normaliteit en veranderende spreiding voordat je het voorspellingsinterval gebruikt.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7595,7 +7595,7 @@ window.SRA = {
         "residual plot"
       ],
       "definition": "Een grafiek van residuen tegenover bijvoorbeeld x, voorspelde y of de tijd. Een systematisch patroon kan aangeven wat het model mist.",
-      "example": "Didactisch voorbeeld (eigen): Een boog in de residuen kan erop wijzen dat een rechte lijn het verband onvoldoende beschrijft.",
+      "example": "Een boog in de residuen kan erop wijzen dat een rechte lijn het verband onvoldoende beschrijft.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7621,7 +7621,7 @@ window.SRA = {
         "outliers"
       ],
       "definition": "Een waarneming die ongewoon ver van het patroon ligt. Onderscheid afwijking in y, afwijking in x en invloed op het model; een signaal is geen automatische reden om een geldige waarneming te verwijderen.",
-      "example": "Didactisch voorbeeld (eigen): Een ongewoon salaris kan een invoerfout zijn, maar ook een geldige bijzondere functie betreffen.",
+      "example": "Een ongewoon salaris kan een invoerfout zijn, maar ook een geldige bijzondere functie betreffen.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7646,7 +7646,7 @@ window.SRA = {
         "Std. Residual"
       ],
       "definition": "Een residu uitgedrukt op een standaardafwijkingsschaal. De cursus signaleert een y-uitbijter bij |z| > 2 als n ≤ 100 en bij |z| > 3 als n > 100.",
-      "example": "Didactisch voorbeeld (eigen): z = 2,5 overschrijdt de cursusgrens bij n = 100, maar niet bij n = 101.",
+      "example": "z = 2,5 overschrijdt de cursusgrens bij n = 100, maar niet bij n = 101.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7671,7 +7671,7 @@ window.SRA = {
         "uitbijter in x"
       ],
       "definition": "Een maat voor een ongebruikelijke positie in de verklarende variabelen. De SRA-cursus vergelijkt het maximum met gemiddelde MD + 3 × standaardafwijking MD.",
-      "example": "Didactisch voorbeeld (eigen): Gemiddelde MD = 1 en s_MD = 0,5 geven een cursusgrens van 2,5.",
+      "example": "Gemiddelde MD = 1 en s_MD = 0,5 geven een cursusgrens van 2,5.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7696,7 +7696,7 @@ window.SRA = {
         "CD"
       ],
       "definition": "Een maat voor de potentiële invloed van een waarneming op de geschatte regressie. De cursusgrens is gemiddelde CD + 3 × standaardafwijking CD.",
-      "example": "Didactisch voorbeeld (eigen): Gemiddelde CD = 0,04 en s_CD = 0,07 geven een grens van 0,25.",
+      "example": "Gemiddelde CD = 0,04 en s_CD = 0,07 geven een grens van 0,25.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7720,7 +7720,7 @@ window.SRA = {
         "invloedrijke waarnemingen"
       ],
       "definition": "Een waarneming waarvan de aanwezigheid de geschatte regressie sterk kan veranderen. Grootte van een residu alleen is daarvoor niet voldoende; SRA gebruikt Cook’s Distance.",
-      "example": "Didactisch voorbeeld (eigen): Een ver weg gelegen punt kan de helling sterk sturen, ook als het dicht bij de geschatte lijn ligt.",
+      "example": "Een ver weg gelegen punt kan de helling sterk sturen, ook als het dicht bij de geschatte lijn ligt.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7744,7 +7744,7 @@ window.SRA = {
         "normaliteit van de residuen"
       ],
       "definition": "De aanname dat de relevante storingsterm normaal verdeeld is, onderzocht via de residuen. Een niet-significante normaliteitstoets bewijst deze aanname niet.",
-      "example": "Didactisch voorbeeld (eigen): Bij Shapiro-Wilk p = 0,20 en α = 0,05 wordt normaliteit van de residuen niet verworpen.",
+      "example": "Bij Shapiro-Wilk p = 0,20 en α = 0,05 wordt normaliteit van de residuen niet verworpen.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7767,7 +7767,7 @@ window.SRA = {
         "Shapiro-Wilk-toets"
       ],
       "definition": "Een normaliteitstoets. De SRA-analyseroute gebruikt haar voor residuen bij n ≤ 50. H₀ is normaliteit; een kleine p geeft aanleiding H₀ te verwerpen.",
-      "example": "Didactisch voorbeeld (eigen): Bij n = 30 en p = 0,01 verwerp je normaliteit op niveau 0,05.",
+      "example": "Bij n = 30 en p = 0,01 verwerp je normaliteit op niveau 0,05.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7790,7 +7790,7 @@ window.SRA = {
         "Kolmogorov-Smirnov-toets"
       ],
       "definition": "De normaliteitstoets die de SRA-analyseroute gebruikt voor residuen bij n > 50. Beoordeel de p-waarde tegenover α.",
-      "example": "Didactisch voorbeeld (eigen): Bij n = 59 en p = 0,20 is er op niveau 0,05 onvoldoende bewijs om normaliteit te verwerpen.",
+      "example": "Bij n = 59 en p = 0,20 is er op niveau 0,05 onvoldoende bewijs om normaliteit te verwerpen.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7812,7 +7812,7 @@ window.SRA = {
         "histogrammen"
       ],
       "definition": "Een grafiek die numerieke waarden groepeert in aaneengesloten klassen. Bij gelijke klassebreedte laat de hoogte zien hoeveel waarnemingen in elke klasse vallen.",
-      "example": "Didactisch voorbeeld (eigen): Van 12 residuen liggen er 5 tussen −1 en 0; die klasse krijgt frequentie 5.",
+      "example": "Van 12 residuen liggen er 5 tussen −1 en 0; die klasse krijgt frequentie 5.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7831,7 +7831,7 @@ window.SRA = {
         "frequentietabel"
       ],
       "definition": "Het aantal waarnemingen dat een bepaalde waarde heeft of binnen een gekozen klasse valt.",
-      "example": "Didactisch voorbeeld (eigen): Als vier residuen tussen 0 en 1 liggen, is de frequentie van die klasse 4.",
+      "example": "Als vier residuen tussen 0 en 1 liggen, is de frequentie van die klasse 4.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7851,7 +7851,7 @@ window.SRA = {
         "klassen"
       ],
       "definition": "Het verschil tussen de onder- en bovengrens van een histogramklasse. In de didactische histogramtool zijn alle klassen even breed.",
-      "example": "Didactisch voorbeeld (eigen): De klasse van −1 tot 0 heeft breedte 1, net als de klasse van 0 tot 1.",
+      "example": "De klasse van −1 tot 0 heeft breedte 1, net als de klasse van 0 tot 1.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7872,7 +7872,7 @@ window.SRA = {
         "normaliteitsplot"
       ],
       "definition": "De didactische grafiek vergelijkt overeenkomstige kwantielen van geordende residuen en een theoretische normaalreferentie. Een ongeveer rechte puntenrij past bij een overeenkomstige verdelingsvorm; de grafiek berekent geen p-waarde.",
-      "example": "Didactisch voorbeeld (eigen): In het lab buigt de puntenrij wanneer je de verdelingsvorm schever maakt.",
+      "example": "In het lab buigt de puntenrij wanneer je de verdelingsvorm schever maakt.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7891,7 +7891,7 @@ window.SRA = {
         "theoretische kwantielen"
       ],
       "definition": "Een grenswaarde bij een bepaalde positie in een verdeling. De Q-Q-tool vergelijkt gelijke posities, bijvoorbeeld een lage positie in de residuen met dezelfde lage positie in de normaalreferentie.",
-      "example": "Didactisch voorbeeld (eigen): Vergelijk een punt uit de onderste helft van de residuen met de overeenkomstige positie in de normaalreferentie.",
+      "example": "Vergelijk een punt uit de onderste helft van de residuen met de overeenkomstige positie in de normaalreferentie.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7910,7 +7910,7 @@ window.SRA = {
         "constante spreiding"
       ],
       "definition": "De aanname dat de spreiding van de storingsterm niet verandert met de verklarende waarden. Je beoordeelt dit met de residuen.",
-      "example": "Didactisch voorbeeld (eigen): Rond zowel lage als hoge x-waarden blijft de verticale spreiding van residuen ongeveer even groot.",
+      "example": "Rond zowel lage als hoge x-waarden blijft de verticale spreiding van residuen ongeveer even groot.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7936,7 +7936,7 @@ window.SRA = {
         "waaier"
       ],
       "definition": "Een situatie waarin de spreiding van de storingsterm verandert met de verklarende waarden. Een trechter in het residuendiagram is een onderzoekssignaal.",
-      "example": "Didactisch voorbeeld (eigen): Bij hoge productie lopen de residuen veel verder uiteen dan bij lage productie.",
+      "example": "Bij hoge productie lopen de residuen veel verder uiteen dan bij lage productie.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7960,7 +7960,7 @@ window.SRA = {
         "absolute gestandaardiseerde residuen"
       ],
       "definition": "De grootte van residuen zonder hun plus- of minteken. SRA gebruikt absolute residuen in het onderzoek naar samenhang tussen spreiding en verklarende variabelen.",
-      "example": "Didactisch voorbeeld (eigen): De absolute waarden van residuen −3 en +2 zijn 3 en 2.",
+      "example": "De absolute waarden van residuen −3 en +2 zijn 3 en 2.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -7984,7 +7984,7 @@ window.SRA = {
         "gewogen regressie"
       ],
       "definition": "Regressie waarbij waarnemingen verschillende gewichten krijgen. Dit kan passen bij verschillen in spreiding; het juiste gewicht hangt af van het probleem.",
-      "example": "Didactisch voorbeeld (eigen): Het cursusvoorbeeld met gewicht 1/x² is een specifieke correctie, geen algemene keuze voor elk model.",
+      "example": "Het cursusvoorbeeld met gewicht 1/x² is een specifieke correctie, geen algemene keuze voor elk model.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -8006,7 +8006,7 @@ window.SRA = {
         "autocorrelaties"
       ],
       "definition": "Samenhang tussen storingen op verschillende tijdstippen. Bij tijdreeksen kunnen residuen daardoor systematisch na elkaar bewegen.",
-      "example": "Didactisch voorbeeld (eigen): Meerdere opeenvolgende positieve residuen gevolgd door negatieve residuen kunnen aanleiding geven dit te onderzoeken.",
+      "example": "Meerdere opeenvolgende positieve residuen gevolgd door negatieve residuen kunnen aanleiding geven dit te onderzoeken.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -8030,7 +8030,7 @@ window.SRA = {
         "Durbin-Watson-toets"
       ],
       "definition": "De SRA-toets voor autocorrelatie bij tijdreeksen. De grootheid d ligt tussen 0 en 4; vergelijk haar met dL, dU en de afgeleide grenzen 4 − dU en 4 − dL.",
-      "example": "Didactisch voorbeeld (eigen): d = 2 moet met de passende tabelgrenzen worden beoordeeld; de afstand tot 2 alleen is niet de volledige toets.",
+      "example": "d = 2 moet met de passende tabelgrenzen worden beoordeeld; de afstand tot 2 alleen is niet de volledige toets.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -8053,7 +8053,7 @@ window.SRA = {
         "onbeslist"
       ],
       "definition": "Een gebied waarin de Durbin-Watson-regel geen eenduidige beslissing geeft. Het ligt tussen dL en dU en tussen 4 − dU en 4 − dL.",
-      "example": "Didactisch voorbeeld (eigen): Bij dL = 1,35, dU = 1,49 en d = 1,40 is de uitkomst onbeslist.",
+      "example": "Bij dL = 1,35, dU = 1,49 en d = 1,40 is de uitkomst onbeslist.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -8078,7 +8078,7 @@ window.SRA = {
         "Predicted Value"
       ],
       "definition": "De voorspelde y nadat je de gekozen x-waarden in het geschatte model hebt ingevuld. Zij beschrijft nog geen interval.",
-      "example": "Didactisch voorbeeld (eigen): Bij ŷ = 10 + 2x en x = 4 is de puntvoorspelling 18.",
+      "example": "Bij ŷ = 10 + 2x en x = 4 is de puntvoorspelling 18.",
       "lesson": "voorspellen",
       "refs": [
         {
@@ -8102,7 +8102,7 @@ window.SRA = {
         "individuele voorspelling"
       ],
       "definition": "Een interval voor één nieuwe waarneming. Het neemt zowel onzekerheid in de geschatte lijn als individuele spreiding rond de lijn mee; daarom staat in formule 50 de extra 1 onder de wortel.",
-      "example": "Didactisch voorbeeld (eigen): Voor één nieuw artikel kan het interval [27; 33] zijn terwijl de puntvoorspelling 30 is.",
+      "example": "Voor één nieuw artikel kan het interval [27; 33] zijn terwijl de puntvoorspelling 30 is.",
       "lesson": "voorspellen",
       "refs": [
         {
@@ -8125,7 +8125,7 @@ window.SRA = {
         "interval voor de gemiddelde respons"
       ],
       "definition": "De gemiddelde y bij bepaalde verklarende waarden. Het interval hiervoor mist de extra individuele spreiding en is bij dezelfde invoer smaller dan een individueel voorspellingsinterval.",
-      "example": "Didactisch voorbeeld (eigen): Het gemiddelde salaris bij leeftijd 40 is een andere vraag dan het salaris van één nieuwe 40-jarige.",
+      "example": "Het gemiddelde salaris bij leeftijd 40 is een andere vraag dan het salaris van één nieuwe 40-jarige.",
       "lesson": "voorspellen",
       "refs": [
         {
@@ -8147,7 +8147,7 @@ window.SRA = {
         "interpoleren"
       ],
       "definition": "Voorspellen binnen het onderzochte bereik van de verklarende variabele.",
-      "example": "Didactisch voorbeeld (eigen): Je gegevens bevatten leeftijden van 20 tot 60; een voorspelling bij 40 ligt binnen dat bereik.",
+      "example": "Je gegevens bevatten leeftijden van 20 tot 60; een voorspelling bij 40 ligt binnen dat bereik.",
       "lesson": "voorspellen",
       "refs": [
         {
@@ -8169,7 +8169,7 @@ window.SRA = {
         "extrapoleren"
       ],
       "definition": "Voorspellen buiten het onderzochte bereik. Het waargenomen verband hoeft buiten dat bereik niet op dezelfde manier door te lopen.",
-      "example": "Didactisch voorbeeld (eigen): Bij gegevens van leeftijden 20 tot 60 is voorspellen voor leeftijd 85 extrapolatie.",
+      "example": "Bij gegevens van leeftijden 20 tot 60 is voorspellen voor leeftijd 85 extrapolatie.",
       "lesson": "voorspellen",
       "refs": [
         {
@@ -8192,7 +8192,7 @@ window.SRA = {
         "multiple regression"
       ],
       "definition": "Regressie met meerdere verklarende variabelen en één afhankelijke variabele. Elke helling beschrijft samenhang bij gelijkblijvende overige opgenomen kenmerken.",
-      "example": "Didactisch voorbeeld (eigen): Je voorspelt salaris uit leeftijd, beoordelingsscore en leidinggeven samen.",
+      "example": "Je voorspelt salaris uit leeftijd, beoordelingsscore en leidinggeven samen.",
       "lesson": "meervoudig",
       "refs": [
         {
@@ -8223,7 +8223,7 @@ window.SRA = {
         "dummyvariabelen"
       ],
       "definition": "Een variabele met waarde 0 of 1 die een categorie aanduidt. Haar coëfficiënt vergelijkt die categorie met de referentiegroep, bij gelijke andere kenmerken.",
-      "example": "Didactisch voorbeeld (eigen): Leidinggevende = 1 voor ja en 0 voor nee. Een coëfficiënt van 500 geeft een verschil van 500 eenheden.",
+      "example": "Leidinggevende = 1 voor ja en 0 voor nee. Een coëfficiënt van 500 geeft een verschil van 500 eenheden.",
       "lesson": "meervoudig",
       "refs": [
         {
@@ -8251,7 +8251,7 @@ window.SRA = {
         "referentiegroepen"
       ],
       "definition": "De categorie waarmee de opgenomen dummycategorieën worden vergeleken. Bij drie exclusieve categorieën en een constante gebruik je doorgaans twee dummy’s; beide nul duidt de referentie aan.",
-      "example": "Didactisch voorbeeld (eigen): Als HBO en WO de dummy’s zijn, vormt de groep met beide op nul de referentie.",
+      "example": "Als HBO en WO de dummy’s zijn, vormt de groep met beide op nul de referentie.",
       "lesson": "meervoudig",
       "refs": [
         {
@@ -8281,7 +8281,7 @@ window.SRA = {
         "gecorrigeerde determinatiecoëfficiënt"
       ],
       "definition": "R² gecorrigeerd voor het aantal verklarende variabelen en de beschikbare waarnemingen. Deze maat kan dalen als een extra variabele onvoldoende toevoegt.",
-      "example": "Didactisch voorbeeld (eigen): Gewone R² stijgt na toevoeging van x₂, maar adjusted R² kan dalen doordat de extra verbetering te klein is.",
+      "example": "Gewone R² stijgt na toevoeging van x₂, maar adjusted R² kan dalen doordat de extra verbetering te klein is.",
       "lesson": "meervoudig",
       "refs": [
         {
@@ -8309,7 +8309,7 @@ window.SRA = {
         "overfitted"
       ],
       "definition": "Een model past ook toevalligheden van de trainingsgegevens aan en kan daardoor op nieuwe gegevens minder goed werken. De cursusvuistregel n ≥ 10k vervangt geen validatie.",
-      "example": "Didactisch voorbeeld (eigen): Een model met veel variabelen voorspelt de trainingsdata goed, maar maakt grote fouten op een ongebruikte testset.",
+      "example": "Een model met veel variabelen voorspelt de trainingsdata goed, maar maakt grote fouten op een ongebruikte testset.",
       "lesson": "meervoudig",
       "refs": [
         {
@@ -8339,7 +8339,7 @@ window.SRA = {
         "getransformeerde"
       ],
       "definition": "Een variabele via een wiskundige bewerking op een andere schaal uitdrukken, bijvoorbeeld ln(x). Hierdoor kan een krom verband beter bij een lineair geschatte vorm passen.",
-      "example": "Didactisch voorbeeld (eigen): Je gebruikt ln(x) als verklarende variabele in plaats van x zelf.",
+      "example": "Je gebruikt ln(x) als verklarende variabele in plaats van x zelf.",
       "lesson": "transformaties",
       "refs": [
         {
@@ -8364,7 +8364,7 @@ window.SRA = {
         "ln-functie"
       ],
       "definition": "De bewerking ln(x) vraagt tot welke macht je e moet verheffen om x te krijgen. Zij is alleen gedefinieerd voor x > 0.",
-      "example": "Didactisch voorbeeld (eigen): ln(1) = 0, want e⁰ = 1.",
+      "example": "ln(1) = 0, want e⁰ = 1.",
       "lesson": "transformaties",
       "refs": [
         {
@@ -8388,7 +8388,7 @@ window.SRA = {
         "exponentiëren"
       ],
       "definition": "De bewerking exp(z) = eᶻ, die ln omkeert. Zij zet een voorspelling op logschaal terug naar de oorspronkelijke schaal volgens de gebruikte modelvorm.",
-      "example": "Didactisch voorbeeld (eigen): exp(ln(16)) = 16.",
+      "example": "exp(ln(16)) = 16.",
       "lesson": "transformaties",
       "refs": [
         {
@@ -8411,7 +8411,7 @@ window.SRA = {
         "logaritmisch"
       ],
       "definition": "Een model met ln(x) als verklarende grootheid en y op de oorspronkelijke schaal: ŷ = b₀ + b₁ln(x).",
-      "example": "Didactisch voorbeeld (eigen): Bij b₁ = 2 verhoogt een verdubbeling van x de voorspelde y met 2ln(2).",
+      "example": "Bij b₁ = 2 verhoogt een verdubbeling van x de voorspelde y met 2ln(2).",
       "lesson": "transformaties",
       "refs": [
         {
@@ -8434,7 +8434,7 @@ window.SRA = {
         "exponentieel"
       ],
       "definition": "Een model met ln(y) lineair in x. Na terugtransformatie is de cursusvorm ŷ = exp(b₀ + b₁x).",
-      "example": "Didactisch voorbeeld (eigen): Bij één extra x vermenigvuldigt de voorspelde y met exp(b₁).",
+      "example": "Bij één extra x vermenigvuldigt de voorspelde y met exp(b₁).",
       "lesson": "transformaties",
       "refs": [
         {
@@ -8459,7 +8459,7 @@ window.SRA = {
         "power-model"
       ],
       "definition": "Een model dat lineair wordt geschreven met ln(y) en ln(x). Op de oorspronkelijke schaal is de cursusvorm ŷ = exp(b₀) × xᵇ¹.",
-      "example": "Didactisch voorbeeld (eigen): Bij b₁ = 0,5 vermenigvuldigt een verdubbeling van x de voorspelde y met √2.",
+      "example": "Bij b₁ = 0,5 vermenigvuldigt een verdubbeling van x de voorspelde y met √2.",
       "lesson": "transformaties",
       "refs": [
         {
@@ -8482,7 +8482,7 @@ window.SRA = {
         "teruggetransformeerd"
       ],
       "definition": "De voorspelde uitkomst terugzetten naar de oorspronkelijke schaal volgens de gekozen modelvorm. Als y is gelogaritmeerd, is alleen de lineaire uitkomst nog geen voorspelling in de oorspronkelijke eenheid.",
-      "example": "Didactisch voorbeeld (eigen): Een voorspelde logwaarde van 2 wordt op de oorspronkelijke schaal exp(2), ongeveer 7,39.",
+      "example": "Een voorspelde logwaarde van 2 wordt op de oorspronkelijke schaal exp(2), ongeveer 7,39.",
       "lesson": "transformaties",
       "refs": [
         {
@@ -8504,7 +8504,7 @@ window.SRA = {
         "Enter"
       ],
       "definition": "Een modelbouwmethode waarbij alle opgegeven verklarende variabelen tegelijk in het model worden opgenomen.",
-      "example": "Didactisch voorbeeld (eigen): Neem leeftijd, beoordeling en leidinggeven in één keer op.",
+      "example": "Neem leeftijd, beoordeling en leidinggeven in één keer op.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -8527,7 +8527,7 @@ window.SRA = {
         "backward-methode"
       ],
       "definition": "Een methode die begint met alle kandidaatvariabelen en stapsgewijs een onvoldoende bijdragende variabele verwijdert. Na verwijderen wordt opnieuw geschat.",
-      "example": "Didactisch voorbeeld (eigen): De variabele met de grootste p boven de gegeven verwijderingsgrens is de eerste kandidaat.",
+      "example": "De variabele met de grootste p boven de gegeven verwijderingsgrens is de eerste kandidaat.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -8550,7 +8550,7 @@ window.SRA = {
         "forward-methode"
       ],
       "definition": "Een methode die klein begint en stapsgewijs verklarende variabelen toevoegt volgens het selectiecriterium.",
-      "example": "Didactisch voorbeeld (eigen): Na een eerste variabele onderzoekt de procedure welke volgende variabele nog voldoende toevoegt.",
+      "example": "Na een eerste variabele onderzoekt de procedure welke volgende variabele nog voldoende toevoegt.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -8573,7 +8573,7 @@ window.SRA = {
         "stapsgewijze selectie"
       ],
       "definition": "Een selectiemethode die bij toevoeging van variabelen ook opnieuw controleert of eerder opgenomen variabelen moeten vervallen.",
-      "example": "Didactisch voorbeeld (eigen): Na toevoeging van x₃ kan x₁ alsnog onvoldoende bijdragen en worden verwijderd.",
+      "example": "Na toevoeging van x₃ kan x₁ alsnog onvoldoende bijdragen en worden verwijderd.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -8596,7 +8596,7 @@ window.SRA = {
         "multicollineaire"
       ],
       "definition": "Sterke onderlinge samenhang tussen verklarende variabelen, waardoor hun afzonderlijke bijdragen moeilijker te onderscheiden zijn. Dit is iets anders dan een sterk verband tussen x en y.",
-      "example": "Didactisch voorbeeld (eigen): Twee x-variabelen meten bijna hetzelfde kenmerk; hun afzonderlijke coëfficiënten worden moeilijker te interpreteren.",
+      "example": "Twee x-variabelen meten bijna hetzelfde kenmerk; hun afzonderlijke coëfficiënten worden moeilijker te interpreteren.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -8620,7 +8620,7 @@ window.SRA = {
         "hulpregressie R²"
       ],
       "definition": "Bij VIF: een regressie van één verklarende variabele op de overige verklarende variabelen. De R² hiervan meet hoeveel overlap die variabele met de andere x-variabelen heeft.",
-      "example": "Didactisch voorbeeld (eigen): Voor VIF van x₁ voorspel je x₁ met de overige x-variabelen, niet met de oorspronkelijke y.",
+      "example": "Voor VIF van x₁ voorspel je x₁ met de overige x-variabelen, niet met de oorspronkelijke y.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -8642,7 +8642,7 @@ window.SRA = {
         "tolerantie"
       ],
       "definition": "Bij een verklarende variabele: 1 − R² van haar hulpregressie. Een lage tolerance betekent veel overlap met de overige verklarende variabelen.",
-      "example": "Didactisch voorbeeld (eigen): Hulp-R² = 0,92 geeft tolerance = 0,08.",
+      "example": "Hulp-R² = 0,92 geeft tolerance = 0,08.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -8665,7 +8665,7 @@ window.SRA = {
         "variance-inflatiefactor"
       ],
       "definition": "De maat VIF = 1/tolerance = 1/(1 − R²ᵢ) op basis van de hulpregressie. De cursus gebruikt VIF > 10 als probleemsignaal voor multicollineariteit.",
-      "example": "Didactisch voorbeeld (eigen): Tolerance 0,08 geeft VIF 12,5; VIF precies 10 overschrijdt de strikte grens niet.",
+      "example": "Tolerance 0,08 geeft VIF 12,5; VIF precies 10 overschrijdt de strikte grens niet.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -8688,7 +8688,7 @@ window.SRA = {
         "geneste regressiemodellen"
       ],
       "definition": "Modellen waarbij het uitgebreide model alle verklarende variabelen van het kleinere model bevat, plus extra variabelen. Vergelijk ze op dezelfde y en dezelfde waarnemingen.",
-      "example": "Didactisch voorbeeld (eigen): Een model met x₁ en x₂ is genest in een model met x₁, x₂ en x₃ op dezelfde dataset.",
+      "example": "Een model met x₁ en x₂ is genest in een model met x₁, x₂ en x₃ op dezelfde dataset.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -8712,7 +8712,7 @@ window.SRA = {
         "toets van extra variabelen"
       ],
       "definition": "Een F-toets van de verbetering door extra variabelen in geneste modellen. Deel de extra SSR door het aantal toegevoegde variabelen en vervolgens door MSE van het uitgebreide model.",
-      "example": "Didactisch voorbeeld (eigen): Voor één extra variabele: (850 − 800)/10 = F van 5; vergelijk daarna met de passende grens.",
+      "example": "Voor één extra variabele: (850 − 800)/10 = F van 5; vergelijk daarna met de passende grens.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -8735,7 +8735,7 @@ window.SRA = {
         "modelvalidatie"
       ],
       "definition": "Onderzoeken hoe bruikbaar het geschatte model is op gegevens die niet voor schatting en selectie zijn gebruikt.",
-      "example": "Didactisch voorbeeld (eigen): Schat het model op de training en vergelijk de vaste voorspellingen met werkelijke testuitkomsten.",
+      "example": "Schat het model op de training en vergelijk de vaste voorspellingen met werkelijke testuitkomsten.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8758,7 +8758,7 @@ window.SRA = {
         "data-splitting"
       ],
       "definition": "Gegevens opsplitsen in een trainingsset en een testset. De scheiding voorkomt dat beoordeling op nieuwe data in feite dezelfde gegevens als de modelkeuze gebruikt.",
-      "example": "Didactisch voorbeeld (eigen): Een deel van de waarnemingen blijft buiten de schatting en wordt pas voor beoordeling gebruikt.",
+      "example": "Een deel van de waarnemingen blijft buiten de schatting en wordt pas voor beoordeling gebruikt.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8783,7 +8783,7 @@ window.SRA = {
         "trainings-set"
       ],
       "definition": "De gegevens waarop je het model schat en selecteert. Een goede passing op deze gegevens is op zichzelf nog geen bewijs voor goede voorspellingen op nieuwe gevallen.",
-      "example": "Didactisch voorbeeld (eigen): De coëfficiënten worden berekend uit de training en daarna vastgehouden voor de test.",
+      "example": "De coëfficiënten worden berekend uit de training en daarna vastgehouden voor de test.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8808,7 +8808,7 @@ window.SRA = {
         "test-set"
       ],
       "definition": "Gegevens die buiten de schatting en modelselectie zijn gehouden en waarmee je de voorspelfouten van het vaste model beoordeelt.",
-      "example": "Didactisch voorbeeld (eigen): Verandering van een werkelijke testuitkomst verandert de testfout, niet de al geschatte coëfficiënten.",
+      "example": "Verandering van een werkelijke testuitkomst verandert de testfout, niet de al geschatte coëfficiënten.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8834,7 +8834,7 @@ window.SRA = {
         "gemiddelde gekwadrateerde voorspelfout"
       ],
       "definition": "De som van gekwadrateerde voorspelfouten op de testset gedeeld door n_test. Deel hier niet door de residuele vrijheidsgraden van de training. De aangeleverde bronnen gebruiken ook de lettervolgorden MSRP en MPSR voor deze formule.",
-      "example": "Didactisch voorbeeld (eigen): Testfouten −2, 1 en 3 geven MSPR = (4 + 1 + 9)/3 = 4,6667.",
+      "example": "Testfouten −2, 1 en 3 geven MSPR = (4 + 1 + 9)/3 = 4,6667.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8857,7 +8857,7 @@ window.SRA = {
         "generaliseerbaarheid"
       ],
       "definition": "De mate waarin het op trainingsgegevens gevonden model ook bruikbaar is op nieuwe gegevens.",
-      "example": "Didactisch voorbeeld (eigen): Een veel grotere MSPR dan trainings-MSE wijst op minder goede voorspellingen buiten de training.",
+      "example": "Een veel grotere MSPR dan trainings-MSE wijst op minder goede voorspellingen buiten de training.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8880,7 +8880,7 @@ window.SRA = {
         "SPSS-output"
       ],
       "definition": "Het statistische programma waarvan de tabellen en grafieken in de SRA-opgaven worden gebruikt. Je moet niet alleen de getallen, maar ook tabelnamen en voetnoten lezen.",
-      "example": "Didactisch voorbeeld (eigen): Coefficients geeft coëfficiënten; ANOVA geeft kwadratensommen en de globale F-toets.",
+      "example": "Coefficients geeft coëfficiënten; ANOVA geeft kwadratensommen en de globale F-toets.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8903,7 +8903,7 @@ window.SRA = {
         "correlatiematrix"
       ],
       "definition": "De SPSS-tabel met correlaties tussen variabelen. Gebruik haar voor richting en lineaire samenhang, niet als regressievergelijking.",
-      "example": "Didactisch voorbeeld (eigen): Een negatieve r in Correlations geeft de richting die een niet-negatieve model-R niet laat zien.",
+      "example": "Een negatieve r in Correlations geeft de richting die een niet-negatieve model-R niet laat zien.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8925,7 +8925,7 @@ window.SRA = {
         "modeloverzicht"
       ],
       "definition": "De SPSS-tabel met onder meer R, R², adjusted R² en Std. Error of the Estimate; soms staat ook Durbin-Watson hier.",
-      "example": "Didactisch voorbeeld (eigen): Lees R² af voor verklaarde variatie en gebruik het teken van B of r voor de richting.",
+      "example": "Lees R² af voor verklaarde variatie en gebruik het teken van B of r voor de richting.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8948,7 +8948,7 @@ window.SRA = {
         "coefficiententabel"
       ],
       "definition": "De SPSS-tabel met onder meer B, Std. Error, t, Sig. en eventueel Beta, tolerance en VIF. De kolom B levert de gewone regressievergelijking.",
-      "example": "Didactisch voorbeeld (eigen): Gebruik B = 6 en Std. Error = 2 om t = 3 te controleren.",
+      "example": "Gebruik B = 6 en Std. Error = 2 om t = 3 te controleren.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8971,7 +8971,7 @@ window.SRA = {
         "residuenstatistieken"
       ],
       "definition": "De SPSS-tabel met samenvattingen van voorspelde waarden, residuen en eventueel afstandsmaten. Voor diagnostiek lees je onder meer minimum, maximum, gemiddelde en standaardafwijking.",
-      "example": "Didactisch voorbeeld (eigen): Vergelijk de grootste Cook’s Distance met gemiddelde plus drie standaardafwijkingen uit de bijbehorende rij.",
+      "example": "Vergelijk de grootste Cook’s Distance met gemiddelde plus drie standaardafwijkingen uit de bijbehorende rij.",
       "lesson": "validatie",
       "refs": [
         {
@@ -8993,7 +8993,7 @@ window.SRA = {
         "normaliteitstoetsen"
       ],
       "definition": "De SPSS-tabel met normaliteitstoetsen zoals Shapiro-Wilk en Kolmogorov-Smirnov. Controleer dat de getoetste variabele de juiste residuen bevat.",
-      "example": "Didactisch voorbeeld (eigen): Lees de p-waarde bij de volgens de cursus passende toets voor het aantal waarnemingen.",
+      "example": "Lees de p-waarde bij de volgens de cursus passende toets voor het aantal waarnemingen.",
       "lesson": "validatie",
       "refs": [
         {
@@ -9010,7 +9010,7 @@ window.SRA = {
         "toepassingsvoorwaarden"
       ],
       "definition": "Een eis die je controleert voordat je een methode gebruikt. Een rekenbare formule betekent nog niet dat de methode inhoudelijk past.",
-      "example": "Didactisch voorbeeld (eigen): Bij de verschilschatter controleer je het foutpatroon en de cursusvoorwaarde van minstens 30 afwijkende posten.",
+      "example": "Bij de verschilschatter controleer je het foutpatroon en de cursusvoorwaarde van minstens 30 afwijkende posten.",
       "lesson": "tentamen",
       "refs": [
         {
@@ -9032,7 +9032,7 @@ window.SRA = {
         "interpreteren"
       ],
       "definition": "De uitkomst in woorden verbinden met de variabelen, eenheden en vraag van de casus. Benoem wat de berekening ondersteunt en wat daar niet uit volgt.",
-      "example": "Didactisch voorbeeld (eigen): Schrijf bij R² = 0,70 dat het model 70% van de variatie in salaris verklaart, niet alleen het getal.",
+      "example": "Schrijf bij R² = 0,70 dat het model 70% van de variatie in salaris verklaart, niet alleen het getal.",
       "lesson": "tentamen",
       "refs": [
         {
@@ -9055,7 +9055,7 @@ window.SRA = {
         "modelaanpassing"
       ],
       "definition": "Een inhoudelijk passende reactie op een vastgesteld modelprobleem, gevolgd door opnieuw schatten en controleren waar nodig.",
-      "example": "Didactisch voorbeeld (eigen): Bij een duidelijke kromming onderzoek je een passende modelvorm in plaats van willekeurig punten weg te laten.",
+      "example": "Bij een duidelijke kromming onderzoek je een passende modelvorm in plaats van willekeurig punten weg te laten.",
       "lesson": "tentamen",
       "refs": [
         {
@@ -9079,7 +9079,7 @@ window.SRA = {
         "geschatte waarde"
       ],
       "definition": "De uitkomst waarmee je een onbekende populatiewaarde benadert. De schatter is de rekenregel; de schatting is het getal dat deze regel met jouw gegevens oplevert.",
-      "example": "Didactisch voorbeeld (eigen): De directe schatter Nw̄ levert met jouw invoer de schatting € 80.000 op.",
+      "example": "De directe schatter Nw̄ levert met jouw invoer de schatting € 80.000 op.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -9097,7 +9097,7 @@ window.SRA = {
         "totale populatiewaarde"
       ],
       "definition": "De som van de betreffende waarden van alle elementen in de populatie. Bij SRA-geldbedragschattingen is het werkelijke totaal W de onbekende grootheid die je wilt schatten.",
-      "example": "Didactisch voorbeeld (eigen): Drie artikelen met werkelijke waarden 10, 20 en 30 vormen samen een populatietotaal van 60.",
+      "example": "Drie artikelen met werkelijke waarden 10, 20 en 30 vormen samen een populatietotaal van 60.",
       "lesson": "beginnen",
       "refs": [
         {
@@ -9117,7 +9117,7 @@ window.SRA = {
         "toetsing"
       ],
       "definition": "Een procedure waarmee je beoordeelt of de steekproef voldoende bewijs tegen een nulhypothese geeft, met een vooraf gekozen risicogrens en toetsrichting.",
-      "example": "Didactisch voorbeeld (eigen): Je toetst of de populatiehelling positief is in plaats van alleen te kijken of de getekende lijn stijgt.",
+      "example": "Je toetst of de populatiehelling positief is in plaats van alleen te kijken of de getekende lijn stijgt.",
       "lesson": "toetsen",
       "refs": [
         {
@@ -9142,7 +9142,7 @@ window.SRA = {
         "lineaire verbanden"
       ],
       "definition": "Een verband dat met een rechte lijn wordt beschreven. Bij een vaste helling hoort bij één extra eenheid x steeds dezelfde verandering in de voorspelde y.",
-      "example": "Didactisch voorbeeld (eigen): Bij ŷ = 10 + 2x geeft iedere extra x steeds 2 extra voorspelde y.",
+      "example": "Bij ŷ = 10 + 2x geeft iedere extra x steeds 2 extra voorspelde y.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -9165,7 +9165,7 @@ window.SRA = {
         "symmetrische"
       ],
       "definition": "Een vorm waarvan de linker- en rechterkant elkaars spiegelbeeld zijn. Bij een symmetrisch interval liggen de grenzen even ver van het midden.",
-      "example": "Didactisch voorbeeld (eigen): De grenzen 96 en 104 liggen beide 4 van het midden 100.",
+      "example": "De grenzen 96 en 104 liggen beide 4 van het midden 100.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -9189,7 +9189,7 @@ window.SRA = {
         "homogene"
       ],
       "definition": "Een groep waarvan de relevante waarden relatief weinig uiteenlopen. Bij stratificatie probeer je binnen groepen minder spreiding te krijgen.",
-      "example": "Didactisch voorbeeld (eigen): Artikelen in dezelfde prijsklasse kunnen onderling gelijksoortiger zijn dan een gemengde voorraad.",
+      "example": "Artikelen in dezelfde prijsklasse kunnen onderling gelijksoortiger zijn dan een gemengde voorraad.",
       "lesson": "stratificatie",
       "refs": [
         {
@@ -9211,7 +9211,7 @@ window.SRA = {
         "foutpercentages"
       ],
       "definition": "De fout uitgedrukt als aandeel van een gekozen basis. Bij de quotiëntschatter is 1 − q de foutfractie ten opzichte van de totale boekwaarde in de steekproef.",
-      "example": "Didactisch voorbeeld (eigen): Goedratio q = 0,95 betekent een foutfractie van 0,05, oftewel 5% van de boekwaarde.",
+      "example": "Goedratio q = 0,95 betekent een foutfractie van 0,05, oftewel 5% van de boekwaarde.",
       "lesson": "quotient",
       "refs": [
         {
@@ -9234,7 +9234,7 @@ window.SRA = {
         "s_q"
       ],
       "definition": "De tussenmaat s_q uit formule 13 voor wat na de geschatte verhouding overblijft. Ondanks de aanduiding in het formuleblad heeft deze berekening de geldeenheid van b en w; zij is niet de standaardfout van het populatietotaal.",
-      "example": "Didactisch voorbeeld (eigen): s_q = € 7,60 wordt nog met N/√n en de eindigheidscorrectie doorgerekend naar de totale standaardfout.",
+      "example": "s_q = € 7,60 wordt nog met N/√n en de eindigheidscorrectie doorgerekend naar de totale standaardfout.",
       "lesson": "quotient",
       "refs": [
         {
@@ -9256,7 +9256,7 @@ window.SRA = {
         "effectieve df"
       ],
       "definition": "De vrijheidsgraden die bij het samengestelde interval horen. Volgens de SRA-formulebladroute voor strata worden ze in de opgave gegeven; neem niet automatisch het totale n − 1.",
-      "example": "Didactisch voorbeeld (eigen): Geeft een strata-opgave effectieve df = 109, dan kies je de t-tabelrij volgens de bijbehorende cursusregel.",
+      "example": "Geeft een strata-opgave effectieve df = 109, dan kies je de t-tabelrij volgens de bijbehorende cursusregel.",
       "lesson": "stratificatie",
       "refs": [
         {
@@ -9280,7 +9280,7 @@ window.SRA = {
         "boogvorm"
       ],
       "definition": "Een verandering van richting of helling waardoor het patroon niet goed met één rechte lijn wordt beschreven. Kromming in residuen kan op een ongeschikte lineaire modelvorm wijzen.",
-      "example": "Didactisch voorbeeld (eigen): Negatieve residuen in het midden en positieve aan beide randen vormen een boog.",
+      "example": "Negatieve residuen in het midden en positieve aan beide randen vormen een boog.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -9304,7 +9304,7 @@ window.SRA = {
         "Durbin-Watson-grenzen"
       ],
       "definition": "De twee tabelgrenzen dL en dU waarmee de Durbin-Watson-uitkomst wordt beoordeeld. Ze horen bij de steekproefomvang n en het aantal verklarende variabelen k.",
-      "example": "Didactisch voorbeeld (eigen): Bij dL = 1,35 en dU = 1,49 is 1,40 tussen de grenzen onbeslist.",
+      "example": "Bij dL = 1,35 en dU = 1,49 is 1,40 tussen de grenzen onbeslist.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -9328,7 +9328,7 @@ window.SRA = {
         "gerealiseerde uitkomst"
       ],
       "definition": "De werkelijk waargenomen nieuwe uitkomst die je met een voorspelling kunt vergelijken. Buiten een voorspellingsinterval vallen is een signaal voor onderzoek, geen automatische verklaring.",
-      "example": "Didactisch voorbeeld (eigen): De voorspelling is 30, maar de later gemeten uitkomst is 35; 35 is de realisatie.",
+      "example": "De voorspelling is 30, maar de later gemeten uitkomst is 35; 35 is de realisatie.",
       "lesson": "voorspellen",
       "refs": [
         {
@@ -9351,7 +9351,7 @@ window.SRA = {
         "modelcorrelatie"
       ],
       "definition": "De niet-negatieve R uit SPSS Model Summary. Gebruik het teken van de coëfficiënt B of de correlatie r uit Correlations om de richting van het verband te bepalen.",
-      "example": "Didactisch voorbeeld (eigen): Een dalend enkelvoudig verband kan r = −0,8 hebben terwijl Model Summary R = 0,8 toont.",
+      "example": "Een dalend enkelvoudig verband kan r = −0,8 hebben terwijl Model Summary R = 0,8 toont.",
       "lesson": "regressielijn",
       "refs": [
         {
@@ -9376,7 +9376,7 @@ window.SRA = {
         "modelpassing"
       ],
       "definition": "Hoe goed het model de gebruikte gegevens beschrijft. R² en adjusted R² geven aspecten van die passing weer; goede passing vervangt geen diagnose of validatie.",
-      "example": "Didactisch voorbeeld (eigen): Een hoge R² op de training kan samengaan met een hoge MSPR op nieuwe gegevens.",
+      "example": "Een hoge R² op de training kan samengaan met een hoge MSPR op nieuwe gegevens.",
       "lesson": "anova",
       "refs": [
         {
@@ -9399,7 +9399,7 @@ window.SRA = {
         "kandidaten"
       ],
       "definition": "Een verklarende variabele die bij modelselectie overwogen wordt, maar niet noodzakelijk in het uiteindelijke model blijft.",
-      "example": "Didactisch voorbeeld (eigen): Backward begint met alle kandidaten en kan een variabele met te hoge p verwijderen.",
+      "example": "Backward begint met alle kandidaten en kan een variabele met te hoge p verwijderen.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -9423,7 +9423,7 @@ window.SRA = {
         "selectiecriteria"
       ],
       "definition": "Het opgegeven criterium waarmee een selectieprocedure beslist of een variabele voldoende bijdraagt. Gebruik de grens uit de opgave en verwar haar niet met het automatisch halveren van een tweezijdige p.",
-      "example": "Didactisch voorbeeld (eigen): Bij een gegeven verwijderingsgrens 0,10 is een p van 0,18 een kandidaat voor verwijderen.",
+      "example": "Bij een gegeven verwijderingsgrens 0,10 is een p van 0,18 een kandidaat voor verwijderen.",
       "lesson": "modelbouw",
       "refs": [
         {
@@ -9447,7 +9447,7 @@ window.SRA = {
         "voetnoten"
       ],
       "definition": "Toelichting onder een tabel met informatie die de interpretatie bepaalt, zoals afhankelijke variabele, opgenomen verklarende variabelen, selectieprocedure of weging.",
-      "example": "Didactisch voorbeeld (eigen): Controleer in de voetnoot of y het salaris of ln(salaris) is voordat je de coëfficiënten gebruikt.",
+      "example": "Controleer in de voetnoot of y het salaris of ln(salaris) is voordat je de coëfficiënten gebruikt.",
       "lesson": "validatie",
       "refs": [
         {
@@ -9471,7 +9471,7 @@ window.SRA = {
         "Total"
       ],
       "definition": "De drie rijen van de SRA-ANOVA-tabel: Regression is de door het model verklaarde variatie, Residual de resterende variatie en Total de totale variatie in y.",
-      "example": "Didactisch voorbeeld (eigen): De SS-kolom kan achtereenvolgens 80, 20 en 100 tonen; verklaard plus resterend is totaal.",
+      "example": "De SS-kolom kan achtereenvolgens 80, 20 en 100 tonen; verklaard plus resterend is totaal.",
       "lesson": "anova",
       "refs": [
         {
@@ -9493,7 +9493,7 @@ window.SRA = {
         "onafhankelijke schattingen"
       ],
       "definition": "Bij afzonderlijke onafhankelijke steekproeven per stratum hangen de toevallige schattingsafwijkingen niet met elkaar samen. Daarom tel je voor het totaal de varianties op en neem je daarna de wortel.",
-      "example": "Didactisch voorbeeld (eigen): Standaardfouten 3 en 4 combineren tot √(3² + 4²) = 5, niet tot 7.",
+      "example": "Standaardfouten 3 en 4 combineren tot √(3² + 4²) = 5, niet tot 7.",
       "lesson": "stratificatie",
       "refs": [
         {
@@ -9515,7 +9515,7 @@ window.SRA = {
         "intervallen"
       ],
       "definition": "Een bereik tussen een onder- en bovengrens. Welke uitspraak je met dat bereik doet, hangt af van het soort interval: bijvoorbeeld een populatieparameter schatten of een nieuwe waarneming voorspellen.",
-      "example": "Didactisch voorbeeld (eigen): [96; 104] loopt van 96 tot 104. Lees de vraag om te bepalen of dit een interval voor een totaal, gemiddelde of nieuwe uitkomst is.",
+      "example": "[96; 104] loopt van 96 tot 104. Lees de vraag om te bepalen of dit een interval voor een totaal, gemiddelde of nieuwe uitkomst is.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -9538,7 +9538,7 @@ window.SRA = {
         "voorspellen"
       ],
       "definition": "Een met het geschatte model berekende uitkomst bij gekozen verklarende waarden. Een puntvoorspelling geeft één getal; een passend interval beschrijft de bijbehorende onzekerheid.",
-      "example": "Didactisch voorbeeld (eigen): Vul x = 4 in ŷ = 10 + 2x in: de voorspelling is 18. De werkelijke nieuwe uitkomst kan daarvan afwijken.",
+      "example": "Vul x = 4 in ŷ = 10 + 2x in: de voorspelling is 18. De werkelijke nieuwe uitkomst kan daarvan afwijken.",
       "lesson": "voorspellen",
       "refs": [
         {
@@ -9562,7 +9562,7 @@ window.SRA = {
         "nauwkeuriger"
       ],
       "definition": "In de SRA-intervalberekeningen: hoe klein de onzekerheidsmarge E is. Een smaller interval is preciezer. Betrouwbaarheid gaat over de dekking van de intervalmethode en is dus een ander begrip.",
-      "example": "Didactisch voorbeeld (eigen): Twee intervallen gebruiken beide 95% betrouwbaarheid. Het interval met marge € 1.000 is preciezer dan dat met marge € 2.000.",
+      "example": "Twee intervallen gebruiken beide 95% betrouwbaarheid. Het interval met marge € 1.000 is preciezer dan dat met marge € 2.000.",
       "lesson": "onzekerheid",
       "refs": [
         {
@@ -9585,7 +9585,7 @@ window.SRA = {
         "normaalreferentie"
       ],
       "definition": "De theoretische verdeling waarmee je de waargenomen vorm vergelijkt. In het Q-Q-lab is dat een normaalreferentie; de vergelijking is een grafische aanwijzing en berekent geen p-waarde.",
-      "example": "Didactisch voorbeeld (eigen): De horizontale coördinaten in het Q-Q-lab komen uit de normaalreferentie; de verticale uit de geordende demo-residuen.",
+      "example": "De horizontale coördinaten in het Q-Q-lab komen uit de normaalreferentie; de verticale uit de geordende demo-residuen.",
       "lesson": "diagnostiek",
       "refs": [
         {
@@ -9604,7 +9604,7 @@ window.SRA = {
         "schevere"
       ],
       "definition": "Een asymmetrische verdelingsvorm waarbij de waarden aan de ene kant anders uitlopen dan aan de andere kant. In het normaliteitslab kun je zo’n vormverschil tegenover de symmetrische normaalreferentie bekijken.",
-      "example": "Didactisch voorbeeld (eigen): Enkele grote positieve residuen kunnen de rechterkant verder laten uitlopen dan de linkerkant.",
+      "example": "Enkele grote positieve residuen kunnen de rechterkant verder laten uitlopen dan de linkerkant.",
       "lesson": "diagnostiek",
       "refs": [
         {

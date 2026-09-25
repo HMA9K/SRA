@@ -21,6 +21,7 @@ body.study-shell .question legend,.case-task{white-space:pre-line}
 body.study-shell .lesson-bottom{position:sticky;bottom:0;z-index:15;padding:16px 18px;background:#fff;border:1px solid var(--line);margin-top:24px}
 body.study-shell .lesson-bottom .btn{border-width:2px}
 body.study-shell .lesson-bottom .btn.primary{background:white;color:var(--green)}
+body.study-shell #mark-read:hover{background:var(--study-green);border-color:var(--study-green);color:#fff;filter:brightness(.9)}
 body.sra-full-page .layout{display:block;max-width:none}
 body.sra-full-page #sidebar{display:none!important}
 body.sra-full-page main{max-width:none;padding:0}
