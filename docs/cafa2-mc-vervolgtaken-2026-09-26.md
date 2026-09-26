@@ -30,6 +30,8 @@ Aanvullende presentatie-eisen uit de laatste CAFA2-controle, eveneens **openstaa
 - [ ] Laat het tentamenantwoordmodel aansluiten op de officiële uitwerking: berekeningskolommen, subtotalen en journaalposten, met rode puntentoekenning in lichtmodus en leesbaar rood in donkermodus.
 - [ ] Toon bij een invulvraag één compacte voorraadmatrix. Maak cellen en invoervelden kleiner; behoud alle oorspronkelijke rijen, kolommen en opgeslagen antwoorden. Laat de tabel op mobiel horizontaal verschuiven. Controleer dat zwevende knoppen geen invulcellen bedekken.
 - [ ] Gebruik tijdens tentamenvragen de teruglink **Dashboard** naar het tentamenoverzicht. Bewaar vraagpositie en ingevulde antwoorden bij verlaten en hervatten.
+- [ ] Laat **Opnieuw beginnen** eerst de tentamenintroductie openen, zodat tijdinstellingen opnieuw gekozen kunnen worden. Maak pas bij de expliciete start een lege poging aan en bewaar de vorige poging bij Voltooid. Openen, herladen en verlaten van de intro mogen de bestaande poging niet vervangen.
+- [ ] Voeg op het tentamendashboard **Alle tentamenvoortgang resetten** toe. Verwijder na bevestiging alle lopende en voltooide tentamenpogingen op dit apparaat, inclusief antwoorden, scores, markeringen en klokken. Behoud de afzonderlijke MC-oefenvoortgang. Controleer annuleren, opslagfouten, herladen en verwerking in een ander tabblad.
 - [ ] Verwijder **Introductie** uit de knoppenbalk van MC-oefenvragen.
 
 CAFA2: [MC-oefenomgeving](https://cafa2.pages.dev/index.html#oefenen).
