@@ -25,4 +25,4 @@ CAFA2-code staat lokaal in `%USERPROFILE%/Documents/Claude/Projects/CAFA2-web` e
 - Aangeleverde vergelijking van de onderwerpenpagina en het tentamendashboard.
 - [SRA](https://sra-2xt.pages.dev/#tentamen/mc).
 - [CAFA2](https://cafa2.pages.dev/#oefenen).
-- [CAFA2-codewijziging](https://github.com/HMA9K/CAFA2/commit/95081d67bfbb094f2f4f5e923b2b24c2f0e98ccf).
+- [CAFA2-codewijziging](https://github.com/HMA9K/CAFA2/commit/9f022c7738708583ef0c974114cf8f0e34be8991).
