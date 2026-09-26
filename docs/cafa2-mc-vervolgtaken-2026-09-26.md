@@ -17,11 +17,15 @@ SRA moet voor onderstaande punten dezelfde bediening krijgen als CAFA2. De gebru
 - [ ] Toon journaalposten en financiële tabellen als echte tabellen met passende kolommen. Gebruik de bestaande tentameninhoud. Maak eventuele bronafwijkingen herkenbaar en houd het oorspronkelijke antwoordmodel beschikbaar.
 - [ ] Gebruik bij Zelf uitwerken dezelfde invulcomponenten als in de tentamenomgeving: een invulbare voorraadmatrix en een journaalpostentabel met rekeningnaam, debet, credit en toelichting. Bewaar alle cellen en toegevoegde rijen bij herladen en exporteren.
 - [ ] Maak Patroonherkenning passend bij de afzonderlijke vraag: leg uit hoe de vraag is opgebouwd, wat wordt gevraagd, welke casusgegevens en voorwaarden beslissend zijn en hoe het antwoord moet worden opgebouwd. Vermijd een algemeen stappenlijstje dat bij iedere vraag hetzelfde is. Controleer de herkenningsuitleg bij zowel syllabus- als tentamenvragen.
+- [ ] Leg tabelkolommen vast op basis van hun betekenis. Laat jaartallen, percentages, aantallen, koersen en bedragen ieder in de juiste kolom staan. Maak geen financiële tabellen door alleen losse getallen te herkennen. Controleer modeluitwerkingen en MC-afleiders op dezelfde kolomindeling, met zichtbare bronnotities bij een afwijking.
+- [ ] Plaats organisatieschema's en casustabellen eenmaal bij de bijbehorende tekst. Verwijder de dubbele, plat uitgelezen kopie met losse namen, percentages en bedragen. Houd de casustitel, alinea's en toelichtingen leesbaar. Controleer de daadwerkelijke schermen in zowel MC als tentamen, inclusief het bereiken van alle tabelkolommen op mobiel.
 
 ## Referentie voor de latere uitvoering
 
 CAFA2: [MC-oefenomgeving](https://cafa2.pages.dev/index.html#oefenen).
 
 CAFA2-code en dekking: [repository](https://github.com/HMA9K/CAFA2), `docs/mc-audit/exam-practice-coverage.json`, `content/practice/exam-mc/`, `js/practice-case-panel.js`, `js/practice-topics.js` en `css/practice-case-panel.css`.
+
+De aanvullende presentatie-eisen volgen uit het [gecontroleerde CAFA2-herstel van 26 september 2026](https://github.com/HMA9K/CAFA2/blob/main/docs/mc-audit/financial-presentation-2026-09-26.md). Dit is een referentie voor de latere SRA-uitvoering; de punten hierboven blijven openstaand.
 
 SRA: [repository](https://github.com/HMA9K/SRA). De bestaande SRA-bronafbakening en `docs/codex-boekcontrole-sra.md` blijven leidend bij de latere inhoudelijke uitvoering.
