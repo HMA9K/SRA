@@ -48,6 +48,7 @@ const sandbox={document,location:{hash:''},state:{font:18},validIds:new Set(['re
  sidebarLessonId:null,historyBack:element('#history-back'),$:element,
  renderSidebar:()=>{},showCurrentSidebarLesson:()=>{},save:()=>count('save'),
  window:{
+  StudyScale:{set(size,base){documentElement.style.zoom=size/base;count('scale');}},
   SRANavigation:{before(){},after(){}},
   SRATerms:{close:()=>{},annotate:()=>count('terms')},
   SRAFormulaHelp:{close:()=>{},annotate:()=>count('formulas')},
@@ -73,7 +74,8 @@ function visit(hash,cirrus){
  assert.equal(element('.study-navigation-row').hidden,sandbox.historyBack.hidden&&element('.sra-navigation').hidden,hash+' gezamenlijke navigatieregel');
 }
 visit('#les/regressielijn',false);
-assert.equal(properties.get('--font'),'18px');
+assert.equal(properties.get('--font'),'16px');
+assert.equal(documentElement.style.zoom,18/16,'De hele lespagina gebruikt de bewaarde schaal');
 visit('#tentamen',true);
 assert.equal(properties.get('--sra-cirrus-font'),'14px');
 sandbox.changeFont(1);
@@ -84,7 +86,8 @@ visit('#toets/controlepoging',true);
 visit('#inzage/controlepoging',true);
 visit('#tentamen/voltooid',true);
 visit('#tentamen/mc',false);
-assert.equal(properties.get('--font'),'18px','MC herstelt de SRA-lettergrootte');
+assert.equal(properties.get('--font'),'16px','MC houdt de standaardlettergrootte onder de paginaschaal');
+assert.equal(documentElement.style.zoom,18/16,'MC herstelt de bewaarde paginaschaal');
 visit('#tentamen/analyse',false);
 visit('#formules/regressielijn',false);
 visit('#les/regressielijn',false);
@@ -92,11 +95,13 @@ sandbox.changeFont(-1);
 assert.equal(sandbox.state.font,17);
 assert.equal(sandbox.state.cirrusFont,15,'Lesletters wijzigen de tentamenvoorkeur niet');
 visit('#tentamen',true);
-assert.equal(properties.get('--sra-cirrus-font'),'15px','Tentamenvoorkeur blijft bewaard');
+assert.equal(properties.get('--sra-cirrus-font'),'14px','Het tentamen houdt de standaardlettergrootte onder de paginaschaal');
+assert.equal(documentElement.style.zoom,15/14,'Tentamenvoorkeur blijft bewaard');
 sandbox.changeFont(0);
 assert.equal(sandbox.state.cirrusFont,14);
 visit('#home',false);
-assert.equal(properties.get('--font'),'17px');
+assert.equal(properties.get('--font'),'16px');
+assert.equal(documentElement.style.zoom,17/16);
 sandbox.historyBack.hidden=true;
 visit('#les/regressielijn',false);
 visit('#tentamen',true);

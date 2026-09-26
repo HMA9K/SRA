@@ -20,7 +20,7 @@
  root.addEventListener('hashchange',()=>close());
  function ready(){
   apply();const header=doc.querySelector('.study-topbar');
-  if(header){const measure=()=>doc.body.style.setProperty('--study-header-height',header.getBoundingClientRect().height+'px');measure();if(root.ResizeObserver)new root.ResizeObserver(measure).observe(header);else root.addEventListener('resize',measure);}
+  if(header){const measure=()=>doc.body.style.setProperty('--study-header-height',header.offsetHeight+'px');measure();if(root.ResizeObserver)new root.ResizeObserver(measure).observe(header);else root.addEventListener('resize',measure);}
  }
  if(doc.readyState==='loading')doc.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
  apply();

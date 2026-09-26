@@ -6,7 +6,7 @@
  const metric=(value,label)=>`<div class="metric"><b>${esc(value)}</b><span>${esc(label)}</span></div>`;
  const validIds=new Set(LESSONS.map(l=>l.id)),questionMap=new Map(LESSONS.flatMap(l=>l.questions.map(q=>[q.id,q])));
  let state={version:1,read:[],answers:{},notes:{},font:16,directCheck:false},storageAvailable=true,sidebarLessonId=null;
- function sanitize(obj){if(!obj||obj.version!==1||typeof obj!=='object')throw Error('Dit is geen ondersteund SRA-voortgangsbestand.');const s={version:1,read:[],answers:{},notes:{},font:16,directCheck:obj.directCheck===true};if(Array.isArray(obj.read))s.read=[...new Set(obj.read.filter(id=>validIds.has(id)))];if(obj.answers&&typeof obj.answers==='object'){for(const [id,a] of Object.entries(obj.answers)){const q=questionMap.get(id);if(q&&a&&Number.isInteger(a.choice)&&a.choice>=0&&a.choice<q.options.length){s.answers[id]={choice:a.choice,correct:a.choice===q.correct,attempts:Number.isInteger(a.attempts)?Math.max(1,Math.min(999,a.attempts)):1,firstCorrect:typeof a.firstCorrect==='boolean'?a.firstCorrect:a.choice===q.correct};}}}if(obj.notes&&typeof obj.notes==='object'){for(const c of C.examCases)if(typeof obj.notes[c.id]==='string')s.notes[c.id]=obj.notes[c.id].slice(0,30000);}if(Number.isInteger(obj.font))s.font=Math.max(14,Math.min(22,obj.font));if(Number.isInteger(obj.cirrusFont))s.cirrusFont=Math.max(10,Math.min(24,obj.cirrusFont));return s;}
+ function sanitize(obj){if(!obj||obj.version!==1||typeof obj!=='object')throw Error('Dit is geen ondersteund SRA-voortgangsbestand.');const s={version:1,read:[],answers:{},notes:{},font:16,directCheck:obj.directCheck===true};if(Array.isArray(obj.read))s.read=[...new Set(obj.read.filter(id=>validIds.has(id)))];if(obj.answers&&typeof obj.answers==='object'){for(const [id,a] of Object.entries(obj.answers)){const q=questionMap.get(id);if(q&&a&&Number.isInteger(a.choice)&&a.choice>=0&&a.choice<q.options.length){s.answers[id]={choice:a.choice,correct:a.choice===q.correct,attempts:Number.isInteger(a.attempts)?Math.max(1,Math.min(999,a.attempts)):1,firstCorrect:typeof a.firstCorrect==='boolean'?a.firstCorrect:a.choice===q.correct};}}}if(obj.notes&&typeof obj.notes==='object'){for(const c of C.examCases)if(typeof obj.notes[c.id]==='string')s.notes[c.id]=obj.notes[c.id].slice(0,30000);}if(Number.isInteger(obj.font))s.font=Math.max(10,Math.min(24,obj.font));if(Number.isInteger(obj.cirrusFont))s.cirrusFont=Math.max(10,Math.min(24,obj.cirrusFont));return s;}
  try{const saved=localStorage.getItem(KEY);if(saved)state=sanitize(JSON.parse(saved));}catch(e){storageAvailable=false;}
  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){storageAvailable=false;toast('Opslag is niet beschikbaar. Exporteer je voortgang om deze te bewaren.');}}
  window.SRAAnswerSettings={enabled:()=>state.directCheck===true,set(enabled){state.directCheck=enabled===true;save();document.querySelectorAll('[data-direct-check]').forEach(input=>{input.checked=state.directCheck;});}};
@@ -69,8 +69,8 @@
   const sidebar=$('#sidebar'),link=sidebar.querySelector('[aria-current="page"]');
   if(!link||!sidebar.clientHeight)return;
   const frame=sidebar.getBoundingClientRect(),item=link.getBoundingClientRect(),padding=12;
-  if(item.top<frame.top+padding)sidebar.scrollTop-=frame.top+padding-item.top;
-  else if(item.bottom>frame.bottom-padding)sidebar.scrollTop+=item.bottom-frame.bottom+padding;
+  if(item.top<frame.top+padding)sidebar.scrollTop-=(frame.top+padding-item.top)/(window.StudyScale?.get()||1);
+  else if(item.bottom>frame.bottom-padding)sidebar.scrollTop+=(item.bottom-frame.bottom+padding)/(window.StudyScale?.get()||1);
  }
  function showQuestionOverview(lesson,set=null,currentId=null){
   const items=set?set.items:allPracticeItems.filter(item=>item.lesson.phase===lesson.phase);
@@ -167,10 +167,11 @@
  // Codex: the exam shell uses CAFA2's 14px base independently of the 16px lessons.
  function applyFont(){
   const cirrus=document.body.classList.contains('cirrus-mode'),size=cirrus?(state.cirrusFont||14):state.font;
-  document.documentElement.style.setProperty('--font',state.font+'px');
-  document.documentElement.style.setProperty('--sra-cirrus-font',(state.cirrusFont||14)+'px');
+  document.documentElement.style.setProperty('--font','16px');
+  document.documentElement.style.setProperty('--sra-cirrus-font','14px');
   $('#font-minus').disabled=size<=(cirrus?10:14);$('#font-plus').disabled=size>=(cirrus?24:22);
   $('#font-reset').hidden=size===(cirrus?14:16);
+  window.StudyScale.set(size,cirrus?14:16,10,24);
  }
  function route(focus=true){
   const legacyExam={e1:'20250317/1',e2:'20250317/4',e3:'20241028/1',e4:'20241028/9',e5:'20250317/19',e6:'20250317/1'};
@@ -228,7 +229,7 @@
   if(tab==='les'&&parts[2]&&!previousView)focusQuestion(parts[2]);
   window.SRANavigation.after(previousView);
  }
- function changeFont(delta){const cirrus=document.body.classList.contains('cirrus-mode'),key=cirrus?'cirrusFont':'font',base=cirrus?14:16;state[key]=delta===0?base:Math.max(cirrus?10:14,Math.min(cirrus?24:22,(state[key]||base)+delta));applyFont();save();}
+ function changeFont(delta){const cirrus=document.body.classList.contains('cirrus-mode'),key=cirrus?'cirrusFont':'font',base=cirrus?14:16;state[key]=delta===0?base:Math.max(10,Math.min(24,(state[key]||base)+delta));applyFont();save();}
  $('#font-minus').onclick=()=>changeFont(-1);$('#font-plus').onclick=()=>changeFont(1);$('#font-reset').onclick=()=>changeFont(0);
  $('#menu-toggle').onclick=()=>{const open=document.body.classList.toggle('menu-open');$('#menu-toggle').setAttribute('aria-expanded',String(open));if(open)showCurrentSidebarLesson();};
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.body.classList.remove('menu-open');$('#menu-toggle').setAttribute('aria-expanded','false');if($('#tools-menu').open){$('#tools-menu').open=false;$('#tools-menu summary').focus();}}});
@@ -243,7 +244,9 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   const raw=value=>String(Number(value.toPrecision(13)));
   let entries=[], memory=0, lastValue=0, position=null, size=null, expandedSize=null, drag=null, sizing=null, returnFocus=opener;
   let errorShown=false, storageOK=true;
-  const viewport=()=>{const v=window.visualViewport;return {x:v?.offsetLeft||0,y:v?.offsetTop||0,w:v?.width||document.documentElement.clientWidth,h:v?.height||innerHeight};};
+  const scale=()=>window.StudyScale?.get()||1;
+  const bounds=()=>{const r=panel.getBoundingClientRect(),z=scale();return {left:r.left/z,top:r.top/z,width:r.width/z,height:r.height/z};};
+  const viewport=()=>{const v=window.visualViewport,z=scale();return {x:(v?.offsetLeft||0)/z,y:(v?.offsetTop||0)/z,w:(v?.width||document.documentElement.clientWidth)/z,h:(v?.height||innerHeight)/z};};
   const currentValue=()=>input.value.trim()?evaluate(input.value):lastValue;
   try {
     const stored=localStorage.getItem(options.storageKey);
@@ -330,9 +333,9 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   }
   function place(next=position){
     if(panel.hidden)return;
-    applySize();const v=viewport(),r=panel.getBoundingClientRect();
+    applySize();const v=viewport(),r=bounds();
     const maxX=Math.max(v.x+8,v.x+v.w-r.width-8),maxY=Math.max(v.y+8,v.y+v.h-r.height-8);
-    if(!next){const header=document.querySelector('.topbar,.reader-topbar,.study-header');next={x:maxX,y:Math.max(v.y+8,header?header.getBoundingClientRect().bottom+12:v.y+104)};}
+    if(!next){const header=document.querySelector('.topbar,.reader-topbar,.study-header');next={x:maxX,y:Math.max(v.y+8,header?header.getBoundingClientRect().bottom/scale()+12:v.y+104)};}
     position={x:Math.max(v.x+8,Math.min(maxX,next.x)),y:Math.max(v.y+8,Math.min(maxY,next.y))};
     panel.style.left=position.x+'px';panel.style.top=position.y+'px';panel.style.right='auto';panel.style.bottom='auto';
   }
@@ -340,7 +343,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   function open(from=opener){returnFocus=from;panel.hidden=false;expand(true);opener.setAttribute('aria-expanded','true');place();renderHistory(true);if(window.matchMedia('(pointer: fine)').matches)input.focus({preventScroll:true});else panel.focus({preventScroll:true});}
   function close(){const hadFocus=panel.contains(document.activeElement);if(drag&&handle.hasPointerCapture(drag.id))handle.releasePointerCapture(drag.id);if(sizing&&resizer.hasPointerCapture(sizing.id))resizer.releasePointerCapture(sizing.id);drag=null;sizing=null;panel.hidden=true;opener.setAttribute('aria-expanded','false');save();if(hadFocus)(returnFocus?.isConnected?returnFocus:opener).focus({preventScroll:true});}
   find('[data-calc-close]').onclick=close;minimize.onclick=()=>expand(body.hidden);
-  compact.onclick=()=>{if(!expandedSize){const r=panel.getBoundingClientRect();expandedSize={w:r.width,h:r.height};size={w:280,h:680};compact.setAttribute('aria-label','Rekenmachine normale grootte');compact.title='Normale grootte';}else{size=expandedSize;expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';}expand(true);place();save();};
+  compact.onclick=()=>{if(!expandedSize){const r=bounds();expandedSize={w:r.width,h:r.height};size={w:280,h:680};compact.setAttribute('aria-label','Rekenmachine normale grootte');compact.title='Normale grootte';}else{size=expandedSize;expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';}expand(true);place();save();};
   panel.querySelectorAll('[data-calc-key],[data-key]').forEach(button=>{button.addEventListener('pointerdown',e=>{if(e.button===0)e.preventDefault();});button.onclick=()=>perform(button.dataset.calcKey??button.dataset.key);});
   input.oninput=()=>{clearError();save();};
   panel.addEventListener('keydown',event=>{
@@ -350,15 +353,15 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
     if(event.key==='Enter'&&event.target.tagName==='BUTTON')return;
     if(event.key==='Enter'||event.key==='='){event.preventDefault();perform('=');}else if(event.key==='Backspace'){event.preventDefault();perform('back');}else if(event.key==='Delete'){event.preventDefault();perform('C');}else if(/^[0-9()+\-*/%^,.]$/.test(event.key)){event.preventDefault();perform(event.key);}
   });
-  handle.addEventListener('pointerdown',event=>{if(event.button!==0)return;const r=panel.getBoundingClientRect();drag={id:event.pointerId,x:event.clientX-r.left,y:event.clientY-r.top};handle.setPointerCapture(event.pointerId);event.preventDefault();});
-  handle.addEventListener('pointermove',event=>{if(drag?.id===event.pointerId)place({x:event.clientX-drag.x,y:event.clientY-drag.y});});
+  handle.addEventListener('pointerdown',event=>{if(event.button!==0)return;const r=bounds();drag={id:event.pointerId,x:event.clientX/scale()-r.left,y:event.clientY/scale()-r.top};handle.setPointerCapture(event.pointerId);event.preventDefault();});
+  handle.addEventListener('pointermove',event=>{if(drag?.id===event.pointerId)place({x:event.clientX/scale()-drag.x,y:event.clientY/scale()-drag.y});});
   const endDrag=event=>{if(drag?.id!==event.pointerId)return;drag=null;if(handle.hasPointerCapture(event.pointerId))handle.releasePointerCapture(event.pointerId);};handle.addEventListener('pointerup',endDrag);handle.addEventListener('pointercancel',endDrag);handle.addEventListener('lostpointercapture',endDrag);
-  handle.addEventListener('keydown',event=>{const delta={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[event.key];if(event.key==='Home'){event.preventDefault();position=null;place();}else if(delta){event.preventDefault();const r=panel.getBoundingClientRect();place({x:r.left+delta[0]*(event.shiftKey?4:1),y:r.top+delta[1]*(event.shiftKey?4:1)});}});
+  handle.addEventListener('keydown',event=>{const delta={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[event.key];if(event.key==='Home'){event.preventDefault();position=null;place();}else if(delta){event.preventDefault();const r=bounds();place({x:r.left+delta[0]*(event.shiftKey?4:1),y:r.top+delta[1]*(event.shiftKey?4:1)});}});
   function resize(w,h){const v=viewport();size={w:Math.min(Math.max(280,w),Math.max(1,v.w-16)),h:Math.min(Math.max(580,h),Math.max(44,v.h-16))};expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';place();save();}
-  resizer.addEventListener('pointerdown',event=>{if(event.button!==0)return;const r=panel.getBoundingClientRect();sizing={id:event.pointerId,x:event.clientX,y:event.clientY,w:r.width,h:r.height};resizer.setPointerCapture(event.pointerId);event.preventDefault();});
-  resizer.addEventListener('pointermove',event=>{if(sizing?.id===event.pointerId)resize(sizing.w+event.clientX-sizing.x,sizing.h+event.clientY-sizing.y);});
+  resizer.addEventListener('pointerdown',event=>{if(event.button!==0)return;const r=bounds();sizing={id:event.pointerId,x:event.clientX/scale(),y:event.clientY/scale(),w:r.width,h:r.height};resizer.setPointerCapture(event.pointerId);event.preventDefault();});
+  resizer.addEventListener('pointermove',event=>{if(sizing?.id===event.pointerId)resize(sizing.w+event.clientX/scale()-sizing.x,sizing.h+event.clientY/scale()-sizing.y);});
   const endResize=event=>{if(sizing?.id!==event.pointerId)return;sizing=null;if(resizer.hasPointerCapture(event.pointerId))resizer.releasePointerCapture(event.pointerId);};resizer.addEventListener('pointerup',endResize);resizer.addEventListener('pointercancel',endResize);resizer.addEventListener('lostpointercapture',endResize);
-  resizer.addEventListener('keydown',event=>{const delta={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[event.key];if(delta){event.preventDefault();const r=panel.getBoundingClientRect();resize(r.width+delta[0],r.height+delta[1]);}});
+  resizer.addEventListener('keydown',event=>{const delta={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[event.key];if(delta){event.preventDefault();const r=bounds();resize(r.width+delta[0],r.height+delta[1]);}});
   const copy=find('[data-copy-calc]');if(copy)copy.onclick=()=>{try{const value=raw(currentValue()).replace('.',',');if(navigator.clipboard?.writeText)navigator.clipboard.writeText(value).then(()=>find('.calc-copy-result').textContent='Gekopieerd',()=>find('.calc-copy-result').textContent='Uitkomst: '+value);else find('.calc-copy-result').textContent='Uitkomst: '+value;}catch(error){showError(error.message);}};
   document.addEventListener('focusin',event=>{if(!panel.hidden&&!panel.contains(event.target))returnFocus=event.target;});
   window.addEventListener('resize',()=>place());window.visualViewport?.addEventListener('resize',()=>place());window.visualViewport?.addEventListener('scroll',()=>place());window.addEventListener('pagehide',save);

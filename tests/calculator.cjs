@@ -10,8 +10,8 @@ function events(target={}){
  target.dispatch=(type,e)=>{target['on'+type]?.(e);for(const handler of handlers[type]||[])handler(e);if(!e.stopped&&target.parent)target.parent.dispatch(type,e);};
  target.emit=(type,fields={})=>{const e={type,target,defaultPrevented:false,stopped:false,preventDefault(){this.defaultPrevented=true;},stopPropagation(){this.stopped=true;},...fields};target.dispatch(type,e);return e;};return target;
 }
-function fixture({storage=new Map(),finePointer=true,storageBlocked=false}={}){
- const document=events({documentElement:{clientWidth:1200}}),window=events({innerHeight:800,SRAMath:math,matchMedia:()=>({matches:finePointer})});
+function fixture({storage=new Map(),finePointer=true,storageBlocked=false,zoom=1}={}){
+ const document=events({documentElement:{clientWidth:1200}}),window=events({innerHeight:800,SRAMath:math,StudyScale:{get:()=>zoom},matchMedia:()=>({matches:finePointer})});
  const view=window.visualViewport=events({width:1200,height:800,offsetLeft:0,offsetTop:0}),camel=s=>s.replace(/-([a-z])/g,(_,c)=>c.toUpperCase());let sequence=0;
  function element(tag){
   const attrs={},classes=new Set(),captures=new Set();let value='';
@@ -26,7 +26,7 @@ function fixture({storage=new Map(),finePointer=true,storageBlocked=false}={}){
    focus(){document.activeElement=n;n.emit('focusin');},setSelectionRange(a,b){n.selectionStart=a;n.selectionEnd=b;},
    setRangeText(text,a,b){value=value.slice(0,a)+text+value.slice(b);n.selectionStart=n.selectionEnd=a+text.length;},
    setPointerCapture:id=>captures.add(id),hasPointerCapture:id=>captures.has(id),releasePointerCapture:id=>captures.delete(id),
-   getBoundingClientRect(){const width=Math.min(parseFloat(n.style.width)||304,parseFloat(n.style.maxWidth)||Infinity),height=Math.min(n.querySelector('[data-calc-body]')?.hidden?44:parseFloat(n.style.height)||450,parseFloat(n.style.maxHeight)||Infinity),left=parseFloat(n.style.left)||0,top=parseFloat(n.style.top)||0;return {left,top,width,height,right:left+width,bottom:top+height};}
+   getBoundingClientRect(){const width=Math.min(parseFloat(n.style.width)||304,parseFloat(n.style.maxWidth)||Infinity)*zoom,height=Math.min(n.querySelector('[data-calc-body]')?.hidden?44:parseFloat(n.style.height)||450,parseFloat(n.style.maxHeight)||Infinity)*zoom,left=(parseFloat(n.style.left)||0)*zoom,top=(parseFloat(n.style.top)||0)*zoom;return {left,top,width,height,right:left+width,bottom:top+height};}
   });
   Object.defineProperties(n,{className:{get:()=>[...classes].join(' '),set:v=>{classes.clear();String(v).split(/\s+/).filter(Boolean).forEach(k=>classes.add(k));}},value:{get:()=>value,set:v=>{value=String(v);n.selectionStart=n.selectionEnd=value.length;}},isConnected:{get:()=>n.parent===document||!!n.parent?.isConnected}});n.value='';return n;
  }
@@ -81,4 +81,17 @@ const touch=fixture({finePointer:false});touch.opener.emit('click');assert.equal
 const corrupt=fixture({storage:new Map([[storageKey,'{broken']])});corrupt.type('6*7');corrupt.key('=');assert.equal(corrupt.api.getState().lastValue,42);
 const invalid=fixture({storage:new Map([[storageKey,JSON.stringify({memory:'9',lastValue:null,entries:[{id:'valid',expression:'2+2',value:4},{id:'bad',expression:'1/0',value:null},{id:3,expression:'3',value:3}],formula:'5'.repeat(200)})]])});assert.equal(invalid.api.getState().memory,0);assert.equal(invalid.api.getState().lastValue,0);assert.equal(invalid.api.getState().history.length,1);assert.equal(invalid.input.value.length,180);
 const blocked=fixture({storageBlocked:true});blocked.type('6*7');blocked.key('=');assert.equal(blocked.api.getState().lastValue,42);assert.equal(blocked.find('.calc-storage-note').textContent,'Browseropslag niet beschikbaar');
-console.log('Calculator: parser, niet-modale invoer, caret, toetsen, fouten, geheugen, historieopslag, herladen, viewport en terugfocus geslaagd.');
+// Screen coordinates must move/resize the window correctly at both page-scale extremes.
+for(const zoom of [10/14,24/14]){
+ const f=fixture({zoom}),move=f.find('[data-calc-move]'),resize=f.find('[data-calc-resize]');f.opener.emit('click');
+ let r=f.panel.getBoundingClientRect();assert.ok(r.right<=1200&&r.bottom<=800);
+ move.emit('pointerdown',{button:0,pointerId:9,clientX:r.left+10,clientY:r.top+10});
+ move.emit('pointermove',{pointerId:9,clientX:210,clientY:160});move.emit('pointerup',{pointerId:9});
+ r=f.panel.getBoundingClientRect();assert.ok(Math.abs(r.left-200)<.001,'Drag follows the pointer without applying zoom twice.');
+ assert.ok(Math.abs(r.top-Math.min(150,800-r.height-8*zoom))<.001,'Drag respects the lower viewport edge.');
+ resize.emit('keydown',{key:'ArrowRight'});
+ const next=f.panel.getBoundingClientRect();assert.ok(Math.abs(next.width-r.width-10*zoom)<.001);
+ Object.assign(f.view,{width:390,height:620});f.window.emit('resize');
+ r=f.panel.getBoundingClientRect();assert.ok(r.left>=0&&r.top>=0&&r.right<=390&&r.bottom<=620,'Scaled calculator stays inside a narrow viewport.');
+}
+console.log('Calculator: parser, niet-modale invoer, caret, toetsen, fouten, geheugen, historieopslag, herladen, viewport, paginagrootte en terugfocus geslaagd.');
