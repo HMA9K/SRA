@@ -1297,6 +1297,48 @@ html[data-study-theme=dark] body.study-shell .study-navigation-row{background:va
 html[data-study-theme=dark] body.study-shell .study-theme-control>summary{border:1px solid #3b4a5455}
 html[data-study-theme=dark] body.study-shell .study-theme-menu{box-shadow:0 12px 40px #01030436}
 @media (max-width:760px){html[data-study-theme=dark] body.study-shell .study-theme-control>summary{border-color:#3b4a5444}}
+/* css/exam-cirrus-layout.css */
+html[data-study-theme=dark] body.exam-running .topbar{background:#212b38!important;color:#f0f7fc}
+html[data-study-theme=dark] body.exam-running .cirrus-page-head .exam-runner-title{color:#adbdc9!important}
+html[data-study-theme=dark] .cirrus-source-diagram svg{background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.exam-running .cirrus-page-head>details>summary{color:var(--study-ink,#99c1e1)}
+html[data-study-theme=dark] body.exam-running .cirrus-page-head>details>nav,html[data-study-theme=dark] body.exam-running .cirrus-page-head .sra-tools-panel{border:1px solid #38526b;background:var(--study-surface,#152129);box-shadow:0 7px 20px #01030418}
+html[data-study-theme=dark] body.exam-running .frame{border:1px solid #3b4a54;background:var(--study-surface,#152129)}
+html[data-study-theme=dark] body.exam-running .exam-question-identity .qnum{background:#ae5113}
+html[data-study-theme=dark] body.exam-running .exam-question-identity .btn,html[data-study-theme=dark] body.exam-running .cirrus-float-trigger{color:var(--study-ink,#adbdc9);border:1px solid #3b4a54}
+html[data-study-theme=dark] body.exam-running .exam-case-panel,html[data-study-theme=dark] body.cirrus-mode.exam-running .exam-case-panel{background:var(--study-surface,#152129)}
+html[data-study-theme=dark] body.exam-running .cirrus-case-head{color:var(--study-ink,#adbdc9)}
+html[data-study-theme=dark] body.exam-running .cirrus-case-head button{color:#adbdc9}
+html[data-study-theme=dark] body.exam-running .cirrus-summary-link{color:var(--study-accent,#8decda)}
+html[data-study-theme=dark] body.exam-running .exam-footer{border-top:1px solid #3b4a54;background:var(--study-surface,#152129)}
+html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-toolbar{background:#152129;border-color:#3b4a54}
+html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-button,html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-select{color:#e0ebf2}
+html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-content{border-color:#3b4a54}
+html[data-study-theme=dark] .cirrus-question-flag{color:#ecb38d}
+html[data-study-theme=dark] body.exam-running .compact-overview-flag{color:#ecb38d}
+html[data-study-theme=dark] body.exam-running .compact-overview-number{background:#ae5113;color:#f0f7fc}
+html[data-study-theme=dark] .cirrus-case-float{border:1px solid var(--study-line,#3b4a54);background:var(--study-surface,#152129);color:var(--study-ink,#99c1e1);box-shadow:0 9px 30px #01030424}
+html[data-study-theme=dark] .cirrus-case-float>header{border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] .cirrus-case-float button{border:1px solid #3b4a54;background:var(--study-surface,#152129)}
+html[data-study-theme=dark] .cirrus-case-float>footer{background:var(--study-wash,#121e25)}
+html[data-study-theme=dark] body #calculator-dialog,html[data-study-theme=dark] body #calculator{box-shadow:0 7px 24px #01030420}
+html[data-study-theme=dark] body #calculator-dialog .calculator-float-head,html[data-study-theme=dark] body #calculator .calculator-float-head{background:#152129!important;color:#e0ebf2!important;border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] body #calculator-dialog .calculator-float-head button,html[data-study-theme=dark] body #calculator .calculator-float-head button{color:#adbdc9!important}
+html[data-study-theme=dark] body #calculator .calc-head{background:#152129!important;color:#e0ebf2!important;border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] body #calculator .calc-head button{color:#adbdc9!important}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="*"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="/"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="+"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="-"]{background:#2f6692}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="C"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="back"]{background:#212b38}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="="]{background:#ae5113;border-color:#764a2d}
+html[data-study-theme=dark] body #calculator-dialog .calc-keys button,html[data-study-theme=dark] body #calculator .calc-keys button{background:#296399;color:#f0f7fc;border-color:#3b4a54}
+html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="*"],html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="/"],html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="+"],html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="-"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="*"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="/"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="+"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="-"]{background:#2f6692}
+html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="C"],html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="back"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="C"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="back"]{background:#212b38}
+html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="="],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="="]{background:#ae5113;border-color:#764a2d}
+html[data-study-theme=dark][data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-toolbar{background:#212b38}
+html[data-study-theme=dark][data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-button,html[data-study-theme=dark][data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-select{color:#a2c3d8}
+html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calculator-float-head,html[data-study-theme=dark][data-study-theme=dark] body #calculator .calculator-float-head{background:#212b38!important;color:#a2c3d8!important}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="*"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="/"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="+"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="-"]{background:#2f6692}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="C"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="back"]{background:#212b38}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="="]{background:#ae5113;border-color:#764a2d}
 /* Semantic colours complete the literal-colour conversion; source pages stay intact. */
 html[data-study-theme=dark],html[data-study-theme=dark] body.study-shell{--ink:#e1eaf0;--text:#e1eaf0;--muted:#a8b8c4;--line:#354852;--paper:#152129;--wash:#10191f;--bg:#10191f;--purple:#283143;--green:#13856a;--green-dark:#07543c;--danger:#f0aaa7;--bad:#f0aaa7;--study-purple:#283143;--study-green:#13856a;--study-green-dark:#70dec0;--study-surface:#152129;--study-canvas:#10191f;--study-subtle:#10191f;--study-wash:#10191f;--study-ink:#e5edf3;--study-muted:#a7b7c3;--study-title:#d7c7da;--study-line:#354852;--study-border:#354852;--study-accent:#70dec0;--study-focus:#8dcaec;--study-full-bg:#163f30;--study-full-border:#4fbd9a;--study-partial-bg:#40331e;--study-partial-border:#c7a263;--study-zero-bg:#45282a;--study-zero-border:#d29493;--study-ungraded-bg:#202c35;--study-ungraded-border:#73828d}
 html[data-study-theme=dark] body{background:#10191f;color:#e1eaf0}

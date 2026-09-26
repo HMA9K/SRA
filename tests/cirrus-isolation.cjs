@@ -13,7 +13,7 @@ const links=[...index.matchAll(/<link\b[^>]*rel="stylesheet"[^>]*>/g)].map(match
 }));
 assert.ok(links.length>5);
 for(const {tag,href} of links){
- const shared=/^(css\/(?:cirrus(?:-integration)?|study-dark)\.css|vendor\/study-ui\/(?:header|theme)\.css)$/.test(href);
+ const shared=/^(css\/(?:cirrus(?:-integration)?|exam-cirrus-layout|study-dark)\.css|vendor\/study-ui\/(?:header|theme)\.css)$/.test(href);
  assert.equal(/\bdata-study-style\b/.test(tag),!shared,href);
 }
 

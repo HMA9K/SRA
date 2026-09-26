@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="nl" data-study-storage="sra-display-session-v1">
-<head><script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#444159">
+  <meta name="color-scheme" content="light dark">
+  <script>
 /* Shared by CAFA2 and SRA. Scale layout as well as text, preserving viewport space. */
 (function () {
   'use strict';
@@ -54,10 +59,6 @@
 })();
 
 </script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#444159">
-  <meta name="color-scheme" content="light dark">
   <script>
 /* Based on CAFA2 js/study-theme.js. Session choice; system preference by default. */
 (function(root){
@@ -4203,6 +4204,48 @@ html[data-study-theme=dark] body.study-shell .study-navigation-row{background:va
 html[data-study-theme=dark] body.study-shell .study-theme-control>summary{border:1px solid #3b4a5455}
 html[data-study-theme=dark] body.study-shell .study-theme-menu{box-shadow:0 12px 40px #01030436}
 @media (max-width:760px){html[data-study-theme=dark] body.study-shell .study-theme-control>summary{border-color:#3b4a5444}}
+/* css/exam-cirrus-layout.css */
+html[data-study-theme=dark] body.exam-running .topbar{background:#212b38!important;color:#f0f7fc}
+html[data-study-theme=dark] body.exam-running .cirrus-page-head .exam-runner-title{color:#adbdc9!important}
+html[data-study-theme=dark] .cirrus-source-diagram svg{background:#152129;color:#e0ebf2}
+html[data-study-theme=dark] body.exam-running .cirrus-page-head>details>summary{color:var(--study-ink,#99c1e1)}
+html[data-study-theme=dark] body.exam-running .cirrus-page-head>details>nav,html[data-study-theme=dark] body.exam-running .cirrus-page-head .sra-tools-panel{border:1px solid #38526b;background:var(--study-surface,#152129);box-shadow:0 7px 20px #01030418}
+html[data-study-theme=dark] body.exam-running .frame{border:1px solid #3b4a54;background:var(--study-surface,#152129)}
+html[data-study-theme=dark] body.exam-running .exam-question-identity .qnum{background:#ae5113}
+html[data-study-theme=dark] body.exam-running .exam-question-identity .btn,html[data-study-theme=dark] body.exam-running .cirrus-float-trigger{color:var(--study-ink,#adbdc9);border:1px solid #3b4a54}
+html[data-study-theme=dark] body.exam-running .exam-case-panel,html[data-study-theme=dark] body.cirrus-mode.exam-running .exam-case-panel{background:var(--study-surface,#152129)}
+html[data-study-theme=dark] body.exam-running .cirrus-case-head{color:var(--study-ink,#adbdc9)}
+html[data-study-theme=dark] body.exam-running .cirrus-case-head button{color:#adbdc9}
+html[data-study-theme=dark] body.exam-running .cirrus-summary-link{color:var(--study-accent,#8decda)}
+html[data-study-theme=dark] body.exam-running .exam-footer{border-top:1px solid #3b4a54;background:var(--study-surface,#152129)}
+html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-toolbar{background:#152129;border-color:#3b4a54}
+html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-button,html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-select{color:#e0ebf2}
+html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-content{border-color:#3b4a54}
+html[data-study-theme=dark] .cirrus-question-flag{color:#ecb38d}
+html[data-study-theme=dark] body.exam-running .compact-overview-flag{color:#ecb38d}
+html[data-study-theme=dark] body.exam-running .compact-overview-number{background:#ae5113;color:#f0f7fc}
+html[data-study-theme=dark] .cirrus-case-float{border:1px solid var(--study-line,#3b4a54);background:var(--study-surface,#152129);color:var(--study-ink,#99c1e1);box-shadow:0 9px 30px #01030424}
+html[data-study-theme=dark] .cirrus-case-float>header{border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] .cirrus-case-float button{border:1px solid #3b4a54;background:var(--study-surface,#152129)}
+html[data-study-theme=dark] .cirrus-case-float>footer{background:var(--study-wash,#121e25)}
+html[data-study-theme=dark] body #calculator-dialog,html[data-study-theme=dark] body #calculator{box-shadow:0 7px 24px #01030420}
+html[data-study-theme=dark] body #calculator-dialog .calculator-float-head,html[data-study-theme=dark] body #calculator .calculator-float-head{background:#152129!important;color:#e0ebf2!important;border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] body #calculator-dialog .calculator-float-head button,html[data-study-theme=dark] body #calculator .calculator-float-head button{color:#adbdc9!important}
+html[data-study-theme=dark] body #calculator .calc-head{background:#152129!important;color:#e0ebf2!important;border-bottom:1px solid #3b4a54}
+html[data-study-theme=dark] body #calculator .calc-head button{color:#adbdc9!important}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="*"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="/"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="+"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="-"]{background:#2f6692}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="C"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="back"]{background:#212b38}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="="]{background:#ae5113;border-color:#764a2d}
+html[data-study-theme=dark] body #calculator-dialog .calc-keys button,html[data-study-theme=dark] body #calculator .calc-keys button{background:#296399;color:#f0f7fc;border-color:#3b4a54}
+html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="*"],html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="/"],html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="+"],html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="-"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="*"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="/"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="+"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="-"]{background:#2f6692}
+html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="C"],html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="back"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="C"],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="back"]{background:#212b38}
+html[data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="="],html[data-study-theme=dark] body #calculator .calc-keys [data-calc-key="="]{background:#ae5113;border-color:#764a2d}
+html[data-study-theme=dark][data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-toolbar{background:#212b38}
+html[data-study-theme=dark][data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-button,html[data-study-theme=dark][data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-select{color:#a2c3d8}
+html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calculator-float-head,html[data-study-theme=dark][data-study-theme=dark] body #calculator .calculator-float-head{background:#212b38!important;color:#a2c3d8!important}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="*"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="/"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="+"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="-"]{background:#2f6692}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="C"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="back"]{background:#212b38}
+html[data-study-theme=dark] body #calculator .calc-keys [data-key="="]{background:#ae5113;border-color:#764a2d}
 /* Semantic colours complete the literal-colour conversion; source pages stay intact. */
 html[data-study-theme=dark],html[data-study-theme=dark] body.study-shell{--ink:#e1eaf0;--text:#e1eaf0;--muted:#a8b8c4;--line:#354852;--paper:#152129;--wash:#10191f;--bg:#10191f;--purple:#283143;--green:#13856a;--green-dark:#07543c;--danger:#f0aaa7;--bad:#f0aaa7;--study-purple:#283143;--study-green:#13856a;--study-green-dark:#70dec0;--study-surface:#152129;--study-canvas:#10191f;--study-subtle:#10191f;--study-wash:#10191f;--study-ink:#e5edf3;--study-muted:#a7b7c3;--study-title:#d7c7da;--study-line:#354852;--study-border:#354852;--study-accent:#70dec0;--study-focus:#8dcaec;--study-full-bg:#163f30;--study-full-border:#4fbd9a;--study-partial-bg:#40331e;--study-partial-border:#c7a263;--study-zero-bg:#45282a;--study-zero-border:#d29493;--study-ungraded-bg:#202c35;--study-ungraded-border:#73828d}
 html[data-study-theme=dark] body{background:#10191f;color:#e1eaf0}
@@ -4236,6 +4279,8 @@ html[data-study-theme=dark] body.study-shell .lab .key[style*="#176fad"]{border-
 }
 
 </style>
+
+
 
 
 
@@ -4547,7 +4592,146 @@ html[data-study-theme=dark] body.study-shell .lab .key[style*="#176fad"]{border-
   window.addEventListener('cafa:exam-route', schedule);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready); else ready();
 })();
+
 </script>
+<style>
+/* Gedeelde tentamenindeling en compacte rekenmachine. */
+body.exam-running .topbar{background:#444159!important;color:#fff}
+body.exam-running #study-returnbar,body.exam-running .study-navigation-row,body.exam-running .study-page-name,body.exam-running .exam-breadcrumb,body.exam-running .sra-breadcrumb,body.exam-running nav[aria-label="Kruimelpad"],body.exam-running .study-position-bar {display:none!important}
+body.exam-running main,body.cirrus-mode.exam-running:has(.exam-case-layout) #main {height:calc(100dvh - var(--cirrus-top-height,64px))!important;padding:8px 12px 10px!important;max-width:none!important;min-height:0;overflow:hidden;display:flex;flex-direction:column}
+body.exam-running #exam-app{flex:1;min-height:0;display:flex;flex-direction:column}
+body.exam-running .cirrus-page-head{display:flex;align-items:center;gap:16px;flex:0 0 auto;margin:4px 0 12px;min-height:42px;position:relative;z-index:4}
+body.exam-running .cirrus-page-nav{display:flex;gap:8px;flex:0 0 auto}
+body.exam-running .cirrus-page-nav .btn{font:12px/1.3 Arial,sans-serif;padding:7px 9px;min-height:31px}
+body.exam-running .cirrus-page-head .exam-runner-title{font:bold 26px/1.3 Arial,sans-serif;margin:0!important;min-width:0;color:#444159!important}
+body.exam-running .top-controls>.study-theme-control,body.exam-running .top-tools>.study-theme-control{order:-4!important}
+body.exam-running .top-controls>.exam-clock,body.exam-running .top-tools>.exam-clock{order:-3!important}
+body.exam-running .top-controls>[data-calc],body.exam-running .top-tools>[data-calc]{order:-2!important}
+body.exam-running .top-controls>.font-group,body.exam-running .top-tools>.font-group{order:-1!important}
+.cirrus-source-diagram{margin:18px auto 24px;max-width:280px;text-align:center}
+.cirrus-source-diagram svg{display:block;width:100%;height:auto;background:#fff;color:#111}
+.cirrus-source-diagram figcaption{font-size:11px;line-height:1.4;margin-top:8px}
+.cirrus-source-diagram-wide{max-width:650px}
+.cirrus-diagram-with-data{position:relative;min-width:0;overflow:hidden}
+.cirrus-diagram-accessible-table{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;clip-path:inset(50%)!important;overflow:hidden!important;white-space:nowrap!important;border:0!important}
+body.exam-running .cirrus-page-head>details{margin-left:auto!important;position:relative;flex:0 0 auto}
+body.exam-running .cirrus-page-head>details>summary{font:12px/1.4 Arial,sans-serif;padding:6px 12px;color:var(--study-ink,#17364e);cursor:pointer;list-style:none}
+body.exam-running .cirrus-page-head>details>nav,body.exam-running .cirrus-page-head .sra-tools-panel{position:absolute;right:0;top:100%;min-width:220px;padding:12px;border:1px solid #d9e2eb;background:var(--study-surface,#fff);box-shadow:0 7px 20px #29233718;z-index:50}
+body.exam-running .frame{min-height:0;flex:1;display:flex;flex-direction:column;border:1px solid #e5e7e9;background:var(--study-surface,#fff)}
+body.exam-running .exam-case-layout{flex:1;min-height:0;overflow:hidden}
+body.exam-running .cirrus-work-pane{min-width:0;min-height:0;height:100%;display:flex;flex-direction:column;overflow:hidden}
+body.exam-running .cirrus-work-pane>.exam-question-body,body.cirrus-mode.exam-running .cirrus-work-pane>.exam-question-body{flex:1;min-width:0;min-height:0;height:auto;overflow:auto;padding:26px 36px 24px!important;font:13px/1.5 Arial,sans-serif}
+body.exam-running .exam-work-head,body.cirrus-mode.exam-running .exam-work-head{display:flex!important;align-items:center;justify-content:space-between;gap:16px;padding:0!important;margin:0 0 30px;border:0;background:transparent}
+body.exam-running .exam-question-identity{display:flex;gap:10px;font:11px/1.3 Arial,sans-serif;flex-wrap:wrap}
+body.exam-running .exam-question-identity .qnum{min-width:17px;width:auto;height:17px;font:700 12px/17px Arial,sans-serif;background:#f60}
+body.exam-running .cirrus-question-points{font:11px/1.3 Arial,sans-serif;white-space:nowrap;color:inherit}
+body.exam-running .exam-question-identity .btn,body.exam-running .cirrus-float-trigger{min-height:26px!important;border-width:1px!important;font:11px/1.3 Arial,sans-serif!important;padding:4px 7px!important;background:transparent;color:var(--study-ink,#615365);border:1px solid #615365;cursor:pointer}
+body.exam-running .exam-position{font:11px/1.3 Arial,sans-serif;white-space:nowrap;margin:0}
+body.exam-running .exam-position strong{font-size:16px}
+body.exam-running .exam-case-layout>.exam-question-body,body.cirrus-mode.exam-running .exam-case-layout>.exam-question-body{padding:26px 36px 24px!important;min-width:0;min-height:0;font:13px/1.5 Arial,sans-serif}
+body.exam-running .exam-case-panel,body.cirrus-mode.exam-running .exam-case-panel{padding:12px 20px 20px!important;font:13px/1.48 Arial,sans-serif;background:var(--study-surface,#fff);border:0}
+body.exam-running .exam-case-panel>h2{display:none}
+body.exam-running .cirrus-case-head{display:flex;align-items:center;gap:10px;justify-content:space-between;margin:0 0 30px;font:11px/1.4 Arial,sans-serif;color:var(--study-ink,#55515c)}
+body.exam-running .cirrus-case-head button{flex:0 0 auto;font:700 18px Arial,sans-serif;color:#615365;background:transparent;border:0;padding:3px;cursor:pointer}
+body.exam-running .exam-case-panel .exam-source-document,body.cirrus-mode .exam-case-panel>.exam-source-document{font:13px/1.48 Arial,sans-serif!important}
+body.exam-running .exam-source-question{font:13px/1.5 Arial,sans-serif!important;margin:0!important;padding:0 0 12px!important}
+body.exam-running .exam-source-question p,body.exam-running .exam-source-question li,body.exam-running .exam-source-question strong{font-weight:400!important}
+body.exam-running .exam-source-question .cirrus-main-instruction,body.exam-running .exam-source-question .cirrus-main-instruction *{font-weight:700!important}
+body.exam-running .exam-source-question .cirrus-main-instruction .cirrus-supplemental,body.exam-running .exam-source-question .cirrus-main-instruction .cirrus-supplemental *{font-weight:400!important}
+body.exam-running .exam-answer-label{margin-top:28px!important;margin-bottom:10px!important;font:11px/1.4 Arial,sans-serif!important}
+body.exam-running .exam-answer-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:16px 0 8px}
+body.exam-running .cirrus-summary-link{font:12px/1.4 Arial,sans-serif;color:var(--study-accent,#087c66)}
+body.exam-running .exam-footer{padding:14px 20px;min-height:62px;flex:0 0 auto;border-top:1px solid #e5e7e9;background:var(--study-surface,#fff)}
+body.exam-running .exam-footer .btn{font:12px/1.3 Arial,sans-serif;min-height:30px;padding:5px 8px}
+body.exam-running .exam-footer .actions,body.exam-running .exam-cirrus-actions{gap:8px}
+body.exam-running .cafa-answer-editor .cae-toolbar{gap:1px;padding:3px;background:#fafafa;border-color:#c4c6c9}
+body.exam-running .cafa-answer-editor .cae-group{gap:1px;padding-right:6px;margin-right:4px}
+body.exam-running .cafa-answer-editor .cae-button,body.exam-running .cafa-answer-editor .cae-select{font-size:12px;min-height:26px;height:26px;padding:3px 5px;border-radius:0;color:#333;background:transparent;border-color:transparent}
+body.exam-running .cafa-answer-editor .cae-content{min-height:160px;height:180px;font:13px/1.5 Arial,sans-serif;border-color:#c4c6c9}
+body.exam-running .cafa-answer-editor.is-expanded .cae-content{height:auto;min-height:0}
+body.exam-running .cafa-answer-editor .cae-toolbar .cae-button:disabled{display:none}
+.cirrus-question-flag{width:18px;height:20px;display:inline-flex;align-items:center;color:#f60}
+.cirrus-question-flag[hidden]{display:none!important}
+.cirrus-question-flag svg,.compact-overview-flag svg{width:20px;height:20px}
+body.exam-running .compact-overview-flag{color:#f60;position:static;width:20px;height:20px;order:2}
+body.exam-running .compact-overview-state{order:3;font:12px/1.3 Arial,sans-serif}
+body.exam-running .compact-overview-item{display:flex;gap:10px;align-items:center}
+body.exam-running .compact-overview-number{font:700 13px/1 Arial,sans-serif;min-width:25px;height:32px;background:#f60;color:#fff;order:1}
+.cirrus-case-float{position:fixed;z-index:130;left:50%;top:18%;transform:translateX(-50%);width:470px;height:560px;min-width:280px;min-height:280px;max-width:calc(100vw - 16px);max-height:calc(100dvh - 16px);display:flex;flex-direction:column;resize:both;overflow:hidden;border:1px solid var(--study-line,#ddd);border-radius:4px;background:var(--study-surface,#fff);color:var(--study-ink,#17364e);box-shadow:0 9px 30px #39334724;animation:float-in .16s ease-out}
+.cirrus-case-float.is-large{width:min(850px,calc(100vw - 32px));height:80dvh;top:8%;left:50%;transform:translateX(-50%)}
+.cirrus-case-float>header{display:flex;gap:8px;align-items:center;border-bottom:1px solid #e3e3e3;padding:12px 14px;flex:0 0 auto}
+.cirrus-case-float button{font:12px/1.4 Arial,sans-serif;border:1px solid #cfcbd2;padding:5px 9px;background:var(--study-surface,#fff);color:inherit;border-radius:2px;cursor:pointer}
+.cirrus-case-float>header>button{border:0;font-size:22px;padding:0 3px}
+.cirrus-case-float>header>.cirrus-float-move{flex:1;min-width:0;text-align:left;cursor:move;touch-action:none;font-size:17px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cirrus-float-content{flex:1;min-height:0;overflow:auto;padding:22px 24px;font:13px/1.48 Arial,sans-serif}
+.cirrus-float-content .exam-source-document{max-width:none!important;margin:0!important;padding:0!important;font:13px/1.48 Arial,sans-serif!important}
+.cirrus-case-float>footer{padding:12px 16px;background:var(--study-wash,#f4f4f4);display:flex;align-items:center;justify-content:space-between;gap:12px;font:10px/1.4 Arial,sans-serif}
+@keyframes float-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.cirrus-case-float{animation:none}}
+body #calculator-dialog,body #calculator{--calc-head:#fff;--calc-accent:#f60;min-width:220px!important;min-height:460px!important;border-radius:2px;box-shadow:0 7px 24px #29233720}
+body #calculator-dialog .calculator-float-head,body #calculator .calculator-float-head{background:#fff!important;color:#222!important;border-bottom:1px solid #ddd}
+body #calculator-dialog .calculator-float-head button,body #calculator .calculator-float-head button{color:#777!important}
+body #calculator .calc-head{background:#fff!important;color:#222!important;border-bottom:1px solid #ddd}
+body #calculator .calc-head button{color:#777!important}
+body #calculator .calc-keys [data-key="*"],body #calculator .calc-keys [data-key="/"],body #calculator .calc-keys [data-key="+"],body #calculator .calc-keys [data-key="-"]{background:#3878ad}
+body #calculator .calc-keys [data-key="C"],body #calculator .calc-keys [data-key="back"]{background:#aeb3b7}
+body #calculator .calc-keys [data-key="="]{background:#f60;border-color:#f60}
+body #calculator-dialog .calc-keys button,body #calculator .calc-keys button{border-radius:0;background:#4b90cf;color:#fff;border-color:#fff}
+body #calculator-dialog .calc-keys [data-calc-key="*"],body #calculator-dialog .calc-keys [data-calc-key="/"],body #calculator-dialog .calc-keys [data-calc-key="+"],body #calculator-dialog .calc-keys [data-calc-key="-"],body #calculator .calc-keys [data-calc-key="*"],body #calculator .calc-keys [data-calc-key="/"],body #calculator .calc-keys [data-calc-key="+"],body #calculator .calc-keys [data-calc-key="-"]{background:#3878ad}
+body #calculator-dialog .calc-keys [data-calc-key="C"],body #calculator-dialog .calc-keys [data-calc-key="back"],body #calculator .calc-keys [data-calc-key="C"],body #calculator .calc-keys [data-calc-key="back"]{background:#aeb3b7}
+body #calculator-dialog .calc-keys [data-calc-key="="],body #calculator .calc-keys [data-calc-key="="]{background:#f60;border-color:#f60}
+body .cirrus-calc-small .calculator-float-head{min-height:36px!important;flex-basis:36px!important}
+body .cirrus-calc-small .calc-head{min-height:36px!important;flex-basis:36px!important}
+body .cirrus-calc-small [data-calc-body]{padding:6px 8px 0!important}
+body .cirrus-calc-small .calc-history{height:106px!important;min-height:106px!important;flex:0 0 106px!important}
+body .cirrus-calc-small [data-calc-move]{gap:4px!important}
+body .cirrus-calc-small [data-calc-move]>span{font-size:16px!important}
+body .cirrus-calc-small [data-calc-move]>b{font-size:12px!important;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+body .cirrus-calc-small .calculator-float-head button:not([data-calc-move]),body .cirrus-calc-small .calc-head button:not([data-calc-move]){width:23px!important;min-width:23px!important;height:26px!important;min-height:26px!important;font-size:17px!important}
+body .cirrus-calc-small .calc-history-list li{height:26px!important;min-height:26px!important}
+body .cirrus-calc-small .calc-history-reuse{height:25px!important;min-height:25px!important}
+body .cirrus-calc-small .calc-history-expression{font-size:10px!important;line-height:11px!important}
+body .cirrus-calc-small .calc-history-value{font-size:11px!important;line-height:12px!important}
+body .cirrus-calc-small .calc-history-remove{height:24px!important;min-height:24px!important}
+body .cirrus-calc-small .calc-history-help,body .cirrus-calc-small .calc-input-label{display:none!important}
+body .cirrus-calc-small [data-calc-input]{height:32px!important;min-height:32px!important;flex-basis:32px!important;font-size:13px!important}
+body .cirrus-calc-small .calc-keys button{height:26px!important;min-height:26px!important;font-size:13px!important}
+body .cirrus-calc-small .calc-memory-keys button{min-height:24px!important;padding:3px!important}
+body .cirrus-calc-small .calc-keys{gap:3px!important}
+body .cirrus-calc-small .calc-help{font-size:9px!important;margin-top:5px!important}
+body .cirrus-calc-small .calc-window-footer{min-height:22px!important;flex-basis:22px!important}
+html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-toolbar{background:#202d37}
+html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-button,html[data-study-theme=dark] body.exam-running .cafa-answer-editor .cae-select{color:#e0ebf2}
+html[data-study-theme=dark] body #calculator-dialog .calculator-float-head,html[data-study-theme=dark] body #calculator .calculator-float-head{background:#202d37!important;color:#e0ebf2!important}
+@media(max-width:760px){
+ body.exam-running main,body.cirrus-mode.exam-running:has(.exam-case-layout) #main{height:auto!important;min-height:calc(100dvh - var(--cirrus-top-height,90px));overflow:visible}
+ body.exam-running .cirrus-page-head{flex-wrap:wrap;gap:10px;margin-bottom:12px}
+ body.exam-running .cirrus-page-head .exam-runner-title{order:3;width:100%;font-size:22px}
+ body.exam-running .cirrus-page-head>details{margin-left:auto!important}
+ body.exam-running .exam-case-layout{overflow:visible}
+ body.exam-running .cirrus-work-pane{height:auto;overflow:visible}
+ body.exam-running .cirrus-work-pane>.exam-question-body,body.cirrus-mode.exam-running .cirrus-work-pane>.exam-question-body{padding:20px 16px 24px!important;min-height:0;overflow:visible}
+ body.exam-running .exam-case-layout>.exam-question-body,body.cirrus-mode.exam-running .exam-case-layout>.exam-question-body{padding:20px 16px 24px!important;height:auto!important}
+ body.exam-running .exam-work-head{gap:8px;margin-bottom:24px}
+ body.exam-running .exam-question-identity{gap:7px}
+ body.exam-running .exam-position{font-size:10px}
+ body.exam-running .exam-position strong{font-size:13px}
+ body.exam-running .exam-case-panel,body.cirrus-mode.exam-running .exam-case-panel{padding:12px 16px!important;max-height:40dvh}
+ body.exam-running .cirrus-case-head{margin-bottom:18px}
+ body.exam-running .exam-footer{padding:12px}
+ .cirrus-case-float{width:calc(100vw - 24px);height:65dvh;top:12%;min-width:260px}
+ .cirrus-case-float>footer span{display:none}
+}
+
+body #calculator .calc-keys [data-key="*"],body #calculator .calc-keys [data-key="/"],body #calculator .calc-keys [data-key="+"],body #calculator .calc-keys [data-key="-"]{background:#3878ad}
+body #calculator .calc-keys [data-key="C"],body #calculator .calc-keys [data-key="back"]{background:#aeb3b7}
+body #calculator .calc-keys [data-key="="]{background:#f60;border-color:#f60}
+
+body .cirrus-calc-small .calc-history,body .cirrus-calc-small .calc-history-list li{box-sizing:border-box}
+
+body #calculator-dialog.calc-collapsed,body #calculator.calc-collapsed{min-height:0!important}
+
+</style>
 </head>
 <body class="study-shell">
 <noscript><img src="https://sra.goatcounter.com/count?p=/SRA&amp;t=SRA" alt="" style="position:absolute;left:-9999px"></noscript>
@@ -31874,6 +32058,23 @@ window.SRA_CIRRUS_EXAMS = [{"id": "20200323", "title": "SRA", "date": "2020-03-2
 
 </script>
 <script>
+/* Alleen invoer normaliseren; de bestaande begrensde parser blijft actief. */
+(() => {
+  const numbers=source=>String(source).replace(/\d+(?:[.,]\d+)+/g,token=>{
+    if(token.includes(',')){
+      if(!/^(?:\d+|\d{1,3}(?:\.\d{3})+),\d+$/.test(token))throw Error('Controleer de punten en komma in het getal.');
+      return token.replaceAll('.','').replace(',','.');
+    }
+    if(/^[1-9]\d{0,2}(?:\.\d{3})+$/.test(token))return token.replaceAll('.','');
+    if((token.match(/\./g)||[]).length>1)throw Error('Gebruik punten voor duizendtallen en een komma voor decimalen.');
+    return token;
+  });
+  const continuation=s=>/^[*×x÷/:^%]/.test(s.trim())?'Ans'+s.trim():s;
+  window.CirrusCalcInput={numbers,normalize:(s,last)=>numbers(continuation(String(s))).replace(/\bAns\b/gi,'('+String(last)+')'),history:(s,last)=>continuation(String(s)).replace(/\bAns\b/gi,'('+String(last).replace('.',',')+')'),label:continuation};
+})();
+
+</script>
+<script>
 (function(){
  'use strict';
  const C=window.SRA,KEY='sra-learning-v1',LESSONS=C.lessons;
@@ -32117,9 +32318,10 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   const historyBox=find('.calc-history'), historyList=find('.calc-history-list'), handle=find('[data-calc-move]');
   const minimize=find('[data-calc-minimize]'), resizer=find('[data-calc-resize]'), compact=find('[data-calc-compact]');
   const fmt=value=>Number(value.toPrecision(13)).toLocaleString('nl-NL',{maximumFractionDigits:12});
-  const raw=value=>String(Number(value.toPrecision(13)));
+  const raw=value=>String(Number(value.toPrecision(13))).replace('.',',');
   let entries=[], memory=0, lastValue=0, position=null, size=null, expandedSize=null, drag=null, sizing=null, returnFocus=opener;
   let errorShown=false, storageOK=true;
+  const baseEvaluate=evaluate; evaluate=value=>baseEvaluate(window.CirrusCalcInput.normalize(value,lastValue));
   const scale=()=>window.StudyScale?.get()||1;
   const bounds=()=>{const r=panel.getBoundingClientRect(),z=scale();return {left:r.left/z,top:r.top/z,width:r.width/z,height:r.height/z};};
   const viewport=()=>{const v=window.visualViewport,z=scale();return {x:(v?.offsetLeft||0)/z,y:(v?.offsetTop||0)/z,w:(v?.width||document.documentElement.clientWidth)/z,h:(v?.height||innerHeight)/z};};
@@ -32154,7 +32356,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
       const row=document.createElement('li');row.dataset.calcHistoryId=entry.id;
       const reuse=document.createElement('button');reuse.type='button';reuse.className='calc-history-reuse';reuse.dataset.calcHistoryReuse='';
       reuse.setAttribute('aria-label','Hergebruik '+entry.expression+', uitkomst '+fmt(entry.value));reuse.title=entry.expression;
-      const expression=document.createElement('span');expression.className='calc-history-expression';expression.textContent=entry.expression;
+      const expression=document.createElement('span');expression.className='calc-history-expression';expression.textContent=entry.displayExpression||entry.expression;
       const result=document.createElement('span');result.className='calc-history-value';result.textContent='= '+fmt(entry.value);
       reuse.append(expression,result);
       reuse.onclick=()=>{input.value=entry.expression;clearError();save();input.focus({preventScroll:true});input.setSelectionRange(input.value.length,input.value.length);};
@@ -32174,14 +32376,14 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   }
   function insert(text){
     let start=input.selectionStart??input.value.length,end=input.selectionEnd??start;
-    if(!input.value&&/^[+*/^%]$/.test(text)){input.value=raw(lastValue);start=end=input.value.length;}
+    if(!input.value&&/^[+*/^%]$/.test(text)){input.value='Ans';start=end=input.value.length;}
     if(input.value.length-(end-start)+text.length>180)throw Error('Berekening te lang');
     input.setRangeText(text,start,end,'end');
   }
   function calculate(){
     if(!input.value.trim())return;
-    const expression=input.value,value=evaluate(expression);
-    entries.push({id:typeof crypto.randomUUID==='function'?crypto.randomUUID():Date.now()+'-'+Math.random(),expression,value});
+    const typed=input.value,expression=window.CirrusCalcInput.history(typed,lastValue),value=evaluate(typed),displayExpression=window.CirrusCalcInput.label(typed);
+    entries.push({id:typeof crypto.randomUUID==='function'?crypto.randomUUID():Date.now()+'-'+Math.random(),expression,displayExpression,value});
     lastValue=value;input.value='';renderHistory(true);
   }
   function perform(key){
@@ -32204,12 +32406,12 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   }
   function applySize(){
     const v=viewport();panel.style.maxWidth=Math.max(1,v.w-16)+'px';panel.style.maxHeight=Math.max(44,v.h-16)+'px';
-    if(size){panel.style.width=Math.min(Math.max(280,size.w),Math.max(1,v.w-16))+'px';panel.style.height=body.hidden?'auto':Math.min(Math.max(580,size.h),Math.max(44,v.h-16))+'px';}
+    if(size){panel.style.width=Math.min(Math.max(220,size.w),Math.max(1,v.w-16))+'px';panel.style.height=body.hidden?'auto':Math.min(Math.max(460,size.h),Math.max(44,v.h-16))+'px';}
     else{panel.style.width='';panel.style.height='';}
   }
   function place(next=position){
     if(panel.hidden)return;
-    applySize();const v=viewport(),r=bounds();
+    applySize();window.ExamCirrusLayout?.updateCalculator(panel,panel.offsetWidth,panel.offsetHeight);const v=viewport(),r=bounds();
     const maxX=Math.max(v.x+8,v.x+v.w-r.width-8),maxY=Math.max(v.y+8,v.y+v.h-r.height-8);
     if(!next){const header=document.querySelector('.topbar,.reader-topbar,.study-header');next={x:maxX,y:Math.max(v.y+8,header?header.getBoundingClientRect().bottom/scale()+12:v.y+104)};}
     position={x:Math.max(v.x+8,Math.min(maxX,next.x)),y:Math.max(v.y+8,Math.min(maxY,next.y))};
@@ -32219,7 +32421,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   function open(from=opener){returnFocus=from;panel.hidden=false;expand(true);opener.setAttribute('aria-expanded','true');place();renderHistory(true);if(window.matchMedia('(pointer: fine)').matches)input.focus({preventScroll:true});else panel.focus({preventScroll:true});}
   function close(){const hadFocus=panel.contains(document.activeElement);if(drag&&handle.hasPointerCapture(drag.id))handle.releasePointerCapture(drag.id);if(sizing&&resizer.hasPointerCapture(sizing.id))resizer.releasePointerCapture(sizing.id);drag=null;sizing=null;panel.hidden=true;opener.setAttribute('aria-expanded','false');save();if(hadFocus)(returnFocus?.isConnected?returnFocus:opener).focus({preventScroll:true});}
   find('[data-calc-close]').onclick=close;minimize.onclick=()=>expand(body.hidden);
-  compact.onclick=()=>{if(!expandedSize){const r=bounds();expandedSize={w:r.width,h:r.height};size={w:280,h:680};compact.setAttribute('aria-label','Rekenmachine normale grootte');compact.title='Normale grootte';}else{size=expandedSize;expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';}expand(true);place();save();};
+  compact.onclick=()=>{if(!expandedSize){const r=bounds();expandedSize={w:r.width,h:r.height};size={w:240,h:500};compact.setAttribute('aria-label','Rekenmachine normale grootte');compact.title='Normale grootte';}else{size=expandedSize;expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';}expand(true);place();save();};
   panel.querySelectorAll('[data-calc-key],[data-key]').forEach(button=>{button.addEventListener('pointerdown',e=>{if(e.button===0)e.preventDefault();});button.onclick=()=>perform(button.dataset.calcKey??button.dataset.key);});
   input.oninput=()=>{clearError();save();};
   panel.addEventListener('keydown',event=>{
@@ -32233,7 +32435,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   handle.addEventListener('pointermove',event=>{if(drag?.id===event.pointerId)place({x:event.clientX/scale()-drag.x,y:event.clientY/scale()-drag.y});});
   const endDrag=event=>{if(drag?.id!==event.pointerId)return;drag=null;if(handle.hasPointerCapture(event.pointerId))handle.releasePointerCapture(event.pointerId);};handle.addEventListener('pointerup',endDrag);handle.addEventListener('pointercancel',endDrag);handle.addEventListener('lostpointercapture',endDrag);
   handle.addEventListener('keydown',event=>{const delta={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[event.key];if(event.key==='Home'){event.preventDefault();position=null;place();}else if(delta){event.preventDefault();const r=bounds();place({x:r.left+delta[0]*(event.shiftKey?4:1),y:r.top+delta[1]*(event.shiftKey?4:1)});}});
-  function resize(w,h){const v=viewport();size={w:Math.min(Math.max(280,w),Math.max(1,v.w-16)),h:Math.min(Math.max(580,h),Math.max(44,v.h-16))};expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';place();save();}
+  function resize(w,h){const v=viewport();size={w:Math.min(Math.max(220,w),Math.max(1,v.w-16)),h:Math.min(Math.max(460,h),Math.max(44,v.h-16))};expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';place();save();}
   resizer.addEventListener('pointerdown',event=>{if(event.button!==0)return;const r=bounds();sizing={id:event.pointerId,x:event.clientX/scale(),y:event.clientY/scale(),w:r.width,h:r.height};resizer.setPointerCapture(event.pointerId);event.preventDefault();});
   resizer.addEventListener('pointermove',event=>{if(sizing?.id===event.pointerId)resize(sizing.w+event.clientX/scale()-sizing.x,sizing.h+event.clientY/scale()-sizing.y);});
   const endResize=event=>{if(sizing?.id!==event.pointerId)return;sizing=null;if(resizer.hasPointerCapture(event.pointerId))resizer.releasePointerCapture(event.pointerId);};resizer.addEventListener('pointerup',endResize);resizer.addEventListener('pointercancel',endResize);resizer.addEventListener('lostpointercapture',endResize);
@@ -32253,6 +32455,94 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
  window.SRATerms.init($('#main'),C.terms,C.sources);
  window.SRANavigation.init($('#main'),historyBack);
  window.addEventListener('hashchange',()=>route());applyFont();route(false);if(!storageAvailable)toast('Browseropslag is niet beschikbaar. Je kunt voortgang handmatig exporteren.');
+})();
+
+</script>
+<script>
+/* Gedeelde tentamenindeling. Bestaande routes, antwoorden en voortgang blijven bij de cursuscontroller. */
+(() => {
+  'use strict';
+  const isSra=!!window.SRA_CIRRUS_EXAMS;
+  let floating=null,restoreCase=false;
+  const flag='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 22V3m1 1c5-5 9 5 15 0v11c-6 5-10-5-15 0" fill="currentColor" stroke="currentColor" stroke-width="1.5"/></svg>';
+  const tag='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h9l9 9-9 9-9-9z" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="1.5" fill="currentColor"/></svg>';
+  function closeFloat(restore=true){
+    if(!floating)return;floating.remove();floating=null;
+    if(restore&&restoreCase&&document.querySelector('.exam-case-layout.is-case-hidden'))document.querySelector('.exam-question-identity [data-exam-action="section"]')?.click();
+    restoreCase=false;document.querySelector('[data-cirrus-float]')?.focus({preventScroll:true});
+  }
+  function openFloat(){
+    if(floating){floating.focus();return;}const panel=document.querySelector('#exam-case-panel');if(!panel)return;
+    restoreCase=!panel.hidden;if(restoreCase)document.querySelector('.exam-question-identity [data-exam-action="section"]').click();
+    floating=document.createElement('section');floating.className='cirrus-case-float';floating.tabIndex=-1;
+    floating.setAttribute('role','dialog');floating.setAttribute('aria-modal','false');floating.setAttribute('aria-labelledby','cirrus-float-title');
+    floating.innerHTML='<header><button class="cirrus-float-move" aria-label="Casus verplaatsen met slepen of pijltoetsen"><b id="cirrus-float-title"></b></button><button data-float-size aria-label="Casus vergroten">⤢</button><button data-float-close aria-label="Zwevende casus sluiten">×</button></header><div class="cirrus-float-content"></div><footer><button data-float-close>Sluiten</button><span>Sleep de hoek om het formaat aan te passen</span></footer>';
+    const copy=panel.querySelector('.exam-source-document').cloneNode(true);copy.querySelectorAll('svg').forEach(svg=>{const ids=Array.from(svg.querySelectorAll('[id]')).map(n=>n.id);ids.forEach(id=>{svg.innerHTML=svg.innerHTML.replaceAll(id,'float-'+id);if(svg.hasAttribute('aria-labelledby'))svg.setAttribute('aria-labelledby',svg.getAttribute('aria-labelledby').replaceAll(id,'float-'+id));});});copy.querySelectorAll('[id]').forEach(n=>{if(!n.closest('svg'))n.removeAttribute('id');});
+    floating.querySelector('b').textContent=panel.querySelector('#exam-case-heading').textContent.replace(/^Casus · /,'');floating.querySelector('.cirrus-float-content').append(copy);
+    floating.querySelectorAll('[data-float-close]').forEach(b=>b.onclick=()=>closeFloat());
+    let previousGeometry='';floating.querySelector('[data-float-size]').onclick=e=>{
+      const large=!floating.classList.contains('is-large');
+      if(large){const scale=window.StudyScale?.get()||1,width=Math.min(850,(innerWidth-32)/scale);previousGeometry=floating.style.cssText;floating.style.width=width+'px';floating.style.height=innerHeight*.8/scale+'px';floating.style.top=innerHeight*.08/scale+'px';floating.style.left=(innerWidth/scale-width)/2+'px';floating.style.transform='none';}else floating.style.cssText=previousGeometry;
+      floating.classList.toggle('is-large',large);e.currentTarget.setAttribute('aria-label',large?'Casus verkleinen':'Casus vergroten');
+    };
+    document.body.append(floating);floating.focus({preventScroll:true});const move=floating.querySelector('.cirrus-float-move');let drag;
+    const place=(x,y)=>{const r=floating.getBoundingClientRect(),scale=window.StudyScale?.get()||1;floating.style.transform='none';floating.style.left=Math.max(8,Math.min(innerWidth-r.width-8,x))/scale+'px';floating.style.top=Math.max(8,Math.min(innerHeight-r.height-8,y))/scale+'px';};
+    move.onpointerdown=e=>{if(e.button!==0)return;const r=floating.getBoundingClientRect();drag={x:e.clientX-r.x,y:e.clientY-r.y};move.setPointerCapture(e.pointerId);e.preventDefault();};
+    move.onpointermove=e=>{if(drag)place(e.clientX-drag.x,e.clientY-drag.y);};move.onpointerup=move.onpointercancel=()=>drag=null;
+    move.onkeydown=e=>{const d={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[e.key];if(d){e.preventDefault();const r=floating.getBoundingClientRect();place(r.x+d[0],r.y+d[1]);}};
+    floating.onkeydown=e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();closeFloat();}};
+  }
+  function layout(){
+    observeSizes();const host=document.querySelector('#exam-app');if(!host)return;
+    if(!document.body.classList.contains('exam-running')){closeFloat(false);return;}
+    const tools=document.querySelector('.top-controls'),theme=tools?.querySelector('.study-theme-control'),clock=tools?.querySelector('.exam-clock'),calculator=tools?.querySelector('[data-calc]'),fonts=tools?.querySelector('.font-group');
+    if(theme&&clock&&theme.nextElementSibling!==clock)clock.before(theme);
+    if(clock&&calculator&&clock.nextElementSibling!==calculator)clock.after(calculator);
+    if(calculator&&fonts&&calculator.nextElementSibling!==fonts)calculator.after(fonts);
+    const body=host.querySelector('.exam-question-body'),head=host.querySelector('.exam-work-head');if(!body||!head)return;
+    if(!head.dataset.cirrusLayout){
+      closeFloat(false);const top=host.querySelector('.exam-question-top,.voorbeeld-opgave'),points=top?.querySelector('.exam-source-points');
+      if(points){points.classList.add('cirrus-question-points');head.querySelector('.qnum').after(points);}top?.remove();head.dataset.cirrusLayout='true';body.prepend(head);
+      const split=host.querySelector('.exam-case-layout'),footer=host.querySelector('.exam-footer');
+      if(split&&footer){const work=document.createElement('div');work.className='cirrus-work-pane';body.before(work);work.append(body,footer);}
+      const title=host.querySelector('.exam-runner-title'),pageHead=document.createElement('div');pageHead.className='cirrus-page-head';
+      const nav=document.createElement('nav');nav.className='cirrus-page-nav';nav.setAttribute('aria-label','Tentamennavigatie');nav.innerHTML='<a class="btn" href="'+(isSra?'#home':'#start')+'">Home</a><a class="btn" href="'+(isSra?'#tentamen':'#dashboard')+'">Dashboard</a>';
+      title.before(pageHead);pageHead.append(nav,title);const menu=document.querySelector(isSra?'#tools-menu':'#study-tools-menu');if(menu){const visibleMenu=menu.cloneNode(true);visibleMenu.id='cirrus-tools-menu';visibleMenu.open=false;visibleMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>visibleMenu.open=false));pageHead.append(visibleMenu);}
+      const panel=host.querySelector('#exam-case-panel');
+      if(!isSra)window.ExamSourceDiagrams?.restore(panel);
+      if(panel){const bar=document.createElement('div');bar.className='cirrus-case-head';const name=document.createElement('span');name.textContent=panel.querySelector('h2').textContent.replace(/^Casus · /,'');const enlarge=document.createElement('button');enlarge.type='button';enlarge.dataset.cirrusFloat='';enlarge.textContent='↗';enlarge.setAttribute('aria-label','Casus in een zwevend venster openen');enlarge.title='Casus los openen en vergroten';enlarge.onclick=openFloat;bar.append(name,enlarge);panel.prepend(bar);const floatButton=enlarge.cloneNode(true);floatButton.className='cirrus-float-trigger';floatButton.textContent='↗';floatButton.onclick=openFloat;head.querySelector('.exam-question-identity').append(floatButton);}
+      const actions=body.querySelector('.exam-answer-actions'),help=Array.from(body.querySelectorAll('a')).find(a=>a.textContent.includes('Uitleg bij deze vraag'));
+      const check=actions?.querySelector('[data-exam-action="check"]');if(check)check.textContent='Nakijken';
+      if(help&&actions){help.classList.add('cirrus-summary-link');actions.append(help);}
+      const question=body.querySelector('.exam-source-question');if(question){const blocks=Array.from(question.querySelectorAll(':scope > p,:scope > ol > li,:scope > ul > li'));const instruction=blocks.find(p=>/^(?:(?:\d+|[a-z])[.)]\s*)?(?:Bereken|Bepaal|Geef|Stel|Maak|Licht|Toon|Onderbouw|Motiveer|Beoordeel|Leg|Welke|Wat|Hoe|Selecteer|Vul|Noem|Beschrijf)\b/i.test(p.textContent.trim()))||blocks[0];instruction?.classList.add('cirrus-main-instruction');}
+      const primary=question?.querySelector('.cirrus-main-instruction');
+      if(primary){const start=primary.textContent.search(/\s+(?=(?:Als (?:je|u)\b|Let op\b|NB\s*:))/i);if(start>=0){const walker=document.createTreeWalker(primary,NodeFilter.SHOW_TEXT);let node,offset=0;while((node=walker.nextNode())){if(offset+node.length>start){const range=document.createRange();range.setStart(node,start-offset);range.setEnd(primary,primary.childNodes.length);const note=document.createElement('span');note.className='cirrus-supplemental';note.append(range.extractContents());primary.append(note);break;}offset+=node.length;}}}
+    }
+    const marked=head.closest('.frame').querySelector('[data-exam-action="mark"]')?.getAttribute('aria-pressed')==='true';let marker=head.querySelector('.cirrus-question-flag');
+    if(!marker){marker=document.createElement('span');marker.className='cirrus-question-flag';marker.innerHTML=flag;marker.setAttribute('aria-label','Gemarkeerde vraag');head.querySelector('.exam-question-identity').prepend(marker);}marker.hidden=!marked;
+    host.querySelectorAll('.cae-toolbar button').forEach(button=>{if(button.dataset.cirrusIcon)return;const labels={'• Lijst':'☷','1. Lijst':'≡','Links':'≡','Midden':'☰','Rechts':'≡','Tabel':'▦','Opmaak wissen':'Tx','Vergroten':'⛶'};if(labels[button.textContent]){button.dataset.cirrusIcon=button.textContent;button.textContent=labels[button.textContent];}});
+    document.querySelectorAll('.compact-overview-item.is-marked').forEach(row=>{const state=row.querySelector('.compact-overview-state');if(state&&state.textContent!=='Gemarkeerd')state.textContent='Gemarkeerd';const label=row.querySelector('.compact-overview-flag');if(label&&!label.dataset.cirrusIcon){label.innerHTML=tag;label.dataset.cirrusIcon='true';}});
+  }
+  let pending=false;const schedule=()=>{if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;layout();});};new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true});
+  document.addEventListener('click',e=>{const menu=document.querySelector('#cirrus-tools-menu');if(menu&&!e.target.closest('#cirrus-tools-menu'))menu.open=false;});
+  document.addEventListener('keydown',e=>{const menu=document.querySelector('#cirrus-tools-menu');if(e.key==='Escape'&&menu?.open){menu.open=false;menu.querySelector('summary').focus();}});
+  function updateCalculator(calculator,width,height){
+    const small=width<300||height<560,changed=calculator.classList.contains('cirrus-calc-small')!==small;
+    const history=calculator.querySelector('.calc-history'),row=history?.querySelector('li'),atEnd=history&&history.scrollHeight-history.clientHeight-history.scrollTop<2,first=row?.offsetHeight?Math.round(history.scrollTop/row.offsetHeight):0;
+    calculator.classList.toggle('cirrus-calc-small',small);
+    if(changed&&row?.offsetHeight)history.scrollTop=atEnd?history.scrollHeight:first*row.offsetHeight;
+  }
+  window.ExamCirrusLayout={updateCalculator};
+  const observed=new WeakSet();
+  function observeSizes(){
+    const topbar=document.querySelector('.topbar,.study-header');
+    if(topbar&&!observed.has(topbar)){observed.add(topbar);new ResizeObserver(()=>document.documentElement.style.setProperty('--cirrus-top-height',topbar.offsetHeight+'px')).observe(topbar);}
+    const calculator=document.querySelector(isSra?'#calculator':'#calculator-dialog');
+    if(calculator&&!observed.has(calculator)){observed.add(calculator);new ResizeObserver(entries=>{const r=entries[0].contentRect;updateCalculator(calculator,r.width,r.height);}).observe(calculator);}
+  }
+  document.addEventListener('DOMContentLoaded',()=>{observeSizes();schedule();},{once:true});
+  window.addEventListener('cafa:ready',()=>{observeSizes();schedule();});
+  observeSizes();schedule();
 })();
 
 </script>

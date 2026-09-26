@@ -241,9 +241,10 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   const historyBox=find('.calc-history'), historyList=find('.calc-history-list'), handle=find('[data-calc-move]');
   const minimize=find('[data-calc-minimize]'), resizer=find('[data-calc-resize]'), compact=find('[data-calc-compact]');
   const fmt=value=>Number(value.toPrecision(13)).toLocaleString('nl-NL',{maximumFractionDigits:12});
-  const raw=value=>String(Number(value.toPrecision(13)));
+  const raw=value=>String(Number(value.toPrecision(13))).replace('.',',');
   let entries=[], memory=0, lastValue=0, position=null, size=null, expandedSize=null, drag=null, sizing=null, returnFocus=opener;
   let errorShown=false, storageOK=true;
+  const baseEvaluate=evaluate; evaluate=value=>baseEvaluate(window.CirrusCalcInput.normalize(value,lastValue));
   const scale=()=>window.StudyScale?.get()||1;
   const bounds=()=>{const r=panel.getBoundingClientRect(),z=scale();return {left:r.left/z,top:r.top/z,width:r.width/z,height:r.height/z};};
   const viewport=()=>{const v=window.visualViewport,z=scale();return {x:(v?.offsetLeft||0)/z,y:(v?.offsetTop||0)/z,w:(v?.width||document.documentElement.clientWidth)/z,h:(v?.height||innerHeight)/z};};
@@ -278,7 +279,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
       const row=document.createElement('li');row.dataset.calcHistoryId=entry.id;
       const reuse=document.createElement('button');reuse.type='button';reuse.className='calc-history-reuse';reuse.dataset.calcHistoryReuse='';
       reuse.setAttribute('aria-label','Hergebruik '+entry.expression+', uitkomst '+fmt(entry.value));reuse.title=entry.expression;
-      const expression=document.createElement('span');expression.className='calc-history-expression';expression.textContent=entry.expression;
+      const expression=document.createElement('span');expression.className='calc-history-expression';expression.textContent=entry.displayExpression||entry.expression;
       const result=document.createElement('span');result.className='calc-history-value';result.textContent='= '+fmt(entry.value);
       reuse.append(expression,result);
       reuse.onclick=()=>{input.value=entry.expression;clearError();save();input.focus({preventScroll:true});input.setSelectionRange(input.value.length,input.value.length);};
@@ -298,14 +299,14 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   }
   function insert(text){
     let start=input.selectionStart??input.value.length,end=input.selectionEnd??start;
-    if(!input.value&&/^[+*/^%]$/.test(text)){input.value=raw(lastValue);start=end=input.value.length;}
+    if(!input.value&&/^[+*/^%]$/.test(text)){input.value='Ans';start=end=input.value.length;}
     if(input.value.length-(end-start)+text.length>180)throw Error('Berekening te lang');
     input.setRangeText(text,start,end,'end');
   }
   function calculate(){
     if(!input.value.trim())return;
-    const expression=input.value,value=evaluate(expression);
-    entries.push({id:typeof crypto.randomUUID==='function'?crypto.randomUUID():Date.now()+'-'+Math.random(),expression,value});
+    const typed=input.value,expression=window.CirrusCalcInput.history(typed,lastValue),value=evaluate(typed),displayExpression=window.CirrusCalcInput.label(typed);
+    entries.push({id:typeof crypto.randomUUID==='function'?crypto.randomUUID():Date.now()+'-'+Math.random(),expression,displayExpression,value});
     lastValue=value;input.value='';renderHistory(true);
   }
   function perform(key){
@@ -328,12 +329,12 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   }
   function applySize(){
     const v=viewport();panel.style.maxWidth=Math.max(1,v.w-16)+'px';panel.style.maxHeight=Math.max(44,v.h-16)+'px';
-    if(size){panel.style.width=Math.min(Math.max(280,size.w),Math.max(1,v.w-16))+'px';panel.style.height=body.hidden?'auto':Math.min(Math.max(580,size.h),Math.max(44,v.h-16))+'px';}
+    if(size){panel.style.width=Math.min(Math.max(220,size.w),Math.max(1,v.w-16))+'px';panel.style.height=body.hidden?'auto':Math.min(Math.max(460,size.h),Math.max(44,v.h-16))+'px';}
     else{panel.style.width='';panel.style.height='';}
   }
   function place(next=position){
     if(panel.hidden)return;
-    applySize();const v=viewport(),r=bounds();
+    applySize();window.ExamCirrusLayout?.updateCalculator(panel,panel.offsetWidth,panel.offsetHeight);const v=viewport(),r=bounds();
     const maxX=Math.max(v.x+8,v.x+v.w-r.width-8),maxY=Math.max(v.y+8,v.y+v.h-r.height-8);
     if(!next){const header=document.querySelector('.topbar,.reader-topbar,.study-header');next={x:maxX,y:Math.max(v.y+8,header?header.getBoundingClientRect().bottom/scale()+12:v.y+104)};}
     position={x:Math.max(v.x+8,Math.min(maxX,next.x)),y:Math.max(v.y+8,Math.min(maxY,next.y))};
@@ -343,7 +344,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   function open(from=opener){returnFocus=from;panel.hidden=false;expand(true);opener.setAttribute('aria-expanded','true');place();renderHistory(true);if(window.matchMedia('(pointer: fine)').matches)input.focus({preventScroll:true});else panel.focus({preventScroll:true});}
   function close(){const hadFocus=panel.contains(document.activeElement);if(drag&&handle.hasPointerCapture(drag.id))handle.releasePointerCapture(drag.id);if(sizing&&resizer.hasPointerCapture(sizing.id))resizer.releasePointerCapture(sizing.id);drag=null;sizing=null;panel.hidden=true;opener.setAttribute('aria-expanded','false');save();if(hadFocus)(returnFocus?.isConnected?returnFocus:opener).focus({preventScroll:true});}
   find('[data-calc-close]').onclick=close;minimize.onclick=()=>expand(body.hidden);
-  compact.onclick=()=>{if(!expandedSize){const r=bounds();expandedSize={w:r.width,h:r.height};size={w:280,h:680};compact.setAttribute('aria-label','Rekenmachine normale grootte');compact.title='Normale grootte';}else{size=expandedSize;expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';}expand(true);place();save();};
+  compact.onclick=()=>{if(!expandedSize){const r=bounds();expandedSize={w:r.width,h:r.height};size={w:240,h:500};compact.setAttribute('aria-label','Rekenmachine normale grootte');compact.title='Normale grootte';}else{size=expandedSize;expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';}expand(true);place();save();};
   panel.querySelectorAll('[data-calc-key],[data-key]').forEach(button=>{button.addEventListener('pointerdown',e=>{if(e.button===0)e.preventDefault();});button.onclick=()=>perform(button.dataset.calcKey??button.dataset.key);});
   input.oninput=()=>{clearError();save();};
   panel.addEventListener('keydown',event=>{
@@ -357,7 +358,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   handle.addEventListener('pointermove',event=>{if(drag?.id===event.pointerId)place({x:event.clientX/scale()-drag.x,y:event.clientY/scale()-drag.y});});
   const endDrag=event=>{if(drag?.id!==event.pointerId)return;drag=null;if(handle.hasPointerCapture(event.pointerId))handle.releasePointerCapture(event.pointerId);};handle.addEventListener('pointerup',endDrag);handle.addEventListener('pointercancel',endDrag);handle.addEventListener('lostpointercapture',endDrag);
   handle.addEventListener('keydown',event=>{const delta={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[event.key];if(event.key==='Home'){event.preventDefault();position=null;place();}else if(delta){event.preventDefault();const r=bounds();place({x:r.left+delta[0]*(event.shiftKey?4:1),y:r.top+delta[1]*(event.shiftKey?4:1)});}});
-  function resize(w,h){const v=viewport();size={w:Math.min(Math.max(280,w),Math.max(1,v.w-16)),h:Math.min(Math.max(580,h),Math.max(44,v.h-16))};expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';place();save();}
+  function resize(w,h){const v=viewport();size={w:Math.min(Math.max(220,w),Math.max(1,v.w-16)),h:Math.min(Math.max(460,h),Math.max(44,v.h-16))};expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';place();save();}
   resizer.addEventListener('pointerdown',event=>{if(event.button!==0)return;const r=bounds();sizing={id:event.pointerId,x:event.clientX/scale(),y:event.clientY/scale(),w:r.width,h:r.height};resizer.setPointerCapture(event.pointerId);event.preventDefault();});
   resizer.addEventListener('pointermove',event=>{if(sizing?.id===event.pointerId)resize(sizing.w+event.clientX/scale()-sizing.x,sizing.h+event.clientY/scale()-sizing.y);});
   const endResize=event=>{if(sizing?.id!==event.pointerId)return;sizing=null;if(resizer.hasPointerCapture(event.pointerId))resizer.releasePointerCapture(event.pointerId);};resizer.addEventListener('pointerup',endResize);resizer.addEventListener('pointercancel',endResize);resizer.addEventListener('lostpointercapture',endResize);

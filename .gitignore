@@ -1,6 +1,11 @@
 __pycache__/
 tmp/
 .DS_Store
-bronnen/
+bronnen/*
+!bronnen/tentamens/
+bronnen/tentamens/*
+!bronnen/tentamens/*/
+bronnen/tentamens/*/*
+!bronnen/tentamens/*/*.jpg
 source-excerpts/
 output/

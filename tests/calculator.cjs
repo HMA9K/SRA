@@ -12,6 +12,7 @@ function events(target={}){
 }
 function fixture({storage=new Map(),finePointer=true,storageBlocked=false,zoom=1}={}){
  const document=events({documentElement:{clientWidth:1200}}),window=events({innerHeight:800,SRAMath:math,StudyScale:{get:()=>zoom},matchMedia:()=>({matches:finePointer})});
+ vm.runInNewContext(fs.readFileSync(path.join(root,'js/calculator-input.js'),'utf8'),{window});
  const view=window.visualViewport=events({width:1200,height:800,offsetLeft:0,offsetTop:0}),camel=s=>s.replace(/-([a-z])/g,(_,c)=>c.toUpperCase());let sequence=0;
  function element(tag){
   const attrs={},classes=new Set(),captures=new Set();let value='';
@@ -47,13 +48,18 @@ function fixture({storage=new Map(),finePointer=true,storageBlocked=false,zoom=1
 for(const [expression,expected] of [['2+3*4',14],['(2+3)*4',20],['-2^2',-4],['2^3^2',512],['1,5×4',6],['sqrt(81)+2^3',17],['1e3/4',250],['ln(exp(2))',2]])assert.equal(math.calc(expression),expected,expression);
 for(const expression of ['1/0','sqrt(-1)','ln(0)','2+','(2+3','globalThis.process.exit()'])assert.throws(()=>math.calc(expression),undefined,expression);
 const f=fixture(),{panel,input,opener,answer,key,api}=f,type=f.type;
+// Exercise the actual input normalizer through the real controller and safe parser.
+for(const [expression,value] of [['200',200],['*0.8',160],['1.000,50+0.5',1001],['1.234.567',1234567],['0.800',0.8]]){
+ type(expression);key('=');assert.equal(api.getState().lastValue,value);assert.equal(api.getState().errorShown,false);
+}
+const groupedHistory=api.getState().history.length;type('1.23.456');key('=');assert.equal(api.getState().errorShown,true);assert.equal(api.getState().history.length,groupedHistory);key('C');
 const output=f.find('[data-calc-output]'),body=f.find('[data-calc-body]'),handle=f.find('[data-calc-move]'),minimize=f.find('[data-calc-minimize]');
 opener.focus();opener.emit('click');assert.equal(panel.hidden,false);assert.equal(opener.getAttribute('aria-expanded'),'true');assert.equal(f.document.activeElement,input);assert.equal(panel.style.left,'888px');assert.equal(panel.style.top,'104px');
 // Caret replacement and Enter commit: result in history, empty next input.
 type('2+3');input.setSelectionRange(2,3);key('7');assert.equal(input.value,'2+7');assert.equal(input.emit('keydown',{key:'Enter'}).defaultPrevented,true);
 assert.equal(api.getState().lastValue,9);assert.equal(input.value,'');assert.equal(api.getState().history.at(-1).expression,'2+7');assert.equal(api.getState().history.at(-1).value,9);assert.equal(output.hidden,true);
 type('2+7');input.setSelectionRange(3,3);key('⌫');assert.equal(input.value,'2+');key('sqrt(');assert.equal(input.value,'2+sqrt(');
-type('sqrt(81)+2^3');input.emit('keydown',{key:'='});assert.equal(api.getState().lastValue,17);key('+');key('5');assert.equal(input.value,'17+5');key('=');assert.equal(api.getState().lastValue,22);key('2');assert.equal(input.value,'2');
+type('sqrt(81)+2^3');input.emit('keydown',{key:'='});assert.equal(api.getState().lastValue,17);key('+');key('5');assert.equal(input.value,'Ans+5');key('=');assert.equal(api.getState().lastValue,22);key('2');assert.equal(input.value,'2');
 // Invalid input retains the last valid result and creates no history entry.
 const historyCount=api.getState().history.length;
 type('1/0');key('=');assert.equal(api.getState().errorShown,true);assert.equal(input.getAttribute('aria-invalid'),'true');assert.equal(output.hidden,false);assert.equal(input.value,'1/0');assert.equal(api.getState().lastValue,22);assert.equal(api.getState().history.length,historyCount);
