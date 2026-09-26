@@ -10,6 +10,14 @@ SRA moet voor onderstaande punten dezelfde bediening krijgen als CAFA2. De gebru
 - [ ] Plaats rechtsboven, direct onder **Werkwijze**, een filter met **Alle vragen**, **Syllabusvragen** en **Tentamenvragen**. Het filter moet ook gelden voor aantallen, voortgang, starten/verder, vorige/volgende, onderwerp-/deeloverzichten, resetten en voltooien. Bewaar de filterkeuze. Houd eerder opgeslagen antwoorden en scores intact.
 - [ ] Controleer de uiteindelijke SRA-uitvoering inhoudelijk en in de browser: volledige dekking van deelvragen, passende onderwerpen, één juiste MC-optie, brongebonden feedback, benodigde eerdere uitkomsten, filterwerking, behoud na herladen, desktop/mobiel en licht/donker.
 
+
+## Aanvullende openstaande MC-taken
+
+- [ ] Splits tentamenvragen met meerdere zelfstandige onderdelen in afzonderlijke oefeningen. Bewaar de casus en benodigde eerdere uitkomsten bij elk onderdeel en houd antwoorden en beoordelingen per onderdeel bij. Archiveer bestaande antwoorden op een volledige samengestelde vraag zonder die als antwoord op een nieuw onderdeel te tellen.
+- [ ] Toon journaalposten en financiële tabellen als echte tabellen met passende kolommen. Gebruik de bestaande tentameninhoud. Maak eventuele bronafwijkingen herkenbaar en houd het oorspronkelijke antwoordmodel beschikbaar.
+- [ ] Gebruik bij Zelf uitwerken dezelfde invulcomponenten als in de tentamenomgeving: een invulbare voorraadmatrix en een journaalpostentabel met rekeningnaam, debet, credit en toelichting. Bewaar alle cellen en toegevoegde rijen bij herladen en exporteren.
+- [ ] Maak Patroonherkenning passend bij de afzonderlijke vraag: leg uit hoe de vraag is opgebouwd, wat wordt gevraagd, welke casusgegevens en voorwaarden beslissend zijn en hoe het antwoord moet worden opgebouwd. Vermijd een algemeen stappenlijstje dat bij iedere vraag hetzelfde is. Controleer de herkenningsuitleg bij zowel syllabus- als tentamenvragen.
+
 ## Referentie voor de latere uitvoering
 
 CAFA2: [MC-oefenomgeving](https://cafa2.pages.dev/index.html#oefenen).
