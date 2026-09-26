@@ -59,6 +59,7 @@ base=(root/'index.html').read_text(encoding='utf-8')
 import build_study_dark
 build_study_dark.build()
 portable=base
+portable=portable.replace('<script defer src="js/page-analytics.js"></script>', '<script>\n'+(root/'js/page-analytics.js').read_text(encoding='utf-8')+'\n</script>')
 portable=portable.replace('<script src="vendor/study-ui/theme.js"></script>', '<script>\n'+(root/'vendor/study-ui/theme.js').read_text(encoding='utf-8')+'\n</script>')
 for tag, name, attributes in re.findall(r'(<link rel="stylesheet" href="([^"]+)"([^>]*)>)',base):
     path=(root/name).resolve()
