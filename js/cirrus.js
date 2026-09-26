@@ -315,8 +315,9 @@
     feedback.hidden=false;
     if(window.CafaStockTable)window.CafaStockTable.enhance(feedback);
   }
+  function measureExamAnswer(a,q,checked){if(!window.StudyMeasure||!Engine.answeredCount({exam:{questions:[q]},answers:a.answers}))return;window.StudyMeasure.answer('exam:'+a.id+':'+q.id,a.answers[q.id],window.StudyMeasure.examNames(a.exam,q),checked);}
   function checkAnswer(a,q){
-    a.checked=a.checked||{};a.checked[q.id]=true;save();renderAnswerFeedback(a,q);
+    measureExamAnswer(a,q,true);if(window.StudyMeasure)window.StudyMeasure.activity('Uitwerking bekeken',window.StudyMeasure.examNames(a.exam,q));a.checked=a.checked||{};a.checked[q.id]=true;save();renderAnswerFeedback(a,q);
     var heading=host.querySelector('#exam-feedback-heading');
     if(heading){heading.focus({preventScroll:true});heading.scrollIntoView({block:'nearest',behavior:'smooth'});}
     announce('Het antwoordmodel staat direct onder je antwoord. Bij open vragen beoordeel je zelf de uitwerking.');
@@ -355,7 +356,7 @@
   function complete(attempt,reason) {
     if(!attempt||attempt.status!=='active')return;
     var finished=Engine.finishAttempt(attempt,{reason:reason});
-    Object.assign(attempt,finished); save();
+    attempt.exam.questions.forEach(function(q){measureExamAnswer(attempt,q,false);});if(window.StudyMeasure)window.StudyMeasure.activity('Tentamen afgerond',window.StudyMeasure.examNames(attempt.exam));Object.assign(attempt,finished); save();
     var current=location.hash==='#toets/'+attempt.id;
     if(current){
       if(submitDialog.open)submitDialog.close();
@@ -405,7 +406,7 @@
     if(action==='backup'){downloadBackup();return;}
     if(action==='start'){
       var exam=examById(button.dataset.examId);if(!exam||corrupt)return;
-      try{var duration=host.querySelector('[data-practice-duration]'); if(duration){if(!duration.reportValidity())return;exam=Object.assign({},exam,{durationMinutes:Number(duration.value)});}var a=Engine.createAttempt(exam,{extraTime:!!host.querySelector('[data-exam-extra]:checked'),untimed:!!host.querySelector('[data-exam-untimed]:checked'),id:exam.id+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,7)});a.currentIndex=Math.min(a.exam.questions.length-1,Number(button.dataset.examStartIndex)||0);attempts().push(a);save();go('toets/'+a.id);}catch(error){announce(error.message);showModal('Starten niet mogelijk','<p>'+esc(error.message)+'</p>');}return;
+      try{var duration=host.querySelector('[data-practice-duration]'); if(duration){if(!duration.reportValidity())return;exam=Object.assign({},exam,{durationMinutes:Number(duration.value)});}var a=Engine.createAttempt(exam,{extraTime:!!host.querySelector('[data-exam-extra]:checked'),untimed:!!host.querySelector('[data-exam-untimed]:checked'),id:exam.id+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,7)});a.currentIndex=Math.min(a.exam.questions.length-1,Number(button.dataset.examStartIndex)||0);attempts().push(a);save();if(window.StudyMeasure)window.StudyMeasure.activity('Tentamen gestart',window.StudyMeasure.examNames(a.exam));go('toets/'+a.id);}catch(error){announce(error.message);showModal('Starten niet mogelijk','<p>'+esc(error.message)+'</p>');}return;
     }
     if(action==='review-tab'){reviewTab=button.dataset.tab;review(button.dataset.attempt);return;}
     if(action==='review-question'){go('inzage/'+button.dataset.attempt+'/vraag/'+button.dataset.index);return;}

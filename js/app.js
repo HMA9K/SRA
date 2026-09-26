@@ -102,7 +102,7 @@
     const radio=box.querySelector('input[type="radio"]:checked');
     if(!radio){toast('Kies eerst een antwoord.');box.querySelector('input').focus();return;}
     const choice=Number(radio.value),previous=state.answers[q.id];
-    if(!previous||previous.choice!==choice){const correct=choice===q.correct;state.answers[q.id]={choice,correct,attempts:(previous?.attempts||0)+1,firstCorrect:previous?previous.firstCorrect:correct};save();}
+    if(!previous||previous.choice!==choice){if(window.StudyMeasure){const lesson=LESSONS.find(l=>l.questions.some(item=>item.id===q.id));window.StudyMeasure.answer('lesson:'+q.id+':'+((previous?.attempts||0)+1),choice,location.hash.startsWith('#oefenen/')?window.StudyMeasure.describe().names:['Leren',lesson.title,'Kennischeck '+(lesson.questions.findIndex(item=>item.id===q.id)+1)],true);window.StudyMeasure.activity('Uitwerking bekeken',location.hash.startsWith('#oefenen/')?window.StudyMeasure.describe().names:['Leren',lesson.title,'Kennischeck '+(lesson.questions.findIndex(item=>item.id===q.id)+1)]);}const correct=choice===q.correct;state.answers[q.id]={choice,correct,attempts:(previous?.attempts||0)+1,firstCorrect:previous?previous.firstCorrect:correct};save();}
     showFeedback(state.answers[q.id]);onUpdate();
    };
   });
