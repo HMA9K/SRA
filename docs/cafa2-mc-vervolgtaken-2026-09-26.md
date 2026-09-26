@@ -22,6 +22,15 @@ SRA moet voor onderstaande punten dezelfde bediening krijgen als CAFA2. De gebru
 
 ## Referentie voor de latere uitvoering
 
+Aanvullende presentatie-eisen uit de laatste CAFA2-controle, eveneens **openstaand** voor SRA:
+
+- [ ] Geef ook nieuwere MC-tabellen de gedeelde tabelopmaak met duidelijke celgrenzen, passende kolombreedtes en uitgelijnde waarden. Controleer zowel antwoordopties als Zelf uitwerken.
+- [ ] Vervang vaste tekstblokken in alle casussen door doorlopende alinea's, kopjes en opsommingen. Reconstrueer plat uitgelezen financiële tabellen vanuit de bestaande transcriptie met expliciete kolommen; behoud de gegevens en bronkoppeling.
+- [ ] Laat het tentamenantwoordmodel aansluiten op de officiële uitwerking: berekeningskolommen, subtotalen en journaalposten, met rode puntentoekenning in lichtmodus en leesbaar rood in donkermodus.
+- [ ] Toon bij een invulvraag één compacte voorraadmatrix. Maak cellen en invoervelden kleiner; behoud alle oorspronkelijke rijen, kolommen en opgeslagen antwoorden. Laat de tabel op mobiel horizontaal verschuiven.
+- [ ] Gebruik tijdens tentamenvragen de teruglink **Dashboard** naar het tentamenoverzicht. Bewaar vraagpositie en ingevulde antwoorden bij verlaten en hervatten.
+- [ ] Verwijder **Introductie** uit de knoppenbalk van MC-oefenvragen.
+
 CAFA2: [MC-oefenomgeving](https://cafa2.pages.dev/index.html#oefenen).
 
 CAFA2-code en dekking: [repository](https://github.com/HMA9K/CAFA2), `docs/mc-audit/exam-practice-coverage.json`, `content/practice/exam-mc/`, `js/practice-case-panel.js`, `js/practice-topics.js` en `css/practice-case-panel.css`.
