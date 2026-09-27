@@ -1339,6 +1339,15 @@ html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calc
 html[data-study-theme=dark] body #calculator .calc-keys [data-key="*"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="/"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="+"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="-"]{background:#2f6692}
 html[data-study-theme=dark] body #calculator .calc-keys [data-key="C"],html[data-study-theme=dark] body #calculator .calc-keys [data-key="back"]{background:#212b38}
 html[data-study-theme=dark] body #calculator .calc-keys [data-key="="]{background:#ae5113;border-color:#764a2d}
+html[data-study-theme=dark] .learning-page-head{background:var(--study-surface,#152129);color:var(--study-ink,#99c1e1);border-bottom:1px solid var(--study-line,#414e63)}
+html[data-study-theme=dark] .learning-page-head .btn{border:1px solid var(--study-line,#374d6c);color:var(--study-ink,#99c1e1);background:var(--study-surface,#152129)}
+html[data-study-theme=dark] .learning-page-title{color:#adbdc9!important}
+html[data-study-theme=dark] #learning-tools-menu{color:var(--study-ink,#99c1e1)}
+html[data-study-theme=dark] #learning-tools-menu>nav,html[data-study-theme=dark] #learning-tools-menu>.sra-tools-panel{background:var(--study-surface,#152129);border:1px solid var(--study-line,#374d6c);box-shadow:0 8px 22px #01030424}
+html[data-study-theme=dark] body.learning-page-layout .qbody>.question-header .qnum{background:#ae5113}
+html[data-study-theme=dark] body[data-theme="dark"] .learning-page-title,html[data-study-theme=dark][data-theme="dark"] .learning-page-title{color:#b1a1d8!important}
+html[data-study-theme=dark][data-study-theme=dark] .learning-page-title{color:#b1a1d8!important}
+html[data-study-theme=dark] .sra-home .study-home-links a{border:1px solid var(--study-line,#38526b);background:var(--study-surface,#152129);color:var(--study-ink,#99c1e1)}
 /* Semantic colours complete the literal-colour conversion; source pages stay intact. */
 html[data-study-theme=dark],html[data-study-theme=dark] body.study-shell{--ink:#e1eaf0;--text:#e1eaf0;--muted:#a8b8c4;--line:#354852;--paper:#152129;--wash:#10191f;--bg:#10191f;--purple:#283143;--green:#13856a;--green-dark:#07543c;--danger:#f0aaa7;--bad:#f0aaa7;--study-purple:#283143;--study-green:#13856a;--study-green-dark:#70dec0;--study-surface:#152129;--study-canvas:#10191f;--study-subtle:#10191f;--study-wash:#10191f;--study-ink:#e5edf3;--study-muted:#a7b7c3;--study-title:#d7c7da;--study-line:#354852;--study-border:#354852;--study-accent:#70dec0;--study-focus:#8dcaec;--study-full-bg:#163f30;--study-full-border:#4fbd9a;--study-partial-bg:#40331e;--study-partial-border:#c7a263;--study-zero-bg:#45282a;--study-zero-border:#d29493;--study-ungraded-bg:#202c35;--study-ungraded-border:#73828d}
 html[data-study-theme=dark] body{background:#10191f;color:#e1eaf0}

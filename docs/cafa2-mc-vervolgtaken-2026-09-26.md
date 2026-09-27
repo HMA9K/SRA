@@ -1,5 +1,7 @@
 # Openstaande SRA-taken: MC-tentamenvragen, casus en bronfilter
 
+Actuele vergelijking: [gelijkloop en open taken, 27 september 2026](gelijkloop-en-open-taken-2026-09-27.md). De onderstaande lijst is de historische opdracht; gebruik de actuele matrix voor de uitvoeringsstatus.
+
 Datum: 26 september 2026. Status: **openstaand, later uitvoeren in SRA**.
 
 SRA moet voor onderstaande punten dezelfde bediening krijgen als CAFA2. De gebruiker heeft gevraagd dit nu vast te leggen en naar de SRA-repository te pushen. Dit document geeft geen voltooiingsstatus voor SRA.
@@ -29,10 +31,10 @@ Aanvullende presentatie-eisen uit de laatste CAFA2-controle, eveneens **openstaa
 - [ ] Vervang vaste tekstblokken in alle casussen door doorlopende alinea's, kopjes en opsommingen. Reconstrueer plat uitgelezen financiële tabellen vanuit de bestaande transcriptie met expliciete kolommen; behoud de gegevens en bronkoppeling.
 - [ ] Laat het tentamenantwoordmodel aansluiten op de officiële uitwerking: berekeningskolommen, subtotalen en journaalposten, met rode puntentoekenning in lichtmodus en leesbaar rood in donkermodus.
 - [ ] Toon bij een invulvraag één compacte voorraadmatrix. Maak cellen en invoervelden kleiner; behoud alle oorspronkelijke rijen, kolommen en opgeslagen antwoorden. Laat de tabel op mobiel horizontaal verschuiven. Controleer dat zwevende knoppen geen invulcellen bedekken.
-- [ ] Gebruik tijdens tentamenvragen de teruglink **Dashboard** naar het tentamenoverzicht. Bewaar vraagpositie en ingevulde antwoorden bij verlaten en hervatten.
+- [x] Gebruik tijdens tentamenvragen de teruglink **Dashboard** naar het tentamenoverzicht. Bewaar vraagpositie en ingevulde antwoorden bij verlaten en hervatten.
 - [ ] Laat **Opnieuw beginnen** eerst de tentamenintroductie openen, zodat tijdinstellingen opnieuw gekozen kunnen worden. Maak pas bij de expliciete start een lege poging aan en bewaar de vorige poging bij Voltooid. Openen, herladen en verlaten van de intro mogen de bestaande poging niet vervangen.
 - [ ] Voeg op het tentamendashboard **Alle tentamenvoortgang resetten** toe. Verwijder na bevestiging alle lopende en voltooide tentamenpogingen op dit apparaat, inclusief antwoorden, scores, markeringen en klokken. Behoud de afzonderlijke MC-oefenvoortgang. Controleer annuleren, opslagfouten, herladen en verwerking in een ander tabblad.
-- [ ] Verwijder **Introductie** uit de knoppenbalk van MC-oefenvragen.
+- [x] Verwijder **Introductie** uit de knoppenbalk van MC-oefenvragen. Uitgevoerd in de gedeelde indeling van 27 september 2026.
 
 CAFA2: [MC-oefenomgeving](https://cafa2.pages.dev/index.html#oefenen).
 
