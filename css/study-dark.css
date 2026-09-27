@@ -1359,6 +1359,9 @@ html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn,html[data-stud
 html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn svg,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar svg,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-collection__item-icon svg{fill:#a2c3d8}
 html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn:hover,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn--enabled,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-collection__item--active{background:#212b38}
 html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-toolbar__group{border-color:#3b4a54}
+html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn{color:#a2c3d8!important}
+html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn svg,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar svg,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-collection__item-icon svg{fill:#a2c3d8!important}
+html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn:hover,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn--enabled{background:#212b38!important}
 /* css/input-table-layout.css */
 html[data-study-theme=dark] .input-table-handles button{color:var(--study-ink,#adbdc9)}
 html[data-study-theme=dark] .input-table-column-grip:hover::after,html[data-study-theme=dark] .input-table-column-grip:focus-visible::after{background:#212b38}
