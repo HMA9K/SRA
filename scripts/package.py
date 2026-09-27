@@ -63,7 +63,7 @@ portable=portable.replace('<script src="js/page-scale.js?v=20260926-1"></script>
 portable=portable.replace('<script defer src="js/page-names.js?v=20260926-3"></script>', '<script>\n'+(root/'js/page-names.js').read_text(encoding='utf-8')+'\n</script>')
 portable=portable.replace('<script src="vendor/study-ui/theme.js"></script>', '<script>\n'+(root/'vendor/study-ui/theme.js').read_text(encoding='utf-8')+'\n</script>')
 for tag, name, attributes in re.findall(r'(<link rel="stylesheet" href="([^"]+)"([^>]*)>)',base):
-    path=(root/name).resolve()
+    path=(root/name.split('?',1)[0].split('#',1)[0]).resolve()
     if not path.is_relative_to(root):
         raise ValueError('Stylesheet staat buiten de app: '+name)
     # Preserve stylesheet isolation when the portable app embeds CSS inline.

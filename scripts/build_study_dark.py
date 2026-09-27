@@ -93,6 +93,7 @@ def build():
     pieces=['/* Generated from the CAFA2 paint compiler; see scripts/build_study_dark.py. */']
     page=(ROOT/'index.html').read_text(encoding='utf-8')
     for tag,relative in re.findall(r'(<link[^>]*rel="stylesheet"[^>]*href="([^"]+)"[^>]*>)',page):
+        relative=relative.split('?',1)[0].split('#',1)[0]
         if relative=='css/study-dark.css':continue
         # Keep the lesson and exam cascades separate, just as in light mode.
         SCOPE='html[data-study-theme=dark]'+(':not(:has(body.cirrus-mode))' if 'data-study-style' in tag else '')
