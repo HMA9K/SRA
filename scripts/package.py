@@ -71,7 +71,7 @@ for tag, name, attributes in re.findall(r'(<link rel="stylesheet" href="([^"]+)"
 presentation_css=(root/'css/presentation.css').read_text(encoding='utf-8')
 for name in ['data/course.js','data/exams.js','data/mc.js','data/mc-exam-frequency.js','js/math.js','js/lab-layout.js','js/labs.js','js/inline-help.js','js/terms.js','js/formula-help.js','js/navigation.js','js/exams.js','js/mc-state.js','js/mc.js','vendor/cafa2-cirrus/js/exam-engine.js','vendor/cafa2-cirrus/js/answer-editor.js','data/cirrus-exams.js','js/cirrus.js','js/calculator-input.js','js/app.js','js/exam-cirrus-layout.js']:
     script=(root/name).read_text(encoding='utf-8').replace('</script','<\\/script')
-    portable=portable.replace(f'<script defer src="{name}"></script>','')
+    portable=re.sub(r'<script defer src="'+re.escape(name)+r'(?:\?[^"<>]*)?"></script>','',portable)
     portable=portable.replace('</body>',f'<script>\n{script}\n</script>\n</body>')
 portable = re.sub(r'(?m)^[ \t]+$', '', portable)
 (root/'SRA interactieve samenvatting.html').write_text(portable,encoding='utf-8')

@@ -31930,9 +31930,12 @@ window.SRA_CIRRUS_EXAMS = [{"id": "20200323", "title": "SRA", "date": "2020-03-2
   }
   function invalidateScore(a,q){
     if(a.scores)delete a.scores[q.id];
-    if(a.checked)delete a.checked[q.id];
-    var feedback=host.querySelector('[data-exam-feedback]');
-    if(feedback){feedback.hidden=true;feedback.innerHTML='';}
+    // Keep the revealed model and its disclosures intact while editing.
+    host.querySelectorAll('[data-self-score]').forEach(function(input){
+      if(input.dataset.attempt!==a.id||input.dataset.question!==q.id)return;
+      input.value='';input.setCustomValidity('');
+      var status=input.parentElement.querySelector('[data-score-saved]');if(status)status.textContent='';
+    });
   }
   function scoreFor(a,q){
     if(q.type==='mc'&&q.correctOptionId)return answerFor(a,q).optionId===q.correctOptionId?(q.points||0):0;
