@@ -9,7 +9,7 @@ const read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const source=read('js/app.js'),index=read('index.html');
 
 const links=[...index.matchAll(/<link\b[^>]*rel="stylesheet"[^>]*>/g)].map(match=>({
- tag:match[0],href:match[0].match(/href="([^"]+)"/)[1]
+ tag:match[0],href:match[0].match(/href="([^"]+)"/)[1].split(/[?#]/)[0]
 }));
 assert.ok(links.length>5);
 for(const {tag,href} of links){
