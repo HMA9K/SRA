@@ -83,7 +83,7 @@ body.study-shell #question-return-links[hidden]{display:none!important}
 body.study-shell #question-return-links a{display:inline-flex;align-items:center;min-height:35px;padding:7px 11px;border:1px solid var(--study-line,#d9e2eb);border-radius:6px;color:var(--study-muted,#58677a);background:var(--study-surface,#fff);text-decoration:none;font:13px/1.25 Arial,sans-serif;white-space:nowrap}
 body.study-shell #question-return-links a:hover{color:var(--study-ink);border-color:var(--study-ink)}
 /* Rekenmachine met historie en verstelbaar venster. */
-body #calculator{--calc-surface:#fff;--calc-ink:#353247;--calc-muted:#777180;--calc-line:#d5d5e2;--calc-key:#f5f6f8;--calc-head:#444159;--calc-accent:#008859;position:fixed;z-index:10010;display:flex;flex-direction:column;box-sizing:border-box;width:342px;height:752px;max-width:calc(100vw - 16px);max-height:calc(100dvh - 16px);margin:0;padding:0;border:1px solid #aaa9bb;border-radius:8px;background:var(--calc-surface);color:var(--calc-ink);box-shadow:0 8px 30px #2824382e;overflow:hidden;font:13px/1.45 Arial,sans-serif;text-align:left}
+body #calculator{--calc-surface:#fff;--calc-ink:#353247;--calc-muted:#777180;--calc-line:#d5d5e2;--calc-key:#f5f6f8;--calc-head:#444159;--calc-accent:#008859;position:fixed;z-index:10010;display:flex;flex-direction:column;box-sizing:border-box;width:342px;height:792px;max-width:calc(100vw - 16px);max-height:calc(100dvh - 16px);margin:0;padding:0;border:1px solid #aaa9bb;border-radius:8px;background:var(--calc-surface);color:var(--calc-ink);box-shadow:0 8px 30px #2824382e;overflow:hidden;font:13px/1.45 Arial,sans-serif;text-align:left}
 body #calculator[hidden],body #calculator [hidden]{display:none!important}
 body #calculator *,body #calculator *::before,body #calculator *::after{box-sizing:border-box}
 body #calculator:focus{outline:none}
@@ -226,3 +226,11 @@ body.cirrus-mode #exam-app .answer-audit p {margin:.5rem 0;line-height:1.55;}
 body.cirrus-mode #exam-app .answer-audit .answer-audit-meta {font-size:.8rem;color:#625b4d;}
 body.cirrus-mode #exam-app .answer-audit-checked {border-color:#b4c9bc;border-left-color:#41704d;background:#f4f9f5;}
 body.cirrus-mode #exam-app .answer-audit summary {cursor:pointer;font-weight:600;}
+
+/* Uitkomsten blijven afzonderlijk selecteerbaar en kopieerbaar. */
+body #calculator .calc-history-list li{grid-template-rows:23px 23px}
+body #calculator .calc-history-reuse{grid-column:1;grid-row:1;height:23px;min-height:23px}
+body #calculator .calc-history-value{grid-column:1;grid-row:2;min-width:0;user-select:text!important;-webkit-user-select:text;cursor:text}
+body #calculator .calc-history-remove{grid-column:2;grid-row:1 / span 2}
+body #calculator .calc-copy{flex-shrink:0;justify-content:flex-end;margin:3px 0}
+body #calculator .calc-copy-result{flex:1;min-width:0}

@@ -21,6 +21,7 @@ function fixture({storage=new Map(),finePointer=true,storageBlocked=false,zoom=1
    setAttribute(k,v){attrs[k]=String(v);if(k==='class')n.className=v;else if(k==='id')n.id=v;else if(k.startsWith('data-'))n.dataset[camel(k.slice(5))]=String(v);else if(k==='hidden')n.hidden=true;},
    getAttribute(k){return k==='class'?n.className:k.startsWith('data-')?n.dataset[camel(k.slice(5))]??null:attrs[k]??null;},removeAttribute:k=>delete attrs[k],
    append(...xs){for(const x of xs){n.children.push(x);x.parent=n;}},replaceChildren(...xs){for(const x of n.children)x.parent=null;n.children=[];n.append(...xs);},
+   after(x){if(x.parent)x.parent.children=x.parent.children.filter(c=>c!==x);const i=n.parent.children.indexOf(n);n.parent.children.splice(i+1,0,x);x.parent=n.parent;},
    contains(x){return x===n||n.children.some(c=>c.contains(x));},
    matches(s){return s.split(',').some(p=>{p=p.trim();if(p[0]==='#')return n.id===p.slice(1);if(p[0]==='.')return classes.has(p.slice(1));const a=p.match(/^\[([^=\]]+)(?:="([^"]*)")?\]$/);return a?n.getAttribute(a[1])!==null&&(a[2]===undefined||n.getAttribute(a[1])===a[2]):n.tagName===p.toUpperCase();});},
    closest(s){return n.matches(s)?n:n.parent?.closest?.(s)||null;},querySelectorAll(s){return n.children.flatMap(c=>[...(c.matches(s)?[c]:[]),...c.querySelectorAll(s)]);},querySelector(s){return n.querySelectorAll(s)[0]||null;},

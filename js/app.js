@@ -249,6 +249,14 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   const bounds=()=>{const r=panel.getBoundingClientRect(),z=scale();return {left:r.left/z,top:r.top/z,width:r.width/z,height:r.height/z};};
   const viewport=()=>{const v=window.visualViewport,z=scale();return {x:(v?.offsetLeft||0)/z,y:(v?.offsetTop||0)/z,w:(v?.width||document.documentElement.clientWidth)/z,h:(v?.height||innerHeight)/z};};
   const currentValue=()=>input.value.trim()?evaluate(input.value):lastValue;
+  let copyControls=find('.calc-copy');
+  if(!copyControls){copyControls=document.createElement('div');copyControls.className='calc-copy';const status=document.createElement('span');status.className='calc-copy-result';status.setAttribute('role','status');const button=document.createElement('button');button.type='button';button.setAttribute('data-copy-calc','');button.textContent='Kopieer uitkomst';copyControls.append(status,button);}
+  input.after(copyControls);
+  async function copyValue(value){
+    const text=raw(value),status=find('.calc-copy-result');
+    try{if(!navigator.clipboard?.writeText)throw new Error('clipboard unavailable');await navigator.clipboard.writeText(text);status.textContent='Gekopieerd';}
+    catch(_){status.textContent='Uitkomst: '+text;}
+  }
   try {
     const stored=localStorage.getItem(options.storageKey);
     const saved=JSON.parse(stored||'null');
@@ -281,12 +289,16 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
       reuse.setAttribute('aria-label','Hergebruik '+entry.expression+', uitkomst '+fmt(entry.value));reuse.title=entry.expression;
       const expression=document.createElement('span');expression.className='calc-history-expression';expression.textContent=entry.displayExpression||entry.expression;
       const result=document.createElement('span');result.className='calc-history-value';result.textContent='= '+fmt(entry.value);
-      reuse.append(expression,result);
+      reuse.append(expression);
+      result.tabIndex=0;result.title='Selecteer de uitkomst of dubbelklik om te kopiëren';
+      result.setAttribute('aria-label','Uitkomst '+fmt(entry.value)+'. Dubbelklik of druk Enter om te kopiëren.');
+      result.ondblclick=()=>copyValue(entry.value);
+      result.onkeydown=event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();copyValue(entry.value);}};
       reuse.onclick=()=>{input.value=entry.expression;clearError();save();input.focus({preventScroll:true});input.setSelectionRange(input.value.length,input.value.length);};
       const remove=document.createElement('button');remove.type='button';remove.className='calc-history-remove';remove.dataset.calcHistoryRemove='';remove.textContent='×';
       remove.setAttribute('aria-label','Verwijder berekening '+entry.expression);remove.title='Deze berekening verwijderen';
       remove.onclick=()=>{const index=entries.findIndex(e=>e.id===entry.id);entries=entries.filter(e=>e.id!==entry.id);renderHistory();save();const next=historyList.children[Math.min(index,entries.length-1)];(next?.querySelector('.calc-history-remove')||historyBox).focus({preventScroll:true});};
-      row.append(reuse,remove);historyList.append(row);
+      row.append(reuse,result,remove);historyList.append(row);
     }
     find('.calc-history-count').textContent=entries.length+' '+(entries.length===1?'regel':'regels');
     find('.calc-history-empty').hidden=entries.length>0;
@@ -363,7 +375,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   resizer.addEventListener('pointermove',event=>{if(sizing?.id===event.pointerId)resize(sizing.w+event.clientX/scale()-sizing.x,sizing.h+event.clientY/scale()-sizing.y);});
   const endResize=event=>{if(sizing?.id!==event.pointerId)return;sizing=null;if(resizer.hasPointerCapture(event.pointerId))resizer.releasePointerCapture(event.pointerId);};resizer.addEventListener('pointerup',endResize);resizer.addEventListener('pointercancel',endResize);resizer.addEventListener('lostpointercapture',endResize);
   resizer.addEventListener('keydown',event=>{const delta={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[event.key];if(delta){event.preventDefault();const r=bounds();resize(r.width+delta[0],r.height+delta[1]);}});
-  const copy=find('[data-copy-calc]');if(copy)copy.onclick=()=>{try{const value=raw(currentValue()).replace('.',',');if(navigator.clipboard?.writeText)navigator.clipboard.writeText(value).then(()=>find('.calc-copy-result').textContent='Gekopieerd',()=>find('.calc-copy-result').textContent='Uitkomst: '+value);else find('.calc-copy-result').textContent='Uitkomst: '+value;}catch(error){showError(error.message);}};
+  find('[data-copy-calc]').onclick=()=>{try{copyValue(currentValue());}catch(error){showError(error.message);}};
   document.addEventListener('focusin',event=>{if(!panel.hidden&&!panel.contains(event.target))returnFocus=event.target;});
   window.addEventListener('resize',()=>place());window.visualViewport?.addEventListener('resize',()=>place());window.visualViewport?.addEventListener('scroll',()=>place());window.addEventListener('pagehide',save);
   renderHistory();paint();save();
