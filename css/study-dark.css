@@ -1362,6 +1362,10 @@ html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar,html[data
 html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn{color:#a2c3d8!important}
 html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn svg,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar svg,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-collection__item-icon svg{fill:#a2c3d8!important}
 html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn:hover,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn--enabled{background:#212b38!important}
+html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-editor-header,html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-toolbar,html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-toolbar__primary,html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-toolbar-overlord,html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-statusbar{background:#212b38!important;color:#a2c3d8!important}
+html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn--disabled svg{fill:#adbdc9!important}
+html[data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .cae-count{color:#8deccc}
+html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .cae-count{color:#9bdec7!important}
 /* css/input-table-layout.css */
 html[data-study-theme=dark] .input-table-handles button{color:var(--study-ink,#adbdc9)}
 html[data-study-theme=dark] .input-table-column-grip:hover::after,html[data-study-theme=dark] .input-table-column-grip:focus-visible::after{background:#212b38}
