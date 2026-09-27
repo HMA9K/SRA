@@ -4665,7 +4665,7 @@ body.exam-running .exam-footer .btn{font:12px/1.3 Arial,sans-serif;min-height:30
 body.exam-running .exam-footer .actions,body.exam-running .exam-cirrus-actions{gap:8px}
 body.exam-running .cafa-answer-editor .cae-toolbar{gap:1px;padding:3px;background:#fafafa;border-color:#c4c6c9}
 body.exam-running .cafa-answer-editor .cae-group{gap:1px;padding-right:6px;margin-right:4px}
-body.exam-running .cafa-answer-editor .cae-button,body.exam-running .cafa-answer-editor .cae-select{font-size:12px;min-height:26px;height:26px;padding:3px 5px;border-radius:0;color:#333;background:transparent;border-color:transparent}
+body.exam-running .cafa-answer-editor .cae-button,body.exam-running .cafa-answer-editor .cae-select{font-size:12px;min-height:28px;height:28px;padding:3px 6px;border-radius:0;color:#333;background:transparent;border-color:transparent}
 body.exam-running .cafa-answer-editor .cae-content{min-height:160px;height:180px;font:13px/1.5 Arial,sans-serif;border-color:#c4c6c9}
 body.exam-running .cafa-answer-editor.is-expanded .cae-content{height:auto;min-height:0}
 body.exam-running .cafa-answer-editor .cae-toolbar .cae-button:disabled{display:none}
@@ -4795,6 +4795,14 @@ html[data-study-theme=dark] .learning-page-title{color:#e7e2f3!important}
 .sra-home .study-home-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0}
 .sra-home .study-home-links a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--study-line,#d9e2eb);background:var(--study-surface,#fff);color:var(--study-ink,#17364e);text-decoration:none;font:600 13px/1.4 Arial,sans-serif}
 @media(max-width:760px){.sra-home .study-home-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Slightly larger symbols; textual table controls retain their compact labels. */
+.cafa-answer-editor .cae-toolbar .cae-button{font-size:14px}
+.cafa-answer-editor .cae-toolbar .cae-button[data-table-action]{font-size:12px}
+body.exam-running .cafa-answer-editor .cae-toolbar .cae-button{font-size:14px}
+body.exam-running .cafa-answer-editor .cae-toolbar .cae-button[data-table-action]{font-size:12px}
+body.learning-page-layout #study-returnbar.has-study-origin{display:flex!important}
+body.learning-page-layout.study-inline-reader #study-returnbar.has-study-origin .study-origin{display:inline-flex!important}
 
 </style>
 </head>
@@ -31478,6 +31486,8 @@ window.SRAMCExamFrequency = {
         return;
       }
       var index = cell.cellIndex, nextCell = cell;
+      // Fixed-layout tables need explicit space for a newly inserted column.
+      var columnWidths = Array.from(table.rows[0].cells, function (c) { return c.getBoundingClientRect().width; });
       if (action === 'row-add') {
         if (table.rows.length >= 10) { announce('Een tabel kan maximaal 10 rijen bevatten.'); return; }
         var newRow = make('tr');
@@ -31500,6 +31510,15 @@ window.SRAMCExamFrequency = {
         nextCell = cell.nextElementSibling || cell.previousElementSibling;
         Array.from(table.rows).forEach(function (r) { if (r.cells[index]) r.cells[index].remove(); });
         if (!row.cells.length) table.remove();
+      }
+      if ((action === 'col-add' || action === 'col-delete') && table.isConnected) {
+        if (action === 'col-add') columnWidths.splice(index + 1, 0, columnWidths.reduce(function (a, b) { return a + b; }, 0) / columnWidths.length);
+        else columnWidths.splice(index, 1);
+        var totalWidth = columnWidths.reduce(function (a, b) { return a + b; }, 0);
+        Array.from(table.rows[0].cells).forEach(function (c, i) {
+          c.style.setProperty('width', (totalWidth ? columnWidths[i] / totalWidth * 100 : 100 / columnWidths.length) + '%', 'important');
+        });
+        document.dispatchEvent(new CustomEvent('learning:table-structure', { detail: { table: table } }));
       }
       range = document.createRange();
       range.selectNodeContents(nextCell && editor.contains(nextCell) ? nextCell : editor);
@@ -31591,7 +31610,7 @@ window.SRAMCExamFrequency = {
       button('Tabel invoegen annuleren', 'Annuleren', function () { hidePanels(); restore(); }, tablePanel.element);
       [['Rij toevoegen', '+ Rij', 'row-add'], ['Kolom toevoegen', '+ Kolom', 'col-add'], ['Rij verwijderen', '− Rij', 'row-delete'], ['Kolom verwijderen', '− Kolom', 'col-delete']].forEach(function (item) {
         var control = button(item[0], item[1], function () { tableAction(item[2]); }, inserts);
-        control.disabled = true; tableButtons.push(control);
+        control.dataset.tableAction = item[2]; control.disabled = true; tableButtons.push(control);
       });
 
       var symbolsPanel = { element: make('div', 'cae-panel cae-symbols') };
@@ -32605,6 +32624,8 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
       const primary=question?.querySelector('.cirrus-main-instruction');
       if(primary){const start=primary.textContent.search(/\s+(?=(?:Als (?:je|u)\b|Let op\b|NB\s*:))/i);if(start>=0){const walker=document.createTreeWalker(primary,NodeFilter.SHOW_TEXT);let node,offset=0;while((node=walker.nextNode())){if(offset+node.length>start){const range=document.createRange();range.setStart(node,start-offset);range.setEnd(primary,primary.childNodes.length);const note=document.createElement('span');note.className='cirrus-supplemental';note.append(range.extractContents());primary.append(note);break;}offset+=node.length;}}}
     }
+    const footerActions=host.querySelector('.exam-cirrus-actions'),submit=footerActions?.querySelector('[data-exam-action="submit"]');
+    if(submit&&footerActions.lastElementChild!==submit)footerActions.append(submit);
     const marked=head.closest('.frame').querySelector('[data-exam-action="mark"]')?.getAttribute('aria-pressed')==='true';let marker=head.querySelector('.cirrus-question-flag');
     if(!marker){marker=document.createElement('span');marker.className='cirrus-question-flag';marker.innerHTML=flag;marker.setAttribute('aria-label','Gemarkeerde vraag');head.querySelector('.exam-question-identity').prepend(marker);}marker.hidden=!marked;
     host.querySelectorAll('.cae-toolbar button').forEach(button=>{if(button.dataset.cirrusIcon)return;const labels={'• Lijst':'☷','1. Lijst':'≡','Links':'≡','Midden':'☰','Rechts':'≡','Tabel':'▦','Opmaak wissen':'Tx','Vergroten':'⛶'};if(labels[button.textContent]){button.dataset.cirrusIcon=button.textContent;button.textContent=labels[button.textContent];}});
@@ -32720,10 +32741,11 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
     const initial=Array.from(row.cells,c=>c.getBoundingClientRect().width),sum=initial.reduce((a,b)=>a+b,0);
     const stock=table.classList.contains('stock-matrix');
     const defaults=stock?Array(count).fill(100/count):initial.map(n=>sum?n*100/sum:100/count);
-    const defaultTableWidth=stock?Math.min(count*135,Math.max(count*110,table.parentElement.clientWidth)):null;
+    const defaultTableWidth=stock?Math.min(count*135,Math.max(count*110,table.parentElement.clientWidth)):editor&&table.style.width.endsWith('px')?Number.parseFloat(table.style.width):null;
     const prior=saved[key];
     let widths=prior&&Array.isArray(prior.widths)&&prior.widths.length===count&&prior.widths.every(n=>Number.isFinite(n)&&n>0&&n<100)&&Math.abs(prior.widths.reduce((a,b)=>a+b,0)-100)<1?prior.widths.slice():defaults.slice();
-    let height=prior&&Number.isFinite(prior.height)&&prior.height>=28&&prior.height<=120?prior.height:36;
+    const inlineHeight=Number.parseFloat(table.style.getPropertyValue('--input-table-row-height'));
+    let height=prior&&Number.isFinite(prior.height)&&prior.height>=28&&prior.height<=120?prior.height:Number.isFinite(inlineHeight)?Math.max(28,Math.min(120,inlineHeight)):36;
     let tableWidth=prior&&Number.isFinite(prior.tableWidth)&&prior.tableWidth>=280&&prior.tableWidth<=2400?prior.tableWidth:defaultTableWidth;
     const overlay=document.createElement('div');overlay.className='input-table-handles';overlay.setAttribute('role','group');overlay.setAttribute('aria-label','Sleepgrepen van de invoertabel');
     const grips=[];
@@ -32797,7 +32819,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
       const header=table.rows[0].getBoundingClientRect();
       grips.forEach((grip,i)=>Object.assign(grip.style,{left:((i===count-1?rect.right-3*s:table.rows[0].cells[i].getBoundingClientRect().right)-rect.left)/s+'px',top:(header.top-rect.top)/s+'px',height:(rect.bottom-header.top)/s+'px'}));
     }
-    const state={table,overlay,count,apply,place};states.add(state);mounted.set(table,state);resizeObserver?.observe(table);apply();place();
+    const state={table,overlay,count,key,apply,place};states.add(state);mounted.set(table,state);resizeObserver?.observe(table);apply();place();
   }
   function remove(state){resizeObserver?.unobserve(state.table);state.overlay.remove();mounted.delete(state.table);states.delete(state);}
   function scan(){
@@ -32814,6 +32836,11 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   new MutationObserver(records=>{
     if(records.some(record=>record.target.closest?.('table')||Array.from(record.addedNodes).concat(Array.from(record.removedNodes)).some(node=>node.nodeType===1&&(node.tagName==='TABLE'||node.querySelector('table')))))queue();
   }).observe(document.body,{childList:true,subtree:true});
+  document.addEventListener('learning:table-structure',event=>{
+    const table=event.detail?.table,state=mounted.get(table);if(!table)return;
+    if(state){delete saved[state.key];remove(state);}
+    mount(table);
+  });
   window.addEventListener('hashchange',queue);window.addEventListener('resize',queue);document.addEventListener('change',queue);document.addEventListener('scroll',queuePlace,true);
   scan();
 })();
