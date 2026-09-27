@@ -45,3 +45,9 @@ De aanvullende presentatie-eisen volgen uit het [gecontroleerde CAFA2-herstel va
 De [volledige CAFA2-presentatiecontrole](https://github.com/HMA9K/CAFA2/blob/main/docs/mc-audit/complete-presentation-2026-09-26.md) bevat het vervolg voor alle casussecties, compacte matrices, rode puntentoekenning, Dashboard en de aangepaste oefenknoppenbalk. Gebruik deze gecontroleerde schermen als aanvullende referentie; de SRA-taken blijven openstaand.
 
 SRA: [repository](https://github.com/HMA9K/SRA). De bestaande SRA-bronafbakening en `docs/codex-boekcontrole-sra.md` blijven leidend bij de latere inhoudelijke uitvoering.
+
+## Originele PDF-bronnen in panelen
+
+Nog uit te voeren: dezelfde knoppen Tentamen PDF en Uitwerking PDF als CAFA2 bij alle Dashboard-tentamens en alle MC-vragen met een tentamenbron. Links de casus vervangen door de originele opgaven-PDF, rechts de assistent door de officiële uitwerking. De vraag en invoer behouden, terugkeer naar casus en assistent bieden en ontbrekende originele documenten expliciet vermelden. Ook testen met samengestelde toetsen, routewissels, bewaarde concepten en mobiel.
+
+[Uitvoeringseisen en CAFA2-documentcontrole](https://github.com/HMA9K/CAFA2/blob/main/docs/originele-tentamen-pdfs.md).
