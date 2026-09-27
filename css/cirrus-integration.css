@@ -234,3 +234,14 @@ body #calculator .calc-history-value{grid-column:1;grid-row:2;min-width:0;user-s
 body #calculator .calc-history-remove{grid-column:2;grid-row:1 / span 2}
 body #calculator .calc-copy{flex-shrink:0;justify-content:flex-end;margin:3px 0}
 body #calculator .calc-copy-result{flex:1;min-width:0}
+
+/* Keep the basic keypad and one history row reachable at the smallest size. */
+body #calculator.calc-small [data-calc-body]{padding:5px 8px 0}
+body #calculator.calc-small .calc-history{height:50px;min-height:50px;flex:1 0 50px}
+body #calculator.calc-small .calc-history-heading{margin-bottom:3px;gap:4px}
+body #calculator.calc-small .calc-history-help,body #calculator.calc-small .calc-input-label,body #calculator.calc-small .calc-help,body #calculator.calc-small .calc-memory-row,body #calculator.calc-small .calc-extra-help,body #calculator.calc-small .calc-storage-note{display:none}
+body #calculator.calc-small [data-calc-input]{height:36px;min-height:36px;flex-basis:36px;margin-top:4px;padding:6px}
+body #calculator.calc-small .calc-controls{flex:0 1 auto;margin-top:6px;padding-bottom:3px}
+body #calculator.calc-small .calc-keys button{height:28px;min-height:28px;padding:2px;font-size:14px}
+body #calculator.calc-small .calc-extra{margin-top:4px;padding-top:3px}
+body #calculator.calc-small .calc-window-footer{justify-content:flex-end}
