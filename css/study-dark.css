@@ -1348,24 +1348,6 @@ html[data-study-theme=dark] body.learning-page-layout .qbody>.question-header .q
 html[data-study-theme=dark] body[data-theme="dark"] .learning-page-title,html[data-study-theme=dark][data-theme="dark"] .learning-page-title{color:#b1a1d8!important}
 html[data-study-theme=dark][data-study-theme=dark] .learning-page-title{color:#b1a1d8!important}
 html[data-study-theme=dark] .sra-home .study-home-links a{border:1px solid var(--study-line,#38526b);background:var(--study-surface,#152129);color:var(--study-ink,#99c1e1)}
-/* css/tinymce-answer-editor.css */
-html[data-study-theme=dark] .cafa-answer-editor.has-tinymce>.tox-tinymce{border:1px solid #3b4a54}
-html[data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-toolbar,html[data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-toolbar__primary,html[data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-toolbar-overlord{background:#1d1d25}
-html[data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-tbtn:hover{background:#1f1a28}
-html[data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-statusbar{border-color:#3b4a54}
-html[data-study-theme=dark] .cafa-answer-editor[data-editor-theme=dark].has-tinymce>.tox-tinymce{border-color:#3b4a54}
-html[data-study-theme=dark][data-study-theme=dark] .tox .tox-editor-header,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-toolbar,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-toolbar__primary,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-toolbar-overlord,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-menu,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-dialog{background:#212b38;color:#a2c3d8}
-html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-collection__item,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar a,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar__path-item,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-dialog__title{color:#a2c3d8}
-html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn svg,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar svg,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-collection__item-icon svg{fill:#a2c3d8}
-html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn:hover,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn--enabled,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-collection__item--active{background:#212b38}
-html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-toolbar__group{border-color:#3b4a54}
-html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn{color:#a2c3d8!important}
-html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn svg,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-statusbar svg,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-collection__item-icon svg{fill:#a2c3d8!important}
-html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn:hover,html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn--enabled{background:#212b38!important}
-html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-editor-header,html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-toolbar,html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-toolbar__primary,html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-toolbar-overlord,html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .tox-statusbar{background:#212b38!important;color:#a2c3d8!important}
-html[data-study-theme=dark][data-study-theme=dark] .tox .tox-tbtn--disabled svg{fill:#adbdc9!important}
-html[data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .cae-count{color:#8deccc}
-html[data-study-theme=dark][data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .cae-count{color:#9bdec7!important}
 /* css/input-table-layout.css */
 html[data-study-theme=dark] .input-table-handles button{color:var(--study-ink,#adbdc9)}
 html[data-study-theme=dark] .input-table-column-grip:hover::after,html[data-study-theme=dark] .input-table-column-grip:focus-visible::after{background:#212b38}

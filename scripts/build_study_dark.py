@@ -94,7 +94,8 @@ def build():
     page=(ROOT/'index.html').read_text(encoding='utf-8')
     for tag,relative in re.findall(r'(<link[^>]*rel="stylesheet"[^>]*href="([^"]+)"[^>]*>)',page):
         relative=relative.split('?',1)[0].split('#',1)[0]
-        if relative=='css/study-dark.css':continue
+        # The answer editor supplies its own complete light/dark palette.
+        if relative in ('css/study-dark.css','css/tinymce-answer-editor.css'):continue
         # Keep the lesson and exam cascades separate, just as in light mode.
         SCOPE='html[data-study-theme=dark]'+(':not(:has(body.cirrus-mode))' if 'data-study-style' in tag else '')
         pieces.append('/* '+relative+' */\n'+compile_rules(tinycss2.parse_stylesheet((ROOT/relative).read_text(encoding='utf-8'),skip_comments=True,skip_whitespace=True)))
