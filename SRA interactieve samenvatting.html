@@ -4886,6 +4886,155 @@ html[data-study-theme=dark] .answer-thousands-toggle{color:#bed0dd}
 .study-scale-compact .topbar .top-controls{flex-wrap:wrap;min-width:0;max-width:100%;gap:8px}
 .study-scale-compact .topbar .cafa-profile{gap:12px;margin-left:0}
 
+</style><style>
+/* Calculator layout from the SRA calculator: a compact title bar, editable expression,
+   separate result and four-column keypad. Scoped to keep the course UI untouched. */
+.calculator-toolbar-trigger {
+  display: inline-flex !important; align-items: center; justify-content: center;
+  position: static !important; flex: 0 0 auto; min-width: 36px; min-height: 38px;
+  padding: 6px 8px; margin: 0; border: 0; border-radius: 4px;
+  background: transparent; color: inherit; box-shadow: none; cursor: pointer;
+}
+.calculator-toolbar-trigger .calc-icon { display: block; width: 19px; height: 23px; }
+.reader-top-tools .calculator-toolbar-trigger { border: 0; color: inherit; }
+.calculator-standalone-tools { display: flex; justify-content: flex-end; padding: 8px 16px; }
+#calculator-dialog{--calc-surface:#fff;--calc-ink:#353247;--calc-muted:#777180;--calc-line:#d5d5e2;--calc-key:#f5f6f8;--calc-head:#444159;--calc-accent:#008859;position:fixed;z-index:10010;display:flex;flex-direction:column;box-sizing:border-box;width:342px;height:792px;max-width:calc(100vw - 16px);max-height:calc(100dvh - 16px);margin:0;padding:0;border:1px solid #aaa9bb;border-radius:8px;background:var(--calc-surface);color:var(--calc-ink);box-shadow:0 8px 30px #2824382e;overflow:hidden;font:13px/1.45 Arial,sans-serif;text-align:left}
+#calculator-dialog[hidden],#calculator-dialog [hidden]{display:none!important}
+#calculator-dialog *,#calculator-dialog *::before,#calculator-dialog *::after{box-sizing:border-box}
+#calculator-dialog:focus{outline:none}
+#calculator-dialog.calc-collapsed{height:auto!important}
+#calculator-dialog .calculator-float-head,#calculator-dialog .calc-head{display:flex;align-items:center;gap:2px;flex:0 0 44px;min-height:44px;margin:0;padding:4px 6px;border:0;background:var(--calc-head);color:white}
+#calculator-dialog .calculator-float-head button,#calculator-dialog .calc-head button{display:inline-flex;align-items:center;justify-content:center;min-width:29px;width:29px;height:32px;min-height:32px;margin:0;padding:0;border:0;border-radius:4px;background:transparent;color:white;font:22px/1 Arial,sans-serif;cursor:pointer}
+#calculator-dialog [data-calc-move]{flex:1!important;width:auto!important;min-width:0!important;gap:8px!important;justify-content:flex-start!important;text-align:left!important;cursor:grab!important;touch-action:none;user-select:none}
+#calculator-dialog [data-calc-move]>span{font-size:23px}
+#calculator-dialog [data-calc-move]>b{font:bold 14px/1.3 Arial,sans-serif;color:inherit}
+#calculator-dialog .calculator-float-head button:hover,#calculator-dialog .calc-head button:hover{background:#ffffff20}
+#calculator-dialog .calculator-float-head [data-calc-compact],#calculator-dialog .calc-head [data-calc-compact]{font-size:20px}
+#calculator-dialog [data-calc-body]{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;margin:0;padding:10px 12px 0;overflow:hidden}
+#calculator-dialog .calc-history-heading{display:flex;flex:0 0 auto;justify-content:space-between;margin:0 0 5px;color:var(--calc-muted);font:11px/1.4 Arial,sans-serif}
+#calculator-dialog .calc-history-heading>span:first-child{font-weight:bold;color:var(--calc-ink)}
+#calculator-dialog .calc-history{height:194px;min-height:194px;flex:1 0 194px;border:1px solid var(--calc-line);border-radius:4px;background:var(--calc-surface);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#adaab9 transparent}
+#calculator-dialog .calc-history-list{list-style:none;margin:0;padding:0}
+#calculator-dialog .calc-history-list li{height:48px;min-height:48px;display:grid;grid-template-columns:minmax(0,1fr) 31px;align-items:center;margin:0;padding:0 3px 0 8px;border-bottom:1px solid var(--calc-line);background:transparent}
+#calculator-dialog .calc-history-list li:last-child{border-bottom:0;background:#00885909}
+#calculator-dialog .calc-history-reuse{display:flex;flex-direction:column;align-items:stretch;justify-content:center;width:100%;height:46px;min-height:46px;min-width:0;margin:0;padding:2px 0;border:0;background:transparent;color:var(--calc-ink);text-align:left;cursor:pointer}
+#calculator-dialog .calc-history-expression{display:block;color:var(--calc-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:12px/18px Arial,sans-serif}
+#calculator-dialog .calc-history-value{display:block;padding-right:5px;text-align:right;font:600 16px/20px Arial,sans-serif;font-variant-numeric:tabular-nums}
+#calculator-dialog .calc-history-remove{display:block;width:28px;height:40px;min-height:40px;margin:0;padding:0;border:0;border-radius:4px;background:transparent;color:var(--calc-muted);font:19px/1 Arial,sans-serif;cursor:pointer}
+#calculator-dialog .calc-history-remove:hover{color:#a12b38;background:#ad29350d}
+#calculator-dialog .calc-history-empty{margin:0;padding:16px;font:12px/1.4 Arial,sans-serif;color:var(--calc-muted)}
+#calculator-dialog .calc-history-help{display:flex;justify-content:space-between;flex:0 0 auto;flex-wrap:wrap;gap:0 6px;margin:5px 0 9px;font:9px/1.4 Arial,sans-serif;color:var(--calc-muted)}
+#calculator-dialog .calc-input-label{display:block;flex:0 0 auto;margin:0 0 4px;color:var(--calc-ink);font:11px/1.4 Arial,sans-serif}
+#calculator-dialog [data-calc-input]{display:block;width:100%;height:40px;min-height:40px;flex:0 0 40px;margin:0;padding:8px;border:1px solid var(--calc-line);border-radius:4px;background:var(--calc-surface);color:var(--calc-ink);font:16px/1.3 Arial,sans-serif;box-shadow:none}
+#calculator-dialog [data-calc-input]::placeholder{font-size:12px;color:var(--calc-muted)}
+#calculator-dialog [data-calc-output]{display:block;flex:0 0 auto;min-height:0;margin:5px 0 0;padding:0;font:12px/1.4 Arial,sans-serif;text-align:left;color:#ad2935;overflow-wrap:anywhere}
+#calculator-dialog .calc-controls{min-height:0;flex:0 1 auto;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;margin-top:8px;padding:0 1px 5px}
+#calculator-dialog .calc-memory-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 7px}
+#calculator-dialog .calc-memory-keys{display:flex;gap:4px}
+#calculator-dialog .calc-memory-keys button{height:27px;min-height:27px;min-width:36px;padding:0 4px;border:1px solid var(--calc-line);border-radius:3px;background:var(--calc-key);color:var(--calc-muted);font:10px/1.3 Arial,sans-serif;cursor:pointer}
+#calculator-dialog .calc-memory{min-height:0;max-width:110px;margin:0;padding:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--calc-muted);font:10px/1.4 Arial,sans-serif}
+#calculator-dialog .calc-keys,#calculator-dialog .calc-extra-keys{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:0;padding:0;background:transparent}
+#calculator-dialog .calc-keys button,#calculator-dialog .calc-extra-keys button{display:flex;align-items:center;justify-content:center;height:36px;min-height:36px;min-width:0;margin:0;padding:5px;border:1px solid var(--calc-line);border-radius:4px;background:var(--calc-key);color:var(--calc-ink);font:16px/1.25 Arial,sans-serif;cursor:pointer;touch-action:manipulation}
+#calculator-dialog .calc-keys button:hover,#calculator-dialog .calc-extra-keys button:hover{border-color:var(--calc-accent);background:#00885910}
+#calculator-dialog .calc-keys [data-calc-key="="],#calculator-dialog .calc-keys [data-key="="]{background:var(--calc-accent);border-color:var(--calc-accent);color:white}
+#calculator-dialog .calc-help{flex:0 0 auto;margin:6px 0 0;padding:0;background:transparent;color:var(--calc-muted);font:10px/1.4 Arial,sans-serif!important}
+#calculator-dialog .calc-extra{margin:8px 0 0;padding:6px 0 0;border:0;border-top:1px solid var(--calc-line);border-radius:0;background:transparent}
+#calculator-dialog .calc-extra>summary{display:list-item;min-height:0;margin:0;padding:0;cursor:pointer;color:var(--calc-muted);font:11px/1.4 Arial,sans-serif;list-style-position:inside}
+#calculator-dialog .calc-extra-keys{margin-top:7px}
+#calculator-dialog .calc-extra-keys button{height:29px;min-height:29px;font-size:12px}
+#calculator-dialog .calc-extra-help{margin:7px 0;color:var(--calc-muted);font:10px/1.4 Arial,sans-serif}
+#calculator-dialog .calc-copy{display:flex;align-items:center;justify-content:space-between;gap:6px;margin:5px 0;font:10px/1.4 Arial,sans-serif}
+#calculator-dialog .calc-copy button{padding:6px;border:1px solid var(--calc-line);border-radius:4px;background:var(--calc-key);color:var(--calc-ink);font:inherit;cursor:pointer}
+#calculator-dialog .calc-window-footer{display:flex;align-items:center;justify-content:space-between;flex:0 0 26px;min-height:26px;margin:0;padding:0 4px 0 12px;border:0;background:var(--calc-surface);color:var(--calc-muted);font:9px/1.4 Arial,sans-serif}
+#calculator-dialog [data-calc-resize]{display:block;width:28px;height:24px;min-height:24px;margin:0;padding:0;border:0;background:transparent;color:var(--calc-muted);font:17px/1 Arial,sans-serif;cursor:nwse-resize;touch-action:none;user-select:none}
+#calculator-dialog button:focus-visible,#calculator-dialog input:focus-visible,#calculator-dialog summary:focus-visible,#calculator-dialog [tabindex]:focus-visible{outline:2px solid var(--calc-accent);outline-offset:1px}
+#calculator-dialog .calculator-float-head button:focus-visible,#calculator-dialog .calc-head button:focus-visible{outline-color:white;outline-offset:-2px}
+html[data-study-theme=dark] #calculator-dialog{--calc-surface:#152129;--calc-ink:#e0ebf2;--calc-muted:#aabbc5;--calc-line:#44525f;--calc-key:#202e39;--calc-accent:#008859}
+html[data-study-theme=dark] #calculator-dialog [data-calc-output]{color:#ffb4bc}
+@media(max-height:540px){#calculator-dialog .calc-history-help,#calculator-dialog .calc-input-label{display:none}#calculator-dialog [data-calc-body]{padding-top:5px}#calculator-dialog .calc-history-heading{margin-bottom:3px}#calculator-dialog [data-calc-input]{margin-top:4px}}
+@media print{#calculator-dialog{display:none!important}}
+
+@media print{.calculator-toolbar-trigger,.calculator-standalone-tools{display:none!important}}
+
+#calculator-dialog .calc-history-heading{align-items:center;gap:8px}
+#calculator-dialog .calc-history-count{margin-left:auto}
+#calculator-dialog [data-calc-clear-history]{padding:3px 6px;border:1px solid var(--calc-line);border-radius:4px;background:var(--calc-key);color:var(--calc-ink);font:10px/1.4 Arial,sans-serif;cursor:pointer}
+#calculator-dialog [data-calc-clear-history]:disabled{opacity:.5;cursor:default}
+
+/* Uitkomsten blijven afzonderlijk selecteerbaar en kopieerbaar. */
+#calculator-dialog .calc-history-list li{grid-template-rows:23px 23px}
+#calculator-dialog .calc-history-reuse{grid-column:1;grid-row:1;height:23px;min-height:23px}
+#calculator-dialog .calc-history-value{grid-column:1;grid-row:2;min-width:0;user-select:text!important;-webkit-user-select:text;cursor:text}
+#calculator-dialog .calc-history-remove{grid-column:2;grid-row:1 / span 2}
+#calculator-dialog .calc-copy{flex-shrink:0;justify-content:flex-end;margin:3px 0}
+#calculator-dialog .calc-copy-result{flex:1;min-width:0}
+
+/* Keep the basic keypad and one history row reachable at the smallest size. */
+#calculator-dialog.calc-small [data-calc-body]{padding:5px 8px 0}
+#calculator-dialog.calc-small .calc-history{height:50px;min-height:50px;flex:1 0 50px}
+#calculator-dialog.calc-small .calc-history-heading{margin-bottom:3px;gap:4px}
+#calculator-dialog.calc-small .calc-history-help,#calculator-dialog.calc-small .calc-input-label,#calculator-dialog.calc-small .calc-help,#calculator-dialog.calc-small .calc-memory-row,#calculator-dialog.calc-small .calc-extra-help,#calculator-dialog.calc-small .calc-storage-note{display:none}
+#calculator-dialog.calc-small [data-calc-input]{height:36px;min-height:36px;flex-basis:36px;margin-top:4px;padding:6px}
+#calculator-dialog.calc-small .calc-controls{flex:0 1 auto;margin-top:6px;padding-bottom:3px}
+#calculator-dialog.calc-small .calc-keys button{height:28px;min-height:28px;padding:2px;font-size:14px}
+#calculator-dialog.calc-small .calc-extra{margin-top:4px;padding-top:3px}
+#calculator-dialog.calc-small .calc-window-footer{justify-content:flex-end}
+
+</style><style>
+/* Gemeenschappelijke Cirrus-opmaak voor de rekenmachine. */
+body #calculator-dialog,body #calculator{--calc-head:#fff;--calc-accent:#f60;min-width:220px!important;min-height:380px!important;border-radius:2px;box-shadow:0 7px 24px #29233720}
+body #calculator-dialog .calculator-float-head,body #calculator .calculator-float-head{background:#fff!important;color:#222!important;border-bottom:1px solid #ddd}
+body #calculator-dialog .calculator-float-head button,body #calculator .calculator-float-head button{color:#777!important}
+body #calculator .calc-head{background:#fff!important;color:#222!important;border-bottom:1px solid #ddd}
+body #calculator .calc-head button{color:#777!important}
+body #calculator .calc-keys [data-key="*"],body #calculator .calc-keys [data-key="/"],body #calculator .calc-keys [data-key="+"],body #calculator .calc-keys [data-key="-"]{background:#3878ad}
+body #calculator .calc-keys [data-key="C"],body #calculator .calc-keys [data-key="back"]{background:#aeb3b7}
+body #calculator .calc-keys [data-key="="]{background:#f60;border-color:#f60}
+body #calculator-dialog .calc-keys button,body #calculator .calc-keys button{border-radius:0;background:#4b90cf;color:#fff;border-color:#fff}
+body #calculator-dialog .calc-keys [data-calc-key="*"],body #calculator-dialog .calc-keys [data-calc-key="/"],body #calculator-dialog .calc-keys [data-calc-key="+"],body #calculator-dialog .calc-keys [data-calc-key="-"],body #calculator .calc-keys [data-calc-key="*"],body #calculator .calc-keys [data-calc-key="/"],body #calculator .calc-keys [data-calc-key="+"],body #calculator .calc-keys [data-calc-key="-"]{background:#3878ad}
+body #calculator-dialog .calc-keys [data-calc-key="C"],body #calculator-dialog .calc-keys [data-calc-key="back"],body #calculator .calc-keys [data-calc-key="C"],body #calculator .calc-keys [data-calc-key="back"]{background:#aeb3b7}
+body #calculator-dialog .calc-keys [data-calc-key="="],body #calculator .calc-keys [data-calc-key="="]{background:#f60;border-color:#f60}
+body .cirrus-calc-small .calculator-float-head{min-height:36px!important;flex-basis:36px!important}
+body .cirrus-calc-small .calc-head{min-height:36px!important;flex-basis:36px!important}
+body .cirrus-calc-small [data-calc-body]{padding:6px 8px 0!important}
+body .cirrus-calc-small .calc-history{height:106px!important;min-height:106px!important;flex:1 0 106px!important}
+body .cirrus-calc-small [data-calc-move]{gap:4px!important}
+body .cirrus-calc-small [data-calc-move]>span{font-size:16px!important}
+body .cirrus-calc-small [data-calc-move]>b{font-size:12px!important;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+body .cirrus-calc-small .calculator-float-head button:not([data-calc-move]),body .cirrus-calc-small .calc-head button:not([data-calc-move]){width:23px!important;min-width:23px!important;height:26px!important;min-height:26px!important;font-size:17px!important}
+body .cirrus-calc-small .calc-history-list li{height:26px!important;min-height:26px!important}
+body .cirrus-calc-small .calc-history-reuse{height:25px!important;min-height:25px!important}
+body .cirrus-calc-small .calc-history-expression{font-size:10px!important;line-height:11px!important}
+body .cirrus-calc-small .calc-history-value{font-size:11px!important;line-height:12px!important}
+body .cirrus-calc-small .calc-history-remove{height:24px!important;min-height:24px!important}
+body .cirrus-calc-small .calc-history-help,body .cirrus-calc-small .calc-input-label{display:none!important}
+body .cirrus-calc-small [data-calc-input]{height:32px!important;min-height:32px!important;flex-basis:32px!important;font-size:13px!important}
+body .cirrus-calc-small .calc-keys button{height:26px!important;min-height:26px!important;font-size:13px!important}
+body .cirrus-calc-small .calc-memory-keys button{min-height:24px!important;padding:3px!important}
+body .cirrus-calc-small .calc-keys{gap:3px!important}
+body .cirrus-calc-small .calc-help{font-size:9px!important;margin-top:5px!important}
+body .cirrus-calc-small .calc-window-footer{min-height:22px!important;flex-basis:22px!important}
+html[data-study-theme=dark] body #calculator-dialog .calculator-float-head,html[data-study-theme=dark] body #calculator .calculator-float-head{background:#202d37!important;color:#e0ebf2!important}
+body #calculator .calc-keys [data-key="*"],body #calculator .calc-keys [data-key="/"],body #calculator .calc-keys [data-key="+"],body #calculator .calc-keys [data-key="-"]{background:#3878ad}
+body #calculator .calc-keys [data-key="C"],body #calculator .calc-keys [data-key="back"]{background:#aeb3b7}
+body #calculator .calc-keys [data-key="="]{background:#f60;border-color:#f60}
+body .cirrus-calc-small .calc-history,body .cirrus-calc-small .calc-history-list li{box-sizing:border-box}
+body #calculator-dialog.calc-collapsed,body #calculator.calc-collapsed{min-height:0!important}
+body .cirrus-calc-small .calc-history-list li{grid-template-rows:13px 13px!important}
+body .cirrus-calc-small .calc-history-reuse{height:13px!important;min-height:13px!important}
+body #calculator-dialog.calc-small .calc-history,body #calculator.calc-small .calc-history{height:var(--calc-history-height,28px)!important;min-height:var(--calc-history-height,28px)!important;flex:0 0 var(--calc-history-height,28px)!important}
+/* Keep host-page typography and generated dark palettes outside this widget. */
+body #calculator-dialog .calc-help{margin:6px 0 0;padding:0;line-height:1.4}
+html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calculator-float-head{background:#202d37!important;color:#e0ebf2!important;border-bottom:1px solid #ddd}
+html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calculator-float-head button{color:#777!important}
+html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calc-keys button{background:#4b90cf;color:#fff;border-color:#fff}
+html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="*"],html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="/"],html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="+"],html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="-"]{background:#3878ad}
+html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="C"],html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="back"]{background:#aeb3b7}
+html[data-study-theme=dark][data-study-theme=dark] body #calculator-dialog .calc-keys [data-calc-key="="]{background:#f60;border-color:#f60}
+body #calculator-dialog .calc-help{margin:6px 0 0!important}
+body #calculator-dialog.cirrus-calc-small .calc-help{margin-top:5px!important}
+body #calculator-dialog .calculator-float-head button:hover{background:transparent!important}
+
 </style></head>
 <body class="study-shell">
 <noscript><img src="https://sra.goatcounter.com/count?p=/SRA&amp;t=SRA" alt="" style="position:absolute;left:-9999px"></noscript>
@@ -4894,7 +5043,7 @@ html[data-study-theme=dark] .answer-thousands-toggle{color:#bed0dd}
     <div class="bar-inner">
     <a class="brand study-brand cafa-wordmark" href="#home" aria-label="SRA hoofdpagina"><svg class="sra-wordmark-initial" viewBox="0 0 38 44" aria-hidden="true"><text x="1" y="39" fill="currentColor" font-family="Arial,sans-serif" font-size="51" font-weight="700" letter-spacing="0">S</text><path fill="#ff720c" d="M3 5h12v12H3Z"/><path fill="none" stroke="#444159" stroke-width="2.7" d="m5 10 3 3 6-7"/></svg><span>RA</span><small class="brand-sub">LEER- EN OEFENOMGEVING</small></a>
     <div class="top-tools study-controls top-controls">
-      <button id="calc-open" data-calc aria-label="Rekenmachine openen" aria-controls="calculator" aria-expanded="false" title="Rekenmachine"><svg class="calc-icon" aria-hidden="true" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="1" width="14" height="21" rx="1"/><path d="M6 5h8v4H6zM6 12h2m2 0h2m2 0h1M6 15h2m2 0h2m2 0h1M6 18h2m2 0h2m2 0h1"/></svg></button>
+      <button id="calc-open" data-calc aria-label="Rekenmachine openen" aria-controls="calculator-dialog" aria-expanded="false" title="Rekenmachine"><svg class="calc-icon" aria-hidden="true" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="1" width="14" height="21" rx="1"/><path d="M6 5h8v4H6zM6 12h2m2 0h2m2 0h1M6 15h2m2 0h2m2 0h1M6 18h2m2 0h2m2 0h1"/></svg></button>
       <details id="study-theme-control" class="study-theme-control"><summary aria-label="Lichtmodus wijzigen"><span aria-hidden="true">◐</span><span class="study-theme-word">Lichtmodus</span><span data-theme-label>Automatisch</span></summary><div class="study-theme-menu"><p>Lichtmodus</p><div role="group" aria-label="Lichtmodus"><button type="button" data-theme-choice="light" aria-pressed="false">Aan <small>Licht</small></button><button type="button" data-theme-choice="dark" aria-pressed="false">Uit <small>Donker</small></button><button type="button" data-theme-choice="auto" aria-pressed="true">Automatisch <small>Volg apparaat</small></button></div><p class="study-theme-hint">Automatisch is de standaard. Een handmatige keuze geldt voor deze browsersessie.</p></div></details>
       <div class="study-font-group font-group" role="group" aria-label="Tekstgrootte">
         <button id="font-minus" data-font="-1" title="Kleinere letters" aria-label="Kleinere letters">A−</button>
@@ -4946,10 +5095,7 @@ html[data-study-theme=dark] .answer-thousands-toggle{color:#bed0dd}
       <div class="calc-body"><p id="confirm-message"></p><div class="actions"><button class="btn" value="cancel" autofocus>Annuleren</button><button class="btn primary" value="confirm">Bevestigen</button></div></div>
     </form>
   </dialog>
-  <section id="calculator" role="dialog" aria-modal="false" aria-labelledby="calc-title" hidden>
-<header class="calc-head"><button type="button" id="calc-move" data-calc-move aria-label="Rekenmachine verplaatsen. Sleep of gebruik de pijltoetsen."><span aria-hidden="true">⠿</span><b id="calc-title">Rekenmachine</b></button><button type="button" data-calc-compact title="Verkleinen" aria-label="Rekenmachine verkleinen">↙</button><button type="button" id="calc-minimize" data-calc-minimize aria-label="Rekenmachine inklappen" aria-expanded="true">−</button><button type="button" id="calc-close" data-calc-close aria-label="Rekenmachine sluiten">×</button></header>
-<div id="calc-body" class="calc-body" data-calc-body><div class="calc-history-heading"><span>Berekeningen</span><span class="calc-history-count">0 regels</span></div><div class="calc-history" tabindex="0" role="region" aria-label="Berekeningshistorie, scroll voor oudere regels"><ol class="calc-history-list"></ol><p class="calc-history-empty">Je berekeningen verschijnen hier.</p></div><p class="calc-history-help"><span class="calc-history-older">Laatste berekeningen</span><span>Klik op een regel om te hergebruiken</span></p><label class="calc-input-label" for="calc-expression">Nieuwe berekening</label><input id="calc-expression" class="calc-input" data-calc-input inputmode="text" autocomplete="off" spellcheck="false" maxlength="180" aria-describedby="calc-input-help" placeholder="Typ hier je volgende berekening"><output id="calc-result" class="calc-output calc-error" data-calc-output aria-live="polite" hidden></output><div class="calc-controls"><div class="calc-memory-row"><div class="calc-memory-keys"><button type="button" data-key="MC" aria-label="Geheugen wissen">MC</button><button type="button" data-key="MR" aria-label="Geheugen oproepen">MR</button><button type="button" data-key="M+" aria-label="Bij geheugen optellen">M+</button><button type="button" data-key="M-" aria-label="Van geheugen aftrekken">M−</button></div><span class="calc-memory" aria-live="polite">M: 0</span></div><div id="calc-keys" class="calc-keys"><button type="button" data-key="7">7</button><button type="button" data-key="8">8</button><button type="button" data-key="9">9</button><button type="button" data-key="/">÷</button><button type="button" data-key="4">4</button><button type="button" data-key="5">5</button><button type="button" data-key="6">6</button><button type="button" data-key="*">×</button><button type="button" data-key="1">1</button><button type="button" data-key="2">2</button><button type="button" data-key="3">3</button><button type="button" data-key="-">−</button><button type="button" data-key="0">0</button><button type="button" data-key=".">.</button><button type="button" data-key="(">(</button><button type="button" data-key=")">)</button><button type="button" data-key="sqrt(" aria-label="Vierkantswortel">√</button><button type="button" data-key="ln(" aria-label="Natuurlijke logaritme">ln</button><button type="button" data-key="exp(" aria-label="Exponentiële functie">exp</button><button type="button" data-key="^">^</button><button type="button" data-key="C" aria-label="Nieuwe berekening wissen">C</button><button type="button" data-key="⌫" aria-label="Laatste teken wissen">⌫</button><button type="button" data-key="=" aria-label="Berekenen en nieuwe regel beginnen">=</button><button type="button" data-key="+">+</button></div><p id="calc-input-help" class="calc-help">Punt of komma voor decimalen, zonder duizendtallen. Enter of = bewaart je berekening.</p></div></div><footer class="calc-window-footer"><span class="calc-storage-note" role="status">Bewaard in deze browser</span><button type="button" data-calc-resize title="Sleep om te vergroten of verkleinen" aria-label="Rekenmachineformaat wijzigen. Sleep of gebruik de pijltoetsen.">◢</button></footer>
-  </section>
+  <section id="calculator-dialog" hidden></section>
 <style>
 .input-table-handles{position:fixed;z-index:92;pointer-events:none;box-sizing:border-box}
 .input-table-handles[hidden]{display:none!important}
@@ -32702,6 +32848,7 @@ window.SRA_CIRRUS_EXAMS = [{"id": "20200323", "title": "SRA", "date": "2020-03-2
     if((token.match(/\./g)||[]).length>1)throw Error('Gebruik punten voor duizendtallen en een komma voor decimalen.');
     return token;
   });
+  // Operators continue the last result; the negative-number key starts fresh.
   const continuation=(s,continueFromResult=false)=>/^[*×x÷/:^%]/.test(s.trim())||(continueFromResult&&/^[+\-−]/.test(s.trim()))?'Ans'+s.trim():s;
   window.CirrusCalcInput={numbers,normalize:(s,last,continueFromResult)=>numbers(continuation(String(s),continueFromResult)).replace(/\bAns\b/gi,'('+String(last)+')'),history:(s,last,continueFromResult)=>continuation(String(s),continueFromResult).replace(/\bAns\b/gi,'('+String(last).replace('.',',')+')'),label:continuation};
 })();
@@ -32945,7 +33092,84 @@ window.SRA_CIRRUS_EXAMS = [{"id": "20200323", "title": "SRA", "date": "2020-03-2
  $('#menu-toggle').onclick=()=>{const open=document.body.classList.toggle('menu-open');$('#menu-toggle').setAttribute('aria-expanded',String(open));if(open)showCurrentSidebarLesson();};
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.body.classList.remove('menu-open');$('#menu-toggle').setAttribute('aria-expanded','false');if($('#tools-menu').open){$('#tools-menu').open=false;$('#tools-menu summary').focus();}}});
  document.addEventListener('click',e=>{if(document.body.classList.contains('menu-open')&&!e.target.closest('#sidebar,#menu-toggle')){document.body.classList.remove('menu-open');$('#menu-toggle').setAttribute('aria-expanded','false');}if(!e.target.closest('#tools-menu'))$('#tools-menu').open=false;});
- function initCalculator(){
+ window.CourseCalculatorOptions={storageKey:'sra-calculator-history-v1',apiName:'SRACalculator'};
+ $('.skip').onclick=e=>{e.preventDefault();$('#main').focus();};
+ window.SRAFormulaHelp.init($('#main'),C);
+ window.SRATerms.init($('#main'),C.terms,C.sources);
+ window.SRANavigation.init($('#main'),historyBack);
+ window.addEventListener('hashchange',()=>route());applyFont();route(false);if(!storageAvailable)toast('Browseropslag is niet beschikbaar. Je kunt voortgang handmatig exporteren.');
+})();
+
+</script>
+<script>
+/* Non-modal calculator with persistent history. Bounded parser; no code execution. */
+(function(){'use strict';if(window.CafaCalculator){document.querySelectorAll('dialog#calculator-dialog').forEach(function(legacy){legacy.remove();});return;}
+  function normalized(s) {
+    return s.replace(/,/g, '.').replace(/[×x]/g, '*').replace(/[÷:]/g, '/').replace(/−/g, '-').replace(/\s/g, '');
+  }
+  function lex(s) {
+    // Do not normalize the x in exp: recognize function names before single symbols.
+    s = s.replace(/exp/gi, 'EXP');
+    s = normalized(s).replace(/EXP/g, 'exp').toLowerCase();
+    if (s.length > 180) throw Error('Berekening te lang');
+    var ts = s.match(/(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?|sqrt|ln|exp|[()+\-*/%^]/g) || [];
+    if (ts.join('') !== s) throw Error('Ongeldige invoer');
+    return ts;
+  }
+  function evaluate(s) {
+    var ts = lex(String(s)), i = 0;
+    function atom() {
+      var t = ts[i++], v;
+      if (t === '(') {
+        v = expr();
+        if (ts[i++] !== ')') throw Error('Haakje ontbreekt');
+      } else if (t === 'sqrt' || t === 'ln' || t === 'exp') {
+        if (ts[i++] !== '(') throw Error('Gebruik haakjes bij ' + t);
+        v = expr();
+        if (ts[i++] !== ')') throw Error('Haakje ontbreekt');
+        if (t === 'sqrt' && v < 0) throw Error('Geen reële wortel');
+        if (t === 'ln' && v <= 0) throw Error('ln vereist een positief getal');
+        v = t === 'sqrt' ? Math.sqrt(v) : t === 'ln' ? Math.log(v) : Math.exp(v);
+      } else {
+        if (!t || !/^(?:\d|\.)/.test(t)) throw Error('Vul een getal in');
+        v = Number(t);
+      }
+      while (ts[i] === '%') { i++; v /= 100; }
+      return v;
+    }
+    function power() {
+      var v = atom();
+      if (ts[i] === '^') { i++; v = Math.pow(v, unary()); }
+      return v;
+    }
+    function unary() {
+      if (ts[i] === '+') { i++; return unary(); }
+      if (ts[i] === '-') { i++; return -unary(); }
+      return power();
+    }
+    function term() {
+      var v = unary();
+      while (ts[i] === '*' || ts[i] === '/') {
+        var op = ts[i++], rhs = unary();
+        if (op === '/' && rhs === 0) throw Error('Delen door nul');
+        v = op === '*' ? v * rhs : v / rhs;
+      }
+      return v;
+    }
+    function expr() {
+      var v = term();
+      while (ts[i] === '+' || ts[i] === '-') {
+        var op = ts[i++], rhs = term();
+        v = op === '+' ? v + rhs : v - rhs;
+      }
+      return v;
+    }
+    if (!ts.length) return 0;
+    var v = expr();
+    if (i !== ts.length || !Number.isFinite(v)) throw Error('Ongeldige berekening');
+    return v;
+  }
+
 function setupHistoryCalculator(panel, opener, evaluate, options) {
   const find = selector => panel.querySelector(selector);
   const input=find('[data-calc-input]'), output=find('[data-calc-output]'), body=find('[data-calc-body]');
@@ -32954,7 +33178,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   const fmt=value=>Number(value.toPrecision(13)).toLocaleString('nl-NL',{maximumFractionDigits:12});
   const raw=value=>String(Number(value.toPrecision(13))).replace('.',',');
   let entries=[], memory=0, lastValue=0, position=null, size=null, expandedSize=null, drag=null, sizing=null, returnFocus=opener;
-  let errorShown=false, storageOK=true, continueFromResult=false;
+  let errorShown=false, storageOK=true, continueFromResult=false, firstOpen=true;
   const baseEvaluate=evaluate; evaluate=value=>baseEvaluate(window.CirrusCalcInput.normalize(value,lastValue,continueFromResult));
   const scale=()=>window.StudyScale?.get()||1;
   const bounds=()=>{const r=panel.getBoundingClientRect(),z=scale();return {left:r.left/z,top:r.top/z,width:r.width/z,height:r.height/z};};
@@ -33014,9 +33238,11 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
     }
     find('.calc-history-count').textContent=entries.length+' '+(entries.length===1?'regel':'regels');
     find('.calc-history-empty').hidden=entries.length>0;
+    find('[data-calc-clear-history]').disabled=entries.length===0;
     find('.calc-history-older').textContent=entries.length>4?'↑ Scroll voor oudere regels':'Laatste berekeningen';
     historyBox.scrollTop=toEnd?historyBox.scrollHeight:previous;
   }
+  find('[data-calc-clear-history]').onclick=()=>{entries=[];renderHistory();save();historyBox.focus({preventScroll:true});};
   function paint(){
     const memoryLabel=find('.calc-memory');memoryLabel.textContent='M: '+fmt(memory);memoryLabel.title='Geheugen: '+fmt(memory);
     const flag=find('.calc-memory-flag');if(flag)flag.hidden=memory===0;
@@ -33039,6 +33265,11 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
     try{
       if(key==='=')calculate();
       else if(key==='C'){input.value='';lastValue=0;continueFromResult=false;}
+      else if(key==='Ans')insert('Ans');
+      else if(key==='negative'){
+        if(!input.value.trim()){input.value='-';continueFromResult=false;input.setSelectionRange(1,1);}
+        else{insert('(-)');const caret=input.selectionStart-1;input.setSelectionRange(caret,caret);}
+      }
       else if(key==='CE')input.value=input.value.replace(/(?:\d+(?:[.,]\d*)?|[.,]\d+)(?:[eE][+-]?\d+)?%?$/,'');
       else if(key==='back'||key==='⌫'){let start=input.selectionStart??input.value.length,end=input.selectionEnd??start;if(start===end)start=Math.max(0,start-1);input.setRangeText('',start,end,'end');}
       else if(key==='MC')memory=0;
@@ -33066,12 +33297,20 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
     panel.style.left=position.x+'px';panel.style.top=position.y+'px';panel.style.right='auto';panel.style.bottom='auto';
   }
   function expand(value){panel.classList.toggle('calc-collapsed',!value);body.hidden=!value;find('.calc-window-footer').hidden=!value;minimize.textContent=value?'−':'+';minimize.setAttribute('aria-expanded',String(value));minimize.setAttribute('aria-label',value?'Rekenmachine inklappen':'Rekenmachine uitklappen');place();}
-  function open(from=opener){returnFocus=from;panel.hidden=false;expand(true);opener.setAttribute('aria-expanded','true');place();renderHistory(true);if(window.matchMedia('(pointer: fine)').matches)input.focus({preventScroll:true});else panel.focus({preventScroll:true});}
+  function open(from=opener){returnFocus=from;panel.hidden=false;expand(true);opener.setAttribute('aria-expanded','true');place();renderHistory(true);if(window.matchMedia('(pointer: fine)').matches)input.focus({preventScroll:true});else panel.focus({preventScroll:true});if(firstOpen){input.setSelectionRange(input.value.length,input.value.length);firstOpen=false;}}
   function close(){const hadFocus=panel.contains(document.activeElement);if(drag&&handle.hasPointerCapture(drag.id))handle.releasePointerCapture(drag.id);if(sizing&&resizer.hasPointerCapture(sizing.id))resizer.releasePointerCapture(sizing.id);drag=null;sizing=null;panel.hidden=true;opener.setAttribute('aria-expanded','false');save();if(hadFocus)(returnFocus?.isConnected?returnFocus:opener).focus({preventScroll:true});}
   find('[data-calc-close]').onclick=close;minimize.onclick=()=>expand(body.hidden);
   compact.onclick=()=>{if(!expandedSize){const r=bounds();expandedSize={w:r.width,h:r.height};size={w:240,h:380};compact.setAttribute('aria-label','Rekenmachine normale grootte');compact.title='Normale grootte';}else{size=expandedSize;expandedSize=null;compact.setAttribute('aria-label','Rekenmachine verkleinen');compact.title='Verkleinen';}expand(true);place();save();};
   panel.querySelectorAll('[data-calc-key],[data-key]').forEach(button=>{button.addEventListener('pointerdown',e=>{if(e.button===0)e.preventDefault();});button.onclick=()=>perform(button.dataset.calcKey??button.dataset.key);});
-  input.oninput=()=>{clearError();save();};
+  input.oninput=()=>{
+    clearError();
+    const value=input.value,prefixed=window.CirrusCalcInput.label(value,continueFromResult);
+    if(prefixed!==value&&prefixed.length<=180){
+      const start=input.selectionStart,end=input.selectionEnd,shift=prefixed.length-value.length;
+      input.value=prefixed;input.setSelectionRange(start+shift,end+shift);
+    }
+    save();
+  };
   panel.addEventListener('keydown',event=>{
     if(event.key==='Escape'){event.preventDefault();event.stopPropagation();close();return;}
     if(event.ctrlKey||event.metaKey||event.altKey||event.target.closest('[data-calc-move],[data-calc-resize],.calc-history'))return;
@@ -33095,15 +33334,12 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   return {open,close,perform,getState:()=>({formula:input.value,memory,history:entries.map(e=>({...e})),size,lastValue,errorShown})};
 }
 
-  const panel=$('#calculator'),opener=$('#calc-open');panel.tabIndex=-1;const api=setupHistoryCalculator(panel,opener,window.SRAMath.calc,{storageKey:'sra-calculator-history-v1'});opener.onclick=()=>api.open(opener);window.SRACalculator=api;
- }
- initCalculator();
- $('.skip').onclick=e=>{e.preventDefault();$('#main').focus();};
- window.SRAFormulaHelp.init($('#main'),C);
- window.SRATerms.init($('#main'),C.terms,C.sources);
- window.SRANavigation.init($('#main'),historyBack);
- window.addEventListener('hashchange',()=>route());applyFont();route(false);if(!storageAvailable)toast('Browseropslag is niet beschikbaar. Je kunt voortgang handmatig exporteren.');
-})();
+const original=document.getElementById('calculator-dialog'),panel=document.createElement('section');panel.id='calculator-dialog';panel.className='calculator-float';panel.hidden=true;panel.tabIndex=-1;panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','false');panel.setAttribute('aria-labelledby','calculator-title');panel.innerHTML="<header class=\"calculator-float-head\"><button type=\"button\" class=\"calculator-handle\" data-calc-move aria-label=\"Rekenmachine verplaatsen. Sleep of gebruik de pijltoetsen.\"><span aria-hidden=\"true\">⠿</span><b id=\"calculator-title\">Rekenmachine</b></button><button type=\"button\" data-calc-compact title=\"Verkleinen\" aria-label=\"Rekenmachine verkleinen\">↙</button><button type=\"button\"  data-calc-minimize aria-label=\"Rekenmachine inklappen\" aria-expanded=\"true\">−</button><button type=\"button\"  data-calc-close aria-label=\"Rekenmachine sluiten\">×</button></header>\n<div  class=\"calculator-float-body\" data-calc-body><div class=\"calc-history-heading\"><span>Berekeningen</span><span class=\"calc-history-count\">0 regels</span><button type=\"button\" data-calc-clear-history>Alle regels wissen</button></div><div class=\"calc-history\" tabindex=\"0\" role=\"region\" aria-label=\"Berekeningshistorie, scroll voor oudere regels\"><ol class=\"calc-history-list\"></ol><p class=\"calc-history-empty\">Je berekeningen verschijnen hier.</p></div><p class=\"calc-history-help\"><span class=\"calc-history-older\">Laatste berekeningen</span><span>Klik op de berekening om te hergebruiken</span></p><label class=\"calc-input-label\" for=\"calc-expression\">Nieuwe berekening</label><input id=\"calc-expression\" class=\"calc-input\" data-calc-input inputmode=\"text\" autocomplete=\"off\" spellcheck=\"false\" maxlength=\"180\" aria-describedby=\"calc-input-help\" placeholder=\"Typ hier je volgende berekening\"><p id=\"calc-input-help\" class=\"calc-help\">Duizendtallen met punten mogelijk; decimalen met komma of punt mogelijk; spaties worden genegeerd. Kopiëren en plakken mogelijk.</p><output  class=\"calc-output calc-error\" data-calc-output aria-live=\"polite\" hidden></output><div class=\"calc-controls\"><div class=\"calc-memory-row\"><div class=\"calc-memory-keys\"><button type=\"button\" data-calc-key=\"MC\" aria-label=\"Geheugen wissen\">MC</button><button type=\"button\" data-calc-key=\"MR\" aria-label=\"Geheugen oproepen\">MR</button><button type=\"button\" data-calc-key=\"M+\" aria-label=\"Bij geheugen optellen\">M+</button><button type=\"button\" data-calc-key=\"M-\" aria-label=\"Van geheugen aftrekken\">M−</button></div><span class=\"calc-memory\" aria-live=\"polite\">M: 0</span></div><div  class=\"calc-keys\"><button type=\"button\" data-calc-key=\"7\">7</button><button type=\"button\" data-calc-key=\"8\">8</button><button type=\"button\" data-calc-key=\"9\">9</button><button type=\"button\" data-calc-key=\"/\">÷</button><button type=\"button\" data-calc-key=\"4\">4</button><button type=\"button\" data-calc-key=\"5\">5</button><button type=\"button\" data-calc-key=\"6\">6</button><button type=\"button\" data-calc-key=\"*\">×</button><button type=\"button\" data-calc-key=\"1\">1</button><button type=\"button\" data-calc-key=\"2\">2</button><button type=\"button\" data-calc-key=\"3\">3</button><button type=\"button\" data-calc-key=\"-\">−</button><button type=\"button\" data-calc-key=\"0\">0</button><button type=\"button\" data-calc-key=\".\">.</button><button type=\"button\" data-calc-key=\"(\">(</button><button type=\"button\" data-calc-key=\")\">)</button><button type=\"button\" data-calc-key=\"sqrt(\" aria-label=\"Vierkantswortel\">√</button><button type=\"button\" data-calc-key=\"Ans\" aria-label=\"Vorige uitkomst invoegen\" title=\"Vorige uitkomst invoegen\">Ans</button><button type=\"button\" data-calc-key=\"negative\" aria-label=\"Negatief getal invoeren\" title=\"Nieuw negatief getal, zonder automatisch Ans\">(−)</button><button type=\"button\" data-calc-key=\"^\">^</button><button type=\"button\" data-calc-key=\"C\" aria-label=\"Nieuwe berekening wissen\">C</button><button type=\"button\" data-calc-key=\"back\" aria-label=\"Laatste teken wissen\">⌫</button><button type=\"button\" data-calc-key=\"=\" aria-label=\"Berekenen en nieuwe regel beginnen\">=</button><button type=\"button\" data-calc-key=\"+\">+</button></div><details class=\"calc-extra\"><summary>Extra functies</summary><div class=\"calc-extra-keys\"><button type=\"button\" data-calc-key=\"CE\">CE</button><button type=\"button\" data-calc-key=\"%\">%</button><button type=\"button\" data-calc-key=\"ln(\" aria-label=\"Natuurlijke logaritme\">ln</button><button type=\"button\" data-calc-key=\"exp(\" aria-label=\"Exponentiële functie\">exp</button><button type=\"button\" data-calc-key=\"reciprocal\">1/x</button></div><p class=\"calc-extra-help\">% deelt door 100. MC wist het geheugen; MR haalt het op. M+ en M− gebruiken je invoer of de laatste uitkomst.</p><div class=\"calc-copy\"><span class=\"calc-copy-result\" role=\"status\"></span><button type=\"button\" data-copy-calc>Kopieer uitkomst</button></div></details></div></div><footer class=\"calc-window-footer\"><span class=\"calc-storage-note\" role=\"status\">Bewaard in deze browser</span><button type=\"button\" data-calc-resize title=\"Sleep om te vergroten of verkleinen\" aria-label=\"Rekenmachineformaat wijzigen. Sleep of gebruik de pijltoetsen.\">◢</button></footer>";if(original)original.replaceWith(panel);else document.body.append(panel);
+const icon='<svg class="calc-icon" aria-hidden="true" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="1" width="14" height="21" rx="1"/><path d="M6 5h8v4H6zM6 12h2m2 0h2m2 0h1M6 15h2m2 0h2m2 0h1M6 18h2m2 0h2m2 0h1"/></svg>';
+let toolbar=document.querySelector('.top-controls,.reader-top-tools'),trigger=toolbar&&toolbar.querySelector('[data-calc]');if(!trigger){trigger=document.createElement('button');trigger.type='button';trigger.setAttribute('data-calc','');trigger.innerHTML=icon;if(toolbar)toolbar.prepend(trigger);else{toolbar=document.createElement('div');toolbar.className='calculator-standalone-tools';toolbar.append(trigger);document.body.prepend(toolbar);}}
+trigger.classList.add('calculator-toolbar-trigger');trigger.title='Rekenmachine';trigger.setAttribute('aria-label','Rekenmachine openen');trigger.setAttribute('aria-controls',panel.id);trigger.setAttribute('aria-expanded','false');
+const courseOptions=window.CourseCalculatorOptions||{};
+const api=setupHistoryCalculator(panel,trigger,evaluate,{storageKey:courseOptions.storageKey||'cafa2-calculator-history-v1',legacyKey:courseOptions.legacyKey||'cafa2-calculator-v2'});document.addEventListener('click',event=>{const from=event.target.closest('[data-calc]');if(from){event.preventDefault();api.open(from);}});window.CafaCalculator=api;if(courseOptions.apiName)window[courseOptions.apiName]=api;window.cafaCalculatorTest={evaluate};})();
 
 </script>
 <script>
@@ -33243,7 +33479,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   function observeSizes(){
     const topbar=document.querySelector('.topbar,.study-header');
     if(topbar&&!observed.has(topbar)){observed.add(topbar);new ResizeObserver(()=>document.documentElement.style.setProperty('--cirrus-top-height',topbar.offsetHeight+'px')).observe(topbar);}
-    const calculator=document.querySelector(isSra?'#calculator':'#calculator-dialog');
+    const calculator=document.querySelector('#calculator-dialog,#calculator');
     if(calculator&&!observed.has(calculator)){observed.add(calculator);new ResizeObserver(entries=>{const r=entries[0].contentRect;updateCalculator(calculator,r.width,r.height);}).observe(calculator);}
   }
   document.addEventListener('DOMContentLoaded',()=>{observeSizes();schedule();},{once:true});

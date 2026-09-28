@@ -1,9 +1,9 @@
 /* Actual controller + parser; layout, four visible history rows and row deletion use browser QA. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
-const root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'js/app.js'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),math=require('../js/math.js');
-const storageKey='sra-calculator-history-v1',start=source.indexOf(' function initCalculator(){'),end=source.indexOf(' initCalculator();',start);
-assert.ok(start>=0&&end>start,'Execute the real calculator controller');
-const markup=html.match(/<section\b[^>]*id="calculator"[^>]*>[\s\S]*?<\/section>/)?.[0];
+const root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'js/calculator.js'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),math=require('../js/math.js');
+const storageKey='sra-calculator-history-v1',start=source.indexOf('function setupHistoryCalculator('),end=source.indexOf('\nconst original=',start);
+assert.ok(start>=0&&end>start,'Execute the shared calculator controller');
+const markup='<section id="calculator-dialog" role="dialog" aria-modal="false" hidden>'+JSON.parse(source.match(/panel\.innerHTML=("(?:\\.|[^"\\])*")/)[1])+'</section>';
 assert.ok(markup);assert.match(markup,/<section[^>]*role="dialog"[^>]*aria-modal="false"[^>]*hidden>/);assert.doesNotMatch(markup,/<dialog\b/);
 function events(target={}){
  const handlers={};target.addEventListener=(type,handler)=>(handlers[type]??=[]).push(handler);
@@ -40,8 +40,8 @@ function fixture({storage=new Map(),finePointer=true,storageBlocked=false,zoom=1
  }
  const opener=element('button');opener.setAttribute('id','calc-open');document.body.append(opener);const answer=element('textarea');document.body.append(answer);
  const localStorage={getItem(k){if(storageBlocked)throw Error('Opslag geblokkeerd');return storage.get(k)??null;},setItem(k,v){if(storageBlocked)throw Error('Opslag geblokkeerd');storage.set(k,String(v));}};
- vm.runInNewContext(source.slice(start,end)+'\ninitCalculator();',{window,document,localStorage,sessionStorage:localStorage,innerHeight:800,navigator:{},crypto:{randomUUID:()=>`test-${++sequence}`},$:s=>document.querySelector(s)});
- const panel=document.querySelector('#calculator'),input=panel.querySelector('[data-calc-input]');
+ vm.runInNewContext(source.slice(start,end)+`\nconst panel=document.querySelector('#calculator-dialog');panel.tabIndex=-1;const opener=document.querySelector('#calc-open');const api=setupHistoryCalculator(panel,opener,window.SRAMath.calc,{storageKey:'${storageKey}'});opener.onclick=()=>api.open(opener);window.SRACalculator=api;`,{window,document,localStorage,sessionStorage:localStorage,innerHeight:800,navigator:{},crypto:{randomUUID:()=>`test-${++sequence}`}});
+ const panel=document.querySelector('#calculator-dialog'),input=panel.querySelector('[data-calc-input]');
  const key=k=>{const b=panel.querySelectorAll('[data-calc-key],[data-key]').find(n=>(n.dataset.calcKey??n.dataset.key)===k);assert.ok(b,`Knop ${k} bestaat`);b.emit('click');};
  return {window,document,view,storage,panel,input,opener,answer,key,type(v){input.value=v;input.emit('input');},api:window.SRACalculator,find:s=>panel.querySelector(s)};
 }
@@ -59,7 +59,7 @@ opener.focus();opener.emit('click');assert.equal(panel.hidden,false);assert.equa
 // Caret replacement and Enter commit: result in history, empty next input.
 type('2+3');input.setSelectionRange(2,3);key('7');assert.equal(input.value,'2+7');assert.equal(input.emit('keydown',{key:'Enter'}).defaultPrevented,true);
 assert.equal(api.getState().lastValue,9);assert.equal(input.value,'');assert.equal(api.getState().history.at(-1).expression,'2+7');assert.equal(api.getState().history.at(-1).value,9);assert.equal(output.hidden,true);
-type('2+7');input.setSelectionRange(3,3);key('⌫');assert.equal(input.value,'2+');key('sqrt(');assert.equal(input.value,'2+sqrt(');
+type('2+7');input.setSelectionRange(3,3);key('back');assert.equal(input.value,'2+');key('sqrt(');assert.equal(input.value,'2+sqrt(');
 type('sqrt(81)+2^3');input.emit('keydown',{key:'='});assert.equal(api.getState().lastValue,17);key('+');key('5');assert.equal(input.value,'Ans+5');key('=');assert.equal(api.getState().lastValue,22);key('2');assert.equal(input.value,'2');
 // Invalid input retains the last valid result and creates no history entry.
 const historyCount=api.getState().history.length;

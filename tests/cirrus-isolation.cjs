@@ -13,7 +13,7 @@ const links=[...index.matchAll(/<link\b[^>]*rel="stylesheet"[^>]*>/g)].map(match
 }));
 assert.ok(links.length>5);
 for(const {tag,href} of links){
- const shared=/^(css\/(?:cirrus(?:-integration)?|exam-cirrus-layout|input-table-layout|answer-input-tools|study-dark|tinymce-answer-editor)\.css|vendor\/study-ui\/(?:header|theme)\.css)$/.test(href);
+ const shared=/^(css\/(?:cirrus(?:-integration)?|exam-cirrus-layout|input-table-layout|answer-input-tools|study-dark|tinymce-answer-editor|calculator(?:-cirrus)?)\.css|vendor\/study-ui\/(?:header|theme)\.css)$/.test(href);
  assert.equal(/\bdata-study-style\b/.test(tag),!shared,href);
 }
 
@@ -115,9 +115,9 @@ const studyStyles=styleTags.filter(match=>/\bdata-study-style\b/.test(match[1]))
 assert.equal(studyStyles.length,sheets.length,'Portable HTML bewaart alle stylesheetmarkeringen');
 const normalized=value=>value.replace(/\r\n/g,'\n').replace(/(?<=\n)[ \t]+(?=\n)/g,'').trim();
 for(const sheet of sheets)assert.ok(studyStyles.some(match=>normalized(match[2])===normalized(read(sheet.href))),'Portable stylesheet actueel: '+sheet.href);
-for(const id of ['calc-open','calculator','calc-expression','calc-result','calc-keys','history-back']){
+for(const id of ['calc-open','calculator-dialog','history-back']){
  assert.equal([...index.matchAll(new RegExp('id="'+id+'"','g'))].length,1,id+' blijft een uniek bereikbaar element');
 }
-assert.match(read('css/cirrus-integration.css'),/#calculator\s+\[data-calc-input\]\{/,'Rekenmachine heeft een invoerstijl in Cirrus');
+assert.match(read('css/calculator.css'),/#calculator-dialog\s+\[data-calc-input\]\{/,'Rekenmachine heeft een invoerstijl in Cirrus');
 assert.match(read('css/cirrus-integration.css'),/#history-back\{/,'Terugknop heeft een eigen Cirrus-adapter');
 console.log('OK: les/dashboard/welkom/toets/inzage/MC/analyse-routeisolatie, mediaherstel, afzonderlijke lettergrootte en zelfstandige HTML.');

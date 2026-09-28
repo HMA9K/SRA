@@ -134,7 +134,7 @@
   function observeSizes(){
     const topbar=document.querySelector('.topbar,.study-header');
     if(topbar&&!observed.has(topbar)){observed.add(topbar);new ResizeObserver(()=>document.documentElement.style.setProperty('--cirrus-top-height',topbar.offsetHeight+'px')).observe(topbar);}
-    const calculator=document.querySelector(isSra?'#calculator':'#calculator-dialog');
+    const calculator=document.querySelector('#calculator-dialog,#calculator');
     if(calculator&&!observed.has(calculator)){observed.add(calculator);new ResizeObserver(entries=>{const r=entries[0].contentRect;updateCalculator(calculator,r.width,r.height);}).observe(calculator);}
   }
   document.addEventListener('DOMContentLoaded',()=>{observeSizes();schedule();},{once:true});

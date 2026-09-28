@@ -1285,6 +1285,8 @@ html[data-study-theme=dark] body.cirrus-mode .report-legend{color:#adbdc9}
 html[data-study-theme=dark] body.cirrus-mode #exam-app .answer-audit{border:1px solid #76612d;border-left:4px solid #765f2d;background:#2c2516;color:#cac2af}
 html[data-study-theme=dark] body.cirrus-mode #exam-app .answer-audit .answer-audit-meta{color:#adbdc9}
 html[data-study-theme=dark] body.cirrus-mode #exam-app .answer-audit-checked{border-color:#445f4e;border-left-color:#3c6747;background:#1a281d}
+/* css/exam-study-links.css */
+
 /* vendor/study-ui/header.css */
 html[data-study-theme=dark] body.study-shell .study-topbar{background:#212b38;color:#f0f7fc;box-shadow:0 1px 2px #01030433}
 html[data-study-theme=dark] body.study-shell .study-topbar .study-brand{color:#f0f7fc}
