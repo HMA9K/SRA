@@ -1348,6 +1348,9 @@ html[data-study-theme=dark] body.learning-page-layout .qbody>.question-header .q
 html[data-study-theme=dark] body[data-theme="dark"] .learning-page-title,html[data-study-theme=dark][data-theme="dark"] .learning-page-title{color:#b1a1d8!important}
 html[data-study-theme=dark][data-study-theme=dark] .learning-page-title{color:#b1a1d8!important}
 html[data-study-theme=dark] .sra-home .study-home-links a{border:1px solid var(--study-line,#38526b);background:var(--study-surface,#152129);color:var(--study-ink,#99c1e1)}
+/* css/answer-input-tools.css */
+html[data-study-theme=dark] .answer-thousands-toggle{color:var(--study-muted,#adbdc9)}
+html[data-study-theme=dark][data-study-theme=dark] .answer-thousands-toggle{color:#a8c0d1}
 /* css/input-table-layout.css */
 html[data-study-theme=dark] .input-table-handles button{color:var(--study-ink,#adbdc9)}
 html[data-study-theme=dark] .input-table-column-grip:hover::after,html[data-study-theme=dark] .input-table-column-grip:focus-visible::after{background:#212b38}
