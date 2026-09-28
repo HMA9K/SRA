@@ -36,6 +36,9 @@ async function fingerprint(page){
       await page.reload();await page.waitForFunction(()=>!!window.SRACalculator);await page.locator('[data-calc]').first().click();
       assert.equal(await page.evaluate(()=>SRACalculator.getState().lastValue),-50);
       const saved=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey);assert.equal(saved.lastValue,-50);assert.equal(saved.memory,-25);assert.equal(saved.entries.length,3);
+      await page.locator('[data-calc-key="-"]').click();await input.focus();await input.evaluate(e=>e.setSelectionRange(0,3));await input.press('Backspace');
+      assert.equal(await input.inputValue(),'-');await input.pressSequentially('550');assert.equal(await input.inputValue(),'-550');await input.press('Enter');
+      assert.equal(await page.evaluate(()=>SRACalculator.getState().lastValue),-550);
       await context.close();
       if(peer){
         const pair=await browser.newContext({viewport:{width,height:900},hasTouch:width===390});
