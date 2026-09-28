@@ -2857,6 +2857,11 @@ body #calculator.calc-small .calc-extra{margin-top:4px;padding-top:3px}
 body #calculator.calc-small .calc-window-footer{justify-content:flex-end}
 
 </style>
+  <style data-study-style>
+.sra-exam-study-return{margin:0 0 18px}
+.sra-exam-study-return .study-btn{font-family:Arial,sans-serif}
+
+</style>
   <style>
 /* Shared header, based on CAFA2 css/exams.css and css/exam-document.css. */
 body.study-shell .study-topbar{display:block;position:sticky;top:0;z-index:90;height:auto;min-height:64px;width:100%;padding:0;margin:0;background:#444159;color:#fff;box-shadow:0 1px 2px #0003;font:14px/1.42 Arial,sans-serif}
@@ -4214,6 +4219,8 @@ html[data-study-theme=dark] body.cirrus-mode .report-legend{color:#adbdc9}
 html[data-study-theme=dark] body.cirrus-mode #exam-app .answer-audit{border:1px solid #76612d;border-left:4px solid #765f2d;background:#2c2516;color:#cac2af}
 html[data-study-theme=dark] body.cirrus-mode #exam-app .answer-audit .answer-audit-meta{color:#adbdc9}
 html[data-study-theme=dark] body.cirrus-mode #exam-app .answer-audit-checked{border-color:#445f4e;border-left-color:#3c6747;background:#1a281d}
+/* css/exam-study-links.css */
+
 /* vendor/study-ui/header.css */
 html[data-study-theme=dark] body.study-shell .study-topbar{background:#212b38;color:#f0f7fc;box-shadow:0 1px 2px #01030433}
 html[data-study-theme=dark] body.study-shell .study-topbar .study-brand{color:#f0f7fc}
@@ -4322,6 +4329,7 @@ html[data-study-theme=dark] body.study-shell .lab .key[style*="#176fad"]{border-
 }
 
 </style>
+
 
 
 
@@ -32003,7 +32011,7 @@ window.SRAMCExamFrequency = {
     var fallback = original.mount(container, options);
     if (options.readOnly) return fallback;
     var target = container.querySelector('.cae-content'), wrapper = target.closest('.cafa-answer-editor');
-    var editor = null, disposed = false, initialized = false, last = fallback.getHTML(), observer, widthObserver, applyingBounds = false, previousWidth = 0, initialization = 0;
+    var editor = null, disposed = false, initialized = false, last = fallback.getHTML(), observer, widthObserver, resizeCleanup, applyingBounds = false, previousWidth = 0, initialization = 0;
     var sizeKey = "learning-answer-editor-size-v2:" + location.hash;
     var widthRatio = 1;
     function sync() {
@@ -32025,6 +32033,51 @@ window.SRAMCExamFrequency = {
     var size = savedSize();
     if (size && Number.isFinite(size.widthRatio)) widthRatio = Math.max(0.1, Math.min(1, size.widthRatio));
     function fullScreen() { return editor && editor.plugins.fullscreen && editor.plugins.fullscreen.isFullscreen(); }
+    function installResize(instance) {
+      var element=instance.getContainer(),handle=element.querySelector('.tox-statusbar__resize-handle'),drag=null;
+      if(!handle)return;
+      function dimensions(){var scale=window.StudyScale?.get()||1,r=element.getBoundingClientRect();return {width:r.width/scale,height:r.height/scale,scale:scale};}
+      function apply(width,height){
+        var limit=availableWidth();
+        element.style.width=Math.max(Math.min(260,limit),Math.min(limit,width))+'px';
+        element.style.height=Math.max(220,height)+'px';
+        instance.dispatch('ResizeEditor');
+      }
+      function stop(){
+        if(!drag)return;
+        var previous=drag;drag=null;
+        if(previous.pane)previous.pane.style.overflowAnchor=previous.anchor;
+        if(handle.hasPointerCapture(previous.pointer))handle.releasePointerCapture(previous.pointer);
+      }
+      function start(event){
+        if(event.button!==0||fullScreen())return;
+        event.preventDefault();event.stopImmediatePropagation();
+        handle.focus({preventScroll:true});
+        var size=dimensions(),pane=element.closest('.exam-question-body');
+        if(!pane||getComputedStyle(pane).overflowY==='visible')pane=document.scrollingElement;
+        drag={x:event.clientX,y:event.clientY,width:size.width,height:size.height,scale:size.scale,pointer:event.pointerId,pane:pane,anchor:pane&&pane.style.overflowAnchor};
+        if(pane)pane.style.overflowAnchor='none';
+        handle.setPointerCapture(event.pointerId);
+      }
+      function move(event){
+        if(!drag||event.pointerId!==drag.pointer)return;
+        event.preventDefault();event.stopImmediatePropagation();
+        apply(drag.width+(event.clientX-drag.x)/drag.scale,drag.height+(event.clientY-drag.y)/drag.scale);
+      }
+      // TinyMCE's native mouse handler measures zoomed pixels as CSS pixels.
+      function blockMouse(event){event.preventDefault();event.stopImmediatePropagation();}
+      function keyboard(event){
+        if(fullScreen()||!/^Arrow(?:Left|Right|Up|Down)$/.test(event.key))return;
+        event.preventDefault();event.stopImmediatePropagation();
+        var size=dimensions(),step=event.shiftKey?25:10;
+        apply(size.width+(event.key==='ArrowLeft'?-step:event.key==='ArrowRight'?step:0),size.height+(event.key==='ArrowUp'?-step:event.key==='ArrowDown'?step:0));
+      }
+      handle.tabIndex=0;handle.style.touchAction='none';handle.setAttribute('role','button');handle.setAttribute('aria-label','Antwoordveld vergroten of verkleinen met slepen of pijltjestoetsen');
+      handle.addEventListener('pointerdown',start,true);handle.addEventListener('pointermove',move,true);
+      handle.addEventListener('pointerup',stop,true);handle.addEventListener('pointercancel',stop,true);handle.addEventListener('lostpointercapture',stop,true);
+      handle.addEventListener('mousedown',blockMouse,true);handle.addEventListener('keydown',keyboard,true);
+      resizeCleanup=function(){stop();handle.removeEventListener('pointerdown',start,true);handle.removeEventListener('pointermove',move,true);handle.removeEventListener('pointerup',stop,true);handle.removeEventListener('pointercancel',stop,true);handle.removeEventListener('lostpointercapture',stop,true);handle.removeEventListener('mousedown',blockMouse,true);handle.removeEventListener('keydown',keyboard,true);};
+    }
     function resizeBounds() {
       if (!initialized || disposed || fullScreen()) return;
       var width = availableWidth();
@@ -32068,6 +32121,7 @@ window.SRAMCExamFrequency = {
             observer = new MutationObserver(theme); observer.observe(document.documentElement, {attributes: true, attributeFilter: ['data-study-theme']});
             if (window.StudyAnswerInput) window.StudyAnswerInput.attachEditor(instance, wrapper);
             resizeBounds();
+            installResize(instance);
             if (window.ResizeObserver) { widthObserver = new ResizeObserver(resizeBounds); widthObserver.observe(container); }
             window.addEventListener('resize', resizeBounds);
           });
@@ -32088,6 +32142,7 @@ window.SRAMCExamFrequency = {
     var record = {
       suspend: function () {
         sync(); initialization++;
+        if(resizeCleanup)resizeCleanup();
         if (observer) observer.disconnect(); if (widthObserver) widthObserver.disconnect();
         window.removeEventListener('resize', resizeBounds);
         var count = wrapper.querySelector('.cae-count'); if (count) wrapper.querySelector('.cae-footer').append(count);
@@ -32102,7 +32157,7 @@ window.SRAMCExamFrequency = {
       getHTML: function () { return initialized && editor ? original.sanitize(editor.getContent()) : fallback.getHTML(); },
       setHTML: function (value) { last = original.sanitize(value); fallback.setHTML(last); if (initialized && editor) editor.setContent(last); },
       focus: function () { if (initialized && editor) editor.focus(); else fallback.focus(); },
-      destroy: function () { if (disposed) return; sync(); disposed = true; instances.delete(wrapper); if (observer) observer.disconnect(); if (widthObserver) widthObserver.disconnect(); window.removeEventListener('resize', resizeBounds); if (editor) editor.remove(); fallback.destroy(); }
+      destroy: function () { if (disposed) return; sync(); disposed = true; instances.delete(wrapper); if(resizeCleanup)resizeCleanup();if (observer) observer.disconnect(); if (widthObserver) widthObserver.disconnect(); window.removeEventListener('resize', resizeBounds); if (editor) editor.remove(); fallback.destroy(); }
     };
   }
   window.CafaAnswerEditor = {mount: mount, sanitize: original.sanitize, moveNode: moveNode};
@@ -32334,9 +32389,10 @@ window.SRA_CIRRUS_EXAMS = [{"id": "20200323", "title": "SRA", "date": "2020-03-2
 
     mountCasePanel(attempt,q);
     var answerHost=host.querySelector('[data-exam-answer]');
+    if(window.SRAExamStudy)host.querySelector('.exam-answer-actions').insertAdjacentHTML('beforeend',window.SRAExamStudy.link(attempt,q));
     var feedback=document.createElement('section');feedback.className='exam-inline-feedback';feedback.hidden=true;
     feedback.setAttribute('data-exam-feedback','');feedback.setAttribute('aria-labelledby','exam-feedback-heading');
-    answerHost.after(feedback);
+    host.querySelector('.exam-answer-actions').after(feedback);
     host.querySelector('[data-exam-action="check"]').textContent='Controleer mijn antwoord';
     if(q.type==='open') {
       if(window.CafaJournalTable&&window.CafaJournalTable.supports(q)){
@@ -32571,8 +32627,67 @@ window.SRA_CIRRUS_EXAMS = [{"id": "20200323", "title": "SRA", "date": "2020-03-2
   attempts().filter(function(a){return a.status==='active'&&Engine.remainingSeconds(a)===0;}).forEach(function(a){Object.assign(a,Engine.finishAttempt(a,{reason:'timeout'}));});
   if(!corrupt)save();
   setInterval(tick,1000);
-  window.SRACirrus={mount:function(){document.body.classList.add('cirrus-mode');document.getElementById('main').replaceChildren(host);route();},leave:function(){rememberCaseScroll();dropEditor();selectedAttempt=null;clock.hidden=true;document.body.classList.remove('cirrus-mode','exam-running','exam-dashboard','exam-surface');var d=document.getElementById('exam-info-dialog');if(d)d.close();},catalog:catalog,getAttempts:function(){return JSON.parse(JSON.stringify(attempts()));},storageKey:KEY};
+  window.SRACirrus={mount:function(){document.body.classList.add('cirrus-mode');document.getElementById('main').replaceChildren(host);route();},leave:function(){rememberCaseScroll();dropEditor();selectedAttempt=null;clock.hidden=true;document.body.classList.remove('cirrus-mode','exam-running','exam-dashboard','exam-surface');var d=document.getElementById('exam-info-dialog');if(d)d.close();},catalog:catalog,restorePosition:function(id,index){var a=byId(id);if(a&&a.status==='active'&&Number.isInteger(index)&&index>=0&&index<a.exam.questions.length){a.currentIndex=index;save();}},getAttempts:function(){return JSON.parse(JSON.stringify(attempts()));},storageKey:KEY};
 }());
+
+</script>
+<script>
+/* Vraaggerichte koppelingen naar bestaande lessen, met terugkeer naar de poging. */
+(function(){
+  'use strict';
+  const key='sra-exam-study-origin-v1';
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const topics={'Stratificatie':'stratificatie','Verklaarde variatie / modelvergelijking':'anova','Hypothesen / significantie':'toetsen','Uitschieters / invloed':'diagnostiek','Normaliteit':'diagnostiek','Heteroscedasticiteit':'diagnostiek','Multicollineariteit':'modelbouw','Variabelenselectie':'modelbouw','Niet-lineaire modellen':'transformaties','Voorspellingsinterval regressie':'voorspellen','Benodigde steekproefomvang':'steekproefomvang'};
+  // Deze korte vragen benoemen hun onderwerp alleen in de bijbehorende casus.
+  // Koppelingen volgen de bestaande opgaven en uitwerkingen in het project.
+  const sourceLessons={
+    '20200323':{2:'verschil',3:'verschil',6:'quotient'},
+    '20200626':{2:'verschil',3:'verschil',6:'quotient'},
+    '20211101':{1:'mpu',3:'quotient',4:'quotient',9:'anova',21:'meervoudig'},
+    '20220316':{12:'diagnostiek',19:'regressielijn'},
+    '20230315':{1:'regressieschatter',2:'regressieschatter'},
+    '20241028':{1:'regressieschatter'}
+  };
+  function lesson(exam,q){
+    const source=sourceLessons[exam.id]?.[q.number];if(source)return source;
+    const prompt=(q.prompt||'').toLowerCase();
+    const rules=[[/stratific|allocatie|strata|stratum/,'stratificatie'],[/quoti[eë]ntschatter/,'quotient'],[/verschilschatter/,'verschil'],[/regressieschatter/,'regressieschatter'],[/directe schatter|\bmpu\b/,'mpu'],[/steekproefomvang|steekproefgrootte|hoeveel.*(?:posten|artikelen|waarnemingen)|steekproef.*(?:uitbreid|beperk|verklein)/,'steekproefomvang'],[/voorspellingsinterval|predictie.interval/,'voorspellen'],[/multicollinear|selectie|modelbouw|stepwise|backward|forward/,'modelbouw'],[/normaliteit|normaal verdeeld|homoscedast|heteroscedast|uitbijter|uitschieter|invloedrijk|residu/,'diagnostiek'],[/logarit|niet.lineair|transformat|power model/,'transformaties'],[/hypothese|kritiek gebied|kritieke gebied|significan|voer.*toets/,'toetsen'],[/verklaarde variatie|verklaarde variantie|anova|model summary|r.?kwadraat/,'anova']];
+    if(/samengevoegde groepen/.test(prompt))return 'diagnostiek';
+    const explicit=rules.find(([re])=>re.test(prompt));if(explicit)return explicit[1];
+    const original=(window.SRAExamData?.exams||[]).find(e=>e.id===exam.id);
+    const evidence=Object.entries(original?.evidence||{}).filter(([,numbers])=>numbers.includes(q.number));
+    const mapped=evidence.map(([topic])=>topics[topic]).find(Boolean);if(mapped)return mapped;
+    const section=(exam.sections||[]).find(s=>s.id===q.sectionId),context=(section?.caseText||section?.caseHtml||'').toLowerCase();
+    if(/steekproeven/i.test(section?.title||'')){
+      if(/quoti[eë]ntschatter/.test(context)&&!/verschilschatter/.test(context))return 'quotient';
+      if(/verschilschatter/.test(context)&&!/quoti[eë]ntschatter/.test(context))return 'verschil';
+      return 'tentamen';
+    }
+    if(/meervoudig|dummy|wo.er|hbo.er|vrouw|man van|salaris/.test(prompt))return 'meervoudig';
+    if(/regressie|correlatie/.test(prompt))return 'regressielijn';
+    return 'tentamen';
+  }
+  function link(a,q){const id=lesson(a.exam,q);return '<a class="btn study-exam-link cirrus-summary-link" data-exam-study href="#les/'+esc(id)+'">Uitleg bij deze vraag in de samenvatting →</a>';}
+  function origin(){try{const value=JSON.parse(sessionStorage.getItem(key)||'null');return value&&typeof value.attempt==='string'&&typeof value.question==='string'?value:null;}catch(_){return null;}}
+  function renderReturn(){
+    document.querySelector('[data-exam-study-return]')?.remove();const o=origin();
+    if(!o||!/^#(?:les|formules)\//.test(location.hash))return;
+    const a=window.SRACirrus?.getAttempts().find(a=>a.id===o.attempt);
+    if(!a||a.status!=='active'||!a.exam.questions.some(q=>q.id===o.question))return;
+    const nav=document.createElement('nav');nav.dataset.examStudyReturn='';nav.className='sra-exam-study-return';nav.setAttribute('aria-label','Terug naar je tentamenvraag');
+    nav.innerHTML='<a class="study-btn" href="#toets/'+esc(a.id)+'">← Terug naar vraag '+esc(o.label)+'</a>';
+    const title=document.querySelector('#main .lesson-top,#main .study-page-title');if(title)title.before(nav);else document.getElementById('main').prepend(nav);
+  }
+  document.addEventListener('click',e=>{
+    const link=e.target.closest('[data-exam-study]');
+    if(link&&!e.ctrlKey&&!e.metaKey&&!e.shiftKey&&!e.altKey&&e.button===0){
+      const id=location.hash.slice('#toets/'.length),a=window.SRACirrus?.getAttempts().find(a=>a.id===id),q=a?.exam.questions[a.currentIndex];
+      if(q)try{sessionStorage.setItem(key,JSON.stringify({attempt:a.id,question:q.id,index:a.currentIndex,label:q.displayNumber||q.number}));}catch(_){}
+    }
+    if(e.target.closest('[data-exam-study-return] a')){const o=origin();if(o)window.SRACirrus?.restorePosition(o.attempt,o.index);}
+  });
+  window.SRAExamStudy={link,lesson,renderReturn};
+})();
 
 </script>
 <script>
@@ -32587,8 +32702,8 @@ window.SRA_CIRRUS_EXAMS = [{"id": "20200323", "title": "SRA", "date": "2020-03-2
     if((token.match(/\./g)||[]).length>1)throw Error('Gebruik punten voor duizendtallen en een komma voor decimalen.');
     return token;
   });
-  const continuation=s=>/^[*×x÷/:^%]/.test(s.trim())?'Ans'+s.trim():s;
-  window.CirrusCalcInput={numbers,normalize:(s,last)=>numbers(continuation(String(s))).replace(/\bAns\b/gi,'('+String(last)+')'),history:(s,last)=>continuation(String(s)).replace(/\bAns\b/gi,'('+String(last).replace('.',',')+')'),label:continuation};
+  const continuation=(s,continueFromResult=false)=>/^[*×x÷/:^%]/.test(s.trim())||(continueFromResult&&/^[+\-−]/.test(s.trim()))?'Ans'+s.trim():s;
+  window.CirrusCalcInput={numbers,normalize:(s,last,continueFromResult)=>numbers(continuation(String(s),continueFromResult)).replace(/\bAns\b/gi,'('+String(last)+')'),history:(s,last,continueFromResult)=>continuation(String(s),continueFromResult).replace(/\bAns\b/gi,'('+String(last).replace('.',',')+')'),label:continuation};
 })();
 
 </script>
@@ -32812,6 +32927,7 @@ window.SRA_CIRRUS_EXAMS = [{"id": "20200323", "title": "SRA", "date": "2020-03-2
   $('#study-returnbar').hidden=!showReturnLinks&&historyBack.hidden;
   $('.study-navigation-row').hidden=!showReturnLinks&&historyBack.hidden&&$('.sra-navigation').hidden;
   if(current)renderSidebar(current);else $('#sidebar').innerHTML='';
+  window.SRAExamStudy?.renderReturn();
   if(current&&current!==sidebarLessonId)showCurrentSidebarLesson();
   sidebarLessonId=current;
   document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===(isLesson?'leren':tab))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
@@ -32838,8 +32954,8 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   const fmt=value=>Number(value.toPrecision(13)).toLocaleString('nl-NL',{maximumFractionDigits:12});
   const raw=value=>String(Number(value.toPrecision(13))).replace('.',',');
   let entries=[], memory=0, lastValue=0, position=null, size=null, expandedSize=null, drag=null, sizing=null, returnFocus=opener;
-  let errorShown=false, storageOK=true;
-  const baseEvaluate=evaluate; evaluate=value=>baseEvaluate(window.CirrusCalcInput.normalize(value,lastValue));
+  let errorShown=false, storageOK=true, continueFromResult=false;
+  const baseEvaluate=evaluate; evaluate=value=>baseEvaluate(window.CirrusCalcInput.normalize(value,lastValue,continueFromResult));
   const scale=()=>window.StudyScale?.get()||1;
   const bounds=()=>{const r=panel.getBoundingClientRect(),z=scale();return {left:r.left/z,top:r.top/z,width:r.width/z,height:r.height/z};};
   const viewport=()=>{const v=window.visualViewport,z=scale();return {x:(v?.offsetLeft||0)/z,y:(v?.offsetTop||0)/z,w:(v?.width||document.documentElement.clientWidth)/z,h:(v?.height||innerHeight)/z};};
@@ -32859,17 +32975,18 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
       entries=Array.isArray(saved.entries)?saved.entries.filter(e=>e&&typeof e.id==='string'&&typeof e.expression==='string'&&e.expression.length<=180&&Number.isFinite(e.value)):[];
       memory=Number.isFinite(saved.memory)?saved.memory:0;
       lastValue=Number.isFinite(saved.lastValue)?saved.lastValue:0;
+      continueFromResult=typeof saved.continueFromResult==='boolean'?saved.continueFromResult:entries.length>0||lastValue!==0;
       input.value=typeof saved.formula==='string'?saved.formula.slice(0,180):'';
       if(saved.size&&Number.isFinite(saved.size.w)&&Number.isFinite(saved.size.h))size={w:saved.size.w,h:saved.size.h};
     } else if(options.legacyKey){
       const old=JSON.parse(sessionStorage.getItem(options.legacyKey)||'{}');
       input.value=typeof old.formula==='string'?old.formula.slice(0,180):'';
       memory=Number.isFinite(old.memory)?old.memory:0;
-      if(old.justResult&&input.value)lastValue=evaluate(input.value);
+      if(old.justResult&&input.value){lastValue=evaluate(input.value);continueFromResult=true;}
     }
   } catch (_) {storageOK=false;}
   function save(){
-    try{localStorage.setItem(options.storageKey,JSON.stringify({version:1,entries,memory,lastValue,formula:input.value,size}));storageOK=true;}
+    try{localStorage.setItem(options.storageKey,JSON.stringify({version:1,entries,memory,lastValue,continueFromResult,formula:input.value,size}));storageOK=true;}
     catch(_){storageOK=false;}
     find('.calc-storage-note').textContent=storageOK?'Bewaard in deze browser':'Browseropslag niet beschikbaar';
   }
@@ -32906,21 +33023,22 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
   }
   function insert(text){
     let start=input.selectionStart??input.value.length,end=input.selectionEnd??start;
-    if(!input.value&&/^[+*/^%]$/.test(text)){input.value='Ans';start=end=input.value.length;}
+    if(!input.value&&continueFromResult&&/^(?:sqrt|ln|exp)\($/.test(text))text+='Ans)';
+    if(!input.value){const prefix=window.CirrusCalcInput.label(text,continueFromResult);if(prefix!==text){input.value='Ans';start=end=input.value.length;}}
     if(input.value.length-(end-start)+text.length>180)throw Error('Berekening te lang');
     input.setRangeText(text,start,end,'end');
   }
   function calculate(){
     if(!input.value.trim())return;
-    const typed=input.value,expression=window.CirrusCalcInput.history(typed,lastValue),value=evaluate(typed),displayExpression=window.CirrusCalcInput.label(typed);
+    const typed=input.value,expression=window.CirrusCalcInput.history(typed,lastValue,continueFromResult),value=evaluate(typed),displayExpression=window.CirrusCalcInput.label(typed,continueFromResult);
     entries.push({id:typeof crypto.randomUUID==='function'?crypto.randomUUID():Date.now()+'-'+Math.random(),expression,displayExpression,value});
-    lastValue=value;input.value='';renderHistory(true);
+    lastValue=value;continueFromResult=true;input.value='';renderHistory(true);
   }
   function perform(key){
     clearError();const copy=find('.calc-copy-result');if(copy)copy.textContent='';
     try{
       if(key==='=')calculate();
-      else if(key==='C'){input.value='';lastValue=0;}
+      else if(key==='C'){input.value='';lastValue=0;continueFromResult=false;}
       else if(key==='CE')input.value=input.value.replace(/(?:\d+(?:[.,]\d*)?|[.,]\d+)(?:[eE][+-]?\d+)?%?$/,'');
       else if(key==='back'||key==='⌫'){let start=input.selectionStart??input.value.length,end=input.selectionEnd??start;if(start===end)start=Math.max(0,start-1);input.setRangeText('',start,end,'end');}
       else if(key==='MC')memory=0;
@@ -32929,7 +33047,7 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
       else if(key==='M+'||key==='M-'){const next=memory+(key==='M+'?1:-1)*currentValue();if(!Number.isFinite(next))throw Error('Geheugen buiten bereik');memory=next;}
       else if(['sqrt','square','reciprocal','sign'].includes(key)){
         let value=currentValue();if(key==='sqrt'){if(value<0)throw Error('Geen reële wortel');value=Math.sqrt(value);}else if(key==='square')value*=value;else if(key==='reciprocal'){if(value===0)throw Error('Delen door nul');value=1/value;}else value=-value;
-        if(!Number.isFinite(value))throw Error('Ongeldige berekening');input.value=raw(value);lastValue=value;
+        if(!Number.isFinite(value))throw Error('Ongeldige berekening');input.value=raw(value);lastValue=value;continueFromResult=false;
       }else if(/^(?:[0-9.,()+\-*/%^]|sqrt\(|ln\(|exp\()$/.test(key))insert(key);
     }catch(error){showError(error.message);}
     paint();save();
@@ -33044,6 +33162,8 @@ function setupHistoryCalculator(panel, opener, evaluate, options) {
       const primary=question?.querySelector('.cirrus-main-instruction');
       if(primary){const start=primary.textContent.search(/\s+(?=(?:Als (?:je|u)\b|Let op\b|NB\s*:))/i);if(start>=0){const walker=document.createTreeWalker(primary,NodeFilter.SHOW_TEXT);let node,offset=0;while((node=walker.nextNode())){if(offset+node.length>start){const range=document.createRange();range.setStart(node,start-offset);range.setEnd(primary,primary.childNodes.length);const note=document.createElement('span');note.className='cirrus-supplemental';note.append(range.extractContents());primary.append(note);break;}offset+=node.length;}}}
     }
+    const actions=body.querySelector('.exam-answer-actions'),help=body.querySelector('.study-exam-link,.cirrus-summary-link'),pause=actions?.querySelector('[data-exam-action="pause"]');
+    if(help&&pause&&pause.nextElementSibling!==help){help.classList.add('cirrus-summary-link');pause.after(help);}
     const footerActions=host.querySelector('.exam-cirrus-actions'),submit=footerActions?.querySelector('[data-exam-action="submit"]');
     if(submit&&footerActions.lastElementChild!==submit)footerActions.append(submit);
     const marked=head.closest('.frame').querySelector('[data-exam-action="mark"]')?.getAttribute('aria-pressed')==='true';let marker=head.querySelector('.cirrus-question-flag');

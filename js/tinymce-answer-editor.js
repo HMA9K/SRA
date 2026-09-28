@@ -30,7 +30,7 @@
     var fallback = original.mount(container, options);
     if (options.readOnly) return fallback;
     var target = container.querySelector('.cae-content'), wrapper = target.closest('.cafa-answer-editor');
-    var editor = null, disposed = false, initialized = false, last = fallback.getHTML(), observer, widthObserver, applyingBounds = false, previousWidth = 0, initialization = 0;
+    var editor = null, disposed = false, initialized = false, last = fallback.getHTML(), observer, widthObserver, resizeCleanup, applyingBounds = false, previousWidth = 0, initialization = 0;
     var sizeKey = "learning-answer-editor-size-v2:" + location.hash;
     var widthRatio = 1;
     function sync() {
@@ -52,6 +52,51 @@
     var size = savedSize();
     if (size && Number.isFinite(size.widthRatio)) widthRatio = Math.max(0.1, Math.min(1, size.widthRatio));
     function fullScreen() { return editor && editor.plugins.fullscreen && editor.plugins.fullscreen.isFullscreen(); }
+    function installResize(instance) {
+      var element=instance.getContainer(),handle=element.querySelector('.tox-statusbar__resize-handle'),drag=null;
+      if(!handle)return;
+      function dimensions(){var scale=window.StudyScale?.get()||1,r=element.getBoundingClientRect();return {width:r.width/scale,height:r.height/scale,scale:scale};}
+      function apply(width,height){
+        var limit=availableWidth();
+        element.style.width=Math.max(Math.min(260,limit),Math.min(limit,width))+'px';
+        element.style.height=Math.max(220,height)+'px';
+        instance.dispatch('ResizeEditor');
+      }
+      function stop(){
+        if(!drag)return;
+        var previous=drag;drag=null;
+        if(previous.pane)previous.pane.style.overflowAnchor=previous.anchor;
+        if(handle.hasPointerCapture(previous.pointer))handle.releasePointerCapture(previous.pointer);
+      }
+      function start(event){
+        if(event.button!==0||fullScreen())return;
+        event.preventDefault();event.stopImmediatePropagation();
+        handle.focus({preventScroll:true});
+        var size=dimensions(),pane=element.closest('.exam-question-body');
+        if(!pane||getComputedStyle(pane).overflowY==='visible')pane=document.scrollingElement;
+        drag={x:event.clientX,y:event.clientY,width:size.width,height:size.height,scale:size.scale,pointer:event.pointerId,pane:pane,anchor:pane&&pane.style.overflowAnchor};
+        if(pane)pane.style.overflowAnchor='none';
+        handle.setPointerCapture(event.pointerId);
+      }
+      function move(event){
+        if(!drag||event.pointerId!==drag.pointer)return;
+        event.preventDefault();event.stopImmediatePropagation();
+        apply(drag.width+(event.clientX-drag.x)/drag.scale,drag.height+(event.clientY-drag.y)/drag.scale);
+      }
+      // TinyMCE's native mouse handler measures zoomed pixels as CSS pixels.
+      function blockMouse(event){event.preventDefault();event.stopImmediatePropagation();}
+      function keyboard(event){
+        if(fullScreen()||!/^Arrow(?:Left|Right|Up|Down)$/.test(event.key))return;
+        event.preventDefault();event.stopImmediatePropagation();
+        var size=dimensions(),step=event.shiftKey?25:10;
+        apply(size.width+(event.key==='ArrowLeft'?-step:event.key==='ArrowRight'?step:0),size.height+(event.key==='ArrowUp'?-step:event.key==='ArrowDown'?step:0));
+      }
+      handle.tabIndex=0;handle.style.touchAction='none';handle.setAttribute('role','button');handle.setAttribute('aria-label','Antwoordveld vergroten of verkleinen met slepen of pijltjestoetsen');
+      handle.addEventListener('pointerdown',start,true);handle.addEventListener('pointermove',move,true);
+      handle.addEventListener('pointerup',stop,true);handle.addEventListener('pointercancel',stop,true);handle.addEventListener('lostpointercapture',stop,true);
+      handle.addEventListener('mousedown',blockMouse,true);handle.addEventListener('keydown',keyboard,true);
+      resizeCleanup=function(){stop();handle.removeEventListener('pointerdown',start,true);handle.removeEventListener('pointermove',move,true);handle.removeEventListener('pointerup',stop,true);handle.removeEventListener('pointercancel',stop,true);handle.removeEventListener('lostpointercapture',stop,true);handle.removeEventListener('mousedown',blockMouse,true);handle.removeEventListener('keydown',keyboard,true);};
+    }
     function resizeBounds() {
       if (!initialized || disposed || fullScreen()) return;
       var width = availableWidth();
@@ -95,6 +140,7 @@
             observer = new MutationObserver(theme); observer.observe(document.documentElement, {attributes: true, attributeFilter: ['data-study-theme']});
             if (window.StudyAnswerInput) window.StudyAnswerInput.attachEditor(instance, wrapper);
             resizeBounds();
+            installResize(instance);
             if (window.ResizeObserver) { widthObserver = new ResizeObserver(resizeBounds); widthObserver.observe(container); }
             window.addEventListener('resize', resizeBounds);
           });
@@ -115,6 +161,7 @@
     var record = {
       suspend: function () {
         sync(); initialization++;
+        if(resizeCleanup)resizeCleanup();
         if (observer) observer.disconnect(); if (widthObserver) widthObserver.disconnect();
         window.removeEventListener('resize', resizeBounds);
         var count = wrapper.querySelector('.cae-count'); if (count) wrapper.querySelector('.cae-footer').append(count);
@@ -129,7 +176,7 @@
       getHTML: function () { return initialized && editor ? original.sanitize(editor.getContent()) : fallback.getHTML(); },
       setHTML: function (value) { last = original.sanitize(value); fallback.setHTML(last); if (initialized && editor) editor.setContent(last); },
       focus: function () { if (initialized && editor) editor.focus(); else fallback.focus(); },
-      destroy: function () { if (disposed) return; sync(); disposed = true; instances.delete(wrapper); if (observer) observer.disconnect(); if (widthObserver) widthObserver.disconnect(); window.removeEventListener('resize', resizeBounds); if (editor) editor.remove(); fallback.destroy(); }
+      destroy: function () { if (disposed) return; sync(); disposed = true; instances.delete(wrapper); if(resizeCleanup)resizeCleanup();if (observer) observer.disconnect(); if (widthObserver) widthObserver.disconnect(); window.removeEventListener('resize', resizeBounds); if (editor) editor.remove(); fallback.destroy(); }
     };
   }
   window.CafaAnswerEditor = {mount: mount, sanitize: original.sanitize, moveNode: moveNode};

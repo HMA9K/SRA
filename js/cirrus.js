@@ -217,9 +217,10 @@
 
     mountCasePanel(attempt,q);
     var answerHost=host.querySelector('[data-exam-answer]');
+    if(window.SRAExamStudy)host.querySelector('.exam-answer-actions').insertAdjacentHTML('beforeend',window.SRAExamStudy.link(attempt,q));
     var feedback=document.createElement('section');feedback.className='exam-inline-feedback';feedback.hidden=true;
     feedback.setAttribute('data-exam-feedback','');feedback.setAttribute('aria-labelledby','exam-feedback-heading');
-    answerHost.after(feedback);
+    host.querySelector('.exam-answer-actions').after(feedback);
     host.querySelector('[data-exam-action="check"]').textContent='Controleer mijn antwoord';
     if(q.type==='open') {
       if(window.CafaJournalTable&&window.CafaJournalTable.supports(q)){
@@ -454,5 +455,5 @@
   attempts().filter(function(a){return a.status==='active'&&Engine.remainingSeconds(a)===0;}).forEach(function(a){Object.assign(a,Engine.finishAttempt(a,{reason:'timeout'}));});
   if(!corrupt)save();
   setInterval(tick,1000);
-  window.SRACirrus={mount:function(){document.body.classList.add('cirrus-mode');document.getElementById('main').replaceChildren(host);route();},leave:function(){rememberCaseScroll();dropEditor();selectedAttempt=null;clock.hidden=true;document.body.classList.remove('cirrus-mode','exam-running','exam-dashboard','exam-surface');var d=document.getElementById('exam-info-dialog');if(d)d.close();},catalog:catalog,getAttempts:function(){return JSON.parse(JSON.stringify(attempts()));},storageKey:KEY};
+  window.SRACirrus={mount:function(){document.body.classList.add('cirrus-mode');document.getElementById('main').replaceChildren(host);route();},leave:function(){rememberCaseScroll();dropEditor();selectedAttempt=null;clock.hidden=true;document.body.classList.remove('cirrus-mode','exam-running','exam-dashboard','exam-surface');var d=document.getElementById('exam-info-dialog');if(d)d.close();},catalog:catalog,restorePosition:function(id,index){var a=byId(id);if(a&&a.status==='active'&&Number.isInteger(index)&&index>=0&&index<a.exam.questions.length){a.currentIndex=index;save();}},getAttempts:function(){return JSON.parse(JSON.stringify(attempts()));},storageKey:KEY};
 }());

@@ -101,4 +101,22 @@ for(const zoom of [10/14,24/14]){
  Object.assign(f.view,{width:390,height:620});f.window.emit('resize');
  r=f.panel.getBoundingClientRect();assert.ok(r.left>=0&&r.top>=0&&r.right<=390&&r.bottom<=620,'Scaled calculator stays inside a narrow viewport.');
 }
-console.log('Calculator: parser, niet-modale invoer, caret, toetsen, fouten, geheugen, historieopslag, herladen, viewport, paginagrootte en terugfocus geslaagd.');
+// Iedere vervolgbewerking gebruikt dezelfde vorige uitkomst, met toetsen of tekst.
+for(const [operator,operand,expected] of [['+',5,-21595],['-',5,-21605],['*',8,-172800],['/',8,-2700],['^',2,466560000]]){
+ for(const typed of [false,true]){
+  const f=fixture();f.type('-21600');f.key('=');
+  if(typed)f.type(operator+(operand??''));
+  else{f.key(operator);assert.equal(f.input.value,'Ans'+operator);for(const digit of String(operand??''))f.key(digit);}
+  f.key('=');assert.equal(f.api.getState().lastValue,expected);assert.equal(f.api.getState().errorShown,false);
+ }
+}
+for(const [value,key,expected] of [[81,'sqrt(',9],[Math.E,'ln(',1],[2,'exp(',Math.exp(2)]]){
+ const f=fixture();f.type(String(value));f.key('=');f.key(key);f.key('=');assert.ok(Math.abs(f.api.getState().lastValue-expected)<1e-10);assert.equal(f.api.getState().errorShown,false);
+}
+{
+ const f=fixture();f.type('100');f.key('=');f.type('-5');f.key('=');assert.equal(f.api.getState().lastValue,95);
+ const frozen=f.api.getState().history.at(-1).expression;f.type('200');f.key('=');f.type(frozen);f.key('=');assert.equal(f.api.getState().lastValue,95);
+ const next=fixture({storage:new Map(f.storage)});next.type('+5');next.key('=');assert.equal(next.api.getState().lastValue,100);
+ next.key('C');const cleared=fixture({storage:new Map(next.storage)});cleared.key('-');assert.equal(cleared.input.value,'-');cleared.key('5');cleared.key('=');assert.equal(cleared.api.getState().lastValue,-5);
+}
+console.log('Calculator: parser, invoer, geheugen, historie, herladen, viewport, focus en Ans bij alle vervolgbewerkingen geslaagd.');

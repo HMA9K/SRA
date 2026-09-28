@@ -40,9 +40,10 @@ def adapt(source):
     replace(anchor, anchor + "\n      attempt.checked = attempt.checked && typeof attempt.checked === 'object' && !Array.isArray(attempt.checked) ? attempt.checked : {};")
     anchor = "    var answerHost=host.querySelector('[data-exam-answer]');"
     replace(anchor, anchor + '''
+    if(window.SRAExamStudy)host.querySelector('.exam-answer-actions').insertAdjacentHTML('beforeend',window.SRAExamStudy.link(attempt,q));
     var feedback=document.createElement('section');feedback.className='exam-inline-feedback';feedback.hidden=true;
     feedback.setAttribute('data-exam-feedback','');feedback.setAttribute('aria-labelledby','exam-feedback-heading');
-    answerHost.after(feedback);
+    host.querySelector('.exam-answer-actions').after(feedback);
     host.querySelector('[data-exam-action="check"]').textContent='Controleer mijn antwoord';''')
     replace('    updateSaveStatus();\n  }\n  function showModal',
             '    if(attempt.checked&&attempt.checked[q.id])renderAnswerFeedback(attempt,q);\n    updateSaveStatus();\n  }\n  function showModal')
