@@ -110,7 +110,7 @@
       var generation = initialization;
       size = savedSize();
       previousWidth = 0;
-      if (disposed || !target.isConnected) return;
+      if (disposed || !target.isConnected || editor) return;
       var width = availableWidth();
       return tiny.init({
         target: target, base_url: base.href.replace(/\/$/, ''), suffix: '.min', license_key: 'gpl',
