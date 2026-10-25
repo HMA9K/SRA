@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 import build_content
 from build_mc import make_topics
 from question_patterns import PATTERNS, apply_pattern, key_for, validate_coverage
+from learning_questions import QUESTIONS as LEARNING_QUESTIONS
 
 
 class RecognitionRoutes(unittest.TestCase):
@@ -19,10 +20,10 @@ class RecognitionRoutes(unittest.TestCase):
         cls.questions = {q['id']: q for t in cls.topics for q in t['questions']}
 
     def test_every_existing_question_has_an_explicit_route(self):
-        self.assertEqual(len(self.questions), 134)
-        self.assertEqual(len(PATTERNS), 134)
+        self.assertEqual(len(self.questions), 134 + sum(map(len, LEARNING_QUESTIONS.values())))
+        self.assertEqual(len(PATTERNS), len(self.questions))
         validate_coverage(self.questions.values())
-        self.assertEqual(len({q['pattern'] for q in self.questions.values()}), 134)
+        self.assertEqual(len({q['pattern'] for q in self.questions.values()}), len(self.questions))
         for question in self.questions.values():
             with self.subTest(question=question['id']):
                 route = question['recognition']

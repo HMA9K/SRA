@@ -5,6 +5,7 @@ import build_content as C
 from question_explanations import APPLICATION, enrich_application, validate_question
 from question_patterns import validate_coverage
 from mc_guidance import attach_guidance
+from learning_questions import for_lesson as learning_for_lesson, ADDED_COUNT
 
 ROOT=Path(__file__).resolve().parents[1]
 EXTRA={}
@@ -123,18 +124,34 @@ def make_topics():
             q['optionExplanations']=q['optionExplanations'][shift:]+q['optionExplanations'][:shift]
             q['correct']=target
             validate_question(q)
+        # Pas na de oorspronkelijke rotatie toevoegen: opgeslagen antwoordindices
+        # bij de eerste 134 vragen blijven daarmee exact dezelfde betekenis houden.
+        for i,q in enumerate(learning_for_lesson(lesson)):
+            target=(len(topics)+i)%len(q['options'])
+            shift=(q['correct']-target)%len(q['options'])
+            q['options']=q['options'][shift:]+q['options'][:shift]
+            q['optionExplanations']=q['optionExplanations'][shift:]+q['optionExplanations'][:shift]
+            q['correct']=target
+            validate_question(q)
+            questions.append(q)
         questions.sort(key=lambda q:q['level'])
         topics.append(dict(id=lesson['id'],title=lesson['title'],phase=lesson['phase'],lesson=lesson['id'],signal=meta['signal'],approach=meta['approach'],refs=lesson['refs'],questions=questions))
-    assert len(topics)==19 and sum(len(t['questions']) for t in topics)==134
+    assert len(topics)==19 and sum(len(t['questions']) for t in topics)==134+ADDED_COUNT
     validate_coverage([q for topic in topics for q in topic['questions']])
     assert all([q['level'] for q in t['questions']]==sorted(q['level'] for q in t['questions']) for t in topics)
     attach_guidance(topics)
+    # De bronplaatsen van de nieuwe toepassing horen ook bij de optionele hulp,
+    # inclusief de daadwerkelijk te raadplegen pagina van de tabellenbundel.
+    for topic in topics:
+        for q in topic['questions']:
+            if '-leertoepassing-' in q['id']:
+                q['guidance']['refs']=[dict(ref) for ref in q['refs']]
     return topics
 
 
 def build():
     topics=make_topics()
-    (ROOT/'data/mc.js').write_text('/* Gemaakt met Codex. Eigen oefenvarianten op de aangeleverde SRA-lesstof. */\nwindow.SRAMCData = '+json.dumps(dict(version=2,topics=topics),ensure_ascii=False,indent=2)+';\n',encoding='utf8')
-    print('MC: 19 onderwerpen, 134 vragen, inclusief 20 brongebonden aanvullingen.')
+    (ROOT/'data/mc.js').write_text('/* Gemaakt met Codex. Eigen oefenvarianten op de aangeleverde SRA-lesstof. */\nwindow.SRAMCData = '+json.dumps(dict(version=2,learningRevision=dict(id='2026-09-25',addedQuestions=ADDED_COUNT),topics=topics),ensure_ascii=False,indent=2)+';\n',encoding='utf8')
+    print(f'MC: 19 onderwerpen, {134+ADDED_COUNT} vragen, inclusief {ADDED_COUNT} nieuwe toepassingen met tabellen, grafieken en casussen.')
 
 if __name__=='__main__': build()

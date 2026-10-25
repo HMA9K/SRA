@@ -22,5 +22,7 @@ for(const topic of topics){
   }
  }
 }
-assert.equal(options,479);
-console.log('OK: 134 vraaggerichte uitwerkingen, 479 optietoelichtingen en juiste koppeling na antwoordrotatie.');
+const legacy=topics.flatMap(t=>t.questions).filter(q=>!q.id.includes('-leertoepassing-'));
+assert.equal(legacy.reduce((n,q)=>n+q.options.length,0),479);
+assert.equal(options,topics.flatMap(t=>t.questions).reduce((n,q)=>n+q.options.length,0));
+console.log(`OK: alle ${topics.flatMap(t=>t.questions).length} vraaguitwerkingen, ${options} optietoelichtingen en juiste koppeling na antwoordrotatie.`);

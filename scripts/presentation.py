@@ -158,6 +158,75 @@ def mathml(content, inline=False):
     ET.fromstring(result)  # Never ship malformed mathematical markup.
     return result
 
+
+def inline_formulas(content):
+    """Typeset known inline notation without touching markup or existing MathML."""
+    from html.parser import HTMLParser
+
+    formulas = {
+        's/√n': frac(s, root(n)),
+        's / √n': frac(s, root(n)),
+        's_w/√n': frac(sw, root(n)),
+        's_w/s_b': frac(sw, sb),
+        's_w / s_b': frac(sw, sb),
+        'Σw / n': frac(summ(w), n),
+        'Σw/n': frac(summ(w), n),
+        'Σb / n': frac(summ(b), n),
+        'Σb/n': frac(summ(b), n),
+        '√(1 − R_bw²)': root(minus(one, sq(Rbw))),
+    }
+    tokens = re.compile(r'(?<!\w)(?:' + '|'.join(re.escape(key) for key in sorted(formulas, key=len, reverse=True))
+                        + r'|[sRbŴn][²³]?_(?:MPU|test|tot|adj|bw|[wbexqQRVij01])[²³]?)(?!\w)')
+
+    def replace(match):
+        token = match.group()
+        formula = formulas.get(token)
+        if formula is None:
+            base, index = token.split('_')
+            power = '2' if '²' in token else '3' if '³' in token else None
+            base = base.rstrip('²³')
+            index = index.rstrip('²³')
+            formula = sub(hat(v('W')) if base == 'Ŵ' else v(base), text(index) if len(index) > 1 else v(index))
+            if power:
+                formula = sub(sup(v(base), num(power)), text(index)) if index == 'adj' else sup(formula, num(power))
+        return mathml(formula, inline=True)
+
+    class InlineParser(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=False)
+            self.parts = []
+            self.skip = 0
+
+        def handle_starttag(self, name, attrs):
+            if name in ('math', 'svg', 'script', 'style'):
+                self.skip += 1
+            self.parts.append(self.get_starttag_text())
+
+        def handle_endtag(self, name):
+            self.parts.append(f'</{name}>')
+            if name in ('math', 'svg', 'script', 'style'):
+                self.skip -= 1
+
+        def handle_startendtag(self, name, attrs):
+            self.parts.append(self.get_starttag_text())
+
+        def handle_data(self, value):
+            self.parts.append(value if self.skip else tokens.sub(replace, value))
+
+        def handle_entityref(self, name):
+            self.parts.append(f'&{name};')
+
+        def handle_charref(self, name):
+            self.parts.append(f'&#{name};')
+
+        def handle_comment(self, value):
+            self.parts.append(f'<!--{value}-->')
+
+    parser = InlineParser()
+    parser.feed(content)
+    parser.close()
+    return ''.join(parser.parts)
+
 CELL_FORMULAS = {
  'SSR/k': frac(ssr,k),
  'SSE/(n−k−1)': frac(sse,df),

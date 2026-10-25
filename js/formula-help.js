@@ -212,11 +212,6 @@
     observer?.disconnect();
     host.querySelectorAll('math').forEach(math => { if (!math.closest('a,button,[contenteditable]')) annotateMath(math); });
     host.querySelectorAll('.section-body p,.section-body li,.section-body td,.formula-guide-card p,.formula-guide-card li,.lab-equation,.example li,.question-feedback .feedback,.mc-feedback p,.mc-feedback li').forEach(annotateText);
-    if (host.querySelector('[data-formula-help]') && !host.querySelector('.formula-help-hint')) {
-      const hint = document.createElement('p'); hint.className = 'formula-help-hint'; hint.setAttribute('data-no-terms',''); hint.textContent = 'Klik op een statistisch symbool in een formule voor een korte uitleg. Met Tab en Enter kan dat ook.';
-      const header = host.querySelector('article > header,.lesson-header');
-      if (header) header.after(hint);
-    }
     observer?.observe(host,{childList:true,subtree:true});
   }
   function close(restore = true) {
