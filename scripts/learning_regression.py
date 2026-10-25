@@ -145,19 +145,40 @@ def enhance(lessons, sources):
         [bookref('boek-h9a',248),bookref('boek-h9b',250),ref('attentie',4,'Attentiepunten, variantieanalyse, PDF 4')], first=True)
 
     add(L['anova'], sources, 'Een volledige ANOVA-tabel reconstrueren',
-        '<p>Gebruik de oorspronkelijke autogewichten uit H9.1. Hieronder staan de drie kwadratensommen '
-        'uit de cursusuitwerking; de overige getallen kun je daaruit zelf reconstrueren.</p>'
-        + table('H9.1: bronwaarden en te berekenen velden', ['Rij','Sum of Squares','df','Mean Square','F'], [
-            ['Regression','17.923,10303','?','?','?'],['Residual','2.357,29697','?','?',''],
-            ['Total','20.280,40000','9','',''],
+        '<p>In cursusopgave H9.1 wordt het gewicht van een auto voorspeld met het bouwjaar. '
+        'Dit is een enkelvoudige regressie: er is één verklarende variabele (k = 1). '
+        'Hieronder zijn de drie kwadratensommen en het totale aantal vrijheidsgraden al gegeven.</p>'
+        '<p><strong>Oefening:</strong> bereken zelf de vijf ontbrekende waarden, op papier of in je eigen notities. '
+        'De cellen met <em>zelf berekenen</em> laten zien welke waarden je zoekt. '
+        '<em>N.v.t.</em> betekent dat die cel in deze ANOVA-tabel niet wordt gebruikt. '
+        'Open daarna de uitwerking om je tabel te vergelijken.</p>'
+        + table('Oefentabel H9.1: gegeven waarden en vijf te berekenen cellen', ['Rij','Sum of Squares','df','Mean Square','F'], [
+            ['Regression','17.923,10303','Zelf berekenen','Zelf berekenen','Zelf berekenen'],
+            ['Residual','2.357,29697','Zelf berekenen','Zelf berekenen','n.v.t.'],
+            ['Total','20.280,40000','9','n.v.t.','n.v.t.'],
         ])
-        + answer('Vul de tabel aan. Bepaal n, R², sᵧ en sₑ. Leg uit waarom sᵧ en sₑ verschillen.',
-            steps(['Total df = 9, dus n = 10. Eén verklarende variabele geeft Regression df = 1 en Residual df = 8.',
+        + answer('Bereken df voor Regression en Residual, beide Mean Squares en F. '
+                 'Bepaal vervolgens n, R², sᵧ en sₑ en leg het verschil tussen beide spreidingen uit.',
+            table('Uitwerking H9.1: de volledig ingevulde ANOVA-tabel', ['Rij','Sum of Squares','df','Mean Square','F'], [
+                ['Regression','17.923,10303','1','17.923,10303','60,82595'],
+                ['Residual','2.357,29697','8','294,66212','n.v.t.'],
+                ['Total','20.280,40000','9','n.v.t.','n.v.t.'],
+            ])
+            + '<h4>Zo kom je aan de uitkomst: zes reken- en uitlegstappen</h4>'
+            '<p>De stappen 1–3 vullen de vijf ontbrekende tabelwaarden in. '
+            'Stap 4 berekent het verklaarde aandeel; stap 5 berekent twee spreidingsmaten; stap 6 legt hun verschil uit. '
+            'Reken tussendoor met ongeronde waarden; de tabel toont afgeronde uitkomsten.</p>'
+            + steps(['<strong>Bepaal n en de vrijheidsgraden.</strong> Total df = n − 1 = 9, dus n = 10. '
+                   'Regression df = k = 1 en Residual df = n − k − 1 = 10 − 1 − 1 = 8.',
+                   '<strong>Deel iedere SS door de bijbehorende df.</strong> '
                    'MSR = 17.923,10303 / 1 = 17.923,10303; MSE = 2.357,29697 / 8 ≈ 294,66212.',
-                   'F = 17.923,10303 / 294,66212 ≈ 60,82595.',
+                   '<strong>Bereken F als MSR / MSE.</strong> F = 17.923,10303 / 294,66212 ≈ 60,82595.',
+                   '<strong>Bereken het verklaarde aandeel R².</strong> '
                    'R² = 17.923,10303 / 20.280,4 ≈ 0,883765. Circa 88,38% van de gewichtvariatie wordt verklaard.',
+                   '<strong>Bereken de twee standaardafwijkingen.</strong> '
                    'sᵧ = √(20.280,4 / 9) ≈ 47,46976 kg; sₑ = √294,66212 ≈ 17,16572 kg.',
-                   'sᵧ beschrijft spreiding rond het algemene gemiddelde. sₑ beschrijft spreiding rond '
+                   '<strong>Leg het verschil uit.</strong> sᵧ beschrijft spreiding rond het algemene gemiddelde. '
+                   'sₑ beschrijft spreiding rond '
                    'de bijpassende voorspelling voor elk bouwjaar. Met x blijft hier minder spreiding over.']))
         + '<p><strong>Controleer jezelf:</strong> SSR + SSE = TotalSS; de twee df tellen op tot Total df; '
         '√MSE sluit aan op Model Summary. Deze controles vinden veel verwisselingen voordat je een toetsconclusie trekt.</p>',
@@ -695,11 +716,11 @@ def enhance(lessons, sources):
          ref('attentie',5,'Attentiepunten, vereiste diagnoseconclusies, PDF 5')], first=True)
 
     add(L['tentamen'], sources, 'SPSS-praktijkroute college 8: één volledige analyse van autoverkoop',
-        '<p><strong>Doel:</strong> de onderdelen zelfstandig verbinden. De casus bevat 163 '
-        'tweedehandsauto’s en vraagt eerst een enkelvoudig model voor verkoopwaarde uit '
-        'bouwjaar of leeftijd, daarna een meervoudig model. Let op dat de getoonde volledige '
-        'analyse 162 bruikbare waarnemingen gebruikt. Het aantal rijen in een bestand is dus '
-        'niet automatisch het n van iedere regressie.</p>'
+        '<p><strong>Doel:</strong> de onderdelen zelfstandig verbinden. De opdrachttekst noemt 163 '
+        'auto’s. Het oorspronkelijke Excelblad College8 bevat echter 162 datarijen, zonder '
+        'ontbrekende waarden; alle 162 worden in de getoonde modellen gebruikt. '
+        'De kopregel is geen waarneming. De gecontroleerde data bevatten geen verkoopwaarde nul, '
+        'hoewel de casustekst onverkoopbare auto’s met waarde nul noemt.</p>'
         + steps(['Open College8_data.sav of het tabblad College8. Leg vast dat Verkoopwaarde '
                  'de dependent is en welke bouwjaar- of leeftijdcodering je gebruikt. '
                  'Maak spreidingsdiagrammen, ook met groepen zichtbaar.',
@@ -708,13 +729,17 @@ def enhance(lessons, sources):
                  'bij grens 3,634; Cook maximum 0,075 bij grens 0,039. '
                  'De afwijkende auto’s lijken in de casus geen invoerfouten en blijven behouden.',
                  'Voer <strong>Explore → Normality plots with tests</strong> uit op de actuele '
-                 'residuen. De bron gebruikt n = 162 en Kolmogorov-Smirnov p = 0,059. '
+                 'residuen. Bij n = 162 gebruik je volgens de cursus Kolmogorov-Smirnov. '
+                 'De oorspronkelijke tabel op PDF 40 toont Statistic = 0,059 en Sig. = 0,200*. '
+                 'De tekst eronder verwart de toetsingsgrootheid met de p-waarde. '
+                 'Het sterretje betekent dat 0,200 een ondergrens is; H₀ wordt niet verworpen. '
                  'Maak ABSRES = ABS(RES van dit model) en correleer met Bouwjaar: '
                  'Sig. = ,000 wijst hier wel op heteroscedasticiteit. Leg uit waarom deze '
                  'twee diagnoses verschillende conclusies kunnen geven.',
                  'Maak waar nodig dummy’s met <strong>Transform → Create Dummy Variables</strong>. '
                  'De categorie met weggelaten dummy is de referentie. Controleer logvoorwaarden '
-                 'vóór transformatie, vooral omdat de casus onverkoopbare auto’s met verkoopwaarde nul bevat.',
+                 'vóór transformatie. Een werkelijke nul mag je niet logaritmeren of stilzwijgend verwijderen; '
+                 'in het hier gecontroleerde Excelblad zijn verkoopwaarde en kilometerstand positief.',
                  'Schat het meervoudige model, voer backwardselectie uit en beoordeel VIF. '
                  'De uitwerking kiest in deze casus Kilometerstand óf LnKmStand. Leg de gemaakte '
                  'keuze uit en controleer na de selectiestappen opnieuw de residuen.',
@@ -730,8 +755,9 @@ def enhance(lessons, sources):
         'dummy’s heeft adjusted R² = 0,868. Het benzinemodel heeft 0,919, maar de groepen '
         'bevatten 81, 41 en 40 waarnemingen en zijn verschillende datasets. Dit is geen '
         'zuivere vergelijking van geneste modellen. De officiële uitwerking werkt de volledige '
-        'diagnostiek van alle drie afzonderlijke modellen niet uit. Benoem die nog uit te '
-        'voeren controle in je eigen eindbeoordeling.</p>',
+        'diagnostiek van alle drie afzonderlijke modellen niet uit. De aanvullende '
+        'herberekening hieronder vult die controle vanuit de oorspronkelijke Exceldata aan, '
+        'met herkenbaar onderscheid tussen bronuitvoer en eigen berekening.</p>',
         [ref('spss',37,'SPSS-uitwerkingen, college 8, PDF 37–47')])
 
     add(L['tentamen'], sources, 'Zelfstandige eindopdracht met bronuitvoer',

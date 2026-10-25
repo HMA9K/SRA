@@ -26,7 +26,7 @@ Een volgende uitvoerder moet de werkelijke bronbeschikbaarheid controleren met `
 
 ## Samenwerken en publiceren
 
-Werk op een eigen branch of werkboom vanuit de actuele hoofdtak. Bewaar bestaande lokale wijzigingen. Eén schrijver per bestand; leg bij expliciet verdeelde uitvoering de bestanden en afhankelijkheden vast. Een overdracht bevat taakvoorwaarden, branch/commit, gewijzigde bestanden, actuele bewijzen, bronbeschikbaarheid en resterend werk, zonder persoonlijke gespreksinhoud. Een echte overdracht tussen uitvoerders moet apart worden beproefd; de aanwezigheid van dit document bewijst dat niet.
+Werk op een eigen branch of werkboom vanuit de actuele hoofdtak. Bewaar bestaande lokale wijzigingen. Eén schrijver per bestand; leg bij expliciet verdeelde uitvoering de bestanden en afhankelijkheden vast. Een overdracht bevat taakvoorwaarden, branch/commit, gewijzigde bestanden, actuele bewijzen, bronbeschikbaarheid en resterend werk, zonder persoonlijke gespreksinhoud. Issue #5 is op 25 oktober 2026 gesloten als achterhaald door deze handleiding en de actuele Duo-werkwijze. Een afzonderlijke overdrachtstest is geen open SRA-taak; bij daadwerkelijk gevraagde samenwerking blijft feitelijke bronbeschikbaarheid te controleren. Er wordt geen geslaagde overdrachtstest geclaimd.
 
 Productie: <https://sra-2xt.pages.dev/>. Publiceer uitsluitend de complete map `output/site`, opgebouwd met `python scripts/prepare_publication.py`. Deze stap controleert bronbestanden en bewaart de bestaande meet- en privacy-integratie met een vastgezette controlesom. Automatische productie-uitrol vanuit de bronloze Git-clone staat uit; PR-previews vanuit Git zijn geen bewijs voor de complete bronpublicatie.
 

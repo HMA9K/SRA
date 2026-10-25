@@ -1,5 +1,7 @@
 # Broncontrole en didactische uitbreiding regressie, 25 september 2026
 
+Vervolg op 25 oktober 2026: de oorspronkelijke college-8-data zijn gevonden en vijf modellen zijn lokaal herberekend, inclusief groepsdiagnoses. Puntenweging en een gerichte boekcontrole zijn toegevoegd. Zie [vervolgcontrole](sra-vervolgcontrole-2026-10-25.md). De beperkingen hieronder beschrijven de oorspronkelijke controle; deze aanvulling vervangt uitsluitend de genoemde onderdelen en bewijst geen nieuwe publicatie of SPSS-bediening.
+
 ## Afbakening en gerealiseerde wijziging
 
 De gebruiker heeft de inhoudelijke herziening van de leeromgeving goedgekeurd. Dit onderdeel betreft de tien lessen `regressielijn`, `anova`, `toetsen`, `diagnostiek`, `voorspellen`, `meervoudig`, `transformaties`, `modelbouw`, `validatie` en `tentamen`. De uitvoering staat in `scripts/learning_regression.py`, na `course_completion.enhance`.

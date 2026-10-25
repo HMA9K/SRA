@@ -172,7 +172,8 @@ class LearningApplications(unittest.TestCase):
 
     def test_actual_table_cells_and_links(self):
         from pypdf import PdfReader
-        pdf=PdfReader(ROOT.parent/'Onderwijsmateriaal'/'Tabellenbundel.pdf')
+        # De gecontroleerde lokale bronkopie werkt ook in een Git-werkboom.
+        pdf=PdfReader(ROOT/'bronnen'/'tabellenbundel.pdf')
         t12=pdf.pages[11].extract_text()
         t13=pdf.pages[12].extract_text()
         # Tabelkolommen: df plus 18 overschrijdingskansen. 0,025 is kolom 14.

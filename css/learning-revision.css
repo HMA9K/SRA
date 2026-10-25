@@ -12,11 +12,24 @@ body.study-shell[data-page="les"] .lesson-top .eyebrow{margin:0 0 4px;font-size:
 body.study-shell[data-page="les"] .lesson-top h1{margin:0;font-size:1.4rem;line-height:1.25;letter-spacing:0;overflow-wrap:break-word}
 body.study-shell[data-page="les"] .jump{margin:12px 0;gap:6px}
 body.study-shell[data-page="les"] .jump a{border-radius:3px}
-.lesson-preparation{border-bottom:1px solid var(--line);margin:0 0 16px;padding:0 0 10px}
-.lesson-preparation>summary{cursor:pointer;font-size:.85rem;font-weight:600;padding:8px 0;min-height:40px;color:var(--green-dark)}
-.lesson-preparation .lesson-source-title{font-size:.8rem;margin:8px 0}
-.lesson-preparation .lesson-start{padding:12px 0;margin:12px 0;border:0;background:transparent;gap:20px}
-.lesson-preparation aside.learning-context{padding:14px 16px;margin:12px 0}
+.lesson-preparation{border:1px solid var(--line);border-radius:4px;margin:0 0 20px;padding:0 16px;min-width:0}
+.lesson-preparation>summary{cursor:pointer;font-size:.9rem;font-weight:600;padding:12px 0;min-height:44px;line-height:1.5;color:var(--green-dark)}
+.lesson-preparation[open]>summary{border-bottom:1px solid var(--line)}
+.lesson-preparation-info{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 24px;padding:16px 0}
+body.study-shell[data-page="les"] .lesson-top .lesson-source-title{font-size:.85rem;font-weight:500;line-height:1.5;margin:8px 0 4px}
+.lesson-preparation .lesson-meta{font-size:.85rem;line-height:1.5;gap:8px 24px}
+.lesson-preparation .lesson-start{grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));padding:0 0 20px;margin:0;border:0;border-radius:0;background:transparent;gap:24px}
+.lesson-preparation .lesson-start>div{min-width:0}
+.lesson-preparation .lesson-start h2{font-size:1rem;line-height:1.5;margin:0 0 8px}
+.lesson-preparation .lesson-start ul{padding-left:20px;margin:0}
+body[data-page="les"] #main .lesson-preparation li,body[data-page="les"] #main .lesson-preparation p{text-align:left;hyphens:none}
+body[data-page="les"] #main .lesson-preparation .lesson-start li{margin:0 0 6px;line-height:1.6}
+body[data-page="les"] #main .lesson-preparation .lesson-start li:last-child{margin-bottom:0}
+.lesson-preparation aside.learning-context{padding:20px 0;margin:0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
+.lesson-preparation aside.learning-context h2{font-size:1rem;line-height:1.5;margin:0 0 8px}
+.lesson-preparation aside.learning-context .actions{margin-bottom:0}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation .lesson-start{background:transparent;border:0}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation aside.learning-context{background:transparent;border:0;border-top:1px solid var(--line)}
 .lesson-opening{margin:16px 0}
 .lesson-conclusion{margin:24px 0 16px;padding-top:16px;border-top:1px solid var(--line)}
 .lesson-conclusion h2{font-size:1.1rem;margin-bottom:10px}
@@ -97,6 +110,7 @@ html[data-study-theme=dark] .section-body p.note.learning-source{background:tran
 @media(min-width:761px){
  body.study-shell[data-page="les"]{--study-sidebar-width:var(--lesson-panel-width,248px)}
  body.study-shell[data-page="les"].lesson-panel-closed{--study-sidebar-width:0px}
+ body.study-shell[data-page="les"].lesson-panel-closed .layout{grid-template-columns:minmax(0,1fr)}
  body.study-shell[data-page="les"].lesson-panel-closed #sidebar{display:none}
  body.study-shell[data-page="les"] #menu-toggle{display:inline-flex;align-items:center;min-height:36px;white-space:nowrap}
 }
