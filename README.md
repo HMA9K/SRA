@@ -4,7 +4,7 @@ Een leerroute vanaf nulkennis naar de voorgeschreven onderwerpen van Sampling & 
 
 ## Openen
 
-- **SRA interactieve samenvatting.html**: zelfstandig openen op een computer. Stijlen, lessen en scripts zitten in dit bestand. De map `bronnen` moet ernaast blijven voor bronlinks.
+- **SRA interactieve samenvatting.html**: zelfstandig openen op een computer. Stijlen, lessen en scripts zitten in dit bestand. De mappen `bronnen`, `pdf-reader` en `vendor` moeten ernaast blijven voor bronlinks, de PDF-lezer en de uitgebreide antwoordeditor.
 - **index.html**: dezelfde app, met losse bestanden voor onderhoud en hosting.
 - **SRA leesversie.html**: alle uitleg en checks zonder scripts. Geschikt voor een bestandsvoorvertoning die scripts blokkeert.
 - De ZIP in de map `output` binnen deze projectmap bevat de app en lokale bronbestanden. Pak deze eerst volledig uit.
@@ -25,11 +25,11 @@ Catalogus: `scripts/terminology.py`. Kennisstart en formules: `scripts/lesson_gu
 
 ## Inhoud
 
-19 lessen, 57 begripchecks, 175 meerkeuzevragen, 19 interactieve reken-/onderzoeksbladen, een begrippenlijst en 10 volledige tentamens met 224 vragen. Stapsgewijs geopende voorbeelden, lokale voortgang, aparte eerste/laatste pogingen, export/import, tentamenuitwerkingen en een rekenmachine.
+19 lessen, 57 begripchecks, 409 unieke meerkeuzevragen (175 syllabusvragen en 234 brongebonden tentamenoefeningen), 19 interactieve reken-/onderzoeksbladen, een begrippenlijst en 10 volledige tentamens met 224 vragen. Stapsgewijs geopende voorbeelden, lokale voortgang, aparte eerste/laatste pogingen, export/import, tentamenuitwerkingen en een rekenmachine.
 
 De cijfers bij de checks zijn geen tentamencijfer. Volledige tentamens gebruiken de oorspronkelijke vragen, casussen, tabellen en antwoordmodellen. Open antwoorden worden met het officiële model vergeleken en door de student zelf beoordeeld.
 
-De hoofdpagina geeft vier keuzes: **Leren**, **Oefenvragen**, **Tentamenanalyse** en **Tentamens**. Oefenvragen biedt per onderwerp zes vragen met oplopende moeilijkheid. De begripchecks uit de lessen blijven ook afzonderlijk bereikbaar. Naast iedere controleknop staat de keuze om een antwoord direct na aanklikken na te kijken; deze voorkeur geldt voor beide omgevingen en blijft bewaard. De toelichting verschijnt onder het gekozen antwoord, met rekenstappen, patroonherkenning, valkuilen en uitleg per antwoordmogelijkheid. Tentamens gebruikt de CAFA2-bediening met één vraag per scherm, een antwoordeditor en de knoppen Overzicht, Sectie, Introductie, Markeren en Toets voltooien. Het antwoordmodel verschijnt onder de eigen uitwerking. De oude oefenroutes zijn verwijderd; bestaande links openen de bijbehorende volledige tentamenvraag. Oude aantekeningen blijven beschikbaar bij Voortgang.
+De hoofdpagina geeft vier keuzes: **Leren**, **Oefenvragen**, **Tentamenanalyse** en **Tentamens**. Oefenvragen biedt per onderwerp vragen met oplopende moeilijkheid en een bronfilter. De begripchecks uit de lessen blijven ook afzonderlijk bereikbaar. Naast iedere controleknop staat de keuze om een antwoord direct na aanklikken na te kijken; deze voorkeur geldt voor beide omgevingen en blijft bewaard. De toelichting verschijnt onder het gekozen antwoord, met rekenstappen, patroonherkenning, valkuilen en uitleg per antwoordmogelijkheid. Tentamens gebruikt de CAFA2-bediening met één vraag per scherm, een antwoordeditor en de knoppen Overzicht, Sectie, Introductie, Markeren en Toets voltooien. Het antwoordmodel verschijnt onder de eigen uitwerking. De oude oefenroutes zijn verwijderd; bestaande links openen de bijbehorende volledige tentamenvraag. Oude aantekeningen blijven beschikbaar bij Voortgang.
 
 Elke les bevat een eigen onderzoek. De grafieken reageren op invoer en tonen naast de afbeelding ook rekenwaarden en een interpretatie. Bij de eerste les en de tentamenaanpak helpt een interactief schema bij het maken van keuzes. Demonstratiegegevens zijn herkenbaar; het wijzigen van zulke gegevens verandert de oorspronkelijke cursusbronnen niet.
 
@@ -57,7 +57,7 @@ tests/validate.cjs
 bronnen/                 lokale kopieën, niet gevolgd in Git
 ```
 
-Inhoud aanpassen in `scripts/build_content.py`. De brongebonden aanvullingen en extra oefenvragen staan in `scripts/course_completion.py` en `scripts/completion_questions.py`. Installeer voor het bouwen eerst de Python-kleurparser met `python -m pip install -r requirements-build.txt`. Met Node.js en Python 3 beschikbaar kun je vanuit een gewone clone `npm test` en `npm run build` uitvoeren. Er zijn geen npm-afhankelijkheden om te installeren. Deze bouwmodus maakt de data, zelfstandige HTML, leesversie en een ZIP zonder bronbestanden. De app heeft geen externe libraries, fonts of netwerkdiensten nodig.
+Inhoud aanpassen in `scripts/build_content.py`. De brongebonden aanvullingen en extra oefenvragen staan in `scripts/course_completion.py` en `scripts/completion_questions.py`. Installeer voor het bouwen eerst de Python-bouwvereisten met `python -m pip install -r requirements-build.txt`. Met Node.js en Python 3 beschikbaar kun je vanuit een gewone clone `npm test` en `npm run build` uitvoeren. Er zijn geen npm-afhankelijkheden om te installeren. Deze bouwmodus maakt de data, zelfstandige HTML, leesversie en een ZIP zonder bronbestanden. De kern werkt met lokaal meegeleverde scripts en lettertypen; de PDF-lezer gebruikt de meegeleverde PDF.js-distributie. Gebruik voor de volledige reader een lokale webserver of de gehoste versie.
 
 Maak bij een nieuwe lokale opbouw eerst de boek- en SET-uitsneden met `python scripts/prepare_completion_sources.py`. Dat vereist het oorspronkelijke boek in de SRA-map en `Attentiepunten SET V23.pdf` in de naastgelegen SET-studiemap zoals in dat script vastgelegd.
 
@@ -87,3 +87,5 @@ De [afronding en dekkingsmatrix van 20 september](docs/afronding-sra-2026-09-20.
 ### Kop en lichtmodus
 
 Alle interactieve pagina’s delen de CAFA2-kop, met het vinkje op de S en de ondertitel LEER- EN OEFENOMGEVING. Lichtmodus biedt Aan, Uit en Automatisch; een handmatige keuze geldt voor de browsersessie. Automatisch volgt het apparaat. De bestaande Meer-navigatie blijft beschikbaar. De gedeelde bestanden staan in `packages/study-ui` versie 1.1.0.
+
+De centrale bron-, bouw-, test- en publicatieafspraken staan in [PROJECT_GUIDE.md](PROJECT_GUIDE.md). De geparkeerde SRA-functies en controlegrenzen staan in [de uitvoering van 25 oktober](docs/geparkeerde-taken-2026-10-25.md). Productie gebruikt de volledige map `output/site`; automatische productie uit de bronloze Git-clone staat uit.

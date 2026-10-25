@@ -18,13 +18,13 @@ De wijziging is overgezet op de actuele hoofdtak van 3 oktober 2026. De nieuwere
 - Dezelfde browsercontrole toetst toetsenbordbediening van inline formule-uitleg, openen en herstellen van voorbeeldstappen, 41 MC-casussen, bewaren van een antwoord na herladen, formulegidsen en de twee zelfstandige HTML-versies.
 - De donkere opmaak is opnieuw gegenereerd en met de bestaande stijltests gecontroleerd. Desktop en mobiele weergave zijn ook visueel bekeken.
 
-Dit betreft lokale browser- en technische controles. Een fysieke telefoon en de productieversie zijn niet voor deze wijziging getest.
+Deze versie is via PR #8 gepubliceerd, mergecommit `976c59b1a748b3bfdb2400b0f58b6306ac17f7ff`. De volledige preview en productie zijn in de browser gecontroleerd. Van 52 kritieke bestanden, inclusief 42 bron-PDF's, kwamen de bytes overeen met de geteste build. Een fysieke telefoon is niet gebruikt.
 
 ## Nog open in de repository
 
 De [takenmatrix van 27 september](gelijkloop-en-open-taken-2026-09-27.md) is leidend. De oudere lijst met tien taken is niet de actuele status. De navigatievolgorde en dubbele home-navigatie waren al opgelost en blijven behouden.
 
-Nog te behandelen: volledige tentamendeelvraagkoppeling en zelfstandige oefenvragen met casus en eerdere uitkomsten; bronfilter; zelf uitwerken met passende statistische invoer; verstelbare casus- en leerpanelen; oorspronkelijke PDF-panelen; herstart via de intro en dashboardreset; volledige beoordeling van rekenstappen. De matrix noemt daarnaast gezamenlijke distributie en daadwerkelijke ontvangst van gebruiksmetingen. De 175 huidige MC-vragen betekenen nog geen volledige koppeling met alle 224 tentamenvragen.
+De geparkeerde SRA-functies zijn vervolgens uitgevoerd; zie [vervolguitvoering](geparkeerde-taken-2026-10-25.md). De actuele matrix onderscheidt deze resultaten van de resterende gezamenlijke distributie, daadwerkelijke meetontvangst en overdrachtstest.
 
 De GitHub-controle op 25 oktober 2026 vond daarnaast één open issue: [#5, centrale projecthandleiding en overdracht](https://github.com/HMA9K/SRA/issues/5). Er zijn op dat controlemoment geen open pull requests gevonden.
 

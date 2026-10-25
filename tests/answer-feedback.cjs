@@ -57,7 +57,7 @@ for(const [id,target]of Object.entries(legacy)){app.location.hash='#tentamen/'+i
 function loadMC(){
  const topic=D.topics[0],q=topic.questions[0],radios=q.options.map((_,i)=>input(i)),preference=input('on');
  const panels=q.options.map((_,i)=>({dataset:{mcFeedback:String(i)},hidden:true,innerHTML:'',previousElementSibling:{classList:classes()}}));
- const nodes={'#main':{innerHTML:''},'#mc-mark':input('on'),'#mc-check':{},'#mc-overview':{},'#mc-introduction':{},'#mc-count':{},'#mc-choice-status':{},'#mc-answer-status':{}};
+ const nodes={'#mc-reset':{},'.mc-own-work':{open:false},'#main':{innerHTML:''},'#mc-mark':input('on'),'#mc-check':{},'#mc-overview':{},'#mc-introduction':{},'#mc-count':{},'#mc-choice-status':{},'#mc-answer-status':{}};
  const document={querySelector(selector){if(selector==='[data-direct-check]')return preference;if(selector==='input[name="mc-choice"]:checked')return radios.find(r=>r.checked);return nodes[selector];},querySelectorAll(selector){if(selector==='input[name="mc-choice"]')return radios;if(selector==='[data-mc-feedback]')return panels;return [];}};
  const window={SRAMCData:D,SRAMCState:require('../js/mc-state.js'),localStorage,SRAAnswerSettings:app.settings};
  vm.runInNewContext(read('js/mc.js'),{window,document},{filename:'mc.js'});

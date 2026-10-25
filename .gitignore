@@ -9,3 +9,4 @@ bronnen/tentamens/*/*
 !bronnen/tentamens/*/*.jpg
 source-excerpts/
 output/
+.wrangler/

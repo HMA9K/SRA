@@ -238,3 +238,12 @@ html:has(.mc-page){scroll-padding-top:75px;scroll-padding-bottom:145px}
 .mc-guidance-sources ul{padding-left:16px;margin:0 0 12px;font-size:11px;overflow-wrap:anywhere}
 .mc-guidance-sources li+li{margin-top:10px}
 .mc-guidance-sources li>span{display:block;margin-top:3px}
+.mc-source-filter{display:flex;align-items:center;gap:8px;font-size:13px;margin:8px 0 16px;justify-content:flex-end}.mc-source-filter select{max-width:100%;padding:7px;border:1px solid var(--line);background:var(--study-surface,#fff);color:inherit}
+.mc-own-work{margin:16px 0;border:1px solid var(--line);padding:12px}.mc-own-work summary{cursor:pointer;font-weight:600}.mc-own-work[open] summary{margin-bottom:12px}
+.mc-question-layout.mc-case-layout{display:grid;grid-template-columns:var(--mc-case-width,33%) 8px minmax(0,1fr);gap:0;padding:0 16px 24px;align-items:start}
+.mc-primary{min-width:0}.mc-question-tools{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px}.mc-question-tools .mc-question-help{margin:0;padding:0;width:min(100%,280px);border:0}.mc-question-tools>.study-btn{flex-shrink:0}.mc-case-layout.mc-case-closed{grid-template-columns:minmax(0,1fr)}
+.mc-case-panel{min-width:0;max-height:calc(100dvh - 210px);overflow:auto;padding:16px;background:var(--study-surface,#fff);border-right:1px solid var(--line);position:sticky;top:150px}
+.mc-case-panel h2{font-size:1rem;margin:0 0 12px}.mc-case-panel table{display:block;max-width:100%;overflow-x:auto}.mc-case-panel img{max-width:100%;height:auto}.mc-case-panel p{text-align:justify;hyphens:auto}
+.mc-case-panel .mc-stimulus{padding:0;margin:0;border:0;background:transparent}.mc-question-tools .mc-source-filter{margin:8px 0 0}.mc-question-tools .mc-source-filter select{min-width:0}
+.mc-case-resizer{min-height:350px;align-self:stretch;cursor:col-resize;touch-action:none;border-inline:1px solid var(--line)}.mc-case-resizer:focus-visible,.mc-case-resizer:hover,.mc-case-resizer[data-dragging]{background:var(--study-teal,#008577)}
+@media(max-width:760px){.mc-question-layout.mc-case-layout{display:flex;flex-direction:column;padding:0 12px 16px}.mc-case-panel{position:static;width:100%;max-height:35dvh}.mc-case-resizer{display:none}.mc-primary{width:100%}.mc-source-filter{justify-content:flex-start}.mc-question-tools{flex-wrap:wrap}.mc-question-tools .mc-question-help{width:100%}}

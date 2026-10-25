@@ -1878,4 +1878,14 @@ html[data-study-theme=dark] .section-body p.note.learning-source{background:tran
 @media(max-width:680px){.lesson-source-title{font-size:.52em}aside.learning-context{padding:18px 16px}aside.learning-context .actions{display:flex;flex-wrap:wrap}.section-body details:not(.learning-source){padding:12px}.mc-stimulus{padding:10px;font-size:.9rem}.mc-stimulus th,.mc-stimulus td{padding:7px 9px}.learning-figure figcaption{font-size:.8rem}}
 @media print{aside.learning-context .actions{display:none}.learning-figure{break-inside:avoid}}
 .section-title{flex:1;min-width:0}
+@media(min-width:761px){
+ body.study-shell[data-page="les"]{--study-sidebar-width:var(--lesson-panel-width,248px)}
+ body.study-shell[data-page="les"].lesson-panel-closed{--study-sidebar-width:0px}
+ body.study-shell[data-page="les"].lesson-panel-closed #sidebar{display:none}
+ body.study-shell[data-page="les"] #menu-toggle{display:inline-flex;align-items:center;min-height:36px;white-space:nowrap}
+}
+#lesson-panel-resizer{position:fixed;z-index:41;top:calc(var(--study-header-height) + var(--learning-head-height,58px));bottom:0;left:calc(var(--lesson-panel-width,248px) - 4px);width:8px;cursor:col-resize;touch-action:none;background:transparent}
+#lesson-panel-resizer:hover,#lesson-panel-resizer:focus-visible,#lesson-panel-resizer[data-dragging]{background:var(--study-teal,#008577);outline:0}
+#lesson-panel-resizer[hidden]{display:none}
+@media(max-width:760px){#lesson-panel-resizer{display:none}}
 svg{max-width:100%;height:auto}</style></html>

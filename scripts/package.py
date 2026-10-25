@@ -48,8 +48,12 @@ if not args.without_sources:
     build_exams.build()
     import build_cirrus_data
     build_cirrus_data.build()
+    import build_original_pdfs
+    build_original_pdfs.build()
 
 build_mc.build()
+import build_exam_practice
+build_exam_practice.build()
 import build_mc_exam_frequency
 build_mc_exam_frequency.build(check_sources=not args.without_sources)
 payload = dict(lessons=build_content.lessons, sources=build_content.sources,
@@ -80,7 +84,7 @@ for tag, name, attributes in re.findall(r'(<link rel="stylesheet" href="([^"]+)"
     # Preserve stylesheet isolation when the portable app embeds CSS inline.
     portable=portable.replace(tag,'<style'+attributes+'>\n'+path.read_text(encoding='utf-8')+'\n</style>')
 presentation_css=(root/'css/presentation.css').read_text(encoding='utf-8')
-for name in ['data/course.js','data/exams.js','data/mc.js','data/mc-exam-frequency.js','js/math.js','js/lab-layout.js','js/labs.js','js/inline-help.js','js/terms.js','js/formula-help.js','js/navigation.js','js/exams.js','js/mc-state.js','js/mc.js','vendor/cafa2-cirrus/js/exam-engine.js','vendor/cafa2-cirrus/js/answer-editor.js','js/answer-input-tools.js','js/tinymce-answer-editor.js','data/cirrus-exams.js','js/cirrus.js','js/exam-study-links.js','js/calculator-input.js','js/app.js','js/calculator.js','js/exam-cirrus-layout.js','js/input-table-layout.js']:
+for name in ['data/course.js','data/exams.js','data/mc.js','data/exam-practice.js','data/mc-exam-frequency.js','js/math.js','js/lab-layout.js','js/labs.js','js/inline-help.js','js/terms.js','js/formula-help.js','js/navigation.js','js/exams.js','js/mc-state.js','js/mc-case-panel.js','js/mc.js','vendor/cafa2-cirrus/js/exam-engine.js','vendor/cafa2-cirrus/js/answer-editor.js','js/answer-input-tools.js','js/tinymce-answer-editor.js','data/cirrus-exams.js','data/exam-original-pdfs.js','js/cirrus.js','js/exam-study-links.js','js/calculator-input.js','js/lesson-panel.js','js/app.js','js/calculator.js','js/exam-cirrus-layout.js','js/input-table-layout.js','js/pdf-panels.js']:
     script=(root/name).read_text(encoding='utf-8').replace('</script','<\\/script')
     portable=re.sub(r'<script defer src="'+re.escape(name)+r'(?:\?[^"<>]*)?"></script>','',portable)
     portable=portable.replace('</body>',f'<script>\n{script}\n</script>\n</body>')
@@ -140,7 +144,7 @@ zip_name = 'SRA interactieve samenvatting zonder bronbestanden.zip' if args.with
 with zipfile.ZipFile(output/zip_name,'w',zipfile.ZIP_DEFLATED) as z:
     for p in root.rglob('*'):
         relative = p.relative_to(root)
-        if not p.is_file() or any(x in relative.parts for x in ['__pycache__','.git','.playwright-cli','tmp','node_modules','output','source-excerpts']):
+        if not p.is_file() or any(x in relative.parts for x in ['__pycache__','.git','.playwright-cli','.wrangler','tmp','node_modules','output','source-excerpts']):
             continue
         if args.without_sources and ((relative.parts[0] == 'bronnen' and p.suffix.lower() != '.jpg') or p.suffix.lower() == '.pdf'):
             continue

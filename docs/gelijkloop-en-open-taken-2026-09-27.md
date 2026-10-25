@@ -1,6 +1,6 @@
 # Gelijkloop van CAFA2 en SRA
 
-Controle van 27 september 2026. Dit document is de actuele ingang voor de gezamenlijke bediening en de nog openstaande verschillen. Oudere verslagen blijven historische controles; hun vinkjes bewijzen niet de actuele toestand van de andere omgeving.
+Bijgewerkt op 25 oktober 2026. De oorspronkelijke gezamenlijke controle dateert van 27 september 2026. Dit document is de actuele ingang voor de gezamenlijke bediening en de nog openstaande verschillen. Oudere verslagen blijven historische controles; hun vinkjes bewijzen niet de actuele toestand van de andere omgeving.
 
 ## Gezamenlijke opzet
 
@@ -24,22 +24,23 @@ De bestanden `js/exam-cirrus-layout.js`, `css/exam-cirrus-layout.css` en `tests/
 | Onderdeel | CAFA2 | SRA | Nog nodig |
 |---|---|---|---|
 | Algemene paginakop, Home, Meer, thema en knopvolgorde | Uitgevoerd in deze wijziging | Uitgevoerd in deze wijziging | Gezamenlijk onderhouden en beide browsercontroles uitvoeren bij een wijziging |
-| Originele tentamen- en uitwerking-PDF in linker en rechter paneel | 22 oorspronkelijke PDF-bronnen gekoppeld; alle elf tentamens volledig beschikbaar | Geparkeerd op verzoek | SRA dezelfde bronknoppen, paneelwissels, herstelbediening en controles geven; zie [specificatie](https://github.com/HMA9K/CAFA2/blob/main/docs/originele-tentamen-pdfs.md) |
-| Cirrus-tentamenindeling, zwevende casus, markeringen, compacte rekenmachine | Aanwezig | Aanwezig | Geen afzonderlijke open implementatietaak |
-| MC-koppeling van iedere tentamendeelvraag | 282 bronnen gekoppeld; 380 tentamenoefeningen, waarvan 65 samengestelde vragen gesplitst | 134 bestaande MC-vragen; geen volledige deelvraagkoppeling | SRA-dekkingsmatrix maken en ontbrekende tegenhangers uit bestaande tentamenrecords toevoegen |
-| MC-casus, eerdere uitkomsten, gedeelde voortgang per onderwerp | Aanwezig voor de ingevoerde tentamenoefeningen | Niet overgenomen voor alle tentamendeelvragen | SRA-bronvragen zelfstandig oefenbaar maken met echte casus en benodigde eerdere uitkomsten |
-| Bronfilter Alle vragen / Syllabusvragen / Tentamenvragen | Aanwezig | Ontbreekt | SRA-filter met aantallen, routes, voortgang, resetten en behoud van antwoorden uitvoeren |
-| Vraaggerichte patroonherkenning | Ingevoerd | Herkenningsvelden aanwezig voor alle 134 MC-vragen | Bij nieuwe SRA-tentamenoefeningen eveneens brongebonden herkenningsuitleg toevoegen en beoordelen |
-| Zelf uitwerken en invoercomponenten in MC | Tekst, journaalposten en voorraadcellen aanwezig | Bestaande MC-bank biedt antwoordkeuze | SRA dezelfde keuze voor Zelf uitwerken en passende invoervormen geven; geen ongeschikte financiële vraagvormen kopiëren |
-| Tabellen en casusschema's | Financiële herstelcontrole en 9 schema's aanwezig | Oorspronkelijke statistische bronbeelden behouden | Bij de uitbreiding van SRA-MC tabellen, grafieken en eerdere uitvoer expliciet behouden; semantische kolommen gebruiken |
-| Opnieuw beginnen via intro en alle tentamenvoortgang resetten | Beide aanwezig | Intro laat een nieuwe poging toe; dashboard mist overeenkomstige herstart- en resetbediening | SRA-dashboard gelijk trekken; annuleren, opslagfouten en andere tabbladen testen |
-| Rekenstappen zelfstandig begrijpelijk, inclusief formuleoverzicht | Bestaande uitleg; geen volledige nieuwe beoordeling in deze wijziging | Aanvullende verbetering lokaal geparkeerd | Doel, gegevens, formule, invulling, eenheid en verbinding naar de volgende stap overal inhoudelijk beoordelen |
-| Compactere spacing in alle uitleg en formuleblokken | Vraagruimte compacter; volledige leerinhoud niet opnieuw beoordeeld | Idem | Afzonderlijke controle van alinea's, lijsten, voorbeelden, formules en tabellen in beide thema's |
-| Verstelbaar en inklapbaar linker leerpaneel | Readerbediening aanwezig; geen gezamenlijke breedtebediening | Lespaneel heeft nog geen gezamenlijke breedtebediening | Leerpanelen gelijk trekken, los van de reeds bestaande casusresizers; positie en antwoorden behouden |
+| Originele PDF-panelen | Aanwezig | Uitgevoerd: 20 documenten, reader en arceringen | Publicatiecontrole per release; geen SRA-assistent of samengestelde toets aanwezig |
+| MC-koppeling van iedere bronvraag | Aanwezig | Uitgevoerd: 224/224 records, 234 unieke oefeningen | Bronwijzigingen via de dekkingsmatrix onderhouden |
+| MC-casus, eerdere uitkomsten en gedeelde voortgang | Aanwezig | Uitgevoerd, oorspronkelijke casus/bronbeelden/uitwerking behouden | Onderhoud bij nieuwe bronvragen |
+| Bronfilter | Aanwezig | Uitgevoerd voor aantallen, routes, resultaten en reset | Geen afzonderlijke open implementatietaak |
+| Vraaggerichte patroonherkenning | Aanwezig | Aanwezig bij 175 syllabusvragen en 234 tentamenoefeningen | Brongebonden inhoud blijven beoordelen bij wijzigingen |
+| Zelf uitwerken | Aanwezig | Bestaande tentameneditor hergebruikt, concept in export/import | Financiële matrices en journaalposten zijn zonder SRA-bronvraag niet van toepassing |
+| Tabellen, grafieken en casusschema's | Aanwezig | Oorspronkelijke statistische bronbeelden en HTML behouden | Geen nieuwe reconstructie uit losse getallen |
+| Opnieuw beginnen en tentamenreset | Aanwezig | Uitgevoerd en getest op behoud, annuleren, opslagfout en ander tabblad | Geen afzonderlijke open implementatietaak |
+| Rekenstappen en formuleoverzicht | Bestaande uitleg | Lesinleiding, voorbeeldvraag, slot en formuleweergave verbeterd; bestaande rekencontroles slagen | De eerder vastgelegde grenzen rond ontbrekende ruwe SPSS-data blijven gelden |
+| Compactere spacing | Vraagruimte compacter | Lessen en oefenruimte gecontroleerd, vier breedtes en licht/donker | Fysieke telefoontest niet uitgevoerd |
+| Verstelbaar en inklapbaar leerpaneel | Eigen readerbediening | SRA-lesmenu uitgevoerd, inclusief toetsenbord en bewaren | Geen claim dat beide apps nu hetzelfde distributiepakket gebruiken |
 | Gemeenschappelijke distributie en automatische controle op gelijkloop | Losse gedeelde bestanden | Lokale study-ui-distributie plus losse gedeelde bestanden | Beide afnemers aan dezelfde versiebron koppelen en releasecontrole automatiseren |
 | Oefenactiviteit meten | StudyMeasure en gebeurtenissen aanwezig | StudyMeasure en gebeurtenissen aanwezig | Ontvangst en aantallen in de echte GoatCounter-dashboards controleren; code-aanwezigheid is geen ontvangstbewijs |
 
-De lokaal geparkeerde navigatievolgorde en dubbele home-navigatie zijn in deze wijziging meegenomen. De inhoudelijke uitlegverbetering en het linker leerpaneel blijven aparte open taken. De oudere SRA-boekcontrole is opgevolgd door `docs/afronding-sra-2026-09-20.md`; de daar verwerkte boekhiaten worden hier niet opnieuw als ontbrekend vermeld.
+De geparkeerde SRA-bediening is uitgevoerd in de wijziging van 25 oktober. Zie [uitvoering en controlebewijs](geparkeerde-taken-2026-10-25.md). De eerste leesbaarheidsverbetering is gepubliceerd via [PR #8](https://github.com/HMA9K/SRA/pull/8). Oudere vinkjes hieronder of in andere verslagen blijven historische bewijzen. De boekcontrole is opgevolgd door `docs/afronding-sra-2026-09-20.md`.
+
+Het documentatiedeel van [issue #5](https://github.com/HMA9K/SRA/issues/5) is toegevoegd in `PROJECT_GUIDE.md`, met verwijzingen vanuit `AGENTS.md` en `CLAUDE.md`. De gevraagde echte overdrachtstest blijft open.
 
 De CAFA2-assistent heeft eigen historische controles en resterende validatiepunten in `docs/CAFA2_ASSISTENT_TESTSTATUS.md`. Deze wijziging bevat geen nieuwe modelkwaliteitscontrole of SRA-assistentintegratie. Volledige functionele gelijkloop omvat dus meer dan alleen deze presentatieaanpassing.
 
