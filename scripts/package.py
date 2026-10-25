@@ -7,11 +7,22 @@ import shutil
 import zipfile
 import hashlib
 import re
+import base64
 import build_content
 import build_mc
 
 root = Path(__file__).resolve().parents[1]
 workspace = root.parent
+def embed_learning_images(content):
+    """Behoud lesfiguren ook als alleen de zelfstandige HTML wordt geopend."""
+    for relative in set(re.findall(r'assets/learning/[A-Za-z0-9_.-]+\.(?:png|jpg)', content)):
+        image = root / relative
+        if not image.is_file():
+            raise ValueError('Ontbrekende lesfiguur: ' + relative)
+        mime = 'image/png' if image.suffix == '.png' else 'image/jpeg'
+        content = content.replace(relative, 'data:' + mime + ';base64,' + base64.b64encode(image.read_bytes()).decode('ascii'))
+    return content
+
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--without-sources', action='store_true',
                     help='Bouw zonder lokale bron-PDF\'s en maak een aparte ZIP zonder bronbestanden.')
@@ -74,22 +85,24 @@ for name in ['data/course.js','data/exams.js','data/mc.js','data/mc-exam-frequen
     portable=re.sub(r'<script defer src="'+re.escape(name)+r'(?:\?[^"<>]*)?"></script>','',portable)
     portable=portable.replace('</body>',f'<script>\n{script}\n</script>\n</body>')
 portable = re.sub(r'(?m)^[ \t]+$', '', portable)
+portable = embed_learning_images(portable)
 (root/'SRA interactieve samenvatting.html').write_text(portable,encoding='utf-8')
 
 e=html.escape
-parts=['<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SRA · Leesversie</title><style>body{max-width:900px;margin:35px auto;padding:0 20px;font:17px/1.65 Arial;color:#242431}h1,h2{color:#444159}h2{margin-top:38px}a{color:#006c47}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f0f1f6}.formula{padding:15px;background:#f0f3fa;overflow-wrap:anywhere}details{margin:15px 0;padding:12px;border:1px solid #ddd}summary{cursor:pointer}article{border-top:2px solid #008859;margin-top:45px}.note{padding:12px;background:#fff6ea}@media(max-width:600px){table{display:block;overflow-x:auto}body{font-size:16px}}@media print{details{break-inside:avoid}}</style><h1>SRA · Zelfstandige leesversie</h1><p>Alle uitleg, voorbeelden en begripchecks zonder scripts. Open antwoorden met de uitklapknop. Voor interactieve rekenbladen en voortgang gebruik je <a href="SRA interactieve samenvatting.html">de interactieve versie</a>.</p><ol>']
+parts=['<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SRA · Leesversie</title><style>body{max-width:900px;margin:35px auto;padding:0 20px;font:17px/1.65 Arial;color:#242431}p,li{text-align:justify;hyphens:auto}h1,h2{color:#444159}h2{margin-top:38px}a{color:#006c47}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f0f1f6}.formula{padding:15px;background:#f0f3fa;overflow-wrap:anywhere}details{margin:15px 0;padding:12px;border:1px solid #ddd}summary{cursor:pointer}article{border-top:2px solid #008859;margin-top:45px}.note{padding:12px;background:#fff6ea}@media(max-width:600px){table{display:block;overflow-x:auto}body{font-size:16px}}@media print{details{break-inside:avoid}}</style><h1>SRA · Zelfstandige leesversie</h1><p>Alle uitleg, voorbeelden en begripchecks zonder scripts. Open antwoorden met de uitklapknop. Voor interactieve rekenbladen en voortgang gebruik je <a href="SRA interactieve samenvatting.html">de interactieve versie</a>.</p><ol>']
 for l in build_content.lessons:parts.append(f'<li><a href="#{l["id"]}">{e(l["title"])}</a></li>')
 parts.append('</ol>')
 for i,l in enumerate(build_content.lessons):
-    parts.append(f'<article id="{l["id"]}"><h2>{i+1}. {e(l["title"])}</h2><p>{e(l["intro"])}</p>')
+    parts.append(f'<article id="{l["id"]}"><h2>{i+1}. {e(l["title"])}</h2><p>{e(l["reading"]["opening"])}</p>')
+    parts.append('<p><strong>'+e(l['curriculum']['title'])+'</strong></p>')
     for heading, items in [('Dit heb je vooraf nodig', l['prerequisites']), ('Dit ga je leren', l['goals'])]:
         parts.append('<h3>'+heading+'</h3><ul>'+''.join('<li>'+e(item)+'</li>' for item in items)+'</ul>')
     for s in l['sections']:parts.append(f'<h3>{e(s["title"])}</h3>{s["html"]}')
     parts.append('<details><summary>Formules bij dit onderwerp uitgelegd</summary>')
     for guide in l['formulaGuide']:parts.append(f'<h3>{e(guide["title"])}</h3>{guide["html"]}')
     parts.append('</details>')
-    parts.append(f'<h3>{e(l["example"]["title"])}</h3><ol>')
-    parts.extend('<li>'+e(s)+'</li>' for s in l['example']['steps'])
+    parts.append(f'<h3>{e(l["example"]["title"])}</h3><p>{e(l["example"]["context"])}</p><ol>')
+    parts.extend('<li>'+s+'</li>' for s in l['example']['stepsHtml'])
     parts.append('</ol><h3>Hier gaat het vaak mis</h3><ul>')
     parts.extend('<li>'+e(s)+'</li>' for s in l['pitfalls'])
     parts.append('</ul><h3>Check je begrip</h3>')
@@ -111,13 +124,14 @@ for i,l in enumerate(build_content.lessons):
         if q.get('optionExplanations'):
             parts.append('<h4>De antwoordmogelijkheden</h4>'+''.join('<p><strong>'+e(option)+'</strong><br>'+e(reason)+'</p>' for option,reason in zip(q['options'],q['optionExplanations'])))
         parts.append('</details>')
+    parts.append('<h3>De kern en het vervolg</h3><p>'+e(l['reading']['conclusion'])+'</p>')
     parts.append('<h3>Bronnen</h3><ul>')
     for ref in l['refs']:
         s=build_content.sources[ref['source']]
         parts.append(f'<li><a href="bronnen/{s["file"]}#page={ref["page"]}">{e(s["title"])}</a>: {e(ref["locator"])}</li>')
     parts.append('</ul></article>')
-parts.append('<style>'+presentation_css+'</style></html>')
-read_version='\n'.join(parts)
+parts.append('<style>'+presentation_css+(root/'css/learning-revision.css').read_text(encoding='utf-8')+'svg{max-width:100%;height:auto}</style></html>')
+read_version=embed_learning_images('\n'.join(parts))
 read_version=read_version.replace('<title>', '<script data-goatcounter="https://sra.goatcounter.com/count" data-goatcounter-settings=\'{"no_onload":true}\' async src="https://gc.zgo.at/count.js"></script><script>\n'+(root/'js/page-names.js').read_text(encoding='utf-8')+'\n</script><title>')
 (root/'SRA leesversie.html').write_text(read_version,encoding='utf-8')
 
@@ -126,7 +140,7 @@ zip_name = 'SRA interactieve samenvatting zonder bronbestanden.zip' if args.with
 with zipfile.ZipFile(output/zip_name,'w',zipfile.ZIP_DEFLATED) as z:
     for p in root.rglob('*'):
         relative = p.relative_to(root)
-        if not p.is_file() or any(x in relative.parts for x in ['__pycache__','.git','tmp','node_modules','output','source-excerpts']):
+        if not p.is_file() or any(x in relative.parts for x in ['__pycache__','.git','.playwright-cli','tmp','node_modules','output','source-excerpts']):
             continue
         if args.without_sources and ((relative.parts[0] == 'bronnen' and p.suffix.lower() != '.jpg') or p.suffix.lower() == '.pdf'):
             continue

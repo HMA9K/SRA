@@ -26,6 +26,8 @@ BOOK_LESSONS = {
 
 def bookref(source, printed):
     first,last=BOOK_PARTS[source]
+    if not first <= printed + 18 <= last:
+        raise ValueError(f'Boek p. {printed} valt niet in bronuitsnede {source} (PDF {first}-{last}).')
     return dict(source=source,page=printed+18-first+1,
                 locator=f'Boek p. {printed}; oorspronkelijke PDF p. {printed+18}; uitsnede p. {printed+18-first+1}')
 

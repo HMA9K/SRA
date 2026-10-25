@@ -9,6 +9,7 @@ import build_content as course
 import build_mc as mc
 from question_explanations import APPLICATION
 from completion_questions import QUESTIONS
+from learning_questions import QUESTIONS as LEARNING_QUESTIONS
 
 
 class QuestionExplanationTests(unittest.TestCase):
@@ -16,7 +17,7 @@ class QuestionExplanationTests(unittest.TestCase):
         checks = [q for lesson in course.lessons for q in lesson['questions']]
         questions = [q for topic in mc.make_topics() for q in topic['questions']]
         self.assertEqual(len(checks), 57)
-        self.assertEqual(len(questions), 134)
+        self.assertEqual(len(questions), 134 + sum(map(len, LEARNING_QUESTIONS.values())))
         for q in checks + questions:
             with self.subTest(question=q['id']):
                 self.assertGreaterEqual(len(q['steps']), 3)
@@ -24,7 +25,7 @@ class QuestionExplanationTests(unittest.TestCase):
                 self.assertGreater(len(q['explanation']), 150)
                 self.assertTrue(q['pattern'] and q['trap'] and q['refs'])
                 self.assertEqual(len(set(q['optionExplanations'])), len(q['options']))
-        self.assertEqual(len({q['pattern'] for q in questions}), 134)
+        self.assertEqual(len({q['pattern'] for q in questions}), len(questions))
 
     def test_rotation_preserves_option_explanations_and_correct_answer(self):
         original = {}
@@ -36,7 +37,7 @@ class QuestionExplanationTests(unittest.TestCase):
             for i, row in enumerate(meta['rows'], start=1):
                 original[f'mc-{topic}-toepassing-{i}'] = (
                     row[1], row[2], APPLICATION[f'{topic}-{i}']['optionExplanations'])
-        for questions in QUESTIONS.values():
+        for questions in [*QUESTIONS.values(), *LEARNING_QUESTIONS.values()]:
             for q in questions:
                 original[q['id']] = (q['options'], q['correct'], q['optionExplanations'])
         for topic in mc.make_topics():

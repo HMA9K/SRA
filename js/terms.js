@@ -12,6 +12,8 @@
   const APOSTROPHE = /[\u2018\u2019\u02bc]/u;
   const SKIP = 'script,style,noscript,template,input,textarea,select,option,optgroup,button,a,nav,code,pre,kbd,samp,math,svg,canvas,iframe,object,embed,[role="button"],[contenteditable="true"],[contenteditable=""],[contenteditable="plaintext-only"],[aria-hidden="true"],[data-no-terms],[data-sra-term],[data-formula-help],.formula-help-hint,.sr-only,.sra-term-popup';
   const HTML_NAMESPACE = 'http://www.w3.org/1999/xhtml';
+  // Een paragraaf is het hele omkaderde inhoudsblok, inclusief de titel.
+  const TERM_SCOPE = '[data-term-scope],details.section,.formula-guide-card,.example,.lesson-start,.pitfalls,.lesson-top,.lab,.learning-context';
 
   function catalogEntries(terms) {
     const entries = Array.isArray(terms) ? terms : terms && typeof terms === 'object' ? Object.values(terms) : [];
@@ -227,14 +229,18 @@
     if (!node || !appRoot || (!appRoot.contains(node) && node !== appRoot)) return;
     const parent = node.nodeType === 1 ? node : node.parentElement;
     if (excluded(parent)) return;
-    queued.add(node);
+    queued.add(parent.closest(TERM_SCOPE) || node);
     if (queued.size > 80) queued = new Set([appRoot]);
   }
 
   function collectRecords(records) {
     for (const record of records) {
       if (record.type === 'characterData') addToQueue(record.target);
-      else for (const node of record.addedNodes) addToQueue(node);
+      else {
+        for (const node of record.addedNodes) addToQueue(node);
+        // Na verwijderen van de eerste vermelding wordt de volgende klikbaar.
+        if (record.removedNodes.length) addToQueue(record.target);
+      }
     }
   }
 
@@ -254,6 +260,8 @@
     root = root || appRoot;
     if (!root || !appRoot || active || (root !== appRoot && !appRoot.contains(root))) return 0;
     if (excluded(root.nodeType === 1 ? root : root.parentElement)) return 0;
+    const containingScope = (root.nodeType === 1 ? root : root.parentElement).closest(TERM_SCOPE);
+    if (containingScope && appRoot.contains(containingScope)) root = containingScope;
     if (observer) {
       collectRecords(observer.takeRecords());
       observer.disconnect();
@@ -261,6 +269,14 @@
     active = true;
     let inserted = 0;
     try {
+      // Opnieuw bepalen in leesvolgorde maakt dit ook correct na dynamische updates.
+      if (root.querySelectorAll) {
+        for (const term of root.querySelectorAll('[data-sra-auto-term]')) {
+          term.replaceWith(documentRef.createTextNode(term.textContent));
+        }
+        root.normalize();
+      }
+      const seenByScope = new Map();
       const nodes = [];
       if (root.nodeType === 3) nodes.push(root);
       else {
@@ -271,7 +287,14 @@
       }
       for (const textNode of nodes) {
         if (!textNode.parentElement || excluded(textNode.parentElement)) continue;
-        const matches = matcher.find(textNode.nodeValue);
+        const scope = textNode.parentElement.closest(TERM_SCOPE) || appRoot;
+        if (!seenByScope.has(scope)) seenByScope.set(scope, new Set());
+        const seen = seenByScope.get(scope);
+        const matches = matcher.find(textNode.nodeValue).filter(match => {
+          if (seen.has(match.id)) return false;
+          seen.add(match.id);
+          return true;
+        });
         if (!matches.length) continue;
         const fragment = documentRef.createDocumentFragment();
         const useSpan = !!textNode.parentElement.closest('label,summary,legend');
@@ -280,6 +303,7 @@
           if (match.start > offset) fragment.append(documentRef.createTextNode(textNode.nodeValue.slice(offset, match.start)));
           const term = element(useSpan ? 'span' : 'button', 'sra-term', match.text);
           term.dataset.sraTerm = match.id;
+          term.dataset.sraAutoTerm = '';
           term.setAttribute('aria-haspopup', 'dialog');
           term.setAttribute('aria-label', match.text + ': uitleg openen');
           if (useSpan) {

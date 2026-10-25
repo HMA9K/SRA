@@ -1,0 +1,96 @@
+/* Compact reading layout. Equations and tables retain their own alignment. */
+body.study-shell[data-page="les"]{--study-sidebar-width:248px}
+body.study-shell[data-page="les"] .layout{max-width:none;align-items:start}
+body.study-shell[data-page="les"] #sidebar{padding:16px 12px 24px;top:calc(var(--study-header-height) + var(--lesson-nav-height,49px));height:calc(100dvh - var(--study-header-height) - var(--lesson-nav-height,49px))}
+body.study-shell[data-page="les"] .side-head{margin:12px 0 6px}
+body.study-shell[data-page="les"] .phase-title{margin:16px 0 6px}
+body.study-shell[data-page="les"] .lesson-link{padding:8px 6px;gap:8px;margin:0;min-height:44px}
+body.study-shell[data-page="les"] main{max-width:1200px;padding:0 24px 24px}
+body.study-shell[data-page="les"] .study-page-name,body.study-shell[data-page="les"] .sra-breadcrumb{display:none}
+body.study-shell[data-page="les"] .lesson-top{position:sticky;top:calc(var(--study-header-height) + var(--lesson-nav-height,49px));z-index:30;background:var(--bg);padding:12px 0 10px;margin:0;border-bottom:1px solid var(--line)}
+body.study-shell[data-page="les"] .lesson-top .eyebrow{margin:0 0 4px;font-size:.68rem}
+body.study-shell[data-page="les"] .lesson-top h1{margin:0;font-size:1.4rem;line-height:1.25;letter-spacing:0;overflow-wrap:break-word}
+body.study-shell[data-page="les"] .jump{margin:12px 0;gap:6px}
+body.study-shell[data-page="les"] .jump a{border-radius:3px}
+.lesson-preparation{border-bottom:1px solid var(--line);margin:0 0 16px;padding:0 0 10px}
+.lesson-preparation>summary{cursor:pointer;font-size:.85rem;font-weight:600;padding:8px 0;min-height:40px;color:var(--green-dark)}
+.lesson-preparation .lesson-source-title{font-size:.8rem;margin:8px 0}
+.lesson-preparation .lesson-start{padding:12px 0;margin:12px 0;border:0;background:transparent;gap:20px}
+.lesson-preparation aside.learning-context{padding:14px 16px;margin:12px 0}
+.lesson-opening{margin:16px 0}
+.lesson-conclusion{margin:24px 0 16px;padding-top:16px;border-top:1px solid var(--line)}
+.lesson-conclusion h2{font-size:1.1rem;margin-bottom:10px}
+body[data-page="les"] #main p,body[data-page="les"] #main li,body[data-page="les"] .section-body,body[data-page="formules"] #main p,body[data-page="formules"] #main li,body[data-page="formules"] .formula-guide-card{text-align:justify;hyphens:auto;text-justify:inter-word}
+body[data-page="les"] #main summary,body[data-page="formules"] #main summary{text-align:left}
+body[data-page="les"] #main p{margin-bottom:12px}
+body[data-page="les"] #main li{margin-bottom:6px}
+body.study-shell[data-page="les"] .section{margin:12px 0}
+body.study-shell[data-page="les"] .section>summary{padding:14px 16px;gap:10px}
+body.study-shell[data-page="les"] .section-body{padding:0 16px 6px;line-height:1.6}
+body.study-shell[data-page="les"] .example{margin:20px 0;padding:18px 16px}
+body[data-page="les"] .formula,body[data-page="formules"] .formula{margin:12px 0;padding:8px 14px}
+body[data-page="les"] .formula-row,body[data-page="formules"] .formula-row{padding:8px 0}
+body[data-page="les"] .formula-label,body[data-page="formules"] .formula-label{margin-bottom:4px}
+body[data-page="les"] .table-scroll{margin:12px 0}
+body[data-page="les"] table{margin:8px 0}
+body[data-page="les"] th,body[data-page="les"] td{padding:8px 10px}
+body.study-shell[data-page="les"] .lesson-bottom{position:static;padding:14px 0;border-width:1px 0 0;background:transparent}
+math[display="inline"]{display:inline math;math-style:normal;font-size:1.08em;white-space:nowrap}
+@media(max-width:760px){
+ body.study-shell[data-page="les"] main{padding:0 14px 24px}
+ body.study-shell[data-page="les"] .lesson-top h1{font-size:1.15rem}
+ body.study-shell[data-page="les"] .lesson-top{padding:8px 0}
+ body.study-shell[data-page="les"] .section>summary{padding:12px;gap:8px}
+ body.study-shell[data-page="les"] .section-body{padding:0 12px 6px}
+ body.study-shell[data-page="les"] .jump{gap:5px;margin:10px 0}
+ body.study-shell[data-page="les"] .jump a{padding:6px 8px}
+}
+@media print{body.study-shell[data-page="les"] .lesson-top{position:static}.lesson-preparation{display:none}}
+/* Use the current shared page heading, including Home, Dashboard and Meer. */
+body.study-shell.learning-page-layout[data-page="les"] .learning-page-head{position:sticky;top:var(--study-header-height);z-index:40}
+body.study-shell.learning-page-layout[data-page="les"] .lesson-top{position:static;padding:10px 0 0;border:0}
+body.study-shell.learning-page-layout[data-page="les"] #sidebar{top:calc(var(--study-header-height) + var(--learning-head-height,58px));height:calc(100dvh - var(--study-header-height) - var(--learning-head-height,58px))}
+html:has(body.learning-page-layout[data-page="les"]){scroll-padding-top:0}
+body.learning-page-layout[data-page="les"] :is(#uitleg,#onderzoek,#voorbeeld,#begrip){scroll-margin-top:calc(var(--study-header-height) + var(--learning-head-height,58px) + 12px)}
+/* Brongebonden uitleg, uitvoer en casussen binnen de bestaande leeromgeving. */
+.formula-visual{--fv-green:#087c66;--fv-purple:#6857a0;--fv-orange:#a64b13;margin:20px 0;padding:16px;border:1px solid #d5e3dd;border-radius:8px;background:#f8fbfa;min-width:0}
+.formula-visual>h3{margin:0 0 7px;font-size:1rem}.formula-visual .fv-provenance{margin:0 0 14px;font-size:.78rem;line-height:1.5;color:#526579}
+.fv-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.fv-panels>.fv-panel:only-child{max-width:440px;width:100%}
+.fv-panel{margin:0;min-width:0}.fv-panel>figcaption{font-size:.9rem;font-weight:650;line-height:1.45;margin:0 0 8px}
+.fv-chart{display:block;width:100%;max-width:440px;height:auto;overflow:visible}.fv-chart text{font-family:Arial,Helvetica,sans-serif;font-size:12px;fill:#374b5a}.fv-chart .fv-gridline{stroke:#e0e8e5;fill:none}.fv-chart .fv-axis{stroke:#526579;fill:none}
+.formula-visual .fv-legend{display:flex;flex-wrap:wrap;gap:5px 12px;font-size:.75rem;line-height:1.5;margin:4px 0 8px}.fv-legend>span{display:flex;gap:5px;align-items:center}.fv-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;flex:none}
+.formula-visual .fv-work{font-size:.84rem;line-height:1.65;margin:8px 0 0}.formula-visual .fv-meaning{margin:16px 0 0;font-size:.86rem;line-height:1.65;border-top:1px solid #d5e3dd;padding-top:12px}
+.formula-visual .fv-table{width:100%;font-size:.82rem;border-collapse:collapse;min-width:0}.fv-table caption{text-align:left;font-size:.76rem;line-height:1.5;padding:0 0 8px;color:#526579}.fv-table th,.fv-table td{padding:7px 8px;text-align:left;white-space:normal;border:1px solid #d5e3dd}.fv-table th{background:#edf4f0;font-weight:600}.formula-visual .table-scroll{min-width:0;max-width:100%}
+html[data-study-theme=dark] .formula-visual{--fv-green:#70dec0;--fv-purple:#c0b0f3;--fv-orange:#ffc18b;background:#152129;border-color:#354852;color:#e5edf3}
+html[data-study-theme=dark] .formula-visual .fv-provenance,html[data-study-theme=dark] .fv-table caption{color:#a7b7c3}html[data-study-theme=dark] .fv-chart text{fill:#e5edf3}html[data-study-theme=dark] .fv-chart .fv-gridline{stroke:#354852}html[data-study-theme=dark] .fv-chart .fv-axis{stroke:#a7b7c3}html[data-study-theme=dark] .fv-table th{background:#25383b}html[data-study-theme=dark] .fv-table td,html[data-study-theme=dark] .fv-table th,html[data-study-theme=dark] .fv-meaning{border-color:#354852}
+@media(max-width:700px){.fv-panels{grid-template-columns:1fr;gap:20px}.formula-visual{padding:12px}.fv-panels>.fv-panel{max-width:440px;width:100%}.fv-chart text{font-size:13px}}
+@media print{.formula-visual{background:white;color:#172a37;break-inside:avoid;--fv-green:#087c66;--fv-purple:#6857a0;--fv-orange:#a64b13}.fv-panels{grid-template-columns:repeat(2,minmax(0,1fr))}.fv-chart text{fill:#172a37!important}.fv-chart .fv-gridline{stroke:#d5e3dd!important}.fv-table th{background:#edf4f0!important}}
+.lesson-source-title{display:block;font-size:.48em;font-weight:600;line-height:1.6;color:#526579;margin:0 0 10px;letter-spacing:0}
+.learning-list-source{display:block;margin-top:5px;font-size:12px;font-weight:400;line-height:1.5;color:#596b78}
+aside.learning-context{border:1px solid #cddcd7;border-left:4px solid #008859;border-radius:8px;background:#f6faf8;padding:22px 26px;margin:24px 0;min-width:0}
+aside.learning-context h2{font-size:1.12rem;margin:0 0 10px}aside.learning-context p{margin:10px 0}.learning-frequency{font-size:.92rem}.learning-evidence{margin:16px 0;font-size:.88rem}.learning-evidence>summary{cursor:pointer;font-weight:600;color:#285749}.learning-evidence[open]>summary{margin-bottom:10px}
+.learning-source{font-size:.8rem;line-height:1.55;margin:16px 0 10px;color:#586b76;border-top:1px solid #e1e7e9;background:transparent}
+details.learning-source{padding:0;border-right:0;border-bottom:0;border-left:0;border-radius:0}
+details.learning-source>summary{display:flex;align-items:center;min-height:40px;padding:8px 2px;gap:0;font-size:.8rem;line-height:1.4;font-weight:500;color:#586b76;list-style:none}
+details.learning-source>summary::before{content:'▸';display:inline-block;margin-right:8px;font-size:.8rem}
+details.learning-source[open]>summary::before{transform:rotate(90deg)}
+.section-body details.learning-source>summary::after{content:none}
+details.learning-source>summary:focus-visible{outline:2px solid #587482;outline-offset:2px}
+details.learning-source>ul{margin:2px 0 8px;padding-left:18px}
+details.learning-source li{margin-bottom:4px}
+p.note.learning-source{padding:9px 0 0;border-left:0;background:transparent}
+html[data-study-theme=dark] .section-body p.note.learning-source{background:transparent}
+.learning-source a{overflow-wrap:anywhere}
+.learning-figure{margin:24px 0;max-width:100%;min-width:0}.learning-figure img{display:block;max-width:100%;height:auto;border:1px solid #dce4ec;border-radius:6px}.learning-figure figcaption{font-size:.87rem;line-height:1.5;color:#526579;margin-top:9px}
+.section-body svg,.mc-stimulus svg{max-width:100%;height:auto;display:block}
+.section-body .table-wrap,.mc-stimulus .table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+.section-body details:not(.learning-source){margin:18px 0;padding:16px 18px;border:1px solid #dce4ec;border-radius:6px;min-width:0}
+.section-body details:not(.learning-source)>summary{font-weight:600;cursor:pointer;line-height:1.5}
+.section-body details[open]:not(.learning-source)>summary{margin-bottom:14px}
+.section-body table caption,.mc-stimulus table caption{font-weight:600;text-align:left;margin-bottom:10px;line-height:1.5}
+.mc-stimulus{margin:12px 0 24px;padding:16px;background:#f6f8fb;border:1px solid #d9e2eb;border-radius:6px;min-width:0;max-width:100%;overflow-x:auto;font-size:.94rem;line-height:1.6}
+.mc-stimulus p:first-child{margin-top:0}.mc-stimulus p:last-child{margin-bottom:0}.mc-stimulus table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}.mc-stimulus th,.mc-stimulus td{padding:9px 11px;border:1px solid #cdd7e1;text-align:left;vertical-align:top}.mc-stimulus th{background:#eaf0f5;font-weight:600}.mc-stimulus figure{margin:12px 0}.mc-stimulus figcaption{font-size:.85rem;margin-top:8px}
+@media(max-width:680px){.lesson-source-title{font-size:.52em}aside.learning-context{padding:18px 16px}aside.learning-context .actions{display:flex;flex-wrap:wrap}.section-body details:not(.learning-source){padding:12px}.mc-stimulus{padding:10px;font-size:.9rem}.mc-stimulus th,.mc-stimulus td{padding:7px 9px}.learning-figure figcaption{font-size:.8rem}}
+@media print{aside.learning-context .actions{display:none}.learning-figure{break-inside:avoid}}
+.section-title{flex:1;min-width:0}

@@ -1,6 +1,10 @@
 /* Gemaakt met Codex. Eigen oefenvarianten op de aangeleverde SRA-lesstof. */
 window.SRAMCData = {
   "version": 2,
+  "learningRevision": {
+    "id": "2026-09-25",
+    "addedQuestions": 41
+  },
   "topics": [
     {
       "id": "beginnen",
@@ -29,6 +33,26 @@ window.SRAMCData = {
           "source": "set-basis",
           "page": 1,
           "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 2,
+          "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+        },
+        {
+          "source": "slides",
+          "page": 6,
+          "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+        },
+        {
+          "source": "slides",
+          "page": 6,
+          "locator": "PDF 6-10: veel of weinig verwachte fouten"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 4,
+          "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
         }
       ],
       "questions": [
@@ -74,6 +98,26 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-10: veel of weinig verwachte fouten"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 4,
+              "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
             }
           ],
           "recognition": {
@@ -146,6 +190,26 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-10: veel of weinig verwachte fouten"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 4,
+              "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
             }
           ],
           "recognition": {
@@ -218,6 +282,26 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-10: veel of weinig verwachte fouten"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 4,
+              "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
             }
           ],
           "recognition": {
@@ -293,6 +377,26 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-10: veel of weinig verwachte fouten"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 4,
+              "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
             }
           ],
           "recognition": {
@@ -318,6 +422,74 @@ window.SRAMCData = {
                 "source": "formules",
                 "page": 1,
                 "locator": "Formules 2-4: schatting, totaal en onzekerheid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-beginnen-leertoepassing-controlebestand",
+          "level": 2,
+          "prompt": "Eigen oefenvraag. Welke schatting beantwoordt de vraag naar de werkelijke waarde van alle openstaande facturen?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een accountant trekt zonder teruglegging aselect uit het volledige bestand. Alle geselecteerde facturen worden onderzocht.</p><div class=\"table-wrap\"><table><caption>Controlebestand</caption><thead><tr><th scope=\"col\">Gegeven</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Aantal openstaande facturen N</th><td>2.400</td></tr><tr><th scope=\"row\">Onderzochte facturen n</th><td>120</td></tr><tr><th scope=\"row\">Som werkelijke waarden in steekproef</th><td>€ 9.600</td></tr><tr><th scope=\"row\">Boektotaal volledig bestand</th><td>€ 205.000</td></tr></tbody></table></div>",
+          "options": [
+            "€ 192.000, nog aan te vullen met schattingsonzekerheid",
+            "€ 9.600, want alleen die facturen zijn gecontroleerd",
+            "€ 205.000, want de administratie kent het totaal",
+            "€ 23.040.000, berekend als 2.400 × 9.600"
+          ],
+          "optionExplanations": [
+            "Het gemiddelde is 9.600/120 = 80. Het geschatte populatietotaal is 2.400 × 80 = 192.000; een puntschatting is nog geen interval.",
+            "Dit is het gecontroleerde steekproeftotaal. De vraag gaat over alle 2.400 facturen, zodat nog projectie nodig is.",
+            "De boekwaarde is bekend, maar de werkelijke waarde is juist onderwerp van controle; deze bedragen zijn niet zonder meer gelijk.",
+            "Vermenigvuldig N met het gemiddelde per post, niet met het totale bedrag van 120 onderzochte posten."
+          ],
+          "correct": 0,
+          "steps": [
+            "Selectie en controledoel betreffen dezelfde volledige populatie van 2.400 facturen.",
+            "Bereken de werkelijke waarde per onderzochte post: 9.600/120 = 80.",
+            "Projecteer het gemiddelde met MPU: 2.400 × 80 = 192.000. Voor een oordeel over nauwkeurigheid ontbreken nog spreidingsgegevens."
+          ],
+          "explanation": "Selectie en controledoel betreffen dezelfde volledige populatie van 2.400 facturen. Bereken de werkelijke waarde per onderzochte post: 9.600/120 = 80. Projecteer het gemiddelde met MPU: 2.400 × 80 = 192.000. Voor een oordeel over nauwkeurigheid ontbreken nog spreidingsgegevens.",
+          "pattern": "Herken: Welke schatting beantwoordt de vraag naar de werkelijke waarde van alle openstaande facturen? → Betekenis: Een gecontroleerd deelbestand levert het gemiddelde voor een uitspraak over het hele bestand. → Aanpak: Koppel N en n aan de juiste rijen en bereken eerst een bedrag per post voordat je naar de populatie projecteert. → Gevraagd antwoord: Een werkelijk populatietotaal met erkenning van resterende steekproefonzekerheid.",
+          "trap": "Een bekend boektotaal bewijst niet de werkelijke waarde van de te controleren populatie.",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 12,
+              "locator": "PDF p. 12-15: directe schatter"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 2-4: schatting en onzekerheid"
+            }
+          ],
+          "practiceMode": "begeleid",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke schatting beantwoordt de vraag naar de werkelijke waarde van alle openstaande facturen?",
+            "meaning": "Een gecontroleerd deelbestand levert het gemiddelde voor een uitspraak over het hele bestand.",
+            "approach": "Koppel N en n aan de juiste rijen en bereken eerst een bedrag per post voordat je naar de populatie projecteert.",
+            "answer": "Een werkelijk populatietotaal met erkenning van resterende steekproefonzekerheid."
+          },
+          "guidance": {
+            "title": "Populatie, steekproef en schatting",
+            "focus": "Koppel N en n aan de juiste rijen en bereken eerst een bedrag per post voordat je naar de populatie projecteert.",
+            "rules": [
+              "N is het aantal posten in de volledige populatie; n is het aantal onderzochte posten. Een hoofdletter W duidt hier het werkelijke populatietotaal aan; een dakje betekent dat dit totaal wordt geschat.",
+              "Een schatting gebruikt steekproefgegevens om iets over de populatie te zeggen. Benoem eerst of een aantal, gemiddelde, totaal of onzekerheidsinterval wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "slides",
+                "page": 12,
+                "locator": "PDF p. 12-15: directe schatter"
+              },
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 2-4: schatting en onzekerheid"
               }
             ]
           }
@@ -367,6 +539,26 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-10: veel of weinig verwachte fouten"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 4,
+              "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
             }
           ],
           "recognition": {
@@ -441,6 +633,26 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-10: veel of weinig verwachte fouten"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 4,
+              "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
             }
           ],
           "recognition": {
@@ -499,6 +711,21 @@ window.SRAMCData = {
           "source": "set-basis",
           "page": 1,
           "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formule 1: variantie uit som en kwadratensom"
+        },
+        {
+          "source": "slides",
+          "page": 15,
+          "locator": "PDF 15-16: equivalente variantieformules"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 1, 3 en 4"
         }
       ],
       "questions": [
@@ -544,6 +771,21 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1, 3 en 4"
             }
           ],
           "recognition": {
@@ -611,6 +853,21 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1, 3 en 4"
             }
           ],
           "recognition": {
@@ -678,6 +935,21 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1, 3 en 4"
             }
           ],
           "recognition": {
@@ -748,6 +1020,21 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1, 3 en 4"
             }
           ],
           "recognition": {
@@ -768,6 +1055,64 @@ window.SRAMCData = {
                 "source": "formules",
                 "page": 1,
                 "locator": "Formule 1: steekproefvariantie; formule 4: onzekerheid van de schatting"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-rekenen-leertoepassing-kwadratenkolom",
+          "level": 2,
+          "prompt": "Eigen oefenvraag. Welke combinatie van steekproefvariantie en standaardafwijking volgt uit deze tabel?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De accountant vergelijkt de spreiding van vier gecontroleerde posten. Bedragen staan in euro.</p><div class=\"table-wrap\"><table><caption>Werkelijke waarden</caption><thead><tr><th scope=\"col\">Post</th><th scope=\"col\">w</th><th scope=\"col\">w²</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>10</td><td>100</td></tr><tr><th scope=\"row\">2</th><td>20</td><td>400</td></tr><tr><th scope=\"row\">3</th><td>30</td><td>900</td></tr><tr><th scope=\"row\">4</th><td>40</td><td>1600</td></tr><tr><th scope=\"row\">Som</th><td>100</td><td>3000</td></tr></tbody></table></div>",
+          "options": [
+            "s² = 3.000 en s ≈ 54,77",
+            "s² ≈ 166,67 en s ≈ 12,91",
+            "s² = 125 en s ≈ 11,18",
+            "s² ≈ 166,67 en s ≈ 83,33"
+          ],
+          "optionExplanations": [
+            "De som van kwadraten is nog geen variantie: corrigeer voor het geschatte gemiddelde en deel door n − 1.",
+            "Gebruik [3.000 − 100²/4]/3 = 500/3 voor de variantie en neem daarvan de wortel voor de standaardafwijking.",
+            "Dit deelt door n in plaats van n − 1. Voor de in deze cursus gebruikte steekproefvariantie is de noemer 3.",
+            "Een wortel nemen is niet delen door twee. √166,6667 ≈ 12,91 euro."
+          ],
+          "correct": 1,
+          "steps": [
+            "Lees n = 4, Σw = 100 en Σw² = 3.000 uit verschillende onderdelen van de tabel.",
+            "s² = [3.000 − 100²/4]/(4 − 1) = 166,6667 euro².",
+            "s = √166,6667 ≈ 12,91 euro. Deze spreiding van posten is niet de standaardfout van een populatietotaal."
+          ],
+          "explanation": "Lees n = 4, Σw = 100 en Σw² = 3.000 uit verschillende onderdelen van de tabel. s² = [3.000 − 100²/4]/(4 − 1) = 166,6667 euro². s = √166,6667 ≈ 12,91 euro. Deze spreiding van posten is niet de standaardfout van een populatietotaal.",
+          "pattern": "Herken: Welke combinatie van steekproefvariantie en standaardafwijking volgt uit deze tabel? → Betekenis: De tabel biedt zowel de som als de som van afzonderlijke kwadraten voor de rekenformule. → Aanpak: Vul de som en kwadratensom afzonderlijk in en controleer of de uitkomst in euro of euro² gevraagd is. → Gevraagd antwoord: Een variantie in euro² en de bijbehorende standaardafwijking in euro.",
+          "trap": "Σw² en (Σw)² verschillen; de somregel is geen extra waarneming.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: steekproefvariantie"
+            }
+          ],
+          "practiceMode": "begeleid",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke combinatie van steekproefvariantie en standaardafwijking volgt uit deze tabel?",
+            "meaning": "De tabel biedt zowel de som als de som van afzonderlijke kwadraten voor de rekenformule.",
+            "approach": "Vul de som en kwadratensom afzonderlijk in en controleer of de uitkomst in euro of euro² gevraagd is.",
+            "answer": "Een variantie in euro² en de bijbehorende standaardafwijking in euro."
+          },
+          "guidance": {
+            "title": "Som, spreiding en standaardfout",
+            "focus": "Vul de som en kwadratensom afzonderlijk in en controleer of de uitkomst in euro of euro² gevraagd is.",
+            "rules": [
+              "Bij Σw² kwadrateer je iedere waarneming en tel je daarna op. Bij (Σw)² tel je eerst op en kwadrateer je de som. Dit zijn verschillende bewerkingen.",
+              "De steekproefvariantie is s² = [Σw² − (Σw)²/n]/(n − 1). De standaardafwijking s is de wortel van s² en heeft weer dezelfde eenheid als de waarnemingen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formule 1: steekproefvariantie"
               }
             ]
           }
@@ -817,6 +1162,21 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1, 3 en 4"
             }
           ],
           "recognition": {
@@ -886,6 +1246,21 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1, 3 en 4"
             }
           ],
           "recognition": {
@@ -944,6 +1319,41 @@ window.SRAMCData = {
           "source": "set-basis",
           "page": 1,
           "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+        },
+        {
+          "source": "tabellen",
+          "page": 12,
+          "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+        },
+        {
+          "source": "programma",
+          "page": 4,
+          "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 6,
+          "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+        },
+        {
+          "source": "slides",
+          "page": 34,
+          "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 7,
+          "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 2,
+          "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 9,
+          "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
         }
       ],
       "questions": [
@@ -994,6 +1404,41 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
           ],
           "recognition": {
@@ -1071,6 +1516,41 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
           ],
           "recognition": {
@@ -1148,6 +1628,41 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
           ],
           "recognition": {
@@ -1228,6 +1743,41 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
           ],
           "recognition": {
@@ -1307,6 +1857,41 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
           ],
           "recognition": {
@@ -1332,6 +1917,74 @@ window.SRAMCData = {
                 "source": "programma",
                 "page": 4,
                 "locator": "Afspraken over het gebruik van de tabellenbundel"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-onzekerheid-leertoepassing-t-tabel-interval",
+          "level": 2,
+          "prompt": "Eigen oefenvraag. Zoek de tabelwaarde op. Wat is het tweezijdige 95%-interval voor het populatiegemiddelde?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een aselecte steekproef levert de volgende al berekende samenvatting. De benodigde standaardfout is gegeven.</p><div class=\"table-wrap\"><table><caption>Schatting</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Gemiddelde</th><td>80</td></tr><tr><th scope=\"row\">Standaardfout van gemiddelde</th><td>2</td></tr><tr><th scope=\"row\">Vrijheidsgraden</th><td>24</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 12</a>. Zoek de benodigde grens zelf op.</p>",
+          "options": [
+            "[78; 82]",
+            "[75,08; 84,92]",
+            "[75,872; 84,128]",
+            "[76,578; 83,422]"
+          ],
+          "optionExplanations": [
+            "Dit neemt één standaardfout als marge en negeert de betrouwbaarheid en de t-verdeling.",
+            "Deze marge hoort niet bij de vereiste rij en kolom. Lees df = 24 en 0,025 af in de echte bundel.",
+            "In rij df = 24 en kolom overschrijdingskans 0,025 staat 2,064. De marge is 2,064 × 2 = 4,128.",
+            "Dit gebruikt de eenzijdige 0,05-kolom met t = 1,711. Een tweezijdig 95%-interval verlangt 0,025 per staart."
+          ],
+          "correct": 2,
+          "steps": [
+            "Bij 95% is α = 0,05. Voor twee grenzen gaat 0,025 naar iedere staart.",
+            "Zoek in tabel 13.4 de rij 24 en kolom 0,025: t = 2,064.",
+            "80 ± 2,064 × 2 geeft [75,872; 84,128]. Het interval betreft het gemiddelde, niet alle afzonderlijke posten."
+          ],
+          "explanation": "Bij 95% is α = 0,05. Voor twee grenzen gaat 0,025 naar iedere staart. Zoek in tabel 13.4 de rij 24 en kolom 0,025: t = 2,064. 80 ± 2,064 × 2 geeft [75,872; 84,128]. Het interval betreft het gemiddelde, niet alle afzonderlijke posten.",
+          "pattern": "Herken: Zoek de tabelwaarde op. Wat is het tweezijdige 95%-interval voor het populatiegemiddelde? → Betekenis: Betrouwbaarheid en vrijheidsgraden bepalen samen de rij en overschrijdingskolom. → Aanpak: Zet de betrouwbaarheid om in de staartkans, lees de echte t-tabel en vermenigvuldig de grens met de gegeven standaardfout. → Gevraagd antwoord: Twee intervalgrenzen voor het onbekende populatiegemiddelde.",
+          "trap": "Gebruik niet de eenzijdige kolom voor een tweezijdig interval.",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4: df 24, kolom 0,025"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels bij toetsing"
+            }
+          ],
+          "practiceMode": "begeleid",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Zoek de tabelwaarde op. Wat is het tweezijdige 95%-interval voor het populatiegemiddelde?",
+            "meaning": "Betrouwbaarheid en vrijheidsgraden bepalen samen de rij en overschrijdingskolom.",
+            "approach": "Zet de betrouwbaarheid om in de staartkans, lees de echte t-tabel en vermenigvuldig de grens met de gegeven standaardfout.",
+            "answer": "Twee intervalgrenzen voor het onbekende populatiegemiddelde."
+          },
+          "guidance": {
+            "title": "Schatting, marge en interval",
+            "focus": "Zet de betrouwbaarheid om in de staartkans, lees de echte t-tabel en vermenigvuldig de grens met de gegeven standaardfout.",
+            "rules": [
+              "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
+              "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
+            ],
+            "refs": [
+              {
+                "source": "tabellen",
+                "page": 12,
+                "locator": "Tabel 13.4: df 24, kolom 0,025"
+              },
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "Tabelregels bij toetsing"
               }
             ]
           }
@@ -1386,6 +2039,41 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
           ],
           "recognition": {
@@ -1465,6 +2153,41 @@ window.SRAMCData = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
           ],
           "recognition": {
@@ -1490,6 +2213,74 @@ window.SRAMCData = {
                 "source": "programma",
                 "page": 4,
                 "locator": "Afspraken over het gebruik van de tabellenbundel"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-onzekerheid-leertoepassing-ontbrekende-df",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het effectief aantal vrijheidsgraden van een schatting is 99. Volg de tabelafspraak in het onderwijsprogramma. Er wordt geen interpolatie gevraagd.</p><p><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 13</a>. Zoek de benodigde grens zelf op.</p>",
+          "options": [
+            "df = 90 en t = 1,987",
+            "df = 100 en t = 1,984",
+            "df = oneindig en t = 1,960",
+            "df = 95 en t = 1,985"
+          ],
+          "optionExplanations": [
+            "Rij 90 ligt lager, maar is niet de naast lagere beschikbare rij: 95 staat ertussen.",
+            "Afronden naar de dichtstbijzijnde rij is hier niet toegestaan: de cursus verlangt de naast lagere beschikbare rij.",
+            "De afspraak voor de onderste rij geldt bij df > 200. Met df = 99 is zij niet van toepassing.",
+            "Rij 99 ontbreekt, rij 95 is wel aanwezig en is de naast lagere rij. De 0,025-kolom geeft 1,985."
+          ],
+          "correct": 3,
+          "steps": [
+            "Een tweezijdig 95%-interval gebruikt overschrijdingskans 0,025.",
+            "Zoek de aangrenzende rijen in de bundel: 95 en 100. Kies de naast lagere rij 95.",
+            "Lees t = 1,985 af. De effectieve df blijven inhoudelijk 99; alleen voor het tabelgebruik neem je rij 95."
+          ],
+          "explanation": "Een tweezijdig 95%-interval gebruikt overschrijdingskans 0,025. Zoek de aangrenzende rijen in de bundel: 95 en 100. Kies de naast lagere rij 95. Lees t = 1,985 af. De effectieve df blijven inhoudelijk 99; alleen voor het tabelgebruik neem je rij 95.",
+          "pattern": "Herken: Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval? → Betekenis: Een ontbrekende exacte rij vereist de concrete cursusafspraak over tabelgebruik. → Aanpak: Bekijk daadwerkelijk welke rijen aanwezig zijn en kies de naast lagere beschikbare rij bij dezelfde staartkans. → Gevraagd antwoord: De gebruikte tabelrij en bijbehorende kritieke waarde.",
+          "trap": "Een eerder onthouden tabelwaarde vervangt het aflezen van de aangeleverde bundel niet.",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4 vervolg: rij 95, kolom 0,025"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Naast lagere t-rij; uitzondering df > 200"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval?",
+            "meaning": "Een ontbrekende exacte rij vereist de concrete cursusafspraak over tabelgebruik.",
+            "approach": "Bekijk daadwerkelijk welke rijen aanwezig zijn en kies de naast lagere beschikbare rij bij dezelfde staartkans.",
+            "answer": "De gebruikte tabelrij en bijbehorende kritieke waarde."
+          },
+          "guidance": {
+            "title": "Schatting, marge en interval",
+            "focus": "Bekijk daadwerkelijk welke rijen aanwezig zijn en kies de naast lagere beschikbare rij bij dezelfde staartkans.",
+            "rules": [
+              "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
+              "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
+            ],
+            "refs": [
+              {
+                "source": "tabellen",
+                "page": 13,
+                "locator": "Tabel 13.4 vervolg: rij 95, kolom 0,025"
+              },
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "Naast lagere t-rij; uitzondering df > 200"
               }
             ]
           }
@@ -1528,6 +2319,26 @@ window.SRAMCData = {
           "source": "boek-basis",
           "page": 1,
           "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 7,
+          "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+        },
+        {
+          "source": "slides",
+          "page": 18,
+          "locator": "PDF 18-19: voorraadcontrole MPU"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 1-4"
+        },
+        {
+          "source": "tabellen",
+          "page": 13,
+          "locator": "Tabel 13.4, rij 170, kolom 0,025"
         }
       ],
       "questions": [
@@ -1578,6 +2389,26 @@ window.SRAMCData = {
               "source": "boek-basis",
               "page": 1,
               "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
             }
           ],
           "recognition": {
@@ -1655,6 +2486,26 @@ window.SRAMCData = {
               "source": "boek-basis",
               "page": 1,
               "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
             }
           ],
           "recognition": {
@@ -1732,6 +2583,26 @@ window.SRAMCData = {
               "source": "boek-basis",
               "page": 1,
               "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
             }
           ],
           "recognition": {
@@ -1812,6 +2683,26 @@ window.SRAMCData = {
               "source": "boek-basis",
               "page": 1,
               "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
             }
           ],
           "recognition": {
@@ -1891,6 +2782,26 @@ window.SRAMCData = {
               "source": "boek-basis",
               "page": 1,
               "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
             }
           ],
           "recognition": {
@@ -1971,6 +2882,26 @@ window.SRAMCData = {
               "source": "boek-basis",
               "page": 1,
               "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
             }
           ],
           "recognition": {
@@ -2050,6 +2981,26 @@ window.SRAMCData = {
               "source": "boek-basis",
               "page": 1,
               "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
             }
           ],
           "recognition": {
@@ -2075,6 +3026,132 @@ window.SRAMCData = {
                 "source": "boek-basis",
                 "page": 1,
                 "locator": "Boek p. 92; oorspronkelijke PDF p. 110: voorwaarden en scheefheid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-mpu-leertoepassing-controleoverzicht",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welk MPU-interval volgt, op hele euro’s naar buiten afgerond, met gegeven t = 2?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een accountant wil de totale werkelijke voorraadwaarde schatten. Gebruik de eindigheidscorrectie.</p><div class=\"table-wrap\"><table><caption>Steekproefoverzicht</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">N</th><td>1.000</td></tr><tr><th scope=\"row\">n</th><td>100</td></tr><tr><th scope=\"row\">Σw</th><td>8.000</td></tr><tr><th scope=\"row\">Σw²</th><td>679.600</td></tr></tbody></table></div>",
+          "options": [
+            "[€ 79.996; € 80.004]",
+            "[€ 76.000; € 84.000]",
+            "[€ 72.203; € 79.797]",
+            "[€ 76.203; € 83.797]"
+          ],
+          "optionExplanations": [
+            "Dit gebruikt ongeveer de onzekerheid van het gemiddelde. Het gevraagde totaal verlangt de factor N in de standaardfout.",
+            "Dit laat de uitdrukkelijk gevraagde eindigheidscorrectie weg. Daardoor ontstaat hier een ruimere marge dan volgens de gegeven formule.",
+            "Dit centreert het interval rond een verkeerd totaal. De steekproefsom 8.000 levert gemiddelde 80 en populatieschatting 80.000.",
+            "w̄ = 80, s² = 400 en s = 20. De standaardfout is 1.898,315992; de grenzen zijn 76.203,368 en 83.796,632."
+          ],
+          "correct": 3,
+          "steps": [
+            "Gemiddelde: 8.000/100 = 80. Variantie: [679.600 − 8.000²/100]/99 = 400, dus s_w = 20.",
+            "Ŵ = 1.000 × 80 = 80.000; SE = 1.000 × 20/√100 × √(900/999) ≈ 1.898,316.",
+            "80.000 ± 2 × 1.898,316 geeft [76.203,368; 83.796,632]. Naar buiten op euro’s: [76.203; 83.797]."
+          ],
+          "explanation": "Gemiddelde: 8.000/100 = 80. Variantie: [679.600 − 8.000²/100]/99 = 400, dus s_w = 20. Ŵ = 1.000 × 80 = 80.000; SE = 1.000 × 20/√100 × √(900/999) ≈ 1.898,316. 80.000 ± 2 × 1.898,316 geeft [76.203,368; 83.796,632]. Naar buiten op euro’s: [76.203; 83.797].",
+          "pattern": "Herken: Welk MPU-interval volgt, op hele euro’s naar buiten afgerond, met gegeven t = 2? → Betekenis: De samenvatting bevat voldoende gegevens voor gemiddelde, spreiding en totale schattingsonzekerheid. → Aanpak: Bereken eerst gemiddelde en spreiding uit de somkolommen, schaal vervolgens naar N en pas de eindigheidscorrectie toe. → Gevraagd antwoord: Een interval voor de gehele voorraadwaarde, naar buiten afgerond op euro’s.",
+          "trap": "Rond tussenuitkomsten niet vroeg af en gebruik de standaardfout van het totaal.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4: MPU en eindigheidscorrectie"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welk MPU-interval volgt, op hele euro’s naar buiten afgerond, met gegeven t = 2?",
+            "meaning": "De samenvatting bevat voldoende gegevens voor gemiddelde, spreiding en totale schattingsonzekerheid.",
+            "approach": "Bereken eerst gemiddelde en spreiding uit de somkolommen, schaal vervolgens naar N en pas de eindigheidscorrectie toe.",
+            "answer": "Een interval voor de gehele voorraadwaarde, naar buiten afgerond op euro’s."
+          },
+          "guidance": {
+            "title": "Directe schatter van een populatietotaal",
+            "focus": "Bereken eerst gemiddelde en spreiding uit de somkolommen, schaal vervolgens naar N en pas de eindigheidscorrectie toe.",
+            "rules": [
+              "De MPU-schatter gebruikt de werkelijke waarden: Ŵ = N × w̄. N hoort bij de hele populatie; w̄ en de spreiding s_w worden uit de steekproef bepaald.",
+              "De standaardfout van dit totaal is N × s_w/√n × √((N − n)/(N − 1)). Een interval volgt uit Ŵ ± t × standaardfout. Laat de eindigheidscorrectie alleen weg als dat is toegestaan of expliciet wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 1-4: MPU en eindigheidscorrectie"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-mpu-leertoepassing-schatterkeuze-patronen",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Bij welk gegevenspatroon biedt de verschilschatter het meest directe alternatief voor MPU?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De tabel toont illustratieve patronen voor b (boekwaarde) en w (werkelijke waarde), geen volledige steekproeven. De toepassingsvoorwaarden zijn voor de werkelijke steekproeven afzonderlijk gecontroleerd.</p><div class=\"table-wrap\"><table><caption>Drie patronen</caption><thead><tr><th scope=\"col\">Patroon</th><th scope=\"col\">b-waarden</th><th scope=\"col\">w-waarden</th></tr></thead><tbody><tr><th scope=\"row\">A</th><td>100; 200; 400</td><td>90; 190; 390</td></tr><tr><th scope=\"row\">B</th><td>100; 200; 400</td><td>90; 180; 360</td></tr><tr><th scope=\"row\">C</th><td>100; 200; 400</td><td>240; 80; 190</td></tr></tbody></table></div>",
+          "options": [
+            "Patroon A: verschillen zijn constant, terwijl werkelijke waarden sterk spreiden",
+            "Patroon B: de verhouding is constant, dus het absolute verschil ook",
+            "Patroon C: geen duidelijk hulpverband is altijd het beste",
+            "Alle patronen, want een bekend B maakt de foutvariantie altijd nul"
+          ],
+          "optionExplanations": [
+            "In A is b − w steeds 10. De werkelijke waarden lopen sterk uiteen, zodat corrigeren met vrijwel constante verschillen een precieze route kan bieden.",
+            "Bij B is w/b constant op 0,90, maar de verschillen zijn 10, 20 en 40. Dat past directer bij quotiëntschatten.",
+            "Zonder bruikbaar verband bieden hulpvariabelen niet vanzelf winst. MPU kan dan juist een geschikte directe basis blijven.",
+            "Een bekend boektotaal verwijdert alleen onzekerheid over B. De controleverschillen of verhoudingen kunnen nog steeds sterk spreiden."
+          ],
+          "correct": 0,
+          "steps": [
+            "Vergelijk absolute afwijkingen: A heeft steeds b − w = 10. B heeft verschillen 10, 20 en 40 maar telkens ratio 0,90.",
+            "De verschilschatter gebruikt de spreiding van de verschillen. Als die klein is tegenover s_w, kan zij preciezer zijn dan MPU.",
+            "In A is het patroon daarom direct passend, mits de volledige steekproef en toepassingsvoorwaarden dat ondersteunen. Drie illustratieve posten bewijzen die voorwaarden niet."
+          ],
+          "explanation": "Vergelijk absolute afwijkingen: A heeft steeds b − w = 10. B heeft verschillen 10, 20 en 40 maar telkens ratio 0,90. De verschilschatter gebruikt de spreiding van de verschillen. Als die klein is tegenover s_w, kan zij preciezer zijn dan MPU. In A is het patroon daarom direct passend, mits de volledige steekproef en toepassingsvoorwaarden dat ondersteunen. Drie illustratieve posten bewijzen die voorwaarden niet.",
+          "pattern": "Herken: Bij welk gegevenspatroon biedt de verschilschatter het meest directe alternatief voor MPU? → Betekenis: Schatterkeuze hangt af van het foutpatroon en de resterende spreiding na de correctie. → Aanpak: Vergelijk absolute verschillen en relatieve verhoudingen voordat je kiest welke informatie naast de werkelijke waarden nuttig is. → Gevraagd antwoord: Een beargumenteerde keuze voor de verschilschatter op basis van het gegevenspatroon.",
+          "trap": "Een kleine illustratieve tabel toont een patroon, maar bewijst niet dat de werkelijke steekproef aan alle voorwaarden voldoet.",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF p. 20-25: verschil- en quotiëntschatter"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 4, 7 en 12: schatters vergelijken"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Bij welk gegevenspatroon biedt de verschilschatter het meest directe alternatief voor MPU?",
+            "meaning": "Schatterkeuze hangt af van het foutpatroon en de resterende spreiding na de correctie.",
+            "approach": "Vergelijk absolute verschillen en relatieve verhoudingen voordat je kiest welke informatie naast de werkelijke waarden nuttig is.",
+            "answer": "Een beargumenteerde keuze voor de verschilschatter op basis van het gegevenspatroon."
+          },
+          "guidance": {
+            "title": "Directe schatter van een populatietotaal",
+            "focus": "Vergelijk absolute verschillen en relatieve verhoudingen voordat je kiest welke informatie naast de werkelijke waarden nuttig is.",
+            "rules": [
+              "De MPU-schatter gebruikt de werkelijke waarden: Ŵ = N × w̄. N hoort bij de hele populatie; w̄ en de spreiding s_w worden uit de steekproef bepaald.",
+              "De standaardfout van dit totaal is N × s_w/√n × √((N − n)/(N − 1)). Een interval volgt uit Ŵ ± t × standaardfout. Laat de eindigheidscorrectie alleen weg als dat is toegestaan of expliciet wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "slides",
+                "page": 20,
+                "locator": "PDF p. 20-25: verschil- en quotiëntschatter"
+              },
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 4, 7 en 12: schatters vergelijken"
               }
             ]
           }
@@ -2108,6 +3185,46 @@ window.SRAMCData = {
           "source": "boek-h8a",
           "page": 7,
           "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+        },
+        {
+          "source": "slides",
+          "page": 20,
+          "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formule 6: e = b − w"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 8,
+          "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+        },
+        {
+          "source": "opgaven",
+          "page": 5,
+          "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 6,
+          "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+        },
+        {
+          "source": "exam2025",
+          "page": 1,
+          "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 6-11"
+        },
+        {
+          "source": "tabellen",
+          "page": 13,
+          "locator": "Rij 160; kolom 0,025"
         }
       ],
       "questions": [
@@ -2153,6 +3270,46 @@ window.SRAMCData = {
               "source": "boek-h8a",
               "page": 7,
               "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 6: e = b − w"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 8,
+              "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+            },
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
             }
           ],
           "recognition": {
@@ -2225,6 +3382,46 @@ window.SRAMCData = {
               "source": "boek-h8a",
               "page": 7,
               "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 6: e = b − w"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 8,
+              "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+            },
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
             }
           ],
           "recognition": {
@@ -2297,6 +3494,46 @@ window.SRAMCData = {
               "source": "boek-h8a",
               "page": 7,
               "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 6: e = b − w"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 8,
+              "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+            },
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
             }
           ],
           "recognition": {
@@ -2372,6 +3609,46 @@ window.SRAMCData = {
               "source": "boek-h8a",
               "page": 7,
               "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 6: e = b − w"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 8,
+              "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+            },
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
             }
           ],
           "recognition": {
@@ -2446,6 +3723,46 @@ window.SRAMCData = {
               "source": "boek-h8a",
               "page": 7,
               "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 6: e = b − w"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 8,
+              "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+            },
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
             }
           ],
           "recognition": {
@@ -2521,6 +3838,46 @@ window.SRAMCData = {
               "source": "boek-h8a",
               "page": 7,
               "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 6: e = b − w"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 8,
+              "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+            },
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
             }
           ],
           "recognition": {
@@ -2549,6 +3906,132 @@ window.SRAMCData = {
               }
             ]
           }
+        },
+        {
+          "id": "mc-verschil-leertoepassing-verschillentabel",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Wat is de verschilschatting van de werkelijke voorraadwaarde?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>In 100 aselect gecontroleerde posten zijn 40 verschillen gevonden. Het foutenpatroon past bij een absolute correctie. N = 2.000 en B = € 210.000.</p><div class=\"table-wrap\"><table><caption>Samenvatting van alle 100 controles</caption><thead><tr><th scope=\"col\">Gegeven</th><th scope=\"col\">Bedrag</th></tr></thead><tbody><tr><th scope=\"row\">Σb</th><td>10.500</td></tr><tr><th scope=\"row\">Σw</th><td>10.200</td></tr><tr><th scope=\"row\">Σ(b − w)²</th><td>2.880</td></tr></tbody></table></div>",
+          "options": [
+            "€ 204.000",
+            "€ 216.000",
+            "€ 209.700",
+            "€ 198.000"
+          ],
+          "optionExplanations": [
+            "Het gemiddelde verschil is (10.500 − 10.200)/100 = 3 euro. Corrigeer B met N × 3 = 6.000 euro.",
+            "Dit telt de geschatte overwaardering op. Met e = b − w moet een positief verschil juist van B af.",
+            "Dit trekt alleen de steekproeffout 300 af. Projecteer de gemiddelde fout naar alle 2.000 posten.",
+            "De gegeven sommen leveren geen gemiddelde fout van 6. Het steekproefverschil 300 moet door alle 100 onderzochte posten worden gedeeld."
+          ],
+          "correct": 0,
+          "steps": [
+            "Definieer e = b − w. Over alle gecontroleerde posten is Σe = 300.",
+            "Deel door n = 100, ook al hebben slechts 40 posten een niet-nulverschil: ē = 3.",
+            "Ŵ_V = 210.000 − 2.000 × 3 = 204.000. Voor het interval gebruik je de spreiding van e; de kwadratensom ondersteunt die vervolgstap."
+          ],
+          "explanation": "Definieer e = b − w. Over alle gecontroleerde posten is Σe = 300. Deel door n = 100, ook al hebben slechts 40 posten een niet-nulverschil: ē = 3. Ŵ_V = 210.000 − 2.000 × 3 = 204.000. Voor het interval gebruik je de spreiding van e; de kwadratensom ondersteunt die vervolgstap.",
+          "pattern": "Herken: Wat is de verschilschatting van de werkelijke voorraadwaarde? → Betekenis: De bekende populatieboekwaarde wordt met een geprojecteerd absoluut controleverschil gecorrigeerd. → Aanpak: Trek de twee steekproefsommen af, deel door alle gecontroleerde posten en trek N maal dat gemiddelde van het boektotaal af. → Gevraagd antwoord: Een geschatte werkelijke populatiewaarde na correctie van de boeken.",
+          "trap": "Deel de som van verschillen niet uitsluitend door het aantal posten met een fout.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11: verschilschatter"
+            },
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF p. 20-22: verschilvoorwaarden"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Wat is de verschilschatting van de werkelijke voorraadwaarde?",
+            "meaning": "De bekende populatieboekwaarde wordt met een geprojecteerd absoluut controleverschil gecorrigeerd.",
+            "approach": "Trek de twee steekproefsommen af, deel door alle gecontroleerde posten en trek N maal dat gemiddelde van het boektotaal af.",
+            "answer": "Een geschatte werkelijke populatiewaarde na correctie van de boeken."
+          },
+          "guidance": {
+            "title": "Verschilschatter: teken en controledoel",
+            "focus": "Trek de twee steekproefsommen af, deel door alle gecontroleerde posten en trek N maal dat gemiddelde van het boektotaal af.",
+            "rules": [
+              "In SRA is een verschil e = boekwaarde b − werkelijke waarde w. Een positief verschil is overwaardering; een negatief verschil betekent dat de werkelijke waarde hoger is.",
+              "Schat de totale werkelijke waarde met Ŵ_V = B − N × ē. Voor de onzekerheid gebruik je de spreiding van de verschillen s_e, niet de spreiding van de boekwaarden of de werkelijke waarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 6-11: verschilschatter"
+              },
+              {
+                "source": "slides",
+                "page": 20,
+                "locator": "PDF p. 20-22: verschilvoorwaarden"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-verschil-leertoepassing-verschilvariantie",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke spreiding hoort bij de onzekerheid van de verschilschatter?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>N = 2.000 en n = 100. De fouten in de volledige gecontroleerde steekproef voldoen aan de cursusvoorwaarden. De tabel bevat alle 100 controles, ook de nulverschillen.</p><div class=\"table-wrap\"><table><caption>Samenvatting controleverschillen e = b − w</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Σe</th><td>300</td></tr><tr><th scope=\"row\">Σe²</th><td>2.880</td></tr><tr><th scope=\"row\">s_w</th><td>30</td></tr></tbody></table></div>",
+          "options": [
+            "s_e = 20; een variantie hoeft niet te worden geworteld",
+            "s_e = √20 ≈ 4,47; gebruik deze in de standaardfout van het totaal",
+            "s_e = 30; gebruik altijd de spreiding van werkelijke waarden",
+            "s_e = 3; gebruik de gemiddelde fout als spreiding"
+          ],
+          "optionExplanations": [
+            "20 is de variantie in euro². De standaardfoutformule met s_e verlangt de standaardafwijking in euro.",
+            "s_e² = [2.880 − 300²/100]/99 = 20. Deze resterende verschilspreiding hoort bij de verschilschatter.",
+            "s_w = 30 hoort bij MPU. De verschilschatter projecteert de verschillen en gebruikt daarom hun spreiding.",
+            "3 is Σe/n, dus de gemiddelde fout. Het gemiddelde zegt niet hoe sterk de verschillen onderling variëren."
+          ],
+          "correct": 1,
+          "steps": [
+            "Het gemiddelde verschil is 300/100 = 3. Corrigeer de som van kwadraten voor dit geschatte gemiddelde.",
+            "s_e² = [2.880 − 300²/100]/99 = 20 euro², dus s_e = √20 ≈ 4,4721 euro.",
+            "Voor de standaardfout van het totaal gebruik je N × s_e/√n × √((N − n)/(N − 1)). De relatief kleine verschilspreiding verklaart de mogelijke precisiewinst tegenover MPU."
+          ],
+          "explanation": "Het gemiddelde verschil is 300/100 = 3. Corrigeer de som van kwadraten voor dit geschatte gemiddelde. s_e² = [2.880 − 300²/100]/99 = 20 euro², dus s_e = √20 ≈ 4,4721 euro. Voor de standaardfout van het totaal gebruik je N × s_e/√n × √((N − n)/(N − 1)). De relatief kleine verschilspreiding verklaart de mogelijke precisiewinst tegenover MPU.",
+          "pattern": "Herken: Welke spreiding hoort bij de onzekerheid van de verschilschatter? → Betekenis: De samenvatting van controleverschillen bepaalt de resterende onzekerheid na correctie op B. → Aanpak: Bereken de variantie uit de verschilkolommen, neem de wortel en gebruik die spreiding in de passende totaalfoutformule. → Gevraagd antwoord: De standaardafwijking van controleverschillen met haar rol in de schattingsonzekerheid.",
+          "trap": "Gemiddelde fout, verschilvariantie en standaardfout van het totaal zijn drie verschillende grootheden.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11: verschilspreiding en onzekerheid"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke spreiding hoort bij de onzekerheid van de verschilschatter?",
+            "meaning": "De samenvatting van controleverschillen bepaalt de resterende onzekerheid na correctie op B.",
+            "approach": "Bereken de variantie uit de verschilkolommen, neem de wortel en gebruik die spreiding in de passende totaalfoutformule.",
+            "answer": "De standaardafwijking van controleverschillen met haar rol in de schattingsonzekerheid."
+          },
+          "guidance": {
+            "title": "Verschilschatter: teken en controledoel",
+            "focus": "Bereken de variantie uit de verschilkolommen, neem de wortel en gebruik die spreiding in de passende totaalfoutformule.",
+            "rules": [
+              "In SRA is een verschil e = boekwaarde b − werkelijke waarde w. Een positief verschil is overwaardering; een negatief verschil betekent dat de werkelijke waarde hoger is.",
+              "Schat de totale werkelijke waarde met Ŵ_V = B − N × ē. Voor de onzekerheid gebruik je de spreiding van de verschillen s_e, niet de spreiding van de boekwaarden of de werkelijke waarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 6-11: verschilspreiding en onzekerheid"
+              }
+            ]
+          }
         }
       ]
     },
@@ -2574,6 +4057,76 @@ window.SRAMCData = {
           "source": "boek-h8b",
           "page": 1,
           "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+        },
+        {
+          "source": "slides",
+          "page": 23,
+          "locator": "PDF 23-26: quotiëntschatter"
+        },
+        {
+          "source": "opgaven",
+          "page": 5,
+          "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+        },
+        {
+          "source": "opgaven",
+          "page": 6,
+          "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 6,
+          "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 8,
+          "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 12-17; twee routes voor s_q"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 2,
+          "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Eigen oefening volgens formules 12-17"
+        },
+        {
+          "source": "slides",
+          "page": 23,
+          "locator": "Methode en voorwaarden: PDF 23-26"
+        },
+        {
+          "source": "tabellen",
+          "page": 13,
+          "locator": "Rij 95; kolom 0,025"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 9,
+          "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 3,
+          "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formule 14: resterende spreiding uit fouttotalen"
+        },
+        {
+          "source": "programma",
+          "page": 4,
+          "locator": "Huidige cursusregel voor df > 200"
         }
       ],
       "questions": [
@@ -2614,6 +4167,76 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 1,
               "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "PDF 23-26: quotiëntschatter"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+            },
+            {
+              "source": "opgaven",
+              "page": 6,
+              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 8,
+              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17; twee routes voor s_q"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
             }
           ],
           "recognition": {
@@ -2681,6 +4304,76 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 1,
               "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "PDF 23-26: quotiëntschatter"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+            },
+            {
+              "source": "opgaven",
+              "page": 6,
+              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 8,
+              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17; twee routes voor s_q"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
             }
           ],
           "recognition": {
@@ -2748,6 +4441,76 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 1,
               "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "PDF 23-26: quotiëntschatter"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+            },
+            {
+              "source": "opgaven",
+              "page": 6,
+              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 8,
+              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17; twee routes voor s_q"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
             }
           ],
           "recognition": {
@@ -2818,6 +4581,76 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 1,
               "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "PDF 23-26: quotiëntschatter"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+            },
+            {
+              "source": "opgaven",
+              "page": 6,
+              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 8,
+              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17; twee routes voor s_q"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
             }
           ],
           "recognition": {
@@ -2887,6 +4720,76 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 1,
               "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "PDF 23-26: quotiëntschatter"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+            },
+            {
+              "source": "opgaven",
+              "page": 6,
+              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 8,
+              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17; twee routes voor s_q"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
             }
           ],
           "recognition": {
@@ -2956,6 +4859,76 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 1,
               "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "PDF 23-26: quotiëntschatter"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+            },
+            {
+              "source": "opgaven",
+              "page": 6,
+              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 8,
+              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17; twee routes voor s_q"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
             }
           ],
           "recognition": {
@@ -2981,6 +4954,64 @@ window.SRAMCData = {
                 "source": "boek-h8b",
                 "page": 1,
                 "locator": "Boek p. 211; oorspronkelijke PDF p. 229: verhouding tussen boekwaarde en werkelijke waarde"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-quotient-leertoepassing-ratio-uit-tabel",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke goedratio gebruik je en welke werkelijke populatiewaarde volgt bij B = € 1.000.000?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De 100 aselect gecontroleerde posten zijn hieronder naar twee groepen samengevat. Gebruik de verhouding van steekproefsommen.</p><div class=\"table-wrap\"><table><caption>Gecontroleerde bedragen</caption><thead><tr><th scope=\"col\">Groep</th><th scope=\"col\">Aantal</th><th scope=\"col\">Σb</th><th scope=\"col\">Σw</th></tr></thead><tbody><tr><th scope=\"row\">Klein</th><td>80</td><td>8.000</td><td>7.200</td></tr><tr><th scope=\"row\">Groot</th><td>20</td><td>12.000</td><td>10.200</td></tr><tr><th scope=\"row\">Totaal</th><td>100</td><td>20.000</td><td>17.400</td></tr></tbody></table></div>",
+          "options": [
+            "q = 0,13; Ŵ_Q = € 130.000",
+            "q = 0,87; Ŵ_Q = € 870.000",
+            "q = 0,875; Ŵ_Q = € 875.000",
+            "q = 0,89; Ŵ_Q = € 890.000"
+          ],
+          "optionExplanations": [
+            "0,13 is de geschatte foutratio. De vraag vraagt de goedratio en de werkelijke waarde, niet de overwaardering.",
+            "De verhouding van de totale werkelijke waarde tot de totale boekwaarde is 17.400/20.000 = 0,87; vermenigvuldig met B.",
+            "Dit neemt het ongewogen gemiddelde van de groepsratio’s 0,90 en 0,85. De groepen dragen verschillende boekbedragen bij.",
+            "Dit weegt de groepsratio’s naar aantallen, terwijl de quotiëntschatter de verhouding van geldsommen gebruikt."
+          ],
+          "correct": 1,
+          "steps": [
+            "Tel de bedragen over dezelfde gecontroleerde posten op: Σb = 20.000 en Σw = 17.400.",
+            "q = 17.400/20.000 = 0,87. Deze verhouding weegt individuele ratio’s impliciet met hun boekwaarde.",
+            "Ŵ_Q = 0,87 × 1.000.000 = 870.000. De geschatte overwaardering is afzonderlijk 130.000."
+          ],
+          "explanation": "Tel de bedragen over dezelfde gecontroleerde posten op: Σb = 20.000 en Σw = 17.400. q = 17.400/20.000 = 0,87. Deze verhouding weegt individuele ratio’s impliciet met hun boekwaarde. Ŵ_Q = 0,87 × 1.000.000 = 870.000. De geschatte overwaardering is afzonderlijk 130.000.",
+          "pattern": "Herken: Welke goedratio gebruik je en welke werkelijke populatiewaarde volgt bij B = € 1.000.000? → Betekenis: De groepen hebben verschillende boekbedragen; ratio’s kun je daarom niet ongewogen middelen. → Aanpak: Gebruik de totaalregels voor de verhouding van sommen en bepaal of werkelijke waarde of fout gevraagd wordt. → Gevraagd antwoord: Een goedratio en de daarop gebaseerde geschatte populatiewaarde.",
+          "trap": "Middel de groepspercentages niet zonder rekening te houden met hun boekwaarde.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17: quotiëntschatter"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke goedratio gebruik je en welke werkelijke populatiewaarde volgt bij B = € 1.000.000?",
+            "meaning": "De groepen hebben verschillende boekbedragen; ratio’s kun je daarom niet ongewogen middelen.",
+            "approach": "Gebruik de totaalregels voor de verhouding van sommen en bepaal of werkelijke waarde of fout gevraagd wordt.",
+            "answer": "Een goedratio en de daarop gebaseerde geschatte populatiewaarde."
+          },
+          "guidance": {
+            "title": "Quotiëntschatter: verhouding en totaal",
+            "focus": "Gebruik de totaalregels voor de verhouding van sommen en bepaal of werkelijke waarde of fout gevraagd wordt.",
+            "rules": [
+              "De goedratio is q = Σw/Σb, berekend over dezelfde gecontroleerde posten. Gebruik de verhouding van de sommen; het ongewogen gemiddelde van afzonderlijke ratio’s hoeft niet gelijk te zijn.",
+              "De geschatte werkelijke waarde van de hele populatie is Ŵ_Q = q × B, met B het bekende boektotaal van de populatie. Een totale overwaardering is B − Ŵ_Q."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formules 12-17: quotiëntschatter"
               }
             ]
           }
@@ -3014,6 +5045,36 @@ window.SRAMCData = {
           "source": "boek-h8b",
           "page": 6,
           "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+        },
+        {
+          "source": "slides",
+          "page": 27,
+          "locator": "PDF 27-33: regressieschatter en correctieterm"
+        },
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Formules 18-24"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 4,
+          "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 7,
+          "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 8,
+          "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+        },
+        {
+          "source": "slides",
+          "page": 34,
+          "locator": "Gerealiseerde marges per schatter"
         }
       ],
       "questions": [
@@ -3059,6 +5120,36 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
             }
           ],
           "recognition": {
@@ -3131,6 +5222,36 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
             }
           ],
           "recognition": {
@@ -3203,6 +5324,36 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
             }
           ],
           "recognition": {
@@ -3278,6 +5429,36 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
             }
           ],
           "recognition": {
@@ -3352,6 +5533,36 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
             }
           ],
           "recognition": {
@@ -3427,6 +5638,36 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
             }
           ],
           "recognition": {
@@ -3501,6 +5742,36 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
             }
           ],
           "recognition": {
@@ -3526,6 +5797,132 @@ window.SRAMCData = {
                 "source": "boek-h8b",
                 "page": 6,
                 "locator": "Boek p. 216; oorspronkelijke PDF p. 234: onzekerheid en voorwaarden"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-regressieschatter-leertoepassing-hulpinformatie",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke regressieschatting en standaardfout volgen uit het overzicht?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De steekproef is aselect en de voorwaarden zijn beoordeeld. Alle spreidingen staan in euro. De MPU-standaardfout is reeds inclusief eindigheidscorrectie.</p><div class=\"table-wrap\"><table><caption>Boekwaarde b en werkelijke waarde w</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">N</th><td>1.000</td></tr><tr><th scope=\"row\">B</th><td>105.000</td></tr><tr><th scope=\"row\">b̄</th><td>100</td></tr><tr><th scope=\"row\">w̄</th><td>90</td></tr><tr><th scope=\"row\">s_b</th><td>20</td></tr><tr><th scope=\"row\">s_w</th><td>30</td></tr><tr><th scope=\"row\">R_bw</th><td>0,80</td></tr><tr><th scope=\"row\">SE_MPU</th><td>3.000</td></tr></tbody></table></div>",
+          "options": [
+            "Ŵ_R = € 96.000 en SE_R = € 1.080",
+            "Ŵ_R = € 105.000 en SE_R = € 0",
+            "Ŵ_R = € 96.000 en SE_R = € 1.800",
+            "Ŵ_R = € 94.000 en SE_R = € 1.800"
+          ],
+          "optionExplanations": [
+            "Dit vermenigvuldigt de standaardfout met 1 − R². Op een standaardfout werkt de wortel van deze factor.",
+            "B is de bekende boekwaarde, niet de onbekende werkelijke waarde. Een correlatie van 0,80 verwijdert niet alle onzekerheid.",
+            "b₁ = 0,80 × 30/20 = 1,2. De correctie is 1,2 × 5.000 = 6.000; SE_R = 3.000√(1 − 0,64) = 1.800.",
+            "De standaardfout klopt, maar voor de correctie is de helling 1,2 nodig. Correlatie 0,80 is niet dezelfde grootheid als b₁."
+          ],
+          "correct": 2,
+          "steps": [
+            "Bereken b₁ = R_bw × s_w/s_b = 1,2. De directe MPU-schatting is 90.000.",
+            "Het bekende B overschrijdt N × b̄ met 5.000. De regressiecorrectie van 6.000 geeft Ŵ_R = 96.000.",
+            "SE_R = 3.000 × √(1 − 0,80²) = 1.800. Dit is meer berekende precisie, geen garantie dat het model passend is."
+          ],
+          "explanation": "Bereken b₁ = R_bw × s_w/s_b = 1,2. De directe MPU-schatting is 90.000. Het bekende B overschrijdt N × b̄ met 5.000. De regressiecorrectie van 6.000 geeft Ŵ_R = 96.000. SE_R = 3.000 × √(1 − 0,80²) = 1.800. Dit is meer berekende precisie, geen garantie dat het model passend is.",
+          "pattern": "Herken: Welke regressieschatting en standaardfout volgen uit het overzicht? → Betekenis: Boekwaarden geven bekende hulpinformatie en de tabel geeft het verband met werkelijke waarden. → Aanpak: Bepaal de regressiehelling uit correlatie en spreidingen, corrigeer de MPU-schatting en bereken afzonderlijk de resterende onzekerheid. → Gevraagd antwoord: Een totale schatting plus de standaardfout van datzelfde totaal.",
+          "trap": "Gebruik de correlatie niet rechtstreeks als helling en verwar variantiefactor niet met standaardfoutfactor.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24: regressieschatter"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke regressieschatting en standaardfout volgen uit het overzicht?",
+            "meaning": "Boekwaarden geven bekende hulpinformatie en de tabel geeft het verband met werkelijke waarden.",
+            "approach": "Bepaal de regressiehelling uit correlatie en spreidingen, corrigeer de MPU-schatting en bereken afzonderlijk de resterende onzekerheid.",
+            "answer": "Een totale schatting plus de standaardfout van datzelfde totaal."
+          },
+          "guidance": {
+            "title": "Regressieschatter met boekwaarden als hulpinformatie",
+            "focus": "Bepaal de regressiehelling uit correlatie en spreidingen, corrigeer de MPU-schatting en bereken afzonderlijk de resterende onzekerheid.",
+            "rules": [
+              "De regressieschatter schat het totale W van de populatie. Zij corrigeert de directe schatting: Ŵ_R = Nw̄ + b₁(B − Nb̄), waarbij b₁ = R_bw × s_w/s_b.",
+              "Bij dezelfde gegevens is s_R = s_MPU × √(1 − R_bw²). Deze berekende standaardfout is kleiner dan of gelijk aan die van MPU en vervangt niet de controle van de toepassingsvoorwaarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 18-24: regressieschatter"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-regressieschatter-leertoepassing-schatters-nauwkeurigheid",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke vergelijking van de twee schattingen is inhoudelijk juist?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Beide methoden zijn toegepast op dezelfde geschikte aselecte steekproef met dezelfde gekozen betrouwbaarheid van 95%. Beide toepassingsvoorwaarden zijn beoordeeld.</p><div class=\"table-wrap\"><table><caption>Resultaten</caption><thead><tr><th scope=\"col\">Schatter</th><th scope=\"col\">Puntschatting</th><th scope=\"col\">Standaardfout totaal</th></tr></thead><tbody><tr><th scope=\"row\">MPU</th><td>€ 100.000</td><td>€ 5.000</td></tr><tr><th scope=\"row\">Regressieschatter</th><td>€ 102.000</td><td>€ 3.000</td></tr></tbody></table></div>",
+          "options": [
+            "Regressie is bewezen dichter bij de werkelijke waarde omdat 102.000 hoger is",
+            "MPU is betrouwbaarder omdat zijn interval breder is",
+            "Neem altijd het gemiddelde 101.000 en deel de fouten door twee",
+            "Regressie heeft een kleinere berekende marge, maar niet automatisch hogere gekozen betrouwbaarheid"
+          ],
+          "optionExplanations": [
+            "De werkelijke waarde is onbekend. Een andere puntschatting en kleinere standaardfout bewijzen niet welke schatting in deze trekking dichterbij ligt.",
+            "De gekozen betrouwbaarheid is voor beide gelijk gegeven. Breedte beschrijft precisie binnen de gehanteerde model- en steekproefvoorwaarden.",
+            "De schattingen komen uit dezelfde steekproef en zijn niet onafhankelijk. Blind middelen met zo’n foutberekening is niet onderbouwd.",
+            "Bij dezelfde kritieke waarde geeft SE 3.000 een kleinere marge dan SE 5.000. Het gekozen betrouwbaarheidsniveau blijft voor beide 95%."
+          ],
+          "correct": 3,
+          "steps": [
+            "Vergelijk eerst of steekproef, populatie en betrouwbaarheidsniveau overeenkomen; dat is hier expliciet gegeven.",
+            "De regressieschatter gebruikt bekende hulpinformatie om de resterende standaardfout te verkleinen van 5.000 naar 3.000.",
+            "Dat is hogere berekende precisie bij hetzelfde gekozen niveau. Beoordeel nog steeds of het hulpverband passend blijft en presenteer de onbekende werkelijke waarde niet als vastgesteld."
+          ],
+          "explanation": "Vergelijk eerst of steekproef, populatie en betrouwbaarheidsniveau overeenkomen; dat is hier expliciet gegeven. De regressieschatter gebruikt bekende hulpinformatie om de resterende standaardfout te verkleinen van 5.000 naar 3.000. Dat is hogere berekende precisie bij hetzelfde gekozen niveau. Beoordeel nog steeds of het hulpverband passend blijft en presenteer de onbekende werkelijke waarde niet als vastgesteld.",
+          "pattern": "Herken: Welke vergelijking van de twee schattingen is inhoudelijk juist? → Betekenis: Twee schatters uit dezelfde gegevens kunnen verschillende centra en verschillende marges opleveren. → Aanpak: Houd gekozen betrouwbaarheid gelijk en vergelijk de resterende onzekerheid zonder onbekende werkelijke waarden als gegeven te behandelen. → Gevraagd antwoord: Een onderscheid tussen precisie, betrouwbaarheid en onbekende daadwerkelijke schattingsfout.",
+          "trap": "Kleinere berekende onzekerheid bewijst niet dat deze ene puntschatting dichter bij de werkelijkheid ligt.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-23: regressieschatter en onzekerheid"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216: nauwkeurigheid en voorwaarden"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke vergelijking van de twee schattingen is inhoudelijk juist?",
+            "meaning": "Twee schatters uit dezelfde gegevens kunnen verschillende centra en verschillende marges opleveren.",
+            "approach": "Houd gekozen betrouwbaarheid gelijk en vergelijk de resterende onzekerheid zonder onbekende werkelijke waarden als gegeven te behandelen.",
+            "answer": "Een onderscheid tussen precisie, betrouwbaarheid en onbekende daadwerkelijke schattingsfout."
+          },
+          "guidance": {
+            "title": "Regressieschatter met boekwaarden als hulpinformatie",
+            "focus": "Houd gekozen betrouwbaarheid gelijk en vergelijk de resterende onzekerheid zonder onbekende werkelijke waarden als gegeven te behandelen.",
+            "rules": [
+              "De regressieschatter schat het totale W van de populatie. Zij corrigeert de directe schatting: Ŵ_R = Nw̄ + b₁(B − Nb̄), waarbij b₁ = R_bw × s_w/s_b.",
+              "Bij dezelfde gegevens is s_R = s_MPU × √(1 − R_bw²). Deze berekende standaardfout is kleiner dan of gelijk aan die van MPU en vervangt niet de controle van de toepassingsvoorwaarden."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 18-23: regressieschatter en onzekerheid"
+              },
+              {
+                "source": "boek-h8b",
+                "page": 6,
+                "locator": "Boek p. 216: nauwkeurigheid en voorwaarden"
               }
             ]
           }
@@ -3564,6 +5961,41 @@ window.SRAMCData = {
           "source": "uitwerkingen",
           "page": 13,
           "locator": "H8 opgave 9c, PDF 13"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 5 en 11"
+        },
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Formule 24"
+        },
+        {
+          "source": "slides",
+          "page": 35,
+          "locator": "Quotiëntschatter plannen met s_q²"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 7,
+          "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+        },
+        {
+          "source": "slides",
+          "page": 34,
+          "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 11,
+          "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 13,
+          "locator": "H8.9c: gerichte uitbreiding van stratum 3"
         }
       ],
       "questions": [
@@ -3614,6 +6046,41 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
           "recognition": {
@@ -3691,6 +6158,41 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
           "recognition": {
@@ -3768,6 +6270,41 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
           "recognition": {
@@ -3848,6 +6385,41 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
           "recognition": {
@@ -3928,6 +6500,41 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
           "recognition": {
@@ -4007,6 +6614,41 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
           "recognition": {
@@ -4086,6 +6728,41 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
           "recognition": {
@@ -4111,6 +6788,64 @@ window.SRAMCData = {
                 "source": "formules",
                 "page": 2,
                 "locator": "Formule 24: omvang bij de regressieschatter"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-steekproefomvang-leertoepassing-uitbreidingsplan",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Hoeveel aanvullende controles zijn minimaal nodig volgens de gegeven planningsformule?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De accountant wil bij gelijkblijvende voorlopige spreiding een totale intervalbreedte van € 800. Gebruik n = N/(1 + γ), met γ = E²/(t²Ns²).</p><div class=\"table-wrap\"><table><caption>Vooronderzoek</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">N</th><td>1.000</td></tr><tr><th scope=\"row\">Al gecontroleerd</th><td>200</td></tr><tr><th scope=\"row\">s</th><td>10</td></tr><tr><th scope=\"row\">t voor planning</th><td>2</td></tr><tr><th scope=\"row\">Gewenste totale breedte</th><td>800</td></tr></tbody></table></div>",
+          "options": [
+            "185 extra controles; totaal 385",
+            "715 extra controles; totaal 915",
+            "514 extra controles; totaal 714",
+            "515 extra controles; totaal 715"
+          ],
+          "optionExplanations": [
+            "Dit vult de volledige breedte 800 in als E. In de formule is E de halve breedte.",
+            "715 is al de totale behoefte. De 200 uitgevoerde controles zijn daarin inbegrepen.",
+            "Naar beneden afronden voldoet niet aan de berekende minimale omvang. Rond 714,2857 naar boven af.",
+            "E = 400, γ = 0,4 en n = 714,2857. Rond de totale behoefte naar boven af en trek 200 af."
+          ],
+          "correct": 3,
+          "steps": [
+            "De totale breedte is 2E, dus E = 800/2 = 400.",
+            "γ = 400²/(2² × 1.000 × 10²) = 0,4; n = 1.000/1,4 = 714,2857.",
+            "Rond omhoog naar 715. Er zijn 200 bruikbare controles uitgevoerd: uitbreiding = 715 − 200 = 515."
+          ],
+          "explanation": "De totale breedte is 2E, dus E = 800/2 = 400. γ = 400²/(2² × 1.000 × 10²) = 0,4; n = 1.000/1,4 = 714,2857. Rond omhoog naar 715. Er zijn 200 bruikbare controles uitgevoerd: uitbreiding = 715 − 200 = 515.",
+          "pattern": "Herken: Hoeveel aanvullende controles zijn minimaal nodig volgens de gegeven planningsformule? → Betekenis: De gewenste breedte en een vooronderzoek bepalen de aanvullende controle-inspanning. → Aanpak: Halveer de breedte, gebruik de passende spreiding, rond de totale behoefte omhoog af en trek bestaande controles af. → Gevraagd antwoord: Het extra aantal controles met het nieuwe totaal ter controle.",
+          "trap": "De formule berekent het totaal; de vraag vraagt de uitbreiding.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 5: gewenste omvang bij MPU"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Hoeveel aanvullende controles zijn minimaal nodig volgens de gegeven planningsformule?",
+            "meaning": "De gewenste breedte en een vooronderzoek bepalen de aanvullende controle-inspanning.",
+            "approach": "Halveer de breedte, gebruik de passende spreiding, rond de totale behoefte omhoog af en trek bestaande controles af.",
+            "answer": "Het extra aantal controles met het nieuwe totaal ter controle."
+          },
+          "guidance": {
+            "title": "Benodigde omvang en extra controles",
+            "focus": "Halveer de breedte, gebruik de passende spreiding, rond de totale behoefte omhoog af en trek bestaande controles af.",
+            "rules": [
+              "E is de gewenste halve intervalbreedte. Gebruik de spreiding die bij de gekozen schatter hoort: s_w voor MPU, s_e voor verschil en s_q voor quotiënt. De kritieke t-waarde hangt af van de betrouwbaarheid, een- of tweezijdigheid en vrijheidsgraden.",
+              "De berekende omvang is een totaal. Rond dat aantal naar boven af en trek pas daarna de al gecontroleerde posten af als de uitbreiding wordt gevraagd."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 1,
+                "locator": "Formule 5: gewenste omvang bij MPU"
               }
             ]
           }
@@ -4159,6 +6894,81 @@ window.SRAMCData = {
           "source": "uitwerkingen",
           "page": 13,
           "locator": "H8 opgave 9c, PDF 13"
+        },
+        {
+          "source": "slides",
+          "page": 38,
+          "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 9,
+          "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+        },
+        {
+          "source": "slides",
+          "page": 40,
+          "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+        },
+        {
+          "source": "opgaven",
+          "page": 7,
+          "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 10,
+          "locator": "H8.8b, volledige worteltabel"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 2,
+          "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+        },
+        {
+          "source": "slides",
+          "page": 42,
+          "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 4,
+          "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 6,
+          "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+        },
+        {
+          "source": "slides",
+          "page": 48,
+          "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+        },
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+        },
+        {
+          "source": "tabellen",
+          "page": 13,
+          "locator": "Rij inf.; kolom 0,025"
+        },
+        {
+          "source": "slides",
+          "page": 47,
+          "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+        },
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 11,
+          "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
         }
       ],
       "questions": [
@@ -4219,6 +7029,81 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -4301,6 +7186,81 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -4383,6 +7343,81 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -4468,6 +7503,81 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -4552,6 +7662,81 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -4641,6 +7826,81 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -4726,6 +7986,81 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -4810,6 +8145,81 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -4899,6 +8309,81 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -4988,6 +8473,81 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -5013,6 +8573,278 @@ window.SRAMCData = {
                 "source": "boek-h8c",
                 "page": 1,
                 "locator": "Boek p. 221-232; oorspronkelijke PDF p. 239-250: grenzen en uitbreiding"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-stratificatie-leertoepassing-cumulatieve-grens",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Je wilt vier bemonsterde strata. Welke eerste klassegrens ligt het dichtst bij het eerste cumulatieve streefbedrag?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Brongegevens: slides SRA NJ26, PDF-pagina 40. Eigen vraag bij de oorspronkelijke tabel.</p><p>Het topstratum wordt afzonderlijk integraal gecontroleerd. Kies een beschikbare klassegrens zonder interpolatie.</p><div class=\"table-wrap\"><table><caption>Cumulatieve boekwaarde uit het collegevoorbeeld</caption><thead><tr><th scope=\"col\">Boekwaardeklasse</th><th scope=\"col\">Aantal</th><th scope=\"col\">Som boekwaarden</th><th scope=\"col\">Cumulatief</th></tr></thead><tbody><tr><th scope=\"row\">0 tot &lt;1.000</th><td>1.127</td><td>513.513</td><td>513.513</td></tr><tr><th scope=\"row\">1.000 tot &lt;2.000</th><td>813</td><td>1.195.110</td><td>1.708.623</td></tr><tr><th scope=\"row\">2.000 tot &lt;3.000</th><td>760</td><td>1.846.186</td><td>3.554.809</td></tr><tr><th scope=\"row\">3.000 tot &lt;4.000</th><td>699</td><td>2.394.075</td><td>5.948.884</td></tr><tr><th scope=\"row\">4.000 tot &lt;5.000</th><td>412</td><td>1.858.944</td><td>7.807.828</td></tr><tr><th scope=\"row\">5.000 tot &lt;6.000</th><td>300</td><td>1.651.237</td><td>9.459.065</td></tr><tr><th scope=\"row\">6.000 tot &lt;7.000</th><td>267</td><td>1.717.729</td><td>11.176.794</td></tr><tr><th scope=\"row\">7.000 tot &lt;8.000</th><td>217</td><td>1.588.182</td><td>12.764.976</td></tr><tr><th scope=\"row\">8.000 tot &lt;9.000</th><td>110</td><td>892.584</td><td>13.657.560</td></tr><tr><th scope=\"row\">9.000 tot &lt;10.000</th><td>70</td><td>649.099</td><td>14.306.659</td></tr><tr><th scope=\"row\">Topstratum ≥10.000</th><td>48</td><td>621.778</td><td>Buiten cumulatie</td></tr></tbody></table></div>",
+          "options": [
+            "€ 3.000; cumulatief € 3.554.809",
+            "€ 4.000; cumulatief € 5.948.884",
+            "€ 2.500, omdat 10.000/4 = 2.500",
+            "De klasse met de eerste 1.194 posten"
+          ],
+          "optionExplanations": [
+            "Het eerste streefbedrag is 14.306.659/4 = 3.576.664,75. De klassegrens 3.000 ligt met cumulatief 3.554.809 het dichtst erbij.",
+            "Deze grens ligt boven het streefbedrag, maar veel verder weg dan de grens 3.000. De vraag verlangt de dichtstbijzijnde grens.",
+            "Dit verdeelt de schaal van boekwaarden in gelijke breedtes. De gevraagde methode verdeelt cumulatieve geldbedragen.",
+            "Dit verdeelt aantallen posten ongeveer gelijk. Cumulatieve boekwaarde gebruikt de geldsom en kan ongelijke aantallen opleveren."
+          ],
+          "correct": 0,
+          "steps": [
+            "Houd de integraal gecontroleerde topgroep buiten de indeling van de bemonsterde strata.",
+            "Het eerste cumulatieve doel is 14.306.659/4 = 3.576.664,75.",
+            "Bij boekwaardegrens 3.000 bedraagt de cumulatieve som 3.554.809, slechts 21.855,75 lager. De aangrenzende grenzen liggen verder weg."
+          ],
+          "explanation": "Houd de integraal gecontroleerde topgroep buiten de indeling van de bemonsterde strata. Het eerste cumulatieve doel is 14.306.659/4 = 3.576.664,75. Bij boekwaardegrens 3.000 bedraagt de cumulatieve som 3.554.809, slechts 21.855,75 lager. De aangrenzende grenzen liggen verder weg.",
+          "pattern": "Herken: Je wilt vier bemonsterde strata. Welke eerste klassegrens ligt het dichtst bij het eerste cumulatieve streefbedrag? → Betekenis: Het topstratum staat apart en de cumulatieve kolom bepaalt grenzen op basis van geldbedragen. → Aanpak: Deel het resterende boekbedrag door het aantal strata en vergelijk het doel met de beschikbare cumulatieve klassegrenzen. → Gevraagd antwoord: Een klassegrens in boekwaarde en de bijbehorende cumulatieve geldsom.",
+          "trap": "Verdeel niet de boekwaardeschaal of het aantal posten wanneer cumulatieve boekwaarde gevraagd wordt.",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF p. 40-41: cumulatieve boekwaarde"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222: keuze van strata"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "bron",
+          "recognition": {
+            "signals": "Je wilt vier bemonsterde strata. Welke eerste klassegrens ligt het dichtst bij het eerste cumulatieve streefbedrag?",
+            "meaning": "Het topstratum staat apart en de cumulatieve kolom bepaalt grenzen op basis van geldbedragen.",
+            "approach": "Deel het resterende boekbedrag door het aantal strata en vergelijk het doel met de beschikbare cumulatieve klassegrenzen.",
+            "answer": "Een klassegrens in boekwaarde en de bijbehorende cumulatieve geldsom."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Deel het resterende boekbedrag door het aantal strata en vergelijk het doel met de beschikbare cumulatieve klassegrenzen.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "slides",
+                "page": 40,
+                "locator": "PDF p. 40-41: cumulatieve boekwaarde"
+              },
+              {
+                "source": "boek-h8c",
+                "page": 2,
+                "locator": "Boek p. 222: keuze van strata"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-stratificatie-leertoepassing-stratum-uitwerken",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke combinatie hoort bij stratum 1: puntschatting en standaardfout van het stratumtotaal?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Brongegevens: slides SRA NJ26, PDF-pagina 48. Eigen vraag bij de oorspronkelijke tabel.</p><p>Werk stratum 1 uit met MPU en de eindigheidscorrectie. Houd tussenwaarden ongerond; de antwoordopties zijn afgerond.</p><div class=\"table-wrap\"><table><caption>Steekproeven per stratum uit het collegevoorbeeld</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">nᵢ</th><th scope=\"col\">Σwᵢ</th><th scope=\"col\">Σwᵢ²</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>2700</td><td>114</td><td>7.000</td><td>475.000</td></tr><tr><th scope=\"row\">2</th><td>1111</td><td>58</td><td>8.000</td><td>1.175.000</td></tr><tr><th scope=\"row\">3</th><td>567</td><td>36</td><td>12.000</td><td>4.030.000</td></tr><tr><th scope=\"row\">4</th><td>397</td><td>42</td><td>20.000</td><td>9.600.000</td></tr></tbody></table></div>",
+          "options": [
+            "Ŵ₁ ≈ € 165.789 en SE₁ ≈ € 20",
+            "Ŵ₁ ≈ € 165.789 en SE₁ ≈ € 4.949",
+            "Ŵ₁ = € 7.000 en SE₁ ≈ € 20",
+            "Ŵ₁ ≈ € 293.202 en SE₁ ≈ € 4.949"
+          ],
+          "optionExplanations": [
+            "De puntschatting klopt. De spreiding van individuele werkelijke waarden is geen standaardfout van een totaal.",
+            "w̄₁ = 7.000/114; s_w1 = √([475.000 − 7.000²/114]/113) ≈ 19,9946. Schaal gemiddelde en onzekerheid met N₁ = 2.700.",
+            "Dit zijn het steekproeftotaal en de spreiding per post. Er is nog niet naar het gehele stratum geprojecteerd.",
+            "De standaardfout hoort bij stratum 1, maar het gemiddelde vermenigvuldigen met het totale aantal van alle strata telt andere strata verkeerd mee."
+          ],
+          "correct": 1,
+          "steps": [
+            "Gebruik uitsluitend de eerste rij: N₁ = 2.700, n₁ = 114, Σw₁ = 7.000, Σw₁² = 475.000.",
+            "Ŵ₁ = 2.700 × 7.000/114 ≈ 165.789,474; s_w1² = [475.000 − 7.000²/114]/113 ≈ 399,782642.",
+            "SE₁ = 2.700 × √399,782642/√114 × √(2.586/2.699) ≈ 4.949,213. Ieder ander stratum moet eerst op dezelfde wijze afzonderlijk worden uitgewerkt."
+          ],
+          "explanation": "Gebruik uitsluitend de eerste rij: N₁ = 2.700, n₁ = 114, Σw₁ = 7.000, Σw₁² = 475.000. Ŵ₁ = 2.700 × 7.000/114 ≈ 165.789,474; s_w1² = [475.000 − 7.000²/114]/113 ≈ 399,782642. SE₁ = 2.700 × √399,782642/√114 × √(2.586/2.699) ≈ 4.949,213. Ieder ander stratum moet eerst op dezelfde wijze afzonderlijk worden uitgewerkt.",
+          "pattern": "Herken: Welke combinatie hoort bij stratum 1: puntschatting en standaardfout van het stratumtotaal? → Betekenis: Per stratum horen populatieaantal, steekproefaantal en somkolommen bij dezelfde rij. → Aanpak: Werk één rij volledig uit: gemiddelde, postvariantie, totaal en standaardfout van het totaal met eindigheidscorrectie. → Gevraagd antwoord: De puntschatting en de standaardfout van het gevraagde stratum.",
+          "trap": "Gebruik bij een stratum niet de N of n van de gehele gestratificeerde steekproef.",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF p. 48: stratum 1 uitwerken"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 26-29: strata combineren"
+            }
+          ],
+          "practiceMode": "begeleid",
+          "kind": "tabel",
+          "dataOrigin": "bron",
+          "recognition": {
+            "signals": "Welke combinatie hoort bij stratum 1: puntschatting en standaardfout van het stratumtotaal?",
+            "meaning": "Per stratum horen populatieaantal, steekproefaantal en somkolommen bij dezelfde rij.",
+            "approach": "Werk één rij volledig uit: gemiddelde, postvariantie, totaal en standaardfout van het totaal met eindigheidscorrectie.",
+            "answer": "De puntschatting en de standaardfout van het gevraagde stratum."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Werk één rij volledig uit: gemiddelde, postvariantie, totaal en standaardfout van het totaal met eindigheidscorrectie.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "slides",
+                "page": 48,
+                "locator": "PDF p. 48: stratum 1 uitwerken"
+              },
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 26-29: strata combineren"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-stratificatie-leertoepassing-onzekerheid-combineren",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welk totaalinterval volgt bij t = 2 uit deze onafhankelijk getrokken strata?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Alle bedragen zijn euro. Het werkelijke totaal van de topgroep is integraal vastgesteld; de getoonde SE’s zijn al voor de stratumtotalen.</p><div class=\"table-wrap\"><table><caption>Afgeronde stratumresultaten</caption><thead><tr><th scope=\"col\">Groep</th><th scope=\"col\">Geschat of vastgesteld werkelijk totaal</th><th scope=\"col\">SE totaal</th></tr></thead><tbody><tr><th scope=\"row\">Stratum 1</th><td>160.000</td><td>3.000</td></tr><tr><th scope=\"row\">Stratum 2</th><td>240.000</td><td>4.000</td></tr><tr><th scope=\"row\">Integraal topstratum</th><td>50.000</td><td>0</td></tr></tbody></table></div>",
+          "options": [
+            "[€ 390.000; € 410.000]",
+            "[€ 490.000; € 510.000]",
+            "[€ 440.000; € 460.000]",
+            "[€ 436.000; € 464.000]"
+          ],
+          "optionExplanations": [
+            "Dit laat de werkelijke waarde van het integraal gecontroleerde topstratum weg. Geen steekproefvariantie betekent niet geen waarde.",
+            "Dit telt de topgroep dubbel. Het werkelijke totaal van de topgroep wordt precies eenmaal aan de bemonsterde strata toegevoegd.",
+            "Het centrum is 160.000 + 240.000 + 50.000 = 450.000. De gezamenlijke SE is √(3.000² + 4.000²) = 5.000 en de marge 10.000.",
+            "Dit telt de standaardfouten rechtstreeks op. Bij onafhankelijke strata moet je eerst hun varianties optellen."
+          ],
+          "correct": 2,
+          "steps": [
+            "Tel de werkelijke totalen op: Ŵ = 450.000, inclusief het topstratum eenmaal.",
+            "Tel de onafhankelijke variantiebijdragen op: 9.000.000 + 16.000.000 + 0 = 25.000.000; SE = 5.000.",
+            "De marge is 2 × 5.000 = 10.000. Het interval is [440.000; 460.000]; de topgroep vergroot het centrum zonder steekproefvariantie toe te voegen."
+          ],
+          "explanation": "Tel de werkelijke totalen op: Ŵ = 450.000, inclusief het topstratum eenmaal. Tel de onafhankelijke variantiebijdragen op: 9.000.000 + 16.000.000 + 0 = 25.000.000; SE = 5.000. De marge is 2 × 5.000 = 10.000. Het interval is [440.000; 460.000]; de topgroep vergroot het centrum zonder steekproefvariantie toe te voegen.",
+          "pattern": "Herken: Welk totaalinterval volgt bij t = 2 uit deze onafhankelijk getrokken strata? → Betekenis: Afzonderlijke stratumresultaten moeten worden gecombineerd tot één populatie-uitspraak. → Aanpak: Tel de totalen op, combineer onafhankelijke onzekerheden via de som van varianties en voeg de topgroep eenmaal toe. → Gevraagd antwoord: Eén totaalinterval voor alle strata inclusief de gecontroleerde topgroep.",
+          "trap": "Standaardfouten optellen overschat de gecombineerde fout en heeft een andere betekenis dan varianties optellen.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 26-29: stratificatieschatting"
+            },
+            {
+              "source": "slides",
+              "page": 49,
+              "locator": "PDF p. 49: totaal en onzekerheid combineren"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welk totaalinterval volgt bij t = 2 uit deze onafhankelijk getrokken strata?",
+            "meaning": "Afzonderlijke stratumresultaten moeten worden gecombineerd tot één populatie-uitspraak.",
+            "approach": "Tel de totalen op, combineer onafhankelijke onzekerheden via de som van varianties en voeg de topgroep eenmaal toe.",
+            "answer": "Eén totaalinterval voor alle strata inclusief de gecontroleerde topgroep."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Tel de totalen op, combineer onafhankelijke onzekerheden via de som van varianties en voeg de topgroep eenmaal toe.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 26-29: stratificatieschatting"
+              },
+              {
+                "source": "slides",
+                "page": 49,
+                "locator": "PDF p. 49: totaal en onzekerheid combineren"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-stratificatie-leertoepassing-neyman-allocatie",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Hoe verdeel je 100 controles volgens Neyman-allocatie over de twee strata?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Er zijn geen minimumaantallen of verschillende controlekosten gegeven. Gebruik nᵢ evenredig met Nᵢsᵢ.</p><div class=\"table-wrap\"><table><caption>Vooronderzoek</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">sᵢ</th></tr></thead><tbody><tr><th scope=\"row\">A</th><td>800</td><td>10</td></tr><tr><th scope=\"row\">B</th><td>200</td><td>40</td></tr></tbody></table></div>",
+          "options": [
+            "80 in A en 20 in B",
+            "20 in A en 80 in B",
+            "100 in A en 0 in B",
+            "50 in A en 50 in B"
+          ],
+          "optionExplanations": [
+            "Dit is proportionele allocatie naar populatieaantallen. Neyman houdt ook rekening met de grotere spreiding in B.",
+            "Dit weegt alleen met spreiding en laat de verschillende populatieaantallen weg.",
+            "B draagt ondanks zijn kleinere omvang evenveel Nᵢsᵢ bij. Geen controles toekennen volgt niet uit Neyman-allocatie.",
+            "N_A s_A = 8.000 en N_B s_B = 8.000. Beide krijgen dus de helft van de controles."
+          ],
+          "correct": 3,
+          "steps": [
+            "Bereken per stratum omvang maal spreiding: A = 800 × 10 = 8.000 en B = 200 × 40 = 8.000.",
+            "Het totaal van de gewichten is 16.000, zodat elk stratum 8.000/16.000 = 50% krijgt.",
+            "Verdeel 100 controles als 50 en 50. Het kleinere maar sterker spreidende stratum krijgt relatief intensievere controle om onzekerheid doelmatiger te verminderen."
+          ],
+          "explanation": "Bereken per stratum omvang maal spreiding: A = 800 × 10 = 8.000 en B = 200 × 40 = 8.000. Het totaal van de gewichten is 16.000, zodat elk stratum 8.000/16.000 = 50% krijgt. Verdeel 100 controles als 50 en 50. Het kleinere maar sterker spreidende stratum krijgt relatief intensievere controle om onzekerheid doelmatiger te verminderen.",
+          "pattern": "Herken: Hoe verdeel je 100 controles volgens Neyman-allocatie over de twee strata? → Betekenis: Verschillende populatieaantallen en spreidingen sturen de verdeling van controlecapaciteit. → Aanpak: Bereken Nᵢsᵢ en verdeel het totale aantal controles naar deze gewichten; vergelijk dit met proportionele allocatie. → Gevraagd antwoord: Twee gehele controleaantallen die samen de beschikbare omvang vormen.",
+          "trap": "Een groot stratum krijgt niet automatisch de meeste controles als de spreiding elders veel groter is.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 25: Neyman-allocatie"
+            },
+            {
+              "source": "slides",
+              "page": 45,
+              "locator": "PDF p. 44-46: allocatie"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Hoe verdeel je 100 controles volgens Neyman-allocatie over de twee strata?",
+            "meaning": "Verschillende populatieaantallen en spreidingen sturen de verdeling van controlecapaciteit.",
+            "approach": "Bereken Nᵢsᵢ en verdeel het totale aantal controles naar deze gewichten; vergelijk dit met proportionele allocatie.",
+            "answer": "Twee gehele controleaantallen die samen de beschikbare omvang vormen."
+          },
+          "guidance": {
+            "title": "Strata afzonderlijk berekenen en combineren",
+            "focus": "Bereken Nᵢsᵢ en verdeel het totale aantal controles naar deze gewichten; vergelijk dit met proportionele allocatie.",
+            "rules": [
+              "Maak onderscheid tussen Nᵢ (alle posten), nᵢ (gecontroleerde posten) en het steekproefgemiddelde w̄ᵢ per stratum. Tel Nᵢw̄ᵢ op over de bemonsterde strata en voeg het bekende totaal van een eventueel afzonderlijk, volledig gecontroleerd topstratum eenmaal toe.",
+              "Bij onafhankelijke strata tel je de variantiebijdragen op. Neem daarna de wortel voor de gezamenlijke standaardfout. Een integraal gecontroleerd topstratum draagt wel waarde bij, maar geen steekproefvariantie."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formule 25: Neyman-allocatie"
+              },
+              {
+                "source": "slides",
+                "page": 45,
+                "locator": "PDF p. 44-46: allocatie"
               }
             ]
           }
@@ -5061,6 +8893,41 @@ window.SRAMCData = {
           "source": "boek-h9a",
           "page": 14,
           "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+        },
+        {
+          "source": "boek-h9a",
+          "page": 1,
+          "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+        },
+        {
+          "source": "boek-h9a",
+          "page": 5,
+          "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+        },
+        {
+          "source": "attentie",
+          "page": 3,
+          "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+        },
+        {
+          "source": "opgaven",
+          "page": 10,
+          "locator": "Opgavenbundel, H9.1, PDF 10"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 14,
+          "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+        },
+        {
+          "source": "spss",
+          "page": 9,
+          "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+        },
+        {
+          "source": "spss",
+          "page": 5,
+          "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
         }
       ],
       "questions": [
@@ -5121,6 +8988,41 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 14,
               "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            },
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
           "recognition": {
@@ -5208,6 +9110,41 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 14,
               "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            },
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
           "recognition": {
@@ -5295,6 +9232,41 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 14,
               "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            },
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
           "recognition": {
@@ -5385,6 +9357,41 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 14,
               "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            },
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
           "recognition": {
@@ -5410,6 +9417,64 @@ window.SRAMCData = {
                 "source": "boek-h9a",
                 "page": 1,
                 "locator": "Boek p. 233 en verder; oorspronkelijke PDF p. 251 en verder"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-regressielijn-leertoepassing-residu-uitvoer",
+          "level": 2,
+          "prompt": "Eigen oefenvraag. Wat zijn de voorspelde kosten en het residu van de getoonde controlemaand?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Kosten staan in duizenden euro’s; productie staat in honderden eenheden. Het model is met een constante geschat.</p><div class=\"table-wrap\"><table><caption>Coefficients: afhankelijke variabele kosten</caption><thead><tr><th scope=\"col\">Modelterm</th><th scope=\"col\">Unstandardized B</th><th scope=\"col\">Std. Error</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>12</td><td>2</td></tr><tr><th scope=\"row\">Productie</th><td>3</td><td>0.5</td></tr></tbody></table></div><div class=\"table-wrap\"><table><caption>Controlemaand</caption><thead><tr><th scope=\"col\">Productie x</th><th scope=\"col\">Werkelijke kosten y</th></tr></thead><tbody><tr><th scope=\"row\">8</th><td>41</td></tr></tbody></table></div>",
+          "options": [
+            "ŷ = 16 en e = 25",
+            "ŷ = 36 en e = 5",
+            "ŷ = 36 en e = −5",
+            "ŷ = 24 en e = 17"
+          ],
+          "optionExplanations": [
+            "Dit gebruikt Std. Error = 0,5 als helling. Voor voorspellen heb je de B-kolom nodig.",
+            "De lijn geeft 12 + 3 × 8 = 36. Het residu is werkelijk min voorspeld: 41 − 36 = 5 duizend euro.",
+            "De voorspelling klopt, maar het teken van het residu is omgekeerd: SRA gebruikt e = y − ŷ.",
+            "Dit vergeet de constante 12. De voorspelling omvat alle termen van de geschatte lijn."
+          ],
+          "correct": 1,
+          "steps": [
+            "Lees de vergelijking uit B: ŷ = 12 + 3x. Std. Error beschrijft coëfficiëntonzekerheid en is geen helling.",
+            "Vul x = 8 in: ŷ = 36 duizend euro.",
+            "e = y − ŷ = 41 − 36 = 5 duizend euro. De kosten liggen boven de verwachting; de oorzaak moet inhoudelijk worden onderzocht."
+          ],
+          "explanation": "Lees de vergelijking uit B: ŷ = 12 + 3x. Std. Error beschrijft coëfficiëntonzekerheid en is geen helling. Vul x = 8 in: ŷ = 36 duizend euro. e = y − ŷ = 41 − 36 = 5 duizend euro. De kosten liggen boven de verwachting; de oorzaak moet inhoudelijk worden onderzocht.",
+          "pattern": "Herken: Wat zijn de voorspelde kosten en het residu van de getoonde controlemaand? → Betekenis: Coëfficiënten en de waargenomen uitkomst komen uit verschillende tabellen. → Aanpak: Lees B inclusief de constante, bereken de verwachting en trek deze van de werkelijke uitkomst af. → Gevraagd antwoord: Een voorspelling en een residu in de oorspronkelijke kosten-eenheid.",
+          "trap": "Een positief residu betekent hogere werkelijke kosten dan voorspeld; het is nog geen verklaring van de oorzaak.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 30-34: regressielijn en residu"
+            }
+          ],
+          "practiceMode": "begeleid",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Wat zijn de voorspelde kosten en het residu van de getoonde controlemaand?",
+            "meaning": "Coëfficiënten en de waargenomen uitkomst komen uit verschillende tabellen.",
+            "approach": "Lees B inclusief de constante, bereken de verwachting en trek deze van de werkelijke uitkomst af.",
+            "answer": "Een voorspelling en een residu in de oorspronkelijke kosten-eenheid."
+          },
+          "guidance": {
+            "title": "Voorspelling, residu en kleinste kwadraten",
+            "focus": "Lees B inclusief de constante, bereken de verwachting en trek deze van de werkelijke uitkomst af.",
+            "rules": [
+              "De geschatte lijn is ŷ = b₀ + b₁x. Vul eerst x in om de voorspelling ŷ te bepalen. Het residu is e = y − ŷ, dus waarneming min voorspelling.",
+              "OLS kiest de coëfficiënten die de som van gekwadrateerde residuen (SSE) minimaliseren. Alleen de som van residuen vergelijken kan misleiden doordat positieve en negatieve fouten elkaar opheffen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 2,
+                "locator": "Formules 30-34: regressielijn en residu"
               }
             ]
           }
@@ -5474,6 +9539,41 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 14,
               "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            },
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
           "recognition": {
@@ -5563,6 +9663,41 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 14,
               "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            },
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
           "recognition": {
@@ -5652,6 +9787,41 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 14,
               "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            },
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
           "recognition": {
@@ -5710,6 +9880,36 @@ window.SRAMCData = {
           "source": "boek-h9a",
           "page": 16,
           "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+        },
+        {
+          "source": "boek-h9b",
+          "page": 2,
+          "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+        },
+        {
+          "source": "attentie",
+          "page": 4,
+          "locator": "Attentiepunten, variantieanalyse, PDF 4"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 14,
+          "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formuleblad, formules 35–43, PDF 3"
+        },
+        {
+          "source": "slides",
+          "page": 72,
+          "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+        },
+        {
+          "source": "slides",
+          "page": 86,
+          "locator": "Slides, F-toets huurcasus, PDF 86–87"
         }
       ],
       "questions": [
@@ -5755,6 +9955,36 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 16,
               "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 2,
+              "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+            },
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "Attentiepunten, variantieanalyse, PDF 4"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 72,
+              "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+            },
+            {
+              "source": "slides",
+              "page": 86,
+              "locator": "Slides, F-toets huurcasus, PDF 86–87"
             }
           ],
           "recognition": {
@@ -5822,6 +10052,36 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 16,
               "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 2,
+              "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+            },
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "Attentiepunten, variantieanalyse, PDF 4"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 72,
+              "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+            },
+            {
+              "source": "slides",
+              "page": 86,
+              "locator": "Slides, F-toets huurcasus, PDF 86–87"
             }
           ],
           "recognition": {
@@ -5889,6 +10149,36 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 16,
               "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 2,
+              "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+            },
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "Attentiepunten, variantieanalyse, PDF 4"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 72,
+              "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+            },
+            {
+              "source": "slides",
+              "page": 86,
+              "locator": "Slides, F-toets huurcasus, PDF 86–87"
             }
           ],
           "recognition": {
@@ -5959,6 +10249,36 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 16,
               "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 2,
+              "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+            },
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "Attentiepunten, variantieanalyse, PDF 4"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 72,
+              "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+            },
+            {
+              "source": "slides",
+              "page": 86,
+              "locator": "Slides, F-toets huurcasus, PDF 86–87"
             }
           ],
           "recognition": {
@@ -6029,6 +10349,36 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 16,
               "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 2,
+              "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+            },
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "Attentiepunten, variantieanalyse, PDF 4"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 72,
+              "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+            },
+            {
+              "source": "slides",
+              "page": 86,
+              "locator": "Slides, F-toets huurcasus, PDF 86–87"
             }
           ],
           "recognition": {
@@ -6098,6 +10448,36 @@ window.SRAMCData = {
               "source": "boek-h9a",
               "page": 16,
               "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 2,
+              "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+            },
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "Attentiepunten, variantieanalyse, PDF 4"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 72,
+              "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+            },
+            {
+              "source": "slides",
+              "page": 86,
+              "locator": "Slides, F-toets huurcasus, PDF 86–87"
             }
           ],
           "recognition": {
@@ -6118,6 +10498,132 @@ window.SRAMCData = {
                 "source": "formules",
                 "page": 3,
                 "locator": "Formules 35-43: variantieanalyse en globale F-toets"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-anova-leertoepassing-volledige-tabel",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke combinatie vult de ANOVA-uitvoer correct aan?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het regressiemodel heeft een constante. Bereken uit de uitvoer ook het aantal gebruikte waarnemingen.</p><div class=\"table-wrap\"><table><caption>ANOVA: kosten verklaard door productie en bezetting</caption><thead><tr><th scope=\"col\">Bron</th><th scope=\"col\">Sum of Squares</th><th scope=\"col\">df</th><th scope=\"col\">Mean Square</th><th scope=\"col\">F</th></tr></thead><tbody><tr><th scope=\"row\">Regression</th><td>180</td><td>2</td><td>?</td><td>?</td></tr><tr><th scope=\"row\">Residual</th><td>40</td><td>20</td><td>?</td><td></td></tr><tr><th scope=\"row\">Total</th><td>220</td><td>22</td><td></td><td></td></tr></tbody></table></div>",
+          "options": [
+            "n = 23; MSE = 40; F = 4,5; R² ≈ 0,818",
+            "n = 23; MSE = 2; F = 45; R² ≈ 0,182",
+            "n = 23; MSE = 2; F = 45; R² ≈ 0,818",
+            "n = 22; MSE = 2; F = 45; R² ≈ 0,818"
+          ],
+          "optionExplanations": [
+            "De som van residukwadraten 40 moet door zijn vrijheidsgraden worden gedeeld. F vergelijkt gemiddelde kwadratensommen.",
+            "0,182 is SSE/TotalSS, het onverklaarde aandeel. R² vraagt juist het verklaarde aandeel SSR/TotalSS.",
+            "Total df = n − 1 geeft 23. MSE = 40/20 = 2; MSR = 180/2 = 90; F = 90/2 = 45 en R² = 180/220.",
+            "De rekenmaten kloppen, maar Total df is n − 1 en dus één lager dan het aantal waarnemingen."
+          ],
+          "correct": 2,
+          "steps": [
+            "Total df = 22 betekent n = 23; de regressierij heeft k = 2 verklarende variabelen.",
+            "MSR = 180/2 = 90 en MSE = 40/20 = 2, zodat F = 45.",
+            "R² = 180/220 ≈ 0,818: circa 81,8% van de kostenvariatie is verklaard in deze steekproef. Dat bewijst geen causaliteit of geldige residuvoorwaarden."
+          ],
+          "explanation": "Total df = 22 betekent n = 23; de regressierij heeft k = 2 verklarende variabelen. MSR = 180/2 = 90 en MSE = 40/20 = 2, zodat F = 45. R² = 180/220 ≈ 0,818: circa 81,8% van de kostenvariatie is verklaard in deze steekproef. Dat bewijst geen causaliteit of geldige residuvoorwaarden.",
+          "pattern": "Herken: Welke combinatie vult de ANOVA-uitvoer correct aan? → Betekenis: De ANOVA-tabel biedt aantallen, verklaarde variatie en resterende spreiding in één samenhangend geheel. → Aanpak: Koppel iedere kwadratensom aan de df van dezelfde rij en bereken daarna F en het verklaarde aandeel. → Gevraagd antwoord: Een consistente combinatie van aantal waarnemingen, residuele variantie, F en R².",
+          "trap": "Verwar Sum of Squares niet met Mean Square en Total df niet met n.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formules 35-43: ANOVA en F-toets"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke combinatie vult de ANOVA-uitvoer correct aan?",
+            "meaning": "De ANOVA-tabel biedt aantallen, verklaarde variatie en resterende spreiding in één samenhangend geheel.",
+            "approach": "Koppel iedere kwadratensom aan de df van dezelfde rij en bereken daarna F en het verklaarde aandeel.",
+            "answer": "Een consistente combinatie van aantal waarnemingen, residuele variantie, F en R²."
+          },
+          "guidance": {
+            "title": "ANOVA: verklaarde en onverklaarde variatie",
+            "focus": "Koppel iedere kwadratensom aan de df van dezelfde rij en bereken daarna F en het verklaarde aandeel.",
+            "rules": [
+              "TotalSS = SSR + SSE. SSR is de verklaarde kwadratensom en SSE de resterende kwadratensom. Het verklaarde aandeel is R² = SSR/TotalSS.",
+              "Bij een model met constante is k het aantal verklarende variabelen; de constante telt niet mee in k. De vrijheidsgraden zijn k voor regressie, n − k − 1 voor residu en n − 1 voor totaal. MSE = SSE/(n − k − 1), MSR = SSR/k en F = MSR/MSE."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 35-43: ANOVA en F-toets"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-anova-leertoepassing-f-grens-bundel",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Toets het gehele model bij α = 0,05. Welke kritieke F en conclusie volgen uit de tabellenbundel?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Gebruik de ANOVA-uitvoer. De hypothesen gaan over beide regressiehellingen samen.</p><div class=\"table-wrap\"><table><caption>ANOVA: kosten verklaard door productie en bezetting</caption><thead><tr><th scope=\"col\">Bron</th><th scope=\"col\">Sum of Squares</th><th scope=\"col\">df</th><th scope=\"col\">Mean Square</th><th scope=\"col\">F</th></tr></thead><tbody><tr><th scope=\"row\">Regression</th><td>180</td><td>2</td><td>?</td><td>?</td></tr><tr><th scope=\"row\">Residual</th><td>40</td><td>20</td><td>?</td><td></td></tr><tr><th scope=\"row\">Total</th><td>220</td><td>22</td><td></td><td></td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=21\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.8 F-verdeling, PDF-pagina 21</a>. Zoek de benodigde grens zelf op.</p>",
+          "options": [
+            "F_kritiek = 4,461; verwerp H₀",
+            "F_kritiek = 3,493; iedere afzonderlijke helling is significant",
+            "F_kritiek = 3,493; H₀ niet verwerpen",
+            "F_kritiek = 3,493; verwerp H₀ dat beide hellingen nul zijn"
+          ],
+          "optionExplanations": [
+            "De conclusie blijft hier hetzelfde, maar 4,461 hoort bij α = 0,025. Voor deze F-toets halveer je 0,05 niet.",
+            "De globale F-toets verwerpt dat alle hellingen tegelijk nul zijn. Zij toont niet dat iedere losse helling significant is.",
+            "De berekende F = 45 is groter dan de kritieke waarde; de beslisregel is dus omgekeerd toegepast.",
+            "Gebruik teller-df 2 en noemer-df 20 bij α = 0,05. F = (180/2)/(40/20) = 45 overschrijdt 3,493."
+          ],
+          "correct": 3,
+          "steps": [
+            "H₀: β_productie = β_bezetting = 0; H₁: ten minste één helling wijkt van nul af.",
+            "Bereken F = 45 en lees tabel 13.8: kolom teller-df 2, rij noemer-df 20 en α = 0,05 geeft 3,493.",
+            "45 > 3,493, dus verwerp H₀. Het model bevat gezamenlijk verklarende informatie; individuele effecten vereisen afzonderlijke t-toetsen."
+          ],
+          "explanation": "H₀: β_productie = β_bezetting = 0; H₁: ten minste één helling wijkt van nul af. Bereken F = 45 en lees tabel 13.8: kolom teller-df 2, rij noemer-df 20 en α = 0,05 geeft 3,493. 45 > 3,493, dus verwerp H₀. Het model bevat gezamenlijk verklarende informatie; individuele effecten vereisen afzonderlijke t-toetsen.",
+          "pattern": "Herken: Toets het gehele model bij α = 0,05. Welke kritieke F en conclusie volgen uit de tabellenbundel? → Betekenis: De globale toets vergelijkt verklaarde variatie per vrijheidsgraad met residuele variatie. → Aanpak: Bepaal teller- en noemervrijheidsgraden, kies de α-rij zonder halvering en vergelijk de berekende F met de tabelgrens. → Gevraagd antwoord: Een globale toetsconclusie over de gezamenlijke regressiehellingen.",
+          "trap": "Een significant geheel garandeert niet dat iedere afzonderlijke variabele significant is.",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 21,
+              "locator": "Tabel 13.8: teller-df 2, noemer-df 20, α 0,05"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formule 43: F-toets"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Toets het gehele model bij α = 0,05. Welke kritieke F en conclusie volgen uit de tabellenbundel?",
+            "meaning": "De globale toets vergelijkt verklaarde variatie per vrijheidsgraad met residuele variatie.",
+            "approach": "Bepaal teller- en noemervrijheidsgraden, kies de α-rij zonder halvering en vergelijk de berekende F met de tabelgrens.",
+            "answer": "Een globale toetsconclusie over de gezamenlijke regressiehellingen."
+          },
+          "guidance": {
+            "title": "ANOVA: verklaarde en onverklaarde variatie",
+            "focus": "Bepaal teller- en noemervrijheidsgraden, kies de α-rij zonder halvering en vergelijk de berekende F met de tabelgrens.",
+            "rules": [
+              "TotalSS = SSR + SSE. SSR is de verklaarde kwadratensom en SSE de resterende kwadratensom. Het verklaarde aandeel is R² = SSR/TotalSS.",
+              "Bij een model met constante is k het aantal verklarende variabelen; de constante telt niet mee in k. De vrijheidsgraden zijn k voor regressie, n − k − 1 voor residu en n − 1 voor totaal. MSE = SSE/(n − k − 1), MSR = SSR/k en F = MSR/MSE."
+            ],
+            "refs": [
+              {
+                "source": "tabellen",
+                "page": 21,
+                "locator": "Tabel 13.8: teller-df 2, noemer-df 20, α 0,05"
+              },
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 43: F-toets"
               }
             ]
           }
@@ -6171,6 +10677,31 @@ window.SRAMCData = {
           "source": "boek-h9b",
           "page": 7,
           "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+        },
+        {
+          "source": "boek-h9b",
+          "page": 8,
+          "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+        },
+        {
+          "source": "attentie",
+          "page": 8,
+          "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+        },
+        {
+          "source": "tabellen",
+          "page": 12,
+          "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+        },
+        {
+          "source": "tabellen",
+          "page": 20,
+          "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 15,
+          "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
         }
       ],
       "questions": [
@@ -6236,6 +10767,31 @@ window.SRAMCData = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -6333,6 +10889,31 @@ window.SRAMCData = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -6430,6 +11011,31 @@ window.SRAMCData = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -6530,6 +11136,31 @@ window.SRAMCData = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -6629,6 +11260,31 @@ window.SRAMCData = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -6728,6 +11384,31 @@ window.SRAMCData = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -6827,6 +11508,31 @@ window.SRAMCData = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -6926,6 +11632,31 @@ window.SRAMCData = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -7025,6 +11756,31 @@ window.SRAMCData = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -7060,6 +11816,210 @@ window.SRAMCData = {
                 "source": "boek-h9b",
                 "page": 7,
                 "locator": "Boek p. 255; oorspronkelijke PDF p. 273: interval van de helling"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-toetsen-leertoepassing-p-en-t-route",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke conclusie volgt bij H₁: β ≠ 0 en α = 0,05, via zowel Sig. als de kritieke t?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het model heeft n = 22 waarnemingen, één verklarende variabele en een constante. SPSS toont een tweezijdige Sig.</p><div class=\"table-wrap\"><table><caption>Coefficients: kosten</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">t</th><th scope=\"col\">Sig. (2-tailed)</th></tr></thead><tbody><tr><th scope=\"row\">Productie</th><td>0,460</td><td>0,200</td><td>2,300</td><td>0,032</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 12</a>. Zoek de benodigde grens zelf op.</p>",
+          "options": [
+            "Beide routes verwerpen niet: p > 0,025",
+            "Alleen de p-route verwerpt, want t moet groter zijn dan 5",
+            "Beide routes bewijzen dat β exact 0,460 is",
+            "Beide routes verwerpen H₀: p < 0,05 en |t| > 2,086"
+          ],
+          "optionExplanations": [
+            "Een reeds tweezijdige Sig. moet met de totale α worden vergeleken. α/2 is alleen de staartkans voor het aflezen van de t-grens.",
+            "De grens 5 is niet uit de t-tabel afgeleid. De passende df en betrouwbaarheid geven hier 2,086.",
+            "De toetsen ondersteunen een niet-nulhelling. Zij bewijzen niet dat de geschatte waarde exact gelijk is aan de populatieparameter.",
+            "De tweezijdige p-waarde 0,032 vergelijk je met α = 0,05. Bij df = 20 geeft kolom 0,025 t_kritiek = 2,086."
+          ],
+          "correct": 3,
+          "steps": [
+            "Stel H₀: β = 0 en H₁: β ≠ 0; df = 22 − 1 − 1 = 20.",
+            "P-route: 0,032 < 0,05. Kritieke route: B/SE = 2,3 en bij df = 20, staartkans 0,025 is t = 2,086.",
+            "Beide verwerpen H₀ omdat 2,3 > 2,086. De positieve samenhang is statistisch ondersteund; causaliteit volgt niet uit deze toets."
+          ],
+          "explanation": "Stel H₀: β = 0 en H₁: β ≠ 0; df = 22 − 1 − 1 = 20. P-route: 0,032 < 0,05. Kritieke route: B/SE = 2,3 en bij df = 20, staartkans 0,025 is t = 2,086. Beide verwerpen H₀ omdat 2,3 > 2,086. De positieve samenhang is statistisch ondersteund; causaliteit volgt niet uit deze toets.",
+          "pattern": "Herken: Welke conclusie volgt bij H₁: β ≠ 0 en α = 0,05, via zowel Sig. als de kritieke t? → Betekenis: Een tweezijdige Sig. en de t-statistiek zijn twee weergaven van dezelfde coëfficiënttoets. → Aanpak: Vergelijk de volledige tweezijdige p met α en vergelijk daarnaast de absolute t met de α/2-grens bij de juiste df. → Gevraagd antwoord: Twee overeenstemmende, onderbouwde beslissingen over een populatiehelling.",
+          "trap": "Halveer niet zowel de p-waarde als de grens en vergelijk een tweezijdige Sig. niet automatisch met α/2.",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4: df 20 en kolom 0,025"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formules 39-43: hypothesetoetsen"
+            }
+          ],
+          "practiceMode": "begeleid",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke conclusie volgt bij H₁: β ≠ 0 en α = 0,05, via zowel Sig. als de kritieke t?",
+            "meaning": "Een tweezijdige Sig. en de t-statistiek zijn twee weergaven van dezelfde coëfficiënttoets.",
+            "approach": "Vergelijk de volledige tweezijdige p met α en vergelijk daarnaast de absolute t met de α/2-grens bij de juiste df.",
+            "answer": "Twee overeenstemmende, onderbouwde beslissingen over een populatiehelling."
+          },
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "Vergelijk de volledige tweezijdige p met α en vergelijk daarnaast de absolute t met de α/2-grens bij de juiste df.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "tabellen",
+                "page": 12,
+                "locator": "Tabel 13.4: df 20 en kolom 0,025"
+              },
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 39-43: hypothesetoetsen"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-toetsen-leertoepassing-richting-eenzijdig",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. De hypothese vooraf is dat meer controles de foutfractie verlagen: H₁: β < 0. Wat volgt bij α = 0,05?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De gerichte hypothese is vóór de analyse gekozen. De tabel toont een positieve helling en een tweezijdige p-waarde.</p><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">t</th><th scope=\"col\">Sig. (2-tailed)</th></tr></thead><tbody><tr><th scope=\"row\">Controle-intensiteit</th><td>0,44</td><td>0,20</td><td>2,20</td><td>0,040</td></tr></tbody></table></div>",
+          "options": [
+            "H₀ niet verwerpen in de gevraagde richting; p_eenzijdig ≈ 0,980",
+            "H₀ verwerpen: 0,040/2 = 0,020",
+            "Een negatieve werking is bewezen omdat Sig. < 0,05",
+            "H₁ achteraf wijzigen naar β > 0 en dezelfde claim behouden"
+          ],
+          "optionExplanations": [
+            "Het geschatte effect is positief, tegengesteld aan H₁. Voor de negatieve richting is de p-waarde 1 − 0,040/2 = 0,980.",
+            "Blind halveren negeert dat de waargenomen helling de andere kant op wijst. Voor H₁: β < 0 ligt t juist verkeerd.",
+            "De tweezijdige toets ondersteunt een verschil van nul; het teken van B is positief en ondersteunt geen verlaging.",
+            "Een achteraf gewijzigde richting is een andere toetsvraag. Zij bevestigt niet de oorspronkelijk vooraf gekozen hypothese."
+          ],
+          "correct": 0,
+          "steps": [
+            "H₁ verlangt een negatieve populatiehelling. Het geschatte B en t zijn positief.",
+            "Bij een symmetrische t-verdeling is de negatieve eenzijdige p hier 1 − 0,040/2 = 0,980.",
+            "Verwerp H₀ niet ten gunste van een daling. Benoem dat het effect tegengesteld ligt aan de vooraf geformuleerde verwachting."
+          ],
+          "explanation": "H₁ verlangt een negatieve populatiehelling. Het geschatte B en t zijn positief. Bij een symmetrische t-verdeling is de negatieve eenzijdige p hier 1 − 0,040/2 = 0,980. Verwerp H₀ niet ten gunste van een daling. Benoem dat het effect tegengesteld ligt aan de vooraf geformuleerde verwachting.",
+          "pattern": "Herken: De hypothese vooraf is dat meer controles de foutfractie verlagen: H₁: β < 0. Wat volgt bij α = 0,05? → Betekenis: Een directionele uitspraak moet passen bij zowel de p-waarde als het teken van de coëfficiënt. → Aanpak: Lees eerst de vooraf gekozen richting, controleer het teken van t en pas daarna de tweezijdige p aan. → Gevraagd antwoord: Een toetsconclusie voor precies de vooraf gestelde negatieve hypothese.",
+          "trap": "Een kleine tweezijdige p ondersteunt niet automatisch elke gewenste eenzijdige richting.",
+          "refs": [
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "PDF p. 4-5: hypothesen en toetsrichting"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formule 62: individuele t-toets"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "De hypothese vooraf is dat meer controles de foutfractie verlagen: H₁: β < 0. Wat volgt bij α = 0,05?",
+            "meaning": "Een directionele uitspraak moet passen bij zowel de p-waarde als het teken van de coëfficiënt.",
+            "approach": "Lees eerst de vooraf gekozen richting, controleer het teken van t en pas daarna de tweezijdige p aan.",
+            "answer": "Een toetsconclusie voor precies de vooraf gestelde negatieve hypothese."
+          },
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "Lees eerst de vooraf gekozen richting, controleer het teken van t en pas daarna de tweezijdige p aan.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "attentie",
+                "page": 4,
+                "locator": "PDF p. 4-5: hypothesen en toetsrichting"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formule 62: individuele t-toets"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-toetsen-leertoepassing-niet-nul-hypothese",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Toets H₀: β = 1 tegenover H₁: β ≠ 1 bij α = 0,05. Welke conclusie is juist?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Er zijn 26 waarnemingen, één verklarende variabele en een constante. De gebruikelijke SPSS-t toetst tegen nul; deze eigen oefenvariant vraagt tegen één. Gebruik hiervoor t = (B − β₀)/Std. Error.</p><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">SPSS t tegen nul</th></tr></thead><tbody><tr><th scope=\"row\">Activiteit</th><td>1,20</td><td>0,10</td><td>12,00</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 12</a>. Zoek de benodigde grens zelf op.</p>",
+          "options": [
+            "t = 2; β is daarmee exact 1 bewezen",
+            "t = 2; H₀ niet verwerpen, want 2 < 2,064",
+            "t = 12; H₀ verwerpen",
+            "t = 0,20; H₀ niet verwerpen"
+          ],
+          "optionExplanations": [
+            "Niet verwerpen betekent onvoldoende bewijs tegen β = 1 op dit niveau; het bewijst geen exacte parameterwaarde.",
+            "Tegen β₀ = 1 is t = (1,20 − 1)/0,10 = 2. Bij df = 24 is de tweezijdige grens 2,064.",
+            "SPSS t = B/SE toetst standaard tegen nul. Dat is niet de nulhypothese β = 1 uit deze opgave.",
+            "0,20 is alleen het verschil tussen de schatting en de nulwaarde. Deel dit verschil nog door de standaardfout."
+          ],
+          "correct": 1,
+          "steps": [
+            "Neem de nulwaarde uit de hypothese: β₀ = 1, niet de standaardwaarde nul van SPSS.",
+            "t = (B − β₀)/SE = 0,20/0,10 = 2; df = 26 − 2 = 24.",
+            "Lees 2,064 bij df = 24 en staartkans 0,025. Omdat |2| < 2,064 verwerp je H₀ niet; de gegeven t = 12 beantwoordt een andere toetsvraag."
+          ],
+          "explanation": "Neem de nulwaarde uit de hypothese: β₀ = 1, niet de standaardwaarde nul van SPSS. t = (B − β₀)/SE = 0,20/0,10 = 2; df = 26 − 2 = 24. Lees 2,064 bij df = 24 en staartkans 0,025. Omdat |2| < 2,064 verwerp je H₀ niet; de gegeven t = 12 beantwoordt een andere toetsvraag.",
+          "pattern": "Herken: Toets H₀: β = 1 tegenover H₁: β ≠ 1 bij α = 0,05. Welke conclusie is juist? → Betekenis: De gevraagde hypothese wijkt af van de nulwaarde van de standaardcoëfficiëntentabel. → Aanpak: Bereken een nieuwe t met de gevraagde parameterwaarde en vergelijk die met de passende kritieke grens. → Gevraagd antwoord: Een toetsbeslissing over de specifieke waarde één voor de populatiehelling.",
+          "trap": "Neem de standaard t-kolom niet over wanneer de nulhypothese een andere parameterwaarde bevat.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formule 62 toetst tegen nul; aangepaste nulwaarde en formule expliciet gegeven in eigen oefenvariant"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4: df 24 en 0,025"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Toets H₀: β = 1 tegenover H₁: β ≠ 1 bij α = 0,05. Welke conclusie is juist?",
+            "meaning": "De gevraagde hypothese wijkt af van de nulwaarde van de standaardcoëfficiëntentabel.",
+            "approach": "Bereken een nieuwe t met de gevraagde parameterwaarde en vergelijk die met de passende kritieke grens.",
+            "answer": "Een toetsbeslissing over de specifieke waarde één voor de populatiehelling."
+          },
+          "guidance": {
+            "title": "Hypothese, toetsingsgrootheid en conclusie",
+            "focus": "Bereken een nieuwe t met de gevraagde parameterwaarde en vergelijk die met de passende kritieke grens.",
+            "rules": [
+              "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
+              "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formule 62 toetst tegen nul; aangepaste nulwaarde en formule expliciet gegeven in eigen oefenvariant"
+              },
+              {
+                "source": "tabellen",
+                "page": 12,
+                "locator": "Tabel 13.4: df 24 en 0,025"
               }
             ]
           }
@@ -7113,6 +12073,101 @@ window.SRAMCData = {
           "source": "boek-h9d",
           "page": 10,
           "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+        },
+        {
+          "source": "boek-h9b",
+          "page": 11,
+          "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+        },
+        {
+          "source": "attentie",
+          "page": 5,
+          "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+        },
+        {
+          "source": "spss",
+          "page": 11,
+          "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+        },
+        {
+          "source": "boek-h9c",
+          "page": 2,
+          "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+        },
+        {
+          "source": "slides",
+          "page": 94,
+          "locator": "Slides, tijdsvertraging, PDF 94–99"
+        },
+        {
+          "source": "boek-h9c",
+          "page": 3,
+          "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+        },
+        {
+          "source": "slides",
+          "page": 100,
+          "locator": "Slides, uitbijters en invloed, PDF 100–108"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+        },
+        {
+          "source": "slides",
+          "page": 110,
+          "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+        },
+        {
+          "source": "attentie",
+          "page": 6,
+          "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+        },
+        {
+          "source": "tabellen",
+          "page": 30,
+          "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+        },
+        {
+          "source": "slides",
+          "page": 118,
+          "locator": "Slides, Durbin-Watson, PDF 118–119"
+        },
+        {
+          "source": "spss",
+          "page": 14,
+          "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+        },
+        {
+          "source": "slides",
+          "page": 146,
+          "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+        },
+        {
+          "source": "attentie",
+          "page": 5,
+          "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+        },
+        {
+          "source": "boek-h9d",
+          "page": 3,
+          "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+        },
+        {
+          "source": "boek-h9d",
+          "page": 4,
+          "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+        },
+        {
+          "source": "boek-h9d",
+          "page": 5,
+          "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+        },
+        {
+          "source": "boek-h9d",
+          "page": 6,
+          "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
         }
       ],
       "questions": [
@@ -7178,6 +12233,101 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -7270,6 +12420,101 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -7362,6 +12607,101 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -7457,6 +12797,101 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -7551,6 +12986,101 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -7576,6 +13106,74 @@ window.SRAMCData = {
                 "source": "attentie",
                 "page": 5,
                 "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-diagnostiek-leertoepassing-minimum-residu",
+          "level": 2,
+          "prompt": "Eigen oefenvraag. Welke waarnemingen zijn volgens de cursusgrens kandidaat-uitbijters in y?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het model is op 80 waarnemingen geschat. De tabel toont vier geselecteerde waarnemingen, niet alle 80.</p><div class=\"table-wrap\"><table><caption>Casewise Diagnostics</caption><thead><tr><th scope=\"col\">Waarneming</th><th scope=\"col\">Std. Residual</th></tr></thead><tbody><tr><th scope=\"row\">4</th><td>−2,60</td></tr><tr><th scope=\"row\">18</th><td>−1,10</td></tr><tr><th scope=\"row\">35</th><td>1,95</td></tr><tr><th scope=\"row\">67</th><td>2,20</td></tr></tbody></table></div>",
+          "options": [
+            "Geen waarnemingen, want de grens is ±3",
+            "Waarnemingen 4, 35 en 67",
+            "Waarnemingen 4 en 67",
+            "Alleen waarneming 67"
+          ],
+          "optionExplanations": [
+            "De cursus gebruikt ±3 bij n > 100. Voor het model met 80 waarnemingen geldt ±2.",
+            "1,95 ligt nog binnen de grens +2. Rond een residu niet op om alsnog de signaalgrens te overschrijden.",
+            "Bij n = 80 ligt de grens op |z| > 2. Zowel −2,60 als +2,20 ligt buiten de grenzen.",
+            "Dit kijkt alleen naar positieve residuen. Een grote negatieve afwijking kan eveneens een uitbijter in y zijn."
+          ],
+          "correct": 2,
+          "steps": [
+            "Gebruik de omvang van het gehele model n = 80, niet het aantal weergegeven rijen.",
+            "Bij n ≤ 100 is de cursusgrens ±2: |−2,60| = 2,60 en |2,20| = 2,20 overschrijden deze grens.",
+            "Onderzoek waarnemingen 4 en 67 inhoudelijk. De diagnose is een signaal, geen automatische verwijderopdracht."
+          ],
+          "explanation": "Gebruik de omvang van het gehele model n = 80, niet het aantal weergegeven rijen. Bij n ≤ 100 is de cursusgrens ±2: |−2,60| = 2,60 en |2,20| = 2,20 overschrijden deze grens. Onderzoek waarnemingen 4 en 67 inhoudelijk. De diagnose is een signaal, geen automatische verwijderopdracht.",
+          "pattern": "Herken: Welke waarnemingen zijn volgens de cursusgrens kandidaat-uitbijters in y? → Betekenis: Een geselecteerde uitvoertabel kan zowel negatieve als positieve grote residuen bevatten. → Aanpak: Neem de modelomvang voor de grens en vergelijk de absolute waarde van ieder getoond residu met die grens. → Gevraagd antwoord: De nummers van de waarnemingen die nader onderzoek verdienen.",
+          "trap": "Het aantal afgedrukte probleemrijen is niet de steekproefomvang van het model.",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "PDF p. 100-102: beide grenzen en waarnemingen in y"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formule 44: gestandaardiseerde residuen"
+            }
+          ],
+          "practiceMode": "begeleid",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke waarnemingen zijn volgens de cursusgrens kandidaat-uitbijters in y?",
+            "meaning": "Een geselecteerde uitvoertabel kan zowel negatieve als positieve grote residuen bevatten.",
+            "approach": "Neem de modelomvang voor de grens en vergelijk de absolute waarde van ieder getoond residu met die grens.",
+            "answer": "De nummers van de waarnemingen die nader onderzoek verdienen."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Neem de modelomvang voor de grens en vergelijk de absolute waarde van ieder getoond residu met die grens.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "slides",
+                "page": 100,
+                "locator": "PDF p. 100-102: beide grenzen en waarnemingen in y"
+              },
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 44: gestandaardiseerde residuen"
               }
             ]
           }
@@ -7645,6 +13243,101 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -7739,6 +13432,101 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -7833,6 +13621,101 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -7932,6 +13815,101 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -8031,6 +14009,101 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -8056,6 +14129,424 @@ window.SRAMCData = {
                 "source": "attentie",
                 "page": 5,
                 "locator": "PDF p. 5-6: analyses, oorzaken en remedies"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-diagnostiek-leertoepassing-residual-statistics",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Brongegevens: geselecteerde rijen uit slides SRA NJ26, PDF-pagina 100. Eigen diagnosevraag.</p><p>Gebruik de cursusgrenzen voor uitbijters en invloedrijke punten. De afhankelijke variabele is huur per maand in euro.</p><div class=\"table-wrap\"><table><caption>Residuals Statistics: geselecteerde rijen</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">Minimum</th><th scope=\"col\">Maximum</th><th scope=\"col\">Mean</th><th scope=\"col\">Std. Deviation</th><th scope=\"col\">N</th></tr></thead><tbody><tr><th scope=\"row\">Std. Residual</th><td>−1,352</td><td>2,490</td><td>0,000</td><td>0,987</td><td>40</td></tr><tr><th scope=\"row\">Mahal. Distance</th><td>0,000</td><td>2,388</td><td>0,975</td><td>0,815</td><td>40</td></tr><tr><th scope=\"row\">Cook’s Distance</th><td>0,000</td><td>0,313</td><td>0,030</td><td>0,060</td><td>40</td></tr></tbody></table></div>",
+          "options": [
+            "Aanwijzing voor uitbijter(s) in y en invloed; geen MD-overschrijding",
+            "Alleen een uitbijter in x, want MD_max > 2",
+            "Geen afwijkingen, omdat gemiddeld residu nul is",
+            "De waarneming met z = 2,490 moet direct worden verwijderd"
+          ],
+          "optionExplanations": [
+            "Bij n = 40 geldt |z| > 2. MD-grens = 0,975 + 3 × 0,815 = 3,420; CD-grens = 0,030 + 3 × 0,060 = 0,210. Alleen z_max en CD_max overschrijden hun grens.",
+            "Voor Mahalanobis Distance geldt hier de eigen cursusgrens mean + 3 × sd. De grens ±2 hoort bij gestandaardiseerde residuen.",
+            "Een gemiddeld residu rond nul kan samengaan met grote individuele residuen. Onderzoek minimum en maximum.",
+            "De tabel signaleert mogelijke afwijkingen. Zij geeft geen inhoudelijke rechtvaardiging voor automatisch verwijderen en identificeert ook niet zelf de rij."
+          ],
+          "correct": 0,
+          "steps": [
+            "Met n = 40 is de cursusgrens voor gestandaardiseerde residuen ±2; 2,490 overschrijdt deze, −1,352 niet.",
+            "MD_kritiek = 0,975 + 3 × 0,815 = 3,420; het maximum 2,388 blijft eronder. CD_kritiek = 0,030 + 3 × 0,060 = 0,210; 0,313 ligt erboven.",
+            "Onderzoek betrokken waarnemingen in detail. Deze samenvatting toont niet of het grote residu en de grote Cook’s Distance bij dezelfde waarneming horen."
+          ],
+          "explanation": "Met n = 40 is de cursusgrens voor gestandaardiseerde residuen ±2; 2,490 overschrijdt deze, −1,352 niet. MD_kritiek = 0,975 + 3 × 0,815 = 3,420; het maximum 2,388 blijft eronder. CD_kritiek = 0,030 + 3 × 0,060 = 0,210; 0,313 ligt erboven. Onderzoek betrokken waarnemingen in detail. Deze samenvatting toont niet of het grote residu en de grote Cook’s Distance bij dezelfde waarneming horen.",
+          "pattern": "Herken: Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen? → Betekenis: Drie verschillende diagnosematen staan in één tabel en vragen ieder hun eigen grens. → Aanpak: Lees N, controleer beide residu-extremen en bereken afzonderlijk de grenzen voor Mahalanobis en Cook. → Gevraagd antwoord: Een onderscheiden oordeel over uitbijters in y, uitbijters in x en invloed.",
+          "trap": "Maak van een samengevatte tabel geen bewijs dat verschillende maxima dezelfde waarneming betreffen.",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "PDF p. 100: Residuals Statistics"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formules 44-45: uitbijters en invloed"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "bron",
+          "recognition": {
+            "signals": "Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen?",
+            "meaning": "Drie verschillende diagnosematen staan in één tabel en vragen ieder hun eigen grens.",
+            "approach": "Lees N, controleer beide residu-extremen en bereken afzonderlijk de grenzen voor Mahalanobis en Cook.",
+            "answer": "Een onderscheiden oordeel over uitbijters in y, uitbijters in x en invloed."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Lees N, controleer beide residu-extremen en bereken afzonderlijk de grenzen voor Mahalanobis en Cook.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "slides",
+                "page": 100,
+                "locator": "PDF p. 100: Residuals Statistics"
+              },
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 44-45: uitbijters en invloed"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-diagnostiek-leertoepassing-normaliteit-tabel",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke normaliteitsconclusie past bij de cursusroute en α = 0,05?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De tests zijn uitgevoerd op de residuen van een regressiemodel. Er zijn 40 waarnemingen.</p><div class=\"table-wrap\"><table><caption>Tests of Normality: residuen</caption><thead><tr><th scope=\"col\">Toets</th><th scope=\"col\">Statistic</th><th scope=\"col\">df</th><th scope=\"col\">Sig.</th></tr></thead><tbody><tr><th scope=\"row\">Kolmogorov-Smirnov</th><td>0,130</td><td>40</td><td>0,084</td></tr><tr><th scope=\"row\">Shapiro-Wilk</th><td>0,928</td><td>40</td><td>0,014</td></tr></tbody></table></div>",
+          "options": [
+            "De afhankelijke variabele y is niet normaal verdeeld",
+            "Verwerp residunormaliteit op basis van Shapiro-Wilk p = 0,014",
+            "Normaliteit bewezen, want Kolmogorov-Smirnov p = 0,084",
+            "Geen van beide toetsen is bruikbaar omdat de p-waarden verschillen"
+          ],
+          "optionExplanations": [
+            "De gegeven tabel toetst de residuen. De verdeling van y zelf is niet de getoetste regressievoorwaarde.",
+            "Bij n ≤ 50 kiest de cursus Shapiro-Wilk. 0,014 < 0,05 geeft bewijs tegen de normaliteitshypothese.",
+            "Dit kiest de andere toets om een gunstige uitkomst te krijgen. Bovendien bewijst een grote p de aanname niet.",
+            "Verschillende toetsen kunnen verschillende gevoeligheid hebben. Volg de vooraf bepaalde cursuskeuze en interpreteer die toets."
+          ],
+          "correct": 1,
+          "steps": [
+            "De modelvoorwaarde betreft de residuen. H₀: deze zijn normaal verdeeld; H₁: zij wijken daarvan af.",
+            "Volgens de cursus gebruik je bij n = 40 Shapiro-Wilk. De bijbehorende Sig. is 0,014.",
+            "Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen."
+          ],
+          "explanation": "De modelvoorwaarde betreft de residuen. H₀: deze zijn normaal verdeeld; H₁: zij wijken daarvan af. Volgens de cursus gebruik je bij n = 40 Shapiro-Wilk. De bijbehorende Sig. is 0,014. Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen.",
+          "pattern": "Herken: Welke normaliteitsconclusie past bij de cursusroute en α = 0,05? → Betekenis: Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de cursuskeuze vooraf. → Aanpak: Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau. → Gevraagd antwoord: Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek.",
+          "trap": "Kies niet achteraf de normaliteitstoets met de prettigste p-waarde.",
+          "refs": [
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "PDF p. 6: normaliteit en cursuskeuze"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "PDF p. 110: normaliteitstoetsen"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke normaliteitsconclusie past bij de cursusroute en α = 0,05?",
+            "meaning": "Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de cursuskeuze vooraf.",
+            "approach": "Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau.",
+            "answer": "Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "PDF p. 6: normaliteit en cursuskeuze"
+              },
+              {
+                "source": "slides",
+                "page": 110,
+                "locator": "PDF p. 110: normaliteitstoetsen"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-diagnostiek-leertoepassing-trechtergrafiek",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welk modelprobleem vraagt deze residugrafiek vooral om te onderzoeken?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De horizontale as toont productieomvang. De verticale as toont residuen van het kostenmodel.</p><figure><svg viewBox=\"0 0 560 245\" role=\"img\" aria-label=\"Residu tegenover productie\" style=\"width:100%;max-width:640px;height:auto\"><title>Residu tegenover productie</title><desc>productie horizontaal van 0 tot 7; residu verticaal van -3 tot 3. De waarden zijn ook in de gegevenstabel beschikbaar.</desc><path d=\"M55 40 V190 H505\" stroke=\"currentColor\" fill=\"none\"/><path d=\"M55 117.50 H500\" stroke=\"currentColor\" stroke-dasharray=\"5 5\" opacity=\"0.4\"/><circle cx=\"118.57\" cy=\"127.17\" r=\"4\" fill=\"currentColor\"/><circle cx=\"150.36\" cy=\"110.25\" r=\"4\" fill=\"currentColor\"/><circle cx=\"182.14\" cy=\"132.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"213.93\" cy=\"100.58\" r=\"4\" fill=\"currentColor\"/><circle cx=\"245.71\" cy=\"141.67\" r=\"4\" fill=\"currentColor\"/><circle cx=\"277.50\" cy=\"88.50\" r=\"4\" fill=\"currentColor\"/><circle cx=\"309.29\" cy=\"151.33\" r=\"4\" fill=\"currentColor\"/><circle cx=\"341.07\" cy=\"78.83\" r=\"4\" fill=\"currentColor\"/><circle cx=\"372.86\" cy=\"168.25\" r=\"4\" fill=\"currentColor\"/><circle cx=\"404.64\" cy=\"64.33\" r=\"4\" fill=\"currentColor\"/><circle cx=\"436.43\" cy=\"180.33\" r=\"4\" fill=\"currentColor\"/><circle cx=\"468.21\" cy=\"49.83\" r=\"4\" fill=\"currentColor\"/><g fill=\"currentColor\" font-size=\"12\"><text x=\"50\" y=\"210\">0</text><text x=\"492\" y=\"210\">7</text><text x=\"18\" y=\"193\">-3</text><text x=\"18\" y=\"48\">3</text><text x=\"245\" y=\"232\">productie</text><text x=\"55\" y=\"25\">residu</text></g></svg><figcaption>Residu tegenover productie</figcaption></figure><details><summary>Bekijk de grafiekgegevens</summary><div class=\"table-wrap\"><table><caption>Residu tegenover productie</caption><thead><tr><th scope=\"col\">productie</th><th scope=\"col\">residu</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>-0.4</td></tr><tr><th scope=\"row\">1.5</th><td>0.3</td></tr><tr><th scope=\"row\">2</th><td>-0.6</td></tr><tr><th scope=\"row\">2.5</th><td>0.7</td></tr><tr><th scope=\"row\">3</th><td>-1.0</td></tr><tr><th scope=\"row\">3.5</th><td>1.2</td></tr><tr><th scope=\"row\">4</th><td>-1.4</td></tr><tr><th scope=\"row\">4.5</th><td>1.6</td></tr><tr><th scope=\"row\">5</th><td>-2.1</td></tr><tr><th scope=\"row\">5.5</th><td>2.2</td></tr><tr><th scope=\"row\">6</th><td>-2.6</td></tr><tr><th scope=\"row\">6.5</th><td>2.8</td></tr></tbody></table></div></details>",
+          "options": [
+            "Het model is goed, want positieve en negatieve residuen wisselen af",
+            "Iedere waarneming rechts moet uit de dataset worden verwijderd",
+            "Heteroscedasticiteit: de residuspreiding neemt toe met productie",
+            "Autocorrelatie: opeenvolgende maanden hebben hetzelfde residu"
+          ],
+          "optionExplanations": [
+            "Afwisseling van tekens sluit een toenemende spreiding niet uit. De breedte van de residuwolk is hier het relevante signaal.",
+            "Grote productie is niet automatisch fout. Onderzoek modelvorm en een passende spreidingscorrectie, zoals een onderbouwd WLS-model.",
+            "Bij lage x liggen de residuen dicht bij nul en bij hoge x veel verder weg. Dat patroon betreft veranderende foutspreiding.",
+            "De horizontale as is productie, niet tijd. Een patroon in foutgrootte tegen x stelt geen samenhang tussen opeenvolgende maanden vast."
+          ],
+          "correct": 2,
+          "steps": [
+            "Lees de assen: x is productie en y is het residu. De grafiek toont geen tijdsvolgorde.",
+            "De verticale spreiding groeit bij hogere productie; dat is een visueel signaal van heteroscedasticiteit.",
+            "Onderzoek de samenhang tussen x en absolute residuen en een inhoudelijk passende remedie. WLS-gewichten moeten bij de foutstructuur passen; 1/x² is geen universele oplossing."
+          ],
+          "explanation": "Lees de assen: x is productie en y is het residu. De grafiek toont geen tijdsvolgorde. De verticale spreiding groeit bij hogere productie; dat is een visueel signaal van heteroscedasticiteit. Onderzoek de samenhang tussen x en absolute residuen en een inhoudelijk passende remedie. WLS-gewichten moeten bij de foutstructuur passen; 1/x² is geen universele oplossing.",
+          "pattern": "Herken: Welk modelprobleem vraagt deze residugrafiek vooral om te onderzoeken? → Betekenis: De residuwolk wordt breder naarmate de verklarende variabele groter is. → Aanpak: Beoordeel de breedte rond nul over het x-bereik en onderscheid veranderende spreiding van tijdsafhankelijkheid. → Gevraagd antwoord: Een diagnose van mogelijke veranderende foutspreiding met gerichte vervolgstap.",
+          "trap": "Een gemiddeld residu rond nul sluit heteroscedasticiteit niet uit.",
+          "refs": [
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "PDF p. 6: homoscedasticiteit"
+            },
+            {
+              "source": "slides",
+              "page": 111,
+              "locator": "PDF p. 111-112: onderzoek absolute residuen"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "grafiek",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welk modelprobleem vraagt deze residugrafiek vooral om te onderzoeken?",
+            "meaning": "De residuwolk wordt breder naarmate de verklarende variabele groter is.",
+            "approach": "Beoordeel de breedte rond nul over het x-bereik en onderscheid veranderende spreiding van tijdsafhankelijkheid.",
+            "answer": "Een diagnose van mogelijke veranderende foutspreiding met gerichte vervolgstap."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Beoordeel de breedte rond nul over het x-bereik en onderscheid veranderende spreiding van tijdsafhankelijkheid.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "PDF p. 6: homoscedasticiteit"
+              },
+              {
+                "source": "slides",
+                "page": 111,
+                "locator": "PDF p. 111-112: onderzoek absolute residuen"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-diagnostiek-leertoepassing-absres-correlations",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke conclusie over de foutspreiding volgt bij α = 0,05 uit deze Correlations-tabel?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>ABSRES is de absolute waarde van de modelresiduen; productie is de verklarende variabele.</p><div class=\"table-wrap\"><table><caption>Correlations: productie met ABSRES</caption><thead><tr><th scope=\"col\">Statistiek</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Pearson Correlation</th><td>0,550</td></tr><tr><th scope=\"row\">Sig. (2-tailed)</th><td>0,008</td></tr><tr><th scope=\"row\">N</th><td>22</td></tr></tbody></table></div>",
+          "options": [
+            "De residuen zijn zeker normaal verdeeld",
+            "Geen probleem, want 0,550 is kleiner dan 1",
+            "De productie veroorzaakt fouten met kans 0,008",
+            "Aanwijzing voor toenemende foutspreiding bij grotere productie"
+          ],
+          "optionExplanations": [
+            "Deze tabel toetst samenhang tussen productie en absolute residuen. Voor normaliteit gebruik je andere uitvoer.",
+            "De toetsbeslissing gebruikt Sig. ten opzichte van α. Een correlatie hoeft niet gelijk aan één te zijn om significant te zijn.",
+            "Een p-waarde is geen kans op causaliteit. De positieve samenhang zegt ook niet welke oorzaak de grotere fouten verklaart.",
+            "De positieve correlatie van productie met foutgrootte is significant. Dit ondersteunt nader onderzoek naar heteroscedasticiteit."
+          ],
+          "correct": 3,
+          "steps": [
+            "H₀: de populatiecorrelatie tussen productie en |e| is nul. H₁: deze verschilt van nul.",
+            "Sig. = 0,008 < 0,05; verwerp H₀. De positieve r = 0,550 betekent dat grotere productie samenhangt met grotere absolute residuen.",
+            "Dat is een aanwijzing voor heteroscedasticiteit. Onderzoek modelvorm en spreidingscorrectie en controleer het aangepaste model opnieuw."
+          ],
+          "explanation": "H₀: de populatiecorrelatie tussen productie en |e| is nul. H₁: deze verschilt van nul. Sig. = 0,008 < 0,05; verwerp H₀. De positieve r = 0,550 betekent dat grotere productie samenhangt met grotere absolute residuen. Dat is een aanwijzing voor heteroscedasticiteit. Onderzoek modelvorm en spreidingscorrectie en controleer het aangepaste model opnieuw.",
+          "pattern": "Herken: Welke conclusie over de foutspreiding volgt bij α = 0,05 uit deze Correlations-tabel? → Betekenis: De absolute residuen meten foutgrootte en zijn niet hetzelfde als de oorspronkelijke uitkomst y. → Aanpak: Lees eerst de variabelen van de correlatie, gebruik de tweezijdige p voor de toets en interpreteer vervolgens het teken van r. → Gevraagd antwoord: Een onderbouwde conclusie over veranderende residuspreiding.",
+          "trap": "Verwar een correlatietoets met een normaliteitstoets of een bewijs van causaliteit.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formule 40: toets op correlatie met absolute residuen"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "PDF p. 6: homoscedasticiteit"
+            },
+            {
+              "source": "slides",
+              "page": 111,
+              "locator": "PDF p. 111-112: absolute residuen"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke conclusie over de foutspreiding volgt bij α = 0,05 uit deze Correlations-tabel?",
+            "meaning": "De absolute residuen meten foutgrootte en zijn niet hetzelfde als de oorspronkelijke uitkomst y.",
+            "approach": "Lees eerst de variabelen van de correlatie, gebruik de tweezijdige p voor de toets en interpreteer vervolgens het teken van r.",
+            "answer": "Een onderbouwde conclusie over veranderende residuspreiding."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Lees eerst de variabelen van de correlatie, gebruik de tweezijdige p voor de toets en interpreteer vervolgens het teken van r.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 40: toets op correlatie met absolute residuen"
+              },
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "PDF p. 6: homoscedasticiteit"
+              },
+              {
+                "source": "slides",
+                "page": 111,
+                "locator": "PDF p. 111-112: absolute residuen"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-diagnostiek-leertoepassing-dw-echte-tabel",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Toets uitsluitend op positieve autocorrelatie bij α = 0,05. Welke conclusie volgt?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een tijdreeksmodel bevat n = 30 maanden en twee verklarende variabelen naast de constante.</p><div class=\"table-wrap\"><table><caption>Model Summary</caption><thead><tr><th scope=\"col\">R Square</th><th scope=\"col\">Std. Error of the Estimate</th><th scope=\"col\">Durbin-Watson</th></tr></thead><tbody><tr><th scope=\"row\">0,820</th><td>12,5</td><td>1,400</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=30\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.9 Durbin-Watson, PDF-pagina 30</a>. Zoek de benodigde grens zelf op.</p>",
+          "options": [
+            "Onbeslist: d = 1,400 ligt tussen d_L = 1,28 en d_U = 1,57",
+            "Positieve autocorrelatie bewezen, want d < 2",
+            "Geen positieve autocorrelatie, want R² is hoog",
+            "Onbeslist tussen 1,21 en 1,65, omdat k = 3"
+          ],
+          "optionExplanations": [
+            "Bij n = 30 en k = 2 geeft de α = 0,05-rij 1,28 en 1,57. Tussen die twee grenzen is de toets onbeslist.",
+            "Een d onder 2 is niet voldoende voor de toetsbeslissing. Bij d_L < d < d_U geeft de tabel een onbeslist gebied.",
+            "R² meet verklaarde variatie en vervangt de tijdreeksdiagnose niet. De relevante waarde is Durbin-Watson.",
+            "De constante telt niet als verklarende variabele k. De vraag geeft twee verklarende variabelen, dus gebruik k = 2."
+          ],
+          "correct": 0,
+          "steps": [
+            "Voor deze gerichte toets is H₀: geen autocorrelatie; H₁: positieve autocorrelatie. Gebruik n = 30 en k = 2.",
+            "Lees tabel 13.9, α = 0,05: d_L = 1,28 en d_U = 1,57.",
+            "1,28 < 1,400 < 1,57: de toets is onbeslist. Dat is een geldige uitkomst; rapporteer de onzekerheid en onderzoek de tijdsstructuur verder."
+          ],
+          "explanation": "Voor deze gerichte toets is H₀: geen autocorrelatie; H₁: positieve autocorrelatie. Gebruik n = 30 en k = 2. Lees tabel 13.9, α = 0,05: d_L = 1,28 en d_U = 1,57. 1,28 < 1,400 < 1,57: de toets is onbeslist. Dat is een geldige uitkomst; rapporteer de onzekerheid en onderzoek de tijdsstructuur verder.",
+          "pattern": "Herken: Toets uitsluitend op positieve autocorrelatie bij α = 0,05. Welke conclusie volgt? → Betekenis: Durbin-Watson heeft twee tabelgrenzen en daardoor ook een onbeslist gebied. → Aanpak: Lees n en k zonder constante af, zoek beide DW-grenzen en plaats d in het bijbehorende beslisgebied. → Gevraagd antwoord: Een gerichte toetsconclusie over positieve autocorrelatie, inclusief een eventuele onbesliste uitkomst.",
+          "trap": "Vervang de twee tabelgrenzen niet door de vuistregel dat d ongeveer twee moet zijn.",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabel 13.9: n 30, k 2, α 0,05"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formules 47-49: beslisgebieden Durbin-Watson"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Toets uitsluitend op positieve autocorrelatie bij α = 0,05. Welke conclusie volgt?",
+            "meaning": "Durbin-Watson heeft twee tabelgrenzen en daardoor ook een onbeslist gebied.",
+            "approach": "Lees n en k zonder constante af, zoek beide DW-grenzen en plaats d in het bijbehorende beslisgebied.",
+            "answer": "Een gerichte toetsconclusie over positieve autocorrelatie, inclusief een eventuele onbesliste uitkomst."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Lees n en k zonder constante af, zoek beide DW-grenzen en plaats d in het bijbehorende beslisgebied.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "tabellen",
+                "page": 30,
+                "locator": "Tabel 13.9: n 30, k 2, α 0,05"
+              },
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 47-49: beslisgebieden Durbin-Watson"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-diagnostiek-leertoepassing-tijdsvertraging-grafieken",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke koppeling verdient op basis van deze uitvoer verder onderzoek voor een vertraagd reclame-effect?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>x is reclame in maand t, y is afzet. Bij verschuiving j wordt afzet y_t gekoppeld aan reclame x_(t−j). Onderzoek ook of een vertraagd effect inhoudelijk plausibel is.</p><div class=\"table-wrap\"><table><caption>Correlaties uit dezelfde eigen tijdreeks</caption><thead><tr><th scope=\"col\">Verschuiving j</th><th scope=\"col\">Geldige paren N</th><th scope=\"col\">Pearson r</th></tr></thead><tbody><tr><th scope=\"row\">0</th><td>12</td><td>0,269</td></tr><tr><th scope=\"row\">1</th><td>11</td><td>-0,498</td></tr><tr><th scope=\"row\">2</th><td>10</td><td>0,999</td></tr><tr><th scope=\"row\">3</th><td>9</td><td>-0,581</td></tr></tbody></table></div><figure><svg viewBox=\"0 0 560 245\" role=\"img\" aria-label=\"Verschuiving 0\" style=\"width:100%;max-width:640px;height:auto\"><title>Verschuiving 0</title><desc>reclame x_t horizontaal van 5 tot 23; afzet y_t verticaal van 10 tot 45. De waarden zijn ook in de gegevenstabel beschikbaar.</desc><path d=\"M55 40 V190 H505\" stroke=\"currentColor\" fill=\"none\"/><circle cx=\"178.61\" cy=\"156.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"326.94\" cy=\"140.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"129.17\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"425.83\" cy=\"103.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"228.06\" cy=\"161.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"376.39\" cy=\"69.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"79.72\" cy=\"127.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"277.50\" cy=\"86.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"475.28\" cy=\"177.57\" r=\"4\" fill=\"currentColor\"/><circle cx=\"178.61\" cy=\"111.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"376.39\" cy=\"53.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"129.17\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><g fill=\"currentColor\" font-size=\"12\"><text x=\"50\" y=\"210\">5</text><text x=\"492\" y=\"210\">23</text><text x=\"18\" y=\"193\">10</text><text x=\"18\" y=\"48\">45</text><text x=\"245\" y=\"232\">reclame x_t</text><text x=\"55\" y=\"25\">afzet y_t</text></g></svg><figcaption>Verschuiving 0</figcaption></figure><details><summary>Bekijk de grafiekgegevens</summary><div class=\"table-wrap\"><table><caption>Verschuiving 0</caption><thead><tr><th scope=\"col\">reclame x_t</th><th scope=\"col\">afzet y_t</th></tr></thead><tbody><tr><th scope=\"row\">10</th><td>18</td></tr><tr><th scope=\"row\">16</th><td>22</td></tr><tr><th scope=\"row\">8</th><td>21</td></tr><tr><th scope=\"row\">20</th><td>31</td></tr><tr><th scope=\"row\">12</th><td>17</td></tr><tr><th scope=\"row\">18</th><td>39</td></tr><tr><th scope=\"row\">6</th><td>25</td></tr><tr><th scope=\"row\">14</th><td>35</td></tr><tr><th scope=\"row\">22</th><td>13</td></tr><tr><th scope=\"row\">10</th><td>29</td></tr><tr><th scope=\"row\">18</th><td>43</td></tr><tr><th scope=\"row\">8</th><td>21</td></tr></tbody></table></div></details><figure><svg viewBox=\"0 0 560 245\" role=\"img\" aria-label=\"Verschuiving 2\" style=\"width:100%;max-width:640px;height:auto\"><title>Verschuiving 2</title><desc>reclame x_(t−2) horizontaal van 5 tot 23; afzet y_t verticaal van 10 tot 45. De waarden zijn ook in de gegevenstabel beschikbaar.</desc><path d=\"M55 40 V190 H505\" stroke=\"currentColor\" fill=\"none\"/><circle cx=\"178.61\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"326.94\" cy=\"103.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"129.17\" cy=\"161.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"425.83\" cy=\"69.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"228.06\" cy=\"127.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"376.39\" cy=\"86.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"79.72\" cy=\"177.57\" r=\"4\" fill=\"currentColor\"/><circle cx=\"277.50\" cy=\"111.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"475.28\" cy=\"53.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"178.61\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><g fill=\"currentColor\" font-size=\"12\"><text x=\"50\" y=\"210\">5</text><text x=\"492\" y=\"210\">23</text><text x=\"18\" y=\"193\">10</text><text x=\"18\" y=\"48\">45</text><text x=\"245\" y=\"232\">reclame x_(t−2)</text><text x=\"55\" y=\"25\">afzet y_t</text></g></svg><figcaption>Verschuiving 2</figcaption></figure><details><summary>Bekijk de grafiekgegevens</summary><div class=\"table-wrap\"><table><caption>Verschuiving 2</caption><thead><tr><th scope=\"col\">reclame x_(t−2)</th><th scope=\"col\">afzet y_t</th></tr></thead><tbody><tr><th scope=\"row\">10</th><td>21</td></tr><tr><th scope=\"row\">16</th><td>31</td></tr><tr><th scope=\"row\">8</th><td>17</td></tr><tr><th scope=\"row\">20</th><td>39</td></tr><tr><th scope=\"row\">12</th><td>25</td></tr><tr><th scope=\"row\">18</th><td>35</td></tr><tr><th scope=\"row\">6</th><td>13</td></tr><tr><th scope=\"row\">14</th><td>29</td></tr><tr><th scope=\"row\">22</th><td>43</td></tr><tr><th scope=\"row\">10</th><td>21</td></tr></tbody></table></div></details>",
+          "options": [
+            "Verschuiving 2 bewijst dat reclame de afzet veroorzaakt",
+            "Afzet deze maand koppelen aan reclame twee maanden eerder",
+            "Afzet deze maand koppelen aan reclame twee maanden later",
+            "Verschuiving 0 handhaven omdat die de meeste paren heeft"
+          ],
+          "optionExplanations": [
+            "De sterke samenhang is een reden om dit model te onderzoeken. Gemeenschappelijke trends en andere factoren kunnen nog steeds een rol spelen.",
+            "Verschuiving 2 laat hier de sterkste positieve lineaire samenhang zien. Die koppeling moet inhoudelijk worden beoordeeld en daarna in een nieuw model worden gecontroleerd.",
+            "Dit keert de tijdsrichting om. Het gegeven vertraagde-effectmodel gebruikt eerdere reclame om huidige afzet te verklaren.",
+            "Meer paren zijn een voordeel, maar wegen niet automatisch op tegen een verkeerd tijdsverband. Bekijk inhoud, patroon en modeldiagnostiek samen."
+          ],
+          "correct": 1,
+          "steps": [
+            "Vergelijk richting en sterkte van de correlaties en spreidingsdiagrammen; verschuiving 2 toont het sterkste positieve lineaire patroon.",
+            "Bij j = 2 hoort x_(t−2) bij y_t. Er blijven 10 paren over omdat de eerste twee afzetmaanden geen twee maanden eerdere reclame binnen deze reeks hebben.",
+            "Beoordeel het veronderstelde uitgestelde reclame-effect inhoudelijk, schat het aangepaste model en controleer de residuen opnieuw. Maximale correlatie alleen bewijst geen oorzaak."
+          ],
+          "explanation": "Vergelijk richting en sterkte van de correlaties en spreidingsdiagrammen; verschuiving 2 toont het sterkste positieve lineaire patroon. Bij j = 2 hoort x_(t−2) bij y_t. Er blijven 10 paren over omdat de eerste twee afzetmaanden geen twee maanden eerdere reclame binnen deze reeks hebben. Beoordeel het veronderstelde uitgestelde reclame-effect inhoudelijk, schat het aangepaste model en controleer de residuen opnieuw. Maximale correlatie alleen bewijst geen oorzaak.",
+          "pattern": "Herken: Welke koppeling verdient op basis van deze uitvoer verder onderzoek voor een vertraagd reclame-effect? → Betekenis: Verschuivingsdiagrammen laten zien op welke tijdsafstand het verband het duidelijkst is. → Aanpak: Vergelijk de grafieken en correlaties, lees de lag-richting zorgvuldig en controleer welke beginwaarnemingen wegvallen. → Gevraagd antwoord: Een inhoudelijk te onderzoeken koppeling van huidige afzet met eerdere reclame.",
+          "trap": "Een tijdsverschuiving en autocorrelatie zijn verschillende problemen; een sterke lag-correlatie vervangt residudiagnostiek niet.",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 95,
+              "locator": "PDF p. 95-99: tijdsvertraging en spreidingsdiagrammen"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "PDF p. 5: analyseroute tijdreeks"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "grafiek",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke koppeling verdient op basis van deze uitvoer verder onderzoek voor een vertraagd reclame-effect?",
+            "meaning": "Verschuivingsdiagrammen laten zien op welke tijdsafstand het verband het duidelijkst is.",
+            "approach": "Vergelijk de grafieken en correlaties, lees de lag-richting zorgvuldig en controleer welke beginwaarnemingen wegvallen.",
+            "answer": "Een inhoudelijk te onderzoeken koppeling van huidige afzet met eerdere reclame."
+          },
+          "guidance": {
+            "title": "Diagnose onderbouwen met de juiste uitvoer",
+            "focus": "Vergelijk de grafieken en correlaties, lees de lag-richting zorgvuldig en controleer welke beginwaarnemingen wegvallen.",
+            "rules": [
+              "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
+              "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
+            ],
+            "refs": [
+              {
+                "source": "slides",
+                "page": 95,
+                "locator": "PDF p. 95-99: tijdsvertraging en spreidingsdiagrammen"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5: analyseroute tijdreeks"
               }
             ]
           }
@@ -8089,6 +14580,36 @@ window.SRAMCData = {
           "source": "boek-h9d",
           "page": 11,
           "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+        },
+        {
+          "source": "boek-h9d",
+          "page": 12,
+          "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+        },
+        {
+          "source": "tabellen",
+          "page": 12,
+          "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+        },
+        {
+          "source": "slides",
+          "page": 116,
+          "locator": "Slides, aanpassing huurmodel, PDF 116"
+        },
+        {
+          "source": "slides",
+          "page": 121,
+          "locator": "Slides, voorspelling huurmodel, PDF 121"
+        },
+        {
+          "source": "tabellen",
+          "page": 12,
+          "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
         }
       ],
       "questions": [
@@ -8134,6 +14655,36 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 11,
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            },
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
           ],
           "recognition": {
@@ -8206,6 +14757,36 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 11,
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            },
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
           ],
           "recognition": {
@@ -8278,6 +14859,36 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 11,
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            },
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
           ],
           "recognition": {
@@ -8353,6 +14964,36 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 11,
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            },
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
           ],
           "recognition": {
@@ -8427,6 +15068,36 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 11,
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            },
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
           ],
           "recognition": {
@@ -8502,6 +15173,36 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 11,
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            },
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
           ],
           "recognition": {
@@ -8576,6 +15277,36 @@ window.SRAMCData = {
               "source": "boek-h9d",
               "page": 11,
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            },
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
           ],
           "recognition": {
@@ -8601,6 +15332,74 @@ window.SRAMCData = {
                 "source": "attentie",
                 "page": 6,
                 "locator": "Voorspelling en nadere controle bij een afwijkende realisatie"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-voorspellen-leertoepassing-gemiddelde-individu",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke combinatie geeft de marge voor een gemiddelde respons en voor één nieuwe maand bij x₀ = x̄?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De voorspelling is 50. Er zijn n = 25 basiswaarnemingen, s_e = 5 en de gegeven kritieke t = 2. Het model is passend beoordeeld.</p><div class=\"table-wrap\"><table><caption>Twee doelen</caption><thead><tr><th scope=\"col\">Doel</th><th scope=\"col\">Wortelfactor bij x₀ = x̄</th></tr></thead><tbody><tr><th scope=\"row\">Gemiddelde respons</th><td>√(1/n)</td></tr><tr><th scope=\"row\">Eén nieuwe maand</th><td>√(1 + 1/n)</td></tr></tbody></table></div>",
+          "options": [
+            "Beide: ±10",
+            "Gemiddelde: ±2; nieuwe maand: ongeveer ±10,20",
+            "Beide: ±2",
+            "Gemiddelde: ongeveer ±10,20; nieuwe maand: ±2"
+          ],
+          "optionExplanations": [
+            "Dit gebruikt alleen t × s_e. De onzekerheid van de geschatte lijn verdwijnt niet helemaal wanneer x₀ = x̄.",
+            "Voor een gemiddelde is 2 × 5/√25 = 2. Voor een individu is 2 × 5√(1 + 1/25) ≈ 10,198.",
+            "Dit laat voor één nieuwe maand de eigen onverklaarde variatie weg. De extra 1 onder de wortel is daarvoor nodig.",
+            "De betekenissen zijn verwisseld. Een individuele uitkomst omvat extra spreiding en heeft bij dezelfde gegevens het bredere interval."
+          ],
+          "correct": 1,
+          "steps": [
+            "Bij x₀ = x̄ is alleen de afstandsterm nul. De onzekerheid van de geschatte lijn blijft bestaan.",
+            "Marge gemiddelde: 2 × 5 × √(1/25) = 2. Dit geeft [48; 52].",
+            "Marge individu: 2 × 5 × √(1 + 1/25) ≈ 10,198. Eén nieuwe maand is minder precies voorspelbaar door haar eigen residuele variatie."
+          ],
+          "explanation": "Bij x₀ = x̄ is alleen de afstandsterm nul. De onzekerheid van de geschatte lijn blijft bestaan. Marge gemiddelde: 2 × 5 × √(1/25) = 2. Dit geeft [48; 52]. Marge individu: 2 × 5 × √(1 + 1/25) ≈ 10,198. Eén nieuwe maand is minder precies voorspelbaar door haar eigen residuele variatie.",
+          "pattern": "Herken: Welke combinatie geeft de marge voor een gemiddelde respons en voor één nieuwe maand bij x₀ = x̄? → Betekenis: Het doel van de uitspraak bepaalt of de toekomstige individuele storing moet worden meegerekend. → Aanpak: Markeer gemiddelde of individu en kies daarna de bijbehorende wortelfactor bij dezelfde voorspelling. → Gevraagd antwoord: Twee verschillende marges met de juiste betekenis voor de controle-uitspraak.",
+          "trap": "De extra 1 is individuele spreiding en geen optionele veiligheidsopslag.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formule 50: individueel voorspellingsinterval"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284: voorspelling en onzekerheid"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke combinatie geeft de marge voor een gemiddelde respons en voor één nieuwe maand bij x₀ = x̄?",
+            "meaning": "Het doel van de uitspraak bepaalt of de toekomstige individuele storing moet worden meegerekend.",
+            "approach": "Markeer gemiddelde of individu en kies daarna de bijbehorende wortelfactor bij dezelfde voorspelling.",
+            "answer": "Twee verschillende marges met de juiste betekenis voor de controle-uitspraak."
+          },
+          "guidance": {
+            "title": "Voorspelling en voorspellingsinterval",
+            "focus": "Markeer gemiddelde of individu en kies daarna de bijbehorende wortelfactor bij dezelfde voorspelling.",
+            "rules": [
+              "Bepaal of één nieuwe waarneming of het gemiddelde bij x₀ wordt gevraagd. Voor één waarneming bevat de marge de extra term 1 onder de wortel: t × s_e × √(1 + 1/n + (x₀ − x̄)²/((n − 1)s_x²)).",
+              "Het interval is bij gelijk model het smalst rond x̄. Verder weg neemt de onzekerheid toe. Controleer bovendien of x₀ binnen het gebied ligt waarop het model is geschat."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 50: individueel voorspellingsinterval"
+              },
+              {
+                "source": "boek-h9d",
+                "page": 12,
+                "locator": "Boek p. 284: voorspelling en onzekerheid"
               }
             ]
           }
@@ -8639,6 +15438,41 @@ window.SRAMCData = {
           "source": "boek-h10c",
           "page": 5,
           "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+        },
+        {
+          "source": "spss",
+          "page": 32,
+          "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+        },
+        {
+          "source": "exam2025",
+          "page": 9,
+          "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+        },
+        {
+          "source": "exam2025",
+          "page": 9,
+          "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+        },
+        {
+          "source": "exam2025",
+          "page": 14,
+          "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+        },
+        {
+          "source": "tabellen",
+          "page": 13,
+          "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+        },
+        {
+          "source": "slides",
+          "page": 161,
+          "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+        },
+        {
+          "source": "tabellen",
+          "page": 20,
+          "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
         }
       ],
       "questions": [
@@ -8689,6 +15523,41 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 5,
               "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
           "recognition": {
@@ -8766,6 +15635,41 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 5,
               "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
           "recognition": {
@@ -8843,6 +15747,41 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 5,
               "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
           "recognition": {
@@ -8923,6 +15862,41 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 5,
               "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
           "recognition": {
@@ -9002,6 +15976,41 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 5,
               "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
           "recognition": {
@@ -9086,6 +16095,41 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 5,
               "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
           "recognition": {
@@ -9165,6 +16209,41 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 5,
               "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
           "recognition": {
@@ -9190,6 +16269,132 @@ window.SRAMCData = {
                 "source": "attentie",
                 "page": 7,
                 "locator": "PDF p. 7-8: meervoudige regressie en uitvoer"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-meervoudig-leertoepassing-dummy-contrast",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Wat is volgens dit model het voorspelde salarisverschil tussen WO en HBO bij gelijke ervaring?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Salaris staat in euro per maand. Opleiding is gecodeerd met HBO en WO; de referentiegroep is MBO. Iedere persoon heeft precies één opleidingscategorie.</p><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Beta</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>2.000</td><td></td></tr><tr><th scope=\"row\">Ervaring (jaren)</th><td>80</td><td>0,40</td></tr><tr><th scope=\"row\">HBO (0/1)</th><td>350</td><td>0,20</td></tr><tr><th scope=\"row\">WO (0/1)</th><td>700</td><td>0,32</td></tr></tbody></table></div>",
+          "options": [
+            "WO ligt € 1.050 hoger dan HBO",
+            "WO ligt 0,12 euro hoger dan HBO",
+            "WO ligt € 350 hoger dan HBO",
+            "WO ligt € 700 hoger dan HBO"
+          ],
+          "optionExplanations": [
+            "Dit telt de twee dummy-effecten op. Voor een contrast tussen de groepen moet je hun voorspellingen aftrekken.",
+            "0,32 − 0,20 gebruikt de gestandaardiseerde Beta-kolom. Voor bedragen in euro gebruik je Unstandardized B.",
+            "WO en HBO worden allebei met MBO vergeleken. Het onderlinge contrast is daarom 700 − 350 = 350 euro.",
+            "700 is het verschil tussen WO en de referentiegroep MBO, niet tussen WO en HBO."
+          ],
+          "correct": 2,
+          "steps": [
+            "Voor HBO geldt HBO = 1 en WO = 0; voor WO geldt HBO = 0 en WO = 1.",
+            "Bij gelijke ervaring vallen de constante en ervaringsterm weg wanneer je de voorspellingen aftrekt.",
+            "Het resterende verschil is 700 − 350 = 350 euro per maand. Dit is een modelmatig verschil bij gelijke opgenomen kenmerken, geen bewezen opleidingseffect."
+          ],
+          "explanation": "Voor HBO geldt HBO = 1 en WO = 0; voor WO geldt HBO = 0 en WO = 1. Bij gelijke ervaring vallen de constante en ervaringsterm weg wanneer je de voorspellingen aftrekt. Het resterende verschil is 700 − 350 = 350 euro per maand. Dit is een modelmatig verschil bij gelijke opgenomen kenmerken, geen bewezen opleidingseffect.",
+          "pattern": "Herken: Wat is volgens dit model het voorspelde salarisverschil tussen WO en HBO bij gelijke ervaring? → Betekenis: Dummycoëfficiënten zijn verschillen ten opzichte van een gezamenlijke referentiegroep. → Aanpak: Schrijf de codes voor beide groepen op en trek de twee B-bijdragen van elkaar af bij gelijke overige kenmerken. → Gevraagd antwoord: Een salariscontrast in euro tussen twee niet-referentiecategorieën.",
+          "trap": "Gebruik niet zonder meer één dummycoëfficiënt als contrast tussen twee andere groepen.",
+          "refs": [
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "PDF p. 7-8: dummyvariabelen en meervoudige regressie"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formules 51-54: meervoudig model"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Wat is volgens dit model het voorspelde salarisverschil tussen WO en HBO bij gelijke ervaring?",
+            "meaning": "Dummycoëfficiënten zijn verschillen ten opzichte van een gezamenlijke referentiegroep.",
+            "approach": "Schrijf de codes voor beide groepen op en trek de twee B-bijdragen van elkaar af bij gelijke overige kenmerken.",
+            "answer": "Een salariscontrast in euro tussen twee niet-referentiecategorieën."
+          },
+          "guidance": {
+            "title": "Meervoudige regressie: model en vergelijking",
+            "focus": "Schrijf de codes voor beide groepen op en trek de twee B-bijdragen van elkaar af bij gelijke overige kenmerken.",
+            "rules": [
+              "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
+              "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
+            ],
+            "refs": [
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: dummyvariabelen en meervoudige regressie"
+              },
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 51-54: meervoudig model"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-meervoudig-leertoepassing-adjusted-vergelijking",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke uitspraak over toevoeging van twee variabelen wordt door deze vergelijking ondersteund?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Beide modellen zijn op dezelfde 30 complete waarnemingen en dezelfde afhankelijke variabele geschat.</p><div class=\"table-wrap\"><table><caption>Model Summary</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">R²</th></tr></thead><tbody><tr><th scope=\"row\">Klein</th><td>1</td><td>0,800</td></tr><tr><th scope=\"row\">Groot</th><td>3</td><td>0,810</td></tr></tbody></table></div>",
+          "options": [
+            "Adjusted R² stijgt altijd mee met R²",
+            "Het grote model is bewezen slechter op elke nieuwe waarneming",
+            "Je mag R² niet vergelijken omdat k verschilt",
+            "Adjusted R² daalt van circa 0,793 naar 0,788"
+          ],
+          "optionExplanations": [
+            "Gewone R² daalt bij toevoegen op dezelfde data niet. Adjusted R² corrigeert voor het aantal variabelen en kan wel dalen.",
+            "De maat vergelijkt fit en complexiteit op deze steekproef. Prestatie op nieuwe gegevens moet met validatie worden beoordeeld.",
+            "Het verschil in k is juist waarom een gecorrigeerde maat zinvol is. Dezelfde uitkomst en waarnemingen maken de modellen vergelijkbaar.",
+            "Klein: 0,800 − 1 × 0,200/28 = 0,792857. Groot: 0,810 − 3 × 0,190/26 = 0,788077. De kleine winst compenseert de extra complexiteit niet volgens deze maat."
+          ],
+          "correct": 3,
+          "steps": [
+            "Gebruik R²_adj = R² − k(1 − R²)/(n − k − 1), met k zonder constante.",
+            "Klein: 0,792857; groot: 0,788077. De gewone R² stijgt, maar de aangepaste maat daalt.",
+            "Volgens adjusted R² leveren de twee extra variabelen onvoldoende winst voor hun extra complexiteit. Combineer dat met inhoudelijke reden, diagnose en validatie."
+          ],
+          "explanation": "Gebruik R²_adj = R² − k(1 − R²)/(n − k − 1), met k zonder constante. Klein: 0,792857; groot: 0,788077. De gewone R² stijgt, maar de aangepaste maat daalt. Volgens adjusted R² leveren de twee extra variabelen onvoldoende winst voor hun extra complexiteit. Combineer dat met inhoudelijke reden, diagnose en validatie.",
+          "pattern": "Herken: Welke uitspraak over toevoeging van twee variabelen wordt door deze vergelijking ondersteund? → Betekenis: Een stijgende gewone R² kan een kleine fitwinst verbergen tegenover extra modelcomplexiteit. → Aanpak: Controleer vergelijkbare data en uitkomst en bereken de correctie voor het eigen k van ieder model. → Gevraagd antwoord: Een vergelijking van adjusted R² met een begrensde modelkeuzeconclusie.",
+          "trap": "Een fitmaat op trainingsdata is geen onafhankelijke voorspelfout op nieuwe gegevens.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formule 51: adjusted R²"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke uitspraak over toevoeging van twee variabelen wordt door deze vergelijking ondersteund?",
+            "meaning": "Een stijgende gewone R² kan een kleine fitwinst verbergen tegenover extra modelcomplexiteit.",
+            "approach": "Controleer vergelijkbare data en uitkomst en bereken de correctie voor het eigen k van ieder model.",
+            "answer": "Een vergelijking van adjusted R² met een begrensde modelkeuzeconclusie."
+          },
+          "guidance": {
+            "title": "Meervoudige regressie: model en vergelijking",
+            "focus": "Controleer vergelijkbare data en uitkomst en bereken de correctie voor het eigen k van ieder model.",
+            "rules": [
+              "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
+              "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formule 51: adjusted R²"
               }
             ]
           }
@@ -9233,6 +16438,26 @@ window.SRAMCData = {
           "source": "boek-h10c",
           "page": 8,
           "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+        },
+        {
+          "source": "boek-h10a",
+          "page": 12,
+          "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+        },
+        {
+          "source": "attentie",
+          "page": 7,
+          "locator": "Attentiepunten, transformaties, PDF 7"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+        },
+        {
+          "source": "spss",
+          "page": 22,
+          "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
         }
       ],
       "questions": [
@@ -9288,6 +16513,26 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -9370,6 +16615,26 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -9455,6 +16720,26 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -9536,6 +16821,26 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -9621,6 +16926,26 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -9705,6 +17030,26 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -9789,6 +17134,26 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -9873,6 +17238,26 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -9898,6 +17283,132 @@ window.SRAMCData = {
                 "source": "attentie",
                 "page": 7,
                 "locator": "PDF p. 7-8: transformaties en meervoudige terugtransformatie"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-transformaties-leertoepassing-terugtransformeren-tabel",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Wat is de teruggetransformeerde voorspelling bij x = 10 volgens dit exponentiële model?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De afhankelijke variabele in deze uitvoer is LN(omzet). Gebruik de in de cursus gehanteerde terugtransformatie exp van de voorspelde logwaarde.</p><div class=\"table-wrap\"><table><caption>Coefficients: Dependent Variable LN(omzet)</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>2,000</td></tr><tr><th scope=\"row\">x</th><td>0,100</td></tr></tbody></table></div>",
+          "options": [
+            "3,00",
+            "Ongeveer 8,39",
+            "Ongeveer 9,20",
+            "Ongeveer 20,09"
+          ],
+          "optionExplanations": [
+            "Dit is de voorspelde logwaarde. De vraag verlangt de oorspronkelijke schaal van omzet.",
+            "Dit doet exp alleen op de constante en telt vervolgens 1 op. De volledige rechterkant moet worden geëxponentieerd.",
+            "Dit vult ln(10) in voor x. In het exponentiële model is hier alleen de afhankelijke variabele gelogaritmeerd.",
+            "De voorspelde logwaarde is 2 + 0,1 × 10 = 3. Terugtransformeren geeft exp(3) ≈ 20,0855."
+          ],
+          "correct": 3,
+          "steps": [
+            "Lees de afhankelijke variabele van de tabel: LN(omzet). De formule staat dus op logschaal.",
+            "Voorspelde logwaarde: 2 + 0,100 × 10 = 3.",
+            "De cursus-terugtransformatie is exp(3) ≈ 20,09. Beoordeel modelvoorwaarden op de juiste modelschaal; voeg geen niet-gegeven correctiefactor toe."
+          ],
+          "explanation": "Lees de afhankelijke variabele van de tabel: LN(omzet). De formule staat dus op logschaal. Voorspelde logwaarde: 2 + 0,100 × 10 = 3. De cursus-terugtransformatie is exp(3) ≈ 20,09. Beoordeel modelvoorwaarden op de juiste modelschaal; voeg geen niet-gegeven correctiefactor toe.",
+          "pattern": "Herken: Wat is de teruggetransformeerde voorspelling bij x = 10 volgens dit exponentiële model? → Betekenis: De voetnoot of titel van de coëfficiëntentabel bepaalt op welke schaal de voorspelling staat. → Aanpak: Lees welke variabele is getransformeerd, vul x op de juiste schaal in en transformeer de gehele voorspelde logwaarde terug. → Gevraagd antwoord: Een voorspelling op de oorspronkelijke omzet-schaal volgens de opgegeven cursusroute.",
+          "trap": "Dezelfde tabelvorm kan een ander model beschrijven zodra de afhankelijke variabele LN(y) is.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formules 55-58: exponentiële en logaritmische modellen"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "PDF p. 7-8: transformaties"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Wat is de teruggetransformeerde voorspelling bij x = 10 volgens dit exponentiële model?",
+            "meaning": "De voetnoot of titel van de coëfficiëntentabel bepaalt op welke schaal de voorspelling staat.",
+            "approach": "Lees welke variabele is getransformeerd, vul x op de juiste schaal in en transformeer de gehele voorspelde logwaarde terug.",
+            "answer": "Een voorspelling op de oorspronkelijke omzet-schaal volgens de opgegeven cursusroute."
+          },
+          "guidance": {
+            "title": "Welke variabele is getransformeerd?",
+            "focus": "Lees welke variabele is getransformeerd, vul x op de juiste schaal in en transformeer de gehele voorspelde logwaarde terug.",
+            "rules": [
+              "Logarithmic gebruikt ln(x) en laat y op de oorspronkelijke schaal. Exponential gebruikt ln(ŷ) met x. Power gebruikt zowel ln(ŷ) als ln(x). Lees dus eerst op welke schaal de vergelijking staat.",
+              "Terugtransformeren van ln(ŷ) doe je met exp: ŷ = exp(de volledige rechterkant). Het oorspronkelijke getal binnen ln moet positief zijn; de logwaarde zelf mag nul of negatief zijn."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 55-58: exponentiële en logaritmische modellen"
+              },
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: transformaties"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-transformaties-leertoepassing-modelvorm-verdubbeling",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke voorspelde verandering hoort bij verdubbeling van x van 10 naar 20?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Vergelijk drie afzonderlijke modellen op hun eigen aangegeven schaal; er wordt alleen naar de gevolgen binnen ieder model gevraagd.</p><div class=\"table-wrap\"><table><caption>Modelvergelijkingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">Vergelijking</th></tr></thead><tbody><tr><th scope=\"row\">Lineair</th><td>ŷ = 5 + 3x</td></tr><tr><th scope=\"row\">Logaritmisch</th><td>ŷ = 5 + 3 ln(x)</td></tr><tr><th scope=\"row\">Macht</th><td>ln(ŷ) = 5 + 3 ln(x)</td></tr></tbody></table></div>",
+          "options": [
+            "Lineair: +30; logaritmisch: +3 ln(2); macht: factor 8",
+            "Alle drie: +30",
+            "Lineair: factor 2; logaritmisch: factor 2; macht: factor 3",
+            "Lineair: +30; logaritmisch: factor 8; macht: +3 ln(2)"
+          ],
+          "optionExplanations": [
+            "De veranderingen volgen uit respectievelijk 3 × (20 − 10), 3 × ln(20/10) en (20/10)³.",
+            "De coëfficiënt 3 heeft door de verschillende transformaties niet in ieder model dezelfde betekenis.",
+            "Constanten en transformaties veranderen de verdubbelingsreactie. Een helling van 3 betekent niet overal een factor 3.",
+            "Dit verwisselt het model met alleen ln(x) met het model waarin ook y gelogaritmeerd is."
+          ],
+          "correct": 0,
+          "steps": [
+            "Lineair: verschil = 3 × (20 − 10) = 30; de constante valt weg.",
+            "Logaritmisch: verschil = 3[ln(20) − ln(10)] = 3 ln(2) ≈ 2,079.",
+            "Machtsmodel: ŷ = exp(5) × x³. De verhouding na verdubbelen is 2³ = 8; dit is een factor en geen vaste optelling."
+          ],
+          "explanation": "Lineair: verschil = 3 × (20 − 10) = 30; de constante valt weg. Logaritmisch: verschil = 3[ln(20) − ln(10)] = 3 ln(2) ≈ 2,079. Machtsmodel: ŷ = exp(5) × x³. De verhouding na verdubbelen is 2³ = 8; dit is een factor en geen vaste optelling.",
+          "pattern": "Herken: Welke voorspelde verandering hoort bij verdubbeling van x van 10 naar 20? → Betekenis: Een coëfficiënt krijgt een andere betekenis wanneer x, y of beide zijn gelogaritmeerd. → Aanpak: Vergelijk twee voorspellingen binnen ieder model en let op het onderscheid tussen verschil en verhouding. → Gevraagd antwoord: Twee absolute toenamen en één vermenigvuldigingsfactor in de juiste modellen.",
+          "trap": "Lees de modelvergelijking zelf; de waarde van de coëfficiënt alleen bepaalt de interpretatie niet.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formules 55-58: modelvorm en terugtransformatie"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke voorspelde verandering hoort bij verdubbeling van x van 10 naar 20?",
+            "meaning": "Een coëfficiënt krijgt een andere betekenis wanneer x, y of beide zijn gelogaritmeerd.",
+            "approach": "Vergelijk twee voorspellingen binnen ieder model en let op het onderscheid tussen verschil en verhouding.",
+            "answer": "Twee absolute toenamen en één vermenigvuldigingsfactor in de juiste modellen."
+          },
+          "guidance": {
+            "title": "Welke variabele is getransformeerd?",
+            "focus": "Vergelijk twee voorspellingen binnen ieder model en let op het onderscheid tussen verschil en verhouding.",
+            "rules": [
+              "Logarithmic gebruikt ln(x) en laat y op de oorspronkelijke schaal. Exponential gebruikt ln(ŷ) met x. Power gebruikt zowel ln(ŷ) als ln(x). Lees dus eerst op welke schaal de vergelijking staat.",
+              "Terugtransformeren van ln(ŷ) doe je met exp: ŷ = exp(de volledige rechterkant). Het oorspronkelijke getal binnen ln moet positief zijn; de logwaarde zelf mag nul of negatief zijn."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 55-58: modelvorm en terugtransformatie"
               }
             ]
           }
@@ -9931,6 +17442,56 @@ window.SRAMCData = {
           "source": "boek-h10b",
           "page": 3,
           "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+        },
+        {
+          "source": "boek-h10b",
+          "page": 6,
+          "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+        },
+        {
+          "source": "attentie",
+          "page": 7,
+          "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+        },
+        {
+          "source": "formules",
+          "page": 4,
+          "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+        },
+        {
+          "source": "tabellen",
+          "page": 20,
+          "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+        },
+        {
+          "source": "boek-h10c",
+          "page": 6,
+          "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+        },
+        {
+          "source": "spss",
+          "page": 28,
+          "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+        },
+        {
+          "source": "attentie",
+          "page": 7,
+          "locator": "Attentiepunten, backward, PDF 7"
+        },
+        {
+          "source": "slides",
+          "page": 126,
+          "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+        },
+        {
+          "source": "slides",
+          "page": 140,
+          "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
         }
       ],
       "questions": [
@@ -9976,6 +17537,56 @@ window.SRAMCData = {
               "source": "boek-h10b",
               "page": 3,
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "spss",
+              "page": 28,
+              "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, backward, PDF 7"
+            },
+            {
+              "source": "slides",
+              "page": 126,
+              "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+            },
+            {
+              "source": "slides",
+              "page": 140,
+              "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
             }
           ],
           "recognition": {
@@ -10048,6 +17659,56 @@ window.SRAMCData = {
               "source": "boek-h10b",
               "page": 3,
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "spss",
+              "page": 28,
+              "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, backward, PDF 7"
+            },
+            {
+              "source": "slides",
+              "page": 126,
+              "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+            },
+            {
+              "source": "slides",
+              "page": 140,
+              "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
             }
           ],
           "recognition": {
@@ -10120,6 +17781,56 @@ window.SRAMCData = {
               "source": "boek-h10b",
               "page": 3,
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "spss",
+              "page": 28,
+              "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, backward, PDF 7"
+            },
+            {
+              "source": "slides",
+              "page": 126,
+              "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+            },
+            {
+              "source": "slides",
+              "page": 140,
+              "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
             }
           ],
           "recognition": {
@@ -10195,6 +17906,56 @@ window.SRAMCData = {
               "source": "boek-h10b",
               "page": 3,
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "spss",
+              "page": 28,
+              "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, backward, PDF 7"
+            },
+            {
+              "source": "slides",
+              "page": 126,
+              "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+            },
+            {
+              "source": "slides",
+              "page": 140,
+              "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
             }
           ],
           "recognition": {
@@ -10269,6 +18030,56 @@ window.SRAMCData = {
               "source": "boek-h10b",
               "page": 3,
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "spss",
+              "page": 28,
+              "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, backward, PDF 7"
+            },
+            {
+              "source": "slides",
+              "page": 126,
+              "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+            },
+            {
+              "source": "slides",
+              "page": 140,
+              "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
             }
           ],
           "recognition": {
@@ -10343,6 +18154,56 @@ window.SRAMCData = {
               "source": "boek-h10b",
               "page": 3,
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "spss",
+              "page": 28,
+              "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, backward, PDF 7"
+            },
+            {
+              "source": "slides",
+              "page": 126,
+              "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+            },
+            {
+              "source": "slides",
+              "page": 140,
+              "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
             }
           ],
           "recognition": {
@@ -10371,6 +18232,200 @@ window.SRAMCData = {
               }
             ]
           }
+        },
+        {
+          "id": "mc-modelbouw-leertoepassing-backward-uitvoer",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke variabele is de eerste verwijderkandidaat en wat doe je daarna?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Voer backward elimination uit. De opgave geeft expliciet: verwijderen als Sig. &gt; 0,10. Begin met het weergegeven model.</p><div class=\"table-wrap\"><table><caption>Coefficients: model 1</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Sig.</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>1.400</td><td>0,280</td></tr><tr><th scope=\"row\">Omzet</th><td>0,030</td><td>0,002</td></tr><tr><th scope=\"row\">Omvang</th><td>4,200</td><td>0,074</td></tr><tr><th scope=\"row\">Leeftijd</th><td>−0,800</td><td>0,310</td></tr></tbody></table></div>",
+          "options": [
+            "Leeftijd verwijderen en het model opnieuw schatten",
+            "De constante verwijderen en verder dezelfde tabel gebruiken",
+            "Leeftijd en omvang tegelijk verwijderen",
+            "Omzet verwijderen omdat de coëfficiënt het kleinst is"
+          ],
+          "optionExplanations": [
+            "Leeftijd heeft van de verklarende variabelen de grootste p boven 0,10. Na verwijderen kunnen andere coëfficiënten en p-waarden wijzigen.",
+            "De constante is geen gewone kandidaat in deze backward-opdracht. Bovendien hoort een nieuwe selectie bij opnieuw geschatte uitvoer.",
+            "Omvang heeft p = 0,074 en voldoet aan de expliciet gegeven grens 0,10. Backward verwijdert hier eerst één kandidaat en schat opnieuw.",
+            "Coëfficiënten hebben verschillende eenheden. De kleinste B is geen criterium voor de geringste statistische bijdrage."
+          ],
+          "correct": 0,
+          "steps": [
+            "De verwijderingsgrens is expliciet 0,10; gebruik die grens, zonder deze te vervangen door 0,05 of 0,025.",
+            "Onder de verklarende variabelen is Leeftijd met p = 0,310 de grootste overschrijding.",
+            "Verwijder deze kandidaat, schat het resterende model opnieuw en beoordeel de nieuwe uitvoer. Omvang mag later veranderen van betekenis of significantie."
+          ],
+          "explanation": "De verwijderingsgrens is expliciet 0,10; gebruik die grens, zonder deze te vervangen door 0,05 of 0,025. Onder de verklarende variabelen is Leeftijd met p = 0,310 de grootste overschrijding. Verwijder deze kandidaat, schat het resterende model opnieuw en beoordeel de nieuwe uitvoer. Omvang mag later veranderen van betekenis of significantie.",
+          "pattern": "Herken: Welke variabele is de eerste verwijderkandidaat en wat doe je daarna? → Betekenis: Een expliciete proceduregrens en tabel met meerdere p-waarden bepalen de eerste selectiestap. → Aanpak: Selecteer onder verklarende variabelen de grootste p boven de opgegeven grens en gebruik daarna opnieuw geschatte uitvoer. → Gevraagd antwoord: Eén eerste verwijderkandidaat met de noodzakelijke vervolgstap.",
+          "trap": "Een eigen vaste α of de grootte van B vervangt de expliciete verwijderingsregel niet.",
+          "refs": [
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "PDF p. 7-8: backward en modelbouw"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formules 59-63: modelkeuze"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke variabele is de eerste verwijderkandidaat en wat doe je daarna?",
+            "meaning": "Een expliciete proceduregrens en tabel met meerdere p-waarden bepalen de eerste selectiestap.",
+            "approach": "Selecteer onder verklarende variabelen de grootste p boven de opgegeven grens en gebruik daarna opnieuw geschatte uitvoer.",
+            "answer": "Eén eerste verwijderkandidaat met de noodzakelijke vervolgstap."
+          },
+          "guidance": {
+            "title": "Variabelenselectie en multicollineariteit",
+            "focus": "Selecteer onder verklarende variabelen de grootste p boven de opgegeven grens en gebruik daarna opnieuw geschatte uitvoer.",
+            "rules": [
+              "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
+              "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
+            ],
+            "refs": [
+              {
+                "source": "attentie",
+                "page": 7,
+                "locator": "PDF p. 7-8: backward en modelbouw"
+              },
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 59-63: modelkeuze"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-modelbouw-leertoepassing-vif-tolerance",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke modelbeoordeling volgt uit deze tabel volgens de cursusgrens?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het model verklaart voorraadwaarde uit omzet en activa. Beide bedragen kunnen veel gezamenlijke informatie bevatten.</p><div class=\"table-wrap\"><table><caption>Coefficients: Collinearity Statistics</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">Tolerance</th><th scope=\"col\">VIF</th></tr></thead><tbody><tr><th scope=\"row\">Omzet</th><td>0,080</td><td>?</td></tr><tr><th scope=\"row\">Activa</th><td>0,080</td><td>?</td></tr><tr><th scope=\"row\">Aantal vestigingen</th><td>0,500</td><td>?</td></tr></tbody></table></div>",
+          "options": [
+            "VIF = 0,08 voor omzet, dus er is geen probleem",
+            "Omzet en activa hebben VIF = 12,5; onderzoek hun overlap",
+            "Alle variabelen hebben een probleem omdat Tolerance < 1",
+            "Omzet heeft bewezen geen effect en moet altijd weg"
+          ],
+          "optionExplanations": [
+            "Tolerance en VIF zijn omgekeerden. De kleine tolerance betekent hier juist een hoge VIF.",
+            "VIF = 1/Tolerance. Voor 0,080 is dat 12,5, boven de cursusgrens 10; voor vestigingen is VIF = 2.",
+            "Tolerance ligt tussen nul en één. De cursusgrens VIF > 10 komt overeen met Tolerance < 0,10.",
+            "Multicollineariteit maakt afzonderlijke bijdragen minder precies identificeerbaar; de tabel bepaalt niet zelfstandig welke inhoudelijke variabele moet vervallen."
+          ],
+          "correct": 1,
+          "steps": [
+            "Bereken VIF per rij: 1/0,080 = 12,5; 1/0,500 = 2.",
+            "De waarden 12,5 overschrijden de cursusgrens 10 en wijzen op sterke overlap in verklarende informatie.",
+            "Onderzoek inhoudelijke betekenis en stabiliteit van individuele effecten en beoordeel een aangepast model opnieuw. Verwijder niet blind een variabele uitsluitend op basis van één tabelcel."
+          ],
+          "explanation": "Bereken VIF per rij: 1/0,080 = 12,5; 1/0,500 = 2. De waarden 12,5 overschrijden de cursusgrens 10 en wijzen op sterke overlap in verklarende informatie. Onderzoek inhoudelijke betekenis en stabiliteit van individuele effecten en beoordeel een aangepast model opnieuw. Verwijder niet blind een variabele uitsluitend op basis van één tabelcel.",
+          "pattern": "Herken: Welke modelbeoordeling volgt uit deze tabel volgens de cursusgrens? → Betekenis: Tolerance en VIF meten overlap van iedere verklarende variabele met de overige verklarende variabelen. → Aanpak: Neem de reciproke van Tolerance, vergelijk met de cursusgrens en vertaal de uitkomst naar onzekerheid van afzonderlijke effecten. → Gevraagd antwoord: Een rekenkundige VIF en een inhoudelijk begrensde multicollineariteitsdiagnose.",
+          "trap": "Een goede totale fit sluit onzekere afzonderlijke coëfficiënten door overlap niet uit.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formules 59-60: VIF en cursusgrens"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke modelbeoordeling volgt uit deze tabel volgens de cursusgrens?",
+            "meaning": "Tolerance en VIF meten overlap van iedere verklarende variabele met de overige verklarende variabelen.",
+            "approach": "Neem de reciproke van Tolerance, vergelijk met de cursusgrens en vertaal de uitkomst naar onzekerheid van afzonderlijke effecten.",
+            "answer": "Een rekenkundige VIF en een inhoudelijk begrensde multicollineariteitsdiagnose."
+          },
+          "guidance": {
+            "title": "Variabelenselectie en multicollineariteit",
+            "focus": "Neem de reciproke van Tolerance, vergelijk met de cursusgrens en vertaal de uitkomst naar onzekerheid van afzonderlijke effecten.",
+            "rules": [
+              "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
+              "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formules 59-60: VIF en cursusgrens"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-modelbouw-leertoepassing-extra-variabele",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Is de extra variabele volgens de partiële F-toets significant bij α = 0,05?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Beide geneste modellen gebruiken dezelfde 23 waarnemingen en dezelfde y. Het uitgebreide model bevat alle termen van het kleine model plus één variabele.</p><div class=\"table-wrap\"><table><caption>Twee ANOVA-samenvattingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th></tr></thead><tbody><tr><th scope=\"row\">Klein</th><td>1</td><td>120</td><td>100</td></tr><tr><th scope=\"row\">Uitgebreid</th><td>2</td><td>180</td><td>40</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=21\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.8 F-verdeling, PDF-pagina 21</a>. Zoek de benodigde grens zelf op.</p>",
+          "options": [
+            "Nee: F = 0,6 < 4,351",
+            "Niet te bepalen omdat SSR groter wordt",
+            "Ja: F = 30 > 4,351 bij df 1 en 20",
+            "Ja: F = 45 > 3,493 bij df 2 en 20"
+          ],
+          "optionExplanations": [
+            "Dit deelt de extra verklaarde som door SSE van het kleine model. De juiste noemer is MSE van het uitgebreide model.",
+            "De vraag is juist of de toename groot genoeg is ten opzichte van de resterende variatie. De gegeven tabel bevat de benodigde informatie.",
+            "De extra SSR is 60 en MSE_uitgebreid = 40/(23 − 2 − 1) = 2. F = 60/2 = 30; de kritieke grens is 4,351.",
+            "Dit is de globale toets van het uitgebreide model. De vraag betreft alleen de extra bijdrage en verlangt teller-df 1."
+          ],
+          "correct": 2,
+          "steps": [
+            "Er is één extra variabele: teller-df = 1. Noemer-df = 23 − 2 − 1 = 20.",
+            "Extra SSR = 180 − 120 = 60 en MSE_uitgebreid = 40/20 = 2; partiële F = 60/2 = 30.",
+            "Lees F_0,05(1,20) = 4,351. Omdat 30 > 4,351 verwerp je dat de extra bijdrage nul is, onder de voorwaarden van deze modelvergelijking."
+          ],
+          "explanation": "Er is één extra variabele: teller-df = 1. Noemer-df = 23 − 2 − 1 = 20. Extra SSR = 180 − 120 = 60 en MSE_uitgebreid = 40/20 = 2; partiële F = 60/2 = 30. Lees F_0,05(1,20) = 4,351. Omdat 30 > 4,351 verwerp je dat de extra bijdrage nul is, onder de voorwaarden van deze modelvergelijking.",
+          "pattern": "Herken: Is de extra variabele volgens de partiële F-toets significant bij α = 0,05? → Betekenis: Geneste modellen isoleren de bijdrage van de nieuwe variabele ten opzichte van het kleinere model. → Aanpak: Gebruik het verschil in SSR in de teller en de residuele gemiddelde kwadratensom van het uitgebreide model in de noemer. → Gevraagd antwoord: Een toetsconclusie over de extra variabele met eigen teller- en noemervrijheidsgraden.",
+          "trap": "De globale F van het uitgebreide model toetst een andere nulhypothese dan de partiële F.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formule 63: bijdrage van één extra variabele"
+            },
+            {
+              "source": "tabellen",
+              "page": 21,
+              "locator": "Tabel 13.8: teller-df 1, noemer-df 20, α 0,05"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Is de extra variabele volgens de partiële F-toets significant bij α = 0,05?",
+            "meaning": "Geneste modellen isoleren de bijdrage van de nieuwe variabele ten opzichte van het kleinere model.",
+            "approach": "Gebruik het verschil in SSR in de teller en de residuele gemiddelde kwadratensom van het uitgebreide model in de noemer.",
+            "answer": "Een toetsconclusie over de extra variabele met eigen teller- en noemervrijheidsgraden."
+          },
+          "guidance": {
+            "title": "Variabelenselectie en multicollineariteit",
+            "focus": "Gebruik het verschil in SSR in de teller en de residuele gemiddelde kwadratensom van het uitgebreide model in de noemer.",
+            "rules": [
+              "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
+              "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formule 63: bijdrage van één extra variabele"
+              },
+              {
+                "source": "tabellen",
+                "page": 21,
+                "locator": "Tabel 13.8: teller-df 1, noemer-df 20, α 0,05"
+              }
+            ]
+          }
         }
       ]
     },
@@ -10396,6 +18451,26 @@ window.SRAMCData = {
           "source": "spss",
           "locator": "SPSS-opgaven en uitwerkingen",
           "page": 1
+        },
+        {
+          "source": "attentie",
+          "page": 8,
+          "locator": "Attentiepunten, validatie, PDF 8–9"
+        },
+        {
+          "source": "formules",
+          "page": 4,
+          "locator": "Formuleblad, validatieformule 64, PDF 4"
+        },
+        {
+          "source": "attentie",
+          "page": 9,
+          "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+        },
+        {
+          "source": "formules",
+          "page": 4,
+          "locator": "Formuleblad, formule 64, PDF 4"
         }
       ],
       "questions": [
@@ -10436,6 +18511,26 @@ window.SRAMCData = {
               "source": "spss",
               "locator": "SPSS-opgaven en uitwerkingen",
               "page": 1
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, validatie, PDF 8–9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, validatieformule 64, PDF 4"
+            },
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
             }
           ],
           "recognition": {
@@ -10503,6 +18598,26 @@ window.SRAMCData = {
               "source": "spss",
               "locator": "SPSS-opgaven en uitwerkingen",
               "page": 1
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, validatie, PDF 8–9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, validatieformule 64, PDF 4"
+            },
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
             }
           ],
           "recognition": {
@@ -10570,6 +18685,26 @@ window.SRAMCData = {
               "source": "spss",
               "locator": "SPSS-opgaven en uitwerkingen",
               "page": 1
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, validatie, PDF 8–9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, validatieformule 64, PDF 4"
+            },
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
             }
           ],
           "recognition": {
@@ -10640,6 +18775,26 @@ window.SRAMCData = {
               "source": "spss",
               "locator": "SPSS-opgaven en uitwerkingen",
               "page": 1
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, validatie, PDF 8–9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, validatieformule 64, PDF 4"
+            },
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
             }
           ],
           "recognition": {
@@ -10665,6 +18820,74 @@ window.SRAMCData = {
                 "source": "attentie",
                 "page": 8,
                 "locator": "PDF p. 8-9: validatie"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-validatie-leertoepassing-software-uitvoer-keuze",
+          "level": 2,
+          "prompt": "Eigen oefenvraag. Welke uitvoer moet je bewaren om uitbijters in y én veranderende residuspreiding te onderzoeken?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Je voert de voorgeschreven regressieanalyse in SPSS uit. Het model levert al Model Summary, ANOVA en Coefficients. De opdracht verlangt daarna modeldiagnostiek.</p><div class=\"table-wrap\"><table><caption>Beschikbare aanvullende uitvoer</caption><thead><tr><th scope=\"col\">Keuze</th><th scope=\"col\">Inhoud</th></tr></thead><tbody><tr><th scope=\"row\">A</th><td>Gestandaardiseerde residuen en absolute residuen tegenover x</td></tr><tr><th scope=\"row\">B</th><td>Alleen een extra Coefficients-tabel</td></tr><tr><th scope=\"row\">C</th><td>Alleen een histogram van de oorspronkelijke y</td></tr><tr><th scope=\"row\">D</th><td>Alleen een groter aantal decimalen bij R²</td></tr></tbody></table></div>",
+          "options": [
+            "Keuze B",
+            "Keuze C",
+            "Keuze D",
+            "Keuze A"
+          ],
+          "optionExplanations": [
+            "Coëfficiënten en hun toetsen zijn onvoldoende om beide gevraagde residuproblemen te beoordelen.",
+            "De verdeling van de oorspronkelijke y is niet dezelfde als die van de residuen, en een histogram toont geen spreiding afhankelijk van x.",
+            "Meer decimalen verbeteren de diagnostische dekking niet. R² onderzoekt niet de gevraagde afwijkende residuen of veranderende spreiding.",
+            "Gestandaardiseerde residuen ondersteunen uitbijteranalyse in y. Absolute residuen tegenover x ondersteunen onderzoek naar veranderende foutspreiding."
+          ],
+          "correct": 3,
+          "steps": [
+            "Vertaal de opdracht eerst naar twee diagnosevragen: uitzonderlijke y-afwijkingen en samenhang van foutgrootte met x.",
+            "Bewaar gestandaardiseerde residuen voor de eerste vraag en absolute residuen met x voor de tweede.",
+            "Maak de passende tabel/grafiek en beoordeel de cursusgrenzen en p-waarden. De softwarehandeling krijgt zo een inhoudelijk doel in plaats van alleen een menuvolgorde."
+          ],
+          "explanation": "Vertaal de opdracht eerst naar twee diagnosevragen: uitzonderlijke y-afwijkingen en samenhang van foutgrootte met x. Bewaar gestandaardiseerde residuen voor de eerste vraag en absolute residuen met x voor de tweede. Maak de passende tabel/grafiek en beoordeel de cursusgrenzen en p-waarden. De softwarehandeling krijgt zo een inhoudelijk doel in plaats van alleen een menuvolgorde.",
+          "pattern": "Herken: Welke uitvoer moet je bewaren om uitbijters in y én veranderende residuspreiding te onderzoeken? → Betekenis: Een SPSS-praktijkopdracht vraagt doelgerichte uitvoer die de gekozen modelvoorwaarden controleerbaar maakt. → Aanpak: Bepaal eerst de gewenste diagnose en selecteer daarna de residumaten die daarvoor nodig zijn. → Gevraagd antwoord: Een uitvoerkeuze gekoppeld aan beide te onderzoeken modelproblemen.",
+          "trap": "Een succesvol uitgevoerde regressie levert niet vanzelf alle benodigde diagnose-uitvoer.",
+          "refs": [
+            {
+              "source": "spss",
+              "page": 16,
+              "locator": "Uitwerkingen college 5, §5.2-5.3: diagnose-uitvoer en residuen"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "PDF p. 5-6: diagnosematen"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke uitvoer moet je bewaren om uitbijters in y én veranderende residuspreiding te onderzoeken?",
+            "meaning": "Een SPSS-praktijkopdracht vraagt doelgerichte uitvoer die de gekozen modelvoorwaarden controleerbaar maakt.",
+            "approach": "Bepaal eerst de gewenste diagnose en selecteer daarna de residumaten die daarvoor nodig zijn.",
+            "answer": "Een uitvoerkeuze gekoppeld aan beide te onderzoeken modelproblemen."
+          },
+          "guidance": {
+            "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
+            "focus": "Bepaal eerst de gewenste diagnose en selecteer daarna de residumaten die daarvoor nodig zijn.",
+            "rules": [
+              "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
+              "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
+            ],
+            "refs": [
+              {
+                "source": "spss",
+                "page": 16,
+                "locator": "Uitwerkingen college 5, §5.2-5.3: diagnose-uitvoer en residuen"
+              },
+              {
+                "source": "attentie",
+                "page": 5,
+                "locator": "PDF p. 5-6: diagnosematen"
               }
             ]
           }
@@ -10709,6 +18932,26 @@ window.SRAMCData = {
               "source": "spss",
               "locator": "SPSS-opgaven en uitwerkingen",
               "page": 1
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, validatie, PDF 8–9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, validatieformule 64, PDF 4"
+            },
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
             }
           ],
           "recognition": {
@@ -10778,6 +19021,26 @@ window.SRAMCData = {
               "source": "spss",
               "locator": "SPSS-opgaven en uitwerkingen",
               "page": 1
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, validatie, PDF 8–9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, validatieformule 64, PDF 4"
+            },
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
             }
           ],
           "recognition": {
@@ -10806,6 +19069,142 @@ window.SRAMCData = {
               }
             ]
           }
+        },
+        {
+          "id": "mc-validatie-leertoepassing-testset-tabel",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Wat is de MSPR op deze ongebruikte testset en hoe verhoudt zij zich tot trainings-MSE = 2?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De drie testwaarnemingen zijn vooraf apart gehouden en zijn niet gebruikt voor modelkeuze. y en ŷ staan op dezelfde schaal.</p><div class=\"table-wrap\"><table><caption>Voorspellen op testgegevens</caption><thead><tr><th scope=\"col\">Testwaarneming</th><th scope=\"col\">y</th><th scope=\"col\">ŷ</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>10</td><td>12</td></tr><tr><th scope=\"row\">2</th><td>14</td><td>13</td></tr><tr><th scope=\"row\">3</th><td>20</td><td>17</td></tr></tbody></table></div>",
+          "options": [
+            "MSPR = 4,67; fraude is daardoor bewezen",
+            "MSPR = 14/3 ≈ 4,67; de testfout ligt hoger",
+            "MSPR = 14; de testfout ligt hoger",
+            "MSPR = 2/3; de testfout ligt lager"
+          ],
+          "optionExplanations": [
+            "De foutmaat toont slechtere voorspelling op deze kleine testset. Zij identificeert geen inhoudelijke oorzaak of fraude.",
+            "De fouten zijn −2, 1 en 3; de kwadratensom is 14. Deel door drie testwaarnemingen, niet door regressievrijheidsgraden.",
+            "14 is de som van gekwadrateerde voorspelfouten. MSPR is het gemiddelde daarvan.",
+            "Dit middelt getekende fouten die elkaar deels opheffen. MSPR kwadrateert iedere fout vóór het middelen."
+          ],
+          "correct": 1,
+          "steps": [
+            "Bereken per testwaarneming y − ŷ: −2, 1 en 3. De kwadraten zijn 4, 1 en 9.",
+            "MSPR = (4 + 1 + 9)/3 = 4,6667. De noemer is het aantal testwaarnemingen.",
+            "De waarde ligt hoger dan trainings-MSE = 2. Onderzoek generalisatie; drie testwaarnemingen alleen geven nog geen nauwkeurig beeld van alle toekomstige gevallen."
+          ],
+          "explanation": "Bereken per testwaarneming y − ŷ: −2, 1 en 3. De kwadraten zijn 4, 1 en 9. MSPR = (4 + 1 + 9)/3 = 4,6667. De noemer is het aantal testwaarnemingen. De waarde ligt hoger dan trainings-MSE = 2. Onderzoek generalisatie; drie testwaarnemingen alleen geven nog geen nauwkeurig beeld van alle toekomstige gevallen.",
+          "pattern": "Herken: Wat is de MSPR op deze ongebruikte testset en hoe verhoudt zij zich tot trainings-MSE = 2? → Betekenis: Nieuwe gegevens beoordelen voorspellen buiten de gegevens waarmee het model is gekozen. → Aanpak: Bereken voorspelfouten per testgeval, kwadrateer ze en deel hun som door het testsetaantal. → Gevraagd antwoord: Een gemiddelde kwadratische voorspelfout met passende vergelijking met training.",
+          "trap": "Een regressie-vrijheidsgradencorrectie hoort niet in de gegeven MSPR-formule.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formule 64: MSPR"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "PDF p. 8-9: validatie"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Wat is de MSPR op deze ongebruikte testset en hoe verhoudt zij zich tot trainings-MSE = 2?",
+            "meaning": "Nieuwe gegevens beoordelen voorspellen buiten de gegevens waarmee het model is gekozen.",
+            "approach": "Bereken voorspelfouten per testgeval, kwadrateer ze en deel hun som door het testsetaantal.",
+            "answer": "Een gemiddelde kwadratische voorspelfout met passende vergelijking met training."
+          },
+          "guidance": {
+            "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
+            "focus": "Bereken voorspelfouten per testgeval, kwadrateer ze en deel hun som door het testsetaantal.",
+            "rules": [
+              "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
+              "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 4,
+                "locator": "Formule 64: MSPR"
+              },
+              {
+                "source": "attentie",
+                "page": 8,
+                "locator": "PDF p. 8-9: validatie"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-validatie-leertoepassing-uitvoer-kruiscontrole",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke reconstructie van het SPSS-model klopt met alle drie tabellen?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De getoonde tabellen behoren tot hetzelfde model met constante.</p><div class=\"table-wrap\"><table><caption>Model Summary</caption><thead><tr><th scope=\"col\">R</th><th scope=\"col\">R Square</th><th scope=\"col\">Std. Error of the Estimate</th></tr></thead><tbody><tr><th scope=\"row\">0,900</th><td>0,810</td><td>3,000</td></tr></tbody></table></div><div class=\"table-wrap\"><table><caption>ANOVA: vrijheidsgraden</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">df</th></tr></thead><tbody><tr><th scope=\"row\">Regression</th><td>2</td></tr><tr><th scope=\"row\">Residual</th><td>17</td></tr><tr><th scope=\"row\">Total</th><td>19</td></tr></tbody></table></div><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Beta</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>10</td><td></td></tr><tr><th scope=\"row\">x₁</th><td>2</td><td>0,70</td></tr><tr><th scope=\"row\">x₂</th><td>-1</td><td>−0,25</td></tr></tbody></table></div>",
+          "options": [
+            "n = 20; k = 3; ŷ = 10 + 2x₁ − x₂; MSE = 3",
+            "n = 20; k = 2; ŷ = 10 + 0,70x₁ − 0,25x₂; MSE = 9",
+            "n = 20; k = 2; ŷ = 10 + 2x₁ − x₂; MSE = 9",
+            "n = 19; k = 2; ŷ = 10 + 2x₁ − x₂; MSE = 9"
+          ],
+          "optionExplanations": [
+            "Dit telt de constante mee in k en verwart de residuele standaardafwijking 3 met de residuele variantie 9.",
+            "Dit gebruikt Beta voor een vergelijking in oorspronkelijke eenheden. Gebruik daarvoor de B-kolom.",
+            "Total df = 19 geeft n = 20, Regression df = 2 geeft k = 2, B geeft de vergelijking en de gekwadrateerde schattingsstandaardfout is MSE.",
+            "De andere onderdelen kloppen, maar Total df is n − 1 en niet n."
+          ],
+          "correct": 2,
+          "steps": [
+            "Lees n = Total df + 1 = 20 en k = Regression df = 2; controleer 20 − 2 − 1 = 17 bij Residual.",
+            "De vergelijking gebruikt Unstandardized B: ŷ = 10 + 2x₁ − x₂.",
+            "Std. Error of the Estimate = s_e = 3, dus MSE = s_e² = 9. Kruiscontrole voorkomt dat je waarden uit gelijkende kolommen verwisselt."
+          ],
+          "explanation": "Lees n = Total df + 1 = 20 en k = Regression df = 2; controleer 20 − 2 − 1 = 17 bij Residual. De vergelijking gebruikt Unstandardized B: ŷ = 10 + 2x₁ − x₂. Std. Error of the Estimate = s_e = 3, dus MSE = s_e² = 9. Kruiscontrole voorkomt dat je waarden uit gelijkende kolommen verwisselt.",
+          "pattern": "Herken: Welke reconstructie van het SPSS-model klopt met alle drie tabellen? → Betekenis: Verschillende SPSS-tabellen bevatten samen de structuur, vergelijking en foutmaat van hetzelfde model. → Aanpak: Lees n en k uit ANOVA, de vergelijking uit B en de residuele variantie uit het kwadraat van de schattingsstandaardfout. → Gevraagd antwoord: Een samenhangende reconstructie van aantal, model en residuele variatie.",
+          "trap": "Beta, B, standaardfout en variantie zijn verschillende grootheden ondanks hun plaats in dezelfde uitvoer.",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formules 35-38 en 51-54: SPSS-model reconstrueren"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "Uitwerkingen college 3, §3.4: Coefficients, Model Summary en ANOVA lezen"
+            }
+          ],
+          "practiceMode": "begeleid",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke reconstructie van het SPSS-model klopt met alle drie tabellen?",
+            "meaning": "Verschillende SPSS-tabellen bevatten samen de structuur, vergelijking en foutmaat van hetzelfde model.",
+            "approach": "Lees n en k uit ANOVA, de vergelijking uit B en de residuele variantie uit het kwadraat van de schattingsstandaardfout.",
+            "answer": "Een samenhangende reconstructie van aantal, model en residuele variatie."
+          },
+          "guidance": {
+            "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
+            "focus": "Lees n en k uit ANOVA, de vergelijking uit B en de residuele variantie uit het kwadraat van de schattingsstandaardfout.",
+            "rules": [
+              "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
+              "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
+            ],
+            "refs": [
+              {
+                "source": "formules",
+                "page": 3,
+                "locator": "Formules 35-38 en 51-54: SPSS-model reconstrueren"
+              },
+              {
+                "source": "spss",
+                "page": 9,
+                "locator": "Uitwerkingen college 3, §3.4: Coefficients, Model Summary en ANOVA lezen"
+              }
+            ]
+          }
         }
       ]
     },
@@ -10831,6 +19230,36 @@ window.SRAMCData = {
           "source": "exam2024",
           "locator": "Volledige uitwerking",
           "page": 1
+        },
+        {
+          "source": "programma",
+          "page": 4,
+          "locator": "Onderwijsprogramma, toetsing, PDF 4"
+        },
+        {
+          "source": "exam2025",
+          "page": 9,
+          "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+        },
+        {
+          "source": "attentie",
+          "page": 5,
+          "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+        },
+        {
+          "source": "spss",
+          "page": 37,
+          "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+        },
+        {
+          "source": "exam2025",
+          "page": 9,
+          "locator": "Tentamen 17 maart 2025, PDF 9–10"
+        },
+        {
+          "source": "exam2025",
+          "page": 14,
+          "locator": "Officiële uitwerking, PDF 14–15"
         }
       ],
       "questions": [
@@ -10871,6 +19300,36 @@ window.SRAMCData = {
               "source": "exam2024",
               "locator": "Volledige uitwerking",
               "page": 1
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Onderwijsprogramma, toetsing, PDF 4"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+            },
+            {
+              "source": "spss",
+              "page": 37,
+              "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
             }
           ],
           "recognition": {
@@ -10938,6 +19397,36 @@ window.SRAMCData = {
               "source": "exam2024",
               "locator": "Volledige uitwerking",
               "page": 1
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Onderwijsprogramma, toetsing, PDF 4"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+            },
+            {
+              "source": "spss",
+              "page": 37,
+              "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
             }
           ],
           "recognition": {
@@ -11005,6 +19494,36 @@ window.SRAMCData = {
               "source": "exam2024",
               "locator": "Volledige uitwerking",
               "page": 1
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Onderwijsprogramma, toetsing, PDF 4"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+            },
+            {
+              "source": "spss",
+              "page": 37,
+              "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
             }
           ],
           "recognition": {
@@ -11075,6 +19594,36 @@ window.SRAMCData = {
               "source": "exam2024",
               "locator": "Volledige uitwerking",
               "page": 1
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Onderwijsprogramma, toetsing, PDF 4"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+            },
+            {
+              "source": "spss",
+              "page": 37,
+              "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
             }
           ],
           "recognition": {
@@ -11144,6 +19693,36 @@ window.SRAMCData = {
               "source": "exam2024",
               "locator": "Volledige uitwerking",
               "page": 1
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Onderwijsprogramma, toetsing, PDF 4"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+            },
+            {
+              "source": "spss",
+              "page": 37,
+              "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
             }
           ],
           "recognition": {
@@ -11213,6 +19792,36 @@ window.SRAMCData = {
               "source": "exam2024",
               "locator": "Volledige uitwerking",
               "page": 1
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Onderwijsprogramma, toetsing, PDF 4"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+            },
+            {
+              "source": "spss",
+              "page": 37,
+              "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
             }
           ],
           "recognition": {
@@ -11238,6 +19847,74 @@ window.SRAMCData = {
                 "source": "attentie",
                 "page": 5,
                 "locator": "PDF p. 5-6: bij analyses uitvoer, conclusie en remedie"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mc-tentamen-leertoepassing-casusconclusie",
+          "level": 3,
+          "prompt": "Eigen oefenvraag. Welke rapportage bevat een controleerbare berekening, een begrensde conclusie en een passende vervolgactie?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een accountant beoordeelt één nieuwe maand met een vooraf vastgelegd, passend basismodel. Het individuele 95%-voorspellingsinterval is [€ 88.000; € 112.000]. De werkelijke kosten bedragen € 118.000.</p><div class=\"table-wrap\"><table><caption>Aanvullende context</caption><thead><tr><th scope=\"col\">Onderdeel</th><th scope=\"col\">Informatie</th></tr></thead><tbody><tr><th scope=\"row\">Puntvoorspelling</th><td>€ 100.000</td></tr><tr><th scope=\"row\">Nieuwe maand</th><td>Niet gebruikt om model of interval te schatten</td></tr><tr><th scope=\"row\">Mogelijke veranderingen</th><td>Nog niet onderzocht</td></tr></tbody></table></div>",
+          "options": [
+            "Geen afwijking, want 95% laat vijf procent fouten toe",
+            "Neem € 118.000 op in de basisperiode totdat de maand binnen het interval valt",
+            "€ 6.000 boven de bovengrens; onderzoek gegevens en bijzondere omstandigheden",
+            "€ 18.000 fraude, want realisatie min voorspelling is 18.000"
+          ],
+          "optionExplanations": [
+            "De betrouwbaarheid van de methode maakt een buitenliggende waarneming niet irrelevant. Zij vraagt om een begrensde interpretatie en onderzoek.",
+            "De te beoordelen waarneming achteraf gebruiken om haar eigen beoordelingsgrens aan te passen maakt de controle niet onafhankelijk.",
+            "118.000 − 112.000 = 6.000. De afwijking is een statistisch signaal onder het model, waarna inhoudelijk controlebewijs nodig is.",
+            "Het residu is inderdaad 18.000, maar het model bewijst niet dat dit fraude of zelfs een administratieve fout is."
+          ],
+          "correct": 2,
+          "steps": [
+            "Vergelijk de realisatie met de passende bovengrens voor één nieuwe maand: 118.000 − 112.000 = 6.000.",
+            "Het residu ten opzichte van de puntvoorspelling is 18.000, maar de overschrijding van de intervalgrens is 6.000. Benoem welk verschil je rapporteert.",
+            "Onderzoek invoer, bronboekingen en gewijzigde omstandigheden met het vastgelegde model. Een statistisch signaal bewijst geen foutoorzaak of fraude."
+          ],
+          "explanation": "Vergelijk de realisatie met de passende bovengrens voor één nieuwe maand: 118.000 − 112.000 = 6.000. Het residu ten opzichte van de puntvoorspelling is 18.000, maar de overschrijding van de intervalgrens is 6.000. Benoem welk verschil je rapporteert. Onderzoek invoer, bronboekingen en gewijzigde omstandigheden met het vastgelegde model. Een statistisch signaal bewijst geen foutoorzaak of fraude.",
+          "pattern": "Herken: Welke rapportage bevat een controleerbare berekening, een begrensde conclusie en een passende vervolgactie? → Betekenis: Een nieuwe controlewaarneming wordt met een vooraf bepaald individueel interval vergeleken. → Aanpak: Bereken de relevante overschrijding, onderscheid die van het residu en verbind de statistische conclusie aan controlewerk. → Gevraagd antwoord: Een onderbouwde auditconclusie met concrete, passende vervolgactie.",
+          "trap": "Een voorspelfout, een grensoverschrijding en een bewezen administratieve fout zijn verschillende uitspraken.",
+          "refs": [
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "PDF p. 6: voorspelling en controleperiode"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Toetsing: toepassing en onderbouwing"
+            }
+          ],
+          "practiceMode": "zelfstandig",
+          "kind": "tabel",
+          "dataOrigin": "eigen",
+          "recognition": {
+            "signals": "Welke rapportage bevat een controleerbare berekening, een begrensde conclusie en een passende vervolgactie?",
+            "meaning": "Een nieuwe controlewaarneming wordt met een vooraf bepaald individueel interval vergeleken.",
+            "approach": "Bereken de relevante overschrijding, onderscheid die van het residu en verbind de statistische conclusie aan controlewerk.",
+            "answer": "Een onderbouwde auditconclusie met concrete, passende vervolgactie."
+          },
+          "guidance": {
+            "title": "Van de vraag naar een onderbouwd antwoord",
+            "focus": "Bereken de relevante overschrijding, onderscheid die van het residu en verbind de statistische conclusie aan controlewerk.",
+            "rules": [
+              "Benoem wat gevraagd wordt, selecteer de relevante casusgegevens en kies daarna de methode. Maak onderscheid tussen een totaal en een uitbreiding, een puntschatting en een interval, en een signaal en bewijs.",
+              "Een volledig antwoord bevat berekening of relevante uitvoer, een conclusie in de context van de casus en een eventuele vervolgactie. Alleen een formule noemen of een keuze aankruisen oefent niet de hele open uitwerking."
+            ],
+            "refs": [
+              {
+                "source": "attentie",
+                "page": 6,
+                "locator": "PDF p. 6: voorspelling en controleperiode"
+              },
+              {
+                "source": "programma",
+                "page": 4,
+                "locator": "Toetsing: toepassing en onderbouwing"
               }
             ]
           }

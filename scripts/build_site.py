@@ -25,6 +25,10 @@ def build():
         if missing:
             raise ValueError('Ontbrekende tentamenbronnen: ' + ', '.join(sorted(missing)))
     course = (ROOT / 'data/course.js').read_text(encoding='utf-8')
+    learning_assets = set(re.findall(r'assets/learning/[A-Za-z0-9_.-]+\.(?:png|jpg)', course))
+    missing_assets = learning_assets - paths
+    if missing_assets:
+        raise ValueError('Ontbrekende lesfiguren: ' + ', '.join(sorted(missing_assets)))
     data = json.loads(course.split('window.SRA = ', 1)[1].rstrip(';\n'))
     for source in data['sources'].values():
         pdf = ROOT / 'bronnen' / source['file']

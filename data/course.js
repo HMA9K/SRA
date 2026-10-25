@@ -17,7 +17,20 @@ window.SRA = {
         },
         {
           "title": "Begin met een concrete vraag",
-          "html": "<p>Stel: in een magazijn liggen 1.000 artikelen. Je wilt de totale werkelijke waarde weten. Alles controleren kost tijd. Je onderzoekt 100 willekeurig gekozen artikelen en gebruikt die informatie voor een schatting van de hele voorraad. De 1.000 artikelen vormen de <strong>populatie</strong>: de volledige verzameling waarover je iets wilt zeggen. De 100 gecontroleerde artikelen vormen de <strong>steekproef</strong>.</p><p>Een <strong>waarneming</strong> is één vastgelegde uitkomst, bijvoorbeeld de werkelijke waarde van één artikel. Een <strong>variabele</strong> is wat je meet, zoals waarde, salaris of leeftijd. Leg eerst vast wat één waarneming is, wat je meet en in welke eenheid.</p>"
+          "html": "<p>Stel: in een magazijn liggen 1.000 artikelen. Je wilt de totale werkelijke waarde weten. Alles controleren kost tijd. Je onderzoekt 100 willekeurig gekozen artikelen en gebruikt die informatie voor een schatting van de hele voorraad. De 1.000 artikelen vormen de <strong>populatie</strong>: de volledige verzameling waarover je iets wilt zeggen. De 100 gecontroleerde artikelen vormen de <strong>steekproef</strong>.</p><p>Een <strong>waarneming</strong> is één vastgelegde uitkomst, bijvoorbeeld de werkelijke waarde van één artikel. Een <strong>variabele</strong> is wat je meet, zoals waarde, salaris of leeftijd. Leg eerst vast wat één waarneming is, wat je meet en in welke eenheid.</p><h3>Van controledoel naar onderzoeksopzet</h3><p>Leg vóór de selectie vast <strong>welke uitspraak</strong> je wilt doen: over het aantal foutieve posten, de totale fout in euro of de werkelijke totale waarde. Die grootheden vragen andere gegevens. Een telling van foutieve facturen vertelt nog niet hoeveel euro de verantwoording afwijkt. Bij een waardeschatting controleer je daarom ook de bedragen van de geselecteerde posten.</p><p>De selectie-eenheid moet aansluiten op de populatieomvang N. Als één regel een artikel is, telt n gecontroleerde artikelen. Als één regel een factuur is, telt n facturen. De bekende boekwaarde B en de gecontroleerde werkelijke waarden moeten betrekking hebben op dezelfde populatie, periode en waarderingsvraag. Anders corrigeert een goede formule voor een verkeerd geheel.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8a.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 201–210</a> · Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2</li><li><a href=\"bronnen/slides.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 6-12: doel, schatten en populatiegegevens</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         },
         {
           "title": "Een klein woordenboek voor formules",
@@ -25,12 +38,44 @@ window.SRA = {
         },
         {
           "title": "Twee soorten vragen",
-          "html": "<p><strong>Schatten:</strong> hoe groot is de werkelijke voorraadwaarde? Je geeft een geschat bedrag met een onzekerheidsmarge. <strong>Toetsen:</strong> ondersteunen de gegevens de bewering dat salaris stijgt met leeftijd? Je formuleert hypothesen en beslist of de gegevens voldoende bewijs tegen de nulhypothese geven.</p><p>Een grotere steekproef kan de toevallige onzekerheid verkleinen. Een verkeerde selectie los je daarmee niet op. Alleen de goedkoopste artikelen onderzoeken geeft geen goede basis voor een uitspraak over alle artikelen.</p>"
+          "html": "<p><strong>Schatten:</strong> hoe groot is de werkelijke voorraadwaarde? Je geeft een geschat bedrag met een onzekerheidsmarge. <strong>Toetsen:</strong> ondersteunen de gegevens de bewering dat salaris stijgt met leeftijd? Je formuleert hypothesen en beslist of de gegevens voldoende bewijs tegen de nulhypothese geven.</p><p>Een grotere steekproef kan de toevallige onzekerheid verkleinen. Een verkeerde selectie los je daarmee niet op. Alleen de goedkoopste artikelen onderzoeken geeft geen goede basis voor een uitspraak over alle artikelen.</p><h3>Goedkeuren of de afwijking in kaart brengen</h3><p>De colleges koppelen weinig verwachte fouten aan een toets die goedkeuring kan onderbouwen. Bij veel verwachte fouten is vooral de omvang van de afwijking van belang: een schattingsinterval maakt die omvang en de onzekerheid zichtbaar. Dit is een keuze vanuit de onderzoeksvraag. Het betekent niet dat iedere regressietoets een goedkeuringsvraag is.</p><p>Een accountant moet een bedrag én de onzekerheid kunnen uitleggen. Twee schattingen van € 100.000 met marges van € 2.000 en € 25.000 bieden bijvoorbeeld een heel andere basis voor dezelfde beslissing. Vergelijk de marge met de in de opgave toegestane onnauwkeurigheid.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p><strong>Eigen herkenningsoefening.</strong> Een voorraad bevat 5.000 posten. De accountant verwacht veel verschillen en wil de werkelijke totale waarde bepalen. Een medewerker stelt voor uitsluitend het percentage posten met een verschil te rapporteren. Wat ontbreekt in dat voorstel?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>De hoogte van de bedragen ontbreekt. Eén verschil van € 10.000 weegt voor het eurototaal anders dan honderd verschillen van € 1. Controleer de werkelijke waarden of foutbedragen, kies een passende totaalschatter en rapporteer een interval bij het gevraagde betrouwbaarheidsniveau. Het foutenpercentage kan aanvullende informatie geven, maar beantwoordt deze waardevraag niet.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 6-10: veel of weinig verwachte fouten</li><li><a href=\"bronnen/boek-h8a.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 201–210</a> · Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-10: veel of weinig verwachte fouten"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "Een aselecte selectie navolgbaar uitvoeren",
+          "html": "<p>Het boek laat een praktische trekking zien: geef iedere populatiepost een willekeurig getal, leg de getallen vast, sorteer de gehele tabel daarop en neem de eerste n posten. Daarmee voorkom je dat volgorde, bereikbaarheid of een persoonlijke voorkeur de selectie bepaalt.</p><ol><li>Controleer dat het populatiebestand alle bedoelde posten bevat en dat elke post een herkenbaar uniek nummer heeft.</li><li>Voeg per post een onafhankelijk willekeurig getal toe. Bewaar de getallen als vaste waarden voordat je sorteert, zodat ze niet bij een herberekening wijzigen.</li><li>Sorteer alle bij elkaar horende kolommen gezamenlijk. Alleen de kolom boekwaarde sorteren zou de koppeling met de post verbreken.</li><li>Selecteer de eerste n unieke posten en bewaar de selectie. Controleer hun werkelijke waarden volgens dezelfde waarderingsvraag.</li><li>Bij stratificatie voer je de trekking per stratum uit; bij uitbreiding trek je uit de nog niet gecontroleerde posten.</li></ol><p>Dit is de werkwijze uit boek p. 204 in algemene handelingen. De historische Excel-menuvolgorde is niet nodig om de statistische redenering te volgen. Een steekproef die al in de opgave is gegeven hoef je niet opnieuw te trekken. Benoem wel waarop de uitspraak kan worden gebaseerd: een groter n herstelt geen onvolledig bestand.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8a.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 201–210</a> · Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8a",
+              "page": 4,
+              "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
       ],
       "example": {
         "title": "De eerste vertaling naar cijfers",
         "steps": [
+          "Er zijn 1.000 artikelen: N = 1.000. Je controleert 100 artikelen: n = 100.",
+          "De totale werkelijke waarde van die 100 artikelen is € 8.000: Σw = 8.000.",
+          "Gemiddelde per gecontroleerd artikel: w̄ = 8.000 / 100 = € 80.",
+          "Met de directe schatter wordt het geschatte totaal: Ŵ = 1.000 × 80 = € 80.000. Dit is nog geen interval."
+        ],
+        "context": "Hoe schat je de totale voorraadwaarde wanneer je 100 van de 1.000 artikelen controleert? Het voorbeeld verbindt populatie en steekproef met een eerste totaalschatting.",
+        "stepsHtml": [
           "Er zijn 1.000 artikelen: N = 1.000. Je controleert 100 artikelen: n = 100.",
           "De totale werkelijke waarde van die 100 artikelen is € 8.000: Σw = 8.000.",
           "Gemiddelde per gecontroleerd artikel: w̄ = 8.000 / 100 = € 80.",
@@ -61,6 +106,26 @@ window.SRA = {
           "source": "set-basis",
           "page": 1,
           "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 2,
+          "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+        },
+        {
+          "source": "slides",
+          "page": 6,
+          "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+        },
+        {
+          "source": "slides",
+          "page": 6,
+          "locator": "PDF 6-10: veel of weinig verwachte fouten"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 4,
+          "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
         }
       ],
       "questions": [
@@ -106,6 +171,26 @@ window.SRA = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-10: veel of weinig verwachte fouten"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 4,
+              "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
             }
           ],
           "recognition": {
@@ -157,6 +242,26 @@ window.SRA = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-10: veel of weinig verwachte fouten"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 4,
+              "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
             }
           ],
           "recognition": {
@@ -208,6 +313,26 @@ window.SRA = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 2,
+              "locator": "Boek p. 202; oorspronkelijke PDF p. 220; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-12: doel, schatten en populatiegegevens"
+            },
+            {
+              "source": "slides",
+              "page": 6,
+              "locator": "PDF 6-10: veel of weinig verwachte fouten"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 4,
+              "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
             }
           ],
           "recognition": {
@@ -227,9 +352,38 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Van steekproefsom naar gemiddelde en geschat totaal",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze eerste relaties om cijfers aan hun betekenis te koppelen: je kent een steekproefsom en wilt eerst het gemiddelde per gecontroleerde post weten. Met de populatieomvang kun je dat gemiddelde daarna omrekenen naar een directe totaalschatting.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Gemiddelde in de steekproef</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddelde in de steekproef\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mi>n</mi></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Σ betekent optellen. Σw is de som van de werkelijke waarden in de steekproef. n is het aantal gecontroleerde posten. w̄ is hun gemiddelde. N is het aantal posten in de gehele populatie. Het dakje op Ŵ betekent dat het om een schatting gaat.</p><h3>Zo reken je stap voor stap</h3><ol><li>Schrijf eerst op wat één post is en in welke eenheid de waarde wordt gemeten.</li><li>Deel de som van de gecontroleerde waarden door n. De uitkomst is een bedrag per post.</li><li>Vermenigvuldig dit gemiddelde met N voor een schatting van het populatietotaal.</li><li>Noem de uitkomst een puntschatting. Een betrouwbaarheidsinterval vraagt extra informatie over spreiding en betrouwbaarheid.</li></ol><h3>De eerste vertaling naar cijfers</h3><ol><li>Er zijn 1.000 artikelen: N = 1.000. Je controleert 100 artikelen: n = 100.</li><li>De totale werkelijke waarde van die 100 artikelen is € 8.000: Σw = 8.000.</li><li>Gemiddelde per gecontroleerd artikel: w̄ = 8.000 / 100 = € 80.</li><li>Met de directe schatter wordt het geschatte totaal: Ŵ = 1.000 × 80 = € 80.000. Dit is nog geen interval.</li></ol><p class=\"note\"><strong>Let op:</strong> Deel de steekproefsom niet door N. Daarmee bereken je niet het gemiddelde van de gecontroleerde posten. Deze les introduceert geen afzonderlijke nieuwe schattingsmethode.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze eerste relaties om cijfers aan hun betekenis te koppelen: je kent een steekproefsom en wilt eerst het gemiddelde per gecontroleerde post weten. Met de populatieomvang kun je dat gemiddelde daarna omrekenen naar een directe totaalschatting.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Gemiddelde in de steekproef</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddelde in de steekproef\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mi>n</mi></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Σ betekent optellen. Σw is de som van de werkelijke waarden in de steekproef. n is het aantal gecontroleerde posten. w̄ is hun gemiddelde. N is het aantal posten in de gehele populatie. Het dakje op Ŵ betekent dat het om een schatting gaat.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"mean-total\"><h3>Van de gecontroleerde posten naar het totaal</h3><p class=\"fv-provenance\">Uitwerking van het bestaande voorbeeld: N = 1.000, n = 100 en Σw = € 8.000.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Eerst het bedrag per post</figcaption><table class=\"fv-table\"><caption>De steekproef vertalen</caption><thead><tr><th scope=\"col\">Gegeven</th><th scope=\"col\">Rekenstap</th></tr></thead><tbody><tr><td>100 gecontroleerde artikelen</td><td>€ 8.000 / 100</td></tr><tr><td>Gemiddelde</td><td>€ 80 per artikel</td></tr></tbody></table><p class=\"fv-work\">Deel door het aantal gecontroleerde posten: de som wordt een gemiddelde.</p></figure><figure class=\"fv-panel\"><figcaption>Daarna het populatietotaal</figcaption><table class=\"fv-table\"><caption>Het gemiddelde opschalen</caption><thead><tr><th scope=\"col\">Gegeven</th><th scope=\"col\">Rekenstap</th></tr></thead><tbody><tr><td>1.000 artikelen</td><td>1.000 × € 80</td></tr><tr><td>Puntschatting</td><td>€ 80.000</td></tr></tbody></table><p class=\"fv-work\">De populatieomvang schaalt een bedrag per post op naar een geschat totaal.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Dezelfde € 80 krijgt een andere functie door vermenigvuldiging met N. Deze tabel voegt nog geen onzekerheidsmarge toe.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Schrijf eerst op wat één post is en in welke eenheid de waarde wordt gemeten.</li><li>Deel de som van de gecontroleerde waarden door n. De uitkomst is een bedrag per post.</li><li>Vermenigvuldig dit gemiddelde met N voor een schatting van het populatietotaal.</li><li>Noem de uitkomst een puntschatting. Een betrouwbaarheidsinterval vraagt extra informatie over spreiding en betrouwbaarheid.</li></ol><h3>De eerste vertaling naar cijfers</h3><ol><li>Er zijn 1.000 artikelen: N = 1.000. Je controleert 100 artikelen: n = 100.</li><li>De totale werkelijke waarde van die 100 artikelen is € 8.000: Σw = 8.000.</li><li>Gemiddelde per gecontroleerd artikel: w̄ = 8.000 / 100 = € 80.</li><li>Met de directe schatter wordt het geschatte totaal: Ŵ = 1.000 × 80 = € 80.000. Dit is nog geen interval.</li></ol><p class=\"note\"><strong>Let op:</strong> Deel de steekproefsom niet door N. Daarmee bereken je niet het gemiddelde van de gecontroleerde posten. Deze les introduceert geen afzonderlijke nieuwe schattingsmethode.</p>"
         }
-      ]
+      ],
+      "samplingVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H8 · §8.1",
+        "college": "1",
+        "focus": "Beginnen bij de controlevraag: bepaal populatie, steekproefelement en de uitspraak die de accountant wil onderbouwen.",
+        "title": "H8 · §8.1 · Hoorcollege 1",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "mean-total",
+          "title": "Van steekproefsom naar gemiddelde en geschat totaal"
+        }
+      ],
+      "reading": {
+        "opening": "Een accountant controleert vaak een deel van de posten en wil daarmee iets zeggen over het geheel. Voordat je kunt rekenen, moet duidelijk zijn wat één post is, wat je daarvan meet en over welke verzameling je een uitspraak wilt doen.",
+        "conclusion": "De controlevraag bepaalt dus de populatie, de steekproef en de te meten waarde. Een steekproef levert een schatting op; om de onzekerheid daarvan te begrijpen, heb je vervolgens gemiddelde en spreiding nodig."
+      }
     },
     {
       "id": "rekenen",
@@ -244,11 +398,11 @@ window.SRA = {
       "sections": [
         {
           "title": "SET-opfrisser: spreiding tegenover onzekerheid",
-          "html": "<p>De standaardafwijking s beschrijft verschillen tussen losse waarnemingen. De standaardfout s/√n beschrijft de onzekerheid van het steekproefgemiddelde. Voor een populatietotaal vermenigvuldig je die standaardfout met N. Bij trekken zonder teruglegging kan de eindigheidscorrectie nodig zijn. De variantie heeft gekwadrateerde eenheden; de standaardafwijking en standaardfout hebben de eenheid van de bijbehorende grootheid.</p>"
+          "html": "<p>De standaardafwijking s beschrijft verschillen tussen losse waarnemingen. De standaardfout <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mi>s</mi></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac></mrow></math> beschrijft de onzekerheid van het steekproefgemiddelde. Voor een populatietotaal vermenigvuldig je die standaardfout met N. Bij trekken zonder teruglegging kan de eindigheidscorrectie nodig zijn. De variantie heeft gekwadrateerde eenheden; de standaardafwijking en standaardfout hebben de eenheid van de bijbehorende grootheid.</p>"
         },
         {
           "title": "Rekenen zonder verborgen stappen",
-          "html": "<p>Een <strong>gemiddelde</strong> is de som gedeeld door het aantal: w̄ = Σw / n. Een <strong>kwadraat</strong> betekent een getal met zichzelf vermenigvuldigen: 4² = 16 en (−4)² = 16. De <strong>vierkantswortel</strong> keert dat om: √16 = 4. Bereken eerst wat tussen haakjes staat, daarna machten en wortels, daarna vermenigvuldigen en delen en ten slotte optellen en aftrekken.</p><p>Let op het verschil: bij 2 en 4 is Σw² = 2² + 4² = 20, maar (Σw)² = (2 + 4)² = 36. In formule 1 komen beide soorten bewerkingen voor.</p>"
+          "html": "<p>Een <strong>gemiddelde</strong> is de som gedeeld door het aantal: w̄ = <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mi>n</mi></mrow></mfrac></mrow></math>. Een <strong>kwadraat</strong> betekent een getal met zichzelf vermenigvuldigen: 4² = 16 en (−4)² = 16. De <strong>vierkantswortel</strong> keert dat om: √16 = 4. Bereken eerst wat tussen haakjes staat, daarna machten en wortels, daarna vermenigvuldigen en delen en ten slotte optellen en aftrekken.</p><p>Let op het verschil: bij 2 en 4 is Σw² = 2² + 4² = 20, maar (Σw)² = (2 + 4)² = 36. In formule 1 komen beide soorten bewerkingen voor.</p>"
         },
         {
           "title": "Waarom kwadrateren?",
@@ -256,12 +410,50 @@ window.SRA = {
         },
         {
           "title": "De rekenvorm op het formuleblad",
-          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Rekenen met totalen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Rekenen met totalen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mi>w</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><msup><mrow><mo>(</mo><mo>∑</mo><mi>w</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi></mrow></mfrac></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div></div><p>Deze vorm is handig als een opgave alleen totalen geeft. Bereken de teller eerst volledig. Neem pas daarna de wortel als je s nodig hebt. De <strong>standaardfout</strong> van een gemiddelde is iets anders: s / √n, eventueel met eindigheidscorrectie. Die beschrijft de onzekerheid van het geschatte gemiddelde, niet de verschillen tussen individuele posten.</p>"
+          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Rekenen met totalen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Rekenen met totalen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mi>w</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><msup><mrow><mo>(</mo><mo>∑</mo><mi>w</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi></mrow></mfrac></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div></div><p>Deze vorm is handig als een opgave alleen totalen geeft. Bereken de teller eerst volledig. Neem pas daarna de wortel als je s nodig hebt. De <strong>standaardfout</strong> van een gemiddelde is iets anders: <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mi>s</mi></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac></mrow></math>, eventueel met eindigheidscorrectie. Die beschrijft de onzekerheid van het geschatte gemiddelde, niet de verschillen tussen individuele posten.</p><h3>Controleer de betekenis vóór het getal</h3><div class=\"table-wrap\"><table><caption>Drie verschillende soorten spreiding</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Wat varieert?</th><th scope=\"col\">Waarvoor gebruik je haar?</th></tr></thead><tbody><tr><td>s<sub>w</sub></td><td>Werkelijke waarden van individuele posten</td><td>Invoer voor MPU of regressieschatter</td></tr><tr><td>s<sub>w</sub>/√n, met eindigheidscorrectie</td><td>Het gemiddelde bij herhaalde steekproeven</td><td>Interval voor een gemiddelde</td></tr><tr><td>N × s<sub>w</sub>/√n, met eindigheidscorrectie</td><td>De schatting van het populatietotaal</td><td>Interval in euro voor de gehele populatie</td></tr></tbody></table></div><p>Een negatieve berekende variantie is een controlesignaal: bekijk de invoer, haakjes, eenheden en afgeronde totalen. Maak die uitkomst niet positief met een absolute waarde. En als Σw² in duizenden euro² is weergegeven, herstel dan eerst de schaal.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 1, 3 en 4</li><li><a href=\"bronnen/boek-h8a.pdf#page=5\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 201–210</a> · Boek p. 205; oorspronkelijke PDF p. 223; uitsnede p. 5</li></ul></details>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1, 3 en 4"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 5,
+              "locator": "Boek p. 205; oorspronkelijke PDF p. 223; uitsnede p. 5"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "Een gegevenstabel in beide richtingen doorrekenen",
+          "html": "<p>Een opgave kan losse waarden geven of alleen sommen. Onderstaande eigen oefentabel laat zien dat de twee variantieformules hetzelfde meten. De ene route begint bij afwijkingen van het gemiddelde; de andere gebruikt direct de kolomsommen.</p><div class=\"table-wrap\"><table><caption>Eigen rekenvoorbeeld: vier gecontroleerde waarden in euro</caption><thead><tr><th scope=\"col\">Post</th><th scope=\"col\">wᵢ</th><th scope=\"col\">wᵢ²</th><th scope=\"col\">wᵢ − 100</th><th scope=\"col\">(wᵢ − 100)²</th></tr></thead><tbody><tr><td>1</td><td>80</td><td>6.400</td><td>-20</td><td>400</td></tr><tr><td>2</td><td>90</td><td>8.100</td><td>-10</td><td>100</td></tr><tr><td>3</td><td>110</td><td>12.100</td><td>10</td><td>100</td></tr><tr><td>4</td><td>120</td><td>14.400</td><td>20</td><td>400</td></tr><tr><td>Totaal</td><td>400</td><td>41.000</td><td>0</td><td>1.000</td></tr></tbody></table></div><ol><li>Het gemiddelde is 400/4 = 100. De gewone afwijkingen tellen op tot nul, terwijl de waarden duidelijk uiteenlopen. Kwadrateren voorkomt die opheffing.</li><li>Afwijkingenroute: s² = 1.000/(4 − 1) = 333,3333 euro².</li><li>Somroute: s² = [41.000 − 400²/4]/3 = [41.000 − 40.000]/3 = 333,3333 euro².</li><li>Neem de wortel om terug te keren naar euro: s = 18,2574. Voor de onzekerheid van het gemiddelde deel je daarna pas door √n.</li></ol><p>Met een berekend gemiddelde zijn maar n − 1 afwijkingen vrij te kiezen: de laatste afwijking ligt vast doordat ze samen nul moeten zijn. Daarom staat bij de steekproefvariantie n − 1 in de noemer.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>In een eigen oefening zijn n = 5, Σw = 500 en Σw² = 52.000. Bereken gemiddelde, variantie en standaardafwijking. Welke eenheid hoort bij elk antwoord?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>w̄ = € 100. s² = (52.000 − 500²/5)/4 = 500 euro²; s = √500 ≈ € 22,36. De standaardfout van het gemiddelde vóór eindigheidscorrectie is 22,3607/√5 = € 10. Een gemiddelde en een standaardafwijking hebben beide de eenheid euro, maar beantwoorden verschillende vragen.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formule 1: variantie uit som en kwadratensom</li><li><a href=\"bronnen/slides.pdf#page=15\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 15-16: equivalente variantieformules</li></ul></details>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
       ],
       "example": {
         "title": "Vier gecontroleerde waarden: 80, 90, 110 en 120",
         "steps": [
+          "Som = 400; gemiddelde = 400 / 4 = 100.",
+          "Afwijkingen van 100: −20, −10, 10 en 20.",
+          "Kwadraten: 400, 100, 100 en 400; samen 1.000.",
+          "Steekproefvariantie = 1.000 / (4 − 1) = 333,3333.",
+          "Standaardafwijking = √333,3333 = 18,2574. Dit kleine voorbeeld leert het rekenen; het rechtvaardigt op zichzelf nog geen populatie-interval."
+        ],
+        "context": "Hoe bereken je gemiddelde, variantie en standaardafwijking van 80, 90, 110 en 120? We rekenen eerst de afwijkingen uit en brengen de spreiding daarna terug naar de oorspronkelijke eenheid.",
+        "stepsHtml": [
           "Som = 400; gemiddelde = 400 / 4 = 100.",
           "Afwijkingen van 100: −20, −10, 10 en 20.",
           "Kwadraten: 400, 100, 100 en 400; samen 1.000.",
@@ -294,6 +486,21 @@ window.SRA = {
           "source": "set-basis",
           "page": 1,
           "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formule 1: variantie uit som en kwadratensom"
+        },
+        {
+          "source": "slides",
+          "page": 15,
+          "locator": "PDF 15-16: equivalente variantieformules"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 1, 3 en 4"
         }
       ],
       "questions": [
@@ -339,6 +546,21 @@ window.SRA = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1, 3 en 4"
             }
           ],
           "recognition": {
@@ -390,6 +612,21 @@ window.SRA = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1, 3 en 4"
             }
           ],
           "recognition": {
@@ -441,6 +678,21 @@ window.SRA = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1, 3 en 4"
             }
           ],
           "recognition": {
@@ -460,9 +712,55 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Gemiddelde, variantie en standaardafwijking uitrekenen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik het gemiddelde voor het centrum van de gegevens en de variantie of standaardafwijking voor hun spreiding. De rekenvorm met totalen is handig wanneer een opgave Σw en Σw² geeft in plaats van alle afzonderlijke waarden.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Gemiddelde</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddelde\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mi>n</mi></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>w</mi><mi>i</mi></msub><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardafwijking</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardafwijking\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>s</mi><mo>=</mo><msqrt><msup><mi>s</mi><mn>2</mn></msup></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Rekenen met totalen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Rekenen met totalen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mi>w</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><msup><mrow><mo>(</mo><mo>∑</mo><mi>w</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi></mrow></mfrac></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Σ betekent optellen; wᵢ is waarde i; w̄ is het gemiddelde; n is het aantal waarden; s² is de variantie; s is de standaardafwijking. Σw² betekent: eerst elke waarde kwadrateren en daarna optellen. (Σw)² betekent: eerst optellen en daarna de hele som kwadrateren.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken w̄ = Σw / n.</li><li>Trek bij losse gegevens het gemiddelde van elke waarde af. Kwadrateer die afwijkingen en tel de kwadraten op.</li><li>Deel de som door n − 1. Bij de rekenvorm uit totalen bereken je eerst Σw² − (Σw)²/n en deel je die hele teller door n − 1.</li><li>Neem de vierkantswortel als om de standaardafwijking s wordt gevraagd.</li><li>Controleer de eenheid: bij bedragen is de variantie in euro² en de standaardafwijking in euro.</li></ol><h3>Vier gecontroleerde waarden: 80, 90, 110 en 120</h3><ol><li>Som = 400; gemiddelde = 400 / 4 = 100.</li><li>Afwijkingen van 100: −20, −10, 10 en 20.</li><li>Kwadraten: 400, 100, 100 en 400; samen 1.000.</li><li>Steekproefvariantie = 1.000 / (4 − 1) = 333,3333.</li><li>Standaardafwijking = √333,3333 = 18,2574. Dit kleine voorbeeld leert het rekenen; het rechtvaardigt op zichzelf nog geen populatie-interval.</li></ol><p class=\"note\"><strong>Let op:</strong> Een negatieve berekende variantie wijst op verkeerde invoer, verwisselde totalen of te vroege afronding. Het delen door √n hoort bij een standaardfout, niet bij de standaardafwijking van de losse waarden.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik het gemiddelde voor het centrum van de gegevens en de variantie of standaardafwijking voor hun spreiding. De rekenvorm met totalen is handig wanneer een opgave Σw en Σw² geeft in plaats van alle afzonderlijke waarden.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Gemiddelde</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddelde\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mi>n</mi></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>w</mi><mi>i</mi></msub><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardafwijking</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardafwijking\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>s</mi><mo>=</mo><msqrt><msup><mi>s</mi><mn>2</mn></msup></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Rekenen met totalen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Rekenen met totalen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mi>w</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><msup><mrow><mo>(</mo><mo>∑</mo><mi>w</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi></mrow></mfrac></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Σ betekent optellen; wᵢ is waarde i; w̄ is het gemiddelde; n is het aantal waarden; s² is de variantie; s is de standaardafwijking. Σw² betekent: eerst elke waarde kwadrateren en daarna optellen. (Σw)² betekent: eerst optellen en daarna de hele som kwadrateren.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"spread\"><h3>Van afwijking naar gekwadrateerde afwijking</h3><p class=\"fv-provenance\">Dezelfde vier waarden als in de formule-uitleg en de bestaande rekentabel: 80, 90, 110 en 120.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>De afwijkingen blijven zichtbaar</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Waarden rond het gemiddelde; x-as: Postnummer; y-as: Waarde (€)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">60,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">80,0</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">100,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">120,0</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">140,0</text><text x=\"113.20\" y=\"200\" text-anchor=\"middle\">1</text><text x=\"168.40\" y=\"200\" text-anchor=\"middle\">2</text><text x=\"223.60\" y=\"200\" text-anchor=\"middle\">3</text><text x=\"278.80\" y=\"200\" text-anchor=\"middle\">4</text><path d=\"M58 102.00H334\" stroke=\"var(--fv-purple)\" stroke-dasharray=\"5 4\"/><text x=\"330\" y=\"97.00\" text-anchor=\"end\" fill=\"var(--fv-purple)\">gem. 100</text><path d=\"M113.20 102.00L113.20 141.00\" stroke=\"var(--fv-orange)\" stroke-width=\"2\"/><path d=\"M168.40 102.00L168.40 121.50\" stroke=\"var(--fv-orange)\" stroke-width=\"2\"/><path d=\"M223.60 102.00L223.60 82.50\" stroke=\"var(--fv-orange)\" stroke-width=\"2\"/><path d=\"M278.80 102.00L278.80 63.00\" stroke=\"var(--fv-orange)\" stroke-width=\"2\"/><circle cx=\"113.20\" cy=\"141.00\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"168.40\" cy=\"121.50\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"223.60\" cy=\"82.50\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"278.80\" cy=\"63.00\" r=\"4\" fill=\"var(--fv-green)\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Postnummer</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Waarde (€)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Waarde</span></div><p class=\"fv-work\">Afwijkingen: −20, −10, +10, +20. Hun som is nul, terwijl de posten wel verschillen.</p></figure><figure class=\"fv-panel\"><figcaption>Kwadraten heffen elkaar niet op</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Gekwadrateerde afwijkingen; x-as: Postnummer; y-as: Afwijking² (euro²)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">125,0</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">250,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">375,0</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">500,0</text><text x=\"113.20\" y=\"200\" text-anchor=\"middle\">1</text><text x=\"168.40\" y=\"200\" text-anchor=\"middle\">2</text><text x=\"223.60\" y=\"200\" text-anchor=\"middle\">3</text><text x=\"278.80\" y=\"200\" text-anchor=\"middle\">4</text><circle cx=\"113.20\" cy=\"55.20\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"168.40\" cy=\"148.80\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"223.60\" cy=\"148.80\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"278.80\" cy=\"55.20\" r=\"4\" fill=\"var(--fv-orange)\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Postnummer</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Afwijking² (euro²)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-orange)\"></i>Afwijking²</span></div><p class=\"fv-work\">400 + 100 + 100 + 400 = 1.000.<br>s² = 1.000 / 3 = 333,33 euro²; s = √333,33 ≈ € 18,26.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Kwadrateren voorkomt opheffing; de wortel brengt de uitkomst terug naar euro. De volledige kolomtabel staat verderop bij de tweede rekenroute.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bereken w̄ = <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mi>n</mi></mrow></mfrac></mrow></math>.</li><li>Trek bij losse gegevens het gemiddelde van elke waarde af. Kwadrateer die afwijkingen en tel de kwadraten op.</li><li>Deel de som door n − 1. Bij de rekenvorm uit totalen bereken je eerst Σw² − (Σw)²/n en deel je die hele teller door n − 1.</li><li>Neem de vierkantswortel als om de standaardafwijking s wordt gevraagd.</li><li>Controleer de eenheid: bij bedragen is de variantie in euro² en de standaardafwijking in euro.</li></ol><h3>Vier gecontroleerde waarden: 80, 90, 110 en 120</h3><ol><li>Som = 400; gemiddelde = 400 / 4 = 100.</li><li>Afwijkingen van 100: −20, −10, 10 en 20.</li><li>Kwadraten: 400, 100, 100 en 400; samen 1.000.</li><li>Steekproefvariantie = 1.000 / (4 − 1) = 333,3333.</li><li>Standaardafwijking = √333,3333 = 18,2574. Dit kleine voorbeeld leert het rekenen; het rechtvaardigt op zichzelf nog geen populatie-interval.</li></ol><p class=\"note\"><strong>Let op:</strong> Een negatieve berekende variantie wijst op verkeerde invoer, verwisselde totalen of te vroege afronding. Het delen door √n hoort bij een standaardfout, niet bij de standaardafwijking van de losse waarden.</p>"
+        },
+        {
+          "title": "Een gegevenstabel in beide richtingen doorrekenen",
+          "html": "<p>Een opgave kan losse waarden geven of alleen sommen. Onderstaande eigen oefentabel laat zien dat de twee variantieformules hetzelfde meten. De ene route begint bij afwijkingen van het gemiddelde; de andere gebruikt direct de kolomsommen.</p><div class=\"table-wrap\"><table><caption>Eigen rekenvoorbeeld: vier gecontroleerde waarden in euro</caption><thead><tr><th scope=\"col\">Post</th><th scope=\"col\">wᵢ</th><th scope=\"col\">wᵢ²</th><th scope=\"col\">wᵢ − 100</th><th scope=\"col\">(wᵢ − 100)²</th></tr></thead><tbody><tr><td>1</td><td>80</td><td>6.400</td><td>-20</td><td>400</td></tr><tr><td>2</td><td>90</td><td>8.100</td><td>-10</td><td>100</td></tr><tr><td>3</td><td>110</td><td>12.100</td><td>10</td><td>100</td></tr><tr><td>4</td><td>120</td><td>14.400</td><td>20</td><td>400</td></tr><tr><td>Totaal</td><td>400</td><td>41.000</td><td>0</td><td>1.000</td></tr></tbody></table></div><ol><li>Het gemiddelde is 400/4 = 100. De gewone afwijkingen tellen op tot nul, terwijl de waarden duidelijk uiteenlopen. Kwadrateren voorkomt die opheffing.</li><li>Afwijkingenroute: s² = 1.000/(4 − 1) = 333,3333 euro².</li><li>Somroute: s² = [41.000 − 400²/4]/3 = [41.000 − 40.000]/3 = 333,3333 euro².</li><li>Neem de wortel om terug te keren naar euro: s = 18,2574. Voor de onzekerheid van het gemiddelde deel je daarna pas door √n.</li></ol><p>Met een berekend gemiddelde zijn maar n − 1 afwijkingen vrij te kiezen: de laatste afwijking ligt vast doordat ze samen nul moeten zijn. Daarom staat bij de steekproefvariantie n − 1 in de noemer.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>In een eigen oefening zijn n = 5, Σw = 500 en Σw² = 52.000. Bereken gemiddelde, variantie en standaardafwijking. Welke eenheid hoort bij elk antwoord?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>w̄ = € 100. s² = (52.000 − 500²/5)/4 = 500 euro²; s = √500 ≈ € 22,36. De standaardfout van het gemiddelde vóór eindigheidscorrectie is 22,3607/√5 = € 10. Een gemiddelde en een standaardafwijking hebben beide de eenheid euro, maar beantwoorden verschillende vragen.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formule 1: variantie uit som en kwadratensom</li><li><a href=\"bronnen/slides.pdf#page=15\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 15-16: equivalente variantieformules</li></ul></details>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 1: variantie uit som en kwadratensom"
+            },
+            {
+              "source": "slides",
+              "page": 15,
+              "locator": "PDF 15-16: equivalente variantieformules"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
-      ]
+      ],
+      "samplingVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H8 · §8.2.1 · rekenbasis",
+        "college": "1",
+        "focus": "Bereken vanuit sommen en kwadratensommen de juiste spreiding. Leg uit waarom een standaardafwijking iets anders meet dan een standaardfout.",
+        "title": "H8 · §8.2.1 · rekenbasis · Hoorcollege 1",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "spread",
+          "title": "Gemiddelde, variantie en standaardafwijking uitrekenen"
+        }
+      ],
+      "reading": {
+        "opening": "Na het afbakenen van de steekproef heb je een reeks gemeten waarden. Om die samen te vatten, bepaal je waar de waarden gemiddeld liggen en hoeveel ze onderling verschillen. Dat onderscheid is ook nodig om later de onzekerheid van een schatting te berekenen.",
+        "conclusion": "Het gemiddelde beschrijft het niveau; variantie en standaardafwijking beschrijven de spreiding van de waarden. De standaardfout gaat over de onzekerheid van een schatting. Met dat onderscheid kun je nu betrouwbaarheidsintervallen lezen en berekenen."
+      }
     },
     {
       "id": "onzekerheid",
@@ -492,13 +790,77 @@ window.SRA = {
           "html": "<p>De <strong>Student-t-verdeling</strong> houdt rekening met het schatten van de spreiding. De <strong>vrijheidsgraden</strong> (df) bepalen welke rij je gebruikt. Bij de schatters in hoofdstuk 8 is dat doorgaans n − 1. Bij een regressiemodel met k verklarende variabelen is het n − k − 1.</p><ol><li>Bepaal de betrouwbaarheid en of de vraag een- of tweezijdig is.</li><li>Bepaal df.</li><li>Kies de kolom voor de staartkans: α/2 bij een tweezijdig t-interval.</li><li>Ontbreekt df in de tabel, neem volgens het onderwijsprogramma de naast lagere beschikbare df. Bij df &gt; 200 gebruik je de onderste rij.</li></ol><p>Bij een F-toets gebruik je twee vrijheidsgraden. Ontbreken ze, kies ook daar de naast lagere tabelwaarden. Je halveert α niet voor de F-kritieke grens.</p>"
         },
         {
+          "title": "De tabellenbundel gebruiken: pagina, rij, kolom en conclusie",
+          "html": "<p>Een <strong>overschrijdingskans</strong> in de Student-t-tabel is de kans rechts van de positieve tabelwaarde. Bij een tweezijdig interval gaat slechts de helft van α naar die rechterstaart. De tabelkolom geeft dus niet rechtstreeks de betrouwbaarheid weer.</p><div class=\"table-wrap\"><table><caption>Selectie uit tabel 13.4; PDF 12-13 van de tabellenbundel</caption><thead><tr><th scope=\"col\">Vrijheidsgraden</th><th scope=\"col\">Rechterstaart 0,05</th><th scope=\"col\">Rechterstaart 0,025</th><th scope=\"col\">Rechterstaart 0,005</th></tr></thead><tbody><tr><td>24 (PDF 12)</td><td>1,711</td><td>2,064</td><td>2,797</td></tr><tr><td>95 (PDF 13)</td><td>1,661</td><td>1,985</td><td>2,629</td></tr><tr><td>160 (PDF 13)</td><td>1,654</td><td>1,975</td><td>2,607</td></tr><tr><td>170 (PDF 13)</td><td>1,654</td><td>1,974</td><td>2,605</td></tr><tr><td>200 (PDF 13)</td><td>1,653</td><td>1,972</td><td>2,601</td></tr><tr><td>inf. = z (PDF 13)</td><td>1,645</td><td>1,960</td><td>2,576</td></tr></tbody></table></div><ol><li>Neem een 95%-interval bij n = 165 voor een hoofdstuk-8-schatter: α = 0,05; twee staarten geven α/2 = 0,025.</li><li>Bereken df = 165 − 1 = 164. Rij 164 ontbreekt; het onderwijsprogramma schrijft de naast lagere beschikbare rij voor: 160. Interpoleer niet.</li><li>Open PDF-pagina 13, kies rij 160 en kolom 0,025. Het snijpunt geeft 1,975.</li><li>Bij een eenzijdige 95%-grens gebruik je in dezelfde rij kolom 0,05: 1,654. De hele foutkans zit nu aan één kant. Een tweezijdig 90%-interval gebruikt eveneens kolom 0,05, maar heeft wél twee grenzen.</li><li>Bij df = 200 blijf je op rij 200. Alleen bij df > 200 schrijft de cursus de onderste rij inf. voor. Bijvoorbeeld df = 249 geeft bij 95% tweezijdig 1,960.</li></ol><p><strong>Toepassing:</strong> bij een schatting van € 100.000 en een standaardfout van € 2.000 is het tweezijdige 95%-interval met df = 164 gelijk aan [€ 96.050; € 103.950]. Een eenzijdige 95%-ondergrens is € 96.692. Kies eerst de gevraagde uitspraak; de ondergrens van een tweezijdig 95%-interval is geen eenzijdige 95%-ondergrens.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Zoek met de bundel de kritieke waarde voor (a) een tweezijdig 99%-interval bij df = 164, (b) een tweezijdig 95%-interval bij df = 99 en (c) een eenzijdige 95%-bovengrens bij df = 24. Noteer pagina, rij en kolom.</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>(a) PDF 13, rij 160, kolom 0,005: 2,607. (b) PDF 13, rij 95, kolom 0,025: 1,985. Rij 95 staat werkelijk in deze bundel; rij 90 is daarom niet de naast lagere rij. (c) PDF 12, rij 24, kolom 0,05: 1,711. Voor de bovengrens tel je 1,711 × de standaardfout bij de schatting op.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Tabellenbundel</a> · Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen</li><li><a href=\"bronnen/onderwijsprogramma.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Onderwijsprogramma SRA NJ26</a> · Tabelregels: naast lagere df; bij df &gt; 200 onderste rij</li></ul></details>",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
           "title": "Wat maakt een interval breder?",
-          "html": "<p>Meer spreiding geeft meer onzekerheid. Hogere betrouwbaarheid vraagt een grotere kritieke waarde en dus een breder interval. Een grotere steekproef maakt het interval doorgaans smaller. <strong>Eindigheidscorrectie</strong> is de factor √((N − n)/(N − 1)): bij controle van een groter deel van een eindige populatie blijft minder onzekerheid over. In de geldbedragschattingen van SRA neem je deze factor steeds mee.</p><p>Bij een gevraagde afronding van een schattingsinterval volgen de aangeleverde uitwerkingen een afronding naar buiten: ondergrens omlaag, bovengrens omhoog.</p>"
+          "html": "<p>Meer spreiding geeft meer onzekerheid. Hogere betrouwbaarheid vraagt een grotere kritieke waarde en dus een breder interval. Een grotere steekproef maakt het interval doorgaans smaller. <strong>Eindigheidscorrectie</strong> is de factor √((N − n)/(N − 1)): bij controle van een groter deel van een eindige populatie blijft minder onzekerheid over. In de geldbedragschattingen van SRA neem je deze factor steeds mee.</p><p>Bij een gevraagde afronding van een schattingsinterval volgen de aangeleverde uitwerkingen een afronding naar buiten: ondergrens omlaag, bovengrens omhoog.</p><p>De <strong>precisie</strong> van de schatting beschrijf je met de marge E: kleiner is preciezer. De <strong>betrouwbaarheid</strong> is het vooraf gekozen dekkingsniveau van de intervalmethode. Een kleinere standaardfout bij hetzelfde t maakt de marge kleiner zonder dat je het betrouwbaarheidspercentage wijzigt. Het is daarom onjuist om een smaller interval automatisch betrouwbaarder te noemen.</p><p>Voor controle van een waarde B kan een interval richting geven aan nader onderzoek. Als B buiten het interval valt, sluit de boekwaarde niet aan bij de schatting op dit niveau. Als B erin valt, is daarmee niet bewezen dat iedere post juist is. De gekozen schatter en intervalaannamen moeten ook passen bij de gegevens.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8b.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6</li><li><a href=\"bronnen/slides.pdf#page=34\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 34: vergelijking van onnauwkeurigheidsmarges</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "Intervalgrafieken lezen: één vaste populatiewaarde, verschillende schattingen",
+          "html": "<p>De intervalgrafieken in boekafbeeldingen 8.2, 8.3, 8.4 en 8.6 tonen twintig opnieuw getrokken steekproeven uit dezelfde populatie. De horizontale referentielijn is het vaste werkelijke totaal van € 7.029.580. Elke verticale lijn is één berekend interval; het midden en de lengte kunnen per steekproef verschillen.</p><ol><li>Kijk of het interval de horizontale populatielijn kruist. Dan bevat die ene uitkomst het werkelijke totaal.</li><li>Vergelijk de lengtes: kortere intervallen betekenen kleinere gerealiseerde marges. Alleen een lijn dicht bij het juiste totaal zegt nog niets over de precisie.</li><li>Kijk over meerdere steekproeven hoe vaak de waarde buiten het interval valt. Het betrouwbaarheidsniveau betreft de methode bij herhaling, niet de verdeling van losse posten.</li></ol><div class=\"table-wrap\"><table><caption>Boektabel 8.4: twintig steekproeven van dezelfde populatie</caption><thead><tr><th scope=\"col\">Schatter</th><th scope=\"col\">Aantal intervallen dat W mist</th><th scope=\"col\">Gemiddelde marge (€)</th></tr></thead><tbody><tr><td>MPU</td><td>2 van 20</td><td>221.864</td></tr><tr><td>Verschil</td><td>2 van 20</td><td>108.856</td></tr><tr><td>Quotiënt</td><td>2 van 20</td><td>109.117</td></tr><tr><td>Regressie</td><td>2 van 20</td><td>108.751</td></tr></tbody></table></div><p>In deze reeks missen alle methoden twee keer de werkelijke waarde. Daaruit volgt niet dat een 95%-methode per reeks van twintig exact één keer moet missen: ook die telling is toevallig. De drie methoden met boekwaarde-informatie zijn in dit voorbeeld gemiddeld preciezer dan MPU. De tabel bewijst geen algemene rangorde voor iedere populatie.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Een student zegt: “Het interval van steekproef 1 bevat de werkelijke waarde, dus deze methode is betrouwbaar.” Welke informatie ontbreekt in die conclusie?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Eén getroffen interval laat niet zien hoe vaak de methode bij herhaalde steekproeven de waarde bevat. Je moet de selectie, modelvoorwaarden en langetermijndekking beoordelen. Ook een heel breed interval kan de waarde toevallig bevatten; voor bruikbaarheid telt daarnaast de marge.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8a.pdf#page=7\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 201–210</a> · Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7</li><li><a href=\"bronnen/boek-h8b.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2</li><li><a href=\"bronnen/boek-h8b.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6</li><li><a href=\"bronnen/boek-h8b.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
       ],
       "example": {
         "title": "Een 95%-interval uitrekenen",
         "steps": [
+          "Puntschatting = € 100.000; standaardfout = € 2.000; gegeven t = 2,00.",
+          "Marge E = 2 × 2.000 = € 4.000.",
+          "Interval = [€ 96.000; € 104.000]; breedte = € 8.000.",
+          "Bij dezelfde gegevens en een hogere kritieke waarde van 2,60 wordt E € 5.200 en dus het interval breder."
+        ],
+        "context": "Welk 95%-interval hoort bij een schatting van € 100.000, een standaardfout van € 2.000 en een gegeven kritieke waarde van 2,00? Daarna vergelijken we de marge bij een hogere kritieke waarde.",
+        "stepsHtml": [
           "Puntschatting = € 100.000; standaardfout = € 2.000; gegeven t = 2,00.",
           "Marge E = 2 × 2.000 = € 4.000.",
           "Interval = [€ 96.000; € 104.000]; breedte = € 8.000.",
@@ -534,6 +896,41 @@ window.SRA = {
           "source": "set-basis",
           "page": 1,
           "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+        },
+        {
+          "source": "tabellen",
+          "page": 12,
+          "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+        },
+        {
+          "source": "programma",
+          "page": 4,
+          "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 6,
+          "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+        },
+        {
+          "source": "slides",
+          "page": 34,
+          "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 7,
+          "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 2,
+          "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 9,
+          "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
         }
       ],
       "questions": [
@@ -584,6 +981,41 @@ window.SRA = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
           ],
           "recognition": {
@@ -640,6 +1072,41 @@ window.SRA = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
           ],
           "recognition": {
@@ -696,6 +1163,41 @@ window.SRA = {
               "source": "set-basis",
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 6,
+              "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
           ],
           "recognition": {
@@ -715,9 +1217,59 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Van puntschatting naar betrouwbaarheidsinterval",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik een interval als de vraag niet alleen een geschat getal verlangt, maar ook de nauwkeurigheid van die schatting. Zoek vóór het rekenen uit of een onder- én bovengrens of een eenzijdige grens wordt gevraagd.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><mtext>puntschatting</mtext><mo>±</mo><mi>E</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Marge</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Marge\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>E</mi><mo>=</mo><mtext>kritieke waarde</mtext><mo>×</mo><mtext>standaardfout</mtext></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Totale breedte</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Totale breedte\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>breedte</mtext><mo>=</mo><mn>2</mn><mo>×</mo><mi>E</mi></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>De puntschatting is het midden van het interval. E is de marge aan één kant. α is het totale onbetrouwbaarheidsrisico; 1 − α is de betrouwbaarheid. Bij een tweezijdig t-interval hoort α/2 bij iedere staart. De standaardfout meet de onzekerheid van de schatting.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bepaal de betrouwbaarheid en zet die om naar α. Bij 95% is α = 0,05.</li><li>Bepaal de juiste vrijheidsgraden. Bij de gewone schatters doorgaans n − 1; bij regressie n − k − 1.</li><li>Lees t af met de juiste staartkans. Ontbreekt df, gebruik dan de naast lagere beschikbare tabelrij volgens het onderwijsprogramma. Voor df boven 200 geldt de onderste rij.</li><li>Vermenigvuldig t met de standaardfout: dit is E.</li><li>Trek E af van de puntschatting voor de ondergrens en tel E op voor de bovengrens. Rond alleen volgens de gevraagde afspraak; bij deze schattingsopgaven worden grenzen naar buiten afgerond.</li></ol><h3>Een 95%-interval uitrekenen</h3><ol><li>Puntschatting = € 100.000; standaardfout = € 2.000; gegeven t = 2,00.</li><li>Marge E = 2 × 2.000 = € 4.000.</li><li>Interval = [€ 96.000; € 104.000]; breedte = € 8.000.</li><li>Bij dezelfde gegevens en een hogere kritieke waarde van 2,60 wordt E € 5.200 en dus het interval breder.</li></ol><p class=\"note\"><strong>Let op:</strong> De betrouwbaarheid beschrijft de intervalmethode bij herhaalde steekproeven. Zij zegt niet dat 95% van de afzonderlijke posten binnen het interval voor een totaal valt. Verwar de marge E niet met de totale breedte 2E.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik een interval als de vraag niet alleen een geschat getal verlangt, maar ook de nauwkeurigheid van die schatting. Zoek vóór het rekenen uit of een onder- én bovengrens of een eenzijdige grens wordt gevraagd.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><mtext>puntschatting</mtext><mo>±</mo><mi>E</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Marge</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Marge\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>E</mi><mo>=</mo><mtext>kritieke waarde</mtext><mo>×</mo><mtext>standaardfout</mtext></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Totale breedte</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Totale breedte\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>breedte</mtext><mo>=</mo><mn>2</mn><mo>×</mo><mi>E</mi></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>De puntschatting is het midden van het interval. E is de marge aan één kant. α is het totale onbetrouwbaarheidsrisico; 1 − α is de betrouwbaarheid. Bij een tweezijdig t-interval hoort α/2 bij iedere staart. De standaardfout meet de onzekerheid van de schatting.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"interval-width\"><h3>De marge is de halve intervalbreedte</h3><p class=\"fv-provenance\">Visualisatie van de twee gegeven t-waarden in het bestaande rekenvoorbeeld; geen nieuwe tabelkeuze.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Gegeven t = 2,00</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 165\" role=\"img\" aria-label=\"Gegeven t = 2,00: 96.000,00 tot 104.000,00; puntschatting 100.000,00\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-axis\" d=\"M25 92H335\"/><path d=\"M94.29 65H265.71\" stroke=\"var(--fv-green)\" stroke-width=\"3\"/><path d=\"M94.29 55V102\" stroke=\"var(--fv-green)\"/><text x=\"94.29\" y=\"123\" text-anchor=\"middle\">Ondergrens</text><text x=\"94.29\" y=\"139\" text-anchor=\"middle\">96.000,00</text><path d=\"M180.00 55V102\" stroke=\"var(--fv-purple)\"/><text x=\"180.00\" y=\"33\" text-anchor=\"middle\">Puntschatting</text><text x=\"180.00\" y=\"49\" text-anchor=\"middle\">100.000,00</text><path d=\"M265.71 55V102\" stroke=\"var(--fv-green)\"/><text x=\"265.71\" y=\"123\" text-anchor=\"middle\">Bovengrens</text><text x=\"265.71\" y=\"139\" text-anchor=\"middle\">104.000,00</text><text x=\"180\" y=\"161\" text-anchor=\"middle\">Bedrag (€)</text></svg><p class=\"fv-work\">Standaardfout € 2.000. E = 2 × 2.000 = € 4.000; breedte = € 8.000.<br>Ondergrens 96.000,00; bovengrens 104.000,00.</p></figure><figure class=\"fv-panel\"><figcaption>Gegeven t = 2,60</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 165\" role=\"img\" aria-label=\"Gegeven t = 2,60: 94.800,00 tot 105.200,00; puntschatting 100.000,00\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-axis\" d=\"M25 92H335\"/><path d=\"M68.57 65H291.43\" stroke=\"var(--fv-green)\" stroke-width=\"3\"/><path d=\"M68.57 55V102\" stroke=\"var(--fv-green)\"/><text x=\"68.57\" y=\"123\" text-anchor=\"middle\">Ondergrens</text><text x=\"68.57\" y=\"139\" text-anchor=\"middle\">94.800,00</text><path d=\"M180.00 55V102\" stroke=\"var(--fv-purple)\"/><text x=\"180.00\" y=\"33\" text-anchor=\"middle\">Puntschatting</text><text x=\"180.00\" y=\"49\" text-anchor=\"middle\">100.000,00</text><path d=\"M291.43 55V102\" stroke=\"var(--fv-green)\"/><text x=\"291.43\" y=\"123\" text-anchor=\"middle\">Bovengrens</text><text x=\"291.43\" y=\"139\" text-anchor=\"middle\">105.200,00</text><text x=\"180\" y=\"161\" text-anchor=\"middle\">Bedrag (€)</text></svg><p class=\"fv-work\">Dezelfde standaardfout. E = 2,60 × 2.000 = € 5.200; breedte = € 10.400.<br>Ondergrens 94.800,00; bovengrens 105.200,00.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De puntschatting blijft gelijk. Een grotere kritieke waarde geeft een breder interval; beide grafieken gebruiken dezelfde schaal.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bepaal de betrouwbaarheid en zet die om naar α. Bij 95% is α = 0,05.</li><li>Bepaal de juiste vrijheidsgraden. Bij de gewone schatters doorgaans n − 1; bij regressie n − k − 1.</li><li>Lees t af met de juiste staartkans. Ontbreekt df, gebruik dan de naast lagere beschikbare tabelrij volgens het onderwijsprogramma. Voor df boven 200 geldt de onderste rij.</li><li>Vermenigvuldig t met de standaardfout: dit is E.</li><li>Trek E af van de puntschatting voor de ondergrens en tel E op voor de bovengrens. Rond alleen volgens de gevraagde afspraak; bij deze schattingsopgaven worden grenzen naar buiten afgerond.</li></ol><h3>Een 95%-interval uitrekenen</h3><ol><li>Puntschatting = € 100.000; standaardfout = € 2.000; gegeven t = 2,00.</li><li>Marge E = 2 × 2.000 = € 4.000.</li><li>Interval = [€ 96.000; € 104.000]; breedte = € 8.000.</li><li>Bij dezelfde gegevens en een hogere kritieke waarde van 2,60 wordt E € 5.200 en dus het interval breder.</li></ol><p class=\"note\"><strong>Let op:</strong> De betrouwbaarheid beschrijft de intervalmethode bij herhaalde steekproeven. Zij zegt niet dat 95% van de afzonderlijke posten binnen het interval voor een totaal valt. Verwar de marge E niet met de totale breedte 2E.</p>"
+        },
+        {
+          "title": "De tabellenbundel gebruiken: pagina, rij, kolom en conclusie",
+          "html": "<p>Een <strong>overschrijdingskans</strong> in de Student-t-tabel is de kans rechts van de positieve tabelwaarde. Bij een tweezijdig interval gaat slechts de helft van α naar die rechterstaart. De tabelkolom geeft dus niet rechtstreeks de betrouwbaarheid weer.</p><div class=\"table-wrap\"><table><caption>Selectie uit tabel 13.4; PDF 12-13 van de tabellenbundel</caption><thead><tr><th scope=\"col\">Vrijheidsgraden</th><th scope=\"col\">Rechterstaart 0,05</th><th scope=\"col\">Rechterstaart 0,025</th><th scope=\"col\">Rechterstaart 0,005</th></tr></thead><tbody><tr><td>24 (PDF 12)</td><td>1,711</td><td>2,064</td><td>2,797</td></tr><tr><td>95 (PDF 13)</td><td>1,661</td><td>1,985</td><td>2,629</td></tr><tr><td>160 (PDF 13)</td><td>1,654</td><td>1,975</td><td>2,607</td></tr><tr><td>170 (PDF 13)</td><td>1,654</td><td>1,974</td><td>2,605</td></tr><tr><td>200 (PDF 13)</td><td>1,653</td><td>1,972</td><td>2,601</td></tr><tr><td>inf. = z (PDF 13)</td><td>1,645</td><td>1,960</td><td>2,576</td></tr></tbody></table></div><ol><li>Neem een 95%-interval bij n = 165 voor een hoofdstuk-8-schatter: α = 0,05; twee staarten geven α/2 = 0,025.</li><li>Bereken df = 165 − 1 = 164. Rij 164 ontbreekt; het onderwijsprogramma schrijft de naast lagere beschikbare rij voor: 160. Interpoleer niet.</li><li>Open PDF-pagina 13, kies rij 160 en kolom 0,025. Het snijpunt geeft 1,975.</li><li>Bij een eenzijdige 95%-grens gebruik je in dezelfde rij kolom 0,05: 1,654. De hele foutkans zit nu aan één kant. Een tweezijdig 90%-interval gebruikt eveneens kolom 0,05, maar heeft wél twee grenzen.</li><li>Bij df = 200 blijf je op rij 200. Alleen bij df > 200 schrijft de cursus de onderste rij inf. voor. Bijvoorbeeld df = 249 geeft bij 95% tweezijdig 1,960.</li></ol><p><strong>Toepassing:</strong> bij een schatting van € 100.000 en een standaardfout van € 2.000 is het tweezijdige 95%-interval met df = 164 gelijk aan [€ 96.050; € 103.950]. Een eenzijdige 95%-ondergrens is € 96.692. Kies eerst de gevraagde uitspraak; de ondergrens van een tweezijdig 95%-interval is geen eenzijdige 95%-ondergrens.</p><div class=\"learning-exercise\"><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"table-tails\"><h3>Eén tabel, verschillende staartkansen</h3><p class=\"fv-provenance\">Tabellenbundel, tabel 13.4, PDF 12: de reeds opgenomen waarden bij 24 vrijheidsgraden.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>95% tweezijdig</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"95% tweezijdig; x-as: t; y-as: Kansdichtheid\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,1</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,2</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">0,3</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">0,5</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">-4,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">-2,0</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">2,0</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">4,0</text><polygon points=\"268.45,180.00 268.45,163.38 270.18,164.86 271.90,166.23 273.62,167.49 275.35,168.65 277.07,169.72 278.80,170.70 280.52,171.60 282.25,172.42 283.98,173.16 285.70,173.85 287.43,174.47 289.15,175.03 290.88,175.54 292.60,176.00 294.32,176.42 296.05,176.80 297.77,177.14 299.50,177.44 301.23,177.72 302.95,177.97 304.68,178.19 306.40,178.39 308.12,178.57 309.85,178.73 311.57,178.87 313.30,179.00 315.03,179.11 316.75,179.21 318.47,179.30 320.20,179.38 321.93,179.45 323.65,179.51 325.38,179.57 327.10,179.62 328.82,179.66 330.55,179.70 332.28,179.74 334.00,179.77 334.00,180.00\" fill=\"var(--fv-orange)\" fill-opacity=\"0.25\"/><polygon points=\"58.00,180.00 58.00,179.77 59.72,179.74 61.45,179.70 63.17,179.66 64.90,179.62 66.62,179.57 68.35,179.51 70.08,179.45 71.80,179.38 73.53,179.30 75.25,179.21 76.97,179.11 78.70,179.00 80.42,178.87 82.15,178.73 83.88,178.57 85.60,178.39 87.33,178.19 89.05,177.97 90.78,177.72 92.50,177.44 94.22,177.14 95.95,176.80 97.67,176.42 99.40,176.00 101.12,175.54 102.85,175.03 104.58,174.47 106.30,173.85 108.03,173.16 109.75,172.42 111.47,171.60 113.20,170.70 114.92,169.72 116.65,168.65 118.38,167.49 120.10,166.23 121.83,164.86 123.55,163.38 123.55,180.00\" fill=\"var(--fv-orange)\" fill-opacity=\"0.25\"/><path d=\"M267.21 24V180\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"267.21\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-orange)\">2,064</text><path d=\"M124.79 24V180\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"124.79\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-orange)\">−2,064</text><polyline points=\"58.00,179.77 59.72,179.74 61.45,179.70 63.17,179.66 64.90,179.62 66.62,179.57 68.35,179.51 70.08,179.45 71.80,179.38 73.53,179.30 75.25,179.21 76.97,179.11 78.70,179.00 80.42,178.87 82.15,178.73 83.88,178.57 85.60,178.39 87.33,178.19 89.05,177.97 90.78,177.72 92.50,177.44 94.22,177.14 95.95,176.80 97.67,176.42 99.40,176.00 101.12,175.54 102.85,175.03 104.58,174.47 106.30,173.85 108.03,173.16 109.75,172.42 111.47,171.60 113.20,170.70 114.92,169.72 116.65,168.65 118.38,167.49 120.10,166.23 121.83,164.86 123.55,163.38 125.28,161.79 127.00,160.07 128.72,158.23 130.45,156.25 132.18,154.14 133.90,151.89 135.62,149.50 137.35,146.96 139.07,144.27 140.80,141.44 142.53,138.47 144.25,135.35 145.97,132.09 147.70,128.70 149.43,125.18 151.15,121.54 152.88,117.78 154.60,113.93 156.32,110.00 158.05,105.99 159.78,101.93 161.50,97.83 163.22,93.72 164.95,89.61 166.68,85.53 168.40,81.50 170.12,77.55 171.85,73.69 173.57,69.96 175.30,66.37 177.03,62.97 178.75,59.76 180.47,56.78 182.20,54.04 183.93,51.57 185.65,49.39 187.38,47.51 189.10,45.95 190.83,44.73 192.55,43.84 194.28,43.31 196.00,43.13 197.72,43.31 199.45,43.84 201.18,44.73 202.90,45.95 204.62,47.51 206.35,49.39 208.07,51.57 209.80,54.04 211.53,56.78 213.25,59.76 214.97,62.97 216.70,66.37 218.43,69.96 220.15,73.69 221.88,77.55 223.60,81.50 225.32,85.53 227.05,89.61 228.78,93.72 230.50,97.83 232.22,101.93 233.95,105.99 235.68,110.00 237.40,113.93 239.12,117.78 240.85,121.54 242.57,125.18 244.30,128.70 246.03,132.09 247.75,135.35 249.47,138.47 251.20,141.44 252.93,144.27 254.65,146.96 256.38,149.50 258.10,151.89 259.82,154.14 261.55,156.25 263.27,158.23 265.00,160.07 266.73,161.79 268.45,163.38 270.18,164.86 271.90,166.23 273.62,167.49 275.35,168.65 277.07,169.72 278.80,170.70 280.52,171.60 282.25,172.42 283.98,173.16 285.70,173.85 287.43,174.47 289.15,175.03 290.88,175.54 292.60,176.00 294.32,176.42 296.05,176.80 297.77,177.14 299.50,177.44 301.23,177.72 302.95,177.97 304.68,178.19 306.40,178.39 308.12,178.57 309.85,178.73 311.57,178.87 313.30,179.00 315.03,179.11 316.75,179.21 318.47,179.30 320.20,179.38 321.93,179.45 323.65,179.51 325.38,179.57 327.10,179.62 328.82,179.66 330.55,179.70 332.28,179.74 334.00,179.77\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">t</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Kansdichtheid</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-purple)\"></i>Student-t, df = 24</span></div><p class=\"fv-work\">α = 0,05 → 0,025 per staart.<br>Rij 24, kolom 0,025 → t = 2,064.</p></figure><figure class=\"fv-panel\"><figcaption>95% eenzijdig</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"95% eenzijdig; x-as: t; y-as: Kansdichtheid\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,1</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,2</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">0,3</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">0,5</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">-4,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">-2,0</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">2,0</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">4,0</text><polygon points=\"256.38,180.00 256.38,149.50 258.10,151.89 259.82,154.14 261.55,156.25 263.27,158.23 265.00,160.07 266.73,161.79 268.45,163.38 270.18,164.86 271.90,166.23 273.62,167.49 275.35,168.65 277.07,169.72 278.80,170.70 280.52,171.60 282.25,172.42 283.98,173.16 285.70,173.85 287.43,174.47 289.15,175.03 290.88,175.54 292.60,176.00 294.32,176.42 296.05,176.80 297.77,177.14 299.50,177.44 301.23,177.72 302.95,177.97 304.68,178.19 306.40,178.39 308.12,178.57 309.85,178.73 311.57,178.87 313.30,179.00 315.03,179.11 316.75,179.21 318.47,179.30 320.20,179.38 321.93,179.45 323.65,179.51 325.38,179.57 327.10,179.62 328.82,179.66 330.55,179.70 332.28,179.74 334.00,179.77 334.00,180.00\" fill=\"var(--fv-orange)\" fill-opacity=\"0.25\"/><path d=\"M255.03 24V180\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"255.03\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-orange)\">1,711</text><polyline points=\"58.00,179.77 59.72,179.74 61.45,179.70 63.17,179.66 64.90,179.62 66.62,179.57 68.35,179.51 70.08,179.45 71.80,179.38 73.53,179.30 75.25,179.21 76.97,179.11 78.70,179.00 80.42,178.87 82.15,178.73 83.88,178.57 85.60,178.39 87.33,178.19 89.05,177.97 90.78,177.72 92.50,177.44 94.22,177.14 95.95,176.80 97.67,176.42 99.40,176.00 101.12,175.54 102.85,175.03 104.58,174.47 106.30,173.85 108.03,173.16 109.75,172.42 111.47,171.60 113.20,170.70 114.92,169.72 116.65,168.65 118.38,167.49 120.10,166.23 121.83,164.86 123.55,163.38 125.28,161.79 127.00,160.07 128.72,158.23 130.45,156.25 132.18,154.14 133.90,151.89 135.62,149.50 137.35,146.96 139.07,144.27 140.80,141.44 142.53,138.47 144.25,135.35 145.97,132.09 147.70,128.70 149.43,125.18 151.15,121.54 152.88,117.78 154.60,113.93 156.32,110.00 158.05,105.99 159.78,101.93 161.50,97.83 163.22,93.72 164.95,89.61 166.68,85.53 168.40,81.50 170.12,77.55 171.85,73.69 173.57,69.96 175.30,66.37 177.03,62.97 178.75,59.76 180.47,56.78 182.20,54.04 183.93,51.57 185.65,49.39 187.38,47.51 189.10,45.95 190.83,44.73 192.55,43.84 194.28,43.31 196.00,43.13 197.72,43.31 199.45,43.84 201.18,44.73 202.90,45.95 204.62,47.51 206.35,49.39 208.07,51.57 209.80,54.04 211.53,56.78 213.25,59.76 214.97,62.97 216.70,66.37 218.43,69.96 220.15,73.69 221.88,77.55 223.60,81.50 225.32,85.53 227.05,89.61 228.78,93.72 230.50,97.83 232.22,101.93 233.95,105.99 235.68,110.00 237.40,113.93 239.12,117.78 240.85,121.54 242.57,125.18 244.30,128.70 246.03,132.09 247.75,135.35 249.47,138.47 251.20,141.44 252.93,144.27 254.65,146.96 256.38,149.50 258.10,151.89 259.82,154.14 261.55,156.25 263.27,158.23 265.00,160.07 266.73,161.79 268.45,163.38 270.18,164.86 271.90,166.23 273.62,167.49 275.35,168.65 277.07,169.72 278.80,170.70 280.52,171.60 282.25,172.42 283.98,173.16 285.70,173.85 287.43,174.47 289.15,175.03 290.88,175.54 292.60,176.00 294.32,176.42 296.05,176.80 297.77,177.14 299.50,177.44 301.23,177.72 302.95,177.97 304.68,178.19 306.40,178.39 308.12,178.57 309.85,178.73 311.57,178.87 313.30,179.00 315.03,179.11 316.75,179.21 318.47,179.30 320.20,179.38 321.93,179.45 323.65,179.51 325.38,179.57 327.10,179.62 328.82,179.66 330.55,179.70 332.28,179.74 334.00,179.77\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">t</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Kansdichtheid</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-purple)\"></i>Student-t, df = 24</span></div><p class=\"fv-work\">α = 0,05 in één staart.<br>Rij 24, kolom 0,05 → t = 1,711.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De gekleurde oppervlakte is de foutkans. De hoogte van de curve is geen p-waarde. De bestaande tabel geeft de exacte snijpunten.</p></section><!-- formula-visual:end --><h3>Zelf toepassen</h3><p>Zoek met de bundel de kritieke waarde voor (a) een tweezijdig 99%-interval bij df = 164, (b) een tweezijdig 95%-interval bij df = 99 en (c) een eenzijdige 95%-bovengrens bij df = 24. Noteer pagina, rij en kolom.</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>(a) PDF 13, rij 160, kolom 0,005: 2,607. (b) PDF 13, rij 95, kolom 0,025: 1,985. Rij 95 staat werkelijk in deze bundel; rij 90 is daarom niet de naast lagere rij. (c) PDF 12, rij 24, kolom 0,05: 1,711. Voor de bovengrens tel je 1,711 × de standaardfout bij de schatting op.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Tabellenbundel</a> · Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen</li><li><a href=\"bronnen/onderwijsprogramma.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Onderwijsprogramma SRA NJ26</a> · Tabelregels: naast lagere df; bij df &gt; 200 onderste rij</li></ul></details>",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
-      ]
+      ],
+      "samplingVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H3 · §3.2 · voorkennis voor H8",
+        "college": "1",
+        "focus": "Vertaal betrouwbaarheid naar staartkans en tabelrij. Leg de betekenis van het interval uit en onderscheid marge, breedte en betrouwbaarheid.",
+        "title": "H3 · §3.2 · voorkennis voor H8 · Hoorcollege 1",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "interval-width",
+          "title": "Van puntschatting naar betrouwbaarheidsinterval"
+        },
+        {
+          "key": "table-tails",
+          "title": "De tabellenbundel gebruiken: pagina, rij, kolom en conclusie"
+        }
+      ],
+      "reading": {
+        "opening": "Een steekproefschatting verandert als je andere posten trekt. Daarom hoort bij één geschatte waarde ook een uitspraak over de onzekerheid. We verbinden de standaardfout met een kritieke tabelwaarde en bouwen daarmee een interval op.",
+        "conclusion": "Een interval ontstaat uit een schatting plus en min een marge. Die marge hangt af van de standaardfout en de gekozen betrouwbaarheid. De volgende lessen passen dit toe op verschillende manieren om een populatietotaal te schatten."
+      }
     },
     {
       "id": "mpu",
@@ -732,11 +1284,24 @@ window.SRA = {
       "sections": [
         {
           "title": "Wanneer gebruik je deze schatter?",
-          "html": "<p>Je hebt gecontroleerde werkelijke waarden en een populatieomvang. Je schat het totaal rechtstreeks uit die werkelijke waarden. De boekwaarden spelen in de formule geen rol. Als werkelijke waarden sterk uiteenlopen, kan het interval breed worden. Andere schatters kunnen extra informatie uit de boekwaarden gebruiken.</p><p>De berekening veronderstelt een bruikbare aselecte steekproef. Het boek gebruikt voor de normale benadering van het gemiddelde de cursusgrens n ≥ 100; bij een kleinere steekproef beoordeel je de verdeling. Een groot aantal posten herstelt een selectieve steekproef niet.</p>"
+          "html": "<p>Je hebt gecontroleerde werkelijke waarden en een populatieomvang. Je schat het totaal rechtstreeks uit die werkelijke waarden. De boekwaarden spelen in de formule geen rol. Als werkelijke waarden sterk uiteenlopen, kan het interval breed worden. Andere schatters kunnen extra informatie uit de boekwaarden gebruiken.</p><p>De berekening veronderstelt een bruikbare aselecte steekproef. Het boek gebruikt voor de normale benadering van het gemiddelde de cursusgrens n ≥ 100; bij een kleinere steekproef beoordeel je de verdeling. Een groot aantal posten herstelt een selectieve steekproef niet.</p><p>MPU is bruikbaar als je de werkelijke waarden rechtstreeks onderzoekt en de boekwaarden geen bruikbare aanvullende informatie bieden. De methode laat een bekend boekwaardetotaal bewust buiten de formule: er wordt geen verband met de boekwaarden verondersteld. Dat maakt de berekening overzichtelijk, maar de volledige spreiding van de werkelijke waarden werkt door in de onzekerheid.</p><p>Een paar zeer grote posten tussen veel kleine kunnen s<sub>w</sub> sterk vergroten. Dan onderzoek je of een boekwaarde als hulpvariabele of een verdeling in homogenere strata een inhoudelijk passende verbetering geeft. Je kiest een alternatief op basis van populatie en foutpatroon, niet uitsluitend omdat het berekende interval smaller is.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8a.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 201–210</a> · Boek p. 203; oorspronkelijke PDF p. 221; uitsnede p. 3</li><li><a href=\"bronnen/boek-h8b.pdf#page=7\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8a",
+              "page": 3,
+              "locator": "Boek p. 203; oorspronkelijke PDF p. 221; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         },
         {
           "title": "Bouw de formule op",
-          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>N = populatieomvang; n = steekproefomvang; w̄ = gemiddelde werkelijke waarde; s_w = standaardafwijking; t = kritieke tabelwaarde. Het dakje op W betekent geschat.</p></details><p>Begin bij s<sub>w</sub>, de spreiding van losse werkelijke waarden. Deel door √n om de onzekerheid van het gemiddelde te krijgen. Vermenigvuldig met N voor de onzekerheid van het totaal. Pas de eindigheidscorrectie toe. Vermenigvuldig ten slotte met t voor de marge.</p>"
+          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>N = populatieomvang; n = steekproefomvang; w̄ = gemiddelde werkelijke waarde; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = standaardafwijking; t = kritieke tabelwaarde. Het dakje op W betekent geschat.</p></details><p>Begin bij s<sub>w</sub>, de spreiding van losse werkelijke waarden. Deel door √n om de onzekerheid van het gemiddelde te krijgen. Vermenigvuldig met N voor de onzekerheid van het totaal. Pas de eindigheidscorrectie toe. Vermenigvuldig ten slotte met t voor de marge.</p>"
         },
         {
           "title": "Een vaste werkvolgorde",
@@ -745,16 +1310,46 @@ window.SRA = {
         {
           "title": "Wanneer een grote steekproef toch onvoldoende kan zijn",
           "html": "<p>n ≥ 100 is de cursusvuistregel voor de normale benadering, geen garantie voor iedere populatie. Het boek waarschuwt dat extreem scheve verdelingen een grotere steekproef kunnen vragen. Beoordeel daarom selectie, verdeling en opvallende posten voordat je het interval interpreteert. Zie boek p. 92, voetnoot 2.</p>"
+        },
+        {
+          "title": "Van samenvattingstabel naar een volledig voorraadinterval",
+          "html": "<p>De slides geven de onderstaande voorraadgegevens. De kwadratensom is in euro²; deze is dus niet de som van de waarden nogmaals in euro.</p><div class=\"table-wrap\"><table><caption>Voorraadcontrole uit slides PDF 18</caption><thead><tr><th scope=\"col\">Gegeven</th><th scope=\"col\">Waarde</th><th scope=\"col\">Functie in de berekening</th></tr></thead><tbody><tr><td>N</td><td>5.230</td><td>Van gemiddelde naar populatietotaal</td></tr><tr><td>n</td><td>180</td><td>Gemiddelde, spreiding, standaardfout en vrijheidsgraden</td></tr><tr><td>Σw</td><td>€ 398.000</td><td>Totaal van de gecontroleerde werkelijke waarden</td></tr><tr><td>Σw²</td><td>5.378.400.500 euro²</td><td>Berekening van de steekproefvariantie</td></tr><tr><td>Betrouwbaarheid</td><td>95%, tweezijdig</td><td>Kolom 0,025 van de t-tabel</td></tr></tbody></table></div><ol><li>w̄ = 398.000/180 = € 2.211,1111; Ŵ = 5.230 × w̄ = € 11.564.111,11.</li><li>s² = [5.378.400.500 − 398.000²/180]/179 = 25.130.604,90 euro². Neem de wortel: s<sub>w</sub> = € 5.013,0435.</li><li>s<sub>MPU</sub> = 5.230 × (s<sub>w</sub>/√180) × √(5.050/5.229) = € 1.920.451,20. Elke factor heeft een doel: gemiddelde, totaal en resterende populatie.</li><li>df = 179. Tabellenbundel PDF 13, rij 170, kolom 0,025 geeft t = 1,974.</li><li>E = 1,974 × s<sub>MPU</sub> = € 3.790.970,67. Interval: [€ 7.773.140,44; € 15.355.081,78].</li></ol><p class=\"note\">De slides rekenen met afgeronde s<sub>w</sub> = 5.013 en tonen een marge van € 3.790.938. Hier wordt met de gegeven sommen onafgerond doorgerekend: € 3.790.970,67. Dit verschil komt door tussenafronding. De marge is groot doordat de afzonderlijke voorraadwaarden sterk uiteenlopen.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Gebruik dezelfde gegevens. De accountant mag een totale intervalbreedte van € 2.000.000 accepteren. Voldoet deze controle? Noem twee inhoudelijke vervolgroutes en motiveer welke aanvullende informatie daarvoor nodig is.</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Nee: de toegestane marge E is € 1.000.000, terwijl de berekende marge ongeveer € 3.790.971 is. Route 1 is een grotere aselecte steekproef, te plannen met s²<sub>w</sub>. Route 2 is een passende hulpvariabeleschatter of stratificatie. Daarvoor onderzoek je het verband met boekwaarden, het foutpatroon of de groepsindeling. Het alleen verhogen van het betrouwbaarheidsniveau vergroot de marge juist.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=18\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 18-19: voorraadcontrole MPU</li><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 1-4</li><li><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Tabellenbundel</a> · Tabel 13.4, rij 170, kolom 0,025</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
       ],
       "example": {
         "title": "Voorbeeld: een voorraad van 1.000 artikelen",
         "steps": [
-          "Gegeven: N = 1.000, n = 100, w̄ = € 80, s_w = € 20. 95% tweezijdig: df = 99; gebruik tabelrij 90 en t = 1,987.",
-          "Ŵ = 1.000 × 80 = € 80.000.",
-          "Eindigheidscorrectie = √(900 / 999) ≈ 0,9492.",
-          "s_MPU = 1.000 × (20 / 10) × 0,9492 ≈ € 1.898,32.",
-          "Reken door met onafgeronde tussenwaarden: E ≈ 1,987 × 1.898,31599 = € 3.771,95. Interval ≈ [€ 76.228,05; € 83.771,95]."
+          "Gegeven: N = 1.000, n = 100, w̄ = € 80, s_w = € 20. Voor een tweezijdig 95%-interval is df = 99. Tabellenbundel PDF 13: naast lagere rij 95, kolom 0,025; t = 1,985.",
+          "Ŵ = 1.000 × 80 = € 80.000. Het gemiddelde wordt naar alle 1.000 artikelen doorgerekend.",
+          "Eindigheidscorrectie = √(900/999) ≈ 0,9492. De 100 al gecontroleerde posten verkleinen de resterende steekproefonzekerheid.",
+          "s_MPU = 1.000 × (20/10) × √(900/999) ≈ € 1.898,32. Dit is de standaardfout van het totaal.",
+          "Reken met onafgeronde tussenwaarden: E = 1,985 × 1.898,31599 ≈ € 3.768,16. Interval ≈ [€ 76.231,84; € 83.768,16]."
+        ],
+        "context": "Wat is de geschatte waarde van 1.000 artikelen als de 100 gecontroleerde artikelen gemiddeld € 80 waard zijn? Met de gegeven spreiding berekenen we ook een tweezijdig 95%-interval.",
+        "stepsHtml": [
+          "Gegeven: N = 1.000, n = 100, w̄ = € 80, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = € 20. Voor een tweezijdig 95%-interval is df = 99. Tabellenbundel PDF 13: naast lagere rij 95, kolom 0,025; t = 1,985.",
+          "Ŵ = 1.000 × 80 = € 80.000. Het gemiddelde wordt naar alle 1.000 artikelen doorgerekend.",
+          "Eindigheidscorrectie = √(900/999) ≈ 0,9492. De 100 al gecontroleerde posten verkleinen de resterende steekproefonzekerheid.",
+          "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math> = 1.000 × (20/10) × √(900/999) ≈ € 1.898,32. Dit is de standaardfout van het totaal.",
+          "Reken met onafgeronde tussenwaarden: E = 1,985 × 1.898,31599 ≈ € 3.768,16. Interval ≈ [€ 76.231,84; € 83.768,16]."
         ]
       },
       "pitfalls": [
@@ -786,6 +1381,26 @@ window.SRA = {
           "source": "boek-basis",
           "page": 1,
           "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 7,
+          "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+        },
+        {
+          "source": "slides",
+          "page": 18,
+          "locator": "PDF 18-19: voorraadcontrole MPU"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 1-4"
+        },
+        {
+          "source": "tabellen",
+          "page": 13,
+          "locator": "Tabel 13.4, rij 170, kolom 0,025"
         }
       ],
       "questions": [
@@ -836,6 +1451,26 @@ window.SRA = {
               "source": "boek-basis",
               "page": 1,
               "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
             }
           ],
           "recognition": {
@@ -892,6 +1527,26 @@ window.SRA = {
               "source": "boek-basis",
               "page": 1,
               "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
             }
           ],
           "recognition": {
@@ -948,6 +1603,26 @@ window.SRA = {
               "source": "boek-basis",
               "page": 1,
               "locator": "Boek p. 92; oorspronkelijke PDF p. 110; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
             }
           ],
           "recognition": {
@@ -967,9 +1642,60 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "De directe totaalschatting met haar standaardfout",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik MPU wanneer je het populatietotaal rechtstreeks schat uit de gecontroleerde werkelijke waarden. Je hebt N, n, het steekproefgemiddelde en de spreiding van de werkelijke waarden nodig.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>N = populatieomvang; n = steekproefomvang; w̄ = gemiddelde werkelijke waarde; s_w = standaardafwijking; t = kritieke tabelwaarde. Het dakje op W betekent geschat. s_MPU is de standaardfout van het totale geschatte bedrag. Dat is niet dezelfde grootheid als s_w, de spreiding van individuele werkelijke waarden.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken w̄ en s_w uit de gecontroleerde werkelijke waarden.</li><li>Bereken het midden Ŵ_MPU = N × w̄.</li><li>Deel s_w door √n om de standaardfout van het gemiddelde te krijgen.</li><li>Vermenigvuldig met N en met √((N − n)/(N − 1)). Dit is s_MPU.</li><li>Kies de juiste t-waarde, bereken E = t × s_MPU en maak de twee intervalgrenzen.</li><li>Controleer dat de bedragen in het interval totalschattingen in euro zijn.</li></ol><h3>Voorbeeld: een voorraad van 1.000 artikelen</h3><ol><li>Gegeven: N = 1.000, n = 100, w̄ = € 80, s_w = € 20. 95% tweezijdig: df = 99; gebruik tabelrij 90 en t = 1,987.</li><li>Ŵ = 1.000 × 80 = € 80.000.</li><li>Eindigheidscorrectie = √(900 / 999) ≈ 0,9492.</li><li>s_MPU = 1.000 × (20 / 10) × 0,9492 ≈ € 1.898,32.</li><li>Reken door met onafgeronde tussenwaarden: E ≈ 1,987 × 1.898,31599 = € 3.771,95. Interval ≈ [€ 76.228,05; € 83.771,95].</li></ol><p class=\"note\"><strong>Let op:</strong> Een grotere steekproef herstelt geen selectieve steekproeftrekking. Vergeet N niet bij de standaardfout van het totaal en gebruik niet de boekwaardespreiding s_b.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik MPU wanneer je het populatietotaal rechtstreeks schat uit de gecontroleerde werkelijke waarden. Je hebt N, n, het steekproefgemiddelde en de spreiding van de werkelijke waarden nodig.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>N = populatieomvang; n = steekproefomvang; w̄ = gemiddelde werkelijke waarde; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = standaardafwijking; t = kritieke tabelwaarde. Het dakje op W betekent geschat. <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math> is de standaardfout van het totale geschatte bedrag. Dat is niet dezelfde grootheid als <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math>, de spreiding van individuele werkelijke waarden.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"finite-total\"><h3>De standaardfout verschilt van de spreiding per post</h3><p class=\"fv-provenance\">Uitwerking van het bestaande MPU-voorbeeld: N = 1.000, n = 100 en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = € 20.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Van post naar totaal</figcaption><table class=\"fv-table\"><caption>De vier verschillende grootheden</caption><thead><tr><th scope=\"col\">Stap</th><th scope=\"col\">Uitkomst</th></tr></thead><tbody><tr><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math></td><td>€ 20</td></tr><tr><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> / √100</td><td>€ 2 per gemiddeld bedrag</td></tr><tr><td>N × <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> / √100</td><td>€ 2.000</td></tr><tr><td>Met eindigheidscorrectie</td><td>€ 1.898,32</td></tr></tbody></table><p class=\"fv-work\">De eindigheidscorrectie is √(900/999) ≈ 0,9492.</p></figure><figure class=\"fv-panel\"><figcaption>Meer van de populatie gecontroleerd</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Eindigheidscorrectie; x-as: Steekproeffractie n/N; y-as: Correctiefactor\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,3</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,5</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">0,8</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">1,1</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">0,2</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">0,5</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">0,8</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">1,0</text><polyline points=\"58.00,31.35 61.45,32.29 64.90,33.22 68.35,34.17 71.80,35.12 75.25,36.07 78.70,37.04 82.15,38.01 85.60,38.98 89.05,39.96 92.50,40.95 95.95,41.95 99.40,42.96 102.85,43.97 106.30,44.99 109.75,46.01 113.20,47.05 116.65,48.09 120.10,49.14 123.55,50.20 127.00,51.27 130.45,52.35 133.90,53.43 137.35,54.53 140.80,55.63 144.25,56.75 147.70,57.88 151.15,59.01 154.60,60.16 158.05,61.32 161.50,62.49 164.95,63.67 168.40,64.86 171.85,66.07 175.30,67.28 178.75,68.52 182.20,69.76 185.65,71.02 189.10,72.30 192.55,73.59 196.00,74.89 199.45,76.21 202.90,77.55 206.35,78.91 209.80,80.29 213.25,81.68 216.70,83.09 220.15,84.53 223.60,85.99 227.05,87.47 230.50,88.97 233.95,90.50 237.40,92.06 240.85,93.64 244.30,95.26 247.75,96.90 251.20,98.58 254.65,100.30 258.10,102.05 261.55,103.84 265.00,105.68 268.45,107.56 271.90,109.49 275.35,111.48 278.80,113.52 282.25,115.63 285.70,117.82 289.15,120.08 292.60,122.43 296.05,124.88 299.50,127.45 302.95,130.14 306.40,132.99 309.85,136.03 313.30,139.29 316.75,142.84 320.20,146.76 323.65,151.21 327.10,156.50 330.55,163.38 334.00,180.00\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Steekproeffractie n/N</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Correctiefactor</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Factor</span></div><p class=\"fv-work\">Bij n = N is de factor nul. Binnen deze steekproefformule resteert dan geen steekproefonzekerheid over het totaal.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De factor werkt op de standaardfout, niet op het geschatte gemiddelde of de spreiding van losse posten. Andere controleonzekerheden worden er niet mee gemeten.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bereken w̄ en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> uit de gecontroleerde werkelijke waarden.</li><li>Bereken het midden <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>MPU</mtext></msub></mrow></math> = N × w̄.</li><li>Deel <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> door √n om de standaardfout van het gemiddelde te krijgen.</li><li>Vermenigvuldig met N en met √((N − n)/(N − 1)). Dit is <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math>.</li><li>Kies de juiste t-waarde, bereken E = t × <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math> en maak de twee intervalgrenzen.</li><li>Controleer dat de bedragen in het interval totalschattingen in euro zijn.</li></ol><h3>Voorbeeld: een voorraad van 1.000 artikelen</h3><ol><li>Gegeven: N = 1.000, n = 100, w̄ = € 80, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = € 20. 95% tweezijdig: df = 99; gebruik tabelrij 95 en t = 1,985.</li><li>Ŵ = 1.000 × 80 = € 80.000.</li><li>Eindigheidscorrectie = √(900 / 999) ≈ 0,9492.</li><li><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math> = 1.000 × (20 / 10) × 0,9492 ≈ € 1.898,32.</li><li>Reken door met onafgeronde tussenwaarden: E ≈ 1,985 × 1.898,31599 = € 3.768,16. Interval ≈ [€ 76.231,84; € 83.768,16].</li></ol><p class=\"note\"><strong>Let op:</strong> Een grotere steekproef herstelt geen selectieve steekproeftrekking. Vergeet N niet bij de standaardfout van het totaal en gebruik niet de boekwaardespreiding <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></math>.</p>"
+        },
+        {
+          "title": "Van samenvattingstabel naar een volledig voorraadinterval",
+          "html": "<p>De slides geven de onderstaande voorraadgegevens. De kwadratensom is in euro²; deze is dus niet de som van de waarden nogmaals in euro.</p><div class=\"table-wrap\"><table><caption>Voorraadcontrole uit slides PDF 18</caption><thead><tr><th scope=\"col\">Gegeven</th><th scope=\"col\">Waarde</th><th scope=\"col\">Functie in de berekening</th></tr></thead><tbody><tr><td>N</td><td>5.230</td><td>Van gemiddelde naar populatietotaal</td></tr><tr><td>n</td><td>180</td><td>Gemiddelde, spreiding, standaardfout en vrijheidsgraden</td></tr><tr><td>Σw</td><td>€ 398.000</td><td>Totaal van de gecontroleerde werkelijke waarden</td></tr><tr><td>Σw²</td><td>5.378.400.500 euro²</td><td>Berekening van de steekproefvariantie</td></tr><tr><td>Betrouwbaarheid</td><td>95%, tweezijdig</td><td>Kolom 0,025 van de t-tabel</td></tr></tbody></table></div><ol><li>w̄ = 398.000/180 = € 2.211,1111; Ŵ = 5.230 × w̄ = € 11.564.111,11.</li><li>s² = [5.378.400.500 − 398.000²/180]/179 = 25.130.604,90 euro². Neem de wortel: s<sub>w</sub> = € 5.013,0435.</li><li>s<sub>MPU</sub> = 5.230 × (s<sub>w</sub>/√180) × √(5.050/5.229) = € 1.920.451,20. Elke factor heeft een doel: gemiddelde, totaal en resterende populatie.</li><li>df = 179. Tabellenbundel PDF 13, rij 170, kolom 0,025 geeft t = 1,974.</li><li>E = 1,974 × s<sub>MPU</sub> = € 3.790.970,67. Interval: [€ 7.773.140,44; € 15.355.081,78].</li></ol><p class=\"note\">De slides rekenen met afgeronde s<sub>w</sub> = 5.013 en tonen een marge van € 3.790.938. Hier wordt met de gegeven sommen onafgerond doorgerekend: € 3.790.970,67. Dit verschil komt door tussenafronding. De marge is groot doordat de afzonderlijke voorraadwaarden sterk uiteenlopen.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Gebruik dezelfde gegevens. De accountant mag een totale intervalbreedte van € 2.000.000 accepteren. Voldoet deze controle? Noem twee inhoudelijke vervolgroutes en motiveer welke aanvullende informatie daarvoor nodig is.</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Nee: de toegestane marge E is € 1.000.000, terwijl de berekende marge ongeveer € 3.790.971 is. Route 1 is een grotere aselecte steekproef, te plannen met s²<sub>w</sub>. Route 2 is een passende hulpvariabeleschatter of stratificatie. Daarvoor onderzoek je het verband met boekwaarden, het foutpatroon of de groepsindeling. Het alleen verhogen van het betrouwbaarheidsniveau vergroot de marge juist.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=18\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 18-19: voorraadcontrole MPU</li><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 1-4</li><li><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Tabellenbundel</a> · Tabel 13.4, rij 170, kolom 0,025</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 18,
+              "locator": "PDF 18-19: voorraadcontrole MPU"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 1-4"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabel 13.4, rij 170, kolom 0,025"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
-      ]
+      ],
+      "samplingVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H8 · §8.2.1",
+        "college": "1; toepassing in 2",
+        "focus": "Herken wanneer werkelijke waarden en populatieomvang voldoende zijn. Werk van steekproeftabel naar totaalschatting, standaardfout en interval.",
+        "title": "H8 · §8.2.1 · Hoorcollege 1; toepassing in 2",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "finite-total",
+          "title": "De directe totaalschatting met haar standaardfout"
+        }
+      ],
+      "reading": {
+        "opening": "Je kent nu het verschil tussen een schatting en haar onzekerheid. De directe schatter gebruikt het gemiddelde van gecontroleerde werkelijke waarden om het totale bedrag te schatten. We volgen de route van steekproefgemiddelde naar totaalschatting en interval.",
+        "conclusion": "Bij MPU reken je het steekproefgemiddelde door naar de populatie en bepaal je de onzekerheid van dat totaal. Als daarnaast bruikbare boekwaarden bekend zijn, kunnen andere schatters die informatie benutten. De verschilschatter doet dat via fouten per post."
+      }
     },
     {
       "id": "verschil",
@@ -984,11 +1710,61 @@ window.SRA = {
       "sections": [
         {
           "title": "Wat is hier een fout?",
-          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Verschil per post</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Verschil per post\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>b</mi><mi>i</mi></msub><mo>−</mo><msub><mi>w</mi><mi>i</mi></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gemiddeld verschil</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddeld verschil\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>e</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>V</mtext></msub><mo>=</mo><mi>B</mi><mo>−</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>e</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>e = boekwaarde minus werkelijke waarde; B = bekend boekwaardetotaal; s_e = spreiding van de verschillen; s_V = standaardfout van het geschatte totaal.</p></details><p>Een artikel staat voor € 100 in de boeken, maar is € 90 waard. Dan is e = +€ 10: de boekwaarde is te hoog. Daarom trek je de geschatte fout van B af. Is de werkelijke waarde hoger, dan is e negatief en leidt aftrekken juist tot een hogere schatting.</p><p>De verschilschatter past bij redelijk constante verschillen, onafhankelijk van de grootte van de boekwaarde. Volgens de slides en de tentamenuitwerking moet de steekproef minstens 30 fouten bevatten. Dat zijn 30 afwijkende posten, niet alleen 30 onderzochte posten.</p>"
+          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Verschil per post</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Verschil per post\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>b</mi><mi>i</mi></msub><mo>−</mo><msub><mi>w</mi><mi>i</mi></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gemiddeld verschil</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddeld verschil\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>e</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>V</mtext></msub><mo>=</mo><mi>B</mi><mo>−</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>e</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>e = boekwaarde minus werkelijke waarde; B = bekend boekwaardetotaal; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = spreiding van de verschillen; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>V</mi></msub></mrow></math> = standaardfout van het geschatte totaal.</p></details><p>Een artikel staat voor € 100 in de boeken, maar is € 90 waard. Dan is e = +€ 10: de boekwaarde is te hoog. Daarom trek je de geschatte fout van B af. Is de werkelijke waarde hoger, dan is e negatief en leidt aftrekken juist tot een hogere schatting.</p><p>De verschilschatter past bij redelijk constante verschillen, onafhankelijk van de grootte van de boekwaarde. Volgens de slides en de tentamenuitwerking moet de steekproef minstens 30 fouten bevatten. Dat zijn 30 afwijkende posten, niet alleen 30 onderzochte posten.</p><div class=\"table-wrap\"><table><caption>Eigen patroonvoorbeeld: een vast foutbedrag</caption><thead><tr><th scope=\"col\">Boekwaarde b</th><th scope=\"col\">Werkelijke waarde w</th><th scope=\"col\">Verschil e = b − w</th></tr></thead><tbody><tr><td>€ 100</td><td>€ 90</td><td>€ 10</td></tr><tr><td>€ 200</td><td>€ 190</td><td>€ 10</td></tr><tr><td>€ 500</td><td>€ 490</td><td>€ 10</td></tr></tbody></table></div><p>Het bedrag is constant, het foutpercentage is dat niet: 10%, 5% en 2%. De verschilschatter verwijdert het gemeenschappelijke niveau van de boekwaarde en schat de resterende fout. Een quotiëntschatter zou hier ten onrechte een vast percentage als beste beschrijving kiezen. Drie regels tonen het patroon; ze zijn op zichzelf geen steekproef die aan de cursusvoorwaarde van dertig fouten voldoet.</p><p>Houd de tekenafspraak e = b − w vast. Een positieve e betekent overwaardering; een negatieve e onderwaardering. De voorbeelden met uitsluitend positieve fouten in het boek horen bij hun specifieke controlevraag. Verander bij gemengde verschillen de tekens niet zonder een expliciete opdracht of afbakening.</p><p><strong>Bronnuance bij H8, opgave 5:</strong> de kolom <em>Fout</em> gebruikt juist w − b. Daarom hoort bij boekwaarde € 513 en Fout −€ 48 een werkelijke waarde van € 465; in onze formuleconventie is e = +€ 48. Lees eerst een controleregel en vertaal daarna het teken. Hier is Σw = € 179.044 + € 1.606 = € 180.650. De opgave bevat 22 fouten in 148 posten; de officiële uitwerking gebruikt MPU. Een andere kolomtitel heft de cursusvoorwaarde van dertig fouten voor de verschilschatter niet op.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=20\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 20-22: constant verschil en minimaal 30 fouten</li><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formule 6: e = b − w</li><li><a href=\"bronnen/boek-h8a.pdf#page=8\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 201–210</a> · Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8</li><li><a href=\"bronnen/opgavenbundel.pdf#page=5\" target=\"_blank\" rel=\"noopener\">Opgavenbundel SRA NJ26</a> · H8, opgave 5: tegengestelde tekenrichting in kolom Fout</li><li><a href=\"bronnen/uitwerkingenbundel.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel SRA NJ26</a> · H8, opgave 5: werkelijke som en MPU-uitwerking</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 6: e = b − w"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 8,
+              "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         },
         {
           "title": "De spreiding van de verschillen",
           "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Variantie verschillen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Variantie verschillen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mi>e</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><msup><mrow><mo>(</mo><mo>∑</mo><mi>e</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi></mrow></mfrac></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>V</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>V</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mtext>V</mtext></msub></mrow></math></div></div></div><p>Posten zonder verschil tellen ook mee: hun e is nul. Gebruik dus n van de hele steekproef als noemer, niet alleen het aantal fouten. De methode kan nauwkeurig zijn als de fouten weinig variëren, ook als de werkelijke waarden zelf sterk verschillen.</p>"
+        },
+        {
+          "title": "De gegevenstabel lezen en de juiste waarde rapporteren",
+          "html": "<p>De cijfers uit tentamen maart 2025 vragen om twee vertalingen: van een gegeven gemiddelde boekwaarde naar een steekproeftotaal, en van een totale fout naar een werkelijke populatiewaarde. Schrijf die vertalingen op vóór de variantieformule.</p><div class=\"table-wrap\"><table><caption>Elektroconsum: gegevens voor de verschilschatter</caption><thead><tr><th scope=\"col\">Invoer</th><th scope=\"col\">Waarde</th><th scope=\"col\">Betekenis</th></tr></thead><tbody><tr><td>N / n</td><td>3.740 / 165</td><td>Populatie tegenover gecontroleerde steekproef</td></tr><tr><td>B</td><td>€ 1.980.000</td><td>Bekende boekwaarde van de gehele populatie</td></tr><tr><td>b̄</td><td>€ 636</td><td>Gemiddelde boekwaarde van de steekproef</td></tr><tr><td>Σw</td><td>€ 97.185</td><td>Som gecontroleerde werkelijke waarden</td></tr><tr><td>Σe²</td><td>395.000 euro²</td><td>Kwadratensom van de verschillen</td></tr><tr><td>Aantal afwijkende posten</td><td>43</td><td>Cursusvoorwaarde minstens 30 fouten is vervuld</td></tr></tbody></table></div><ol><li>Σb = 165 × 636 = € 104.940. Daardoor Σe = 104.940 − 97.185 = € 7.755 en ē = € 47.</li><li>De geschatte totale fout is Nē = 3.740 × 47 = € 175.780. De geschatte werkelijke waarde is B − Nē = € 1.804.220. Dit zijn twee verschillende antwoorden.</li><li>Gebruik alle 165 posten, ook de 122 posten met e = 0: s²<sub>e</sub> = [395.000 − 7.755²/165]/164 = 186,0671 euro².</li><li>Vermenigvuldig √186,0671/√165 met N en de eindigheidscorrectie. s<sub>V</sub> = € 3.883,5123; met t = 1,975 is E = € 7.669,9368.</li><li>Het interval voor W is [€ 1.796.550,06; € 1.811.889,94]. Afronden naar buiten op € 10.000 geeft [€ 1.790.000; € 1.820.000].</li></ol><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Gebruik dit interval om ook een interval voor de totale fout F = B − W te bepalen. Welke grens moet je van B aftrekken voor de ondergrens van F?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Bij F = B − W keert de volgorde om. De kleinste fout hoort bij de grootste W. Gebruik dus [B − bovengrens W; B − ondergrens W] = [€ 168.110,06; € 183.449,94], vóór eventuele gevraagde afronding. Een interval voor de totale fout mag je niet als interval voor de werkelijke waarde presenteren.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/tentamen-2025-03.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Tentamen en uitwerkingen 17 maart 2025</a> · Elektroconsum, vraag 1-3; uitwerking PDF 11</li><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 6-11</li><li><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Tabellenbundel</a> · Rij 160; kolom 0,025</li></ul></details>",
+          "refs": [
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
       ],
       "example": {
@@ -999,6 +1775,16 @@ window.SRA = {
           "Ŵ_V = 1.980.000 − 3.740 × 47 = € 1.804.220.",
           "s²_e = [395.000 − 7.755²/165] / 164 = 186,0670732; s_e = 13,6406405.",
           "s_V = 3.740 × 13,6406405 / √165 × √(3.575/3.739) = € 3.883,51229.",
+          "95% tweezijdig: df = 164; tabelrij 160; t = 1,975. E = € 7.669,94.",
+          "Onafgerond: [€ 1.796.550,06; € 1.811.889,94]. Naar buiten op € 10.000: [€ 1.790.000; € 1.820.000]."
+        ],
+        "context": "Hoe corrigeer je de boekwaarde in de Elektroconsum-casus voor de gevonden fouten? We bepalen het gemiddelde verschil, de totaalschatting en het 95%-interval, met de afronding uit de opgave.",
+        "stepsHtml": [
+          "N = 3.740; B = € 1.980.000; n = 165; b̄ = € 636; Σw = € 97.185; Σe² = 395.000. Er zijn 43 fouten, dus aan de cursusvoorwaarde is voldaan.",
+          "w̄ = 97.185 / 165 = 589; ē = 636 − 589 = 47; Σe = 165 × 47 = 7.755.",
+          "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mi>V</mi></msub></mrow></math> = 1.980.000 − 3.740 × 47 = € 1.804.220.",
+          "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup></mrow></math> = [395.000 − 7.755²/165] / 164 = 186,0670732; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = 13,6406405.",
+          "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>V</mi></msub></mrow></math> = 3.740 × 13,6406405 / √165 × √(3.575/3.739) = € 3.883,51229.",
           "95% tweezijdig: df = 164; tabelrij 160; t = 1,975. E = € 7.669,94.",
           "Onafgerond: [€ 1.796.550,06; € 1.811.889,94]. Naar buiten op € 10.000: [€ 1.790.000; € 1.820.000]."
         ]
@@ -1027,6 +1813,46 @@ window.SRA = {
           "source": "boek-h8a",
           "page": 7,
           "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+        },
+        {
+          "source": "slides",
+          "page": 20,
+          "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formule 6: e = b − w"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 8,
+          "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+        },
+        {
+          "source": "opgaven",
+          "page": 5,
+          "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 6,
+          "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+        },
+        {
+          "source": "exam2025",
+          "page": 1,
+          "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 6-11"
+        },
+        {
+          "source": "tabellen",
+          "page": 13,
+          "locator": "Rij 160; kolom 0,025"
         }
       ],
       "questions": [
@@ -1072,6 +1898,46 @@ window.SRA = {
               "source": "boek-h8a",
               "page": 7,
               "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 6: e = b − w"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 8,
+              "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+            },
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
             }
           ],
           "recognition": {
@@ -1123,6 +1989,46 @@ window.SRA = {
               "source": "boek-h8a",
               "page": 7,
               "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 6: e = b − w"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 8,
+              "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+            },
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
             }
           ],
           "recognition": {
@@ -1174,6 +2080,46 @@ window.SRA = {
               "source": "boek-h8a",
               "page": 7,
               "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 20,
+              "locator": "PDF 20-22: constant verschil en minimaal 30 fouten"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 6: e = b − w"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 8,
+              "locator": "Boek p. 208; oorspronkelijke PDF p. 226; uitsnede p. 8"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 5: tegengestelde tekenrichting in kolom Fout"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
+            },
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
             }
           ],
           "recognition": {
@@ -1193,9 +2139,60 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Boekwaarde corrigeren met het gemiddelde controleverschil",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de verschilschatter als de absolute controleverschillen redelijk constant zijn en niet sterk afhangen van de boekwaarde. Controleer ook de toepassingsvoorwaarde uit de cursus; het tentamenvoorbeeld noemt minstens dertig gevonden fouten.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Verschil per post</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Verschil per post\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>b</mi><mi>i</mi></msub><mo>−</mo><msub><mi>w</mi><mi>i</mi></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gemiddeld verschil</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddeld verschil\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>e</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>V</mtext></msub><mo>=</mo><mi>B</mi><mo>−</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>e</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Variantie verschillen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Variantie verschillen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mi>e</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><msup><mrow><mo>(</mo><mo>∑</mo><mi>e</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi></mrow></mfrac></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>V</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>V</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mtext>V</mtext></msub></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>e = boekwaarde minus werkelijke waarde; B = bekend boekwaardetotaal; s_e = spreiding van de verschillen; s_V = standaardfout van het geschatte totaal. n en N zijn de steekproef- en populatieomvang. Σe² is de som van de afzonderlijk gekwadrateerde verschillen; t is de kritieke tabelwaarde.</p><h3>Zo reken je stap voor stap</h3><ol><li>Houd één tekenafspraak aan: e = b − w. Een positieve e betekent dat de boekwaarde te hoog is.</li><li>Bereken ē en vermenigvuldig met N. Trek dit geschatte totale verschil af van het bekende populatieboekwaardetotaal B.</li><li>Bereken de steekproefvariantie van de verschillen en neem de wortel voor s_e.</li><li>Vul s_e in de standaardfout van de totaalschatting in, met √n en de eindigheidscorrectie.</li><li>Maak het interval rond Ŵ_V met de juiste t-waarde. Rond de eindgrenzen naar buiten af als de opgave dit vraagt.</li></ol><h3>Tentamen 17 maart 2025: Elektroconsum, vraag 3</h3><ol><li>N = 3.740; B = € 1.980.000; n = 165; b̄ = € 636; Σw = € 97.185; Σe² = 395.000. Er zijn 43 fouten, dus aan de cursusvoorwaarde is voldaan.</li><li>w̄ = 97.185 / 165 = 589; ē = 636 − 589 = 47; Σe = 165 × 47 = 7.755.</li><li>Ŵ_V = 1.980.000 − 3.740 × 47 = € 1.804.220.</li><li>s²_e = [395.000 − 7.755²/165] / 164 = 186,0670732; s_e = 13,6406405.</li><li>s_V = 3.740 × 13,6406405 / √165 × √(3.575/3.739) = € 3.883,51229.</li><li>95% tweezijdig: df = 164; tabelrij 160; t = 1,975. E = € 7.669,94.</li><li>Onafgerond: [€ 1.796.550,06; € 1.811.889,94]. Naar buiten op € 10.000: [€ 1.790.000; € 1.820.000].</li></ol><p class=\"note\"><strong>Let op:</strong> Gebruik in deze schatter de spreiding van de verschillen. Een positieve fout moet van B worden afgetrokken; een verkeerd gekozen teken kan een te hoge boekwaarde juist nog hoger maken.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de verschilschatter als de absolute controleverschillen redelijk constant zijn en niet sterk afhangen van de boekwaarde. Controleer ook de toepassingsvoorwaarde uit de cursus; het tentamenvoorbeeld noemt minstens dertig gevonden fouten.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Verschil per post</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Verschil per post\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>b</mi><mi>i</mi></msub><mo>−</mo><msub><mi>w</mi><mi>i</mi></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gemiddeld verschil</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddeld verschil\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>e</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>V</mtext></msub><mo>=</mo><mi>B</mi><mo>−</mo><mi>N</mi><mo>×</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>e</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Variantie verschillen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Variantie verschillen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mi>e</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><msup><mrow><mo>(</mo><mo>∑</mo><mi>e</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi></mrow></mfrac></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>V</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>V</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mtext>V</mtext></msub></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>e = boekwaarde minus werkelijke waarde; B = bekend boekwaardetotaal; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = spreiding van de verschillen; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>V</mi></msub></mrow></math> = standaardfout van het geschatte totaal. n en N zijn de steekproef- en populatieomvang. Σe² is de som van de afzonderlijk gekwadrateerde verschillen; t is de kritieke tabelwaarde.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"absolute-errors\"><h3>Een vaste absolute afwijking</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Boekwaarde tegenover werkelijke waarde</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Vaste euro-afwijking; x-as: Boekwaarde b (€); y-as: Werkelijke waarde w (€)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">22,5</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">45,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">67,5</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">90,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">22,5</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">45,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">67,5</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">90,0</text><circle cx=\"119.33\" cy=\"148.80\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"180.67\" cy=\"114.13\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"242.00\" cy=\"79.47\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"303.33\" cy=\"44.80\" r=\"4\" fill=\"var(--fv-green)\"/><polyline points=\"58.00,180.00 334.00,24.00\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Boekwaarde b (€)</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Werkelijke waarde w (€)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>w = b − 2</span><span><i style=\"background:var(--fv-purple)\"></i>w = b</span></div><p class=\"fv-work\">Iedere werkelijke waarde ligt € 2 onder de boekwaarde.</p></figure><figure class=\"fv-panel\"><figcaption>De verschillen tegenover de boekwaarde</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Absolute verschillen; x-as: Boekwaarde b (€); y-as: Verschil e (€)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">1,0</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">2,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">3,0</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">4,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">22,5</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">45,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">67,5</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">90,0</text><path d=\"M58 102.00H334\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"330\" y=\"97.00\" text-anchor=\"end\" fill=\"var(--fv-orange)\">e = 2</text><circle cx=\"119.33\" cy=\"102.00\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"180.67\" cy=\"102.00\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"242.00\" cy=\"102.00\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"303.33\" cy=\"102.00\" r=\"4\" fill=\"var(--fv-orange)\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Boekwaarde b (€)</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Verschil e (€)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-orange)\"></i>e = b − w</span></div><p class=\"fv-work\">Voor N = 1.000 en B = € 50.000: Nē = € 2.000; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mi>V</mi></msub></mrow></math> = € 48.000.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De verhouding verandert per post, maar de euro-afwijking blijft gelijk. Dit kleine beeld verduidelijkt het patroon; vier posten voldoen niet aan de cursusvoorwaarde voor toepassing van de schatter.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Houd één tekenafspraak aan: e = b − w. Een positieve e betekent dat de boekwaarde te hoog is.</li><li>Bereken ē en vermenigvuldig met N. Trek dit geschatte totale verschil af van het bekende populatieboekwaardetotaal B.</li><li>Bereken de steekproefvariantie van de verschillen en neem de wortel voor <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math>.</li><li>Vul <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> in de standaardfout van de totaalschatting in, met √n en de eindigheidscorrectie.</li><li>Maak het interval rond <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mi>V</mi></msub></mrow></math> met de juiste t-waarde. Rond de eindgrenzen naar buiten af als de opgave dit vraagt.</li></ol><h3>Tentamen 17 maart 2025: Elektroconsum, vraag 3</h3><ol><li>N = 3.740; B = € 1.980.000; n = 165; b̄ = € 636; Σw = € 97.185; Σe² = 395.000. Er zijn 43 fouten, dus aan de cursusvoorwaarde is voldaan.</li><li>w̄ = 97.185 / 165 = 589; ē = 636 − 589 = 47; Σe = 165 × 47 = 7.755.</li><li><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mi>V</mi></msub></mrow></math> = 1.980.000 − 3.740 × 47 = € 1.804.220.</li><li><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup></mrow></math> = [395.000 − 7.755²/165] / 164 = 186,0670732; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = 13,6406405.</li><li><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>V</mi></msub></mrow></math> = 3.740 × 13,6406405 / √165 × √(3.575/3.739) = € 3.883,51229.</li><li>95% tweezijdig: df = 164; tabelrij 160; t = 1,975. E = € 7.669,94.</li><li>Onafgerond: [€ 1.796.550,06; € 1.811.889,94]. Naar buiten op € 10.000: [€ 1.790.000; € 1.820.000].</li></ol><p class=\"note\"><strong>Let op:</strong> Gebruik in deze schatter de spreiding van de verschillen. Een positieve fout moet van B worden afgetrokken; een verkeerd gekozen teken kan een te hoge boekwaarde juist nog hoger maken.</p>"
+        },
+        {
+          "title": "De gegevenstabel lezen en de juiste waarde rapporteren",
+          "html": "<p>De cijfers uit tentamen maart 2025 vragen om twee vertalingen: van een gegeven gemiddelde boekwaarde naar een steekproeftotaal, en van een totale fout naar een werkelijke populatiewaarde. Schrijf die vertalingen op vóór de variantieformule.</p><div class=\"table-wrap\"><table><caption>Elektroconsum: gegevens voor de verschilschatter</caption><thead><tr><th scope=\"col\">Invoer</th><th scope=\"col\">Waarde</th><th scope=\"col\">Betekenis</th></tr></thead><tbody><tr><td>N / n</td><td>3.740 / 165</td><td>Populatie tegenover gecontroleerde steekproef</td></tr><tr><td>B</td><td>€ 1.980.000</td><td>Bekende boekwaarde van de gehele populatie</td></tr><tr><td>b̄</td><td>€ 636</td><td>Gemiddelde boekwaarde van de steekproef</td></tr><tr><td>Σw</td><td>€ 97.185</td><td>Som gecontroleerde werkelijke waarden</td></tr><tr><td>Σe²</td><td>395.000 euro²</td><td>Kwadratensom van de verschillen</td></tr><tr><td>Aantal afwijkende posten</td><td>43</td><td>Cursusvoorwaarde minstens 30 fouten is vervuld</td></tr></tbody></table></div><ol><li>Σb = 165 × 636 = € 104.940. Daardoor Σe = 104.940 − 97.185 = € 7.755 en ē = € 47.</li><li>De geschatte totale fout is Nē = 3.740 × 47 = € 175.780. De geschatte werkelijke waarde is B − Nē = € 1.804.220. Dit zijn twee verschillende antwoorden.</li><li>Gebruik alle 165 posten, ook de 122 posten met e = 0: s²<sub>e</sub> = [395.000 − 7.755²/165]/164 = 186,0671 euro².</li><li>Vermenigvuldig √186,0671/√165 met N en de eindigheidscorrectie. s<sub>V</sub> = € 3.883,5123; met t = 1,975 is E = € 7.669,9368.</li><li>Het interval voor W is [€ 1.796.550,06; € 1.811.889,94]. Afronden naar buiten op € 10.000 geeft [€ 1.790.000; € 1.820.000].</li></ol><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Gebruik dit interval om ook een interval voor de totale fout F = B − W te bepalen. Welke grens moet je van B aftrekken voor de ondergrens van F?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Bij F = B − W keert de volgorde om. De kleinste fout hoort bij de grootste W. Gebruik dus [B − bovengrens W; B − ondergrens W] = [€ 168.110,06; € 183.449,94], vóór eventuele gevraagde afronding. Een interval voor de totale fout mag je niet als interval voor de werkelijke waarde presenteren.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/tentamen-2025-03.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Tentamen en uitwerkingen 17 maart 2025</a> · Elektroconsum, vraag 1-3; uitwerking PDF 11</li><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 6-11</li><li><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Tabellenbundel</a> · Rij 160; kolom 0,025</li></ul></details>",
+          "refs": [
+            {
+              "source": "exam2025",
+              "page": 1,
+              "locator": "Elektroconsum, vraag 1-3; uitwerking PDF 11"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 6-11"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 160; kolom 0,025"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
-      ]
+      ],
+      "samplingVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H8 · §8.2.2",
+        "college": "1",
+        "focus": "Kies de verschilschatter op basis van het foutpatroon, bewaak het teken van de fout en toets de toepassingsvoorwaarde voordat je een interval berekent.",
+        "title": "H8 · §8.2.2 · Hoorcollege 1",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "absolute-errors",
+          "title": "Boekwaarde corrigeren met het gemiddelde controleverschil"
+        }
+      ],
+      "reading": {
+        "opening": "Als de totale boekwaarde bekend is, hoef je niet altijd het werkelijke totaal rechtstreeks op te bouwen. Je kunt ook de totale boekwaarde corrigeren voor het geschatte verschil. Eerst moet duidelijk zijn hoe je een fout definieert en of het foutpatroon bij deze methode past.",
+        "conclusion": "De verschilschatter corrigeert een bekend boektotaal met het geschatte totale verschil. Het teken van de fout en de spreiding van verschillen bepalen de berekening. Wanneer vooral een vast percentage herkenbaar is, komt de quotiëntschatter in beeld."
+      }
     },
     {
       "id": "quotient",
@@ -1210,11 +2207,123 @@ window.SRA = {
       "sections": [
         {
           "title": "Een vast percentage herkennen",
-          "html": "<p>Een artikel van € 100 blijkt € 90 waard, een artikel van € 200 blijkt € 180 waard. Het verschil is niet hetzelfde bedrag, maar de werkelijke waarde is telkens 90% van de boekwaarde. De <strong>goedratio</strong> q is de verhouding werkelijke waarde / boekwaarde.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Goedratio</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Goedratio\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>q</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mo>∑</mo><mi>b</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>Q</mtext></msub><mo>=</mo><mi>q</mi><mo>×</mo><mi>B</mi></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>q = goedratio; R_bw = correlatie tussen b en w; s_b en s_w = standaardafwijkingen; s_Q = standaardfout van het geschatte totaal.</p></details><p>Bereken de verhouding van de sommen. Neem niet zomaar het gemiddelde van alle losse verhoudingen wᵢ/bᵢ. De slides noemen ook hier als voorwaarde minstens 30 fouten in de steekproef.</p>"
+          "html": "<p>Een artikel van € 100 blijkt € 90 waard, een artikel van € 200 blijkt € 180 waard. Het verschil is niet hetzelfde bedrag, maar de werkelijke waarde is telkens 90% van de boekwaarde. De <strong>goedratio</strong> q is de verhouding werkelijke waarde / boekwaarde.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Goedratio</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Goedratio\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>q</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mo>∑</mo><mi>b</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>Q</mtext></msub><mo>=</mo><mi>q</mi><mo>×</mo><mi>B</mi></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>q = goedratio; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>R</mi><mtext>bw</mtext></msub></mrow></math> = correlatie tussen b en w; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = standaardafwijkingen; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>Q</mi></msub></mrow></math> = standaardfout van het geschatte totaal.</p></details><p>Bereken de verhouding van de sommen. Neem niet zomaar het gemiddelde van alle losse verhoudingen wᵢ/bᵢ. De slides noemen ook hier als voorwaarde minstens 30 fouten in de steekproef.</p><div class=\"table-wrap\"><table><caption>Eigen patroonvoorbeeld: een vaste goedratio</caption><thead><tr><th scope=\"col\">Boekwaarde b</th><th scope=\"col\">Werkelijke waarde w</th><th scope=\"col\">Verschil e</th><th scope=\"col\">w/b</th></tr></thead><tbody><tr><td>€ 100</td><td>€ 90</td><td>€ 10</td><td>0,90</td></tr><tr><td>€ 200</td><td>€ 180</td><td>€ 20</td><td>0,90</td></tr><tr><td>€ 500</td><td>€ 450</td><td>€ 50</td><td>0,90</td></tr></tbody></table></div><p>Bij grotere boekwaarden groeit het foutbedrag mee. Een vast bedrag aftrekken past dan minder goed dan vermenigvuldigen met een verhouding. De goedratio gebruikt Σw/Σb en geeft daardoor grote boekwaarden het passende gewicht in de totale verhouding. Bijvoorbeeld b = 100 en 900 met w = 50 en 900 geven q = 950/1.000 = 0,95; het ongewogen gemiddelde van 0,50 en 1,00 zou 0,75 zijn en beantwoordt een andere vraag.</p><p><strong>Een eerdere meting als hulpvariabele:</strong> in H8, opgave 6 is b het gedeclareerde bedrag van vorig jaar en w dat van dit jaar; B = € 125.000 is het bekende totaal van vorig jaar voor alle werknemers. In opgave 7 zijn b en w de winkelomzetten vóór en tijdens de campagne; B = € 1.282.000. Dezelfde schatters gebruiken nu een verandering in plaats van een administratieve fout. Een ratio boven één kan dus groei betekenen. Koppel steeds dezelfde werknemer of winkel en gebruik het bekende totaal van de gehele populatie.</p><p>Maak ook de beperking zichtbaar: de eerste honderd binnengekomen declaraties in opgave 6 vormen niet vanzelf een aselecte steekproef. Een rekenuitkomst herstelt die selectie niet. De vergelijking vóór en tijdens de campagne in opgave 7 bewijst op zichzelf geen oorzakelijk campagne-effect.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=23\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 23-26: quotiëntschatter</li><li><a href=\"bronnen/boek-h8b.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1</li><li><a href=\"bronnen/opgavenbundel.pdf#page=5\" target=\"_blank\" rel=\"noopener\">Opgavenbundel SRA NJ26</a> · H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar</li><li><a href=\"bronnen/opgavenbundel.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Opgavenbundel SRA NJ26</a> · H8, opgave 7: omzet voor en tijdens de campagne</li><li><a href=\"bronnen/uitwerkingenbundel.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel SRA NJ26</a> · H8, opgave 6, PDF 6-8: betekenis b en w</li><li><a href=\"bronnen/uitwerkingenbundel.pdf#page=8\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel SRA NJ26</a> · H8, opgave 7, PDF 8-9: betekenis b en w</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "PDF 23-26: quotiëntschatter"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 1,
+              "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+            },
+            {
+              "source": "opgaven",
+              "page": 6,
+              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 8,
+              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         },
         {
           "title": "Spreiding die na de verhouding overblijft",
-          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Resterende spreiding</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Resterende spreiding\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>q</mtext></msub><mo>=</mo><msqrt><msup><msub><mi>s</mi><mi>w</mi></msub><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mi>q</mi><msub><mi>R</mi><mi>bw</mi></msub><msub><mi>s</mi><mi>b</mi></msub><msub><mi>s</mi><mi>w</mi></msub></mrow><mo>+</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><msup><msub><mi>s</mi><mi>b</mi></msub><mn>2</mn></msup></mrow></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>Q</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mtext>q</mtext></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div></div><p>R<sub>bw</sub> is de correlatie tussen boekwaarde en werkelijke waarde. Het formuleblad noemt s<sub>q</sub> de standaardafwijking van q, maar deze tussenmaat wordt volgens formule 13 in dezelfde geldeenheid als b en w berekend. Gebruik daarna formule 17 voor de standaardfout van het geschatte totaal.</p><p>Heb je fouttotalen, dan biedt formule 14 een tweede route: s<sub>q</sub> = √([Σe² − 2(1−q)Σbe + (1−q)²Σb²]/(n−1)). Kies de route die past bij de verstrekte gegevens. Het interval is weer de puntschatting ± t × standaardfout.</p>"
+          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Resterende spreiding</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Resterende spreiding\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>q</mtext></msub><mo>=</mo><msqrt><msup><msub><mi>s</mi><mi>w</mi></msub><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mi>q</mi><msub><mi>R</mi><mi>bw</mi></msub><msub><mi>s</mi><mi>b</mi></msub><msub><mi>s</mi><mi>w</mi></msub></mrow><mo>+</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><msup><msub><mi>s</mi><mi>b</mi></msub><mn>2</mn></msup></mrow></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>Q</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mtext>q</mtext></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div></div><p>R<sub>bw</sub> is de correlatie tussen boekwaarde en werkelijke waarde. Het formuleblad noemt s<sub>q</sub> de standaardafwijking van q, maar deze tussenmaat wordt volgens formule 13 in dezelfde geldeenheid als b en w berekend. Gebruik daarna formule 17 voor de standaardfout van het geschatte totaal.</p><p>Heb je fouttotalen, dan biedt formule 14 een tweede route: s<sub>q</sub> = √([Σe² − 2(1−q)Σbe + (1−q)²Σb²]/(n−1)). Kies de route die past bij de verstrekte gegevens. Het interval is weer de puntschatting ± t × standaardfout.</p><p>De resterende afwijking per post is wᵢ − qbᵢ. Bij een perfecte verhouding verdwijnt die afwijking. Formule 13 berekent de spreiding van zulke resten uit de standaardafwijkingen en correlatie. Formule 14 herschrijft dezelfde rest met eᵢ = bᵢ − wᵢ en de sommen Σe², Σbe en Σb². Die routes passen bij verschillende manieren waarop de opgave de gegevens aanlevert; je hoeft niet ontbrekende individuele posten te reconstrueren.</p><p>De term −2qR<sub>bw</sub>s<sub>b</sub>s<sub>w</sub> corrigeert voor de samenhang tussen boekwaarde en werkelijke waarde. De twee variaties onafhankelijk optellen zou de resterende onzekerheid verkeerd berekenen. q is dimensieloos, maar s<sub>q</sub> staat hier in euro en is geen standaardfout van een percentage.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 12-17; twee routes voor <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math></li><li><a href=\"bronnen/boek-h8b.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2</li></ul></details>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17; twee routes voor s_q"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "Een volledige casus: van goedratio tot interval",
+          "html": "<p><strong>Eigen oefencasus op basis van de cursusformules.</strong> Een voorraad bevat 2.500 posten met een totale boekwaarde van € 500.000. In een aselecte steekproef van 100 posten zijn 40 afwijkingen gevonden; het foutpatroon is ongeveer proportioneel met de boekwaarde. Bereken een tweezijdig 95%-interval.</p><div class=\"table-wrap\"><table><caption>Gegevens voor een volledige quotiëntschatting</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>Σb / Σw</td><td>€ 20.000 / € 19.000</td></tr><tr><td>s<sub>b</sub> / s<sub>w</sub></td><td>€ 40 / € 38</td></tr><tr><td>R<sub>bw</sub></td><td>0,98</td></tr><tr><td>N / n / B</td><td>2.500 / 100 / € 500.000</td></tr></tbody></table></div><ol><li>q = 19.000/20.000 = 0,95; Ŵ<sub>Q</sub> = 0,95 × 500.000 = € 475.000.</li><li>s²<sub>q</sub> = 38² − 2 × 0,95 × 0,98 × 40 × 38 + 0,95² × 40² = 57,76 euro²; s<sub>q</sub> = € 7,60.</li><li>s<sub>Q</sub> = 2.500 × (7,60/√100) × √(2.400/2.499) = € 1.861,98.</li><li>df = 99: tabellenbundel PDF 13, rij 95, kolom 0,025 geeft t = 1,985.</li><li>E = € 3.696,04; interval [€ 471.303,96; € 478.696,04].</li></ol><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>De accountant wil daarnaast de geschatte totale overwaardering rapporteren. Bereken dat bedrag. Leg uit waarom € 7,60 niet de marge van deze schatting is.</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>De geschatte overwaardering is B − Ŵ = € 25.000, ook te berekenen als (1 − q)B = 0,05 × € 500.000. € 7,60 is de resterende spreiding op het niveau van een post. Die moet eerst naar de standaardfout van het totale bedrag worden omgerekend, en daarna met de kritieke waarde worden vermenigvuldigd.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Eigen oefening volgens formules 12-17</li><li><a href=\"bronnen/slides.pdf#page=23\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · Methode en voorwaarden: PDF 23-26</li><li><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Tabellenbundel</a> · Rij 95; kolom 0,025</li></ul></details>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "De tweede rekenroute: fouttotalen en productsommen",
+          "html": "<p>Boektabel 8.1 geeft sommen waarmee je formule 14 kunt invullen zonder eerst s<sub>b</sub>, s<sub>w</sub> en R afzonderlijk te berekenen. Dit is nuttig wanneer een tentamencasus juist zulke kolommen aanlevert.</p><div class=\"table-wrap\"><table><caption>Boektabel 8.1, met de populatiegegevens van de voorraadcasus</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>N / n / B</td><td>3.500 / 400 / € 7.360.817</td></tr><tr><td>Σw / Σb</td><td>€ 803.403 / € 830.066</td></tr><tr><td>Σe²</td><td>34.730.934 euro²</td></tr><tr><td>Σbe</td><td>53.988.529 euro²</td></tr><tr><td>Σb²</td><td>1.871.695.609 euro²</td></tr></tbody></table></div><ol><li>q = 803.403/830.066 = 0,96787846.</li><li>s²<sub>q</sub> = [34.730.934 − 2(1 − q) × 53.988.529 + (1 − q)² × 1.871.695.609]/399. Neem de wortel: s<sub>q</sub> = € 288,4308.</li><li>Ŵ<sub>Q</sub> = qB = € 7.124.376,21; s<sub>Q</sub> = € 47.510,39.</li><li>De actuele cursusregel geeft bij df = 399 de onderste t-rij: t = 1,960 bij 95% tweezijdig. Daarmee wordt het interval [€ 7.031.255,84; € 7.217.496,58].</li></ol><p class=\"note\">Dit is een rekenillustratie uit het boek. Het boek meldt voor deze steekproef 28 fouten en rekent ondanks die uitzondering verder. Op het tentamen toets je de expliciete cursusvoorwaarde van minstens 30 fouten; deze boekuitzondering heft die niet op. Ook gebruikt het boek afgeronde invoer en t = 1,966. De uitkomst hierboven gebruikt de gepubliceerde sommen en de huidige tabelregel. Daarom wijkt zij enigszins af van het afgedrukte boekinterval.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8a.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 201–210</a> · Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9</li><li><a href=\"bronnen/boek-h8b.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3</li><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formule 14: resterende spreiding uit fouttotalen</li><li><a href=\"bronnen/onderwijsprogramma.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Onderwijsprogramma SRA NJ26</a> · Huidige cursusregel voor df &gt; 200</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "Boekverdieping: wanneer verbetert de quotiëntschatter MPU?",
+          "html": "<p>De <strong>variatiecoëfficiënt</strong> vergelijkt spreiding met het gemiddelde: VC<sub>b</sub> = s<sub>b</sub>/b̄ en VC<sub>w</sub> = s<sub>w</sub>/w̄. Het is relatieve spreiding en heeft geen geldeenheid. Bij positieve gemiddelden geeft het boek de volgende voorwaarde voor een kleinere berekende onzekerheid van quotiënt dan van MPU:</p><div class=\"formula\">R<sub>bw</sub> > ½ × VC<sub>b</sub>/VC<sub>w</sub></div><p>Als beide variatiecoëfficiënten ongeveer gelijk zijn, vereenvoudigt dit tot R<sub>bw</sub> > 0,5. In de eigen quotiëntcasus hierboven is VC<sub>b</sub> = 40/200 = 0,20 en VC<sub>w</sub> = 38/190 = 0,20. R = 0,98 ligt boven 0,5. Het verband met boekwaarde laat dus minder restspreiding over dan MPU. Deze vergelijking vervangt de overige voorwaarden voor een bruikbaar interval niet.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8b.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2</li><li><a href=\"bronnen/boek-h8b.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
       ],
       "example": {
@@ -1224,6 +2333,13 @@ window.SRA = {
           "Bij B = € 500.000 is Ŵ_Q = 0,95 × 500.000 = € 475.000.",
           "Stel s_w = 38, s_b = 40 en R_bw = 0,98. Dan s_q² = 38² − 2 × 0,95 × 0,98 × 40 × 38 + 0,95² × 40² = 57,76.",
           "Dus s_q = 7,60. Vul deze spreiding samen met N en n in formule 17 in om de totale standaardfout te krijgen."
+        ],
+        "context": "Hoe schat je het werkelijke totaal wanneer de gecontroleerde waarden samen 95% van de boekwaarden zijn? Het voorbeeld berekent de totaalschatting en de resterende spreiding; voor een volledig interval zijn daarnaast N, n en de passende kritieke waarde nodig.",
+        "stepsHtml": [
+          "Σw = € 19.000 en Σb = € 20.000: q = 0,95.",
+          "Bij B = € 500.000 is <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mi>Q</mi></msub></mrow></math> = 0,95 × 500.000 = € 475.000.",
+          "Stel <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = 38, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></math> = 40 en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>R</mi><mtext>bw</mtext></msub></mrow></math> = 0,98. Dan <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>q</mi></msub><mn>2</mn></msup></mrow></math> = 38² − 2 × 0,95 × 0,98 × 40 × 38 + 0,95² × 40² = 57,76.",
+          "Dus <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> = 7,60. Vul deze spreiding samen met N en n in formule 17 in om de totale standaardfout te krijgen."
         ]
       },
       "pitfalls": [
@@ -1245,6 +2361,76 @@ window.SRA = {
           "source": "boek-h8b",
           "page": 1,
           "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+        },
+        {
+          "source": "slides",
+          "page": 23,
+          "locator": "PDF 23-26: quotiëntschatter"
+        },
+        {
+          "source": "opgaven",
+          "page": 5,
+          "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+        },
+        {
+          "source": "opgaven",
+          "page": 6,
+          "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 6,
+          "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 8,
+          "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 12-17; twee routes voor s_q"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 2,
+          "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Eigen oefening volgens formules 12-17"
+        },
+        {
+          "source": "slides",
+          "page": 23,
+          "locator": "Methode en voorwaarden: PDF 23-26"
+        },
+        {
+          "source": "tabellen",
+          "page": 13,
+          "locator": "Rij 95; kolom 0,025"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 9,
+          "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 3,
+          "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formule 14: resterende spreiding uit fouttotalen"
+        },
+        {
+          "source": "programma",
+          "page": 4,
+          "locator": "Huidige cursusregel voor df > 200"
         }
       ],
       "questions": [
@@ -1285,6 +2471,76 @@ window.SRA = {
               "source": "boek-h8b",
               "page": 1,
               "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "PDF 23-26: quotiëntschatter"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+            },
+            {
+              "source": "opgaven",
+              "page": 6,
+              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 8,
+              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17; twee routes voor s_q"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
             }
           ],
           "recognition": {
@@ -1331,6 +2587,76 @@ window.SRA = {
               "source": "boek-h8b",
               "page": 1,
               "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "PDF 23-26: quotiëntschatter"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+            },
+            {
+              "source": "opgaven",
+              "page": 6,
+              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 8,
+              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17; twee routes voor s_q"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
             }
           ],
           "recognition": {
@@ -1377,6 +2703,76 @@ window.SRA = {
               "source": "boek-h8b",
               "page": 1,
               "locator": "Boek p. 211; oorspronkelijke PDF p. 229; uitsnede p. 1"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "PDF 23-26: quotiëntschatter"
+            },
+            {
+              "source": "opgaven",
+              "page": 5,
+              "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
+            },
+            {
+              "source": "opgaven",
+              "page": 6,
+              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 6,
+              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 8,
+              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 12-17; twee routes voor s_q"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 2,
+              "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
             }
           ],
           "recognition": {
@@ -1396,9 +2792,87 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Een redelijk vaste verhouding gebruiken",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de quotiëntschatter wanneer werkelijke waarde en boekwaarde ongeveer evenredig samenhangen: bij grotere boekwaarden zijn de afwijkingen vooral procentueel vergelijkbaar. Je gebruikt de verhouding van de totale gecontroleerde waarden.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Goedratio</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Goedratio\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>q</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mo>∑</mo><mi>b</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>Q</mtext></msub><mo>=</mo><mi>q</mi><mo>×</mo><mi>B</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Resterende spreiding</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Resterende spreiding\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>q</mtext></msub><mo>=</mo><msqrt><msup><msub><mi>s</mi><mi>w</mi></msub><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mi>q</mi><msub><mi>R</mi><mi>bw</mi></msub><msub><mi>s</mi><mi>b</mi></msub><msub><mi>s</mi><mi>w</mi></msub></mrow><mo>+</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><msup><msub><mi>s</mi><mi>b</mi></msub><mn>2</mn></msup></mrow></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>Q</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mtext>q</mtext></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>q = goedratio; R_bw = correlatie tussen b en w; s_b en s_w = standaardafwijkingen; s_Q = standaardfout van het geschatte totaal. B is het boekwaardetotaal van de hele populatie. s_q is de resterende spreiding na de verhoudingcorrectie; n en N horen daarna in de standaardfout van het totaal.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken q = Σw / Σb. Controleer dat de gebruikte boekwaardesom niet nul is.</li><li>Vermenigvuldig q met B voor de geschatte totale werkelijke waarde.</li><li>Bereken de drie termen van s_q² zorgvuldig, inclusief het minteken van de middelste term.</li><li>Neem één wortel om s_q te krijgen. Vul vervolgens s_q in de standaardfoutformule in.</li><li>Als een interval gevraagd wordt: bepaal t en maak Ŵ_Q ± t × s_Q. Zonder N en n kun je uit het korte voorbeeld nog geen numerieke standaardfout van het totaal berekenen.</li></ol><h3>Voorbeeld: 95% van de boekwaarde</h3><ol><li>Σw = € 19.000 en Σb = € 20.000: q = 0,95.</li><li>Bij B = € 500.000 is Ŵ_Q = 0,95 × 500.000 = € 475.000.</li><li>Stel s_w = 38, s_b = 40 en R_bw = 0,98. Dan s_q² = 38² − 2 × 0,95 × 0,98 × 40 × 38 + 0,95² × 40² = 57,76.</li><li>Dus s_q = 7,60. Vul deze spreiding samen met N en n in formule 17 in om de totale standaardfout te krijgen.</li></ol><p class=\"note\"><strong>Let op:</strong> Het gaat om Σw/Σb, niet om het ongewogen gemiddelde van de verhoudingen per post. Bij q = 0,95 is de geschatte werkelijke waarde 95% van B, niet een afwijking van 95%.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de quotiëntschatter wanneer werkelijke waarde en boekwaarde ongeveer evenredig samenhangen: bij grotere boekwaarden zijn de afwijkingen vooral procentueel vergelijkbaar. Je gebruikt de verhouding van de totale gecontroleerde waarden.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Goedratio</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Goedratio\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>q</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>w</mi></mrow><mrow><mo>∑</mo><mi>b</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mrow><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>Q</mtext></msub><mo>=</mo><mi>q</mi><mo>×</mo><mi>B</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Resterende spreiding</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Resterende spreiding\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>q</mtext></msub><mo>=</mo><msqrt><msup><msub><mi>s</mi><mi>w</mi></msub><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mi>q</mi><msub><mi>R</mi><mi>bw</mi></msub><msub><mi>s</mi><mi>b</mi></msub><msub><mi>s</mi><mi>w</mi></msub></mrow><mo>+</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><msup><msub><mi>s</mi><mi>b</mi></msub><mn>2</mn></msup></mrow></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>Q</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mtext>q</mtext></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>q = goedratio; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>R</mi><mtext>bw</mtext></msub></mrow></math> = correlatie tussen b en w; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = standaardafwijkingen; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>Q</mi></msub></mrow></math> = standaardfout van het geschatte totaal. B is het boekwaardetotaal van de hele populatie. <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> is de resterende spreiding na de verhoudingcorrectie; n en N horen daarna in de standaardfout van het totaal.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"ratio-pattern\"><h3>Een vaste verhouding is geen vast euroverschil</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Een lijn door de oorsprong</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Proportioneel verband; x-as: Boekwaarde b (€); y-as: Werkelijke waarde w (€)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">22,5</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">45,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">67,5</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">90,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">22,5</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">45,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">67,5</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">90,0</text><polyline points=\"58.00,180.00 334.00,31.80\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><circle cx=\"119.33\" cy=\"147.07\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"180.67\" cy=\"114.13\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"242.00\" cy=\"81.20\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"303.33\" cy=\"48.27\" r=\"4\" fill=\"var(--fv-green)\"/><polyline points=\"58.00,180.00 334.00,24.00\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Boekwaarde b (€)</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Werkelijke waarde w (€)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>w = 0,95b</span><span><i style=\"background:var(--fv-green)\"></i>Gecontroleerde posten</span><span><i style=\"background:var(--fv-purple)\"></i>w = b</span></div><p class=\"fv-work\">Σw / Σb = 190 / 200 = 0,95. Elke post behoudt dezelfde verhouding.</p></figure><figure class=\"fv-panel\"><figcaption>Euroverschillen nemen mee toe</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Proportionele controleverschillen; x-as: Boekwaarde b (€); y-as: Verschil e (€)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">1,2</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">2,5</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">3,8</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">5,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">22,5</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">45,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">67,5</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">90,0</text><circle cx=\"119.33\" cy=\"148.80\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"180.67\" cy=\"117.60\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"242.00\" cy=\"86.40\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"303.33\" cy=\"55.20\" r=\"4\" fill=\"var(--fv-orange)\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Boekwaarde b (€)</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Verschil e (€)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-orange)\"></i>e = 0,05b</span></div><p class=\"fv-work\">Verschillen: € 1, € 2, € 3, € 4. Bij B = € 500.000 is de puntschatting 0,95B = € 475.000.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De richting van de fout is dezelfde, maar haar omvang schaalt mee met b. Het exacte patroon illustreert de ratio; toets de toepassingsvoorwaarden met de echte casusgegevens.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bereken q = Σw / Σb. Controleer dat de gebruikte boekwaardesom niet nul is.</li><li>Vermenigvuldig q met B voor de geschatte totale werkelijke waarde.</li><li>Bereken de drie termen van <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>q</mi></msub><mn>2</mn></msup></mrow></math> zorgvuldig, inclusief het minteken van de middelste term.</li><li>Neem één wortel om <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> te krijgen. Vul vervolgens <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> in de standaardfoutformule in.</li><li>Als een interval gevraagd wordt: bepaal t en maak <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mi>Q</mi></msub></mrow></math> ± t × <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>Q</mi></msub></mrow></math>. Zonder N en n kun je uit het korte voorbeeld nog geen numerieke standaardfout van het totaal berekenen.</li></ol><h3>Voorbeeld: 95% van de boekwaarde</h3><ol><li>Σw = € 19.000 en Σb = € 20.000: q = 0,95.</li><li>Bij B = € 500.000 is <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mi>Q</mi></msub></mrow></math> = 0,95 × 500.000 = € 475.000.</li><li>Stel <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = 38, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></math> = 40 en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>R</mi><mtext>bw</mtext></msub></mrow></math> = 0,98. Dan <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>q</mi></msub><mn>2</mn></msup></mrow></math> = 38² − 2 × 0,95 × 0,98 × 40 × 38 + 0,95² × 40² = 57,76.</li><li>Dus <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> = 7,60. Vul deze spreiding samen met N en n in formule 17 in om de totale standaardfout te krijgen.</li></ol><p class=\"note\"><strong>Let op:</strong> Het gaat om Σw/Σb, niet om het ongewogen gemiddelde van de verhoudingen per post. Bij q = 0,95 is de geschatte werkelijke waarde 95% van B, niet een afwijking van 95%.</p>"
+        },
+        {
+          "title": "Een volledige casus: van goedratio tot interval",
+          "html": "<p><strong>Eigen oefencasus op basis van de cursusformules.</strong> Een voorraad bevat 2.500 posten met een totale boekwaarde van € 500.000. In een aselecte steekproef van 100 posten zijn 40 afwijkingen gevonden; het foutpatroon is ongeveer proportioneel met de boekwaarde. Bereken een tweezijdig 95%-interval.</p><div class=\"table-wrap\"><table><caption>Gegevens voor een volledige quotiëntschatting</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>Σb / Σw</td><td>€ 20.000 / € 19.000</td></tr><tr><td>s<sub>b</sub> / s<sub>w</sub></td><td>€ 40 / € 38</td></tr><tr><td>R<sub>bw</sub></td><td>0,98</td></tr><tr><td>N / n / B</td><td>2.500 / 100 / € 500.000</td></tr></tbody></table></div><ol><li>q = 19.000/20.000 = 0,95; Ŵ<sub>Q</sub> = 0,95 × 500.000 = € 475.000.</li><li>s²<sub>q</sub> = 38² − 2 × 0,95 × 0,98 × 40 × 38 + 0,95² × 40² = 57,76 euro²; s<sub>q</sub> = € 7,60.</li><li>s<sub>Q</sub> = 2.500 × (7,60/√100) × √(2.400/2.499) = € 1.861,98.</li><li>df = 99: tabellenbundel PDF 13, rij 95, kolom 0,025 geeft t = 1,985.</li><li>E = € 3.696,04; interval [€ 471.303,96; € 478.696,04].</li></ol><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>De accountant wil daarnaast de geschatte totale overwaardering rapporteren. Bereken dat bedrag. Leg uit waarom € 7,60 niet de marge van deze schatting is.</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>De geschatte overwaardering is B − Ŵ = € 25.000, ook te berekenen als (1 − q)B = 0,05 × € 500.000. € 7,60 is de resterende spreiding op het niveau van een post. Die moet eerst naar de standaardfout van het totale bedrag worden omgerekend, en daarna met de kritieke waarde worden vermenigvuldigd.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Eigen oefening volgens formules 12-17</li><li><a href=\"bronnen/slides.pdf#page=23\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · Methode en voorwaarden: PDF 23-26</li><li><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Tabellenbundel</a> · Rij 95; kolom 0,025</li></ul></details>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Eigen oefening volgens formules 12-17"
+            },
+            {
+              "source": "slides",
+              "page": 23,
+              "locator": "Methode en voorwaarden: PDF 23-26"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij 95; kolom 0,025"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "De tweede rekenroute: fouttotalen en productsommen",
+          "html": "<p>Boektabel 8.1 geeft sommen waarmee je formule 14 kunt invullen zonder eerst s<sub>b</sub>, s<sub>w</sub> en R afzonderlijk te berekenen. Dit is nuttig wanneer een tentamencasus juist zulke kolommen aanlevert.</p><div class=\"table-wrap\"><table><caption>Boektabel 8.1, met de populatiegegevens van de voorraadcasus</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>N / n / B</td><td>3.500 / 400 / € 7.360.817</td></tr><tr><td>Σw / Σb</td><td>€ 803.403 / € 830.066</td></tr><tr><td>Σe²</td><td>34.730.934 euro²</td></tr><tr><td>Σbe</td><td>53.988.529 euro²</td></tr><tr><td>Σb²</td><td>1.871.695.609 euro²</td></tr></tbody></table></div><ol><li>q = 803.403/830.066 = 0,96787846.</li><li>s²<sub>q</sub> = [34.730.934 − 2(1 − q) × 53.988.529 + (1 − q)² × 1.871.695.609]/399. Neem de wortel: s<sub>q</sub> = € 288,4308.</li><li>Ŵ<sub>Q</sub> = qB = € 7.124.376,21; s<sub>Q</sub> = € 47.510,39.</li><li>De actuele cursusregel geeft bij df = 399 de onderste t-rij: t = 1,960 bij 95% tweezijdig. Daarmee wordt het interval [€ 7.031.255,84; € 7.217.496,58].</li></ol><p class=\"note\">Dit is een rekenillustratie uit het boek. Het boek meldt voor deze steekproef 28 fouten en rekent ondanks die uitzondering verder. Op het tentamen toets je de expliciete cursusvoorwaarde van minstens 30 fouten; deze boekuitzondering heft die niet op. Ook gebruikt het boek afgeronde invoer en t = 1,966. De uitkomst hierboven gebruikt de gepubliceerde sommen en de huidige tabelregel. Daarom wijkt zij enigszins af van het afgedrukte boekinterval.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8a.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 201–210</a> · Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9</li><li><a href=\"bronnen/boek-h8b.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3</li><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formule 14: resterende spreiding uit fouttotalen</li><li><a href=\"bronnen/onderwijsprogramma.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Onderwijsprogramma SRA NJ26</a> · Huidige cursusregel voor df &gt; 200</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8a",
+              "page": 9,
+              "locator": "Boek p. 209; oorspronkelijke PDF p. 227; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 3,
+              "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formule 14: resterende spreiding uit fouttotalen"
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Huidige cursusregel voor df > 200"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
-      ]
+      ],
+      "samplingVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H8 · §8.2.3",
+        "college": "1",
+        "focus": "Herken een proportioneel foutpatroon. Bereken de verhouding van de sommen en gebruik de spreiding die na deze verhouding overblijft.",
+        "title": "H8 · §8.2.3 · Hoorcollege 1",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "ratio-pattern",
+          "title": "Een redelijk vaste verhouding gebruiken"
+        }
+      ],
+      "reading": {
+        "opening": "Bij de verschilschatter stond het verschil in euro’s centraal. Soms groeit de fout juist mee met de boekwaarde: grotere posten hebben dan ook grotere afwijkingen. We onderzoeken daarom eerst een vast percentage en gebruiken daarna de verhouding tussen werkelijke en geboekte waarden.",
+        "conclusion": "De quotiëntschatter past één verhouding van sommen toe op de totale boekwaarde. De onzekerheid hangt af van de spreiding die na die verhouding overblijft. Is het verband wel lineair maar niet evenredig, dan biedt de regressieschatter een andere route."
+      }
     },
     {
       "id": "regressieschatter",
@@ -1413,7 +2887,29 @@ window.SRA = {
       "sections": [
         {
           "title": "Corrigeren voor een afwijkende steekproef",
-          "html": "<p>Een aselecte steekproef kan toevallig artikelen met relatief hoge boekwaarden bevatten. De regressieschatter gebruikt het bekende populatietotaal B om daarvoor te corrigeren. Een <strong>lineair verband</strong> is een verband dat je met een rechte lijn beschrijft.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><msub><mi>R</mi><mi>bw</mi></msub><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>R</mtext></msub><mo>=</mo><mrow><mi>N</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>B</mi><mo>−</mo><mrow><mi>N</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mo>)</mo></mrow></mrow></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>b₁ = helling; R_bw = correlatie; B = bekend boekwaardetotaal. De factor √(1 − R²_bw) verlaagt de standaardfout ten opzichte van MPU.</p></details><p>Het eerste deel is MPU. Het tweede deel corrigeert het verschil tussen de echte totale boekwaarde B en de vanuit de steekproef geschatte boekwaarde Nb̄. Let op: bᵢ is een boekwaarde, maar b₁ is hier een regressiecoëfficiënt. De context bepaalt de betekenis.</p>"
+          "html": "<p>Een aselecte steekproef kan toevallig artikelen met relatief hoge boekwaarden bevatten. De regressieschatter gebruikt het bekende populatietotaal B om daarvoor te corrigeren. Een <strong>lineair verband</strong> is een verband dat je met een rechte lijn beschrijft.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><msub><mi>R</mi><mi>bw</mi></msub><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>R</mtext></msub><mo>=</mo><mrow><mi>N</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>B</mi><mo>−</mo><mrow><mi>N</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mo>)</mo></mrow></mrow></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>b₁ = helling; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>R</mi><mtext>bw</mtext></msub></mrow></math> = correlatie; B = bekend boekwaardetotaal. De factor √(1 − <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>R</mi><mtext>bw</mtext></msub><mn>2</mn></msup></mrow></math>) verlaagt de standaardfout ten opzichte van MPU.</p></details><p>Het eerste deel is MPU. Het tweede deel corrigeert het verschil tussen de echte totale boekwaarde B en de vanuit de steekproef geschatte boekwaarde Nb̄. Let op: bᵢ is een boekwaarde, maar b₁ is hier een regressiecoëfficiënt. De context bepaalt de betekenis.</p>"
+        },
+        {
+          "title": "De correctie verklaren en de helling uit productsommen berekenen",
+          "html": "<p>De regressieschatter gebruikt een lineair verband met een vrije constante en helling. Het volgende eigen invulvoorbeeld maakt zichtbaar wat de correctie op MPU doet. Neem N = 1.000, n = 100, B = € 105.000, b̄ = € 100, w̄ = € 95, s<sub>b</sub> = € 40, s<sub>w</sub> = € 38 en R<sub>bw</sub> = 0,98.</p><div class=\"table-wrap\"><table><caption>De regressiecorrectie lezen</caption><thead><tr><th scope=\"col\">Onderdeel</th><th scope=\"col\">Berekening</th><th scope=\"col\">Betekenis</th></tr></thead><tbody><tr><td>MPU</td><td>1.000 × 95 = € 95.000</td><td>Directe schatting uit werkelijke waarden</td></tr><tr><td>b₁</td><td>0,98 × 38/40 = 0,931</td><td>Verwachte verandering in w bij één euro meer b</td></tr><tr><td>B − Nb̄</td><td>105.000 − 1.000 × 100 = € 5.000</td><td>Steekproef bevat gemiddeld relatief lage boekwaarden</td></tr><tr><td>Correctie</td><td>0,931 × 5.000 = € 4.655</td><td>Verwachte waardeverandering op basis van die boekwaarde-afwijking</td></tr><tr><td>Ŵ<sub>R</sub></td><td>95.000 + 4.655 = € 99.655</td><td>Voor de hulpvariabele gecorrigeerde totaalschatting</td></tr></tbody></table></div><p>De correctie is positief omdat de echte gemiddelde boekwaarde € 105 is, terwijl de steekproef gemiddeld € 100 bevat. Alleen MPU gebruiken zou die bekende informatie onbenut laten. Bij een negatieve helling zou de richting van de correctie omkeren. Schrijf daarom steeds beide tekens uit.</p><h3>Als de opgave productsommen geeft</h3><div class=\"formula\">b₁ = [Σbw − (Σb × Σw)/n] / [Σb² − (Σb)²/n]</div><p>Met dezelfde oefengegevens zijn Σb = 10.000, Σw = 9.500, Σb² = 1.158.400 en Σbw = 1.097.470,4. De gecentreerde teller is 147.470,4; de noemer is 158.400. Hun verhouding is opnieuw 0,931. De teller meet gezamenlijk variëren; de noemer corrigeert voor de spreiding in b. Als alle boekwaarden gelijk zijn, is die noemer nul en is deze helling niet te bepalen.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Gebruik dezelfde oefengegevens, maar neem B = € 95.000. Wat wordt Ŵ<sub>R</sub>? Verandert bij gelijkblijvende overige gegevens de berekende standaardfout?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>B − Nb̄ = −€ 5.000, dus de correctie is −€ 4.655. Ŵ<sub>R</sub> = € 90.345. De standaardfout blijft gelijk: B staat niet in de standaardfoutformule. De plaats van het interval verschuift, terwijl de marge bij dezelfde N, n, s<sub>w</sub>, R en t gelijk blijft.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=27\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 27-33: regressieschatter en correctieterm</li><li><a href=\"bronnen/formuleblad.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 18-24</li><li><a href=\"bronnen/boek-h8b.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         },
         {
           "title": "Waarom kan het interval smaller worden?",
@@ -1422,6 +2918,28 @@ window.SRA = {
         {
           "title": "Een smaller interval moet ook geldig zijn",
           "html": "<p>De factor √(1 − R²) verkleint de berekende standaardfout, maar maakt een ongeschikte foutverdeling niet geschikt. Het boek bespreekt dat het interval bij ongunstige foutpatronen de werkelijke waarde te vaak kan missen. Kies dus op grond van het verband en de foutstructuur, en controleer de voorwaarden. Een smaller interval is meer berekende precisie, geen hogere gekozen betrouwbaarheid.</p>"
+        },
+        {
+          "title": "Vier schatters: welk foutpatroon past bij welke keuze?",
+          "html": "<p>Alle vier methoden schatten hetzelfde populatietotaal W. Het verschil zit in de informatie die zij benutten en de afwijkingen die na die keuze overblijven.</p><div class=\"table-wrap\"><table><caption>Methodekeuze vanuit de gegevens</caption><thead><tr><th scope=\"col\">Methode</th><th scope=\"col\">Passend patroon / informatie</th><th scope=\"col\">Spreiding die overblijft</th><th scope=\"col\">Aandachtspunt</th></tr></thead><tbody><tr><td>MPU</td><td>Werkelijke waarden beschikbaar; geen bruikbare hulpvariabele</td><td>Spreiding van w</td><td>Sterk verschillende postgroottes kunnen een grote marge geven</td></tr><tr><td>Verschil</td><td>Een ongeveer vast foutbedrag, onafhankelijk van boekwaarde</td><td>Spreiding van e = b − w</td><td>B nodig; cursusvoorwaarde minstens 30 fouten</td></tr><tr><td>Quotiënt</td><td>Een ongeveer vaste verhouding w/b</td><td>Spreiding van w − qb</td><td>B nodig; verhouding van sommen; minstens 30 fouten</td></tr><tr><td>Regressie</td><td>Een bruikbaar lineair verband met vrije helling en constante</td><td>Niet door b verklaarde spreiding</td><td>Meer invoer; verband en foutverdeling beoordelen</td></tr></tbody></table></div><h3>De onderlinge relaties verklaren</h3><div class=\"table-wrap\"><table><caption>Bijzondere gevallen van de puntschatting</caption><thead><tr><th scope=\"col\">Voorwaarde in de regressieschatter</th><th scope=\"col\">Wat blijft over?</th><th scope=\"col\">Verklaring</th></tr></thead><tbody><tr><td>b₁ = 0</td><td>MPU: Nw̄</td><td>Boekwaarden geven geen lineaire correctie</td></tr><tr><td>b₁ = 1</td><td>Verschil: B − N(b̄ − w̄)</td><td>Eén euro boekwaarde hangt samen met één euro werkelijke waarde</td></tr><tr><td>b₁ = w̄/b̄ en b₀ = 0</td><td>Quotiënt: (w̄/b̄)B</td><td>Het verband loopt door de oorsprong</td></tr><tr><td>B = Nb̄</td><td>Regressie, verschil en quotiënt hebben dezelfde puntschatting als MPU</td><td>De gemiddelde boekwaarde van steekproef en populatie is gelijk</td></tr></tbody></table></div><p>Gelijke puntschattingen betekenen niet automatisch gelijke standaardfouten. Onder dezelfde overige gegevens verkleint de factor √(1 − R²) de standaardfout van regressie ten opzichte van MPU. Toch moet de intervalmethode geldig zijn: veel nulverschillen of een ongunstige foutverdeling kunnen de werkelijke dekking aantasten. Het boek vergelijkt daarom ook uitkomsten over herhaalde steekproeven.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8b.pdf#page=7\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7</li><li><a href=\"bronnen/boek-h8b.pdf#page=8\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8</li><li><a href=\"bronnen/slides.pdf#page=34\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · Gerealiseerde marges per schatter</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
       ],
       "example": {
@@ -1432,6 +2950,15 @@ window.SRA = {
           "w̄ = 896,1111 en b̄ = 913,8889.",
           "De officiële uitwerking geeft Ŵ_R = € 1.784.652,89. Met volledig onafgeronde tussenwaarden volgt € 1.784.652,94; het verschil van enkele centen verandert de gevraagde afgeronde grenzen niet.",
           "De bron geeft s_R = € 4.739,8643; volledig onafgerond volgt € 4.739,8214. Bij 95% en df = 179 gebruik je tabelrij 170: t = 1,974.",
+          "Interval vóór afronding: [€ 1.775.296,40; € 1.794.009,38]. Op € 100 naar buiten: [€ 1.775.200; € 1.794.100]."
+        ],
+        "context": "Hoe gebruik je het bekende boektotaal uit de tentamencasus van 28 oktober 2024 om de schatting te corrigeren? We berekenen helling, totaalschatting en interval en benoemen het afrondingsverschil met de bronuitwerking.",
+        "stepsHtml": [
+          "N = 2.130; n = 180; B = € 1.810.500; Σw = 161.300; Σb = 164.500; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = 82,1; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></math> = 83,3; R = 0,925.",
+          "b₁ = 0,925 × 82,1/83,3 = 0,9116747.",
+          "w̄ = 896,1111 en b̄ = 913,8889.",
+          "De officiële uitwerking geeft <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mi>R</mi></msub></mrow></math> = € 1.784.652,89. Met volledig onafgeronde tussenwaarden volgt € 1.784.652,94; het verschil van enkele centen verandert de gevraagde afgeronde grenzen niet.",
+          "De bron geeft <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>R</mi></msub></mrow></math> = € 4.739,8643; volledig onafgerond volgt € 4.739,8214. Bij 95% en df = 179 gebruik je tabelrij 170: t = 1,974.",
           "Interval vóór afronding: [€ 1.775.296,40; € 1.794.009,38]. Op € 100 naar buiten: [€ 1.775.200; € 1.794.100]."
         ]
       },
@@ -1459,6 +2986,36 @@ window.SRA = {
           "source": "boek-h8b",
           "page": 6,
           "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+        },
+        {
+          "source": "slides",
+          "page": 27,
+          "locator": "PDF 27-33: regressieschatter en correctieterm"
+        },
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Formules 18-24"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 4,
+          "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 7,
+          "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 8,
+          "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+        },
+        {
+          "source": "slides",
+          "page": 34,
+          "locator": "Gerealiseerde marges per schatter"
         }
       ],
       "questions": [
@@ -1504,6 +3061,36 @@ window.SRA = {
               "source": "boek-h8b",
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
             }
           ],
           "recognition": {
@@ -1555,6 +3142,36 @@ window.SRA = {
               "source": "boek-h8b",
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
             }
           ],
           "recognition": {
@@ -1606,6 +3223,36 @@ window.SRA = {
               "source": "boek-h8b",
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 7,
+              "locator": "Boek p. 217; oorspronkelijke PDF p. 235; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 8,
+              "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "Gerealiseerde marges per schatter"
             }
           ],
           "recognition": {
@@ -1626,13 +3273,68 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "De directe schatting aanpassen met de boekwaarde",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de regressieschatter wanneer de samenhang tussen boekwaarde en werkelijke waarde door een rechte lijn kan worden beschreven, zonder dat die lijn noodzakelijk door de oorsprong loopt. Het bekende boekwaardetotaal helpt de directe schatting te verbeteren.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><msub><mi>R</mi><mi>bw</mi></msub><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>R</mtext></msub><mo>=</mo><mrow><mi>N</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>B</mi><mo>−</mo><mrow><mi>N</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mo>)</mo></mrow></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>R</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt><mo>×</mo><msqrt><mn>1</mn><mo>−</mo><msup><msub><mi>R</mi><mi>bw</mi></msub><mn>2</mn></msup></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Vergelijk met MPU</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Vergelijk met MPU\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>R</mtext></msub><mo>=</mo><msub><mi>s</mi><mtext>MPU</mtext></msub><mo>×</mo><msqrt><mn>1</mn><mo>−</mo><msup><msub><mi>R</mi><mi>bw</mi></msub><mn>2</mn></msup></msqrt></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>b₁ = helling; R_bw = correlatie; B = bekend boekwaardetotaal. De factor √(1 − R²_bw) verlaagt de standaardfout ten opzichte van MPU. s_w en s_b zijn de standaardafwijkingen van de werkelijke en geboekte steekproefwaarden. w̄ en b̄ zijn de bijbehorende gemiddelden. s_R is de standaardfout van de totale schatting.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken de helling b₁ = R_bw × s_w/s_b.</li><li>Bereken eerst de directe totaalschatting N × w̄.</li><li>Bereken B − N × b̄. Dit is het verschil tussen het bekende boekwaardetotaal en het boekwaardetotaal dat de steekproef suggereert.</li><li>Vermenigvuldig dit verschil met b₁ en tel de correctie bij N × w̄ op.</li><li>Bereken de MPU-standaardfout uit s_w en vermenigvuldig met √(1 − R_bw²).</li><li>Gebruik die s_R voor de intervalmarge. Bewaar voldoende decimalen en vermeld een relevant afrondingsverschil met de uitwerking.</li></ol><h3>Tentamen 28 oktober 2024, vraag 1</h3><ol><li>N = 2.130; n = 180; B = € 1.810.500; Σw = 161.300; Σb = 164.500; s_w = 82,1; s_b = 83,3; R = 0,925.</li><li>b₁ = 0,925 × 82,1/83,3 = 0,9116747.</li><li>w̄ = 896,1111 en b̄ = 913,8889.</li><li>De officiële uitwerking geeft Ŵ_R = € 1.784.652,89. Met volledig onafgeronde tussenwaarden volgt € 1.784.652,94; het verschil van enkele centen verandert de gevraagde afgeronde grenzen niet.</li><li>De bron geeft s_R = € 4.739,8643; volledig onafgerond volgt € 4.739,8214. Bij 95% en df = 179 gebruik je tabelrij 170: t = 1,974.</li><li>Interval vóór afronding: [€ 1.775.296,40; € 1.794.009,38]. Op € 100 naar buiten: [€ 1.775.200; € 1.794.100].</li></ol><p class=\"note\"><strong>Let op:</strong> Σb is alleen de som in de steekproef; B is het bekende populatietotaal. Dit interval hoort bij de totale waarde, niet bij één toekomstige individuele waarneming.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de regressieschatter wanneer de samenhang tussen boekwaarde en werkelijke waarde door een rechte lijn kan worden beschreven, zonder dat die lijn noodzakelijk door de oorsprong loopt. Het bekende boekwaardetotaal helpt de directe schatting te verbeteren.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><msub><mi>R</mi><mi>bw</mi></msub><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Puntschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>R</mtext></msub><mo>=</mo><mrow><mi>N</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mrow><mo>(</mo><mi>B</mi><mo>−</mo><mrow><mi>N</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>b</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow><mo>)</mo></mrow></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>R</mtext></msub><mo>=</mo><mi>N</mi><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msqrt><mi>n</mi></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mi>N</mi><mo>−</mo><mi>n</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt><mo>×</mo><msqrt><mn>1</mn><mo>−</mo><msup><msub><mi>R</mi><mi>bw</mi></msub><mn>2</mn></msup></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Vergelijk met MPU</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Vergelijk met MPU\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mtext>R</mtext></msub><mo>=</mo><msub><mi>s</mi><mtext>MPU</mtext></msub><mo>×</mo><msqrt><mn>1</mn><mo>−</mo><msup><msub><mi>R</mi><mi>bw</mi></msub><mn>2</mn></msup></msqrt></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>b₁ = helling; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>R</mi><mtext>bw</mtext></msub></mrow></math> = correlatie; B = bekend boekwaardetotaal. De factor √(1 − <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>R</mi><mtext>bw</mtext></msub><mn>2</mn></msup></mrow></math>) verlaagt de standaardfout ten opzichte van MPU. <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></math> zijn de standaardafwijkingen van de werkelijke en geboekte steekproefwaarden. w̄ en b̄ zijn de bijbehorende gemiddelden. <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>R</mi></msub></mrow></math> is de standaardfout van de totale schatting.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"regression-precision\"><h3>Wat correlatie met de standaardfout doet</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>De resterende onzekerheidsfactor</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Factor bij correlatie; x-as: Correlatie R; y-as: Factor\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,3</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,5</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">0,8</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">1,1</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">-1,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">-0,5</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">0,5</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">1,0</text><polyline points=\"58.00,180.00 61.45,146.99 64.90,133.61 68.35,123.55 71.80,115.24 75.25,108.07 78.70,101.74 82.15,96.04 85.60,90.86 89.05,86.11 92.50,81.73 95.95,77.67 99.40,73.90 102.85,70.38 106.30,67.10 109.75,64.02 113.20,61.14 116.65,58.45 120.10,55.92 123.55,53.55 127.00,51.33 130.45,49.26 133.90,47.32 137.35,45.51 140.80,43.83 144.25,42.27 147.70,40.83 151.15,39.49 154.60,38.27 158.05,37.16 161.50,36.15 164.95,35.24 168.40,34.43 171.85,33.72 175.30,33.11 178.75,32.59 182.20,32.17 185.65,31.85 189.10,31.61 192.55,31.48 196.00,31.43 199.45,31.48 202.90,31.61 206.35,31.85 209.80,32.17 213.25,32.59 216.70,33.11 220.15,33.72 223.60,34.43 227.05,35.24 230.50,36.15 233.95,37.16 237.40,38.27 240.85,39.49 244.30,40.83 247.75,42.27 251.20,43.83 254.65,45.51 258.10,47.32 261.55,49.26 265.00,51.33 268.45,53.55 271.90,55.92 275.35,58.45 278.80,61.14 282.25,64.02 285.70,67.10 289.15,70.38 292.60,73.90 296.05,77.67 299.50,81.73 302.95,86.11 306.40,90.86 309.85,96.04 313.30,101.74 316.75,108.07 320.20,115.24 323.65,123.55 327.10,133.61 330.55,146.99 334.00,180.00\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Correlatie R</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Factor</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>√(1 − R²)</span></div><p class=\"fv-work\">R = 0 → factor 1; R = ±0,80 → factor 0,60. Het kwadraat maakt het teken hier irrelevant.</p></figure><figure class=\"fv-panel\"><figcaption>Dezelfde MPU-standaardfout als vertrekpunt</figcaption><table class=\"fv-table\"><caption>Alleen de factor verandert</caption><thead><tr><th scope=\"col\">R</th><th scope=\"col\">Factor</th><th scope=\"col\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>R</mi></msub></mrow></math> bij <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>MPU</mtext></msub></mrow></math> = € 2.000</th></tr></thead><tbody><tr><td>0</td><td>1,00</td><td>€ 2.000</td></tr><tr><td>0,60</td><td>0,80</td><td>€ 1.600</td></tr><tr><td>0,80</td><td>0,60</td><td>€ 1.200</td></tr></tbody></table><p class=\"fv-work\">Het kleinere berekende interval blijft afhankelijk van een bruikbaar model en passend foutpatroon.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Hier gaat het om precisie, niet om een hogere gekozen betrouwbaarheid. De correctie op het midden van de schatting wordt apart in het volgende voorbeeld uitgewerkt.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bereken de helling b₁ = <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>R</mi><mtext>bw</mtext></msub></mrow></math> × <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></mfrac></mrow></math>.</li><li>Bereken eerst de directe totaalschatting N × w̄.</li><li>Bereken B − N × b̄. Dit is het verschil tussen het bekende boekwaardetotaal en het boekwaardetotaal dat de steekproef suggereert.</li><li>Vermenigvuldig dit verschil met b₁ en tel de correctie bij N × w̄ op.</li><li>Bereken de MPU-standaardfout uit <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> en vermenigvuldig met <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msqrt><mn>1</mn><mo>−</mo><msup><msub><mi>R</mi><mi>bw</mi></msub><mn>2</mn></msup></msqrt></mrow></math>.</li><li>Gebruik die <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>R</mi></msub></mrow></math> voor de intervalmarge. Bewaar voldoende decimalen en vermeld een relevant afrondingsverschil met de uitwerking.</li></ol><h3>Tentamen 28 oktober 2024, vraag 1</h3><ol><li>N = 2.130; n = 180; B = € 1.810.500; Σw = 161.300; Σb = 164.500; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = 82,1; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>b</mi></msub></mrow></math> = 83,3; R = 0,925.</li><li>b₁ = 0,925 × 82,1/83,3 = 0,9116747.</li><li>w̄ = 896,1111 en b̄ = 913,8889.</li><li>De officiële uitwerking geeft <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mi>R</mi></msub></mrow></math> = € 1.784.652,89. Met volledig onafgeronde tussenwaarden volgt € 1.784.652,94; het verschil van enkele centen verandert de gevraagde afgeronde grenzen niet.</li><li>De bron geeft <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>R</mi></msub></mrow></math> = € 4.739,8643; volledig onafgerond volgt € 4.739,8214. Bij 95% en df = 179 gebruik je tabelrij 170: t = 1,974.</li><li>Interval vóór afronding: [€ 1.775.296,40; € 1.794.009,38]. Op € 100 naar buiten: [€ 1.775.200; € 1.794.100].</li></ol><p class=\"note\"><strong>Let op:</strong> Σb is alleen de som in de steekproef; B is het bekende populatietotaal. Dit interval hoort bij de totale waarde, niet bij één toekomstige individuele waarneming.</p>"
         },
         {
           "title": "Een smaller interval moet ook geldig zijn",
           "html": "<p>De factor √(1 − R²) verkleint de berekende standaardfout, maar maakt een ongeschikte foutverdeling niet geschikt. Het boek bespreekt dat het interval bij ongunstige foutpatronen de werkelijke waarde te vaak kan missen. Kies dus op grond van het verband en de foutstructuur, en controleer de voorwaarden. Een smaller interval is meer berekende precisie, geen hogere gekozen betrouwbaarheid.</p>"
+        },
+        {
+          "title": "De correctie verklaren en de helling uit productsommen berekenen",
+          "html": "<p>De regressieschatter gebruikt een lineair verband met een vrije constante en helling. Het volgende eigen invulvoorbeeld maakt zichtbaar wat de correctie op MPU doet. Neem N = 1.000, n = 100, B = € 105.000, b̄ = € 100, w̄ = € 95, s<sub>b</sub> = € 40, s<sub>w</sub> = € 38 en R<sub>bw</sub> = 0,98.</p><div class=\"table-wrap\"><table><caption>De regressiecorrectie lezen</caption><thead><tr><th scope=\"col\">Onderdeel</th><th scope=\"col\">Berekening</th><th scope=\"col\">Betekenis</th></tr></thead><tbody><tr><td>MPU</td><td>1.000 × 95 = € 95.000</td><td>Directe schatting uit werkelijke waarden</td></tr><tr><td>b₁</td><td>0,98 × 38/40 = 0,931</td><td>Verwachte verandering in w bij één euro meer b</td></tr><tr><td>B − Nb̄</td><td>105.000 − 1.000 × 100 = € 5.000</td><td>Steekproef bevat gemiddeld relatief lage boekwaarden</td></tr><tr><td>Correctie</td><td>0,931 × 5.000 = € 4.655</td><td>Verwachte waardeverandering op basis van die boekwaarde-afwijking</td></tr><tr><td>Ŵ<sub>R</sub></td><td>95.000 + 4.655 = € 99.655</td><td>Voor de hulpvariabele gecorrigeerde totaalschatting</td></tr></tbody></table></div><p>De correctie is positief omdat de echte gemiddelde boekwaarde € 105 is, terwijl de steekproef gemiddeld € 100 bevat. Alleen MPU gebruiken zou die bekende informatie onbenut laten. Bij een negatieve helling zou de richting van de correctie omkeren. Schrijf daarom steeds beide tekens uit.</p><h3>Als de opgave productsommen geeft</h3><div class=\"formula\">b₁ = [Σbw − (Σb × Σw)/n] / [Σb² − (Σb)²/n]</div><p>Met dezelfde oefengegevens zijn Σb = 10.000, Σw = 9.500, Σb² = 1.158.400 en Σbw = 1.097.470,4. De gecentreerde teller is 147.470,4; de noemer is 158.400. Hun verhouding is opnieuw 0,931. De teller meet gezamenlijk variëren; de noemer corrigeert voor de spreiding in b. Als alle boekwaarden gelijk zijn, is die noemer nul en is deze helling niet te bepalen.</p><div class=\"learning-exercise\"><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"regression-correction\"><h3>De bekende boekwaarde verschuift het midden</h3><p class=\"fv-provenance\">Dezelfde invoer als de bestaande correctietabel; de getekende lijn heeft helling 0,931 en gaat door (100;95).</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Steekproefgemiddelde tegenover populatiegemiddelde</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Regressiecorrectie per post; x-as: Boekwaarde per post (€); y-as: Verwachte werkelijke waarde (€)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">88,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">92,5</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">97,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">101,5</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">106,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">95,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">98,8</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">102,5</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">106,2</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">110,0</text><polyline points=\"58.00,159.68 334.00,38.65\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><circle cx=\"150.00\" cy=\"119.33\" r=\"4\" fill=\"var(--fv-purple)\"/><circle cx=\"242.00\" cy=\"78.99\" r=\"4\" fill=\"var(--fv-orange)\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Boekwaarde per post (€)</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Verwachte werkelijke waarde (€)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Lijn door (100;95)</span><span><i style=\"background:var(--fv-purple)\"></i>Steekproef</span><span><i style=\"background:var(--fv-orange)\"></i>Bij bekende gemiddelde boekwaarde</span></div><p class=\"fv-work\">B/N = € 105 tegenover b̄ = € 100. b₁ = 0,931 geeft 0,931 × € 5 = € 4,655 per post.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Bij N = 1.000 is de totale correctie € 4.655. Ŵ verschuift van € 95.000 naar € 99.655. De bestaande tabel toont dezelfde stappen op totaalniveau.</p></section><!-- formula-visual:end --><h3>Zelf toepassen</h3><p>Gebruik dezelfde oefengegevens, maar neem B = € 95.000. Wat wordt Ŵ<sub>R</sub>? Verandert bij gelijkblijvende overige gegevens de berekende standaardfout?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>B − Nb̄ = −€ 5.000, dus de correctie is −€ 4.655. Ŵ<sub>R</sub> = € 90.345. De standaardfout blijft gelijk: B staat niet in de standaardfoutformule. De plaats van het interval verschuift, terwijl de marge bij dezelfde N, n, s<sub>w</sub>, R en t gelijk blijft.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=27\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 27-33: regressieschatter en correctieterm</li><li><a href=\"bronnen/formuleblad.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 18-24</li><li><a href=\"bronnen/boek-h8b.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 27,
+              "locator": "PDF 27-33: regressieschatter en correctieterm"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 18-24"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 4,
+              "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
-      ]
+      ],
+      "samplingVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H8 · §8.2.4",
+        "college": "1",
+        "focus": "Gebruik de bekende boekwaarde om een scheve samenstelling van de steekproef te corrigeren. Onderbouw zowel de methodekeuze als de geldigheid van het interval.",
+        "title": "H8 · §8.2.4 · Hoorcollege 1",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "regression-precision",
+          "title": "De directe schatting aanpassen met de boekwaarde"
+        },
+        {
+          "key": "regression-correction",
+          "title": "De correctie verklaren en de helling uit productsommen berekenen"
+        }
+      ],
+      "reading": {
+        "opening": "Boekwaarden en werkelijke waarden kunnen samenhangen zonder een vast verschil of percentage. De regressieschatter gebruikt die samenhang én het bekende boektotaal. Zo corrigeer je voor een steekproef die toevallig relatief hoge of lage boekwaarden bevat.",
+        "conclusion": "De regressieschatter benut het lineaire verband om een totaalschatting te corrigeren en de resterende onzekerheid te bepalen. De methodekeuze moet bij de gegevens passen. Blijft het interval te breed, dan is de vervolgvraag hoeveel extra controles nodig zijn."
+      }
     },
     {
       "id": "steekproefomvang",
@@ -1647,7 +3349,30 @@ window.SRA = {
       "sections": [
         {
           "title": "Werk terug vanaf de gewenste precisie",
-          "html": "<p>De gebruikelijke vraag luidt: hoe groot moet n zijn om een bepaalde <strong>onnauwkeurigheid</strong> E te halen? E is de halve intervalbreedte. Het formuleblad gebruikt een tussenstap γ (gamma). Die maakt de omvangsformule overzichtelijk.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Tussenstap</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Tussenstap\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>γ</mi><mo>=</mo><mfrac><mrow><msup><mi>E</mi><mn>2</mn></msup></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>×</mo><mi>N</mi><mo>×</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Benodigde omvang</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Benodigde omvang\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>n</mi><mo>=</mo><mfrac><mrow><mi>N</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>γ</mi></mrow></mfrac></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>E = toegestane marge aan één kant; t = kritieke waarde; N = populatieomvang; s² = de variantie passend bij de schatter; γ = tussenuitkomst.</p></details><p>Voor MPU is s² = s²_w. Voor de verschilschatter is s² = s²_e. Voor de regressieschatter staat in de noemer bovendien de factor (1 − R²_bw). Gebruik de in de opgave of uitwerking gehanteerde t-waarde; deze planningsformule is de formulebladroute.</p>"
+          "html": "<p>De gebruikelijke vraag luidt: hoe groot moet n zijn om een bepaalde <strong>onnauwkeurigheid</strong> E te halen? E is de halve intervalbreedte. Het formuleblad gebruikt een tussenstap γ (gamma). Die maakt de omvangsformule overzichtelijk.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Tussenstap</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Tussenstap\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>γ</mi><mo>=</mo><mfrac><mrow><msup><mi>E</mi><mn>2</mn></msup></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>×</mo><mi>N</mi><mo>×</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Benodigde omvang</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Benodigde omvang\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>n</mi><mo>=</mo><mfrac><mrow><mi>N</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>γ</mi></mrow></mfrac></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>E = toegestane marge aan één kant; t = kritieke waarde; N = populatieomvang; s² = de variantie passend bij de schatter; γ = tussenuitkomst.</p></details><p>Voor MPU is s² = <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>w</mi></msub><mn>2</mn></msup></mrow></math>. Voor de verschilschatter is s² = <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup></mrow></math>. Voor de regressieschatter staat in de noemer bovendien de factor (1 − <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>R</mi><mtext>bw</mtext></msub><mn>2</mn></msup></mrow></math>). Gebruik de in de opgave of uitwerking gehanteerde t-waarde; deze planningsformule is de formulebladroute.</p><p>De omvangsformule is een <strong>planningsberekening</strong>: zij voorspelt welke omvang bij vastgehouden spreiding en kritieke waarde nodig is. In een volgende steekproef kunnen de geschatte spreiding en het foutpatroon veranderen. Bereken het interval daarom opnieuw na uitvoering.</p><div class=\"table-wrap\"><table><caption>Welke s² gaat in de planningsformule?</caption><thead><tr><th scope=\"col\">Schatter</th><th scope=\"col\">Te gebruiken variantie</th><th scope=\"col\">Reden</th></tr></thead><tbody><tr><td>MPU</td><td>s²<sub>w</sub></td><td>Werkelijke postwaarden worden rechtstreeks opgeschaald</td></tr><tr><td>Verschil</td><td>s²<sub>e</sub></td><td>Alleen de resterende foutbedragen worden geschat</td></tr><tr><td>Quotiënt</td><td>s²<sub>q</sub></td><td>Restspreiding na de vaste verhouding</td></tr><tr><td>Regressie</td><td>s²<sub>w</sub>(1 − R²<sub>bw</sub>)</td><td>Alleen onverklaarde spreiding blijft over</td></tr></tbody></table></div><p>Het boek benadert in de omvangsformule N − 1 door N. Daardoor krijg je n = N/(1 + γ). Gebruik bij het evalueren van het werkelijke interval wel de eindigheidscorrectie uit het formuleblad. Kies niet willekeurig een t-waarde die een gunstiger aantal oplevert; volg de opgave of de gegeven planningswaarde.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/formuleblad.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 5 en 11</li><li><a href=\"bronnen/formuleblad.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formule 24</li><li><a href=\"bronnen/slides.pdf#page=35\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · Quotiëntschatter plannen met <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>q</mi></msub><mn>2</mn></msup></mrow></math></li><li><a href=\"bronnen/boek-h8a.pdf#page=7\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 201–210</a> · Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7</li></ul></details>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         },
         {
           "title": "Rond in de veilige richting",
@@ -1655,11 +3380,45 @@ window.SRA = {
         },
         {
           "title": "Uitbreiding na stratificatie",
-          "html": "<p>De totale variantie is de som van de variantiebijdragen van de strata. Bij een gewenste marge E hoort maximaal (E/t)² totale variantie. Houd voor een planningsberekening de gegeven t-waarde en geschatte spreidingen vast; na de aanvullende controle beoordeel je de nieuwe uitkomsten opnieuw.</p><h3>Cursusopgave H8.9b/c</h3><ol><li>De oorspronkelijke schatting is € 6.678.000 met s_tot ≈ € 256.153 en t = 1,978. De marge is circa € 506.670, dus meer dan de gewenste € 500.000.</li><li>De maximaal toegestane standaardfout is 500.000 / 1,978 ≈ € 252.780. De totale variantie moet ongeveer 1,717 × 10⁹ afnemen.</li><li>Stratum 3 draagt het meest bij: s_3,totaal ≈ € 135.645,95. Trek de benodigde vermindering van deze gekwadrateerde bijdrage af. De gewenste bijdrage wordt circa 1,6683 × 10¹⁰.</li><li>Gebruik de cursusbenadering γ₃ = gewenste variantiebijdrage / (N₃ × s₃²). Met N₃ = 300 en s₃ = 2.606,15 volgt γ₃ ≈ 8,1876.</li><li>Nieuwe totale n₃ = 300 / (1 + 8,1876) ≈ 32,65. Rond omhoog naar 33. Er waren 30 controles, dus voeg 3 toe.</li><li>Controleer de marge met n₃ = 33 en de overige strata ongewijzigd. Bij de vastgehouden planningswaarden daalt die tot ongeveer € 499.443.</li></ol><p class=\"note\">De cursusuitwerking gebruikt de gebruikelijke N − 1 ≈ N-benadering bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>"
+          "html": "<p>De totale variantie is de som van de variantiebijdragen van de strata. Bij een gewenste marge E hoort maximaal (E/t)² totale variantie. Houd voor een planningsberekening de gegeven t-waarde en geschatte spreidingen vast; na de aanvullende controle beoordeel je de nieuwe uitkomsten opnieuw.</p><h3>Cursusopgave H8.9b/c</h3><ol><li>De oorspronkelijke schatting is € 6.678.000 met <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>tot</mtext></msub></mrow></math> ≈ € 256.153 en t = 1,978. De marge is circa € 506.670, dus meer dan de gewenste € 500.000.</li><li>De maximaal toegestane standaardfout is 500.000 / 1,978 ≈ € 252.780. De totale variantie moet ongeveer 1,717 × 10⁹ afnemen.</li><li>Stratum 3 draagt het meest bij: s_3,totaal ≈ € 135.645,95. Trek de benodigde vermindering van deze gekwadrateerde bijdrage af. De gewenste bijdrage wordt circa 1,6683 × 10¹⁰.</li><li>Gebruik de cursusbenadering γ₃ = gewenste variantiebijdrage / (N₃ × s₃²). Met N₃ = 300 en s₃ = 2.606,15 volgt γ₃ ≈ 8,1876.</li><li>Nieuwe totale n₃ = 300 / (1 + 8,1876) ≈ 32,65. Rond omhoog naar 33. Er waren 30 controles, dus voeg 3 toe.</li><li>Controleer de marge met n₃ = 33 en de overige strata ongewijzigd. Bij de vastgehouden planningswaarden daalt die tot ongeveer € 499.443.</li></ol><p class=\"note\">De cursusuitwerking gebruikt de gebruikelijke N − 1 ≈ N-benadering bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>"
         },
         {
           "title": "Omvang bij de quotiëntschatter",
-          "html": "<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld bij slides PDF 34–36</h3><ol><li>N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.</li><li>γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.</li><li>n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.</li><li>Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.</li></ol>"
+          "html": "<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> van de quotiëntschatter: γ = E²/(t² × N × <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>q</mi></msub><mn>2</mn></msup></mrow></math>) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld bij slides PDF 34–36</h3><ol><li>N = 1.000, t = 2, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> = 7,60 en gewenste marge E = € 1.000.</li><li>γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.</li><li>n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.</li><li>Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.</li></ol>"
+        },
+        {
+          "title": "De slides doorrekenen: van gewenste marge naar extra controles",
+          "html": "<p>De slides vergelijken vier gerealiseerde marges en willen de quotiëntschatter nauwkeuriger maken. De gewenste <em>marge</em> is € 310.000, dus de gewenste totale breedte € 620.000.</p><div class=\"table-wrap\"><table><caption>Invoer uit slides PDF 34-35</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>N</td><td>28.946</td></tr><tr><td>Reeds gecontroleerd n</td><td>1.000</td></tr><tr><td>s<sub>q</sub></td><td>€ 213,51</td></tr><tr><td>t</td><td>1,960</td></tr><tr><td>E</td><td>€ 310.000</td></tr></tbody></table></div><ol><li>γ = 310.000²/(1,960² × 28.946 × 213,51²) = 18,95773.</li><li>n = 28.946/(1 + γ) = 1.450,36562; rond omhoog naar 1.451.</li><li>Er zijn al 1.000 controles: aanvullend nodig 451.</li><li>Na uitbreiding tonen de slides een nieuwe s<sub>q</sub> van € 195,17 en een gerealiseerde marge van circa € 283.305. Die is kleiner dan de geplande € 310.000 doordat de nieuwe spreiding lager is.</li></ol><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p><strong>Eigen vervolg op de cursuscasus.</strong> Een collega wil in γ € 620.000 invullen, omdat dat de toegestane totale breedte is. Wat gebeurt er en waarom is dat onjuist?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>De ingevoerde E verdubbelt. Door E² wordt γ vier keer zo groot en wordt n kleiner. Je zou dus te weinig posten plannen voor de werkelijk toegestane marge. Het interval heeft breedte 2E; in de formule hoort € 310.000.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=34\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "Alle strata uitbreiden of gericht één bijdrage verkleinen",
+          "html": "<p>Een te brede gestratificeerde schatting kun je op twee manieren verbeteren: opnieuw over alle groepen verdelen, of gericht groepen met een grote variantiebijdrage uitbreiden. Het boek behandelt beide. De volgende algemene route is formule 8.20 en gebruikt een directe schatter per stratum.</p><div class=\"formula\">γ = E² / [t² × Σ(Nᵢs²ᵢ)]<br>n = N / (1 + γ)</div><p>N betreft de populatie waaruit wordt getrokken; een integraal gecontroleerd topstratum staat daarbuiten. De formule sluit aan op de cursusbenadering bij evenredige verdeling en vastgehouden stratumspreidingen. Voor een andere allocatie mag je niet zonder controle dezelfde n-verdeling invullen. E is de gewenste marge voor de totaalschatting.</p><div class=\"table-wrap\"><table><caption>Eigen invulvoorbeeld bij boekformule 8.20</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">sᵢ</th><th scope=\"col\">Nᵢs²ᵢ</th></tr></thead><tbody><tr><td>1</td><td>600</td><td>20</td><td>240.000</td></tr><tr><td>2</td><td>400</td><td>40</td><td>640.000</td></tr><tr><td>Som</td><td>1.000</td><td></td><td>880.000</td></tr></tbody></table></div><ol><li>Gegeven planningswaarde t = 2 en gewenste marge E = € 3.000.</li><li>γ = 3.000²/(2² × 880.000) = 2,556818.</li><li>n = 1.000/(1 + γ) = 281,150160; naar boven afgerond 282. Een evenredige verdeling is 169 en 113 controles.</li><li>Reken de marge vervolgens na met deze gehele aantallen en de twee afzonderlijke eindigheidscorrecties. Die is ongeveer € 2.995,10 en voldoet dus aan de gestelde € 3.000.</li></ol><p>Het alternatief is de al behandelde uitbreiding van één stratum: doelvariantie (E/t)² minus de ongewijzigde bijdragen van andere strata geeft de maximaal toegestane bijdrage van de te vergroten groep. Vergelijk variantiebijdragen, niet alleen sᵢ of aantallen posten. De bijdrage bevat ook Nᵢ, nᵢ en de eindigheidscorrectie.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Stel: de gewenste totale variantie is 100, terwijl de ongewijzigde andere strata samen al 120 bijdragen. Kan extra controle uitsluitend in één geselecteerd stratum voldoende zijn?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Nee. Voor dat stratum zou maximaal 100 − 120 = −20 variantie overblijven; een variantie kan niet negatief zijn. Zelfs integrale controle van die ene groep laat 120 over. Ook andere groepen moeten worden uitgebreid of de opzet moet inhoudelijk opnieuw worden beoordeeld.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8c.pdf#page=10\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10</li><li><a href=\"bronnen/boek-h8c.pdf#page=11\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11</li><li><a href=\"bronnen/uitwerkingenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel SRA NJ26</a> · H8.9c: gerichte uitbreiding van stratum 3</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         },
         {
           "title": "Zelf oefenen met deze aanvulling",
@@ -1671,6 +3430,14 @@ window.SRA = {
         "steps": [
           "Gewenste totale breedte: € 10.000, dus E = € 5.000.",
           "Gebruik de gegevens van de regressieschatter: N = 2.130, s_w = 82,1, R = 0,925 en t = 1,974.",
+          "γ = 5.000² / [1,974² × 2.130 × 82,1² × (1 − 0,925²)] ≈ 3,09519.",
+          "n = 2.130 / (1 + 3,09519) ≈ 520,122. Rond op naar 521.",
+          "Er zijn al 180 posten gecontroleerd; nog nodig: 341."
+        ],
+        "context": "Hoeveel controles zijn nodig om de totale intervalbreedte terug te brengen tot € 10.000? We gebruiken de regressieschatter uit de vorige casus en trekken de 180 reeds gecontroleerde posten van de benodigde omvang af.",
+        "stepsHtml": [
+          "Gewenste totale breedte: € 10.000, dus E = € 5.000.",
+          "Gebruik de gegevens van de regressieschatter: N = 2.130, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = 82,1, R = 0,925 en t = 1,974.",
           "γ = 5.000² / [1,974² × 2.130 × 82,1² × (1 − 0,925²)] ≈ 3,09519.",
           "n = 2.130 / (1 + 3,09519) ≈ 520,122. Rond op naar 521.",
           "Er zijn al 180 posten gecontroleerd; nog nodig: 341."
@@ -1705,6 +3472,41 @@ window.SRA = {
           "source": "uitwerkingen",
           "page": 13,
           "locator": "H8 opgave 9c, PDF 13"
+        },
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 5 en 11"
+        },
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Formule 24"
+        },
+        {
+          "source": "slides",
+          "page": 35,
+          "locator": "Quotiëntschatter plannen met s_q²"
+        },
+        {
+          "source": "boek-h8a",
+          "page": 7,
+          "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+        },
+        {
+          "source": "slides",
+          "page": 34,
+          "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 11,
+          "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 13,
+          "locator": "H8.9c: gerichte uitbreiding van stratum 3"
         }
       ],
       "questions": [
@@ -1755,6 +3557,41 @@ window.SRA = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
           "recognition": {
@@ -1811,6 +3648,41 @@ window.SRA = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
           "recognition": {
@@ -1867,6 +3739,41 @@ window.SRA = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "formules",
+              "page": 1,
+              "locator": "Formules 5 en 11"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formule 24"
+            },
+            {
+              "source": "slides",
+              "page": 35,
+              "locator": "Quotiëntschatter plannen met s_q²"
+            },
+            {
+              "source": "boek-h8a",
+              "page": 7,
+              "locator": "Boek p. 207; oorspronkelijke PDF p. 225; uitsnede p. 7"
+            },
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
           "recognition": {
@@ -1886,18 +3793,81 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Terugrekenen vanaf de toegestane marge",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de omvangsformule vóór of tijdens een controle als je wilt weten hoeveel posten nodig zijn om een gegeven nauwkeurigheid te bereiken. De onderstaande vorm is de planningsroute van het formuleblad.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Tussenstap</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Tussenstap\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>γ</mi><mo>=</mo><mfrac><mrow><msup><mi>E</mi><mn>2</mn></msup></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>×</mo><mi>N</mi><mo>×</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Benodigde omvang</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Benodigde omvang\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>n</mi><mo>=</mo><mfrac><mrow><mi>N</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>γ</mi></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>E = toegestane marge aan één kant; t = kritieke waarde; N = populatieomvang; s² = de variantie passend bij de schatter; γ = tussenuitkomst. Voor MPU gebruik je s_w²; voor verschillen s_e². Bij de regressieschatter is de passende resterende variantie s_w² × (1 − R_bw²).</p><h3>Zo reken je stap voor stap</h3><ol><li>Vertaal de gewenste totale intervalbreedte naar E door de breedte te halveren.</li><li>Kies de variantie die bij de schatter hoort. Bij regressie moet de factor 1 − R_bw² dus worden meegenomen.</li><li>Gebruik de t-waarde volgens de opgave of de gevolgde uitwerking en bereken γ.</li><li>Bereken n = N/(1 + γ). Rond het vereiste aantal altijd naar boven af.</li><li>Wordt om uitbreiding gevraagd? Trek het aantal al gecontroleerde posten van het benodigde totale aantal af.</li></ol><h3>Tentamen 28 oktober 2024, vraag 2</h3><ol><li>Gewenste totale breedte: € 10.000, dus E = € 5.000.</li><li>Gebruik de gegevens van de regressieschatter: N = 2.130, s_w = 82,1, R = 0,925 en t = 1,974.</li><li>γ = 5.000² / [1,974² × 2.130 × 82,1² × (1 − 0,925²)] ≈ 3,09519.</li><li>n = 2.130 / (1 + 3,09519) ≈ 520,122. Rond op naar 521.</li><li>Er zijn al 180 posten gecontroleerd; nog nodig: 341.</li></ol><p class=\"note\"><strong>Let op:</strong> Vul geen totale intervalbreedte in waar E staat. Een uitkomst van 520,122 vraagt om 521 controles in totaal; hoeveel extra nodig zijn hangt af van wat al gecontroleerd is.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de omvangsformule vóór of tijdens een controle als je wilt weten hoeveel posten nodig zijn om een gegeven nauwkeurigheid te bereiken. De onderstaande vorm is de planningsroute van het formuleblad.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Tussenstap</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Tussenstap\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>γ</mi><mo>=</mo><mfrac><mrow><msup><mi>E</mi><mn>2</mn></msup></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>×</mo><mi>N</mi><mo>×</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Benodigde omvang</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Benodigde omvang\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>n</mi><mo>=</mo><mfrac><mrow><mi>N</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>γ</mi></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>E = toegestane marge aan één kant; t = kritieke waarde; N = populatieomvang; s² = de variantie passend bij de schatter; γ = tussenuitkomst. Voor MPU gebruik je <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>w</mi></msub><mn>2</mn></msup></mrow></math>; voor verschillen <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup></mrow></math>. Bij de regressieschatter is de passende resterende variantie <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>w</mi></msub><mn>2</mn></msup></mrow></math> × (1 − <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>R</mi><mtext>bw</mtext></msub><mn>2</mn></msup></mrow></math>).</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"sample-margin\"><h3>Meer controles verkleinen de marge</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Marge bij een vaste spreiding en t</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Marge tegenover omvang; x-as: Gecontroleerde posten n; y-as: Marge E (€)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">2.000,0</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">4.000,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">6.000,0</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">8.000,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">250,0</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">500,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">750,0</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">1.000,0</text><polyline points=\"64.90,27.04 68.26,55.37 71.63,72.53 74.99,84.37 78.36,93.20 81.72,100.12 85.08,105.74 88.45,110.44 91.81,114.45 95.17,117.92 98.54,120.97 101.90,123.68 105.27,126.12 108.63,128.32 111.99,130.33 115.36,132.18 118.72,133.88 122.08,135.46 125.45,136.93 128.81,138.31 132.18,139.60 135.54,140.81 138.90,141.96 142.27,143.05 145.63,144.09 148.99,145.08 152.36,146.02 155.72,146.92 159.08,147.78 162.45,148.61 165.81,149.41 169.18,150.18 172.54,150.92 175.90,151.64 179.27,152.33 182.63,153.01 186.00,153.66 189.36,154.30 192.72,154.92 196.09,155.52 199.45,156.11 202.81,156.69 206.18,157.25 209.54,157.80 212.91,158.34 216.27,158.88 219.63,159.40 223.00,159.91 226.36,160.42 229.72,160.91 233.09,161.41 236.45,161.89 239.81,162.37 243.18,162.85 246.54,163.32 249.91,163.79 253.27,164.25 256.63,164.71 260.00,165.18 263.36,165.64 266.73,166.09 270.09,166.55 273.45,167.02 276.82,167.48 280.18,167.95 283.54,168.42 286.91,168.89 290.27,169.37 293.63,169.86 297.00,170.36 300.36,170.88 303.73,171.40 307.09,171.95 310.45,172.52 313.82,173.12 317.18,173.76 320.55,174.46 323.91,175.23 327.27,176.13 330.64,177.28 334.00,180.00\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Gecontroleerde posten n</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Marge E (€)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>E(n)</span></div><p class=\"fv-work\">Voor dit beeld blijven N = 1.000, s = € 20 en t = 1,985 vast. Alleen n verandert.</p></figure><figure class=\"fv-panel\"><figcaption>Dezelfde curve in getallen</figcaption><table class=\"fv-table\"><caption>Controle van vier punten op de curve</caption><thead><tr><th scope=\"col\">n</th><th scope=\"col\">E</th></tr></thead><tbody><tr><td>25</td><td>€ 7.844,04</td></tr><tr><td>100</td><td>€ 3.768,16</td></tr><tr><td>400</td><td>€ 1.538,34</td></tr><tr><td>1000</td><td>€ 0,00</td></tr></tbody></table><p class=\"fv-work\">Zonder eindigheidscorrectie geeft vier keer zoveel posten de helft van de marge. De correctie verlaagt de marge hier nog verder.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Deze gevoeligheidsvergelijking houdt t bewust vast. Bij een echte planning volg je de cursusroute en bepaal je de vereiste kritieke waarde en afronding.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Vertaal de gewenste totale intervalbreedte naar E door de breedte te halveren.</li><li>Kies de variantie die bij de schatter hoort. Bij regressie moet de factor 1 − <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>R</mi><mtext>bw</mtext></msub><mn>2</mn></msup></mrow></math> dus worden meegenomen.</li><li>Gebruik de t-waarde volgens de opgave of de gevolgde uitwerking en bereken γ.</li><li>Bereken n = N/(1 + γ). Rond het vereiste aantal altijd naar boven af.</li><li>Wordt om uitbreiding gevraagd? Trek het aantal al gecontroleerde posten van het benodigde totale aantal af.</li></ol><h3>Tentamen 28 oktober 2024, vraag 2</h3><ol><li>Gewenste totale breedte: € 10.000, dus E = € 5.000.</li><li>Gebruik de gegevens van de regressieschatter: N = 2.130, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>w</mi></msub></mrow></math> = 82,1, R = 0,925 en t = 1,974.</li><li>γ = 5.000² / [1,974² × 2.130 × 82,1² × (1 − 0,925²)] ≈ 3,09519.</li><li>n = 2.130 / (1 + 3,09519) ≈ 520,122. Rond op naar 521.</li><li>Er zijn al 180 posten gecontroleerd; nog nodig: 341.</li></ol><p class=\"note\"><strong>Let op:</strong> Vul geen totale intervalbreedte in waar E staat. Een uitkomst van 520,122 vraagt om 521 controles in totaal; hoeveel extra nodig zijn hangt af van wat al gecontroleerd is.</p>"
         },
         {
           "title": "Uitbreiding na stratificatie",
-          "html": "<p>De totale variantie is de som van de variantiebijdragen van de strata. Bij een gewenste marge E hoort maximaal (E/t)² totale variantie. Houd voor een planningsberekening de gegeven t-waarde en geschatte spreidingen vast; na de aanvullende controle beoordeel je de nieuwe uitkomsten opnieuw.</p><h3>Cursusopgave H8.9b/c</h3><ol><li>De oorspronkelijke schatting is € 6.678.000 met s_tot ≈ € 256.153 en t = 1,978. De marge is circa € 506.670, dus meer dan de gewenste € 500.000.</li><li>De maximaal toegestane standaardfout is 500.000 / 1,978 ≈ € 252.780. De totale variantie moet ongeveer 1,717 × 10⁹ afnemen.</li><li>Stratum 3 draagt het meest bij: s_3,totaal ≈ € 135.645,95. Trek de benodigde vermindering van deze gekwadrateerde bijdrage af. De gewenste bijdrage wordt circa 1,6683 × 10¹⁰.</li><li>Gebruik de cursusbenadering γ₃ = gewenste variantiebijdrage / (N₃ × s₃²). Met N₃ = 300 en s₃ = 2.606,15 volgt γ₃ ≈ 8,1876.</li><li>Nieuwe totale n₃ = 300 / (1 + 8,1876) ≈ 32,65. Rond omhoog naar 33. Er waren 30 controles, dus voeg 3 toe.</li><li>Controleer de marge met n₃ = 33 en de overige strata ongewijzigd. Bij de vastgehouden planningswaarden daalt die tot ongeveer € 499.443.</li></ol><p class=\"note\">De cursusuitwerking gebruikt de gebruikelijke N − 1 ≈ N-benadering bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>"
+          "html": "<p>De totale variantie is de som van de variantiebijdragen van de strata. Bij een gewenste marge E hoort maximaal (E/t)² totale variantie. Houd voor een planningsberekening de gegeven t-waarde en geschatte spreidingen vast; na de aanvullende controle beoordeel je de nieuwe uitkomsten opnieuw.</p><h3>Cursusopgave H8.9b/c</h3><ol><li>De oorspronkelijke schatting is € 6.678.000 met <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>tot</mtext></msub></mrow></math> ≈ € 256.153 en t = 1,978. De marge is circa € 506.670, dus meer dan de gewenste € 500.000.</li><li>De maximaal toegestane standaardfout is 500.000 / 1,978 ≈ € 252.780. De totale variantie moet ongeveer 1,717 × 10⁹ afnemen.</li><li>Stratum 3 draagt het meest bij: s_3,totaal ≈ € 135.645,95. Trek de benodigde vermindering van deze gekwadrateerde bijdrage af. De gewenste bijdrage wordt circa 1,6683 × 10¹⁰.</li><li>Gebruik de cursusbenadering γ₃ = gewenste variantiebijdrage / (N₃ × s₃²). Met N₃ = 300 en s₃ = 2.606,15 volgt γ₃ ≈ 8,1876.</li><li>Nieuwe totale n₃ = 300 / (1 + 8,1876) ≈ 32,65. Rond omhoog naar 33. Er waren 30 controles, dus voeg 3 toe.</li><li>Controleer de marge met n₃ = 33 en de overige strata ongewijzigd. Bij de vastgehouden planningswaarden daalt die tot ongeveer € 499.443.</li></ol><p class=\"note\">De cursusuitwerking gebruikt de gebruikelijke N − 1 ≈ N-benadering bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>"
         },
         {
           "title": "Omvang bij de quotiëntschatter",
-          "html": "<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld bij slides PDF 34–36</h3><ol><li>N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.</li><li>γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.</li><li>n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.</li><li>Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.</li></ol>"
+          "html": "<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> van de quotiëntschatter: γ = E²/(t² × N × <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>q</mi></msub><mn>2</mn></msup></mrow></math>) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld bij slides PDF 34–36</h3><ol><li>N = 1.000, t = 2, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>q</mi></msub></mrow></math> = 7,60 en gewenste marge E = € 1.000.</li><li>γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.</li><li>n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.</li><li>Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.</li></ol>"
+        },
+        {
+          "title": "Alle strata uitbreiden of gericht één bijdrage verkleinen",
+          "html": "<p>Een te brede gestratificeerde schatting kun je op twee manieren verbeteren: opnieuw over alle groepen verdelen, of gericht groepen met een grote variantiebijdrage uitbreiden. Het boek behandelt beide. De volgende algemene route is formule 8.20 en gebruikt een directe schatter per stratum.</p><div class=\"formula\">γ = E² / [t² × Σ(Nᵢs²ᵢ)]<br>n = N / (1 + γ)</div><p>N betreft de populatie waaruit wordt getrokken; een integraal gecontroleerd topstratum staat daarbuiten. De formule sluit aan op de cursusbenadering bij evenredige verdeling en vastgehouden stratumspreidingen. Voor een andere allocatie mag je niet zonder controle dezelfde n-verdeling invullen. E is de gewenste marge voor de totaalschatting.</p><div class=\"table-wrap\"><table><caption>Eigen invulvoorbeeld bij boekformule 8.20</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">sᵢ</th><th scope=\"col\">Nᵢs²ᵢ</th></tr></thead><tbody><tr><td>1</td><td>600</td><td>20</td><td>240.000</td></tr><tr><td>2</td><td>400</td><td>40</td><td>640.000</td></tr><tr><td>Som</td><td>1.000</td><td></td><td>880.000</td></tr></tbody></table></div><ol><li>Gegeven planningswaarde t = 2 en gewenste marge E = € 3.000.</li><li>γ = 3.000²/(2² × 880.000) = 2,556818.</li><li>n = 1.000/(1 + γ) = 281,150160; naar boven afgerond 282. Een evenredige verdeling is 169 en 113 controles.</li><li>Reken de marge vervolgens na met deze gehele aantallen en de twee afzonderlijke eindigheidscorrecties. Die is ongeveer € 2.995,10 en voldoet dus aan de gestelde € 3.000.</li></ol><p>Het alternatief is de al behandelde uitbreiding van één stratum: doelvariantie (E/t)² minus de ongewijzigde bijdragen van andere strata geeft de maximaal toegestane bijdrage van de te vergroten groep. Vergelijk variantiebijdragen, niet alleen sᵢ of aantallen posten. De bijdrage bevat ook Nᵢ, nᵢ en de eindigheidscorrectie.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Stel: de gewenste totale variantie is 100, terwijl de ongewijzigde andere strata samen al 120 bijdragen. Kan extra controle uitsluitend in één geselecteerd stratum voldoende zijn?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Nee. Voor dat stratum zou maximaal 100 − 120 = −20 variantie overblijven; een variantie kan niet negatief zijn. Zelfs integrale controle van die ene groep laat 120 over. Ook andere groepen moeten worden uitgebreid of de opzet moet inhoudelijk opnieuw worden beoordeeld.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/boek-h8c.pdf#page=10\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10</li><li><a href=\"bronnen/boek-h8c.pdf#page=11\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11</li><li><a href=\"bronnen/uitwerkingenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel SRA NJ26</a> · H8.9c: gerichte uitbreiding van stratum 3</li></ul></details>",
+          "refs": [
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 13,
+              "locator": "H8.9c: gerichte uitbreiding van stratum 3"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "De slides doorrekenen: van gewenste marge naar extra controles",
+          "html": "<p>De slides vergelijken vier gerealiseerde marges en willen de quotiëntschatter nauwkeuriger maken. De gewenste <em>marge</em> is € 310.000, dus de gewenste totale breedte € 620.000.</p><div class=\"table-wrap\"><table><caption>Invoer uit slides PDF 34-35</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>N</td><td>28.946</td></tr><tr><td>Reeds gecontroleerd n</td><td>1.000</td></tr><tr><td>s<sub>q</sub></td><td>€ 213,51</td></tr><tr><td>t</td><td>1,960</td></tr><tr><td>E</td><td>€ 310.000</td></tr></tbody></table></div><ol><li>γ = 310.000²/(1,960² × 28.946 × 213,51²) = 18,95773.</li><li>n = 28.946/(1 + γ) = 1.450,36562; rond omhoog naar 1.451.</li><li>Er zijn al 1.000 controles: aanvullend nodig 451.</li><li>Na uitbreiding tonen de slides een nieuwe s<sub>q</sub> van € 195,17 en een gerealiseerde marge van circa € 283.305. Die is kleiner dan de geplande € 310.000 doordat de nieuwe spreiding lager is.</li></ol><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p><strong>Eigen vervolg op de cursuscasus.</strong> Een collega wil in γ € 620.000 invullen, omdat dat de toegestane totale breedte is. Wat gebeurt er en waarom is dat onjuist?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>De ingevoerde E verdubbelt. Door E² wordt γ vier keer zo groot en wordt n kleiner. Je zou dus te weinig posten plannen voor de werkelijk toegestane marge. Het interval heeft breedte 2E; in de formule hoort € 310.000.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=34\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 34,
+              "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
       ],
-      "completionVersion": "2026-09-20"
+      "completionVersion": "2026-09-20",
+      "samplingVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H8 · §8.2.1–8.2.4 en §8.3.4",
+        "college": "1–2",
+        "focus": "Vertaal een gewenste intervalbreedte eerst naar de marge. Onderscheid totale benodigde omvang en extra controles, ook binnen één stratum.",
+        "title": "H8 · §8.2.1–8.2.4 en §8.3.4 · Hoorcollege 1–2",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "sample-margin",
+          "title": "Terugrekenen vanaf de toegestane marge"
+        }
+      ],
+      "reading": {
+        "opening": "Een berekend interval kan te breed zijn voor de controlevraag. Je werkt dan terug: vanuit de gewenste marge bepaal je hoeveel waarnemingen nodig zijn. Daarbij horen de spreiding van de gekozen schatter en het onderscheid tussen totale en aanvullende controles.",
+        "conclusion": "Reken een gevraagde intervalbreedte eerst om naar de halve breedte, de marge. Rond de benodigde totale steekproefomvang naar boven af en bepaal pas daarna de extra controles. Bij een verdeelde populatie moet ook de verdeling over strata worden gekozen."
+      }
     },
     {
       "id": "stratificatie",
@@ -1914,15 +3884,94 @@ window.SRA = {
       "sections": [
         {
           "title": "Waarom opdelen?",
-          "html": "<p><strong>Stratificatie</strong> is het verdelen van een populatie in strata, oftewel deelpopulaties. Binnen elk stratum wil je relatief weinig spreiding. Bijvoorbeeld: goedkope, middeldure en dure voorraadartikelen. Dit kan de schatting nauwkeuriger maken en levert informatie per groep.</p><p>Een <strong>topstratum</strong> bevat bijvoorbeeld alle posten boven een grensbedrag. Worden die integraal gecontroleerd, dan ken je hun werkelijke totaal. Tel dat bij de schatting op. Voor dat volledig gecontroleerde deel is de steekproefvariantie nul.</p>"
+          "html": "<p><strong>Stratificatie</strong> is het verdelen van een populatie in strata, oftewel deelpopulaties. Binnen elk stratum wil je relatief weinig spreiding. Bijvoorbeeld: goedkope, middeldure en dure voorraadartikelen. Dit kan de schatting nauwkeuriger maken en levert informatie per groep.</p><p>Een <strong>topstratum</strong> bevat bijvoorbeeld alle posten boven een grensbedrag. Worden die integraal gecontroleerd, dan ken je hun werkelijke totaal. Tel dat bij de schatting op. Voor dat volledig gecontroleerde deel is de steekproefvariantie nul.</p><p>Een <strong>homogeen stratum</strong> bevat posten die onderling relatief vergelijkbaar zijn. Door binnen zulke groepen te schatten, voorkom je dat het verschil tussen bijvoorbeeld kleine en grote voorraadposten de volledige onzekerheid bepaalt. De boekwaarden zijn vóór de controle beschikbaar en kunnen daarom de indeling sturen, terwijl de werkelijke waarden pas door de controle bekend worden.</p><p>Eigen inzicht kan ook een verdedigbare indeling opleveren, bijvoorbeeld naar locatie of productgroep als die groepen een andere waardeopbouw of foutstructuur hebben. De slides noemen vier à vijf strata als vuistregel. Het is geen garantie dat ieder viertal groepen een betere schatting geeft. Beoordeel wat binnen de groepen homogener wordt en of ieder stratum voldoende informatie krijgt.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=38\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 38-39: nut, eigen inzicht en indelingsmethoden</li><li><a href=\"bronnen/boek-h8b.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 211–220</a> · Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "De volledige collegestabel: cumulatieve boekwaarde en grenzen",
+          "html": "<p>Dit is de volledige tabel uit de colleges. De grenzen in de eerste kolom betreffen <strong>boekwaarde per post</strong>; de laatste kolom telt eurobedragen van alle posten tot die grens op. Verwar die twee eurogrootheden niet.</p><div class=\"table-wrap\"><table><caption>Slides PDF 40: boekwaarde per klasse en cumulatief bedrag</caption><thead><tr><th scope=\"col\">Boekwaarde per post (€)</th><th scope=\"col\">Aantal posten</th><th scope=\"col\">Som boekwaarden (€)</th><th scope=\"col\">Cumulatief (€)</th></tr></thead><tbody><tr><td>0 tot < 1.000</td><td>1.127</td><td>513.513</td><td>513.513</td></tr><tr><td>1.000 tot < 2.000</td><td>813</td><td>1.195.110</td><td>1.708.623</td></tr><tr><td>2.000 tot < 3.000</td><td>760</td><td>1.846.186</td><td>3.554.809</td></tr><tr><td>3.000 tot < 4.000</td><td>699</td><td>2.394.075</td><td>5.948.884</td></tr><tr><td>4.000 tot < 5.000</td><td>412</td><td>1.858.944</td><td>7.807.828</td></tr><tr><td>5.000 tot < 6.000</td><td>300</td><td>1.651.237</td><td>9.459.065</td></tr><tr><td>6.000 tot < 7.000</td><td>267</td><td>1.717.729</td><td>11.176.794</td></tr><tr><td>7.000 tot < 8.000</td><td>217</td><td>1.588.182</td><td>12.764.976</td></tr><tr><td>8.000 tot < 9.000</td><td>110</td><td>892.584</td><td>13.657.560</td></tr><tr><td>9.000 tot < 10.000</td><td>70</td><td>649.099</td><td>14.306.659</td></tr><tr><td>≥ 10.000: volledige controle</td><td>48</td><td>621.778</td><td>Buiten de cumulatie</td></tr></tbody></table></div><ol><li>Haal de 48 posten met boekwaarde ≥ € 10.000 apart voor volledige controle. De overige 4.775 posten hebben samen € 14.306.659 boekwaarde.</li><li>Voor vier steekproefstrata is het streefbedrag per groep 14.306.659/4 = € 3.576.664,75. Cumulatieve doelen: € 3.576.664,75; € 7.153.329,50; € 10.729.994,25.</li><li>Vergelijk ieder doel met de beschikbare cumulatieve bedragen. Bij het eerste doel ligt € 3.554.809 dichtbij: de bijbehorende boekwaardegrens per post is € 3.000, niet € 3.554.809.</li><li>Bij het tweede doel kies je € 7.807.828 (grens € 5.000); bij het derde € 11.176.794 (grens € 7.000). Zonder individuele postgegevens splits je de beschikbare klassen niet willekeurig.</li></ol><div class=\"table-wrap\"><table><caption>Resultaat: van cumulatieve bedragen naar afzonderlijke strata</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Boekwaarde per post (€)</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">Boekwaarde in stratum (€)</th></tr></thead><tbody><tr><td>1</td><td>0 tot < 3.000</td><td>2.700</td><td>3.554.809</td></tr><tr><td>2</td><td>3.000 tot < 5.000</td><td>1.111</td><td>4.253.019</td></tr><tr><td>3</td><td>5.000 tot < 7.000</td><td>567</td><td>3.368.966</td></tr><tr><td>4</td><td>7.000 tot < 10.000</td><td>397</td><td>3.129.865</td></tr><tr><td>Totaal zonder topstratum</td><td></td><td>4.775</td><td>14.306.659</td></tr></tbody></table></div><p>Het tweede stratum bevat bijvoorbeeld € 7.807.828 − € 3.554.809 = € 4.253.019. Een cumulatief totaal is dus niet hetzelfde als de boekwaarde van dat ene stratum. De aantallen hoeven niet gelijk te zijn: deze methode streeft naar ongeveer gelijke totale boekwaarde.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Verklaar met de oorspronkelijke tabel waarom de grens tussen stratum 2 en 3 bij € 5.000 ligt en niet bij € 4.000. Bereken ook het aantal posten in stratum 3.</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Doel 2 is € 7.153.329,50. Bij grens € 4.000 is het cumulatieve bedrag € 5.948.884, een afstand van € 1.204.445,50. Bij grens € 5.000 is dat € 7.807.828, afstand € 654.498,50. De laatste ligt dichterbij. Stratum 3 bevat de klassen € 5.000 tot € 6.000 en € 6.000 tot € 7.000: 300 + 267 = 567 posten.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=40\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 40-41: oorspronkelijke klassen en gekozen strata</li><li><a href=\"bronnen/boek-h8c.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 221; oorspronkelijke PDF p. 239; uitsnede p. 1</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 1,
+              "locator": "Boek p. 221; oorspronkelijke PDF p. 239; uitsnede p. 1"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         },
         {
           "title": "Hoe verdeel je de steekproef?",
           "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Evenredig</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Evenredig\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>N</mi><mi>i</mi></msub></mrow><mrow><mi>N</mi></mrow></mfrac><mo>×</mo><mi>n</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Neyman</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Neyman\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mrow><msub><mi>N</mi><mi>i</mi></msub><msub><mi>s</mi><mi>i</mi></msub></mrow></mrow><mrow><mo>∑</mo><mrow><mo>(</mo><mrow><msub><mi>N</mi><mi>i</mi></msub><msub><mi>s</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></mrow></mfrac><mo>×</mo><mi>n</mi></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>Index i verwijst naar stratum i. Nᵢ = groepsomvang; nᵢ = controles; sᵢ = spreiding. W_top is het bekende werkelijke totaal van het volledig gecontroleerde topstratum.</p></details><p><strong>Allocatie</strong> is de verdeling van je beschikbare controles. Evenredige allocatie houdt alleen rekening met de groepsomvang. Neyman geeft bij gelijke kosten meer controles aan grote groepen én aan groepen met meer spreiding. Zonder informatie over sᵢ kun je Neyman niet uitrekenen.</p><p>Na afronden moeten de aantallen nog steeds het gewenste n vormen. Controleer ook dat nᵢ niet groter is dan Nᵢ. Een volledig gecontroleerd topstratum tel je niet nog eens mee in de allocatie over de overige groepen.</p>"
         },
         {
+          "title": "Neyman en evenredige allocatie naast elkaar uitrekenen",
+          "html": "<p><strong>Allocatie</strong> bepaalt hoeveel controles ieder al gevormd stratum krijgt. De stratumgrenzen veranderen hierbij niet. Neyman-allocatie gebruikt omvang én vooraf geschatte spreiding. Bij gelijke controlekosten krijgen grotere en meer variabele groepen meer waarnemingen, omdat daar meer onzekerheid te verminderen is.</p><div class=\"table-wrap\"><table><caption>Slides PDF 44-46: 250 controles verdelen over 4.775 posten</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">Vooraf sᵢ</th><th scope=\"col\">Nᵢsᵢ</th><th scope=\"col\">Neyman onafgerond</th><th scope=\"col\">Neyman geheel</th><th scope=\"col\">Evenredig onafgerond</th></tr></thead><tbody><tr><td>1</td><td>2.700</td><td>200</td><td>540.000</td><td>113,794</td><td>114</td><td>141,361</td></tr><tr><td>2</td><td>1.111</td><td>250</td><td>277.750</td><td>58,530</td><td>58</td><td>58,168</td></tr><tr><td>3</td><td>567</td><td>300</td><td>170.100</td><td>35,845</td><td>36</td><td>29,686</td></tr><tr><td>4</td><td>397</td><td>500</td><td>198.500</td><td>41,830</td><td>42</td><td>20,785</td></tr></tbody></table></div><div class=\"formula\">Neyman: nᵢ = n × Nᵢsᵢ / ΣNᵢsᵢ<br>Evenredig: nᵢ = n × Nᵢ / N</div><ol><li>ΣNᵢsᵢ = 1.186.350. Voor stratum 1: 250 × 540.000/1.186.350 = 113,794 en dus 114 controles.</li><li>Bij Neyman worden de aantallen 114, 58, 36 en 42. Controleer dat ze samen 250 zijn. De 48 integraal gecontroleerde posten vallen buiten deze verdeling; totale controle-inspanning is dan 298 posten.</li><li>Bij evenredige verdeling zijn de onafgeronde aantallen circa 141,361; 58,168; 29,686 en 20,785. Een verdeling met som 250 is 141, 58, 30 en 21.</li><li>Stratum 4 krijgt bij Neyman meer controles: zijn sᵢ = 500 is groter dan bij de andere strata. Bij gelijke sᵢ vallen die spreidingsfactoren weg en wordt Neyman gelijk aan evenredige allocatie.</li></ol><p>Een vast totaal n moet behouden blijven. Als gewoon afronden een ander totaal geeft, verdeel de resterende plaatsen na afronden naar beneden op basis van de grootste fracties, tenzij de opgave een andere afspraak geeft. Dit is een praktische afrondingsregel. Geen groep kan meer unieke controles krijgen dan Nᵢ; een volledig gecontroleerde groep wordt vervolgens apart behandeld.</p><p><strong>Planning versus uitvoering:</strong> de vooraf geschatte sᵢ uit deze allocatietabel is niet automatisch de werkelijk gevonden s<sub>w,i</sub>. Gebruik bij de schatting de na controle gegeven sommen, kwadratensommen en gerealiseerde nᵢ. De collegecasus hieronder illustreert dat onderscheid.</p><p><strong>Aanvullende boekvariant:</strong> boek p. 226 noemt ook allocatie evenredig aan de totale <em>boekwaarde</em> per stratum. Als die bedragen ongeveer gelijk zijn, leidt dat tot ongeveer gelijke aantallen controles. Dat is een andere keuze dan de standaard evenredige allocatie Nᵢ/N. Lees daarom expliciet of de opdracht op aantallen of bedragen wil verdelen.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Een tweede eigen planning heeft twee even grote groepen. s₁ = 100 en s₂ = 300; totaal n = 80. Verdeel evenredig en volgens Neyman. Wanneer heeft evenredige allocatie hier toch een praktische reden?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Evenredig: 40 en 40. Neyman: verhouding 100:300, dus 20 en 60. Als betrouwbare voorafgaande spreidingsschattingen ontbreken, kan evenredige allocatie een uitvoerbare keuze zijn. Neyman met verzonnen spreidingen heeft geen onderbouwd voordeel. Onder de gegeven betrouwbare spreidingen en gelijke kosten richt Neyman meer controle-inspanning op de variabelere groep.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=42\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 42-46: allocatieformules en volledige tabellen</li><li><a href=\"bronnen/boek-h8c.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4</li><li><a href=\"bronnen/boek-h8c.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
           "title": "De groepen samenvoegen",
           "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Totaalschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Totaalschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>tot</mtext></msub><mo>=</mo><mo>∑</mo><mrow><mo>(</mo><mrow><msub><mi>N</mi><mi>i</mi></msub><msub><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mi>i</mi></msub></mrow><mo>)</mo></mrow><mo>+</mo><msub><mi>W</mi><mtext>top</mtext></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gecombineerde variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gecombineerde variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>s</mi><mtext>tot</mtext></msub><mn>2</mn></msup><mo>=</mo><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>N</mi><mi>i</mi></msub><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow><mrow><msqrt><msub><mi>n</mi><mi>i</mi></msub></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><msub><mi>N</mi><mi>i</mi></msub><mo>−</mo><msub><mi>n</mi><mi>i</mi></msub></mrow><mrow><msub><mi>N</mi><mi>i</mi></msub><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt><mo>)</mo></mrow><mn>2</mn></msup></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>tot</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msqrt><msup><msub><mi>s</mi><mtext>tot</mtext></msub><mn>2</mn></msup></msqrt></mrow></math></div></div></div><p>Je telt de <strong>varianties</strong> van de afzonderlijke schattingen op, daarna neem je één wortel. De effectieve vrijheidsgraden voor t worden volgens het formuleblad in de opgave gegeven. Gebruik dus niet zelf automatisch n − 1.</p>"
+        },
+        {
+          "title": "De volledige MPU-stratacase: iedere rij tot en met het interval",
+          "html": "<p>Na de controles worden per stratum de werkelijke waarden samengevat. Deze oorspronkelijke collegedata sluiten aan op de Neyman-aantallen hierboven. Gebruik bij elke rij de eigen Nᵢ en nᵢ, ook in de eindigheidscorrectie.</p><div class=\"table-wrap\"><table><caption>Slides PDF 48: invoer voor de gestratificeerde MPU-schatting</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">nᵢ</th><th scope=\"col\">Σwᵢ (€)</th><th scope=\"col\">Σwᵢ² (euro²)</th></tr></thead><tbody><tr><td>1</td><td>2.700</td><td>114</td><td>7.000</td><td>475.000</td></tr><tr><td>2</td><td>1.111</td><td>58</td><td>8.000</td><td>1.175.000</td></tr><tr><td>3</td><td>567</td><td>36</td><td>12.000</td><td>4.030.000</td></tr><tr><td>4</td><td>397</td><td>42</td><td>20.000</td><td>9.600.000</td></tr></tbody></table></div><ol><li>Stratum 1: gemiddelde = 7.000/114 = € 61,4035. Ŵ₁ = 2.700 × 61,4035 = € 165.789,47. De factor is 2.700 omdat dit stratum die omvang heeft.</li><li>s²<sub>w,1</sub> = [475.000 − 7.000²/114]/113 = 399,7826 euro². De wortel is € 19,9946. De vooraf gebruikte 200 uit de allocatie vervang je dus door de werkelijk gevonden spreiding.</li><li>s<sub>Ŵ₁</sub> = 2.700 × (19,9946/√114) × √(2.586/2.699) = € 4.949,21. Dit is de standaardfout van het stratumtotaal, niet de spreiding van een losse post.</li><li>Herhaal dezelfde route voor alle vier strata. De onderstaande weergave is afgerond; de verdere berekening gebruikt onafgeronde waarden.</li></ol><div class=\"table-wrap\"><table><caption>Uitkomsten en variantiebijdragen per stratum</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Gemiddelde (€)</th><th scope=\"col\">Ŵᵢ (€)</th><th scope=\"col\">s<sub>w,i</sub> (€)</th><th scope=\"col\">Standaardfout totaal (€)</th><th scope=\"col\">Variantiebijdrage (euro²)</th></tr></thead><tbody><tr><td>1</td><td>61,40</td><td>165.789,47</td><td>19,9946</td><td>4.949,21</td><td>24.494.706,90</td></tr><tr><td>2</td><td>137,93</td><td>153.241,38</td><td>35,4301</td><td>5.034,14</td><td>25.342.576,39</td></tr><tr><td>3</td><td>333,33</td><td>189.000,00</td><td>29,2770</td><td>2.679,77</td><td>7.181.165,19</td></tr><tr><td>4</td><td>476,19</td><td>189.047,62</td><td>43,1081</td><td>2.500,29</td><td>6.251.463,81</td></tr></tbody></table></div><p>De vier puntschattingen tellen op tot € 697.078,47. De controle van de 48 grote posten levert volgens het collegevoorbeeld een werkelijk totaal van € 621.778 op. Tel dit één keer erbij: Ŵ = € 1.318.856,47. Als bij volledige controle een ander werkelijk totaal wordt gevonden dan de boekwaarde, gebruik je dat gecontroleerde totaal.</p><div class=\"formula\">s²<sub>tot</sub> = Σs²<sub>Ŵᵢ</sub> = 63.269.912,30 euro²<br>s<sub>tot</sub> = € 7.954,24</div><p>Bij onafhankelijke steekproeven per stratum tellen varianties op. Afwijkingen van schattingen kunnen elkaar in het totaal deels compenseren; standaardfouten rechtstreeks optellen telt hun onzekerheden verkeerd samen. Het integraal gecontroleerde topstratum voegt een waarde toe en heeft geen steekproefvariantie.</p><p>Gegeven effectieve df > 200: tabellenbundel PDF 13, rij inf., kolom 0,025 geeft t = 1,960. E = € 15.590,31. Het tweezijdige 95%-interval is [€ 1.303.266,16; € 1.334.446,78]. Bij afronding naar buiten op € 1.000 wordt dit [€ 1.303.000; € 1.335.000]. De collegedia rondt het midden tot € 1.318.856 en de marge tot € 15.590 af.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Stel dat dezelfde integrale controle een werkelijke topwaarde van € 600.000 oplevert. De vier steekproeven blijven gelijk. Wat verandert aan het midden en de marge?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>De nieuwe puntschatting is € 697.078,47 + € 600.000 = € 1.297.078,47. De marge blijft € 15.590,31, omdat de steekproefvarianties niet veranderen en de topgroep geheel is gecontroleerd. De oude ongecontroleerde boekwaarde van de topgroep nogmaals optellen zou de schatting te hoog maken.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=48\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 48-49: invoer, vier uitkomsten en totaalschatting</li><li><a href=\"bronnen/formuleblad.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 25-27: combinatie van strata; df wordt gegeven</li><li><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Tabellenbundel</a> · Rij inf.; kolom 0,025</li><li><a href=\"bronnen/boek-h8c.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         },
         {
           "title": "Stratagrenzen bepalen vanuit de cursusopgave",
@@ -1930,7 +3979,51 @@ window.SRA = {
         },
         {
           "title": "Gericht extra controles in één stratum",
-          "html": "<p>De totale variantie is de som van de variantiebijdragen van de strata. Bij een gewenste marge E hoort maximaal (E/t)² totale variantie. Houd voor een planningsberekening de gegeven t-waarde en geschatte spreidingen vast; na de aanvullende controle beoordeel je de nieuwe uitkomsten opnieuw.</p><h3>Cursusopgave H8.9b/c</h3><ol><li>De oorspronkelijke schatting is € 6.678.000 met s_tot ≈ € 256.153 en t = 1,978. De marge is circa € 506.670, dus meer dan de gewenste € 500.000.</li><li>De maximaal toegestane standaardfout is 500.000 / 1,978 ≈ € 252.780. De totale variantie moet ongeveer 1,717 × 10⁹ afnemen.</li><li>Stratum 3 draagt het meest bij: s_3,totaal ≈ € 135.645,95. Trek de benodigde vermindering van deze gekwadrateerde bijdrage af. De gewenste bijdrage wordt circa 1,6683 × 10¹⁰.</li><li>Gebruik de cursusbenadering γ₃ = gewenste variantiebijdrage / (N₃ × s₃²). Met N₃ = 300 en s₃ = 2.606,15 volgt γ₃ ≈ 8,1876.</li><li>Nieuwe totale n₃ = 300 / (1 + 8,1876) ≈ 32,65. Rond omhoog naar 33. Er waren 30 controles, dus voeg 3 toe.</li><li>Controleer de marge met n₃ = 33 en de overige strata ongewijzigd. Bij de vastgehouden planningswaarden daalt die tot ongeveer € 499.443.</li></ol><p class=\"note\">De cursusuitwerking gebruikt de gebruikelijke N − 1 ≈ N-benadering bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>"
+          "html": "<p>De totale variantie is de som van de variantiebijdragen van de strata. Bij een gewenste marge E hoort maximaal (E/t)² totale variantie. Houd voor een planningsberekening de gegeven t-waarde en geschatte spreidingen vast; na de aanvullende controle beoordeel je de nieuwe uitkomsten opnieuw.</p><h3>Cursusopgave H8.9b/c</h3><ol><li>De oorspronkelijke schatting is € 6.678.000 met <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>tot</mtext></msub></mrow></math> ≈ € 256.153 en t = 1,978. De marge is circa € 506.670, dus meer dan de gewenste € 500.000.</li><li>De maximaal toegestane standaardfout is 500.000 / 1,978 ≈ € 252.780. De totale variantie moet ongeveer 1,717 × 10⁹ afnemen.</li><li>Stratum 3 draagt het meest bij: s_3,totaal ≈ € 135.645,95. Trek de benodigde vermindering van deze gekwadrateerde bijdrage af. De gewenste bijdrage wordt circa 1,6683 × 10¹⁰.</li><li>Gebruik de cursusbenadering γ₃ = gewenste variantiebijdrage / (N₃ × s₃²). Met N₃ = 300 en s₃ = 2.606,15 volgt γ₃ ≈ 8,1876.</li><li>Nieuwe totale n₃ = 300 / (1 + 8,1876) ≈ 32,65. Rond omhoog naar 33. Er waren 30 controles, dus voeg 3 toe.</li><li>Controleer de marge met n₃ = 33 en de overige strata ongewijzigd. Bij de vastgehouden planningswaarden daalt die tot ongeveer € 499.443.</li></ol><p class=\"note\">De cursusuitwerking gebruikt de gebruikelijke N − 1 ≈ N-benadering bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>"
+        },
+        {
+          "title": "Ook de wortelmethode volledig uit een klassentabel opbouwen",
+          "html": "<p>De tweede boekmethode houdt rekening met de verdeling van de aantallen en de breedte van de boekwaardeklassen. In cursusopgave H8.8 hebben de klassen verschillende breedtes. Bereken per klasse √(breedte × frequentie) en tel die <em>wortels</em> op. Neem niet eerst de totale frequentie en daarna één wortel.</p><div class=\"table-wrap\"><table><caption>H8.8b: volledige rekenkolommen, zonder het 100%-stratum</caption><thead><tr><th scope=\"col\">Boekwaardeklasse (€)</th><th scope=\"col\">Breedte</th><th scope=\"col\">Frequentie</th><th scope=\"col\">Breedte × frequentie</th><th scope=\"col\">Wortel</th><th scope=\"col\">Cumulatief</th></tr></thead><tbody><tr><td>0 tot < 400</td><td>400</td><td>772</td><td>308.800</td><td>555,70</td><td>555,70</td></tr><tr><td>400 tot < 800</td><td>400</td><td>1.016</td><td>406.400</td><td>637,50</td><td>1.193,19</td></tr><tr><td>800 tot < 1.200</td><td>400</td><td>1.408</td><td>563.200</td><td>750,47</td><td>1.943,66</td></tr><tr><td>1.200 tot < 1.600</td><td>400</td><td>882</td><td>352.800</td><td>593,97</td><td>2.537,63</td></tr><tr><td>1.600 tot < 2.000</td><td>400</td><td>812</td><td>324.800</td><td>569,91</td><td>3.107,54</td></tr><tr><td>2.000 tot < 2.500</td><td>500</td><td>635</td><td>317.500</td><td>563,47</td><td>3.671,01</td></tr><tr><td>2.500 tot < 3.000</td><td>500</td><td>480</td><td>240.000</td><td>489,90</td><td>4.160,91</td></tr><tr><td>3.000 tot < 4.000</td><td>1.000</td><td>336</td><td>336.000</td><td>579,66</td><td>4.740,57</td></tr><tr><td>4.000 tot < 5.000</td><td>1.000</td><td>771</td><td>771.000</td><td>878,07</td><td>5.618,63</td></tr><tr><td>5.000 tot < 7.500</td><td>2.500</td><td>418</td><td>1.045.000</td><td>1.022,25</td><td>6.640,88</td></tr><tr><td>7.500 tot < 10.000</td><td>2.500</td><td>129</td><td>322.500</td><td>567,89</td><td>7.208,78</td></tr></tbody></table></div><ol><li>Het cumulatieve worteltotaal is 7.208,78. De vier streefdelen zijn elk 1.802,19.</li><li>Vergelijk doelen 1.802,20; 3.604,40 en 5.406,60 met de cumulatieve kolom. De nabije beschikbare grenzen zijn 1.943,67; 3.671,02 en 5.618,65.</li><li>Lees vervolgens de bijbehorende bovengrenzen uit de boekwaardeklassen: € 1.200, € 2.500 en € 5.000. De vierde groep eindigt bij € 10.000.</li><li>Tel de frequenties binnen de nieuwe groepen op. Gebruik pas die groepsomvangen bij de allocatie.</li></ol><div class=\"table-wrap\"><table><caption>Twee indelingen van dezelfde cursuspopulatie H8.8</caption><thead><tr><th scope=\"col\">Methode</th><th scope=\"col\">Grenzen van vier strata (€)</th><th scope=\"col\">Aantallen Nᵢ</th></tr></thead><tbody><tr><td>Cumulatieve boekwaarde</td><td>0 / 1.600 / 3.000 / 5.000 / 10.000</td><td>4.078 / 1.927 / 1.107 / 547</td></tr><tr><td>Cumulatieve wortel</td><td>0 / 1.200 / 2.500 / 5.000 / 10.000</td><td>3.196 / 2.329 / 1.587 / 547</td></tr></tbody></table></div><p>Beide indelingen tellen op tot 7.659 posten. De verschillen zijn inhoudelijk: de eerste verdeelt ongeveer het bedrag, de tweede benut de vorm van de frequentieverdeling. Het boek vindt in zijn voorbeeld een betere precisie met de wortelmethode; dat is geen garantie voor iedere populatie. Vergelijk uiteindelijk de gerealiseerde standaardfouten.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Waarom is voor de klasse € 5.000 tot € 7.500 de rekenwaarde √(2.500 × 418) en niet √418? Welke gegeven informatie gaat verloren als je alleen de frequentie gebruikt?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>De klassen zijn ongelijk breed. Deze klasse beslaat € 2.500, terwijl de eerste klassen € 400 breed zijn. Breedte × frequentie neemt dat verschil mee volgens de boekmethode. Alleen √frequentie gebruiken zou een andere indeling opleveren. Bij gelijke breedtes is de breedte een gemeenschappelijke factor; hier niet.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/opgavenbundel.pdf#page=7\" target=\"_blank\" rel=\"noopener\">Opgavenbundel SRA NJ26</a> · H8.8a-b, oorspronkelijke klassegegevens</li><li><a href=\"bronnen/uitwerkingenbundel.pdf#page=10\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel SRA NJ26</a> · H8.8b, volledige worteltabel</li><li><a href=\"bronnen/boek-h8c.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2</li></ul></details>",
+          "refs": [
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "Van tabel naar een onderbouwde tentamenuitwerking",
+          "html": "<p>Bij een stratificatiecasus horen verschillende beslissingen achter elkaar. Maak zichtbaar welke informatie je in iedere stap gebruikt; daarmee is ook een tussenuitkomst controleerbaar.</p><div class=\"table-wrap\"><table><caption>Werkvolgorde en de reden achter iedere stap</caption><thead><tr><th scope=\"col\">Stap</th><th scope=\"col\">Wat je noteert</th><th scope=\"col\">Wat dit voorkomt</th></tr></thead><tbody><tr><td>1. Populatie afbakenen</td><td>N, B en apart volledig gecontroleerde posten</td><td>Topgroep dubbel tellen of in een verkeerde noemer opnemen</td></tr><tr><td>2. Grenzen bepalen</td><td>Cumulatieve doelwaarden, gekozen klassegrenzen, nieuwe Nᵢ</td><td>Cumulatieve bedragen als individuele boekwaardegrenzen lezen</td></tr><tr><td>3. Allocatie plannen</td><td>Evenredig of Neyman, invoer en som van nᵢ</td><td>Gelijke aantallen verwarren met evenredige verdeling</td></tr><tr><td>4. Gegevens evalueren</td><td>Werkelijke nᵢ, Σwᵢ, Σwᵢ² of andere schattergegevens</td><td>Voorafgaande spreidingen blijven gebruiken na de controle</td></tr><tr><td>5. Schattingen combineren</td><td>Som geschatte totalen plus gecontroleerde topwaarde</td><td>Een ongewogen gemiddelde van stratumgemiddelden nemen</td></tr><tr><td>6. Onzekerheid combineren</td><td>Som van varianties, daarna wortel en t</td><td>Standaardfouten optellen of eigen df verzinnen</td></tr><tr><td>7. Eis beoordelen</td><td>Marge E tegenover toegestane marge; uitbreiding indien nodig</td><td>Totale breedte vergelijken met een halve breedte</td></tr></tbody></table></div><p>Ook binnen strata kan een verschil-, quotiënt- of regressieschatter passend zijn. Dan bereken je per groep de bij die methode horende puntschatting en standaardfout; de combinatie van onafhankelijke stratumtotalen blijft via optellen van schattingen en varianties lopen. Controleer de methodevoorwaarden binnen de gebruikte groepen. Stratificatie en een hulpvariabeleschatter zijn dus verschillende keuzen die je onder passende omstandigheden kunt combineren.</p><p>Voor het tentamen hoef je de effectieve vrijheidsgraden van een gestratificeerde schatting niet zelf af te leiden als deze gegeven zijn. Het formuleblad zegt dat ze in de opgave worden meegedeeld. Gebruik niet automatisch totaal n − 1; de bijdragen van strata zijn verschillend.</p><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=47\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 47-49: methode per stratum en totale evaluatie</li><li><a href=\"bronnen/formuleblad.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Effectieve vrijheidsgraden worden meegedeeld</li><li><a href=\"bronnen/boek-h8c.pdf#page=11\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         },
         {
           "title": "Zelf oefenen met deze aanvulling",
@@ -1944,6 +4037,15 @@ window.SRA = {
           "Voor de berekening gebruikt de casus vervolgens andere, gegeven steekproefgroottes: 45, 32, 30 en 30. Gebruik die werkelijke aantallen.",
           "De gemiddelden zijn 60, 53, 50 en 41. Het totaal van de vier schattingen is 940×60 + 677×53 + 639×50 + 592×41 = € 148.503.",
           "Tel de € 22.580 van het volledig gecontroleerde topstratum erbij op: Ŵ_tot = € 171.083.",
+          "De gecombineerde variantie is 11.524.549,74; de standaardfout is € 3.394,7827.",
+          "90% betrouwbaarheid, effectieve df = 109, tabelrij 100: t = 1,660. Interval naar buiten op € 100: [€ 165.400; € 176.800]."
+        ],
+        "context": "Hoe combineer je vier bemonsterde strata met een volledig gecontroleerd topstratum? De tentamencasus laat eerst de allocatie zien en gebruikt daarna de werkelijk gegeven steekproefgroottes voor het totale interval.",
+        "stepsHtml": [
+          "Vier strata hebben Nᵢ = 940, 677, 639 en 592, samen 2.848. Voor n = 130 geeft evenredige allocatie 43, 31, 29 en 27.",
+          "Voor de berekening gebruikt de casus vervolgens andere, gegeven steekproefgroottes: 45, 32, 30 en 30. Gebruik die werkelijke aantallen.",
+          "De gemiddelden zijn 60, 53, 50 en 41. Het totaal van de vier schattingen is 940×60 + 677×53 + 639×50 + 592×41 = € 148.503.",
+          "Tel de € 22.580 van het volledig gecontroleerde topstratum erbij op: <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>tot</mtext></msub></mrow></math> = € 171.083.",
           "De gecombineerde variantie is 11.524.549,74; de standaardfout is € 3.394,7827.",
           "90% betrouwbaarheid, effectieve df = 109, tabelrij 100: t = 1,660. Interval naar buiten op € 100: [€ 165.400; € 176.800]."
         ]
@@ -1988,6 +4090,81 @@ window.SRA = {
           "source": "uitwerkingen",
           "page": 13,
           "locator": "H8 opgave 9c, PDF 13"
+        },
+        {
+          "source": "slides",
+          "page": 38,
+          "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+        },
+        {
+          "source": "boek-h8b",
+          "page": 9,
+          "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+        },
+        {
+          "source": "slides",
+          "page": 40,
+          "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+        },
+        {
+          "source": "opgaven",
+          "page": 7,
+          "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 10,
+          "locator": "H8.8b, volledige worteltabel"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 2,
+          "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+        },
+        {
+          "source": "slides",
+          "page": 42,
+          "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 4,
+          "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 6,
+          "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+        },
+        {
+          "source": "slides",
+          "page": 48,
+          "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+        },
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+        },
+        {
+          "source": "tabellen",
+          "page": 13,
+          "locator": "Rij inf.; kolom 0,025"
+        },
+        {
+          "source": "slides",
+          "page": 47,
+          "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+        },
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 11,
+          "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
         }
       ],
       "questions": [
@@ -2048,6 +4225,81 @@ window.SRA = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -2114,6 +4366,81 @@ window.SRA = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -2180,6 +4507,81 @@ window.SRA = {
               "source": "uitwerkingen",
               "page": 13,
               "locator": "H8 opgave 9c, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 38,
+              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            },
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "slides",
+              "page": 47,
+              "locator": "PDF 47-49: methode per stratum en totale evaluatie"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Effectieve vrijheidsgraden worden meegedeeld"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 11,
+              "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
           "recognition": {
@@ -2200,11 +4602,11 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "De steekproef verdelen over strata",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik allocatie als de populatie in groepen is verdeeld en je het geplande aantal controles n over die groepen moet verdelen. Evenredige allocatie gebruikt alleen omvang; Neyman gebruikt bij gelijke controlekosten ook de spreiding.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Evenredig</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Evenredig\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>N</mi><mi>i</mi></msub></mrow><mrow><mi>N</mi></mrow></mfrac><mo>×</mo><mi>n</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Neyman</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Neyman\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mrow><msub><mi>N</mi><mi>i</mi></msub><msub><mi>s</mi><mi>i</mi></msub></mrow></mrow><mrow><mo>∑</mo><mrow><mo>(</mo><mrow><msub><mi>N</mi><mi>i</mi></msub><msub><mi>s</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></mrow></mfrac><mo>×</mo><mi>n</mi></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Nᵢ is het aantal posten in stratum i; nᵢ wordt het aantal controles daarin. N en n zijn de totalen van de strata waarover je verdeelt. sᵢ is de spreiding binnen het stratum. ΣNᵢsᵢ is de som van alle omvang-maal-spreidingproducten.</p><h3>Zo reken je stap voor stap</h3><ol><li>Zet per stratum de omvang Nᵢ op een rij. Een integraal gecontroleerd topstratum blijft buiten deze verdeling.</li><li>Bereken bij evenredige allocatie per groep Nᵢ/N en vermenigvuldig met n.</li><li>Bereken bij Neyman eerst Nᵢ × sᵢ per groep. Deel elk product door de som van die producten en vermenigvuldig met n.</li><li>Rond af tot gehele aantallen en controleer dat hun som precies n is. Geen nᵢ mag groter zijn dan Nᵢ.</li></ol><h3>Tentamen 17 maart 2025, vraag 4–6</h3><ol><li>Vier strata hebben Nᵢ = 940, 677, 639 en 592, samen 2.848. Voor n = 130 geeft evenredige allocatie 43, 31, 29 en 27.</li><li>Voor de berekening gebruikt de casus vervolgens andere, gegeven steekproefgroottes: 45, 32, 30 en 30. Gebruik die werkelijke aantallen.</li></ol><p class=\"note\"><strong>Let op:</strong> Een berekende allocatie is een planning. Voor de latere evaluatie gebruik je de werkelijk gegeven of gerealiseerde steekproefaantallen, ook wanneer die afwijken van het plan.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik allocatie als de populatie in groepen is verdeeld en je het geplande aantal controles n over die groepen moet verdelen. Evenredige allocatie gebruikt alleen omvang; Neyman gebruikt bij gelijke controlekosten ook de spreiding.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Evenredig</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Evenredig\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>N</mi><mi>i</mi></msub></mrow><mrow><mi>N</mi></mrow></mfrac><mo>×</mo><mi>n</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Neyman</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Neyman\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mrow><msub><mi>N</mi><mi>i</mi></msub><msub><mi>s</mi><mi>i</mi></msub></mrow></mrow><mrow><mo>∑</mo><mrow><mo>(</mo><mrow><msub><mi>N</mi><mi>i</mi></msub><msub><mi>s</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></mrow></mfrac><mo>×</mo><mi>n</mi></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Nᵢ is het aantal posten in stratum i; nᵢ wordt het aantal controles daarin. N en n zijn de totalen van de strata waarover je verdeelt. sᵢ is de spreiding binnen het stratum. ΣNᵢsᵢ is de som van alle omvang-maal-spreidingproducten.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"allocation\"><h3>Evenredig en Neyman verdelen anders</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Evenredig naar omvang</figcaption><table class=\"fv-table\"><caption>N = 1.000; n = 100</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">N_i</th><th scope=\"col\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow></math></th><th scope=\"col\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>n</mi><mi>i</mi></msub></mrow></math></th></tr></thead><tbody><tr><td>1</td><td>500</td><td>10</td><td>50</td></tr><tr><td>2</td><td>500</td><td>30</td><td>50</td></tr></tbody></table><p class=\"fv-work\">De omvang is gelijk, dus ieder stratum krijgt 50 controles.</p></figure><figure class=\"fv-panel\"><figcaption>Neyman naar omvang én spreiding</figcaption><table class=\"fv-table\"><caption>Dezelfde populatie en totale steekproef</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">N_i × <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow></math></th><th scope=\"col\">Aandeel</th><th scope=\"col\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>n</mi><mi>i</mi></msub></mrow></math></th></tr></thead><tbody><tr><td>1</td><td>5.000</td><td>25%</td><td>25</td></tr><tr><td>2</td><td>15.000</td><td>75%</td><td>75</td></tr></tbody></table><p class=\"fv-work\">Het tweede stratum heeft driemaal zoveel spreiding. Bij gelijke kosten geeft de Neyman-route 25 en 75 controles.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Hier is een vergelijkingstabel duidelijker dan een extra grafiek: je ziet rechtstreeks welke gewichten de twee formules gebruiken.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Zet per stratum de omvang Nᵢ op een rij. Een integraal gecontroleerd topstratum blijft buiten deze verdeling.</li><li>Bereken bij evenredige allocatie per groep Nᵢ/N en vermenigvuldig met n.</li><li>Bereken bij Neyman eerst Nᵢ × sᵢ per groep. Deel elk product door de som van die producten en vermenigvuldig met n.</li><li>Rond af tot gehele aantallen en controleer dat hun som precies n is. Geen nᵢ mag groter zijn dan Nᵢ.</li></ol><h3>Tentamen 17 maart 2025, vraag 4–6</h3><ol><li>Vier strata hebben Nᵢ = 940, 677, 639 en 592, samen 2.848. Voor n = 130 geeft evenredige allocatie 43, 31, 29 en 27.</li><li>Voor de berekening gebruikt de casus vervolgens andere, gegeven steekproefgroottes: 45, 32, 30 en 30. Gebruik die werkelijke aantallen.</li></ol><p class=\"note\"><strong>Let op:</strong> Een berekende allocatie is een planning. Voor de latere evaluatie gebruik je de werkelijk gegeven of gerealiseerde steekproefaantallen, ook wanneer die afwijken van het plan.</p>"
         },
         {
           "title": "De schattingen en onzekerheid samenvoegen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze combinatie nadat voor ieder stratum gegevens beschikbaar zijn. Je schat het totaal door de stratumtotalen op te tellen, maar combineert de onzekerheid via varianties.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Totaalschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Totaalschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>tot</mtext></msub><mo>=</mo><mo>∑</mo><mrow><mo>(</mo><mrow><msub><mi>N</mi><mi>i</mi></msub><msub><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mi>i</mi></msub></mrow><mo>)</mo></mrow><mo>+</mo><msub><mi>W</mi><mtext>top</mtext></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gecombineerde variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gecombineerde variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>s</mi><mtext>tot</mtext></msub><mn>2</mn></msup><mo>=</mo><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>N</mi><mi>i</mi></msub><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow><mrow><msqrt><msub><mi>n</mi><mi>i</mi></msub></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><msub><mi>N</mi><mi>i</mi></msub><mo>−</mo><msub><mi>n</mi><mi>i</mi></msub></mrow><mrow><msub><mi>N</mi><mi>i</mi></msub><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt><mo>)</mo></mrow><mn>2</mn></msup></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>tot</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msqrt><msup><msub><mi>s</mi><mtext>tot</mtext></msub><mn>2</mn></msup></msqrt></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Index i verwijst naar stratum i. Nᵢ = groepsomvang; nᵢ = controles; sᵢ = spreiding. W_top is het bekende werkelijke totaal van het volledig gecontroleerde topstratum. s_tot² is de som van de varianties van de stratumtotaalschattingen. s_tot is de wortel daarvan. Een integraal gecontroleerd topstratum heeft geen steekproefonzekerheid.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken Nᵢ × w̄ᵢ voor ieder getrokken stratum en tel die bedragen op.</li><li>Tel het bekende werkelijke totaal van het integraal gecontroleerde topstratum eenmaal erbij.</li><li>Bereken per getrokken stratum de standaardfout van het totaal, inclusief de eigen eindigheidscorrectie.</li><li>Kwadrateer die standaardfouten, tel de varianties op en neem daarna één wortel.</li><li>Gebruik de gegeven effectieve vrijheidsgraden voor t. Maak het interval rond het volledige totaal.</li></ol><h3>Tentamen 17 maart 2025, vraag 4–6</h3><ol><li>Voor de berekening gebruikt de casus vervolgens andere, gegeven steekproefgroottes: 45, 32, 30 en 30. Gebruik die werkelijke aantallen.</li><li>De gemiddelden zijn 60, 53, 50 en 41. Het totaal van de vier schattingen is 940×60 + 677×53 + 639×50 + 592×41 = € 148.503.</li><li>Tel de € 22.580 van het volledig gecontroleerde topstratum erbij op: Ŵ_tot = € 171.083.</li><li>De gecombineerde variantie is 11.524.549,74; de standaardfout is € 3.394,7827.</li><li>90% betrouwbaarheid, effectieve df = 109, tabelrij 100: t = 1,660. Interval naar buiten op € 100: [€ 165.400; € 176.800].</li></ol><p class=\"note\"><strong>Let op:</strong> Tel standaardfouten niet rechtstreeks op. Neem van het topstratum de werkelijke waarde op, niet de ongecontroleerde boekwaarde, en tel de topgroep niet dubbel.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze combinatie nadat voor ieder stratum gegevens beschikbaar zijn. Je schat het totaal door de stratumtotalen op te tellen, maar combineert de onzekerheid via varianties.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Totaalschatting</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Totaalschatting\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>tot</mtext></msub><mo>=</mo><mo>∑</mo><mrow><mo>(</mo><mrow><msub><mi>N</mi><mi>i</mi></msub><msub><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>w</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mi>i</mi></msub></mrow><mo>)</mo></mrow><mo>+</mo><msub><mi>W</mi><mtext>top</mtext></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gecombineerde variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gecombineerde variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>s</mi><mtext>tot</mtext></msub><mn>2</mn></msup><mo>=</mo><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>N</mi><mi>i</mi></msub><mo>×</mo><mfrac><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow><mrow><msqrt><msub><mi>n</mi><mi>i</mi></msub></msqrt></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><msub><mi>N</mi><mi>i</mi></msub><mo>−</mo><msub><mi>n</mi><mi>i</mi></msub></mrow><mrow><msub><mi>N</mi><mi>i</mi></msub><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt><mo>)</mo></mrow><mn>2</mn></msup></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>tot</mtext></msub><mo>±</mo><mi>t</mi><mo>×</mo><msqrt><msup><msub><mi>s</mi><mtext>tot</mtext></msub><mn>2</mn></msup></msqrt></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Index i verwijst naar stratum i. Nᵢ = groepsomvang; nᵢ = controles; sᵢ = spreiding. W_top is het bekende werkelijke totaal van het volledig gecontroleerde topstratum. <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mtext>tot</mtext></msub><mn>2</mn></msup></mrow></math> is de som van de varianties van de stratumtotaalschattingen. <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>tot</mtext></msub></mrow></math> is de wortel daarvan. Een integraal gecontroleerd topstratum heeft geen steekproefonzekerheid.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"strata-variance\"><h3>Totalen optellen, onzekerheid via kwadraten combineren</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>De puntschattingen</figcaption><table class=\"fv-table\"><caption>Eigen vereenvoudigd voorbeeld</caption><thead><tr><th scope=\"col\">Deel</th><th scope=\"col\">Geschat totaal</th></tr></thead><tbody><tr><td>Stratum 1</td><td>€ 40</td></tr><tr><td>Stratum 2</td><td>€ 60</td></tr><tr><td>Volledig gecontroleerde topgroep</td><td>€ 100</td></tr><tr><td>Samen</td><td>€ 200</td></tr></tbody></table><p class=\"fv-work\">De topgroep draagt haar gecontroleerde werkelijke totaal één keer bij.</p></figure><figure class=\"fv-panel\"><figcaption>De standaardfouten</figcaption><table class=\"fv-table\"><caption>Onafhankelijke steekproeven binnen strata</caption><thead><tr><th scope=\"col\">Deel</th><th scope=\"col\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow></math></th><th scope=\"col\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>i</mi></msub><mn>2</mn></msup></mrow></math></th></tr></thead><tbody><tr><td>Stratum 1</td><td>3</td><td>9</td></tr><tr><td>Stratum 2</td><td>4</td><td>16</td></tr><tr><td>Topgroep</td><td>0</td><td>0</td></tr><tr><td>Totaal</td><td>√25 = 5</td><td>25</td></tr></tbody></table><p class=\"fv-work\">Niet 3 + 4 = 7, maar √(3² + 4²) = 5. Het totaal en de standaardfout hebben dezelfde oorspronkelijke eenheid.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De twee kolommen volgen verschillende regels. Een volledig gecontroleerd stratum voegt binnen deze schattingsmethode geen steekproefvariantie toe.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bereken Nᵢ × w̄ᵢ voor ieder getrokken stratum en tel die bedragen op.</li><li>Tel het bekende werkelijke totaal van het integraal gecontroleerde topstratum eenmaal erbij.</li><li>Bereken per getrokken stratum de standaardfout van het totaal, inclusief de eigen eindigheidscorrectie.</li><li>Kwadrateer die standaardfouten, tel de varianties op en neem daarna één wortel.</li><li>Gebruik de gegeven effectieve vrijheidsgraden voor t. Maak het interval rond het volledige totaal.</li></ol><h3>Tentamen 17 maart 2025, vraag 4–6</h3><ol><li>Voor de berekening gebruikt de casus vervolgens andere, gegeven steekproefgroottes: 45, 32, 30 en 30. Gebruik die werkelijke aantallen.</li><li>De gemiddelden zijn 60, 53, 50 en 41. Het totaal van de vier schattingen is 940×60 + 677×53 + 639×50 + 592×41 = € 148.503.</li><li>Tel de € 22.580 van het volledig gecontroleerde topstratum erbij op: <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mover accent=\"true\"><mi>W</mi><mo>^</mo></mover><mtext>tot</mtext></msub></mrow></math> = € 171.083.</li><li>De gecombineerde variantie is 11.524.549,74; de standaardfout is € 3.394,7827.</li><li>90% betrouwbaarheid, effectieve df = 109, tabelrij 100: t = 1,660. Interval naar buiten op € 100: [€ 165.400; € 176.800].</li></ol><p class=\"note\"><strong>Let op:</strong> Tel standaardfouten niet rechtstreeks op. Neem van het topstratum de werkelijke waarde op, niet de ongecontroleerde boekwaarde, en tel de topgroep niet dubbel.</p>"
         },
         {
           "title": "Stratagrenzen bepalen vanuit de cursusopgave",
@@ -2212,10 +4614,135 @@ window.SRA = {
         },
         {
           "title": "Gericht extra controles in één stratum",
-          "html": "<p>De totale variantie is de som van de variantiebijdragen van de strata. Bij een gewenste marge E hoort maximaal (E/t)² totale variantie. Houd voor een planningsberekening de gegeven t-waarde en geschatte spreidingen vast; na de aanvullende controle beoordeel je de nieuwe uitkomsten opnieuw.</p><h3>Cursusopgave H8.9b/c</h3><ol><li>De oorspronkelijke schatting is € 6.678.000 met s_tot ≈ € 256.153 en t = 1,978. De marge is circa € 506.670, dus meer dan de gewenste € 500.000.</li><li>De maximaal toegestane standaardfout is 500.000 / 1,978 ≈ € 252.780. De totale variantie moet ongeveer 1,717 × 10⁹ afnemen.</li><li>Stratum 3 draagt het meest bij: s_3,totaal ≈ € 135.645,95. Trek de benodigde vermindering van deze gekwadrateerde bijdrage af. De gewenste bijdrage wordt circa 1,6683 × 10¹⁰.</li><li>Gebruik de cursusbenadering γ₃ = gewenste variantiebijdrage / (N₃ × s₃²). Met N₃ = 300 en s₃ = 2.606,15 volgt γ₃ ≈ 8,1876.</li><li>Nieuwe totale n₃ = 300 / (1 + 8,1876) ≈ 32,65. Rond omhoog naar 33. Er waren 30 controles, dus voeg 3 toe.</li><li>Controleer de marge met n₃ = 33 en de overige strata ongewijzigd. Bij de vastgehouden planningswaarden daalt die tot ongeveer € 499.443.</li></ol><p class=\"note\">De cursusuitwerking gebruikt de gebruikelijke N − 1 ≈ N-benadering bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>"
+          "html": "<p>De totale variantie is de som van de variantiebijdragen van de strata. Bij een gewenste marge E hoort maximaal (E/t)² totale variantie. Houd voor een planningsberekening de gegeven t-waarde en geschatte spreidingen vast; na de aanvullende controle beoordeel je de nieuwe uitkomsten opnieuw.</p><h3>Cursusopgave H8.9b/c</h3><ol><li>De oorspronkelijke schatting is € 6.678.000 met <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mtext>tot</mtext></msub></mrow></math> ≈ € 256.153 en t = 1,978. De marge is circa € 506.670, dus meer dan de gewenste € 500.000.</li><li>De maximaal toegestane standaardfout is 500.000 / 1,978 ≈ € 252.780. De totale variantie moet ongeveer 1,717 × 10⁹ afnemen.</li><li>Stratum 3 draagt het meest bij: s_3,totaal ≈ € 135.645,95. Trek de benodigde vermindering van deze gekwadrateerde bijdrage af. De gewenste bijdrage wordt circa 1,6683 × 10¹⁰.</li><li>Gebruik de cursusbenadering γ₃ = gewenste variantiebijdrage / (N₃ × s₃²). Met N₃ = 300 en s₃ = 2.606,15 volgt γ₃ ≈ 8,1876.</li><li>Nieuwe totale n₃ = 300 / (1 + 8,1876) ≈ 32,65. Rond omhoog naar 33. Er waren 30 controles, dus voeg 3 toe.</li><li>Controleer de marge met n₃ = 33 en de overige strata ongewijzigd. Bij de vastgehouden planningswaarden daalt die tot ongeveer € 499.443.</li></ol><p class=\"note\">De cursusuitwerking gebruikt de gebruikelijke N − 1 ≈ N-benadering bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>"
+        },
+        {
+          "title": "De volledige MPU-stratacase: iedere rij tot en met het interval",
+          "html": "<p>Na de controles worden per stratum de werkelijke waarden samengevat. Deze oorspronkelijke collegedata sluiten aan op de Neyman-aantallen hierboven. Gebruik bij elke rij de eigen Nᵢ en nᵢ, ook in de eindigheidscorrectie.</p><div class=\"table-wrap\"><table><caption>Slides PDF 48: invoer voor de gestratificeerde MPU-schatting</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">nᵢ</th><th scope=\"col\">Σwᵢ (€)</th><th scope=\"col\">Σwᵢ² (euro²)</th></tr></thead><tbody><tr><td>1</td><td>2.700</td><td>114</td><td>7.000</td><td>475.000</td></tr><tr><td>2</td><td>1.111</td><td>58</td><td>8.000</td><td>1.175.000</td></tr><tr><td>3</td><td>567</td><td>36</td><td>12.000</td><td>4.030.000</td></tr><tr><td>4</td><td>397</td><td>42</td><td>20.000</td><td>9.600.000</td></tr></tbody></table></div><ol><li>Stratum 1: gemiddelde = 7.000/114 = € 61,4035. Ŵ₁ = 2.700 × 61,4035 = € 165.789,47. De factor is 2.700 omdat dit stratum die omvang heeft.</li><li>s²<sub>w,1</sub> = [475.000 − 7.000²/114]/113 = 399,7826 euro². De wortel is € 19,9946. De vooraf gebruikte 200 uit de allocatie vervang je dus door de werkelijk gevonden spreiding.</li><li>s<sub>Ŵ₁</sub> = 2.700 × (19,9946/√114) × √(2.586/2.699) = € 4.949,21. Dit is de standaardfout van het stratumtotaal, niet de spreiding van een losse post.</li><li>Herhaal dezelfde route voor alle vier strata. De onderstaande weergave is afgerond; de verdere berekening gebruikt onafgeronde waarden.</li></ol><div class=\"table-wrap\"><table><caption>Uitkomsten en variantiebijdragen per stratum</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Gemiddelde (€)</th><th scope=\"col\">Ŵᵢ (€)</th><th scope=\"col\">s<sub>w,i</sub> (€)</th><th scope=\"col\">Standaardfout totaal (€)</th><th scope=\"col\">Variantiebijdrage (euro²)</th></tr></thead><tbody><tr><td>1</td><td>61,40</td><td>165.789,47</td><td>19,9946</td><td>4.949,21</td><td>24.494.706,90</td></tr><tr><td>2</td><td>137,93</td><td>153.241,38</td><td>35,4301</td><td>5.034,14</td><td>25.342.576,39</td></tr><tr><td>3</td><td>333,33</td><td>189.000,00</td><td>29,2770</td><td>2.679,77</td><td>7.181.165,19</td></tr><tr><td>4</td><td>476,19</td><td>189.047,62</td><td>43,1081</td><td>2.500,29</td><td>6.251.463,81</td></tr></tbody></table></div><p>De vier puntschattingen tellen op tot € 697.078,47. De controle van de 48 grote posten levert volgens het collegevoorbeeld een werkelijk totaal van € 621.778 op. Tel dit één keer erbij: Ŵ = € 1.318.856,47. Als bij volledige controle een ander werkelijk totaal wordt gevonden dan de boekwaarde, gebruik je dat gecontroleerde totaal.</p><div class=\"formula\">s²<sub>tot</sub> = Σs²<sub>Ŵᵢ</sub> = 63.269.912,30 euro²<br>s<sub>tot</sub> = € 7.954,24</div><p>Bij onafhankelijke steekproeven per stratum tellen varianties op. Afwijkingen van schattingen kunnen elkaar in het totaal deels compenseren; standaardfouten rechtstreeks optellen telt hun onzekerheden verkeerd samen. Het integraal gecontroleerde topstratum voegt een waarde toe en heeft geen steekproefvariantie.</p><p>Gegeven effectieve df > 200: tabellenbundel PDF 13, rij inf., kolom 0,025 geeft t = 1,960. E = € 15.590,31. Het tweezijdige 95%-interval is [€ 1.303.266,16; € 1.334.446,78]. Bij afronding naar buiten op € 1.000 wordt dit [€ 1.303.000; € 1.335.000]. De collegedia rondt het midden tot € 1.318.856 en de marge tot € 15.590 af.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Stel dat dezelfde integrale controle een werkelijke topwaarde van € 600.000 oplevert. De vier steekproeven blijven gelijk. Wat verandert aan het midden en de marge?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>De nieuwe puntschatting is € 697.078,47 + € 600.000 = € 1.297.078,47. De marge blijft € 15.590,31, omdat de steekproefvarianties niet veranderen en de topgroep geheel is gecontroleerd. De oude ongecontroleerde boekwaarde van de topgroep nogmaals optellen zou de schatting te hoog maken.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=48\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 48-49: invoer, vier uitkomsten en totaalschatting</li><li><a href=\"bronnen/formuleblad.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Formuleblad SRA, augustus 2024</a> · Formules 25-27: combinatie van strata; df wordt gegeven</li><li><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Tabellenbundel</a> · Rij inf.; kolom 0,025</li><li><a href=\"bronnen/boek-h8c.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 48,
+              "locator": "PDF 48-49: invoer, vier uitkomsten en totaalschatting"
+            },
+            {
+              "source": "formules",
+              "page": 2,
+              "locator": "Formules 25-27: combinatie van strata; df wordt gegeven"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Rij inf.; kolom 0,025"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "De volledige collegestabel: cumulatieve boekwaarde en grenzen",
+          "html": "<p>Dit is de volledige tabel uit de colleges. De grenzen in de eerste kolom betreffen <strong>boekwaarde per post</strong>; de laatste kolom telt eurobedragen van alle posten tot die grens op. Verwar die twee eurogrootheden niet.</p><div class=\"table-wrap\"><table><caption>Slides PDF 40: boekwaarde per klasse en cumulatief bedrag</caption><thead><tr><th scope=\"col\">Boekwaarde per post (€)</th><th scope=\"col\">Aantal posten</th><th scope=\"col\">Som boekwaarden (€)</th><th scope=\"col\">Cumulatief (€)</th></tr></thead><tbody><tr><td>0 tot < 1.000</td><td>1.127</td><td>513.513</td><td>513.513</td></tr><tr><td>1.000 tot < 2.000</td><td>813</td><td>1.195.110</td><td>1.708.623</td></tr><tr><td>2.000 tot < 3.000</td><td>760</td><td>1.846.186</td><td>3.554.809</td></tr><tr><td>3.000 tot < 4.000</td><td>699</td><td>2.394.075</td><td>5.948.884</td></tr><tr><td>4.000 tot < 5.000</td><td>412</td><td>1.858.944</td><td>7.807.828</td></tr><tr><td>5.000 tot < 6.000</td><td>300</td><td>1.651.237</td><td>9.459.065</td></tr><tr><td>6.000 tot < 7.000</td><td>267</td><td>1.717.729</td><td>11.176.794</td></tr><tr><td>7.000 tot < 8.000</td><td>217</td><td>1.588.182</td><td>12.764.976</td></tr><tr><td>8.000 tot < 9.000</td><td>110</td><td>892.584</td><td>13.657.560</td></tr><tr><td>9.000 tot < 10.000</td><td>70</td><td>649.099</td><td>14.306.659</td></tr><tr><td>≥ 10.000: volledige controle</td><td>48</td><td>621.778</td><td>Buiten de cumulatie</td></tr></tbody></table></div><ol><li>Haal de 48 posten met boekwaarde ≥ € 10.000 apart voor volledige controle. De overige 4.775 posten hebben samen € 14.306.659 boekwaarde.</li><li>Voor vier steekproefstrata is het streefbedrag per groep 14.306.659/4 = € 3.576.664,75. Cumulatieve doelen: € 3.576.664,75; € 7.153.329,50; € 10.729.994,25.</li><li>Vergelijk ieder doel met de beschikbare cumulatieve bedragen. Bij het eerste doel ligt € 3.554.809 dichtbij: de bijbehorende boekwaardegrens per post is € 3.000, niet € 3.554.809.</li><li>Bij het tweede doel kies je € 7.807.828 (grens € 5.000); bij het derde € 11.176.794 (grens € 7.000). Zonder individuele postgegevens splits je de beschikbare klassen niet willekeurig.</li></ol><div class=\"table-wrap\"><table><caption>Resultaat: van cumulatieve bedragen naar afzonderlijke strata</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Boekwaarde per post (€)</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">Boekwaarde in stratum (€)</th></tr></thead><tbody><tr><td>1</td><td>0 tot < 3.000</td><td>2.700</td><td>3.554.809</td></tr><tr><td>2</td><td>3.000 tot < 5.000</td><td>1.111</td><td>4.253.019</td></tr><tr><td>3</td><td>5.000 tot < 7.000</td><td>567</td><td>3.368.966</td></tr><tr><td>4</td><td>7.000 tot < 10.000</td><td>397</td><td>3.129.865</td></tr><tr><td>Totaal zonder topstratum</td><td></td><td>4.775</td><td>14.306.659</td></tr></tbody></table></div><p>Het tweede stratum bevat bijvoorbeeld € 7.807.828 − € 3.554.809 = € 4.253.019. Een cumulatief totaal is dus niet hetzelfde als de boekwaarde van dat ene stratum. De aantallen hoeven niet gelijk te zijn: deze methode streeft naar ongeveer gelijke totale boekwaarde.</p><div class=\"learning-exercise\"><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"cumulative-strata\"><h3>De klassentabel als cumulatieve lijn</h3><p class=\"fv-provenance\">Slides: bestaande collegestabel met cumulatieve boekwaarden. De grafiek zet de tien cumulatieve bedragen om naar miljoenen euro.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>De boekwaarde stapelt op</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Cumulatieve boekwaarde; x-as: Bovengrens klasse (× € 1.000); y-as: Cumulatief (miljoen €)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">3,8</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">7,5</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">11,2</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">15,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">2,5</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">5,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">7,5</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">10,0</text><polyline points=\"58.00,180.00 85.60,174.66 113.20,162.23 140.80,143.03 168.40,118.13 196.00,98.80 223.60,81.63 251.20,63.76 278.80,47.24 306.40,37.96 334.00,31.21\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Bovengrens klasse (× € 1.000)</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Cumulatief (miljoen €)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Cumulatieve som</span></div><p class=\"fv-work\">Bij € 5.000 loopt de cumulatieve boekwaarde op tot € 7.807.828. De volledige klassentabel hierboven geeft de exacte waarden.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Dit beeld helpt klassengrenzen lokaliseren. Lees de uiteindelijke bedragen uit de tabel. De aparte topgroep ≥ € 10.000 is niet in deze lijn opgenomen.</p></section><!-- formula-visual:end --><h3>Zelf toepassen</h3><p>Verklaar met de oorspronkelijke tabel waarom de grens tussen stratum 2 en 3 bij € 5.000 ligt en niet bij € 4.000. Bereken ook het aantal posten in stratum 3.</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Doel 2 is € 7.153.329,50. Bij grens € 4.000 is het cumulatieve bedrag € 5.948.884, een afstand van € 1.204.445,50. Bij grens € 5.000 is dat € 7.807.828, afstand € 654.498,50. De laatste ligt dichterbij. Stratum 3 bevat de klassen € 5.000 tot € 6.000 en € 6.000 tot € 7.000: 300 + 267 = 567 posten.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=40\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 40-41: oorspronkelijke klassen en gekozen strata</li><li><a href=\"bronnen/boek-h8c.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 221; oorspronkelijke PDF p. 239; uitsnede p. 1</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 40,
+              "locator": "PDF 40-41: oorspronkelijke klassen en gekozen strata"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 1,
+              "locator": "Boek p. 221; oorspronkelijke PDF p. 239; uitsnede p. 1"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "Ook de wortelmethode volledig uit een klassentabel opbouwen",
+          "html": "<p>De tweede boekmethode houdt rekening met de verdeling van de aantallen en de breedte van de boekwaardeklassen. In cursusopgave H8.8 hebben de klassen verschillende breedtes. Bereken per klasse √(breedte × frequentie) en tel die <em>wortels</em> op. Neem niet eerst de totale frequentie en daarna één wortel.</p><div class=\"table-wrap\"><table><caption>H8.8b: volledige rekenkolommen, zonder het 100%-stratum</caption><thead><tr><th scope=\"col\">Boekwaardeklasse (€)</th><th scope=\"col\">Breedte</th><th scope=\"col\">Frequentie</th><th scope=\"col\">Breedte × frequentie</th><th scope=\"col\">Wortel</th><th scope=\"col\">Cumulatief</th></tr></thead><tbody><tr><td>0 tot < 400</td><td>400</td><td>772</td><td>308.800</td><td>555,70</td><td>555,70</td></tr><tr><td>400 tot < 800</td><td>400</td><td>1.016</td><td>406.400</td><td>637,50</td><td>1.193,19</td></tr><tr><td>800 tot < 1.200</td><td>400</td><td>1.408</td><td>563.200</td><td>750,47</td><td>1.943,66</td></tr><tr><td>1.200 tot < 1.600</td><td>400</td><td>882</td><td>352.800</td><td>593,97</td><td>2.537,63</td></tr><tr><td>1.600 tot < 2.000</td><td>400</td><td>812</td><td>324.800</td><td>569,91</td><td>3.107,54</td></tr><tr><td>2.000 tot < 2.500</td><td>500</td><td>635</td><td>317.500</td><td>563,47</td><td>3.671,01</td></tr><tr><td>2.500 tot < 3.000</td><td>500</td><td>480</td><td>240.000</td><td>489,90</td><td>4.160,91</td></tr><tr><td>3.000 tot < 4.000</td><td>1.000</td><td>336</td><td>336.000</td><td>579,66</td><td>4.740,57</td></tr><tr><td>4.000 tot < 5.000</td><td>1.000</td><td>771</td><td>771.000</td><td>878,07</td><td>5.618,63</td></tr><tr><td>5.000 tot < 7.500</td><td>2.500</td><td>418</td><td>1.045.000</td><td>1.022,25</td><td>6.640,88</td></tr><tr><td>7.500 tot < 10.000</td><td>2.500</td><td>129</td><td>322.500</td><td>567,89</td><td>7.208,78</td></tr></tbody></table></div><ol><li>Het cumulatieve worteltotaal is 7.208,78. De vier streefdelen zijn elk 1.802,19.</li><li>Vergelijk doelen 1.802,20; 3.604,40 en 5.406,60 met de cumulatieve kolom. De nabije beschikbare grenzen zijn 1.943,67; 3.671,02 en 5.618,65.</li><li>Lees vervolgens de bijbehorende bovengrenzen uit de boekwaardeklassen: € 1.200, € 2.500 en € 5.000. De vierde groep eindigt bij € 10.000.</li><li>Tel de frequenties binnen de nieuwe groepen op. Gebruik pas die groepsomvangen bij de allocatie.</li></ol><div class=\"table-wrap\"><table><caption>Twee indelingen van dezelfde cursuspopulatie H8.8</caption><thead><tr><th scope=\"col\">Methode</th><th scope=\"col\">Grenzen van vier strata (€)</th><th scope=\"col\">Aantallen Nᵢ</th></tr></thead><tbody><tr><td>Cumulatieve boekwaarde</td><td>0 / 1.600 / 3.000 / 5.000 / 10.000</td><td>4.078 / 1.927 / 1.107 / 547</td></tr><tr><td>Cumulatieve wortel</td><td>0 / 1.200 / 2.500 / 5.000 / 10.000</td><td>3.196 / 2.329 / 1.587 / 547</td></tr></tbody></table></div><p>Beide indelingen tellen op tot 7.659 posten. De verschillen zijn inhoudelijk: de eerste verdeelt ongeveer het bedrag, de tweede benut de vorm van de frequentieverdeling. Het boek vindt in zijn voorbeeld een betere precisie met de wortelmethode; dat is geen garantie voor iedere populatie. Vergelijk uiteindelijk de gerealiseerde standaardfouten.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Waarom is voor de klasse € 5.000 tot € 7.500 de rekenwaarde √(2.500 × 418) en niet √418? Welke gegeven informatie gaat verloren als je alleen de frequentie gebruikt?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>De klassen zijn ongelijk breed. Deze klasse beslaat € 2.500, terwijl de eerste klassen € 400 breed zijn. Breedte × frequentie neemt dat verschil mee volgens de boekmethode. Alleen √frequentie gebruiken zou een andere indeling opleveren. Bij gelijke breedtes is de breedte een gemeenschappelijke factor; hier niet.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/opgavenbundel.pdf#page=7\" target=\"_blank\" rel=\"noopener\">Opgavenbundel SRA NJ26</a> · H8.8a-b, oorspronkelijke klassegegevens</li><li><a href=\"bronnen/uitwerkingenbundel.pdf#page=10\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel SRA NJ26</a> · H8.8b, volledige worteltabel</li><li><a href=\"bronnen/boek-h8c.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2</li></ul></details>",
+          "refs": [
+            {
+              "source": "opgaven",
+              "page": 7,
+              "locator": "H8.8a-b, oorspronkelijke klassegegevens"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 10,
+              "locator": "H8.8b, volledige worteltabel"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            }
+          ],
+          "learningVersion": "2026-09-25"
+        },
+        {
+          "title": "Neyman en evenredige allocatie naast elkaar uitrekenen",
+          "html": "<p><strong>Allocatie</strong> bepaalt hoeveel controles ieder al gevormd stratum krijgt. De stratumgrenzen veranderen hierbij niet. Neyman-allocatie gebruikt omvang én vooraf geschatte spreiding. Bij gelijke controlekosten krijgen grotere en meer variabele groepen meer waarnemingen, omdat daar meer onzekerheid te verminderen is.</p><div class=\"table-wrap\"><table><caption>Slides PDF 44-46: 250 controles verdelen over 4.775 posten</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">Vooraf sᵢ</th><th scope=\"col\">Nᵢsᵢ</th><th scope=\"col\">Neyman onafgerond</th><th scope=\"col\">Neyman geheel</th><th scope=\"col\">Evenredig onafgerond</th></tr></thead><tbody><tr><td>1</td><td>2.700</td><td>200</td><td>540.000</td><td>113,794</td><td>114</td><td>141,361</td></tr><tr><td>2</td><td>1.111</td><td>250</td><td>277.750</td><td>58,530</td><td>58</td><td>58,168</td></tr><tr><td>3</td><td>567</td><td>300</td><td>170.100</td><td>35,845</td><td>36</td><td>29,686</td></tr><tr><td>4</td><td>397</td><td>500</td><td>198.500</td><td>41,830</td><td>42</td><td>20,785</td></tr></tbody></table></div><div class=\"formula\">Neyman: nᵢ = n × Nᵢsᵢ / ΣNᵢsᵢ<br>Evenredig: nᵢ = n × Nᵢ / N</div><ol><li>ΣNᵢsᵢ = 1.186.350. Voor stratum 1: 250 × 540.000/1.186.350 = 113,794 en dus 114 controles.</li><li>Bij Neyman worden de aantallen 114, 58, 36 en 42. Controleer dat ze samen 250 zijn. De 48 integraal gecontroleerde posten vallen buiten deze verdeling; totale controle-inspanning is dan 298 posten.</li><li>Bij evenredige verdeling zijn de onafgeronde aantallen circa 141,361; 58,168; 29,686 en 20,785. Een verdeling met som 250 is 141, 58, 30 en 21.</li><li>Stratum 4 krijgt bij Neyman meer controles: zijn sᵢ = 500 is groter dan bij de andere strata. Bij gelijke sᵢ vallen die spreidingsfactoren weg en wordt Neyman gelijk aan evenredige allocatie.</li></ol><p>Een vast totaal n moet behouden blijven. Als gewoon afronden een ander totaal geeft, verdeel de resterende plaatsen na afronden naar beneden op basis van de grootste fracties, tenzij de opgave een andere afspraak geeft. Dit is een praktische afrondingsregel. Geen groep kan meer unieke controles krijgen dan Nᵢ; een volledig gecontroleerde groep wordt vervolgens apart behandeld.</p><p><strong>Planning versus uitvoering:</strong> de vooraf geschatte sᵢ uit deze allocatietabel is niet automatisch de werkelijk gevonden s<sub>w,i</sub>. Gebruik bij de schatting de na controle gegeven sommen, kwadratensommen en gerealiseerde nᵢ. De collegecasus hieronder illustreert dat onderscheid.</p><p><strong>Aanvullende boekvariant:</strong> boek p. 226 noemt ook allocatie evenredig aan de totale <em>boekwaarde</em> per stratum. Als die bedragen ongeveer gelijk zijn, leidt dat tot ongeveer gelijke aantallen controles. Dat is een andere keuze dan de standaard evenredige allocatie Nᵢ/N. Lees daarom expliciet of de opdracht op aantallen of bedragen wil verdelen.</p><div class=\"learning-exercise\"><h3>Zelf toepassen</h3><p>Een tweede eigen planning heeft twee even grote groepen. s₁ = 100 en s₂ = 300; totaal n = 80. Verdeel evenredig en volgens Neyman. Wanneer heeft evenredige allocatie hier toch een praktische reden?</p><details class=\"learning-solution\"><summary>Bekijk de uitwerking en onderbouwing</summary><p>Evenredig: 40 en 40. Neyman: verhouding 100:300, dus 20 en 60. Als betrouwbare voorafgaande spreidingsschattingen ontbreken, kan evenredige allocatie een uitvoerbare keuze zijn. Neyman met verzonnen spreidingen heeft geen onderbouwd voordeel. Onder de gegeven betrouwbare spreidingen en gelijke kosten richt Neyman meer controle-inspanning op de variabelere groep.</p></details></div><details class=\"learning-source\"><summary>Bronnen bij dit onderdeel</summary><ul><li><a href=\"bronnen/slides.pdf#page=42\" target=\"_blank\" rel=\"noopener\">Slides SRA najaar 2026</a> · PDF 42-46: allocatieformules en volledige tabellen</li><li><a href=\"bronnen/boek-h8c.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4</li><li><a href=\"bronnen/boek-h8c.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Statistiek voor audit en controlling, boek p. 221–232</a> · Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6</li></ul></details>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 42,
+              "locator": "PDF 42-46: allocatieformules en volledige tabellen"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 4,
+              "locator": "Boek p. 224; oorspronkelijke PDF p. 242; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 6,
+              "locator": "Boek p. 226; oorspronkelijke PDF p. 244; uitsnede p. 6"
+            }
+          ],
+          "learningVersion": "2026-09-25"
         }
       ],
-      "completionVersion": "2026-09-20"
+      "completionVersion": "2026-09-20",
+      "samplingVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H8 · §8.3.1–8.3.4",
+        "college": "2",
+        "focus": "Bepaal strata en allocatie, reken per stratum en voeg totalen en varianties correct samen. Behandel een integraal gecontroleerd topstratum apart.",
+        "title": "H8 · §8.3.1–8.3.4 · Hoorcollege 2",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "allocation",
+          "title": "De steekproef verdelen over strata"
+        },
+        {
+          "key": "strata-variance",
+          "title": "De schattingen en onzekerheid samenvoegen"
+        },
+        {
+          "key": "cumulative-strata",
+          "title": "De volledige collegestabel: cumulatieve boekwaarde en grenzen"
+        }
+      ],
+      "reading": {
+        "opening": "Een populatie kan uit sterk verschillende groepen bestaan. Eén gezamenlijke steekproef benut die structuur niet altijd goed. Door eerst strata te vormen, kun je de controles verdelen, per groep schatten en de uitkomsten samenvoegen.",
+        "conclusion": "Bij stratificatie bepaal je eerst de groepen en de verdeling van controles. Daarna tel je de schattingen en varianties volgens de bijbehorende regels op; een volledig gecontroleerd topstratum blijft apart herkenbaar. Hiermee is de route van steekproef naar totaal compleet en verschuift de aandacht naar regressiemodellen."
+      }
     },
     {
       "id": "regressielijn",
@@ -2228,6 +4755,28 @@ window.SRA = {
         "Een residu berekenen en correlatie begrijpen"
       ],
       "sections": [
+        {
+          "title": "Van controleverwachting naar regressiemodel",
+          "html": "<p>Bij <strong>cijferbeoordeling</strong> onderzoekt de accountant of financiële of operationele cijfers passen bij een verklaarbaar patroon. In het boek voorspellen arbeidsuren de productie. Een model maakt de verwachte uitkomst én de normale afwijking daarvan meetbaar. Daardoor kun je gericht onderzoeken welke maanden of posten afwijken. Alleen een gemiddeld productiegetal gebruiken zou een drukke maand en een rustige maand ten onrechte langs dezelfde maatstaf leggen.</p><p>Kies daarom eerst de te beoordelen uitkomst <strong>y</strong>, de inhoudelijk passende verklarende variabele <strong>x</strong>, de eenheden en de onderzoekspopulatie. De regressielijn is een schatting uit gegevens; het onbekende populatiemodel bevat daarnaast een storingsterm. Regressie helpt een controleverwachting opbouwen, maar vervangt de beoordeling van de kwaliteit van de onderliggende gegevens niet.</p><table><caption>Welke vraag stelt de accountant?</caption><thead><tr><th scope=\"col\">Vraag</th><th scope=\"col\">Passende aanpak</th><th scope=\"col\">Reden</th></tr></thead><tbody><tr><td>Wat is het totale werkelijke bedrag van een populatie?</td><td>Een schatter uit hoofdstuk 8.</td><td>Je trekt een steekproef en extrapoleert naar een populatietotaal.</td></tr><tr><td>Past een nieuwe productie bij het aantal arbeidsuren?</td><td>Regressie met een individueel voorspellingsinterval.</td><td>Je voorspelt y bij een gegeven x en beoordeelt de afwijking.</td></tr><tr><td>Is een getekende stijgende lijn ook statistisch aantoonbaar?</td><td>Een t-toets op de populatiehelling.</td><td>De steekproeflijn kan ook door toevalsvariatie stijgen.</td></tr></tbody></table><p>De regressieschatter uit hoofdstuk 8 en de regressieanalyse uit hoofdstuk 9 gebruiken allebei samenhang. Hun eindvraag verschilt. De eerste schat een totaal met bekende hulpinformatie; de tweede beschrijft of voorspelt een uitkomst gegeven verklarende variabelen.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h9a.pdf#page=1\" target=\"_blank\" rel=\"noopener\">Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1</a>; <a href=\"bronnen/boek-h9a.pdf#page=5\" target=\"_blank\" rel=\"noopener\">Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5</a>; <a href=\"bronnen/attentiepunten.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Attentiepunten, PDF 3: doel en regressiemodel</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
         {
           "title": "Een rechte lijn leren lezen",
           "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Populatiemodel</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Populatiemodel\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>y</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>β</mi><mn>1</mn></msub><mi>x</mi></mrow><mo>+</mo><mi>ε</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Geschatte lijn</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Geschatte lijn\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Residu</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Residu\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>β = onbekende populatiecoëfficiënt; b = geschatte coëfficiënt; ŷ = voorspelde y; ε = storing; eᵢ = residu bij waarneming i.</p></details><p>x is de verklarende variabele, y de te verklaren variabele. β₀ en β₁ zijn onbekende populatiecoëfficiënten; b₀ en b₁ schat je uit de steekproef. ε (epsilon) is de onbekende storing. Het residu e is de berekende afwijking van een waarneming ten opzichte van de geschatte lijn.</p><p>b₀ is de <strong>constante</strong>: de voorspelde y bij x = 0. b₁ is de <strong>richtingscoëfficiënt</strong>: de verandering in voorspelde y bij één eenheid meer x. Geef altijd de eenheden erbij. x = 0 kan buiten het onderzochte gebied liggen; de constante heeft dan niet vanzelf een praktische betekenis.</p>"
@@ -2245,6 +4794,40 @@ window.SRA = {
           "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Formule 34: residuele variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Formule 34: residuele variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></mfrac><mo>×</mo><mrow><mo>(</mo><mn>1</mn><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup><mo>)</mo></mrow><mo>×</mo><msup><msub><mi>s</mi><mi>y</mi></msub><mn>2</mn></msup></mrow></math></div></div></div><p>Je gebruikt deze vorm bij enkelvoudige regressie met een constante wanneer n, r en sᵧ gegeven zijn. sₑ² is de resterende variantie rond de regressielijn; sₑ = √sₑ². Vanuit een ANOVA-tabel krijg je hetzelfde met SSE/(n − 2). Het aandeel 1 − r² is niet verklaard door de lijn.</p><h3>Cursusopgave H9.1: autogewichten</h3><ol><li>De tien oorspronkelijke gewichten zijn 946, 950, 965, 978, 980, 990, 1.055, 1.015, 1.055 en 1.080 kg; x loopt van 1 tot en met 10.</li><li>Met de onafgeronde brongegevens: sᵧ ≈ 47,46976, sₓ ≈ 3,02765 en r ≈ 0,940088. Gebruik de afgeronde r = 0,940 alleen als niet meer cijfers beschikbaar zijn.</li><li>sₑ² = (9/8) × (1 − r²) × sᵧ² ≈ 294,66212 kg². Neem de wortel: sₑ ≈ 17,16572 kg.</li><li>Controle: de ANOVA-tabel geeft SSE = 2.357,29697 en df = 8. SSE/df = 294,66212. Beide berekeningen beschrijven dezelfde resterende spreiding.</li></ol>"
         },
         {
+          "title": "Van gegevens naar Coefficients: cursusopgave H9.1",
+          "html": "<p>De cursusopgave bevat tien autogewichten. x is het gecodeerde bouwjaar 1 tot en met 10; y is het gewicht in kg. De codering is onderdeel van het model: vul niet ongemerkt een volledig kalenderjaar in een vergelijking in die op x = 1, …, 10 is geschat.</p><table><caption>Oorspronkelijke gegevens H9.1</caption><thead><tr><th scope=\"col\">x: gecodeerd bouwjaar</th><th scope=\"col\">y: gewicht in kg</th></tr></thead><tbody><tr><td>1</td><td>946</td></tr><tr><td>2</td><td>950</td></tr><tr><td>3</td><td>965</td></tr><tr><td>4</td><td>978</td></tr><tr><td>5</td><td>980</td></tr><tr><td>6</td><td>990</td></tr><tr><td>7</td><td>1055</td></tr><tr><td>8</td><td>1015</td></tr><tr><td>9</td><td>1055</td></tr><tr><td>10</td><td>1080</td></tr></tbody></table><p>Gemiddelden zijn x̄ = 5,5 en ȳ = 1.001,4. Met de oorspronkelijke waarnemingen volgt b₁ = 14,73939 en b₀ = 920,33333. De kleinste-kwadratenmethode kiest deze waarden doordat Σ(yᵢ − ŷᵢ)² minimaal is. De lijn loopt bij een model met constante door (x̄, ȳ).</p><table><caption>Kern van de SPSS-uitvoer, afgerond</caption><thead><tr><th scope=\"col\">Uitvoer</th><th scope=\"col\">Waarde</th><th scope=\"col\">Betekenis</th></tr></thead><tbody><tr><td>Coefficients: B (Constant)</td><td>920,333</td><td>Voorspeld gewicht bij gecodeerd jaar 0; beoordeel of dat binnen het relevante bereik ligt.</td></tr><tr><td>Coefficients: B voor x</td><td>14,739</td><td>Per jaar neemt het voorspelde gewicht met circa 14,74 kg toe.</td></tr><tr><td>Model Summary: R Square</td><td>0,884</td><td>Circa 88,4% van de waargenomen variatie in gewicht wordt lineair verklaard.</td></tr><tr><td>Model Summary: Std. Error of the Estimate</td><td>17,166</td><td>Resterende spreiding rond de lijn, in kg.</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken de voorspelling en het residu voor x = 7, y = 1.055. Waarom is dit residu geen bewijs van een fout in het gewicht?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>ŷ = 920,33333 + 14,73939 × 7 ≈ 1.023,51 kg.</li><li>e = y − ŷ = 1.055 − 1.023,51 ≈ +31,49 kg. Het gewicht ligt boven de lijn.</li><li>Een regressielijn voorspelt niet elke waarneming exact. De afwijking moet worden beoordeeld met de resterende spreiding, relevante diagnoses en inhoudelijke informatie.</li><li>Het getal +31,49 is een residu in kg, geen p-waarde en geen standaardfout.</li></ol></details></div><p class=\"note\">De oorspronkelijke uitwerking rondt r tussentijds af op 0,940 en vindt daardoor sₑ ≈ 17,18. Rekenen met de ongeronde brongegevens geeft circa 17,166. Gebruik in een eigen berekening zoveel mogelijk ongeronde tussenuitkomsten.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/opgavenbundel.pdf#page=10\" target=\"_blank\" rel=\"noopener\">Opgavenbundel, H9.1, PDF 10</a>; <a href=\"bronnen/uitwerkingenbundel.pdf#page=14\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel, H9.1, PDF 14–15</a>; <a href=\"bronnen/spss-uitwerkingen.pdf#page=9\" target=\"_blank\" rel=\"noopener\">SPSS-uitwerkingen, college 3, PDF 9</a>.</p>",
+          "refs": [
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "SPSS-praktijkroute college 3: de handberekening terugvinden",
+          "html": "<p><strong>Doel:</strong> verbinden wat je zelf berekent met de software-uitvoer. Gebruik het tabblad College3 van de aangeleverde SRA-dataset en cursusopgave H9.1.</p><ol><li>Open de Excelgegevens via <strong>File → Open → Data</strong>; kies het tabblad College3. Controleer in Variable View of x en Gewicht als kwantitatieve variabelen (Scale) worden behandeld.</li><li>Maak via <strong>Graphs → Chart Builder → Scatter/Dot → Simple Scatter</strong> een diagram met x horizontaal en Gewicht verticaal. Bekijk richting, kromming en opvallende punten vóór het rekenen.</li><li>Vraag eventueel via <strong>Analyze → Descriptive Statistics → Descriptives</strong> de gemiddelden, sommen en standaardafwijkingen op. Vergelijk die met de gegevens uit de handopgave.</li><li>Kies <strong>Analyze → Regression → Linear</strong>: Dependent = Gewicht, Independent = x. Vraag onder Statistics <strong>Estimates</strong> en <strong>Model fit</strong> op.</li><li>Lees B uit Coefficients voor de vergelijking. Verbind vervolgens Model Summary en ANOVA: R² = SSR/TotalSS en Std. Error of the Estimate = √MSE.</li><li>Dubbelklik op de grafiek en kies <strong>Elements → Fit Line at Total</strong> om de geschatte lijn zichtbaar te maken. Controleer de schaal en het label met de vergelijking.</li></ol><p><strong>Op te leveren:</strong> één diagram, de vergelijking met eenheden, de interpretatie van de helling en één zelf berekend residu. Daarmee controleer je of je de uitvoer begrijpt; alleen screenshots van menu’s leveren dat inzicht niet.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/spss-uitwerkingen.pdf#page=5\" target=\"_blank\" rel=\"noopener\">SPSS-uitwerkingen, college 3, PDF 5–10</a>.</p>",
+          "refs": [
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
           "title": "Zelf oefenen met deze aanvulling",
           "html": "<p>Maak de eigen oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/regressielijn\">Oefen Regressie: een lijn door gegevens</a></p>"
         }
@@ -2252,6 +4835,13 @@ window.SRA = {
       "example": {
         "title": "Voorbeeld: kosten en productie",
         "steps": [
+          "Lijn: voorspelde kosten = 200 + 3 × productie.",
+          "Bij x = 50 voorspelt de lijn 200 + 3×50 = 350.",
+          "De werkelijke kosten zijn 380. Het residu is 380 − 350 = +30.",
+          "Bij één extra product stijgen de voorspelde kosten met 3 geldeenheden. De constante 200 is de voorspelling bij nul productie."
+        ],
+        "context": "Welke kosten voorspelt de lijn bij een productie van 50 en wat betekent de afwijking van de werkelijke kosten? Dit voorbeeld maakt constante, helling en residu concreet.",
+        "stepsHtml": [
           "Lijn: voorspelde kosten = 200 + 3 × productie.",
           "Bij x = 50 voorspelt de lijn 200 + 3×50 = 350.",
           "De werkelijke kosten zijn 380. Het residu is 380 − 350 = +30.",
@@ -2297,6 +4887,41 @@ window.SRA = {
           "source": "boek-h9a",
           "page": 14,
           "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+        },
+        {
+          "source": "boek-h9a",
+          "page": 1,
+          "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+        },
+        {
+          "source": "boek-h9a",
+          "page": 5,
+          "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+        },
+        {
+          "source": "attentie",
+          "page": 3,
+          "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+        },
+        {
+          "source": "opgaven",
+          "page": 10,
+          "locator": "Opgavenbundel, H9.1, PDF 10"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 14,
+          "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+        },
+        {
+          "source": "spss",
+          "page": 9,
+          "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+        },
+        {
+          "source": "spss",
+          "page": 5,
+          "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
         }
       ],
       "questions": [
@@ -2357,6 +4982,41 @@ window.SRA = {
               "source": "boek-h9a",
               "page": 14,
               "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            },
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
           "recognition": {
@@ -2423,6 +5083,41 @@ window.SRA = {
               "source": "boek-h9a",
               "page": 14,
               "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            },
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
           "recognition": {
@@ -2489,6 +5184,41 @@ window.SRA = {
               "source": "boek-h9a",
               "page": 14,
               "locator": "Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 1,
+              "locator": "Boek p. 233; oorspronkelijke PDF p. 251; uitsnede p. 1"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 5,
+              "locator": "Boek p. 237; oorspronkelijke PDF p. 255; uitsnede p. 5"
+            },
+            {
+              "source": "attentie",
+              "page": 3,
+              "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            },
+            {
+              "source": "spss",
+              "page": 5,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
           "recognition": {
@@ -2508,14 +5238,69 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "De lijn berekenen, invullen en het residu lezen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik een enkelvoudige regressielijn om y te beschrijven of te voorspellen met één verklarende variabele x. De helling en constante kun je uit gegevens berekenen of uit de ongestandaardiseerde B-kolom van SPSS overnemen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Populatiemodel</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Populatiemodel\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>y</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>β</mi><mn>1</mn></msub><mi>x</mi></mrow><mo>+</mo><mi>ε</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Geschatte lijn</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Geschatte lijn\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Residu</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Residu\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mo>∑</mo><mrow><mi>x</mi><mi>y</mi></mrow><mo>−</mo><mrow><mi>n</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>y</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mrow><mrow><mrow><mrow><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><msup><msub><mi>s</mi><mi>x</mi></msub><mn>2</mn></msup></mrow></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Constante</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Constante\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>y</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>−</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>β = onbekende populatiecoëfficiënt; b = geschatte coëfficiënt; ŷ = voorspelde y; ε = storing; eᵢ = residu bij waarneming i. b₀ is de constante en b₁ de helling. x̄ en ȳ zijn de steekproefgemiddelden. s_x² is de steekproefvariantie van x. Een residu heeft dezelfde eenheid als y.</p><h3>Zo reken je stap voor stap</h3><ol><li>Leg vast wat x en y voorstellen en welke eenheden ze hebben.</li><li>Als je de lijn moet schatten: bereken b₁ met de totalen en de variantie van x; bereken daarna b₀ = ȳ − b₁x̄.</li><li>Als de coëfficiënten al gegeven zijn: schrijf ŷ = b₀ + b₁x op met de getallen uit B.</li><li>Vul de gevraagde x in om ŷ te krijgen.</li><li>Is de werkelijke y bekend? Bereken e = y − ŷ en interpreteer het teken. Een positief residu betekent dat de werkelijke y boven de voorspelling ligt.</li></ol><h3>Voorbeeld: kosten en productie</h3><ol><li>Lijn: voorspelde kosten = 200 + 3 × productie.</li><li>Bij x = 50 voorspelt de lijn 200 + 3×50 = 350.</li><li>De werkelijke kosten zijn 380. Het residu is 380 − 350 = +30.</li><li>Bij één extra product stijgen de voorspelde kosten met 3 geldeenheden. De constante 200 is de voorspelling bij nul productie.</li></ol><p class=\"note\"><strong>Let op:</strong> De Beta-kolom bevat gestandaardiseerde coëfficiënten en hoort niet in de vergelijking in oorspronkelijke eenheden. Een residu y − ŷ heeft een andere betekenis dan een controleverschil b − w.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik een enkelvoudige regressielijn om y te beschrijven of te voorspellen met één verklarende variabele x. De helling en constante kun je uit gegevens berekenen of uit de ongestandaardiseerde B-kolom van SPSS overnemen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Populatiemodel</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Populatiemodel\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>y</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>β</mi><mn>1</mn></msub><mi>x</mi></mrow><mo>+</mo><mi>ε</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Geschatte lijn</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Geschatte lijn\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Residu</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Residu\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mo>∑</mo><mrow><mi>x</mi><mi>y</mi></mrow><mo>−</mo><mrow><mi>n</mi><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>y</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mrow><mrow><mrow><mrow><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><msup><msub><mi>s</mi><mi>x</mi></msub><mn>2</mn></msup></mrow></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Constante</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Constante\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>y</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>−</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>β = onbekende populatiecoëfficiënt; b = geschatte coëfficiënt; ŷ = voorspelde y; ε = storing; eᵢ = residu bij waarneming i. b₀ is de constante en b₁ de helling. x̄ en ȳ zijn de steekproefgemiddelden. <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>x</mi></msub><mn>2</mn></msup></mrow></math> is de steekproefvariantie van x. Een residu heeft dezelfde eenheid als y.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"line-residual\"><h3>Eén dataset, twee manieren om de afwijkingen te zien</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Waarnemingen en geschatte lijn</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Regressielijn en residuen; x-as: x; y-as: y\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">2,5</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">5,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">7,5</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">10,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">0,9</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">1,8</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">2,6</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">3,5</text><path d=\"M136.86 141.00L136.86 133.20\" stroke=\"var(--fv-orange)\" stroke-width=\"2\"/><path d=\"M215.71 102.00L215.71 117.60\" stroke=\"var(--fv-orange)\" stroke-width=\"2\"/><path d=\"M294.57 63.00L294.57 55.20\" stroke=\"var(--fv-orange)\" stroke-width=\"2\"/><circle cx=\"136.86\" cy=\"133.20\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"215.71\" cy=\"117.60\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"294.57\" cy=\"55.20\" r=\"4\" fill=\"var(--fv-green)\"/><polyline points=\"58.00,180.00 334.00,43.50\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">y</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>y</span><span><i style=\"background:var(--fv-purple)\"></i>ŷ = 2,5x</span></div><p class=\"fv-work\">x̄ = 2; ȳ = 5; Sxx = 2; Sxy = 5.<br>b₁ = 5/2 = 2,5; b₀ = 5 − 2,5 × 2 = 0.</p></figure><figure class=\"fv-panel\"><figcaption>Residuen tegenover x</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Residuen van hetzelfde model; x-as: x; y-as: Residu e\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">-1,5</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">-0,8</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">0,8</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">1,5</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">0,9</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">1,8</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">2,6</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">3,5</text><path d=\"M58 102.00H334\" stroke=\"var(--fv-purple)\" stroke-dasharray=\"5 4\"/><text x=\"330\" y=\"97.00\" text-anchor=\"end\" fill=\"var(--fv-purple)\">nul</text><circle cx=\"136.86\" cy=\"76.00\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"215.71\" cy=\"154.00\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"294.57\" cy=\"76.00\" r=\"4\" fill=\"var(--fv-orange)\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Residu e</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-orange)\"></i>e = y − ŷ</span></div><p class=\"fv-work\">Residuen: +0,5; −1; +0,5. Een punt boven de lijn heeft een positief residu.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Het residu is een verticale afstand op de y-schaal. Drie punten verduidelijken het rekenen; zij vormen geen voldoende onderbouwing voor modeldiagnoses.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Leg vast wat x en y voorstellen en welke eenheden ze hebben.</li><li>Als je de lijn moet schatten: bereken b₁ met de totalen en de variantie van x; bereken daarna b₀ = ȳ − b₁x̄.</li><li>Als de coëfficiënten al gegeven zijn: schrijf ŷ = b₀ + b₁x op met de getallen uit B.</li><li>Vul de gevraagde x in om ŷ te krijgen.</li><li>Is de werkelijke y bekend? Bereken e = y − ŷ en interpreteer het teken. Een positief residu betekent dat de werkelijke y boven de voorspelling ligt.</li></ol><h3>Voorbeeld: kosten en productie</h3><ol><li>Lijn: voorspelde kosten = 200 + 3 × productie.</li><li>Bij x = 50 voorspelt de lijn 200 + 3×50 = 350.</li><li>De werkelijke kosten zijn 380. Het residu is 380 − 350 = +30.</li><li>Bij één extra product stijgen de voorspelde kosten met 3 geldeenheden. De constante 200 is de voorspelling bij nul productie.</li></ol><p class=\"note\"><strong>Let op:</strong> De Beta-kolom bevat gestandaardiseerde coëfficiënten en hoort niet in de vergelijking in oorspronkelijke eenheden. Een residu y − ŷ heeft een andere betekenis dan een controleverschil b − w.</p>"
         },
         {
           "title": "Residuele variantie berekenen zonder ANOVA-tabel",
-          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Formule 34: residuele variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Formule 34: residuele variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></mfrac><mo>×</mo><mrow><mo>(</mo><mn>1</mn><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup><mo>)</mo></mrow><mo>×</mo><msup><msub><mi>s</mi><mi>y</mi></msub><mn>2</mn></msup></mrow></math></div></div></div><p>Je gebruikt deze vorm bij enkelvoudige regressie met een constante wanneer n, r en sᵧ gegeven zijn. sₑ² is de resterende variantie rond de regressielijn; sₑ = √sₑ². Vanuit een ANOVA-tabel krijg je hetzelfde met SSE/(n − 2). Het aandeel 1 − r² is niet verklaard door de lijn.</p><h3>Cursusopgave H9.1: autogewichten</h3><ol><li>De tien oorspronkelijke gewichten zijn 946, 950, 965, 978, 980, 990, 1.055, 1.015, 1.055 en 1.080 kg; x loopt van 1 tot en met 10.</li><li>Met de onafgeronde brongegevens: sᵧ ≈ 47,46976, sₓ ≈ 3,02765 en r ≈ 0,940088. Gebruik de afgeronde r = 0,940 alleen als niet meer cijfers beschikbaar zijn.</li><li>sₑ² = (9/8) × (1 − r²) × sᵧ² ≈ 294,66212 kg². Neem de wortel: sₑ ≈ 17,16572 kg.</li><li>Controle: de ANOVA-tabel geeft SSE = 2.357,29697 en df = 8. SSE/df = 294,66212. Beide berekeningen beschrijven dezelfde resterende spreiding.</li></ol>"
+          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Formule 34: residuele variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Formule 34: residuele variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></mfrac><mo>×</mo><mrow><mo>(</mo><mn>1</mn><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup><mo>)</mo></mrow><mo>×</mo><msup><msub><mi>s</mi><mi>y</mi></msub><mn>2</mn></msup></mrow></math></div></div></div><p>Je gebruikt deze vorm bij enkelvoudige regressie met een constante wanneer n, r en sᵧ gegeven zijn. sₑ² is de resterende variantie rond de regressielijn; sₑ = √sₑ². Vanuit een ANOVA-tabel krijg je hetzelfde met SSE/(n − 2). Het aandeel 1 − r² is niet verklaard door de lijn.</p><h3>Cursusopgave H9.1: autogewichten</h3><ol><li>De tien oorspronkelijke gewichten zijn 946, 950, 965, 978, 980, 990, 1.055, 1.015, 1.055 en 1.080 kg; x loopt van 1 tot en met 10.</li><li>Met de onafgeronde brongegevens: sᵧ ≈ 47,46976, sₓ ≈ 3,02765 en r ≈ 0,940088. Gebruik de afgeronde r = 0,940 alleen als niet meer cijfers beschikbaar zijn.</li><li>sₑ² = (9/8) × (1 − r²) × sᵧ² ≈ 294,66212 kg². Neem de wortel: sₑ ≈ 17,16572 kg.</li><li>Controle: de ANOVA-tabel geeft SSE = 2.357,29697 en df = 8. SSE/df = 294,66212. Beide berekeningen beschrijven dezelfde resterende spreiding.</li></ol><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"residual-df\"><h3>Dezelfde residuen, een andere noemer</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Kwadratensom van de modelafwijkingen</figcaption><table class=\"fv-table\"><caption>De drie punten van het voorgaande beeld</caption><thead><tr><th scope=\"col\">Residu</th><th scope=\"col\">Kwadraat</th></tr></thead><tbody><tr><td>+0,5</td><td>0,25</td></tr><tr><td>−1</td><td>1</td></tr><tr><td>+0,5</td><td>0,25</td></tr><tr><td>SSE</td><td>1,50</td></tr></tbody></table><p class=\"fv-work\">De residuen horen bij de geschatte lijn, niet bij het gewone gemiddelde.</p></figure><figure class=\"fv-panel\"><figcaption>Vrijheidsgraden van het model</figcaption><table class=\"fv-table\"><caption>Enkelvoudige regressie met constante</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Uitkomst</th></tr></thead><tbody><tr><td>n</td><td>3</td></tr><tr><td>Geschatte parameters</td><td>2: constante en helling</td></tr><tr><td>Residual df</td><td>3 − 2 = 1</td></tr><tr><td>MSE / <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math></td><td>1,50 / √1,50 ≈ 1,225</td></tr></tbody></table><p class=\"fv-work\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup></mrow></math> = SSE/(n − 2). Dit is een rekenillustratie met bewust weinig waarnemingen.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De noemer past bij de parameters die zijn geschat. Gebruik bij k verklarende variabelen en een constante n − k − 1.</p></section><!-- formula-visual:end -->"
+        },
+        {
+          "title": "Van gegevens naar Coefficients: cursusopgave H9.1",
+          "html": "<p>De cursusopgave bevat tien autogewichten. x is het gecodeerde bouwjaar 1 tot en met 10; y is het gewicht in kg. De codering is onderdeel van het model: vul niet ongemerkt een volledig kalenderjaar in een vergelijking in die op x = 1, …, 10 is geschat.</p><table><caption>Oorspronkelijke gegevens H9.1</caption><thead><tr><th scope=\"col\">x: gecodeerd bouwjaar</th><th scope=\"col\">y: gewicht in kg</th></tr></thead><tbody><tr><td>1</td><td>946</td></tr><tr><td>2</td><td>950</td></tr><tr><td>3</td><td>965</td></tr><tr><td>4</td><td>978</td></tr><tr><td>5</td><td>980</td></tr><tr><td>6</td><td>990</td></tr><tr><td>7</td><td>1055</td></tr><tr><td>8</td><td>1015</td></tr><tr><td>9</td><td>1055</td></tr><tr><td>10</td><td>1080</td></tr></tbody></table><p>Gemiddelden zijn x̄ = 5,5 en ȳ = 1.001,4. Met de oorspronkelijke waarnemingen volgt b₁ = 14,73939 en b₀ = 920,33333. De kleinste-kwadratenmethode kiest deze waarden doordat Σ(yᵢ − ŷᵢ)² minimaal is. De lijn loopt bij een model met constante door (x̄, ȳ).</p><table><caption>Kern van de SPSS-uitvoer, afgerond</caption><thead><tr><th scope=\"col\">Uitvoer</th><th scope=\"col\">Waarde</th><th scope=\"col\">Betekenis</th></tr></thead><tbody><tr><td>Coefficients: B (Constant)</td><td>920,333</td><td>Voorspeld gewicht bij gecodeerd jaar 0; beoordeel of dat binnen het relevante bereik ligt.</td></tr><tr><td>Coefficients: B voor x</td><td>14,739</td><td>Per jaar neemt het voorspelde gewicht met circa 14,74 kg toe.</td></tr><tr><td>Model Summary: R Square</td><td>0,884</td><td>Circa 88,4% van de waargenomen variatie in gewicht wordt lineair verklaard.</td></tr><tr><td>Model Summary: Std. Error of the Estimate</td><td>17,166</td><td>Resterende spreiding rond de lijn, in kg.</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken de voorspelling en het residu voor x = 7, y = 1.055. Waarom is dit residu geen bewijs van een fout in het gewicht?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>ŷ = 920,33333 + 14,73939 × 7 ≈ 1.023,51 kg.</li><li>e = y − ŷ = 1.055 − 1.023,51 ≈ +31,49 kg. Het gewicht ligt boven de lijn.</li><li>Een regressielijn voorspelt niet elke waarneming exact. De afwijking moet worden beoordeeld met de resterende spreiding, relevante diagnoses en inhoudelijke informatie.</li><li>Het getal +31,49 is een residu in kg, geen p-waarde en geen standaardfout.</li></ol></details></div><p class=\"note\">De oorspronkelijke uitwerking rondt r tussentijds af op 0,940 en vindt daardoor sₑ ≈ 17,18. Rekenen met de ongeronde brongegevens geeft circa 17,166. Gebruik in een eigen berekening zoveel mogelijk ongeronde tussenuitkomsten.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/opgavenbundel.pdf#page=10\" target=\"_blank\" rel=\"noopener\">Opgavenbundel, H9.1, PDF 10</a>; <a href=\"bronnen/uitwerkingenbundel.pdf#page=14\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel, H9.1, PDF 14–15</a>; <a href=\"bronnen/spss-uitwerkingen.pdf#page=9\" target=\"_blank\" rel=\"noopener\">SPSS-uitwerkingen, college 3, PDF 9</a>.</p>",
+          "refs": [
+            {
+              "source": "opgaven",
+              "page": 10,
+              "locator": "Opgavenbundel, H9.1, PDF 10"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "spss",
+              "page": 9,
+              "locator": "SPSS-uitwerkingen, college 3, PDF 9"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
       ],
-      "completionVersion": "2026-09-20"
+      "completionVersion": "2026-09-20",
+      "learningVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H9 · §9.1–9.3",
+        "college": "3",
+        "focus": "Stel een regressielijn op uit gegevens of Coefficients. Leg de eenheden, het residu en de beperkingen van een gevonden verband uit.",
+        "title": "H9 · §9.1–9.3 · Hoorcollege 3",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "line-residual",
+          "title": "De lijn berekenen, invullen en het residu lezen"
+        },
+        {
+          "key": "residual-df",
+          "title": "Residuele variantie berekenen zonder ANOVA-tabel"
+        }
+      ],
+      "reading": {
+        "opening": "Bij schatten stond een populatietotaal centraal. Bij regressie onderzoek je hoe een uitkomst samenhangt met een of meer verklarende kenmerken. We beginnen met één verklarende variabele en bekijken zowel de voorspelde lijn als de afwijkingen daarvan.",
+        "conclusion": "De regressielijn geeft een voorspelling; het residu beschrijft het verschil met de waarneming. De eenheden en de betekenis van de helling horen bij de uitleg van het model. Met ANOVA onderzoeken we vervolgens hoeveel variatie de lijn verklaart."
+      }
     },
     {
       "id": "anova",
@@ -2529,12 +5314,68 @@ window.SRA = {
       ],
       "sections": [
         {
+          "title": "ANOVA vergelijkt de lijn met voorspellen door het gemiddelde",
+          "html": "<p>Zonder x zou je voor iedereen hetzelfde steekproefgemiddelde ȳ voorspellen. <strong>TotalSS</strong> meet de totale gekwadrateerde afwijking van die eenvoudige voorspelling. Met de regressielijn voorspelt iedere x een eigen ŷ. <strong>SSE</strong> meet wat daarna onverklaard blijft. Het verschil is <strong>SSR</strong>: de verbetering ten opzichte van alleen het gemiddelde. Daarom is R² een aandeel van de variatie en geen slagingspercentage van losse voorspellingen.</p><p>Een <strong>vrijheidsgraad</strong> is de hoeveelheid onafhankelijke informatie die na het schatten overblijft. Het gemiddelde kost één vrijheidsgraad. Een regressiemodel schat k hellingen én een constante, zodat n − k − 1 vrijheidsgraden voor de residuen overblijven. SS moet daarom door de eigen df worden gedeeld voordat je gemiddelde kwadraten vergelijkt.</p><p>Voor de accountant hangen de maatstaven samen met verschillende vragen: R² beschrijft verklaarde variatie, sₑ beschrijft de resterende spreiding in bedragen of aantallen, en F toetst of het model statistisch informatie toevoegt. Een hoge R² kan samengaan met een voor het controledoel te brede voorspellingsmarge.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h9a.pdf#page=16\" target=\"_blank\" rel=\"noopener\">Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16</a>; <a href=\"bronnen/boek-h9b.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2</a>; <a href=\"bronnen/attentiepunten.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Attentiepunten, variantieanalyse, PDF 4</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h9a",
+              "page": 16,
+              "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 2,
+              "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+            },
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "Attentiepunten, variantieanalyse, PDF 4"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
           "title": "Drie soorten kwadratensommen",
           "html": "<table><caption>Drie soorten kwadratensommen</caption><tr><th scope=\"col\">Rij</th><th scope=\"col\">Kwadratensom</th><th scope=\"col\">Vrijheidsgraden</th><th scope=\"col\">Mean Square</th></tr><tr><td>Regression</td><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>SSR</mi><mo>=</mo><mo>∑</mo><msup><mrow><mo>(</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>y</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>)</mo></mrow><mn>2</mn></msup></mrow></math></td><td>k</td><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mrow></math></td></tr><tr><td>Residual</td><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>SSE</mi><mo>=</mo><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo>)</mo></mrow><mn>2</mn></msup></mrow></math></td><td>n−k−1</td><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mi>SSE</mi></mrow><mrow><mi>n</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></td></tr><tr><td>Total</td><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>TotalSS</mi><mo>=</mo><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>y</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>)</mo></mrow><mn>2</mn></msup></mrow></math></td><td>n−1</td><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mi>TotalSS</mi></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></td></tr></table><p><strong>ANOVA</strong> betekent variantieanalyse. k is het aantal verklarende variabelen; de constante telt niet mee. Bij de gewone OLS-regressie met constante geldt TotalSS = SSR + SSE. De vrijheidsgraden van Regression en Residual tellen op tot die van Total.</p>"
         },
         {
           "title": "Van de tabel naar betekenis",
-          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Verklaarde variatie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Verklaarde variatie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mi>SSE</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Residuele variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Residuele variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSE</mi><mo>=</mo><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mi>e</mi></msub><mo>=</mo><msqrt><mi>MSE</mi></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Globale toets</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Globale toets\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mi>MSR</mi></mrow><mrow><mi>MSE</mi></mrow></mfrac></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>SSR = verklaarde kwadratensom; SSE = residuele kwadratensom; TotalSS = totale kwadratensom; MSR en MSE zijn kwadratensommen gedeeld door hun vrijheidsgraden.</p></details><p><strong>R²</strong>, de determinatiecoëfficiënt, is het aandeel van de variatie in y dat het model verklaart. R² = 0,80 betekent dus 80% verklaarde variatie, niet dat 80% van de voorspellingen exact juist is. De standaardfout s_e geeft aan hoeveel de waarnemingen rond de lijn spreiden, in de eenheid van y.</p><p>Een grote F vergelijkt veel verklaarde variatie met weinig resterende variatie. Of F groot genoeg is, beoordeel je met de juiste kritieke grens of de Sig.-waarde. Een hoge R² vervangt de controles van modelaannames niet.</p>"
+          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Verklaarde variatie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Verklaarde variatie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mi>SSE</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Residuele variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Residuele variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSE</mi><mo>=</mo><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mi>e</mi></msub><mo>=</mo><msqrt><mi>MSE</mi></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Globale toets</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Globale toets\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mi>MSR</mi></mrow><mrow><mi>MSE</mi></mrow></mfrac></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>SSR = verklaarde kwadratensom; SSE = residuele kwadratensom; TotalSS = totale kwadratensom; MSR en MSE zijn kwadratensommen gedeeld door hun vrijheidsgraden.</p></details><p><strong>R²</strong>, de determinatiecoëfficiënt, is het aandeel van de variatie in y dat het model verklaart. R² = 0,80 betekent dus 80% verklaarde variatie, niet dat 80% van de voorspellingen exact juist is. De standaardfout <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> geeft aan hoeveel de waarnemingen rond de lijn spreiden, in de eenheid van y.</p><p>Een grote F vergelijkt veel verklaarde variatie met weinig resterende variatie. Of F groot genoeg is, beoordeel je met de juiste kritieke grens of de Sig.-waarde. Een hoge R² vervangt de controles van modelaannames niet.</p>"
+        },
+        {
+          "title": "Een volledige ANOVA-tabel reconstrueren",
+          "html": "<p>Gebruik de oorspronkelijke autogewichten uit H9.1. Hieronder staan de drie kwadratensommen uit de cursusuitwerking; de overige getallen kun je daaruit zelf reconstrueren.</p><table><caption>H9.1: bronwaarden en te berekenen velden</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">Sum of Squares</th><th scope=\"col\">df</th><th scope=\"col\">Mean Square</th><th scope=\"col\">F</th></tr></thead><tbody><tr><td>Regression</td><td>17.923,10303</td><td>?</td><td>?</td><td>?</td></tr><tr><td>Residual</td><td>2.357,29697</td><td>?</td><td>?</td><td></td></tr><tr><td>Total</td><td>20.280,40000</td><td>9</td><td></td><td></td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Vul de tabel aan. Bepaal n, R², sᵧ en sₑ. Leg uit waarom sᵧ en sₑ verschillen.</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>Total df = 9, dus n = 10. Eén verklarende variabele geeft Regression df = 1 en Residual df = 8.</li><li>MSR = 17.923,10303 / 1 = 17.923,10303; MSE = 2.357,29697 / 8 ≈ 294,66212.</li><li>F = 17.923,10303 / 294,66212 ≈ 60,82595.</li><li>R² = 17.923,10303 / 20.280,4 ≈ 0,883765. Circa 88,38% van de gewichtvariatie wordt verklaard.</li><li>sᵧ = √(20.280,4 / 9) ≈ 47,46976 kg; sₑ = √294,66212 ≈ 17,16572 kg.</li><li>sᵧ beschrijft spreiding rond het algemene gemiddelde. sₑ beschrijft spreiding rond de bijpassende voorspelling voor elk bouwjaar. Met x blijft hier minder spreiding over.</li></ol></details></div><p><strong>Controleer jezelf:</strong> SSR + SSE = TotalSS; de twee df tellen op tot Total df; √MSE sluit aan op Model Summary. Deze controles vinden veel verwisselingen voordat je een toetsconclusie trekt.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/uitwerkingenbundel.pdf#page=14\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel, H9.1, PDF 14–15</a>; <a href=\"bronnen/formuleblad.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Formuleblad, formules 35–43, PDF 3</a>.</p>",
+          "refs": [
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "De huurcasus: correlatie, ANOVA en voorspelling verbinden",
+          "html": "<p>De collegeslides gebruiken een doorlopende casus met huur per maand als y en oppervlakte in m² als x. Het spreidingsdiagram laat een stijgend patroon zien, maar de punten liggen niet allemaal op de lijn. ANOVA meet hoeveel variatie de oppervlakte verklaart en hoeveel voor de vervolgdiagnoses overblijft.</p><figure class=\"learning-figure\"><a href=\"bronnen/slides.pdf#page=72\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/learning/regression-rent-output.png\" alt=\"Spreidingsdiagram huur tegen oppervlakte en Correlations met r 0,892 en n 40.\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></a><figcaption>De combinatie van grafiek, variabelen en aantallen bepaalt hoe je de uitvoer leest. Bron: slides SRA NJ26, PDF-pagina 72. Open de afbeelding voor de bron op volledig formaat.</figcaption></figure><table><caption>ANOVA van het oorspronkelijke huurmodel</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">SS</th><th scope=\"col\">df</th><th scope=\"col\">MS</th></tr></thead><tbody><tr><td>Regression</td><td>472.578,299</td><td>1</td><td>472.578,299</td></tr><tr><td>Residual</td><td>121.859,201</td><td>38</td><td>3.206,821</td></tr><tr><td>Total</td><td>594.437,500</td><td>39</td><td></td></tr></tbody></table><ol><li>n = 40 en k = 1. R² = 472.578,299/594.437,500 ≈ 0,7950. De oppervlakte verklaart circa 79,5% van de huurvariatie in deze dataset.</li><li>sₑ = √(121.859,201/38) ≈ € 56,63 per maand. Dit is de spreiding rond de lijn; het is geen standaardfout van de helling.</li><li>F = 472.578,299/(121.859,201/38) ≈ 147,367. Toets het model met ν₁ = 1 en ν₂ = 38; lees bij gebruik van een tabelbenadering de gekozen rij expliciet af.</li><li>De lijn is ŷ = 485,971 + 6,757x. Bij 100 m² volgt met deze afgedrukte coëfficiënten ŷ = € 1.161,671, afgerond € 1.161,67 per maand.</li><li>De combinatie van hoge R² en significante F maakt de diagnoses niet overbodig. In de les diagnostiek blijkt dezelfde casus een normaliteitsprobleem te hebben.</li></ol><p class=\"note\">In de breuk op slide PDF 75 ontbreekt een cijfer in SSE (12.189,201 in plaats van 121.859,201). De ANOVA-uitvoer en TotalSS − SSR geven 121.859,201; alleen dit bedrag levert de afgedrukte MSE 3.206,821 op. Controleer een formule-invulling dus met de oorspronkelijke tabel.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/slides.pdf#page=72\" target=\"_blank\" rel=\"noopener\">Slides, huurcasus en ANOVA, PDF 72–76</a>; <a href=\"bronnen/slides.pdf#page=86\" target=\"_blank\" rel=\"noopener\">Slides, F-toets huurcasus, PDF 86–87</a>.</p>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 72,
+              "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+            },
+            {
+              "source": "slides",
+              "page": 86,
+              "locator": "Slides, F-toets huurcasus, PDF 86–87"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
       ],
       "example": {
@@ -2544,6 +5385,14 @@ window.SRA = {
           "Vrijheidsgraden: 1, 28 en 29.",
           "MSR = 1.351,262 / 1 = 1.351,262; MSE = 44,105 / 28 ≈ 1,57518.",
           "F ≈ 857,85; s_e ≈ √1,57518 = 1,2551.",
+          "R² = 1.351,262 / 1.395,367 ≈ 0,9684. Ongeveer 96,84% van de variatie in spronghoogte wordt in dit model verklaard door beenkracht."
+        ],
+        "context": "Wat vertelt de ANOVA-uitvoer over spronghoogte en beenkracht? Vanuit de gegeven kwadratensommen berekenen we vrijheidsgraden, gemiddelde kwadraten, F, de residuele standaardafwijking en R².",
+        "stepsHtml": [
+          "Gegeven: SSR = 1.351,262; SSE = 44,105; TotalSS = 1.395,367; n = 30; k = 1.",
+          "Vrijheidsgraden: 1, 28 en 29.",
+          "MSR = 1.351,262 / 1 = 1.351,262; MSE = 44,105 / 28 ≈ 1,57518.",
+          "F ≈ 857,85; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> ≈ √1,57518 = 1,2551.",
           "R² = 1.351,262 / 1.395,367 ≈ 0,9684. Ongeveer 96,84% van de variatie in spronghoogte wordt in dit model verklaard door beenkracht."
         ]
       },
@@ -2571,6 +5420,36 @@ window.SRA = {
           "source": "boek-h9a",
           "page": 16,
           "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+        },
+        {
+          "source": "boek-h9b",
+          "page": 2,
+          "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+        },
+        {
+          "source": "attentie",
+          "page": 4,
+          "locator": "Attentiepunten, variantieanalyse, PDF 4"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 14,
+          "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formuleblad, formules 35–43, PDF 3"
+        },
+        {
+          "source": "slides",
+          "page": 72,
+          "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+        },
+        {
+          "source": "slides",
+          "page": 86,
+          "locator": "Slides, F-toets huurcasus, PDF 86–87"
         }
       ],
       "questions": [
@@ -2616,6 +5495,36 @@ window.SRA = {
               "source": "boek-h9a",
               "page": 16,
               "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 2,
+              "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+            },
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "Attentiepunten, variantieanalyse, PDF 4"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 72,
+              "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+            },
+            {
+              "source": "slides",
+              "page": 86,
+              "locator": "Slides, F-toets huurcasus, PDF 86–87"
             }
           ],
           "recognition": {
@@ -2667,6 +5576,36 @@ window.SRA = {
               "source": "boek-h9a",
               "page": 16,
               "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 2,
+              "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+            },
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "Attentiepunten, variantieanalyse, PDF 4"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 72,
+              "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+            },
+            {
+              "source": "slides",
+              "page": 86,
+              "locator": "Slides, F-toets huurcasus, PDF 86–87"
             }
           ],
           "recognition": {
@@ -2718,6 +5657,36 @@ window.SRA = {
               "source": "boek-h9a",
               "page": 16,
               "locator": "Boek p. 248; oorspronkelijke PDF p. 266; uitsnede p. 16"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 2,
+              "locator": "Boek p. 250; oorspronkelijke PDF p. 268; uitsnede p. 2"
+            },
+            {
+              "source": "attentie",
+              "page": 4,
+              "locator": "Attentiepunten, variantieanalyse, PDF 4"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 72,
+              "locator": "Slides, huurcasus en ANOVA, PDF 72–76"
+            },
+            {
+              "source": "slides",
+              "page": 86,
+              "locator": "Slides, F-toets huurcasus, PDF 86–87"
             }
           ],
           "recognition": {
@@ -2737,9 +5706,55 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "De ANOVA-tabel en verklaarde variatie aanvullen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik ANOVA om totale variatie in y te verdelen in verklaarde variatie en residuele variatie. De tabel levert ook MSE, de residuele standaardfout en de globale F-toets.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Verdeling van kwadratensommen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Verdeling van kwadratensommen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>TotalSS</mi><mo>=</mo><mi>SSR</mi><mo>+</mo><mi>SSE</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gemiddelde verklaarde kwadratensom</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddelde verklaarde kwadratensom\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSR</mi><mo>=</mo><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gemiddelde residuele kwadratensom</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddelde residuele kwadratensom\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSE</mi><mo>=</mo><mfrac><mrow><mi>SSE</mi></mrow><mrow><mi>n</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Verklaarde variatie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Verklaarde variatie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mi>SSE</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Residuele variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Residuele variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSE</mi><mo>=</mo><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mi>e</mi></msub><mo>=</mo><msqrt><mi>MSE</mi></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Globale toets</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Globale toets\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mi>MSR</mi></mrow><mrow><mi>MSE</mi></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>SSR = verklaarde kwadratensom; SSE = residuele kwadratensom; TotalSS = totale kwadratensom; MSR en MSE zijn kwadratensommen gedeeld door hun vrijheidsgraden. n is het aantal gebruikte waarnemingen en k het aantal verklarende variabelen, zonder constante. De vrijheidsgraden zijn k, n − k − 1 en n − 1.</p><h3>Zo reken je stap voor stap</h3><ol><li>Noteer n en k. Bereken de drie vrijheidsgraden en controleer dat regressie plus residu gelijk is aan totaal.</li><li>Vul een ontbrekende kwadratensom aan met TotalSS = SSR + SSE.</li><li>Deel SSR door k voor MSR en SSE door n − k − 1 voor MSE.</li><li>Bereken F = MSR/MSE en s_e = √MSE.</li><li>Bereken R² = SSR/TotalSS en interpreteer dit als het verklaarde aandeel van de variatie in y.</li></ol><h3>Tentamen 28 oktober 2024: spronghoogte en beenkracht</h3><ol><li>Gegeven: SSR = 1.351,262; SSE = 44,105; TotalSS = 1.395,367; n = 30; k = 1.</li><li>Vrijheidsgraden: 1, 28 en 29.</li><li>MSR = 1.351,262 / 1 = 1.351,262; MSE = 44,105 / 28 ≈ 1,57518.</li><li>F ≈ 857,85; s_e ≈ √1,57518 = 1,2551.</li><li>R² = 1.351,262 / 1.395,367 ≈ 0,9684. Ongeveer 96,84% van de variatie in spronghoogte wordt in dit model verklaard door beenkracht.</li></ol><p class=\"note\"><strong>Let op:</strong> R² is geen percentage correct voorspelde personen. MSE en s_e hebben verschillende eenheden; gebruik de wortel van MSE als de standaardfout nodig is.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik ANOVA om totale variatie in y te verdelen in verklaarde variatie en residuele variatie. De tabel levert ook MSE, de residuele standaardfout en de globale F-toets.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Verdeling van kwadratensommen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Verdeling van kwadratensommen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>TotalSS</mi><mo>=</mo><mi>SSR</mi><mo>+</mo><mi>SSE</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gemiddelde verklaarde kwadratensom</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddelde verklaarde kwadratensom\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSR</mi><mo>=</mo><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Gemiddelde residuele kwadratensom</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gemiddelde residuele kwadratensom\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSE</mi><mo>=</mo><mfrac><mrow><mi>SSE</mi></mrow><mrow><mi>n</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Verklaarde variatie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Verklaarde variatie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mi>SSE</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Residuele variantie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Residuele variantie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSE</mi><mo>=</mo><msup><msub><mi>s</mi><mi>e</mi></msub><mn>2</mn></msup></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Standaardfout</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Standaardfout\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><mi>e</mi></msub><mo>=</mo><msqrt><mi>MSE</mi></msqrt></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Globale toets</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Globale toets\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mi>MSR</mi></mrow><mrow><mi>MSE</mi></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>SSR = verklaarde kwadratensom; SSE = residuele kwadratensom; TotalSS = totale kwadratensom; MSR en MSE zijn kwadratensommen gedeeld door hun vrijheidsgraden. n is het aantal gebruikte waarnemingen en k het aantal verklarende variabelen, zonder constante. De vrijheidsgraden zijn k, n − k − 1 en n − 1.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"anova-decomposition\"><h3>Drie afstanden bij één waarneming</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Totale afwijking tegenover modelresidu</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Gemiddelde en geschatte lijn; x-as: x; y-as: y\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">2,5</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">5,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">7,5</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">10,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">0,9</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">1,8</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">2,6</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">3,5</text><path d=\"M58 102.00H334\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"330\" y=\"97.00\" text-anchor=\"end\" fill=\"var(--fv-orange)\">ȳ = 5</text><circle cx=\"136.86\" cy=\"133.20\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"215.71\" cy=\"117.60\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"294.57\" cy=\"55.20\" r=\"4\" fill=\"var(--fv-green)\"/><polyline points=\"136.86,141.00 294.57,63.00\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">y</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>y</span><span><i style=\"background:var(--fv-purple)\"></i>ŷ</span></div><p class=\"fv-work\">Voor x = 3: y − ȳ = 8 − 5 = 3; ŷ − ȳ = 7,5 − 5 = 2,5; y − ŷ = 0,5.</p></figure><figure class=\"fv-panel\"><figcaption>Kwadratensommen over alle punten</figcaption><table class=\"fv-table\"><caption>Dezelfde drie punten als bij regressie</caption><thead><tr><th scope=\"col\">Bron</th><th scope=\"col\">SS</th></tr></thead><tbody><tr><td>Total: Σ(y − ȳ)²</td><td>14</td></tr><tr><td>Regression: Σ(ŷ − ȳ)²</td><td>12,50</td></tr><tr><td>Residual: Σ(y − ŷ)²</td><td>1,50</td></tr><tr><td>R² = 12,50/14</td><td>0,8929</td></tr></tbody></table><p class=\"fv-work\">Bij kleinste kwadraten met constante: 14 = 12,50 + 1,50. R² betreft het verklaarde aandeel, niet het percentage juiste voorspellingen.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De kwadratensommen tellen over de hele dataset op. De gekwadrateerde afstanden van één afzonderlijk punt hoeven die optelregel niet te volgen.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Noteer n en k. Bereken de drie vrijheidsgraden en controleer dat regressie plus residu gelijk is aan totaal.</li><li>Vul een ontbrekende kwadratensom aan met TotalSS = SSR + SSE.</li><li>Deel SSR door k voor MSR en SSE door n − k − 1 voor MSE.</li><li>Bereken F = MSR/MSE en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = √MSE.</li><li>Bereken R² = SSR/TotalSS en interpreteer dit als het verklaarde aandeel van de variatie in y.</li></ol><h3>Tentamen 28 oktober 2024: spronghoogte en beenkracht</h3><ol><li>Gegeven: SSR = 1.351,262; SSE = 44,105; TotalSS = 1.395,367; n = 30; k = 1.</li><li>Vrijheidsgraden: 1, 28 en 29.</li><li>MSR = 1.351,262 / 1 = 1.351,262; MSE = 44,105 / 28 ≈ 1,57518.</li><li>F ≈ 857,85; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> ≈ √1,57518 = 1,2551.</li><li>R² = 1.351,262 / 1.395,367 ≈ 0,9684. Ongeveer 96,84% van de variatie in spronghoogte wordt in dit model verklaard door beenkracht.</li></ol><p class=\"note\"><strong>Let op:</strong> R² is geen percentage correct voorspelde personen. MSE en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> hebben verschillende eenheden; gebruik de wortel van MSE als de standaardfout nodig is.</p>"
+        },
+        {
+          "title": "Een volledige ANOVA-tabel reconstrueren",
+          "html": "<p>Gebruik de oorspronkelijke autogewichten uit H9.1. Hieronder staan de drie kwadratensommen uit de cursusuitwerking; de overige getallen kun je daaruit zelf reconstrueren.</p><table><caption>H9.1: bronwaarden en te berekenen velden</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">Sum of Squares</th><th scope=\"col\">df</th><th scope=\"col\">Mean Square</th><th scope=\"col\">F</th></tr></thead><tbody><tr><td>Regression</td><td>17.923,10303</td><td>?</td><td>?</td><td>?</td></tr><tr><td>Residual</td><td>2.357,29697</td><td>?</td><td>?</td><td></td></tr><tr><td>Total</td><td>20.280,40000</td><td>9</td><td></td><td></td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Vul de tabel aan. Bepaal n, R², sᵧ en sₑ. Leg uit waarom sᵧ en sₑ verschillen.</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>Total df = 9, dus n = 10. Eén verklarende variabele geeft Regression df = 1 en Residual df = 8.</li><li>MSR = 17.923,10303 / 1 = 17.923,10303; MSE = 2.357,29697 / 8 ≈ 294,66212.</li><li>F = 17.923,10303 / 294,66212 ≈ 60,82595.</li><li>R² = 17.923,10303 / 20.280,4 ≈ 0,883765. Circa 88,38% van de gewichtvariatie wordt verklaard.</li><li>sᵧ = √(20.280,4 / 9) ≈ 47,46976 kg; sₑ = √294,66212 ≈ 17,16572 kg.</li><li>sᵧ beschrijft spreiding rond het algemene gemiddelde. sₑ beschrijft spreiding rond de bijpassende voorspelling voor elk bouwjaar. Met x blijft hier minder spreiding over.</li></ol></details></div><p><strong>Controleer jezelf:</strong> SSR + SSE = TotalSS; de twee df tellen op tot Total df; √MSE sluit aan op Model Summary. Deze controles vinden veel verwisselingen voordat je een toetsconclusie trekt.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/uitwerkingenbundel.pdf#page=14\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel, H9.1, PDF 14–15</a>; <a href=\"bronnen/formuleblad.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Formuleblad, formules 35–43, PDF 3</a>.</p>",
+          "refs": [
+            {
+              "source": "uitwerkingen",
+              "page": 14,
+              "locator": "Uitwerkingenbundel, H9.1, PDF 14–15"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 35–43, PDF 3"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
-      ]
+      ],
+      "learningVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H9 · §9.4",
+        "college": "3",
+        "focus": "Vul ontbrekende ANOVA-cellen aan en verbind kwadratensommen, vrijheidsgraden, MSE, R² en F met hun betekenis.",
+        "title": "H9 · §9.4 · Hoorcollege 3",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "anova-decomposition",
+          "title": "De ANOVA-tabel en verklaarde variatie aanvullen"
+        }
+      ],
+      "reading": {
+        "opening": "Een regressielijn sluit meestal niet precies op alle waarnemingen aan. Om de kwaliteit van de aansluiting te beschrijven, splitsen we de totale variatie in een verklaard deel en een resterend deel. De ANOVA-tabel brengt die onderdelen bij elkaar.",
+        "conclusion": "De ANOVA-tabel verbindt verklaarde en onverklaarde variatie met vrijheidsgraden. Daaruit volgen onder meer R², MSE en F. Een goede aansluiting alleen is nog geen toetsbesluit: daarvoor formuleren we eerst een hypothese en kiezen we een passende grens."
+      }
     },
     {
       "id": "toetsen",
@@ -2752,6 +5767,28 @@ window.SRA = {
         "Een conclusie met richting, context en risico schrijven"
       ],
       "sections": [
+        {
+          "title": "Van de onderzoeksvraag naar de juiste toets",
+          "html": "<p>Een toets verdeelt de gevonden helling door haar onzekerheid. Een helling van 10 kan overtuigend zijn als de standaardfout 1 is, en weinig overtuigend als die 20 is. Daarom beoordeel je de verhouding t en niet alleen B. De p-waarde vertelt hoe uitzonderlijk de uitkomst is onder de nulhypothese; de grootte van B vertelt wat het verband inhoudelijk betekent.</p><table><caption>Kies eerst het doel van de toets</caption><thead><tr><th scope=\"col\">Doel</th><th scope=\"col\">Toets</th><th scope=\"col\">Wat deze toets niet beantwoordt</th></tr></thead><tbody><tr><td>Een specifieke stijgende of dalende helling aantonen</td><td>Eenzijdige t-toets met vooraf gekozen richting.</td><td>Een F-toets bewaart het teken van de helling niet.</td></tr><tr><td>Nagaan of één enkelvoudig model een lineair verband bevat</td><td>Tweezijdige t-toets of globale F-toets.</td><td>Significantie bewijst geen oorzakelijk verband.</td></tr><tr><td>Nagaan of een meervoudig model als geheel informatie bevat</td><td>Globale F met k en n − k − 1 vrijheidsgraden.</td><td>Een significante F bewijst niet dat iedere variabele afzonderlijk nodig is.</td></tr><tr><td>De extra bijdrage van één coëfficiënt binnen een meervoudig model toetsen</td><td>t = B/Std. Error bij βⱼ = 0.</td><td>De totale R van het model vervangt de individuele coëfficiënt en haar standaardfout niet.</td></tr></tbody></table><p>Bij een controleverwachting zijn zowel <strong>statistische significantie</strong> als de omvang en precisie van het verband van belang. Een kleine p-waarde maakt een brede voorspellingsmarge niet smaller. Beoordeel dus ook de residuele spreiding en de modelvoorwaarden.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h9b.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Boek p. 252; oorspronkelijke PDF p. 270; uitsnede p. 4</a>; <a href=\"bronnen/boek-h9b.pdf#page=8\" target=\"_blank\" rel=\"noopener\">Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8</a>; <a href=\"bronnen/attentiepunten.pdf#page=8\" target=\"_blank\" rel=\"noopener\">Attentiepunten, toetsen meervoudige regressie, PDF 8</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h9b",
+              "page": 4,
+              "locator": "Boek p. 252; oorspronkelijke PDF p. 270; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
         {
           "title": "SET-opfrisser: hypothesen en foutkansen",
           "html": "<p>Formuleer H₀ en H₁ over een populatieparameter. Bij een positief regressieverband: H₀: β₁ ≤ 0, H₁: β₁ &gt; 0. Het α-risico is het ten onrechte verwerpen van een ware H₀. Het β-risico is het niet verwerpen van een onware H₀. Niet verwerpen betekent dat het bewijs onvoldoende is, niet dat H₀ bewezen is.</p><p>Schrijf steeds parameter, hypothesen, toetsingsgrootheid, grens of p-waarde en conclusie in de context op. Voor het gemiddelde gebruikte SET vaak n − 1 vrijheidsgraden; bij enkelvoudige regressie zijn dat n − 2 en bij meervoudige regressie n − k − 1.</p>"
@@ -2777,6 +5814,28 @@ window.SRA = {
           "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Formule 39: standaardfout van de helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Formule 39: standaardfout van de helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><msub><mi>b</mi><mn>1</mn></msub></msub><mo>=</mo><mfrac><mrow><msub><mi>s</mi><mi>y</mi></msub></mrow><mrow><msub><mi>s</mi><mi>x</mi></msub></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></mfrac></msqrt></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Formule 40: correlatie toetsen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Formule 40: correlatie toetsen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mi>r</mi><mo>×</mo><msqrt><mi>n</mi><mo>−</mo><mn>2</mn></msqrt></mrow><mrow><msqrt><mn>1</mn><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup></msqrt></mrow></mfrac></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Interval voor de populatiehelling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval voor de populatiehelling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><msub><mi>b</mi><mn>1</mn></msub></msub></mrow></mrow></math></div></div></div><p>Deze vormen met de gewone Pearson-correlatie r horen bij enkelvoudige regressie met constante. Voor H₀: ρ = 0 of H₀: β₁ = 0 geven ze dezelfde t als b₁/s_b₁. Gebruik ze niet met de totale R van een meervoudig model. Voor H₀: β₁ = een andere waarde neem je (b₁ − die waarde)/s_b₁.</p><h3>Vervolg op cursusopgave H9.1</h3><ol><li>De regressiehelling is b₁ ≈ 14,73939 kg/jaar. Met n = 10, r ≈ 0,940088, sᵧ ≈ 47,46976 en sₓ ≈ 3,02765 volgt s_b₁ ≈ 1,88988 kg/jaar.</li><li>t = b₁/s_b₁ ≈ 7,79910. Formule 40 geeft dezelfde waarde; df = 10 − 2 = 8.</li><li>De cursusvraag vraagt een positief verband: H₀: β₁ ≤ 0, H₁: β₁ > 0. Bij α = 0,05 is de eenzijdige grens 1,860. Verwerp H₀: er is statistisch bewijs voor een positief lineair verband.</li><li>Aanvullende toepassing uit boek p. 255: voor een tweezijdig 95%-interval gebruik je t = 2,306. Het interval is 14,73939 ± 2,306 × 1,88988 ≈ [10,38; 19,10] kg/jaar.</li><li>Nul ligt buiten dit tweezijdige interval. Daarmee verwerp je ook H₀: β₁ = 0 bij een tweezijdige toets met α = 0,05. Koppel een interval alleen aan een toets met passend niveau en passende richting.</li></ol>"
         },
         {
+          "title": "Tabellenbundel gebruiken: dezelfde casus, drie toetsroutes",
+          "html": "<p>H9.1 geeft t ≈ 7,79910, F ≈ 60,82595, n = 10 en één verklarende variabele. Neem α = 0,05. De tabellenbundel geeft <strong>overschrijdingskansen</strong>: de kans rechts van de positieve tabelwaarde.</p><table><caption>Werkelijk af te lezen tabelwaarden</caption><thead><tr><th scope=\"col\">Vraag</th><th scope=\"col\">Tabel en keuze</th><th scope=\"col\">Kritiek gebied</th></tr></thead><tbody><tr><td>Positief verband?</td><td>Tabel 13.4, df = 8, kolom 0,05: 1,860.</td><td>t &gt; 1,860.</td></tr><tr><td>Enig lineair verband?</td><td>Tabel 13.4, df = 8, kolom 0,025: 2,306.</td><td>t &lt; −2,306 of t &gt; 2,306.</td></tr><tr><td>Hetzelfde tweezijdige enkelvoudige verband via F?</td><td>Tabel 13.8, ν₁ = 1, ν₂ = 8, α = 0,05: 5,32.</td><td>F &gt; 5,32.</td></tr></tbody></table><p>Bij de tweezijdige t-toets verdeel je α over twee staarten. Bij F gebruik je α volledig in de rechterstaart: de toetsingsgrootheid is een verhouding van niet-negatieve gemiddelde kwadraten. Bij één helling is F = t². Daardoor kan F beide richtingen aantonen, maar niet zelfstandig vaststellen dat de richting positief is.</p><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Schrijf het volledige antwoord voor een positief verband tussen gecodeerd bouwjaar en gewicht. Wat verandert er wanneer de vraag alleen “een verband” zegt?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>H₀: β₁ ≤ 0; H₁: β₁ &gt; 0. β₁ is de populatiehelling voor gewicht ten opzichte van bouwjaar.</li><li>t ≈ 7,79910, df = 8; uit tabel 13.4 volgt t<sub>0,05;8</sub> = 1,860.</li><li>7,79910 &gt; 1,860, dus H₀ verwerpen. Er is een significant positief lineair verband tussen bouwjaar en gewicht. Het α-risico is relevant.</li><li>Voor “een verband” gebruik je H₀: β₁ = 0 en H₁: β₁ ≠ 0. Dan geldt |t| &gt; 2,306 of F &gt; 5,32. Ook die H₀ wordt verworpen; de onderzoeksconclusie is tweezijdig.</li></ol></details></div><p class=\"note\">SPSS Sig. = ,000 betekent een zeer kleine afgeronde p-waarde, geen kans van exact nul. Noteer bij een weergave met drie decimalen bijvoorbeeld p &lt; 0,001. Vergelijk een reeds tweezijdige Sig. met α; verdeel die α niet nogmaals over twee staarten.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.4, PDF 12</a>; <a href=\"bronnen/tabellenbundel.pdf#page=20\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.8, PDF 20</a>; <a href=\"bronnen/uitwerkingenbundel.pdf#page=15\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel, H9.1g/h, PDF 15</a>.</p>",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
           "title": "Zelf oefenen met deze aanvulling",
           "html": "<p>Maak de eigen oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/toetsen\">Oefen Hypothesen, t-toets en F-toets</a></p>"
         }
@@ -2788,6 +5847,14 @@ window.SRA = {
           "H₀: β₁ ≥ 0; H₁: β₁ < 0. De tabel geeft t = −2,444.",
           "De officiële uitwerking gebruikt df = 193, tabelrij 190 en de eenzijdige grens −1,653 bij α = 0,05.",
           "−2,444 < −1,653: de uitkomst ligt in het kritieke gebied; H₀ wordt verworpen.",
+          "Binnen dit model is het voorspelde salaris voor vrouwen significant lager, bij gelijkblijvende overige opgenomen kenmerken. Het α-risico is relevant."
+        ],
+        "context": "Geven de gegevens uit de salariscasus voldoende bewijs voor een negatieve coëfficiënt bij de dummy Vrouw? We vertalen de vraag naar hypothesen, vergelijken t met de eenzijdige grens en formuleren de conclusie binnen het model.",
+        "stepsHtml": [
+          "Dummy Vrouw: 1 = vrouw, 0 = man. Gevraagd: aantonen dat de coëfficiënt negatief is.",
+          "H₀: β₁ ≥ 0; H₁: β₁ &lt; 0. De tabel geeft t = −2,444.",
+          "De officiële uitwerking gebruikt df = 193, tabelrij 190 en de eenzijdige grens −1,653 bij α = 0,05.",
+          "−2,444 &lt; −1,653: de uitkomst ligt in het kritieke gebied; H₀ wordt verworpen.",
           "Binnen dit model is het voorspelde salaris voor vrouwen significant lager, bij gelijkblijvende overige opgenomen kenmerken. Het α-risico is relevant."
         ]
       },
@@ -2835,6 +5902,31 @@ window.SRA = {
           "source": "boek-h9b",
           "page": 7,
           "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+        },
+        {
+          "source": "boek-h9b",
+          "page": 8,
+          "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+        },
+        {
+          "source": "attentie",
+          "page": 8,
+          "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+        },
+        {
+          "source": "tabellen",
+          "page": 12,
+          "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+        },
+        {
+          "source": "tabellen",
+          "page": 20,
+          "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+        },
+        {
+          "source": "uitwerkingen",
+          "page": 15,
+          "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
         }
       ],
       "questions": [
@@ -2900,6 +5992,31 @@ window.SRA = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -2971,6 +6088,31 @@ window.SRA = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -3042,6 +6184,31 @@ window.SRA = {
               "source": "boek-h9b",
               "page": 7,
               "locator": "Boek p. 255; oorspronkelijke PDF p. 273; uitsnede p. 7"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 8,
+              "locator": "Boek p. 256; oorspronkelijke PDF p. 274; uitsnede p. 8"
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
           "recognition": {
@@ -3062,18 +6229,77 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Eén coëfficiënt toetsen met t",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de t-toets voor een uitspraak over één populatiecoëfficiënt. De richting van de onderzoeksvraag bepaalt of H₁ linkszijdig, rechtszijdig of tweezijdig is.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Toetsingsgrootheid</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Toetsingsgrootheid\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><msub><mi>b</mi><mi>j</mi></msub><mo>−</mo><msub><mi>β</mi><mrow><mi>j</mi><mo>,</mo><mn>0</mn></mrow></msub></mrow><mrow><msub><mi>s</mi><msub><mi>b</mi><mi>j</mi></msub></msub></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Bij H₀: βⱼ = 0</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Bij H₀: βⱼ = 0\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><msub><mi>b</mi><mi>j</mi></msub></mrow><mrow><msub><mi>s</mi><msub><mi>b</mi><mi>j</mi></msub></msub></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Vrijheidsgraden</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Vrijheidsgraden\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>df</mi><mo>=</mo><mi>n</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>bⱼ = geschatte coëfficiënt; βⱼ,₀ = waarde onder H₀; s_bⱼ = standaardfout van die coëfficiënt; k = aantal verklarende variabelen, zonder constante. De berekende t is een toetsingsgrootheid. De kritieke t komt uit de tabel en hangt af van α, richting en df. SPSS Sig. bij een coëfficiënt is gewoonlijk tweezijdig.</p><h3>Zo reken je stap voor stap</h3><ol><li>Definieer de populatiecoëfficiënt en schrijf H₀ en H₁ op voordat je de getallen bekijkt.</li><li>Bereken t = (bⱼ − βⱼ,₀)/s_bⱼ. Bij een grenswaarde nul wordt dit B/Std. Error.</li><li>Gebruik df = n − k − 1. Kies de juiste eenzijdige of tweezijdige kritieke grens.</li><li>Vergelijk met het juiste kritieke gebied. Bij een linkszijdige toets horen ook de mintekens bij de beslissing.</li><li>Schrijf de conclusie in de context van de vraag. Bij verwerpen is het α-risico relevant.</li></ol><h3>Tentamen 17 maart 2025, vraag 21</h3><ol><li>Dummy Vrouw: 1 = vrouw, 0 = man. Gevraagd: aantonen dat de coëfficiënt negatief is.</li><li>H₀: β₁ ≥ 0; H₁: β₁ &lt; 0. De tabel geeft t = −2,444.</li><li>De officiële uitwerking gebruikt df = 193, tabelrij 190 en de eenzijdige grens −1,653 bij α = 0,05.</li><li>−2,444 &lt; −1,653: de uitkomst ligt in het kritieke gebied; H₀ wordt verworpen.</li><li>Binnen dit model is het voorspelde salaris voor vrouwen significant lager, bij gelijkblijvende overige opgenomen kenmerken. Het α-risico is relevant.</li></ol><p class=\"note\"><strong>Let op:</strong> Een tweezijdige p-waarde mag je voor een eenzijdige toets alleen halveren als het gevonden teken bij H₁ past. Een grote p-waarde bewijst niet dat de coëfficiënt nul is.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de t-toets voor een uitspraak over één populatiecoëfficiënt. De richting van de onderzoeksvraag bepaalt of H₁ linkszijdig, rechtszijdig of tweezijdig is.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Toetsingsgrootheid</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Toetsingsgrootheid\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><msub><mi>b</mi><mi>j</mi></msub><mo>−</mo><msub><mi>β</mi><mrow><mi>j</mi><mo>,</mo><mn>0</mn></mrow></msub></mrow><mrow><msub><mi>s</mi><msub><mi>b</mi><mi>j</mi></msub></msub></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Bij H₀: βⱼ = 0</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Bij H₀: βⱼ = 0\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><msub><mi>b</mi><mi>j</mi></msub></mrow><mrow><msub><mi>s</mi><msub><mi>b</mi><mi>j</mi></msub></msub></mrow></mfrac></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Vrijheidsgraden</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Vrijheidsgraden\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>df</mi><mo>=</mo><mi>n</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>bⱼ = geschatte coëfficiënt; βⱼ,₀ = waarde onder H₀; s_bⱼ = standaardfout van die coëfficiënt; k = aantal verklarende variabelen, zonder constante. De berekende t is een toetsingsgrootheid. De kritieke t komt uit de tabel en hangt af van α, richting en df. SPSS Sig. bij een coëfficiënt is gewoonlijk tweezijdig.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"t-decisions\"><h3>Dezelfde toetsingsgrootheid, een andere hypothese</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Tweezijdig bij α = 0,05</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Tweezijdig bij α = 0,05; x-as: t; y-as: Kansdichtheid\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,1</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,2</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">0,3</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">0,5</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">-4,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">-2,0</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">2,0</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">4,0</text><polygon points=\"268.45,180.00 268.45,163.38 270.18,164.86 271.90,166.23 273.62,167.49 275.35,168.65 277.07,169.72 278.80,170.70 280.52,171.60 282.25,172.42 283.98,173.16 285.70,173.85 287.43,174.47 289.15,175.03 290.88,175.54 292.60,176.00 294.32,176.42 296.05,176.80 297.77,177.14 299.50,177.44 301.23,177.72 302.95,177.97 304.68,178.19 306.40,178.39 308.12,178.57 309.85,178.73 311.57,178.87 313.30,179.00 315.03,179.11 316.75,179.21 318.47,179.30 320.20,179.38 321.93,179.45 323.65,179.51 325.38,179.57 327.10,179.62 328.82,179.66 330.55,179.70 332.28,179.74 334.00,179.77 334.00,180.00\" fill=\"var(--fv-orange)\" fill-opacity=\"0.25\"/><polygon points=\"58.00,180.00 58.00,179.77 59.72,179.74 61.45,179.70 63.17,179.66 64.90,179.62 66.62,179.57 68.35,179.51 70.08,179.45 71.80,179.38 73.53,179.30 75.25,179.21 76.97,179.11 78.70,179.00 80.42,178.87 82.15,178.73 83.88,178.57 85.60,178.39 87.33,178.19 89.05,177.97 90.78,177.72 92.50,177.44 94.22,177.14 95.95,176.80 97.67,176.42 99.40,176.00 101.12,175.54 102.85,175.03 104.58,174.47 106.30,173.85 108.03,173.16 109.75,172.42 111.47,171.60 113.20,170.70 114.92,169.72 116.65,168.65 118.38,167.49 120.10,166.23 121.83,164.86 123.55,163.38 123.55,180.00\" fill=\"var(--fv-orange)\" fill-opacity=\"0.25\"/><path d=\"M267.21 24V180\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"267.21\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-orange)\">2,064</text><path d=\"M124.79 24V180\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"124.79\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-orange)\">−2,064</text><path d=\"M265.00 24V180\" stroke=\"var(--fv-green)\" stroke-dasharray=\"5 4\"/><text x=\"265.00\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-green)\">t = 2,0</text><polyline points=\"58.00,179.77 59.72,179.74 61.45,179.70 63.17,179.66 64.90,179.62 66.62,179.57 68.35,179.51 70.08,179.45 71.80,179.38 73.53,179.30 75.25,179.21 76.97,179.11 78.70,179.00 80.42,178.87 82.15,178.73 83.88,178.57 85.60,178.39 87.33,178.19 89.05,177.97 90.78,177.72 92.50,177.44 94.22,177.14 95.95,176.80 97.67,176.42 99.40,176.00 101.12,175.54 102.85,175.03 104.58,174.47 106.30,173.85 108.03,173.16 109.75,172.42 111.47,171.60 113.20,170.70 114.92,169.72 116.65,168.65 118.38,167.49 120.10,166.23 121.83,164.86 123.55,163.38 125.28,161.79 127.00,160.07 128.72,158.23 130.45,156.25 132.18,154.14 133.90,151.89 135.62,149.50 137.35,146.96 139.07,144.27 140.80,141.44 142.53,138.47 144.25,135.35 145.97,132.09 147.70,128.70 149.43,125.18 151.15,121.54 152.88,117.78 154.60,113.93 156.32,110.00 158.05,105.99 159.78,101.93 161.50,97.83 163.22,93.72 164.95,89.61 166.68,85.53 168.40,81.50 170.12,77.55 171.85,73.69 173.57,69.96 175.30,66.37 177.03,62.97 178.75,59.76 180.47,56.78 182.20,54.04 183.93,51.57 185.65,49.39 187.38,47.51 189.10,45.95 190.83,44.73 192.55,43.84 194.28,43.31 196.00,43.13 197.72,43.31 199.45,43.84 201.18,44.73 202.90,45.95 204.62,47.51 206.35,49.39 208.07,51.57 209.80,54.04 211.53,56.78 213.25,59.76 214.97,62.97 216.70,66.37 218.43,69.96 220.15,73.69 221.88,77.55 223.60,81.50 225.32,85.53 227.05,89.61 228.78,93.72 230.50,97.83 232.22,101.93 233.95,105.99 235.68,110.00 237.40,113.93 239.12,117.78 240.85,121.54 242.57,125.18 244.30,128.70 246.03,132.09 247.75,135.35 249.47,138.47 251.20,141.44 252.93,144.27 254.65,146.96 256.38,149.50 258.10,151.89 259.82,154.14 261.55,156.25 263.27,158.23 265.00,160.07 266.73,161.79 268.45,163.38 270.18,164.86 271.90,166.23 273.62,167.49 275.35,168.65 277.07,169.72 278.80,170.70 280.52,171.60 282.25,172.42 283.98,173.16 285.70,173.85 287.43,174.47 289.15,175.03 290.88,175.54 292.60,176.00 294.32,176.42 296.05,176.80 297.77,177.14 299.50,177.44 301.23,177.72 302.95,177.97 304.68,178.19 306.40,178.39 308.12,178.57 309.85,178.73 311.57,178.87 313.30,179.00 315.03,179.11 316.75,179.21 318.47,179.30 320.20,179.38 321.93,179.45 323.65,179.51 325.38,179.57 327.10,179.62 328.82,179.66 330.55,179.70 332.28,179.74 334.00,179.77\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">t</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Kansdichtheid</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-purple)\"></i>Student-t, df = 24</span></div><p class=\"fv-work\">Gegeven b₁ = 0,40 en s_b₁ = 0,20: t = 2,00. Bij df = 24 valt t binnen ±2,064: H₀ niet verwerpen.</p></figure><figure class=\"fv-panel\"><figcaption>Positief eenzijdig bij α = 0,05</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Positief eenzijdig bij α = 0,05; x-as: t; y-as: Kansdichtheid\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,1</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,2</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">0,3</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">0,5</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">-4,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">-2,0</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">2,0</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">4,0</text><polygon points=\"256.38,180.00 256.38,149.50 258.10,151.89 259.82,154.14 261.55,156.25 263.27,158.23 265.00,160.07 266.73,161.79 268.45,163.38 270.18,164.86 271.90,166.23 273.62,167.49 275.35,168.65 277.07,169.72 278.80,170.70 280.52,171.60 282.25,172.42 283.98,173.16 285.70,173.85 287.43,174.47 289.15,175.03 290.88,175.54 292.60,176.00 294.32,176.42 296.05,176.80 297.77,177.14 299.50,177.44 301.23,177.72 302.95,177.97 304.68,178.19 306.40,178.39 308.12,178.57 309.85,178.73 311.57,178.87 313.30,179.00 315.03,179.11 316.75,179.21 318.47,179.30 320.20,179.38 321.93,179.45 323.65,179.51 325.38,179.57 327.10,179.62 328.82,179.66 330.55,179.70 332.28,179.74 334.00,179.77 334.00,180.00\" fill=\"var(--fv-orange)\" fill-opacity=\"0.25\"/><path d=\"M255.03 24V180\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"255.03\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-orange)\">1,711</text><path d=\"M265.00 24V180\" stroke=\"var(--fv-green)\" stroke-dasharray=\"5 4\"/><text x=\"265.00\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-green)\">t = 2,0</text><polyline points=\"58.00,179.77 59.72,179.74 61.45,179.70 63.17,179.66 64.90,179.62 66.62,179.57 68.35,179.51 70.08,179.45 71.80,179.38 73.53,179.30 75.25,179.21 76.97,179.11 78.70,179.00 80.42,178.87 82.15,178.73 83.88,178.57 85.60,178.39 87.33,178.19 89.05,177.97 90.78,177.72 92.50,177.44 94.22,177.14 95.95,176.80 97.67,176.42 99.40,176.00 101.12,175.54 102.85,175.03 104.58,174.47 106.30,173.85 108.03,173.16 109.75,172.42 111.47,171.60 113.20,170.70 114.92,169.72 116.65,168.65 118.38,167.49 120.10,166.23 121.83,164.86 123.55,163.38 125.28,161.79 127.00,160.07 128.72,158.23 130.45,156.25 132.18,154.14 133.90,151.89 135.62,149.50 137.35,146.96 139.07,144.27 140.80,141.44 142.53,138.47 144.25,135.35 145.97,132.09 147.70,128.70 149.43,125.18 151.15,121.54 152.88,117.78 154.60,113.93 156.32,110.00 158.05,105.99 159.78,101.93 161.50,97.83 163.22,93.72 164.95,89.61 166.68,85.53 168.40,81.50 170.12,77.55 171.85,73.69 173.57,69.96 175.30,66.37 177.03,62.97 178.75,59.76 180.47,56.78 182.20,54.04 183.93,51.57 185.65,49.39 187.38,47.51 189.10,45.95 190.83,44.73 192.55,43.84 194.28,43.31 196.00,43.13 197.72,43.31 199.45,43.84 201.18,44.73 202.90,45.95 204.62,47.51 206.35,49.39 208.07,51.57 209.80,54.04 211.53,56.78 213.25,59.76 214.97,62.97 216.70,66.37 218.43,69.96 220.15,73.69 221.88,77.55 223.60,81.50 225.32,85.53 227.05,89.61 228.78,93.72 230.50,97.83 232.22,101.93 233.95,105.99 235.68,110.00 237.40,113.93 239.12,117.78 240.85,121.54 242.57,125.18 244.30,128.70 246.03,132.09 247.75,135.35 249.47,138.47 251.20,141.44 252.93,144.27 254.65,146.96 256.38,149.50 258.10,151.89 259.82,154.14 261.55,156.25 263.27,158.23 265.00,160.07 266.73,161.79 268.45,163.38 270.18,164.86 271.90,166.23 273.62,167.49 275.35,168.65 277.07,169.72 278.80,170.70 280.52,171.60 282.25,172.42 283.98,173.16 285.70,173.85 287.43,174.47 289.15,175.03 290.88,175.54 292.60,176.00 294.32,176.42 296.05,176.80 297.77,177.14 299.50,177.44 301.23,177.72 302.95,177.97 304.68,178.19 306.40,178.39 308.12,178.57 309.85,178.73 311.57,178.87 313.30,179.00 315.03,179.11 316.75,179.21 318.47,179.30 320.20,179.38 321.93,179.45 323.65,179.51 325.38,179.57 327.10,179.62 328.82,179.66 330.55,179.70 332.28,179.74 334.00,179.77\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">t</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Kansdichtheid</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-purple)\"></i>Student-t, df = 24</span></div><p class=\"fv-work\">Dezelfde t = 2,00 ligt boven 1,711: H₀ verwerpen ten gunste van een positief verband, als deze richting vooraf is gekozen.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De richting van de hypothese bepaalt het verwerpingsgebied. Kies niet achteraf eenzijdig om een gunstiger resultaat te krijgen.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Definieer de populatiecoëfficiënt en schrijf H₀ en H₁ op voordat je de getallen bekijkt.</li><li>Bereken t = (bⱼ − βⱼ,₀)/s_bⱼ. Bij een grenswaarde nul wordt dit B/Std. Error.</li><li>Gebruik df = n − k − 1. Kies de juiste eenzijdige of tweezijdige kritieke grens.</li><li>Vergelijk met het juiste kritieke gebied. Bij een linkszijdige toets horen ook de mintekens bij de beslissing.</li><li>Schrijf de conclusie in de context van de vraag. Bij verwerpen is het α-risico relevant.</li></ol><h3>Tentamen 17 maart 2025, vraag 21</h3><ol><li>Dummy Vrouw: 1 = vrouw, 0 = man. Gevraagd: aantonen dat de coëfficiënt negatief is.</li><li>H₀: β₁ ≥ 0; H₁: β₁ &lt; 0. De tabel geeft t = −2,444.</li><li>De officiële uitwerking gebruikt df = 193, tabelrij 190 en de eenzijdige grens −1,653 bij α = 0,05.</li><li>−2,444 &lt; −1,653: de uitkomst ligt in het kritieke gebied; H₀ wordt verworpen.</li><li>Binnen dit model is het voorspelde salaris voor vrouwen significant lager, bij gelijkblijvende overige opgenomen kenmerken. Het α-risico is relevant.</li></ol><p class=\"note\"><strong>Let op:</strong> Een tweezijdige p-waarde mag je voor een eenzijdige toets alleen halveren als het gevonden teken bij H₁ past. Een grote p-waarde bewijst niet dat de coëfficiënt nul is.</p>"
         },
         {
           "title": "Het gehele regressiemodel toetsen met F",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de globale F-toets om te onderzoeken of de verklarende variabelen gezamenlijk lineaire verklaringskracht hebben. Onder H₀ zijn alle k hellingscoëfficiënten nul.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Globale F-toets</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Globale F-toets\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mi>MSR</mi></mrow><mrow><mi>MSE</mi></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>MSR = SSR/k en MSE = SSE/(n − k − 1). De teller heeft k vrijheidsgraden en de noemer n − k − 1. De F-kritieke grens gebruikt de rechterstaart met kans α.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken MSR en MSE uit de ANOVA-tabel.</li><li>Deel MSR door MSE voor F.</li><li>Vergelijk F met de F-tabelgrens met beide vrijheidsgraden, of vergelijk de globale Sig. met α.</li><li>Concludeer bij verwerpen dat minstens één opgenomen hellingscoëfficiënt afwijkt van nul.</li></ol><h3>Voorbeeld: de ANOVA-gegevens uit de bestaande les</h3><ol><li>Bij n = 30, k = 1, SSR = 1.351,262 en SSE = 44,105 is MSE = 44,105/28 ≈ 1,57518.</li><li>MSR = 1.351,262/1 = 1.351,262. Dus F ≈ 857,85.</li><li>Voor een formele conclusie hoort daarbij de gegeven α en de passende F-grens of globale p-waarde.</li></ol><p class=\"note\"><strong>Let op:</strong> Een significante globale F-toets maakt niet alle afzonderlijke coëfficiënten significant. Halveer α niet voor de rechterstaart van deze F-toets.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de globale F-toets om te onderzoeken of de verklarende variabelen gezamenlijk lineaire verklaringskracht hebben. Onder H₀ zijn alle k hellingscoëfficiënten nul.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Globale F-toets</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Globale F-toets\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mi>MSR</mi></mrow><mrow><mi>MSE</mi></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>MSR = SSR/k en MSE = SSE/(n − k − 1). De teller heeft k vrijheidsgraden en de noemer n − k − 1. De F-kritieke grens gebruikt de rechterstaart met kans α.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"global-f\"><h3>De F-toets ligt in de rechterstaart</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Globale modeltoets</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"F-verdeling, 2 en 24 vrijheidsgraden; x-as: F; y-as: Kansdichtheid\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,3</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,6</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">0,8</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">1,1</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">2,0</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">4,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">6,0</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">8,0</text><polygon points=\"177.03,180.00 177.03,174.69 178.75,174.91 180.47,175.12 182.20,175.32 183.93,175.51 185.65,175.69 187.38,175.87 189.10,176.03 190.83,176.19 192.55,176.34 194.28,176.49 196.00,176.63 197.72,176.76 199.45,176.89 201.18,177.02 202.90,177.13 204.62,177.25 206.35,177.35 208.07,177.46 209.80,177.56 211.53,177.65 213.25,177.74 214.97,177.83 216.70,177.91 218.43,177.99 220.15,178.07 221.88,178.14 223.60,178.21 225.32,178.28 227.05,178.35 228.78,178.41 230.50,178.47 232.22,178.53 233.95,178.58 235.68,178.63 237.40,178.68 239.12,178.73 240.85,178.78 242.57,178.82 244.30,178.87 246.03,178.91 247.75,178.95 249.47,178.99 251.20,179.02 252.93,179.06 254.65,179.09 256.38,179.13 258.10,179.16 259.82,179.19 261.55,179.22 263.27,179.24 265.00,179.27 266.73,179.30 268.45,179.32 270.18,179.35 271.90,179.37 273.62,179.39 275.35,179.41 277.07,179.43 278.80,179.45 280.52,179.47 282.25,179.49 283.98,179.51 285.70,179.52 287.43,179.54 289.15,179.56 290.88,179.57 292.60,179.59 294.32,179.60 296.05,179.61 297.77,179.63 299.50,179.64 301.23,179.65 302.95,179.66 304.68,179.67 306.40,179.69 308.12,179.70 309.85,179.71 311.57,179.72 313.30,179.72 315.03,179.73 316.75,179.74 318.47,179.75 320.20,179.76 321.93,179.77 323.65,179.77 325.38,179.78 327.10,179.79 328.82,179.80 330.55,179.80 332.28,179.81 334.00,179.81 334.00,180.00\" fill=\"var(--fv-orange)\" fill-opacity=\"0.25\"/><path d=\"M175.40 24V180\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"175.40\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-orange)\">grens 3,403</text><path d=\"M196.00 24V180\" stroke=\"var(--fv-green)\" stroke-dasharray=\"5 4\"/><text x=\"196.00\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-green)\">F = 4</text><polyline points=\"58.00,38.18 59.73,45.64 61.45,52.69 63.17,59.33 64.90,65.60 66.62,71.53 68.35,77.12 70.08,82.41 71.80,87.40 73.53,92.12 75.25,96.58 76.97,100.80 78.70,104.79 80.42,108.56 82.15,112.14 83.88,115.52 85.60,118.71 87.33,121.74 89.05,124.61 90.78,127.33 92.50,129.90 94.22,132.34 95.95,134.65 97.67,136.84 99.40,138.92 101.12,140.89 102.85,142.76 104.58,144.53 106.30,146.21 108.03,147.81 109.75,149.33 111.47,150.77 113.20,152.13 114.92,153.43 116.65,154.67 118.38,155.84 120.10,156.95 121.83,158.01 123.55,159.02 125.27,159.97 127.00,160.88 128.72,161.75 130.45,162.57 132.18,163.36 133.90,164.10 135.62,164.81 137.35,165.49 139.07,166.13 140.80,166.75 142.53,167.33 144.25,167.89 145.97,168.42 147.70,168.92 149.43,169.40 151.15,169.86 152.88,170.30 154.60,170.72 156.32,171.12 158.05,171.50 159.78,171.86 161.50,172.20 163.22,172.53 164.95,172.85 166.68,173.15 168.40,173.44 170.12,173.71 171.85,173.97 173.57,174.22 175.30,174.46 177.03,174.69 178.75,174.91 180.47,175.12 182.20,175.32 183.93,175.51 185.65,175.69 187.38,175.87 189.10,176.03 190.83,176.19 192.55,176.34 194.28,176.49 196.00,176.63 197.72,176.76 199.45,176.89 201.18,177.02 202.90,177.13 204.62,177.25 206.35,177.35 208.07,177.46 209.80,177.56 211.53,177.65 213.25,177.74 214.97,177.83 216.70,177.91 218.43,177.99 220.15,178.07 221.88,178.14 223.60,178.21 225.32,178.28 227.05,178.35 228.78,178.41 230.50,178.47 232.22,178.53 233.95,178.58 235.68,178.63 237.40,178.68 239.12,178.73 240.85,178.78 242.57,178.82 244.30,178.87 246.03,178.91 247.75,178.95 249.47,178.99 251.20,179.02 252.93,179.06 254.65,179.09 256.38,179.13 258.10,179.16 259.82,179.19 261.55,179.22 263.27,179.24 265.00,179.27 266.73,179.30 268.45,179.32 270.18,179.35 271.90,179.37 273.62,179.39 275.35,179.41 277.07,179.43 278.80,179.45 280.52,179.47 282.25,179.49 283.98,179.51 285.70,179.52 287.43,179.54 289.15,179.56 290.88,179.57 292.60,179.59 294.32,179.60 296.05,179.61 297.77,179.63 299.50,179.64 301.23,179.65 302.95,179.66 304.68,179.67 306.40,179.69 308.12,179.70 309.85,179.71 311.57,179.72 313.30,179.72 315.03,179.73 316.75,179.74 318.47,179.75 320.20,179.76 321.93,179.77 323.65,179.77 325.38,179.78 327.10,179.79 328.82,179.80 330.55,179.80 332.28,179.81 334.00,179.81\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">F</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Kansdichtheid</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-purple)\"></i>F(2;24)</span></div><p class=\"fv-work\">Gegeven MSR = 8 en MSE = 2: F = 4. Bij α = 0,05, ν₁ = 2 en ν₂ = 24 ligt dit in het verwerpingsgebied.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De globale toets beoordeelt de gezamenlijke bijdrage van de opgenomen x-variabelen. Zij maakt niet automatisch iedere afzonderlijke coëfficiënt significant.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bereken MSR en MSE uit de ANOVA-tabel.</li><li>Deel MSR door MSE voor F.</li><li>Vergelijk F met de F-tabelgrens met beide vrijheidsgraden, of vergelijk de globale Sig. met α.</li><li>Concludeer bij verwerpen dat minstens één opgenomen hellingscoëfficiënt afwijkt van nul.</li></ol><h3>Voorbeeld: de ANOVA-gegevens uit de bestaande les</h3><ol><li>Bij n = 30, k = 1, SSR = 1.351,262 en SSE = 44,105 is MSE = 44,105/28 ≈ 1,57518.</li><li>MSR = 1.351,262/1 = 1.351,262. Dus F ≈ 857,85.</li><li>Voor een formele conclusie hoort daarbij de gegeven α en de passende F-grens of globale p-waarde.</li></ol><p class=\"note\"><strong>Let op:</strong> Een significante globale F-toets maakt niet alle afzonderlijke coëfficiënten significant. Halveer α niet voor de rechterstaart van deze F-toets.</p>"
         },
         {
           "title": "Toetsen en het interval voor de regressiehelling",
-          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Formule 39: standaardfout van de helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Formule 39: standaardfout van de helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><msub><mi>b</mi><mn>1</mn></msub></msub><mo>=</mo><mfrac><mrow><msub><mi>s</mi><mi>y</mi></msub></mrow><mrow><msub><mi>s</mi><mi>x</mi></msub></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></mfrac></msqrt></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Formule 40: correlatie toetsen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Formule 40: correlatie toetsen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mi>r</mi><mo>×</mo><msqrt><mi>n</mi><mo>−</mo><mn>2</mn></msqrt></mrow><mrow><msqrt><mn>1</mn><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup></msqrt></mrow></mfrac></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Interval voor de populatiehelling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval voor de populatiehelling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><msub><mi>b</mi><mn>1</mn></msub></msub></mrow></mrow></math></div></div></div><p>Deze vormen met de gewone Pearson-correlatie r horen bij enkelvoudige regressie met constante. Voor H₀: ρ = 0 of H₀: β₁ = 0 geven ze dezelfde t als b₁/s_b₁. Gebruik ze niet met de totale R van een meervoudig model. Voor H₀: β₁ = een andere waarde neem je (b₁ − die waarde)/s_b₁.</p><h3>Vervolg op cursusopgave H9.1</h3><ol><li>De regressiehelling is b₁ ≈ 14,73939 kg/jaar. Met n = 10, r ≈ 0,940088, sᵧ ≈ 47,46976 en sₓ ≈ 3,02765 volgt s_b₁ ≈ 1,88988 kg/jaar.</li><li>t = b₁/s_b₁ ≈ 7,79910. Formule 40 geeft dezelfde waarde; df = 10 − 2 = 8.</li><li>De cursusvraag vraagt een positief verband: H₀: β₁ ≤ 0, H₁: β₁ > 0. Bij α = 0,05 is de eenzijdige grens 1,860. Verwerp H₀: er is statistisch bewijs voor een positief lineair verband.</li><li>Aanvullende toepassing uit boek p. 255: voor een tweezijdig 95%-interval gebruik je t = 2,306. Het interval is 14,73939 ± 2,306 × 1,88988 ≈ [10,38; 19,10] kg/jaar.</li><li>Nul ligt buiten dit tweezijdige interval. Daarmee verwerp je ook H₀: β₁ = 0 bij een tweezijdige toets met α = 0,05. Koppel een interval alleen aan een toets met passend niveau en passende richting.</li></ol>"
+          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Formule 39: standaardfout van de helling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Formule 39: standaardfout van de helling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>s</mi><msub><mi>b</mi><mn>1</mn></msub></msub><mo>=</mo><mfrac><mrow><msub><mi>s</mi><mi>y</mi></msub></mrow><mrow><msub><mi>s</mi><mi>x</mi></msub></mrow></mfrac><mo>×</mo><msqrt><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></mfrac></msqrt></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Formule 40: correlatie toetsen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Formule 40: correlatie toetsen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mi>r</mi><mo>×</mo><msqrt><mi>n</mi><mo>−</mo><mn>2</mn></msqrt></mrow><mrow><msqrt><mn>1</mn><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup></msqrt></mrow></mfrac></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Interval voor de populatiehelling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Interval voor de populatiehelling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><msub><mi>b</mi><mn>1</mn></msub></msub></mrow></mrow></math></div></div></div><p>Deze vormen met de gewone Pearson-correlatie r horen bij enkelvoudige regressie met constante. Voor H₀: ρ = 0 of H₀: β₁ = 0 geven ze dezelfde t als b₁/s_b₁. Gebruik ze niet met de totale R van een meervoudig model. Voor H₀: β₁ = een andere waarde neem je (b₁ − die waarde)/s_b₁.</p><h3>Vervolg op cursusopgave H9.1</h3><ol><li>De regressiehelling is b₁ ≈ 14,73939 kg/jaar. Met n = 10, r ≈ 0,940088, sᵧ ≈ 47,46976 en sₓ ≈ 3,02765 volgt s_b₁ ≈ 1,88988 kg/jaar.</li><li>t = b₁/s_b₁ ≈ 7,79910. Formule 40 geeft dezelfde waarde; df = 10 − 2 = 8.</li><li>De cursusvraag vraagt een positief verband: H₀: β₁ ≤ 0, H₁: β₁ > 0. Bij α = 0,05 is de eenzijdige grens 1,860. Verwerp H₀: er is statistisch bewijs voor een positief lineair verband.</li><li>Aanvullende toepassing uit boek p. 255: voor een tweezijdig 95%-interval gebruik je t = 2,306. Het interval is 14,73939 ± 2,306 × 1,88988 ≈ [10,38; 19,10] kg/jaar.</li><li>Nul ligt buiten dit tweezijdige interval. Daarmee verwerp je ook H₀: β₁ = 0 bij een tweezijdige toets met α = 0,05. Koppel een interval alleen aan een toets met passend niveau en passende richting.</li></ol><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"slope-zero\"><h3>Het interval koppelen aan de passende tweezijdige toets</h3><p class=\"fv-provenance\">Dezelfde b₁, s_b₁ en t-waarde als de reeds uitgewerkte cursusopgave H9.1 en het hellingsinterval.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Het 95%-interval voor de helling</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 165\" role=\"img\" aria-label=\"Het 95%-interval voor de helling: 10,38 tot 19,10; puntschatting 14,74\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-axis\" d=\"M25 92H335\"/><path d=\"M178.45 65H292.14\" stroke=\"var(--fv-green)\" stroke-width=\"3\"/><path d=\"M178.45 55V102\" stroke=\"var(--fv-green)\"/><text x=\"178.45\" y=\"123\" text-anchor=\"middle\">Ondergrens</text><text x=\"178.45\" y=\"139\" text-anchor=\"middle\">10,38</text><path d=\"M235.30 55V102\" stroke=\"var(--fv-purple)\"/><text x=\"235.30\" y=\"33\" text-anchor=\"middle\">Puntschatting</text><text x=\"235.30\" y=\"49\" text-anchor=\"middle\">14,74</text><path d=\"M292.14 55V102\" stroke=\"var(--fv-green)\"/><text x=\"292.14\" y=\"123\" text-anchor=\"middle\">Bovengrens</text><text x=\"292.14\" y=\"139\" text-anchor=\"middle\">19,10</text><path d=\"M43.04 55V102\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"4 3\"/><text x=\"43.04\" y=\"49\" text-anchor=\"middle\">nul</text><text x=\"180\" y=\"161\" text-anchor=\"middle\">Helling (kg/jaar)</text></svg><p class=\"fv-work\">Marge = 2,306 × 1,88988 ≈ 4,3581. Nul ligt buiten het interval.<br>Ondergrens 10,38; bovengrens 19,10.</p></figure><figure class=\"fv-panel\"><figcaption>De twee equivalente t-routes</figcaption><table class=\"fv-table\"><caption>Enkelvoudige regressie met constante</caption><thead><tr><th scope=\"col\">Route</th><th scope=\"col\">Uitkomst</th></tr></thead><tbody><tr><td>b₁/s_b₁</td><td>14,73939/1,88988 ≈ 7,7991</td></tr><tr><td>r√(n−2)/√(1−r²)</td><td>Bij onafgeronde casusgegevens: dezelfde t</td></tr><tr><td>Vrijheidsgraden</td><td>10 − 2 = 8</td></tr></tbody></table><p class=\"fv-work\">Deze overeenkomst geldt voor toetsen op nul in dit model. Een andere nulwaarde of een meervoudig model vraagt de bijpassende route.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Een tweezijdig 95%-interval dat nul uitsluit past bij verwerpen van H₀: β₁ = 0 op 5%. Het is niet dezelfde afleesregel als een eenzijdige toets.</p></section><!-- formula-visual:end -->"
+        },
+        {
+          "title": "Tabellenbundel gebruiken: dezelfde casus, drie toetsroutes",
+          "html": "<p>H9.1 geeft t ≈ 7,79910, F ≈ 60,82595, n = 10 en één verklarende variabele. Neem α = 0,05. De tabellenbundel geeft <strong>overschrijdingskansen</strong>: de kans rechts van de positieve tabelwaarde.</p><table><caption>Werkelijk af te lezen tabelwaarden</caption><thead><tr><th scope=\"col\">Vraag</th><th scope=\"col\">Tabel en keuze</th><th scope=\"col\">Kritiek gebied</th></tr></thead><tbody><tr><td>Positief verband?</td><td>Tabel 13.4, df = 8, kolom 0,05: 1,860.</td><td>t &gt; 1,860.</td></tr><tr><td>Enig lineair verband?</td><td>Tabel 13.4, df = 8, kolom 0,025: 2,306.</td><td>t &lt; −2,306 of t &gt; 2,306.</td></tr><tr><td>Hetzelfde tweezijdige enkelvoudige verband via F?</td><td>Tabel 13.8, ν₁ = 1, ν₂ = 8, α = 0,05: 5,32.</td><td>F &gt; 5,32.</td></tr></tbody></table><p>Bij de tweezijdige t-toets verdeel je α over twee staarten. Bij F gebruik je α volledig in de rechterstaart: de toetsingsgrootheid is een verhouding van niet-negatieve gemiddelde kwadraten. Bij één helling is F = t². Daardoor kan F beide richtingen aantonen, maar niet zelfstandig vaststellen dat de richting positief is.</p><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Schrijf het volledige antwoord voor een positief verband tussen gecodeerd bouwjaar en gewicht. Wat verandert er wanneer de vraag alleen “een verband” zegt?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>H₀: β₁ ≤ 0; H₁: β₁ &gt; 0. β₁ is de populatiehelling voor gewicht ten opzichte van bouwjaar.</li><li>t ≈ 7,79910, df = 8; uit tabel 13.4 volgt t<sub>0,05;8</sub> = 1,860.</li><li>7,79910 &gt; 1,860, dus H₀ verwerpen. Er is een significant positief lineair verband tussen bouwjaar en gewicht. Het α-risico is relevant.</li><li>Voor “een verband” gebruik je H₀: β₁ = 0 en H₁: β₁ ≠ 0. Dan geldt |t| &gt; 2,306 of F &gt; 5,32. Ook die H₀ wordt verworpen; de onderzoeksconclusie is tweezijdig.</li></ol></details></div><p class=\"note\">SPSS Sig. = ,000 betekent een zeer kleine afgeronde p-waarde, geen kans van exact nul. Noteer bij een weergave met drie decimalen bijvoorbeeld p &lt; 0,001. Vergelijk een reeds tweezijdige Sig. met α; verdeel die α niet nogmaals over twee staarten.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.4, PDF 12</a>; <a href=\"bronnen/tabellenbundel.pdf#page=20\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.8, PDF 20</a>; <a href=\"bronnen/uitwerkingenbundel.pdf#page=15\" target=\"_blank\" rel=\"noopener\">Uitwerkingenbundel, H9.1g/h, PDF 15</a>.</p>",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, PDF 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20"
+            },
+            {
+              "source": "uitwerkingen",
+              "page": 15,
+              "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
       ],
-      "completionVersion": "2026-09-20"
+      "completionVersion": "2026-09-20",
+      "learningVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H9 · §9.5.1–9.5.2; H10 · §10.6",
+        "college": "3 en 7",
+        "focus": "Kies een toets die bij de onderzoeksvraag past. Gebruik de juiste uitvoer en tabelgrens en formuleer een conclusie over de benoemde variabelen.",
+        "title": "H9 · §9.5.1–9.5.2; H10 · §10.6 · Hoorcollege 3 en 7",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "t-decisions",
+          "title": "Eén coëfficiënt toetsen met t"
+        },
+        {
+          "key": "global-f",
+          "title": "Het gehele regressiemodel toetsen met F"
+        },
+        {
+          "key": "slope-zero",
+          "title": "Toetsen en het interval voor de regressiehelling"
+        }
+      ],
+      "reading": {
+        "opening": "Een berekende helling of een hoge verklaarde variatie vertelt nog niet of de gegevens voldoende bewijs leveren voor de onderzoeksvraag. Een toets begint daarom met een uitspraak over de populatie. Daarna kies je de richting, toetsingsgrootheid en beslisgrens.",
+        "conclusion": "Een volledig toetsantwoord verbindt hypothesen, grenswaarde, berekening en een conclusie over de benoemde variabelen. Significant betekent niet automatisch bruikbaar of oorzakelijk. Daarom controleren we hierna ook de aannames en opvallende waarnemingen."
+      }
     },
     {
       "id": "diagnostiek",
@@ -3086,6 +6312,23 @@ window.SRA = {
         "Per analyse bron, conclusie en remedie geven"
       ],
       "sections": [
+        {
+          "title": "Een modelcontrole begint bij het gegevensproces",
+          "html": "<p>Diagnostiek onderzoekt of de berekende lijn en onzekerheid passen bij de gegevens. Dat gaat verder dan een lijst grenswaarden invullen. Een p-waarde uit een ongeschikt model kan een onterecht overtuigende indruk geven; een voorspellingsinterval kan te smal of verkeerd gecentreerd zijn.</p><p>De eerste vier analyses onderzoeken de structuur en bijzondere waarnemingen: samengevoegde groepen, tijdsvertraging, uitbijters en invloed. Daarna onderzoek je normaliteit, constante spreiding en bij tijdreeksen autocorrelatie. De volgorde helpt oorzaken te herkennen: een ten onrechte samengevoegde groep kan bijvoorbeeld zowel een krom patroon als afwijkende residuen veroorzaken.</p><table><caption>Signaal, verklaring en beslissing</caption><thead><tr><th scope=\"col\">Vaststelling</th><th scope=\"col\">Wat moet je vervolgens begrijpen?</th></tr></thead><tbody><tr><td>Twee groepen volgen verschillende lijnen.</td><td>Eén lijn kan de verschillen tussen groepen verwarren met samenhang binnen groepen.</td></tr><tr><td>Een groot gestandaardiseerd residu.</td><td>De y-waarde is onverwacht gegeven het model; onderzoek invoer, context en modelvorm.</td></tr><tr><td>Een hoge Cook’s Distance.</td><td>De geschatte lijn is gevoelig voor deze waarneming; dat maakt haar nog niet ongeldig.</td></tr><tr><td>Een diagnose verwerpt H₀.</td><td>Zoek een onderbouwde aanpassing en herhaal daarna de analyses op de nieuwe residuen.</td></tr></tbody></table><p>De accountantsbetekenis is een betrouwbare basis voor cijferbeoordeling. Een opvallende post kan juist controle-informatie bevatten. Het verwijderen ervan uitsluitend om R² of normaliteit te verbeteren zou het controleprobleem uit beeld halen.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h9b.pdf#page=11\" target=\"_blank\" rel=\"noopener\">Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11</a>; <a href=\"bronnen/attentiepunten.pdf#page=5\" target=\"_blank\" rel=\"noopener\">Attentiepunten, analyses 1–4, PDF 5–6</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
         {
           "title": "Eerst de structuur van de gegevens",
           "html": "<p><strong>Crosssectie</strong>: verschillende personen of bedrijven op ongeveer hetzelfde moment. <strong>Tijdreeks</strong>: waarnemingen opeenvolgend in de tijd. In de SRA-analyseroute onderzoek je tijdsvertraging en autocorrelatie bij tijdreeksen.</p><table><caption>Eerst de structuur van de gegevens</caption><tr><th scope=\"col\">Analyse</th><th scope=\"col\">Waar kijk je?</th><th scope=\"col\">Wat doe je met een probleem?</th></tr><tr><td>1. Samengevoegde groepen</td><td>Spreidingsdiagram: verschillende patronen per groep</td><td>Groepen splitsen of het model passend aanpassen</td></tr><tr><td>2. Tijdsvertraging</td><td>Tijdsdiagram en inhoudelijke logica</td><td>Bijvoorbeeld yₜ koppelen aan xₜ₋₁</td></tr><tr><td>3. Uitbijters</td><td>Gestandaardiseerde residuen en Mahalanobis Distance</td><td>Oorzaak onderzoeken, fouten herstellen, valide gegevens behouden</td></tr><tr><td>4. Invloedrijke punten</td><td>Cook’s Distance en spreidingsdiagram</td><td>Onderzoek de invloed en inhoudelijke verklaring</td></tr></table>"
@@ -3115,6 +6358,157 @@ window.SRA = {
           "html": "<h3>Durbin-Watson uit residuen</h3><p>d = Σ(e_t − e_(t−1))² / Σe_t². De teller begint bij de tweede waarneming, want de eerste heeft geen voorganger in de reeks. De noemer bevat alle residuen. De tijdsvolgorde is essentieel.</p><p><strong>Voorbeeld:</strong> voor residuen 1, 1, −1, −1 is de teller 0² + (−2)² + 0² = 4 en de noemer 1 + 1 + 1 + 1 = 4. Dus d = 1. Voor een toetsbeslissing zijn passende d_L en d_U uit de tabel nodig; dit kleine voorbeeld oefent alleen de berekening.</p><h3>ABSRES en heteroscedasticiteit</h3><p>Maak de absolute residuen |eᵢ| en bepaal hun correlatie met de verklarende variabele volgens de cursusdiagnose. Toets H₀: ρ = 0 met de correlatie-t-toets. Een significant verband is een aanwijzing dat de spreiding samenhangt met x. Controleer daarnaast het residudiagram; een niet-significante toets bewijst geen constante spreiding.</p><p><strong>Voorbeeld:</strong> n = 22, r(x, |e|) = 0,50 geeft t = 0,50√20/√0,75 ≈ 2,582. Bij tweezijdig α = 0,05 en df = 20 is de grens 2,086. Onderzoek heteroscedasticiteit en een passende transformatie of gewogen regressie; controleer het aangepaste model opnieuw.</p>"
         },
         {
+          "title": "Samengevoegde groepen: eerst zichtbaar maken, dan modelleren",
+          "html": "<p>In SPSS-opdracht college 4 onderzoekt Bank X de roodstand van 195 klanten. Een ongesplitst diagram van gemiddeld inkomen en roodstand lijkt één relatie te tonen. Na inkleuren naar <strong>vast of variabel inkomen</strong> blijken er groepen te zijn: het inkomenstype hangt met beide variabelen samen. De ene regressielijn mengt dan twee patronen.</p><table><caption>Wat de officiële verkenning laat zien</caption><thead><tr><th scope=\"col\">Kandidaat x</th><th scope=\"col\">Beoordeling uit de casus</th></tr></thead><tbody><tr><td>Leeftijd</td><td>Geen duidelijk verband met de roodstand in het getoonde diagram.</td></tr><tr><td>Aantal keren loon ontvangen</td><td>Een dalend verband binnen de groep met variabel inkomen; vaste inkomens hebben vrijwel altijd 12 of 13 betalingen.</td></tr><tr><td>Absolute hypotheeklasten</td><td>Geen duidelijk rechtstreeks verband in de getoonde verkenning.</td></tr><tr><td>Hypotheeklasten als percentage van inkomen</td><td>Wel een stijgend patroon bij beide inkomenstypen.</td></tr></tbody></table><p><strong>Methodekeuze:</strong> splitsen geeft iedere groep een eigen lijn. Een dummy kan een verschil in niveau binnen één meervoudig model verwerken. Als ook de hellingen verschillen, is alleen een niveaudummy onvoldoende. Kies dus op basis van wat de groepen laten zien, niet uitsluitend op de hoogste gezamenlijke correlatie.</p><h3>SPSS-praktijkroute college 4</h3><ol><li>Lees College4 in en maak <strong>Graphs → Chart Builder → Simple Scatter</strong>, met Gem Inkomsten p/m op x en Grootte Roodstand op y.</li><li>Maak daarna een <strong>Grouped Scatter</strong> met dezelfde assen en Type Inkomen bij <strong>Set color</strong>. Deze vergelijking laat zien wat de groepsindeling toevoegt.</li><li>Herhaal de verkenning met de andere kandidaten, waaronder de relatieve hypotheeklast. Geef per kandidaat aan of het patroon binnen de groepen standhoudt.</li><li>Lever de gewone en gegroepeerde grafiek plus een gemotiveerde modelkeuze op. Bij deze crosssectie zijn tijdsvertraging en de cursusroute voor autocorrelatie niet van toepassing.</li></ol><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/spss-uitwerkingen.pdf#page=11\" target=\"_blank\" rel=\"noopener\">SPSS-uitwerkingen, college 4, PDF 11–13</a>; <a href=\"bronnen/boek-h9c.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2</a>.</p>",
+          "refs": [
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "Tijdsvertraging lezen in grafieken én Correlations",
+          "html": "<p><strong>Tijdsvertraging</strong> betekent dat x uit een eerdere periode bij de huidige y hoort. Reclame kan bijvoorbeeld pas later in afzet doorwerken. Een vergelijking van reclame en afzet in dezelfde maand kan daardoor weinig samenhang laten zien, terwijl een verschoven vergelijking een duidelijk patroon heeft. Begin met de tijdsvolgorde en een inhoudelijk aannemelijke vertraging.</p><figure class=\"learning-figure\"><a href=\"bronnen/slides.pdf#page=95\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/learning/regression-lag-timeseries.png\" alt=\"Tijdreeksen reclame en afzet en Correlations bij geen verschuiving en verschuiving van één periode.\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></a><figcaption>De pieken en dalen vallen niet vanzelf in dezelfde maand. Kijk ook naar het aantal bruikbare paren in de correlatiematrix. Bron: slides SRA NJ26, PDF-pagina 95. Open de afbeelding voor de bron op volledig formaat.</figcaption></figure><table><caption>Brongegevens van de verschuivingen</caption><thead><tr><th scope=\"col\">Verschuiving</th><th scope=\"col\">Pearson r</th><th scope=\"col\">Sig. (2-tailed)</th><th scope=\"col\">Bruikbare paren</th><th scope=\"col\">Beoordeling</th></tr></thead><tbody><tr><td>0</td><td>−0,118</td><td>0,584</td><td>24</td><td>Geen overtuigende lineaire samenhang op hetzelfde tijdstip.</td></tr><tr><td>1</td><td>0,207</td><td>0,343</td><td>23</td><td>Een periode verschuiven is hier onvoldoende.</td></tr><tr><td>2</td><td>0,963</td><td>,000 (p &lt; 0,001)</td><td>22</td><td>Sterk positief patroon; de collegeslide kiest deze vertraging.</td></tr><tr><td>3</td><td>Zie bronfiguur</td><td>Zie bronuitvoer</td><td>21 bij drie verloren randparen</td><td>De puntenwolk wordt weer duidelijk losser.</td></tr></tbody></table><figure class=\"learning-figure\"><a href=\"bronnen/slides.pdf#page=98\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/learning/regression-lag-diagrams.png\" alt=\"Vier oorspronkelijke spreidingsdiagrammen voor verschuiving nul, één, twee en drie. Twee geeft het strakste stijgende patroon.\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></a><figcaption>Vergelijk eerst zelf de vier puntenwolken; de derde geeft het duidelijkste lineaire patroon. Bron: slides SRA NJ26, PDF-pagina 98. Open de afbeelding voor de bron op volledig formaat.</figcaption></figure><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Hoe formuleer je het aangepaste model en waarom verandert n? Betekent een gekozen vertraging dat autocorrelatie niet meer hoeft te worden onderzocht?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>Koppel afzet in periode t aan reclame in periode t − 2: ŷₜ = b₀ + b₁xₜ₋₂.</li><li>Voor de eerste twee afzetperioden ontbreken binnen deze reeks de bijpassende eerdere reclamewaarden. Er blijven 22 complete paren over; gebruik niet automatisch n = 24.</li><li>Dit gaat over de koppeling tussen x en y. Autocorrelatie gaat over samenhang tussen opeenvolgende storingen. Controleer daarom ook de residuen van het aangepaste tijdreeksmodel.</li><li>Een grote correlatie bewijst geen oorzaak. Onderbouw de vertraging inhoudelijk en beoordeel de bruikbaarheid op nieuwe perioden; kies niet achteraf onbeperkt uit verschuivingen alleen om een kleine p te vinden.</li></ol></details></div><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/slides.pdf#page=94\" target=\"_blank\" rel=\"noopener\">Slides, tijdsvertraging, PDF 94–99</a>; <a href=\"bronnen/boek-h9c.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3</a>.</p>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "Residuals Statistics: drie verschillende waarschuwingen",
+          "html": "<p>De collegeslides onderzoeken huur per maand met n = 40. Lees eerst de rijnaam. <strong>Std. Residual</strong> meet een afwijking in y relatief aan de residuele spreiding; <strong>Mahalanobis Distance</strong> meet hoe uitzonderlijk x is; <strong>Cook’s Distance</strong> meet de invloed op de geschatte regressie. De drie vragen kunnen verschillende antwoorden geven.</p><table><caption>Relevante rijen uit de oorspronkelijke huurcasus</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">Minimum</th><th scope=\"col\">Maximum</th><th scope=\"col\">Mean</th><th scope=\"col\">Std. Deviation</th><th scope=\"col\">N</th></tr></thead><tbody><tr><td>Std. Residual</td><td>−1,352</td><td>2,490</td><td>0,000</td><td>0,987</td><td>40</td></tr><tr><td>Mahal. Distance</td><td>0,000</td><td>2,388</td><td>0,975</td><td>0,815</td><td>40</td></tr><tr><td>Cook’s Distance</td><td>0,000</td><td>0,313</td><td>0,030</td><td>0,060</td><td>40</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Beoordeel uitbijters in y, uitbijters in x en invloedrijke punten met de cursusgrenzen.</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>n = 40 ≤ 100, dus de grenzen voor Std. Residual zijn −2 en +2. Het minimum −1,352 blijft binnen de grens; het maximum 2,490 overschrijdt +2. Er is minstens één potentiële uitbijter in y.</li><li>MD<sub>kritiek</sub> = 0,975 + 3 × 0,815 = 3,420. Het maximum 2,388 is lager; geen x-uitbijtersignaal volgens deze cursusregel.</li><li>CD<sub>kritiek</sub> = 0,030 + 3 × 0,060 = 0,210. Het maximum 0,313 is hoger; onderzoek het potentiële invloedrijke punt.</li><li>Deze samenvatting identificeert niet welke rijen het betreft. Zoek de individuele residuen/afstanden en het spreidingsdiagram op. Onderbouw een behandeling met de casusinformatie.</li></ol></details></div><figure class=\"learning-figure\"><a href=\"bronnen/slides.pdf#page=100\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/learning/regression-residuals.png\" alt=\"Volledige oorspronkelijke Residuals Statistics met het omcirkelde maximum Std. Residual van 2,490.\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></a><figcaption>De volledige tabel bevat ook andere soorten residuen. Gebruik voor deze cursusregel de rij Std. Residual. Bron: slides SRA NJ26, PDF-pagina 100. Open de afbeelding voor de bron op volledig formaat.</figcaption></figure><p><strong>Let op:</strong> 2,490 is hier geen t-toetsingsgrootheid uit Coefficients. Zoek er dus geen t-grens uit de tabellenbundel bij. Het is evenmin de ruwe afwijking in euro’s. De standaardisering maakt afwijkingen vergelijkbaar met de cursusvuistregel.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/slides.pdf#page=100\" target=\"_blank\" rel=\"noopener\">Slides, uitbijters en invloed, PDF 100–108</a>; <a href=\"bronnen/formuleblad.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Formuleblad, formules 44–45 en 48, PDF 3</a>.</p>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "Tests of Normality en ABSRES: kies de juiste rij en grootheid",
+          "html": "<p><strong>Normaliteit</strong> en <strong>homoscedasticiteit</strong> onderzoeken verschillende eigenschappen. Normaliteit gaat over de vorm van de verdeling van de storingen, benaderd met residuen. Homoscedasticiteit betekent dat hun spreiding niet systematisch verandert met x. Bij dezelfde huurcasus kan de ene diagnose dus wel en de andere geen probleem aanwijzen.</p><table><caption>Tests of Normality, oorspronkelijke huurcasus</caption><thead><tr><th scope=\"col\">Toets</th><th scope=\"col\">Statistic</th><th scope=\"col\">df / n</th><th scope=\"col\">Sig.</th></tr></thead><tbody><tr><td>Kolmogorov-Smirnov</td><td>0,103</td><td>40</td><td>0,200*</td></tr><tr><td>Shapiro-Wilk</td><td>0,928</td><td>40</td><td>0,014</td></tr></tbody></table><p>Omdat n = 40 ≤ 50 schrijft de cursus <strong>Shapiro-Wilk</strong> voor. H₀: de residuen zijn normaal verdeeld; H₁: niet normaal verdeeld. 0,014 &lt; 0,05, dus H₀ verwerpen. De andere kolom is geen uitwijkmogelijkheid om toch een gunstige conclusie te krijgen. Het sterretje bij 0,200 zegt bovendien dat deze uitvoer een ondergrens voor die p-waarde weergeeft.</p><figure class=\"learning-figure\"><a href=\"bronnen/slides.pdf#page=110\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/learning/regression-normality.png\" alt=\"Tests of Normality met Shapiro-Wilk p 0,014 voor veertig gestandaardiseerde residuen en een histogram.\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></a><figcaption>Het histogram geeft een beeld; de cursusbeslissing gebruikt de toets die bij n past. Bron: slides SRA NJ26, PDF-pagina 110. Open de afbeelding voor de bron op volledig formaat.</figcaption></figure><h3>Waarom absolute residuen?</h3><p>Een gewoon residu kan positief of negatief zijn. Voor de spreiding telt de grootte van de afwijking, ongeacht de richting. Daarom neem je ABSRES = |e| en onderzoek je de samenhang met de verklarende variabele.</p><table><caption>De juiste cel in Correlations, huurcasus</caption><thead><tr><th scope=\"col\">Vergelijking</th><th scope=\"col\">Pearson r</th><th scope=\"col\">Sig. (2-tailed)</th><th scope=\"col\">Gebruik</th></tr></thead><tbody><tr><td>ABSRES met oppervlakte in m²</td><td>−0,103</td><td>0,526</td><td>Dit is de bedoelde heteroscedasticiteitsdiagnose.</td></tr><tr><td>ABSRES met huur per maand</td><td>0,099</td><td>0,545</td><td>Niet de in deze opgave gevraagde vergelijking met x.</td></tr><tr><td>Huur met oppervlakte</td><td>0,892</td><td>,000</td><td>Dit beschrijft de hoofdrelatie; het test geen constante residuspreiding.</td></tr></tbody></table><p>Voor ABSRES tegenover oppervlakte is p = 0,526 &gt; 0,05. De cursus-H₀ van constante spreiding wordt niet verworpen. Daarmee is normaliteit nog steeds een probleem. Controleer ook het diagram: geen significant lineair verband van ABSRES met x bewijst niet dat iedere denkbare vorm van veranderende spreiding ontbreekt.</p><figure class=\"learning-figure\"><a href=\"bronnen/slides.pdf#page=112\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/learning/regression-absres.png\" alt=\"Correlatiematrix ABSRES, huur en oppervlakte plus het diagram van ABSRES tegenover oppervlakte.\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></a><figcaption>De omcirkelde cel hoort bij ABSRES en de verklarende variabele oppervlakte. Bron: slides SRA NJ26, PDF-pagina 112. Open de afbeelding voor de bron op volledig formaat.</figcaption></figure><p><strong>Vervolg:</strong> onderzoek bijzondere waarnemingen, een betere variabele of modelvorm, en waar passend gewogen regressie. Bij WLS krijgen waarnemingen met meer variantie minder gewicht in de kwadratensom. Het cursusvoorbeeld gebruikt gewicht 1/x² bij een specifieke spreidingsstructuur; pas dat niet als universele reparatie toe. Beoordeel na elke wijziging de nieuwe residuen en leg vast waarom de wijziging inhoudelijk gerechtvaardigd is.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/slides.pdf#page=110\" target=\"_blank\" rel=\"noopener\">Slides, normaliteit en ABSRES, PDF 110–116</a>; <a href=\"bronnen/attentiepunten.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Attentiepunten, diagnoses 5 en 6, PDF 6</a>; <a href=\"bronnen/boek-h9d.pdf#page=2\" target=\"_blank\" rel=\"noopener\">Boek p. 274; oorspronkelijke PDF p. 292; uitsnede p. 2</a>.</p>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 2,
+              "locator": "Boek p. 274; oorspronkelijke PDF p. 292; uitsnede p. 2"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "Durbin-Watson: van tabellenbundel naar beslissing",
+          "html": "<p>Bij een tijdreeks kan een positieve storing worden gevolgd door opnieuw een positieve storing. Dan zijn de afwijkingen niet onafhankelijk. De d-grootheid vergelijkt veranderingen tussen opeenvolgende residuen met de totale residugrootte. Weinig verandering geeft een lage d; afwisselend positieve en negatieve residuen kunnen juist een hoge d geven.</p><p>Neem het cursusvoorbeeld met n = 24, k = 1 en α = 0,05. Zoek in <strong>tabel 13.9</strong> de rij n = 24, daarna de juiste α-regel en de twee kolommen voor k = 1. Je vindt d<sub>L</sub> = 1,27 en d<sub>U</sub> = 1,45. Spiegel ze om 2: 4 − d<sub>U</sub> = 2,55 en 4 − d<sub>L</sub> = 2,73.</p><table><caption>Beslissingsgebieden bij deze tabelkeuze</caption><thead><tr><th scope=\"col\">Gebied</th><th scope=\"col\">Conclusie volgens de cursusroute</th></tr></thead><tbody><tr><td>d ≤ 1,27</td><td>Aanwijzing voor positieve autocorrelatie.</td></tr><tr><td>1,27 &lt; d &lt; 1,45</td><td>Onbeslist; de tabel geeft hier geen definitieve beslissing.</td></tr><tr><td>1,45 ≤ d ≤ 2,55</td><td>Geen autocorrelatie aangetoond.</td></tr><tr><td>2,55 &lt; d &lt; 2,73</td><td>Onbeslist.</td></tr><tr><td>d ≥ 2,73</td><td>Aanwijzing voor negatieve autocorrelatie.</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Eigen afleesvarianten bij dezelfde brontabel: beoordeel d = 1,35, d = 1,90 en d = 2,80. Welke fout maak je als je “d dicht bij 2” als enige regel gebruikt?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><p>1,35 ligt in het onbesliste gebied; 1,90 in het gebied waarin geen autocorrelatie wordt aangetoond; 2,80 geeft een aanwijzing voor negatieve autocorrelatie. Een globale vuistregel mist de afhankelijke grenzen en de onbesliste gebieden. Bij ander n, k of α moet je opnieuw aflezen.</p></details></div><p class=\"note\">De boekcorrectie die elders in deze les wordt uitgewerkt gebruikt α = 0,01 en daarom d<sub>L</sub> = 1,04 en d<sub>U</sub> = 1,20. Deze waarden spreken de bovenstaande grenzen bij α = 0,05 niet tegen. Een andere betrouwbaarheid geeft een andere toets.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/tabellenbundel.pdf#page=30\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.9, PDF 30–31</a>; <a href=\"bronnen/slides.pdf#page=118\" target=\"_blank\" rel=\"noopener\">Slides, Durbin-Watson, PDF 118–119</a>; <a href=\"bronnen/boek-h9d.pdf#page=10\" target=\"_blank\" rel=\"noopener\">Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10</a>.</p>",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 10,
+              "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "SPSS-praktijkroute college 5: diagnoses en herbeoordeling",
+          "html": "<p><strong>Doel:</strong> voor de 60 personen uit de leeftijd-bloeddrukcasus begrijpen waarom een significante lijn nog moet worden onderzocht. De oorspronkelijke lijn is bloeddruk = 83,463 + 1,044 × leeftijd. De bronuitvoer geeft t = 8,862 en Sig. = ,000.</p><ol><li>Lees College5 in en schat <strong>Analyze → Regression → Linear</strong>: Dependent = Blood pressure, Independent = Age. Maak ook een spreidingsdiagram.</li><li>Bewaar onder <strong>Save</strong> de relevante residuen en afstanden: gestandaardiseerde residuen, Mahalanobis en Cook. Hiermee kun je de samenvatting in Residuals Statistics terugvoeren naar individuele personen.</li><li>De oorspronkelijke Std. Residual minimumwaarde is −6,166, MD<sub>max</sub> = 3,380 bij grens 4,088, en CD<sub>max</sub> = 0,328 bij grens 0,140. Onderzoek de betreffende personen met de omschrijvingen uit de bronopgave.</li><li>De officiële uitwerking sluit persoon 33 uit voor bloeddruk en behoudt de sportieve persoon 24. Behandel dit als een casusbeslissing die toelichting vereist. Bewaar de oorspronkelijke gegevens en documenteer een uitsluiting, zodat de keuze controleerbaar blijft.</li><li>Voer de regressie opnieuw uit. Gebruik vervolgens in <strong>Analyze → Descriptive Statistics → Explore → Plots → Normality plots with tests</strong> de residuen van juist dit nieuwe model. De nieuwe n is 59; de cursus kiest dus Kolmogorov-Smirnov.</li><li>Maak via <strong>Transform → Compute Variable</strong> ABSRES = ABS(residu van het actuele model). Bereken via <strong>Analyze → Correlate → Bivariate</strong> de Pearson-correlatie met Age. De bron vindt p = 0,470: geen heteroscedasticiteit aangetoond.</li><li>Rapporteer per analyse de tabel of grafiek, relevante waarden, conclusie en eventuele remedie. Tijdsvertraging en autocorrelatie zijn in deze crosssectie niet van toepassing.</li></ol><p class=\"note\">SPSS kan bij herhalen ZRE_1, ZRE_2 of andere volgnummers maken. De officiële uitleg noemt soms ZRE_1 terwijl een hernieuwde regressie is uitgevoerd. Selecteer op basis van het bijbehorende model, niet blind op de naam. Gebruik binnen dezelfde diagnose ook hetzelfde aantal complete waarnemingen.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/spss-uitwerkingen.pdf#page=14\" target=\"_blank\" rel=\"noopener\">SPSS-uitwerkingen, college 5, PDF 14–21</a>.</p>",
+          "refs": [
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "Meervoudige diagnostiek: samenhangende keuzes in Life Expectancy",
+          "html": "<p>De controles van enkelvoudige regressie blijven bij meervoudige regressie nodig. Er komt multicollineariteit bij. Bovendien onderzoek je de residuspreiding tegenover de relevante verklarende variabelen, niet alleen tegenover de x die toevallig eerst in de uitvoer staat.</p><table><caption>Diagnostisch verloop in de collegecasus</caption><thead><tr><th scope=\"col\">Bronstap</th><th scope=\"col\">Uitvoer of keuze</th><th scope=\"col\">Wat je daarvan moet begrijpen</th></tr></thead><tbody><tr><td>Transformaties, slides 149–152</td><td>Een logtransformatie van HIV/AIDS lijkt enkelvoudig beter, maar geeft in het meervoudige model geen noemenswaardige verbetering.</td><td>Een gekozen y-transformatie moet passen bij alle opgenomen verklarende variabelen. Een losse bivariate verbetering bepaalt niet het eindmodel.</td></tr><tr><td>Uitbijter in y, slide 153</td><td>n = 171; grens ±3; z<sub>max</sub> = 3,172.</td><td>Het maximum is een signaal; identificeer het land en de context.</td></tr><tr><td>Uitbijter in x, slide 154</td><td>MD-grens = 2,982 + 3 × 4,779 = 17,319; MD<sub>max</sub> = 42,190.</td><td>Meervoudige afstand kan een combinatie van kenmerken uitzonderlijk maken.</td></tr><tr><td>Invloed, slides 157–158</td><td>CD-grens = 0,007 + 3 × 0,022 = 0,073; CD<sub>max</sub> = 0,251.</td><td>Een invloedrijk land kan het gezamenlijke model sterk sturen.</td></tr><tr><td>Na de bronselecties, slide 159</td><td>n = 163; Kolmogorov-Smirnov p = 0,070.</td><td>De actuele n bepaalt de diagnosekeuze en de nieuwe vrijheidsgraden.</td></tr><tr><td>Heteroscedasticiteit, slide 160</td><td>Geen significante ABSRES-correlatie met ICOR, HIV/AIDS of Adult Mortality.</td><td>Volgens deze controles geen heteroscedasticiteit aangetoond; beoordeel ook de grafische patronen.</td></tr></tbody></table><p><strong>Kritische bronlezing:</strong> de slides verwijderen in opeenvolgende stappen landen, deels omdat gegevens mogelijk minder betrouwbaar zijn of punten herkenbaar invloedrijk zijn. Die aannames worden niet volledig onderbouwd met onafhankelijke gegevenscontrole. Leer het verloop en de rekenregels, maar maak hiervan geen algemene regel dat kleine landen of invloedrijke punten moeten worden verwijderd. Leg bij iedere uitsluiting het bewijs, de relatie tot de onderzoekspopulatie en de gevolgen voor de uitkomsten vast. Vergelijk waar nodig resultaten met en zonder de betwiste waarneming.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/slides.pdf#page=146\" target=\"_blank\" rel=\"noopener\">Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160</a>; <a href=\"bronnen/attentiepunten.pdf#page=5\" target=\"_blank\" rel=\"noopener\">Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6</a>.</p>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "Gewogen regressie: de WLS-voetnoot bepaalt hoe je uitvoer leest",
+          "html": "<p><strong>Weighted Least Squares</strong> gebruikt gewichten in de gekwadrateerde afwijkingen: waarnemingen met relatief veel spreiding tellen minder zwaar mee. Dit is gericht op de foutstructuur. Het is een andere ingreep dan een logtransformatie om een krom verband rechter te maken of een dummy voor verschillende groepen.</p><p>In de boekcasus Productiviteit geeft Weight Estimation een gewicht evenredig aan 1/x². De uitvoervoetnoot schrijft dit als ARBEIDSU**−2,000. Een waarneming bij x = 80 krijgt daardoor een kwart van het gewicht van een waarneming bij x = 40: (1/80²)/(1/40²) = 1/4. Dit is een eigen invulvoorbeeld bij het gewicht uit de bron; het zijn geen extra waarnemingen uit de boekdataset.</p><table><caption>WLS-uitvoer uit boektabellen 9.18–9.20</caption><thead><tr><th scope=\"col\">Uitvoer</th><th scope=\"col\">Bronwaarde</th><th scope=\"col\">Leespunt</th></tr></thead><tbody><tr><td>Model Summary: R²</td><td>0,934</td><td>Deze fit hoort bij de aangegeven weging.</td></tr><tr><td>Model Summary: Std. Error of the Estimate</td><td>0,0224</td><td>De foutmaat hoort bij de gewogen berekening; vergelijk haar niet rechtstreeks met de ongewogen sₑ.</td></tr><tr><td>ANOVA: Regression df / Residual df</td><td>1 / 22</td><td>Het aantal geschatte hellingen blijft één; de weging voegt geen waarnemingen toe.</td></tr><tr><td>ANOVA: F</td><td>310,736</td><td>Gebruik voldoende precisie; de afgedrukte MS-waarden zijn sterk afgerond.</td></tr><tr><td>Coefficients: constante B</td><td>−1,408</td><td>De coëfficiënten zijn na weging opnieuw geschat.</td></tr><tr><td>Coefficients: arbeidsuren B</td><td>0,616</td><td>De vergelijking is ŷ = −1,408 + 0,616x in de oorspronkelijke variabelen van de casus.</td></tr></tbody></table><p>De bronroute is <strong>Analyze → Regression → Weight Estimation</strong>, met productie als Dependent, arbeidsuren als Independent en als Weight Variable. Bewaar het beste gewicht en geef dat bij <strong>Regression → Linear → WLS Weight</strong> op. Gebruik de broninstelling als oefenroute; een andere dataset kan een andere weging vragen. Controleer daarna opnieuw de residuen en verklaar waarom de gekozen weging bij de waargenomen spreiding past.</p><p class=\"note\">De ongewogen casusdiagnose in het boek vindt op zichzelf geen significant heteroscedasticiteitsprobleem (p = 0,193). De WLS-tabellen illustreren de mogelijke techniek en vormen geen algemene opdracht om ieder model toch te wegen. Ook een hogere gewogen R² is op zichzelf geen bewijs van een betere voorspelling op nieuwe ongewogen waarnemingen.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h9d.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3</a>; <a href=\"bronnen/boek-h9d.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4</a>; <a href=\"bronnen/boek-h9d.pdf#page=5\" target=\"_blank\" rel=\"noopener\">Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5</a>; <a href=\"bronnen/boek-h9d.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
           "title": "Zelf oefenen met deze aanvulling",
           "html": "<p>Maak de eigen oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/diagnostiek\">Oefen Controleer of je het model kunt gebruiken</a></p>"
         }
@@ -3127,6 +6521,14 @@ window.SRA = {
           "CD-grens = 0,045 + 3×0,071 = 0,258. CD_max = 0,284 is hoger: onderzoek het betreffende punt.",
           "Shapiro-Wilk is passend bij n = 30. p = 0,879 > 0,05: H₀ niet verwerpen; geen aangetoond normaliteitsprobleem.",
           "Voor heteroscedasticiteit is p = 0,084 > 0,05: ook daar geen aangetoond probleem. Dat is geen bewijs dat elke aanname perfect geldt."
+        ],
+        "context": "Welke signalen voor afwijkende waarnemingen of modelproblemen bevat de tentamenuitvoer van 28 oktober 2024? We vergelijken de gegeven waarden met de cursuscriteria en onderscheiden een signaal van bewijs.",
+        "stepsHtml": [
+          "n = 30: de y-uitbijtergrenzen zijn −2 en +2. z_min = −2,016 en z_max = 2,053 signaleren potentiële uitbijters.",
+          "MD-grens = 0,967 + 3×1,112 = 4,303. MD_max = 4,245 is lager: geen signaal in x.",
+          "CD-grens = 0,045 + 3×0,071 = 0,258. CD_max = 0,284 is hoger: onderzoek het betreffende punt.",
+          "Shapiro-Wilk is passend bij n = 30. p = 0,879 &gt; 0,05: H₀ niet verwerpen; geen aangetoond normaliteitsprobleem.",
+          "Voor heteroscedasticiteit is p = 0,084 &gt; 0,05: ook daar geen aangetoond probleem. Dat is geen bewijs dat elke aanname perfect geldt."
         ]
       },
       "pitfalls": [
@@ -3174,6 +6576,101 @@ window.SRA = {
           "source": "boek-h9d",
           "page": 10,
           "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+        },
+        {
+          "source": "boek-h9b",
+          "page": 11,
+          "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+        },
+        {
+          "source": "attentie",
+          "page": 5,
+          "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+        },
+        {
+          "source": "spss",
+          "page": 11,
+          "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+        },
+        {
+          "source": "boek-h9c",
+          "page": 2,
+          "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+        },
+        {
+          "source": "slides",
+          "page": 94,
+          "locator": "Slides, tijdsvertraging, PDF 94–99"
+        },
+        {
+          "source": "boek-h9c",
+          "page": 3,
+          "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+        },
+        {
+          "source": "slides",
+          "page": 100,
+          "locator": "Slides, uitbijters en invloed, PDF 100–108"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+        },
+        {
+          "source": "slides",
+          "page": 110,
+          "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+        },
+        {
+          "source": "attentie",
+          "page": 6,
+          "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+        },
+        {
+          "source": "tabellen",
+          "page": 30,
+          "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+        },
+        {
+          "source": "slides",
+          "page": 118,
+          "locator": "Slides, Durbin-Watson, PDF 118–119"
+        },
+        {
+          "source": "spss",
+          "page": 14,
+          "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+        },
+        {
+          "source": "slides",
+          "page": 146,
+          "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+        },
+        {
+          "source": "attentie",
+          "page": 5,
+          "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+        },
+        {
+          "source": "boek-h9d",
+          "page": 3,
+          "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+        },
+        {
+          "source": "boek-h9d",
+          "page": 4,
+          "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+        },
+        {
+          "source": "boek-h9d",
+          "page": 5,
+          "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+        },
+        {
+          "source": "boek-h9d",
+          "page": 6,
+          "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
         }
       ],
       "questions": [
@@ -3239,6 +6736,101 @@ window.SRA = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -3310,6 +6902,101 @@ window.SRA = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -3381,6 +7068,101 @@ window.SRA = {
               "source": "boek-h9d",
               "page": 10,
               "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            },
+            {
+              "source": "boek-h9b",
+              "page": 11,
+              "locator": "Boek p. 259; oorspronkelijke PDF p. 277; uitsnede p. 11"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
+            },
+            {
+              "source": "spss",
+              "page": 11,
+              "locator": "SPSS-uitwerkingen, college 4, PDF 11–13"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 2,
+              "locator": "Boek p. 261; oorspronkelijke PDF p. 279; uitsnede p. 2"
+            },
+            {
+              "source": "slides",
+              "page": 94,
+              "locator": "Slides, tijdsvertraging, PDF 94–99"
+            },
+            {
+              "source": "boek-h9c",
+              "page": 3,
+              "locator": "Boek p. 262; oorspronkelijke PDF p. 280; uitsnede p. 3"
+            },
+            {
+              "source": "slides",
+              "page": 100,
+              "locator": "Slides, uitbijters en invloed, PDF 100–108"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, formules 44–45 en 48, PDF 3"
+            },
+            {
+              "source": "slides",
+              "page": 110,
+              "locator": "Slides, normaliteit en ABSRES, PDF 110–116"
+            },
+            {
+              "source": "attentie",
+              "page": 6,
+              "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
+            },
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "spss",
+              "page": 14,
+              "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
+            },
+            {
+              "source": "slides",
+              "page": 146,
+              "locator": "Slides, meervoudige diagnostiek en aanpassingen, PDF 146–160"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 3,
+              "locator": "Boek p. 275; oorspronkelijke PDF p. 293; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 4,
+              "locator": "Boek p. 276; oorspronkelijke PDF p. 294; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 5,
+              "locator": "Boek p. 277; oorspronkelijke PDF p. 295; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 6,
+              "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
           "recognition": {
@@ -3401,7 +7183,7 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Signalen voor uitbijters en invloedrijke waarnemingen berekenen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze controles voordat je conclusies of voorspellingen op een regressiemodel baseert. Een ongebruikelijke y, een ongebruikelijke combinatie van x-waarden en een invloedrijke waarneming zijn verschillende signalen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Y-signaal bij n ≤ 100</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Y-signaal bij n ≤ 100\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mo>|</mo><mi>z</mi><mo>|</mo><mo>&gt;</mo><mn>2</mn></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Y-signaal bij n &gt; 100</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Y-signaal bij n &gt; 100\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mo>|</mo><mi>z</mi><mo>|</mo><mo>&gt;</mo><mn>3</mn></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Grens voor MD</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Grens voor MD\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>MD</mi><mtext>kritiek</mtext></msub><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>MD</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>+</mo><mn>3</mn><mo>×</mo><msub><mi>s</mi><mtext>MD</mtext></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Grens voor CD</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Grens voor CD\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>CD</mi><mtext>kritiek</mtext></msub><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>CD</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>+</mo><mn>3</mn><mo>×</mo><msub><mi>s</mi><mtext>CD</mtext></msub></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>MD = Mahalanobis Distance; CD = Cook’s Distance. Een streep boven MD of CD betekent gemiddelde; s is de standaardafwijking. z is hier het gestandaardiseerde residu uit de diagnostische uitvoer. De absolute waarde |z| gebruikt de afstand tot nul, ongeacht het teken.</p><h3>Zo reken je stap voor stap</h3><ol><li>Kies de y-grens op basis van n en vergelijk zowel het kleinste als het grootste gestandaardiseerde residu.</li><li>Bereken het gemiddelde van MD plus drie keer de standaardafwijking van MD. Vergelijk MD_max met die grens.</li><li>Bereken op dezelfde manier de grens voor CD en vergelijk CD_max ermee.</li><li>Zoek bij een overschrijding op welke waarneming het gaat. Onderzoek invoer, inhoud en invloed; verwijder niet automatisch.</li><li>Controleer daarnaast normaliteit, homoscedasticiteit en waar relevant autocorrelatie. Dat vraagt de passende uitvoer, grafieken en toetsen; een uitbijtergrens vervangt die controles niet.</li></ol><h3>Tentamen 28 oktober 2024, vraag 11–12</h3><ol><li>n = 30: de y-uitbijtergrenzen zijn −2 en +2. z_min = −2,016 en z_max = 2,053 signaleren potentiële uitbijters.</li><li>MD-grens = 0,967 + 3×1,112 = 4,303. MD_max = 4,245 is lager: geen signaal in x.</li><li>CD-grens = 0,045 + 3×0,071 = 0,258. CD_max = 0,284 is hoger: onderzoek het betreffende punt.</li><li>Shapiro-Wilk is passend bij n = 30. p = 0,879 &gt; 0,05: H₀ niet verwerpen; geen aangetoond normaliteitsprobleem.</li><li>Voor heteroscedasticiteit is p = 0,084 &gt; 0,05: ook daar geen aangetoond probleem. Dat is geen bewijs dat elke aanname perfect geldt.</li></ol><p class=\"note\"><strong>Let op:</strong> De grenzen signaleren nader te onderzoeken punten. Een niet-significante diagnosetoets bewijst geen perfecte aanname. Bij Durbin-Watson bestaan ook onbesliste gebieden; d rond 2 is op zichzelf geen volledige tabelbeslissing.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze controles voordat je conclusies of voorspellingen op een regressiemodel baseert. Een ongebruikelijke y, een ongebruikelijke combinatie van x-waarden en een invloedrijke waarneming zijn verschillende signalen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Y-signaal bij n ≤ 100</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Y-signaal bij n ≤ 100\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mo>|</mo><mi>z</mi><mo>|</mo><mo>&gt;</mo><mn>2</mn></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Y-signaal bij n &gt; 100</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Y-signaal bij n &gt; 100\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mo>|</mo><mi>z</mi><mo>|</mo><mo>&gt;</mo><mn>3</mn></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Grens voor MD</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Grens voor MD\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>MD</mi><mtext>kritiek</mtext></msub><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>MD</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>+</mo><mn>3</mn><mo>×</mo><msub><mi>s</mi><mtext>MD</mtext></msub></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Grens voor CD</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Grens voor CD\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>CD</mi><mtext>kritiek</mtext></msub><mo>=</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>CD</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>+</mo><mn>3</mn><mo>×</mo><msub><mi>s</mi><mtext>CD</mtext></msub></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>MD = Mahalanobis Distance; CD = Cook’s Distance. Een streep boven MD of CD betekent gemiddelde; s is de standaardafwijking. z is hier het gestandaardiseerde residu uit de diagnostische uitvoer. De absolute waarde |z| gebruikt de afstand tot nul, ongeacht het teken.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"diagnostic-signals\"><h3>Een y-uitbijter en invloed zijn verschillende signalen</h3><p class=\"fv-provenance\">De waarden uit de reeds opgenomen Residuals Statistics van de slides: n = 40, Std. Residual, Mahalanobis en Cook’s Distance.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Gestandaardiseerd residu bij n = 40</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Minimum en maximum gestandaardiseerd residu; x-as: Gestandaardiseerd residu z; y-as: Signaalpositie\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,2</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,5</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">0,8</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">1,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">-3,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">-1,5</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">1,5</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">3,0</text><path d=\"M104.00 24V180\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"104.00\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-orange)\">−2</text><path d=\"M288.00 24V180\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"288.00\" y=\"16\" text-anchor=\"middle\" fill=\"var(--fv-orange)\">+2</text><circle cx=\"133.81\" cy=\"117.60\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"310.54\" cy=\"86.40\" r=\"4\" fill=\"var(--fv-green)\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Gestandaardiseerd residu z</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Signaalpositie</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Minimum / maximum</span></div><p class=\"fv-work\">Maximum 2,490 > 2. Minimum −1,352 blijft binnen de cursusgrens. Dit zijn geen t-waarden uit Coefficients.</p></figure><figure class=\"fv-panel\"><figcaption>Cook’s Distance uit dezelfde uitvoer</figcaption><table class=\"fv-table\"><caption>De invloed apart beoordelen</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>Gemiddelde / s</td><td>0,030 / 0,060</td></tr><tr><td>Grens: gemiddelde + 3s</td><td>0,210</td></tr><tr><td>Maximum</td><td>0,313 &gt; 0,210</td></tr></tbody></table><p class=\"fv-work\">Cook signaleert invloed op de schatting. Voor Mahalanobis: 0,975 + 3 × 0,815 = 3,420; maximum 2,388 blijft daaronder.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Onderzoek de betreffende waarnemingen. Een overschrijding geeft geen automatische opdracht om een post te verwijderen.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Kies de y-grens op basis van n en vergelijk zowel het kleinste als het grootste gestandaardiseerde residu.</li><li>Bereken het gemiddelde van MD plus drie keer de standaardafwijking van MD. Vergelijk MD_max met die grens.</li><li>Bereken op dezelfde manier de grens voor CD en vergelijk CD_max ermee.</li><li>Zoek bij een overschrijding op welke waarneming het gaat. Onderzoek invoer, inhoud en invloed; verwijder niet automatisch.</li><li>Controleer daarnaast normaliteit, homoscedasticiteit en waar relevant autocorrelatie. Dat vraagt de passende uitvoer, grafieken en toetsen; een uitbijtergrens vervangt die controles niet.</li></ol><h3>Tentamen 28 oktober 2024, vraag 11–12</h3><ol><li>n = 30: de y-uitbijtergrenzen zijn −2 en +2. z_min = −2,016 en z_max = 2,053 signaleren potentiële uitbijters.</li><li>MD-grens = 0,967 + 3×1,112 = 4,303. MD_max = 4,245 is lager: geen signaal in x.</li><li>CD-grens = 0,045 + 3×0,071 = 0,258. CD_max = 0,284 is hoger: onderzoek het betreffende punt.</li><li>Shapiro-Wilk is passend bij n = 30. p = 0,879 &gt; 0,05: H₀ niet verwerpen; geen aangetoond normaliteitsprobleem.</li><li>Voor heteroscedasticiteit is p = 0,084 &gt; 0,05: ook daar geen aangetoond probleem. Dat is geen bewijs dat elke aanname perfect geldt.</li></ol><p class=\"note\"><strong>Let op:</strong> De grenzen signaleren nader te onderzoeken punten. Een niet-significante diagnosetoets bewijst geen perfecte aanname. Bij Durbin-Watson bestaan ook onbesliste gebieden; d rond 2 is op zichzelf geen volledige tabelbeslissing.</p>"
         },
         {
           "title": "Van uitbijtersignaal naar onderbouwde aanpassing",
@@ -3409,14 +7191,77 @@ window.SRA = {
         },
         {
           "title": "Autocorrelatie corrigeren en opnieuw controleren",
-          "html": "<p>Bij eerste-orde autocorrelatie hangen opeenvolgende storingen samen. In het boek wordt de vorige storing meegenomen: ŷ_t = b₀ + b₁x_t + r₁e_(t−1). r₁ is de geschatte autocorrelatiecoëfficiënt; e_(t−1) is het residu van de vorige periode. De coëfficiënten worden bij de correctie opnieuw geschat.</p><h3>Boekmodel met voorbeeld</h3><ol><li>Het boek geeft na correctie: ŷ_t = 14,92 + 0,2154x_t + 0,6496e_(t−1).</li><li>Neem voor het invulvoorbeeld x_t = 20 en het vorige residu e_(t−1) = 1,5. De correctieterm is 0,6496 × 1,5 = 0,9744.</li><li>De voorspelling is 14,92 + 0,2154 × 20 + 0,9744 = 20,2024. Gebruik het vorige residu, niet het nog onbekende residu van de periode die je voorspelt.</li><li>Controleer de nieuwe residuen opnieuw. In het boek is de nieuwe Durbin-Watson d = 1,2048, net boven d_U = 1,20 en onder 4 − d_U. De toets toont op het gebruikte niveau geen autocorrelatie aan. Dat is geen bewijs dat iedere modelaanname klopt.</li></ol>"
+          "html": "<p>Bij eerste-orde autocorrelatie hangen opeenvolgende storingen samen. In het boek wordt de vorige storing meegenomen: ŷ_t = b₀ + b₁x_t + r₁e_(t−1). r₁ is de geschatte autocorrelatiecoëfficiënt; e_(t−1) is het residu van de vorige periode. De coëfficiënten worden bij de correctie opnieuw geschat.</p><h3>Boekmodel met voorbeeld</h3><ol><li>Het boek geeft na correctie: ŷ_t = 14,92 + 0,2154x_t + 0,6496e_(t−1).</li><li>Neem voor het invulvoorbeeld x_t = 20 en het vorige residu e_(t−1) = 1,5. De correctieterm is 0,6496 × 1,5 = 0,9744.</li><li>De voorspelling is 14,92 + 0,2154 × 20 + 0,9744 = 20,2024. Gebruik het vorige residu, niet het nog onbekende residu van de periode die je voorspelt.</li><li>Controleer de nieuwe residuen opnieuw. In het boek is de nieuwe Durbin-Watson d = 1,2048, net boven d_U = 1,20 en onder 4 − d_U. De toets toont op het gebruikte niveau geen autocorrelatie aan. Dat is geen bewijs dat iedere modelaanname klopt.</li></ol><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"autocorrelation\"><h3>Residuen in tijdsvolgorde houden</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Opeenvolgende residuen lijken op elkaar</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Positief samenhangende residuen; x-as: Tijdstip t; y-as: Residu e\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">-4,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">-2,0</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">2,0</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">4,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">1</text><text x=\"97.43\" y=\"200\" text-anchor=\"middle\">2</text><text x=\"136.86\" y=\"200\" text-anchor=\"middle\">3</text><text x=\"176.29\" y=\"200\" text-anchor=\"middle\">4</text><text x=\"215.71\" y=\"200\" text-anchor=\"middle\">5</text><text x=\"255.14\" y=\"200\" text-anchor=\"middle\">6</text><text x=\"294.57\" y=\"200\" text-anchor=\"middle\">7</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">8</text><path d=\"M58 102.00H334\" stroke=\"var(--fv-purple)\" stroke-dasharray=\"5 4\"/><text x=\"330\" y=\"97.00\" text-anchor=\"end\" fill=\"var(--fv-purple)\">nul</text><polyline points=\"58.00,82.50 97.43,63.00 136.86,43.50 176.29,63.00 215.71,82.50 255.14,121.50 294.57,141.00 334.00,160.50\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Tijdstip t</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Residu e</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>e_t</span></div><p class=\"fv-work\">Σ(e_t − e_(t−1))² = 10; Σe_t² = 33; d = 10/33 ≈ 0,303.</p></figure><figure class=\"fv-panel\"><figcaption>De verschillen gebruiken maar n − 1 paren</figcaption><table class=\"fv-table\"><caption>De teller van Durbin-Watson</caption><thead><tr><th scope=\"col\">t</th><th scope=\"col\">e_t</th><th scope=\"col\">e_t − e_(t−1)</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>geen voorganger</td></tr><tr><td>2</td><td>2</td><td>1</td></tr><tr><td>3</td><td>3</td><td>1</td></tr><tr><td>…</td><td>…</td><td>…</td></tr><tr><td>8</td><td>−3</td><td>−1</td></tr></tbody></table><p class=\"fv-work\">Kleine opeenvolgende verschillen tegenover de totale residuele grootte leiden hier tot een lage d.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Dit is alleen een illustratieve residureeks, geen nieuw geschat model. Gebruik voor de formele conclusie de cursusvoorwaarden en grenzen uit de tabellenbundel. Controleer een aangepast model opnieuw.</p></section><!-- formula-visual:end -->"
         },
         {
           "title": "Diagnostische toetsingsgrootheden zelf berekenen",
-          "html": "<h3>Durbin-Watson uit residuen</h3><p>d = Σ(e_t − e_(t−1))² / Σe_t². De teller begint bij de tweede waarneming, want de eerste heeft geen voorganger in de reeks. De noemer bevat alle residuen. De tijdsvolgorde is essentieel.</p><p><strong>Voorbeeld:</strong> voor residuen 1, 1, −1, −1 is de teller 0² + (−2)² + 0² = 4 en de noemer 1 + 1 + 1 + 1 = 4. Dus d = 1. Voor een toetsbeslissing zijn passende d_L en d_U uit de tabel nodig; dit kleine voorbeeld oefent alleen de berekening.</p><h3>ABSRES en heteroscedasticiteit</h3><p>Maak de absolute residuen |eᵢ| en bepaal hun correlatie met de verklarende variabele volgens de cursusdiagnose. Toets H₀: ρ = 0 met de correlatie-t-toets. Een significant verband is een aanwijzing dat de spreiding samenhangt met x. Controleer daarnaast het residudiagram; een niet-significante toets bewijst geen constante spreiding.</p><p><strong>Voorbeeld:</strong> n = 22, r(x, |e|) = 0,50 geeft t = 0,50√20/√0,75 ≈ 2,582. Bij tweezijdig α = 0,05 en df = 20 is de grens 2,086. Onderzoek heteroscedasticiteit en een passende transformatie of gewogen regressie; controleer het aangepaste model opnieuw.</p>"
+          "html": "<h3>Durbin-Watson uit residuen</h3><p>d = Σ(e_t − e_(t−1))² / Σe_t². De teller begint bij de tweede waarneming, want de eerste heeft geen voorganger in de reeks. De noemer bevat alle residuen. De tijdsvolgorde is essentieel.</p><p><strong>Voorbeeld:</strong> voor residuen 1, 1, −1, −1 is de teller 0² + (−2)² + 0² = 4 en de noemer 1 + 1 + 1 + 1 = 4. Dus d = 1. Voor een toetsbeslissing zijn passende d_L en d_U uit de tabel nodig; dit kleine voorbeeld oefent alleen de berekening.</p><h3>ABSRES en heteroscedasticiteit</h3><p>Maak de absolute residuen |eᵢ| en bepaal hun correlatie met de verklarende variabele volgens de cursusdiagnose. Toets H₀: ρ = 0 met de correlatie-t-toets. Een significant verband is een aanwijzing dat de spreiding samenhangt met x. Controleer daarnaast het residudiagram; een niet-significante toets bewijst geen constante spreiding.</p><p><strong>Voorbeeld:</strong> n = 22, r(x, |e|) = 0,50 geeft t = 0,50√20/√0,75 ≈ 2,582. Bij tweezijdig α = 0,05 en df = 20 is de grens 2,086. Onderzoek heteroscedasticiteit en een passende transformatie of gewogen regressie; controleer het aangepaste model opnieuw.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"absres\"><h3>De absolute residuen maken toenemende spreiding zichtbaar</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Residuen hebben beide tekens</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Residuen met toenemende grootte; x-as: x; y-as: Residu e\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">-3,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">-1,5</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">1,5</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">3,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">2,2</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">4,5</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">6,8</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">9,0</text><path d=\"M58 102.00H334\" stroke=\"var(--fv-purple)\" stroke-dasharray=\"5 4\"/><text x=\"330\" y=\"97.00\" text-anchor=\"end\" fill=\"var(--fv-purple)\">nul</text><circle cx=\"88.67\" cy=\"109.80\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"119.33\" cy=\"86.40\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"150.00\" cy=\"125.40\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"180.67\" cy=\"70.80\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"211.33\" cy=\"141.00\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"242.00\" cy=\"55.20\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"272.67\" cy=\"156.60\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"303.33\" cy=\"39.60\" r=\"4\" fill=\"var(--fv-green)\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Residu e</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>e</span></div><p class=\"fv-work\">De negatieve en positieve afwijkingen wisselen elkaar af, maar worden groter bij grotere x.</p></figure><figure class=\"fv-panel\"><figcaption>De absolute waarden houden de grootte vast</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Absolute residuen; x-as: x; y-as: Absoluut residu |e|\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,8</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">1,5</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">2,2</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">3,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">2,2</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">4,5</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">6,8</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">9,0</text><circle cx=\"88.67\" cy=\"164.40\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"119.33\" cy=\"148.80\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"150.00\" cy=\"133.20\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"180.67\" cy=\"117.60\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"211.33\" cy=\"102.00\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"242.00\" cy=\"86.40\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"272.67\" cy=\"70.80\" r=\"4\" fill=\"var(--fv-orange)\"/><circle cx=\"303.33\" cy=\"55.20\" r=\"4\" fill=\"var(--fv-orange)\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Absoluut residu |e|</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-orange)\"></i>|e|</span></div><p class=\"fv-work\">Na de absolute waarde zijn alle afstanden positief. De correlatie met x kan nu de samenhang met de foutgrootte zichtbaar maken.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Dit is een bewust eenvoudig patroon, geen echte diagnosetoets. De n = 22, r = 0,50 en t ≈ 2,582 in de bestaande uitwerking horen bij een andere, gegeven dataset.</p></section><!-- formula-visual:end -->"
+        },
+        {
+          "title": "Durbin-Watson: van tabellenbundel naar beslissing",
+          "html": "<p>Bij een tijdreeks kan een positieve storing worden gevolgd door opnieuw een positieve storing. Dan zijn de afwijkingen niet onafhankelijk. De d-grootheid vergelijkt veranderingen tussen opeenvolgende residuen met de totale residugrootte. Weinig verandering geeft een lage d; afwisselend positieve en negatieve residuen kunnen juist een hoge d geven.</p><p>Neem het cursusvoorbeeld met n = 24, k = 1 en α = 0,05. Zoek in <strong>tabel 13.9</strong> de rij n = 24, daarna de juiste α-regel en de twee kolommen voor k = 1. Je vindt d<sub>L</sub> = 1,27 en d<sub>U</sub> = 1,45. Spiegel ze om 2: 4 − d<sub>U</sub> = 2,55 en 4 − d<sub>L</sub> = 2,73.</p><table><caption>Beslissingsgebieden bij deze tabelkeuze</caption><thead><tr><th scope=\"col\">Gebied</th><th scope=\"col\">Conclusie volgens de cursusroute</th></tr></thead><tbody><tr><td>d ≤ 1,27</td><td>Aanwijzing voor positieve autocorrelatie.</td></tr><tr><td>1,27 &lt; d &lt; 1,45</td><td>Onbeslist; de tabel geeft hier geen definitieve beslissing.</td></tr><tr><td>1,45 ≤ d ≤ 2,55</td><td>Geen autocorrelatie aangetoond.</td></tr><tr><td>2,55 &lt; d &lt; 2,73</td><td>Onbeslist.</td></tr><tr><td>d ≥ 2,73</td><td>Aanwijzing voor negatieve autocorrelatie.</td></tr></tbody></table><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"dw-regions\"><h3>Twee onbesliste gebieden blijven zichtbaar</h3><p class=\"fv-provenance\">Dezelfde grenzen en afleesvarianten als tabel 13.9 in de bestaande formule-uitleg: n = 24, k = 1, α = 0,05.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>De vijf gebieden op één as</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 180\" role=\"img\" aria-label=\"Durbin-Watson bij n = 24, k = 1, α = 0,05\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20.00\" y=\"55\" width=\"101.60\" height=\"40\" fill=\"var(--fv-orange)\" fill-opacity=\"0.3\"/><text x=\"70.80\" y=\"118\" text-anchor=\"middle\">positief</text><rect x=\"121.60\" y=\"55\" width=\"14.40\" height=\"40\" fill=\"var(--fv-purple)\" fill-opacity=\"0.3\"/><text x=\"128.80\" y=\"140\" text-anchor=\"middle\">onbeslist</text><rect x=\"136.00\" y=\"55\" width=\"88.00\" height=\"40\" fill=\"var(--fv-green)\" fill-opacity=\"0.3\"/><text x=\"180.00\" y=\"118\" text-anchor=\"middle\">geen signaal</text><rect x=\"224.00\" y=\"55\" width=\"14.40\" height=\"40\" fill=\"var(--fv-purple)\" fill-opacity=\"0.3\"/><text x=\"231.20\" y=\"140\" text-anchor=\"middle\">onbeslist</text><rect x=\"238.40\" y=\"55\" width=\"101.60\" height=\"40\" fill=\"var(--fv-orange)\" fill-opacity=\"0.3\"/><text x=\"289.20\" y=\"118\" text-anchor=\"middle\">negatief</text><path class=\"fv-axis\" d=\"M20.00 51V99\"/><text x=\"20.00\" y=\"22\" text-anchor=\"middle\">0,00</text><path class=\"fv-axis\" d=\"M121.60 51V99\"/><text x=\"121.60\" y=\"42\" text-anchor=\"middle\">1,27</text><path class=\"fv-axis\" d=\"M136.00 51V99\"/><text x=\"136.00\" y=\"22\" text-anchor=\"middle\">1,45</text><path class=\"fv-axis\" d=\"M224.00 51V99\"/><text x=\"224.00\" y=\"42\" text-anchor=\"middle\">2,55</text><path class=\"fv-axis\" d=\"M238.40 51V99\"/><text x=\"238.40\" y=\"22\" text-anchor=\"middle\">2,73</text><path class=\"fv-axis\" d=\"M340.00 51V99\"/><text x=\"340.00\" y=\"42\" text-anchor=\"middle\">4,00</text><text x=\"180\" y=\"173\" text-anchor=\"middle\">Durbin-Watson d</text></svg><p class=\"fv-work\">d_L = 1,27; d_U = 1,45.<br>Spiegelen: 4 − d_U = 2,55; 4 − d_L = 2,73.</p></figure><figure class=\"fv-panel\"><figcaption>De gegeven afleesvarianten</figcaption><table class=\"fv-table\"><caption>Dezelfde grenzen gebruiken</caption><thead><tr><th scope=\"col\">d</th><th scope=\"col\">Gebied</th></tr></thead><tbody><tr><td>1,35</td><td>Onbeslist</td></tr><tr><td>1,90</td><td>Geen autocorrelatie aangetoond</td></tr><tr><td>2,80</td><td>Aanwijzing voor negatieve autocorrelatie</td></tr></tbody></table><p class=\"fv-work\">Kies bij ander n, k of α opnieuw de juiste tabelwaarden. Het middengebied bewijst geen perfecte onafhankelijkheid.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De kleine onbesliste intervallen zijn wezenlijk. Alleen kijken of d ongeveer 2 is, slaat deze tabelbeslissing over.</p></section><!-- formula-visual:end --><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Eigen afleesvarianten bij dezelfde brontabel: beoordeel d = 1,35, d = 1,90 en d = 2,80. Welke fout maak je als je “d dicht bij 2” als enige regel gebruikt?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><p>1,35 ligt in het onbesliste gebied; 1,90 in het gebied waarin geen autocorrelatie wordt aangetoond; 2,80 geeft een aanwijzing voor negatieve autocorrelatie. Een globale vuistregel mist de afhankelijke grenzen en de onbesliste gebieden. Bij ander n, k of α moet je opnieuw aflezen.</p></details></div><p class=\"note\">De boekcorrectie die elders in deze les wordt uitgewerkt gebruikt α = 0,01 en daarom d<sub>L</sub> = 1,04 en d<sub>U</sub> = 1,20. Deze waarden spreken de bovenstaande grenzen bij α = 0,05 niet tegen. Een andere betrouwbaarheid geeft een andere toets.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/tabellenbundel.pdf#page=30\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.9, PDF 30–31</a>; <a href=\"bronnen/slides.pdf#page=118\" target=\"_blank\" rel=\"noopener\">Slides, Durbin-Watson, PDF 118–119</a>; <a href=\"bronnen/boek-h9d.pdf#page=10\" target=\"_blank\" rel=\"noopener\">Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10</a>.</p>",
+          "refs": [
+            {
+              "source": "tabellen",
+              "page": 30,
+              "locator": "Tabellenbundel, tabel 13.9, PDF 30–31"
+            },
+            {
+              "source": "slides",
+              "page": 118,
+              "locator": "Slides, Durbin-Watson, PDF 118–119"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 10,
+              "locator": "Boek p. 282; oorspronkelijke PDF p. 300; uitsnede p. 10"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
       ],
-      "completionVersion": "2026-09-20"
+      "completionVersion": "2026-09-20",
+      "learningVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H9 · §9.6.1–9.6.7; H10 · §10.4",
+        "college": "4; herhaling in 5–7",
+        "focus": "Beoordeel iedere relevante modelcontrole met tabel of grafiek, criterium, conclusie en vervolgactie. Een goede fit vervangt deze controles niet.",
+        "title": "H9 · §9.6.1–9.6.7; H10 · §10.4 · Hoorcollege 4; herhaling in 5–7",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "diagnostic-signals",
+          "title": "Signalen voor uitbijters en invloedrijke waarnemingen berekenen"
+        },
+        {
+          "key": "autocorrelation",
+          "title": "Autocorrelatie corrigeren en opnieuw controleren"
+        },
+        {
+          "key": "absres",
+          "title": "Diagnostische toetsingsgrootheden zelf berekenen"
+        },
+        {
+          "key": "dw-regions",
+          "title": "Durbin-Watson: van tabellenbundel naar beslissing"
+        }
+      ],
+      "reading": {
+        "opening": "Een regressietoets steunt op aannames over model en gegevens. Voordat je de uitkomst gebruikt, onderzoek je of die aannames voldoende passen en of enkele waarnemingen het resultaat sterk bepalen. Elke controle vraagt om een signaal, betekenis en passende vervolgstap.",
+        "conclusion": "Diagnostiek leidt tot een onderbouwd oordeel over het gebruik van het model, niet alleen tot een lijst vinkjes. Een gesignaleerd probleem vraagt om onderzoek; geen signaal bewijst geen perfecte aanname. Pas met die beoordeling kun je voorspellingen en intervallen verantwoord interpreteren."
+      }
     },
     {
       "id": "voorspellen",
@@ -3430,12 +7275,29 @@ window.SRA = {
       ],
       "sections": [
         {
+          "title": "De voorspelling is een verwachting met een onzekerheidsmarge",
+          "html": "<p>Een puntvoorspelling ligt op de lijn en is zelden exact de realisatie. Voor een accountant is daarom de vervolgvraag van belang: hoeveel afwijking is nog verenigbaar met de gebruikelijke spreiding? Een <strong>individueel voorspellingsinterval</strong> bevat zowel onzekerheid over de lijn als de extra storing van de nieuwe waarneming.</p><table><caption>Lees eerst wat wordt gevraagd</caption><thead><tr><th scope=\"col\">Gevraagd</th><th scope=\"col\">Passend antwoord</th><th scope=\"col\">Gevolg</th></tr></thead><tbody><tr><td>De verwachte productie bij één gegeven hoeveelheid arbeidsuren</td><td>Puntvoorspelling ŷ₀.</td><td>Geeft één centrumwaarde; geen informatie over de marge.</td></tr><tr><td>Het gemiddelde van alle vergelijkbare situaties bij x₀</td><td>Interval voor de gemiddelde respons.</td><td>Geen extra individuele storing; daarom smaller.</td></tr><tr><td>De productie van één concrete nieuwe maand</td><td>Individueel voorspellingsinterval, formule 50.</td><td>De eerste 1 onder de wortel blijft staan.</td></tr></tbody></table><p>De term 1/n weerspiegelt dat meer basisgegevens de lijn preciezer schatten. De afstandsterm (x₀ − x̄)² maakt de marge groter buiten het centrum van de onderzochte x-waarden. Extra basisgegevens nemen de natuurlijke spreiding van één nieuwe uitkomst niet weg. Daarom verdwijnt het individuele interval niet zodra n groot wordt.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h9d.pdf#page=11\" target=\"_blank\" rel=\"noopener\">Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11</a>; <a href=\"bronnen/formuleblad.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h9d",
+              "page": 11,
+              "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
           "title": "Eerst de puntvoorspelling",
           "html": "<p>x₀ is de nieuwe waarde van x waarvoor je iets wilt weten. Vul die in: ŷ₀ = b₀ + b₁x₀. Controleer de eenheden. Zijn bedragen in duizenden euro’s uitgedrukt, dan is de voorspelling dat ook.</p><p><strong>Interpolatie</strong> is voorspellen binnen het onderzochte x-gebied. <strong>Extrapolatie</strong> is voorspellen daarbuiten. Het oorspronkelijke verband hoeft buiten het waargenomen gebied niet door te lopen. Onderzoek eerst het relevante bereik en de regressieaannames.</p>"
         },
         {
           "title": "Waarom staat er een 1 onder de wortel?",
-          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Individueel voorspellingsinterval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Individueel voorspellingsinterval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mn>0</mn></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mi>e</mi></msub><mo>×</mo><msqrt><mn>1</mn><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mrow><mrow><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><msup><msub><mi>s</mi><mi>x</mi></msub><mn>2</mn></msup></mrow></mrow></mfrac></msqrt></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>x₀ = nieuwe x; x̄ = gemiddelde x; s_x = standaardafwijking van x; s_e = residuele standaardfout; t hoort hier bij n − 2 vrijheidsgraden.</p></details><p>De eerste <strong>1</strong> staat voor de extra spreiding van één nieuwe waarneming rond de lijn. De term 1/n hoort bij de onzekerheid van de geschatte lijn. De laatste term vergroot de marge wanneer x₀ ver van x̄ ligt. Daarom is het individuele voorspellingsinterval het smalst bij x₀ = x̄.</p><p>Dit is het <strong>voorspellingsinterval voor één nieuwe waarneming</strong> uit formule 50. Het interval voor de gemiddelde respons bij x₀ mist die eerste 1 en is smaller. Lees dus eerst wat er precies wordt voorspeld. Gebruik voor enkelvoudige regressie df = n − 2 en s_e = √MSE.</p>"
+          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Individueel voorspellingsinterval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Individueel voorspellingsinterval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mn>0</mn></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mi>e</mi></msub><mo>×</mo><msqrt><mn>1</mn><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mrow><mrow><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><msup><msub><mi>s</mi><mi>x</mi></msub><mn>2</mn></msup></mrow></mrow></mfrac></msqrt></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>x₀ = nieuwe x; x̄ = gemiddelde x; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>x</mi></msub></mrow></math> = standaardafwijking van x; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = residuele standaardfout; t hoort hier bij n − 2 vrijheidsgraden.</p></details><p>De eerste <strong>1</strong> staat voor de extra spreiding van één nieuwe waarneming rond de lijn. De term 1/n hoort bij de onzekerheid van de geschatte lijn. De laatste term vergroot de marge wanneer x₀ ver van x̄ ligt. Daarom is het individuele voorspellingsinterval het smalst bij x₀ = x̄.</p><p>Dit is het <strong>voorspellingsinterval voor één nieuwe waarneming</strong> uit formule 50. Het interval voor de gemiddelde respons bij x₀ mist die eerste 1 en is smaller. Lees dus eerst wat er precies wordt voorspeld. Gebruik voor enkelvoudige regressie df = n − 2 en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = √MSE.</p>"
         },
         {
           "title": "Een werkelijke uitkomst vergelijken",
@@ -3444,12 +7306,64 @@ window.SRA = {
         {
           "title": "Basisperiode en controleperiode gescheiden houden",
           "html": "<p>In de <strong>basisperiode</strong> schat en beoordeel je het model. In de <strong>controleperiode</strong> gebruik je dat model om nieuwe waarnemingen op plausibiliteit te onderzoeken. Het boek gebruikt 24 maanden als basis en daarna 12 maanden voor controle. Bepaal voor iedere nieuwe x de voorspelling en het individuele voorspellingsinterval. Een nieuwe realisatie buiten het interval is aanleiding voor onderzoek, geen automatisch bewijs van een boekingsfout of fraude.</p><p>Pas het model niet stilzwijgend aan met dezelfde controlewaarneming die je wilt beoordelen. Als het proces aantoonbaar verandert, motiveer een nieuwe basisperiode en controleer het model opnieuw.</p>"
+        },
+        {
+          "title": "Boekcasus Productiviteit: een controlemaand beoordelen",
+          "html": "<p>Het boek gebruikt 24 basismaanden en onderzoekt daarna de controleperiode. Voor januari is x₀ = 55,5 in duizenden arbeidsuren. De benodigde waarden zijn sₑ = 1,10, sₓ = 6,31 en x̄ = 48,683. De voorspelling is ŷ₀ = 32,75 in tienduizenden producten. De werkelijke productie is 34,3.</p><table><caption>Vul de onderdelen van de intervalformule afzonderlijk in</caption><thead><tr><th scope=\"col\">Onderdeel</th><th scope=\"col\">Invulling</th><th scope=\"col\">Reden</th></tr></thead><tbody><tr><td>Vrijheidsgraden</td><td>24 − 2 = 22</td><td>Een enkelvoudig model schat een helling en een constante.</td></tr><tr><td>Kritieke t</td><td>Tabel 13.4: df 22, overschrijdingskans 0,025 → 2,074</td><td>Een tweezijdig 95%-interval verdeelt 5% over beide staarten.</td></tr><tr><td>Onzekerheidsfactor</td><td>√[1 + 1/24 + (55,5 − 48,683)²/(23 × 6,31²)] ≈ 1,04519</td><td>Individuele storing, lijnonzekerheid en afstand tot x̄.</td></tr><tr><td>Marge</td><td>2,074 × 1,10 × 1,04519 ≈ 2,3845</td><td>De schaal blijft tienduizenden producten.</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Stel het interval op en formuleer de controleconclusie. Wat betekent de marge in stuks?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><p>32,75 ± 2,3845 geeft ongeveer [30,37; 35,13] × 10.000 stuks. De marge is circa 23.845 stuks. De realisatie 34,3 × 10.000 ligt binnen het interval: deze modelvergelijking geeft geen bijzonder afwijkingssignaal voor januari. Dat bewijst niet dat elke productieboeking juist is. Een realisatie buiten het interval zou gericht onderzoek vragen naar brongegevens, omstandigheden en modelgeschiktheid.</p></details></div><p>Controleer bij iedere nieuwe maand opnieuw de x-waarde en dus de afstandsterm. Gebruik niet voor alle maanden automatisch de marge van januari. Extrapolatie buiten het onderzochte bereik vraagt bovendien een inhoudelijke beoordeling; een ingevulde formule kan daar een schijnbaar precies maar ongefundeerd antwoord geven.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h9d.pdf#page=11\" target=\"_blank\" rel=\"noopener\">Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11</a>; <a href=\"bronnen/boek-h9d.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12</a>; <a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.4, df 22, PDF 12</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h9d",
+              "page": 11,
+              "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "Voorspellen met de huurcasus na modelaanpassing",
+          "html": "<p>Na de aanpassing in de collegeslides gebruikt de huurcasus 39 waarnemingen. De nieuwe lijn is ŷ = 512,479 + 6,388x, met MSE = 2.706,538, x̄ = 81,54 en sₓ = 15,992. Gebruik alle onderdelen van ditzelfde model. Een oude helling combineren met de nieuwe MSE levert geen geldig interval op.</p><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken voor 80 m² een individueel 95%-voorspellingsinterval met de tabelbenadering uit de slide: df = 37, tabelrij 35, t = 2,030.</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>Puntvoorspelling: 512,479 + 6,388 × 80 = 1.023,519, dus circa € 1.023,52.</li><li>Neem de wortel van de MSE: sₑ = √2.706,538 ≈ 52,0244.</li><li>Marge = 2,030 × 52,0244 × √[1 + 1/39 + (80 − 81,54)²/(38 × 15,992²)] ≈ € 106,97. De slide rondt sₑ op 52,02 af en geeft € 106,96.</li><li>Het interval met de ongeronde tussenwaarde is ongeveer [€ 916,55; € 1.130,49] per maand. Een huur buiten dit interval is een onderzoeksaanleiding, geen automatische boekingsfout.</li><li>De oppervlakte 80 ligt dicht bij x̄; de afstandsterm is klein. Bij een ver weg gelegen oppervlakte wordt de marge groter.</li></ol></details></div><p>De slide kiest een lagere beschikbare df-rij als benadering. Vermeld die keuze in je antwoord. Houd daarnaast het verschil tussen een statistische verbetering en een inhoudelijk gerechtvaardigde uitsluiting in het oog: een gunstiger interval rechtvaardigt op zichzelf geen verwijdering.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/slides.pdf#page=116\" target=\"_blank\" rel=\"noopener\">Slides, aanpassing huurmodel, PDF 116</a>; <a href=\"bronnen/slides.pdf#page=121\" target=\"_blank\" rel=\"noopener\">Slides, voorspelling huurmodel, PDF 121</a>; <a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.4, rij 35, PDF 12</a>.</p>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
       ],
       "example": {
         "title": "Tentamen 28 oktober 2024, vraag 13: gemiddelde of individu?",
         "steps": [
           "Gegeven: ŷ = 7,159 + 0,099x; x₀ = x̄ = 228,1; n = 30; s_e = 1,25506.",
+          "Puntvoorspelling: 7,159 + 0,099×228,1 = 29,7409. Omdat x₀ = x̄ is de laatste term onder de wortel nul.",
+          "De opgave vraagt het gemiddelde. Bij 95% en df = 28 is t = 2,048; de marge voor dat gemiddelde is 2,048 × 1,25506 / √30 ≈ 0,4693.",
+          "Het interval voor de gemiddelde respons is [29,2716; 30,2102]. Naar buiten op één decimaal afgerond: [29,2; 30,3].",
+          "Het officiële antwoordmodel gebruikt wél de extra 1 en berekent daardoor het bredere individuele interval [27,1; 32,4]. Dat antwoord past bij één nieuwe persoon, maar niet bij het woord gemiddelde in de vraag."
+        ],
+        "context": "Welk interval hoort bij de gevraagde gemiddelde spronghoogte? We berekenen de voorspelling en de marge voor het gemiddelde en verklaren waarom de bronuitwerking met een extra 1 een individueel interval oplevert.",
+        "stepsHtml": [
+          "Gegeven: ŷ = 7,159 + 0,099x; x₀ = x̄ = 228,1; n = 30; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = 1,25506.",
           "Puntvoorspelling: 7,159 + 0,099×228,1 = 29,7409. Omdat x₀ = x̄ is de laatste term onder de wortel nul.",
           "De opgave vraagt het gemiddelde. Bij 95% en df = 28 is t = 2,048; de marge voor dat gemiddelde is 2,048 × 1,25506 / √30 ≈ 0,4693.",
           "Het interval voor de gemiddelde respons is [29,2716; 30,2102]. Naar buiten op één decimaal afgerond: [29,2; 30,3].",
@@ -3480,6 +7394,36 @@ window.SRA = {
           "source": "boek-h9d",
           "page": 11,
           "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+        },
+        {
+          "source": "boek-h9d",
+          "page": 12,
+          "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+        },
+        {
+          "source": "tabellen",
+          "page": 12,
+          "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+        },
+        {
+          "source": "slides",
+          "page": 116,
+          "locator": "Slides, aanpassing huurmodel, PDF 116"
+        },
+        {
+          "source": "slides",
+          "page": 121,
+          "locator": "Slides, voorspelling huurmodel, PDF 121"
+        },
+        {
+          "source": "tabellen",
+          "page": 12,
+          "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
         }
       ],
       "questions": [
@@ -3525,6 +7469,36 @@ window.SRA = {
               "source": "boek-h9d",
               "page": 11,
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            },
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
           ],
           "recognition": {
@@ -3576,6 +7550,36 @@ window.SRA = {
               "source": "boek-h9d",
               "page": 11,
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            },
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
           ],
           "recognition": {
@@ -3627,6 +7631,36 @@ window.SRA = {
               "source": "boek-h9d",
               "page": 11,
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            },
+            {
+              "source": "slides",
+              "page": 116,
+              "locator": "Slides, aanpassing huurmodel, PDF 116"
+            },
+            {
+              "source": "slides",
+              "page": 121,
+              "locator": "Slides, voorspelling huurmodel, PDF 121"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
           ],
           "recognition": {
@@ -3647,9 +7681,60 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Een individueel voorspellingsinterval opbouwen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze formule voor de mogelijke y van één nieuwe waarneming bij x₀ in een enkelvoudig regressiemodel. Eerst moet het model inhoudelijk en volgens de diagnoses bruikbaar zijn.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Puntvoorspelling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntvoorspelling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mn>0</mn></msub><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Individueel voorspellingsinterval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Individueel voorspellingsinterval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mn>0</mn></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mi>e</mi></msub><mo>×</mo><msqrt><mn>1</mn><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mrow><mrow><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><msup><msub><mi>s</mi><mi>x</mi></msub><mn>2</mn></msup></mrow></mrow></mfrac></msqrt></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>x₀ = nieuwe x; x̄ = gemiddelde x; s_x = standaardafwijking van x; s_e = residuele standaardfout; t hoort hier bij n − 2 vrijheidsgraden. De eerste 1 onder de wortel staat voor de extra individuele spreiding. De term 1/n en de afstandsterm hebben betrekking op onzekerheid van de geschatte lijn.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken de puntvoorspelling ŷ₀ door x₀ in de geschatte lijn in te vullen.</li><li>Lees MSE af of bereken die; neem de wortel om s_e te krijgen.</li><li>Bereken apart 1/n en (x₀ − x̄)²/((n − 1)s_x²). Tel beide bij 1 op en neem één wortel.</li><li>Vermenigvuldig die factor met s_e en de passende t-waarde met n − 2 vrijheidsgraden.</li><li>Trek de marge van ŷ₀ af en tel haar erbij op. Interpreteer de grenzen in de oorspronkelijke y-eenheid.</li></ol><h3>Tentamen 28 oktober 2024, vraag 13: gemiddelde of individu?</h3><ol><li>Gegeven: ŷ = 7,159 + 0,099x; x₀ = x̄ = 228,1; n = 30; s_e = 1,25506.</li><li>Puntvoorspelling: 7,159 + 0,099×228,1 = 29,7409. Omdat x₀ = x̄ is de laatste term onder de wortel nul.</li><li>De opgave vraagt het gemiddelde. Bij 95% en df = 28 is t = 2,048; de marge voor dat gemiddelde is 2,048 × 1,25506 / √30 ≈ 0,4693.</li><li>Het interval voor de gemiddelde respons is [29,2716; 30,2102]. Naar buiten op één decimaal afgerond: [29,2; 30,3].</li><li>Het officiële antwoordmodel gebruikt wél de extra 1 en berekent daardoor het bredere individuele interval [27,1; 32,4]. Dat antwoord past bij één nieuwe persoon, maar niet bij het woord gemiddelde in de vraag.</li></ol><p class=\"note\"><strong>Let op:</strong> Laat de eerste 1 onder de wortel niet weg bij een individuele voorspelling. Een voorspelling buiten het waargenomen x-bereik is extrapolatie en vraagt extra inhoudelijke terughoudendheid.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze formule voor de mogelijke y van één nieuwe waarneming bij x₀ in een enkelvoudig regressiemodel. Eerst moet het model inhoudelijk en volgens de diagnoses bruikbaar zijn.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Puntvoorspelling</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Puntvoorspelling\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mn>0</mn></msub><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Individueel voorspellingsinterval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Individueel voorspellingsinterval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mn>0</mn></msub><mo>±</mo><mi>t</mi><mo>×</mo><msub><mi>s</mi><mi>e</mi></msub><mo>×</mo><msqrt><mn>1</mn><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><msup><mrow><mo>(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>−</mo><mover accent=\"true\"><mpadded height=\"+0.15em\"><mi>x</mi></mpadded><mo stretchy=\"true\">¯</mo></mover><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><mrow><mrow><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><msup><msub><mi>s</mi><mi>x</mi></msub><mn>2</mn></msup></mrow></mrow></mfrac></msqrt></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>x₀ = nieuwe x; x̄ = gemiddelde x; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>x</mi></msub></mrow></math> = standaardafwijking van x; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = residuele standaardfout; t hoort hier bij n − 2 vrijheidsgraden. De eerste 1 onder de wortel staat voor de extra individuele spreiding. De term 1/n en de afstandsterm hebben betrekking op onzekerheid van de geschatte lijn.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"prediction-bands\"><h3>De extra 1 onder de wortel maakt verschil</h3><p class=\"fv-provenance\">Eigen vergelijking bij enkelvoudige regressie: n = 10, x̄ = 5,5, Sxx = 82,5, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = 2 en gegeven t = 2,306.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Onzekerheid over het gemiddelde</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Betrouwbaarheidsband voor gemiddelde y; x-as: x; y-as: y\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">8,0</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">16,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">24,0</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">32,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">1,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">3,2</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">5,5</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">7,8</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">10,0</text><polygon points=\"58.00,132.66 64.90,130.93 71.80,129.20 78.70,127.45 85.60,125.70 92.50,123.94 99.40,122.16 106.30,120.37 113.20,118.57 120.10,116.75 127.00,114.91 133.90,113.04 140.80,111.16 147.70,109.25 154.60,107.31 161.50,105.33 168.40,103.32 175.30,101.28 182.20,99.19 189.10,97.06 196.00,94.89 202.90,92.67 209.80,90.42 216.70,88.12 223.60,85.77 230.50,83.40 237.40,80.98 244.30,78.54 251.20,76.06 258.10,73.56 265.00,71.03 271.90,68.48 278.80,65.92 285.70,63.33 292.60,60.74 299.50,58.12 306.40,55.50 313.30,52.87 320.20,50.22 327.10,47.57 334.00,44.91 334.00,71.34 327.10,73.07 320.20,74.80 313.30,76.55 306.40,78.30 299.50,80.06 292.60,81.84 285.70,83.63 278.80,85.43 271.90,87.25 265.00,89.09 258.10,90.96 251.20,92.84 244.30,94.75 237.40,96.69 230.50,98.67 223.60,100.68 216.70,102.72 209.80,104.81 202.90,106.94 196.00,109.11 189.10,111.33 182.20,113.58 175.30,115.88 168.40,118.23 161.50,120.60 154.60,123.02 147.70,125.46 140.80,127.94 133.90,130.44 127.00,132.97 120.10,135.52 113.20,138.08 106.30,140.67 99.40,143.26 92.50,145.88 85.60,148.50 78.70,151.13 71.80,153.78 64.90,156.43 58.00,159.09\" fill=\"var(--fv-green)\" fill-opacity=\"0.14\"/><polyline points=\"58.00,145.88 64.90,143.68 71.80,141.49 78.70,139.29 85.60,137.10 92.50,134.91 99.40,132.71 106.30,130.52 113.20,128.32 120.10,126.13 127.00,123.94 133.90,121.74 140.80,119.55 147.70,117.36 154.60,115.16 161.50,112.97 168.40,110.78 175.30,108.58 182.20,106.39 189.10,104.19 196.00,102.00 202.90,99.81 209.80,97.61 216.70,95.42 223.60,93.22 230.50,91.03 237.40,88.84 244.30,86.64 251.20,84.45 258.10,82.26 265.00,80.06 271.90,77.87 278.80,75.68 285.70,73.48 292.60,71.29 299.50,69.09 306.40,66.90 313.30,64.71 320.20,62.51 327.10,60.32 334.00,58.12\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">y</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>ŷ = 5 + 2x</span></div><p class=\"fv-work\">Bij x₀ = x̄ = 5,5 is de afstandsterm nul.<br>Marge = 2,306 × 2 × √0,1 ≈ 1,46.</p></figure><figure class=\"fv-panel\"><figcaption>Onzekerheid over één nieuwe y</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Individuele voorspellingsband; x-as: x; y-as: y\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">8,0</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">16,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">24,0</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">32,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">1,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">3,2</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">5,5</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">7,8</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">10,0</text><polygon points=\"58.00,119.80 64.90,117.83 71.80,115.86 78.70,113.88 85.60,111.89 92.50,109.89 99.40,107.88 106.30,105.85 113.20,103.82 120.10,101.77 127.00,99.71 133.90,97.64 140.80,95.55 147.70,93.46 154.60,91.35 161.50,89.22 168.40,87.09 175.30,84.94 182.20,82.78 189.10,80.61 196.00,78.42 202.90,76.22 209.80,74.01 216.70,71.78 223.60,69.54 230.50,67.29 237.40,65.02 244.30,62.74 251.20,60.45 258.10,58.15 265.00,55.83 271.90,53.50 278.80,51.17 285.70,48.81 292.60,46.45 299.50,44.08 306.40,41.69 313.30,39.30 320.20,36.89 327.10,34.47 334.00,32.05 334.00,84.20 327.10,86.17 320.20,88.14 313.30,90.12 306.40,92.11 299.50,94.11 292.60,96.12 285.70,98.15 278.80,100.18 271.90,102.23 265.00,104.29 258.10,106.36 251.20,108.45 244.30,110.54 237.40,112.65 230.50,114.78 223.60,116.91 216.70,119.06 209.80,121.22 202.90,123.39 196.00,125.58 189.10,127.78 182.20,129.99 175.30,132.22 168.40,134.46 161.50,136.71 154.60,138.98 147.70,141.26 140.80,143.55 133.90,145.85 127.00,148.17 120.10,150.50 113.20,152.83 106.30,155.19 99.40,157.55 92.50,159.92 85.60,162.31 78.70,164.70 71.80,167.11 64.90,169.53 58.00,171.95\" fill=\"var(--fv-orange)\" fill-opacity=\"0.14\"/><polyline points=\"58.00,145.88 64.90,143.68 71.80,141.49 78.70,139.29 85.60,137.10 92.50,134.91 99.40,132.71 106.30,130.52 113.20,128.32 120.10,126.13 127.00,123.94 133.90,121.74 140.80,119.55 147.70,117.36 154.60,115.16 161.50,112.97 168.40,110.78 175.30,108.58 182.20,106.39 189.10,104.19 196.00,102.00 202.90,99.81 209.80,97.61 216.70,95.42 223.60,93.22 230.50,91.03 237.40,88.84 244.30,86.64 251.20,84.45 258.10,82.26 265.00,80.06 271.90,77.87 278.80,75.68 285.70,73.48 292.60,71.29 299.50,69.09 306.40,66.90 313.30,64.71 320.20,62.51 327.10,60.32 334.00,58.12\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">y</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Dezelfde geschatte lijn</span></div><p class=\"fv-work\">Bij hetzelfde x₀: marge = 2,306 × 2 × √1,1 ≈ 4,84. De individuele spreiding blijft bestaan.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Beide grafieken hebben dezelfde assen en gegeven t. Naar de randen neemt de onzekerheid over de lijn toe. De formule veronderstelt een bruikbaar model.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bereken de puntvoorspelling ŷ₀ door x₀ in de geschatte lijn in te vullen.</li><li>Lees MSE af of bereken die; neem de wortel om <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> te krijgen.</li><li>Bereken apart 1/n en (x₀ − x̄)²/((n − 1)<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>s</mi><mi>x</mi></msub><mn>2</mn></msup></mrow></math>). Tel beide bij 1 op en neem één wortel.</li><li>Vermenigvuldig die factor met <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> en de passende t-waarde met n − 2 vrijheidsgraden.</li><li>Trek de marge van ŷ₀ af en tel haar erbij op. Interpreteer de grenzen in de oorspronkelijke y-eenheid.</li></ol><h3>Tentamen 28 oktober 2024, vraag 13: gemiddelde of individu?</h3><ol><li>Gegeven: ŷ = 7,159 + 0,099x; x₀ = x̄ = 228,1; n = 30; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = 1,25506.</li><li>Puntvoorspelling: 7,159 + 0,099×228,1 = 29,7409. Omdat x₀ = x̄ is de laatste term onder de wortel nul.</li><li>De opgave vraagt het gemiddelde. Bij 95% en df = 28 is t = 2,048; de marge voor dat gemiddelde is 2,048 × 1,25506 / √30 ≈ 0,4693.</li><li>Het interval voor de gemiddelde respons is [29,2716; 30,2102]. Naar buiten op één decimaal afgerond: [29,2; 30,3].</li><li>Het officiële antwoordmodel gebruikt wél de extra 1 en berekent daardoor het bredere individuele interval [27,1; 32,4]. Dat antwoord past bij één nieuwe persoon, maar niet bij het woord gemiddelde in de vraag.</li></ol><p class=\"note\"><strong>Let op:</strong> Laat de eerste 1 onder de wortel niet weg bij een individuele voorspelling. Een voorspelling buiten het waargenomen x-bereik is extrapolatie en vraagt extra inhoudelijke terughoudendheid.</p>"
+        },
+        {
+          "title": "Boekcasus Productiviteit: een controlemaand beoordelen",
+          "html": "<p>Het boek gebruikt 24 basismaanden en onderzoekt daarna de controleperiode. Voor januari is x₀ = 55,5 in duizenden arbeidsuren. De benodigde waarden zijn sₑ = 1,10, sₓ = 6,31 en x̄ = 48,683. De voorspelling is ŷ₀ = 32,75 in tienduizenden producten. De werkelijke productie is 34,3.</p><table><caption>Vul de onderdelen van de intervalformule afzonderlijk in</caption><thead><tr><th scope=\"col\">Onderdeel</th><th scope=\"col\">Invulling</th><th scope=\"col\">Reden</th></tr></thead><tbody><tr><td>Vrijheidsgraden</td><td>24 − 2 = 22</td><td>Een enkelvoudig model schat een helling en een constante.</td></tr><tr><td>Kritieke t</td><td>Tabel 13.4: df 22, overschrijdingskans 0,025 → 2,074</td><td>Een tweezijdig 95%-interval verdeelt 5% over beide staarten.</td></tr><tr><td>Onzekerheidsfactor</td><td>√[1 + 1/24 + (55,5 − 48,683)²/(23 × 6,31²)] ≈ 1,04519</td><td>Individuele storing, lijnonzekerheid en afstand tot x̄.</td></tr><tr><td>Marge</td><td>2,074 × 1,10 × 1,04519 ≈ 2,3845</td><td>De schaal blijft tienduizenden producten.</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Stel het interval op en formuleer de controleconclusie. Wat betekent de marge in stuks?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><p>32,75 ± 2,3845 geeft ongeveer [30,37; 35,13] × 10.000 stuks. De marge is circa 23.845 stuks. De realisatie 34,3 × 10.000 ligt binnen het interval: deze modelvergelijking geeft geen bijzonder afwijkingssignaal voor januari. Dat bewijst niet dat elke productieboeking juist is. Een realisatie buiten het interval zou gericht onderzoek vragen naar brongegevens, omstandigheden en modelgeschiktheid.</p></details></div><p>Controleer bij iedere nieuwe maand opnieuw de x-waarde en dus de afstandsterm. Gebruik niet voor alle maanden automatisch de marge van januari. Extrapolatie buiten het onderzochte bereik vraagt bovendien een inhoudelijke beoordeling; een ingevulde formule kan daar een schijnbaar precies maar ongefundeerd antwoord geven.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h9d.pdf#page=11\" target=\"_blank\" rel=\"noopener\">Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11</a>; <a href=\"bronnen/boek-h9d.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12</a>; <a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.4, df 22, PDF 12</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h9d",
+              "page": 11,
+              "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
+            },
+            {
+              "source": "boek-h9d",
+              "page": 12,
+              "locator": "Boek p. 284; oorspronkelijke PDF p. 302; uitsnede p. 12"
+            },
+            {
+              "source": "tabellen",
+              "page": 12,
+              "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
-      ]
+      ],
+      "learningVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H9 · §9.7",
+        "college": "5",
+        "focus": "Onderscheid het verwachte gemiddelde en een individuele realisatie. Bereken een passende voorspelling en onzekerheidsmarge en vertaal afwijkingen naar nader onderzoek.",
+        "title": "H9 · §9.7 · Hoorcollege 5",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "prediction-bands",
+          "title": "Een individueel voorspellingsinterval opbouwen"
+        }
+      ],
+      "reading": {
+        "opening": "Met een beoordeeld regressiemodel kun je een uitkomst bij een gekozen x-waarde voorspellen. De benodigde onzekerheidsmarge hangt af van de vraag: gaat het om een gemiddelde of om één nieuwe waarneming? We houden die twee doelen vanaf het begin uit elkaar.",
+        "conclusion": "Bepaal vóór het invullen van een formule of je een gemiddelde of een individu voorspelt. Dat bepaalt de onzekerheidsterm en de betekenis van het interval. Dezelfde zorg bij interpretatie blijft nodig wanneer het model meerdere verklarende variabelen bevat."
+      }
     },
     {
       "id": "meervoudig",
@@ -3663,8 +7748,30 @@ window.SRA = {
       ],
       "sections": [
         {
+          "title": "Een extra variabele verandert de vraag die de helling beantwoordt",
+          "html": "<p>Een enkelvoudig salarismodel kan een verschil tussen groepen laten zien doordat die groepen ook verschillen in leeftijd, opleiding of leidinggeven. Een meervoudig model vergelijkt kenmerken <strong>bij gelijkblijvende overige opgenomen variabelen</strong>. Daardoor kan de betekenis en grootte van een coëfficiënt veranderen na uitbreiding.</p><p>Dat maakt het model bruikbaar voor een meer gerichte verwachting bij cijferbeoordeling. Het blijft nodig om te onderzoeken of de gekozen kenmerken voldoende en juist gemeten zijn. Een gedeeltelijk gecorrigeerd salarisverschil is niet automatisch een oorzakelijk effect.</p><p>Dummy’s maken categorieën bruikbaar zonder een verzonnen afstand tussen categorieën te introduceren. Bij drie categorieën en een constante gebruik je twee dummy’s: de derde categorie is de referentie. Alle drie de dummy’s plus de constante opnemen geeft een exacte afhankelijkheid, want de drie dummy’s tellen voor iedere waarneming op tot één.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h10a.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Boek p. 290; oorspronkelijke PDF p. 308; uitsnede p. 4</a>; <a href=\"bronnen/spss-uitwerkingen.pdf#page=32\" target=\"_blank\" rel=\"noopener\">SPSS-uitwerkingen, dummyvariabelen, PDF 32–35</a>; <a href=\"bronnen/tentamen-2025-03.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Tentamen 17 maart 2025, salarisuitvoer, PDF 9</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h10a",
+              "page": 4,
+              "locator": "Boek p. 290; oorspronkelijke PDF p. 308; uitsnede p. 4"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
           "title": "Eén model, meerdere verklaringen",
-          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Geschatte vergelijking</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Geschatte vergelijking\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mo>…</mo><mo>+</mo><mrow><msub><mi>b</mi><mi>k</mi></msub><msub><mi>x</mi><mi>k</mi></msub></mrow></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>k = aantal verklarende variabelen; bⱼ is het effect bij gelijkblijvende overige variabelen. R²_adj corrigeert voor het aantal verklarende variabelen.</p></details><p>Elke bⱼ beschrijft de verandering in de voorspelde y bij één eenheid meer xⱼ, <strong>terwijl de andere opgenomen variabelen gelijk blijven</strong>. Een coëfficiënt uit een enkelvoudig model kan veranderen zodra je andere variabelen toevoegt. Het blijft een statistische samenhang.</p><p>Gebruik uit Coefficients de kolom B. De constante telt niet mee in k. Voor een individuele coëfficiënt is t = B/Std. Error. Het hele model toets je met F.</p>"
+          "html": "<div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Geschatte vergelijking</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Geschatte vergelijking\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mo>…</mo><mo>+</mo><mrow><msub><mi>b</mi><mi>k</mi></msub><msub><mi>x</mi><mi>k</mi></msub></mrow></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>k = aantal verklarende variabelen; bⱼ is het effect bij gelijkblijvende overige variabelen. <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><msup><mi>R</mi><mn>2</mn></msup><mtext>adj</mtext></msub></mrow></math> corrigeert voor het aantal verklarende variabelen.</p></details><p>Elke bⱼ beschrijft de verandering in de voorspelde y bij één eenheid meer xⱼ, <strong>terwijl de andere opgenomen variabelen gelijk blijven</strong>. Een coëfficiënt uit een enkelvoudig model kan veranderen zodra je andere variabelen toevoegt. Het blijft een statistische samenhang.</p><p>Gebruik uit Coefficients de kolom B. De constante telt niet mee in k. Voor een individuele coëfficiënt is t = B/Std. Error. Het hele model toets je met F.</p>"
         },
         {
           "title": "Een categorie in cijfers",
@@ -3679,6 +7786,45 @@ window.SRA = {
           "html": "<p><strong>B</strong> is de coëfficiënt in de eenheden van het gekozen model. <strong>Beta</strong> drukt de verandering uit in standaardafwijkingen: bij één standaardafwijking meer x verandert de voorspelde y met Beta standaardafwijkingen, bij gelijkblijvende andere verklarende variabelen. Het teken geeft de richting; vergelijk absolute waarden voor een vergelijking binnen hetzelfde model.</p><h3>Boekvoorbeeld GDP, tabel 10.24</h3><table><caption>B en Beta in hetzelfde logmodel</caption><thead><tr><th scope=\"col\">Variabele</th><th scope=\"col\">B</th><th scope=\"col\">Beta</th></tr></thead><tbody><tr><td>LN_MORT</td><td>−0,434</td><td>−0,385</td></tr><tr><td>LN_ELECT</td><td>0,353</td><td>0,592</td></tr></tbody></table><p>LN_ELECT heeft in dit model de grootste absolute Beta: 0,592 &gt; 0,385. Het verband is positief; dat van LN_MORT is negatief. Dit is geen ranglijst van causale invloed. Onderlinge samenhang en de keuze van het model blijven relevant. Voorspellen in de gekozen modeleenheden doe je met B, niet met Beta.</p>"
         },
         {
+          "title": "Volledige toepassing: salaris, dummy’s en modeltoets",
+          "html": "<p>Dit is de oorspronkelijke Coefficients-uitvoer van het tentamen 17 maart 2025. De ANOVA-tabel heeft Total df = 199, Regression df = 6 en Residual df = 193. Daaruit volgen n = 200 en k = 6. Model Summary vermeldt R² = 0,647, adjusted R² = 0,636 en sₑ = 758,06049.</p><table><caption>Coefficients, relevante kolommen uit afbeelding 13</caption><thead><tr><th scope=\"col\">Variabele</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">t</th><th scope=\"col\">Sig.</th></tr></thead><tbody><tr><td>(Constant)</td><td>739,508</td><td>490,677</td><td>1,507</td><td>0,133</td></tr><tr><td>Leeftijd</td><td>38,495</td><td>6,492</td><td>5,929</td><td>&lt; 0,001</td></tr><tr><td>Beoordeling</td><td>71,550</td><td>53,000</td><td>1,350</td><td>0,179</td></tr><tr><td>Vrouw</td><td>−273,746</td><td>111,998</td><td>−2,444</td><td>0,015</td></tr><tr><td>HBO</td><td>644,888</td><td>123,861</td><td>5,207</td><td>&lt; 0,001</td></tr><tr><td>WO</td><td>1.010,210</td><td>170,216</td><td>5,935</td><td>&lt; 0,001</td></tr><tr><td>Leidinggevende</td><td>2.237,947</td><td>177,802</td><td>12,587</td><td>&lt; 0,001</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>1. Hoeveel hoger is de voorspelling voor WO dan voor HBO bij gelijke overige kenmerken? 2. Voorspel het salaris van een man van 50, leidinggevende, zonder HBO/WO, beoordeling 10. 3. Hoe toets je de coëfficiënt Vrouw op een negatieve richting?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>WO en HBO worden allebei met dezelfde referentiegroep vergeleken. Het verschil is 1.010,210 − 644,888 = € 365,322. Het antwoord is dus circa € 365,32; 1.010,210 is het verschil met de referentie, niet met HBO.</li><li>De dummy’s Vrouw, HBO en WO zijn nul, Leidinggevende is één. ŷ = 739,508 + 38,495 × 50 + 71,550 × 10 + 2.237,947 = € 5.617,705. Op hele euro’s afgerond: € 5.618.</li><li>H₀: β<sub>Vrouw</sub> ≥ 0, H₁: β<sub>Vrouw</sub> &lt; 0. Gebruik t = −2,444 en df = 193. De oorspronkelijke sleutel gebruikt tabelrij 190: t-grens = −1,653 bij eenzijdig α = 0,05. H₀ verwerpen: binnen dit model is de voorspelling voor vrouwen significant lager bij gelijke opgenomen kenmerken. Het α-risico is relevant.</li><li>De globale F = 58,923 met p &lt; 0,001 levert statistisch bewijs dat minstens één hellingscoëfficiënt niet nul is. Beoordeling kan tegelijk individueel niet significant zijn (p = 0,179).</li></ol></details></div><p class=\"note\"><strong>Rekenverschil met de sleutel:</strong> de officiële uitwerking drukt bij vraag 20 € 5.617 af. De daar afgedrukte coëfficiënten en invulling tellen op tot € 5.617,705, dus gebruikelijk afronden geeft € 5.618. De methode en dummykeuze blijven gelijk; deze leeromgeving laat het rekenverschil expliciet zien.</p><p>Gebruik de vergelijking die de opgave aanwijst. Laat Beoordeling in deze voorspellingsvraag staan, ook al is zij niet significant: verwijderen zou een ander model vereisen waarin ook de overige coëfficiënten opnieuw worden geschat.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/tentamen-2025-03.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9</a>; <a href=\"bronnen/tentamen-2025-03.pdf#page=14\" target=\"_blank\" rel=\"noopener\">Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15</a>; <a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.4, rij 190, PDF 13</a>.</p>",
+          "refs": [
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "Life Expectancy: eindmodel, globale toets en voorspelling",
+          "html": "<p>Na de in de slides besproken selecties bevat het eindmodel 163 landen en drie verklarende variabelen. Gebruik deze uitvoer niet door elkaar met de eerdere backwarduitvoer voor 171 landen.</p><table><caption>Eindmodel uit slides 162–163</caption><thead><tr><th scope=\"col\">Onderdeel</th><th scope=\"col\">Bronwaarde</th></tr></thead><tbody><tr><td>ANOVA Regression SS; df</td><td>8.173,121; 3</td></tr><tr><td>ANOVA Residual SS; df</td><td>1.372,702; 159</td></tr><tr><td>ANOVA Total SS; df</td><td>9.545,823; 162</td></tr><tr><td>Model Summary R²; adjusted R²</td><td>0,856; 0,853</td></tr><tr><td>Constante B</td><td>50,065</td></tr><tr><td>ICOR: B; Beta</td><td>36,011; 0,694</td></tr><tr><td>Adult Mortality: B; Beta</td><td>−0,015; −0,181</td></tr><tr><td>HIV/AIDS: B; Beta</td><td>−1,409; −0,164</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken de globale F en interpreteer B tegenover Beta. Maak daarna de Nederlandse puntvoorspelling met de afgedrukte invoer ICOR = 0,92, Adult Mortality = 58 en HIV/AIDS = 0,1.</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>MSR = 8.173,121/3 ≈ 2.724,374; MSE = 1.372,702/159 ≈ 8,633. F ≈ 315,564. Toets H₀: alle drie hellingen nul tegenover H₁: minstens één niet nul.</li><li>De slide benadert F<sub>0,05;3;159</sub> met tabelrij ν₂ = 100: 2,696. 315,564 &gt; 2,696, dus H₀ verwerpen. Dit is een uitspraak over het gezamenlijke model.</li><li>B voor ICOR is 36,011 in de oorspronkelijke modelvergelijking. Beta = 0,694 is gestandaardiseerd en beschrijft verandering in standaardafwijkingen. Gebruik B voor een voorspelling in jaren.</li><li>50,065 + 36,011 × 0,92 − 0,015 × 58 − 1,409 × 0,1 = 82,18422, dus circa 82,18 jaar met de afgedrukte getallen.</li><li>De slide noemt de werkelijke Nederlandse waarde 81,7. Het residu op basis van deze afgedrukte invoer is 81,7 − 82,18422 ≈ −0,48 jaar. Een residu alleen zegt niet of het verschil statistisch uitzonderlijk is.</li></ol></details></div><p class=\"note\">Slide 164 drukt een voorspelling 82,28 af; de getoonde coëfficiënten en invoer geven 82,18. Er kunnen meer decimalen in de oorspronkelijke gegevens zijn gebruikt, maar die zijn in deze slide niet zichtbaar. De leeromgeving rekent controleerbaar met de afgedrukte waarden en benoemt het verschil.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/slides.pdf#page=161\" target=\"_blank\" rel=\"noopener\">Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165</a>; <a href=\"bronnen/tabellenbundel.pdf#page=20\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.8, PDF 20–29</a>.</p>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
           "title": "Zelf oefenen met deze aanvulling",
           "html": "<p>Maak de eigen oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/meervoudig\">Oefen Meervoudige regressie en dummyvariabelen</a></p>"
         }
@@ -3686,6 +7832,13 @@ window.SRA = {
       "example": {
         "title": "Tentamen 17 maart 2025, vraag 19–20",
         "steps": [
+          "Het verschil tussen WO en HBO is 1.010,210 − 644,888 = € 365,322. Dit is een vergelijking binnen hetzelfde model.",
+          "Voor de gegeven man: Vrouw = 0, HBO = 0, WO = 0, Leidinggevende = 1, Leeftijd = 50, Beoordeling = 10.",
+          "Voorspelling = 739,508 + 38,495×50 + 71,550×10 + 2.237,947.",
+          "Uitkomst = € 5.617,705. De officiële uitwerking vermeldt € 5.617; bij gewoon afronden op gehele euro’s uit de getoonde coëfficiënten is het € 5.618. De samenvatting laat dit bronverschil zichtbaar."
+        ],
+        "context": "Hoe vergelijk je opleidingsgroepen en bereken je het salaris voor een gegeven profiel? We gebruiken de coëfficiënten uit één model en maken het afrondingsverschil met de bronuitwerking zichtbaar.",
+        "stepsHtml": [
           "Het verschil tussen WO en HBO is 1.010,210 − 644,888 = € 365,322. Dit is een vergelijking binnen hetzelfde model.",
           "Voor de gegeven man: Vrouw = 0, HBO = 0, WO = 0, Leidinggevende = 1, Leeftijd = 50, Beoordeling = 10.",
           "Voorspelling = 739,508 + 38,495×50 + 71,550×10 + 2.237,947.",
@@ -3721,6 +7874,41 @@ window.SRA = {
           "source": "boek-h10c",
           "page": 5,
           "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+        },
+        {
+          "source": "spss",
+          "page": 32,
+          "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+        },
+        {
+          "source": "exam2025",
+          "page": 9,
+          "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+        },
+        {
+          "source": "exam2025",
+          "page": 9,
+          "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+        },
+        {
+          "source": "exam2025",
+          "page": 14,
+          "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+        },
+        {
+          "source": "tabellen",
+          "page": 13,
+          "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+        },
+        {
+          "source": "slides",
+          "page": 161,
+          "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+        },
+        {
+          "source": "tabellen",
+          "page": 20,
+          "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
         }
       ],
       "questions": [
@@ -3771,6 +7959,41 @@ window.SRA = {
               "source": "boek-h10c",
               "page": 5,
               "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
           "recognition": {
@@ -3827,6 +8050,41 @@ window.SRA = {
               "source": "boek-h10c",
               "page": 5,
               "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
           "recognition": {
@@ -3883,6 +8141,41 @@ window.SRA = {
               "source": "boek-h10c",
               "page": 5,
               "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
+            },
+            {
+              "source": "spss",
+              "page": 32,
+              "locator": "SPSS-uitwerkingen, dummyvariabelen, PDF 32–35"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            },
+            {
+              "source": "slides",
+              "page": 161,
+              "locator": "Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
           "recognition": {
@@ -3902,18 +8195,77 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Meerdere verklarende variabelen en dummy’s invullen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de meervoudige vergelijking wanneer het model meer dan één verklarende variabele bevat. Een dummy is een codering met 0 of 1 voor een categorie.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Geschatte vergelijking</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Geschatte vergelijking\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mo>…</mo><mo>+</mo><mrow><msub><mi>b</mi><mi>k</mi></msub><msub><mi>x</mi><mi>k</mi></msub></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>b₀ is de constante. Elke bⱼ hoort bij precies één xⱼ en beschrijft de verandering in voorspelde y bij één eenheid extra xⱼ, terwijl de overige opgenomen variabelen gelijk blijven. Een dummycoëfficiënt vergelijkt de categorie met waarde 1 met de referentiecategorie.</p><h3>Zo reken je stap voor stap</h3><ol><li>Schrijf de vergelijking met de ongestandaardiseerde B-coëfficiënten op.</li><li>Vertaal de beschreven persoon of situatie naar een waarde voor iedere x en een 0/1 voor iedere dummy.</li><li>Vermenigvuldig iedere coëfficiënt met de juiste waarde. Tel de producten en de constante op.</li><li>Vergelijk twee categorieën via hun verschil in voorspelling, met de andere kenmerken gelijk.</li><li>Controleer eenheid en afronding. Maak een relevant verschil met het bronantwoord zichtbaar.</li></ol><h3>Tentamen 17 maart 2025, vraag 19–20</h3><ol><li>Het verschil tussen WO en HBO is 1.010,210 − 644,888 = € 365,322. Dit is een vergelijking binnen hetzelfde model.</li><li>Voor de gegeven man: Vrouw = 0, HBO = 0, WO = 0, Leidinggevende = 1, Leeftijd = 50, Beoordeling = 10.</li><li>Voorspelling = 739,508 + 38,495×50 + 71,550×10 + 2.237,947.</li><li>Uitkomst = € 5.617,705. De officiële uitwerking vermeldt € 5.617; bij gewoon afronden op gehele euro’s uit de getoonde coëfficiënten is het € 5.618. De samenvatting laat dit bronverschil zichtbaar.</li></ol><p class=\"note\"><strong>Let op:</strong> De dummycodering bepaalt de betekenis van het teken. Bij meerdere dummies voor één categorische variabele staan niet zomaar alle dummies tegelijk op 1.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik de meervoudige vergelijking wanneer het model meer dan één verklarende variabele bevat. Een dummy is een codering met 0 of 1 voor een categorie.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Geschatte vergelijking</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Geschatte vergelijking\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mo>…</mo><mo>+</mo><mrow><msub><mi>b</mi><mi>k</mi></msub><msub><mi>x</mi><mi>k</mi></msub></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>b₀ is de constante. Elke bⱼ hoort bij precies één xⱼ en beschrijft de verandering in voorspelde y bij één eenheid extra xⱼ, terwijl de overige opgenomen variabelen gelijk blijven. Een dummycoëfficiënt vergelijkt de categorie met waarde 1 met de referentiecategorie.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"dummy-lines\"><h3>Een dummy verschuift de voorspelling bij gelijke overige kenmerken</h3><p class=\"fv-provenance\">Dezelfde B-coëfficiënten en gekozen kenmerken als de salarisuitvoer van tentamen 17 maart 2025 in de formule-uitleg.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Twee categorieën binnen hetzelfde model</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Salaris bij gelijke overige kenmerken; x-as: Leeftijd (jaar); y-as: Voorspeld salaris (€)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">3.500,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">4.200,0</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">4.900,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">5.600,0</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">6.300,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">20,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">30,0</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">40,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">50,0</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">60,0</text><polyline points=\"58.00,126.36 334.00,40.57\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><polyline points=\"58.00,141.61 334.00,55.82\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Leeftijd (jaar)</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">Voorspeld salaris (€)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Vrouw = 0</span><span><i style=\"background:var(--fv-purple)\"></i>Vrouw = 1</span></div><p class=\"fv-work\">Beoordeling = 10, leidinggevende = 1, HBO = WO = 0. Het verticale verschil blijft € 273,746.</p></figure><figure class=\"fv-panel\"><figcaption>Invullen bij leeftijd 50</figcaption><table class=\"fv-table\"><caption>Alle andere modelwaarden blijven gelijk</caption><thead><tr><th scope=\"col\">Dummy Vrouw</th><th scope=\"col\">Voorspelling</th></tr></thead><tbody><tr><td>0</td><td>€ 5.617,705</td></tr><tr><td>1</td><td>€ 5.343,959</td></tr><tr><td>Verschil categorie 1 minus 0</td><td>−€ 273,746</td></tr></tbody></table><p class=\"fv-work\">Een interactieterm zou het verschil met leeftijd kunnen laten veranderen. Zo’n term staat niet in dit model.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De getekende lijnen zijn een vergelijking binnen de gegeven regressie. Zij bewijzen geen causaal verschil.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Schrijf de vergelijking met de ongestandaardiseerde B-coëfficiënten op.</li><li>Vertaal de beschreven persoon of situatie naar een waarde voor iedere x en een 0/1 voor iedere dummy.</li><li>Vermenigvuldig iedere coëfficiënt met de juiste waarde. Tel de producten en de constante op.</li><li>Vergelijk twee categorieën via hun verschil in voorspelling, met de andere kenmerken gelijk.</li><li>Controleer eenheid en afronding. Maak een relevant verschil met het bronantwoord zichtbaar.</li></ol><h3>Tentamen 17 maart 2025, vraag 19–20</h3><ol><li>Het verschil tussen WO en HBO is 1.010,210 − 644,888 = € 365,322. Dit is een vergelijking binnen hetzelfde model.</li><li>Voor de gegeven man: Vrouw = 0, HBO = 0, WO = 0, Leidinggevende = 1, Leeftijd = 50, Beoordeling = 10.</li><li>Voorspelling = 739,508 + 38,495×50 + 71,550×10 + 2.237,947.</li><li>Uitkomst = € 5.617,705. De officiële uitwerking vermeldt € 5.617; bij gewoon afronden op gehele euro’s uit de getoonde coëfficiënten is het € 5.618. De samenvatting laat dit bronverschil zichtbaar.</li></ol><p class=\"note\"><strong>Let op:</strong> De dummycodering bepaalt de betekenis van het teken. Bij meerdere dummies voor één categorische variabele staan niet zomaar alle dummies tegelijk op 1.</p>"
         },
         {
           "title": "R² corrigeren voor het aantal verklarende variabelen",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik adjusted R² wanneer je de verklaarde variatie wilt beoordelen met een correctie voor het aantal opgenomen verklarende variabelen. Het toevoegen van variabelen maakt gewone R² niet kleiner, maar kan adjusted R² wel verlagen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Gecorrigeerde verklaarde variatie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gecorrigeerde verklaarde variatie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><msup><mi>R</mi><mn>2</mn></msup><mtext>adj</mtext></msub><mo>=</mo><msup><mi>R</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><mrow><mi>k</mi><mrow><mo>(</mo><mn>1</mn><mo>−</mo><msup><mi>R</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow><mrow><mi>n</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>R² is de gewone verklaarde variatie. k telt de verklarende variabelen, zonder constante; n is het aantal gebruikte waarnemingen. n − k − 1 zijn de residuele vrijheidsgraden.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken 1 − R²: het niet-verklaarde aandeel.</li><li>Vermenigvuldig met k en deel door n − k − 1.</li><li>Trek deze correctie af van R².</li><li>Beoordeel de uitkomst naast inhoud, modelvoorwaarden en validatie.</li></ol><h3>Voorbeeld: een correctie voor twee verklarende variabelen</h3><ol><li>Stel n = 30, k = 2 en R² = 0,80.</li><li>Correctie = 2 × (1 − 0,80)/(30 − 2 − 1) = 0,4/27 ≈ 0,01481.</li><li>Adjusted R² ≈ 0,78519. De correctie ligt hier onder de gewone R² van 0,80.</li></ol><p class=\"note\"><strong>Let op:</strong> Een hoge adjusted R² vervangt geen controle van aannamen en maakt een individueel effect nog niet significant.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik adjusted R² wanneer je de verklaarde variatie wilt beoordelen met een correctie voor het aantal opgenomen verklarende variabelen. Het toevoegen van variabelen maakt gewone R² niet kleiner, maar kan adjusted R² wel verlagen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Gecorrigeerde verklaarde variatie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Gecorrigeerde verklaarde variatie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><msup><mi>R</mi><mn>2</mn></msup><mtext>adj</mtext></msub><mo>=</mo><msup><mi>R</mi><mn>2</mn></msup><mo>−</mo><mfrac><mrow><mrow><mi>k</mi><mrow><mo>(</mo><mn>1</mn><mo>−</mo><msup><mi>R</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow><mrow><mi>n</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>R² is de gewone verklaarde variatie. k telt de verklarende variabelen, zonder constante; n is het aantal gebruikte waarnemingen. n − k − 1 zijn de residuele vrijheidsgraden.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"adjusted-r2\"><h3>De correctie voor modelomvang zichtbaar maken</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Dezelfde n en R², andere k</figcaption><table class=\"fv-table\"><caption>Gevoeligheidsvergelijking van de formule</caption><thead><tr><th scope=\"col\">n</th><th scope=\"col\">R²</th><th scope=\"col\">k</th><th scope=\"col\">Adjusted R²</th></tr></thead><tbody><tr><td>30</td><td>0,80</td><td>1</td><td>0,79286</td></tr><tr><td>30</td><td>0,80</td><td>2</td><td>0,78519</td></tr><tr><td>30</td><td>0,80</td><td>5</td><td>0,75833</td></tr></tbody></table><p class=\"fv-work\">Bij gelijke fit betekent meer k een grotere correctie. De middelste rij is het bestaande voorbeeld.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Dit zijn formulevergelijkingen met R² vastgezet, geen claim dat drie werkelijk geschatte modellen identiek presteren. Bij echte modeluitbreiding kan R² stijgen en adjusted R² ook.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bereken 1 − R²: het niet-verklaarde aandeel.</li><li>Vermenigvuldig met k en deel door n − k − 1.</li><li>Trek deze correctie af van R².</li><li>Beoordeel de uitkomst naast inhoud, modelvoorwaarden en validatie.</li></ol><h3>Voorbeeld: een correctie voor twee verklarende variabelen</h3><ol><li>Stel n = 30, k = 2 en R² = 0,80.</li><li>Correctie = 2 × (1 − 0,80)/(30 − 2 − 1) = 0,4/27 ≈ 0,01481.</li><li>Adjusted R² ≈ 0,78519. De correctie ligt hier onder de gewone R² van 0,80.</li></ol><p class=\"note\"><strong>Let op:</strong> Een hoge adjusted R² vervangt geen controle van aannamen en maakt een individueel effect nog niet significant.</p>"
         },
         {
           "title": "B en gestandaardiseerde Beta vergelijken",
-          "html": "<p><strong>B</strong> is de coëfficiënt in de eenheden van het gekozen model. <strong>Beta</strong> drukt de verandering uit in standaardafwijkingen: bij één standaardafwijking meer x verandert de voorspelde y met Beta standaardafwijkingen, bij gelijkblijvende andere verklarende variabelen. Het teken geeft de richting; vergelijk absolute waarden voor een vergelijking binnen hetzelfde model.</p><h3>Boekvoorbeeld GDP, tabel 10.24</h3><table><caption>B en Beta in hetzelfde logmodel</caption><thead><tr><th scope=\"col\">Variabele</th><th scope=\"col\">B</th><th scope=\"col\">Beta</th></tr></thead><tbody><tr><td>LN_MORT</td><td>−0,434</td><td>−0,385</td></tr><tr><td>LN_ELECT</td><td>0,353</td><td>0,592</td></tr></tbody></table><p>LN_ELECT heeft in dit model de grootste absolute Beta: 0,592 &gt; 0,385. Het verband is positief; dat van LN_MORT is negatief. Dit is geen ranglijst van causale invloed. Onderlinge samenhang en de keuze van het model blijven relevant. Voorspellen in de gekozen modeleenheden doe je met B, niet met Beta.</p>"
+          "html": "<p><strong>B</strong> is de coëfficiënt in de eenheden van het gekozen model. <strong>Beta</strong> drukt de verandering uit in standaardafwijkingen: bij één standaardafwijking meer x verandert de voorspelde y met Beta standaardafwijkingen, bij gelijkblijvende andere verklarende variabelen. Het teken geeft de richting; vergelijk absolute waarden voor een vergelijking binnen hetzelfde model.</p><h3>Boekvoorbeeld GDP, tabel 10.24</h3><table><caption>B en Beta in hetzelfde logmodel</caption><thead><tr><th scope=\"col\">Variabele</th><th scope=\"col\">B</th><th scope=\"col\">Beta</th></tr></thead><tbody><tr><td>LN_MORT</td><td>−0,434</td><td>−0,385</td></tr><tr><td>LN_ELECT</td><td>0,353</td><td>0,592</td></tr></tbody></table><p>LN_ELECT heeft in dit model de grootste absolute Beta: 0,592 &gt; 0,385. Het verband is positief; dat van LN_MORT is negatief. Dit is geen ranglijst van causale invloed. Onderlinge samenhang en de keuze van het model blijven relevant. Voorspellen in de gekozen modeleenheden doe je met B, niet met Beta.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"beta-units\"><h3>Van oorspronkelijke eenheden naar standaardafwijkingen</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>De omzetting</figcaption><table class=\"fv-table\"><caption>Eigen schaalvoorbeeld</caption><thead><tr><th scope=\"col\">Invoer</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>B</td><td>2 y-eenheden per x-eenheid</td></tr><tr><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>x</mi></msub></mrow></math></td><td>3 x-eenheden</td></tr><tr><td>s_y</td><td>10 y-eenheden</td></tr><tr><td>Beta = B × <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>x</mi></msub></mrow></math> / s_y</td><td>0,60</td></tr></tbody></table><p class=\"fv-work\">Eén standaardafwijking meer x is 3 eenheden: voorspelde y stijgt 2 × 3 = 6, dus 0,6 standaardafwijking van y.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Voorspellen met oorspronkelijke x doe je met B. Beta beschrijft een verandering op een gestandaardiseerde schaal binnen hetzelfde model.</p></section><!-- formula-visual:end -->"
+        },
+        {
+          "title": "Volledige toepassing: salaris, dummy’s en modeltoets",
+          "html": "<p>Dit is de oorspronkelijke Coefficients-uitvoer van het tentamen 17 maart 2025. De ANOVA-tabel heeft Total df = 199, Regression df = 6 en Residual df = 193. Daaruit volgen n = 200 en k = 6. Model Summary vermeldt R² = 0,647, adjusted R² = 0,636 en sₑ = 758,06049.</p><table><caption>Coefficients, relevante kolommen uit afbeelding 13</caption><thead><tr><th scope=\"col\">Variabele</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">t</th><th scope=\"col\">Sig.</th></tr></thead><tbody><tr><td>(Constant)</td><td>739,508</td><td>490,677</td><td>1,507</td><td>0,133</td></tr><tr><td>Leeftijd</td><td>38,495</td><td>6,492</td><td>5,929</td><td>&lt; 0,001</td></tr><tr><td>Beoordeling</td><td>71,550</td><td>53,000</td><td>1,350</td><td>0,179</td></tr><tr><td>Vrouw</td><td>−273,746</td><td>111,998</td><td>−2,444</td><td>0,015</td></tr><tr><td>HBO</td><td>644,888</td><td>123,861</td><td>5,207</td><td>&lt; 0,001</td></tr><tr><td>WO</td><td>1.010,210</td><td>170,216</td><td>5,935</td><td>&lt; 0,001</td></tr><tr><td>Leidinggevende</td><td>2.237,947</td><td>177,802</td><td>12,587</td><td>&lt; 0,001</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>1. Hoeveel hoger is de voorspelling voor WO dan voor HBO bij gelijke overige kenmerken? 2. Voorspel het salaris van een man van 50, leidinggevende, zonder HBO/WO, beoordeling 10. 3. Hoe toets je de coëfficiënt Vrouw op een negatieve richting?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>WO en HBO worden allebei met dezelfde referentiegroep vergeleken. Het verschil is 1.010,210 − 644,888 = € 365,322. Het antwoord is dus circa € 365,32; 1.010,210 is het verschil met de referentie, niet met HBO.</li><li>De dummy’s Vrouw, HBO en WO zijn nul, Leidinggevende is één. ŷ = 739,508 + 38,495 × 50 + 71,550 × 10 + 2.237,947 = € 5.617,705. Op hele euro’s afgerond: € 5.618.</li><li>H₀: β<sub>Vrouw</sub> ≥ 0, H₁: β<sub>Vrouw</sub> &lt; 0. Gebruik t = −2,444 en df = 193. De oorspronkelijke sleutel gebruikt tabelrij 190: t-grens = −1,653 bij eenzijdig α = 0,05. H₀ verwerpen: binnen dit model is de voorspelling voor vrouwen significant lager bij gelijke opgenomen kenmerken. Het α-risico is relevant.</li><li>De globale F = 58,923 met p &lt; 0,001 levert statistisch bewijs dat minstens één hellingscoëfficiënt niet nul is. Beoordeling kan tegelijk individueel niet significant zijn (p = 0,179).</li></ol></details></div><p class=\"note\"><strong>Rekenverschil met de sleutel:</strong> de officiële uitwerking drukt bij vraag 20 € 5.617 af. De daar afgedrukte coëfficiënten en invulling tellen op tot € 5.617,705, dus gebruikelijk afronden geeft € 5.618. De methode en dummykeuze blijven gelijk; deze leeromgeving laat het rekenverschil expliciet zien.</p><p>Gebruik de vergelijking die de opgave aanwijst. Laat Beoordeling in deze voorspellingsvraag staan, ook al is zij niet significant: verwijderen zou een ander model vereisen waarin ook de overige coëfficiënten opnieuw worden geschat.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/tentamen-2025-03.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9</a>; <a href=\"bronnen/tentamen-2025-03.pdf#page=14\" target=\"_blank\" rel=\"noopener\">Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15</a>; <a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.4, rij 190, PDF 13</a>.</p>",
+          "refs": [
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21 en uitvoer, PDF 9"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Tentamen 17 maart 2025, officiële uitwerking, PDF 14–15"
+            },
+            {
+              "source": "tabellen",
+              "page": 13,
+              "locator": "Tabellenbundel, tabel 13.4, rij 190, PDF 13"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
       ],
-      "completionVersion": "2026-09-20"
+      "completionVersion": "2026-09-20",
+      "learningVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H10 · §10.1 en §10.4–10.6",
+        "college": "6–7",
+        "focus": "Lees meerdere coëfficiënten binnen hetzelfde model, interpreteer dummy’s ten opzichte van de referentiegroep en onderscheid B, Beta en de gezamenlijke modeltoets.",
+        "title": "H10 · §10.1 en §10.4–10.6 · Hoorcollege 6–7",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "dummy-lines",
+          "title": "Meerdere verklarende variabelen en dummy’s invullen"
+        },
+        {
+          "key": "adjusted-r2",
+          "title": "R² corrigeren voor het aantal verklarende variabelen"
+        },
+        {
+          "key": "beta-units",
+          "title": "B en gestandaardiseerde Beta vergelijken"
+        }
+      ],
+      "reading": {
+        "opening": "Een uitkomst hangt vaak met meerdere kenmerken tegelijk samen. Een meervoudig regressiemodel neemt die kenmerken samen op. Daardoor lees je elke coëfficiënt bij gelijkblijvende overige opgenomen variabelen, en vergelijk je dummy’s met hun referentiegroep.",
+        "conclusion": "Bij meervoudige regressie horen de coëfficiënten bij hetzelfde model en dezelfde codering. Een groepsverschil of voorspelling moet dus rekening houden met de overige kenmerken en de referentiegroep. Als het verband op de oorspronkelijke schaal krom is, kan een transformatie nodig zijn."
+      }
     },
     {
       "id": "transformaties",
@@ -3926,6 +8278,28 @@ window.SRA = {
         "Terugrekenen naar de oorspronkelijke eenheid"
       ],
       "sections": [
+        {
+          "title": "Een transformatie verandert welk patroon lineair wordt",
+          "html": "<p>Een rechte lijn in de verkeerde variabelen kan systematisch naast de waarnemingen liggen. Bij een <strong>transformatie</strong> verander je de schaal, zodat een inhoudelijk passend niet-recht patroon met een lineair model kan worden geschat. Je kiest de transformatie op basis van de puntenwolk, mogelijke samenhang en de residuen.</p><table><caption>Herkenningsvragen voor modelkeuze</caption><thead><tr><th scope=\"col\">Patroon</th><th scope=\"col\">Model</th><th scope=\"col\">Wat verandert er?</th></tr></thead><tbody><tr><td>Een vaste toename van y bij één extra x</td><td>Lineair: ŷ = b₀ + b₁x</td><td>B is een absolute toename.</td></tr><tr><td>Dezelfde vermenigvuldigingsfactor in y bij één extra x</td><td>Exponentieel: ln(ŷ) = b₀ + b₁x</td><td>De factor is exp(b₁); y moet positief zijn.</td></tr><tr><td>Dezelfde verandering in y bij eenzelfde verhouding in x</td><td>Logaritmisch: ŷ = b₀ + b₁ln(x)</td><td>Een verdubbeling van x verandert y met b₁ln(2); x moet positief zijn.</td></tr><tr><td>Een vaste verhouding in x geeft een vaste factor in y</td><td>Machtsmodel: ln(ŷ) = b₀ + b₁ln(x)</td><td>Verdubbelen van x geeft factor 2<sup>b₁</sup>; x en y moeten positief zijn.</td></tr></tbody></table><p>Een transformatie kan een kromming of veranderende spreiding verminderen. Zij maakt foute of niet-vergelijkbare gegevens niet alsnog juist. Controleer na schatting de residuen op de gekozen modelschaal en vertaal de voorspelling terug naar de eenheden waarin de accountant de uitkomst beoordeelt.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h10a.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Boek p. 292; oorspronkelijke PDF p. 310; uitsnede p. 6</a>; <a href=\"bronnen/boek-h10a.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12</a>; <a href=\"bronnen/attentiepunten.pdf#page=7\" target=\"_blank\" rel=\"noopener\">Attentiepunten, transformaties, PDF 7</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h10a",
+              "page": 6,
+              "locator": "Boek p. 292; oorspronkelijke PDF p. 310; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
         {
           "title": "Wat doet een logaritme?",
           "html": "<p>De <strong>natuurlijke logaritme</strong> ln gebruikt grondtal e ≈ 2,718. Je kunt ln zien als de vraag: tot welke macht moet ik e verheffen om dit getal te krijgen? ln(1) = 0, ln(e) = 1 en exp(ln(x)) = x. De functie exp(z) betekent eᶻ. Voor ln(x) moet x positief zijn.</p><p>Een logaritme drukt grote getallen relatief sterker samen. Dat kan een krom verband rechter maken. Kijk naar de puntenwolk en de modelvorm. Het onderwijsprogramma sluit de inverse functie uit; die behandelen we daarom niet.</p>"
@@ -3947,6 +8321,40 @@ window.SRA = {
           "html": "<p>R² is verklaarde variatie gedeeld door totale variatie in de gekozen afhankelijke variabele. Linear en Logarithmic gebruiken dezelfde y; Power en Exponential gebruiken ln(y). Een ranglijst van hun R²-waarden vergelijkt daardoor verschillende grootheden. Enkele tentamenmodellen maken deze vergelijking toch: bij de oorspronkelijke vraag staat nu welke keuze de sleutel verwacht en welk voorbehoud daarbij hoort.</p><p>Vergelijk de voorspelkwaliteit op dezelfde y-schaal en dezelfde waarnemingen, en controleer de residuen. Het hoogste getal in een tabel met verschillende y-transformaties bewijst op zichzelf niet dat het model op de oorspronkelijke schaal het beste voorspelt.</p>"
         },
         {
+          "title": "Terugtransformeren: de hele logwaarde en beide intervalgrenzen",
+          "html": "<p>Een logmodel voorspelt eerst een logwaarde. Alleen de laatste term terugtransformeren of de constante ongemoeid laten geeft een ander model. Als een interval op logschaal is gegeven, transformeer je de onder- en bovengrens afzonderlijk; de resulterende marge op de oorspronkelijke schaal is meestal niet symmetrisch.</p><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Eigen rekenvoorbeeld bij de cursusformules: ln(ŷ) = 2 + 0,3x. Neem x = 4 en een gegeven individueel interval [2,8; 3,6] op logschaal. Wat zijn voorspelling, interval en het effect van één extra x op de oorspronkelijke schaal?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>De voorspelde logwaarde is 2 + 0,3 × 4 = 3,2. De directe terugtransformatie is exp(3,2) ≈ 24,5325 oorspronkelijke eenheden.</li><li>De grenzen worden exp(2,8) ≈ 16,4446 en exp(3,6) ≈ 36,5982. De afstanden tot 24,5325 zijn ongelijk: circa 8,0878 omlaag en 12,0657 omhoog.</li><li>Eén extra x geeft factor exp(0,3) ≈ 1,34986, dus circa 34,99% hoger. De coëfficiënt 0,3 is geen toename van 0,3 oorspronkelijke eenheden.</li><li>Dit is de directe terugtransformatie volgens de cursus. Zonder aanvullende aannames is exp(voorspelde logwaarde) niet automatisch het rekenkundig gemiddelde van y.</li></ol></details></div><p><strong>Rekenvolgorde:</strong> controleer positiviteit, bepaal de juiste getransformeerde variabelen, vul B in, reken de hele rechterkant uit en transformeer pas daarna terug. Rond de logwaarde niet vroeg af: exponentiëren kan de afronding zichtbaar vergroten.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/formuleblad.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Formuleblad, transformaties, formules 55–58, PDF 3</a>; <a href=\"bronnen/boek-h10c.pdf#page=8\" target=\"_blank\" rel=\"noopener\">Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8</a>.</p>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 8,
+              "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "SPSS-praktijkroute college 6: vier patronen, vier modelkeuzes",
+          "html": "<p><strong>Doel:</strong> bij de plantgegevens het patroon herkennen voordat je een regressie kiest. De steellengte is telkens de verklarende variabele. De officiële uitwerking kiest per uitkomst een andere vorm.</p><table><caption>Modellen uit de officiële college-6-uitwerking</caption><thead><tr><th scope=\"col\">Uitkomst y</th><th scope=\"col\">Modelvorm</th><th scope=\"col\">Independent</th><th scope=\"col\">Dependent</th></tr></thead><tbody><tr><td>Bladlengte</td><td>Exponentieel</td><td>Steellengte</td><td>LN(Bladlengte)</td></tr><tr><td>Bloembreedte</td><td>Lineair</td><td>Steellengte</td><td>Bloembreedte</td></tr><tr><td>Bloembladlengte</td><td>Macht</td><td>LN(Steellengte)</td><td>LN(Bloembladlengte)</td></tr><tr><td>Aantal bloemen</td><td>Logaritmisch</td><td>LN(Steellengte)</td><td>Aantal bloemen</td></tr></tbody></table><ol><li>Lees College6 in en maak met <strong>Chart Builder</strong> een scattermatrix of vier afzonderlijke spreidingsdiagrammen. Lees de assen; in de oorspronkelijke matrix staat steellengte alleen in de relevante kolom steeds op de x-as.</li><li>Maak noodzakelijke logvariabelen met <strong>Transform → Compute Variable</strong>, bijvoorbeeld LnBladLengte = LN(Bladlengtemm). Controleer vooraf of alle te logaritmeren waarden positief zijn.</li><li>Schat per uitkomst het lineaire model en de in de tabel gekozen getransformeerde variant via <strong>Analyze → Regression → Linear</strong>. Bewaar welke y-schaal bij welke uitvoer hoort.</li><li>Vergelijk de vorm van de puntenwolk en de residuen; noteer ook R² en sₑ met hun modelschaal. De bronopgave vraagt expliciet om R² te vergelijken, maar R² van y en R² van ln(y) meten variatie in verschillende grootheden. Een hogere waarde bewijst daarom op zichzelf geen betere voorspelling op de oorspronkelijke schaal.</li><li>Maak ten minste één voorspelling per gekozen model en toon de benodigde terugtransformatie. Optioneel biedt <strong>Analyze → Regression → Curve Estimation</strong> meerdere modelvormen tegelijk; dezelfde inhoudelijke beoordelingsregels blijven gelden.</li></ol><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/spss-uitwerkingen.pdf#page=22\" target=\"_blank\" rel=\"noopener\">SPSS-uitwerkingen, college 6, PDF 22–27</a>; <a href=\"bronnen/attentiepunten.pdf#page=7\" target=\"_blank\" rel=\"noopener\">Attentiepunten, transformaties, PDF 7</a>.</p>",
+          "refs": [
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
           "title": "Zelf oefenen met deze aanvulling",
           "html": "<p>Maak de eigen oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/transformaties\">Oefen Kromme verbanden en logaritmen</a></p>"
         }
@@ -3954,6 +8362,13 @@ window.SRA = {
       "example": {
         "title": "Voorbeeld: een machtsfunctie",
         "steps": [
+          "ln(ŷ) = 1 + 0,5ln(x). Gevraagd: de voorspelling bij x = 16.",
+          "ln(16) ≈ 2,772589. De voorspelde logwaarde is 1 + 0,5×2,772589 = 2,386294.",
+          "Terugtransformeren: exp(2,386294) ≈ 10,8731.",
+          "De korte route geeft hetzelfde: exp(1) × 16^0,5 = 2,71828 × 4 = 10,8731."
+        ],
+        "context": "Hoe bereken je de voorspelling bij x = 16 uit een model met ln(x) en ln(y)? We rekenen eerst op logschaal, transformeren terug en controleren de uitkomst met de machtsvorm.",
+        "stepsHtml": [
           "ln(ŷ) = 1 + 0,5ln(x). Gevraagd: de voorspelling bij x = 16.",
           "ln(16) ≈ 2,772589. De voorspelde logwaarde is 1 + 0,5×2,772589 = 2,386294.",
           "Terugtransformeren: exp(2,386294) ≈ 10,8731.",
@@ -3994,6 +8409,26 @@ window.SRA = {
           "source": "boek-h10c",
           "page": 8,
           "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+        },
+        {
+          "source": "boek-h10a",
+          "page": 12,
+          "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+        },
+        {
+          "source": "attentie",
+          "page": 7,
+          "locator": "Attentiepunten, transformaties, PDF 7"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+        },
+        {
+          "source": "spss",
+          "page": 22,
+          "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
         }
       ],
       "questions": [
@@ -4049,6 +8484,26 @@ window.SRA = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -4110,6 +8565,26 @@ window.SRA = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -4171,6 +8646,26 @@ window.SRA = {
               "source": "boek-h10c",
               "page": 8,
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h10a",
+              "page": 12,
+              "locator": "Boek p. 298; oorspronkelijke PDF p. 316; uitsnede p. 12"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, transformaties, PDF 7"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "spss",
+              "page": 22,
+              "locator": "SPSS-uitwerkingen, college 6, PDF 22–27"
             }
           ],
           "recognition": {
@@ -4191,22 +8686,80 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Een logaritmisch model: alleen x wordt getransformeerd",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze vorm wanneer de geschatte vergelijking x via ln(x) opneemt, terwijl y in de oorspronkelijke eenheid blijft. Voor ln(x) moet x positief zijn.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Logaritmisch model</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Logaritmisch model\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>ln</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>ln is de natuurlijke logaritme, met grondtal e. b₀ en b₁ horen bij de regressie op ln(x). ŷ is in deze modelvorm al een voorspelling van y op de oorspronkelijke schaal.</p><h3>Zo reken je stap voor stap</h3><ol><li>Controleer dat x positief is en bereken ln(x).</li><li>Vermenigvuldig ln(x) met b₁ en tel b₀ op.</li><li>Stop op de y-schaal: hier hoeft geen exp op de einduitkomst te worden toegepast.</li><li>Bij verdubbeling van x neemt de voorspelde y toe met b₁ × ln(2), als deze modelvorm passend blijft.</li></ol><h3>Voorbeeld: dezelfde getallen op de logaritmische schaal van x</h3><ol><li>Stel ŷ = 1 + 0,5ln(x) en x = 16.</li><li>ln(16) ≈ 2,772589, dus ŷ = 1 + 0,5 × 2,772589 ≈ 2,386294.</li><li>Deze 2,386294 is al de voorspelde y, geen voorspelde ln(y).</li></ol><p class=\"note\"><strong>Let op:</strong> Kijk welke variabele is getransformeerd. Alleen het voorkomen van ln in de vergelijking betekent niet dat je de hele uitkomst moet terugtransformeren.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze vorm wanneer de geschatte vergelijking x via ln(x) opneemt, terwijl y in de oorspronkelijke eenheid blijft. Voor ln(x) moet x positief zijn.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Logaritmisch model</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Logaritmisch model\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>ln</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>ln is de natuurlijke logaritme, met grondtal e. b₀ en b₁ horen bij de regressie op ln(x). ŷ is in deze modelvorm al een voorspelling van y op de oorspronkelijke schaal.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"log-x\"><h3>Dezelfde modelvorm op twee schalen</h3><p class=\"fv-provenance\">Visualisatie van de modelvergelijking en invoer die al in deze formulekaart staan; geen afzonderlijk geschatte dataset.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Oorspronkelijke schaal</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Oorspronkelijke schaal: y = 1 + 0,5 ln(x); x-as: x; y-as: y\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,6</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">1,2</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">1,8</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">2,4</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,5</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">4,4</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">8,2</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">12,1</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">16,0</text><polyline points=\"58.00,137.28 61.45,126.58 64.90,118.53 68.35,112.07 71.80,106.69 75.25,102.06 78.70,98.01 82.15,94.41 85.60,91.16 89.05,88.21 92.50,85.50 95.95,83.00 99.40,80.68 102.85,78.51 106.30,76.48 109.75,74.57 113.20,72.76 116.65,71.04 120.10,69.42 123.55,67.86 127.00,66.38 130.45,64.97 133.90,63.61 137.35,62.31 140.80,61.05 144.25,59.85 147.70,58.68 151.15,57.56 154.60,56.47 158.05,55.42 161.50,54.40 164.95,53.41 168.40,52.45 171.85,51.52 175.30,50.62 178.75,49.73 182.20,48.88 185.65,48.04 189.10,47.22 192.55,46.43 196.00,45.65 199.45,44.89 202.90,44.15 206.35,43.43 209.80,42.72 213.25,42.02 216.70,41.34 220.15,40.68 223.60,40.02 227.05,39.38 230.50,38.76 233.95,38.14 237.40,37.54 240.85,36.94 244.30,36.36 247.75,35.79 251.20,35.22 254.65,34.67 258.10,34.13 261.55,33.59 265.00,33.06 268.45,32.55 271.90,32.04 275.35,31.53 278.80,31.04 282.25,30.55 285.70,30.07 289.15,29.60 292.60,29.13 296.05,28.67 299.50,28.22 302.95,27.77 306.40,27.33 309.85,26.90 313.30,26.47 316.75,26.04 320.20,25.62 323.65,25.21 327.10,24.80 330.55,24.40 334.00,24.00\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">y</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Modelcurve</span></div><p class=\"fv-work\">x = 16 → ln(x) ≈ 2,7726 → ŷ ≈ 2,3863. Geen exp op de uitkomst.</p></figure><figure class=\"fv-panel\"><figcaption>Schaal waarop de lijn wordt geschat</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Getransformeerde schaal: y = 1 + 0,5 ln(x); x-as: ln(x); y-as: y\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,6</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">1,2</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">1,8</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">2,4</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">-0,7</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">0,2</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">1,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">1,9</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">2,8</text><polyline points=\"58.00,137.28 61.45,135.87 64.90,134.45 68.35,133.04 71.80,131.62 75.25,130.20 78.70,128.79 82.15,127.37 85.60,125.96 89.05,124.54 92.50,123.12 95.95,121.71 99.40,120.29 102.85,118.87 106.30,117.46 109.75,116.04 113.20,114.63 116.65,113.21 120.10,111.79 123.55,110.38 127.00,108.96 130.45,107.55 133.90,106.13 137.35,104.71 140.80,103.30 144.25,101.88 147.70,100.47 151.15,99.05 154.60,97.63 158.05,96.22 161.50,94.80 164.95,93.39 168.40,91.97 171.85,90.55 175.30,89.14 178.75,87.72 182.20,86.31 185.65,84.89 189.10,83.47 192.55,82.06 196.00,80.64 199.45,79.23 202.90,77.81 206.35,76.39 209.80,74.98 213.25,73.56 216.70,72.15 220.15,70.73 223.60,69.31 227.05,67.90 230.50,66.48 233.95,65.07 237.40,63.65 240.85,62.23 244.30,60.82 247.75,59.40 251.20,57.99 254.65,56.57 258.10,55.15 261.55,53.74 265.00,52.32 268.45,50.90 271.90,49.49 275.35,48.07 278.80,46.66 282.25,45.24 285.70,43.82 289.15,42.41 292.60,40.99 296.05,39.58 299.50,38.16 302.95,36.74 306.40,35.33 309.85,33.91 313.30,32.50 316.75,31.08 320.20,29.66 323.65,28.25 327.10,26.83 330.55,25.42 334.00,24.00\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">ln(x)</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">y</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-purple)\"></i>Lineaire vorm</span></div><p class=\"fv-work\">Let op de asnamen. Alleen x is getransformeerd; y blijft in zijn oorspronkelijke eenheid.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De schalen verschillen bewust. Een rechte lijn op de getransformeerde schaal hoort bij een kromme op de oorspronkelijke schaal. De geldige oorspronkelijke log-invoer moet positief zijn.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Controleer dat x positief is en bereken ln(x).</li><li>Vermenigvuldig ln(x) met b₁ en tel b₀ op.</li><li>Stop op de y-schaal: hier hoeft geen exp op de einduitkomst te worden toegepast.</li><li>Bij verdubbeling van x neemt de voorspelde y toe met b₁ × ln(2), als deze modelvorm passend blijft.</li></ol><h3>Voorbeeld: dezelfde getallen op de logaritmische schaal van x</h3><ol><li>Stel ŷ = 1 + 0,5ln(x) en x = 16.</li><li>ln(16) ≈ 2,772589, dus ŷ = 1 + 0,5 × 2,772589 ≈ 2,386294.</li><li>Deze 2,386294 is al de voorspelde y, geen voorspelde ln(y).</li></ol><p class=\"note\"><strong>Let op:</strong> Kijk welke variabele is getransformeerd. Alleen het voorkomen van ln in de vergelijking betekent niet dat je de hele uitkomst moet terugtransformeren.</p>"
         },
         {
           "title": "Een exponentieel model: terug van ln(y) naar y",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze vorm wanneer ln(y) lineair wordt verklaard uit x. Het formuleblad brengt de geschatte logwaarde terug met exp.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Lineaire vorm</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Lineaire vorm\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Terug naar y</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Terug naar y\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>exp(z) betekent e tot de macht z. De coëfficiënten b₀ en b₁ horen bij het model voor ln(y). Bij één extra eenheid x wordt de teruggetransformeerde voorspelling vermenigvuldigd met exp(b₁).</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken b₀ + b₁x. Dit is de voorspelde logwaarde.</li><li>Neem exp van de gehele uitkomst, dus exp(b₀ + b₁x).</li><li>Schrijf de voorspelling in de oorspronkelijke y-eenheid op.</li><li>Beoordeel de residuen van het gekozen model opnieuw; de transformatie garandeert geen goed model.</li></ol><h3>Voorbeeld: een voorspelde logwaarde terugrekenen</h3><ol><li>Stel ln(ŷ) = 1 + 0,5x en x = 2.</li><li>De voorspelde logwaarde is 1 + 0,5 × 2 = 2.</li><li>Terug volgens het formuleblad: ŷ = exp(2) ≈ 7,3891.</li></ol><p class=\"note\"><strong>Let op:</strong> De waarde 2 is hier niet de voorspelde y. Gebruik exp en niet de inverse van de gewone logaritme met grondtal 10.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze vorm wanneer ln(y) lineair wordt verklaard uit x. Het formuleblad brengt de geschatte logwaarde terug met exp.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Lineaire vorm</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Lineaire vorm\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Terug naar y</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Terug naar y\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>exp(z) betekent e tot de macht z. De coëfficiënten b₀ en b₁ horen bij het model voor ln(y). Bij één extra eenheid x wordt de teruggetransformeerde voorspelling vermenigvuldigd met exp(b₁).</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"log-y\"><h3>Dezelfde modelvorm op twee schalen</h3><p class=\"fv-provenance\">Visualisatie van de modelvergelijking en invoer die al in deze formulekaart staan; geen afzonderlijk geschatte dataset.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Oorspronkelijke schaal</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Oorspronkelijke schaal: ln(y) = 1 + 0,5x; x-as: x; y-as: y\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">5,0</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">10,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">15,1</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">20,1</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">1,0</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">2,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">3,0</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">4,0</text><polyline points=\"58.00,158.89 61.45,158.35 64.90,157.81 68.35,157.24 71.80,156.67 75.25,156.08 78.70,155.47 82.15,154.85 85.60,154.21 89.05,153.56 92.50,152.89 95.95,152.21 99.40,151.50 102.85,150.78 106.30,150.04 109.75,149.28 113.20,148.50 116.65,147.71 120.10,146.89 123.55,146.05 127.00,145.19 130.45,144.31 133.90,143.41 137.35,142.48 140.80,141.53 144.25,140.56 147.70,139.56 151.15,138.53 154.60,137.49 158.05,136.41 161.50,135.31 164.95,134.17 168.40,133.01 171.85,131.82 175.30,130.60 178.75,129.35 182.20,128.07 185.65,126.76 189.10,125.41 192.55,124.03 196.00,122.61 199.45,121.16 202.90,119.67 206.35,118.14 209.80,116.58 213.25,114.97 216.70,113.32 220.15,111.64 223.60,109.90 227.05,108.13 230.50,106.31 233.95,104.45 237.40,102.53 240.85,100.57 244.30,98.56 247.75,96.50 251.20,94.39 254.65,92.22 258.10,90.00 261.55,87.72 265.00,85.38 268.45,82.99 271.90,80.53 275.35,78.01 278.80,75.43 282.25,72.78 285.70,70.07 289.15,67.29 292.60,64.43 296.05,61.51 299.50,58.51 302.95,55.43 306.40,52.28 309.85,49.04 313.30,45.73 316.75,42.33 320.20,38.85 323.65,35.27 327.10,31.61 330.55,27.85 334.00,24.00\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">y</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Modelcurve</span></div><p class=\"fv-work\">x = 2 → voorspelde logwaarde 2 → exp(2) ≈ 7,3891.</p></figure><figure class=\"fv-panel\"><figcaption>Schaal waarop de lijn wordt geschat</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Getransformeerde schaal: ln(y) = 1 + 0,5x; x-as: x; y-as: ln(y)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,8</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">1,5</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">2,2</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">3,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">1,0</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">2,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">3,0</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">4,0</text><polyline points=\"58.00,128.00 61.45,126.70 64.90,125.40 68.35,124.10 71.80,122.80 75.25,121.50 78.70,120.20 82.15,118.90 85.60,117.60 89.05,116.30 92.50,115.00 95.95,113.70 99.40,112.40 102.85,111.10 106.30,109.80 109.75,108.50 113.20,107.20 116.65,105.90 120.10,104.60 123.55,103.30 127.00,102.00 130.45,100.70 133.90,99.40 137.35,98.10 140.80,96.80 144.25,95.50 147.70,94.20 151.15,92.90 154.60,91.60 158.05,90.30 161.50,89.00 164.95,87.70 168.40,86.40 171.85,85.10 175.30,83.80 178.75,82.50 182.20,81.20 185.65,79.90 189.10,78.60 192.55,77.30 196.00,76.00 199.45,74.70 202.90,73.40 206.35,72.10 209.80,70.80 213.25,69.50 216.70,68.20 220.15,66.90 223.60,65.60 227.05,64.30 230.50,63.00 233.95,61.70 237.40,60.40 240.85,59.10 244.30,57.80 247.75,56.50 251.20,55.20 254.65,53.90 258.10,52.60 261.55,51.30 265.00,50.00 268.45,48.70 271.90,47.40 275.35,46.10 278.80,44.80 282.25,43.50 285.70,42.20 289.15,40.90 292.60,39.60 296.05,38.30 299.50,37.00 302.95,35.70 306.40,34.40 309.85,33.10 313.30,31.80 316.75,30.50 320.20,29.20 323.65,27.90 327.10,26.60 330.55,25.30 334.00,24.00\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">ln(y)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-purple)\"></i>Lineaire vorm</span></div><p class=\"fv-work\">Let op de asnamen. y is gelogaritmeerd: transformeer de volledige voorspelde logwaarde terug.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De schalen verschillen bewust. Een rechte lijn op de getransformeerde schaal hoort bij een kromme op de oorspronkelijke schaal. De geldige oorspronkelijke log-invoer moet positief zijn.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bereken b₀ + b₁x. Dit is de voorspelde logwaarde.</li><li>Neem exp van de gehele uitkomst, dus exp(b₀ + b₁x).</li><li>Schrijf de voorspelling in de oorspronkelijke y-eenheid op.</li><li>Beoordeel de residuen van het gekozen model opnieuw; de transformatie garandeert geen goed model.</li></ol><h3>Voorbeeld: een voorspelde logwaarde terugrekenen</h3><ol><li>Stel ln(ŷ) = 1 + 0,5x en x = 2.</li><li>De voorspelde logwaarde is 1 + 0,5 × 2 = 2.</li><li>Terug volgens het formuleblad: ŷ = exp(2) ≈ 7,3891.</li></ol><p class=\"note\"><strong>Let op:</strong> De waarde 2 is hier niet de voorspelde y. Gebruik exp en niet de inverse van de gewone logaritme met grondtal 10.</p>"
         },
         {
           "title": "Een machtsmodel: zowel x als y heeft een logvorm",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik een machtsfunctie als het lineair geschatte model ln(y) verbindt met ln(x). De les en het formuleblad geven twee gelijkwaardige routes om terug te rekenen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Lineaire vorm</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Lineaire vorm\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>ln</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Machtsfunctie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Machtsfunctie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>)</mo></mrow></mrow><mo>×</mo><msup><mi>x</mi><msub><mi>b</mi><mn>1</mn></msub></msup></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>b₀ is de constante op de logschaal; exp(b₀) is de factor op de oorspronkelijke schaal. b₁ is de macht van x. De oorspronkelijke waarden x en y waarop je een logaritme toepast moeten positief zijn. De logwaarden zelf mogen nul of negatief zijn: ln(1) = 0 en ln(0,5) ≈ −0,693.</p><h3>Zo reken je stap voor stap</h3><ol><li>Bereken ln(x) en vul die in bij b₀ + b₁ln(x).</li><li>Neem exp van deze voorspelde logwaarde.</li><li>Controleer desgewenst met exp(b₀) × x tot de macht b₁.</li><li>Bij verdubbeling van x verandert de teruggetransformeerde voorspelling met factor 2 tot de macht b₁.</li></ol><h3>Voorbeeld: een machtsfunctie</h3><ol><li>ln(ŷ) = 1 + 0,5ln(x). Gevraagd: de voorspelling bij x = 16.</li><li>ln(16) ≈ 2,772589. De voorspelde logwaarde is 1 + 0,5×2,772589 = 2,386294.</li><li>Terugtransformeren: exp(2,386294) ≈ 10,8731.</li><li>De korte route geeft hetzelfde: exp(1) × 16^0,5 = 2,71828 × 4 = 10,8731.</li></ol><p class=\"note\"><strong>Let op:</strong> Verwar het machtsmodel niet met het exponentiële model. De inverse functie behoort volgens het onderwijsprogramma niet tot deze SRA-stof en wordt hier niet toegevoegd.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik een machtsfunctie als het lineair geschatte model ln(y) verbindt met ln(x). De les en het formuleblad geven twee gelijkwaardige routes om terug te rekenen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Lineaire vorm</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Lineaire vorm\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mi>ln</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Machtsfunctie</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Machtsfunctie\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>)</mo></mrow></mrow><mo>×</mo><msup><mi>x</mi><msub><mi>b</mi><mn>1</mn></msub></msup></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>b₀ is de constante op de logschaal; exp(b₀) is de factor op de oorspronkelijke schaal. b₁ is de macht van x. De oorspronkelijke waarden x en y waarop je een logaritme toepast moeten positief zijn. De logwaarden zelf mogen nul of negatief zijn: ln(1) = 0 en ln(0,5) ≈ −0,693.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"log-xy\"><h3>Dezelfde modelvorm op twee schalen</h3><p class=\"fv-provenance\">Visualisatie van de modelvergelijking en invoer die al in deze formulekaart staan; geen afzonderlijk geschatte dataset.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Oorspronkelijke schaal</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Oorspronkelijke schaal: ln(y) = 1 + 0,5 ln(x); x-as: x; y-as: y\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">2,7</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">5,4</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">8,2</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">10,9</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,5</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">4,4</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">8,2</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">12,1</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">16,0</text><polyline points=\"58.00,152.42 61.45,147.52 64.90,143.26 68.35,139.45 71.80,135.96 75.25,132.74 78.70,129.71 82.15,126.86 85.60,124.16 89.05,121.58 92.50,119.11 95.95,116.74 99.40,114.45 102.85,112.24 106.30,110.10 109.75,108.02 113.20,106.00 116.65,104.04 120.10,102.12 123.55,100.25 127.00,98.43 130.45,96.64 133.90,94.89 137.35,93.18 140.80,91.49 144.25,89.85 147.70,88.23 151.15,86.63 154.60,85.07 158.05,83.53 161.50,82.01 164.95,80.52 168.40,79.05 171.85,77.60 175.30,76.17 178.75,74.76 182.20,73.37 185.65,72.00 189.10,70.64 192.55,69.30 196.00,67.98 199.45,66.67 202.90,65.38 206.35,64.10 209.80,62.84 213.25,61.59 216.70,60.35 220.15,59.12 223.60,57.91 227.05,56.71 230.50,55.52 233.95,54.34 237.40,53.18 240.85,52.02 244.30,50.87 247.75,49.74 251.20,48.61 254.65,47.49 258.10,46.39 261.55,45.29 265.00,44.20 268.45,43.12 271.90,42.05 275.35,40.98 278.80,39.93 282.25,38.88 285.70,37.84 289.15,36.80 292.60,35.78 296.05,34.76 299.50,33.75 302.95,32.75 306.40,31.75 309.85,30.76 313.30,29.77 316.75,28.80 320.20,27.83 323.65,26.86 327.10,25.90 330.55,24.95 334.00,24.00\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">x</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">y</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Modelcurve</span></div><p class=\"fv-work\">x = 16 → logwaarde ≈ 2,3863 → exp(2,3863) ≈ 10,8731.</p></figure><figure class=\"fv-panel\"><figcaption>Schaal waarop de lijn wordt geschat</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Getransformeerde schaal: ln(y) = 1 + 0,5 ln(x); x-as: ln(x); y-as: ln(y)\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">0,6</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">1,2</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">1,8</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">2,4</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">-0,7</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">0,2</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">1,0</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">1,9</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">2,8</text><polyline points=\"58.00,137.28 61.45,135.87 64.90,134.45 68.35,133.04 71.80,131.62 75.25,130.20 78.70,128.79 82.15,127.37 85.60,125.96 89.05,124.54 92.50,123.12 95.95,121.71 99.40,120.29 102.85,118.87 106.30,117.46 109.75,116.04 113.20,114.63 116.65,113.21 120.10,111.79 123.55,110.38 127.00,108.96 130.45,107.55 133.90,106.13 137.35,104.71 140.80,103.30 144.25,101.88 147.70,100.47 151.15,99.05 154.60,97.63 158.05,96.22 161.50,94.80 164.95,93.39 168.40,91.97 171.85,90.55 175.30,89.14 178.75,87.72 182.20,86.31 185.65,84.89 189.10,83.47 192.55,82.06 196.00,80.64 199.45,79.23 202.90,77.81 206.35,76.39 209.80,74.98 213.25,73.56 216.70,72.15 220.15,70.73 223.60,69.31 227.05,67.90 230.50,66.48 233.95,65.07 237.40,63.65 240.85,62.23 244.30,60.82 247.75,59.40 251.20,57.99 254.65,56.57 258.10,55.15 261.55,53.74 265.00,52.32 268.45,50.90 271.90,49.49 275.35,48.07 278.80,46.66 282.25,45.24 285.70,43.82 289.15,42.41 292.60,40.99 296.05,39.58 299.50,38.16 302.95,36.74 306.40,35.33 309.85,33.91 313.30,32.50 316.75,31.08 320.20,29.66 323.65,28.25 327.10,26.83 330.55,25.42 334.00,24.00\" fill=\"none\" stroke=\"var(--fv-purple)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">ln(x)</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">ln(y)</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-purple)\"></i>Lineaire vorm</span></div><p class=\"fv-work\">Let op de asnamen. y is gelogaritmeerd: transformeer de volledige voorspelde logwaarde terug.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De schalen verschillen bewust. Een rechte lijn op de getransformeerde schaal hoort bij een kromme op de oorspronkelijke schaal. De geldige oorspronkelijke log-invoer moet positief zijn.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Bereken ln(x) en vul die in bij b₀ + b₁ln(x).</li><li>Neem exp van deze voorspelde logwaarde.</li><li>Controleer desgewenst met exp(b₀) × x tot de macht b₁.</li><li>Bij verdubbeling van x verandert de teruggetransformeerde voorspelling met factor 2 tot de macht b₁.</li></ol><h3>Voorbeeld: een machtsfunctie</h3><ol><li>ln(ŷ) = 1 + 0,5ln(x). Gevraagd: de voorspelling bij x = 16.</li><li>ln(16) ≈ 2,772589. De voorspelde logwaarde is 1 + 0,5×2,772589 = 2,386294.</li><li>Terugtransformeren: exp(2,386294) ≈ 10,8731.</li><li>De korte route geeft hetzelfde: exp(1) × 16^0,5 = 2,71828 × 4 = 10,8731.</li></ol><p class=\"note\"><strong>Let op:</strong> Verwar het machtsmodel niet met het exponentiële model. De inverse functie behoort volgens het onderwijsprogramma niet tot deze SRA-stof en wordt hier niet toegevoegd.</p>"
         },
         {
           "title": "Een meervoudig logmodel terugtransformeren",
           "html": "<p>Bij meerdere verklarende variabelen transformeer je de volledige voorspelde logwaarde terug. De constante wordt een vermenigvuldigingsfactor; coëfficiënten bij ln(x) worden machten van x.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Meervoudig machtsmodel</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Meervoudig machtsmodel\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>ln</mi><mrow><mo>(</mo><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><mo>×</mo><mrow><mi>ln</mi><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub><mo>×</mo><mrow><mi>ln</mi><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></math></div></div></div><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Terug naar de oorspronkelijke schaal</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Terug naar de oorspronkelijke schaal\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mo>=</mo><mrow><mi>exp</mi><mrow><mo>(</mo><msub><mi>b</mi><mn>0</mn></msub><mo>)</mo></mrow></mrow><mo>×</mo><msup><msub><mi>x</mi><mn>1</mn></msub><msub><mi>b</mi><mn>1</mn></msub></msup><mo>×</mo><msup><msub><mi>x</mi><mn>2</mn></msub><msub><mi>b</mi><mn>2</mn></msub></msup></mrow></math></div></div></div><h3>Boekvoorbeeld GDP, p. 321</h3><p>ln(ŷ) = 9,080 + 0,353 ln(elect) − 0,434 ln(mort) wordt ŷ = exp(9,080) × elect<sup>0,353</sup> × mort<sup>−0,434</sup>. De constante factor is ongeveer 8.778. De negatieve macht kun je ook als delen door mort<sup>0,434</sup> schrijven.</p><h3>Voorbeeld bij die boekvergelijking</h3><ol><li>Neem elect = 100 en mort = 10, beide positief.</li><li>De voorspelde logwaarde is 9,080 + 0,353 × ln(100) − 0,434 × ln(10) ≈ 9,70630.</li><li>Terugtransformeren met de onafgeronde logwaarde geeft ongeveer 16.420,78. De productvorm geeft dezelfde uitkomst.</li><li>Bij verdubbeling van elect en gelijkblijvende mort verandert de teruggetransformeerde voorspelling met factor 2^0,353 ≈ 1,277. Het gaat dus niet om 0,353 extra oorspronkelijke eenheden.</li></ol><p class=\"note\">Dit is de directe terugtransformatie van de geschatte logwaarde volgens de cursus. Noem dit niet zonder aanvullende aannames het rekenkundige gemiddelde op de oorspronkelijke schaal. Bij een interval op logschaal transformeer je de twee grenzen afzonderlijk terug.</p>"
+        },
+        {
+          "title": "Terugtransformeren: de hele logwaarde en beide intervalgrenzen",
+          "html": "<p>Een logmodel voorspelt eerst een logwaarde. Alleen de laatste term terugtransformeren of de constante ongemoeid laten geeft een ander model. Als een interval op logschaal is gegeven, transformeer je de onder- en bovengrens afzonderlijk; de resulterende marge op de oorspronkelijke schaal is meestal niet symmetrisch.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"log-interval\"><h3>Symmetrie op logschaal wordt asymmetrie op de oorspronkelijke schaal</h3><p class=\"fv-provenance\">Dezelfde logwaarde en grenzen als het bestaande rekenvoorbeeld. In het linkerbeeld worden log-eenheden gebruikt, geen euro.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Op logschaal</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 165\" role=\"img\" aria-label=\"Op logschaal: 2,80 tot 3,60; puntschatting 3,20\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-axis\" d=\"M25 92H335\"/><path d=\"M80.00 65H280.00\" stroke=\"var(--fv-green)\" stroke-width=\"3\"/><path d=\"M80.00 55V102\" stroke=\"var(--fv-green)\"/><text x=\"80.00\" y=\"123\" text-anchor=\"middle\">Ondergrens</text><text x=\"80.00\" y=\"139\" text-anchor=\"middle\">2,80</text><path d=\"M180.00 55V102\" stroke=\"var(--fv-purple)\"/><text x=\"180.00\" y=\"33\" text-anchor=\"middle\">Puntschatting</text><text x=\"180.00\" y=\"49\" text-anchor=\"middle\">3,20</text><path d=\"M280.00 55V102\" stroke=\"var(--fv-green)\"/><text x=\"280.00\" y=\"123\" text-anchor=\"middle\">Bovengrens</text><text x=\"280.00\" y=\"139\" text-anchor=\"middle\">3,60</text><text x=\"180\" y=\"161\" text-anchor=\"middle\">Logwaarde ln(y)</text></svg><p class=\"fv-work\">De gegeven grenzen 2,8 en 3,6 liggen beide 0,4 van 3,2.<br>Ondergrens 2,80; bovengrens 3,60.</p></figure><figure class=\"fv-panel\"><figcaption>Na afzonderlijke terugtransformatie</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 165\" role=\"img\" aria-label=\"Getransformeerde intervalgrenzen: 16,44 tot 36,60; puntschatting 24,53\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-axis\" d=\"M25 92H335\"/><path d=\"M88.59 65H271.80\" stroke=\"var(--fv-green)\" stroke-width=\"3\"/><path d=\"M88.59 55V102\" stroke=\"var(--fv-green)\"/><text x=\"88.59\" y=\"123\" text-anchor=\"middle\">Ondergrens</text><text x=\"88.59\" y=\"139\" text-anchor=\"middle\">16,44</text><path d=\"M162.11 55V102\" stroke=\"var(--fv-purple)\"/><text x=\"162.11\" y=\"33\" text-anchor=\"middle\">Puntschatting</text><text x=\"162.11\" y=\"49\" text-anchor=\"middle\">24,53</text><path d=\"M271.80 55V102\" stroke=\"var(--fv-green)\"/><text x=\"271.80\" y=\"123\" text-anchor=\"middle\">Bovengrens</text><text x=\"271.80\" y=\"139\" text-anchor=\"middle\">36,60</text><text x=\"180\" y=\"161\" text-anchor=\"middle\">Oorspronkelijke y-eenheid</text></svg><p class=\"fv-work\">exp(2,8) ≈ 16,4446; exp(3,2) ≈ 24,5325; exp(3,6) ≈ 36,5982.<br>Afstanden: circa 8,09 omlaag en 12,07 omhoog.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> Gebruik de teruggetransformeerde grenzen. Een symmetrische ±-marge op de oorspronkelijke schaal zou hier de gegeven intervaltransformatie veranderen.</p></section><!-- formula-visual:end --><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Eigen rekenvoorbeeld bij de cursusformules: ln(ŷ) = 2 + 0,3x. Neem x = 4 en een gegeven individueel interval [2,8; 3,6] op logschaal. Wat zijn voorspelling, interval en het effect van één extra x op de oorspronkelijke schaal?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>De voorspelde logwaarde is 2 + 0,3 × 4 = 3,2. De directe terugtransformatie is exp(3,2) ≈ 24,5325 oorspronkelijke eenheden.</li><li>De grenzen worden exp(2,8) ≈ 16,4446 en exp(3,6) ≈ 36,5982. De afstanden tot 24,5325 zijn ongelijk: circa 8,0878 omlaag en 12,0657 omhoog.</li><li>Eén extra x geeft factor exp(0,3) ≈ 1,34986, dus circa 34,99% hoger. De coëfficiënt 0,3 is geen toename van 0,3 oorspronkelijke eenheden.</li><li>Dit is de directe terugtransformatie volgens de cursus. Zonder aanvullende aannames is exp(voorspelde logwaarde) niet automatisch het rekenkundig gemiddelde van y.</li></ol></details></div><p><strong>Rekenvolgorde:</strong> controleer positiviteit, bepaal de juiste getransformeerde variabelen, vul B in, reken de hele rechterkant uit en transformeer pas daarna terug. Rond de logwaarde niet vroeg af: exponentiëren kan de afronding zichtbaar vergroten.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/formuleblad.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Formuleblad, transformaties, formules 55–58, PDF 3</a>; <a href=\"bronnen/boek-h10c.pdf#page=8\" target=\"_blank\" rel=\"noopener\">Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8</a>.</p>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, transformaties, formules 55–58, PDF 3"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 8,
+              "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
       ],
-      "completionVersion": "2026-09-20"
+      "completionVersion": "2026-09-20",
+      "learningVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H10 · §10.2.1–10.2.2",
+        "college": "6",
+        "focus": "Herken welke variabelen zijn getransformeerd. Reken terug naar de juiste schaal en vergelijk modellen alleen wanneer die vergelijking betekenis heeft. De inverse functie is uitgezonderd.",
+        "title": "H10 · §10.2.1–10.2.2 · Hoorcollege 6",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "log-x",
+          "title": "Een logaritmisch model: alleen x wordt getransformeerd"
+        },
+        {
+          "key": "log-y",
+          "title": "Een exponentieel model: terug van ln(y) naar y"
+        },
+        {
+          "key": "log-xy",
+          "title": "Een machtsmodel: zowel x als y heeft een logvorm"
+        },
+        {
+          "key": "log-interval",
+          "title": "Terugtransformeren: de hele logwaarde en beide intervalgrenzen"
+        }
+      ],
+      "reading": {
+        "opening": "Een lineair model hoeft geen rechte lijn in de oorspronkelijke variabelen te beschrijven. Door de schaal van x, y of beide te veranderen, kun je bepaalde kromme verbanden als een lineair model schrijven. De gekozen schaal bepaalt hoe je rekent en de uitkomst terugvertaalt.",
+        "conclusion": "Controleer bij een transformatie welke variabelen van schaal zijn veranderd en vertaal de voorspelling passend terug. Vergelijk modellen alleen op een betekenisvolle basis. Bij modelkeuze beoordelen we vervolgens ook de extra bijdrage en overlap van verklarende variabelen."
+      }
     },
     {
       "id": "modelbouw",
@@ -4220,6 +8773,28 @@ window.SRA = {
       ],
       "sections": [
         {
+          "title": "Modelbouw balanceert extra informatie en onnodige complexiteit",
+          "html": "<p>Een extra variabele kan ontbrekende samenhang verklaren, maar ook vooral toeval uit de bestaande gegevens volgen. Gewone R² daalt bij uitbreiding van hetzelfde OLS-model op dezelfde data niet. Zij is daarom geen eerlijke beloning voor iedere nieuwe variabele. <strong>Adjusted R²</strong> rekent de hoeveelheid overgebleven informatie mee en kan dalen wanneer de extra variabele weinig toevoegt.</p><p>Bij <strong>multicollineariteit</strong> bevatten verklarende variabelen sterk overlappende informatie. Het model kan gezamenlijk goed passen, terwijl de afzonderlijke bijdragen onzeker zijn. Voor de accountant is dit verschil van belang: een bruikbare gezamenlijke verwachting is iets anders dan een onderbouwde verklaring waarom een afzonderlijk kenmerk een bedrag verhoogt of verlaagt.</p><p>VIF kijkt voor iedere x naar een hulpregressie op alle andere x-variabelen. Een losse correlatiematrix geeft aanwijzingen, maar vervangt die gezamenlijke vergelijking niet. Verwijderen kan de overlap beperken; de inhoudelijke functie van een variabele blijft meewegen en het model moet na verwijderen opnieuw worden geschat en beoordeeld.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/boek-h10b.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3</a>; <a href=\"bronnen/boek-h10b.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6</a>; <a href=\"bronnen/attentiepunten.pdf#page=7\" target=\"_blank\" rel=\"noopener\">Attentiepunten, modelbouw en multicollineariteit, PDF 7–8</a>.</p>",
+          "refs": [
+            {
+              "source": "boek-h10b",
+              "page": 3,
+              "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
           "title": "Hoe komt een variabele in het model?",
           "html": "<p><strong>Enter</strong> neemt de opgegeven variabelen tegelijk op. <strong>Backward elimination</strong> begint met alle kandidaten en verwijdert stapsgewijs een onvoldoende bijdragende variabele. <strong>Forward</strong> begint klein en voegt toe. <strong>Stepwise</strong> controleert bij het toevoegen ook of eerdere variabelen weer kunnen vervallen.</p><p>Bij backward is de variabele met de grootste niet-significante p-waarde de eerste kandidaat. Daarna moet het model opnieuw worden geschat: coëfficiënten en p-waarden kunnen veranderen. De constante verwijder je niet zomaar als gewone kandidaat.</p><p class=\"note\"><strong>Bronverschil:</strong> de attentiepunten noemen bij backward een grens ½α voor p-waarden. Een reeds tweezijdige SPSS Sig. wordt bij een gewone tweezijdige toets met α vergeleken; α/2 is de staartkans voor een kritieke t-grens. Volg bij selectiemethoden de expliciet gegeven verwijderingsgrens. In het voorbeeld uit 2025 is p = 0,179 boven beide grenzen, zodat de keuze daar niet afhangt van dit verschil.</p>"
         },
@@ -4230,11 +8805,79 @@ window.SRA = {
         {
           "title": "Een extra variabele toetsen",
           "html": "<p>Vergelijk geneste modellen: het uitgebreide model bevat alle variabelen uit het kleinere model plus de extra variabele. De modellen moeten dezelfde y en dezelfde waarnemingen gebruiken.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Eén extra variabele</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Eén extra variabele\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><msub><mi>SSR</mi><mtext>uitgebreid</mtext></msub><mo>−</mo><msub><mi>SSR</mi><mtext>klein</mtext></msub></mrow><mrow><msub><mi>MSE</mi><mtext>uitgebreid</mtext></msub></mrow></mfrac></mrow></math></div></div></div><p>Dit is formule 63 voor één extra variabele. De teller heeft dan één vrijheidsgraad; de noemer n − k_uitgebreid − 1. Test je een blok van meerdere extra variabelen, dan deel je het verschil in SSR ook door het aantal extra variabelen. Een hoge F wijst op een extra bijdrage.</p>"
+        },
+        {
+          "title": "Geneste modellen: de extra bijdrage zichtbaar berekenen",
+          "html": "<p><strong>Genest</strong> betekent dat het kleine model in het uitgebreide model zit. De uitkomst y, waarnemingen en weging moeten gelijk zijn. Dan kun je de afname in onverklaarde variatie toeschrijven aan de extra variabelen, in plaats van aan een andere dataset.</p><table><caption>Eigen rekenvoorbeeld bij formule 63: dezelfde 50 waarnemingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th><th scope=\"col\">Residual df</th></tr></thead><tbody><tr><td>Klein</td><td>2</td><td>800</td><td>200</td><td>47</td></tr><tr><td>Uitgebreid</td><td>3</td><td>850</td><td>150</td><td>46</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken de partiële F voor de ene extra variabele en beide adjusted R²-waarden. Waarom gebruik je de MSE van het uitgebreide model?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>TotalSS is in beide modellen 1.000. De extra variabele verklaart 850 − 800 = 50 extra.</li><li>MSE<sub>uitgebreid</sub> = 150/46 ≈ 3,26087. F = (850 − 800)/(150/46) ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.</li><li>Deze MSE beschrijft de resterende foutvariatie nadat de extra variabele is opgenomen. De teller meet de verbetering door precies die toevoeging.</li><li>Klein: adjusted R² = 1 − (200/47)/(1.000/49) ≈ 0,79149. Uitgebreid: 1 − (150/46)/(1.000/49) ≈ 0,84022.</li><li>De fit na correctie verbetert. Voor een formele toets kies je vooraf α en zoek je de bijbehorende F-grens met 1 en 46 vrijheidsgraden in tabel 13.8. Een betere fit vervangt validatie en modeldiagnoses niet.</li></ol></details></div><p>Bij één extra variabele sluit deze tweezijdige vergelijking aan op de gekwadrateerde t-toets van die variabele in het uitgebreide model. Voor een blok van q extra variabelen deel je de toename van SSR ook door q. Vergelijk geen model voor y met een model voor ln(y) met deze formule.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/formuleblad.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Formuleblad, adjusted R², formule 51, PDF 3</a>; <a href=\"bronnen/formuleblad.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Formuleblad, partiële F, formule 63, PDF 4</a>; <a href=\"bronnen/tabellenbundel.pdf#page=20\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.8, PDF 20–29</a>; <a href=\"bronnen/boek-h10c.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6</a>.</p>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "SPSS-praktijkroute college 7: huizen, selectie en overlap",
+          "html": "<p><strong>Doel:</strong> uit een reeks woningkenmerken een verklaarbaar model voor Verkoopprijs maken. De officiële uitwerking laat eerst handmatige backwardselectie zien. De dependent is Verkoopprijs; de tekst op bronpagina 28 noemt haar eenmaal ten onrechte onafhankelijk.</p><ol><li>Lees College7 in, controleer de meetniveaus en begin met de bruikbare kwantitatieve kenmerken. Een nominale categoriecode is niet vanzelf een hoeveelheid: gebruik voor categorieën later dummy’s.</li><li>Schat via <strong>Analyze → Regression → Linear</strong> een volledig model. Noteer per stap k, n, adjusted R², de grootste Sig. van de kandidaten en de inhoudelijke betekenis.</li><li>De college-uitwerking gebruikt als verwijderingsgrens 0,05. Verwijder eerst Aantal verdiepingen en schat opnieuw; daarna kan Aantal badkamers vervallen. Lees de nieuwe p-waarden steeds uit de nieuwe uitvoer.</li><li>Vraag onder <strong>Statistics → Collinearity diagnostics</strong> Tolerance en VIF op. Vergelijk het beginmodel met het geselecteerde model en bekijk een correlatiematrix om de overlap met Woonoppervlakte te begrijpen.</li><li>Maak voor de optionele categorische uitbreiding dummy’s via <strong>Transform → Create Dummy Variables</strong>, of via <strong>Compute Variable</strong> met bijvoorbeeld Buurt = \"Kippenbuurt\". Laat per categorievariabele één dummy als referentie weg.</li><li>Automatische selectie kan met <strong>Method = Backward</strong>. Controleer de ingestelde invoer- en verwijderingscriteria en de gebruikte waarnemingen; een standaardinstelling hoeft niet gelijk te zijn aan de handmatige grens uit de opdracht.</li><li>Lever het selectieverloop en een modelinterpretatie op. Voer na selectie de relevante diagnoses opnieuw uit; backwardselectie garandeert geen afwezigheid van multicollineariteit.</li></ol><p class=\"note\"><strong>Bronverschil:</strong> deze praktijkuitwerking gebruikt Sig. &lt; 0,05; de attentiepunten noemen bij backward ½α. Gebruik de expliciete selectiegrens van de opgave. Een gewone tweezijdige p-waarde wordt bij een toets met de totale α vergeleken.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/spss-uitwerkingen.pdf#page=28\" target=\"_blank\" rel=\"noopener\">SPSS-uitwerkingen, college 7, PDF 28–36</a>; <a href=\"bronnen/attentiepunten.pdf#page=7\" target=\"_blank\" rel=\"noopener\">Attentiepunten, backward, PDF 7</a>.</p>",
+          "refs": [
+            {
+              "source": "spss",
+              "page": 28,
+              "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, backward, PDF 7"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "Doorlopende collegecasus Life Expectancy: selecteren met uitvoer",
+          "html": "<p>De slides beginnen met 171 landen en vijf kandidaten voor de levensverwachting: Adult Mortality, BMI, HIV/AIDS, ICOR en Schooling. Het <strong>conceptuele model</strong> beschrijft vooraf welke verbanden inhoudelijk worden verwacht. De selectie onderzoekt daarna de extra statistische bijdrage binnen het gezamenlijke model.</p><table><caption>Enter: relevante Coefficients-kolommen uit slide 141</caption><thead><tr><th scope=\"col\">Kandidaat</th><th scope=\"col\">B</th><th scope=\"col\">Sig.</th><th scope=\"col\">VIF</th></tr></thead><tbody><tr><td>Adult Mortality</td><td>−0,016</td><td>,000</td><td>2,583</td></tr><tr><td>BMI</td><td>−0,008</td><td>0,565</td><td>1,425</td></tr><tr><td>HIV/AIDS</td><td>−0,951</td><td>,000</td><td>1,726</td></tr><tr><td>ICOR</td><td>35,523</td><td>,000</td><td>8,476</td></tr><tr><td>Schooling</td><td>0,124</td><td>0,570</td><td>6,244</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Welke kandidaat valt bij backward met grens 0,05 eerst af? Waarom mag je niet meteen alle oorspronkelijke niet-significante kandidaten tegelijk schrappen?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>Schooling heeft met 0,570 de grootste p-waarde boven 0,05. De constante telt niet als gewone selectiekandidaat.</li><li>Na verwijderen wordt het model opnieuw geschat. De tweede uitvoer geeft voor BMI p = 0,545; daarna valt ook BMI af.</li><li>Het derde model bevat Adult Mortality, HIV/AIDS en ICOR. Op dezelfde 171 waarnemingen zijn de residuele df achtereenvolgens 165, 166 en 167.</li><li>De coëfficiënt ICOR verandert van 35,523 naar 37,792 en vervolgens 37,138. Een effectschatting hangt dus af van welke andere kenmerken zijn opgenomen.</li><li>De grootste VIF in het beginmodel is 8,476 &lt; 10. Dat overschrijdt de cursusgrens niet, maar er is wel merkbare overlap. Een grenswaarde is geen bewijs dat de verklarende variabelen volledig onafhankelijk zijn.</li></ol></details></div><figure class=\"learning-figure\"><a href=\"bronnen/slides.pdf#page=143\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/learning/regression-life-backward.png\" alt=\"Oorspronkelijke ANOVA en Coefficients voor drie backwardstappen met 171 landen.\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></a><figcaption>Lees bij iedere berekening hetzelfde modelnummer in beide tabellen. Bron: slides SRA NJ26, PDF-pagina 143. Open de afbeelding voor de bron op volledig formaat.</figcaption></figure><p>Forward en stepwise komen in deze collegecasus op dezelfde drie kandidaten uit. Dat is een uitkomst van deze gegevens en selectie-instellingen, geen algemene garantie dat alle methoden hetzelfde model vinden.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/slides.pdf#page=126\" target=\"_blank\" rel=\"noopener\">Slides, conceptueel model en kandidaten, PDF 126–132</a>; <a href=\"bronnen/slides.pdf#page=140\" target=\"_blank\" rel=\"noopener\">Slides, Enter/backward/forward/stepwise, PDF 140–145</a>.</p>",
+          "refs": [
+            {
+              "source": "slides",
+              "page": 126,
+              "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+            },
+            {
+              "source": "slides",
+              "page": 140,
+              "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
       ],
       "example": {
         "title": "Voorbeeld: overlap en extra bijdrage",
         "steps": [
+          "Tolerance = 0,08. Dan VIF = 1/0,08 = 12,5: boven de cursusgrens van 10.",
+          "Vergelijk vervolgens twee geldige geneste modellen met één verschil: SSR_klein = 800, SSR_uitgebreid = 850 en MSE_uitgebreid = 10.",
+          "F = (850 − 800)/10 = 5.",
+          "Vergelijk 5 met de toepasselijke F-grens. Alleen deze berekening geeft nog geen conclusie over significantie zonder α en vrijheidsgraden."
+        ],
+        "context": "Wat vertelt een lage tolerance over overlap, en hoe toets je daarna de extra bijdrage van één variabele? Dit zijn twee afzonderlijke controles. Het voorbeeld laat zien welke aanvullende grens nodig is voor een significantieoordeel.",
+        "stepsHtml": [
           "Tolerance = 0,08. Dan VIF = 1/0,08 = 12,5: boven de cursusgrens van 10.",
           "Vergelijk vervolgens twee geldige geneste modellen met één verschil: SSR_klein = 800, SSR_uitgebreid = 850 en MSE_uitgebreid = 10.",
           "F = (850 − 800)/10 = 5.",
@@ -4265,6 +8908,56 @@ window.SRA = {
           "source": "boek-h10b",
           "page": 3,
           "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+        },
+        {
+          "source": "boek-h10b",
+          "page": 6,
+          "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+        },
+        {
+          "source": "attentie",
+          "page": 7,
+          "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+        },
+        {
+          "source": "formules",
+          "page": 4,
+          "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+        },
+        {
+          "source": "tabellen",
+          "page": 20,
+          "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+        },
+        {
+          "source": "boek-h10c",
+          "page": 6,
+          "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+        },
+        {
+          "source": "spss",
+          "page": 28,
+          "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+        },
+        {
+          "source": "attentie",
+          "page": 7,
+          "locator": "Attentiepunten, backward, PDF 7"
+        },
+        {
+          "source": "slides",
+          "page": 126,
+          "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+        },
+        {
+          "source": "slides",
+          "page": 140,
+          "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
         }
       ],
       "questions": [
@@ -4310,6 +9003,56 @@ window.SRA = {
               "source": "boek-h10b",
               "page": 3,
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "spss",
+              "page": 28,
+              "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, backward, PDF 7"
+            },
+            {
+              "source": "slides",
+              "page": 126,
+              "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+            },
+            {
+              "source": "slides",
+              "page": 140,
+              "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
             }
           ],
           "recognition": {
@@ -4361,6 +9104,56 @@ window.SRA = {
               "source": "boek-h10b",
               "page": 3,
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "spss",
+              "page": 28,
+              "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, backward, PDF 7"
+            },
+            {
+              "source": "slides",
+              "page": 126,
+              "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+            },
+            {
+              "source": "slides",
+              "page": 140,
+              "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
             }
           ],
           "recognition": {
@@ -4412,6 +9205,56 @@ window.SRA = {
               "source": "boek-h10b",
               "page": 3,
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "spss",
+              "page": 28,
+              "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
+            },
+            {
+              "source": "attentie",
+              "page": 7,
+              "locator": "Attentiepunten, backward, PDF 7"
+            },
+            {
+              "source": "slides",
+              "page": 126,
+              "locator": "Slides, conceptueel model en kandidaten, PDF 126–132"
+            },
+            {
+              "source": "slides",
+              "page": 140,
+              "locator": "Slides, Enter/backward/forward/stepwise, PDF 140–145"
             }
           ],
           "recognition": {
@@ -4431,13 +9274,73 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "Overlap tussen verklarende variabelen meten met VIF",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik VIF en tolerance om te beoordelen of verklarende variabelen onderling zoveel overlap vertonen dat hun afzonderlijke effecten moeilijk te onderscheiden zijn.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Variance Inflation Factor</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Variance Inflation Factor\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>VIF</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>Tolerance</mi><mi>i</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>1</mn><mo>−</mo><msup><msub><mi>R</mi><mi>i</mi></msub><mn>2</mn></msup></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Tolerance komt uit de Coefficients-uitvoer. Rᵢ² hoort bij een hulpregressie waarin xᵢ wordt verklaard uit de overige x-variabelen. VIF is het omgekeerde van tolerance; dit is niet de R² van het hoofdmodel met y.</p><h3>Zo reken je stap voor stap</h3><ol><li>Lees tolerance of VIF per verklarende variabele af.</li><li>Als alleen tolerance bekend is, deel 1 door die tolerance.</li><li>Vergelijk met de cursusvuistregel: VIF groter dan 10 is een probleemsignaal.</li><li>Onderzoek inhoudelijke overlap en schat een aangepast model opnieuw als een variabele wordt weggelaten.</li></ol><h3>Voorbeeld: overlap en extra bijdrage</h3><ol><li>Tolerance = 0,08. Dan VIF = 1/0,08 = 12,5: boven de cursusgrens van 10.</li></ol><p class=\"note\"><strong>Let op:</strong> Correlatie van x met y is iets anders dan samenhang tussen de x-variabelen. Een automatisch selectieproces vervangt geen inhoudelijke keuze.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik VIF en tolerance om te beoordelen of verklarende variabelen onderling zoveel overlap vertonen dat hun afzonderlijke effecten moeilijk te onderscheiden zijn.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Variance Inflation Factor</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Variance Inflation Factor\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>VIF</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>Tolerance</mi><mi>i</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>1</mn><mo>−</mo><msup><msub><mi>R</mi><mi>i</mi></msub><mn>2</mn></msup></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>Tolerance komt uit de Coefficients-uitvoer. Rᵢ² hoort bij een hulpregressie waarin xᵢ wordt verklaard uit de overige x-variabelen. VIF is het omgekeerde van tolerance; dit is niet de R² van het hoofdmodel met y.</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"vif\"><h3>Een kleine tolerance geeft een grote VIF</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>De omgekeerde relatie</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"VIF tegenover tolerance; x-as: Tolerance; y-as: VIF\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">0,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">5,2</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">10,5</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">15,8</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">21,0</text><text x=\"58.00\" y=\"200\" text-anchor=\"middle\">0,1</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">0,3</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">0,5</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">0,8</text><text x=\"334.00\" y=\"200\" text-anchor=\"middle\">1,0</text><path d=\"M58 105.71H334\" stroke=\"var(--fv-orange)\" stroke-dasharray=\"5 4\"/><text x=\"330\" y=\"100.71\" text-anchor=\"end\" fill=\"var(--fv-orange)\">cursusgrens 10</text><polyline points=\"58.00,31.43 61.45,59.94 64.90,79.27 68.35,93.24 71.80,103.81 75.25,112.08 78.70,118.73 82.15,124.20 85.60,128.77 89.05,132.65 92.50,135.98 95.95,138.87 99.40,141.41 102.85,143.65 106.30,145.65 109.75,147.44 113.20,149.05 116.65,150.51 120.10,151.83 123.55,153.05 127.00,154.16 130.45,155.19 133.90,156.13 137.35,157.01 140.80,157.83 144.25,158.58 147.70,159.29 151.15,159.96 154.60,160.58 158.05,161.16 161.50,161.71 164.95,162.23 168.40,162.72 171.85,163.19 175.30,163.63 178.75,164.05 182.20,164.44 185.65,164.82 189.10,165.18 192.55,165.52 196.00,165.85 199.45,166.16 202.90,166.46 206.35,166.75 209.80,167.02 213.25,167.29 216.70,167.54 220.15,167.78 223.60,168.02 227.05,168.24 230.50,168.46 233.95,168.67 237.40,168.87 240.85,169.07 244.30,169.25 247.75,169.43 251.20,169.61 254.65,169.78 258.10,169.94 261.55,170.10 265.00,170.26 268.45,170.41 271.90,170.55 275.35,170.69 278.80,170.83 282.25,170.96 285.70,171.09 289.15,171.22 292.60,171.34 296.05,171.46 299.50,171.57 302.95,171.68 306.40,171.79 309.85,171.90 313.30,172.00 316.75,172.10 320.20,172.20 323.65,172.30 327.10,172.39 330.55,172.48 334.00,172.57\" fill=\"none\" stroke=\"var(--fv-green)\" stroke-width=\"2.5\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Tolerance</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">VIF</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>VIF = 1/tolerance</span></div><p class=\"fv-work\">Tolerance 0,08 → VIF 12,5. Tolerance 0,10 → VIF 10.</p></figure><figure class=\"fv-panel\"><figcaption>De hulpregressie herkennen</figcaption><table class=\"fv-table\"><caption>x_i verklaard uit de overige x-variabelen</caption><thead><tr><th scope=\"col\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><msub><mi>R</mi><mi>i</mi></msub><mn>2</mn></msup></mrow></math></th><th scope=\"col\">Tolerance</th><th scope=\"col\">VIF</th></tr></thead><tbody><tr><td>0,50</td><td>0,50</td><td>2</td></tr><tr><td>0,90</td><td>0,10</td><td>10</td></tr><tr><td>0,92</td><td>0,08</td><td>12,5</td></tr></tbody></table><p class=\"fv-work\">Het gaat om onderlinge overlap tussen verklarende variabelen; niet om R² van y in het hoofdmodel.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De cursusgrens is een onderzoekssignaal. Weglaten van een variabele vraagt een inhoudelijke keuze en opnieuw schatten.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Lees tolerance of VIF per verklarende variabele af.</li><li>Als alleen tolerance bekend is, deel 1 door die tolerance.</li><li>Vergelijk met de cursusvuistregel: VIF groter dan 10 is een probleemsignaal.</li><li>Onderzoek inhoudelijke overlap en schat een aangepast model opnieuw als een variabele wordt weggelaten.</li></ol><h3>Voorbeeld: overlap en extra bijdrage</h3><ol><li>Tolerance = 0,08. Dan VIF = 1/0,08 = 12,5: boven de cursusgrens van 10.</li></ol><p class=\"note\"><strong>Let op:</strong> Correlatie van x met y is iets anders dan samenhang tussen de x-variabelen. Een automatisch selectieproces vervangt geen inhoudelijke keuze.</p>"
         },
         {
           "title": "De extra bijdrage van één toegevoegde variabele toetsen",
           "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik deze F-verhouding om twee geneste modellen met precies één extra verklarende variabele te vergelijken. Beide modellen moeten dezelfde y en dezelfde waarnemingen gebruiken.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Eén extra variabele</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Eén extra variabele\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><msub><mi>SSR</mi><mtext>uitgebreid</mtext></msub><mo>−</mo><msub><mi>SSR</mi><mtext>klein</mtext></msub></mrow><mrow><msub><mi>MSE</mi><mtext>uitgebreid</mtext></msub></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>SSR_klein is de verklaarde kwadratensom van het kleine model. SSR_uitgebreid en MSE_uitgebreid horen bij het model met de extra variabele. De teller heeft hier één vrijheidsgraad; de noemer n − k_uitgebreid − 1.</p><h3>Zo reken je stap voor stap</h3><ol><li>Controleer eerst dat het uitgebreide model alle variabelen van het kleine model bevat, plus precies één extra variabele.</li><li>Trek SSR_klein af van SSR_uitgebreid.</li><li>Deel het verschil door MSE_uitgebreid.</li><li>Vergelijk de uitkomst met de passende F-grens of beoordeel de relevante toetsuitvoer.</li><li>Bij selectie op SPSS Sig. gebruik je de expliciet gegeven selectiegrens. Een al tweezijdige p-waarde wordt niet zonder reden met α/2 vergeleken.</li></ol><h3>Voorbeeld: overlap en extra bijdrage</h3><ol><li>Vergelijk vervolgens twee geldige geneste modellen met één verschil: SSR_klein = 800, SSR_uitgebreid = 850 en MSE_uitgebreid = 10.</li><li>F = (850 − 800)/10 = 5.</li><li>Vergelijk 5 met de toepasselijke F-grens. Alleen deze berekening geeft nog geen conclusie over significantie zonder α en vrijheidsgraden.</li></ol><p class=\"note\"><strong>Let op:</strong> Deze formulevorm geldt voor één extra variabele. Voor meerdere extra variabelen moet de teller ook door hun aantal worden gedeeld. Vergelijk geen modellen op verschillende datasets alsof zij genest zijn.</p>"
+        },
+        {
+          "title": "Geneste modellen: de extra bijdrage zichtbaar berekenen",
+          "html": "<p><strong>Genest</strong> betekent dat het kleine model in het uitgebreide model zit. De uitkomst y, waarnemingen en weging moeten gelijk zijn. Dan kun je de afname in onverklaarde variatie toeschrijven aan de extra variabelen, in plaats van aan een andere dataset.</p><table><caption>Eigen rekenvoorbeeld bij formule 63: dezelfde 50 waarnemingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th><th scope=\"col\">Residual df</th></tr></thead><tbody><tr><td>Klein</td><td>2</td><td>800</td><td>200</td><td>47</td></tr><tr><td>Uitgebreid</td><td>3</td><td>850</td><td>150</td><td>46</td></tr></tbody></table><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"nested-model\"><h3>De extra verklaring tegenover de resterende foutvariatie</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Dezelfde totale variatie</figcaption><table class=\"fv-table\"><caption>De bestaande casus: dezelfde 50 waarnemingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th><th scope=\"col\">Totaal</th></tr></thead><tbody><tr><td>Klein</td><td>800</td><td>200</td><td>1.000</td></tr><tr><td>Uitgebreid</td><td>850</td><td>150</td><td>1.000</td></tr><tr><td>Verschil</td><td>+50</td><td>−50</td><td>0</td></tr></tbody></table><p class=\"fv-work\">De extra variabele verklaart 50 van de voorheen onverklaarde variatie.</p></figure><figure class=\"fv-panel\"><figcaption>De partiële F afmaken</figcaption><table class=\"fv-table\"><caption>De noemer hoort bij het uitgebreide model</caption><thead><tr><th scope=\"col\">Stap</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>Extra variabelen</td><td>1</td></tr><tr><td>Residual df uitgebreid</td><td>50 − 3 − 1 = 46</td></tr><tr><td>MSE uitgebreid</td><td>150/46 ≈ 3,26087</td></tr><tr><td>F</td><td>50/3,26087 ≈ 15,3333</td></tr></tbody></table><p class=\"fv-work\">De verbetering wordt gedeeld door de foutvariatie na uitbreiding, niet door die van het kleine model.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De getallen horen bij dezelfde bestaande casus. Een andere dataset of andere y laat deze vergelijking niet toe. Significant verklaren vraagt daarnaast α en de juiste F-grens.</p></section><!-- formula-visual:end --><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken de partiële F voor de ene extra variabele en beide adjusted R²-waarden. Waarom gebruik je de MSE van het uitgebreide model?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>TotalSS is in beide modellen 1.000. De extra variabele verklaart 850 − 800 = 50 extra.</li><li>MSE<sub>uitgebreid</sub> = 150/46 ≈ 3,26087. F = (850 − 800)/(150/46) ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.</li><li>Deze MSE beschrijft de resterende foutvariatie nadat de extra variabele is opgenomen. De teller meet de verbetering door precies die toevoeging.</li><li>Klein: adjusted R² = 1 − (200/47)/(1.000/49) ≈ 0,79149. Uitgebreid: 1 − (150/46)/(1.000/49) ≈ 0,84022.</li><li>De fit na correctie verbetert. Voor een formele toets kies je vooraf α en zoek je de bijbehorende F-grens met 1 en 46 vrijheidsgraden in tabel 13.8. Een betere fit vervangt validatie en modeldiagnoses niet.</li></ol></details></div><p>Bij één extra variabele sluit deze tweezijdige vergelijking aan op de gekwadrateerde t-toets van die variabele in het uitgebreide model. Voor een blok van q extra variabelen deel je de toename van SSR ook door q. Vergelijk geen model voor y met een model voor ln(y) met deze formule.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/formuleblad.pdf#page=3\" target=\"_blank\" rel=\"noopener\">Formuleblad, adjusted R², formule 51, PDF 3</a>; <a href=\"bronnen/formuleblad.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Formuleblad, partiële F, formule 63, PDF 4</a>; <a href=\"bronnen/tabellenbundel.pdf#page=20\" target=\"_blank\" rel=\"noopener\">Tabellenbundel, tabel 13.8, PDF 20–29</a>; <a href=\"bronnen/boek-h10c.pdf#page=6\" target=\"_blank\" rel=\"noopener\">Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6</a>.</p>",
+          "refs": [
+            {
+              "source": "formules",
+              "page": 3,
+              "locator": "Formuleblad, adjusted R², formule 51, PDF 3"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, partiële F, formule 63, PDF 4"
+            },
+            {
+              "source": "tabellen",
+              "page": 20,
+              "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 6,
+              "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
-      ]
+      ],
+      "learningVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H10 · §10.3 en §10.5",
+        "college": "6–7",
+        "focus": "Onderbouw selectie en vergelijking van modellen, herbeoordeel het model na iedere wijziging en herken de gevolgen van multicollineariteit.",
+        "title": "H10 · §10.3 en §10.5 · Hoorcollege 6–7",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "vif",
+          "title": "Overlap tussen verklarende variabelen meten met VIF"
+        },
+        {
+          "key": "nested-model",
+          "title": "Geneste modellen: de extra bijdrage zichtbaar berekenen"
+        }
+      ],
+      "reading": {
+        "opening": "Je kunt vaak meerdere modellen voor dezelfde uitkomst maken. Extra variabelen kunnen nuttige informatie toevoegen, maar ook overlappen met bestaande kenmerken. Daarom beoordelen we zowel de toegevoegde bijdrage als de stabiliteit en bruikbaarheid van het model.",
+        "conclusion": "Modelkeuze vraagt om meer dan een hogere R²: bekijk de extra bijdrage, overlap en aannames opnieuw. Daarmee is nog niet vastgesteld hoe goed het model buiten de gebruikte gegevens voorspelt. Dat onderzoeken we met validatie."
+      }
     },
     {
       "id": "validatie",
@@ -4451,8 +9354,25 @@ window.SRA = {
       ],
       "sections": [
         {
+          "title": "Een sterke fit in de training kan buiten de training tegenvallen",
+          "html": "<p>Het model en de variabelen zijn gekozen met de trainingsgegevens. Diezelfde gegevens nogmaals beoordelen geeft daarom een gunstig beeld van de prestatie. <strong>Validatie</strong> onderzoekt of het vaste model ook bruikbaar is voor gegevens die bij die keuze niet zijn gebruikt. Dit sluit aan op het controledoel: nieuwe waarnemingen beoordelen met een eerder opgebouwde verwachting.</p><p>Bij data splitting kies je eerst training en test. Bereken coëfficiënten, selectiestappen en eventuele transformaties met de training. Gebruik vervolgens precies dat vaste model voor de test. Als je na iedere testuitkomst het model aanpast, is de testset zelf onderdeel van de modelkeuze geworden en is een onafhankelijke eindbeoordeling nodig.</p><table><caption>MSE en MSPR beantwoorden verschillende vragen</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Berekening</th><th scope=\"col\">Interpretatie</th></tr></thead><tbody><tr><td>MSE op training</td><td>SSE/(n<sub>train</sub> − k − 1)</td><td>Geschatte residuele variantie na schatting op de training.</td></tr><tr><td>MSPR op test</td><td>Σ(y − ŷ)²/n<sub>test</sub></td><td>Gemiddelde gekwadrateerde fout bij voorspellen met het vaste model.</td></tr></tbody></table><p>De noemer van MSPR is het aantal getoetste voorspellingen. Je schat geen k + 1 nieuwe parameters uit die testset. Beide maten hebben gekwadrateerde eenheden. Vergelijk ze op dezelfde y-schaal; MSE van ln(y) en MSPR van eurobedragen zijn niet rechtstreeks vergelijkbaar.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/attentiepunten.pdf#page=8\" target=\"_blank\" rel=\"noopener\">Attentiepunten, validatie, PDF 8–9</a>; <a href=\"bronnen/formuleblad.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Formuleblad, validatieformule 64, PDF 4</a>.</p>",
+          "refs": [
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, validatie, PDF 8–9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, validatieformule 64, PDF 4"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
           "title": "Beoordelen op ongebruikte gegevens",
-          "html": "<p>Bij <strong>data splitting</strong> splits je de waarnemingen in een trainingsset en testset. Je schat en selecteert het model op de trainingsset. Met dat vaste model voorspel je de y-waarden in de testset. De werkelijke testuitkomsten gebruik je om de voorspelfouten te meten.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Voorspelfout op de testset</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Voorspelfout op de testset\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSPR</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><msub><mi>n</mi><mtext>test</mtext></msub></mrow></mfrac></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p>n_test = aantal testwaarnemingen; yᵢ = werkelijk gemeten testwaarde; ŷᵢ = voorspelling met het model uit de trainingsset.</p></details><p><strong>MSPR</strong> is Mean Squared Prediction Error: de gemiddelde gekwadrateerde voorspelfout op de testset. Deel hier door het aantal testwaarnemingen, niet door n − k − 1. Het formuleblad wisselt de lettervolgorde van de afkorting; de formule en betekenis blijven dezelfde.</p><p>Is MSPR ongeveer gelijk aan de MSE van de trainingsset, dan ondersteunt dit de bruikbaarheid op nieuwe data. Een veel grotere MSPR wijst op slechtere generalisatie. De attentiepunten noemen in dat geval MSPR als een beter uitgangspunt voor voorspellingsonzekerheid. Er staat geen universele numerieke grens voor “ongeveer gelijk”.</p>"
+          "html": "<p>Bij <strong>data splitting</strong> splits je de waarnemingen in een trainingsset en testset. Je schat en selecteert het model op de trainingsset. Met dat vaste model voorspel je de y-waarden in de testset. De werkelijke testuitkomsten gebruik je om de voorspelfouten te meten.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Voorspelfout op de testset</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Voorspelfout op de testset\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSPR</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><msub><mi>n</mi><mtext>test</mtext></msub></mrow></mfrac></mrow></math></div></div></div><details class=\"symbols\"><summary>Wat betekenen de symbolen?</summary><p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>n</mi><mtext>test</mtext></msub></mrow></math> = aantal testwaarnemingen; yᵢ = werkelijk gemeten testwaarde; ŷᵢ = voorspelling met het model uit de trainingsset.</p></details><p><strong>MSPR</strong> is Mean Squared Prediction Error: de gemiddelde gekwadrateerde voorspelfout op de testset. Deel hier door het aantal testwaarnemingen, niet door n − k − 1. Het formuleblad wisselt de lettervolgorde van de afkorting; de formule en betekenis blijven dezelfde.</p><p>Is MSPR ongeveer gelijk aan de MSE van de trainingsset, dan ondersteunt dit de bruikbaarheid op nieuwe data. Een veel grotere MSPR wijst op slechtere generalisatie. De attentiepunten noemen in dat geval MSPR als een beter uitgangspunt voor voorspellingsonzekerheid. Er staat geen universele numerieke grens voor “ongeveer gelijk”.</p>"
         },
         {
           "title": "Een leesroute door SPSS",
@@ -4465,11 +9385,35 @@ window.SRA = {
         {
           "title": "Herkomst van validatie",
           "html": "<p>De MSPR-validatie staat in de aanvullende attentiepunten, PDF-pagina 8, en niet in het boek. Gebruik deze cursusaanvulling naast hoofdstuk 10.</p>"
+        },
+        {
+          "title": "Voorspelfouten op een onafhankelijke testset uitwerken",
+          "html": "<p><strong>Eigen rekenvoorbeeld bij de cursusmethode.</strong> Een vast regressiemodel voorspelt de waarden in de onderstaande testset. Neem als trainings-MSE 1. De variabelen hebben in training en test dezelfde schaal.</p><table><caption>Testgegevens en gekwadrateerde fouten</caption><thead><tr><th scope=\"col\">Waarneming</th><th scope=\"col\">Werkelijke y</th><th scope=\"col\">Vaste voorspelling ŷ</th><th scope=\"col\">y − ŷ</th><th scope=\"col\">(y − ŷ)²</th></tr></thead><tbody><tr><td>1</td><td>10</td><td>12</td><td>−2</td><td>4</td></tr><tr><td>2</td><td>14</td><td>13</td><td>1</td><td>1</td></tr><tr><td>3</td><td>20</td><td>17</td><td>3</td><td>9</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken MSPR en formuleer een gevolg voor het gebruik van de trainingsonzekerheid. Kun je hieruit een harde algemene afkeurgrens afleiden?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><p>MSPR = (4 + 1 + 9)/3 = 4,6667. De gemiddelde gekwadrateerde fout op de test is veel groter dan de trainings-MSE 1. De training geeft hier een te gunstige indruk van nieuwe voorspelfouten. Onderzoek onder meer overfitting, een andere samenstelling van de testgegevens of veranderde omstandigheden. De attentiepunten noemen MSPR als een beter uitgangspunt wanneer deze duidelijk groter is. Er staat geen universele numerieke afkeurgrens en deze kleine oefentest geeft op zichzelf geen zekerheid over de toekomstige prestatie.</p></details></div><p>Laat in een tentamenantwoord zien waar de voorspellingen vandaan komen, wat de noemer is en welke vergelijking je maakt. Alleen “MSPR = 4,67” laat de betekenis voor de bruikbaarheid van het model onbesproken.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/attentiepunten.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Attentiepunten, data splitting en MSPR, PDF 9</a>; <a href=\"bronnen/formuleblad.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Formuleblad, formule 64, PDF 4</a>.</p>",
+          "refs": [
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
       ],
       "example": {
         "title": "Voorbeeld",
         "steps": [
+          "Werkelijke testwaarden: 10, 14 en 20. Voorspellingen: 12, 13 en 17.",
+          "Fouten y − ŷ: −2, 1 en 3. Kwadraten: 4, 1 en 9.",
+          "MSPR = (4 + 1 + 9)/3 = 14/3 ≈ 4,6667.",
+          "Als de trainings-MSE 1 is, zijn de fouten op de testset aanzienlijk groter. De training geeft dan een te gunstig beeld van de voorspelfout."
+        ],
+        "context": "Hoe groot is de gemiddelde gekwadrateerde voorspelfout voor drie testwaarnemingen? We berekenen MSPR en vergelijken die met de gegeven trainings-MSE.",
+        "stepsHtml": [
           "Werkelijke testwaarden: 10, 14 en 20. Voorspellingen: 12, 13 en 17.",
           "Fouten y − ŷ: −2, 1 en 3. Kwadraten: 4, 1 en 9.",
           "MSPR = (4 + 1 + 9)/3 = 14/3 ≈ 4,6667.",
@@ -4495,6 +9439,26 @@ window.SRA = {
           "source": "spss",
           "locator": "SPSS-opgaven en uitwerkingen",
           "page": 1
+        },
+        {
+          "source": "attentie",
+          "page": 8,
+          "locator": "Attentiepunten, validatie, PDF 8–9"
+        },
+        {
+          "source": "formules",
+          "page": 4,
+          "locator": "Formuleblad, validatieformule 64, PDF 4"
+        },
+        {
+          "source": "attentie",
+          "page": 9,
+          "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+        },
+        {
+          "source": "formules",
+          "page": 4,
+          "locator": "Formuleblad, formule 64, PDF 4"
         }
       ],
       "questions": [
@@ -4535,6 +9499,26 @@ window.SRA = {
               "source": "spss",
               "locator": "SPSS-opgaven en uitwerkingen",
               "page": 1
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, validatie, PDF 8–9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, validatieformule 64, PDF 4"
+            },
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
             }
           ],
           "recognition": {
@@ -4581,6 +9565,26 @@ window.SRA = {
               "source": "spss",
               "locator": "SPSS-opgaven en uitwerkingen",
               "page": 1
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, validatie, PDF 8–9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, validatieformule 64, PDF 4"
+            },
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
             }
           ],
           "recognition": {
@@ -4627,6 +9631,26 @@ window.SRA = {
               "source": "spss",
               "locator": "SPSS-opgaven en uitwerkingen",
               "page": 1
+            },
+            {
+              "source": "attentie",
+              "page": 8,
+              "locator": "Attentiepunten, validatie, PDF 8–9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, validatieformule 64, PDF 4"
+            },
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
             }
           ],
           "recognition": {
@@ -4646,9 +9670,55 @@ window.SRA = {
       "formulaGuide": [
         {
           "title": "De voorspelfout op ongebruikte testgegevens meten",
-          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik MSPR nadat het model met trainingsgegevens is geschat. Je beoordeelt hoe goed dat vaste model voorspelt op andere, niet voor de schatting gebruikte waarnemingen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Voorspelfout op de testset</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Voorspelfout op de testset\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSPR</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><msub><mi>n</mi><mtext>test</mtext></msub></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>n_test = aantal testwaarnemingen; yᵢ = werkelijk gemeten testwaarde; ŷᵢ = voorspelling met het model uit de trainingsset. De fout is werkelijk y minus voorspeld ŷ. Door te kwadrateren heffen positieve en negatieve fouten elkaar niet op. MSPR heeft de eenheid van y².</p><h3>Zo reken je stap voor stap</h3><ol><li>Houd het geschatte trainingsmodel vast en voorspel voor iedere testwaarneming de y.</li><li>Bereken per testwaarneming y − ŷ en kwadrateer die fout.</li><li>Tel de gekwadrateerde fouten op en deel door n_test.</li><li>Vergelijk MSPR met de trainings-MSE als aanwijzing voor hoe goed de trainingsprestatie overdraagbaar is.</li><li>Lees SPSS steeds per functie: Coefficients voor B en individuele toetsen, ANOVA voor MSE en globale F, Model Summary voor R² en adjusted R².</li></ol><h3>Voorbeeld</h3><ol><li>Werkelijke testwaarden: 10, 14 en 20. Voorspellingen: 12, 13 en 17.</li><li>Fouten y − ŷ: −2, 1 en 3. Kwadraten: 4, 1 en 9.</li><li>MSPR = (4 + 1 + 9)/3 = 14/3 ≈ 4,6667.</li><li>Als de trainings-MSE 1 is, zijn de fouten op de testset aanzienlijk groter. De training geeft dan een te gunstig beeld van de voorspelfout.</li></ol><p class=\"note\"><strong>Let op:</strong> De noemer is n_test, niet de residuele vrijheidsgraad van de training. Blijf je het model aanpassen op dezelfde testset, dan is die set niet meer een onafhankelijke eindcontrole.</p>"
+          "html": "<h3>Wanneer gebruik je dit?</h3><p>Gebruik MSPR nadat het model met trainingsgegevens is geschat. Je beoordeelt hoe goed dat vaste model voorspelt op andere, niet voor de schatting gebruikte waarnemingen.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Voorspelfout op de testset</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Voorspelfout op de testset\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>MSPR</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover accent=\"true\"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub><mo>)</mo></mrow><mn>2</mn></msup></mrow><mrow><msub><mi>n</mi><mtext>test</mtext></msub></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>n</mi><mtext>test</mtext></msub></mrow></math> = aantal testwaarnemingen; yᵢ = werkelijk gemeten testwaarde; ŷᵢ = voorspelling met het model uit de trainingsset. De fout is werkelijk y minus voorspeld ŷ. Door te kwadrateren heffen positieve en negatieve fouten elkaar niet op. MSPR heeft de eenheid van y².</p><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"test-errors\"><h3>De fouten op nieuwe gegevens zichtbaar maken</h3><p class=\"fv-provenance\">Dezelfde testwaarden en voorspellingen als de bestaande MSPR-uitleg: y = 10, 14, 20; ŷ = 12, 13, 17.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Werkelijk tegenover voorspeld</figcaption><svg class=\"fv-chart\" viewBox=\"0 0 360 238\" role=\"img\" aria-label=\"Testwaarden en vaste voorspellingen; x-as: Testwaarneming; y-as: y\" xmlns=\"http://www.w3.org/2000/svg\"><path class=\"fv-gridline\" d=\"M58 180.00H334\"/><text x=\"51\" y=\"184.00\" text-anchor=\"end\">8,0</text><path class=\"fv-gridline\" d=\"M58 141.00H334\"/><text x=\"51\" y=\"145.00\" text-anchor=\"end\">11,5</text><path class=\"fv-gridline\" d=\"M58 102.00H334\"/><text x=\"51\" y=\"106.00\" text-anchor=\"end\">15,0</text><path class=\"fv-gridline\" d=\"M58 63.00H334\"/><text x=\"51\" y=\"67.00\" text-anchor=\"end\">18,5</text><path class=\"fv-gridline\" d=\"M58 24.00H334\"/><text x=\"51\" y=\"28.00\" text-anchor=\"end\">22,0</text><text x=\"127.00\" y=\"200\" text-anchor=\"middle\">1</text><text x=\"196.00\" y=\"200\" text-anchor=\"middle\">2</text><text x=\"265.00\" y=\"200\" text-anchor=\"middle\">3</text><path d=\"M127.00 157.71L127.00 135.43\" stroke=\"var(--fv-orange)\" stroke-width=\"2\"/><path d=\"M196.00 113.14L196.00 124.29\" stroke=\"var(--fv-orange)\" stroke-width=\"2\"/><path d=\"M265.00 46.29L265.00 79.71\" stroke=\"var(--fv-orange)\" stroke-width=\"2\"/><circle cx=\"127.00\" cy=\"157.71\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"196.00\" cy=\"113.14\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"265.00\" cy=\"46.29\" r=\"4\" fill=\"var(--fv-green)\"/><circle cx=\"127.00\" cy=\"135.43\" r=\"4\" fill=\"var(--fv-purple)\"/><circle cx=\"196.00\" cy=\"124.29\" r=\"4\" fill=\"var(--fv-purple)\"/><circle cx=\"265.00\" cy=\"79.71\" r=\"4\" fill=\"var(--fv-purple)\"/><path class=\"fv-axis\" d=\"M58 24V180H334\"/><text x=\"196\" y=\"224\" text-anchor=\"middle\">Testwaarneming</text><text transform=\"translate(15 104) rotate(-90)\" text-anchor=\"middle\">y</text></svg><div class=\"fv-legend\"><span><i style=\"background:var(--fv-green)\"></i>Werkelijk y</span><span><i style=\"background:var(--fv-purple)\"></i>Voorspeld ŷ</span></div><p class=\"fv-work\">Fouten y − ŷ: −2, +1, +3. De volledige foutentabel staat in het volgende voorbeeld.</p></figure><figure class=\"fv-panel\"><figcaption>Training tegenover test</figcaption><table class=\"fv-table\"><caption>Dezelfde eenheid: y²</caption><thead><tr><th scope=\"col\">Gegevens</th><th scope=\"col\">Gemiddelde kwadratische fout</th></tr></thead><tbody><tr><td>Training: gegeven MSE</td><td>1</td></tr><tr><td>Test: (4 + 1 + 9)/3</td><td>4,6667</td></tr></tbody></table><p class=\"fv-work\">De grotere testfout geeft aanleiding om de overdraagbaarheid van de trainingsprestatie te onderzoeken.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> MSPR deelt door het aantal testwaarnemingen. Het model is op deze testset niet opnieuw geschat. Drie punten leveren geen universele afkeurgrens.</p></section><!-- formula-visual:end --><h3>Zo reken je stap voor stap</h3><ol><li>Houd het geschatte trainingsmodel vast en voorspel voor iedere testwaarneming de y.</li><li>Bereken per testwaarneming y − ŷ en kwadrateer die fout.</li><li>Tel de gekwadrateerde fouten op en deel door <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>n</mi><mtext>test</mtext></msub></mrow></math>.</li><li>Vergelijk MSPR met de trainings-MSE als aanwijzing voor hoe goed de trainingsprestatie overdraagbaar is.</li><li>Lees SPSS steeds per functie: Coefficients voor B en individuele toetsen, ANOVA voor MSE en globale F, Model Summary voor R² en adjusted R².</li></ol><h3>Voorbeeld</h3><ol><li>Werkelijke testwaarden: 10, 14 en 20. Voorspellingen: 12, 13 en 17.</li><li>Fouten y − ŷ: −2, 1 en 3. Kwadraten: 4, 1 en 9.</li><li>MSPR = (4 + 1 + 9)/3 = 14/3 ≈ 4,6667.</li><li>Als de trainings-MSE 1 is, zijn de fouten op de testset aanzienlijk groter. De training geeft dan een te gunstig beeld van de voorspelfout.</li></ol><p class=\"note\"><strong>Let op:</strong> De noemer is <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>n</mi><mtext>test</mtext></msub></mrow></math>, niet de residuele vrijheidsgraad van de training. Blijf je het model aanpassen op dezelfde testset, dan is die set niet meer een onafhankelijke eindcontrole.</p>"
+        },
+        {
+          "title": "Voorspelfouten op een onafhankelijke testset uitwerken",
+          "html": "<p><strong>Eigen rekenvoorbeeld bij de cursusmethode.</strong> Een vast regressiemodel voorspelt de waarden in de onderstaande testset. Neem als trainings-MSE 1. De variabelen hebben in training en test dezelfde schaal.</p><table><caption>Testgegevens en gekwadrateerde fouten</caption><thead><tr><th scope=\"col\">Waarneming</th><th scope=\"col\">Werkelijke y</th><th scope=\"col\">Vaste voorspelling ŷ</th><th scope=\"col\">y − ŷ</th><th scope=\"col\">(y − ŷ)²</th></tr></thead><tbody><tr><td>1</td><td>10</td><td>12</td><td>−2</td><td>4</td></tr><tr><td>2</td><td>14</td><td>13</td><td>1</td><td>1</td></tr><tr><td>3</td><td>20</td><td>17</td><td>3</td><td>9</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken MSPR en formuleer een gevolg voor het gebruik van de trainingsonzekerheid. Kun je hieruit een harde algemene afkeurgrens afleiden?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><p>MSPR = (4 + 1 + 9)/3 = 4,6667. De gemiddelde gekwadrateerde fout op de test is veel groter dan de trainings-MSE 1. De training geeft hier een te gunstige indruk van nieuwe voorspelfouten. Onderzoek onder meer overfitting, een andere samenstelling van de testgegevens of veranderde omstandigheden. De attentiepunten noemen MSPR als een beter uitgangspunt wanneer deze duidelijk groter is. Er staat geen universele numerieke afkeurgrens en deze kleine oefentest geeft op zichzelf geen zekerheid over de toekomstige prestatie.</p></details></div><p>Laat in een tentamenantwoord zien waar de voorspellingen vandaan komen, wat de noemer is en welke vergelijking je maakt. Alleen “MSPR = 4,67” laat de betekenis voor de bruikbaarheid van het model onbesproken.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/attentiepunten.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Attentiepunten, data splitting en MSPR, PDF 9</a>; <a href=\"bronnen/formuleblad.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Formuleblad, formule 64, PDF 4</a>.</p>",
+          "refs": [
+            {
+              "source": "attentie",
+              "page": 9,
+              "locator": "Attentiepunten, data splitting en MSPR, PDF 9"
+            },
+            {
+              "source": "formules",
+              "page": 4,
+              "locator": "Formuleblad, formule 64, PDF 4"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
-      ]
+      ],
+      "learningVersion": "2026-09-25",
+      "curriculum": {
+        "book": "Aanvullende collegestof · geen boekparagraaf",
+        "college": "7; toepassing in 8",
+        "focus": "Beoordeel of een model ook op nieuwe gegevens bruikbaar is. Onderscheid trainings-MSE en MSPR van een onafhankelijke testset.",
+        "title": "Aanvullende collegestof · geen boekparagraaf · Hoorcollege 7; toepassing in 8",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [
+        {
+          "key": "test-errors",
+          "title": "De voorspelfout op ongebruikte testgegevens meten"
+        }
+      ],
+      "reading": {
+        "opening": "Een model wordt afgestemd op de gegevens waarmee het is gemaakt. De aansluiting op die trainingsgegevens kan daarom gunstiger lijken dan de prestatie op nieuwe gegevens. Validatie houdt gegevens apart om juist die voorspelfout te onderzoeken.",
+        "conclusion": "Validatie vergelijkt voorspellingen met waarnemingen die niet voor het afstemmen van het model zijn gebruikt. Een grotere testfout dan trainingsfout kan een te gunstig trainingsbeeld zichtbaar maken. De laatste les brengt methodekeuze, rekenen en interpreteren samen in een tentamenantwoord."
+      }
     },
     {
       "id": "tentamen",
@@ -4661,6 +9731,28 @@ window.SRA = {
         "Gericht herhalen op basis van fouten"
       ],
       "sections": [
+        {
+          "title": "Van SPSS-uitvoer naar een beargumenteerd tentamenantwoord",
+          "html": "<p>Het tentamen vraagt om informatie uit meerdere tabellen en grafieken te verbinden. Begin bij de gevraagde uitspraak. Lees daarna de afhankelijke variabele, opgenomen voorspellers, n, modelnummer en eventuele weging in de uitvoer. Een getal uit een vorige modelstap kan correct afgelezen zijn en toch bij de verkeerde vraag horen.</p><table><caption>Welke prestatie moet je zelfstandig kunnen leveren?</caption><thead><tr><th scope=\"col\">Onderdeel</th><th scope=\"col\">Volledig antwoord</th></tr></thead><tbody><tr><td>Vergelijking en voorspelling</td><td>B-coëfficiënten, correcte dummy’s/transformaties, invulling, eenheden en interpretatie.</td></tr><tr><td>ANOVA</td><td>SS en df reconstrueren, MSE/F/R² berekenen en de grootheden onderscheiden.</td></tr><tr><td>Toetsen</td><td>Populatieparameter, H₀/H₁, α, df, tabelkeuze of p, beslissing, context en risico.</td></tr><tr><td>Diagnostiek</td><td>Relevante tabel/figuur, gekozen maat en grens, conclusie en onderbouwde vervolgactie.</td></tr><tr><td>Modelbouw</td><td>Selectiecriterium, één wijziging per stap, opnieuw schatten, overlap en bruikbaarheid beoordelen.</td></tr><tr><td>Validatie</td><td>Vast model op ongebruikte gegevens, MSPR correct berekenen en met passende MSE vergelijken.</td></tr></tbody></table><p>Oefen eerst met markeringen bij de relevante cellen en daarna met volledige ongemarkeerde uitvoer. Gebruik zowel open berekeningen als MC-vragen: de eerste controleren je gehele redenering, de tweede helpen veelgemaakte interpretatiefouten herkennen.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/onderwijsprogramma.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Onderwijsprogramma, toetsing, PDF 4</a>; <a href=\"bronnen/tentamen-2025-03.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Tentamen 17 maart 2025, vragen 19–21, PDF 9</a>; <a href=\"bronnen/attentiepunten.pdf#page=5\" target=\"_blank\" rel=\"noopener\">Attentiepunten, vereiste diagnoseconclusies, PDF 5</a>.</p>",
+          "refs": [
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Onderwijsprogramma, toetsing, PDF 4"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
         {
           "title": "Wat het onderwijsprogramma vraagt",
           "html": "<p>Het onderwijsprogramma najaar 2026 noemt een tentamen van drie uur: 35 punten voor schattingsmethoden en 65 punten voor regressie. De voorgeschreven kern is hoofdstuk 8, 9 en 10, met SET als voorkennis. De samenvatting volgt die inhoudelijke verdeling. Oudere tentamens kunnen een andere indeling in opgaven hebben.</p><p>Werk eerst de lessen en begripchecks door. Maak daarna echte opgaven zonder de uitwerking te openen. Een goede score op meerkeuzechecks is een aanwijzing voor begrip, maar vervangt het zelfstandig uitwerken van een volledig tentamen niet.</p>"
@@ -4676,6 +9768,35 @@ window.SRA = {
         {
           "title": "Oefen in twee rondes",
           "html": "<p><strong>Leerronde:</strong> gebruik het formuleblad en bekijk pas na je eigen poging de tussenstappen. Noteer of een fout zat in begrip, formulekeuze, rekenen of formuleren.</p><p><strong>Tentamenronde:</strong> gebruik de oorspronkelijke opgaven en de toegestane tabellen/formules uit je materiaal. Een praktische tijdsverdeling naar punten is circa 63 minuten voor 35 punten en 117 minuten voor 65 punten; houd binnen die tijd ruimte voor controle. Dit is een oefenstrategie, geen officiële tijdsregel.</p><p>Je kunt via “Tentamens oefenen” op de hoofdpagina de bronopgaven openen en je eigen aanpak per casus bewaren. Vergelijk pas daarna met de uitwerking.</p>"
+        },
+        {
+          "title": "SPSS-praktijkroute college 8: één volledige analyse van autoverkoop",
+          "html": "<p><strong>Doel:</strong> de onderdelen zelfstandig verbinden. De casus bevat 163 tweedehandsauto’s en vraagt eerst een enkelvoudig model voor verkoopwaarde uit bouwjaar of leeftijd, daarna een meervoudig model. Let op dat de getoonde volledige analyse 162 bruikbare waarnemingen gebruikt. Het aantal rijen in een bestand is dus niet automatisch het n van iedere regressie.</p><ol><li>Open College8_data.sav of het tabblad College8. Leg vast dat Verkoopwaarde de dependent is en welke bouwjaar- of leeftijdcodering je gebruikt. Maak spreidingsdiagrammen, ook met groepen zichtbaar.</li><li>Schat de enkelvoudige regressie en bewaar actuele residuen, Mahalanobis en Cook. De bron geeft Std. Residual maximum 3,469 bij grens 3; MD maximum 2,813 bij grens 3,634; Cook maximum 0,075 bij grens 0,039. De afwijkende auto’s lijken in de casus geen invoerfouten en blijven behouden.</li><li>Voer <strong>Explore → Normality plots with tests</strong> uit op de actuele residuen. De bron gebruikt n = 162 en Kolmogorov-Smirnov p = 0,059. Maak ABSRES = ABS(RES van dit model) en correleer met Bouwjaar: Sig. = ,000 wijst hier wel op heteroscedasticiteit. Leg uit waarom deze twee diagnoses verschillende conclusies kunnen geven.</li><li>Maak waar nodig dummy’s met <strong>Transform → Create Dummy Variables</strong>. De categorie met weggelaten dummy is de referentie. Controleer logvoorwaarden vóór transformatie, vooral omdat de casus onverkoopbare auto’s met verkoopwaarde nul bevat.</li><li>Schat het meervoudige model, voer backwardselectie uit en beoordeel VIF. De uitwerking kiest in deze casus Kilometerstand óf LnKmStand. Leg de gemaakte keuze uit en controleer na de selectiestappen opnieuw de residuen.</li><li>De eerste groepscontrole keek naar merk; later blijkt Aandrijving relevant. Vergelijk daarom een model met aandrijvingsdummy’s met inhoudelijk verdedigbare afzonderlijke modellen. Alleen “geen groepen gezien” in de eerste grafiek is onvoldoende om alle groepsstructuur uit te sluiten.</li><li>Optioneel: <strong>Data → Split File → Compare Groups: Aandrijving</strong> en daarna <strong>Regression → Linear → Method: Backward</strong>. Zet Split File na deze vergelijking weer uit. Onderzoek per groep opnieuw n, de vuistregel n ≥ 10k en de modelvoorwaarden.</li></ol><p><strong>Wat de bron wel en niet afrondt:</strong> het gezamenlijke model met dummy’s heeft adjusted R² = 0,868. Het benzinemodel heeft 0,919, maar de groepen bevatten 81, 41 en 40 waarnemingen en zijn verschillende datasets. Dit is geen zuivere vergelijking van geneste modellen. De officiële uitwerking werkt de volledige diagnostiek van alle drie afzonderlijke modellen niet uit. Benoem die nog uit te voeren controle in je eigen eindbeoordeling.</p><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/spss-uitwerkingen.pdf#page=37\" target=\"_blank\" rel=\"noopener\">SPSS-uitwerkingen, college 8, PDF 37–47</a>.</p>",
+          "refs": [
+            {
+              "source": "spss",
+              "page": 37,
+              "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
+        },
+        {
+          "title": "Zelfstandige eindopdracht met bronuitvoer",
+          "html": "<p>Open de salarisuitvoer van het tentamen 17 maart 2025, PDF-pagina 9. Werk zonder uitwerking een kort controlememo uit. Neem de oorspronkelijke onderzoeksvraag en variabelen als uitgangspunt.</p><ol><li>Reconstrueer n en k uit ANOVA en leg R² = 0,647 en adjusted R² = 0,636 uit.</li><li>Stel de vergelijking op met alle B-coëfficiënten en benoem de referentiegroepen.</li><li>Beantwoord vragen 19–21 met berekening, correcte tabelkeuze en volledige conclusie.</li><li>Bepaal de eerste backwardkandidaat bij de in de vraag gebruikte grens en beoordeel de VIF-uitvoer. Voer geen voorspelling uit met een denkbeeldig opnieuw geschat model.</li><li>Schrijf welke diagnoses en nieuwe gegevens nog nodig zijn voordat je het model als betrouwbare controleverwachting gebruikt.</li></ol><details class=\"worked-answer\"><summary>Controleer de kern van je redenering</summary><p>n = 200, k = 6 en residual df = 193. R² beschrijft het aandeel salarisvariatie dat dit model in deze dataset verklaart; adjusted R² corrigeert voor modelomvang. WO tegenover HBO is € 365,32 bij gelijke overige kenmerken. De gevraagde puntvoorspelling is met de afgedrukte coëfficiënten € 5.617,705 (gebruikelijk afgerond € 5.618; de sleutel drukt € 5.617 af). De eenzijdige t voor Vrouw is −2,444 met kritieke grens −1,653. Beoordeling heeft p = 0,179 en is de eerste selectiekandidaat; maximale VIF 1,355 geeft volgens de cursusgrens geen multicollineariteitssignaal. Significantie en VIF alleen bewijzen nog geen bruikbaarheid op nieuwe gegevens.</p></details><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/tentamen-2025-03.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Tentamen 17 maart 2025, PDF 9–10</a>; <a href=\"bronnen/tentamen-2025-03.pdf#page=14\" target=\"_blank\" rel=\"noopener\">Officiële uitwerking, PDF 14–15</a>.</p>",
+          "refs": [
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
       ],
       "example": {
@@ -4685,6 +9806,14 @@ window.SRA = {
           "H₀: β₁ ≤ 0; H₁: β₁ > 0. β₁ is de helling in het populatiemodel.",
           "Stel gegeven: t = 3,10 en de juiste eenzijdige kritieke t = 1,70.",
           "3,10 > 1,70: de toetsingsgrootheid ligt in het kritieke gebied. H₀ wordt verworpen.",
+          "Er is een significant positief lineair verband tussen productie en kosten. Het α-risico is relevant. Dit toont op zichzelf geen causaliteit aan."
+        ],
+        "context": "Hoe schrijf je een volledig antwoord op de vraag of productie en kosten positief lineair samenhangen? Het voorbeeld loopt van de gerichte hypothesen via de gegeven t-waarden naar een inhoudelijke conclusie.",
+        "stepsHtml": [
+          "Vraag: toon bij α = 0,05 een positief lineair verband tussen productie en kosten aan.",
+          "H₀: β₁ ≤ 0; H₁: β₁ &gt; 0. β₁ is de helling in het populatiemodel.",
+          "Stel gegeven: t = 3,10 en de juiste eenzijdige kritieke t = 1,70.",
+          "3,10 &gt; 1,70: de toetsingsgrootheid ligt in het kritieke gebied. H₀ wordt verworpen.",
           "Er is een significant positief lineair verband tussen productie en kosten. Het α-risico is relevant. Dit toont op zichzelf geen causaliteit aan."
         ]
       },
@@ -4707,6 +9836,36 @@ window.SRA = {
           "source": "exam2024",
           "locator": "Volledige uitwerking",
           "page": 1
+        },
+        {
+          "source": "programma",
+          "page": 4,
+          "locator": "Onderwijsprogramma, toetsing, PDF 4"
+        },
+        {
+          "source": "exam2025",
+          "page": 9,
+          "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+        },
+        {
+          "source": "attentie",
+          "page": 5,
+          "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+        },
+        {
+          "source": "spss",
+          "page": 37,
+          "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+        },
+        {
+          "source": "exam2025",
+          "page": 9,
+          "locator": "Tentamen 17 maart 2025, PDF 9–10"
+        },
+        {
+          "source": "exam2025",
+          "page": 14,
+          "locator": "Officiële uitwerking, PDF 14–15"
         }
       ],
       "questions": [
@@ -4747,6 +9906,36 @@ window.SRA = {
               "source": "exam2024",
               "locator": "Volledige uitwerking",
               "page": 1
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Onderwijsprogramma, toetsing, PDF 4"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+            },
+            {
+              "source": "spss",
+              "page": 37,
+              "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
             }
           ],
           "recognition": {
@@ -4793,6 +9982,36 @@ window.SRA = {
               "source": "exam2024",
               "locator": "Volledige uitwerking",
               "page": 1
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Onderwijsprogramma, toetsing, PDF 4"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+            },
+            {
+              "source": "spss",
+              "page": 37,
+              "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
             }
           ],
           "recognition": {
@@ -4839,6 +10058,36 @@ window.SRA = {
               "source": "exam2024",
               "locator": "Volledige uitwerking",
               "page": 1
+            },
+            {
+              "source": "programma",
+              "page": 4,
+              "locator": "Onderwijsprogramma, toetsing, PDF 4"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, vragen 19–21, PDF 9"
+            },
+            {
+              "source": "attentie",
+              "page": 5,
+              "locator": "Attentiepunten, vereiste diagnoseconclusies, PDF 5"
+            },
+            {
+              "source": "spss",
+              "page": 37,
+              "locator": "SPSS-uitwerkingen, college 8, PDF 37–47"
+            },
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
             }
           ],
           "recognition": {
@@ -4859,8 +10108,49 @@ window.SRA = {
         {
           "title": "Een formule kiezen en een volledig antwoord opbouwen",
           "html": "<h3>Wanneer gebruik je dit?</h3><p>Dit onderwerp introduceert geen nieuwe formule. Je kiest uit de eerder behandelde relaties op basis van wat de opgave vraagt: een schatting, toets, diagnose of voorspelling.</p><div class=\"formula formula-typeset\"><div class=\"formula-row\"><span class=\"formula-label\">Bij een interval</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Bij een interval\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>Interval</mtext><mo>=</mo><mtext>puntschatting</mtext><mo>±</mo><mi>E</mi></mrow></math></div></div><div class=\"formula-row\"><span class=\"formula-label\">Bij een coëfficiënt toetsen</span><div class=\"math-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Formule: Bij een coëfficiënt toetsen\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><msub><mi>b</mi><mi>j</mi></msub><mo>−</mo><msub><mi>β</mi><mrow><mi>j</mi><mo>,</mo><mn>0</mn></mrow></msub></mrow><mrow><msub><mi>s</mi><msub><mi>b</mi><mi>j</mi></msub></msub></mrow></mfrac></mrow></math></div></div></div><h3>Wat betekenen de symbolen?</h3><p>N, n, B en de spreidingen horen bij een schattingsprobleem. Bij regressie leg je y, de x-variabelen, coëfficiënten en eenheden vast. Bij een toets zijn de berekende toetsingsgrootheid en de kritieke tabelgrens verschillende zaken.</p><h3>Zo reken je stap voor stap</h3><ol><li>Onderstreep de gevraagde uitkomst: welk bedrag, welke hypothese of welke voorspelling moet je geven?</li><li>Noteer de relevante gegevens met betekenis en eenheid. Scheid populatietotalen van steekproefgegevens.</li><li>Noem de methode en controleer de toepassingsvoorwaarden.</li><li>Schrijf de formule op, vul de getallen in en bewaar voldoende tussenliggende decimalen.</li><li>Geef de einduitkomst met de gevraagde afronding én een conclusie in de taal van de casus.</li></ol><h3>Voorbeeld van een volledig toetsantwoord</h3><ol><li>Vraag: toon bij α = 0,05 een positief lineair verband tussen productie en kosten aan.</li><li>H₀: β₁ ≤ 0; H₁: β₁ &gt; 0. β₁ is de helling in het populatiemodel.</li><li>Stel gegeven: t = 3,10 en de juiste eenzijdige kritieke t = 1,70.</li><li>3,10 &gt; 1,70: de toetsingsgrootheid ligt in het kritieke gebied. H₀ wordt verworpen.</li><li>Er is een significant positief lineair verband tussen productie en kosten. Het α-risico is relevant. Dit toont op zichzelf geen causaliteit aan.</li></ol><p class=\"note\"><strong>Let op:</strong> Een los getal laat de methode en interpretatie onzichtbaar. Gebruik de originele open opgaven om zelfstandig uitwerken te oefenen; goede meerkeuze-antwoorden vormen geen volledig tentamenantwoord.</p>"
+        },
+        {
+          "title": "Zelfstandige eindopdracht met bronuitvoer",
+          "html": "<p>Open de salarisuitvoer van het tentamen 17 maart 2025, PDF-pagina 9. Werk zonder uitwerking een kort controlememo uit. Neem de oorspronkelijke onderzoeksvraag en variabelen als uitgangspunt.</p><ol><li>Reconstrueer n en k uit ANOVA en leg R² = 0,647 en adjusted R² = 0,636 uit.</li><li>Stel de vergelijking op met alle B-coëfficiënten en benoem de referentiegroepen.</li><li>Beantwoord vragen 19–21 met berekening, correcte tabelkeuze en volledige conclusie.</li><li>Bepaal de eerste backwardkandidaat bij de in de vraag gebruikte grens en beoordeel de VIF-uitvoer. Voer geen voorspelling uit met een denkbeeldig opnieuw geschat model.</li><li>Schrijf welke diagnoses en nieuwe gegevens nog nodig zijn voordat je het model als betrouwbare controleverwachting gebruikt.</li></ol><details class=\"worked-answer\"><summary>Controleer de kern van je redenering</summary><p>n = 200, k = 6 en residual df = 193. R² beschrijft het aandeel salarisvariatie dat dit model in deze dataset verklaart; adjusted R² corrigeert voor modelomvang. WO tegenover HBO is € 365,32 bij gelijke overige kenmerken. De gevraagde puntvoorspelling is met de afgedrukte coëfficiënten € 5.617,705 (gebruikelijk afgerond € 5.618; de sleutel drukt € 5.617 af). De eenzijdige t voor Vrouw is −2,444 met kritieke grens −1,653. Beoordeling heeft p = 0,179 en is de eerste selectiekandidaat; maximale VIF 1,355 geeft volgens de cursusgrens geen multicollineariteitssignaal. Significantie en VIF alleen bewijzen nog geen bruikbaarheid op nieuwe gegevens.</p></details><p class=\"note learning-source\">Bronnen bij dit onderdeel: <a href=\"bronnen/tentamen-2025-03.pdf#page=9\" target=\"_blank\" rel=\"noopener\">Tentamen 17 maart 2025, PDF 9–10</a>; <a href=\"bronnen/tentamen-2025-03.pdf#page=14\" target=\"_blank\" rel=\"noopener\">Officiële uitwerking, PDF 14–15</a>.</p>",
+          "refs": [
+            {
+              "source": "exam2025",
+              "page": 9,
+              "locator": "Tentamen 17 maart 2025, PDF 9–10"
+            },
+            {
+              "source": "exam2025",
+              "page": 14,
+              "locator": "Officiële uitwerking, PDF 14–15"
+            }
+          ],
+          "regressionVersion": "2026-09-25"
         }
-      ]
+      ],
+      "learningVersion": "2026-09-25",
+      "curriculum": {
+        "book": "H8–H10 · integratie van de voorgeschreven paragrafen",
+        "college": "8",
+        "focus": "Combineer methodekeuze, uitvoer, tabellenbundel, berekening en een onderbouwde casusconclusie. Oefen volledige open vragen zonder aanwijzingen.",
+        "title": "H8–H10 · integratie van de voorgeschreven paragrafen · Hoorcollege 8",
+        "refs": [
+          {
+            "source": "programma",
+            "page": 5,
+            "locator": "Collegeprogramma: boekparagrafen per hoorcollege"
+          },
+          {
+            "source": "programma",
+            "page": 4,
+            "locator": "Toetsing: 35 punten schattingsmethoden en 65 punten regressie"
+          }
+        ]
+      },
+      "formulaVisuals": [],
+      "reading": {
+        "opening": "Een tentamenopgave geeft vaak meer informatie dan je voor één berekening nodig hebt. Je begint daarom bij de gevraagde uitspraak en selecteert daarna gegevens, methode en voorwaarden. Zo verbind je de losse onderwerpen tot een controleerbaar antwoord.",
+        "conclusion": "Een volledig antwoord laat zien wat je onderzoekt, waarom de methode past, hoe je rekent en wat de uitkomst betekent. Controleer tot slot voorwaarden, eenheden, afronding en de aansluiting op de vraag. Gebruik die volgorde nu bij het zelfstandig oefenen van een volledige opgave."
+      }
     }
   ],
   "sources": {

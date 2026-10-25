@@ -25,7 +25,7 @@ Catalogus: `scripts/terminology.py`. Kennisstart en formules: `scripts/lesson_gu
 
 ## Inhoud
 
-19 lessen, 57 begripchecks, 134 meerkeuzevragen, 19 interactieve reken-/onderzoeksbladen, een begrippenlijst en 10 volledige tentamens met 224 vragen. Stapsgewijs geopende voorbeelden, lokale voortgang, aparte eerste/laatste pogingen, export/import, tentamenuitwerkingen en een rekenmachine.
+19 lessen, 57 begripchecks, 175 meerkeuzevragen, 19 interactieve reken-/onderzoeksbladen, een begrippenlijst en 10 volledige tentamens met 224 vragen. Stapsgewijs geopende voorbeelden, lokale voortgang, aparte eerste/laatste pogingen, export/import, tentamenuitwerkingen en een rekenmachine.
 
 De cijfers bij de checks zijn geen tentamencijfer. Volledige tentamens gebruiken de oorspronkelijke vragen, casussen, tabellen en antwoordmodellen. Open antwoorden worden met het officiële model vergeleken en door de student zelf beoordeeld.
 

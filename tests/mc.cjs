@@ -2,12 +2,15 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'..'),sandbox={window:{}};
 for(const file of ['data/course.js','data/mc.js'])vm.runInNewContext(fs.readFileSync(path.join(root,file),'utf8'),sandbox);
 const D=sandbox.window.SRAMCData,C=sandbox.window.SRA;
-assert.equal(D.topics.length,19);assert.equal(D.topics.flatMap(t=>t.questions).length,134);
+const questionCount=D.topics.reduce((n,t)=>n+t.questions.length,0);
+const legacy=q=>!q.id.includes('-leertoepassing-');
+assert.equal(D.topics.length,19);assert.equal(D.topics.flatMap(t=>t.questions).filter(legacy).length,134);
+assert.equal(questionCount,134+D.learningRevision.addedQuestions);
 const all=new Map();
 for(const t of D.topics){
  assert.ok(C.lessons.some(l=>l.id===t.lesson));
  assert.deepEqual(Array.from(t.questions,q=>q.level),Array.from(t.questions,q=>q.level).sort());
- assert.deepEqual(Array.from(t.questions.filter(q=>!q.id.includes('-aanvulling-')),q=>q.level),[1,1,2,2,3,3]);
+ assert.deepEqual(Array.from(t.questions.filter(q=>legacy(q)&&!q.id.includes('-aanvulling-')),q=>q.level),[1,1,2,2,3,3]);
  for(const r of t.refs)assert.ok(C.sources[r.source]&&r.page>0);
  for(const q of t.questions){assert.ok(!all.has(q.id));all.set(q.id,q);assert.equal(new Set(q.options).size,q.options.length);assert.ok(q.correct>=0&&q.correct<q.options.length);assert.ok(q.steps.length&&q.steps.every(s=>s.trim().length>0));assert.ok(q.pattern.length>35&&q.trap.length>20);}
 }
@@ -50,8 +53,8 @@ function renderFixture(data=D,snapshot=null){
  return {api:window.SRAMC,node,select:value=>{selected={value:String(value)};},render:(topic,item)=>{window.SRAMC.render(topic,item,context);return node('#main').innerHTML;}};
 }
 const ui=renderFixture(),groups=ui.api.groups;
-assert.deepEqual(Array.from(groups,g=>g.questions.length),[19,43,39,27,6]);
-assert.equal(new Set(groups.flatMap(g=>g.questions.map(q=>q.id))).size,134);
+assert.deepEqual(Array.from(groups,g=>g.questions.filter(legacy).length),[19,43,39,27,6]);
+assert.equal(new Set(groups.flatMap(g=>g.questions.map(q=>q.id))).size,questionCount);
 assert.deepEqual(Array.from(groups.flatMap(g=>g.questions.map(q=>q.id))).sort(),Array.from(all.keys()).sort());
 for(const group of groups){
  assert.deepEqual(Array.from(group.questions,q=>q.level),Array.from(group.questions,q=>q.level).sort());
@@ -98,4 +101,4 @@ assert.ok(html.includes('&lt;signaal&gt; &amp; gegeven'));assert.ok(!html.includ
 delete richQuestion.recognition;assert.ok(richUI.render(richData.topics[0].id,'1').includes(richQuestion.pattern.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')));
 for(const file of ['js/mc.js','js/mc-state.js','js/exams.js','js/app.js'])new vm.Script(fs.readFileSync(path.join(root,file),'utf8'),{filename:file});
 const portable=fs.readFileSync(path.join(root,'SRA interactieve samenvatting.html'),'utf8');assert.ok(portable.includes('window.SRAMCData ='));assert.ok(portable.includes('window.SRAMC='));
-console.log('OK: 134 vragen, eerst 4 delen en daarna 19 gegroepeerde onderwerpen, gedeelde voortgang en markeringen, juiste les/bronnen, herkenning na nakijken, rekenantwoorden, eerste poging, herladen, back-up en opslagfouten.');
+console.log(`OK: ${questionCount} vragen, inclusief 134 bestaande vragen, 19 onderwerpen, gedeelde voortgang, bronnen, feedback, herladen en back-up.`);

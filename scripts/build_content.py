@@ -335,8 +335,18 @@ from lesson_guides import enhance_guides
 enhance_guides(lessons)
 from course_completion import enhance as complete_course
 complete_course(lessons, sources)
+from learning_sampling import enhance as deepen_sampling
+from learning_regression import enhance as deepen_regression
+from learning_context import enhance as add_learning_context
+deepen_sampling(lessons, sources)
+deepen_regression(lessons, sources)
+add_learning_context(lessons, sources)
+from formula_visuals import enhance as add_formula_visuals
+add_formula_visuals(lessons)
 from question_explanations import enrich_basic
 enrich_basic(lessons)
+from lesson_reading import enhance as improve_reading
+improve_reading(lessons)
 
 if __name__ == '__main__':
     (ROOT/'data').mkdir(parents=True,exist_ok=True)
