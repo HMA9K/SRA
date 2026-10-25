@@ -15,15 +15,21 @@ TARGET = ROOT / 'output' / 'site'
 def build():
     files = [ROOT / name for name in ('index.html', '404.html',
              'SRA interactieve samenvatting.html', 'SRA leesversie.html')]
-    for folder in ('assets', 'css', 'data', 'js', 'vendor', 'bronnen'):
+    for folder in ('assets', 'css', 'data', 'js', 'vendor', 'bronnen', 'pdf-reader'):
         files.extend(path for path in (ROOT / folder).rglob('*') if path.is_file())
     paths = {path.relative_to(ROOT).as_posix() for path in files}
-    for name in ('data/exams.js', 'data/cirrus-exams.js'):
+    for name in ('data/exams.js', 'data/cirrus-exams.js', 'data/exam-practice.js', 'data/exam-original-pdfs.js'):
         text = (ROOT / name).read_text(encoding='utf-8')
         refs = re.findall(r'bronnen/[A-Za-z0-9_./-]+\.(?:jpg|png|pdf)', text)
         missing = set(refs) - paths
         if missing:
             raise ValueError('Ontbrekende tentamenbronnen: ' + ', '.join(sorted(missing)))
+    originals = json.loads((ROOT/'data/exam-original-pdfs.js').read_text(encoding='utf-8').split(' = ',1)[1].rstrip(';\n'))
+    for exam in originals.values():
+        for kind in ('questions','solutions'):
+            item = exam[kind]
+            if item.get('url') and hashlib.sha256((ROOT/item['url']).read_bytes()).hexdigest() != item['sha256']:
+                raise ValueError('PDF wijkt af van het gecontroleerde origineel: '+item['url'])
     course = (ROOT / 'data/course.js').read_text(encoding='utf-8')
     learning_assets = set(re.findall(r'assets/learning/[A-Za-z0-9_.-]+\.(?:png|jpg)', course))
     missing_assets = learning_assets - paths

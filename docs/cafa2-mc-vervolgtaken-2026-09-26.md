@@ -2,7 +2,7 @@
 
 Actuele vergelijking: [gelijkloop en open taken, 27 september 2026](gelijkloop-en-open-taken-2026-09-27.md). De onderstaande lijst is de historische opdracht; gebruik de actuele matrix voor de uitvoeringsstatus.
 
-Datum: 26 september 2026. Status: **openstaand, later uitvoeren in SRA**.
+Datum oorspronkelijke opdracht: 26 september 2026. **Uitvoering bijgewerkt op 25 oktober:** de SRA-bediening en bronkoppeling zijn uitgevoerd; zie [actuele resultaten en grenzen](geparkeerde-taken-2026-10-25.md). Onderstaande ongewijzigde lijst is de historische opdracht, inclusief financiële vormen die niet zonder statistische bronvraag naar SRA worden gekopieerd.
 
 SRA moet voor onderstaande punten dezelfde bediening krijgen als CAFA2. De gebruiker heeft gevraagd dit nu vast te leggen en naar de SRA-repository te pushen. Dit document geeft geen voltooiingsstatus voor SRA.
 

@@ -1,0 +1,77 @@
+const assert=require('node:assert/strict');const {chromium}=require(process.env.PLAYWRIGHT_PATH||'playwright');
+const base=process.env.PDF_URL||'http://127.0.0.1:8769/';
+(async()=>{const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH});try{
+ const context=await browser.newContext({viewport:{width:820,height:900}}),page=await context.newPage(),errors=[];
+ page.setDefaultTimeout(60000);page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')console.log(m.text());});
+
+ const source=new URL('bronnen/original-pdfs/20250317/opgaven.pdf',base).href;
+ await page.goto(base+'pdf-reader/web/viewer.html?file='+encodeURIComponent(source));
+ await page.waitForFunction(()=>window.CafaPdfReader?.ready);console.log('reader ready');await page.waitForFunction(()=>PDFViewerApplication.isInitialViewSet);await page.waitForTimeout(300);
+ assert.equal(await page.locator('#cafa-content-width').getAttribute('aria-pressed'),'true','Default is content fit');
+ await page.evaluate(()=>PDFViewerApplication.page=10);
+ await page.locator('.page[data-page-number="10"] .textLayer span[role="presentation"]').first().waitFor();
+ await page.locator('#scaleSelect').selectOption('content-width');await page.waitForTimeout(350);
+ assert.equal(await page.locator('#cafa-page-ends').getAttribute('aria-pressed'),'true');
+ const gap=()=>page.locator('.page[data-page-number="10"]').evaluate(e=>({margin:parseFloat(getComputedStyle(e).marginBottom),bar:getComputedStyle(e,'::before').content}));
+ assert.equal((await gap()).margin,12);assert.equal((await gap()).bar,'""');
+ await page.locator('#cafa-page-ends').click();assert.equal((await gap()).margin,0);assert.equal((await gap()).bar,'none');
+ await page.locator('#cafa-single-page').click();await page.waitForFunction(()=>PDFViewerApplication.pdfViewer.scrollMode===3);
+ assert.equal(await page.locator('#viewer .page').count(),1,'Single page excludes adjacent pages');
+ await page.locator('#cafa-next-page').click();await page.waitForFunction(()=>PDFViewerApplication.page===11);assert.equal(await page.locator('#viewer .page').count(),1);
+ await page.locator('#cafa-previous-page').click();await page.waitForFunction(()=>PDFViewerApplication.page===10);
+ await page.reload();await page.waitForFunction(()=>window.CafaPdfReader?.ready&&PDFViewerApplication.isInitialViewSet);await page.waitForFunction(()=>PDFViewerApplication.pdfViewer.scrollMode===3);
+ assert.equal(await page.locator('#cafa-page-ends').getAttribute('aria-pressed'),'false');assert.equal(await page.locator('#viewer .page').count(),1);
+ assert.equal(await page.evaluate(()=>PDFViewerApplication.page),10,'Layout reload keeps reading page');
+ await page.locator('#cafa-single-page').click();await page.waitForFunction(()=>PDFViewerApplication.pdfViewer.scrollMode===0);
+ assert.equal(await page.locator('#viewer .page').count(),await page.evaluate(()=>PDFViewerApplication.pagesCount),'Continuous mode restores all pages');
+ await page.locator('#cafa-page-ends').click();await page.locator('#cafa-content-width').click();await page.waitForTimeout(300);
+
+ const paper=await page.locator('.page[data-page-number="10"]').evaluate(e=>({border:getComputedStyle(e).borderLeftWidth,background:getComputedStyle(document.getElementById('viewerContainer')).backgroundColor}));
+ assert.equal(paper.border,'0px');assert.equal(paper.background,'rgb(255, 255, 255)');
+ const contentLeft=()=>page.locator('.page[data-page-number="10"] .textLayer span[role="presentation"]').evaluateAll(es=>Math.min(...es.filter(e=>e.textContent.trim()).map(e=>e.getBoundingClientRect().left)));
+ assert.ok((await contentLeft())<35,'Inhoudsbreedte starts at text instead of the PDF margin');
+ await page.locator('#scaleSelect').selectOption('2');await page.waitForTimeout(300);
+ assert.ok((await contentLeft())<35,'Numeric zoom remains aligned with text');
+ await page.locator('#scaleSelect').selectOption('content-width');await page.setViewportSize({width:500,height:900});await page.waitForTimeout(400);
+ assert.equal(await page.locator('#scaleSelect').inputValue(),'content-width');assert.ok((await contentLeft())<35,'Content fit follows resized panel');
+ if(process.env.PDF_SCREENSHOT)await page.screenshot({path:process.env.PDF_SCREENSHOT});
+ await page.reload();await page.waitForFunction(()=>window.CafaPdfReader?.ready&&PDFViewerApplication.isInitialViewSet);await page.waitForTimeout(300);
+ assert.equal(await page.locator('#cafa-content-width').getAttribute('aria-pressed'),'true','Content mode survives reload');
+ await page.setViewportSize({width:820,height:900});
+ await page.setViewportSize({width:820,height:900});await page.locator('#scaleSelect').selectOption('1.25');
+ await page.evaluate(()=>{PDFViewerApplication.page=2;});
+ const text=page.locator('.page[data-page-number="2"] .textLayer span[role="presentation"]').filter({hasText:/[A-Za-z]{4}/}).first();await text.waitFor();console.log('text ready');await text.scrollIntoViewIfNeeded();
+ await page.locator('#cafa-highlight-colour').selectOption('#53FFBC');await page.locator('#cafa-highlight').click();
+ await text.waitFor({state:'visible'});await page.waitForTimeout(250);const rect=await text.boundingBox();await page.mouse.move(rect.x+1,rect.y+rect.height/2);await page.mouse.down();await page.mouse.move(rect.x+rect.width-2,rect.y+rect.height/2,{steps:12});await page.mouse.up();
+ await page.waitForFunction(()=>PDFViewerApplication.pdfDocument.annotationStorage.size>0);console.log('highlight made');
+ await page.locator('#cafa-highlight').click();await page.evaluate(()=>CafaPdfReader.flush());
+ assert.equal(await page.locator('#cafa-save-status').innerText(),'Arceringen lokaal opgeslagen');
+ console.log('saved');const view=await page.evaluate(()=>({page:PDFViewerApplication.page,scale:PDFViewerApplication.pdfViewer.currentScale}));
+ await page.reload();await page.waitForFunction(()=>window.CafaPdfReader?.ready);console.log('reader ready');await page.waitForFunction(()=>PDFViewerApplication.isInitialViewSet);await page.waitForTimeout(300);
+ await page.waitForFunction(v=>PDFViewerApplication.page===v.page,view);
+ assert.equal(await page.locator('#cafa-content-width').getAttribute('aria-pressed'),'true','Reopening defaults to content width after manual zoom');
+ await page.waitForFunction(()=>document.getElementById('scaleSelect').value==='content-width'&&PDFViewerApplication.pdfViewer.getPageView(1).annotationEditorLayer?.div?.isConnected);
+ const annotations=await page.evaluate(async()=>Array.from(await (await PDFViewerApplication.pdfDocument.getPage(2)).getAnnotations()).filter(a=>a.subtype==='Highlight').map(a=>({color:Array.from(a.color),id:a.id})));
+ assert.equal(annotations.length,1);assert.deepEqual(annotations[0].color,[83,255,188]);
+ // The editor container can exist before the saved annotation layer has finished rendering.
+ await page.waitForFunction(()=>Array.from(PDFViewerApplication.pdfViewer.getPageView(1).annotationLayer?.annotationLayer?.getEditableAnnotations()||[]).length>0);
+ await page.locator('#cafa-highlight').click();await page.waitForFunction(()=>PDFViewerApplication.pdfViewer.annotationEditorMode===9);const highlight=page.locator('.page[data-page-number="2"] .highlightEditor').first();await highlight.waitFor({state:"attached"});await highlight.scrollIntoViewIfNeeded();await highlight.waitFor();await highlight.click();await page.locator('#cafa-highlight-colour').selectOption('#80EBFF');await page.evaluate(()=>CafaPdfReader.flush());const edited=await page.evaluate(async()=>{const bytes=await PDFViewerApplication.pdfDocument.saveDocument();const task=pdfjsLib.getDocument({data:bytes}),doc=await task.promise;const a=(await (await doc.getPage(2)).getAnnotations()).find(a=>a.subtype==='Highlight');await task.destroy();return Array.from(a.color);});assert.deepEqual(edited,[128,235,255]);await page.locator('#cafa-highlight-delete').click();await page.waitForTimeout(500);await page.evaluate(()=>CafaPdfReader.flush());
+ await page.reload();await page.waitForFunction(()=>window.CafaPdfReader?.ready);console.log('reader ready');await page.waitForFunction(()=>PDFViewerApplication.isInitialViewSet);await page.waitForTimeout(300);
+ assert.equal(await page.evaluate(async()=>(await (await PDFViewerApplication.pdfDocument.getPage(2)).getAnnotations()).filter(a=>a.subtype==='Highlight').length),0);
+ await page.setViewportSize({width:350,height:700});assert.ok(await page.locator('#cafa-highlight').isVisible());assert.ok(await page.locator('#cafa-highlight-colour').isVisible());
+ for(const id of ['cafa-content-width','cafa-page-ends','cafa-single-page'])assert.ok(await page.locator('#'+id).isVisible());
+ await page.locator('#cafa-single-page').click();await page.waitForFunction(()=>PDFViewerApplication.pdfViewer.scrollMode===3);assert.ok(await page.locator('#cafa-next-page').isVisible());assert.ok(await page.locator('#cafa-previous-page').isVisible());
+ const toolbar=await page.locator('.cafa-mark-toolbar').evaluate(e=>({height:e.getBoundingClientRect().height,bottom:e.getBoundingClientRect().bottom,top:document.getElementById('mainContainer').getBoundingClientRect().top,width:document.documentElement.scrollWidth}));
+ assert.ok(toolbar.height>36,'Narrow toolbar wraps');assert.ok(toolbar.top>=toolbar.bottom-1,'Toolbar does not overlap reader');assert.equal(toolbar.width,350);
+ await page.evaluate(()=>PDFViewerApplication.page=10);await page.waitForTimeout(400);
+ await page.locator('#cafa-single-page').click();await page.waitForFunction(()=>PDFViewerApplication.pdfViewer.scrollMode===0);await page.waitForTimeout(400);
+ for(const id of ['cafa-previous-page','cafa-next-page']){
+  assert.ok(await page.locator('#'+id).isVisible(),'Page buttons remain visible in continuous mode');
+  assert.equal(await page.locator('#'+id).evaluate(e=>e.getBoundingClientRect().height),await page.locator('#cafa-single-page').evaluate(e=>e.getBoundingClientRect().height),'Page buttons have the same height as other controls');
+ }
+ await page.locator('#cafa-next-page').click();await page.waitForFunction(()=>PDFViewerApplication.page===11);await page.waitForTimeout(300);
+ await page.locator('#cafa-previous-page').click();await page.waitForFunction(()=>PDFViewerApplication.page===10);
+ if(process.env.PDF_LAYOUT_SCREENSHOT)await page.screenshot({path:process.env.PDF_LAYOUT_SCREENSHOT});
+ assert.deepEqual(errors,[]);console.log('Real mouse highlighting, colour, saved annotations, page/zoom reload, deletion and narrow toolbar passed.');
+ await browser.close();
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

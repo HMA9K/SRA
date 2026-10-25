@@ -203,6 +203,7 @@
   });
   document.documentElement.classList.toggle('enhanced',isCirrus);
   if(!isCirrus)window.SRACirrus.leave();
+  window.SRAMC?.leave();
   $('#main').toggleAttribute('data-no-terms',!isLesson&&tab!=='formules'&&tab!=='begrippen');
   document.body.classList.toggle('sra-full-page',!isLesson);
   document.body.dataset.page=tab;
@@ -238,10 +239,11 @@
   if(focus){window.scrollTo({top:0,left:0,behavior:'instant'});$('#main').focus({preventScroll:true});}
   if(tab==='les'&&parts[2]&&!previousView)focusQuestion(parts[2]);
   window.SRANavigation.after(previousView);
+  window.SRALessonPanel?.sync();
  }
  function changeFont(delta){const cirrus=document.body.classList.contains('cirrus-mode'),key=cirrus?'cirrusFont':'font',base=cirrus?14:16;state[key]=delta===0?base:Math.max(10,Math.min(24,(state[key]||base)+delta));applyFont();save();}
  $('#font-minus').onclick=()=>changeFont(-1);$('#font-plus').onclick=()=>changeFont(1);$('#font-reset').onclick=()=>changeFont(0);
- $('#menu-toggle').onclick=()=>{const open=document.body.classList.toggle('menu-open');$('#menu-toggle').setAttribute('aria-expanded',String(open));if(open)showCurrentSidebarLesson();};
+ $('#menu-toggle').onclick=()=>{if(window.SRALessonPanel?.toggle())return;const open=document.body.classList.toggle('menu-open');$('#menu-toggle').setAttribute('aria-expanded',String(open));if(open)showCurrentSidebarLesson();};
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.body.classList.remove('menu-open');$('#menu-toggle').setAttribute('aria-expanded','false');if($('#tools-menu').open){$('#tools-menu').open=false;$('#tools-menu summary').focus();}}});
  document.addEventListener('click',e=>{if(document.body.classList.contains('menu-open')&&!e.target.closest('#sidebar,#menu-toggle')){document.body.classList.remove('menu-open');$('#menu-toggle').setAttribute('aria-expanded','false');}if(!e.target.closest('#tools-menu'))$('#tools-menu').open=false;});
  window.CourseCalculatorOptions={storageKey:'sra-calculator-history-v1',apiName:'SRACalculator'};

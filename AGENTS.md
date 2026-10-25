@@ -1,5 +1,7 @@
 # Privacy en publicatie
 
+Lees ook `PROJECT_GUIDE.md` voor de centrale bron-, bouw-, test-, samenwerkings- en publicatieafspraken.
+
 - Anonimiseer persoonsgegevens voordat werk wordt vastgelegd, gedeeld of gepubliceerd.
 - Publiceer geen echte gebruikersnamen, persoonlijke of zakelijke e-mailadressen, woon- of werkgeversgegevens, lokale gebruikersnamen of absolute gebruikerspaden.
 - Gebruik relatieve paden en instelbare lokale bronmappen. Gebruik voor commits het bestaande projectpseudoniem met een GitHub-noreplyadres.

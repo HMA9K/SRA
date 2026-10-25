@@ -80,7 +80,7 @@ assert.ok(home.indexOf('data-topic="stratificatie"')<home.indexOf('data-topic="s
 assert.ok(!home.includes('class="mc-levels"'),'Moeilijkheid wordt niet meer als drie tegels getoond.');
 const regression=groups.find(g=>g.id==='hoofd-regressie'),anova=D.topics.find(t=>t.id==='anova'),aq=anova.questions[0],groupNumber=regression.questions.indexOf(aq)+1,aqWrong=(aq.correct+1)%aq.options.length;
 let html=ui.render(regression.id,String(groupNumber));assert.ok(html.includes('href="#les/anova"'));assert.ok(html.includes('<h2 class="mc-question-title">ANOVA en verklaarde variatie</h2>'));assert.ok(!html.includes('Patroonherkenning'));
-assert.ok(html.includes('SRA oefenvragen · Regressie en toetsen'));assert.ok(html.includes('Basisregels bij deze vraag'));assert.ok(html.includes('class="mc-answer-grid"'));
+assert.ok(html.includes('SRA oefenvragen · Regressie en toetsen'));assert.ok(html.includes('Werkwijze'));assert.ok(html.includes('class="mc-answer-grid"'));
 ui.node('#mc-introduction').onclick();assert.ok(ui.node('#question-overview').open);assert.ok(ui.node('#question-overview-content').innerHTML.includes('Je eerste gecontroleerde antwoord blijft bewaard'));
 ui.node('#mc-mark').onchange({target:{checked:true}});ui.select(aqWrong);ui.node('#mc-check').onclick();
 assert.equal(ui.api.summary(regression).done,1);assert.equal(ui.api.summary(anova).done,1);assert.equal(ui.api.summary().done,1);
