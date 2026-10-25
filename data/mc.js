@@ -15409,7 +15409,7 @@ window.SRAMCData = {
     {
       "id": "meervoudig",
       "title": "Meervoudige regressie en dummyvariabelen",
-      "phase": "Verdieping",
+      "phase": "Meervoudige regressie en modelcontrole",
       "lesson": "meervoudig",
       "signal": "De vergelijking bevat meerdere verklarende variabelen of dummy’s.",
       "approach": "Vul alle variabelen in en interpreteer een coëfficiënt bij gelijkblijvende overige variabelen.",
@@ -16404,7 +16404,7 @@ window.SRAMCData = {
     {
       "id": "transformaties",
       "title": "Kromme verbanden en logaritmen",
-      "phase": "Verdieping",
+      "phase": "Meervoudige regressie en modelcontrole",
       "lesson": "transformaties",
       "signal": "De uitvoer noemt logarithmic, exponential, power of ln.",
       "approach": "Lees welke variabele is getransformeerd en keer de bewerking zo nodig terug.",
@@ -17418,7 +17418,7 @@ window.SRAMCData = {
     {
       "id": "modelbouw",
       "title": "Modelkeuze en multicollineariteit",
-      "phase": "Verdieping",
+      "phase": "Meervoudige regressie en modelcontrole",
       "lesson": "modelbouw",
       "signal": "De vraag vergelijkt modellen, selectieprocedures of overlap tussen voorspellers.",
       "approach": "Controleer vergelijkbaarheid, VIF/tolerance en de bijdrage van toegevoegde variabelen.",
@@ -18432,7 +18432,7 @@ window.SRAMCData = {
     {
       "id": "validatie",
       "title": "Valideren en SPSS-uitvoer lezen",
-      "phase": "Verdieping",
+      "phase": "Meervoudige regressie en modelcontrole",
       "lesson": "validatie",
       "signal": "Je beoordeelt voorspellingen op gegevens die niet voor het schatten zijn gebruikt.",
       "approach": "Bereken kwadratische voorspelfouten op de testset en onderscheid die van trainingsfouten.",

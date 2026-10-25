@@ -14,7 +14,8 @@ TARGET = ROOT / 'output' / 'site'
 
 def build():
     files = [ROOT / name for name in ('index.html', '404.html',
-             'SRA interactieve samenvatting.html', 'SRA leesversie.html')]
+             'SRA interactieve samenvatting.html', 'SRA leesversie.html',
+             'docs/tentamen-puntenanalyse-2026-10-25.md')]
     for folder in ('assets', 'css', 'data', 'js', 'vendor', 'bronnen', 'pdf-reader'):
         files.extend(path for path in (ROOT / folder).rglob('*') if path.is_file())
     paths = {path.relative_to(ROOT).as_posix() for path in files}

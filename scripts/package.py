@@ -56,6 +56,10 @@ import build_exam_practice
 build_exam_practice.build()
 import build_mc_exam_frequency
 build_mc_exam_frequency.build(check_sources=not args.without_sources)
+import build_exam_points
+point_analysis = build_exam_points.analyze()
+(root/'data/exam-point-analysis.json').write_text(json.dumps(point_analysis,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+(root/'docs/tentamen-puntenanalyse-2026-10-25.md').write_text(build_exam_points.markdown(point_analysis),encoding='utf8')
 payload = dict(lessons=build_content.lessons, sources=build_content.sources,
                glossary=build_content.glossary, examCases=build_content.exam_cases, terms=build_content.TERMS)
 (root/'data').mkdir(exist_ok=True)

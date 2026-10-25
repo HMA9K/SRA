@@ -53,7 +53,13 @@ const server=http.createServer((req,res)=>{
   // De uitleg bij een inline breuk blijft met het toetsenbord bereikbaar.
   await page.evaluate(()=>{window.StudyTheme.setMode('light');location.hash='#les/rekenen';});
   await page.locator('.section-body math[display="inline"] mfrac').first().waitFor();
+  const formulaSection=page.locator('#uitleg>details').filter({has:page.locator('math[display="inline"] [data-formula-help]')}).first();
+  if(await formulaSection.getAttribute('open')===null){
+   await formulaSection.locator(':scope>summary').focus();await page.keyboard.press('Enter');
+  }
   const symbol=page.locator('.section-body math[display="inline"] [data-formula-help]').first();
+  await symbol.scrollIntoViewIfNeeded();
+  await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
   await symbol.focus();await page.keyboard.press('Enter');
   await page.locator('#formula-help-popup').waitFor({state:'visible'});await page.keyboard.press('Escape');
   await page.locator('#formula-help-popup').waitFor({state:'hidden'});

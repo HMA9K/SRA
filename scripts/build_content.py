@@ -193,7 +193,7 @@ lesson('voorspellen','Van regressielijn naar voorspellingsinterval','Regressie',
  ('Welk interval is doorgaans breder?',['Voor de gemiddelde respons','Voor één nieuwe waarneming','Ze zijn altijd even breed'],1,'Een nieuwe waarneming heeft ook individuele storing.'),
  ('Een realisatie ligt buiten het interval. Wat volgt?',['Fraude staat vast','Nader onderzoek is nodig','De realisatie moet worden verwijderd'],1,'Een afwijking is een signaal, geen automatische verklaring.')],lab='voorspelling',exam='exam2024:5:Vraag 13')
 
-lesson('meervoudig','Meervoudige regressie en dummyvariabelen','Verdieping',
+lesson('meervoudig','Meervoudige regressie en dummyvariabelen','Meervoudige regressie en modelcontrole',
  'Salaris hangt mogelijk samen met leeftijd, opleiding en leidinggeven tegelijk. Meervoudige regressie beschrijft de samenhang met meerdere kenmerken in één model.',
  ['Coëfficiënten bij gelijkblijvende overige kenmerken interpreteren','Dummy’s correct invullen','R² en adjusted R² uit elkaar houden'],[
  ('Eén model, meerdere verklaringen','<div class="formula">ŷ = b₀ + b₁x₁ + b₂x₂ + … + bₖxₖ</div><p>Elke bⱼ beschrijft de verandering in de voorspelde y bij één eenheid meer xⱼ, <strong>terwijl de andere opgenomen variabelen gelijk blijven</strong>. Een coëfficiënt uit een enkelvoudig model kan veranderen zodra je andere variabelen toevoegt. Het blijft een statistische samenhang.</p><p>Gebruik uit Coefficients de kolom B. De constante telt niet mee in k. Voor een individuele coëfficiënt is t = B/Std. Error. Het hele model toets je met F.</p>'),
@@ -206,7 +206,7 @@ lesson('meervoudig','Meervoudige regressie en dummyvariabelen','Verdieping',
  ('Vier verklarende variabelen plus constante: wat is k?',['5','4','3'],1,'De constante telt niet mee.'),
  ('Waarom adjusted R² gebruiken?',['Om voor extra verklarende variabelen te corrigeren','Om de richting van het verband te bepalen','Om causaliteit te bewijzen'],0,'Adjusted R² weegt modelomvang mee.')],exam='exam2025:9:Vraag 19–20')
 
-lesson('transformaties','Kromme verbanden en logaritmen','Verdieping',
+lesson('transformaties','Kromme verbanden en logaritmen','Meervoudige regressie en modelcontrole',
  'Niet elk verband is recht op de oorspronkelijke schaal. Door x, y of beide te transformeren kun je soms toch een lineair model schatten.',
  ['ln en exp als omgekeerde bewerkingen begrijpen','Logaritmisch, exponentieel en machtsmodel herkennen','Terugrekenen naar de oorspronkelijke eenheid'],[
  ('Wat doet een logaritme?','<p>De <strong>natuurlijke logaritme</strong> ln gebruikt grondtal e ≈ 2,718. Je kunt ln zien als de vraag: tot welke macht moet ik e verheffen om dit getal te krijgen? ln(1) = 0, ln(e) = 1 en exp(ln(x)) = x. De functie exp(z) betekent eᶻ. Voor ln(x) moet x positief zijn.</p><p>Een logaritme drukt grote getallen relatief sterker samen. Dat kan een krom verband rechter maken. Kijk naar de puntenwolk en de modelvorm. Het onderwijsprogramma sluit de inverse functie uit; die behandelen we daarom niet.</p>'),
@@ -219,7 +219,7 @@ lesson('transformaties','Kromme verbanden en logaritmen','Verdieping',
  ('ln(ŷ) = 2. Wat is de oorspronkelijke voorspelling?',['2','exp(2) ≈ 7,389','ln(2)'],1,'De omgekeerde bewerking van ln is exp.'),
  ('Bij ln(ŷ) = b₀ + b₁x, welke factor hoort bij één extra x?',['b₁','exp(b₁)','ln(b₁)'],1,'Op de oorspronkelijke schaal is exp(b₁) de vermenigvuldigingsfactor.')],lab='transformatie')
 
-lesson('modelbouw','Modelkeuze en multicollineariteit','Verdieping',
+lesson('modelbouw','Modelkeuze en multicollineariteit','Meervoudige regressie en modelcontrole',
  'Meer variabelen betekent niet automatisch een beter bruikbaar model. Onderzoek hun extra bijdrage en of ze grotendeels dezelfde informatie bevatten.',
  ['Backward, forward en stepwise herkennen','VIF en tolerance interpreteren','Een extra variabele met een partiële F-toets beoordelen'],[
  ('Hoe komt een variabele in het model?','<p><strong>Enter</strong> neemt de opgegeven variabelen tegelijk op. <strong>Backward elimination</strong> begint met alle kandidaten en verwijdert stapsgewijs een onvoldoende bijdragende variabele. <strong>Forward</strong> begint klein en voegt toe. <strong>Stepwise</strong> controleert bij het toevoegen ook of eerdere variabelen weer kunnen vervallen.</p><p>Bij backward is de variabele met de grootste niet-significante p-waarde de eerste kandidaat. Daarna moet het model opnieuw worden geschat: coëfficiënten en p-waarden kunnen veranderen. De constante verwijder je niet zomaar als gewone kandidaat.</p><p class="note"><strong>Bronverschil:</strong> de attentiepunten noemen bij backward een grens ½α voor p-waarden. Een reeds tweezijdige SPSS Sig. wordt bij een gewone tweezijdige toets met α vergeleken; α/2 is de staartkans voor een kritieke t-grens. Volg bij selectiemethoden de expliciet gegeven verwijderingsgrens. In het voorbeeld uit 2025 is p = 0,179 boven beide grenzen, zodat de keuze daar niet afhangt van dit verschil.</p>'),
@@ -232,7 +232,7 @@ lesson('modelbouw','Modelkeuze en multicollineariteit','Verdieping',
  ('Welke methode begint met alle kandidaatvariabelen?',['Forward','Backward','Een enkelvoudige correlatie'],1,'Backward begint volledig en verwijdert stapsgewijs.'),
  ('Waarom opnieuw schatten na verwijderen?',['De andere coëfficiënten en p-waarden kunnen veranderen','Om n automatisch te verdubbelen','Dat hoeft nooit'],0,'Variabelen delen informatie; hun geschatte bijdrage hangt af van de overige opgenomen variabelen.')])
 
-lesson('validatie','Valideren en SPSS-uitvoer lezen','Verdieping',
+lesson('validatie','Valideren en SPSS-uitvoer lezen','Meervoudige regressie en modelcontrole',
  'Een model kan de gebruikte gegevens goed beschrijven en toch slecht voorspellen op nieuwe gegevens. Validatie onderzoekt juist dat verschil.',
  ['Training en test uit elkaar houden','MSPR berekenen en vergelijken met MSE','De juiste SPSS-tabel voor een vraag kiezen'],[
  ('Beoordelen op ongebruikte gegevens','<p>Bij <strong>data splitting</strong> splits je de waarnemingen in een trainingsset en testset. Je schat en selecteert het model op de trainingsset. Met dat vaste model voorspel je de y-waarden in de testset. De werkelijke testuitkomsten gebruik je om de voorspelfouten te meten.</p><div class="formula">MSPR = Σ(yᵢ − ŷᵢ)² / n<sub>test</sub></div><p><strong>MSPR</strong> is Mean Squared Prediction Error: de gemiddelde gekwadrateerde voorspelfout op de testset. Deel hier door het aantal testwaarnemingen, niet door n − k − 1. Het formuleblad wisselt de lettervolgorde van de afkorting; de formule en betekenis blijven dezelfde.</p><p>Is MSPR ongeveer gelijk aan de MSE van de trainingsset, dan ondersteunt dit de bruikbaarheid op nieuwe data. Een veel grotere MSPR wijst op slechtere generalisatie. De attentiepunten noemen in dat geval MSPR als een beter uitgangspunt voor voorspellingsonzekerheid. Er staat geen universele numerieke grens voor “ongeveer gelijk”.</p>'),
@@ -340,6 +340,8 @@ from learning_regression import enhance as deepen_regression
 from learning_context import enhance as add_learning_context
 deepen_sampling(lessons, sources)
 deepen_regression(lessons, sources)
+from learning_exam_focus import enhance as add_exam_focus
+add_exam_focus(lessons, sources)
 add_learning_context(lessons, sources)
 from formula_visuals import enhance as add_formula_visuals
 add_formula_visuals(lessons)

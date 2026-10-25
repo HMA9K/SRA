@@ -9,7 +9,7 @@
   {id:'hoofd-basis',phase:'Basis',title:'Basis statistiek',description:'Voorbereiding op SRA: populatie en steekproef, kengetallen, kans en betrouwbaarheid.'},
   {id:'hoofd-steekproeven',phase:'Schatten',title:'Steekproeven en schatten',description:'Hoofdstuk 8: schatters, onzekerheid, stratificatie en steekproefomvang.'},
   {id:'hoofd-regressie',phase:'Regressie',title:'Regressie en toetsen',description:'Hoofdstuk 9: regressielijnen, ANOVA, hypothesen, modeldiagnostiek en voorspellen.'},
-  {id:'hoofd-modelbouw',phase:'Verdieping',title:'Meervoudige regressie en modelbouw',description:'Hoofdstuk 10: dummyvariabelen, transformaties, modelkeuze, multicollineariteit en validatie.'},
+  {id:'hoofd-modelbouw',phase:'Meervoudige regressie en modelcontrole',title:'Meervoudige regressie en modelbouw',description:'Hoofdstuk 10: dummyvariabelen, transformaties, modelkeuze, multicollineariteit en validatie.'},
   {id:'hoofd-tentamen',phase:'Tentamen',title:'Tentamenaanpak',description:'Vraagtypen herkennen en een volledig, onderbouwd tentamenantwoord opbouwen.'}
  ].map(g=>{const topics=D.topics.filter(t=>t.phase===g.phase);return {...g,topics,questions:topics.flatMap(t=>t.questions).sort((a,b)=>a.level-b.level)};}).filter(g=>g.questions.length);
  let sourceFilter='all',groups=[],parts=[],topics=[];
