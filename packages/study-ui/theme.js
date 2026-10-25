@@ -1,9 +1,9 @@
-/* Based on CAFA2 js/study-theme.js. Session choice; system preference by default. */
+/* Based on CAFA2 js/study-theme.js. Session choice; configurable light default, otherwise system preference. */
 (function(root){
  'use strict';
  const doc=root.document,html=doc.documentElement,key=html.dataset.studyStorage||'study-display-session-v1';
  const media=root.matchMedia?root.matchMedia('(prefers-color-scheme: dark)'):{matches:false};
- let mode='auto';
+ let mode=html.dataset.studyDefaultMode==='light'?'light':'auto';
  try{const stored=root.sessionStorage.getItem(key);if(['auto','light','dark'].includes(stored))mode=stored;}catch(_){}
  function apply(){
   const effective=mode==='auto'?(media.matches?'dark':'light'):mode;

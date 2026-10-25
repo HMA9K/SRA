@@ -57,7 +57,7 @@ De tabel wordt op schermen tot 680 px in rijen weergegeven. Gebruik de component
 
 `--study-*` zijn de gedeelde ontwerptokens. `--study-content-font-size` documenteert de basis van 16 px, maar het pakket wijzigt de root-lettergrootte niet. De app beheert de leesgrootte. De header is standaard 64 px, mobiel 58 px; een afnemer met extra headerregels moet zijn eigen navigatiepositie afstemmen op de werkelijke hoogte.
 
-`theme.js` verzorgt Aan, Uit en Automatisch, bewaart een handmatige keuze in sessionStorage en volgt bij Automatisch de apparaatinstelling. Het script meet ook de werkelijke headerhoogte voor de navigatie en grafieken. Zie `index.html` voor de toegankelijke dropdownmarkup. Antwoorden, voortgang, routering en overige knopfuncties blijven bij de app.
+`theme.js` verzorgt Aan, Uit en Automatisch, bewaart een handmatige keuze in sessionStorage en volgt bij Automatisch de apparaatinstelling. Met `data-study-default-mode="light"` op het html-element start een nieuwe sessie in lichte modus. Een eerder gekozen sessievoorkeur blijft leidend; zonder dit attribuut blijft Automatisch de standaard. SRA gebruikt de lichte standaard. Het script meet ook de werkelijke headerhoogte voor de navigatie en grafieken. Zie `index.html` voor de toegankelijke dropdownmarkup. Antwoorden, voortgang, routering en overige knopfuncties blijven bij de app.
 
 `dark-palette.css` bevat semantische kleurcorrecties voor de kleurcompiler. De compiler vertaalt alleen kleuren en laat indeling, afbeeldingen en afdrukstijlen intact.
 
