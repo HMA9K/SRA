@@ -38,4 +38,15 @@ for lesson in lessons:
         notes = [int(n) for n in re.findall(r'data-source-note="(\d+)"', section['html'])]
         assert notes == section['sourceNotes'] and all(1 <= n <= len(listed) for n in notes), (lesson['id'], section['title'])
 assert set(summaries) == {'Basis', 'Schatten', 'Regressie', 'Meervoudige regressie en modelcontrole'}
+# Herziene lessen 1-9: uitgebreide kern en vervolg, en een bron bij ieder uitlegblok.
+sentences = lambda text: len(re.findall(r'[.!?](?:\s|$)', text))
+for lesson in lessons[:9]:
+    kern, vervolg = lesson['reading']['kern'], lesson['reading']['vervolg']
+    assert len(kern) >= 300 and sentences(kern) >= 4, lesson['id']
+    assert len(vervolg) >= 150 and sentences(vervolg) >= 2, lesson['id']
+    for section in lesson['sections']:
+        if section['title'] != 'Zelf oefenen met deze aanvulling':
+            assert section['sourceNotes'], (lesson['id'], section['title'])
+for phase in ('Basis', 'Schatten'):
+    assert len(summaries[phase]) > 800, phase
 print('OK: 19 lesverhalen, voorbeeldvragen en bronnummering; breuken, wortels, indices, HTML-behoud en herhaalbare opmaak.')

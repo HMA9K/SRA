@@ -72,14 +72,15 @@ def enhance(lessons,sources):
       'toetsen': ('SET-opfrisser: hypothesen en foutkansen', '<p>Formuleer H₀ en H₁ over een populatieparameter. Bij een positief regressieverband: H₀: β₁ ≤ 0, H₁: β₁ &gt; 0. Het α-risico is het ten onrechte verwerpen van een ware H₀. Het β-risico is het niet verwerpen van een onware H₀. Niet verwerpen betekent dat het bewijs onvoldoende is, niet dat H₀ bewezen is.</p><p>Schrijf steeds parameter, hypothesen, toetsingsgrootheid, grens of p-waarde en conclusie in de context op. Voor het gemiddelde gebruikte SET vaak n − 1 vrijheidsgraden; bij enkelvoudige regressie zijn dat n − 2 en bij meervoudige regressie n − k − 1.</p>',3),
     }
     for slug,(title,body,page) in set_blocks.items():
-        L[slug]['sections'].insert(0,dict(title=title,html=body))
-        L[slug]['refs'].append(dict(source='set-basis',page=page,locator=f'SET-attentiepunten, oorspronkelijke PDF p. {page+2}; uitsnede p. {page}'))
+        set_ref=dict(source='set-basis',page=page,locator=f'SET-attentiepunten, oorspronkelijke PDF p. {page+2}; uitsnede p. {page}')
+        L[slug]['sections'].insert(0,dict(title=title,html=body,refs=[set_ref]))
+        L[slug]['refs'].append(set_ref)
 
     add(L['mpu'],'Wanneer een grote steekproef toch onvoldoende kan zijn',
         '<p>n ≥ 100 is de cursusvuistregel voor de normale benadering, geen garantie voor iedere populatie. Het boek waarschuwt dat extreem scheve verdelingen een grotere steekproef kunnen vragen. Beoordeel daarom selectie, verdeling en opvallende posten voordat je het interval interpreteert.</p>',False,[bookref('boek-basis',92)])
     L['mpu']['refs'].append(bookref('boek-basis',92))
     add(L['regressieschatter'],'Een smaller interval moet ook geldig zijn',
-        '<p>De factor √(1 − R²) verkleint de berekende standaardfout, maar maakt een ongeschikte foutverdeling niet geschikt. Het boek bespreekt dat het interval bij ongunstige foutpatronen de werkelijke waarde te vaak kan missen. Kies dus op grond van het verband en de foutstructuur, en controleer de voorwaarden. Een smaller interval is meer berekende precisie, geen hogere gekozen betrouwbaarheid.</p>')
+        '<p>De factor √(1 − R²) verkleint de berekende standaardfout, maar maakt een ongeschikte foutverdeling niet geschikt. Het boek bespreekt dat het interval bij ongunstige foutpatronen de werkelijke waarde te vaak kan missen. Kies dus op grond van het verband en de foutstructuur, en controleer de voorwaarden. Een smaller interval is meer berekende precisie, geen hogere gekozen betrouwbaarheid.</p>',refs=[bookref('boek-h8b',216)])
     L['regressieschatter']['refs'].append(bookref('boek-h8b',216))
 
     boundary='<p><strong>Stratificatie</strong> bepaalt de groepsgrenzen; <strong>allocatie</strong> verdeelt daarna de controles over die groepen. Haal het volledig te controleren topstratum eerst uit de berekening.</p><h3>Cursusopgave H8.8a: cumulatieve boekwaarde</h3>'+steps([
@@ -107,10 +108,11 @@ def enhance(lessons,sources):
         'Nieuwe totale n₃ = 300 / (1 + 8,1876) ≈ 32,65. Rond omhoog naar 33. Er waren 30 controles, dus voeg 3 toe.',
         'Controleer de marge met n₃ = 33 en de overige strata ongewijzigd. Bij de vastgehouden planningswaarden daalt die tot ongeveer € 499.443.'])
     extension+='<p class="note">De cursusuitwerking gebruikt de gebruikelijke N − 1 ≈ N-benadering bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>'
-    add(L['stratificatie'],'Gericht extra controles in één stratum',extension)
-    add(L['steekproefomvang'],'Uitbreiding na stratificatie',extension)
+    extension_refs=[dict(source='opgaven',page=8,locator='H8 opgave 9b/c, PDF 8'),dict(source='uitwerkingen',page=13,locator='H8 opgave 9c, PDF 13'),bookref('boek-h8c',231)]
+    add(L['stratificatie'],'Gericht extra controles in één stratum',extension,refs=extension_refs)
+    add(L['steekproefomvang'],'Uitbreiding na stratificatie',extension,refs=extension_refs)
     add(L['steekproefomvang'],'Omvang bij de quotiëntschatter',
-        '<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld bij slides PDF 34–36</h3>'+steps(['N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.','γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.','n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.','Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.']))
+        '<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld bij slides PDF 34–36</h3>'+steps(['N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.','γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.','n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.','Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.']),refs=[dict(source='slides',page=34,locator='PDF 34–36: omvang bij de quotiëntschatter'),dict(source='formules',page=1,locator='Formules 12–17, PDF-pagina 1')])
     for slug in ['stratificatie','steekproefomvang']:
         L[slug]['refs'].extend([dict(source='opgaven',page=8,locator='H8 opgave 9b/c, PDF 8'),dict(source='uitwerkingen',page=13,locator='H8 opgave 9c, PDF 13')])
     L['stratificatie']['goals'].extend(['Stratagrenzen bepalen met beide cursusmethoden','De steekproef gericht binnen één stratum uitbreiden'])

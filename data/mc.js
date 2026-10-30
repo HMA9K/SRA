@@ -5072,6 +5072,16 @@ window.SRAMCData = {
           "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
         },
         {
+          "source": "boek-h8b",
+          "page": 9,
+          "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 10,
+          "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
+        },
+        {
           "source": "slides",
           "page": 34,
           "locator": "Gerealiseerde marges per schatter"
@@ -5145,6 +5155,16 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 8,
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
             },
             {
               "source": "slides",
@@ -5249,6 +5269,16 @@ window.SRAMCData = {
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
             },
             {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
+            },
+            {
               "source": "slides",
               "page": 34,
               "locator": "Gerealiseerde marges per schatter"
@@ -5349,6 +5379,16 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 8,
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
             },
             {
               "source": "slides",
@@ -5456,6 +5496,16 @@ window.SRAMCData = {
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
             },
             {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
+            },
+            {
               "source": "slides",
               "page": 34,
               "locator": "Gerealiseerde marges per schatter"
@@ -5558,6 +5608,16 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 8,
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
             },
             {
               "source": "slides",
@@ -5665,6 +5725,16 @@ window.SRAMCData = {
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
             },
             {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
+            },
+            {
               "source": "slides",
               "page": 34,
               "locator": "Gerealiseerde marges per schatter"
@@ -5767,6 +5837,16 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 8,
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
             },
             {
               "source": "slides",
