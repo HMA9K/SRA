@@ -280,6 +280,8 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .saved-exam-notes sectio
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .direct-check-option{color:#adbdc9}
 /* css/learning-revision.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation>summary{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #main .source-notes{color:var(--study-muted,#adbdc9)}
+@media (prefers-reduced-motion:reduce){html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-sources li.is-target{outline:2px solid var(--green,#2d765d)}}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-visual{border:1px solid #416254;background:#1a2823}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-visual .fv-provenance{color:#b0bcc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .fv-chart text{fill:#adbfcd}

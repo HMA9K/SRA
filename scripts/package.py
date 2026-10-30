@@ -61,7 +61,8 @@ point_analysis = build_exam_points.analyze()
 (root/'data/exam-point-analysis.json').write_text(json.dumps(point_analysis,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 (root/'docs/tentamen-puntenanalyse-2026-10-25.md').write_text(build_exam_points.markdown(point_analysis),encoding='utf8')
 payload = dict(lessons=build_content.lessons, sources=build_content.sources,
-               glossary=build_content.glossary, examCases=build_content.exam_cases, terms=build_content.TERMS)
+               glossary=build_content.glossary, examCases=build_content.exam_cases, terms=build_content.TERMS,
+               summaries=build_content.summaries)
 (root/'data').mkdir(exist_ok=True)
 (root/'data/course.js').write_text('window.SRA = '+json.dumps(payload,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 if not args.without_sources:
@@ -100,7 +101,11 @@ e=html.escape
 parts=['<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SRA · Leesversie</title><style>body{max-width:900px;margin:35px auto;padding:0 20px;font:17px/1.65 Arial;color:#242431}p,li{text-align:justify;hyphens:auto}h1,h2{color:#444159}h2{margin-top:38px}a{color:#006c47}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f0f1f6}.formula{padding:15px;background:#f0f3fa;overflow-wrap:anywhere}details{margin:15px 0;padding:12px;border:1px solid #ddd}summary{cursor:pointer}article{border-top:2px solid #008859;margin-top:45px}.note{padding:12px;background:#fff6ea}@media(max-width:600px){table{display:block;overflow-x:auto}body{font-size:16px}}@media print{details{break-inside:avoid}}</style><h1>SRA · Zelfstandige leesversie</h1><p>Alle uitleg, voorbeelden en begripchecks zonder scripts. Open antwoorden met de uitklapknop. Voor interactieve rekenbladen en voortgang gebruik je <a href="SRA interactieve samenvatting.html">de interactieve versie</a>.</p><ol>']
 for l in build_content.lessons:parts.append(f'<li><a href="#{l["id"]}">{e(l["title"])}</a></li>')
 parts.append('</ol>')
+summarized=set()
 for i,l in enumerate(build_content.lessons):
+    if l['phase'] not in summarized and build_content.summaries.get(l['phase']):
+        summarized.add(l['phase'])
+        parts.append(f'<section class="phase-summary"><h2>Samenvatting: {e(l["phase"])}</h2>{build_content.summaries[l["phase"]]}</section>')
     parts.append(f'<article id="{l["id"]}"><h2>{i+1}. {e(l["title"])}</h2><p>{e(l["reading"]["opening"])}</p>')
     parts.append('<p><strong>'+e(l['curriculum']['title'])+'</strong></p>')
     for heading, items in [('Dit heb je vooraf nodig', l['prerequisites']), ('Dit ga je leren', l['goals'])]:
@@ -132,12 +137,12 @@ for i,l in enumerate(build_content.lessons):
         if q.get('optionExplanations'):
             parts.append('<h4>De antwoordmogelijkheden</h4>'+''.join('<p><strong>'+e(option)+'</strong><br>'+e(reason)+'</p>' for option,reason in zip(q['options'],q['optionExplanations'])))
         parts.append('</details>')
-    parts.append('<h3>De kern en het vervolg</h3><p>'+e(l['reading']['conclusion'])+'</p>')
-    parts.append('<h3>Bronnen</h3><ul>')
-    for ref in l['refs']:
+    parts.append('<h3>De kern en het vervolg</h3><h4>Kern</h4><p>'+e(l['reading']['kern'])+'</p><h4>Vervolg</h4><p>'+e(l['reading']['vervolg'])+'</p>')
+    parts.append(f'<details class="lesson-sources"><summary><strong>Bronnen bij deze les</strong> ({len(l["sourceList"])})</summary><ol>')
+    for n,ref in enumerate(l['sourceList'],1):
         s=build_content.sources[ref['source']]
-        parts.append(f'<li><a href="bronnen/{s["file"]}#page={ref["page"]}">{e(s["title"])}</a>: {e(ref["locator"])}</li>')
-    parts.append('</ul></article>')
+        parts.append(f'<li id="bron-{l["id"]}-{n}"><a href="bronnen/{s["file"]}#page={ref["page"]}">{e(s["title"])}</a>: {e(ref["locator"])}</li>')
+    parts.append('</ol></details></article>')
 parts.append('<style>'+presentation_css+(root/'css/learning-revision.css').read_text(encoding='utf-8')+'svg{max-width:100%;height:auto}</style></html>')
 read_version=embed_learning_images('\n'.join(parts))
 read_version=read_version.replace('<title>', '<script data-goatcounter="https://sra.goatcounter.com/count" data-goatcounter-settings=\'{"no_onload":true}\' async src="https://gc.zgo.at/count.js"></script><script>\n'+(root/'js/page-names.js').read_text(encoding='utf-8')+'\n</script><title>')

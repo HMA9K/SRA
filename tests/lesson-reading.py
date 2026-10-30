@@ -5,7 +5,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from presentation import inline_formulas
-from build_content import lessons
+from build_content import lessons, sources, summaries
+import re
 
 source = '<p data-example="s/√n">Standaardfout s/√n; s_w/s_b en R²_adj.</p>'
 formatted = inline_formulas(source)
@@ -23,9 +24,18 @@ assert inline_formulas('ns/√n en s/√naam') == 'ns/√n en s/√naam'
 assert len(lessons) == 19
 for lesson in lessons:
     assert len(lesson['reading']['opening']) > 150
-    assert len(lesson['reading']['conclusion']) > 150
+    assert lesson['reading']['kern'] and lesson['reading']['vervolg']
     assert '?' in lesson['example']['context']
     assert len(lesson['example']['stepsHtml']) == len(lesson['example']['steps'])
     for step in lesson['example']['stepsHtml']:
         ET.fromstring('<div>' + step + '</div>')
-print('OK: 19 lesverhalen en voorbeeldvragen; breuken, wortels, indices, HTML-behoud en herhaalbare opmaak.')
+    # Bronnen staan alleen onderaan; blokken verwijzen er met geldige nummers naar.
+    listed = lesson['sourceList']
+    assert len(listed) == len({(r['source'], r['page'], r['locator']) for r in listed})
+    assert all(sources[r['source']] and r['page'] >= 1 for r in listed)
+    for section in lesson['sections']:
+        assert not re.search(r'learning-source|Bronnen bij dit onderdeel|Zie boek p\.|Bron: (slides|opgavenbundel)', section['html']), (lesson['id'], section['title'])
+        notes = [int(n) for n in re.findall(r'data-source-note="(\d+)"', section['html'])]
+        assert notes == section['sourceNotes'] and all(1 <= n <= len(listed) for n in notes), (lesson['id'], section['title'])
+assert set(summaries) == {'Basis', 'Schatten', 'Regressie', 'Meervoudige regressie en modelcontrole'}
+print('OK: 19 lesverhalen, voorbeeldvragen en bronnummering; breuken, wortels, indices, HTML-behoud en herhaalbare opmaak.')

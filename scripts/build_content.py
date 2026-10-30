@@ -7,7 +7,8 @@ lessons = []
 
 def lesson(slug, title, phase, intro, goals, sections, example, pitfalls, refs, questions, lab=None, exam=None):
     lessons.append(dict(id=slug, title=title, phase=phase, intro=intro, goals=goals,
-                        sections=[dict(title=t,html=h) for t,h in sections],
+                        # Een blok mag eigen bronnen hebben: (titel, html, [(bron, vindplaats, pagina)]).
+                        sections=[dict(title=s[0],html=s[1],refs=[dict(source=b,locator=v,page=p) for b,v,p in (s[2] if len(s)>2 else [])]) for s in sections],
                         example=dict(title=example[0],steps=example[1]), pitfalls=pitfalls,
                         refs=[dict(source=s,locator=l,page=p) for s,l,p in refs],
                         questions=[dict(id=f'{slug}-{i+1}',prompt=q[0],options=q[1],correct=q[2],explanation=q[3]) for i,q in enumerate(questions)],
@@ -349,9 +350,12 @@ from question_explanations import enrich_basic
 enrich_basic(lessons)
 from lesson_reading import enhance as improve_reading
 improve_reading(lessons)
+from lesson_sources import enhance as number_sources
+number_sources(lessons, sources)
+from topic_summaries import SUMMARIES as summaries
 
 if __name__ == '__main__':
     (ROOT/'data').mkdir(parents=True,exist_ok=True)
-    payload=dict(lessons=lessons,sources=sources,glossary=glossary,examCases=exam_cases,terms=TERMS)
+    payload=dict(lessons=lessons,sources=sources,glossary=glossary,examCases=exam_cases,terms=TERMS,summaries=summaries)
     (ROOT/'data'/'course.js').write_text('window.SRA = '+json.dumps(payload,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
     print(f'{len(lessons)} lessen; {sum(len(l["questions"]) for l in lessons)} begripchecks; {len(exam_cases)} tentamenroutes')

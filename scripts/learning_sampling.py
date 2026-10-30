@@ -4,7 +4,6 @@ Pas toe na course_completion.enhance. Bestaande les- en vraag-ID's blijven gelij
 Numerieke voorbeelden worden uit de vermelde invoer berekend; tussenwaarden
 worden alleen voor weergave afgerond. Eigen oefeningen zijn herkenbaar gelabeld.
 """
-from html import escape
 from math import ceil, sqrt
 from course_completion import bookref
 
@@ -43,14 +42,6 @@ def exercise(question, answer):
             + answer + '</details></div>')
 
 
-def sources_html(refs, sources):
-    return ('<details class="learning-source"><summary>Bronnen bij dit onderdeel</summary><ul>'
-            + ''.join('<li><a href="bronnen/' + escape(sources[r['source']]['file'])
-                      + '#page=' + str(r['page']) + '" target="_blank" rel="noopener">'
-                      + escape(sources[r['source']]['title']) + '</a> · '
-                      + escape(r['locator']) + '</li>' for r in refs) + '</ul></details>')
-
-
 def mpu(N, n, total, total_squares):
     variance = (total_squares - total * total / n) / (n - 1)
     return dict(mean=total / n, variance=variance, sd=sqrt(variance),
@@ -84,8 +75,7 @@ def enhance(lessons, sources):
 
     def add(slug, title, body, refs, after=None, formula_guide=False):
         lesson = L[slug]
-        section = dict(title=title, html=body + sources_html(refs, sources), refs=refs,
-                       learningVersion=VERSION)
+        section = dict(title=title, html=body, refs=list(refs), learningVersion=VERSION)
         if after is None:
             position = next((i for i, s in enumerate(lesson['sections'])
                              if s['title'] == 'Zelf oefenen met deze aanvulling'), len(lesson['sections']))
@@ -100,8 +90,8 @@ def enhance(lessons, sources):
 
     def extend(slug, title, body, refs):
         section = next(s for s in L[slug]['sections'] if s['title'] == title)
-        section['html'] += body + sources_html(refs, sources)
-        section['refs'] = refs
+        section['html'] += body
+        section['refs'] = section.get('refs', []) + [r for r in refs if r not in section.get('refs', [])]
         section['learningVersion'] = VERSION
         for r in refs:
             if r not in L[slug]['refs']:

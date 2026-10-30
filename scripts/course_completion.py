@@ -42,8 +42,8 @@ def table(caption, heads, rows):
 def steps(items):
     return '<ol>'+''.join('<li>'+x+'</li>' for x in items)+'</ol>'
 
-def add(lesson,title,body,guide=True):
-    lesson['sections'].append(dict(title=title,html=body))
+def add(lesson,title,body,guide=True,refs=()):
+    lesson['sections'].append(dict(title=title,html=body,refs=list(refs)))
     if guide: lesson['formulaGuide'].append(dict(title=title,html=body))
 
 def enhance(lessons,sources):
@@ -76,7 +76,7 @@ def enhance(lessons,sources):
         L[slug]['refs'].append(dict(source='set-basis',page=page,locator=f'SET-attentiepunten, oorspronkelijke PDF p. {page+2}; uitsnede p. {page}'))
 
     add(L['mpu'],'Wanneer een grote steekproef toch onvoldoende kan zijn',
-        '<p>n ≥ 100 is de cursusvuistregel voor de normale benadering, geen garantie voor iedere populatie. Het boek waarschuwt dat extreem scheve verdelingen een grotere steekproef kunnen vragen. Beoordeel daarom selectie, verdeling en opvallende posten voordat je het interval interpreteert. Zie boek p. 92, voetnoot 2.</p>',False)
+        '<p>n ≥ 100 is de cursusvuistregel voor de normale benadering, geen garantie voor iedere populatie. Het boek waarschuwt dat extreem scheve verdelingen een grotere steekproef kunnen vragen. Beoordeel daarom selectie, verdeling en opvallende posten voordat je het interval interpreteert.</p>',False,[bookref('boek-basis',92)])
     L['mpu']['refs'].append(bookref('boek-basis',92))
     add(L['regressieschatter'],'Een smaller interval moet ook geldig zijn',
         '<p>De factor √(1 − R²) verkleint de berekende standaardfout, maar maakt een ongeschikte foutverdeling niet geschikt. Het boek bespreekt dat het interval bij ongunstige foutpatronen de werkelijke waarde te vaak kan missen. Kies dus op grond van het verband en de foutstructuur, en controleer de voorwaarden. Een smaller interval is meer berekende precisie, geen hogere gekozen betrouwbaarheid.</p>')
@@ -94,9 +94,10 @@ def enhance(lessons,sources):
         'Vergelijk cumulatieve doelen 1.802,20, 3.604,40 en 5.406,60 met de beschikbare klassegrenzen.',
         'De uitwerking kiest 1.943,67, 3.671,02 en 5.618,65. Dat geeft bovengrenzen € 1.200, € 2.500, € 5.000 en € 10.000.',
         'Gebruik de nieuwe groepsomvangen 3.196, 2.329, 1.587 en 547 pas daarna voor de allocatie van 300 controles. De 54 topstratumposten komen daar apart bij.'])
-    boundary+='<p class="note">Bron: opgavenbundel PDF 7 en uitwerkingenbundel PDF 10–11. De twee methoden verdelen verschillende grootheden en hoeven dus niet dezelfde grenzen op te leveren. In boektabel 8.6 is 2.500 × 23 gelijk aan 57.500; de gedrukte 75.500 is een drukfout.</p>'
-    add(L['stratificatie'],'Stratagrenzen bepalen vanuit de cursusopgave',boundary)
-    L['stratificatie']['refs'].extend([dict(source='opgaven',page=7,locator='H8 opgave 8a/b, PDF 7'),dict(source='uitwerkingen',page=10,locator='H8 opgave 8a/b, PDF 10–11')])
+    boundary+='<p class="note">De twee methoden verdelen verschillende grootheden en hoeven dus niet dezelfde grenzen op te leveren. In boektabel 8.6 is 2.500 × 23 gelijk aan 57.500; de gedrukte 75.500 is een drukfout.</p>'
+    boundary_refs=[dict(source='opgaven',page=7,locator='H8 opgave 8a/b, PDF 7'),dict(source='uitwerkingen',page=10,locator='H8 opgave 8a/b, PDF 10–11')]
+    add(L['stratificatie'],'Stratagrenzen bepalen vanuit de cursusopgave',boundary,refs=boundary_refs)
+    L['stratificatie']['refs'].extend(boundary_refs)
 
     extension='<p>De totale variantie is de som van de variantiebijdragen van de strata. Bij een gewenste marge E hoort maximaal (E/t)² totale variantie. Houd voor een planningsberekening de gegeven t-waarde en geschatte spreidingen vast; na de aanvullende controle beoordeel je de nieuwe uitkomsten opnieuw.</p><h3>Cursusopgave H8.9b/c</h3>'+steps([
         'De oorspronkelijke schatting is € 6.678.000 met s_tot ≈ € 256.153 en t = 1,978. De marge is circa € 506.670, dus meer dan de gewenste € 500.000.',

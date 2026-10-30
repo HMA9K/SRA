@@ -23,19 +23,14 @@ def figure(name, page, alt, caption):
             'target="_blank" rel="noopener">'
             f'<img src="assets/learning/regression-{name}.png" alt="{escape(alt)}" '
             'loading="lazy" style="max-width:100%;height:auto"></a>'
-            f'<figcaption>{caption} Bron: slides SRA NJ26, PDF-pagina {page}. '
-            'Open de afbeelding voor de bron op volledig formaat.</figcaption></figure>')
+            f'<figcaption>{caption} Open de afbeelding op volledig formaat.</figcaption></figure>')
 
 
 def add(lesson, sources, title, body, refs, first=False):
-    links = []
+    # De bronnen verschijnen genummerd onderaan de les (lesson_sources.py).
     for r in refs:
-        source = sources[r['source']]
-        links.append(f'<a href="bronnen/{escape(source["file"])}#page={r["page"]}" '
-                     f'target="_blank" rel="noopener">{escape(r["locator"])}</a>')
         if r not in lesson['refs']:
             lesson['refs'].append(r)
-    body += '<p class="note learning-source">Bronnen bij dit onderdeel: ' + '; '.join(links) + '.</p>'
     section = dict(title=title, html=body, refs=refs, regressionVersion='2026-09-25')
     if first:
         lesson['sections'].insert(0, section)
