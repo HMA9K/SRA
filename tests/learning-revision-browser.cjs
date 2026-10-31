@@ -63,6 +63,11 @@ const server=http.createServer((req,res)=>{
   await page.evaluate(()=>location.hash='#leren');
   await page.locator('.sra-learning-phase').first().waitFor();
   assert.equal(await page.locator('.sra-phase-summary').count(),await page.evaluate(()=>Object.values(window.SRA.summaries).filter(Boolean).length));
+  await page.setViewportSize({width:320,height:900});
+  await page.evaluate(()=>document.querySelectorAll('.sra-phase-summary').forEach(d=>d.open=true));
+  assert.equal(await overflow(),false,'samenvattingen: horizontale pagina-overloop bij 320px');
+  assert.equal(await page.locator('.sra-phase-summary-body table').count(),await page.locator('.sra-phase-summary-body .table-scroll table').count());
+  await page.setViewportSize({width:1366,height:950});
   // De uitleg bij een inline breuk blijft met het toetsenbord bereikbaar.
   await page.evaluate(()=>{window.StudyTheme.setMode('light');location.hash='#les/rekenen';});
   await page.locator('.section-body math[display="inline"] mfrac').first().waitFor();

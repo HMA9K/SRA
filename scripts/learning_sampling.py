@@ -143,7 +143,7 @@ def enhance(lessons, sources):
                  'Controleer hun werkelijke waarden volgens dezelfde waarderingsvraag.',
                  'Bij stratificatie voer je de trekking per stratum uit; bij '
                  'uitbreiding trek je uit de nog niet gecontroleerde posten.'])
-        + '<p>Dit is de werkwijze uit boek p. 204 in algemene handelingen. '
+        + '<p>Dit is de werkwijze uit het boek, vertaald naar algemene handelingen. '
         'De historische Excel-menuvolgorde is niet nodig om de statistische '
         'redenering te volgen. Een steekproef die al in de opgave is gegeven '
         'hoef je niet opnieuw te trekken. Benoem wel waarop de uitspraak kan '
@@ -239,7 +239,7 @@ def enhance(lessons, sources):
         'De gekozen schatter en intervalaannamen moeten ook passen bij de gegevens.</p>',
         [bookref('boek-h8b', 216), ref('slides', 34, 'PDF 34: vergelijking van onnauwkeurigheidsmarges')])
     add('onzekerheid', 'Intervalgrafieken lezen: één vaste populatiewaarde, verschillende schattingen',
-        '<p>De intervalgrafieken in boekafbeeldingen 8.2, 8.3, 8.4 en 8.6 tonen '
+        '<p>De intervalgrafieken in het boek tonen '
         'twintig opnieuw getrokken steekproeven uit dezelfde populatie. '
         'De horizontale referentielijn is het vaste werkelijke totaal van '
         '€ 7.029.580. Elke verticale lijn is één berekend interval; het midden '
@@ -252,7 +252,7 @@ def enhance(lessons, sources):
                  'Kijk over meerdere steekproeven hoe vaak de waarde buiten '
                  'het interval valt. Het betrouwbaarheidsniveau betreft '
                  'de methode bij herhaling, niet de verdeling van losse posten.'])
-        + table('Boektabel 8.4: twintig steekproeven van dezelfde populatie',
+        + table('Twintig steekproeven van dezelfde populatie',
                 ['Schatter', 'Aantal intervallen dat W mist', 'Gemiddelde marge (€)'], [
                     ['MPU', '2 van 20', '221.864'], ['Verschil', '2 van 20', '108.856'],
                     ['Quotiënt', '2 van 20', '109.117'], ['Regressie', '2 van 20', '108.751']])
@@ -296,7 +296,7 @@ def enhance(lessons, sources):
     result = mpu(5230, 180, 398000, 5378400500)
     body = '<p>De slides geven de onderstaande voorraadgegevens. De kwadratensom is in euro²; '
     body += 'deze is dus niet de som van de waarden nogmaals in euro.</p>'
-    body += table('Voorraadcontrole uit slides PDF 18', ['Gegeven', 'Waarde', 'Functie in de berekening'], [
+    body += table('Voorraadcontrole uit de colleges', ['Gegeven', 'Waarde', 'Functie in de berekening'], [
         ['N', '5.230', 'Van gemiddelde naar populatietotaal'],
         ['n', '180', 'Gemiddelde, spreiding, standaardfout en vrijheidsgraden'],
         ['Σw', '€ 398.000', 'Totaal van de gecontroleerde werkelijke waarden'],
@@ -372,6 +372,12 @@ def enhance(lessons, sources):
                    's<sub>V</sub> = € 3.883,5123; met t = 1,975 is E = € 7.669,9368.',
                    'Het interval voor W is [€ 1.796.550,06; € 1.811.889,94]. '
                    'Afronden naar buiten op € 10.000 geeft [€ 1.790.000; € 1.820.000].'])
+    body += ('<p class="note"><strong>Bronnuance.</strong> De opgavecijfers zijn onderling niet helemaal '
+             'consistent. Als alle € 7.755 aan fouten in 43 posten zit, is de kleinst mogelijke '
+             'kwadratensom 7.755²/43 ≈ 1.398.605 euro², ruim meer dan de gegeven 395.000. '
+             'De officiële uitwerking rekent toch met de gegeven Σe². Volg op het tentamen de '
+             'gegeven cijfers en deze rekenroute; de werkelijke spreiding van de fouten is '
+             'waarschijnlijk groter dan de berekende s<sub>e</sub>.</p>')
     body += exercise('<p>Gebruik dit interval om ook een interval voor de totale fout F = B − W '
                      'te bepalen. Welke grens moet je van B aftrekken voor de ondergrens van F?</p>',
                      '<p>Bij F = B − W keert de volgorde om. De kleinste fout hoort bij de grootste '
@@ -418,7 +424,7 @@ def enhance(lessons, sources):
     se = N*sq/sqrt(n)*sqrt((N-n)/(N-1))
     body = '<p><strong>Eigen oefencasus op basis van de cursusformules.</strong> Een voorraad '
     body += 'bevat 2.500 posten met een totale boekwaarde van € 500.000. In een aselecte '
-    body += 'steekproef van 100 posten zijn 40 afwijkingen gevonden; het foutpatroon is ongeveer '
+    body += 'steekproef van 100 posten zijn 70 afwijkingen gevonden; het foutpatroon is ongeveer '
     body += 'proportioneel met de boekwaarde. Bereken een tweezijdig 95%-interval.</p>'
     body += table('Gegevens voor een volledige quotiëntschatting', ['Grootheid', 'Waarde'], [
         ['Σb / Σw', '€ 20.000 / € 19.000'], ['s<sub>b</sub> / s<sub>w</sub>', '€ 40 / € 38'],
@@ -445,10 +451,10 @@ def enhance(lessons, sources):
     se = 3500*sq/sqrt(400)*sqrt(3100/3499)
     W = q*7360817
     add('quotient', 'De tweede rekenroute: fouttotalen en productsommen',
-        '<p>Boektabel 8.1 geeft sommen waarmee je formule 14 kunt invullen '
+        '<p>Het boek geeft sommen waarmee je formule 14 kunt invullen '
         'zonder eerst s<sub>b</sub>, s<sub>w</sub> en R afzonderlijk te berekenen. '
         'Dit is nuttig wanneer een tentamencasus juist zulke kolommen aanlevert.</p>'
-        + table('Boektabel 8.1, met de populatiegegevens van de voorraadcasus',
+        + table('Sommen en populatiegegevens van de voorraadcasus uit het boek',
                 ['Grootheid', 'Waarde'], [
                     ['N / n / B', '3.500 / 400 / € 7.360.817'],
                     ['Σw / Σb', '€ 803.403 / € 830.066'],
@@ -601,7 +607,7 @@ def enhance(lessons, sources):
         '<p>De slides vergelijken vier gerealiseerde marges en willen de quotiëntschatter '
         'nauwkeuriger maken. De gewenste <em>marge</em> is € 310.000, dus de gewenste '
         'totale breedte € 620.000.</p>'
-        + table('Invoer uit slides PDF 34-35', ['Grootheid', 'Waarde'], [
+        + table('Invoer uit de colleges', ['Grootheid', 'Waarde'], [
             ['N', '28.946'], ['Reeds gecontroleerd n', '1.000'], ['s<sub>q</sub>', '€ 213,51'],
             ['t', '1,960'], ['E', '€ 310.000']])
         + steps(['γ = 310.000²/(1,960² × 28.946 × 213,51²) = ' + number(gamma, 5) + '.',
@@ -635,7 +641,7 @@ def enhance(lessons, sources):
     body = '<p>Dit is de volledige tabel uit de colleges. De grenzen in de eerste kolom '
     body += 'betreffen <strong>boekwaarde per post</strong>; de laatste kolom telt eurobedragen '
     body += 'van alle posten tot die grens op. Verwar die twee eurogrootheden niet.</p>'
-    body += table('Slides PDF 40: boekwaarde per klasse en cumulatief bedrag',
+    body += table('Collegetabel: boekwaarde per klasse en cumulatief bedrag',
                   ['Boekwaarde per post (€)', 'Aantal posten', 'Som boekwaarden (€)', 'Cumulatief (€)'], rows)
     body += steps(['Haal de 48 posten met boekwaarde ≥ € 10.000 apart voor volledige controle. '
                    'De overige 4.775 posten hebben samen € 14.306.659 boekwaarde.',
@@ -726,7 +732,7 @@ def enhance(lessons, sources):
     body += 'Neyman-allocatie gebruikt omvang én vooraf geschatte spreiding. '
     body += 'Bij gelijke controlekosten krijgen grotere en meer variabele groepen '
     body += 'meer waarnemingen, omdat daar meer onzekerheid te verminderen is.</p>'
-    body += table('Slides PDF 44-46: 250 controles verdelen over 4.775 posten',
+    body += table('Collegevoorbeeld: 250 controles verdelen over 4.775 posten',
                   ['Stratum', 'Nᵢ', 'Vooraf sᵢ', 'Nᵢsᵢ', 'Neyman onafgerond', 'Neyman geheel', 'Evenredig onafgerond'], alloc_rows)
     body += '<div class="formula">Neyman: nᵢ = n × Nᵢsᵢ / ΣNᵢsᵢ<br>'
     body += 'Evenredig: nᵢ = n × Nᵢ / N</div>'
@@ -752,7 +758,7 @@ def enhance(lessons, sources):
     body += 's<sub>w,i</sub>. Gebruik bij de schatting de na controle gegeven '
     body += 'sommen, kwadratensommen en gerealiseerde nᵢ. De collegecasus hieronder '
     body += 'illustreert dat onderscheid.</p>'
-    body += '<p><strong>Aanvullende boekvariant:</strong> boek p. 226 noemt '
+    body += '<p><strong>Aanvullende boekvariant:</strong> het boek noemt '
     body += 'ook allocatie evenredig aan de totale <em>boekwaarde</em> per '
     body += 'stratum. Als die bedragen ongeveer gelijk zijn, leidt dat '
     body += 'tot ongeveer gelijke aantallen controles. Dat is een andere '
@@ -779,7 +785,7 @@ def enhance(lessons, sources):
     body += 'samengevat. Deze oorspronkelijke collegedata sluiten aan op de '
     body += 'Neyman-aantallen hierboven. Gebruik bij elke rij de eigen Nᵢ en nᵢ, '
     body += 'ook in de eindigheidscorrectie.</p>'
-    body += table('Slides PDF 48: invoer voor de gestratificeerde MPU-schatting',
+    body += table('Collegevoorbeeld: invoer voor de gestratificeerde MPU-schatting',
                   ['Stratum', 'Nᵢ', 'nᵢ', 'Σwᵢ (€)', 'Σwᵢ² (euro²)'],
                   [[i, number(N, 0), n, number(total, 0), number(square, 0)]
                    for i, (N, n, total, square) in enumerate(SLIDE_STRATA, 1)])
@@ -957,6 +963,9 @@ def verify_examples():
     planned_se = sqrt(600**2*20**2/169*(600-169)/(600-1)
                       + 400**2*40**2/113*(400-113)/(400-1))
     assert 2*planned_se <= 3000
+    # Eigen quotiëntcasus: k foutposten met som Σe vragen Σe² ≥ (Σe)²/k; 70 past, 40 niet.
+    sum_e2 = 99*(40**2 + 38**2 - 2*.98*40*38) + 1000**2/100
+    assert 1000**2/70 <= sum_e2 < 1000**2/40
     return dict(slideEstimate=W, slideSE=se, plannedMargin=2*planned_se,
                 sourceMPUMargin=1.974*large['se'])
 

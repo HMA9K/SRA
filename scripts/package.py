@@ -101,6 +101,10 @@ e=html.escape
 parts=['<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SRA · Leesversie</title><style>body{max-width:900px;margin:35px auto;padding:0 20px;font:17px/1.65 Arial;color:#242431}p,li{text-align:justify;hyphens:auto}h1,h2{color:#444159}h2{margin-top:38px}a{color:#006c47}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f0f1f6}.formula{padding:15px;background:#f0f3fa;overflow-wrap:anywhere}details{margin:15px 0;padding:12px;border:1px solid #ddd}summary{cursor:pointer}article{border-top:2px solid #008859;margin-top:45px}.note{padding:12px;background:#fff6ea}@media(max-width:600px){table{display:block;overflow-x:auto}body{font-size:16px}}@media print{details{break-inside:avoid}}</style><h1>SRA · Zelfstandige leesversie</h1><p>Alle uitleg, voorbeelden en begripchecks zonder scripts. Open antwoorden met de uitklapknop. Voor interactieve rekenbladen en voortgang gebruik je <a href="SRA interactieve samenvatting.html">de interactieve versie</a>.</p><ol>']
 for l in build_content.lessons:parts.append(f'<li><a href="#{l["id"]}">{e(l["title"])}</a></li>')
 parts.append('</ol>')
+from lesson_sources import note_html
+def question_notes(l,refs):
+    keys=[(r['source'],r['page'],r['locator']) for r in l['sourceList']]
+    return note_html(l['id'],list(dict.fromkeys(keys.index((r['source'],r['page'],r['locator']))+1 for r in refs))) if refs else ''
 summarized=set()
 for i,l in enumerate(build_content.lessons):
     if l['phase'] not in summarized and build_content.summaries.get(l['phase']):
@@ -116,7 +120,7 @@ for i,l in enumerate(build_content.lessons):
     parts.append('</details>')
     parts.append(f'<h3>{e(l["example"]["title"])}</h3><p>{e(l["example"]["context"])}</p><ol>')
     parts.extend('<li>'+s+'</li>' for s in l['example']['stepsHtml'])
-    parts.append('</ol><h3>Hier gaat het vaak mis</h3><ul>')
+    parts.append('</ol>'+l['example']['notesHtml']+'<h3>Hier gaat het vaak mis</h3><ul>')
     parts.extend('<li>'+e(s)+'</li>' for s in l['pitfalls'])
     parts.append('</ul><h3>Check je begrip</h3>')
     for q in l['questions']:
@@ -136,7 +140,7 @@ for i,l in enumerate(build_content.lessons):
             parts.append('<h4>Let op deze valkuil</h4><p>'+e(q['trap'])+'</p>')
         if q.get('optionExplanations'):
             parts.append('<h4>De antwoordmogelijkheden</h4>'+''.join('<p><strong>'+e(option)+'</strong><br>'+e(reason)+'</p>' for option,reason in zip(q['options'],q['optionExplanations'])))
-        parts.append('</details>')
+        parts.append(question_notes(l,q.get('refs') or l['refs'])+'</details>')
     parts.append('<h3>De kern en het vervolg</h3><h4>Kern</h4><p>'+e(l['reading']['kern'])+'</p><h4>Vervolg</h4><p>'+e(l['reading']['vervolg'])+'</p>')
     parts.append(f'<details class="lesson-sources"><summary><strong>Bronnen bij deze les</strong> ({len(l["sourceList"])})</summary><ol>')
     for n,ref in enumerate(l['sourceList'],1):

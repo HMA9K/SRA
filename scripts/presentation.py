@@ -264,8 +264,8 @@ def enhance(lessons):
             for original,formula in CELL_FORMULAS.items():
                 section['html']=section['html'].replace(f'<td>{original}</td>',f'<td>{mathml(formula,inline=True)}</td>')
             section['html']=section['html'].replace('<th>','<th scope="col">')
-            if '<table>' in section['html']:
-                section['html']=section['html'].replace('<table>',f'<table><caption>{html.escape(section["title"])}</caption>')
+            # Alleen tabellen zonder eigen bijschrift krijgen de bloktitel als bijschrift.
+            section['html']=re.sub(r'<table>(?!<caption>)',lambda m:f'<table><caption>{html.escape(section["title"])}</caption>',section['html'])
         if next(blocks,None) is not None:
             raise ValueError(f'Unused typeset formula in {lesson["id"]}')
 

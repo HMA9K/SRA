@@ -64,4 +64,6 @@ SAMPLING = {
         '</ul>'),
 }
 
-SUMMARIES = {**SAMPLING, **REGRESSION}
+FOOTER = ('<p class="note">Deze samenvatting vat de lessen van dit onderwerp samen; de bronnen staan '
+          'genummerd onderaan elke les. Puntentallen komen uit de tentamenpuntenanalyse.</p>')
+SUMMARIES = {phase: html + FOOTER if html else '' for phase, html in {**SAMPLING, **REGRESSION}.items()}

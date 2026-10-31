@@ -6966,6 +6966,11 @@ window.SRAMCData = {
           "locator": "H8 opgave 8a/b, PDF 10–11"
         },
         {
+          "source": "boek-h8c",
+          "page": 2,
+          "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+        },
+        {
           "source": "opgaven",
           "page": 8,
           "locator": "H8 opgave 9b/c, PDF 8"
@@ -6999,11 +7004,6 @@ window.SRAMCData = {
           "source": "uitwerkingen",
           "page": 10,
           "locator": "H8.8b, volledige worteltabel"
-        },
-        {
-          "source": "boek-h8c",
-          "page": 2,
-          "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
         },
         {
           "source": "slides",
@@ -7101,6 +7101,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7134,11 +7139,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7258,6 +7258,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7291,11 +7296,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7415,6 +7415,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7448,11 +7453,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7575,6 +7575,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7608,11 +7613,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7734,6 +7734,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7767,11 +7772,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7898,6 +7898,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7931,11 +7936,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -8058,6 +8058,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -8091,11 +8096,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -8217,6 +8217,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -8250,11 +8255,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -8381,6 +8381,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -8414,11 +8419,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -8545,6 +8545,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -8578,11 +8583,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",

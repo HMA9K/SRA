@@ -35,6 +35,9 @@ def enhance(lessons, sources):
             section['sourceNotes'] = numbers
             if numbers:
                 section['html'] += note_html(lesson['id'], numbers)
+        example = lesson['example']
+        example['sourceNotes'] = list(dict.fromkeys(number(r) for r in example.get('refs', [])))
+        example['notesHtml'] = note_html(lesson['id'], example['sourceNotes']) if example['sourceNotes'] else ''
         for ref in lesson['refs'] + lesson['curriculum']['refs']:
             number(ref)
         for question in lesson['questions']:

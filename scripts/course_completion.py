@@ -95,8 +95,8 @@ def enhance(lessons,sources):
         'Vergelijk cumulatieve doelen 1.802,20, 3.604,40 en 5.406,60 met de beschikbare klassegrenzen.',
         'De uitwerking kiest 1.943,67, 3.671,02 en 5.618,65. Dat geeft bovengrenzen € 1.200, € 2.500, € 5.000 en € 10.000.',
         'Gebruik de nieuwe groepsomvangen 3.196, 2.329, 1.587 en 547 pas daarna voor de allocatie van 300 controles. De 54 topstratumposten komen daar apart bij.'])
-    boundary+='<p class="note">De twee methoden verdelen verschillende grootheden en hoeven dus niet dezelfde grenzen op te leveren. In boektabel 8.6 is 2.500 × 23 gelijk aan 57.500; de gedrukte 75.500 is een drukfout.</p>'
-    boundary_refs=[dict(source='opgaven',page=7,locator='H8 opgave 8a/b, PDF 7'),dict(source='uitwerkingen',page=10,locator='H8 opgave 8a/b, PDF 10–11')]
+    boundary+='<p class="note">De twee methoden verdelen verschillende grootheden en hoeven dus niet dezelfde grenzen op te leveren. In de boektabel voor de wortelmethode (klasse 4.000 tot 6.500) is 2.500 × 23 gelijk aan 57.500; de gedrukte 75.500 is een drukfout.</p>'
+    boundary_refs=[dict(source='opgaven',page=7,locator='H8 opgave 8a/b, PDF 7'),dict(source='uitwerkingen',page=10,locator='H8 opgave 8a/b, PDF 10–11'),bookref('boek-h8c',222)]
     add(L['stratificatie'],'Stratagrenzen bepalen vanuit de cursusopgave',boundary,refs=boundary_refs)
     L['stratificatie']['refs'].extend(boundary_refs)
 
@@ -112,7 +112,7 @@ def enhance(lessons,sources):
     add(L['stratificatie'],'Gericht extra controles in één stratum',extension,refs=extension_refs)
     add(L['steekproefomvang'],'Uitbreiding na stratificatie',extension,refs=extension_refs)
     add(L['steekproefomvang'],'Omvang bij de quotiëntschatter',
-        '<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld bij slides PDF 34–36</h3>'+steps(['N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.','γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.','n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.','Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.']),refs=[dict(source='slides',page=34,locator='PDF 34–36: omvang bij de quotiëntschatter'),dict(source='formules',page=1,locator='Formules 12–17, PDF-pagina 1')])
+        '<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld uit de colleges</h3>'+steps(['N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.','γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.','n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.','Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.']),refs=[dict(source='slides',page=34,locator='PDF 34–36: omvang bij de quotiëntschatter'),dict(source='formules',page=1,locator='Formules 12–17, PDF-pagina 1')])
     for slug in ['stratificatie','steekproefomvang']:
         L[slug]['refs'].extend([dict(source='opgaven',page=8,locator='H8 opgave 9b/c, PDF 8'),dict(source='uitwerkingen',page=13,locator='H8 opgave 9c, PDF 13')])
     L['stratificatie']['goals'].extend(['Stratagrenzen bepalen met beide cursusmethoden','De steekproef gericht binnen één stratum uitbreiden'])

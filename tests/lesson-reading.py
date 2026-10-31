@@ -35,6 +35,7 @@ for lesson in lessons:
     assert all(sources[r['source']] and r['page'] >= 1 for r in listed)
     for section in lesson['sections']:
         assert not re.search(r'learning-source|Bronnen bij dit onderdeel|Zie boek p\.|Bron: (slides|opgavenbundel)', section['html']), (lesson['id'], section['title'])
+        assert "</caption><caption>" not in section["html"], (lesson["id"], section["title"])
         notes = [int(n) for n in re.findall(r'data-source-note="(\d+)"', section['html'])]
         assert notes == section['sourceNotes'] and all(1 <= n <= len(listed) for n in notes), (lesson['id'], section['title'])
 assert set(summaries) == {'Basis', 'Schatten', 'Regressie', 'Meervoudige regressie en modelcontrole'}
