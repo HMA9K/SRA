@@ -61,7 +61,7 @@ def enhance(lessons, sources):
             body+='Een oorspronkelijke deelvraag kan meerdere onderwerpen bevatten; haar punten zijn gesplitst volgens de normering. '
             body+='Geïntegreerde stratificatievragen tellen bij stratificatie, zonder dezelfde punten bij de schatter te herhalen. '
             body+='Niet aantoonbaar te splitsen punten staan uitsluitend in de gezamenlijke rubriek van de tentamenles.</p>'
-        body+='<p><a href="docs/tentamen-puntenanalyse-2026-10-25.md" target="_blank" rel="noopener">Bekijk alle tentamens, spreiding en puntentoerekeningen met bronpagina’s</a>.</p>'
+        body+='<p>Alle tentamens, de spreiding en de puntentoerekening per deelvraag staan in de tentamenpuntenanalyse onderaan de bronnenlijst.</p>'
         add(lesson,sources,'Studieroute en puntengewicht',body,[ref('programma',4,'Onderwijsprogramma: toetsing en afbakening, PDF 4–5')],first=True)
 
     L={l['id']:l for l in lessons}

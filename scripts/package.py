@@ -103,7 +103,7 @@ for l in build_content.lessons:parts.append(f'<li><a href="#{l["id"]}">{e(l["tit
 parts.append('</ol>')
 from lesson_sources import note_html
 def question_notes(l,refs):
-    keys=[(r['source'],r['page'],r['locator']) for r in l['sourceList']]
+    keys=[(r.get('source'),r.get('page'),r['locator']) for r in l['sourceList']]
     return note_html(l['id'],list(dict.fromkeys(keys.index((r['source'],r['page'],r['locator']))+1 for r in refs))) if refs else ''
 summarized=set()
 for i,l in enumerate(build_content.lessons):
@@ -144,8 +144,8 @@ for i,l in enumerate(build_content.lessons):
     parts.append('<h3>De kern en het vervolg</h3><h4>Kern</h4><p>'+e(l['reading']['kern'])+'</p><h4>Vervolg</h4><p>'+e(l['reading']['vervolg'])+'</p>')
     parts.append(f'<details class="lesson-sources"><summary><strong>Bronnen bij deze les</strong> ({len(l["sourceList"])})</summary><ol>')
     for n,ref in enumerate(l['sourceList'],1):
-        s=build_content.sources[ref['source']]
-        parts.append(f'<li id="bron-{l["id"]}-{n}"><a href="bronnen/{s["file"]}#page={ref["page"]}">{e(s["title"])}</a>: {e(ref["locator"])}</li>')
+        link=(ref['href'],ref['title']) if 'href' in ref else (f'bronnen/{build_content.sources[ref["source"]]["file"]}#page={ref["page"]}',build_content.sources[ref['source']]['title'])
+        parts.append(f'<li id="bron-{l["id"]}-{n}"><a href="{e(link[0])}">{e(link[1])}</a>: {e(ref["locator"])}</li>')
     parts.append('</ol></details></article>')
 parts.append('<style>'+presentation_css+(root/'css/learning-revision.css').read_text(encoding='utf-8')+'svg{max-width:100%;height:auto}</style></html>')
 read_version=embed_learning_images('\n'.join(parts))

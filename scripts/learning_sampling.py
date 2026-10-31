@@ -376,8 +376,9 @@ def enhance(lessons, sources):
              'consistent. Als alle € 7.755 aan fouten in 43 posten zit, is de kleinst mogelijke '
              'kwadratensom 7.755²/43 ≈ 1.398.605 euro², ruim meer dan de gegeven 395.000. '
              'De officiële uitwerking rekent toch met de gegeven Σe². Volg op het tentamen de '
-             'gegeven cijfers en deze rekenroute; de werkelijke spreiding van de fouten is '
-             'waarschijnlijk groter dan de berekende s<sub>e</sub>.</p>')
+             'gegeven cijfers en deze rekenroute. Uit deze tegenstrijdige gegevens kan de werkelijke '
+             'spreiding niet worden vastgesteld. Als het fouttotaal en het aantal foutposten kloppen, '
+             'is de opgegeven kwadratensom te laag.</p>')
     body += exercise('<p>Gebruik dit interval om ook een interval voor de totale fout F = B − W '
                      'te bepalen. Welke grens moet je van B aftrekken voor de ondergrens van F?</p>',
                      '<p>Bij F = B − W keert de volgorde om. De kleinste fout hoort bij de grootste '

@@ -8,6 +8,13 @@ begripchecks en de bronnen van het onderwijsprogramma.
 import re
 
 FIGURE = re.compile(r'<figure class="learning-figure"><a href="bronnen/([^"#]+)#page=(\d+)"')
+# Aanvullende documenten zonder PDF-bron, per bloktitel. Ze staan in dezelfde genummerde lijst.
+DOCUMENTS = {
+    'Studieroute en puntengewicht': dict(
+        href='docs/tentamen-puntenanalyse-2026-10-25.md',
+        title='Tentamenpuntenanalyse SRA, negen tentamens',
+        locator='Punten per onderwerp en per tentamen, met bronpagina’s per deelvraag'),
+}
 
 
 def note_html(lesson_id, numbers):
@@ -22,15 +29,20 @@ def enhance(lessons, sources):
         listed = []
 
         def number(ref):
-            key = (ref['source'], ref['page'], ref['locator'])
+            key = (ref['source'], ref['page'], ref['locator']) if 'source' in ref else ('doc', ref['href'], ref['locator'])
             if key not in listed:
                 listed.append(key)
             return listed.index(key) + 1
 
+        documents = {}
         for section in lesson['sections']:
             refs = list(section.get('refs', []))
             for file, page in FIGURE.findall(section['html']):
                 refs.append(dict(source=by_file[file], page=int(page), locator=f'Figuur, PDF-pagina {page}'))
+            if section['title'] in DOCUMENTS:
+                document = DOCUMENTS[section['title']]
+                documents[document['href']] = document
+                refs.append(document)
             numbers = list(dict.fromkeys(number(r) for r in refs))
             section['sourceNotes'] = numbers
             if numbers:
@@ -43,5 +55,6 @@ def enhance(lessons, sources):
         for question in lesson['questions']:
             for ref in question.get('refs', []):
                 number(ref)
-        lesson['sourceList'] = [dict(source=s, page=p, locator=l) for s, p, l in listed]
+        lesson['sourceList'] = [dict(documents[p]) if s == 'doc' else dict(source=s, page=p, locator=l)
+                                for s, p, l in listed]
     return lessons

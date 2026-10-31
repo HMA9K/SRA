@@ -31,8 +31,8 @@ for lesson in lessons:
         ET.fromstring('<div>' + step + '</div>')
     # Bronnen staan alleen onderaan; blokken verwijzen er met geldige nummers naar.
     listed = lesson['sourceList']
-    assert len(listed) == len({(r['source'], r['page'], r['locator']) for r in listed})
-    assert all(sources[r['source']] and r['page'] >= 1 for r in listed)
+    assert len(listed) == len({(r.get('source'), r.get('page', r.get('href')), r['locator']) for r in listed})
+    assert all(sources[r['source']] and r['page'] >= 1 if 'source' in r else r['href'].startswith('docs/') for r in listed)
     for section in lesson['sections']:
         assert not re.search(r'learning-source|Bronnen bij dit onderdeel|Zie boek p\.|Bron: (slides|opgavenbundel)', section['html']), (lesson['id'], section['title'])
         assert "</caption><caption>" not in section["html"], (lesson["id"], section["title"])
