@@ -6818,7 +6818,13 @@ window.SRA = {
           "De werkelijke kosten zijn 380. Het residu is 380 − 350 = +30.",
           "Bij één extra product stijgen de voorspelde kosten met 3 geldeenheden. De constante 200 is de voorspelling bij nul productie."
         ],
-        "refs": [],
+        "refs": [
+          {
+            "source": "formules",
+            "locator": "Formules 30–34, PDF-pagina 2",
+            "page": 2
+          }
+        ],
         "context": "Welke kosten voorspelt de lijn bij een productie van 50 en wat betekent de afwijking van de werkelijke kosten? Dit voorbeeld maakt constante, helling en residu concreet.",
         "stepsHtml": [
           "Lijn: voorspelde kosten = 200 + 3 × productie.",
@@ -6826,8 +6832,10 @@ window.SRA = {
           "De werkelijke kosten zijn 380. Het residu is 380 − 350 = +30.",
           "Bij één extra product stijgen de voorspelde kosten met 3 geldeenheden. De constante 200 is de voorspelling bij nul productie."
         ],
-        "sourceNotes": [],
-        "notesHtml": ""
+        "sourceNotes": [
+          19
+        ],
+        "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-regressielijn-19\" data-source-note=\"19\" aria-label=\"Bron 19\">[19]</a></p>"
       },
       "pitfalls": [
         "Een regressieresidu is y − ŷ; de controlefout in hoofdstuk 8 is b − w.",
@@ -7563,7 +7571,13 @@ window.SRA = {
           "F ≈ 857,85; s_e ≈ √1,57518 = 1,2551.",
           "R² = 1.351,262 / 1.395,367 ≈ 0,9684. Ongeveer 96,84% van de variatie in spronghoogte wordt in dit model verklaard door beenkracht."
         ],
-        "refs": [],
+        "refs": [
+          {
+            "source": "exam2024",
+            "locator": "Vraag 9–10, PDF-pagina 4",
+            "page": 4
+          }
+        ],
         "context": "Wat vertelt de ANOVA-uitvoer over spronghoogte en beenkracht? Vanuit de gegeven kwadratensommen berekenen we vrijheidsgraden, gemiddelde kwadraten, F, de residuele standaardafwijking en R².",
         "stepsHtml": [
           "Gegeven: SSR = 1.351,262; SSE = 44,105; TotalSS = 1.395,367; n = 30; k = 1.",
@@ -7572,8 +7586,10 @@ window.SRA = {
           "F ≈ 857,85; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> ≈ √1,57518 = 1,2551.",
           "R² = 1.351,262 / 1.395,367 ≈ 0,9684. Ongeveer 96,84% van de variatie in spronghoogte wordt in dit model verklaard door beenkracht."
         ],
-        "sourceNotes": [],
-        "notesHtml": ""
+        "sourceNotes": [
+          13
+        ],
+        "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-anova-13\" data-source-note=\"13\" aria-label=\"Bron 13\">[13]</a></p>"
       },
       "pitfalls": [
         "MSE is een variantie; neem de wortel voor de standaardfout.",
@@ -7997,6 +8013,11 @@ window.SRA = {
           "locator": "Figuur, PDF-pagina 72"
         },
         {
+          "source": "exam2024",
+          "page": 4,
+          "locator": "Vraag 9–10, PDF-pagina 4"
+        },
+        {
           "source": "formules",
           "page": 3,
           "locator": "Formules 35–43, PDF-pagina 3"
@@ -8005,11 +8026,6 @@ window.SRA = {
           "source": "attentie",
           "page": 4,
           "locator": "PDF-pagina 4–5"
-        },
-        {
-          "source": "exam2024",
-          "page": 4,
-          "locator": "Vraag 9–10, PDF-pagina 4"
         },
         {
           "source": "programma",
@@ -8280,7 +8296,13 @@ window.SRA = {
           "−2,444 < −1,653: de uitkomst ligt in het kritieke gebied; H₀ wordt verworpen.",
           "Binnen dit model is het voorspelde salaris voor vrouwen significant lager, bij gelijkblijvende overige opgenomen kenmerken. Het α-risico is relevant."
         ],
-        "refs": [],
+        "refs": [
+          {
+            "source": "exam2025",
+            "locator": "Vraag 21, PDF-pagina 14",
+            "page": 14
+          }
+        ],
         "context": "Geven de gegevens uit de salariscasus voldoende bewijs voor een negatieve coëfficiënt bij de dummy Vrouw? We vertalen de vraag naar hypothesen, vergelijken t met de eenzijdige grens en formuleren de conclusie binnen het model.",
         "stepsHtml": [
           "Dummy Vrouw: 1 = vrouw, 0 = man. Gevraagd: aantonen dat de coëfficiënt negatief is.",
@@ -8289,8 +8311,10 @@ window.SRA = {
           "−2,444 &lt; −1,653: de uitkomst ligt in het kritieke gebied; H₀ wordt verworpen.",
           "Binnen dit model is het voorspelde salaris voor vrouwen significant lager, bij gelijkblijvende overige opgenomen kenmerken. Het α-risico is relevant."
         ],
-        "sourceNotes": [],
-        "notesHtml": ""
+        "sourceNotes": [
+          21
+        ],
+        "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-toetsen-21\" data-source-note=\"21\" aria-label=\"Bron 21\">[21]</a></p>"
       },
       "pitfalls": [
         "Een grote p-waarde bewijst niet dat er geen verband bestaat.",
@@ -8837,6 +8861,11 @@ window.SRA = {
           "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
         },
         {
+          "source": "exam2025",
+          "page": 14,
+          "locator": "Vraag 21, PDF-pagina 14"
+        },
+        {
           "source": "formules",
           "page": 3,
           "locator": "Formules 39–43 en 61–62, PDF-pagina 3–4"
@@ -8845,11 +8874,6 @@ window.SRA = {
           "source": "attentie",
           "page": 4,
           "locator": "PDF-pagina 4–5 en 8"
-        },
-        {
-          "source": "exam2025",
-          "page": 14,
-          "locator": "Vraag 21, PDF-pagina 14"
         },
         {
           "source": "set-basis",
@@ -9297,7 +9321,7 @@ window.SRA = {
         },
         {
           "title": "Gewogen regressie: de WLS-voetnoot bepaalt hoe je uitvoer leest",
-          "html": "<p><strong>Weighted Least Squares</strong> gebruikt gewichten in de gekwadrateerde afwijkingen: waarnemingen met relatief veel spreiding tellen minder zwaar mee. Dit is gericht op de foutstructuur. Het is een andere ingreep dan een logtransformatie om een krom verband rechter te maken of een dummy voor verschillende groepen.</p><p>In de boekcasus Productiviteit geeft Weight Estimation een gewicht evenredig aan 1/x². De uitvoervoetnoot schrijft dit als ARBEIDSU**−2,000. Een waarneming bij x = 80 krijgt daardoor een kwart van het gewicht van een waarneming bij x = 40: (1/80²)/(1/40²) = 1/4. Dit is een eigen invulvoorbeeld bij het gewicht uit de bron; het zijn geen extra waarnemingen uit de boekdataset.</p><table><caption>WLS-uitvoer uit boektabellen 9.18–9.20</caption><thead><tr><th scope=\"col\">Uitvoer</th><th scope=\"col\">Bronwaarde</th><th scope=\"col\">Leespunt</th></tr></thead><tbody><tr><td>Model Summary: R²</td><td>0,934</td><td>Deze fit hoort bij de aangegeven weging.</td></tr><tr><td>Model Summary: Std. Error of the Estimate</td><td>0,0224</td><td>De foutmaat hoort bij de gewogen berekening; vergelijk haar niet rechtstreeks met de ongewogen sₑ.</td></tr><tr><td>ANOVA: Regression df / Residual df</td><td>1 / 22</td><td>Het aantal geschatte hellingen blijft één; de weging voegt geen waarnemingen toe.</td></tr><tr><td>ANOVA: F</td><td>310,736</td><td>Gebruik voldoende precisie; de afgedrukte MS-waarden zijn sterk afgerond.</td></tr><tr><td>Coefficients: constante B</td><td>−1,408</td><td>De coëfficiënten zijn na weging opnieuw geschat.</td></tr><tr><td>Coefficients: arbeidsuren B</td><td>0,616</td><td>De vergelijking is ŷ = −1,408 + 0,616x in de oorspronkelijke variabelen van de casus.</td></tr></tbody></table><p>De bronroute is <strong>Analyze → Regression → Weight Estimation</strong>, met productie als Dependent, arbeidsuren als Independent en als Weight Variable. Bewaar het beste gewicht en geef dat bij <strong>Regression → Linear → WLS Weight</strong> op. Gebruik de broninstelling als oefenroute; een andere dataset kan een andere weging vragen. Controleer daarna opnieuw de residuen en verklaar waarom de gekozen weging bij de waargenomen spreiding past.</p><p class=\"note\">De ongewogen casusdiagnose vindt op zichzelf geen significant heteroscedasticiteitsprobleem (p = 0,193). De WLS-tabellen illustreren de mogelijke techniek en vormen geen algemene opdracht om ieder model toch te wegen. Ook een hogere gewogen R² is op zichzelf geen bewijs van een betere voorspelling op nieuwe ongewogen waarnemingen.</p><p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-diagnostiek-42\" data-source-note=\"42\" aria-label=\"Bron 42\">[42]</a> <a class=\"source-note\" href=\"#bron-diagnostiek-16\" data-source-note=\"16\" aria-label=\"Bron 16\">[16]</a> <a class=\"source-note\" href=\"#bron-diagnostiek-43\" data-source-note=\"43\" aria-label=\"Bron 43\">[43]</a> <a class=\"source-note\" href=\"#bron-diagnostiek-44\" data-source-note=\"44\" aria-label=\"Bron 44\">[44]</a></p>",
+          "html": "<p><strong>Weighted Least Squares</strong> gebruikt gewichten in de gekwadrateerde afwijkingen: waarnemingen met relatief veel spreiding tellen minder zwaar mee. Dit is gericht op de foutstructuur. Het is een andere ingreep dan een logtransformatie om een krom verband rechter te maken of een dummy voor verschillende groepen.</p><p>In de boekcasus Productiviteit geeft Weight Estimation een gewicht evenredig aan 1/x². De uitvoervoetnoot schrijft dit als ARBEIDSU**−2,000. Een waarneming bij x = 80 krijgt daardoor een kwart van het gewicht van een waarneming bij x = 40: (1/80²)/(1/40²) = 1/4. Dit is een eigen invulvoorbeeld bij het gewicht uit de bron; het zijn geen extra waarnemingen uit de boekdataset.</p><table><caption>WLS-uitvoer uit het boek</caption><thead><tr><th scope=\"col\">Uitvoer</th><th scope=\"col\">Bronwaarde</th><th scope=\"col\">Leespunt</th></tr></thead><tbody><tr><td>Model Summary: R²</td><td>0,934</td><td>Deze fit hoort bij de aangegeven weging.</td></tr><tr><td>Model Summary: Std. Error of the Estimate</td><td>0,0224</td><td>De foutmaat hoort bij de gewogen berekening; vergelijk haar niet rechtstreeks met de ongewogen sₑ.</td></tr><tr><td>ANOVA: Regression df / Residual df</td><td>1 / 22</td><td>Het aantal geschatte hellingen blijft één; de weging voegt geen waarnemingen toe.</td></tr><tr><td>ANOVA: F</td><td>310,736</td><td>Gebruik voldoende precisie; de afgedrukte MS-waarden zijn sterk afgerond.</td></tr><tr><td>Coefficients: constante B</td><td>−1,408</td><td>De coëfficiënten zijn na weging opnieuw geschat.</td></tr><tr><td>Coefficients: arbeidsuren B</td><td>0,616</td><td>De vergelijking is ŷ = −1,408 + 0,616x in de oorspronkelijke variabelen van de casus.</td></tr></tbody></table><p>De bronroute is <strong>Analyze → Regression → Weight Estimation</strong>, met productie als Dependent, arbeidsuren als Independent en als Weight Variable. Bewaar het beste gewicht en geef dat bij <strong>Regression → Linear → WLS Weight</strong> op. Gebruik de broninstelling als oefenroute; een andere dataset kan een andere weging vragen. Controleer daarna opnieuw de residuen en verklaar waarom de gekozen weging bij de waargenomen spreiding past.</p><p class=\"note\">De ongewogen casusdiagnose vindt op zichzelf geen significant heteroscedasticiteitsprobleem (p = 0,193). De WLS-tabellen illustreren de mogelijke techniek en vormen geen algemene opdracht om ieder model toch te wegen. Ook een hogere gewogen R² is op zichzelf geen bewijs van een betere voorspelling op nieuwe ongewogen waarnemingen.</p><p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-diagnostiek-42\" data-source-note=\"42\" aria-label=\"Bron 42\">[42]</a> <a class=\"source-note\" href=\"#bron-diagnostiek-16\" data-source-note=\"16\" aria-label=\"Bron 16\">[16]</a> <a class=\"source-note\" href=\"#bron-diagnostiek-43\" data-source-note=\"43\" aria-label=\"Bron 43\">[43]</a> <a class=\"source-note\" href=\"#bron-diagnostiek-44\" data-source-note=\"44\" aria-label=\"Bron 44\">[44]</a></p>",
           "refs": [
             {
               "source": "boek-h9d",
@@ -9343,7 +9367,13 @@ window.SRA = {
           "Shapiro-Wilk is passend bij n = 30. p = 0,879 > 0,05: H₀ niet verwerpen; geen aangetoond normaliteitsprobleem.",
           "Voor heteroscedasticiteit is p = 0,084 > 0,05: ook daar geen aangetoond probleem. Dat is geen bewijs dat elke aanname perfect geldt."
         ],
-        "refs": [],
+        "refs": [
+          {
+            "source": "exam2024",
+            "locator": "Vraag 11–12, PDF-pagina 5",
+            "page": 5
+          }
+        ],
         "context": "Welke signalen voor afwijkende waarnemingen of modelproblemen bevat de tentamenuitvoer van 28 oktober 2024? We vergelijken de gegeven waarden met de cursuscriteria en onderscheiden een signaal van bewijs.",
         "stepsHtml": [
           "n = 30: de y-uitbijtergrenzen zijn −2 en +2. z_min = −2,016 en z_max = 2,053 signaleren potentiële uitbijters.",
@@ -9352,8 +9382,10 @@ window.SRA = {
           "Shapiro-Wilk is passend bij n = 30. p = 0,879 &gt; 0,05: H₀ niet verwerpen; geen aangetoond normaliteitsprobleem.",
           "Voor heteroscedasticiteit is p = 0,084 &gt; 0,05: ook daar geen aangetoond probleem. Dat is geen bewijs dat elke aanname perfect geldt."
         ],
-        "sourceNotes": [],
-        "notesHtml": ""
+        "sourceNotes": [
+          45
+        ],
+        "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-diagnostiek-45\" data-source-note=\"45\" aria-label=\"Bron 45\">[45]</a></p>"
       },
       "pitfalls": [
         "Test de normaliteit van de residuen, niet zonder meer die van y.",
@@ -10309,6 +10341,11 @@ window.SRA = {
           "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
         },
         {
+          "source": "exam2024",
+          "page": 5,
+          "locator": "Vraag 11–12, PDF-pagina 5"
+        },
+        {
           "source": "formules",
           "page": 3,
           "locator": "Formules 44–49, PDF-pagina 3"
@@ -10317,11 +10354,6 @@ window.SRA = {
           "source": "attentie",
           "page": 5,
           "locator": "PDF-pagina 5–6"
-        },
-        {
-          "source": "exam2024",
-          "page": 5,
-          "locator": "Vraag 11–12, PDF-pagina 5"
         },
         {
           "source": "programma",
@@ -10556,7 +10588,13 @@ window.SRA = {
           "Het interval voor de gemiddelde respons is [29,2716; 30,2102]. Naar buiten op één decimaal afgerond: [29,2; 30,3].",
           "Het officiële antwoordmodel gebruikt wél de extra 1 en berekent daardoor het bredere individuele interval [27,1; 32,4]. Dat antwoord past bij één nieuwe persoon, maar niet bij het woord gemiddelde in de vraag."
         ],
-        "refs": [],
+        "refs": [
+          {
+            "source": "exam2024",
+            "locator": "Vraag 13, PDF-pagina 5",
+            "page": 5
+          }
+        ],
         "context": "Welk interval hoort bij de gevraagde gemiddelde spronghoogte? We berekenen de voorspelling en de marge voor het gemiddelde en verklaren waarom de bronuitwerking met een extra 1 een individueel interval oplevert.",
         "stepsHtml": [
           "Gegeven: ŷ = 7,159 + 0,099x; x₀ = x̄ = 228,1; n = 30; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>s</mi><mi>e</mi></msub></mrow></math> = 1,25506.",
@@ -10565,8 +10603,10 @@ window.SRA = {
           "Het interval voor de gemiddelde respons is [29,2716; 30,2102]. Naar buiten op één decimaal afgerond: [29,2; 30,3].",
           "Het officiële antwoordmodel gebruikt wél de extra 1 en berekent daardoor het bredere individuele interval [27,1; 32,4]. Dat antwoord past bij één nieuwe persoon, maar niet bij het woord gemiddelde in de vraag."
         ],
-        "sourceNotes": [],
-        "notesHtml": ""
+        "sourceNotes": [
+          15
+        ],
+        "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-voorspellen-15\" data-source-note=\"15\" aria-label=\"Bron 15\">[15]</a></p>"
       },
       "pitfalls": [
         "Gebruik bij een individuele voorspelling de eerste 1 onder de wortel.",
@@ -11006,6 +11046,11 @@ window.SRA = {
           "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
         },
         {
+          "source": "exam2024",
+          "page": 5,
+          "locator": "Vraag 13, PDF-pagina 5"
+        },
+        {
           "source": "formules",
           "page": 3,
           "locator": "Formule 50, PDF-pagina 3"
@@ -11014,11 +11059,6 @@ window.SRA = {
           "source": "attentie",
           "page": 6,
           "locator": "Voorspelling, PDF-pagina 6"
-        },
-        {
-          "source": "exam2024",
-          "page": 5,
-          "locator": "Vraag 13, PDF-pagina 5"
         },
         {
           "source": "programma",
@@ -11245,7 +11285,13 @@ window.SRA = {
           "Voorspelling = 739,508 + 38,495×50 + 71,550×10 + 2.237,947.",
           "Uitkomst = € 5.617,705. De officiële uitwerking vermeldt € 5.617; bij gewoon afronden op gehele euro’s uit de getoonde coëfficiënten is het € 5.618. De samenvatting laat dit bronverschil zichtbaar."
         ],
-        "refs": [],
+        "refs": [
+          {
+            "source": "exam2025",
+            "locator": "Vraag 19–20, PDF-pagina 9 en 14",
+            "page": 14
+          }
+        ],
         "context": "Hoe vergelijk je opleidingsgroepen en bereken je het salaris voor een gegeven profiel? We gebruiken de coëfficiënten uit één model en maken het afrondingsverschil met de bronuitwerking zichtbaar.",
         "stepsHtml": [
           "Het verschil tussen WO en HBO is 1.010,210 − 644,888 = € 365,322. Dit is een vergelijking binnen hetzelfde model.",
@@ -11253,8 +11299,10 @@ window.SRA = {
           "Voorspelling = 739,508 + 38,495×50 + 71,550×10 + 2.237,947.",
           "Uitkomst = € 5.617,705. De officiële uitwerking vermeldt € 5.617; bij gewoon afronden op gehele euro’s uit de getoonde coëfficiënten is het € 5.618. De samenvatting laat dit bronverschil zichtbaar."
         ],
-        "sourceNotes": [],
-        "notesHtml": ""
+        "sourceNotes": [
+          19
+        ],
+        "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-meervoudig-19\" data-source-note=\"19\" aria-label=\"Bron 19\">[19]</a></p>"
       },
       "pitfalls": [
         "De invloed van een dummy hangt af van de gekozen 0- en 1-codering.",
@@ -11770,6 +11818,11 @@ window.SRA = {
           "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
         },
         {
+          "source": "exam2025",
+          "page": 14,
+          "locator": "Vraag 19–20, PDF-pagina 9 en 14"
+        },
+        {
           "source": "formules",
           "page": 3,
           "locator": "Formules 51–54 en 61–62, PDF-pagina 3–4"
@@ -11778,11 +11831,6 @@ window.SRA = {
           "source": "attentie",
           "page": 7,
           "locator": "PDF-pagina 7–8"
-        },
-        {
-          "source": "exam2025",
-          "page": 14,
-          "locator": "Vraag 19–20, PDF-pagina 9 en 14"
         },
         {
           "source": "programma",
@@ -12059,7 +12107,13 @@ window.SRA = {
           "Terugtransformeren: exp(2,386294) ≈ 10,8731.",
           "De korte route geeft hetzelfde: exp(1) × 16^0,5 = 2,71828 × 4 = 10,8731."
         ],
-        "refs": [],
+        "refs": [
+          {
+            "source": "formules",
+            "locator": "Formules 55–58, PDF-pagina 3",
+            "page": 3
+          }
+        ],
         "context": "Hoe bereken je de voorspelling bij x = 16 uit een model met ln(x) en ln(y)? We rekenen eerst op logschaal, transformeren terug en controleren de uitkomst met de machtsvorm.",
         "stepsHtml": [
           "ln(ŷ) = 1 + 0,5ln(x). Gevraagd: de voorspelling bij x = 16.",
@@ -12067,8 +12121,10 @@ window.SRA = {
           "Terugtransformeren: exp(2,386294) ≈ 10,8731.",
           "De korte route geeft hetzelfde: exp(1) × 16^0,5 = 2,71828 × 4 = 10,8731."
         ],
-        "sourceNotes": [],
-        "notesHtml": ""
+        "sourceNotes": [
+          17
+        ],
+        "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-transformaties-17\" data-source-note=\"17\" aria-label=\"Bron 17\">[17]</a></p>"
       },
       "pitfalls": [
         "Een voorspelde logwaarde is nog geen bedrag op de oorspronkelijke schaal.",
@@ -12747,7 +12803,7 @@ window.SRA = {
         },
         {
           "title": "Geneste modellen: de extra bijdrage zichtbaar berekenen",
-          "html": "<p><strong>Genest</strong> betekent dat het kleine model in het uitgebreide model zit. De uitkomst y, waarnemingen en weging moeten gelijk zijn. Dan kun je de afname in onverklaarde variatie toeschrijven aan de extra variabelen, in plaats van aan een andere dataset.</p><table><caption>Eigen rekenvoorbeeld bij formule 63: dezelfde 50 waarnemingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th><th scope=\"col\">Residual df</th></tr></thead><tbody><tr><td>Klein</td><td>2</td><td>800</td><td>200</td><td>47</td></tr><tr><td>Uitgebreid</td><td>3</td><td>850</td><td>150</td><td>46</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken de partiële F voor de ene extra variabele en beide adjusted R²-waarden. Waarom gebruik je de MSE van het uitgebreide model?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>TotalSS is in beide modellen 1.000. De extra variabele verklaart 850 − 800 = 50 extra.</li><li>MSE<sub>uitgebreid</sub> = 150/46 ≈ 3,26087. F = (850 − 800)/(150/46) ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.</li><li>Deze MSE beschrijft de resterende foutvariatie nadat de extra variabele is opgenomen. De teller meet de verbetering door precies die toevoeging.</li><li>Klein: adjusted R² = 1 − (200/47)/(1.000/49) ≈ 0,79149. Uitgebreid: 1 − (150/46)/(1.000/49) ≈ 0,84022.</li><li>De fit na correctie verbetert. Voor een formele toets kies je vooraf α en zoek je de bijbehorende F-grens met 1 en 46 vrijheidsgraden in tabel 13.8. Een betere fit vervangt validatie en modeldiagnoses niet.</li></ol></details></div><p>Bij één extra variabele sluit deze tweezijdige vergelijking aan op de gekwadrateerde t-toets van die variabele in het uitgebreide model. Voor een blok van q extra variabelen deel je de toename van SSR ook door q. Vergelijk geen model voor y met een model voor ln(y) met deze formule.</p><p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-modelbouw-15\" data-source-note=\"15\" aria-label=\"Bron 15\">[15]</a> <a class=\"source-note\" href=\"#bron-modelbouw-16\" data-source-note=\"16\" aria-label=\"Bron 16\">[16]</a> <a class=\"source-note\" href=\"#bron-modelbouw-17\" data-source-note=\"17\" aria-label=\"Bron 17\">[17]</a> <a class=\"source-note\" href=\"#bron-modelbouw-13\" data-source-note=\"13\" aria-label=\"Bron 13\">[13]</a></p>",
+          "html": "<p><strong>Genest</strong> betekent dat het kleine model in het uitgebreide model zit. De uitkomst y, waarnemingen en weging moeten gelijk zijn. Dan kun je de afname in onverklaarde variatie toeschrijven aan de extra variabelen, in plaats van aan een andere dataset.</p><table><caption>Eigen rekenvoorbeeld bij formule 63: dezelfde 50 waarnemingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th><th scope=\"col\">Residual df</th></tr></thead><tbody><tr><td>Klein</td><td>2</td><td>800</td><td>200</td><td>47</td></tr><tr><td>Uitgebreid</td><td>3</td><td>850</td><td>150</td><td>46</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken de partiële F voor de ene extra variabele en beide adjusted R²-waarden. Waarom gebruik je de MSE van het uitgebreide model?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>TotalSS is in beide modellen 1.000. De extra variabele verklaart 850 − 800 = 50 extra.</li><li>MSE<sub>uitgebreid</sub> = 150/46 ≈ 3,26087. F = (850 − 800)/(150/46) ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.</li><li>Deze MSE beschrijft de resterende foutvariatie nadat de extra variabele is opgenomen. De teller meet de verbetering door precies die toevoeging.</li><li>Klein: adjusted R² = 1 − (200/47)/(1.000/49) ≈ 0,79149. Uitgebreid: 1 − (150/46)/(1.000/49) ≈ 0,84022.</li><li>De fit na correctie verbetert. Voor een formele toets kies je vooraf α en zoek je de bijbehorende F-grens met 1 en 46 vrijheidsgraden in tabel 13.8. Een betere fit vervangt validatie en modeldiagnoses niet.</li></ol></details></div><p>Bij één extra variabele sluit deze tweezijdige vergelijking aan op de gekwadrateerde t-toets van die variabele in het uitgebreide model. Voor een blok van q extra variabelen deel je de toename van SSR ook door q. Vergelijk geen model voor y met een model voor ln(y) met deze formule.</p><p class=\"note\"><strong>Bronnuance.</strong> In het uitgewerkte boekvoorbeeld bij de variabele ln_dens deelt het boek de toename van SSR door de MSE van het kleinere model. Deze les gebruikt de gangbare vorm met de MSE van het uitgebreide model, zoals hierboven uitgelegd. Bij een kleine toename geeft dat nauwelijks een ander getal, maar houd op het tentamen de formule van het formuleblad aan.</p><p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-modelbouw-15\" data-source-note=\"15\" aria-label=\"Bron 15\">[15]</a> <a class=\"source-note\" href=\"#bron-modelbouw-16\" data-source-note=\"16\" aria-label=\"Bron 16\">[16]</a> <a class=\"source-note\" href=\"#bron-modelbouw-17\" data-source-note=\"17\" aria-label=\"Bron 17\">[17]</a> <a class=\"source-note\" href=\"#bron-modelbouw-13\" data-source-note=\"13\" aria-label=\"Bron 13\">[13]</a> <a class=\"source-note\" href=\"#bron-modelbouw-18\" data-source-note=\"18\" aria-label=\"Bron 18\">[18]</a></p>",
           "refs": [
             {
               "source": "formules",
@@ -12768,6 +12824,11 @@ window.SRA = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             }
           ],
           "regressionVersion": "2026-09-25",
@@ -12775,12 +12836,13 @@ window.SRA = {
             15,
             16,
             17,
-            13
+            13,
+            18
           ]
         },
         {
           "title": "SPSS-praktijkroute college 7: huizen, selectie en overlap",
-          "html": "<p><strong>Doel:</strong> uit een reeks woningkenmerken een verklaarbaar model voor Verkoopprijs maken. De officiële uitwerking laat eerst handmatige backwardselectie zien. De dependent is Verkoopprijs; de oorspronkelijke uitwerking noemt haar eenmaal ten onrechte onafhankelijk.</p><ol><li>Lees College7 in, controleer de meetniveaus en begin met de bruikbare kwantitatieve kenmerken. Een nominale categoriecode is niet vanzelf een hoeveelheid: gebruik voor categorieën later dummy’s.</li><li>Schat via <strong>Analyze → Regression → Linear</strong> een volledig model. Noteer per stap k, n, adjusted R², de grootste Sig. van de kandidaten en de inhoudelijke betekenis.</li><li>De college-uitwerking gebruikt als verwijderingsgrens 0,05. Verwijder eerst Aantal verdiepingen en schat opnieuw; daarna kan Aantal badkamers vervallen. Lees de nieuwe p-waarden steeds uit de nieuwe uitvoer.</li><li>Vraag onder <strong>Statistics → Collinearity diagnostics</strong> Tolerance en VIF op. Vergelijk het beginmodel met het geselecteerde model en bekijk een correlatiematrix om de overlap met Woonoppervlakte te begrijpen.</li><li>Maak voor de optionele categorische uitbreiding dummy’s via <strong>Transform → Create Dummy Variables</strong>, of via <strong>Compute Variable</strong> met bijvoorbeeld Buurt = \"Kippenbuurt\". Laat per categorievariabele één dummy als referentie weg.</li><li>Automatische selectie kan met <strong>Method = Backward</strong>. Controleer de ingestelde invoer- en verwijderingscriteria en de gebruikte waarnemingen; een standaardinstelling hoeft niet gelijk te zijn aan de handmatige grens uit de opdracht.</li><li>Lever het selectieverloop en een modelinterpretatie op. Voer na selectie de relevante diagnoses opnieuw uit; backwardselectie garandeert geen afwezigheid van multicollineariteit.</li></ol><p class=\"note\"><strong>Bronverschil:</strong> deze praktijkuitwerking gebruikt Sig. &lt; 0,05; de attentiepunten noemen bij backward ½α. Gebruik de expliciete selectiegrens van de opgave. Een gewone tweezijdige p-waarde wordt bij een toets met de totale α vergeleken.</p><p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-modelbouw-18\" data-source-note=\"18\" aria-label=\"Bron 18\">[18]</a> <a class=\"source-note\" href=\"#bron-modelbouw-19\" data-source-note=\"19\" aria-label=\"Bron 19\">[19]</a></p>",
+          "html": "<p><strong>Doel:</strong> uit een reeks woningkenmerken een verklaarbaar model voor Verkoopprijs maken. De officiële uitwerking laat eerst handmatige backwardselectie zien. De dependent is Verkoopprijs; de oorspronkelijke uitwerking noemt haar eenmaal ten onrechte onafhankelijk.</p><ol><li>Lees College7 in, controleer de meetniveaus en begin met de bruikbare kwantitatieve kenmerken. Een nominale categoriecode is niet vanzelf een hoeveelheid: gebruik voor categorieën later dummy’s.</li><li>Schat via <strong>Analyze → Regression → Linear</strong> een volledig model. Noteer per stap k, n, adjusted R², de grootste Sig. van de kandidaten en de inhoudelijke betekenis.</li><li>De college-uitwerking gebruikt als verwijderingsgrens 0,05. Verwijder eerst Aantal verdiepingen en schat opnieuw; daarna kan Aantal badkamers vervallen. Lees de nieuwe p-waarden steeds uit de nieuwe uitvoer.</li><li>Vraag onder <strong>Statistics → Collinearity diagnostics</strong> Tolerance en VIF op. Vergelijk het beginmodel met het geselecteerde model en bekijk een correlatiematrix om de overlap met Woonoppervlakte te begrijpen.</li><li>Maak voor de optionele categorische uitbreiding dummy’s via <strong>Transform → Create Dummy Variables</strong>, of via <strong>Compute Variable</strong> met bijvoorbeeld Buurt = \"Kippenbuurt\". Laat per categorievariabele één dummy als referentie weg.</li><li>Automatische selectie kan met <strong>Method = Backward</strong>. Controleer de ingestelde invoer- en verwijderingscriteria en de gebruikte waarnemingen; een standaardinstelling hoeft niet gelijk te zijn aan de handmatige grens uit de opdracht.</li><li>Lever het selectieverloop en een modelinterpretatie op. Voer na selectie de relevante diagnoses opnieuw uit; backwardselectie garandeert geen afwezigheid van multicollineariteit.</li></ol><p class=\"note\"><strong>Bronverschil:</strong> deze praktijkuitwerking gebruikt Sig. &lt; 0,05; de attentiepunten noemen bij backward ½α. Gebruik de expliciete selectiegrens van de opgave. Een gewone tweezijdige p-waarde wordt bij een toets met de totale α vergeleken.</p><p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-modelbouw-19\" data-source-note=\"19\" aria-label=\"Bron 19\">[19]</a> <a class=\"source-note\" href=\"#bron-modelbouw-20\" data-source-note=\"20\" aria-label=\"Bron 20\">[20]</a></p>",
           "refs": [
             {
               "source": "spss",
@@ -12795,13 +12857,13 @@ window.SRA = {
           ],
           "regressionVersion": "2026-09-25",
           "sourceNotes": [
-            18,
-            19
+            19,
+            20
           ]
         },
         {
           "title": "Doorlopende collegecasus Life Expectancy: selecteren met uitvoer",
-          "html": "<p>De casus begint met 171 landen en vijf kandidaten voor de levensverwachting: Adult Mortality, BMI, HIV/AIDS, ICOR en Schooling. Het <strong>conceptuele model</strong> beschrijft vooraf welke verbanden inhoudelijk worden verwacht. De selectie onderzoekt daarna de extra statistische bijdrage binnen het gezamenlijke model.</p><table><caption>Enter: relevante Coefficients-kolommen</caption><thead><tr><th scope=\"col\">Kandidaat</th><th scope=\"col\">B</th><th scope=\"col\">Sig.</th><th scope=\"col\">VIF</th></tr></thead><tbody><tr><td>Adult Mortality</td><td>−0,016</td><td>,000</td><td>2,583</td></tr><tr><td>BMI</td><td>−0,008</td><td>0,565</td><td>1,425</td></tr><tr><td>HIV/AIDS</td><td>−0,951</td><td>,000</td><td>1,726</td></tr><tr><td>ICOR</td><td>35,523</td><td>,000</td><td>8,476</td></tr><tr><td>Schooling</td><td>0,124</td><td>0,570</td><td>6,244</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Welke kandidaat valt bij backward met grens 0,05 eerst af? Waarom mag je niet meteen alle oorspronkelijke niet-significante kandidaten tegelijk schrappen?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>Schooling heeft met 0,570 de grootste p-waarde boven 0,05. De constante telt niet als gewone selectiekandidaat.</li><li>Na verwijderen wordt het model opnieuw geschat. De tweede uitvoer geeft voor BMI p = 0,545; daarna valt ook BMI af.</li><li>Het derde model bevat Adult Mortality, HIV/AIDS en ICOR. Op dezelfde 171 waarnemingen zijn de residuele df achtereenvolgens 165, 166 en 167.</li><li>De coëfficiënt ICOR verandert van 35,523 naar 37,792 en vervolgens 37,138. Een effectschatting hangt dus af van welke andere kenmerken zijn opgenomen.</li><li>De grootste VIF in het beginmodel is 8,476 &lt; 10. Dat overschrijdt de cursusgrens niet, maar er is wel merkbare overlap. Een grenswaarde is geen bewijs dat de verklarende variabelen volledig onafhankelijk zijn.</li></ol></details></div><figure class=\"learning-figure\"><a href=\"bronnen/slides.pdf#page=143\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/learning/regression-life-backward.png\" alt=\"Oorspronkelijke ANOVA en Coefficients voor drie backwardstappen met 171 landen.\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></a><figcaption>Lees bij iedere berekening hetzelfde modelnummer in beide tabellen. Open de afbeelding op volledig formaat.</figcaption></figure><p>Forward en stepwise komen in deze collegecasus op dezelfde drie kandidaten uit. Dat is een uitkomst van deze gegevens en selectie-instellingen, geen algemene garantie dat alle methoden hetzelfde model vinden.</p><p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-modelbouw-20\" data-source-note=\"20\" aria-label=\"Bron 20\">[20]</a> <a class=\"source-note\" href=\"#bron-modelbouw-21\" data-source-note=\"21\" aria-label=\"Bron 21\">[21]</a> <a class=\"source-note\" href=\"#bron-modelbouw-22\" data-source-note=\"22\" aria-label=\"Bron 22\">[22]</a></p>",
+          "html": "<p>De casus begint met 171 landen en vijf kandidaten voor de levensverwachting: Adult Mortality, BMI, HIV/AIDS, ICOR en Schooling. Het <strong>conceptuele model</strong> beschrijft vooraf welke verbanden inhoudelijk worden verwacht. De selectie onderzoekt daarna de extra statistische bijdrage binnen het gezamenlijke model.</p><table><caption>Enter: relevante Coefficients-kolommen</caption><thead><tr><th scope=\"col\">Kandidaat</th><th scope=\"col\">B</th><th scope=\"col\">Sig.</th><th scope=\"col\">VIF</th></tr></thead><tbody><tr><td>Adult Mortality</td><td>−0,016</td><td>,000</td><td>2,583</td></tr><tr><td>BMI</td><td>−0,008</td><td>0,565</td><td>1,425</td></tr><tr><td>HIV/AIDS</td><td>−0,951</td><td>,000</td><td>1,726</td></tr><tr><td>ICOR</td><td>35,523</td><td>,000</td><td>8,476</td></tr><tr><td>Schooling</td><td>0,124</td><td>0,570</td><td>6,244</td></tr></tbody></table><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Welke kandidaat valt bij backward met grens 0,05 eerst af? Waarom mag je niet meteen alle oorspronkelijke niet-significante kandidaten tegelijk schrappen?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>Schooling heeft met 0,570 de grootste p-waarde boven 0,05. De constante telt niet als gewone selectiekandidaat.</li><li>Na verwijderen wordt het model opnieuw geschat. De tweede uitvoer geeft voor BMI p = 0,545; daarna valt ook BMI af.</li><li>Het derde model bevat Adult Mortality, HIV/AIDS en ICOR. Op dezelfde 171 waarnemingen zijn de residuele df achtereenvolgens 165, 166 en 167.</li><li>De coëfficiënt ICOR verandert van 35,523 naar 37,792 en vervolgens 37,138. Een effectschatting hangt dus af van welke andere kenmerken zijn opgenomen.</li><li>De grootste VIF in het beginmodel is 8,476 &lt; 10. Dat overschrijdt de cursusgrens niet, maar er is wel merkbare overlap. Een grenswaarde is geen bewijs dat de verklarende variabelen volledig onafhankelijk zijn.</li></ol></details></div><figure class=\"learning-figure\"><a href=\"bronnen/slides.pdf#page=143\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/learning/regression-life-backward.png\" alt=\"Oorspronkelijke ANOVA en Coefficients voor drie backwardstappen met 171 landen.\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></a><figcaption>Lees bij iedere berekening hetzelfde modelnummer in beide tabellen. Open de afbeelding op volledig formaat.</figcaption></figure><p>Forward en stepwise komen in deze collegecasus op dezelfde drie kandidaten uit. Dat is een uitkomst van deze gegevens en selectie-instellingen, geen algemene garantie dat alle methoden hetzelfde model vinden.</p><p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-modelbouw-21\" data-source-note=\"21\" aria-label=\"Bron 21\">[21]</a> <a class=\"source-note\" href=\"#bron-modelbouw-22\" data-source-note=\"22\" aria-label=\"Bron 22\">[22]</a> <a class=\"source-note\" href=\"#bron-modelbouw-23\" data-source-note=\"23\" aria-label=\"Bron 23\">[23]</a></p>",
           "refs": [
             {
               "source": "slides",
@@ -12816,9 +12878,9 @@ window.SRA = {
           ],
           "regressionVersion": "2026-09-25",
           "sourceNotes": [
-            20,
             21,
-            22
+            22,
+            23
           ]
         }
       ],
@@ -12830,7 +12892,13 @@ window.SRA = {
           "F = (850 − 800)/10 = 5.",
           "Vergelijk 5 met de toepasselijke F-grens. Alleen deze berekening geeft nog geen conclusie over significantie zonder α en vrijheidsgraden."
         ],
-        "refs": [],
+        "refs": [
+          {
+            "source": "formules",
+            "locator": "Formules 59–63, PDF-pagina 4",
+            "page": 4
+          }
+        ],
         "context": "Wat vertelt een lage tolerance over overlap, en hoe toets je daarna de extra bijdrage van één variabele? Dit zijn twee afzonderlijke controles. Het voorbeeld laat zien welke aanvullende grens nodig is voor een significantieoordeel.",
         "stepsHtml": [
           "Tolerance = 0,08. Dan VIF = 1/0,08 = 12,5: boven de cursusgrens van 10.",
@@ -12838,8 +12906,10 @@ window.SRA = {
           "F = (850 − 800)/10 = 5.",
           "Vergelijk 5 met de toepasselijke F-grens. Alleen deze berekening geeft nog geen conclusie over significantie zonder α en vrijheidsgraden."
         ],
-        "sourceNotes": [],
-        "notesHtml": ""
+        "sourceNotes": [
+          24
+        ],
+        "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-modelbouw-24\" data-source-note=\"24\" aria-label=\"Bron 24\">[24]</a></p>"
       },
       "pitfalls": [
         "Correlatie tussen x en y is iets anders dan multicollineariteit tussen de x-variabelen.",
@@ -12910,6 +12980,11 @@ window.SRA = {
           "source": "boek-h10c",
           "page": 6,
           "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+        },
+        {
+          "source": "boek-h10b",
+          "page": 6,
+          "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
         },
         {
           "source": "spss",
@@ -13020,6 +13095,11 @@ window.SRA = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             },
             {
               "source": "spss",
@@ -13138,6 +13218,11 @@ window.SRA = {
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
             },
             {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
               "source": "spss",
               "page": 28,
               "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
@@ -13254,6 +13339,11 @@ window.SRA = {
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
             },
             {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
               "source": "spss",
               "page": 28,
               "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
@@ -13299,7 +13389,7 @@ window.SRA = {
         },
         {
           "title": "Geneste modellen: de extra bijdrage zichtbaar berekenen",
-          "html": "<p><strong>Genest</strong> betekent dat het kleine model in het uitgebreide model zit. De uitkomst y, waarnemingen en weging moeten gelijk zijn. Dan kun je de afname in onverklaarde variatie toeschrijven aan de extra variabelen, in plaats van aan een andere dataset.</p><table><caption>Eigen rekenvoorbeeld bij formule 63: dezelfde 50 waarnemingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th><th scope=\"col\">Residual df</th></tr></thead><tbody><tr><td>Klein</td><td>2</td><td>800</td><td>200</td><td>47</td></tr><tr><td>Uitgebreid</td><td>3</td><td>850</td><td>150</td><td>46</td></tr></tbody></table><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"nested-model\"><h3>De extra verklaring tegenover de resterende foutvariatie</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Dezelfde totale variatie</figcaption><table class=\"fv-table\"><caption>De bestaande casus: dezelfde 50 waarnemingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th><th scope=\"col\">Totaal</th></tr></thead><tbody><tr><td>Klein</td><td>800</td><td>200</td><td>1.000</td></tr><tr><td>Uitgebreid</td><td>850</td><td>150</td><td>1.000</td></tr><tr><td>Verschil</td><td>+50</td><td>−50</td><td>0</td></tr></tbody></table><p class=\"fv-work\">De extra variabele verklaart 50 van de voorheen onverklaarde variatie.</p></figure><figure class=\"fv-panel\"><figcaption>De partiële F afmaken</figcaption><table class=\"fv-table\"><caption>De noemer hoort bij het uitgebreide model</caption><thead><tr><th scope=\"col\">Stap</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>Extra variabelen</td><td>1</td></tr><tr><td>Residual df uitgebreid</td><td>50 − 3 − 1 = 46</td></tr><tr><td>MSE uitgebreid</td><td>150/46 ≈ 3,26087</td></tr><tr><td>F</td><td>50/3,26087 ≈ 15,3333</td></tr></tbody></table><p class=\"fv-work\">De verbetering wordt gedeeld door de foutvariatie na uitbreiding, niet door die van het kleine model.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De getallen horen bij dezelfde bestaande casus. Een andere dataset of andere y laat deze vergelijking niet toe. Significant verklaren vraagt daarnaast α en de juiste F-grens.</p></section><!-- formula-visual:end --><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken de partiële F voor de ene extra variabele en beide adjusted R²-waarden. Waarom gebruik je de MSE van het uitgebreide model?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>TotalSS is in beide modellen 1.000. De extra variabele verklaart 850 − 800 = 50 extra.</li><li>MSE<sub>uitgebreid</sub> = 150/46 ≈ 3,26087. F = (850 − 800)/(150/46) ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.</li><li>Deze MSE beschrijft de resterende foutvariatie nadat de extra variabele is opgenomen. De teller meet de verbetering door precies die toevoeging.</li><li>Klein: adjusted R² = 1 − (200/47)/(1.000/49) ≈ 0,79149. Uitgebreid: 1 − (150/46)/(1.000/49) ≈ 0,84022.</li><li>De fit na correctie verbetert. Voor een formele toets kies je vooraf α en zoek je de bijbehorende F-grens met 1 en 46 vrijheidsgraden in tabel 13.8. Een betere fit vervangt validatie en modeldiagnoses niet.</li></ol></details></div><p>Bij één extra variabele sluit deze tweezijdige vergelijking aan op de gekwadrateerde t-toets van die variabele in het uitgebreide model. Voor een blok van q extra variabelen deel je de toename van SSR ook door q. Vergelijk geen model voor y met een model voor ln(y) met deze formule.</p>",
+          "html": "<p><strong>Genest</strong> betekent dat het kleine model in het uitgebreide model zit. De uitkomst y, waarnemingen en weging moeten gelijk zijn. Dan kun je de afname in onverklaarde variatie toeschrijven aan de extra variabelen, in plaats van aan een andere dataset.</p><table><caption>Eigen rekenvoorbeeld bij formule 63: dezelfde 50 waarnemingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th><th scope=\"col\">Residual df</th></tr></thead><tbody><tr><td>Klein</td><td>2</td><td>800</td><td>200</td><td>47</td></tr><tr><td>Uitgebreid</td><td>3</td><td>850</td><td>150</td><td>46</td></tr></tbody></table><!-- formula-visual:start --><section class=\"formula-visual\" data-formula-visual=\"nested-model\"><h3>De extra verklaring tegenover de resterende foutvariatie</h3><p class=\"fv-provenance\">Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.</p><div class=\"fv-panels\"><figure class=\"fv-panel\"><figcaption>Dezelfde totale variatie</figcaption><table class=\"fv-table\"><caption>De bestaande casus: dezelfde 50 waarnemingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th><th scope=\"col\">Totaal</th></tr></thead><tbody><tr><td>Klein</td><td>800</td><td>200</td><td>1.000</td></tr><tr><td>Uitgebreid</td><td>850</td><td>150</td><td>1.000</td></tr><tr><td>Verschil</td><td>+50</td><td>−50</td><td>0</td></tr></tbody></table><p class=\"fv-work\">De extra variabele verklaart 50 van de voorheen onverklaarde variatie.</p></figure><figure class=\"fv-panel\"><figcaption>De partiële F afmaken</figcaption><table class=\"fv-table\"><caption>De noemer hoort bij het uitgebreide model</caption><thead><tr><th scope=\"col\">Stap</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><td>Extra variabelen</td><td>1</td></tr><tr><td>Residual df uitgebreid</td><td>50 − 3 − 1 = 46</td></tr><tr><td>MSE uitgebreid</td><td>150/46 ≈ 3,26087</td></tr><tr><td>F</td><td>50/3,26087 ≈ 15,3333</td></tr></tbody></table><p class=\"fv-work\">De verbetering wordt gedeeld door de foutvariatie na uitbreiding, niet door die van het kleine model.</p></figure></div><p class=\"fv-meaning\"><strong>Lees het beeld:</strong> De getallen horen bij dezelfde bestaande casus. Een andere dataset of andere y laat deze vergelijking niet toe. Significant verklaren vraagt daarnaast α en de juiste F-grens.</p></section><!-- formula-visual:end --><div class=\"learning-application\"><h3>Zelf toepassen</h3><p>Bereken de partiële F voor de ene extra variabele en beide adjusted R²-waarden. Waarom gebruik je de MSE van het uitgebreide model?</p><details class=\"worked-answer\"><summary>Bekijk de uitwerking en afweging</summary><ol><li>TotalSS is in beide modellen 1.000. De extra variabele verklaart 850 − 800 = 50 extra.</li><li>MSE<sub>uitgebreid</sub> = 150/46 ≈ 3,26087. F = (850 − 800)/(150/46) ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.</li><li>Deze MSE beschrijft de resterende foutvariatie nadat de extra variabele is opgenomen. De teller meet de verbetering door precies die toevoeging.</li><li>Klein: adjusted R² = 1 − (200/47)/(1.000/49) ≈ 0,79149. Uitgebreid: 1 − (150/46)/(1.000/49) ≈ 0,84022.</li><li>De fit na correctie verbetert. Voor een formele toets kies je vooraf α en zoek je de bijbehorende F-grens met 1 en 46 vrijheidsgraden in tabel 13.8. Een betere fit vervangt validatie en modeldiagnoses niet.</li></ol></details></div><p>Bij één extra variabele sluit deze tweezijdige vergelijking aan op de gekwadrateerde t-toets van die variabele in het uitgebreide model. Voor een blok van q extra variabelen deel je de toename van SSR ook door q. Vergelijk geen model voor y met een model voor ln(y) met deze formule.</p><p class=\"note\"><strong>Bronnuance.</strong> In het uitgewerkte boekvoorbeeld bij de variabele ln_dens deelt het boek de toename van SSR door de MSE van het kleinere model. Deze les gebruikt de gangbare vorm met de MSE van het uitgebreide model, zoals hierboven uitgelegd. Bij een kleine toename geeft dat nauwelijks een ander getal, maar houd op het tentamen de formule van het formuleblad aan.</p>",
           "refs": [
             {
               "source": "formules",
@@ -13320,6 +13410,11 @@ window.SRA = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             }
           ],
           "regressionVersion": "2026-09-25"
@@ -13444,6 +13539,11 @@ window.SRA = {
           "source": "tabellen",
           "page": 20,
           "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
+        },
+        {
+          "source": "boek-h10b",
+          "page": 6,
+          "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
         },
         {
           "source": "spss",
@@ -13672,7 +13772,13 @@ window.SRA = {
           "MSPR = (4 + 1 + 9)/3 = 14/3 ≈ 4,6667.",
           "Als de trainings-MSE 1 is, zijn de fouten op de testset aanzienlijk groter. De training geeft dan een te gunstig beeld van de voorspelfout."
         ],
-        "refs": [],
+        "refs": [
+          {
+            "source": "formules",
+            "locator": "Formule 64, PDF-pagina 4",
+            "page": 4
+          }
+        ],
         "context": "Hoe groot is de gemiddelde gekwadrateerde voorspelfout voor drie testwaarnemingen? We berekenen MSPR en vergelijken die met de gegeven trainings-MSE.",
         "stepsHtml": [
           "Werkelijke testwaarden: 10, 14 en 20. Voorspellingen: 12, 13 en 17.",
@@ -13680,8 +13786,10 @@ window.SRA = {
           "MSPR = (4 + 1 + 9)/3 = 14/3 ≈ 4,6667.",
           "Als de trainings-MSE 1 is, zijn de fouten op de testset aanzienlijk groter. De training geeft dan een te gunstig beeld van de voorspelfout."
         ],
-        "sourceNotes": [],
-        "notesHtml": ""
+        "sourceNotes": [
+          17
+        ],
+        "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-validatie-17\" data-source-note=\"17\" aria-label=\"Bron 17\">[17]</a></p>"
       },
       "pitfalls": [
         "Gebruik de testset niet voortdurend om het model opnieuw te kiezen en behandel haar daarna als onafhankelijk.",
@@ -14465,7 +14573,13 @@ window.SRA = {
           "3,10 > 1,70: de toetsingsgrootheid ligt in het kritieke gebied. H₀ wordt verworpen.",
           "Er is een significant positief lineair verband tussen productie en kosten. Het α-risico is relevant. Dit toont op zichzelf geen causaliteit aan."
         ],
-        "refs": [],
+        "refs": [
+          {
+            "source": "formules",
+            "locator": "Formules 39–43 en 61–62, PDF-pagina 3–4",
+            "page": 3
+          }
+        ],
         "context": "Hoe schrijf je een volledig antwoord op de vraag of productie en kosten positief lineair samenhangen? Het voorbeeld loopt van de gerichte hypothesen via de gegeven t-waarden naar een inhoudelijke conclusie.",
         "stepsHtml": [
           "Vraag: toon bij α = 0,05 een positief lineair verband tussen productie en kosten aan.",
@@ -14474,8 +14588,10 @@ window.SRA = {
           "3,10 &gt; 1,70: de toetsingsgrootheid ligt in het kritieke gebied. H₀ wordt verworpen.",
           "Er is een significant positief lineair verband tussen productie en kosten. Het α-risico is relevant. Dit toont op zichzelf geen causaliteit aan."
         ],
-        "sourceNotes": [],
-        "notesHtml": ""
+        "sourceNotes": [
+          26
+        ],
+        "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-tentamen-26\" data-source-note=\"26\" aria-label=\"Bron 26\">[26]</a></p>"
       },
       "pitfalls": [
         "Alleen een getal opschrijven laat formulekeuze en interpretatie onzichtbaar.",
@@ -14937,6 +15053,11 @@ window.SRA = {
           "source": "attentie",
           "page": 9,
           "locator": "Validatie en MSPR, PDF 9"
+        },
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formules 39–43 en 61–62, PDF-pagina 3–4"
         },
         {
           "source": "programma",

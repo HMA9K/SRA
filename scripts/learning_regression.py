@@ -640,10 +640,16 @@ def enhance(lessons, sources):
         + '<p>Bij één extra variabele sluit deze tweezijdige vergelijking aan op de gekwadrateerde '
         't-toets van die variabele in het uitgebreide model. Voor een blok van q extra variabelen '
         'deel je de toename van SSR ook door q. Vergelijk geen model voor y met een model voor ln(y) '
-        'met deze formule.</p>',
+        'met deze formule.</p>'
+        '<p class="note"><strong>Bronnuance.</strong> In het uitgewerkte boekvoorbeeld bij de '
+        'variabele ln_dens deelt het boek de toename van SSR door de MSE van het kleinere model. '
+        'Deze les gebruikt de gangbare vorm met de MSE van het uitgebreide model, zoals hierboven '
+        'uitgelegd. Bij een kleine toename geeft dat nauwelijks een ander getal, maar houd op het '
+        'tentamen de formule van het formuleblad aan.</p>',
         [ref('formules',3,'Formuleblad, adjusted R², formule 51, PDF 3'),
          ref('formules',4,'Formuleblad, partiële F, formule 63, PDF 4'),
-         ref('tabellen',20,'Tabellenbundel, tabel 13.8, PDF 20–29'),bookref('boek-h10c',319)])
+         ref('tabellen',20,'Tabellenbundel, tabel 13.8, PDF 20–29'),bookref('boek-h10c',319),
+         bookref('boek-h10b',308)])
 
     add(L['modelbouw'], sources, 'SPSS-praktijkroute college 7: huizen, selectie en overlap',
         '<p><strong>Doel:</strong> uit een reeks woningkenmerken een verklaarbaar model voor '
@@ -949,7 +955,7 @@ def enhance(lessons, sources):
         'Een waarneming bij x = 80 krijgt daardoor een kwart van het gewicht van een '
         'waarneming bij x = 40: (1/80²)/(1/40²) = 1/4. Dit is een eigen invulvoorbeeld '
         'bij het gewicht uit de bron; het zijn geen extra waarnemingen uit de boekdataset.</p>'
-        + table('WLS-uitvoer uit boektabellen 9.18–9.20', ['Uitvoer','Bronwaarde','Leespunt'], [
+        + table('WLS-uitvoer uit het boek', ['Uitvoer','Bronwaarde','Leespunt'], [
             ['Model Summary: R²','0,934','Deze fit hoort bij de aangegeven weging.'],
             ['Model Summary: Std. Error of the Estimate','0,0224','De foutmaat hoort bij de gewogen berekening; vergelijk haar niet rechtstreeks met de ongewogen sₑ.'],
             ['ANOVA: Regression df / Residual df','1 / 22','Het aantal geschatte hellingen blijft één; de weging voegt geen waarnemingen toe.'],

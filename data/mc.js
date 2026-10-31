@@ -17569,6 +17569,11 @@ window.SRAMCData = {
           "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
         },
         {
+          "source": "boek-h10b",
+          "page": 6,
+          "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+        },
+        {
           "source": "spss",
           "page": 28,
           "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
@@ -17677,6 +17682,11 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             },
             {
               "source": "spss",
@@ -17816,6 +17826,11 @@ window.SRAMCData = {
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
             },
             {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
               "source": "spss",
               "page": 28,
               "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
@@ -17951,6 +17966,11 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             },
             {
               "source": "spss",
@@ -18093,6 +18113,11 @@ window.SRAMCData = {
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
             },
             {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
               "source": "spss",
               "page": 28,
               "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
@@ -18232,6 +18257,11 @@ window.SRAMCData = {
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
             },
             {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+            },
+            {
               "source": "spss",
               "page": 28,
               "locator": "SPSS-uitwerkingen, college 7, PDF 28–36"
@@ -18369,6 +18399,11 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             },
             {
               "source": "spss",
