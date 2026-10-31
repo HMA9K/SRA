@@ -31,6 +31,6 @@ Lokaal geslaagd: `npm test`, `test:sources`, `test:audit`, `test:patterns`, `tes
 ## Bewuste keuzes en open punten
 
 - Kern, Vervolg en de samenvattingen krijgen geen eigen bronnummer: ze vatten de les samen. De samenvattingen zeggen waar de bronnen staan.
-- De link naar de puntenanalyse blijft in het studierouteblok staan: de bronnenlijst accepteert alleen PDF-bronnen.
+- De puntenanalyse staat als aanvullend document in de genummerde bronnenlijst; het studierouteblok verwijst er met een bronnummer naar.
 - Tabelrij- en kolomverwijzingen in rekenstappen blijven staan: het opzoeken in de tabellenbundel is de vaardigheid die wordt geoefend.
 - De Review-route kon de oorspronkelijke PDF's niet visueel lezen; formules uit de boektekst zijn waar nodig op de PDF-pagina gecontroleerd door de bouwende deelnemer.
