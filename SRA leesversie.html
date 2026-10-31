@@ -2072,7 +2072,10 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation asid
 .lesson-sources li.is-target{animation:source-target 2s ease-out}
 @keyframes source-target{from{background:rgba(0,136,89,.18)}to{background:transparent}}
 @media (prefers-reduced-motion:reduce){.lesson-sources li.is-target{animation:none;outline:2px solid var(--green,#008859)}}
-.sra-phase-summary{border-bottom:1px solid var(--study-border,var(--line));padding:0 24px}
+/* Grid-items mogen smaller worden dan hun breedste tabel; die scrolt dan in zijn eigen container. */
+.sra-learning-phase{min-width:0}
+.sra-phase-summary{border-bottom:1px solid var(--study-border,var(--line));padding:0 24px;min-width:0}
+.sra-phase-summary-body{overflow-wrap:anywhere}
 .sra-phase-summary>summary{cursor:pointer;padding:14px 0;font-weight:600;color:var(--study-title,inherit)}
 .sra-phase-summary-body{padding:0 0 18px;line-height:1.6}
 .sra-phase-summary-body p,.sra-phase-summary-body li{text-align:justify;hyphens:auto}
