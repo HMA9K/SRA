@@ -51,16 +51,16 @@ def enhance(lessons, sources):
         lesson['formulaGuide'] = [s for s in lesson.get('formulaGuide', []) if s.get('regressionVersion') != '2026-09-25']
 
     add(L['regressielijn'], sources, 'Van controleverwachting naar regressiemodel',
-        '<p>Bij <strong>cijferbeoordeling</strong> onderzoekt de accountant of financiële of operationele '
-        'cijfers passen bij een verklaarbaar patroon. In het boek voorspellen arbeidsuren de productie. '
-        'Een model maakt de verwachte uitkomst én de normale afwijking daarvan meetbaar. Daardoor kun je '
-        'gericht onderzoeken welke maanden of posten afwijken. Alleen een gemiddeld productiegetal gebruiken '
-        'zou een drukke maand en een rustige maand ten onrechte langs dezelfde maatstaf leggen.</p>'
-        '<p>Kies daarom eerst de te beoordelen uitkomst <strong>y</strong>, de inhoudelijk passende '
-        'verklarende variabele <strong>x</strong>, de eenheden en de onderzoekspopulatie. De regressielijn '
-        'is een schatting uit gegevens; het onbekende populatiemodel bevat daarnaast een storingsterm. '
-        'Regressie helpt een controleverwachting opbouwen, maar vervangt de beoordeling van de kwaliteit '
-        'van de onderliggende gegevens niet.</p>'
+        '<p>Bij <strong>cijferbeoordeling</strong> vergelijkt de accountant een werkelijk bedrag of '
+        'aantal met een onderbouwde verwachting. In de productiecasus leveren arbeidsuren die '
+        'verwachting: bij meer gewerkte uren verwacht je meer productie. Eén vast gemiddelde voor '
+        'alle maanden houdt geen rekening met het verschil tussen drukke en rustige maanden.</p>'
+        '<p>Regressie maakt die verwachting afhankelijk van een kenmerk. Kies eerst wat je wilt '
+        'beoordelen: dat is <strong>y</strong>. Kies daarna de inhoudelijk passende verklarende '
+        'variabele <strong>x</strong> en noteer populatie, periode en eenheden. De lijn schat het '
+        'verband; de spreiding rond de lijn laat zien hoeveel gewone afwijking je nog kunt verwachten. '
+        'Beide zijn nodig om een nieuwe maand te beoordelen. Controleer dus ook de gegevens waarop '
+        'de verwachting berust.</p>'
         + table('Welke vraag stelt de accountant?', ['Vraag', 'Passende aanpak', 'Reden'], [
             ['Wat is het totale werkelijke bedrag van een populatie?', 'Een schatter uit hoofdstuk 8.',
              'Je trekt een steekproef en extrapoleert naar een populatietotaal.'],
@@ -123,12 +123,12 @@ def enhance(lessons, sources):
         [ref('spss',5,'SPSS-uitwerkingen, college 3, PDF 5–10')])
 
     add(L['anova'], sources, 'ANOVA vergelijkt de lijn met voorspellen door het gemiddelde',
-        '<p>Zonder x zou je voor iedereen hetzelfde steekproefgemiddelde ȳ voorspellen. '
-        '<strong>TotalSS</strong> meet de totale gekwadrateerde afwijking van die eenvoudige voorspelling. '
-        'Met de regressielijn voorspelt iedere x een eigen ŷ. <strong>SSE</strong> meet wat daarna '
-        'onverklaard blijft. Het verschil is <strong>SSR</strong>: de verbetering ten opzichte van '
-        'alleen het gemiddelde. Daarom is R² een aandeel van de variatie en geen slagingspercentage '
-        'van losse voorspellingen.</p>'
+        '<p>Vraag eerst wat je zonder x zou voorspellen: voor iedereen hetzelfde gemiddelde ȳ. '
+        '<strong>TotalSS</strong> telt de gekwadrateerde fouten bij die eenvoudige aanpak. '
+        'Voorspel je met de lijn, dan blijft <strong>SSE</strong> aan gekwadrateerde fouten over. '
+        'De vermindering heet <strong>SSR</strong>. Zo vergelijkt ANOVA twee manieren van voorspellen '
+        'op dezelfde waarnemingen. R² drukt de vermindering uit als aandeel van de oorspronkelijke '
+        'variatie, niet als percentage geslaagde losse voorspellingen.</p>'
         '<p>Een <strong>vrijheidsgraad</strong> is de hoeveelheid onafhankelijke informatie die na het '
         'schatten overblijft. Het gemiddelde kost één vrijheidsgraad. Een regressiemodel schat k '
         'hellingen én een constante, zodat n − k − 1 vrijheidsgraden voor de residuen overblijven. '
@@ -180,7 +180,7 @@ def enhance(lessons, sources):
         [ref('uitwerkingen',14,'Uitwerkingenbundel, H9.1, PDF 14–15'),ref('formules',3,'Formuleblad, formules 35–43, PDF 3')])
 
     add(L['toetsen'], sources, 'Van de onderzoeksvraag naar de juiste toets',
-        '<p>Een toets verdeelt de gevonden helling door haar onzekerheid. Een helling van 10 kan '
+        '<p>Een toets deelt de gevonden helling door haar standaardfout, de onzekerheid van die schatting. Een helling van 10 kan '
         'overtuigend zijn als de standaardfout 1 is, en weinig overtuigend als die 20 is. '
         'Daarom beoordeel je de verhouding t en niet alleen B. De p-waarde vertelt hoe uitzonderlijk '
         'de uitkomst is onder de nulhypothese; de grootte van B vertelt wat het verband inhoudelijk betekent.</p>'
@@ -227,9 +227,10 @@ def enhance(lessons, sources):
          ref('uitwerkingen',15,'Uitwerkingenbundel, H9.1g/h, PDF 15')])
 
     add(L['diagnostiek'], sources, 'Een modelcontrole begint bij het gegevensproces',
-        '<p>Diagnostiek onderzoekt of de berekende lijn en onzekerheid passen bij de gegevens. '
-        'Dat gaat verder dan een lijst grenswaarden invullen. Een p-waarde uit een ongeschikt model '
-        'kan een onterecht overtuigende indruk geven; een voorspellingsinterval kan te smal of verkeerd gecentreerd zijn.</p>'
+        '<p>Een diagnose onderzoekt één mogelijke zwakke plek van het model. De lijn kan een '
+        'verkeerd patroon volgen, een waarneming kan veel invloed hebben of de spreiding kan '
+        'veranderen met x. Dan kan een kleine p-waarde te overtuigend lijken en een interval '
+        'te smal zijn. Begin daarom met wat de gegevens voorstellen en gebruik daarna de passende maat.</p>'
         '<p>De eerste vier analyses onderzoeken de structuur en bijzondere waarnemingen: samengevoegde groepen, '
         'tijdsvertraging, uitbijters en invloed. Daarna onderzoek je normaliteit, constante spreiding en '
         'bij tijdreeksen autocorrelatie. De volgorde helpt oorzaken te herkennen: een ten onrechte '
@@ -272,7 +273,8 @@ def enhance(lessons, sources):
         [ref('spss',11,'SPSS-uitwerkingen, college 4, PDF 11–13'),bookref('boek-h9c',261)])
 
     add(L['diagnostiek'], sources, 'Tijdsvertraging lezen in grafieken én Correlations',
-        '<p><strong>Tijdsvertraging</strong> betekent dat x uit een eerdere periode bij de huidige y hoort. '
+        '<p><strong>Naslag bij tijdreeksen.</strong> De historische vragen gingen over toepasselijkheid; '
+        'deze uitwerking bewaart de volledige collegecasus. <strong>Tijdsvertraging</strong> betekent dat x uit een eerdere periode bij de huidige y hoort. '
         'Reclame kan bijvoorbeeld pas later in afzet doorwerken. Een vergelijking van reclame en afzet '
         'in dezelfde maand kan daardoor weinig samenhang laten zien, terwijl een verschoven vergelijking '
         'een duidelijk patroon heeft. Begin met de tijdsvolgorde en een inhoudelijk aannemelijke vertraging.</p>'
@@ -422,10 +424,11 @@ def enhance(lessons, sources):
         [ref('spss',14,'SPSS-uitwerkingen, college 5, PDF 14–21')])
 
     add(L['voorspellen'], sources, 'De voorspelling is een verwachting met een onzekerheidsmarge',
-        '<p>Een puntvoorspelling ligt op de lijn en is zelden exact de realisatie. '
-        'Voor een accountant is daarom de vervolgvraag van belang: hoeveel afwijking is '
-        'nog verenigbaar met de gebruikelijke spreiding? Een <strong>individueel voorspellingsinterval</strong> '
-        'bevat zowel onzekerheid over de lijn als de extra storing van de nieuwe waarneming.</p>'
+        '<p>De lijn geeft de verwachte uitkomst bij x₀. Een nieuwe maand kan daarvan afwijken, '
+        'ook als de gegevens juist zijn. De controlevraag is daarom hoeveel afwijking bij de '
+        'gebruikelijke spreiding past. Een <strong>individueel voorspellingsinterval</strong> '
+        'neemt twee onzekerheden mee: we kennen de lijn niet precies en de nieuwe waarneming '
+        'heeft daarnaast haar eigen storing. Voor een gemiddelde heb je die laatste component niet nodig.</p>'
         + table('Lees eerst wat wordt gevraagd', ['Gevraagd','Passend antwoord','Gevolg'], [
             ['De verwachte productie bij één gegeven hoeveelheid arbeidsuren','Puntvoorspelling ŷ₀.','Geeft één centrumwaarde; geen informatie over de marge.'],
             ['Het gemiddelde van alle vergelijkbare situaties bij x₀','Interval voor de gemiddelde respons.','Geen extra individuele storing; daarom smaller.'],
@@ -438,7 +441,7 @@ def enhance(lessons, sources):
         [bookref('boek-h9d',283),ref('formules',3,'Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3')], first=True)
 
     add(L['voorspellen'], sources, 'Boekcasus Productiviteit: een controlemaand beoordelen',
-        '<p>Het boek gebruikt 24 basismaanden en onderzoekt daarna de controleperiode. '
+        '<p>De productiecasus gebruikt 24 basismaanden en onderzoekt daarna de controleperiode. '
         'Voor januari is x₀ = 55,5 in duizenden arbeidsuren. De benodigde waarden zijn '
         'sₑ = 1,10, sₓ = 6,31 en x̄ = 48,683. De voorspelling is ŷ₀ = 32,75 '
         'in tienduizenden producten. De werkelijke productie is 34,3.</p>'
@@ -461,10 +464,11 @@ def enhance(lessons, sources):
         [bookref('boek-h9d',283),bookref('boek-h9d',284),ref('tabellen',12,'Tabellenbundel, tabel 13.4, df 22, PDF 12')])
 
     add(L['meervoudig'], sources, 'Een extra variabele verandert de vraag die de helling beantwoordt',
-        '<p>Een enkelvoudig salarismodel kan een verschil tussen groepen laten zien doordat '
-        'die groepen ook verschillen in leeftijd, opleiding of leidinggeven. Een meervoudig model '
-        'vergelijkt kenmerken <strong>bij gelijkblijvende overige opgenomen variabelen</strong>. '
-        'Daardoor kan de betekenis en grootte van een coëfficiënt veranderen na uitbreiding.</p>'
+        '<p>Een salarisverschil tussen twee groepen kan samengaan met verschillen in leeftijd, '
+        'opleiding en leidinggeven. Met één verklarende variabele kun je die bijdragen niet uit '
+        'elkaar houden. Een meervoudig model vergelijkt <strong>bij gelijkblijvende overige '
+        'opgenomen variabelen</strong>. Daardoor kan een helling veranderen als je een kenmerk '
+        'toevoegt: je beantwoordt dan een preciezere, andere vergelijkingsvraag.</p>'
         '<p>Dat maakt het model bruikbaar voor een meer gerichte verwachting bij cijferbeoordeling. '
         'Het blijft nodig om te onderzoeken of de gekozen kenmerken voldoende en juist gemeten zijn. '
         'Een gedeeltelijk gecorrigeerd salarisverschil is niet automatisch een oorzakelijk effect.</p>'
@@ -515,10 +519,11 @@ def enhance(lessons, sources):
          ref('tabellen',13,'Tabellenbundel, tabel 13.4, rij 190, PDF 13')])
 
     add(L['transformaties'], sources, 'Een transformatie verandert welk patroon lineair wordt',
-        '<p>Een rechte lijn in de verkeerde variabelen kan systematisch naast de waarnemingen '
-        'liggen. Bij een <strong>transformatie</strong> verander je de schaal, zodat een inhoudelijk '
-        'passend niet-recht patroon met een lineair model kan worden geschat. Je kiest de '
-        'transformatie op basis van de puntenwolk, mogelijke samenhang en de residuen.</p>'
+        '<p>Als een puntenwolk krom loopt, kan een rechte lijn in de oorspronkelijke variabelen '
+        'systematisch te hoog of te laag voorspellen. Een <strong>transformatie</strong> verandert '
+        'de schaal waarop je de lijn schat. Vraag eerst welk patroon je wilt beschrijven: '
+        'een vaste toename, een vaste factor of een verandering bij dezelfde verhouding in x. '
+        'Bekijk daarna of die vorm bij de puntenwolk en de residuen past.</p>'
         + table('Herkenningsvragen voor modelkeuze', ['Patroon','Model','Wat verandert er?'], [
             ['Een vaste toename van y bij één extra x','Lineair: ŷ = b₀ + b₁x','B is een absolute toename.'],
             ['Dezelfde vermenigvuldigingsfactor in y bij één extra x','Exponentieel: ln(ŷ) = b₀ + b₁x','De factor is exp(b₁); y moet positief zijn.'],
@@ -579,11 +584,12 @@ def enhance(lessons, sources):
         [ref('spss',22,'SPSS-uitwerkingen, college 6, PDF 22–27'),ref('attentie',7,'Attentiepunten, transformaties, PDF 7')])
 
     add(L['modelbouw'], sources, 'Modelbouw balanceert extra informatie en onnodige complexiteit',
-        '<p>Een extra variabele kan ontbrekende samenhang verklaren, maar ook vooral toeval '
-        'uit de bestaande gegevens volgen. Gewone R² daalt bij uitbreiding van hetzelfde OLS-model '
-        'op dezelfde data niet. Zij is daarom geen eerlijke beloning voor iedere nieuwe variabele. '
-        '<strong>Adjusted R²</strong> rekent de hoeveelheid overgebleven informatie mee en '
-        'kan dalen wanneer de extra variabele weinig toevoegt.</p>'
+        '<p>Een model moet voldoende informatie bevatten om de vraag te beantwoorden, zonder '
+        'onnodige variabelen. Dat heet <strong>spaarzaamheid</strong>. Een extra variabele '
+        'kan een ontbrekend verband beschrijven, maar ook toeval volgen. Gewone R² daalt bij '
+        'uitbreiding van hetzelfde OLS-model op dezelfde data niet. <strong>Adjusted R²</strong> '
+        'weegt mee dat een extra helling een vrijheidsgraad kost. Zij kan daarom dalen als '
+        'de extra informatie onvoldoende is.</p>'
         '<p>Bij <strong>multicollineariteit</strong> bevatten verklarende variabelen sterk '
         'overlappende informatie. Het model kan gezamenlijk goed passen, terwijl de afzonderlijke '
         'bijdragen onzeker zijn. Voor de accountant is dit verschil van belang: een bruikbare gezamenlijke '
@@ -593,7 +599,24 @@ def enhance(lessons, sources):
         'Een losse correlatiematrix geeft aanwijzingen, maar vervangt die gezamenlijke vergelijking niet. '
         'Verwijderen kan de overlap beperken; de inhoudelijke functie van een variabele blijft '
         'meewegen en het model moet na verwijderen opnieuw worden geschat en beoordeeld.</p>',
-        [bookref('boek-h10b',305),bookref('boek-h10b',308),ref('attentie',7,'Attentiepunten, modelbouw en multicollineariteit, PDF 7–8')], first=True)
+        [bookref('boek-h10a',291),bookref('boek-h10b',305),bookref('boek-h10c',316),ref('attentie',7,'Attentiepunten, modelbouw en multicollineariteit, PDF 7–8')], first=True)
+
+    add(L['modelbouw'], sources, 'VIF lezen: van hulpregressie naar conclusie',
+        '<p>Een VIF-uitkomst vraagt om drie stappen: bepalen wat de maat vergelijkt, '
+        'de grens toepassen en uitleggen wat dit betekent voor het gebruik van het model. '
+        'In het GDP-model hebben LN_MORT en LN_ELECT beide VIF = 2,634.</p>'
+        + steps(['Bereken tolerance = 1/2,634 ≈ 0,380. Ongeveer dit aandeel van de variatie '
+                 'in de betreffende x blijft over nadat je haar uit de andere x hebt voorspeld.',
+                 'De hulpregressie heeft R² = 1 − 0,380 = 0,620. Dit gaat over samenhang '
+                 'tussen de verklarende variabelen, niet over het verklaarde aandeel GDP.',
+                 'Vergelijk 2,634 met de cursusgrens 10. De grens wordt niet overschreden. '
+                 'Schrijf dat er volgens deze regel geen multicollineariteitsprobleem is aangetoond.',
+                 'De overlap is daarmee niet verdwenen. Beoordeel de afzonderlijke B’s met hun '
+                 'standaardfouten en de overige diagnoses; VIF alleen beslist niet of het model bruikbaar is.'])
+        + '<p>Bij twee verklarende variabelen is de hulpregressie enkelvoudig. Bij meer '
+        'verklarende variabelen wordt iedere x uit alle overige x-variabelen samen voorspeld. '
+        'Daarom is alleen de grootste losse correlatie aflezen niet voldoende.</p>',
+        [bookref('boek-h10c',317),bookref('boek-h10c',318)])
 
     add(L['modelbouw'], sources, 'Geneste modellen: de extra bijdrage zichtbaar berekenen',
         '<p><strong>Genest</strong> betekent dat het kleine model in het uitgebreide model zit. '
@@ -625,7 +648,7 @@ def enhance(lessons, sources):
     add(L['modelbouw'], sources, 'SPSS-praktijkroute college 7: huizen, selectie en overlap',
         '<p><strong>Doel:</strong> uit een reeks woningkenmerken een verklaarbaar model voor '
         'Verkoopprijs maken. De officiële uitwerking laat eerst handmatige backwardselectie zien. '
-        'De dependent is Verkoopprijs; de tekst op bronpagina 28 noemt haar eenmaal ten onrechte onafhankelijk.</p>'
+        'De dependent is Verkoopprijs; de oorspronkelijke uitwerking noemt haar eenmaal ten onrechte onafhankelijk.</p>'
         + steps(['Lees College7 in, controleer de meetniveaus en begin met de bruikbare kwantitatieve '
                  'kenmerken. Een nominale categoriecode is niet vanzelf een hoeveelheid: gebruik '
                  'voor categorieën later dummy’s.',
@@ -651,15 +674,12 @@ def enhance(lessons, sources):
         [ref('spss',28,'SPSS-uitwerkingen, college 7, PDF 28–36'),ref('attentie',7,'Attentiepunten, backward, PDF 7')])
 
     add(L['validatie'], sources, 'Een sterke fit in de training kan buiten de training tegenvallen',
-        '<p>Het model en de variabelen zijn gekozen met de trainingsgegevens. Diezelfde '
-        'gegevens nogmaals beoordelen geeft daarom een gunstig beeld van de prestatie. '
-        '<strong>Validatie</strong> onderzoekt of het vaste model ook bruikbaar is voor gegevens '
-        'die bij die keuze niet zijn gebruikt. Dit sluit aan op het controledoel: nieuwe waarnemingen '
-        'beoordelen met een eerder opgebouwde verwachting.</p>'
-        '<p>Bij data splitting kies je eerst training en test. Bereken coëfficiënten, selectiestappen '
-        'en eventuele transformaties met de training. Gebruik vervolgens precies dat vaste model '
-        'voor de test. Als je na iedere testuitkomst het model aanpast, is de testset zelf '
-        'onderdeel van de modelkeuze geworden en is een onafhankelijke eindbeoordeling nodig.</p>'
+        '<p><strong>Niet getentamineerd in de negen onderzochte tentamens.</strong> '
+        'Validatie met testset en MSPR blijft aanvullende programmastof. De kern is eenvoudig: '
+        'beoordeel het model ook op gegevens die niet hielpen om het te kiezen.</p>'
+        '<p>Gebruik de training voor coëfficiënten, selectie en transformaties. Houd dat '
+        'model vast tijdens de test. Pas je het steeds aan op basis van de testuitkomsten, '
+        'dan is de testset onderdeel van de modelkeuze geworden.</p>'
         + table('MSE en MSPR beantwoorden verschillende vragen', ['Grootheid','Berekening','Interpretatie'], [
             ['MSE op training','SSE/(n<sub>train</sub> − k − 1)','Geschatte residuele variantie na schatting op de training.'],
             ['MSPR op test','Σ(y − ŷ)²/n<sub>test</sub>','Gemiddelde gekwadrateerde fout bij voorspellen met het vaste model.'],
@@ -686,16 +706,17 @@ def enhance(lessons, sources):
                  'noemen MSPR als een beter uitgangspunt wanneer deze duidelijk groter is. '
                  'Er staat geen universele numerieke afkeurgrens en deze kleine oefentest geeft '
                  'op zichzelf geen zekerheid over de toekomstige prestatie.</p>')
-        + '<p>Laat in een tentamenantwoord zien waar de voorspellingen vandaan komen, '
+        + '<p>Laat in de uitwerking zien waar de voorspellingen vandaan komen, '
         'wat de noemer is en welke vergelijking je maakt. Alleen “MSPR = 4,67” laat '
         'de betekenis voor de bruikbaarheid van het model onbesproken.</p>',
         [ref('attentie',9,'Attentiepunten, data splitting en MSPR, PDF 9'),ref('formules',4,'Formuleblad, formule 64, PDF 4')])
 
     add(L['tentamen'], sources, 'Van SPSS-uitvoer naar een beargumenteerd tentamenantwoord',
-        '<p>Het tentamen vraagt om informatie uit meerdere tabellen en grafieken te verbinden. '
-        'Begin bij de gevraagde uitspraak. Lees daarna de afhankelijke variabele, opgenomen '
-        'voorspellers, n, modelnummer en eventuele weging in de uitvoer. Een getal uit een vorige '
-        'modelstap kan correct afgelezen zijn en toch bij de verkeerde vraag horen.</p>'
+        '<p>Een tentamenvraag geeft vaak verschillende tabellen bij dezelfde casus. '
+        'Begin bij wat je moet concluderen en zoek daarna de benodigde gegevens. Lees eerst '
+        'y, de opgenomen x-variabelen, n, modelnummer en eventuele weging. Gebruik vervolgens '
+        'de passende rij en kolom. Een goed afgelezen getal uit een vorige modelstap kan '
+        'toch het verkeerde antwoord opleveren.</p>'
         + table('Welke prestatie moet je zelfstandig kunnen leveren?', ['Onderdeel','Volledig antwoord'], [
             ['Vergelijking en voorspelling','B-coëfficiënten, correcte dummy’s/transformaties, invulling, eenheden en interpretatie.'],
             ['ANOVA','SS en df reconstrueren, MSE/F/R² berekenen en de grootheden onderscheiden.'],
@@ -704,7 +725,7 @@ def enhance(lessons, sources):
             ['Modelbouw','Selectiecriterium, één wijziging per stap, opnieuw schatten, overlap en bruikbaarheid beoordelen.'],
             ['Validatie','Vast model op ongebruikte gegevens, MSPR correct berekenen en met passende MSE vergelijken.'],
         ])
-        + '<p>Oefen eerst met markeringen bij de relevante cellen en daarna met volledige '
+        + '<p>Validatie in dit overzicht is aanvullende programmastof: testset en MSPR kwamen niet voor in de negen onderzochte tentamens.</p><p>Oefen eerst met markeringen bij de relevante cellen en daarna met volledige '
         'ongemarkeerde uitvoer. Gebruik zowel open berekeningen als MC-vragen: de eerste '
         'controleren je gehele redenering, de tweede helpen veelgemaakte interpretatiefouten herkennen.</p>',
         [ref('programma',4,'Onderwijsprogramma, toetsing, PDF 4'),ref('exam2025',9,'Tentamen 17 maart 2025, vragen 19–21, PDF 9'),
@@ -725,7 +746,7 @@ def enhance(lessons, sources):
                  'De afwijkende auto’s lijken in de casus geen invoerfouten en blijven behouden.',
                  'Voer <strong>Explore → Normality plots with tests</strong> uit op de actuele '
                  'residuen. Bij n = 162 gebruik je volgens de cursus Kolmogorov-Smirnov. '
-                 'De oorspronkelijke tabel op PDF 40 toont Statistic = 0,059 en Sig. = 0,200*. '
+                 'De oorspronkelijke tabel toont Statistic = 0,059 en Sig. = 0,200*. '
                  'De tekst eronder verwart de toetsingsgrootheid met de p-waarde. '
                  'Het sterretje betekent dat 0,200 een ondergrens is; H₀ wordt niet verworpen. '
                  'Maak ABSRES = ABS(RES van dit model) en correleer met Bouwjaar: '
@@ -756,8 +777,7 @@ def enhance(lessons, sources):
         [ref('spss',37,'SPSS-uitwerkingen, college 8, PDF 37–47')])
 
     add(L['tentamen'], sources, 'Zelfstandige eindopdracht met bronuitvoer',
-        '<p>Open de salarisuitvoer van het tentamen 17 maart 2025, PDF-pagina 9. '
-        'Werk zonder uitwerking een kort controlememo uit. Neem de oorspronkelijke '
+        '<p>Gebruik de salarisuitvoer om zonder uitwerking een kort controlememo te schrijven. Neem de oorspronkelijke '
         'onderzoeksvraag en variabelen als uitgangspunt.</p>'
         + steps(['Reconstrueer n en k uit ANOVA en leg R² = 0,647 en adjusted R² = 0,636 uit.',
                  'Stel de vergelijking op met alle B-coëfficiënten en benoem de referentiegroepen.',
@@ -800,7 +820,7 @@ def enhance(lessons, sources):
                  'coëfficiënten ŷ = € 1.161,671, afgerond € 1.161,67 per maand.',
                  'De combinatie van hoge R² en significante F maakt de diagnoses niet overbodig. '
                  'In de les diagnostiek blijkt dezelfde casus een normaliteitsprobleem te hebben.'])
-        + '<p class="note">In de breuk op slide PDF 75 ontbreekt een cijfer in SSE '
+        + '<p class="note">In de oorspronkelijke formule-invulling ontbreekt een cijfer in SSE '
         '(12.189,201 in plaats van 121.859,201). De ANOVA-uitvoer en '
         'TotalSS − SSR geven 121.859,201; alleen dit bedrag levert de afgedrukte MSE '
         '3.206,821 op. Controleer een formule-invulling dus met de oorspronkelijke tabel.</p>',
@@ -812,16 +832,16 @@ def enhance(lessons, sources):
         'x̄ = 81,54 en sₓ = 15,992. Gebruik alle onderdelen van ditzelfde model. '
         'Een oude helling combineren met de nieuwe MSE levert geen geldig interval op.</p>'
         + answer('Bereken voor 80 m² een individueel 95%-voorspellingsinterval met de '
-                 'tabelbenadering uit de slide: df = 37, tabelrij 35, t = 2,030.',
+                 'gegeven tabelbenadering: df = 37, tabelrij 35, t = 2,030.',
                  steps(['Puntvoorspelling: 512,479 + 6,388 × 80 = 1.023,519, dus circa € 1.023,52.',
                         'Neem de wortel van de MSE: sₑ = √2.706,538 ≈ 52,0244.',
                         'Marge = 2,030 × 52,0244 × √[1 + 1/39 + (80 − 81,54)²/(38 × 15,992²)] '
-                        '≈ € 106,97. De slide rondt sₑ op 52,02 af en geeft € 106,96.',
+                        '≈ € 106,97. De oorspronkelijke uitwerking rondt sₑ op 52,02 af en geeft € 106,96.',
                         'Het interval met de ongeronde tussenwaarde is ongeveer [€ 916,55; € 1.130,49] '
                         'per maand. Een huur buiten dit interval is een onderzoeksaanleiding, geen automatische boekingsfout.',
                         'De oppervlakte 80 ligt dicht bij x̄; de afstandsterm is klein. '
                         'Bij een ver weg gelegen oppervlakte wordt de marge groter.']))
-        + '<p>De slide kiest een lagere beschikbare df-rij als benadering. Vermeld die keuze '
+        + '<p>De oorspronkelijke uitwerking kiest een lagere beschikbare df-rij als benadering. Vermeld die keuze '
         'in je antwoord. Houd daarnaast het verschil tussen een statistische verbetering '
         'en een inhoudelijk gerechtvaardigde uitsluiting in het oog: een gunstiger interval '
         'rechtvaardigt op zichzelf geen verwijdering.</p>',
@@ -829,11 +849,11 @@ def enhance(lessons, sources):
          ref('tabellen',12,'Tabellenbundel, tabel 13.4, rij 35, PDF 12')])
 
     add(L['modelbouw'], sources, 'Doorlopende collegecasus Life Expectancy: selecteren met uitvoer',
-        '<p>De slides beginnen met 171 landen en vijf kandidaten voor de levensverwachting: '
+        '<p>De casus begint met 171 landen en vijf kandidaten voor de levensverwachting: '
         'Adult Mortality, BMI, HIV/AIDS, ICOR en Schooling. Het <strong>conceptuele model</strong> '
         'beschrijft vooraf welke verbanden inhoudelijk worden verwacht. De selectie onderzoekt '
         'daarna de extra statistische bijdrage binnen het gezamenlijke model.</p>'
-        + table('Enter: relevante Coefficients-kolommen uit slide 141', ['Kandidaat','B','Sig.','VIF'], [
+        + table('Enter: relevante Coefficients-kolommen', ['Kandidaat','B','Sig.','VIF'], [
             ['Adult Mortality','−0,016',',000','2,583'],['BMI','−0,008','0,565','1,425'],
             ['HIV/AIDS','−0,951',',000','1,726'],['ICOR','35,523',',000','8,476'],
             ['Schooling','0,124','0,570','6,244'],
@@ -865,20 +885,20 @@ def enhance(lessons, sources):
         'de relevante verklarende variabelen, niet alleen tegenover de x die toevallig eerst '
         'in de uitvoer staat.</p>'
         + table('Diagnostisch verloop in de collegecasus', ['Bronstap','Uitvoer of keuze','Wat je daarvan moet begrijpen'], [
-            ['Transformaties, slides 149–152','Een logtransformatie van HIV/AIDS lijkt enkelvoudig beter, maar geeft in het meervoudige model geen noemenswaardige verbetering.',
+            ['Transformaties','Een logtransformatie van HIV/AIDS lijkt enkelvoudig beter, maar geeft in het meervoudige model geen noemenswaardige verbetering.',
              'Een gekozen y-transformatie moet passen bij alle opgenomen verklarende variabelen. Een losse bivariate verbetering bepaalt niet het eindmodel.'],
-            ['Uitbijter in y, slide 153','n = 171; grens ±3; z<sub>max</sub> = 3,172.',
+            ['Uitbijter in y','n = 171; grens ±3; z<sub>max</sub> = 3,172.',
              'Het maximum is een signaal; identificeer het land en de context.'],
-            ['Uitbijter in x, slide 154','MD-grens = 2,982 + 3 × 4,779 = 17,319; MD<sub>max</sub> = 42,190.',
+            ['Uitbijter in x','MD-grens = 2,982 + 3 × 4,779 = 17,319; MD<sub>max</sub> = 42,190.',
              'Meervoudige afstand kan een combinatie van kenmerken uitzonderlijk maken.'],
-            ['Invloed, slides 157–158','CD-grens = 0,007 + 3 × 0,022 = 0,073; CD<sub>max</sub> = 0,251.',
+            ['Invloed','CD-grens = 0,007 + 3 × 0,022 = 0,073; CD<sub>max</sub> = 0,251.',
              'Een invloedrijk land kan het gezamenlijke model sterk sturen.'],
-            ['Na de bronselecties, slide 159','n = 163; Kolmogorov-Smirnov p = 0,070.',
+            ['Na de bronselecties','n = 163; Kolmogorov-Smirnov p = 0,070.',
              'De actuele n bepaalt de diagnosekeuze en de nieuwe vrijheidsgraden.'],
-            ['Heteroscedasticiteit, slide 160','Geen significante ABSRES-correlatie met ICOR, HIV/AIDS of Adult Mortality.',
+            ['Heteroscedasticiteit','Geen significante ABSRES-correlatie met ICOR, HIV/AIDS of Adult Mortality.',
              'Volgens deze controles geen heteroscedasticiteit aangetoond; beoordeel ook de grafische patronen.'],
         ])
-        + '<p><strong>Kritische bronlezing:</strong> de slides verwijderen in opeenvolgende stappen '
+        + '<p><strong>Kritische bronlezing:</strong> de uitgewerkte casus verwijdert in opeenvolgende stappen '
         'landen, deels omdat gegevens mogelijk minder betrouwbaar zijn of punten herkenbaar '
         'invloedrijk zijn. Die aannames worden niet volledig onderbouwd met onafhankelijke '
         'gegevenscontrole. Leer het verloop en de rekenregels, maar maak hiervan geen '
@@ -889,10 +909,10 @@ def enhance(lessons, sources):
          ref('attentie',5,'Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6')])
 
     add(L['meervoudig'], sources, 'Life Expectancy: eindmodel, globale toets en voorspelling',
-        '<p>Na de in de slides besproken selecties bevat het eindmodel 163 landen en drie '
+        '<p>Na de beschreven selecties bevat het eindmodel 163 landen en drie '
         'verklarende variabelen. Gebruik deze uitvoer niet door elkaar met de eerdere '
         'backwarduitvoer voor 171 landen.</p>'
-        + table('Eindmodel uit slides 162–163', ['Onderdeel','Bronwaarde'], [
+        + table('Eindmodel', ['Onderdeel','Bronwaarde'], [
             ['ANOVA Regression SS; df','8.173,121; 3'],['ANOVA Residual SS; df','1.372,702; 159'],
             ['ANOVA Total SS; df','9.545,823; 162'],['Model Summary R²; adjusted R²','0,856; 0,853'],
             ['Constante B','50,065'],['ICOR: B; Beta','36,011; 0,694'],
@@ -902,19 +922,19 @@ def enhance(lessons, sources):
                  'puntvoorspelling met de afgedrukte invoer ICOR = 0,92, Adult Mortality = 58 en HIV/AIDS = 0,1.',
             steps(['MSR = 8.173,121/3 ≈ 2.724,374; MSE = 1.372,702/159 ≈ 8,633. '
                    'F ≈ 315,564. Toets H₀: alle drie hellingen nul tegenover H₁: minstens één niet nul.',
-                   'De slide benadert F<sub>0,05;3;159</sub> met tabelrij ν₂ = 100: 2,696. '
+                   'De oorspronkelijke uitwerking benadert F<sub>0,05;3;159</sub> met tabelrij ν₂ = 100: 2,696. '
                    '315,564 &gt; 2,696, dus H₀ verwerpen. Dit is een uitspraak over het gezamenlijke model.',
                    'B voor ICOR is 36,011 in de oorspronkelijke modelvergelijking. Beta = 0,694 '
                    'is gestandaardiseerd en beschrijft verandering in standaardafwijkingen. '
                    'Gebruik B voor een voorspelling in jaren.',
                    '50,065 + 36,011 × 0,92 − 0,015 × 58 − 1,409 × 0,1 = 82,18422, '
                    'dus circa 82,18 jaar met de afgedrukte getallen.',
-                   'De slide noemt de werkelijke Nederlandse waarde 81,7. Het residu op basis '
+                   'De casus geeft als werkelijke Nederlandse waarde 81,7. Het residu op basis '
                    'van deze afgedrukte invoer is 81,7 − 82,18422 ≈ −0,48 jaar. '
                    'Een residu alleen zegt niet of het verschil statistisch uitzonderlijk is.']))
-        + '<p class="note">Slide 164 drukt een voorspelling 82,28 af; de getoonde '
+        + '<p class="note">De oorspronkelijke uitwerking drukt een voorspelling 82,28 af; de getoonde '
         'coëfficiënten en invoer geven 82,18. Er kunnen meer decimalen in de oorspronkelijke '
-        'gegevens zijn gebruikt, maar die zijn in deze slide niet zichtbaar. De leeromgeving '
+        'gegevens zijn gebruikt, maar die zijn in de gegeven invoer niet zichtbaar. Deze uitwerking '
         'rekent controleerbaar met de afgedrukte waarden en benoemt het verschil.</p>',
         [ref('slides',161,'Slides, eindmodel en voorspellen Life Expectancy, PDF 161–165'),
          ref('tabellen',20,'Tabellenbundel, tabel 13.8, PDF 20–29')])
@@ -943,7 +963,7 @@ def enhance(lessons, sources):
         'op. Gebruik de broninstelling als oefenroute; een andere dataset kan een andere '
         'weging vragen. Controleer daarna opnieuw de residuen en verklaar waarom de '
         'gekozen weging bij de waargenomen spreiding past.</p>'
-        + '<p class="note">De ongewogen casusdiagnose in het boek vindt op zichzelf '
+        + '<p class="note">De ongewogen casusdiagnose vindt op zichzelf '
         'geen significant heteroscedasticiteitsprobleem (p = 0,193). De WLS-tabellen '
         'illustreren de mogelijke techniek en vormen geen algemene opdracht om ieder '
         'model toch te wegen. Ook een hogere gewogen R² is op zichzelf geen bewijs '
