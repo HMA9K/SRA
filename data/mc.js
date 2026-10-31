@@ -5072,6 +5072,16 @@ window.SRAMCData = {
           "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
         },
         {
+          "source": "boek-h8b",
+          "page": 9,
+          "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+        },
+        {
+          "source": "boek-h8c",
+          "page": 10,
+          "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
+        },
+        {
           "source": "slides",
           "page": 34,
           "locator": "Gerealiseerde marges per schatter"
@@ -5145,6 +5155,16 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 8,
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
             },
             {
               "source": "slides",
@@ -5249,6 +5269,16 @@ window.SRAMCData = {
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
             },
             {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
+            },
+            {
               "source": "slides",
               "page": 34,
               "locator": "Gerealiseerde marges per schatter"
@@ -5349,6 +5379,16 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 8,
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
             },
             {
               "source": "slides",
@@ -5456,6 +5496,16 @@ window.SRAMCData = {
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
             },
             {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
+            },
+            {
               "source": "slides",
               "page": 34,
               "locator": "Gerealiseerde marges per schatter"
@@ -5558,6 +5608,16 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 8,
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
             },
             {
               "source": "slides",
@@ -5665,6 +5725,16 @@ window.SRAMCData = {
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
             },
             {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
+            },
+            {
               "source": "slides",
               "page": 34,
               "locator": "Gerealiseerde marges per schatter"
@@ -5767,6 +5837,16 @@ window.SRAMCData = {
               "source": "boek-h8b",
               "page": 8,
               "locator": "Boek p. 218; oorspronkelijke PDF p. 236; uitsnede p. 8"
+            },
+            {
+              "source": "boek-h8b",
+              "page": 9,
+              "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
+            },
+            {
+              "source": "boek-h8c",
+              "page": 10,
+              "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10"
             },
             {
               "source": "slides",
@@ -6886,6 +6966,11 @@ window.SRAMCData = {
           "locator": "H8 opgave 8a/b, PDF 10–11"
         },
         {
+          "source": "boek-h8c",
+          "page": 2,
+          "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+        },
+        {
           "source": "opgaven",
           "page": 8,
           "locator": "H8 opgave 9b/c, PDF 8"
@@ -6919,11 +7004,6 @@ window.SRAMCData = {
           "source": "uitwerkingen",
           "page": 10,
           "locator": "H8.8b, volledige worteltabel"
-        },
-        {
-          "source": "boek-h8c",
-          "page": 2,
-          "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
         },
         {
           "source": "slides",
@@ -7021,6 +7101,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7054,11 +7139,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7178,6 +7258,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7211,11 +7296,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7335,6 +7415,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7368,11 +7453,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7495,6 +7575,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7528,11 +7613,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7654,6 +7734,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7687,11 +7772,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7818,6 +7898,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -7851,11 +7936,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -7978,6 +8058,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -8011,11 +8096,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -8137,6 +8217,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -8170,11 +8255,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -8301,6 +8381,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -8334,11 +8419,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -8465,6 +8545,11 @@ window.SRAMCData = {
               "locator": "H8 opgave 8a/b, PDF 10–11"
             },
             {
+              "source": "boek-h8c",
+              "page": 2,
+              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
+            },
+            {
               "source": "opgaven",
               "page": 8,
               "locator": "H8 opgave 9b/c, PDF 8"
@@ -8498,11 +8583,6 @@ window.SRAMCData = {
               "source": "uitwerkingen",
               "page": 10,
               "locator": "H8.8b, volledige worteltabel"
-            },
-            {
-              "source": "boek-h8c",
-              "page": 2,
-              "locator": "Boek p. 222; oorspronkelijke PDF p. 240; uitsnede p. 2"
             },
             {
               "source": "slides",
@@ -17444,14 +17524,29 @@ window.SRAMCData = {
           "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
         },
         {
-          "source": "boek-h10b",
-          "page": 6,
-          "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+          "source": "boek-h10a",
+          "page": 5,
+          "locator": "Boek p. 291; oorspronkelijke PDF p. 309; uitsnede p. 5"
+        },
+        {
+          "source": "boek-h10c",
+          "page": 3,
+          "locator": "Boek p. 316; oorspronkelijke PDF p. 334; uitsnede p. 3"
         },
         {
           "source": "attentie",
           "page": 7,
           "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+        },
+        {
+          "source": "boek-h10c",
+          "page": 4,
+          "locator": "Boek p. 317; oorspronkelijke PDF p. 335; uitsnede p. 4"
+        },
+        {
+          "source": "boek-h10c",
+          "page": 5,
+          "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
         },
         {
           "source": "formules",
@@ -17472,6 +17567,11 @@ window.SRAMCData = {
           "source": "boek-h10c",
           "page": 6,
           "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+        },
+        {
+          "source": "boek-h10b",
+          "page": 6,
+          "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
         },
         {
           "source": "spss",
@@ -17539,14 +17639,29 @@ window.SRAMCData = {
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
             },
             {
-              "source": "boek-h10b",
-              "page": 6,
-              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+              "source": "boek-h10a",
+              "page": 5,
+              "locator": "Boek p. 291; oorspronkelijke PDF p. 309; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 3,
+              "locator": "Boek p. 316; oorspronkelijke PDF p. 334; uitsnede p. 3"
             },
             {
               "source": "attentie",
               "page": 7,
               "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 4,
+              "locator": "Boek p. 317; oorspronkelijke PDF p. 335; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 5,
+              "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
             },
             {
               "source": "formules",
@@ -17567,6 +17682,11 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             },
             {
               "source": "spss",
@@ -17661,14 +17781,29 @@ window.SRAMCData = {
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
             },
             {
-              "source": "boek-h10b",
-              "page": 6,
-              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+              "source": "boek-h10a",
+              "page": 5,
+              "locator": "Boek p. 291; oorspronkelijke PDF p. 309; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 3,
+              "locator": "Boek p. 316; oorspronkelijke PDF p. 334; uitsnede p. 3"
             },
             {
               "source": "attentie",
               "page": 7,
               "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 4,
+              "locator": "Boek p. 317; oorspronkelijke PDF p. 335; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 5,
+              "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
             },
             {
               "source": "formules",
@@ -17689,6 +17824,11 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             },
             {
               "source": "spss",
@@ -17783,14 +17923,29 @@ window.SRAMCData = {
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
             },
             {
-              "source": "boek-h10b",
-              "page": 6,
-              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+              "source": "boek-h10a",
+              "page": 5,
+              "locator": "Boek p. 291; oorspronkelijke PDF p. 309; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 3,
+              "locator": "Boek p. 316; oorspronkelijke PDF p. 334; uitsnede p. 3"
             },
             {
               "source": "attentie",
               "page": 7,
               "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 4,
+              "locator": "Boek p. 317; oorspronkelijke PDF p. 335; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 5,
+              "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
             },
             {
               "source": "formules",
@@ -17811,6 +17966,11 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             },
             {
               "source": "spss",
@@ -17908,14 +18068,29 @@ window.SRAMCData = {
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
             },
             {
-              "source": "boek-h10b",
-              "page": 6,
-              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+              "source": "boek-h10a",
+              "page": 5,
+              "locator": "Boek p. 291; oorspronkelijke PDF p. 309; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 3,
+              "locator": "Boek p. 316; oorspronkelijke PDF p. 334; uitsnede p. 3"
             },
             {
               "source": "attentie",
               "page": 7,
               "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 4,
+              "locator": "Boek p. 317; oorspronkelijke PDF p. 335; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 5,
+              "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
             },
             {
               "source": "formules",
@@ -17936,6 +18111,11 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             },
             {
               "source": "spss",
@@ -18032,14 +18212,29 @@ window.SRAMCData = {
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
             },
             {
-              "source": "boek-h10b",
-              "page": 6,
-              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+              "source": "boek-h10a",
+              "page": 5,
+              "locator": "Boek p. 291; oorspronkelijke PDF p. 309; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 3,
+              "locator": "Boek p. 316; oorspronkelijke PDF p. 334; uitsnede p. 3"
             },
             {
               "source": "attentie",
               "page": 7,
               "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 4,
+              "locator": "Boek p. 317; oorspronkelijke PDF p. 335; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 5,
+              "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
             },
             {
               "source": "formules",
@@ -18060,6 +18255,11 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             },
             {
               "source": "spss",
@@ -18156,14 +18356,29 @@ window.SRAMCData = {
               "locator": "Boek p. 305; oorspronkelijke PDF p. 323; uitsnede p. 3"
             },
             {
-              "source": "boek-h10b",
-              "page": 6,
-              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
+              "source": "boek-h10a",
+              "page": 5,
+              "locator": "Boek p. 291; oorspronkelijke PDF p. 309; uitsnede p. 5"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 3,
+              "locator": "Boek p. 316; oorspronkelijke PDF p. 334; uitsnede p. 3"
             },
             {
               "source": "attentie",
               "page": 7,
               "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 4,
+              "locator": "Boek p. 317; oorspronkelijke PDF p. 335; uitsnede p. 4"
+            },
+            {
+              "source": "boek-h10c",
+              "page": 5,
+              "locator": "Boek p. 318; oorspronkelijke PDF p. 336; uitsnede p. 5"
             },
             {
               "source": "formules",
@@ -18184,6 +18399,11 @@ window.SRAMCData = {
               "source": "boek-h10c",
               "page": 6,
               "locator": "Boek p. 319; oorspronkelijke PDF p. 337; uitsnede p. 6"
+            },
+            {
+              "source": "boek-h10b",
+              "page": 6,
+              "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             },
             {
               "source": "spss",

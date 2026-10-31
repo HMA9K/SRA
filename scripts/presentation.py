@@ -149,7 +149,7 @@ LEGENDS = {
  'diagnostiek':'MD = Mahalanobis Distance; CD = Cook’s Distance. Een streep boven MD of CD betekent gemiddelde; s is de standaardafwijking.',
  'voorspellen':'x₀ = nieuwe x; x̄ = gemiddelde x; s_x = standaardafwijking van x; s_e = residuele standaardfout; t hoort hier bij n − 2 vrijheidsgraden.',
  'meervoudig':'k = aantal verklarende variabelen; bⱼ is het effect bij gelijkblijvende overige variabelen. R²_adj corrigeert voor het aantal verklarende variabelen.',
- 'modelbouw':'R²ᵢ hoort bij de hulpregressie van xᵢ op de overige verklarende variabelen. Bij de F-formule gaat het om precies één extra variabele.',
+ 'modelbouw':'R²ᵢ hoort bij de hulpregressie van xᵢ op de overige verklarende variabelen. In de F-formule voor geneste modellen, verderop in deze les, gaat het om precies één extra variabele.',
  'validatie':'n_test = aantal testwaarnemingen; yᵢ = werkelijk gemeten testwaarde; ŷᵢ = voorspelling met het model uit de trainingsset.',
 }
 
@@ -264,8 +264,8 @@ def enhance(lessons):
             for original,formula in CELL_FORMULAS.items():
                 section['html']=section['html'].replace(f'<td>{original}</td>',f'<td>{mathml(formula,inline=True)}</td>')
             section['html']=section['html'].replace('<th>','<th scope="col">')
-            if '<table>' in section['html']:
-                section['html']=section['html'].replace('<table>',f'<table><caption>{html.escape(section["title"])}</caption>')
+            # Alleen tabellen zonder eigen bijschrift krijgen de bloktitel als bijschrift.
+            section['html']=re.sub(r'<table>(?!<caption>)',lambda m:f'<table><caption>{html.escape(section["title"])}</caption>',section['html'])
         if next(blocks,None) is not None:
             raise ValueError(f'Unused typeset formula in {lesson["id"]}')
 

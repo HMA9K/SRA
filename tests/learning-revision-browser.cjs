@@ -50,6 +50,24 @@ const server=http.createServer((req,res)=>{
    }
    }
   }
+  // Bronnummers per blok openen de ingeklapte bronnenlijst onderaan, zonder routewissel.
+  await page.evaluate(()=>{window.StudyTheme.setMode('light');location.hash='#les/stratificatie';});
+  await page.locator('#lesson-sources').waitFor({state:'attached'});
+  assert.equal(await page.locator('#lesson-sources').getAttribute('open'),null);
+  const note=page.locator('#uitleg .source-note').nth(3),noteTarget=(await note.getAttribute('href')).slice(1);
+  await note.click();
+  await page.waitForFunction(id=>{const r=document.getElementById(id).getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight;},noteTarget);
+  assert.notEqual(await page.locator('#lesson-sources').getAttribute('open'),null);
+  assert.equal(await page.evaluate(()=>location.hash),'#les/stratificatie');
+  // Iedere ingevulde samenvatting per hoofdonderwerp staat ingeklapt op de pagina Leren.
+  await page.evaluate(()=>location.hash='#leren');
+  await page.locator('.sra-learning-phase').first().waitFor();
+  assert.equal(await page.locator('.sra-phase-summary').count(),await page.evaluate(()=>Object.values(window.SRA.summaries).filter(Boolean).length));
+  await page.setViewportSize({width:320,height:900});
+  await page.evaluate(()=>document.querySelectorAll('.sra-phase-summary').forEach(d=>d.open=true));
+  assert.equal(await overflow(),false,'samenvattingen: horizontale pagina-overloop bij 320px');
+  assert.equal(await page.locator('.sra-phase-summary-body table').count(),await page.locator('.sra-phase-summary-body .table-scroll table').count());
+  await page.setViewportSize({width:1366,height:950});
   // De uitleg bij een inline breuk blijft met het toetsenbord bereikbaar.
   await page.evaluate(()=>{window.StudyTheme.setMode('light');location.hash='#les/rekenen';});
   await page.locator('.section-body math[display="inline"] mfrac').first().waitFor();
