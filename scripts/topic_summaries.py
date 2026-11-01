@@ -9,7 +9,7 @@ from summary_regression import SUMMARIES as REGRESSION
 
 SAMPLING = {
     'Basis': (
-        '<p><strong>Tentamengewicht:</strong> geen eigen punten in de negen tentamens, maar elke '
+        '<p><strong>Tentamengewicht:</strong> geen afzonderlijke punten in de negen tentamens, maar elke '
         'rekenvraag in het schattingsdeel (35 punten per tentamen) leunt erop.</p>'
         '<ul>'
         '<li><strong>Populatie en steekproef.</strong> De populatie (N posten, totaal W, boektotaal B) '
@@ -58,7 +58,7 @@ SAMPLING = {
         '<li><strong>Stratificatie.</strong> Haal kritische posten eerst apart (volledig controleren, geen '
         'variantie). Begrens de strata met de cumulatieve boekwaarde of met de cumulatieve wortel van '
         'breedte × frequentie (nauwkeuriger). Verdeel de controles evenredig, nᵢ = Nᵢ/N × n, of volgens '
-        'Neyman, nᵢ = Nᵢsᵢ/ΣNᵢsᵢ × n. Schat elk stratum met de eigen Nᵢ en nᵢ, tel de schattingen en de '
+        'Neyman, nᵢ = Nᵢsᵢ/ΣNᵢsᵢ × n. Schat elk stratum met de Nᵢ en nᵢ van die groep, tel de schattingen en de '
         'varianties op, neem één wortel en gebruik de gegeven effectieve df. Voor extra nauwkeurigheid '
         'breid je alle strata uit of gericht het stratum met de grootste variantiebijdrage.</li>'
         '</ul>'),

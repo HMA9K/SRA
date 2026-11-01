@@ -103,7 +103,7 @@ def markdown(data):
         '- Het gemiddelde puntengewicht in de lessen telt alleen tentamens mee waarin het onderwerp voorkomt: totaalpunten gedeeld door het aantal van die tentamens. Elk tentamen heeft 100 punten, dus het aantal punten is ook het percentage. Bij geen voorkomen is er geen gemiddelde.',
         '- De kolom Gem./100 en de standaarddeviatie in dit rapport gebruiken alle negen tentamens, inclusief nullen. De kolom Gem. bij voorkomen (%) sluit aan op de lessen. Spreiding is minimum, maximum en populatiestandaarddeviatie van de negen historische scores.',
         '- Recent = de drie recentste unieke tentamens: maart 2024, oktober 2024 en maart 2025. Ook het recente gemiddelde bevat nullen. Dit is een beschrijving, geen voorspelling.',
-        '- Gezamenlijke punten blijven in een eigen rij en staan met betrokken onderwerpen in het detailregister. Bronfouten in de bestaande antwoordcontrole veranderen de historische puntentoekenning niet.', '',
+        '- Gezamenlijke punten blijven in een afzonderlijke rij en staan met betrokken onderwerpen in het detailregister. Bronfouten in de bestaande antwoordcontrole veranderen de historische puntentoekenning niet.', '',
         '## Aansluiting per tentamen', '', '| Tentamen | Vraagnummers | Deelvragen | Punten |', '|---|---:|---:|---:|']
     for e in data['exams']:
         count=len({(r['question'],r['part']) for r in data['rows'] if r['exam']==e['id']})

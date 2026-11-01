@@ -1,4 +1,4 @@
-/* Gemaakt met Codex. Eigen oefenvarianten op de aangeleverde SRA-lesstof. */
+/* Gemaakt met Codex. Oefenvarianten op de aangeleverde SRA-lesstof. */
 window.SRAMCData = {
   "version": 2,
   "learningRevision": {
@@ -429,8 +429,8 @@ window.SRAMCData = {
         {
           "id": "mc-beginnen-leertoepassing-controlebestand",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Welke schatting beantwoordt de vraag naar de werkelijke waarde van alle openstaande facturen?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een accountant trekt zonder teruglegging aselect uit het volledige bestand. Alle geselecteerde facturen worden onderzocht.</p><div class=\"table-wrap\"><table><caption>Controlebestand</caption><thead><tr><th scope=\"col\">Gegeven</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Aantal openstaande facturen N</th><td>2.400</td></tr><tr><th scope=\"row\">Onderzochte facturen n</th><td>120</td></tr><tr><th scope=\"row\">Som werkelijke waarden in steekproef</th><td>€ 9.600</td></tr><tr><th scope=\"row\">Boektotaal volledig bestand</th><td>€ 205.000</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke schatting beantwoordt de vraag naar de werkelijke waarde van alle openstaande facturen?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een accountant trekt zonder teruglegging aselect uit het volledige bestand. Alle geselecteerde facturen worden onderzocht.</p><div class=\"table-wrap\"><table><caption>Controlebestand</caption><thead><tr><th scope=\"col\">Gegeven</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Aantal openstaande facturen N</th><td>2.400</td></tr><tr><th scope=\"row\">Onderzochte facturen n</th><td>120</td></tr><tr><th scope=\"row\">Som werkelijke waarden in steekproef</th><td>€ 9.600</td></tr><tr><th scope=\"row\">Boektotaal volledig bestand</th><td>€ 205.000</td></tr></tbody></table></div>",
           "options": [
             "€ 192.000, nog aan te vullen met schattingsonzekerheid",
             "€ 9.600, want alleen die facturen zijn gecontroleerd",
@@ -797,7 +797,7 @@ window.SRAMCData = {
           "level": 1,
           "guidance": {
             "title": "Som, spreiding en standaardfout",
-            "focus": "Let op de plaats van het kwadraat: schrijf bij een som van kwadraten eerst voor elke waarneming haar eigen kwadraat op.",
+            "focus": "Let op de plaats van het kwadraat: schrijf bij een som van kwadraten eerst voor elke waarneming het kwadraat van die waarde op.",
             "rules": [
               "Bij Σw² kwadrateer je iedere waarneming en tel je daarna op. Bij (Σw)² tel je eerst op en kwadrateer je de som. Dit zijn verschillende bewerkingen.",
               "De steekproefvariantie is s² = [Σw² − (Σw)²/n]/(n − 1). De standaardafwijking s is de wortel van s² en heeft weer dezelfde eenheid als de waarnemingen."
@@ -1062,8 +1062,8 @@ window.SRAMCData = {
         {
           "id": "mc-rekenen-leertoepassing-kwadratenkolom",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Welke combinatie van steekproefvariantie en standaardafwijking volgt uit deze tabel?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De accountant vergelijkt de spreiding van vier gecontroleerde posten. Bedragen staan in euro.</p><div class=\"table-wrap\"><table><caption>Werkelijke waarden</caption><thead><tr><th scope=\"col\">Post</th><th scope=\"col\">w</th><th scope=\"col\">w²</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>10</td><td>100</td></tr><tr><th scope=\"row\">2</th><td>20</td><td>400</td></tr><tr><th scope=\"row\">3</th><td>30</td><td>900</td></tr><tr><th scope=\"row\">4</th><td>40</td><td>1600</td></tr><tr><th scope=\"row\">Som</th><td>100</td><td>3000</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke combinatie van steekproefvariantie en standaardafwijking volgt uit deze tabel?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De accountant vergelijkt de spreiding van vier gecontroleerde posten. Bedragen staan in euro.</p><div class=\"table-wrap\"><table><caption>Werkelijke waarden</caption><thead><tr><th scope=\"col\">Post</th><th scope=\"col\">w</th><th scope=\"col\">w²</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>10</td><td>100</td></tr><tr><th scope=\"row\">2</th><td>20</td><td>400</td></tr><tr><th scope=\"row\">3</th><td>30</td><td>900</td></tr><tr><th scope=\"row\">4</th><td>40</td><td>1600</td></tr><tr><th scope=\"row\">Som</th><td>100</td><td>3000</td></tr></tbody></table></div>",
           "options": [
             "s² = 3.000 en s ≈ 54,77",
             "s² ≈ 166,67 en s ≈ 12,91",
@@ -1810,7 +1810,7 @@ window.SRAMCData = {
         {
           "id": "mc-onzekerheid-aanvulling-bovengrens",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Een gemiddelde is 80, de standaardfout is 2 en de gegeven eenzijdige t-waarde is 1,711. Wat is de 95%-bovengrens?",
+          "prompt": "Oefenvraag. Een gemiddelde is 80, de standaardfout is 2 en de gegeven eenzijdige t-waarde is 1,711. Wat is de 95%-bovengrens?",
           "options": [
             "83,422",
             "76,578",
@@ -1924,8 +1924,8 @@ window.SRAMCData = {
         {
           "id": "mc-onzekerheid-leertoepassing-t-tabel-interval",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Zoek de tabelwaarde op. Wat is het tweezijdige 95%-interval voor het populatiegemiddelde?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een aselecte steekproef levert de volgende al berekende samenvatting. De benodigde standaardfout is gegeven.</p><div class=\"table-wrap\"><table><caption>Schatting</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Gemiddelde</th><td>80</td></tr><tr><th scope=\"row\">Standaardfout van gemiddelde</th><td>2</td></tr><tr><th scope=\"row\">Vrijheidsgraden</th><td>24</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 12</a>. Zoek de benodigde grens zelf op.</p>",
+          "prompt": "Oefenvraag. Zoek de tabelwaarde op. Wat is het tweezijdige 95%-interval voor het populatiegemiddelde?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een aselecte steekproef levert de volgende al berekende samenvatting. De benodigde standaardfout is gegeven.</p><div class=\"table-wrap\"><table><caption>Schatting</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Gemiddelde</th><td>80</td></tr><tr><th scope=\"row\">Standaardfout van gemiddelde</th><td>2</td></tr><tr><th scope=\"row\">Vrijheidsgraden</th><td>24</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 12</a>. Zoek de benodigde grens zelf op.</p>",
           "options": [
             "[78; 82]",
             "[75,08; 84,92]",
@@ -2220,8 +2220,8 @@ window.SRAMCData = {
         {
           "id": "mc-onzekerheid-leertoepassing-ontbrekende-df",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het effectief aantal vrijheidsgraden van een schatting is 99. Volg de tabelafspraak in het onderwijsprogramma. Er wordt geen interpolatie gevraagd.</p><p><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 13</a>. Zoek de benodigde grens zelf op.</p>",
+          "prompt": "Oefenvraag. Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het effectief aantal vrijheidsgraden van een schatting is 99. Volg de tabelafspraak in het onderwijsprogramma. Er wordt geen interpolatie gevraagd.</p><p><a href=\"bronnen/tabellenbundel.pdf#page=13\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 13</a>. Zoek de benodigde grens zelf op.</p>",
           "options": [
             "df = 90 en t = 1,987",
             "df = 100 en t = 1,984",
@@ -2735,7 +2735,7 @@ window.SRAMCData = {
         {
           "id": "mc-mpu-aanvulling-scheef",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Je hebt aselect 120 posten gekozen uit een extreem scheve populatie. Welke uitspraak is juist?",
+          "prompt": "Oefenvraag. Je hebt aselect 120 posten gekozen uit een extreem scheve populatie. Welke uitspraak is juist?",
           "options": [
             "De t-waarde mag altijd nul worden",
             "Beoordeel of de normale benadering bruikbaar is",
@@ -3033,8 +3033,8 @@ window.SRAMCData = {
         {
           "id": "mc-mpu-leertoepassing-controleoverzicht",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welk MPU-interval volgt, op hele euro’s naar buiten afgerond, met gegeven t = 2?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een accountant wil de totale werkelijke voorraadwaarde schatten. Gebruik de eindigheidscorrectie.</p><div class=\"table-wrap\"><table><caption>Steekproefoverzicht</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">N</th><td>1.000</td></tr><tr><th scope=\"row\">n</th><td>100</td></tr><tr><th scope=\"row\">Σw</th><td>8.000</td></tr><tr><th scope=\"row\">Σw²</th><td>679.600</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welk MPU-interval volgt, op hele euro’s naar buiten afgerond, met gegeven t = 2?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een accountant wil de totale werkelijke voorraadwaarde schatten. Gebruik de eindigheidscorrectie.</p><div class=\"table-wrap\"><table><caption>Steekproefoverzicht</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">N</th><td>1.000</td></tr><tr><th scope=\"row\">n</th><td>100</td></tr><tr><th scope=\"row\">Σw</th><td>8.000</td></tr><tr><th scope=\"row\">Σw²</th><td>679.600</td></tr></tbody></table></div>",
           "options": [
             "[€ 79.996; € 80.004]",
             "[€ 76.000; € 84.000]",
@@ -3091,8 +3091,8 @@ window.SRAMCData = {
         {
           "id": "mc-mpu-leertoepassing-schatterkeuze-patronen",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Bij welk gegevenspatroon biedt de verschilschatter het meest directe alternatief voor MPU?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De tabel toont illustratieve patronen voor b (boekwaarde) en w (werkelijke waarde), geen volledige steekproeven. De toepassingsvoorwaarden zijn voor de werkelijke steekproeven afzonderlijk gecontroleerd.</p><div class=\"table-wrap\"><table><caption>Drie patronen</caption><thead><tr><th scope=\"col\">Patroon</th><th scope=\"col\">b-waarden</th><th scope=\"col\">w-waarden</th></tr></thead><tbody><tr><th scope=\"row\">A</th><td>100; 200; 400</td><td>90; 190; 390</td></tr><tr><th scope=\"row\">B</th><td>100; 200; 400</td><td>90; 180; 360</td></tr><tr><th scope=\"row\">C</th><td>100; 200; 400</td><td>240; 80; 190</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Bij welk gegevenspatroon biedt de verschilschatter het meest directe alternatief voor MPU?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De tabel toont illustratieve patronen voor b (boekwaarde) en w (werkelijke waarde), geen volledige steekproeven. De toepassingsvoorwaarden zijn voor de werkelijke steekproeven afzonderlijk gecontroleerd.</p><div class=\"table-wrap\"><table><caption>Drie patronen</caption><thead><tr><th scope=\"col\">Patroon</th><th scope=\"col\">b-waarden</th><th scope=\"col\">w-waarden</th></tr></thead><tbody><tr><th scope=\"row\">A</th><td>100; 200; 400</td><td>90; 190; 390</td></tr><tr><th scope=\"row\">B</th><td>100; 200; 400</td><td>90; 180; 360</td></tr><tr><th scope=\"row\">C</th><td>100; 200; 400</td><td>240; 80; 190</td></tr></tbody></table></div>",
           "options": [
             "Patroon A: verschillen zijn constant, terwijl werkelijke waarden sterk spreiden",
             "Patroon B: de verhouding is constant, dus het absolute verschil ook",
@@ -3910,8 +3910,8 @@ window.SRAMCData = {
         {
           "id": "mc-verschil-leertoepassing-verschillentabel",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Wat is de verschilschatting van de werkelijke voorraadwaarde?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>In 100 aselect gecontroleerde posten zijn 40 verschillen gevonden. Het foutenpatroon past bij een absolute correctie. N = 2.000 en B = € 210.000.</p><div class=\"table-wrap\"><table><caption>Samenvatting van alle 100 controles</caption><thead><tr><th scope=\"col\">Gegeven</th><th scope=\"col\">Bedrag</th></tr></thead><tbody><tr><th scope=\"row\">Σb</th><td>10.500</td></tr><tr><th scope=\"row\">Σw</th><td>10.200</td></tr><tr><th scope=\"row\">Σ(b − w)²</th><td>2.880</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Wat is de verschilschatting van de werkelijke voorraadwaarde?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>In 100 aselect gecontroleerde posten zijn 40 verschillen gevonden. Het foutenpatroon past bij een absolute correctie. N = 2.000 en B = € 210.000.</p><div class=\"table-wrap\"><table><caption>Samenvatting van alle 100 controles</caption><thead><tr><th scope=\"col\">Gegeven</th><th scope=\"col\">Bedrag</th></tr></thead><tbody><tr><th scope=\"row\">Σb</th><td>10.500</td></tr><tr><th scope=\"row\">Σw</th><td>10.200</td></tr><tr><th scope=\"row\">Σ(b − w)²</th><td>2.880</td></tr></tbody></table></div>",
           "options": [
             "€ 204.000",
             "€ 216.000",
@@ -3978,8 +3978,8 @@ window.SRAMCData = {
         {
           "id": "mc-verschil-leertoepassing-verschilvariantie",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke spreiding hoort bij de onzekerheid van de verschilschatter?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>N = 2.000 en n = 100. De fouten in de volledige gecontroleerde steekproef voldoen aan de cursusvoorwaarden. De tabel bevat alle 100 controles, ook de nulverschillen.</p><div class=\"table-wrap\"><table><caption>Samenvatting controleverschillen e = b − w</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Σe</th><td>300</td></tr><tr><th scope=\"row\">Σe²</th><td>2.880</td></tr><tr><th scope=\"row\">s_w</th><td>30</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke spreiding hoort bij de onzekerheid van de verschilschatter?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>N = 2.000 en n = 100. De fouten in de volledige gecontroleerde steekproef voldoen aan de cursusvoorwaarden. De tabel bevat alle 100 controles, ook de nulverschillen.</p><div class=\"table-wrap\"><table><caption>Samenvatting controleverschillen e = b − w</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Σe</th><td>300</td></tr><tr><th scope=\"row\">Σe²</th><td>2.880</td></tr><tr><th scope=\"row\">s_w</th><td>30</td></tr></tbody></table></div>",
           "options": [
             "s_e = 20; een variantie hoeft niet te worden geworteld",
             "s_e = √20 ≈ 4,47; gebruik deze in de standaardfout van het totaal",
@@ -4096,7 +4096,7 @@ window.SRAMCData = {
         {
           "source": "formules",
           "page": 1,
-          "locator": "Eigen oefening volgens formules 12-17"
+          "locator": "Oefening volgens formules 12-17"
         },
         {
           "source": "slides",
@@ -4206,7 +4206,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Eigen oefening volgens formules 12-17"
+              "locator": "Oefening volgens formules 12-17"
             },
             {
               "source": "slides",
@@ -4343,7 +4343,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Eigen oefening volgens formules 12-17"
+              "locator": "Oefening volgens formules 12-17"
             },
             {
               "source": "slides",
@@ -4480,7 +4480,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Eigen oefening volgens formules 12-17"
+              "locator": "Oefening volgens formules 12-17"
             },
             {
               "source": "slides",
@@ -4620,7 +4620,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Eigen oefening volgens formules 12-17"
+              "locator": "Oefening volgens formules 12-17"
             },
             {
               "source": "slides",
@@ -4759,7 +4759,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Eigen oefening volgens formules 12-17"
+              "locator": "Oefening volgens formules 12-17"
             },
             {
               "source": "slides",
@@ -4898,7 +4898,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Eigen oefening volgens formules 12-17"
+              "locator": "Oefening volgens formules 12-17"
             },
             {
               "source": "slides",
@@ -4961,8 +4961,8 @@ window.SRAMCData = {
         {
           "id": "mc-quotient-leertoepassing-ratio-uit-tabel",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke goedratio gebruik je en welke werkelijke populatiewaarde volgt bij B = € 1.000.000?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De 100 aselect gecontroleerde posten zijn hieronder naar twee groepen samengevat. Gebruik de verhouding van steekproefsommen.</p><div class=\"table-wrap\"><table><caption>Gecontroleerde bedragen</caption><thead><tr><th scope=\"col\">Groep</th><th scope=\"col\">Aantal</th><th scope=\"col\">Σb</th><th scope=\"col\">Σw</th></tr></thead><tbody><tr><th scope=\"row\">Klein</th><td>80</td><td>8.000</td><td>7.200</td></tr><tr><th scope=\"row\">Groot</th><td>20</td><td>12.000</td><td>10.200</td></tr><tr><th scope=\"row\">Totaal</th><td>100</td><td>20.000</td><td>17.400</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke goedratio gebruik je en welke werkelijke populatiewaarde volgt bij B = € 1.000.000?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De 100 aselect gecontroleerde posten zijn hieronder naar twee groepen samengevat. Gebruik de verhouding van steekproefsommen.</p><div class=\"table-wrap\"><table><caption>Gecontroleerde bedragen</caption><thead><tr><th scope=\"col\">Groep</th><th scope=\"col\">Aantal</th><th scope=\"col\">Σb</th><th scope=\"col\">Σw</th></tr></thead><tbody><tr><th scope=\"row\">Klein</th><td>80</td><td>8.000</td><td>7.200</td></tr><tr><th scope=\"row\">Groot</th><td>20</td><td>12.000</td><td>10.200</td></tr><tr><th scope=\"row\">Totaal</th><td>100</td><td>20.000</td><td>17.400</td></tr></tbody></table></div>",
           "options": [
             "q = 0,13; Ŵ_Q = € 130.000",
             "q = 0,87; Ŵ_Q = € 870.000",
@@ -5541,7 +5541,7 @@ window.SRAMCData = {
         {
           "id": "mc-regressieschatter-aanvulling-dekking",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Bij gelijk betrouwbaarheidsniveau is het berekende regressieschattingsinterval smaller dan het MPU-interval. Wat volgt daaruit?",
+          "prompt": "Oefenvraag. Bij gelijk betrouwbaarheidsniveau is het berekende regressieschattingsinterval smaller dan het MPU-interval. Wat volgt daaruit?",
           "options": [
             "Meer berekende precisie, mits de voorwaarden passen",
             "De gekozen betrouwbaarheid is automatisch hoger",
@@ -5884,8 +5884,8 @@ window.SRAMCData = {
         {
           "id": "mc-regressieschatter-leertoepassing-hulpinformatie",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke regressieschatting en standaardfout volgen uit het overzicht?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De steekproef is aselect en de voorwaarden zijn beoordeeld. Alle spreidingen staan in euro. De MPU-standaardfout is reeds inclusief eindigheidscorrectie.</p><div class=\"table-wrap\"><table><caption>Boekwaarde b en werkelijke waarde w</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">N</th><td>1.000</td></tr><tr><th scope=\"row\">B</th><td>105.000</td></tr><tr><th scope=\"row\">b̄</th><td>100</td></tr><tr><th scope=\"row\">w̄</th><td>90</td></tr><tr><th scope=\"row\">s_b</th><td>20</td></tr><tr><th scope=\"row\">s_w</th><td>30</td></tr><tr><th scope=\"row\">R_bw</th><td>0,80</td></tr><tr><th scope=\"row\">SE_MPU</th><td>3.000</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke regressieschatting en standaardfout volgen uit het overzicht?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De steekproef is aselect en de voorwaarden zijn beoordeeld. Alle spreidingen staan in euro. De MPU-standaardfout is reeds inclusief eindigheidscorrectie.</p><div class=\"table-wrap\"><table><caption>Boekwaarde b en werkelijke waarde w</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">N</th><td>1.000</td></tr><tr><th scope=\"row\">B</th><td>105.000</td></tr><tr><th scope=\"row\">b̄</th><td>100</td></tr><tr><th scope=\"row\">w̄</th><td>90</td></tr><tr><th scope=\"row\">s_b</th><td>20</td></tr><tr><th scope=\"row\">s_w</th><td>30</td></tr><tr><th scope=\"row\">R_bw</th><td>0,80</td></tr><tr><th scope=\"row\">SE_MPU</th><td>3.000</td></tr></tbody></table></div>",
           "options": [
             "Ŵ_R = € 96.000 en SE_R = € 1.080",
             "Ŵ_R = € 105.000 en SE_R = € 0",
@@ -5942,8 +5942,8 @@ window.SRAMCData = {
         {
           "id": "mc-regressieschatter-leertoepassing-schatters-nauwkeurigheid",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke vergelijking van de twee schattingen is inhoudelijk juist?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Beide methoden zijn toegepast op dezelfde geschikte aselecte steekproef met dezelfde gekozen betrouwbaarheid van 95%. Beide toepassingsvoorwaarden zijn beoordeeld.</p><div class=\"table-wrap\"><table><caption>Resultaten</caption><thead><tr><th scope=\"col\">Schatter</th><th scope=\"col\">Puntschatting</th><th scope=\"col\">Standaardfout totaal</th></tr></thead><tbody><tr><th scope=\"row\">MPU</th><td>€ 100.000</td><td>€ 5.000</td></tr><tr><th scope=\"row\">Regressieschatter</th><td>€ 102.000</td><td>€ 3.000</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke vergelijking van de twee schattingen is inhoudelijk juist?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Beide methoden zijn toegepast op dezelfde geschikte aselecte steekproef met dezelfde gekozen betrouwbaarheid van 95%. Beide toepassingsvoorwaarden zijn beoordeeld.</p><div class=\"table-wrap\"><table><caption>Resultaten</caption><thead><tr><th scope=\"col\">Schatter</th><th scope=\"col\">Puntschatting</th><th scope=\"col\">Standaardfout totaal</th></tr></thead><tbody><tr><th scope=\"row\">MPU</th><td>€ 100.000</td><td>€ 5.000</td></tr><tr><th scope=\"row\">Regressieschatter</th><td>€ 102.000</td><td>€ 3.000</td></tr></tbody></table></div>",
           "options": [
             "Regressie is bewezen dichter bij de werkelijke waarde omdat 102.000 hoger is",
             "MPU is betrouwbaarder omdat zijn interval breder is",
@@ -6761,7 +6761,7 @@ window.SRAMCData = {
         {
           "id": "mc-steekproefomvang-aanvulling-quotient",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Bij steekproefplanning met de quotiëntschatter zijn N = 1.000, t = 2, s_q = 7,60 en E = 1.000 gegeven. Gebruik γ = E²/(t²Ns_q²). Wat is de minimaal geplande totale n?",
+          "prompt": "Oefenvraag. Bij steekproefplanning met de quotiëntschatter zijn N = 1.000, t = 2, s_q = 7,60 en E = 1.000 gegeven. Gebruik γ = E²/(t²Ns_q²). Wat is de minimaal geplande totale n?",
           "options": [
             "1.000",
             "188",
@@ -6875,8 +6875,8 @@ window.SRAMCData = {
         {
           "id": "mc-steekproefomvang-leertoepassing-uitbreidingsplan",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Hoeveel aanvullende controles zijn minimaal nodig volgens de gegeven planningsformule?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De accountant wil bij gelijkblijvende voorlopige spreiding een totale intervalbreedte van € 800. Gebruik n = N/(1 + γ), met γ = E²/(t²Ns²).</p><div class=\"table-wrap\"><table><caption>Vooronderzoek</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">N</th><td>1.000</td></tr><tr><th scope=\"row\">Al gecontroleerd</th><td>200</td></tr><tr><th scope=\"row\">s</th><td>10</td></tr><tr><th scope=\"row\">t voor planning</th><td>2</td></tr><tr><th scope=\"row\">Gewenste totale breedte</th><td>800</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Hoeveel aanvullende controles zijn minimaal nodig volgens de gegeven planningsformule?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De accountant wil bij gelijkblijvende voorlopige spreiding een totale intervalbreedte van € 800. Gebruik n = N/(1 + γ), met γ = E²/(t²Ns²).</p><div class=\"table-wrap\"><table><caption>Vooronderzoek</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">N</th><td>1.000</td></tr><tr><th scope=\"row\">Al gecontroleerd</th><td>200</td></tr><tr><th scope=\"row\">s</th><td>10</td></tr><tr><th scope=\"row\">t voor planning</th><td>2</td></tr><tr><th scope=\"row\">Gewenste totale breedte</th><td>800</td></tr></tbody></table></div>",
           "options": [
             "185 extra controles; totaal 385",
             "715 extra controles; totaal 915",
@@ -6937,7 +6937,7 @@ window.SRAMCData = {
       "title": "Stratificatie en allocatie",
       "phase": "Schatten",
       "lesson": "stratificatie",
-      "signal": "De populatie bestaat uit groepen met eigen Nᵢ, nᵢ en spreiding.",
+      "signal": "De populatie bestaat uit groepen met per groep Nᵢ, nᵢ en spreiding.",
       "approach": "Schat per stratum, tel totalen en varianties afzonderlijk op en neem daarna de wortel.",
       "refs": [
         {
@@ -6983,7 +6983,7 @@ window.SRAMCData = {
         {
           "source": "slides",
           "page": 38,
-          "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+          "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
         },
         {
           "source": "boek-h8b",
@@ -7118,7 +7118,7 @@ window.SRAMCData = {
             {
               "source": "slides",
               "page": 38,
-              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+              "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             },
             {
               "source": "boek-h8b",
@@ -7275,7 +7275,7 @@ window.SRAMCData = {
             {
               "source": "slides",
               "page": 38,
-              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+              "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             },
             {
               "source": "boek-h8b",
@@ -7432,7 +7432,7 @@ window.SRAMCData = {
             {
               "source": "slides",
               "page": 38,
-              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+              "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             },
             {
               "source": "boek-h8b",
@@ -7546,7 +7546,7 @@ window.SRAMCData = {
             "15.000 is bijvoorbeeld (100 + 200) × (20 + 30). Daarmee geef je elk stratum ook het gemiddelde van de andere groep, en ontbreekt een correcte weging.",
             "7.000 trekt het topstratum van de € 8.000 af. Het bekende werkelijke topstratum maakt deel uit van de populatie en moet worden opgeteld.",
             "8.000 telt alleen de eerste twee strata op. De bekende € 1.000 van het topstratum ontbreekt.",
-            "9.000 = 100 × 20 + 200 × 30 + 1.000. Elk stratum is met zijn eigen omvang verwerkt."
+            "9.000 = 100 × 20 + 200 × 30 + 1.000. Elk stratum is met de bijbehorende omvang verwerkt."
           ],
           "refs": [
             {
@@ -7592,7 +7592,7 @@ window.SRAMCData = {
             {
               "source": "slides",
               "page": 38,
-              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+              "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             },
             {
               "source": "boek-h8b",
@@ -7685,7 +7685,7 @@ window.SRAMCData = {
         {
           "id": "mc-stratificatie-aanvulling-boekgrens",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Zonder topstratum is de boekwaarde € 15.872.128. Je wilt vier strata. Wat is het eerste cumulatieve doel?",
+          "prompt": "Oefenvraag. Zonder topstratum is de boekwaarde € 15.872.128. Je wilt vier strata. Wat is het eerste cumulatieve doel?",
           "options": [
             "€ 15.872.128",
             "Vier even grote aantallen posten",
@@ -7751,7 +7751,7 @@ window.SRAMCData = {
             {
               "source": "slides",
               "page": 38,
-              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+              "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             },
             {
               "source": "boek-h8b",
@@ -7915,7 +7915,7 @@ window.SRAMCData = {
             {
               "source": "slides",
               "page": 38,
-              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+              "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             },
             {
               "source": "boek-h8b",
@@ -8075,7 +8075,7 @@ window.SRAMCData = {
             {
               "source": "slides",
               "page": 38,
-              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+              "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             },
             {
               "source": "boek-h8b",
@@ -8168,7 +8168,7 @@ window.SRAMCData = {
         {
           "id": "mc-stratificatie-aanvulling-wortel",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Een klasse is € 400 breed en bevat 772 posten. Wat voeg je toe aan de cumulatieve wortelsom?",
+          "prompt": "Oefenvraag. Een klasse is € 400 breed en bevat 772 posten. Wat voeg je toe aan de cumulatieve wortelsom?",
           "options": [
             "Ongeveer 27,78",
             "308.800",
@@ -8234,7 +8234,7 @@ window.SRAMCData = {
             {
               "source": "slides",
               "page": 38,
-              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+              "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             },
             {
               "source": "boek-h8b",
@@ -8332,7 +8332,7 @@ window.SRAMCData = {
         {
           "id": "mc-stratificatie-aanvulling-uitbreiding",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Voor één stratum volgt een benodigde totale steekproefomvang van 32,65. Er zijn al 30 posten gecontroleerd. Hoeveel komen erbij?",
+          "prompt": "Oefenvraag. Voor één stratum volgt een benodigde totale steekproefomvang van 32,65. Er zijn al 30 posten gecontroleerd. Hoeveel komen erbij?",
           "options": [
             "3",
             "33",
@@ -8398,7 +8398,7 @@ window.SRAMCData = {
             {
               "source": "slides",
               "page": 38,
-              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+              "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             },
             {
               "source": "boek-h8b",
@@ -8496,7 +8496,7 @@ window.SRAMCData = {
         {
           "id": "mc-stratificatie-aanvulling-varianties",
           "level": 3,
-          "prompt": "Eigen oefenvraag. De gewenste totale marge E is 10 en t = 2. De andere strata hebben samen variantiebijdrage 16. Hoe groot mag de variantiebijdrage van het uit te breiden stratum maximaal zijn?",
+          "prompt": "Oefenvraag. De gewenste totale marge E is 10 en t = 2. De andere strata hebben samen variantiebijdrage 16. Hoe groot mag de variantiebijdrage van het uit te breiden stratum maximaal zijn?",
           "options": [
             "−11",
             "9",
@@ -8562,7 +8562,7 @@ window.SRAMCData = {
             {
               "source": "slides",
               "page": 38,
-              "locator": "PDF 38-39: nut, eigen inzicht en indelingsmethoden"
+              "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             },
             {
               "source": "boek-h8b",
@@ -8660,8 +8660,8 @@ window.SRAMCData = {
         {
           "id": "mc-stratificatie-leertoepassing-cumulatieve-grens",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Je wilt vier bemonsterde strata. Welke eerste klassegrens ligt het dichtst bij het eerste cumulatieve streefbedrag?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Brongegevens: slides SRA NJ26, PDF-pagina 40. Eigen vraag bij de oorspronkelijke tabel.</p><p>Het topstratum wordt afzonderlijk integraal gecontroleerd. Kies een beschikbare klassegrens zonder interpolatie.</p><div class=\"table-wrap\"><table><caption>Cumulatieve boekwaarde uit het collegevoorbeeld</caption><thead><tr><th scope=\"col\">Boekwaardeklasse</th><th scope=\"col\">Aantal</th><th scope=\"col\">Som boekwaarden</th><th scope=\"col\">Cumulatief</th></tr></thead><tbody><tr><th scope=\"row\">0 tot &lt;1.000</th><td>1.127</td><td>513.513</td><td>513.513</td></tr><tr><th scope=\"row\">1.000 tot &lt;2.000</th><td>813</td><td>1.195.110</td><td>1.708.623</td></tr><tr><th scope=\"row\">2.000 tot &lt;3.000</th><td>760</td><td>1.846.186</td><td>3.554.809</td></tr><tr><th scope=\"row\">3.000 tot &lt;4.000</th><td>699</td><td>2.394.075</td><td>5.948.884</td></tr><tr><th scope=\"row\">4.000 tot &lt;5.000</th><td>412</td><td>1.858.944</td><td>7.807.828</td></tr><tr><th scope=\"row\">5.000 tot &lt;6.000</th><td>300</td><td>1.651.237</td><td>9.459.065</td></tr><tr><th scope=\"row\">6.000 tot &lt;7.000</th><td>267</td><td>1.717.729</td><td>11.176.794</td></tr><tr><th scope=\"row\">7.000 tot &lt;8.000</th><td>217</td><td>1.588.182</td><td>12.764.976</td></tr><tr><th scope=\"row\">8.000 tot &lt;9.000</th><td>110</td><td>892.584</td><td>13.657.560</td></tr><tr><th scope=\"row\">9.000 tot &lt;10.000</th><td>70</td><td>649.099</td><td>14.306.659</td></tr><tr><th scope=\"row\">Topstratum ≥10.000</th><td>48</td><td>621.778</td><td>Buiten cumulatie</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Je wilt vier bemonsterde strata. Welke eerste klassegrens ligt het dichtst bij het eerste cumulatieve streefbedrag?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Brongegevens: slides SRA NJ26, PDF-pagina 40. Vraag bij de oorspronkelijke tabel.</p><p>Het topstratum wordt afzonderlijk integraal gecontroleerd. Kies een beschikbare klassegrens zonder interpolatie.</p><div class=\"table-wrap\"><table><caption>Cumulatieve boekwaarde uit het collegevoorbeeld</caption><thead><tr><th scope=\"col\">Boekwaardeklasse</th><th scope=\"col\">Aantal</th><th scope=\"col\">Som boekwaarden</th><th scope=\"col\">Cumulatief</th></tr></thead><tbody><tr><th scope=\"row\">0 tot &lt;1.000</th><td>1.127</td><td>513.513</td><td>513.513</td></tr><tr><th scope=\"row\">1.000 tot &lt;2.000</th><td>813</td><td>1.195.110</td><td>1.708.623</td></tr><tr><th scope=\"row\">2.000 tot &lt;3.000</th><td>760</td><td>1.846.186</td><td>3.554.809</td></tr><tr><th scope=\"row\">3.000 tot &lt;4.000</th><td>699</td><td>2.394.075</td><td>5.948.884</td></tr><tr><th scope=\"row\">4.000 tot &lt;5.000</th><td>412</td><td>1.858.944</td><td>7.807.828</td></tr><tr><th scope=\"row\">5.000 tot &lt;6.000</th><td>300</td><td>1.651.237</td><td>9.459.065</td></tr><tr><th scope=\"row\">6.000 tot &lt;7.000</th><td>267</td><td>1.717.729</td><td>11.176.794</td></tr><tr><th scope=\"row\">7.000 tot &lt;8.000</th><td>217</td><td>1.588.182</td><td>12.764.976</td></tr><tr><th scope=\"row\">8.000 tot &lt;9.000</th><td>110</td><td>892.584</td><td>13.657.560</td></tr><tr><th scope=\"row\">9.000 tot &lt;10.000</th><td>70</td><td>649.099</td><td>14.306.659</td></tr><tr><th scope=\"row\">Topstratum ≥10.000</th><td>48</td><td>621.778</td><td>Buiten cumulatie</td></tr></tbody></table></div>",
           "options": [
             "€ 3.000; cumulatief € 3.554.809",
             "€ 4.000; cumulatief € 5.948.884",
@@ -8728,8 +8728,8 @@ window.SRAMCData = {
         {
           "id": "mc-stratificatie-leertoepassing-stratum-uitwerken",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke combinatie hoort bij stratum 1: puntschatting en standaardfout van het stratumtotaal?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Brongegevens: slides SRA NJ26, PDF-pagina 48. Eigen vraag bij de oorspronkelijke tabel.</p><p>Werk stratum 1 uit met MPU en de eindigheidscorrectie. Houd tussenwaarden ongerond; de antwoordopties zijn afgerond.</p><div class=\"table-wrap\"><table><caption>Steekproeven per stratum uit het collegevoorbeeld</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">nᵢ</th><th scope=\"col\">Σwᵢ</th><th scope=\"col\">Σwᵢ²</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>2700</td><td>114</td><td>7.000</td><td>475.000</td></tr><tr><th scope=\"row\">2</th><td>1111</td><td>58</td><td>8.000</td><td>1.175.000</td></tr><tr><th scope=\"row\">3</th><td>567</td><td>36</td><td>12.000</td><td>4.030.000</td></tr><tr><th scope=\"row\">4</th><td>397</td><td>42</td><td>20.000</td><td>9.600.000</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke combinatie hoort bij stratum 1: puntschatting en standaardfout van het stratumtotaal?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Brongegevens: slides SRA NJ26, PDF-pagina 48. Vraag bij de oorspronkelijke tabel.</p><p>Werk stratum 1 uit met MPU en de eindigheidscorrectie. Houd tussenwaarden ongerond; de antwoordopties zijn afgerond.</p><div class=\"table-wrap\"><table><caption>Steekproeven per stratum uit het collegevoorbeeld</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">nᵢ</th><th scope=\"col\">Σwᵢ</th><th scope=\"col\">Σwᵢ²</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>2700</td><td>114</td><td>7.000</td><td>475.000</td></tr><tr><th scope=\"row\">2</th><td>1111</td><td>58</td><td>8.000</td><td>1.175.000</td></tr><tr><th scope=\"row\">3</th><td>567</td><td>36</td><td>12.000</td><td>4.030.000</td></tr><tr><th scope=\"row\">4</th><td>397</td><td>42</td><td>20.000</td><td>9.600.000</td></tr></tbody></table></div>",
           "options": [
             "Ŵ₁ ≈ € 165.789 en SE₁ ≈ € 20",
             "Ŵ₁ ≈ € 165.789 en SE₁ ≈ € 4.949",
@@ -8796,8 +8796,8 @@ window.SRAMCData = {
         {
           "id": "mc-stratificatie-leertoepassing-onzekerheid-combineren",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welk totaalinterval volgt bij t = 2 uit deze onafhankelijk getrokken strata?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Alle bedragen zijn euro. Het werkelijke totaal van de topgroep is integraal vastgesteld; de getoonde SE’s zijn al voor de stratumtotalen.</p><div class=\"table-wrap\"><table><caption>Afgeronde stratumresultaten</caption><thead><tr><th scope=\"col\">Groep</th><th scope=\"col\">Geschat of vastgesteld werkelijk totaal</th><th scope=\"col\">SE totaal</th></tr></thead><tbody><tr><th scope=\"row\">Stratum 1</th><td>160.000</td><td>3.000</td></tr><tr><th scope=\"row\">Stratum 2</th><td>240.000</td><td>4.000</td></tr><tr><th scope=\"row\">Integraal topstratum</th><td>50.000</td><td>0</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welk totaalinterval volgt bij t = 2 uit deze onafhankelijk getrokken strata?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Alle bedragen zijn euro. Het werkelijke totaal van de topgroep is integraal vastgesteld; de getoonde SE’s zijn al voor de stratumtotalen.</p><div class=\"table-wrap\"><table><caption>Afgeronde stratumresultaten</caption><thead><tr><th scope=\"col\">Groep</th><th scope=\"col\">Geschat of vastgesteld werkelijk totaal</th><th scope=\"col\">SE totaal</th></tr></thead><tbody><tr><th scope=\"row\">Stratum 1</th><td>160.000</td><td>3.000</td></tr><tr><th scope=\"row\">Stratum 2</th><td>240.000</td><td>4.000</td></tr><tr><th scope=\"row\">Integraal topstratum</th><td>50.000</td><td>0</td></tr></tbody></table></div>",
           "options": [
             "[€ 390.000; € 410.000]",
             "[€ 490.000; € 510.000]",
@@ -8864,8 +8864,8 @@ window.SRAMCData = {
         {
           "id": "mc-stratificatie-leertoepassing-neyman-allocatie",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Hoe verdeel je 100 controles volgens Neyman-allocatie over de twee strata?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Er zijn geen minimumaantallen of verschillende controlekosten gegeven. Gebruik nᵢ evenredig met Nᵢsᵢ.</p><div class=\"table-wrap\"><table><caption>Vooronderzoek</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">sᵢ</th></tr></thead><tbody><tr><th scope=\"row\">A</th><td>800</td><td>10</td></tr><tr><th scope=\"row\">B</th><td>200</td><td>40</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Hoe verdeel je 100 controles volgens Neyman-allocatie over de twee strata?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Er zijn geen minimumaantallen of verschillende controlekosten gegeven. Gebruik nᵢ evenredig met Nᵢsᵢ.</p><div class=\"table-wrap\"><table><caption>Vooronderzoek</caption><thead><tr><th scope=\"col\">Stratum</th><th scope=\"col\">Nᵢ</th><th scope=\"col\">sᵢ</th></tr></thead><tbody><tr><th scope=\"row\">A</th><td>800</td><td>10</td></tr><tr><th scope=\"row\">B</th><td>200</td><td>40</td></tr></tbody></table></div>",
           "options": [
             "80 in A en 20 in B",
             "20 in A en 80 in B",
@@ -9504,8 +9504,8 @@ window.SRAMCData = {
         {
           "id": "mc-regressielijn-leertoepassing-residu-uitvoer",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Wat zijn de voorspelde kosten en het residu van de getoonde controlemaand?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Kosten staan in duizenden euro’s; productie staat in honderden eenheden. Het model is met een constante geschat.</p><div class=\"table-wrap\"><table><caption>Coefficients: afhankelijke variabele kosten</caption><thead><tr><th scope=\"col\">Modelterm</th><th scope=\"col\">Unstandardized B</th><th scope=\"col\">Std. Error</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>12</td><td>2</td></tr><tr><th scope=\"row\">Productie</th><td>3</td><td>0.5</td></tr></tbody></table></div><div class=\"table-wrap\"><table><caption>Controlemaand</caption><thead><tr><th scope=\"col\">Productie x</th><th scope=\"col\">Werkelijke kosten y</th></tr></thead><tbody><tr><th scope=\"row\">8</th><td>41</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Wat zijn de voorspelde kosten en het residu van de getoonde controlemaand?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Kosten staan in duizenden euro’s; productie staat in honderden eenheden. Het model is met een constante geschat.</p><div class=\"table-wrap\"><table><caption>Coefficients: afhankelijke variabele kosten</caption><thead><tr><th scope=\"col\">Modelterm</th><th scope=\"col\">Unstandardized B</th><th scope=\"col\">Std. Error</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>12</td><td>2</td></tr><tr><th scope=\"row\">Productie</th><td>3</td><td>0.5</td></tr></tbody></table></div><div class=\"table-wrap\"><table><caption>Controlemaand</caption><thead><tr><th scope=\"col\">Productie x</th><th scope=\"col\">Werkelijke kosten y</th></tr></thead><tbody><tr><th scope=\"row\">8</th><td>41</td></tr></tbody></table></div>",
           "options": [
             "ŷ = 16 en e = 25",
             "ŷ = 36 en e = 5",
@@ -9810,7 +9810,7 @@ window.SRAMCData = {
         {
           "id": "mc-regressielijn-aanvulling-mse",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Bij enkelvoudige regressie zijn n = 12, r = 0,80 en s_y = 5. Wat is de residuele variantie volgens formule 34?",
+          "prompt": "Oefenvraag. Bij enkelvoudige regressie zijn n = 12, r = 0,80 en s_y = 5. Wat is de residuele variantie volgens formule 34?",
           "options": [
             "9",
             "17,6",
@@ -10469,7 +10469,7 @@ window.SRAMCData = {
           },
           "guidance": {
             "title": "ANOVA: verklaarde en onverklaarde variatie",
-            "focus": "Bereken eerst de twee mean squares met hun eigen vrijheidsgraden. SSR/SSE rechtstreeks delen geeft niet de globale F.",
+            "focus": "Bereken eerst de twee mean squares met de bijbehorende vrijheidsgraden. SSR/SSE rechtstreeks delen geeft niet de globale F.",
             "rules": [
               "TotalSS = SSR + SSE. SSR is de verklaarde kwadratensom en SSE de resterende kwadratensom. Het verklaarde aandeel is R² = SSR/TotalSS.",
               "Bij een model met constante is k het aantal verklarende variabelen; de constante telt niet mee in k. De vrijheidsgraden zijn k voor regressie, n − k − 1 voor residu en n − 1 voor totaal. MSE = SSE/(n − k − 1), MSR = SSR/k en F = MSR/MSE."
@@ -10585,8 +10585,8 @@ window.SRAMCData = {
         {
           "id": "mc-anova-leertoepassing-volledige-tabel",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke combinatie vult de ANOVA-uitvoer correct aan?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het regressiemodel heeft een constante. Bereken uit de uitvoer ook het aantal gebruikte waarnemingen.</p><div class=\"table-wrap\"><table><caption>ANOVA: kosten verklaard door productie en bezetting</caption><thead><tr><th scope=\"col\">Bron</th><th scope=\"col\">Sum of Squares</th><th scope=\"col\">df</th><th scope=\"col\">Mean Square</th><th scope=\"col\">F</th></tr></thead><tbody><tr><th scope=\"row\">Regression</th><td>180</td><td>2</td><td>?</td><td>?</td></tr><tr><th scope=\"row\">Residual</th><td>40</td><td>20</td><td>?</td><td></td></tr><tr><th scope=\"row\">Total</th><td>220</td><td>22</td><td></td><td></td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke combinatie vult de ANOVA-uitvoer correct aan?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het regressiemodel heeft een constante. Bereken uit de uitvoer ook het aantal gebruikte waarnemingen.</p><div class=\"table-wrap\"><table><caption>ANOVA: kosten verklaard door productie en bezetting</caption><thead><tr><th scope=\"col\">Bron</th><th scope=\"col\">Sum of Squares</th><th scope=\"col\">df</th><th scope=\"col\">Mean Square</th><th scope=\"col\">F</th></tr></thead><tbody><tr><th scope=\"row\">Regression</th><td>180</td><td>2</td><td>?</td><td>?</td></tr><tr><th scope=\"row\">Residual</th><td>40</td><td>20</td><td>?</td><td></td></tr><tr><th scope=\"row\">Total</th><td>220</td><td>22</td><td></td><td></td></tr></tbody></table></div>",
           "options": [
             "n = 23; MSE = 40; F = 4,5; R² ≈ 0,818",
             "n = 23; MSE = 2; F = 45; R² ≈ 0,182",
@@ -10643,8 +10643,8 @@ window.SRAMCData = {
         {
           "id": "mc-anova-leertoepassing-f-grens-bundel",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Toets het gehele model bij α = 0,05. Welke kritieke F en conclusie volgen uit de tabellenbundel?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Gebruik de ANOVA-uitvoer. De hypothesen gaan over beide regressiehellingen samen.</p><div class=\"table-wrap\"><table><caption>ANOVA: kosten verklaard door productie en bezetting</caption><thead><tr><th scope=\"col\">Bron</th><th scope=\"col\">Sum of Squares</th><th scope=\"col\">df</th><th scope=\"col\">Mean Square</th><th scope=\"col\">F</th></tr></thead><tbody><tr><th scope=\"row\">Regression</th><td>180</td><td>2</td><td>?</td><td>?</td></tr><tr><th scope=\"row\">Residual</th><td>40</td><td>20</td><td>?</td><td></td></tr><tr><th scope=\"row\">Total</th><td>220</td><td>22</td><td></td><td></td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=21\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.8 F-verdeling, PDF-pagina 21</a>. Zoek de benodigde grens zelf op.</p>",
+          "prompt": "Oefenvraag. Toets het gehele model bij α = 0,05. Welke kritieke F en conclusie volgen uit de tabellenbundel?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Gebruik de ANOVA-uitvoer. De hypothesen gaan over beide regressiehellingen samen.</p><div class=\"table-wrap\"><table><caption>ANOVA: kosten verklaard door productie en bezetting</caption><thead><tr><th scope=\"col\">Bron</th><th scope=\"col\">Sum of Squares</th><th scope=\"col\">df</th><th scope=\"col\">Mean Square</th><th scope=\"col\">F</th></tr></thead><tbody><tr><th scope=\"row\">Regression</th><td>180</td><td>2</td><td>?</td><td>?</td></tr><tr><th scope=\"row\">Residual</th><td>40</td><td>20</td><td>?</td><td></td></tr><tr><th scope=\"row\">Total</th><td>220</td><td>22</td><td></td><td></td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=21\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.8 F-verdeling, PDF-pagina 21</a>. Zoek de benodigde grens zelf op.</p>",
           "options": [
             "F_kritiek = 4,461; verwerp H₀",
             "F_kritiek = 3,493; iedere afzonderlijke helling is significant",
@@ -11038,11 +11038,11 @@ window.SRAMCData = {
             "De residuen zijn normaal"
           ],
           "correct": 1,
-          "explanation": "De globale F-toets heeft als H₀ dat alle drie de hellingscoëfficiënten gezamenlijk nul zijn. Een significante F geeft aanleiding die gezamenlijke nulhypothese te verwerpen. De conclusie is dat minstens één hellingscoëfficiënt niet nul is. Welke coëfficiënten afzonderlijk bijdragen, beoordeel je met hun eigen toetsen.",
+          "explanation": "De globale F-toets heeft als H₀ dat alle drie de hellingscoëfficiënten gezamenlijk nul zijn. Een significante F geeft aanleiding die gezamenlijke nulhypothese te verwerpen. De conclusie is dat minstens één hellingscoëfficiënt niet nul is. Welke coëfficiënten afzonderlijk bijdragen, beoordeel je met afzonderlijke toetsen.",
           "steps": [
             "De globale F-toets heeft als H₀ dat alle drie de hellingscoëfficiënten gezamenlijk nul zijn.",
             "Een significante F geeft aanleiding die gezamenlijke nulhypothese te verwerpen.",
-            "De conclusie is dat minstens één hellingscoëfficiënt niet nul is. Welke coëfficiënten afzonderlijk bijdragen, beoordeel je met hun eigen toetsen."
+            "De conclusie is dat minstens één hellingscoëfficiënt niet nul is. Welke coëfficiënten afzonderlijk bijdragen, beoordeel je met afzonderlijke toetsen."
           ],
           "pattern": "Herken: Een significante globale F bij meerdere verklarende variabelen. → Betekenis: De nulhypothese stelt dat alle populatiehellingen tegelijk nul zijn. → Aanpak: Koppel verwerpen aan ten minste één niet-nulle helling; benoem geen specifieke variabele zonder t-toets. → Gevraagd antwoord: Een conclusie over het model als geheel, niet over iedere voorspeller afzonderlijk.",
           "trap": "Gezamenlijke significantie betekent niet dat iedere afzonderlijke variabele significant is.",
@@ -11251,7 +11251,7 @@ window.SRAMCData = {
           },
           "guidance": {
             "title": "Hypothese, toetsingsgrootheid en conclusie",
-            "focus": "Gebruik de B-coëfficiënt en haar eigen Std. Error uit dezelfde modelrij. De hypothese bepaalt welke nulwaarde je van B aftrekt.",
+            "focus": "Gebruik de B-coëfficiënt en de bijbehorende Std. Error uit dezelfde modelrij. De hypothese bepaalt welke nulwaarde je van B aftrekt.",
             "rules": [
               "De hypothese gaat over een populatieparameter zoals β of ρ. Een stijging hoort bij een positieve alternatieve richting, een daling bij een negatieve; een verband zonder richting is tweezijdig.",
               "Voor H₀: β = 0 gebruik je t = B/Std. Error. Vergelijk een tweezijdige p-waarde met α. Bij een eenzijdige conclusie moet ook het teken van het gevonden effect bij de gevraagde richting passen."
@@ -11526,7 +11526,7 @@ window.SRAMCData = {
         {
           "id": "mc-toetsen-aanvulling-hellingse",
           "level": 3,
-          "prompt": "Eigen oefenvraag. n = 12, r = 0,80, s_x = 2 en s_y = 5. Wat is s_b1 volgens formule 39?",
+          "prompt": "Oefenvraag. n = 12, r = 0,80, s_x = 2 en s_y = 5. Wat is s_b1 volgens formule 39?",
           "options": [
             "0,036",
             "Ongeveer 0,47434",
@@ -11650,7 +11650,7 @@ window.SRAMCData = {
         {
           "id": "mc-toetsen-aanvulling-correlatie",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Bij enkelvoudige regressie zijn n = 12 en r = −0,80. Welke t hoort bij H0: rho = 0?",
+          "prompt": "Oefenvraag. Bij enkelvoudige regressie zijn n = 12 en r = −0,80. Welke t hoort bij H0: rho = 0?",
           "options": [
             "−0,80",
             "0,64",
@@ -11774,7 +11774,7 @@ window.SRAMCData = {
         {
           "id": "mc-toetsen-aanvulling-interval",
           "level": 3,
-          "prompt": "Eigen oefenvraag. b1 = 2, s_b1 = 0,5 en de gegeven tweezijdige kritieke t = 2. Wat volgt uit het bijpassende interval?",
+          "prompt": "Oefenvraag. b1 = 2, s_b1 = 0,5 en de gegeven tweezijdige kritieke t = 2. Wat volgt uit het bijpassende interval?",
           "options": [
             "Interval [1; 3]; H0 niet verwerpen",
             "Interval [1,5; 2,5]; H0 verwerpen",
@@ -11903,8 +11903,8 @@ window.SRAMCData = {
         {
           "id": "mc-toetsen-leertoepassing-p-en-t-route",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke conclusie volgt bij H₁: β ≠ 0 en α = 0,05, via zowel Sig. als de kritieke t?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het model heeft n = 22 waarnemingen, één verklarende variabele en een constante. SPSS toont een tweezijdige Sig.</p><div class=\"table-wrap\"><table><caption>Coefficients: kosten</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">t</th><th scope=\"col\">Sig. (2-tailed)</th></tr></thead><tbody><tr><th scope=\"row\">Productie</th><td>0,460</td><td>0,200</td><td>2,300</td><td>0,032</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 12</a>. Zoek de benodigde grens zelf op.</p>",
+          "prompt": "Oefenvraag. Welke conclusie volgt bij H₁: β ≠ 0 en α = 0,05, via zowel Sig. als de kritieke t?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het model heeft n = 22 waarnemingen, één verklarende variabele en een constante. SPSS toont een tweezijdige Sig.</p><div class=\"table-wrap\"><table><caption>Coefficients: kosten</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">t</th><th scope=\"col\">Sig. (2-tailed)</th></tr></thead><tbody><tr><th scope=\"row\">Productie</th><td>0,460</td><td>0,200</td><td>2,300</td><td>0,032</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 12</a>. Zoek de benodigde grens zelf op.</p>",
           "options": [
             "Beide routes verwerpen niet: p > 0,025",
             "Alleen de p-route verwerpt, want t moet groter zijn dan 5",
@@ -11971,8 +11971,8 @@ window.SRAMCData = {
         {
           "id": "mc-toetsen-leertoepassing-richting-eenzijdig",
           "level": 3,
-          "prompt": "Eigen oefenvraag. De hypothese vooraf is dat meer controles de foutfractie verlagen: H₁: β < 0. Wat volgt bij α = 0,05?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De gerichte hypothese is vóór de analyse gekozen. De tabel toont een positieve helling en een tweezijdige p-waarde.</p><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">t</th><th scope=\"col\">Sig. (2-tailed)</th></tr></thead><tbody><tr><th scope=\"row\">Controle-intensiteit</th><td>0,44</td><td>0,20</td><td>2,20</td><td>0,040</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. De hypothese vooraf is dat meer controles de foutfractie verlagen: H₁: β < 0. Wat volgt bij α = 0,05?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De gerichte hypothese is vóór de analyse gekozen. De tabel toont een positieve helling en een tweezijdige p-waarde.</p><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">t</th><th scope=\"col\">Sig. (2-tailed)</th></tr></thead><tbody><tr><th scope=\"row\">Controle-intensiteit</th><td>0,44</td><td>0,20</td><td>2,20</td><td>0,040</td></tr></tbody></table></div>",
           "options": [
             "H₀ niet verwerpen in de gevraagde richting; p_eenzijdig ≈ 0,980",
             "H₀ verwerpen: 0,040/2 = 0,020",
@@ -12039,8 +12039,8 @@ window.SRAMCData = {
         {
           "id": "mc-toetsen-leertoepassing-niet-nul-hypothese",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Toets H₀: β = 1 tegenover H₁: β ≠ 1 bij α = 0,05. Welke conclusie is juist?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Er zijn 26 waarnemingen, één verklarende variabele en een constante. De gebruikelijke SPSS-t toetst tegen nul; deze eigen oefenvariant vraagt tegen één. Gebruik hiervoor t = (B − β₀)/Std. Error.</p><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">SPSS t tegen nul</th></tr></thead><tbody><tr><th scope=\"row\">Activiteit</th><td>1,20</td><td>0,10</td><td>12,00</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 12</a>. Zoek de benodigde grens zelf op.</p>",
+          "prompt": "Oefenvraag. Toets H₀: β = 1 tegenover H₁: β ≠ 1 bij α = 0,05. Welke conclusie is juist?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Er zijn 26 waarnemingen, één verklarende variabele en een constante. De gebruikelijke SPSS-t toetst tegen nul; deze oefenvariant vraagt tegen één. Gebruik hiervoor t = (B − β₀)/Std. Error.</p><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">SPSS t tegen nul</th></tr></thead><tbody><tr><th scope=\"row\">Activiteit</th><td>1,20</td><td>0,10</td><td>12,00</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 12</a>. Zoek de benodigde grens zelf op.</p>",
           "options": [
             "t = 2; β is daarmee exact 1 bewezen",
             "t = 2; H₀ niet verwerpen, want 2 < 2,064",
@@ -12066,7 +12066,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 4,
-              "locator": "Formule 62 toetst tegen nul; aangepaste nulwaarde en formule expliciet gegeven in eigen oefenvariant"
+              "locator": "Formule 62 toetst tegen nul; aangepaste nulwaarde en formule expliciet gegeven in oefenvariant"
             },
             {
               "source": "tabellen",
@@ -12094,7 +12094,7 @@ window.SRAMCData = {
               {
                 "source": "formules",
                 "page": 4,
-                "locator": "Formule 62 toetst tegen nul; aangepaste nulwaarde en formule expliciet gegeven in eigen oefenvariant"
+                "locator": "Formule 62 toetst tegen nul; aangepaste nulwaarde en formule expliciet gegeven in oefenvariant"
               },
               {
                 "source": "tabellen",
@@ -12793,7 +12793,7 @@ window.SRAMCData = {
           "level": 2,
           "guidance": {
             "title": "Diagnose onderbouwen met de juiste uitvoer",
-            "focus": "Bij normaliteit is H₀ dat de residuen normaal verdeeld zijn. Gebruik de gegeven toets; bij eigen keuze volgt SRA Shapiro-Wilk voor n ≤ 50 en Kolmogorov-Smirnov voor n > 50. Vergelijk p met de opgegeven α.",
+            "focus": "Bij normaliteit is H₀ dat de residuen normaal verdeeld zijn. Gebruik de gegeven toets; als je zelf de toets kiest volgt SRA Shapiro-Wilk voor n ≤ 50 en Kolmogorov-Smirnov voor n > 50. Vergelijk p met de opgegeven α.",
             "rules": [
               "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
               "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
@@ -13004,7 +13004,7 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-aanvulling-uitbijter",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Een opvallende waarneming blijkt juist ingevoerd en hangt samen met een jaarlijks terugkerende sluitingsweek. Wat is een passende vervolgstap?",
+          "prompt": "Oefenvraag. Een opvallende waarneming blijkt juist ingevoerd en hangt samen met een jaarlijks terugkerende sluitingsweek. Wat is een passende vervolgstap?",
           "options": [
             "Vervang de waarneming door de voorspelde waarde",
             "Concludeer direct dat sprake is van fraude",
@@ -13193,8 +13193,8 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-leertoepassing-minimum-residu",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Welke waarnemingen zijn volgens de cursusgrens kandidaat-uitbijters in y?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het model is op 80 waarnemingen geschat. De tabel toont vier geselecteerde waarnemingen, niet alle 80.</p><div class=\"table-wrap\"><table><caption>Casewise Diagnostics</caption><thead><tr><th scope=\"col\">Waarneming</th><th scope=\"col\">Std. Residual</th></tr></thead><tbody><tr><th scope=\"row\">4</th><td>−2,60</td></tr><tr><th scope=\"row\">18</th><td>−1,10</td></tr><tr><th scope=\"row\">35</th><td>1,95</td></tr><tr><th scope=\"row\">67</th><td>2,20</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke waarnemingen zijn volgens de cursusgrens kandidaat-uitbijters in y?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het model is op 80 waarnemingen geschat. De tabel toont vier geselecteerde waarnemingen, niet alle 80.</p><div class=\"table-wrap\"><table><caption>Casewise Diagnostics</caption><thead><tr><th scope=\"col\">Waarneming</th><th scope=\"col\">Std. Residual</th></tr></thead><tbody><tr><th scope=\"row\">4</th><td>−2,60</td></tr><tr><th scope=\"row\">18</th><td>−1,10</td></tr><tr><th scope=\"row\">35</th><td>1,95</td></tr><tr><th scope=\"row\">67</th><td>2,20</td></tr></tbody></table></div>",
           "options": [
             "Geen waarnemingen, want de grens is ±3",
             "Waarnemingen 4, 35 en 67",
@@ -13428,7 +13428,7 @@ window.SRAMCData = {
           },
           "guidance": {
             "title": "Diagnose onderbouwen met de juiste uitvoer",
-            "focus": "Bij normaliteit is H₀ dat de residuen normaal verdeeld zijn. Gebruik de gegeven toets; bij eigen keuze volgt SRA Shapiro-Wilk voor n ≤ 50 en Kolmogorov-Smirnov voor n > 50. Vergelijk p met de opgegeven α.",
+            "focus": "Bij normaliteit is H₀ dat de residuen normaal verdeeld zijn. Gebruik de gegeven toets; als je zelf de toets kiest volgt SRA Shapiro-Wilk voor n ≤ 50 en Kolmogorov-Smirnov voor n > 50. Vergelijk p met de opgegeven α.",
             "rules": [
               "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
               "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
@@ -13639,7 +13639,7 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-aanvulling-autocorrectie",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Een opnieuw geschat model is y-hat_t = 10 + 2x_t + 0,5e_(t−1). Bij x_t = 4 en vorig residu −2 is de voorspelling:",
+          "prompt": "Oefenvraag. Een opnieuw geschat model is y-hat_t = 10 + 2x_t + 0,5e_(t−1). Bij x_t = 4 en vorig residu −2 is de voorspelling:",
           "options": [
             "19",
             "18",
@@ -13806,7 +13806,7 @@ window.SRAMCData = {
           },
           "guidance": {
             "title": "Diagnose onderbouwen met de juiste uitvoer",
-            "focus": "Gebruik in de extra term het residu van de vorige periode met zijn eigen teken. Vul niet het huidige residu of de vorige voorspelling in.",
+            "focus": "Gebruik in de extra term het residu van de vorige periode met de bijbehorende teken. Vul niet het huidige residu of de vorige voorspelling in.",
             "rules": [
               "Benoem eerst welke aanname of welk soort afwijking wordt onderzocht. Gestandaardiseerde residuen betreffen uitbijters in y, Mahalanobis Distance uitbijters in x en Cook’s Distance de mogelijke invloed op het model.",
               "Een opvallende waarde is aanleiding tot onderzoek. Koppel de uitvoer aan een conclusie en een onderbouwde remedie; verwijder een geldige waarneming niet uitsluitend om het model mooier te maken."
@@ -13833,7 +13833,7 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-aanvulling-dw",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Residuvolgorde: 1, 1, −1, −1. Wat is de Durbin-Watson-grootheid d?",
+          "prompt": "Oefenvraag. Residuvolgorde: 1, 1, −1, −1. Wat is de Durbin-Watson-grootheid d?",
           "options": [
             "1",
             "0",
@@ -14027,7 +14027,7 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-aanvulling-absres",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Voor n = 22 is r(x, |e|) = 0,50. De tweezijdige kritieke t is 2,086. Wat concludeer je met t ≈ 2,582?",
+          "prompt": "Oefenvraag. Voor n = 22 is r(x, |e|) = 0,50. De tweezijdige kritieke t is 2,086. Wat concludeer je met t ≈ 2,582?",
           "options": [
             "Het oorspronkelijke verband tussen y en x is causaal",
             "Een aanwijzing voor heteroscedasticiteit onderzoeken",
@@ -14216,8 +14216,8 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-leertoepassing-residual-statistics",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Brongegevens: geselecteerde rijen uit slides SRA NJ26, PDF-pagina 100. Eigen diagnosevraag.</p><p>Gebruik de cursusgrenzen voor uitbijters en invloedrijke punten. De afhankelijke variabele is huur per maand in euro.</p><div class=\"table-wrap\"><table><caption>Residuals Statistics: geselecteerde rijen</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">Minimum</th><th scope=\"col\">Maximum</th><th scope=\"col\">Mean</th><th scope=\"col\">Std. Deviation</th><th scope=\"col\">N</th></tr></thead><tbody><tr><th scope=\"row\">Std. Residual</th><td>−1,352</td><td>2,490</td><td>0,000</td><td>0,987</td><td>40</td></tr><tr><th scope=\"row\">Mahal. Distance</th><td>0,000</td><td>2,388</td><td>0,975</td><td>0,815</td><td>40</td></tr><tr><th scope=\"row\">Cook’s Distance</th><td>0,000</td><td>0,313</td><td>0,030</td><td>0,060</td><td>40</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Brongegevens: geselecteerde rijen uit slides SRA NJ26, PDF-pagina 100. Diagnosevraag.</p><p>Gebruik de cursusgrenzen voor uitbijters en invloedrijke punten. De afhankelijke variabele is huur per maand in euro.</p><div class=\"table-wrap\"><table><caption>Residuals Statistics: geselecteerde rijen</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">Minimum</th><th scope=\"col\">Maximum</th><th scope=\"col\">Mean</th><th scope=\"col\">Std. Deviation</th><th scope=\"col\">N</th></tr></thead><tbody><tr><th scope=\"row\">Std. Residual</th><td>−1,352</td><td>2,490</td><td>0,000</td><td>0,987</td><td>40</td></tr><tr><th scope=\"row\">Mahal. Distance</th><td>0,000</td><td>2,388</td><td>0,975</td><td>0,815</td><td>40</td></tr><tr><th scope=\"row\">Cook’s Distance</th><td>0,000</td><td>0,313</td><td>0,030</td><td>0,060</td><td>40</td></tr></tbody></table></div>",
           "options": [
             "Aanwijzing voor uitbijter(s) in y en invloed; geen MD-overschrijding",
             "Alleen een uitbijter in x, want MD_max > 2",
@@ -14226,7 +14226,7 @@ window.SRAMCData = {
           ],
           "optionExplanations": [
             "Bij n = 40 geldt |z| > 2. MD-grens = 0,975 + 3 × 0,815 = 3,420; CD-grens = 0,030 + 3 × 0,060 = 0,210. Alleen z_max en CD_max overschrijden hun grens.",
-            "Voor Mahalanobis Distance geldt hier de eigen cursusgrens mean + 3 × sd. De grens ±2 hoort bij gestandaardiseerde residuen.",
+            "Voor Mahalanobis Distance geldt hier de bijbehorende cursusgrens mean + 3 × sd. De grens ±2 hoort bij gestandaardiseerde residuen.",
             "Een gemiddeld residu rond nul kan samengaan met grote individuele residuen. Onderzoek minimum en maximum.",
             "De tabel signaleert mogelijke afwijkingen. Zij geeft geen inhoudelijke rechtvaardiging voor automatisch verwijderen en identificeert ook niet zelf de rij."
           ],
@@ -14237,7 +14237,7 @@ window.SRAMCData = {
             "Onderzoek betrokken waarnemingen in detail. Deze samenvatting toont niet of het grote residu en de grote Cook’s Distance bij dezelfde waarneming horen."
           ],
           "explanation": "Met n = 40 is de cursusgrens voor gestandaardiseerde residuen ±2; 2,490 overschrijdt deze, −1,352 niet. MD_kritiek = 0,975 + 3 × 0,815 = 3,420; het maximum 2,388 blijft eronder. CD_kritiek = 0,030 + 3 × 0,060 = 0,210; 0,313 ligt erboven. Onderzoek betrokken waarnemingen in detail. Deze samenvatting toont niet of het grote residu en de grote Cook’s Distance bij dezelfde waarneming horen.",
-          "pattern": "Herken: Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen? → Betekenis: Drie verschillende diagnosematen staan in één tabel en vragen ieder hun eigen grens. → Aanpak: Lees N, controleer beide residu-extremen en bereken afzonderlijk de grenzen voor Mahalanobis en Cook. → Gevraagd antwoord: Een onderscheiden oordeel over uitbijters in y, uitbijters in x en invloed.",
+          "pattern": "Herken: Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen? → Betekenis: Drie verschillende diagnosematen staan in één tabel en vragen ieder een bijpassende grens. → Aanpak: Lees N, controleer beide residu-extremen en bereken afzonderlijk de grenzen voor Mahalanobis en Cook. → Gevraagd antwoord: Een onderscheiden oordeel over uitbijters in y, uitbijters in x en invloed.",
           "trap": "Maak van een samengevatte tabel geen bewijs dat verschillende maxima dezelfde waarneming betreffen.",
           "refs": [
             {
@@ -14256,7 +14256,7 @@ window.SRAMCData = {
           "dataOrigin": "bron",
           "recognition": {
             "signals": "Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen?",
-            "meaning": "Drie verschillende diagnosematen staan in één tabel en vragen ieder hun eigen grens.",
+            "meaning": "Drie verschillende diagnosematen staan in één tabel en vragen ieder een bijpassende grens.",
             "approach": "Lees N, controleer beide residu-extremen en bereken afzonderlijk de grenzen voor Mahalanobis en Cook.",
             "answer": "Een onderscheiden oordeel over uitbijters in y, uitbijters in x en invloed."
           },
@@ -14284,8 +14284,8 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-leertoepassing-normaliteit-tabel",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke normaliteitsconclusie past bij de cursusroute en α = 0,05?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De tests zijn uitgevoerd op de residuen van een regressiemodel. Er zijn 40 waarnemingen.</p><div class=\"table-wrap\"><table><caption>Tests of Normality: residuen</caption><thead><tr><th scope=\"col\">Toets</th><th scope=\"col\">Statistic</th><th scope=\"col\">df</th><th scope=\"col\">Sig.</th></tr></thead><tbody><tr><th scope=\"row\">Kolmogorov-Smirnov</th><td>0,130</td><td>40</td><td>0,084</td></tr><tr><th scope=\"row\">Shapiro-Wilk</th><td>0,928</td><td>40</td><td>0,014</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke normaliteitsconclusie past bij de cursusroute en α = 0,05?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De tests zijn uitgevoerd op de residuen van een regressiemodel. Er zijn 40 waarnemingen.</p><div class=\"table-wrap\"><table><caption>Tests of Normality: residuen</caption><thead><tr><th scope=\"col\">Toets</th><th scope=\"col\">Statistic</th><th scope=\"col\">df</th><th scope=\"col\">Sig.</th></tr></thead><tbody><tr><th scope=\"row\">Kolmogorov-Smirnov</th><td>0,130</td><td>40</td><td>0,084</td></tr><tr><th scope=\"row\">Shapiro-Wilk</th><td>0,928</td><td>40</td><td>0,014</td></tr></tbody></table></div>",
           "options": [
             "De afhankelijke variabele y is niet normaal verdeeld",
             "Verwerp residunormaliteit op basis van Shapiro-Wilk p = 0,014",
@@ -14352,8 +14352,8 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-leertoepassing-trechtergrafiek",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welk modelprobleem vraagt deze residugrafiek vooral om te onderzoeken?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De horizontale as toont productieomvang. De verticale as toont residuen van het kostenmodel.</p><figure><svg viewBox=\"0 0 560 245\" role=\"img\" aria-label=\"Residu tegenover productie\" style=\"width:100%;max-width:640px;height:auto\"><title>Residu tegenover productie</title><desc>productie horizontaal van 0 tot 7; residu verticaal van -3 tot 3. De waarden zijn ook in de gegevenstabel beschikbaar.</desc><path d=\"M55 40 V190 H505\" stroke=\"currentColor\" fill=\"none\"/><path d=\"M55 117.50 H500\" stroke=\"currentColor\" stroke-dasharray=\"5 5\" opacity=\"0.4\"/><circle cx=\"118.57\" cy=\"127.17\" r=\"4\" fill=\"currentColor\"/><circle cx=\"150.36\" cy=\"110.25\" r=\"4\" fill=\"currentColor\"/><circle cx=\"182.14\" cy=\"132.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"213.93\" cy=\"100.58\" r=\"4\" fill=\"currentColor\"/><circle cx=\"245.71\" cy=\"141.67\" r=\"4\" fill=\"currentColor\"/><circle cx=\"277.50\" cy=\"88.50\" r=\"4\" fill=\"currentColor\"/><circle cx=\"309.29\" cy=\"151.33\" r=\"4\" fill=\"currentColor\"/><circle cx=\"341.07\" cy=\"78.83\" r=\"4\" fill=\"currentColor\"/><circle cx=\"372.86\" cy=\"168.25\" r=\"4\" fill=\"currentColor\"/><circle cx=\"404.64\" cy=\"64.33\" r=\"4\" fill=\"currentColor\"/><circle cx=\"436.43\" cy=\"180.33\" r=\"4\" fill=\"currentColor\"/><circle cx=\"468.21\" cy=\"49.83\" r=\"4\" fill=\"currentColor\"/><g fill=\"currentColor\" font-size=\"12\"><text x=\"50\" y=\"210\">0</text><text x=\"492\" y=\"210\">7</text><text x=\"18\" y=\"193\">-3</text><text x=\"18\" y=\"48\">3</text><text x=\"245\" y=\"232\">productie</text><text x=\"55\" y=\"25\">residu</text></g></svg><figcaption>Residu tegenover productie</figcaption></figure><details><summary>Bekijk de grafiekgegevens</summary><div class=\"table-wrap\"><table><caption>Residu tegenover productie</caption><thead><tr><th scope=\"col\">productie</th><th scope=\"col\">residu</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>-0.4</td></tr><tr><th scope=\"row\">1.5</th><td>0.3</td></tr><tr><th scope=\"row\">2</th><td>-0.6</td></tr><tr><th scope=\"row\">2.5</th><td>0.7</td></tr><tr><th scope=\"row\">3</th><td>-1.0</td></tr><tr><th scope=\"row\">3.5</th><td>1.2</td></tr><tr><th scope=\"row\">4</th><td>-1.4</td></tr><tr><th scope=\"row\">4.5</th><td>1.6</td></tr><tr><th scope=\"row\">5</th><td>-2.1</td></tr><tr><th scope=\"row\">5.5</th><td>2.2</td></tr><tr><th scope=\"row\">6</th><td>-2.6</td></tr><tr><th scope=\"row\">6.5</th><td>2.8</td></tr></tbody></table></div></details>",
+          "prompt": "Oefenvraag. Welk modelprobleem vraagt deze residugrafiek vooral om te onderzoeken?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De horizontale as toont productieomvang. De verticale as toont residuen van het kostenmodel.</p><figure><svg viewBox=\"0 0 560 245\" role=\"img\" aria-label=\"Residu tegenover productie\" style=\"width:100%;max-width:640px;height:auto\"><title>Residu tegenover productie</title><desc>productie horizontaal van 0 tot 7; residu verticaal van -3 tot 3. De waarden zijn ook in de gegevenstabel beschikbaar.</desc><path d=\"M55 40 V190 H505\" stroke=\"currentColor\" fill=\"none\"/><path d=\"M55 117.50 H500\" stroke=\"currentColor\" stroke-dasharray=\"5 5\" opacity=\"0.4\"/><circle cx=\"118.57\" cy=\"127.17\" r=\"4\" fill=\"currentColor\"/><circle cx=\"150.36\" cy=\"110.25\" r=\"4\" fill=\"currentColor\"/><circle cx=\"182.14\" cy=\"132.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"213.93\" cy=\"100.58\" r=\"4\" fill=\"currentColor\"/><circle cx=\"245.71\" cy=\"141.67\" r=\"4\" fill=\"currentColor\"/><circle cx=\"277.50\" cy=\"88.50\" r=\"4\" fill=\"currentColor\"/><circle cx=\"309.29\" cy=\"151.33\" r=\"4\" fill=\"currentColor\"/><circle cx=\"341.07\" cy=\"78.83\" r=\"4\" fill=\"currentColor\"/><circle cx=\"372.86\" cy=\"168.25\" r=\"4\" fill=\"currentColor\"/><circle cx=\"404.64\" cy=\"64.33\" r=\"4\" fill=\"currentColor\"/><circle cx=\"436.43\" cy=\"180.33\" r=\"4\" fill=\"currentColor\"/><circle cx=\"468.21\" cy=\"49.83\" r=\"4\" fill=\"currentColor\"/><g fill=\"currentColor\" font-size=\"12\"><text x=\"50\" y=\"210\">0</text><text x=\"492\" y=\"210\">7</text><text x=\"18\" y=\"193\">-3</text><text x=\"18\" y=\"48\">3</text><text x=\"245\" y=\"232\">productie</text><text x=\"55\" y=\"25\">residu</text></g></svg><figcaption>Residu tegenover productie</figcaption></figure><details><summary>Bekijk de grafiekgegevens</summary><div class=\"table-wrap\"><table><caption>Residu tegenover productie</caption><thead><tr><th scope=\"col\">productie</th><th scope=\"col\">residu</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>-0.4</td></tr><tr><th scope=\"row\">1.5</th><td>0.3</td></tr><tr><th scope=\"row\">2</th><td>-0.6</td></tr><tr><th scope=\"row\">2.5</th><td>0.7</td></tr><tr><th scope=\"row\">3</th><td>-1.0</td></tr><tr><th scope=\"row\">3.5</th><td>1.2</td></tr><tr><th scope=\"row\">4</th><td>-1.4</td></tr><tr><th scope=\"row\">4.5</th><td>1.6</td></tr><tr><th scope=\"row\">5</th><td>-2.1</td></tr><tr><th scope=\"row\">5.5</th><td>2.2</td></tr><tr><th scope=\"row\">6</th><td>-2.6</td></tr><tr><th scope=\"row\">6.5</th><td>2.8</td></tr></tbody></table></div></details>",
           "options": [
             "Het model is goed, want positieve en negatieve residuen wisselen af",
             "Iedere waarneming rechts moet uit de dataset worden verwijderd",
@@ -14420,8 +14420,8 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-leertoepassing-absres-correlations",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke conclusie over de foutspreiding volgt bij α = 0,05 uit deze Correlations-tabel?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>ABSRES is de absolute waarde van de modelresiduen; productie is de verklarende variabele.</p><div class=\"table-wrap\"><table><caption>Correlations: productie met ABSRES</caption><thead><tr><th scope=\"col\">Statistiek</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Pearson Correlation</th><td>0,550</td></tr><tr><th scope=\"row\">Sig. (2-tailed)</th><td>0,008</td></tr><tr><th scope=\"row\">N</th><td>22</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke conclusie over de foutspreiding volgt bij α = 0,05 uit deze Correlations-tabel?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>ABSRES is de absolute waarde van de modelresiduen; productie is de verklarende variabele.</p><div class=\"table-wrap\"><table><caption>Correlations: productie met ABSRES</caption><thead><tr><th scope=\"col\">Statistiek</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Pearson Correlation</th><td>0,550</td></tr><tr><th scope=\"row\">Sig. (2-tailed)</th><td>0,008</td></tr><tr><th scope=\"row\">N</th><td>22</td></tr></tbody></table></div>",
           "options": [
             "De residuen zijn zeker normaal verdeeld",
             "Geen probleem, want 0,550 is kleiner dan 1",
@@ -14498,8 +14498,8 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-leertoepassing-dw-echte-tabel",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Toets uitsluitend op positieve autocorrelatie bij α = 0,05. Welke conclusie volgt?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een tijdreeksmodel bevat n = 30 maanden en twee verklarende variabelen naast de constante.</p><div class=\"table-wrap\"><table><caption>Model Summary</caption><thead><tr><th scope=\"col\">R Square</th><th scope=\"col\">Std. Error of the Estimate</th><th scope=\"col\">Durbin-Watson</th></tr></thead><tbody><tr><th scope=\"row\">0,820</th><td>12,5</td><td>1,400</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=30\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.9 Durbin-Watson, PDF-pagina 30</a>. Zoek de benodigde grens zelf op.</p>",
+          "prompt": "Oefenvraag. Toets uitsluitend op positieve autocorrelatie bij α = 0,05. Welke conclusie volgt?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een tijdreeksmodel bevat n = 30 maanden en twee verklarende variabelen naast de constante.</p><div class=\"table-wrap\"><table><caption>Model Summary</caption><thead><tr><th scope=\"col\">R Square</th><th scope=\"col\">Std. Error of the Estimate</th><th scope=\"col\">Durbin-Watson</th></tr></thead><tbody><tr><th scope=\"row\">0,820</th><td>12,5</td><td>1,400</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=30\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.9 Durbin-Watson, PDF-pagina 30</a>. Zoek de benodigde grens zelf op.</p>",
           "options": [
             "Onbeslist: d = 1,400 ligt tussen d_L = 1,28 en d_U = 1,57",
             "Positieve autocorrelatie bewezen, want d < 2",
@@ -14566,8 +14566,8 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-leertoepassing-tijdsvertraging-grafieken",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke koppeling verdient op basis van deze uitvoer verder onderzoek voor een vertraagd reclame-effect?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>x is reclame in maand t, y is afzet. Bij verschuiving j wordt afzet y_t gekoppeld aan reclame x_(t−j). Onderzoek ook of een vertraagd effect inhoudelijk plausibel is.</p><div class=\"table-wrap\"><table><caption>Correlaties uit dezelfde eigen tijdreeks</caption><thead><tr><th scope=\"col\">Verschuiving j</th><th scope=\"col\">Geldige paren N</th><th scope=\"col\">Pearson r</th></tr></thead><tbody><tr><th scope=\"row\">0</th><td>12</td><td>0,269</td></tr><tr><th scope=\"row\">1</th><td>11</td><td>-0,498</td></tr><tr><th scope=\"row\">2</th><td>10</td><td>0,999</td></tr><tr><th scope=\"row\">3</th><td>9</td><td>-0,581</td></tr></tbody></table></div><figure><svg viewBox=\"0 0 560 245\" role=\"img\" aria-label=\"Verschuiving 0\" style=\"width:100%;max-width:640px;height:auto\"><title>Verschuiving 0</title><desc>reclame x_t horizontaal van 5 tot 23; afzet y_t verticaal van 10 tot 45. De waarden zijn ook in de gegevenstabel beschikbaar.</desc><path d=\"M55 40 V190 H505\" stroke=\"currentColor\" fill=\"none\"/><circle cx=\"178.61\" cy=\"156.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"326.94\" cy=\"140.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"129.17\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"425.83\" cy=\"103.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"228.06\" cy=\"161.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"376.39\" cy=\"69.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"79.72\" cy=\"127.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"277.50\" cy=\"86.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"475.28\" cy=\"177.57\" r=\"4\" fill=\"currentColor\"/><circle cx=\"178.61\" cy=\"111.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"376.39\" cy=\"53.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"129.17\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><g fill=\"currentColor\" font-size=\"12\"><text x=\"50\" y=\"210\">5</text><text x=\"492\" y=\"210\">23</text><text x=\"18\" y=\"193\">10</text><text x=\"18\" y=\"48\">45</text><text x=\"245\" y=\"232\">reclame x_t</text><text x=\"55\" y=\"25\">afzet y_t</text></g></svg><figcaption>Verschuiving 0</figcaption></figure><details><summary>Bekijk de grafiekgegevens</summary><div class=\"table-wrap\"><table><caption>Verschuiving 0</caption><thead><tr><th scope=\"col\">reclame x_t</th><th scope=\"col\">afzet y_t</th></tr></thead><tbody><tr><th scope=\"row\">10</th><td>18</td></tr><tr><th scope=\"row\">16</th><td>22</td></tr><tr><th scope=\"row\">8</th><td>21</td></tr><tr><th scope=\"row\">20</th><td>31</td></tr><tr><th scope=\"row\">12</th><td>17</td></tr><tr><th scope=\"row\">18</th><td>39</td></tr><tr><th scope=\"row\">6</th><td>25</td></tr><tr><th scope=\"row\">14</th><td>35</td></tr><tr><th scope=\"row\">22</th><td>13</td></tr><tr><th scope=\"row\">10</th><td>29</td></tr><tr><th scope=\"row\">18</th><td>43</td></tr><tr><th scope=\"row\">8</th><td>21</td></tr></tbody></table></div></details><figure><svg viewBox=\"0 0 560 245\" role=\"img\" aria-label=\"Verschuiving 2\" style=\"width:100%;max-width:640px;height:auto\"><title>Verschuiving 2</title><desc>reclame x_(t−2) horizontaal van 5 tot 23; afzet y_t verticaal van 10 tot 45. De waarden zijn ook in de gegevenstabel beschikbaar.</desc><path d=\"M55 40 V190 H505\" stroke=\"currentColor\" fill=\"none\"/><circle cx=\"178.61\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"326.94\" cy=\"103.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"129.17\" cy=\"161.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"425.83\" cy=\"69.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"228.06\" cy=\"127.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"376.39\" cy=\"86.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"79.72\" cy=\"177.57\" r=\"4\" fill=\"currentColor\"/><circle cx=\"277.50\" cy=\"111.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"475.28\" cy=\"53.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"178.61\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><g fill=\"currentColor\" font-size=\"12\"><text x=\"50\" y=\"210\">5</text><text x=\"492\" y=\"210\">23</text><text x=\"18\" y=\"193\">10</text><text x=\"18\" y=\"48\">45</text><text x=\"245\" y=\"232\">reclame x_(t−2)</text><text x=\"55\" y=\"25\">afzet y_t</text></g></svg><figcaption>Verschuiving 2</figcaption></figure><details><summary>Bekijk de grafiekgegevens</summary><div class=\"table-wrap\"><table><caption>Verschuiving 2</caption><thead><tr><th scope=\"col\">reclame x_(t−2)</th><th scope=\"col\">afzet y_t</th></tr></thead><tbody><tr><th scope=\"row\">10</th><td>21</td></tr><tr><th scope=\"row\">16</th><td>31</td></tr><tr><th scope=\"row\">8</th><td>17</td></tr><tr><th scope=\"row\">20</th><td>39</td></tr><tr><th scope=\"row\">12</th><td>25</td></tr><tr><th scope=\"row\">18</th><td>35</td></tr><tr><th scope=\"row\">6</th><td>13</td></tr><tr><th scope=\"row\">14</th><td>29</td></tr><tr><th scope=\"row\">22</th><td>43</td></tr><tr><th scope=\"row\">10</th><td>21</td></tr></tbody></table></div></details>",
+          "prompt": "Oefenvraag. Welke koppeling verdient op basis van deze uitvoer verder onderzoek voor een vertraagd reclame-effect?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>x is reclame in maand t, y is afzet. Bij verschuiving j wordt afzet y_t gekoppeld aan reclame x_(t−j). Onderzoek ook of een vertraagd effect inhoudelijk plausibel is.</p><div class=\"table-wrap\"><table><caption>Correlaties uit dezelfde oefentijdreeks</caption><thead><tr><th scope=\"col\">Verschuiving j</th><th scope=\"col\">Geldige paren N</th><th scope=\"col\">Pearson r</th></tr></thead><tbody><tr><th scope=\"row\">0</th><td>12</td><td>0,269</td></tr><tr><th scope=\"row\">1</th><td>11</td><td>-0,498</td></tr><tr><th scope=\"row\">2</th><td>10</td><td>0,999</td></tr><tr><th scope=\"row\">3</th><td>9</td><td>-0,581</td></tr></tbody></table></div><figure><svg viewBox=\"0 0 560 245\" role=\"img\" aria-label=\"Verschuiving 0\" style=\"width:100%;max-width:640px;height:auto\"><title>Verschuiving 0</title><desc>reclame x_t horizontaal van 5 tot 23; afzet y_t verticaal van 10 tot 45. De waarden zijn ook in de gegevenstabel beschikbaar.</desc><path d=\"M55 40 V190 H505\" stroke=\"currentColor\" fill=\"none\"/><circle cx=\"178.61\" cy=\"156.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"326.94\" cy=\"140.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"129.17\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"425.83\" cy=\"103.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"228.06\" cy=\"161.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"376.39\" cy=\"69.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"79.72\" cy=\"127.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"277.50\" cy=\"86.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"475.28\" cy=\"177.57\" r=\"4\" fill=\"currentColor\"/><circle cx=\"178.61\" cy=\"111.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"376.39\" cy=\"53.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"129.17\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><g fill=\"currentColor\" font-size=\"12\"><text x=\"50\" y=\"210\">5</text><text x=\"492\" y=\"210\">23</text><text x=\"18\" y=\"193\">10</text><text x=\"18\" y=\"48\">45</text><text x=\"245\" y=\"232\">reclame x_t</text><text x=\"55\" y=\"25\">afzet y_t</text></g></svg><figcaption>Verschuiving 0</figcaption></figure><details><summary>Bekijk de grafiekgegevens</summary><div class=\"table-wrap\"><table><caption>Verschuiving 0</caption><thead><tr><th scope=\"col\">reclame x_t</th><th scope=\"col\">afzet y_t</th></tr></thead><tbody><tr><th scope=\"row\">10</th><td>18</td></tr><tr><th scope=\"row\">16</th><td>22</td></tr><tr><th scope=\"row\">8</th><td>21</td></tr><tr><th scope=\"row\">20</th><td>31</td></tr><tr><th scope=\"row\">12</th><td>17</td></tr><tr><th scope=\"row\">18</th><td>39</td></tr><tr><th scope=\"row\">6</th><td>25</td></tr><tr><th scope=\"row\">14</th><td>35</td></tr><tr><th scope=\"row\">22</th><td>13</td></tr><tr><th scope=\"row\">10</th><td>29</td></tr><tr><th scope=\"row\">18</th><td>43</td></tr><tr><th scope=\"row\">8</th><td>21</td></tr></tbody></table></div></details><figure><svg viewBox=\"0 0 560 245\" role=\"img\" aria-label=\"Verschuiving 2\" style=\"width:100%;max-width:640px;height:auto\"><title>Verschuiving 2</title><desc>reclame x_(t−2) horizontaal van 5 tot 23; afzet y_t verticaal van 10 tot 45. De waarden zijn ook in de gegevenstabel beschikbaar.</desc><path d=\"M55 40 V190 H505\" stroke=\"currentColor\" fill=\"none\"/><circle cx=\"178.61\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"326.94\" cy=\"103.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"129.17\" cy=\"161.00\" r=\"4\" fill=\"currentColor\"/><circle cx=\"425.83\" cy=\"69.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"228.06\" cy=\"127.86\" r=\"4\" fill=\"currentColor\"/><circle cx=\"376.39\" cy=\"86.43\" r=\"4\" fill=\"currentColor\"/><circle cx=\"79.72\" cy=\"177.57\" r=\"4\" fill=\"currentColor\"/><circle cx=\"277.50\" cy=\"111.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"475.28\" cy=\"53.29\" r=\"4\" fill=\"currentColor\"/><circle cx=\"178.61\" cy=\"144.43\" r=\"4\" fill=\"currentColor\"/><g fill=\"currentColor\" font-size=\"12\"><text x=\"50\" y=\"210\">5</text><text x=\"492\" y=\"210\">23</text><text x=\"18\" y=\"193\">10</text><text x=\"18\" y=\"48\">45</text><text x=\"245\" y=\"232\">reclame x_(t−2)</text><text x=\"55\" y=\"25\">afzet y_t</text></g></svg><figcaption>Verschuiving 2</figcaption></figure><details><summary>Bekijk de grafiekgegevens</summary><div class=\"table-wrap\"><table><caption>Verschuiving 2</caption><thead><tr><th scope=\"col\">reclame x_(t−2)</th><th scope=\"col\">afzet y_t</th></tr></thead><tbody><tr><th scope=\"row\">10</th><td>21</td></tr><tr><th scope=\"row\">16</th><td>31</td></tr><tr><th scope=\"row\">8</th><td>17</td></tr><tr><th scope=\"row\">20</th><td>39</td></tr><tr><th scope=\"row\">12</th><td>25</td></tr><tr><th scope=\"row\">18</th><td>35</td></tr><tr><th scope=\"row\">6</th><td>13</td></tr><tr><th scope=\"row\">14</th><td>29</td></tr><tr><th scope=\"row\">22</th><td>43</td></tr><tr><th scope=\"row\">10</th><td>21</td></tr></tbody></table></div></details>",
           "options": [
             "Verschuiving 2 bewijst dat reclame de afzet veroorzaakt",
             "Afzet deze maand koppelen aan reclame twee maanden eerder",
@@ -15106,7 +15106,7 @@ window.SRAMCData = {
         {
           "id": "mc-voorspellen-aanvulling-controleperiode",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Een model is geschat op 24 basismaanden. Een nieuwe controlemaand ligt buiten het voorspellingsinterval. Wat is passend?",
+          "prompt": "Oefenvraag. Een model is geschat op 24 basismaanden. Een nieuwe controlemaand ligt buiten het voorspellingsinterval. Wat is passend?",
           "options": [
             "Bewijs van een boekingsfout vaststellen",
             "De maand direct opnemen om het interval passend te maken",
@@ -15419,8 +15419,8 @@ window.SRAMCData = {
         {
           "id": "mc-voorspellen-leertoepassing-gemiddelde-individu",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke combinatie geeft de marge voor een gemiddelde respons en voor één nieuwe maand bij x₀ = x̄?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De voorspelling is 50. Er zijn n = 25 basiswaarnemingen, s_e = 5 en de gegeven kritieke t = 2. Het model is passend beoordeeld.</p><div class=\"table-wrap\"><table><caption>Twee doelen</caption><thead><tr><th scope=\"col\">Doel</th><th scope=\"col\">Wortelfactor bij x₀ = x̄</th></tr></thead><tbody><tr><th scope=\"row\">Gemiddelde respons</th><td>√(1/n)</td></tr><tr><th scope=\"row\">Eén nieuwe maand</th><td>√(1 + 1/n)</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke combinatie geeft de marge voor een gemiddelde respons en voor één nieuwe maand bij x₀ = x̄?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De voorspelling is 50. Er zijn n = 25 basiswaarnemingen, s_e = 5 en de gegeven kritieke t = 2. Het model is passend beoordeeld.</p><div class=\"table-wrap\"><table><caption>Twee doelen</caption><thead><tr><th scope=\"col\">Doel</th><th scope=\"col\">Wortelfactor bij x₀ = x̄</th></tr></thead><tbody><tr><th scope=\"row\">Gemiddelde respons</th><td>√(1/n)</td></tr><tr><th scope=\"row\">Eén nieuwe maand</th><td>√(1 + 1/n)</td></tr></tbody></table></div>",
           "options": [
             "Beide: ±10",
             "Gemiddelde: ±2; nieuwe maand: ongeveer ±10,20",
@@ -15430,16 +15430,16 @@ window.SRAMCData = {
           "optionExplanations": [
             "Dit gebruikt alleen t × s_e. De onzekerheid van de geschatte lijn verdwijnt niet helemaal wanneer x₀ = x̄.",
             "Voor een gemiddelde is 2 × 5/√25 = 2. Voor een individu is 2 × 5√(1 + 1/25) ≈ 10,198.",
-            "Dit laat voor één nieuwe maand de eigen onverklaarde variatie weg. De extra 1 onder de wortel is daarvoor nodig.",
+            "Dit laat voor één nieuwe maand de individuele onverklaarde variatie weg. De extra 1 onder de wortel is daarvoor nodig.",
             "De betekenissen zijn verwisseld. Een individuele uitkomst omvat extra spreiding en heeft bij dezelfde gegevens het bredere interval."
           ],
           "correct": 1,
           "steps": [
             "Bij x₀ = x̄ is alleen de afstandsterm nul. De onzekerheid van de geschatte lijn blijft bestaan.",
             "Marge gemiddelde: 2 × 5 × √(1/25) = 2. Dit geeft [48; 52].",
-            "Marge individu: 2 × 5 × √(1 + 1/25) ≈ 10,198. Eén nieuwe maand is minder precies voorspelbaar door haar eigen residuele variatie."
+            "Marge individu: 2 × 5 × √(1 + 1/25) ≈ 10,198. Eén nieuwe maand is minder precies voorspelbaar door de individuele residuele variatie."
           ],
-          "explanation": "Bij x₀ = x̄ is alleen de afstandsterm nul. De onzekerheid van de geschatte lijn blijft bestaan. Marge gemiddelde: 2 × 5 × √(1/25) = 2. Dit geeft [48; 52]. Marge individu: 2 × 5 × √(1 + 1/25) ≈ 10,198. Eén nieuwe maand is minder precies voorspelbaar door haar eigen residuele variatie.",
+          "explanation": "Bij x₀ = x̄ is alleen de afstandsterm nul. De onzekerheid van de geschatte lijn blijft bestaan. Marge gemiddelde: 2 × 5 × √(1/25) = 2. Dit geeft [48; 52]. Marge individu: 2 × 5 × √(1 + 1/25) ≈ 10,198. Eén nieuwe maand is minder precies voorspelbaar door de individuele residuele variatie.",
           "pattern": "Herken: Welke combinatie geeft de marge voor een gemiddelde respons en voor één nieuwe maand bij x₀ = x̄? → Betekenis: Het doel van de uitspraak bepaalt of de toekomstige individuele storing moet worden meegerekend. → Aanpak: Markeer gemiddelde of individu en kies daarna de bijbehorende wortelfactor bij dezelfde voorspelling. → Gevraagd antwoord: Twee verschillende marges met de juiste betekenis voor de controle-uitspraak.",
           "trap": "De extra 1 is individuele spreiding en geen optionele veiligheidsopslag.",
           "refs": [
@@ -15649,7 +15649,7 @@ window.SRAMCData = {
           "level": 1,
           "guidance": {
             "title": "Meervoudige regressie: model en vergelijking",
-            "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+            "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
             "rules": [
               "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
               "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -15987,7 +15987,7 @@ window.SRAMCData = {
           },
           "guidance": {
             "title": "Meervoudige regressie: model en vergelijking",
-            "focus": "Vul voor iedere persoon haar of zijn eigen x-waarden en dummycodes in. Bereken bij een verschil twee voorspellingen of trek de modeltermen zorgvuldig van elkaar af.",
+            "focus": "Vul voor iedere persoon de bijbehorende x-waarden en dummycodes in. Bereken bij een verschil twee voorspellingen of trek de modeltermen zorgvuldig van elkaar af.",
             "rules": [
               "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
               "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -16009,7 +16009,7 @@ window.SRAMCData = {
         {
           "id": "mc-meervoudig-aanvulling-beta",
           "level": 2,
-          "prompt": "Eigen oefenvraag. In hetzelfde model heeft X1 Beta = −0,385 en X2 Beta = 0,592. Welke interpretatie is passend?",
+          "prompt": "Oefenvraag. In hetzelfde model heeft X1 Beta = −0,385 en X2 Beta = 0,592. Welke interpretatie is passend?",
           "options": [
             "X2 heeft de grootste absolute gestandaardiseerde coëfficiënt",
             "X1 heeft geen verband omdat Beta negatief is",
@@ -16220,7 +16220,7 @@ window.SRAMCData = {
           },
           "guidance": {
             "title": "Meervoudige regressie: model en vergelijking",
-            "focus": "Vul voor iedere persoon haar of zijn eigen x-waarden en dummycodes in. Bereken bij een verschil twee voorspellingen of trek de modeltermen zorgvuldig van elkaar af.",
+            "focus": "Vul voor iedere persoon de bijbehorende x-waarden en dummycodes in. Bereken bij een verschil twee voorspellingen of trek de modeltermen zorgvuldig van elkaar af.",
             "rules": [
               "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
               "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -16356,8 +16356,8 @@ window.SRAMCData = {
         {
           "id": "mc-meervoudig-leertoepassing-dummy-contrast",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Wat is volgens dit model het voorspelde salarisverschil tussen WO en HBO bij gelijke ervaring?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Salaris staat in euro per maand. Opleiding is gecodeerd met HBO en WO; de referentiegroep is MBO. Iedere persoon heeft precies één opleidingscategorie.</p><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Beta</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>2.000</td><td></td></tr><tr><th scope=\"row\">Ervaring (jaren)</th><td>80</td><td>0,40</td></tr><tr><th scope=\"row\">HBO (0/1)</th><td>350</td><td>0,20</td></tr><tr><th scope=\"row\">WO (0/1)</th><td>700</td><td>0,32</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Wat is volgens dit model het voorspelde salarisverschil tussen WO en HBO bij gelijke ervaring?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Salaris staat in euro per maand. Opleiding is gecodeerd met HBO en WO; de referentiegroep is MBO. Iedere persoon heeft precies één opleidingscategorie.</p><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Beta</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>2.000</td><td></td></tr><tr><th scope=\"row\">Ervaring (jaren)</th><td>80</td><td>0,40</td></tr><tr><th scope=\"row\">HBO (0/1)</th><td>350</td><td>0,20</td></tr><tr><th scope=\"row\">WO (0/1)</th><td>700</td><td>0,32</td></tr></tbody></table></div>",
           "options": [
             "WO ligt € 1.050 hoger dan HBO",
             "WO ligt 0,12 euro hoger dan HBO",
@@ -16424,8 +16424,8 @@ window.SRAMCData = {
         {
           "id": "mc-meervoudig-leertoepassing-adjusted-vergelijking",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke uitspraak over toevoeging van twee variabelen wordt door deze vergelijking ondersteund?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Beide modellen zijn op dezelfde 30 complete waarnemingen en dezelfde afhankelijke variabele geschat.</p><div class=\"table-wrap\"><table><caption>Model Summary</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">R²</th></tr></thead><tbody><tr><th scope=\"row\">Klein</th><td>1</td><td>0,800</td></tr><tr><th scope=\"row\">Groot</th><td>3</td><td>0,810</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke uitspraak over toevoeging van twee variabelen wordt door deze vergelijking ondersteund?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Beide modellen zijn op dezelfde 30 complete waarnemingen en dezelfde afhankelijke variabele geschat.</p><div class=\"table-wrap\"><table><caption>Model Summary</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">R²</th></tr></thead><tbody><tr><th scope=\"row\">Klein</th><td>1</td><td>0,800</td></tr><tr><th scope=\"row\">Groot</th><td>3</td><td>0,810</td></tr></tbody></table></div>",
           "options": [
             "Adjusted R² stijgt altijd mee met R²",
             "Het grote model is bewezen slechter op elke nieuwe waarneming",
@@ -16445,7 +16445,7 @@ window.SRAMCData = {
             "Volgens adjusted R² leveren de twee extra variabelen onvoldoende winst voor hun extra complexiteit. Combineer dat met inhoudelijke reden, diagnose en validatie."
           ],
           "explanation": "Gebruik R²_adj = R² − k(1 − R²)/(n − k − 1), met k zonder constante. Klein: 0,792857; groot: 0,788077. De gewone R² stijgt, maar de aangepaste maat daalt. Volgens adjusted R² leveren de twee extra variabelen onvoldoende winst voor hun extra complexiteit. Combineer dat met inhoudelijke reden, diagnose en validatie.",
-          "pattern": "Herken: Welke uitspraak over toevoeging van twee variabelen wordt door deze vergelijking ondersteund? → Betekenis: Een stijgende gewone R² kan een kleine fitwinst verbergen tegenover extra modelcomplexiteit. → Aanpak: Controleer vergelijkbare data en uitkomst en bereken de correctie voor het eigen k van ieder model. → Gevraagd antwoord: Een vergelijking van adjusted R² met een begrensde modelkeuzeconclusie.",
+          "pattern": "Herken: Welke uitspraak over toevoeging van twee variabelen wordt door deze vergelijking ondersteund? → Betekenis: Een stijgende gewone R² kan een kleine fitwinst verbergen tegenover extra modelcomplexiteit. → Aanpak: Controleer vergelijkbare data en uitkomst en bereken de correctie voor het aantal verklarende variabelen k van ieder model. → Gevraagd antwoord: Een vergelijking van adjusted R² met een begrensde modelkeuzeconclusie.",
           "trap": "Een fitmaat op trainingsdata is geen onafhankelijke voorspelfout op nieuwe gegevens.",
           "refs": [
             {
@@ -16460,12 +16460,12 @@ window.SRAMCData = {
           "recognition": {
             "signals": "Welke uitspraak over toevoeging van twee variabelen wordt door deze vergelijking ondersteund?",
             "meaning": "Een stijgende gewone R² kan een kleine fitwinst verbergen tegenover extra modelcomplexiteit.",
-            "approach": "Controleer vergelijkbare data en uitkomst en bereken de correctie voor het eigen k van ieder model.",
+            "approach": "Controleer vergelijkbare data en uitkomst en bereken de correctie voor het aantal verklarende variabelen k van ieder model.",
             "answer": "Een vergelijking van adjusted R² met een begrensde modelkeuzeconclusie."
           },
           "guidance": {
             "title": "Meervoudige regressie: model en vergelijking",
-            "focus": "Controleer vergelijkbare data en uitkomst en bereken de correctie voor het eigen k van ieder model.",
+            "focus": "Controleer vergelijkbare data en uitkomst en bereken de correctie voor het aantal verklarende variabelen k van ieder model.",
             "rules": [
               "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
               "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -16748,7 +16748,7 @@ window.SRAMCData = {
         {
           "id": "mc-transformaties-aanvulling-domein",
           "level": 1,
-          "prompt": "Eigen oefenvraag. Mag x = 0,5 worden gebruikt als verklarende variabele in ln(x)?",
+          "prompt": "Oefenvraag. Mag x = 0,5 worden gebruikt als verklarende variabele in ln(x)?",
           "options": [
             "Alleen als x wordt vervangen door nul",
             "Ja, want x is positief",
@@ -17266,7 +17266,7 @@ window.SRAMCData = {
         {
           "id": "mc-transformaties-aanvulling-meervoudig",
           "level": 3,
-          "prompt": "Eigen oefenvraag. ln(y-hat) = ln(2) + 0,5 ln(x1) − ln(x2). Wat is de teruggetransformeerde voorspelling bij x1 = 16 en x2 = 4?",
+          "prompt": "Oefenvraag. ln(y-hat) = ln(2) + 0,5 ln(x1) − ln(x2). Wat is de teruggetransformeerde voorspelling bij x1 = 16 en x2 = 4?",
           "options": [
             "8",
             "Ongeveer 0,693",
@@ -17370,8 +17370,8 @@ window.SRAMCData = {
         {
           "id": "mc-transformaties-leertoepassing-terugtransformeren-tabel",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Wat is de teruggetransformeerde voorspelling bij x = 10 volgens dit exponentiële model?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De afhankelijke variabele in deze uitvoer is LN(omzet). Gebruik de in de cursus gehanteerde terugtransformatie exp van de voorspelde logwaarde.</p><div class=\"table-wrap\"><table><caption>Coefficients: Dependent Variable LN(omzet)</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>2,000</td></tr><tr><th scope=\"row\">x</th><td>0,100</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Wat is de teruggetransformeerde voorspelling bij x = 10 volgens dit exponentiële model?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De afhankelijke variabele in deze uitvoer is LN(omzet). Gebruik de in de cursus gehanteerde terugtransformatie exp van de voorspelde logwaarde.</p><div class=\"table-wrap\"><table><caption>Coefficients: Dependent Variable LN(omzet)</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>2,000</td></tr><tr><th scope=\"row\">x</th><td>0,100</td></tr></tbody></table></div>",
           "options": [
             "3,00",
             "Ongeveer 8,39",
@@ -17438,8 +17438,8 @@ window.SRAMCData = {
         {
           "id": "mc-transformaties-leertoepassing-modelvorm-verdubbeling",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke voorspelde verandering hoort bij verdubbeling van x van 10 naar 20?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Vergelijk drie afzonderlijke modellen op hun eigen aangegeven schaal; er wordt alleen naar de gevolgen binnen ieder model gevraagd.</p><div class=\"table-wrap\"><table><caption>Modelvergelijkingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">Vergelijking</th></tr></thead><tbody><tr><th scope=\"row\">Lineair</th><td>ŷ = 5 + 3x</td></tr><tr><th scope=\"row\">Logaritmisch</th><td>ŷ = 5 + 3 ln(x)</td></tr><tr><th scope=\"row\">Macht</th><td>ln(ŷ) = 5 + 3 ln(x)</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke voorspelde verandering hoort bij verdubbeling van x van 10 naar 20?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Vergelijk drie afzonderlijke modellen op de aangegeven schaal; er wordt alleen naar de gevolgen binnen ieder model gevraagd.</p><div class=\"table-wrap\"><table><caption>Modelvergelijkingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">Vergelijking</th></tr></thead><tbody><tr><th scope=\"row\">Lineair</th><td>ŷ = 5 + 3x</td></tr><tr><th scope=\"row\">Logaritmisch</th><td>ŷ = 5 + 3 ln(x)</td></tr><tr><th scope=\"row\">Macht</th><td>ln(ŷ) = 5 + 3 ln(x)</td></tr></tbody></table></div>",
           "options": [
             "Lineair: +30; logaritmisch: +3 ln(2); macht: factor 8",
             "Alle drie: +30",
@@ -18456,8 +18456,8 @@ window.SRAMCData = {
         {
           "id": "mc-modelbouw-leertoepassing-backward-uitvoer",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke variabele is de eerste verwijderkandidaat en wat doe je daarna?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Voer backward elimination uit. De opgave geeft expliciet: verwijderen als Sig. &gt; 0,10. Begin met het weergegeven model.</p><div class=\"table-wrap\"><table><caption>Coefficients: model 1</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Sig.</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>1.400</td><td>0,280</td></tr><tr><th scope=\"row\">Omzet</th><td>0,030</td><td>0,002</td></tr><tr><th scope=\"row\">Omvang</th><td>4,200</td><td>0,074</td></tr><tr><th scope=\"row\">Leeftijd</th><td>−0,800</td><td>0,310</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke variabele is de eerste verwijderkandidaat en wat doe je daarna?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Voer backward elimination uit. De opgave geeft expliciet: verwijderen als Sig. &gt; 0,10. Begin met het weergegeven model.</p><div class=\"table-wrap\"><table><caption>Coefficients: model 1</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Sig.</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>1.400</td><td>0,280</td></tr><tr><th scope=\"row\">Omzet</th><td>0,030</td><td>0,002</td></tr><tr><th scope=\"row\">Omvang</th><td>4,200</td><td>0,074</td></tr><tr><th scope=\"row\">Leeftijd</th><td>−0,800</td><td>0,310</td></tr></tbody></table></div>",
           "options": [
             "Leeftijd verwijderen en het model opnieuw schatten",
             "De constante verwijderen en verder dezelfde tabel gebruiken",
@@ -18478,7 +18478,7 @@ window.SRAMCData = {
           ],
           "explanation": "De verwijderingsgrens is expliciet 0,10; gebruik die grens, zonder deze te vervangen door 0,05 of 0,025. Onder de verklarende variabelen is Leeftijd met p = 0,310 de grootste overschrijding. Verwijder deze kandidaat, schat het resterende model opnieuw en beoordeel de nieuwe uitvoer. Omvang mag later veranderen van betekenis of significantie.",
           "pattern": "Herken: Welke variabele is de eerste verwijderkandidaat en wat doe je daarna? → Betekenis: Een expliciete proceduregrens en tabel met meerdere p-waarden bepalen de eerste selectiestap. → Aanpak: Selecteer onder verklarende variabelen de grootste p boven de opgegeven grens en gebruik daarna opnieuw geschatte uitvoer. → Gevraagd antwoord: Eén eerste verwijderkandidaat met de noodzakelijke vervolgstap.",
-          "trap": "Een eigen vaste α of de grootte van B vervangt de expliciete verwijderingsregel niet.",
+          "trap": "Een zelfgekozen vaste α of de grootte van B vervangt de expliciete verwijderingsregel niet.",
           "refs": [
             {
               "source": "attentie",
@@ -18524,8 +18524,8 @@ window.SRAMCData = {
         {
           "id": "mc-modelbouw-leertoepassing-vif-tolerance",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke modelbeoordeling volgt uit deze tabel volgens de cursusgrens?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het model verklaart voorraadwaarde uit omzet en activa. Beide bedragen kunnen veel gezamenlijke informatie bevatten.</p><div class=\"table-wrap\"><table><caption>Coefficients: Collinearity Statistics</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">Tolerance</th><th scope=\"col\">VIF</th></tr></thead><tbody><tr><th scope=\"row\">Omzet</th><td>0,080</td><td>?</td></tr><tr><th scope=\"row\">Activa</th><td>0,080</td><td>?</td></tr><tr><th scope=\"row\">Aantal vestigingen</th><td>0,500</td><td>?</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke modelbeoordeling volgt uit deze tabel volgens de cursusgrens?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het model verklaart voorraadwaarde uit omzet en activa. Beide bedragen kunnen veel gezamenlijke informatie bevatten.</p><div class=\"table-wrap\"><table><caption>Coefficients: Collinearity Statistics</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">Tolerance</th><th scope=\"col\">VIF</th></tr></thead><tbody><tr><th scope=\"row\">Omzet</th><td>0,080</td><td>?</td></tr><tr><th scope=\"row\">Activa</th><td>0,080</td><td>?</td></tr><tr><th scope=\"row\">Aantal vestigingen</th><td>0,500</td><td>?</td></tr></tbody></table></div>",
           "options": [
             "VIF = 0,08 voor omzet, dus er is geen probleem",
             "Omzet en activa hebben VIF = 12,5; onderzoek hun overlap",
@@ -18582,8 +18582,8 @@ window.SRAMCData = {
         {
           "id": "mc-modelbouw-leertoepassing-extra-variabele",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Is de extra variabele volgens de partiële F-toets significant bij α = 0,05?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Beide geneste modellen gebruiken dezelfde 23 waarnemingen en dezelfde y. Het uitgebreide model bevat alle termen van het kleine model plus één variabele.</p><div class=\"table-wrap\"><table><caption>Twee ANOVA-samenvattingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th></tr></thead><tbody><tr><th scope=\"row\">Klein</th><td>1</td><td>120</td><td>100</td></tr><tr><th scope=\"row\">Uitgebreid</th><td>2</td><td>180</td><td>40</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=21\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.8 F-verdeling, PDF-pagina 21</a>. Zoek de benodigde grens zelf op.</p>",
+          "prompt": "Oefenvraag. Is de extra variabele volgens de partiële F-toets significant bij α = 0,05?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Beide geneste modellen gebruiken dezelfde 23 waarnemingen en dezelfde y. Het uitgebreide model bevat alle termen van het kleine model plus één variabele.</p><div class=\"table-wrap\"><table><caption>Twee ANOVA-samenvattingen</caption><thead><tr><th scope=\"col\">Model</th><th scope=\"col\">k</th><th scope=\"col\">SSR</th><th scope=\"col\">SSE</th></tr></thead><tbody><tr><th scope=\"row\">Klein</th><td>1</td><td>120</td><td>100</td></tr><tr><th scope=\"row\">Uitgebreid</th><td>2</td><td>180</td><td>40</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=21\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.8 F-verdeling, PDF-pagina 21</a>. Zoek de benodigde grens zelf op.</p>",
           "options": [
             "Nee: F = 0,6 < 4,351",
             "Niet te bepalen omdat SSR groter wordt",
@@ -18603,7 +18603,7 @@ window.SRAMCData = {
             "Lees F_0,05(1,20) = 4,351. Omdat 30 > 4,351 verwerp je dat de extra bijdrage nul is, onder de voorwaarden van deze modelvergelijking."
           ],
           "explanation": "Er is één extra variabele: teller-df = 1. Noemer-df = 23 − 2 − 1 = 20. Extra SSR = 180 − 120 = 60 en MSE_uitgebreid = 40/20 = 2; partiële F = 60/2 = 30. Lees F_0,05(1,20) = 4,351. Omdat 30 > 4,351 verwerp je dat de extra bijdrage nul is, onder de voorwaarden van deze modelvergelijking.",
-          "pattern": "Herken: Is de extra variabele volgens de partiële F-toets significant bij α = 0,05? → Betekenis: Geneste modellen isoleren de bijdrage van de nieuwe variabele ten opzichte van het kleinere model. → Aanpak: Gebruik het verschil in SSR in de teller en de residuele gemiddelde kwadratensom van het uitgebreide model in de noemer. → Gevraagd antwoord: Een toetsconclusie over de extra variabele met eigen teller- en noemervrijheidsgraden.",
+          "pattern": "Herken: Is de extra variabele volgens de partiële F-toets significant bij α = 0,05? → Betekenis: Geneste modellen isoleren de bijdrage van de nieuwe variabele ten opzichte van het kleinere model. → Aanpak: Gebruik het verschil in SSR in de teller en de residuele gemiddelde kwadratensom van het uitgebreide model in de noemer. → Gevraagd antwoord: Een toetsconclusie over de extra variabele met de bijbehorende teller- en noemervrijheidsgraden.",
           "trap": "De globale F van het uitgebreide model toetst een andere nulhypothese dan de partiële F.",
           "refs": [
             {
@@ -18624,7 +18624,7 @@ window.SRAMCData = {
             "signals": "Is de extra variabele volgens de partiële F-toets significant bij α = 0,05?",
             "meaning": "Geneste modellen isoleren de bijdrage van de nieuwe variabele ten opzichte van het kleinere model.",
             "approach": "Gebruik het verschil in SSR in de teller en de residuele gemiddelde kwadratensom van het uitgebreide model in de noemer.",
-            "answer": "Een toetsconclusie over de extra variabele met eigen teller- en noemervrijheidsgraden."
+            "answer": "Een toetsconclusie over de extra variabele met de bijbehorende teller- en noemervrijheidsgraden."
           },
           "guidance": {
             "title": "Variabelenselectie en multicollineariteit",
@@ -18762,7 +18762,7 @@ window.SRAMCData = {
           "level": 1,
           "guidance": {
             "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
-            "focus": "Koppel iedere waarneming aan haar eigen voorspelling. Kwadrateer de fouten en deel de som door het aantal testwaarnemingen, niet door n − k − 1.",
+            "focus": "Koppel iedere waarneming aan de bijbehorende voorspelling. Kwadrateer de fouten en deel de som door het aantal testwaarnemingen, niet door n − k − 1.",
             "rules": [
               "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
               "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
@@ -19025,7 +19025,7 @@ window.SRAMCData = {
           },
           "guidance": {
             "title": "Uitvoer lezen en op nieuwe gegevens beoordelen",
-            "focus": "Koppel iedere waarneming aan haar eigen voorspelling. Kwadrateer de fouten en deel de som door het aantal testwaarnemingen, niet door n − k − 1.",
+            "focus": "Koppel iedere waarneming aan de bijbehorende voorspelling. Kwadrateer de fouten en deel de som door het aantal testwaarnemingen, niet door n − k − 1.",
             "rules": [
               "De vergelijking in oorspronkelijke eenheden gebruikt de kolom Unstandardized Coefficients B, inclusief Constant. In een ANOVA-tabel is Total df = n − 1.",
               "MSPR is het gemiddelde van (yᵢ − ŷᵢ)² op nieuwe testwaarnemingen. Deel door het aantal testwaarnemingen. Een model dat goed past op trainingsdata hoeft nog niet goed te voorspellen op nieuwe data."
@@ -19047,8 +19047,8 @@ window.SRAMCData = {
         {
           "id": "mc-validatie-leertoepassing-software-uitvoer-keuze",
           "level": 2,
-          "prompt": "Eigen oefenvraag. Welke uitvoer moet je bewaren om uitbijters in y én veranderende residuspreiding te onderzoeken?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Je voert de voorgeschreven regressieanalyse in SPSS uit. Het model levert al Model Summary, ANOVA en Coefficients. De opdracht verlangt daarna modeldiagnostiek.</p><div class=\"table-wrap\"><table><caption>Beschikbare aanvullende uitvoer</caption><thead><tr><th scope=\"col\">Keuze</th><th scope=\"col\">Inhoud</th></tr></thead><tbody><tr><th scope=\"row\">A</th><td>Gestandaardiseerde residuen en absolute residuen tegenover x</td></tr><tr><th scope=\"row\">B</th><td>Alleen een extra Coefficients-tabel</td></tr><tr><th scope=\"row\">C</th><td>Alleen een histogram van de oorspronkelijke y</td></tr><tr><th scope=\"row\">D</th><td>Alleen een groter aantal decimalen bij R²</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke uitvoer moet je bewaren om uitbijters in y én veranderende residuspreiding te onderzoeken?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Je voert de voorgeschreven regressieanalyse in SPSS uit. Het model levert al Model Summary, ANOVA en Coefficients. De opdracht verlangt daarna modeldiagnostiek.</p><div class=\"table-wrap\"><table><caption>Beschikbare aanvullende uitvoer</caption><thead><tr><th scope=\"col\">Keuze</th><th scope=\"col\">Inhoud</th></tr></thead><tbody><tr><th scope=\"row\">A</th><td>Gestandaardiseerde residuen en absolute residuen tegenover x</td></tr><tr><th scope=\"row\">B</th><td>Alleen een extra Coefficients-tabel</td></tr><tr><th scope=\"row\">C</th><td>Alleen een histogram van de oorspronkelijke y</td></tr><tr><th scope=\"row\">D</th><td>Alleen een groter aantal decimalen bij R²</td></tr></tbody></table></div>",
           "options": [
             "Keuze B",
             "Keuze C",
@@ -19293,8 +19293,8 @@ window.SRAMCData = {
         {
           "id": "mc-validatie-leertoepassing-testset-tabel",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Wat is de MSPR op deze ongebruikte testset en hoe verhoudt zij zich tot trainings-MSE = 2?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De drie testwaarnemingen zijn vooraf apart gehouden en zijn niet gebruikt voor modelkeuze. y en ŷ staan op dezelfde schaal.</p><div class=\"table-wrap\"><table><caption>Voorspellen op testgegevens</caption><thead><tr><th scope=\"col\">Testwaarneming</th><th scope=\"col\">y</th><th scope=\"col\">ŷ</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>10</td><td>12</td></tr><tr><th scope=\"row\">2</th><td>14</td><td>13</td></tr><tr><th scope=\"row\">3</th><td>20</td><td>17</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Wat is de MSPR op deze ongebruikte testset en hoe verhoudt zij zich tot trainings-MSE = 2?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De drie testwaarnemingen zijn vooraf apart gehouden en zijn niet gebruikt voor modelkeuze. y en ŷ staan op dezelfde schaal.</p><div class=\"table-wrap\"><table><caption>Voorspellen op testgegevens</caption><thead><tr><th scope=\"col\">Testwaarneming</th><th scope=\"col\">y</th><th scope=\"col\">ŷ</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>10</td><td>12</td></tr><tr><th scope=\"row\">2</th><td>14</td><td>13</td></tr><tr><th scope=\"row\">3</th><td>20</td><td>17</td></tr></tbody></table></div>",
           "options": [
             "MSPR = 4,67; fraude is daardoor bewezen",
             "MSPR = 14/3 ≈ 4,67; de testfout ligt hoger",
@@ -19361,8 +19361,8 @@ window.SRAMCData = {
         {
           "id": "mc-validatie-leertoepassing-uitvoer-kruiscontrole",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke reconstructie van het SPSS-model klopt met alle drie tabellen?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>De getoonde tabellen behoren tot hetzelfde model met constante.</p><div class=\"table-wrap\"><table><caption>Model Summary</caption><thead><tr><th scope=\"col\">R</th><th scope=\"col\">R Square</th><th scope=\"col\">Std. Error of the Estimate</th></tr></thead><tbody><tr><th scope=\"row\">0,900</th><td>0,810</td><td>3,000</td></tr></tbody></table></div><div class=\"table-wrap\"><table><caption>ANOVA: vrijheidsgraden</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">df</th></tr></thead><tbody><tr><th scope=\"row\">Regression</th><td>2</td></tr><tr><th scope=\"row\">Residual</th><td>17</td></tr><tr><th scope=\"row\">Total</th><td>19</td></tr></tbody></table></div><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Beta</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>10</td><td></td></tr><tr><th scope=\"row\">x₁</th><td>2</td><td>0,70</td></tr><tr><th scope=\"row\">x₂</th><td>-1</td><td>−0,25</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke reconstructie van het SPSS-model klopt met alle drie tabellen?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De getoonde tabellen behoren tot hetzelfde model met constante.</p><div class=\"table-wrap\"><table><caption>Model Summary</caption><thead><tr><th scope=\"col\">R</th><th scope=\"col\">R Square</th><th scope=\"col\">Std. Error of the Estimate</th></tr></thead><tbody><tr><th scope=\"row\">0,900</th><td>0,810</td><td>3,000</td></tr></tbody></table></div><div class=\"table-wrap\"><table><caption>ANOVA: vrijheidsgraden</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">df</th></tr></thead><tbody><tr><th scope=\"row\">Regression</th><td>2</td></tr><tr><th scope=\"row\">Residual</th><td>17</td></tr><tr><th scope=\"row\">Total</th><td>19</td></tr></tbody></table></div><div class=\"table-wrap\"><table><caption>Coefficients</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Beta</th></tr></thead><tbody><tr><th scope=\"row\">(Constant)</th><td>10</td><td></td></tr><tr><th scope=\"row\">x₁</th><td>2</td><td>0,70</td></tr><tr><th scope=\"row\">x₂</th><td>-1</td><td>−0,25</td></tr></tbody></table></div>",
           "options": [
             "n = 20; k = 3; ŷ = 10 + 2x₁ − x₂; MSE = 3",
             "n = 20; k = 2; ŷ = 10 + 0,70x₁ − 0,25x₂; MSE = 9",
@@ -19693,7 +19693,7 @@ window.SRAMCData = {
             "Werk daarom ook volledige open opgaven zelfstandig uit en vergelijk daarna je redenering met de uitwerking."
           ],
           "pattern": "Herken: Alle korte checks zijn goed, maar gevraagd wordt of de voorbereiding klaar is. → Betekenis: Herkenning in korte vragen is iets anders dan zelfstandig een volledige open opgave uitwerken. → Aanpak: Beoordeel ook methodekeuze, tussenstappen en conclusie in complete tentamenopgaven. → Gevraagd antwoord: Een vervolgstap om toepassen te oefenen, geen garantie van beheersing door alleen check-scores.",
-          "trap": "Een hoge score op korte checks is geen vervanging voor oefenen met samenhang en eigen formulering.",
+          "trap": "Een hoge score op korte checks is geen vervanging voor oefenen met samenhang en zelfstandig formuleren.",
           "optionExplanations": [
             "Formules kennen is slechts een onderdeel. Je moet ze ook passend kiezen, correct toepassen en de uitkomst in de casus uitleggen.",
             "Korte checks dekken niet alle vaardigheden van een open tentamen. Zelf een complete redenering opbouwen blijft nodig.",
@@ -20074,8 +20074,8 @@ window.SRAMCData = {
         {
           "id": "mc-tentamen-leertoepassing-casusconclusie",
           "level": 3,
-          "prompt": "Eigen oefenvraag. Welke rapportage bevat een controleerbare berekening, een begrensde conclusie en een passende vervolgactie?",
-          "stimulusHtml": "<p class=\"mc-data-origin\">Eigen oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een accountant beoordeelt één nieuwe maand met een vooraf vastgelegd, passend basismodel. Het individuele 95%-voorspellingsinterval is [€ 88.000; € 112.000]. De werkelijke kosten bedragen € 118.000.</p><div class=\"table-wrap\"><table><caption>Aanvullende context</caption><thead><tr><th scope=\"col\">Onderdeel</th><th scope=\"col\">Informatie</th></tr></thead><tbody><tr><th scope=\"row\">Puntvoorspelling</th><td>€ 100.000</td></tr><tr><th scope=\"row\">Nieuwe maand</th><td>Niet gebruikt om model of interval te schatten</td></tr><tr><th scope=\"row\">Mogelijke veranderingen</th><td>Nog niet onderzocht</td></tr></tbody></table></div>",
+          "prompt": "Oefenvraag. Welke rapportage bevat een controleerbare berekening, een begrensde conclusie en een passende vervolgactie?",
+          "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Een accountant beoordeelt één nieuwe maand met een vooraf vastgelegd, passend basismodel. Het individuele 95%-voorspellingsinterval is [€ 88.000; € 112.000]. De werkelijke kosten bedragen € 118.000.</p><div class=\"table-wrap\"><table><caption>Aanvullende context</caption><thead><tr><th scope=\"col\">Onderdeel</th><th scope=\"col\">Informatie</th></tr></thead><tbody><tr><th scope=\"row\">Puntvoorspelling</th><td>€ 100.000</td></tr><tr><th scope=\"row\">Nieuwe maand</th><td>Niet gebruikt om model of interval te schatten</td></tr><tr><th scope=\"row\">Mogelijke veranderingen</th><td>Nog niet onderzocht</td></tr></tbody></table></div>",
           "options": [
             "Geen afwijking, want 95% laat vijf procent fouten toe",
             "Neem € 118.000 op in de basisperiode totdat de maand binnen het interval valt",
@@ -20084,7 +20084,7 @@ window.SRAMCData = {
           ],
           "optionExplanations": [
             "De betrouwbaarheid van de methode maakt een buitenliggende waarneming niet irrelevant. Zij vraagt om een begrensde interpretatie en onderzoek.",
-            "De te beoordelen waarneming achteraf gebruiken om haar eigen beoordelingsgrens aan te passen maakt de controle niet onafhankelijk.",
+            "De te beoordelen waarneming achteraf gebruiken om de beoordelingsgrens aan te passen maakt de controle niet onafhankelijk.",
             "118.000 − 112.000 = 6.000. De afwijking is een statistisch signaal onder het model, waarna inhoudelijk controlebewijs nodig is.",
             "Het residu is inderdaad 18.000, maar het model bewijst niet dat dit fraude of zelfs een administratieve fout is."
           ],

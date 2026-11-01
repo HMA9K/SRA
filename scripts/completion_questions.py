@@ -1,4 +1,4 @@
-"""Extra eigen oefenvarianten bij de geverifieerde cursusaanvullingen.
+"""Extra oefenvarianten bij de geverifieerde cursusaanvullingen.
 
 Nieuwe ID's, zodat opgeslagen antwoorden op de oorspronkelijke 114 vragen geldig blijven.
 """
@@ -8,7 +8,7 @@ QUESTIONS={}
 
 def q(topic,key,level,prompt,options,steps,pattern,trap):
     QUESTIONS.setdefault(topic,[]).append(dict(id=f'mc-{topic}-aanvulling-{key}',level=level,
-        prompt='Eigen oefenvraag. '+prompt,options=[o[0] for o in options],correct=0,
+        prompt='Oefenvraag. '+prompt,options=[o[0] for o in options],correct=0,
         optionExplanations=[o[1] for o in options],steps=steps,explanation=' '.join(steps),pattern=pattern,trap=trap))
 
 q('onzekerheid','bovengrens',2,'Een gemiddelde is 80, de standaardfout is 2 en de gegeven eenzijdige t-waarde is 1,711. Wat is de 95%-bovengrens?',[

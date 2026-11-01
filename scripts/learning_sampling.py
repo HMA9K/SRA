@@ -2,7 +2,7 @@
 
 Pas toe na course_completion.enhance. Bestaande les- en vraag-ID's blijven gelijk.
 Numerieke voorbeelden worden uit de vermelde invoer berekend; tussenwaarden
-worden alleen voor weergave afgerond. Eigen oefeningen zijn herkenbaar gelabeld.
+worden alleen voor weergave afgerond. Oefeningen zijn herkenbaar gelabeld.
 """
 from math import ceil, sqrt
 from course_completion import bookref
@@ -119,7 +119,7 @@ def enhance(lessons, sources):
         '<p>Een accountant moet een bedrag én de onzekerheid kunnen uitleggen. Twee schattingen van '
         '€ 100.000 met marges van € 2.000 en € 25.000 bieden bijvoorbeeld een heel andere basis '
         'voor dezelfde beslissing. Vergelijk de marge met de in de opgave toegestane onnauwkeurigheid.</p>'
-        + exercise('<p><strong>Eigen herkenningsoefening.</strong> Een voorraad bevat 5.000 posten. '
+        + exercise('<p><strong>Herkenningsoefening.</strong> Een voorraad bevat 5.000 posten. '
                    'De accountant verwacht veel verschillen en wil de werkelijke totale waarde bepalen. '
                    'Een medewerker stelt voor uitsluitend het percentage posten met een verschil te rapporteren. '
                    'Wat ontbreekt in dat voorstel?</p>',
@@ -153,10 +153,10 @@ def enhance(lessons, sources):
 
     # Het rekenwerk krijgt een controleerbare tabel met eenheden.
     values = [80, 90, 110, 120]
-    body = '<p>Een opgave kan losse waarden geven of alleen sommen. Onderstaande eigen oefentabel '
+    body = '<p>Een opgave kan losse waarden geven of alleen sommen. Onderstaande oefentabel '
     body += 'laat zien dat de twee variantieformules hetzelfde meten. De ene route begint bij afwijkingen '
     body += 'van het gemiddelde; de andere gebruikt direct de kolomsommen.</p>'
-    body += table('Eigen rekenvoorbeeld: vier gecontroleerde waarden in euro',
+    body += table('Rekenvoorbeeld: vier gecontroleerde waarden in euro',
                   ['Post', 'wᵢ', 'wᵢ²', 'wᵢ − 100', '(wᵢ − 100)²'],
                   [[i + 1, w, number(w*w, 0), w-100, (w-100)**2] for i, w in enumerate(values)]
                   + [['Totaal', '400', '41.000', '0', '1.000']])
@@ -169,7 +169,7 @@ def enhance(lessons, sources):
     body += '<p>Met een berekend gemiddelde zijn maar n − 1 afwijkingen vrij te kiezen: '
     body += 'de laatste afwijking ligt vast doordat ze samen nul moeten zijn. '
     body += 'Daarom staat bij de steekproefvariantie n − 1 in de noemer.</p>'
-    body += exercise('<p>In een eigen oefening zijn n = 5, Σw = 500 en Σw² = 52.000. '
+    body += exercise('<p>In een oefening zijn n = 5, Σw = 500 en Σw² = 52.000. '
                      'Bereken gemiddelde, variantie en standaardafwijking. Welke eenheid hoort bij elk antwoord?</p>',
                      '<p>w̄ = € 100. s² = (52.000 − 500²/5)/4 = 500 euro²; '
                      's = √500 ≈ € 22,36. De standaardfout van het gemiddelde vóór eindigheidscorrectie '
@@ -331,7 +331,7 @@ def enhance(lessons, sources):
          ref('tabellen', 13, 'Tabel 13.4, rij 170, kolom 0,025')])
 
     extend('verschil', 'Wat is hier een fout?',
-        table('Eigen patroonvoorbeeld: een vast foutbedrag', ['Boekwaarde b', 'Werkelijke waarde w', 'Verschil e = b − w'], [
+        table('Patroonvoorbeeld: een vast foutbedrag', ['Boekwaarde b', 'Werkelijke waarde w', 'Verschil e = b − w'], [
             ['€ 100', '€ 90', '€ 10'], ['€ 200', '€ 190', '€ 10'], ['€ 500', '€ 490', '€ 10']])
         + '<p>Het bedrag is constant, het foutpercentage is dat niet: 10%, 5% en 2%. '
         'De verschilschatter verwijdert het gemeenschappelijke niveau van de boekwaarde en '
@@ -391,7 +391,7 @@ def enhance(lessons, sources):
          ref('formules', 1, 'Formules 6-11'), ref('tabellen', 13, 'Rij 160; kolom 0,025')])
 
     extend('quotient', 'Een vast percentage herkennen',
-        table('Eigen patroonvoorbeeld: een vaste goedratio', ['Boekwaarde b', 'Werkelijke waarde w', 'Verschil e', 'w/b'], [
+        table('Patroonvoorbeeld: een vaste goedratio', ['Boekwaarde b', 'Werkelijke waarde w', 'Verschil e', 'w/b'], [
             ['€ 100', '€ 90', '€ 10', '0,90'], ['€ 200', '€ 180', '€ 20', '0,90'],
             ['€ 500', '€ 450', '€ 50', '0,90']])
         + '<p>Bij grotere boekwaarden groeit het foutbedrag mee. Een vast bedrag aftrekken '
@@ -424,7 +424,7 @@ def enhance(lessons, sources):
     N, n, q, sw, sb, r = 2500, 100, .95, 38, 40, .98
     sq = sqrt(sw*sw - 2*q*r*sb*sw + q*q*sb*sb)
     se = N*sq/sqrt(n)*sqrt((N-n)/(N-1))
-    body = '<p><strong>Eigen oefencasus op basis van de cursusformules.</strong> Een voorraad '
+    body = '<p><strong>Oefencasus op basis van de cursusformules.</strong> Een voorraad '
     body += 'bevat 2.500 posten met een totale boekwaarde van € 500.000. In een aselecte '
     body += 'steekproef van 100 posten zijn 70 afwijkingen gevonden; het foutpatroon is ongeveer '
     body += 'proportioneel met de boekwaarde. Bereken een tweezijdig 95%-interval.</p>'
@@ -446,7 +446,7 @@ def enhance(lessons, sources):
                      'het totale bedrag worden omgerekend, en daarna met de kritieke waarde '
                      'worden vermenigvuldigd.</p>')
     add('quotient', 'Een volledige casus: van goedratio tot interval', body,
-        [ref('formules', 1, 'Eigen oefening volgens formules 12-17'),
+        [ref('formules', 1, 'Oefening volgens formules 12-17'),
          ref('slides', 23, 'Methode en voorwaarden: PDF 23-26'), ref('tabellen', 13, 'Rij 95; kolom 0,025')])
     q = 803403/830066
     sq = sqrt((34730934-2*(1-q)*53988529+(1-q)**2*1871695609)/399)
@@ -493,7 +493,7 @@ def enhance(lessons, sources):
         '<div class="formula">R<sub>bw</sub> > ½ × '
         'VC<sub>b</sub>/VC<sub>w</sub></div>'
         '<p>Als beide variatiecoëfficiënten ongeveer gelijk zijn, vereenvoudigt '
-        'dit tot R<sub>bw</sub> > 0,5. In de eigen quotiëntcasus hierboven is '
+        'dit tot R<sub>bw</sub> > 0,5. In de quotiëntcasus hierboven is '
         'VC<sub>b</sub> = 40/200 = 0,20 en VC<sub>w</sub> = 38/190 = 0,20. '
         'R = 0,98 ligt boven 0,5. Het verband met boekwaarde laat dus '
         'minder restspreiding over dan MPU. Deze vergelijking vervangt '
@@ -501,7 +501,7 @@ def enhance(lessons, sources):
         [bookref('boek-h8b', 212), bookref('boek-h8b', 213)])
 
     body = '<p>De regressieschatter gebruikt een lineair verband met een vrije constante '
-    body += 'en helling. Het volgende eigen invulvoorbeeld maakt zichtbaar wat de correctie op '
+    body += 'en helling. Het volgende invulvoorbeeld maakt zichtbaar wat de correctie op '
     body += 'MPU doet. Neem N = 1.000, n = 100, B = € 105.000, b̄ = € 100, w̄ = € 95, '
     body += 's<sub>b</sub> = € 40, s<sub>w</sub> = € 38 en R<sub>bw</sub> = 0,98.</p>'
     body += table('De regressiecorrectie lezen', ['Onderdeel', 'Berekening', 'Betekenis'], [
@@ -619,7 +619,7 @@ def enhance(lessons, sources):
                  'Na uitbreiding tonen de slides een nieuwe s<sub>q</sub> van € 195,17 en '
                  'een gerealiseerde marge van circa € 283.305. Die is kleiner dan de '
                  'geplande € 310.000 doordat de nieuwe spreiding lager is.'])
-        + exercise('<p><strong>Eigen vervolg op de cursuscasus.</strong> Een collega wil in γ '
+        + exercise('<p><strong>Vervolg op de cursuscasus.</strong> Een collega wil in γ '
                    '€ 620.000 invullen, omdat dat de toegestane totale breedte is. '
                    'Wat gebeurt er en waarom is dat onjuist?</p>',
                    '<p>De ingevoerde E verdubbelt. Door E² wordt γ vier keer zo groot '
@@ -634,7 +634,7 @@ def enhance(lessons, sources):
         'controle, terwijl de werkelijke waarden pas na de controle bekend zijn. De slides '
         'noemen vier à vijf strata als vuistregel. Dat is geen garantie: beoordeel of de '
         'groepen echt homogener worden en of ieder stratum genoeg controles krijgt.</p>',
-        [ref('slides', 38, 'PDF 38-39: nut, eigen inzicht en indelingsmethoden'), bookref('boek-h8b', 219)])
+        [ref('slides', 38, 'PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden'), bookref('boek-h8b', 219)])
     cumulative, rows = 0, []
     for label, count, amount in SLIDE_CLASSES:
         cumulative += amount
@@ -767,7 +767,7 @@ def enhance(lessons, sources):
     body += 'keuze dan de standaard evenredige allocatie Nᵢ/N. '
     body += 'Lees daarom expliciet of de opdracht op aantallen of bedragen '
     body += 'wil verdelen.</p>'
-    body += exercise('<p>Een tweede eigen planning heeft twee even grote groepen. '
+    body += exercise('<p>Een tweede planning heeft twee even grote groepen. '
                      's₁ = 100 en s₂ = 300; totaal n = 80. Verdeel evenredig en volgens Neyman. '
                      'Wanneer heeft evenredige allocatie hier toch een praktische reden?</p>',
                      '<p>Evenredig: 40 en 40. Neyman: verhouding 100:300, dus 20 en 60. '
@@ -785,7 +785,7 @@ def enhance(lessons, sources):
     se = sqrt(sum(v['se']**2 for v in estimates))
     body = '<p>Na de controles worden per stratum de werkelijke waarden '
     body += 'samengevat. Deze oorspronkelijke collegedata sluiten aan op de '
-    body += 'Neyman-aantallen hierboven. Gebruik bij elke rij de eigen Nᵢ en nᵢ, '
+    body += 'Neyman-aantallen hierboven. Gebruik bij elke rij de Nᵢ en nᵢ van die groep, '
     body += 'ook in de eindigheidscorrectie.</p>'
     body += table('Collegevoorbeeld: invoer voor de gestratificeerde MPU-schatting',
                   ['Stratum', 'Nᵢ', 'nᵢ', 'Σwᵢ (€)', 'Σwᵢ² (euro²)'],
@@ -853,7 +853,7 @@ def enhance(lessons, sources):
     body += 'stratumspreidingen. Voor een andere allocatie mag je niet zonder '
     body += 'controle dezelfde n-verdeling invullen. E is de gewenste marge voor '
     body += 'de totaalschatting.</p>'
-    body += table('Eigen invulvoorbeeld bij boekformule 8.20', ['Stratum', 'Nᵢ', 'sᵢ', 'Nᵢs²ᵢ'], [
+    body += table('Invulvoorbeeld bij boekformule 8.20', ['Stratum', 'Nᵢ', 'sᵢ', 'Nᵢs²ᵢ'], [
         [1, 600, 20, '240.000'], [2, 400, 40, '640.000'], ['Som', '1.000', '', '880.000']])
     gamma = 3000**2/(2**2*880000)
     required = 1000/(1+gamma)
@@ -891,7 +891,7 @@ def enhance(lessons, sources):
             ['3. Allocatie plannen', 'Evenredig of Neyman, invoer en som van nᵢ', 'Gelijke aantallen verwarren met evenredige verdeling'],
             ['4. Gegevens evalueren', 'Werkelijke nᵢ, Σwᵢ, Σwᵢ² of andere schattergegevens', 'Voorafgaande spreidingen blijven gebruiken na de controle'],
             ['5. Schattingen combineren', 'Som geschatte totalen plus gecontroleerde topwaarde', 'Een ongewogen gemiddelde van stratumgemiddelden nemen'],
-            ['6. Onzekerheid combineren', 'Som van varianties, daarna wortel en t', 'Standaardfouten optellen of eigen df verzinnen'],
+            ['6. Onzekerheid combineren', 'Som van varianties, daarna wortel en t', 'Standaardfouten optellen of vrijheidsgraden verzinnen'],
             ['7. Eis beoordelen', 'Marge E tegenover toegestane marge; uitbreiding indien nodig', 'Totale breedte vergelijken met een halve breedte'],
         ])
         + '<p>Ook binnen strata kan een verschil-, quotiënt- of regressieschatter '

@@ -209,7 +209,7 @@ _add('stratificatie', 'Stratificatie', ['stratificeren', 'gestratificeerd', 'ges
      'Een populatie verdelen in deelpopulaties en per groep steekproeven of controles uitvoeren. Relatief gelijksoortige groepen kunnen de precisie verbeteren.',
      'Verdeel voorraadartikelen in lage, middelhoge en hoge boekwaarden en schat elke groep afzonderlijk.', 'stratificatie')
 _add('stratum', 'Stratum', ['strata', 'stratums', 'deelpopulatie', 'deelpopulaties'],
-     'Eén van de groepen waarin een populatie bij stratificatie is verdeeld. Elke groep heeft haar eigen omvang, gemiddelde en spreiding.',
+     'Eén van de groepen waarin een populatie bij stratificatie is verdeeld. Elke groep heeft een afzonderlijke omvang, gemiddelde en spreiding.',
      'Alle artikelen met boekwaarde van € 100 tot € 500 vormen één stratum.', 'stratificatie')
 _add('topstratum', 'Topstratum', ['topstrata'],
      'Een apart stratum met bijvoorbeeld de posten boven een hoog grensbedrag. Bij integrale controle ken je de werkelijke waarde ervan en is er voor dat deel geen steekproefonzekerheid.',

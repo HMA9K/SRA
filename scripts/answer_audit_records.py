@@ -152,7 +152,7 @@ REVIEW['20220316'] = [
 ('G','Som fouten 27.990; gemiddelde 174,9375 over alle 160 posten. Verschilschatting €10.726.465,625; s_e≈119,06. Bovengrens met t=1,287 circa €10.767.284, naar boven €10.768.000.'),
 ('N','In deze opgave is s_e≈119 veel kleiner dan s_w≈4.969, waardoor het interval smaller wordt. Kleine foutbedragen op zichzelf bewijzen in het algemeen niet dat hun standaardafwijking kleiner is; het verband tussen boek- en werkelijke waarde is bepalend.'),
 ('N','Evenredig verdeelt naar stratumomvang; Neyman naar omvang maal standaardafwijking. Neyman heeft bij vergelijkbare kosten en bruikbare spreidingsschattingen de kleinste variantie. Een grotere standaardafwijking alleen garandeert geen grotere steekproef als de omvang verschilt.'),
-('G','Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t=1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.'),
+('G','Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t=1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.'),
 ('G','Inkomen: H1: β1<0. Geslacht (vrouw=1): H1: β1>0.'),
 ('C','Inkomen heeft de sterkste absolute correlatie met korting. (-0,725)²=0,525625, niet 0,5265 zoals gedrukt. Dit is 52,5625%, afgerond 53%; de afgeronde eindconclusie blijft gelijk. SPSS 0,000 betekent p<0,001.'),
 ('N','Alle drie paren voorspellers hebben een significante correlatie. Dit vraagt controle met VIF, maar bewijst geen problematische multicollineariteit; significantie en sterkte van een verband zijn verschillende zaken.'),

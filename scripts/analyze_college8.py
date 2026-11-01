@@ -102,7 +102,7 @@ def main():
     assert all(all(v is not None for v in r.values()) for r in rows)
     result=dict(source='SRA SPSS data.xlsx',sheet='College8',range='A1:Q163',sourceSha256=before,
         sourceRows=len(rows),zeroSales=sum(r['Verkoopwaarde']==0 for r in rows),
-        note='Eigen herberekening van de in de cursus gepubliceerde eindmodellen. Geen nieuwe SPSS-bediening en geen gereconstrueerde backwardselectie.',
+        note='Herberekening van de in de cursus gepubliceerde eindmodellen. Geen nieuwe SPSS-bediening en geen gereconstrueerde backwardselectie.',
         models=[analyze(rows,name,terms) for name,terms in MODELS.items()])
     assert before==hashlib.sha256(args.source.read_bytes()).hexdigest()
     args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')

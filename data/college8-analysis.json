@@ -5,7 +5,7 @@
   "sourceSha256": "fe9be3728f6816a00fde3da93fa63e745c47bc5065556aab91b4bb297d28c35f",
   "sourceRows": 162,
   "zeroSales": 0,
-  "note": "Eigen herberekening van de in de cursus gepubliceerde eindmodellen. Geen nieuwe SPSS-bediening en geen gereconstrueerde backwardselectie.",
+  "note": "Herberekening van de in de cursus gepubliceerde eindmodellen. Geen nieuwe SPSS-bediening en geen gereconstrueerde backwardselectie.",
   "models": [
     {
       "name": "enkelvoudig",

@@ -77,7 +77,7 @@ FOCUS = {
   ('toepassing-2', 'Controleer hoe de posten zijn gekozen. Selecteren op lage waarden kan systematisch afwijken van de hele populatie; een grotere selectieve steekproef neemt die vertekening niet vanzelf weg.'),
   ('toepassing-3', 'De onzekerheid hoort bij de geschatte grootheid. Een interval voor het totaal zegt niet waar individuele posten liggen.')],
  'rekenen': [
-  ('basis-1', 'Let op de plaats van het kwadraat: schrijf bij een som van kwadraten eerst voor elke waarneming haar eigen kwadraat op.'),
+  ('basis-1', 'Let op de plaats van het kwadraat: schrijf bij een som van kwadraten eerst voor elke waarneming het kwadraat van die waarde op.'),
   ('basis-2', 'Een variantie heeft een gekwadrateerde eenheid. Neem de wortel om de standaardafwijking in de oorspronkelijke eenheid te krijgen.'),
   ('basis-3 toepassing-3', 's beschrijft spreiding tussen posten. s/√n beschrijft, zonder eindigheidscorrectie, de standaardfout van het geschatte gemiddelde. Voor een populatietotaal komt daar een factor N bij.'),
   ('toepassing-1 toepassing-2', 'Bij een uit de steekproef geschat gemiddelde heeft de steekproefvariantie n − 1 in de noemer. Neem pas daarna een wortel als s wordt gevraagd.')],
@@ -137,12 +137,12 @@ FOCUS = {
   ('basis-1 toepassing-1', 'Het verklaarde aandeel heeft TotalSS in de noemer. De niet-verklaarde fractie is 1 − R².'),
   ('basis-2', 'Trek voor residuele vrijheidsgraden zowel de k verklarende variabelen als de constante van n af.'),
   ('basis-3 toepassing-3', 'Std. Error of the Estimate is √MSE. R² betreft verklaarde variatie, niet het percentage exact voorspelde waarnemingen.'),
-  ('toepassing-2', 'Bereken eerst de twee mean squares met hun eigen vrijheidsgraden. SSR/SSE rechtstreeks delen geeft niet de globale F.')],
+  ('toepassing-2', 'Bereken eerst de twee mean squares met de bijbehorende vrijheidsgraden. SSR/SSE rechtstreeks delen geeft niet de globale F.')],
  'toetsen': [
   ('basis-1', 'Formuleer de verwachte richting voor de populatiehelling, niet voor één losse waarneming.'),
   ('basis-2', 'Vergelijk de volledige tweezijdige p met α. H₀ niet verwerpen is iets anders dan bewijzen dat H₀ waar is.'),
   ('basis-3 toepassing-3', 'De globale F toetst gezamenlijk of alle hellingen nul zijn. Een individuele t-toets gaat over één bijdrage gegeven de overige voorspellers; de conclusies hoeven niet gelijk te zijn.'),
-  ('toepassing-1', 'Gebruik de B-coëfficiënt en haar eigen Std. Error uit dezelfde modelrij. De hypothese bepaalt welke nulwaarde je van B aftrekt.'),
+  ('toepassing-1', 'Gebruik de B-coëfficiënt en de bijbehorende Std. Error uit dezelfde modelrij. De hypothese bepaalt welke nulwaarde je van B aftrekt.'),
   ('toepassing-2', 'Controleer de gevonden richting vóór je een eenzijdige p afleidt. Een klein tweezijdig p-getal bewijst geen stijging als de helling negatief is.'),
   ('aanvulling-hellingse', 'Bij enkelvoudige regressie: s_b1 = (s_y/s_x) × √((1 − r²)/(n − 2)). Verwar deze standaardfout niet met s_y of de residuele spreiding.'),
   ('aanvulling-correlatie', 'Voor H₀: ρ = 0 bij enkelvoudige regressie geldt t = r√(n − 2)/√(1 − r²). Het teken van r blijft behouden.'),
@@ -150,10 +150,10 @@ FOCUS = {
  'diagnostiek': [
   ('basis-1', 'De SRA-grenzen voor gestandaardiseerde residuen zijn ±2 bij n ≤ 100 en ±3 bij n > 100. Overschrijding duidt op een mogelijke uitbijter, niet meteen op een verwijderbesluit.'),
   ('basis-2 toepassing-3', 'Cook’s Distance signaleert potentiële invloed. Onderzoek daarna de positie in het spreidingsdiagram en de casusoorzaak. Een grote waarde alleen rechtvaardigt geen automatische verwijdering.'),
-  ('basis-3 toepassing-2', 'Bij normaliteit is H₀ dat de residuen normaal verdeeld zijn. Gebruik de gegeven toets; bij eigen keuze volgt SRA Shapiro-Wilk voor n ≤ 50 en Kolmogorov-Smirnov voor n > 50. Vergelijk p met de opgegeven α.'),
+  ('basis-3 toepassing-2', 'Bij normaliteit is H₀ dat de residuen normaal verdeeld zijn. Gebruik de gegeven toets; als je zelf de toets kiest volgt SRA Shapiro-Wilk voor n ≤ 50 en Kolmogorov-Smirnov voor n > 50. Vergelijk p met de opgegeven α.'),
   ('toepassing-1', 'Homoscedasticiteit betekent constante spreiding van residuen. Let op de breedte van de residuwolk over x of de voorspelde waarden, niet alleen op het gemiddelde residu.'),
   ('aanvulling-uitbijter', 'Onderscheid een invoerfout, een eenmalige bijzondere oorzaak en een terugkerende omstandigheid. Een terugkerende omstandigheid kan aanleiding zijn om het model inhoudelijk uit te breiden.'),
-  ('aanvulling-autocorrectie', 'Gebruik in de extra term het residu van de vorige periode met zijn eigen teken. Vul niet het huidige residu of de vorige voorspelling in.'),
+  ('aanvulling-autocorrectie', 'Gebruik in de extra term het residu van de vorige periode met de bijbehorende teken. Vul niet het huidige residu of de vorige voorspelling in.'),
   ('aanvulling-dw', 'Durbin-Watson deelt Σ(e_t − e_(t−1))² door Σe_t². De teller begint bij het tweede residu; de noemer omvat alle residuen.'),
   ('aanvulling-absres', 'Een correlatietoets tussen x en de absolute residuen onderzoekt samenhang tussen x en de foutgrootte. Vergelijk de absolute t met de tweezijdige kritieke grens en concludeer over de spreiding.')],
  'voorspellen': [
@@ -164,9 +164,9 @@ FOCUS = {
   ('toepassing-2', 'Bij x₀ = x̄ vervalt alleen de afstandsterm. Voor één nieuwe waarneming blijven 1 en 1/n onder de wortel staan.')],
  'meervoudig': [
   ('basis-1', 'Vergelijk dummycoëfficiënten alleen binnen hetzelfde model en ten opzichte van dezelfde referentiecategorie. Bij gelijke overige kenmerken is het contrast B_groep2 − B_groep1.'),
-  ('basis-2', 'k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.'),
+  ('basis-2', 'k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.'),
   ('basis-3 toepassing-3', 'R² kan door toevoegen van variabelen stijgen zonder nuttige verbetering. Adjusted R² houdt rekening met n en k; vergelijk modellen voor dezelfde y en dezelfde waarnemingen.'),
-  ('toepassing-1 toepassing-2', 'Vul voor iedere persoon haar of zijn eigen x-waarden en dummycodes in. Bereken bij een verschil twee voorspellingen of trek de modeltermen zorgvuldig van elkaar af.'),
+  ('toepassing-1 toepassing-2', 'Vul voor iedere persoon de bijbehorende x-waarden en dummycodes in. Bereken bij een verschil twee voorspellingen of trek de modeltermen zorgvuldig van elkaar af.'),
   ('aanvulling-beta', 'Beta is een gestandaardiseerde coëfficiënt. Vergelijk teken en absolute grootte binnen hetzelfde model; Beta is niet de B waarmee je in oorspronkelijke eenheden voorspelt en bewijst geen causaliteit.')],
  'transformaties': [
   ('basis-1', 'Bij een machtsmodel worden beide variabelen logaritmisch beschreven. Terugtransformeren levert een constante maal x tot een macht.'),
@@ -182,7 +182,7 @@ FOCUS = {
   ('basis-3 toepassing-3', 'Een selectiebesluit verandert het geschatte model. Gebruik voor een volgende beslissing de nieuwe coëfficiënten en p-waarden, niet die van het vorige model.'),
   ('toepassing-2', 'Voor één toegevoegde variabele in geneste modellen op dezelfde data is de partiële F gelijk aan (SSR_groot − SSR_klein)/MSE_groot. Gebruik het uitgebreide model in de noemer.')],
  'validatie': [
-  ('basis-1 toepassing-1', 'Koppel iedere waarneming aan haar eigen voorspelling. Kwadrateer de fouten en deel de som door het aantal testwaarnemingen, niet door n − k − 1.'),
+  ('basis-1 toepassing-1', 'Koppel iedere waarneming aan de bijbehorende voorspelling. Kwadrateer de fouten en deel de som door het aantal testwaarnemingen, niet door n − k − 1.'),
   ('basis-2', 'Voor de vergelijking lees je B in de Coefficients-tabel. Beta is gestandaardiseerd en de t- of Sig.-kolom is geen regressiecoëfficiënt.'),
   ('basis-3', 'De totale kwadratensom gebruikt afwijkingen rond een geschat gemiddelde. Daarom is Total df één kleiner dan n.'),
   ('toepassing-2', 'Vergelijk trainingsfout en fout op ongebruikte testdata op dezelfde uitkomstschaal. Een veel grotere testfout is aanleiding om generaliseerbaarheid en modelkeuze te onderzoeken.'),

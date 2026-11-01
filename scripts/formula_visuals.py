@@ -71,7 +71,7 @@ def panel(title, body, work):
     return '<figure class="fv-panel"><figcaption>' + escape(title) + '</figcaption>' + body + '<p class="fv-work">' + work + '</p></figure>'
 
 
-def block(key, title, panels, meaning, provenance='Eigen didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.'):
+def block(key, title, panels, meaning, provenance='Didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.'):
     return ('<section class="formula-visual" data-formula-visual="' + escape(key, quote=True) + '"><h3>' + escape(title) +
             '</h3><p class="fv-provenance">' + escape(provenance) + '</p><div class="fv-panels">' +
             ''.join(panels) + '</div><p class="fv-meaning"><strong>Lees het beeld:</strong> ' + meaning + '</p></section>')
@@ -180,7 +180,7 @@ def visuals():
         panel('Neyman naar omvang én spreiding',table(['Stratum','N_i × s_i','Aandeel','n_i'],[['1','5.000','25%','25'],['2','15.000','75%','75']],'Dezelfde populatie en totale steekproef'),'Het tweede stratum heeft driemaal zoveel spreiding. Bij gelijke kosten geeft de Neyman-route 25 en 75 controles.')],
         'Hier is een vergelijkingstabel duidelijker dan een extra grafiek: je ziet rechtstreeks welke gewichten de twee formules gebruiken.')
     add('stratificatie','De schattingen en onzekerheid samenvoegen','strata-variance','Totalen optellen, onzekerheid via kwadraten combineren',[
-        panel('De puntschattingen',table(['Deel','Geschat totaal'],[['Stratum 1','€ 40'],['Stratum 2','€ 60'],['Volledig gecontroleerde topgroep','€ 100'],['Samen','€ 200']],'Eigen vereenvoudigd voorbeeld'),'De topgroep draagt haar gecontroleerde werkelijke totaal één keer bij.'),
+        panel('De puntschattingen',table(['Deel','Geschat totaal'],[['Stratum 1','€ 40'],['Stratum 2','€ 60'],['Volledig gecontroleerde topgroep','€ 100'],['Samen','€ 200']],'Vereenvoudigd voorbeeld'),'De topgroep draagt haar gecontroleerde werkelijke totaal één keer bij.'),
         panel('De standaardfouten',table(['Deel','s_i','s_i²'],[['Stratum 1','3','9'],['Stratum 2','4','16'],['Topgroep','0','0'],['Totaal','√25 = 5','25']],'Onafhankelijke steekproeven binnen strata'),'Niet 3 + 4 = 7, maar √(3² + 4²) = 5. Het totaal en de standaardfout hebben dezelfde oorspronkelijke eenheid.')],
         'De twee kolommen volgen verschillende regels. Een volledig gecontroleerd stratum voegt binnen deze schattingsmethode geen steekproefvariantie toe.')
     cumulative=[513513,1708623,3554809,5948884,7807828,9459065,11176794,12764976,13657560,14306659]
@@ -246,7 +246,7 @@ def visuals():
         panel('Onzekerheid over het gemiddelde',plot('Betrouwbaarheidsband voor gemiddelde y',[('ŷ = 5 + 2x',xs,GREEN,False)],'x','y',(1,10,0,32),bands=[(GREEN,meanlo,meanhi)]),'Bij x₀ = x̄ = 5,5 is de afstandsterm nul.<br>Marge = 2,306 × 2 × √0,1 ≈ 1,46.'),
         panel('Onzekerheid over één nieuwe y',plot('Individuele voorspellingsband',[('Dezelfde geschatte lijn',xs,GREEN,False)],'x','y',(1,10,0,32),bands=[(ORANGE,predlo,predhi)]),'Bij hetzelfde x₀: marge = 2,306 × 2 × √1,1 ≈ 4,84. De individuele spreiding blijft bestaan.')],
         'Beide grafieken hebben dezelfde assen en gegeven t. Naar de randen neemt de onzekerheid over de lijn toe. De formule veronderstelt een bruikbaar model.',
-        'Eigen vergelijking bij enkelvoudige regressie: n = 10, x̄ = 5,5, Sxx = 82,5, s_e = 2 en gegeven t = 2,306.')
+        'Vergelijking bij enkelvoudige regressie: n = 10, x̄ = 5,5, Sxx = 82,5, s_e = 2 en gegeven t = 2,306.')
     add('meervoudig','Meerdere verklarende variabelen en dummy’s invullen','dummy-lines','Een dummy verschuift de voorspelling bij gelijke overige kenmerken',[
         panel('Twee categorieën binnen hetzelfde model',plot('Salaris bij gelijke overige kenmerken',[('Vrouw = 0',[(a,739.508+38.495*a+715.5+2237.947) for a in [20,60]],GREEN,False),('Vrouw = 1',[(a,739.508+38.495*a+715.5+2237.947-273.746) for a in [20,60]],PURPLE,False)],'Leeftijd (jaar)','Voorspeld salaris (€)',(20,60,3500,6300)),'Beoordeling = 10, leidinggevende = 1, HBO = WO = 0. Het verticale verschil blijft € 273,746.'),
         panel('Invullen bij leeftijd 50',table(['Dummy Vrouw','Voorspelling'],[['0','€ 5.617,705'],['1','€ 5.343,959'],['Verschil categorie 1 minus 0','−€ 273,746']],'Alle andere modelwaarden blijven gelijk'),'Een interactieterm zou het verschil met leeftijd kunnen laten veranderen. Zo’n term staat niet in dit model.')],
@@ -256,7 +256,7 @@ def visuals():
         panel('Dezelfde n en R², andere k',table(['n','R²','k','Adjusted R²'],[['30','0,80','1',num(1-.2*29/28,5)],['30','0,80','2',num(1-.2*29/27,5)],['30','0,80','5',num(1-.2*29/24,5)]],'Gevoeligheidsvergelijking van de formule'),'Bij gelijke fit betekent meer k een grotere correctie. De middelste rij is het bestaande voorbeeld.')],
         'Dit zijn formulevergelijkingen met R² vastgezet, geen claim dat drie werkelijk geschatte modellen identiek presteren. Bij echte modeluitbreiding kan R² stijgen en adjusted R² ook.')
     add('meervoudig','B en gestandaardiseerde Beta vergelijken','beta-units','Van oorspronkelijke eenheden naar standaardafwijkingen',[
-        panel('De omzetting',table(['Invoer','Waarde'],[['B','2 y-eenheden per x-eenheid'],['s_x','3 x-eenheden'],['s_y','10 y-eenheden'],['Beta = B × s_x / s_y','0,60']],'Eigen schaalvoorbeeld'),'Eén standaardafwijking meer x is 3 eenheden: voorspelde y stijgt 2 × 3 = 6, dus 0,6 standaardafwijking van y.')],
+        panel('De omzetting',table(['Invoer','Waarde'],[['B','2 y-eenheden per x-eenheid'],['s_x','3 x-eenheden'],['s_y','10 y-eenheden'],['Beta = B × s_x / s_y','0,60']],'Schaalvoorbeeld'),'Eén standaardafwijking meer x is 3 eenheden: voorspelde y stijgt 2 × 3 = 6, dus 0,6 standaardafwijking van y.')],
         'Voorspellen met oorspronkelijke x doe je met B. Beta beschrijft een verandering op een gestandaardiseerde schaal binnen hetzelfde model.')
     for index,(title,key,original,transformed,xlab,ylab,eq,work) in enumerate([
         ('Een logaritmisch model: alleen x wordt getransformeerd','log-x',curve(lambda x:1+.5*log(x),.5,16),curve(lambda z:1+.5*z,log(.5),log(16)),'ln(x)','y','y = 1 + 0,5 ln(x)','x = 16 → ln(x) ≈ 2,7726 → ŷ ≈ 2,3863. Geen exp op de uitkomst.'),

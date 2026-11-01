@@ -373,7 +373,7 @@ basic('toetsen-2', [
 basic('toetsen-3', [
     'De globale F-toets heeft als H₀ dat alle drie de hellingscoëfficiënten gezamenlijk nul zijn.',
     'Een significante F geeft aanleiding die gezamenlijke nulhypothese te verwerpen.',
-    'De conclusie is dat minstens één hellingscoëfficiënt niet nul is. Welke coëfficiënten afzonderlijk bijdragen, beoordeel je met hun eigen toetsen.'
+    'De conclusie is dat minstens één hellingscoëfficiënt niet nul is. Welke coëfficiënten afzonderlijk bijdragen, beoordeel je met afzonderlijke toetsen.'
 ], 'F gaat hier over het hele model; een t-toets gaat over één coëfficiënt gegeven de andere.',
     'Gezamenlijke significantie betekent niet dat iedere afzonderlijke variabele significant is.', [
     'De F-toets onderscheidt niet welke van de drie coëfficiënten afwijken. Voor “alle drie” zijn afzonderlijke beoordelingen nodig.',
@@ -585,7 +585,7 @@ basic('tentamen-3', [
     'Open tentamenvragen vragen daarnaast om zelf gegevens te selecteren, berekeningen te combineren en een volledige conclusie te formuleren.',
     'Werk daarom ook volledige open opgaven zelfstandig uit en vergelijk daarna je redenering met de uitwerking.'
 ], 'Herkennen van een antwoord is een andere vaardigheid dan zelfstandig een volledige uitwerking opbouwen.',
-    'Een hoge score op korte checks is geen vervanging voor oefenen met samenhang en eigen formulering.', [
+    'Een hoge score op korte checks is geen vervanging voor oefenen met samenhang en zelfstandig formuleren.', [
     'Korte checks dekken niet alle vaardigheden van een open tentamen. Zelf een complete redenering opbouwen blijft nodig.',
     'Zelfstandig open vragen uitwerken oefent de samenhang, methodekeuze en verantwoording die niet volledig in meerkeuzechecks zitten.',
     'Formules kennen is slechts een onderdeel. Je moet ze ook passend kiezen, correct toepassen en de uitkomst in de casus uitleggen.'
@@ -739,7 +739,7 @@ application('steekproefomvang-3', 'Doe de twee bewerkingen in de juiste volgorde
 application('stratificatie-1', 'Het volledig gecontroleerde topstratum is een extra bekend onderdeel van het populatietotaal. Het moet één keer naast de geschatte overige strata worden opgenomen.', [
     '7.000 trekt het topstratum van de € 8.000 af. Het bekende werkelijke topstratum maakt deel uit van de populatie en moet worden opgeteld.',
     '8.000 telt alleen de eerste twee strata op. De bekende € 1.000 van het topstratum ontbreekt.',
-    '9.000 = 100 × 20 + 200 × 30 + 1.000. Elk stratum is met zijn eigen omvang verwerkt.',
+    '9.000 = 100 × 20 + 200 × 30 + 1.000. Elk stratum is met de bijbehorende omvang verwerkt.',
     '15.000 is bijvoorbeeld (100 + 200) × (20 + 30). Daarmee geef je elk stratum ook het gemiddelde van de andere groep, en ontbreekt een correcte weging.'
 ])
 application('stratificatie-2', 'Neyman-allocatie verdeelt bij gelijke controlekosten op basis van Nᵢsᵢ. Het kleinere tweede stratum krijgt hier meer controles door zijn grotere spreiding.', [

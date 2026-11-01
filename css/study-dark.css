@@ -324,6 +324,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark] .
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-checked{fill:var(--study-teal,#8dece2)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-extra{fill:#ecb28d}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-chart text.transition-check{fill:#f0f7fc}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mini-bar{fill:var(--study-teal,#8dece2)}
 /* css/exams.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry{background:#152129;border:1px solid #3b4a54}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry h2{color:#adbdc9}

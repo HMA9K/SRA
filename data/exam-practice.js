@@ -1590,7 +1590,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -3687,7 +3687,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -4186,7 +4186,7 @@ window.SRAExamPractice = {
       "options": [
         "Tel de marges op en gebruik opnieuw t = 1,660 zonder de eerdere t-waarden weg te delen.",
         "Gebruik alleen het stratum met de grootste bovengrens.",
-        "Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
+        "Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
         "Tel de afzonderlijke bovengrenzen op."
       ],
       "correct": 2,
@@ -4205,24 +4205,24 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20220316/antwoord-8-3.jpg\" alt=\"antwoord-8 · bronpagina 3\"><img src=\"bronnen/tentamens/20220316/antwoord-8-4.jpg\" alt=\"antwoord-8 · bronpagina 4\">",
-      "sourceNote": "Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
-      "explanation": "Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
+      "sourceNote": "Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
+      "explanation": "Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
       "steps": [
-        "Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld."
+        "Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld."
       ],
       "optionExplanations": [
-        "Deze optie is onjuist. Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
-        "Deze optie is onjuist. Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
-        "Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
-        "Deze optie is onjuist. Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld."
+        "Deze optie is onjuist. Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
+        "Deze optie is onjuist. Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
+        "Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
+        "Deze optie is onjuist. Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld."
       ],
       "pattern": "Bepaal de bovengrens van het totale bedrag uit de gegeven stratumintervallen. Gebruik t = 1,660.",
-      "trap": "Controleer de bronvoorwaarden, eenheden en afronding. Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
+      "trap": "Controleer de bronvoorwaarden, eenheden en afronding. Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
       "recognition": {
         "signals": "0 +1,663∗980∗√87∗�980−1 = 137.200+11.681= 148.881\nBepaal de bovengrens van het totaal. Hanteer daarbij een t-waarde van 1,660.",
         "meaning": "Bepaal de bovengrens van het totale bedrag uit de gegeven stratumintervallen. Gebruik t = 1,660.",
-        "approach": "Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
-        "answer": "Je antwoord moet deze conclusie onderbouwen: Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld."
+        "approach": "Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
+        "answer": "Je antwoord moet deze conclusie onderbouwen: Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld."
       },
       "guidance": {
         "title": "Strata afzonderlijk berekenen en combineren",
@@ -5245,7 +5245,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -6741,7 +6741,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -10467,7 +10467,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -12345,7 +12345,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -12413,7 +12413,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -12481,7 +12481,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -15394,7 +15394,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -15462,7 +15462,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
@@ -15531,7 +15531,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
-        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft haar eigen vrijheidsgraad.",
+        "focus": "k telt uitsluitend de verklarende variabelen. De constante wordt apart geschat en heeft een afzonderlijke vrijheidsgraad.",
         "rules": [
           "Vul alle verklarende variabelen in dezelfde modelvergelijking in: ŷ = b₀ + b₁x₁ + … + bₖxₖ. De constante telt niet mee in k. Gebruik in oorspronkelijke eenheden de B-coëfficiënten.",
           "Een dummy is 0 of 1 volgens de gegeven codering. Een coëfficiënt beschrijft het verschil bij gelijkblijvende andere kenmerken. Vergelijk modellen alleen op passende, onderling vergelijkbare gegevens en uitkomstschaal."
