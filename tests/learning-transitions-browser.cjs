@@ -33,7 +33,8 @@ const server=http.createServer((req,res)=>{
        const a=labels[i].b,b=labels[j].b;
        if(a.x<b.x+b.width+2 && a.x+a.width+2>b.x && a.y<b.y+b.height+2 && a.y+a.height+2>b.y)collisions.push([labels[i].text,labels[j].text]);
       }
-      return {labelSize:parseFloat(getComputedStyle(svg.querySelector('text')).fontSize)*svg.getBoundingClientRect().width/svg.viewBox.baseVal.width,
+      return {width:svg.getBoundingClientRect().width,height:svg.getBoundingClientRect().height,
+       labelSize:parseFloat(getComputedStyle(svg.querySelector('text')).fontSize)*svg.getBoundingClientRect().width/svg.viewBox.baseVal.width,
        clipped:labels.filter(({b})=>b.x<0||b.x+b.width>svg.viewBox.baseVal.width+1).map(l=>l.text),collisions};
      });
      return {key:block.dataset.learningTransition,aligned,visible:panels.every(p=>p.getBoundingClientRect().height>0),charts};
@@ -42,20 +43,22 @@ const server=http.createServer((req,res)=>{
     assert.equal(info.length,id==='rekenen'?2:1);
     for(const block of info){
      assert.ok(block.aligned,`${block.key} ${width}: ongelijke rijen`);assert.ok(block.visible);
-     for(const chart of block.charts){assert.ok(chart.labelSize>=11,JSON.stringify({id,width,chart}));assert.deepEqual(chart.clipped,[],JSON.stringify({id,width,chart}));assert.deepEqual(chart.collisions,[],JSON.stringify({id,width,chart}));}
+     for(const chart of block.charts){assert.ok(chart.width<=280.5&&chart.height<=184,`Grafiek te groot: ${JSON.stringify({id,width,chart})}`);assert.ok(chart.labelSize>=11,JSON.stringify({id,width,chart}));assert.deepEqual(chart.clipped,[],JSON.stringify({id,width,chart}));assert.deepEqual(chart.collisions,[],JSON.stringify({id,width,chart}));}
     }
     checks.push({id,width,theme,blocks:info.length});
-    if(id==='rekenen'&&[1366,390].includes(width)){
-     await page.locator('[data-learning-transition="gemiddelde-kwadraten"]').screenshot({path:path.join(out,`rekenen-${width}-${theme}.png`)});
+    if(['beginnen','rekenen'].includes(id)&&[1366,390].includes(width)){
+     await page.locator('.learning-transition').first().screenshot({path:path.join(out,`${id}-${width}-${theme}.png`)});
     }
    }
   }
   // Losse HTML en scriptvrije leesversie bevatten dezelfde zes zichtbare leesbruggen.
-  for(const file of ['SRA%20interactieve%20samenvatting.html#les/rekenen','SRA%20leesversie.html']){
+  for(const width of [1366,390])for(const file of ['SRA%20interactieve%20samenvatting.html#les/rekenen','SRA%20leesversie.html']){
+   await page.setViewportSize({width,height:950});
    await page.goto(base+'/'+file);await page.locator('.learning-transition').first().waitFor();
    assert.equal(await page.locator('.learning-transition').count(),file.includes('leesversie')?6:2);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,file);
    assert.equal(await page.locator('script[data-goatcounter]').count(),1,'SVG-titels mogen geen extra paginascripts krijgen');
+   assert.ok(await page.locator('.transition-chart').evaluateAll(charts=>charts.every(chart=>chart.getBoundingClientRect().width<=280.5&&chart.getBoundingClientRect().height<=184)),`${file} ${width}: grafiek te groot`);
   }
   assert.deepEqual(errors,[]);console.log(JSON.stringify({ok:true,routes:checks.length,viewports:[1366,900,768,390,320],themes:['light','dark'],checks:['alle leesbruggen','gelijke grafiek-, reken-, uitkomst- en tekstrijen','labelgrootte en overlap','geen overloop','zelfstandige HTML en leesversie']}));
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}
