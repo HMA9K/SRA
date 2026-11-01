@@ -1,4 +1,4 @@
-/* Compacte leesbruggen: gelijke rijen, leesbare figuren en alle stappen zichtbaar. */
+/* Compacte leesbruggen: grafiek bij de eigen uitleg, leesbare figuren en alle stappen zichtbaar. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),http=require('node:http'),path=require('node:path');
 const {chromium}=require(process.env.PLAYWRIGHT_PATH||'playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'tmp/transition-qa');fs.mkdirSync(out,{recursive:true});
@@ -22,10 +22,12 @@ const server=http.createServer((req,res)=>{
     await page.evaluate(theme=>window.StudyTheme.setMode(theme),theme);
     const info=await page.locator('.learning-transition').evaluateAll(blocks=>blocks.map(block=>{
      const panels=[...block.querySelectorAll('.transition-panel')];
-     const aligned=panels.every((panel,i)=>panels.slice(i+1).every(other=>{
-      if(Math.abs(panel.getBoundingClientRect().top-other.getBoundingClientRect().top)>1)return true;
-      return ['h4','svg','.transition-work','.transition-result','.transition-meaning'].every(selector=>Math.abs(panel.querySelector(selector).getBoundingClientRect().top-other.querySelector(selector).getBoundingClientRect().top)<1);
-     }));
+     const aligned=panels.every((panel,i)=>{
+      const row=panel.getBoundingClientRect(),copy=panel.querySelector('.transition-copy').getBoundingClientRect(),chart=panel.querySelector('svg').getBoundingClientRect();
+      const placement=row.width>=620?chart.left>=copy.right+19&&Math.abs(chart.top-copy.top)<1:chart.top>=copy.bottom+7;
+      const gap=i?row.top-panels[i-1].getBoundingClientRect().bottom:16;
+      return placement&&gap>=15&&gap<=17;
+     });
      const charts=[...block.querySelectorAll('svg')].map(svg=>{
       const labels=[...svg.querySelectorAll('text')].map(text=>({text:text.textContent,b:text.getBBox()}));
       const collisions=[];
@@ -42,10 +44,17 @@ const server=http.createServer((req,res)=>{
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,`${id} ${width}: overloop`);
     assert.equal(info.length,id==='rekenen'?2:1);
     for(const block of info){
-     assert.ok(block.aligned,`${block.key} ${width}: ongelijke rijen`);assert.ok(block.visible);
+     assert.ok(block.aligned,`${block.key} ${width}: grafiek niet naast eigen tekst of onnodige tussenruimte`);assert.ok(block.visible);
      for(const chart of block.charts){assert.ok(chart.width<=280.5&&chart.height<=184,`Grafiek te groot: ${JSON.stringify({id,width,chart})}`);assert.ok(chart.labelSize>=11,JSON.stringify({id,width,chart}));assert.deepEqual(chart.clipped,[],JSON.stringify({id,width,chart}));assert.deepEqual(chart.collisions,[],JSON.stringify({id,width,chart}));}
     }
     checks.push({id,width,theme,blocks:info.length});
+    if(id==='rekenen'){
+     assert.equal(await page.locator('.section-title').filter({hasText:'Rekenen zonder verborgen stappen'}).count(),1);
+     assert.equal(await page.locator('.section-title').filter({hasText:'Waarom kwadrateren?'}).count(),0);
+     const combined=page.locator('details.section').filter({has:page.locator('[data-learning-transition="gemiddelde-kwadraten"]')});
+     assert.ok((await combined.innerText()).includes('Van kwadraten naar variantie en standaardafwijking'));
+     assert.ok((await combined.innerText()).includes('Rekenvolgorde en twee verschillende sommen'));
+    }
     if(['beginnen','rekenen'].includes(id)&&[1366,390].includes(width)){
      await page.locator('.learning-transition').first().screenshot({path:path.join(out,`${id}-${width}-${theme}.png`)});
     }
@@ -60,6 +69,6 @@ const server=http.createServer((req,res)=>{
    assert.equal(await page.locator('script[data-goatcounter]').count(),1,'SVG-titels mogen geen extra paginascripts krijgen');
    assert.ok(await page.locator('.transition-chart').evaluateAll(charts=>charts.every(chart=>chart.getBoundingClientRect().width<=280.5&&chart.getBoundingClientRect().height<=184)),`${file} ${width}: grafiek te groot`);
   }
-  assert.deepEqual(errors,[]);console.log(JSON.stringify({ok:true,routes:checks.length,viewports:[1366,900,768,390,320],themes:['light','dark'],checks:['alle leesbruggen','gelijke grafiek-, reken-, uitkomst- en tekstrijen','labelgrootte en overlap','geen overloop','zelfstandige HTML en leesversie']}));
+  assert.deepEqual(errors,[]);console.log(JSON.stringify({ok:true,routes:checks.length,viewports:[1366,900,768,390,320],themes:['light','dark'],checks:['alle leesbruggen','grafiek rechts bij eigen uitleg; op smalle schermen eronder','twee rekenblokken samengevoegd','compact formaat en tussenruimte','labelgrootte en overlap','geen overloop','zelfstandige HTML en leesversie']}));
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

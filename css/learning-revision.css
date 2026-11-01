@@ -139,21 +139,21 @@ html[data-study-theme=dark] .section-body p.note.learning-source{background:tran
 #lesson-panel-resizer[hidden]{display:none}
 @media(max-width:760px){#lesson-panel-resizer{display:none}}
 
-/* Gelijke rijen houden grafiek, berekening, uitkomst en betekenis naast elkaar. */
+/* Elke uitleg heeft haar eigen kleine grafiek rechts; smalle kolommen lopen door onder de tekst. */
 .learning-transition{margin:14px 0 18px;min-width:0;color:var(--study-ink,#17364e)}
 .learning-transition>h3{font-size:1rem;margin:0 0 10px}
-.transition-panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:8px 16px}
-.transition-panel{display:grid;grid-row:span 5;grid-template-rows:subgrid;min-width:0;align-items:start}
-.transition-panel h4{font-size:.94rem;line-height:1.5;margin:0}
-.learning-transition .transition-chart{display:block;width:100%;max-width:280px;height:auto;justify-self:start}
+.transition-panels{display:grid;gap:16px}
+.transition-panel{display:flex;flex-wrap:wrap;gap:8px 20px;min-width:0;align-items:flex-start}
+.transition-copy{flex:1 1 320px;min-width:0}
+.transition-panel h4{font-size:.94rem;line-height:1.5;margin:0 0 6px}
+.learning-transition .transition-chart{display:block;flex:0 1 280px;min-width:0;width:100%;max-width:280px;height:auto}
 .transition-chart text{font:13.5px Arial,sans-serif;fill:currentColor}
 .transition-frame{fill:none;stroke:currentColor;stroke-opacity:.18}
 .transition-reference{fill:none;stroke:currentColor;stroke-width:1;stroke-dasharray:3 3}
 .transition-point{fill:var(--study-teal,#008577)}
 .transition-line{fill:none;stroke:var(--study-teal,#008577);stroke-width:2}
-.transition-work{font-size:.86rem;line-height:1.65;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
-.learning-transition .transition-panel>p{font-size:.86rem;line-height:1.6;margin:0!important;text-align:left!important;hyphens:none}
+.transition-work{font-size:.86rem;line-height:1.65;margin:6px 0;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.learning-transition .transition-copy>p{font-size:.86rem;line-height:1.6;margin:6px 0!important;text-align:left!important;hyphens:none}
 .transition-result{font-weight:600;font-variant-numeric:tabular-nums}
 .learning-transition .transition-note{font-size:.8rem;line-height:1.6;margin:12px 0 0!important;text-align:left!important}
-@media(max-width:520px){.transition-panels{grid-template-columns:1fr;row-gap:8px}.transition-panel+.transition-panel{margin-top:12px}}
 @media print{.learning-transition{break-inside:avoid}}
