@@ -164,4 +164,3 @@ def enhance(lessons):
     move_after('transformaties', 'Een transformatie verandert welk patroon lineair wordt', 'Wat doet een logaritme?')
     item = section('transformaties', 'Wat doet een logaritme?')
     item['html'] += log_example()
-
