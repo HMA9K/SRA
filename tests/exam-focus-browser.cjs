@@ -22,15 +22,15 @@ const server=http.createServer((req,res)=>{
    for(const id of lessons){
     await page.evaluate(id=>location.hash='#les/'+id,id);
     await page.waitForFunction(id=>document.querySelector('.lesson-top h1')?.textContent.endsWith(window.SRA.lessons.find(l=>l.id===id).title),id);
-    const blocks=page.locator('#uitleg>details').filter({has:page.locator('summary').filter({hasText:/Studieroute en puntengewicht|College 8:/})});
+    const blocks=page.locator('#uitleg>details').filter({has:page.locator('summary').filter({hasText:/Gemiddeld puntengewicht in tentamens|College 8:/})});
     assert.equal(await blocks.count(),id==='tentamen'?8:1);
     for(let i=0;i<await blocks.count();i++){
      const block=blocks.nth(i);sections++;
      if(await block.getAttribute('open')===null){await block.locator(':scope>summary').focus();await page.keyboard.press('Enter');}
      if(i===0){
-      assert.doesNotMatch(await block.innerText(),/Gemiddelden omvatten nullen|Alle tentamens, de spreiding en de puntentoerekening/);
+      assert.doesNotMatch(await block.innerText(),/Historische punten, geen voorspelling|[Rr]oute|Gemiddelden omvatten nullen|Alle tentamens, de spreiding en de puntentoerekening/);
       if(await block.locator('table').count()){
-       assert.deepEqual(await block.locator('th').allTextContents(),['Onderwerp','Tentamens','Deelvragen','Aandeel']);
+       assert.deepEqual(await block.locator('th').allTextContents(),['Onderwerp','Tentamens','Deelvragen','Gemiddeld puntengewicht (%)']);
        for(const row of await block.locator('tr').all())assert.equal(await row.locator('th,td').count(),4);
       }
       assert.ok(await block.locator('.source-note').count()>0);
