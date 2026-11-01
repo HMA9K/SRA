@@ -1,8 +1,9 @@
-"""Zes compacte leesbruggen. Behoud bestaande blokken, bronnen en vraag-ID's."""
+"""Zes compacte leesbruggen. Behoud bestaande leerstof, bronnen en vraag-ID's."""
 from collections import Counter
 from html import escape
 from itertools import product
 from math import exp, sqrt
+import re
 from formula_visuals import num
 
 VALUES = (80, 90, 110, 120)
@@ -52,7 +53,8 @@ def chart(title, points, xlabel, ylabel, *, reference=None, labels=True, stems=F
 
 def dots(title, groups):
     """Schematische groepen posten, geen kansverdeling of nieuwe brongegevens."""
-    out = [f'<svg class="transition-chart" viewBox="0 0 260 170" role="img" aria-label="{escape(title, quote=True)}" '
+    height = 68 + (len(groups) - 1) * 62
+    out = [f'<svg class="transition-chart" viewBox="0 0 260 {height}" role="img" aria-label="{escape(title, quote=True)}" '
            f'xmlns="http://www.w3.org/2000/svg"><title>{escape(title)}</title>']
     for row, (label, count) in enumerate(groups):
         y = 42 + row * 62
@@ -62,10 +64,10 @@ def dots(title, groups):
     return ''.join(out) + '</svg>'
 
 
-def panel(title, picture, calculations, result, meaning):
-    return ('<section class="transition-panel"><h4>' + title + '</h4>' + picture
+def panel(title, picture, calculations, result, meaning, intro=''):
+    return ('<section class="transition-panel"><div class="transition-copy"><h4>' + title + '</h4>' + intro
             + '<div class="transition-work">' + ''.join('<div>'+s+'</div>' for s in calculations) + '</div>'
-            + '<p class="transition-result">' + result + '</p><p class="transition-meaning">' + meaning + '</p></section>')
+            + '<p class="transition-result">' + result + '</p><p class="transition-meaning">' + meaning + '</p></div>' + picture + '</section>')
 
 
 def block(key, title, panels, note=''):
@@ -74,17 +76,26 @@ def block(key, title, panels, note=''):
             + ('<p class="transition-note">' + note + '</p>' if note else '') + '</div>')
 
 
-def spread_example():
+def spread_example(arithmetic_html, spread_html):
+    # ponytail: alleen deze twee vaste bronblokken; pas bij een nieuwe HTML-structuur ook de verdeling en behoudtest aan.
+    arithmetic = re.findall(r'<p>.*?</p>', arithmetic_html)
+    spread = re.findall(r'<p>.*?</p>|<div class="formula">.*?</div>', spread_html)
+    assert len(arithmetic) == 2 and len(spread) == 4
+    rules = arithmetic[0][3:-4].split('. ')
+    assert len(rules) == 4
+    mean, square, root, order = ('<p>' + sentence.rstrip('.') + '.</p>' for sentence in rules)
     return block('gemiddelde-kwadraten', 'Van het gemiddelde naar spreiding: dezelfde vier posten', [
         panel('1. Gemiddelde', chart('Vier waarden; de stippellijn is het gemiddelde 100 euro', list(enumerate(VALUES, 1)), 'Post', 'Waarde (€)', reference=MEAN),
-              ['80 + 90 + 110 + 120 = 400', '400 ÷ 4 = 100'], 'Gemiddelde: € 100', 'Het gemiddelde is het vertrekpunt voor de afwijkingen.'),
+              ['80 + 90 + 110 + 120 = 400', '400 ÷ 4 = 100'], 'Gemiddelde: € 100', 'Het gemiddelde is het vertrekpunt voor de afwijkingen.', mean),
         panel('2. Afwijkingen', chart('Afwijkingen: −20, −10, +10 en +20 euro', list(enumerate(DEVIATIONS, 1)), 'Post', 'Afwijking (€)', reference=0, stems=True),
-              [f'{value} − 100 = {num(value-MEAN, 0)}' for value in VALUES], 'Som van de afwijkingen: 0', 'Min en plus heffen elkaar op. Toch verschillen de waarden.'),
+              [f'{value} − 100 = {num(value-MEAN, 0)}' for value in VALUES], 'Som van de afwijkingen: 0', 'Min en plus heffen elkaar op. Toch verschillen de waarden.', spread[0]),
         panel('3. Kwadraten', chart('Gekwadrateerde afwijkingen: 400, 100, 100 en 400 euro²', list(enumerate(SQUARES, 1)), 'Post', 'Afwijking² (euro²)', reference=0, stems=True),
-              ['(−20)² = (−20) × (−20) = 400'] + [f'({num(d, 0)})² = {num(d*d, 0)}' for d in DEVIATIONS[1:]], 'Samen: 1.000 euro²', 'Elke afwijking wordt met zichzelf vermenigvuldigd. Zo tellen beide kanten mee.')],
-        'Daarna: steekproefvariantie = 1.000 ÷ (4 − 1) ≈ 333,33 euro²; standaardafwijking = √(1.000 ÷ 3) ≈ € 18,26. '
+              ['(−20)² = (−20) × (−20) = 400'] + [f'({num(d, 0)})² = {num(d*d, 0)}' for d in DEVIATIONS[1:]], 'Samen: 1.000 euro²', 'Elke afwijking wordt met zichzelf vermenigvuldigd. Zo tellen beide kanten mee.', square)]) + (
+        '<h4>4. Van kwadraten naar variantie en standaardafwijking</h4>' + spread[1] + root + spread[2] + spread[3]
+        + '<p>In dit voorbeeld: steekproefvariantie = 1.000 ÷ (4 − 1) ≈ 333,33 euro²; standaardafwijking = √(1.000 ÷ 3) ≈ € 18,26. '
         'Waarom n − 1? Rond het berekende gemiddelde tellen de afwijkingen op tot nul; na drie afwijkingen ligt de vierde vast. '
-        'Dit bestaande rekenvoorbeeld verklaart de bewerkingen, maar rechtvaardigt geen populatie-interval.')
+        'Dit bestaande rekenvoorbeeld verklaart de bewerkingen, maar rechtvaardigt geen populatie-interval.</p>'
+        '<h4>5. Rekenvolgorde en twee verschillende sommen</h4>' + order + arithmetic[1])
 
 
 def uncertainty_example():
@@ -154,7 +165,10 @@ def enhance(lessons):
     item['html'] = population_example() + item['html']
     move_after('rekenen', 'SET-opfrisser: spreiding tegenover onzekerheid', 'Waarom kwadrateren?')
     item = section('rekenen', 'Rekenen zonder verborgen stappen')
-    item['html'] = spread_example() + '<p>Met dit voorbeeld in gedachten lees je de rekenregels:</p>' + item['html']
+    spread = section('rekenen', 'Waarom kwadrateren?')
+    item['html'] = spread_example(item['html'], spread['html'])
+    item['refs'] += [ref for ref in spread['refs'] if ref not in item['refs']]
+    by_id['rekenen']['sections'].remove(spread)
     item = section('rekenen', 'SET-opfrisser: spreiding tegenover onzekerheid')
     item['html'] = uncertainty_example() + item['html']
     item = section('onzekerheid', 'Wat is een verdeling?')
