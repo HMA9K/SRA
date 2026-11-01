@@ -149,7 +149,7 @@ for i,l in enumerate(build_content.lessons):
     parts.append('</ol></details></article>')
 parts.append('<style>'+presentation_css+(root/'css/learning-revision.css').read_text(encoding='utf-8')+'svg{max-width:100%;height:auto}</style></html>')
 read_version=embed_learning_images('\n'.join(parts))
-read_version=read_version.replace('<title>', '<script data-goatcounter="https://sra.goatcounter.com/count" data-goatcounter-settings=\'{"no_onload":true}\' async src="https://gc.zgo.at/count.js"></script><script>\n'+(root/'js/page-names.js').read_text(encoding='utf-8')+'\n</script><title>')
+read_version=read_version.replace('<title>', '<script data-goatcounter="https://sra.goatcounter.com/count" data-goatcounter-settings=\'{"no_onload":true}\' async src="https://gc.zgo.at/count.js"></script><script>\n'+(root/'js/page-names.js').read_text(encoding='utf-8')+'\n</script><title>', 1)
 (root/'SRA leesversie.html').write_text(read_version,encoding='utf-8')
 
 output=root/'output';output.mkdir(exist_ok=True)

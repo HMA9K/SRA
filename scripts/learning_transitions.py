@@ -1,0 +1,167 @@
+"""Zes compacte leesbruggen. Behoud bestaande blokken, bronnen en vraag-ID's."""
+from collections import Counter
+from html import escape
+from itertools import product
+from math import exp, sqrt
+from formula_visuals import num
+
+VALUES = (80, 90, 110, 120)
+MEAN = sum(VALUES) / len(VALUES)
+DEVIATIONS = tuple(value - MEAN for value in VALUES)
+SQUARES = tuple(value ** 2 for value in DEVIATIONS)
+VARIANCE = sum(SQUARES) / (len(VALUES) - 1)
+SD = sqrt(VARIANCE)
+PAIR_MEANS = Counter((a + b) / 2 for a, b in product(VALUES, repeat=2))
+
+
+def chart(title, points, xlabel, ylabel, *, reference=None, labels=True, stems=False, line=False):
+    """Kleine statische SVG; tekst en berekeningen blijven ook buiten de figuur staan."""
+    xs, ys = zip(*points)
+    xmin, xmax = min(xs), max(xs)
+    ymin = min(ys + ((reference,) if reference is not None else ()))
+    ymax = max(ys + ((reference,) if reference is not None else ()))
+    xpad, ypad = (xmax - xmin or 1) * .18, (ymax - ymin or 1) * .3
+    X = lambda x: 48 + (x - xmin + xpad) / (xmax - xmin + 2 * xpad) * 198
+    Y = lambda y: 127 - (y - ymin + ypad) / (ymax - ymin + 2 * ypad) * 96
+    out = [f'<svg class="transition-chart" viewBox="0 0 260 170" role="img" '
+           f'aria-label="{escape(title, quote=True)}" xmlns="http://www.w3.org/2000/svg">'
+           f'<title>{escape(title)}</title><rect class="transition-frame" x="48" y="28" width="198" height="102"/>'
+           f'<text class="axis-title" x="4" y="16">{escape(ylabel)}</text>']
+    ticks = sorted(set((ymin, reference if reference is not None else (ymin + ymax) / 2, ymax)))
+    for y in ticks:
+        out.append(f'<text x="41" y="{Y(y)+4:.2f}" text-anchor="end">{num(y, 0)}</text>')
+    for x in sorted(set(xs)) if len(set(xs)) <= 4 else (xmin, (xmin+xmax)/2, xmax):
+        out.append(f'<text x="{X(x):.2f}" y="148" text-anchor="middle">{num(x, 0)}</text>')
+    if reference is not None:
+        out.append(f'<path class="transition-reference" d="M48 {Y(reference):.2f}H246"/>')
+    if line:
+        out.append('<polyline class="transition-line" points="' + ' '.join(f'{X(x):.2f},{Y(y):.2f}' for x,y in points) + '"/>')
+    for x, y in points:
+        if stems:
+            out.append(f'<path class="transition-line" d="M{X(x):.2f} {Y(reference):.2f}V{Y(y):.2f}"/>')
+        out.append(f'<circle class="transition-point" cx="{X(x):.2f}" cy="{Y(y):.2f}" r="4"/>')
+        if labels:
+            label = num(y, 0 if float(y).is_integer() else 2)
+            if reference == 0 and y > 0 and ymin < 0:
+                label = '+' + label
+            dx, dy, anchor = (8, 4, 'start') if reference is not None and y < reference else (0, -10, 'middle')
+            out.append(f'<text x="{X(x)+dx:.2f}" y="{Y(y)+dy:.2f}" text-anchor="{anchor}">{label}</text>')
+    out.append(f'<text class="axis-title" x="147" y="167" text-anchor="middle">{escape(xlabel)}</text></svg>')
+    return ''.join(out)
+
+
+def dots(title, groups):
+    """Schematische groepen posten, geen kansverdeling of nieuwe brongegevens."""
+    out = [f'<svg class="transition-chart" viewBox="0 0 260 170" role="img" aria-label="{escape(title, quote=True)}" '
+           f'xmlns="http://www.w3.org/2000/svg"><title>{escape(title)}</title>']
+    for row, (label, count) in enumerate(groups):
+        y = 42 + row * 62
+        out.append(f'<text x="8" y="{y-15}">{escape(label)}</text>')
+        for i in range(count):
+            out.append(f'<circle class="transition-point" cx="{20+i*29}" cy="{y+7}" r="7"/>')
+    return ''.join(out) + '</svg>'
+
+
+def panel(title, picture, calculations, result, meaning):
+    return ('<section class="transition-panel"><h4>' + title + '</h4>' + picture
+            + '<div class="transition-work">' + ''.join('<div>'+s+'</div>' for s in calculations) + '</div>'
+            + '<p class="transition-result">' + result + '</p><p class="transition-meaning">' + meaning + '</p></section>')
+
+
+def block(key, title, panels, note=''):
+    return ('<div class="learning-transition" data-learning-transition="' + key + '"><h3>' + title
+            + '</h3><div class="transition-panels">' + ''.join(panels) + '</div>'
+            + ('<p class="transition-note">' + note + '</p>' if note else '') + '</div>')
+
+
+def spread_example():
+    return block('gemiddelde-kwadraten', 'Van het gemiddelde naar spreiding: dezelfde vier posten', [
+        panel('1. Gemiddelde', chart('Vier waarden; de stippellijn is het gemiddelde 100 euro', list(enumerate(VALUES, 1)), 'Post', 'Waarde (€)', reference=MEAN),
+              ['80 + 90 + 110 + 120 = 400', '400 ÷ 4 = 100'], 'Gemiddelde: € 100', 'Het gemiddelde is het vertrekpunt voor de afwijkingen.'),
+        panel('2. Afwijkingen', chart('Afwijkingen: −20, −10, +10 en +20 euro', list(enumerate(DEVIATIONS, 1)), 'Post', 'Afwijking (€)', reference=0, stems=True),
+              [f'{value} − 100 = {num(value-MEAN, 0)}' for value in VALUES], 'Som van de afwijkingen: 0', 'Min en plus heffen elkaar op. Toch verschillen de waarden.'),
+        panel('3. Kwadraten', chart('Gekwadrateerde afwijkingen: 400, 100, 100 en 400 euro²', list(enumerate(SQUARES, 1)), 'Post', 'Afwijking² (euro²)', reference=0, stems=True),
+              ['(−20)² = (−20) × (−20) = 400'] + [f'({num(d, 0)})² = {num(d*d, 0)}' for d in DEVIATIONS[1:]], 'Samen: 1.000 euro²', 'Elke afwijking wordt met zichzelf vermenigvuldigd. Zo tellen beide kanten mee.')],
+        'Daarna: steekproefvariantie = 1.000 ÷ (4 − 1) ≈ 333,33 euro²; standaardafwijking = √(1.000 ÷ 3) ≈ € 18,26. '
+        'Waarom n − 1? Rond het berekende gemiddelde tellen de afwijkingen op tot nul; na drie afwijkingen ligt de vierde vast. '
+        'Dit bestaande rekenvoorbeeld verklaart de bewerkingen, maar rechtvaardigt geen populatie-interval.')
+
+
+def uncertainty_example():
+    return block('standaardafwijking-standaardfout', 'Van verschillen tussen posten naar onzekerheid van het gemiddelde', [
+        panel('1. Losse posten', chart('De vier postwaarden rond het gemiddelde 100', list(enumerate(VALUES, 1)), 'Post', 'Waarde (€)', reference=MEAN),
+              ['Variantie: 1.000 ÷ 3', 's = √(1.000 ÷ 3)'], 's ≈ € 18,26', 's beschrijft hoe sterk de afzonderlijke posten verschillen.'),
+        panel('2. Het geschatte gemiddelde', chart('Standaardfout bij gelijkgehouden s en toenemend n', [(n, SD/sqrt(n)) for n in (4,16,64)], 'n (posten)', 'Standaardfout (€)', labels=False, line=True),
+              [f'n = {n}: s ÷ √{n} ≈ € {num(SD/sqrt(n))}' for n in (4,16,64)], 'Meer posten: kleinere standaardfout', 'Een gemiddelde van meer onafhankelijke waarnemingen varieert minder tussen steekproeven.')],
+        'Rekenvergelijking met dezelfde s, vóór eindigheidscorrectie. Nieuwe steekproeven kunnen een andere s opleveren. '
+        'Hieronder zie je waarom s en de standaardfout verschillende vragen beantwoorden.')
+
+
+def distribution_example():
+    means = sorted((value, count/16*100) for value,count in PAIR_MEANS.items())
+    return block('waarden-steekproefgemiddelden', 'Wat varieert: één waarde of het gemiddelde van twee waarden?', [
+        panel('1. Eén trekking', chart('Vier even waarschijnlijke waarden: elk 25 procent', [(v,25) for v in VALUES], 'Waarde (€)', 'Kans (%)', reference=0, stems=True, labels=False),
+              ['Mogelijk: 80, 90, 110 of 120.', 'Elke waarde heeft kans 1/4.'], 'Vier mogelijke waarden', 'Deze verdeling gaat over één losse trekking.'),
+        panel('2. Twee trekkingen middelen', chart('Verdeling van de gemiddelden van alle zestien geordende paren', means, 'Gemiddelde (€)', 'Kans (%)', reference=0, stems=True, labels=False),
+              ['(80 + 90) ÷ 2 = 85', '(80 + 120) ÷ 2 = 100', '(110 + 120) ÷ 2 = 115'], '100 komt bij 4 van de 16 paren voor', 'Nu bestaat elke uitkomst uit een gemiddelde. De kansen liggen meer rond het midden.')],
+        'Eigen klein kansvoorbeeld: twee onafhankelijke trekkingen mét teruglegging uit 80, 90, 110 en 120. '
+        'Alle 16 geordende paren zijn even waarschijnlijk. Dit is nog geen normale verdeling. '
+        'De bestaande uitleg hieronder behandelt wanneer een normale benadering bruikbaar is.')
+
+
+def population_example():
+    return block('populatie-steekproef', 'Eerst het geheel, dan het onderzochte deel', [
+        panel('1. Populatie', dots('Alle acht voorbeeldposten', [('Alle posten: N = 8',8)]),
+              ['Je wilt de waarde van alle 8 posten weten.'], 'Het geheel waarover je iets zegt', 'Dit heet de populatie. Het werkelijke totaal is nog onbekend.'),
+        panel('2. Steekproef', chart('Vier gecontroleerde voorbeeldposten met gemiddelde 100 euro', list(enumerate(VALUES,1)), 'Post', 'Waarde (€)', reference=MEAN),
+              ['4 gecontroleerd: 80, 90, 110 en 120.', 'Gemiddelde = 400 ÷ 4 = 100.'], 'Het onderzochte deel: n = 4', 'Met deze steekproef schat je iets over het geheel.')],
+        'Eigen verkleind voorbeeld: de directe totaalschatting is 8 × € 100 = € 800, geen zekerheid over het echte totaal. '
+        'Een echte controle vraagt een passende aselecte selectie. Hieronder volgt de volledige cursuscasus.')
+
+
+def strata_example():
+    return block('steekproefomvang-strata', 'Eerst groepen maken, daarna controles per groep plannen', [
+        panel('1. Deel de populatie op', dots('Twee strata van vier posten', [('A: 4 kleine posten',4),('B: 4 grote posten',4)]),
+              ['A: boekwaarden 80, 90, 110, 120.', 'B: 800, 900, 1.100, 1.200.'], 'Elke groep heet een stratum', 'Je deelt in met bekende boekwaarden, vóórdat je de werkelijke waarden controleert.'),
+        panel('2. Plan binnen elke groep', dots('Voorbeeld van een uitbreiding: twee controles in A, drie in B', [('A: 2 controles',2),('B: 2 + 1 controles',3)]),
+              ['Eerst 2 controles in A en 2 in B.', 'Bij uitbreiding in B: 2 + 1 = 3.'], 'Totaal: 5; uitbreiding: 1', 'De echte berekening bepaalt welke groep uitbreiding nodig heeft en hoeveel.')],
+        'Eigen schematisch voorbeeld, geen berekende optimale verdeling. De omvang Nᵢ telt alle posten in een groep; nᵢ telt de controles. '
+        'Hieronder reken je met de variantiebijdragen. Les 9 werkt de groepsgrenzen, allocatie en samenvoeging volledig uit.')
+
+
+def log_example():
+    return block('logaritme-modelvormen', 'Dezelfde waarden op twee schalen', [
+        panel('1. Oorspronkelijke schaal', chart('Voorbeeld y = exp(x): een gebogen verband', [(x/10,exp(x/10)) for x in range(31)], 'x', 'y', labels=False, line=True),
+              ['x: 0, 1, 2, 3', 'y: 1; 2,72; 7,39; 20,09'], 'Bij iedere stap: maal e ≈ 2,718', 'Gelijke stappen in x geven steeds grotere toenamen van y.'),
+        panel('2. Neem ln van y', chart('Dezelfde voorbeeldwaarden na logaritmeren: ln(y) = x', [(x,x) for x in range(4)], 'x', 'ln(y)', line=True),
+              ['ln(1) = 0; ln(e) = 1', 'ln(e²) = 2; ln(e³) = 3'], 'Op deze schaal: steeds +1', 'Het verband is nu een rechte lijn. Met exp ga je terug naar y.')],
+        'Eigen illustratie y = eˣ, geen geschat cursusmodel. De y-waarden zijn afgerond weergegeven; de grafiek gebruikt ongeronde waarden. '
+        'Niet elk krom verband wordt recht door ln. Hierna vergelijk je welke variabele bij elke modelvorm wordt getransformeerd.')
+
+
+def enhance(lessons):
+    by_id = {lesson['id']: lesson for lesson in lessons}
+    def section(slug, title):
+        return next(s for s in by_id[slug]['sections'] if s['title'] == title)
+    def move_after(slug, title, predecessor):
+        items = by_id[slug]['sections']
+        item = section(slug, title)
+        items.remove(item)
+        items.insert(items.index(section(slug, predecessor))+1, item)
+
+    move_after('beginnen', 'SET-opfrisser: populatie en een eerlijke steekproef', 'Een klein woordenboek voor formules')
+    item = section('beginnen', 'Begin met een concrete vraag')
+    item['html'] = population_example() + item['html']
+    move_after('rekenen', 'SET-opfrisser: spreiding tegenover onzekerheid', 'Waarom kwadrateren?')
+    item = section('rekenen', 'Rekenen zonder verborgen stappen')
+    item['html'] = spread_example() + '<p>Met dit voorbeeld in gedachten lees je de rekenregels:</p>' + item['html']
+    item = section('rekenen', 'SET-opfrisser: spreiding tegenover onzekerheid')
+    item['html'] = uncertainty_example() + item['html']
+    item = section('onzekerheid', 'Wat is een verdeling?')
+    item['html'] = distribution_example() + item['html']
+    item = section('steekproefomvang', 'Uitbreiding na stratificatie')
+    item['html'] = strata_example() + item['html']
+    move_after('transformaties', 'Een transformatie verandert welk patroon lineair wordt', 'Wat doet een logaritme?')
+    item = section('transformaties', 'Wat doet een logaritme?')
+    item['html'] += log_example()
+

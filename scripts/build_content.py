@@ -369,6 +369,8 @@ from formula_visuals import enhance as add_formula_visuals
 add_formula_visuals(lessons)
 from question_explanations import enrich_basic
 enrich_basic(lessons)
+from learning_transitions import enhance as connect_topics
+connect_topics(lessons)
 from lesson_reading import enhance as improve_reading
 improve_reading(lessons)
 from lesson_sources import enhance as number_sources
