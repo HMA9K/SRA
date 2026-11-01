@@ -14,7 +14,7 @@ const server=http.createServer((req,res)=>{
   const context=await browser.newContext(),page=await context.newPage(),errors=[],checks=[];
   page.on('pageerror',e=>errors.push(String(e)));
   const base=process.env.TEST_BASE_URL||'http://127.0.0.1:'+server.address().port;
-  for(const width of [1366,900,768,390,320])for(const theme of ['light','dark']){
+  for(const width of [1366,1197,900,768,390,320])for(const theme of ['light','dark']){
    await page.setViewportSize({width,height:950});
    for(const id of ['beginnen','rekenen','onzekerheid','steekproefomvang','transformaties']){
     await page.goto(base+'/index.html#les/'+id);
@@ -22,8 +22,10 @@ const server=http.createServer((req,res)=>{
     await page.evaluate(theme=>window.StudyTheme.setMode(theme),theme);
     const info=await page.locator('.learning-transition').evaluateAll(blocks=>blocks.map(block=>{
      const panels=[...block.querySelectorAll('.transition-panel')];
+     const pair=!!block.querySelector('.transition-pair')&&block.getBoundingClientRect().width>=800;
      const aligned=panels.every((panel,i)=>{
       const row=panel.getBoundingClientRect(),copy=panel.querySelector('.transition-copy').getBoundingClientRect(),chart=panel.querySelector('svg').getBoundingClientRect();
+      if(pair){const previous=i?panels[i-1].getBoundingClientRect():row;return chart.left>=copy.right+11&&Math.abs(chart.top-copy.top)<1&&(!i||(row.left>=previous.right+19&&Math.abs(row.top-previous.top)<1));}
       const placement=row.width>=620?chart.left>=copy.right+19&&Math.abs(chart.top-copy.top)<1:chart.top>=copy.bottom+7;
       const gap=i?row.top-panels[i-1].getBoundingClientRect().bottom:16;
       return placement&&gap>=15&&gap<=17;
@@ -48,16 +50,33 @@ const server=http.createServer((req,res)=>{
      for(const chart of block.charts){assert.ok(chart.width<=280.5&&chart.height<=184,`Grafiek te groot: ${JSON.stringify({id,width,chart})}`);assert.ok(chart.labelSize>=11,JSON.stringify({id,width,chart}));assert.deepEqual(chart.clipped,[],JSON.stringify({id,width,chart}));assert.deepEqual(chart.collisions,[],JSON.stringify({id,width,chart}));}
     }
     checks.push({id,width,theme,blocks:info.length});
+    if(id==='beginnen'){assert.equal(await page.locator('[data-learning-transition="populatie-steekproef"] .transition-note').count(),0);assert.match(await page.locator('[data-learning-transition="populatie-steekproef"]').innerText(),/8 × € 100 = € 800/);}
     if(id==='rekenen'){
      assert.equal(await page.locator('.section-title').filter({hasText:'Rekenen zonder verborgen stappen'}).count(),1);
      assert.equal(await page.locator('.section-title').filter({hasText:'Waarom kwadrateren?'}).count(),0);
      const combined=page.locator('details.section').filter({has:page.locator('[data-learning-transition="gemiddelde-kwadraten"]')});
      assert.ok((await combined.innerText()).includes('Van kwadraten naar variantie en standaardafwijking'));
      assert.ok((await combined.innerText()).includes('Rekenvolgorde en twee verschillende sommen'));
+     assert.equal(await combined.locator('details.symbols').count(),0);
+     assert.ok(await combined.locator('p.symbols').isVisible());
+     assert.match(await combined.locator('p.symbols').innerText(),/Σ betekent optellen/);
      assert.equal(await combined.locator('.formula-typeset math[display="block"]').count(),2,'Variantie en standaardafwijking moeten zichtbaar blijven');
      assert.ok(await combined.locator('.formula-typeset').evaluate(el=>el.getBoundingClientRect().height>0));
     }
-    if(['beginnen','rekenen'].includes(id)&&[1366,390].includes(width)){
+    if(id==='steekproefomvang'){
+     const diagrams=page.locator('[data-learning-transition="steekproefomvang-strata"] svg');
+     assert.equal(await diagrams.locator('circle').count(),16);
+     assert.equal(await diagrams.locator('.transition-checked').count(),4);
+     assert.equal(await diagrams.locator('.transition-extra').count(),1);
+     const planning=page.locator('#uitleg>details').filter({has:page.locator('.section-title').filter({hasText:'Alle strata uitbreiden'})});
+     assert.equal(await planning.locator('.formula-typeset math mfrac').count(),2);
+     assert.ok(await planning.locator('.formula-typeset').isVisible());
+     if(width===1197&&theme==='light'){
+      await page.locator('[data-learning-transition="steekproefomvang-strata"]').screenshot({path:path.join(out,'strata-1197.png')});
+      await planning.locator('.formula-typeset').screenshot({path:path.join(out,'strata-formules.png')});
+     }
+    }
+    if(['beginnen','rekenen'].includes(id)&&[1366,1197,390].includes(width)){
      await page.locator('.learning-transition').first().screenshot({path:path.join(out,`${id}-${width}-${theme}.png`)});
     }
    }
@@ -71,6 +90,6 @@ const server=http.createServer((req,res)=>{
    assert.equal(await page.locator('script[data-goatcounter]').count(),1,'SVG-titels mogen geen extra paginascripts krijgen');
    assert.ok(await page.locator('.transition-chart').evaluateAll(charts=>charts.every(chart=>chart.getBoundingClientRect().width<=280.5&&chart.getBoundingClientRect().height<=184)),`${file} ${width}: grafiek te groot`);
   }
-  assert.deepEqual(errors,[]);console.log(JSON.stringify({ok:true,routes:checks.length,viewports:[1366,900,768,390,320],themes:['light','dark'],checks:['alle leesbruggen','grafiek rechts bij eigen uitleg; op smalle schermen eronder','twee rekenblokken samengevoegd','compact formaat en tussenruimte','labelgrootte en overlap','geen overloop','zelfstandige HTML en leesversie']}));
+  assert.deepEqual(errors,[]);console.log(JSON.stringify({ok:true,routes:checks.length,viewports:[1366,1197,900,768,390,320],themes:['light','dark'],checks:['alle leesbruggen','grafiek rechts bij eigen uitleg; op smalle schermen eronder','twee rekenblokken samengevoegd','compact formaat en tussenruimte','labelgrootte en overlap','geen overloop','zelfstandige HTML en leesversie']}));
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

@@ -34,6 +34,15 @@ const server=http.createServer((req,res)=>{
     assert.equal(await page.locator('aside.learning-context').count(),1);
     assert.deepEqual(await duplicates(),[],`${lesson.id}: dubbel begrip bij ${width}px`);
     assert.equal(await overflow(),false,`${lesson.id}: horizontale pagina-overloop bij ${width}px`);
+    const results=page.locator('#onderzoek .lab-all-results');
+    await results.evaluate(el=>el.open=true);
+    for(const chart of await results.locator('.chart-scroll svg').all()){
+     const box=await chart.boundingBox();
+     assert.ok(box.height<=281,`${lesson.id}: compacte grafiekhoogte ${box.height}`);
+    }
+    assert.equal(await overflow(),false,`${lesson.id}: open labresultaten bij ${width}px`);
+    if(lesson.id==='rekenen'&&width===1366&&theme==='light')await results.screenshot({path:path.join(out,'rekenen-results.png')});
+    await results.evaluate(el=>el.open=false);
     assert.equal(await page.locator('.lesson-preparation').getAttribute('open'),null);
     assert.ok((await page.locator('.lesson-opening').innerText()).length>150);
     assert.ok((await page.locator('.lesson-conclusion').innerText()).length>150);

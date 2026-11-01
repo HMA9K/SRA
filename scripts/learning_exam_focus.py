@@ -1,5 +1,6 @@
 """Tentamenweging en herberekende college-8-casus, zonder bestaande antwoorden te wijzigen."""
 import json
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 from html import escape
 from build_exam_points import analyze
@@ -55,8 +56,9 @@ def enhance(lessons, sources):
             rows=[]
             for key in ids:
                 t=topics[key]
-                rows.append([t['label'],f"{t['exams']}/9",str(t['subquestions']),num(t['share'],2)+'%'])
-            body+=table('', ['Onderwerp','Tentamens','Deelvragen','Gemiddeld puntengewicht (%)'],rows).replace('<caption></caption>', '').replace('<table>', '<table aria-label="Gemiddeld puntengewicht in negen tentamens">')
+                weight = num(Decimal(str(t['meanWhenPresent'])).quantize(Decimal('.01'), rounding=ROUND_HALF_UP),2)+'%' if t['meanWhenPresent'] is not None else 'n.v.t.'
+                rows.append([t['label'],f"{t['exams']}/9",str(t['subquestions']),weight])
+            body+=table('', ['Onderwerp','Voorkomen in Tentamens','Deelvragen (totaal)','Gemiddeld puntengewicht per tentamen (%) <span class="exam-average-note">Alleen als het onderwerp voorkomt</span>'],rows).replace('<caption></caption>', '').replace('<table>', '<table aria-label="Gemiddeld puntengewicht wanneer het onderwerp voorkomt">')
         add(lesson,sources,'Gemiddeld puntengewicht in tentamens',body,[ref('programma',4,'Onderwijsprogramma: toetsing en afbakening, PDF 4–5')],first=True)
 
     L={l['id']:l for l in lessons}

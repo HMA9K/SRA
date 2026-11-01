@@ -5,6 +5,7 @@ import hashlib
 import json
 import re
 import statistics
+from decimal import Decimal, ROUND_HALF_UP
 
 from exam_point_rules import BASE, SPLITS, TOPICS, JOINT_TOPICS
 
@@ -43,12 +44,14 @@ def analyze():
         own = [r for r in rows if r['topic'] == topic]
         scores = {e['id']: sum(r['points'] for r in own if r['exam'] == e['id']) for e in exams}
         values = list(scores.values())
+        present = [v for v in values if v > 0]
         recent = [v for k, v in scores.items() if k >= RECENT]
         recent_rows = [r for r in own if r['exam'] >= RECENT]
         result['topics'].append(dict(id=topic, label=label, byExam=scores,
             exams=sum(v > 0 for v in values), questions=len({(r['exam'], r['question']) for r in own}),
             subquestions=len({(r['exam'],r['question'],r['part']) for r in own}),
             points=sum(values), mean=statistics.mean(values), share=100*sum(values)/900,
+            meanWhenPresent=statistics.mean(present) if present else None,
             minimum=min(values), maximum=max(values), sd=statistics.pstdev(values),
             recentPoints=sum(recent), recentMean=statistics.mean(recent), recentShare=100*sum(recent)/300,
             recentMinimum=min(recent), recentMaximum=max(recent), recentSd=statistics.pstdev(recent),
@@ -97,7 +100,8 @@ def markdown(data):
         '- Een genummerde vraag zonder letteronderdelen telt als één deelvraag. Bij expliciete a/b/c-onderdelen tellen die afzonderlijk. Rubricregels binnen een deelvraag leveren geen extra deelvragen op. Een deelvraag met meerdere onderwerpen kan in meerdere tellingen voorkomen; de punten nooit.',
         '- Een geïntegreerde stratificatieberekening telt onder stratificatie: totaalschatting en interval. MPU, verschil, t-tabellen en spreiding zijn daarbij noodzakelijke voorkennis, zonder dezelfde punten opnieuw te boeken.',
         '- Een onderwerp met nul afzonderlijke punten kan noodzakelijke voorkennis of een actueel leerdoel zijn. Nul betekent niet dat het onderwerp mag verdwijnen.',
-        '- Gemiddelden en standaarddeviaties gebruiken alle negen tentamens, inclusief nullen. Spreiding is minimum, maximum en populatiestandaarddeviatie van de negen historische scores.',
+        '- Het gemiddelde puntengewicht in de lessen telt alleen tentamens mee waarin het onderwerp voorkomt: totaalpunten gedeeld door het aantal van die tentamens. Elk tentamen heeft 100 punten, dus het aantal punten is ook het percentage. Bij geen voorkomen is er geen gemiddelde.',
+        '- De kolom Gem./100 en de standaarddeviatie in dit rapport gebruiken alle negen tentamens, inclusief nullen. De kolom Gem. bij voorkomen (%) sluit aan op de lessen. Spreiding is minimum, maximum en populatiestandaarddeviatie van de negen historische scores.',
         '- Recent = de drie recentste unieke tentamens: maart 2024, oktober 2024 en maart 2025. Ook het recente gemiddelde bevat nullen. Dit is een beschrijving, geen voorspelling.',
         '- Gezamenlijke punten blijven in een eigen rij en staan met betrokken onderwerpen in het detailregister. Bronfouten in de bestaande antwoordcontrole veranderen de historische puntentoekenning niet.', '',
         '## Aansluiting per tentamen', '', '| Tentamen | Vraagnummers | Deelvragen | Punten |', '|---|---:|---:|---:|']
@@ -106,10 +110,11 @@ def markdown(data):
         lines.append(f"| {e['date']} | {e['questions']} | {count} | {e['points']} |")
     count=len({(r['exam'],r['question'],r['part']) for r in data['rows']})
     lines += [f'| Totaal | 196 | {count} | 900 |', '', '## Punten per onderwerp', '',
-        '| Onderwerp | Tentamens | Vragen | Deelvragen | Totaal | Gem./100 | Aandeel | Min–max | SD |',
-        '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
+        '| Onderwerp | Tentamens | Vragen | Deelvragen | Totaal | Gem./100 | Aandeel | Gem. bij voorkomen (%) | Min–max | SD |',
+        '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
     for t in sorted(data['topics'],key=lambda t:-t['points']):
-        lines.append(f"| {t['label']} | {t['exams']}/9 | {t['questions']} | {t['subquestions']} | {t['points']} | {f(t['mean'])} | {f(t['share'])}% | {t['minimum']}–{t['maximum']} | {f(t['sd'])} |")
+        conditional = f(Decimal(str(t['meanWhenPresent'])).quantize(Decimal('.01'), rounding=ROUND_HALF_UP))+'%' if t['meanWhenPresent'] is not None else 'n.v.t.'
+        lines.append(f"| {t['label']} | {t['exams']}/9 | {t['questions']} | {t['subquestions']} | {t['points']} | {f(t['mean'])} | {f(t['share'])}% | {conditional} | {t['minimum']}–{t['maximum']} | {f(t['sd'])} |")
     lines += ['', '## Punten per tentamen en recente periode', '',
         '| Onderwerp | '+' | '.join(e['id'] for e in data['exams'])+' | Recent totaal | Recent gem./100 | Recent aandeel | Recent min–max |',
         '|---|'+ '---:|'*(len(data['exams'])+4)]

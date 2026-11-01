@@ -7,11 +7,7 @@
 .math-scroll:focus-visible,.table-scroll:focus-visible,.chart-scroll:focus-visible{outline:3px solid #b7650a;outline-offset:2px}
 math{font-family:"Cambria Math","STIX Two Math",math;font-size:1.2em;line-height:normal}
 math[display="block"]{display:block;width:max-content;min-width:0;margin:0;text-align:left;math-style:normal}
-.symbols{padding:0 2px;margin:-4px 0 22px;color:#505c73;font-size:.86rem}
-.symbols summary{font-size:.86rem;font-weight:600;cursor:pointer;padding:8px 0;display:list-item;list-style:disclosure-closed;color:#4f617c}
-.symbols[open] summary{list-style:disclosure-open}
-.section .symbols summary::after{content:none}
-.symbols p{margin:8px 0;padding:0;font-size:.86rem}
+.symbols{padding:0;margin:4px 0 12px;color:#505c73;font-size:.82rem;line-height:1.55}
 caption{text-align:left;font-weight:700;color:#444159;font-size:.9rem;padding:0 0 10px;caption-side:top}
 .table-scroll{position:relative;overscroll-behavior-inline:contain;scrollbar-width:thin}
 .table-scroll>table{margin:0}
@@ -45,7 +41,7 @@ table.numeric tfoot td,table.numeric tfoot th{font-weight:700;border-top:2px sol
  .formula-typeset{padding:4px 12px}.formula-typeset math{font-size:1.12em}.formula-row{padding:13px 0}
  .chart-figure{padding:12px}.chart-scroll{margin:0 -2px}.lab svg text{font-size:15px}
  table.numeric{font-size:.85rem}table.numeric th,table.numeric td{min-width:auto;padding:10px 12px}
- .math-scroll{padding-bottom:17px}.symbols summary{font-size:.85rem}
+ .math-scroll{padding-bottom:17px}
 }
 @media print{
  .math-scroll,.table-scroll,.chart-scroll{overflow:visible}.formula-typeset{break-inside:avoid}

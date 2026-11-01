@@ -6,6 +6,7 @@ worden alleen voor weergave afgerond. Eigen oefeningen zijn herkenbaar gelabeld.
 """
 from math import ceil, sqrt
 from course_completion import bookref
+from presentation import formula_block, STRATIFIED_PLANNING
 
 VERSION = '2026-09-25'
 IDS = ('beginnen', 'rekenen', 'onzekerheid', 'mpu', 'verschil', 'quotient',
@@ -109,7 +110,7 @@ def enhance(lessons, sources):
         'De bekende boekwaarde B en de gecontroleerde werkelijke waarden moeten betrekking hebben op '
         'dezelfde populatie, periode en waarderingsvraag. Anders corrigeert een goede formule voor een verkeerd geheel.</p>',
         [bookref('boek-h8a', 202), ref('slides', 6, 'PDF 6-12: doel, schatten en populatiegegevens')])
-    extend('beginnen', 'Twee soorten vragen',
+    extend('beginnen', 'Schatten en toetsen: twee soorten vragen',
         '<h3>Goedkeuren of de afwijking in kaart brengen</h3>'
         '<p>De colleges koppelen weinig verwachte fouten aan een toets die goedkeuring kan onderbouwen. '
         'Bij veel verwachte fouten is vooral de omvang van de afwijking van belang: een schattingsinterval '
@@ -845,7 +846,7 @@ def enhance(lessons, sources):
     body += 'een grote variantiebijdrage uitbreiden. Het boek behandelt beide. '
     body += 'De volgende algemene route is formule 8.20 en gebruikt een directe '
     body += 'schatter per stratum.</p>'
-    body += '<div class="formula">γ = E² / [t² × Σ(Nᵢs²ᵢ)]<br>n = N / (1 + γ)</div>'
+    body += formula_block(STRATIFIED_PLANNING)
     body += '<p>N betreft de populatie waaruit wordt getrokken; een integraal '
     body += 'gecontroleerd topstratum staat daarbuiten. De formule sluit aan op '
     body += 'de cursusbenadering bij evenredige verdeling en vastgehouden '

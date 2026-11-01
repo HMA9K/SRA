@@ -159,6 +159,22 @@ def mathml(content, inline=False):
     return result
 
 
+
+def formula_block(formulas):
+    """Dezelfde toegankelijke formuleopmaak voor oorspronkelijke en aanvullende uitleg."""
+    out = '<div class="formula formula-typeset">'
+    for label, formula in formulas:
+        out += (f'<div class="formula-row"><span class="formula-label">{html.escape(label)}</span>'
+                f'<div class="math-scroll" tabindex="0" role="region" aria-label="Formule: {html.escape(label)}">'
+                f'{mathml(formula)}</div></div>')
+    return out + '</div>'
+
+STRATIFIED_PLANNING = [
+    ('Tussenstap', eq(v('γ'), frac(sq(v('E')), mul(sq(t), summ(group(row(Ni, sq(si)))))))),
+    ('Benodigde omvang', eq(n, frac(N, add(one, v('γ'))))),
+]
+
+
 def inline_formulas(content):
     """Typeset known inline notation without touching markup or existing MathML."""
     from html.parser import HTMLParser
@@ -252,12 +268,9 @@ def enhance(lessons):
             except StopIteration:
                 raise ValueError(f'Unmapped formula in {lesson["id"]}')
             used+=1
-            out='<div class="formula formula-typeset">'
-            for label,formula in formulas:
-                out+=f'<div class="formula-row"><span class="formula-label">{html.escape(label)}</span><div class="math-scroll" tabindex="0" role="region" aria-label="Formule: {html.escape(label)}">{mathml(formula)}</div></div>'
-            out+='</div>'
+            out=formula_block(formulas)
             if used==1:
-                out+=f'<details class="symbols"><summary>Wat betekenen de symbolen?</summary><p>{LEGENDS[lesson["id"]]}</p></details>'
+                out+=f'<p class="symbols">{LEGENDS[lesson["id"]]}</p>'
             return out
         for section in lesson['sections']:
             section['html']=re.sub(r'<div class="formula">(.*?)</div>',replace,section['html'],flags=re.S)
