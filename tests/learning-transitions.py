@@ -36,6 +36,10 @@ for old, new in zip(before, lessons):
                     assert sentence in text, sentence
             for formula in re.findall(r'<div class="formula">.*?</div>', original['html']):
                 assert formula in updated['html']
+            for formula in re.findall(r'<math\b.*?</math>', original['html']):
+                assert formula in updated['html'], 'Opgemaakte formule ontbreekt na samenvoegen'
+            if original['title'] == 'Waarom kwadrateren?':
+                assert original['html'].split('</p>', 2)[2] in updated['html'], 'Formulekader met symbolen en toelichting moet volledig behouden blijven'
             assert all(ref in updated['refs'] for ref in original['refs'])
         else:
             assert original['html'] in updated['html'], (old['id'], original['title'])
