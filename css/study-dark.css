@@ -312,6 +312,9 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-stimulus{background:
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-stimulus th,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-stimulus td{border:1px solid #3d5266}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-stimulus th{background:#18222a}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #lesson-panel-resizer:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #lesson-panel-resizer:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #lesson-panel-resizer[data-dragging]{background:var(--study-teal,#0e8174)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .learning-transition{color:var(--study-ink,#99c1e1)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-point{fill:var(--study-teal,#8dece2)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-line{stroke:var(--study-teal,#8dece2)}
 /* css/exams.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry{background:#152129;border:1px solid #3b4a54}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry h2{color:#adbdc9}
