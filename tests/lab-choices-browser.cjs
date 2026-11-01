@@ -11,9 +11,10 @@ const server=http.createServer((req,res)=>{
 try{
  browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH});
  const page=await browser.newPage(),errors=[],checks=[],base='http://127.0.0.1:'+server.address().port;
+ let feedbackChecks=0;
  page.on('pageerror',e=>errors.push(String(e)));await page.route('**/*',r=>r.request().url().startsWith(base)?r.continue():r.abort());
  await page.goto(base+'/index.html#les/beginnen');await page.locator('[data-lab-view]').waitFor();
- const lessons=await page.evaluate(()=>SRA.lessons.map(l=>({id:l.id,lab:l.lab})));
+ const lessons=await page.evaluate(()=>SRA.lessons.map(l=>({id:l.id,lab:l.lab,answers:l.questions.map(q=>q.correct)})));
  const lab=page.locator('#onderzoek');
  const inputs=()=>lab.locator('input[name],textarea[name]').evaluateAll(nodes=>nodes.map(n=>[n.name,n.value]));
  async function views(){
@@ -48,6 +49,41 @@ try{
  for(const width of [1197,390])for(const theme of ['light','dark'])for(const lesson of lessons){
   await page.setViewportSize({width,height:950});await page.goto(base+'/index.html?choices='+width+'-'+theme+'#les/'+lesson.id);await lab.locator('[data-lab-view]').waitFor();await page.evaluate(t=>StudyTheme.setMode(t),theme);
   assert.equal(await page.locator('main select').count(),0,lesson.id+': geen dropdowns in de les');
+  assert.doesNotMatch(await page.locator('#uitleg').innerText(),/\beigen\b/i,lesson.id);
+  // Alle lessen moeten dezelfde compacte invoer en volledige uitwerking krijgen.
+  const layout=await lab.evaluate(el=>{
+   const box=n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height};};
+   return {height:el.querySelector('.lab-controls').getBoundingClientRect().height,
+    numbers:[...el.querySelectorAll('.lab-number-field')].filter(n=>n.offsetHeight).map(n=>({label:box(n.querySelector('.lab-field-label')),input:box(n.querySelector('input')),font:parseFloat(getComputedStyle(n.querySelector('input')).fontSize)})),
+    sliders:[...el.querySelectorAll('.lab-slider')].filter(n=>n.offsetHeight).map(n=>({label:box(n.querySelector('label')),range:box(n.querySelector('[type=range]')),number:box(n.querySelector('[type=number]'))}))};
+  });
+  if(width===1197)assert.ok(layout.height<750,lesson.id+': bediening past compact naast de grafiek: '+layout.height);
+  for(const n of layout.numbers){
+   assert.ok(n.input.x>=n.label.x+n.label.width&&n.input.width<=110,lesson.id+': compact getalveld naast het label');
+   assert.ok(Math.abs(n.input.y+n.input.height/2-n.label.y-n.label.height/2)<2,lesson.id+': label en invoer uitgelijnd');
+   if(width===390){assert.ok(n.input.height>=44);assert.ok(n.font>=16);}
+  }
+  for(const s of layout.sliders){
+   assert.ok(s.number.x>=s.range.x+s.range.width&&s.number.width<=110,lesson.id+': schuif en waarde naast elkaar');
+   assert.ok(s.range.y>=s.label.y+s.label.height-1&&s.range.y+s.range.height-s.label.y<75,lesson.id+': label en schuif vormen een compacte rij');
+  }
+  await lab.locator('.lab-all-results>summary').click();
+  for(const chart of await lab.locator('.lab-result .chart-scroll svg').all())assert.ok((await chart.boundingBox()).height<=281,lesson.id+': ook de volledige resultaten hebben compacte grafieken');
+  await lab.locator('.lab-all-results>summary').click();
+  if(width===1197&&theme==='light'){
+   for(const [i,correct] of lesson.answers.entries()){
+    const question=page.locator('#begrip .question').nth(i);
+    await question.locator('input[type=radio]').nth(correct).check();
+    const button=question.locator('[data-check]');if(await button.isEnabled())await button.click();
+    const feedback=question.locator('.question-feedback').filter({visible:true});
+    assert.match(await feedback.innerText(),/Goed beantwoord/);
+    assert.equal(await feedback.locator('.question-recognition dt').count(),0);
+    assert.match(await feedback.locator('.question-pattern').innerText(),/^Onthoud:/);
+    assert.ok(await feedback.locator('.source-note').count()>0);
+    assert.ok(parseFloat(await feedback.evaluate(n=>getComputedStyle(n).paddingTop))<=16);
+    feedbackChecks++;
+   }
+  }
   if(lesson.lab==='diagnose'){
    for(const mode of ['residual','normal','outlier','distance','dw']){
     await lab.locator('[data-lab-setting="mode"][data-value="'+mode+'"]').focus();await page.keyboard.press('Enter');await settings(true);await views();
@@ -66,7 +102,7 @@ try{
   if(theme==='light'&&['beginnen','onzekerheid','diagnostiek','transformaties','tentamen'].includes(lesson.id)){
    await lab.scrollIntoViewIfNeeded();await page.mouse.move(0,0);await lab.screenshot({path:path.join(out,lesson.id+'-'+width+'.png'),style:'.study-topbar,.learning-page-head,.skip{visibility:hidden!important}'});
   }
-  checks.push({id:lesson.id,width,theme});
+  checks.push({id:lesson.id,width,theme,controlsHeight:Math.round(layout.height)});
   if(lesson.id===lessons.at(-1).id)console.log('Keuzes gecontroleerd: '+width+' px, '+theme+'.');
  }
  // Een tijdelijk niet toepasselijke keuze blijft bewaard en krijgt geen klikactie.
@@ -78,6 +114,7 @@ try{
  // De zelfstandige HTML gebruikt dezelfde bediening als de losse webbestanden.
  await page.goto(base+'/SRA%20interactieve%20samenvatting.html#les/onzekerheid');await lab.locator('[data-lab-view]').waitFor();
  assert.equal(await page.locator('main select').count(),0);await settings();await views();
- assert.deepEqual(errors,[]);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(checks,null,2));
+ assert.equal(feedbackChecks,57);assert.deepEqual(errors,[]);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(checks,null,2));
  console.log(`${checks.length} lesweergaven: geen dropdowns; alle resultaatkeuzes, instellingen en diagnosemodi bedienbaar; invoer behouden bij wisselen en resize.`);
+ console.log('Alle 19 invoerkolommen en volledige grafiekuitwerkingen compact; alle 57 begripchecks behouden compacte feedback en bronnen.');
 }finally{await browser?.close();await new Promise(r=>server.close(r));}})().catch(e=>{console.error(e);process.exitCode=1;});

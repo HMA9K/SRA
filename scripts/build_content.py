@@ -95,7 +95,7 @@ lesson('quotient','De quotiëntschatter','Schatten',
  ['De goedratio is w/b, niet b/w.','Een verhouding van sommen is niet hetzelfde als een ongewogen gemiddelde van ratios.'],
  [('formules','Formules 12–17, PDF-pagina 1',1),('slides','PDF-pagina 23–25',23)],[
  ('Σw = 90.000 en Σb = 100.000. Wat is q?',['1,111','0,90','0,10'],1,'De goedratio is 90.000 / 100.000 = 0,90.'),
- ('Welk patroon past het best?',['Elke post is circa € 5 te hoog','Elke post is circa 8% te hoog','Geen enkele boekwaarde is bekend'],1,'De quotiëntschatter past bij een redelijk constante verhouding.'),
+ ('Welk foutpatroon past bij de quotiëntschatter?',['Elke post is circa € 5 te hoog','Elke post is circa 8% te hoog','Geen enkele boekwaarde is bekend'],1,'De quotiëntschatter past bij een redelijk constante verhouding.'),
  ('q = 0,96 en B = 1.000.000. Wat is de geschatte werkelijke waarde?',['40.000','960.000','1.040.000'],1,'Ŵ_Q = qB. Het bedrag 40.000 is de geschatte totale fout, niet de werkelijke waarde.')])
 
 lesson('regressieschatter','De regressieschatter','Schatten',
@@ -108,7 +108,7 @@ lesson('regressieschatter','De regressieschatter','Schatten',
  [('formules','Formules 18–24, PDF-pagina 2',2),('exam2024','Vraag 1 en 3, PDF-pagina 1–2',1)],[
  ('B = Nb̄. Wat wordt de correctie op MPU?',['N','0','b₁'],1,'B − Nb̄ = 0, dus Ŵ_R = Nw̄.'),
  ('R = 0,8. Met welke factor vermenigvuldig je s_MPU?',['0,2','0,64','0,6'],2,'√(1 − 0,8²) = √0,36 = 0,6.'),
- ('Wat schat je hier?',['Het totale W van de populatie','De waarde van één nieuwe persoon','Alleen de correlatie'],0,'Dit hoofdstuk gaat over het populatietotaal W.')],exam='exam2024:1:Vraag 1–3')
+ ('Welke grootheid schat je met de regressieschatter?',['Het totale W van de populatie','De waarde van één nieuwe persoon','Alleen de correlatie'],0,'Dit hoofdstuk gaat over het populatietotaal W.')],exam='exam2024:1:Vraag 1–3')
 
 lesson('steekproefomvang','Hoeveel posten moet je controleren?','Schatten',
  'Als het interval te breed is, kun je berekenen hoeveel waarnemingen nodig zijn voor de gewenste marge. Daarbij moet je eerst bepalen welke spreiding bij de schatter hoort.',
@@ -146,7 +146,7 @@ lesson('stratificatie','Stratificatie en allocatie','Schatten',
  ['Tel geen standaardafwijkingen op.','Neem de werkelijke topstratumwaarde op, niet de boekwaarde.','Gebruik bij evaluatie de werkelijk gebruikte nᵢ, ook als eerder een andere allocatie is berekend.'],
  [('formules','Formules 25–29, PDF-pagina 2',2),('exam2025','Vraag 4–6, PDF-pagina 1–2 en 11–12',12)],[
  ('N₁ = 600, N₂ = 400 en n = 100. Wat is evenredig n₁?',['50','60','40'],1,'600/1.000 × 100 = 60.'),
- ('Twee onafhankelijke strata hebben standaardfouten 3 en 4. Gecombineerd?',['7','25','5'],2,'√(3² + 4²) = 5.'),
+ ('Twee onafhankelijke strata hebben standaardfouten 3 en 4. Wat is de gecombineerde standaardfout?',['7','25','5'],2,'√(3² + 4²) = 5.'),
  ('Wat is de steekproefvariantie van het geschatte totaal van een integraal gecontroleerd topstratum?',['Nul','Gelijk aan de boekwaarde','Onbekend'],0,'Alle elementen zijn gecontroleerd; er is geen steekproefonzekerheid voor dat stratum.')],lab='strata',exam='exam2025:2:Vraag 4–6')
 
 lesson('regressielijn','Regressie: een lijn door gegevens','Regressie',
@@ -171,7 +171,7 @@ lesson('anova','ANOVA en verklaarde variatie','Regressie',
  ['MSE is een variantie; neem de wortel voor de standaardfout.','R² zegt iets over variatie, niet over het percentage mensen dat correct voorspeld is.'],
  [('formules','Formules 35–43, PDF-pagina 3',3),('attentie','PDF-pagina 4–5',4),('exam2024','Vraag 9–10, PDF-pagina 4',4)],[
  ('SSR = 80 en TotalSS = 100. Wat is R²?',['0,20','0,80','1,25'],1,'R² = SSR/TotalSS = 0,80.'),
- ('n = 50 en k = 3. Hoeveel residual df?',['49','47','46'],2,'n − k − 1 = 50 − 3 − 1 = 46.'),
+ ('n = 50 en k = 3. Hoeveel residuele vrijheidsgraden (df) heeft het model?',['49','47','46'],2,'n − k − 1 = 50 − 3 − 1 = 46.'),
  ('MSE = 16. Wat is Std. Error of the Estimate?',['4','16','256'],0,'De standaardfout is √MSE = 4.')],lab='anova',exam='exam2024:4:Vraag 9–10')
 
 lesson('toetsen','Hypothesen, t-toets en F-toets','Regressie',
@@ -200,7 +200,7 @@ lesson('diagnostiek','Controleer of je het model kunt gebruiken','Regressie',
  [('formules','Formules 44–49, PDF-pagina 3',3),('attentie','PDF-pagina 5–6',5),('exam2024','Vraag 11–12, PDF-pagina 5',5)],[
  ('n = 178. Wat zijn de cursusgrenzen voor gestandaardiseerde residuen?',['±2','±3','±1'],1,'Bij n > 100 gebruikt het formuleblad ±3.'),
  ('Welke grootheid hoort bij invloedrijke punten?',['Cook’s Distance','R²','De constante'],0,'Cook’s Distance beoordeelt potentiële invloedrijke punten.'),
- ('Shapiro-Wilk p = 0,01 bij α = 0,05. Conclusie?',['Normaliteit bewezen','H₀ verwerpen: aanwijzing voor niet-normale residuen','Geen uitspraak mogelijk'],1,'H₀ is normaliteit van de residuen. De kleine p geeft aanleiding H₀ te verwerpen.')],lab='diagnose',exam='exam2024:5:Vraag 11–12')
+ ('Shapiro-Wilk geeft p = 0,01 bij α = 0,05. Wat concludeer je over de normaliteit van de residuen?',['Normaliteit bewezen','H₀ verwerpen: aanwijzing voor niet-normale residuen','Geen uitspraak mogelijk'],1,'H₀ is normaliteit van de residuen. De kleine p geeft aanleiding H₀ te verwerpen.')],lab='diagnose',exam='exam2024:5:Vraag 11–12')
 
 lesson('voorspellen','Van regressielijn naar voorspellingsinterval','Regressie',
  'De lijn geeft één voorspelling. Voor een nieuwe individuele waarneming is ook een marge nodig. Die marge groeit als je verder van het centrum van de gegevens voorspelt.',
@@ -211,9 +211,9 @@ lesson('voorspellen','Van regressielijn naar voorspellingsinterval','Regressie',
  ('Tentamen 28 oktober 2024, vraag 13: gemiddelde of individu?',['Gegeven: ŷ = 7,159 + 0,099x; x₀ = x̄ = 228,1; n = 30; s_e = 1,25506.','Puntvoorspelling: 7,159 + 0,099×228,1 = 29,7409. Omdat x₀ = x̄ is de laatste term onder de wortel nul.','De opgave vraagt het gemiddelde. Bij 95% en df = 28 is t = 2,048; de marge voor dat gemiddelde is 2,048 × 1,25506 / √30 ≈ 0,4693.','Het interval voor de gemiddelde respons is [29,2716; 30,2102]. Naar buiten op één decimaal afgerond: [29,2; 30,3].','Het officiële antwoordmodel gebruikt wél de extra 1 en berekent daardoor het bredere individuele interval [27,1; 32,4]. Dat antwoord past bij één nieuwe persoon, maar niet bij het woord gemiddelde in de vraag.'],[('exam2024','Vraag 13, PDF-pagina 5',5)]),
  ['Gebruik bij een individuele voorspelling de eerste 1 onder de wortel.','s_e is √MSE, niet MSE zelf.'],
  [('formules','Formule 50, PDF-pagina 3',3),('attentie','Voorspelling, PDF-pagina 6',6),('exam2024','Vraag 13, PDF-pagina 5',5)],[
- ('Waar is het voorspellingsinterval het smalst?',['Bij x₀ = x̄','Bij x₀ = 0, altijd','Zo ver mogelijk van x̄'],0,'Dan is de term (x₀ − x̄)² nul.'),
- ('Welk interval is doorgaans breder?',['Voor de gemiddelde respons','Voor één nieuwe waarneming','Ze zijn altijd even breed'],1,'Een nieuwe waarneming heeft ook individuele storing.'),
- ('Een realisatie ligt buiten het interval. Wat volgt?',['Fraude staat vast','Nader onderzoek is nodig','De realisatie moet worden verwijderd'],1,'Een afwijking is een signaal, geen automatische verklaring.')],lab='voorspelling',exam='exam2024:5:Vraag 13')
+ ('Bij welke x-waarde is het individuele voorspellingsinterval het smalst?',['Bij x₀ = x̄','Bij x₀ = 0, altijd','Zo ver mogelijk van x̄'],0,'Dan is de term (x₀ − x̄)² nul.'),
+ ('Welk interval is bij dezelfde gegevens, x-waarde en betrouwbaarheid breder: dat voor het gemiddelde of voor één nieuwe waarneming?',['Voor de gemiddelde respons','Voor één nieuwe waarneming','Ze zijn altijd even breed'],1,'Een nieuwe waarneming heeft ook individuele storing.'),
+ ('Een nieuwe waarneming ligt buiten het individuele voorspellingsinterval. Welke conclusie past daarbij?',['Fraude staat vast','Nader onderzoek is nodig','De realisatie moet worden verwijderd'],1,'Een afwijking is een signaal, geen automatische verklaring.')],lab='voorspelling',exam='exam2024:5:Vraag 13')
 
 lesson('meervoudig','Meervoudige regressie en dummyvariabelen','Meervoudige regressie en modelcontrole',
  'Salaris hangt mogelijk samen met leeftijd, opleiding en leidinggeven tegelijk. Meervoudige regressie beschrijft de samenhang met meerdere kenmerken in één model.',
@@ -226,7 +226,7 @@ lesson('meervoudig','Meervoudige regressie en dummyvariabelen','Meervoudige regr
  [('formules','Formules 51–54 en 61–62, PDF-pagina 3–4',3),('attentie','PDF-pagina 7–8',7),('exam2025','Vraag 19–20, PDF-pagina 9 en 14',14)],[
  ('B_HBO = 600 en B_WO = 1.000. Wat is WO tegenover HBO?',['1.600','1.000','400'],2,'Beide vergelijken met dezelfde referentiegroep; het onderlinge verschil is 1.000 − 600 = 400.'),
  ('Vier verklarende variabelen plus constante: wat is k?',['5','4','3'],1,'De constante telt niet mee.'),
- ('Waarom adjusted R² gebruiken?',['Om voor extra verklarende variabelen te corrigeren','Om de richting van het verband te bepalen','Om causaliteit te bewijzen'],0,'Adjusted R² weegt modelomvang mee.')],exam='exam2025:9:Vraag 19–20')
+ ('Waarom gebruik je adjusted R² bij het vergelijken van regressiemodellen?',['Om voor extra verklarende variabelen te corrigeren','Om de richting van het verband te bepalen','Om causaliteit te bewijzen'],0,'Adjusted R² weegt modelomvang mee.')],exam='exam2025:9:Vraag 19–20')
 
 lesson('transformaties','Kromme verbanden en logaritmen','Meervoudige regressie en modelcontrole',
  'Niet elk verband is recht op de oorspronkelijke schaal. Door x, y of beide te transformeren kun je soms toch een lineair model schatten.',
@@ -252,7 +252,7 @@ lesson('modelbouw','Modelkeuze en multicollineariteit','Meervoudige regressie en
  [('formules','Formules 59–63, PDF-pagina 4',4),('attentie','Modelbouw en multicollineariteit, PDF-pagina 7–8',7),('exam2025','Vraag 22–23, PDF-pagina 15',15)],[
  ('Tolerance = 0,25. Wat is VIF?',['0,75','4','25'],1,'VIF = 1/0,25 = 4.'),
  ('Welke methode begint met alle kandidaatvariabelen?',['Forward','Backward','Een enkelvoudige correlatie'],1,'Backward begint volledig en verwijdert stapsgewijs.'),
- ('Waarom opnieuw schatten na verwijderen?',['De andere coëfficiënten en p-waarden kunnen veranderen','Om n automatisch te verdubbelen','Dat hoeft nooit'],0,'Variabelen delen informatie; hun geschatte bijdrage hangt af van de overige opgenomen variabelen.')])
+ ('Waarom schat je het regressiemodel opnieuw nadat je een verklarende variabele hebt verwijderd?',['De andere coëfficiënten en p-waarden kunnen veranderen','Om n automatisch te verdubbelen','Dat hoeft nooit'],0,'Variabelen delen informatie; hun geschatte bijdrage hangt af van de overige opgenomen variabelen.')])
 
 lesson('validatie','Valideren en SPSS-uitvoer lezen','Meervoudige regressie en modelcontrole',
  'Een model kan de gebruikte gegevens goed beschrijven en toch slecht voorspellen op nieuwe gegevens. Validatie onderzoekt juist dat verschil.',

@@ -3,7 +3,7 @@
  const M=window.SRAMath;
  const fmt=(x,d=2)=>Number(x).toLocaleString('nl-NL',{maximumFractionDigits:d,minimumFractionDigits:0});
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const field=(id,label,value,extra='')=>`<label class="field">${label}<input id="lab-${id}" name="${id}" aria-label="${esc(label)}" type="number" ${/step=/.test(extra)?'':'step="any"'} value="${value}" ${extra}><span class="lab-control-note" data-note="${id}"></span></label>`;
+ const field=(id,label,value,extra='')=>`<label class="field lab-number-field"><span class="lab-field-label">${label}</span><input id="lab-${id}" name="${id}" aria-label="${esc(label)}" type="number" ${/step=/.test(extra)?'':'step="any"'} value="${value}" ${extra}><span class="lab-control-note" data-note="${id}"></span></label>`;
  const slider=(id,label,value,min,max,step=1)=>`<div class="field lab-slider"><label for="lab-${id}">${label}</label><div class="lab-slider-pair"><input type="range" data-sync="${id}" data-min="${min}" data-max="${max}" data-step="${step}" aria-label="${esc(label)} schuifregelaar" min="${min}" max="${max}" step="${step}" value="${value}"><input type="number" id="lab-${id}" name="${id}" aria-label="${esc(label)} getal" step="any" value="${value}"></div><span class="lab-range-hint">Schuif ${fmt(min)} tot ${fmt(max)}, of typ een waarde.</span><span class="lab-control-note" data-note="${id}"></span></div>`;
  const choiceNotes={
   method:{evenredig:'Verdeel naar het aantal posten per groep.',neyman:'Weeg ook de spreiding binnen iedere groep mee.'},
@@ -256,7 +256,8 @@
  function mount(id,container){
   mounts.get(container)?.();references.delete(container);
   const c=configs[id];if(!c)return;
-  const controls=`<div class="lab-controls"><div class="lab-intro"><div class="block-label">Zelf onderzoeken</div><h2>${c.title}</h2><p>${c.hint}</p></div><div class="lab-grid">${c.fields}</div></div>`;
+  const intro=`<div class="lab-intro"><div class="block-label">Zelf onderzoeken</div><h2>${c.title}</h2><p>${c.hint}</p></div>`;
+  const controls=`<div class="lab-controls">${intro}<div class="lab-grid">${c.fields}</div></div>`;
   const viewControl='<div class="lab-view-choices" data-lab-view role="group" aria-label="Getoonde grafiek of uitkomst"></div>';
   const output=`<section class="lab-output" aria-label="Direct resultaat"><div class="lab-output-head" data-no-terms>${viewControl}<p class="lab-output-context"></p></div><div class="lab-live"></div><p class="sr-only lab-live-status" role="status" aria-live="polite" aria-atomic="true" data-no-terms></p></section>`;
   container.innerHTML=`<div class="lab-workspace">${controls}${output}</div><details class="lab-all-results"><summary>Toelichting, rekenstappen en alle resultaten</summary><div class="lab-result"></div></details>`;
