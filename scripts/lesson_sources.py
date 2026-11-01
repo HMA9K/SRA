@@ -10,7 +10,7 @@ import re
 FIGURE = re.compile(r'<figure class="learning-figure"><a href="bronnen/([^"#]+)#page=(\d+)"')
 # Aanvullende documenten zonder PDF-bron, per bloktitel. Ze staan in dezelfde genummerde lijst.
 DOCUMENTS = {
-    'Studieroute en puntengewicht': dict(
+    'Gemiddeld puntengewicht in tentamens': dict(
         href='docs/tentamen-puntenanalyse-2026-10-25.md',
         title='Tentamenpuntenanalyse SRA, negen tentamens',
         locator='Punten per onderwerp en per tentamen, met bronpagina’s per deelvraag'),

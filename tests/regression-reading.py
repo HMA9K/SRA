@@ -10,7 +10,7 @@ IDS = {
     'regressielijn', 'anova', 'toetsen', 'diagnostiek', 'voorspellen',
     'meervoudig', 'transformaties', 'modelbouw', 'validatie', 'tentamen',
 }
-EXCEPTIONS = {'Zelf oefenen met deze aanvulling', 'Studieroute en puntengewicht'}
+EXCEPTIONS = {'Zelf oefenen met deze aanvulling', 'Gemiddeld puntengewicht in tentamens'}
 selected = {lesson['id']: lesson for lesson in lessons if lesson['id'] in IDS}
 assert set(selected) == IDS
 blocks = 0
