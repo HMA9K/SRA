@@ -15,8 +15,8 @@ const server=http.createServer((req,res)=>{
   const base=process.env.TEST_BASE_URL||'http://127.0.0.1:'+server.address().port;
   for(const width of [1366,1197,768,390,320])for(const theme of ['light','dark']){
    await page.setViewportSize({width,height:950});
-   for(const id of ['mpu','verschil','quotient','regressieschatter','stratificatie','regressielijn','anova','toetsen','diagnostiek','voorspellen','meervoudig','modelbouw','validatie']){
-    await page.goto(base+'/index.html#les/'+id);
+   for(const id of ['onzekerheid-staarten','onzekerheid-interval','mpu','verschil','quotient','regressieschatter','stratificatie','regressielijn','anova','toetsen','diagnostiek','voorspellen','meervoudig','modelbouw','validatie']){
+    await page.goto(base+'/index.html#les/'+(id.startsWith('onzekerheid-')?'onzekerheid':id));
     const block=page.locator('[data-mini-graph="'+id+'"]');await block.waitFor({state:'attached'});
     await page.evaluate(theme=>{window.StudyTheme.setMode(theme);document.querySelectorAll('details').forEach(d=>d.open=true)},theme);
     await block.scrollIntoViewIfNeeded();

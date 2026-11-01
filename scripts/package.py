@@ -110,7 +110,7 @@ for i,l in enumerate(build_content.lessons):
     if l['phase'] not in summarized and build_content.summaries.get(l['phase']):
         summarized.add(l['phase'])
         parts.append(f'<section class="phase-summary"><h2>Samenvatting: {e(l["phase"])}</h2>{build_content.summaries[l["phase"]]}</section>')
-    parts.append(f'<article id="{l["id"]}"><h2>{i+1}. {e(l["title"])}</h2><p>{e(l["reading"]["opening"])}</p>')
+    parts.append(f'<article id="{l["id"]}"><h2>{i+1}. {e(l["title"])}</h2><p>{l["readingHtml"]["opening"]}</p>')
     parts.append('<p><strong>'+e(l['curriculum']['title'])+'</strong></p>')
     for heading, items in [('Dit heb je vooraf nodig', l['prerequisites']), ('Dit ga je leren', l['goals'])]:
         parts.append('<h3>'+heading+'</h3><ul>'+''.join('<li>'+e(item)+'</li>' for item in items)+'</ul>')
@@ -141,7 +141,7 @@ for i,l in enumerate(build_content.lessons):
         if q.get('optionExplanations'):
             parts.append('<h4>De antwoordmogelijkheden</h4>'+''.join('<p><strong>'+e(option)+'</strong><br>'+e(reason)+'</p>' for option,reason in zip(q['options'],q['optionExplanations'])))
         parts.append(question_notes(l,q.get('refs') or l['refs'])+'</details>')
-    parts.append('<h3>De kern en het vervolg</h3><h4>Kern</h4><p>'+e(l['reading']['kern'])+'</p><h4>Vervolg</h4><p>'+e(l['reading']['vervolg'])+'</p>')
+    parts.append('<h3>De kern en het vervolg</h3><h4>Kern</h4><p>'+l['readingHtml']['kern']+'</p><h4>Vervolg</h4><p>'+l['readingHtml']['vervolg']+'</p>')
     parts.append(f'<details class="lesson-sources"><summary><strong>Bronnen bij deze les</strong> ({len(l["sourceList"])})</summary><ol>')
     for n,ref in enumerate(l['sourceList'],1):
         link=(ref['href'],ref['title']) if 'href' in ref else (f'bronnen/{build_content.sources[ref["source"]]["file"]}#page={ref["page"]}',build_content.sources[ref['source']]['title'])

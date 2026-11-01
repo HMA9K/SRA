@@ -216,8 +216,6 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-controls-heading{co
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-controls .field:focus-within{background:#152129;border-color:#406356}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-output{background:#152129;border:1px solid #3e6557;border-top:3px solid #2d765d;box-shadow:0 5px 16px #0103040a}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-output-head{border-bottom:1px solid #416252;background:#1a281f}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-output-head label{color:#abcec1}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-output-head select{color:#a2d8c5}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-output-context{color:#a9d1c3}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-live .metric{background:#1b2820}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-live .metric b{color:#8deccc}
@@ -284,6 +282,9 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .direct
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation>summary{color:var(--study-accent)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #main .source-notes{color:var(--study-muted,#adbdc9)}
 @media (prefers-reduced-motion:reduce){html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-sources li.is-target{outline:2px solid var(--green,#2d765d)}}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) math[display="inline"]{background:#17212c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .inline-expression{background:#17212c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-progress .is-done{color:var(--study-accent)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-visual{border:1px solid #416254;background:#1a2823}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-visual .fv-provenance{color:#b0bcc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .fv-chart text{fill:#adbfcd}
@@ -325,6 +326,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-checked{fill
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-extra{fill:#ecb28d}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-chart text.transition-check{fill:#f0f7fc}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mini-bar{fill:var(--study-teal,#8dece2)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mini-tail{fill:#ecb78d}
 /* css/exams.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry{background:#152129;border:1px solid #3b4a54}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry h2{color:#adbdc9}

@@ -15,13 +15,36 @@ ns = {'m': 'http://www.w3.org/1998/Math/MathML'}
 assert tree.attrib['data-example'] == 's/√n', 'Attributen blijven intact'
 assert len(tree.findall('.//m:mfrac', ns)) == 2
 assert len(tree.findall('.//m:msqrt', ns)) == 1
+total_error = ET.fromstring(inline_formulas('<p>N × s_w/√n, met eindigheidscorrectie</p>'))
+assert len(total_error.findall('.//m:math', ns)) == 1
+assert len(total_error.findall('.//m:mfrac', ns)) == 1
+assert len(total_error.findall('.//m:msub', ns)) == 1
+assert ''.join(total_error.itertext()) == 'N×swn, met eindigheidscorrectie'
 assert inline_formulas(formatted) == formatted, 'Bestaande MathML niet opnieuw omzetten'
 protected = '<svg><text>s/√n</text></svg><!-- s/√n --><p>&amp; &#8594;</p>'
 assert inline_formulas(protected) == protected
 assert inline_formulas('<a href="s_w.pdf">bron</a>') == '<a href="s_w.pdf">bron</a>'
 assert inline_formulas('bestands_naam en een gewoon woord') == 'bestands_naam en een gewoon woord'
 assert inline_formulas('ns/√n en s/√naam') == 'ns/√n en s/√naam'
+for expression in ('n/N &lt; 0,10', 'df &gt; 200', 'α = 0,05', 'n − k − 1', '80 + 1,711 × 2 = 83,422'):
+    shown = inline_formulas('<p>' + expression + '</p>')
+    assert 'class="inline-expression"' in shown, expression
+    assert inline_formulas(shown) == shown, expression
+    ET.fromstring(shown)
+for plain in ('2024/2025', '2026-11-01', 'https://example.com/n/N', '<code>n/N &lt; 0,10</code>', '<a href="n/N">n/N</a>'):
+    assert inline_formulas(plain) == plain, plain
+for value in ('95%', '€ 100.000', '0,025', '123.456,789'):
+    shown = inline_formulas('<p>' + value + '</p>')
+    assert '<span class="inline-value">' + value + '</span>' in shown
+    assert ''.join(ET.fromstring(shown).itertext()) == value
+    assert inline_formulas(shown) == shown
+    assert '<span class="inline-value">' + value + '</span>.' in inline_formulas('<p>' + value + '.</p>')
+assert inline_formulas('PDF 13, rij 160, 3 lessen') == 'PDF 13, rij 160, 3 lessen'
 assert len(lessons) == 19
+uncertainty = next(lesson for lesson in lessons if lesson['id'] == 'onzekerheid')
+titles = [section['title'] for section in uncertainty['sections']]
+assert titles.index('Van kans naar interval') < titles.index('Waar komt de t-waarde vandaan?') < titles.index('Eén of twee grenzen: uitgewerkt voorbeeld') < titles.index('De tabellenbundel gebruiken: pagina, rij, kolom en conclusie')
+assert any('data-mini-table="t-waarde"' in section['html'] and '1,711' in section['html'] and '2,064' in section['html'] for section in uncertainty['sections'])
 for lesson in lessons:
     assert len(lesson['reading']['opening']) > 150
     assert lesson['reading']['kern'] and lesson['reading']['vervolg']

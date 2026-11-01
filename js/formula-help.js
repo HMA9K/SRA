@@ -143,7 +143,7 @@
 
   let host, course, popup, observer, pending = false;
   const help = new WeakMap();
-  const excluded = 'a,button,input,textarea,select,nav,svg,[contenteditable],.sra-term,[data-sra-term],[data-formula-help],.formula-help-hint';
+  const excluded = 'a,button,input,textarea,select,nav,svg,[contenteditable],[data-no-terms],.sra-term,[data-sra-term],[data-formula-help],.formula-help-hint';
   function contextOf(node) {
     const tagged = node.closest('[data-formula-context]');
     if (tagged) return tagged.dataset.formulaContext;

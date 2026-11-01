@@ -181,9 +181,9 @@ def enhance(lessons, sources):
     extend('rekenen', 'De rekenvorm op het formuleblad',
         '<h3>Controleer de betekenis vóór het getal</h3>'
         + table('Drie verschillende soorten spreiding', ['Grootheid', 'Wat varieert?', 'Waarvoor gebruik je haar?'], [
-            ['s<sub>w</sub>', 'Werkelijke waarden van individuele posten', 'Invoer voor MPU of regressieschatter'],
-            ['s<sub>w</sub>/√n, met eindigheidscorrectie', 'Het gemiddelde bij herhaalde steekproeven', 'Interval voor een gemiddelde'],
-            ['N × s<sub>w</sub>/√n, met eindigheidscorrectie', 'De schatting van het populatietotaal', 'Interval in euro voor de gehele populatie'],
+            ['s_w', 'Werkelijke waarden van individuele posten', 'Invoer voor MPU of regressieschatter'],
+            ['s_w/√n, met eindigheidscorrectie', 'Het gemiddelde bij herhaalde steekproeven', 'Interval voor een gemiddelde'],
+            ['N × s_w/√n, met eindigheidscorrectie', 'De schatting van het populatietotaal', 'Interval in euro voor de gehele populatie'],
         ])
         + '<p>Een negatieve berekende variantie is een controlesignaal: bekijk de invoer, haakjes, '
         'eenheden en afgeronde totalen. Maak die uitkomst niet positief met een absolute waarde. '
@@ -201,7 +201,7 @@ def enhance(lessons, sources):
                       ['170 (PDF 13)', '1,654', '1,974', '2,605'],
                       ['200 (PDF 13)', '1,653', '1,972', '2,601'],
                       ['inf. = z (PDF 13)', '1,645', '1,960', '2,576']])
-    body += steps(['Neem een 95%-interval bij n = 165 voor een hoofdstuk-8-schatter: α = 0,05; '
+    body += steps(['Neem een 95%-interval bij n = 165 voor de directe schatter (MPU): α = 0,05; '
                    'twee staarten geven α/2 = 0,025.',
                    'Bereken df = 165 − 1 = 164. Rij 164 ontbreekt; het onderwijsprogramma schrijft '
                    'de naast lagere beschikbare rij voor: 160. Interpoleer niet.',
@@ -219,11 +219,12 @@ def enhance(lessons, sources):
     body += exercise('<p>Zoek met de bundel de kritieke waarde voor (a) een tweezijdig 99%-interval '
                      'bij df = 164, (b) een tweezijdig 95%-interval bij df = 99 en '
                      '(c) een eenzijdige 95%-bovengrens bij df = 24. Noteer pagina, rij en kolom.</p>',
-                     '<p>(a) PDF 13, rij 160, kolom 0,005: 2,607. '
-                     '(b) PDF 13, rij 95, kolom 0,025: 1,985. Rij 95 staat werkelijk in deze bundel; '
-                     'rij 90 is daarom niet de naast lagere rij. '
-                     '(c) PDF 12, rij 24, kolom 0,05: 1,711. Voor de bovengrens tel je '
-                     '1,711 × de standaardfout bij de schatting op.</p>')
+                     table('Gezochte t-waarden', ['Vraag', 'PDF', 'Gegeven df', 'Tabelrij', 'Staartkans', 't'], [
+                         ['<span data-no-terms>a</span>', '13', '164', '160', '0,005', '<strong>2,607</strong>'],
+                         ['<span data-no-terms>b</span>', '13', '99', '95', '0,025', '<strong>1,985</strong>'],
+                         ['<span data-no-terms>c</span>', '12', '24', '24', '0,05', '<strong>1,711</strong>'],
+                     ]) + '<p>Bij b: rij 95 staat werkelijk in deze bundel; rij 90 is daarom niet de naast lagere rij. '
+                     'Bij c: voor de bovengrens tel je 1,711 × de standaardfout bij de schatting op.</p>')
     add('onzekerheid', 'De tabellenbundel gebruiken: pagina, rij, kolom en conclusie', body,
         [ref('tabellen', 12, 'Tabel 13.4, PDF 12-13; kolommen zijn rechterstaartkansen'),
          ref('programma', 4, 'Tabelregels: naast lagere df; bij df > 200 onderste rij')],

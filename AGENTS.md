@@ -9,6 +9,13 @@ Lees ook `PROJECT_GUIDE.md` voor de centrale bron-, bouw-, test-, samenwerkings-
 - Controleer bestanden, bestandsnamen, metadata, commit-auteurs en commitberichten voor publicatie. Voeg oude commits met persoonsgegevens nooit opnieuw samen met opgeschoonde geschiedenis.
 - Houd originele bronstukken lokaal. Namen van onafhankelijke gepubliceerde bronnen worden niet automatisch gewijzigd.
 
+## Visuele feedback voor de hele leeromgeving
+
+- Een aangewezen voorbeeld geldt voor alle vergelijkbare onderdelen in de leerstof, tenzij de opdracht uitdrukkelijk tot één geval is beperkt.
+- Inventariseer de betrokken onderdelen in alle 19 lessen en herstel de gedeelde opmaak of bediening. Alleen het aangewezen voorbeeld controleren is onvoldoende.
+- Controleer de samenhang van de volledige les: volgorde, dubbele uitleg, ontbrekende inhoud, leesbaarheid, bronverwijzingen en werking op desktop en mobiel.
+- Leg bij een brede wijziging vast welke soorten onderdelen en lessen zijn gecontroleerd. Behoud leerinhoud, berekeningen, vragen, opgeslagen voortgang en toegankelijkheid.
+
 ## Eenvoudige techniek met volledig leerresultaat (Ponytail)
 
 - Begrijp eerst de opdracht, de bestaande code en de volledige route van invoer tot zichtbaar resultaat. Zoek alle aanroepplaatsen van code die je wijzigt.

@@ -77,11 +77,24 @@ def enhance(lessons, sources):
     body+='<p>Een dummy voor diesel verschuift in het gezamenlijke model alleen het niveau. De hellingen blijven gelijk voor de groepen. '
     body+='Afzonderlijke modellen laten ook de hellingen verschillen. Een gezamenlijk model met passende interacties kan eveneens verschillende hellingen toestaan; '
     body+='dat is een inhoudelijke vervolgmogelijkheid, geen hier berekende of goedgekeurde verbetering.</p>'
-    add(L['tentamen'],sources,'College 8: brondata en modelkeuze',body,[ref('spss',37,'College 8: opdracht, PDF 37'),ref('spss',45,'Gezamenlijke en groepsmodellen, PDF 45–47')])
+    shared='<h3>Leeswijzer voor de vijf modeluitwerkingen</h3>'
+    shared+='<p>Beoordeel elk model met de residuen van <strong>datzelfde model</strong>. De modeluitwerkingen gebruiken alle waarnemingen uit de bijbehorende groep; er zijn geen auto’s verwijderd.</p>'
+    shared+='<p>De voorspelling is de constante plus de som van B × kenmerk. Een dummy is 1 als de genoemde categorie geldt en anders 0. '
+    shared+='Een B bij kilometerstand is euro per kilometer, bij bouwjaar euro per later bouwjaar en bij een rapportscoreschaal euro per extra scorepunt, bij gelijkblijvende andere kenmerken.</p>'
+    shared+='<p class="note"><strong>Bij modellen met meer dan 50 waarnemingen:</strong> De KS-p is een Lilliefors-benadering uit de herberekening. De SPSS-tabel kan p boven 0,200 afkappen als 0,200*. '
+    shared+='Bij het enkelvoudige model is 0,059 de Statistic; de oorspronkelijke tabel heeft Sig. 0,200*. De tekst onder die brontabel verwisselt die kolommen.</p>'
+    shared+='<p>H₀: geen correlatie tussen de absolute residuen en de betreffende x. Een significante samenhang is volgens de cursus een signaal van heteroscedasticiteit. '
+    shared+='Dit zijn afzonderlijke verkennende controles, zonder correctie voor meerdere toetsen. Ook een niet-significante correlatie sluit andere vormen van heteroscedasticiteit niet uit. '
+    shared+='De grafiek van residuen tegen voorspelde waarde en de inhoud van de kenmerken blijven nodig.</p>'
+    shared+='<p><strong>Vervolgactie:</strong> onderzoek gemarkeerde auto’s op invoerfouten of bijzondere omstandigheden. De dataset geeft geen vastgestelde fout die automatisch verwijderen rechtvaardigt. '
+    shared+='Behoud ze in deze analyse. Alle vijf modellen geven signalen van heteroscedasticiteit. Onderzoek daarom een beter passende modelvorm of weging en herhaal daarna de diagnoses. '
+    shared+='Een hoge R² en VIF onder 10 lossen ongelijke residuspreiding niet op. Tijdsvertraging en autocorrelatie passen niet bij deze crosssectie; Auto is een identificatie, geen tijdsvolgorde.</p>'
+    body+=shared
+    add(L['tentamen'],sources,'College 8: brondata en modelkeuze',body,[ref('spss',37,'College 8: opdracht, PDF 37'),ref('spss',45,'Gezamenlijke en groepsmodellen, PDF 45–47'),ref('spss',39,'Enkelvoudige diagnoses, PDF 39–42'),ref('formules',3,'Cursusgrenzen voor regressiediagnostiek')])
 
     for name,model in models.items():
         d=model['diagnostics']
-        body='<p>Gebruik steeds de residuen van <strong>dit</strong> model. De onderstaande getallen zijn berekend met alle waarnemingen uit deze groep; er zijn geen auto’s verwijderd.</p>'
+        body=''
         a=model['anova']
         body+=table('ANOVA van '+name,['Variatiebron','SS','df','MS','F','p'],[
             ['Regressie',num(a['ssRegression'],2),str(model['k']),num(a['msRegression'],2),num(a['f']),pvalue(a['p'])],
@@ -93,8 +106,6 @@ def enhance(lessons, sources):
         body+='Bij α = 0,05 verwerpen we H₀. Dat toont een gezamenlijk verband, maar bewijst niet dat het model aan alle voorwaarden voldoet.</p>'
         body+=table('Coëfficiënten van '+name,['Term','B','SE(B)','t','p (tweezijdig)','VIF'],[
             [escape(c['term']),num(c['b']),num(c['se']),num(c['t']),pvalue(c['p']),num(c['vif']) if c['vif'] is not None else 'n.v.t.'] for c in model['coefficients']])
-        body+='<p>De voorspelling is de constante plus de som van B × kenmerk. Een dummy is 1 als de genoemde categorie geldt en anders 0. '
-        body+='Een B bij kilometerstand is euro per kilometer, bij bouwjaar euro per later bouwjaar en bij een rapportscoreschaal euro per extra scorepunt, bij gelijkblijvende andere kenmerken.</p>'
         asset=f'assets/learning/college8-{name.lower()}.png'
         body+=f'<figure class="learning-figure"><a href="{asset}" target="_blank" rel="noopener"><img src="{asset}" loading="lazy" style="max-width:100%;height:auto" alt="Werkelijke tegen voorspelde waarde en residuen voor {name}; gemarkeerde auto’s staan ook in de diagnosetabel."></a><figcaption>Figuren uit College8. De diagonale lijn geeft werkelijke waarde = voorspelling; de tweede grafiek toont residuen en auto-nummers voor nader onderzoek. Open voor vergroting.</figcaption></figure>'
         listed=lambda xs:', '.join(map(str,xs)) if xs else 'Geen'
@@ -107,17 +118,8 @@ def enhance(lessons, sources):
         body+=f"<p><strong>Normaliteit:</strong> {escape(d['normalityTest'])}, toetsingsgrootheid {num(d['normalityStatistic'])}, p {pvalue(d['normalityP'])}. "
         body+='Bij α = 0,05 verwerpen we H₀ van normale residuen.' if d['normalityP']<.05 else 'Bij α = 0,05 verwerpen we H₀ van normale residuen niet. Dit bewijst niet dat de verdeling exact normaal is.'
         body+='</p>'
-        if model['n']>50:
-            body+='<p class="note">De KS-p is een Lilliefors-benadering uit de herberekening. De SPSS-tabel kan p boven 0,200 afkappen als 0,200*. '
-            body+='Bij het enkelvoudige model is 0,059 de Statistic; de oorspronkelijke tabel heeft Sig. 0,200*. De tekst onder die brontabel verwisselt die kolommen.</p>'
         body+=table('Heteroscedasticiteit: Pearsoncorrelatie van ABSRES met elke opgenomen x',['Verklarende variabele','r','p tweezijdig','Signaal bij 0,05'],[
             [escape(h['term']),num(h['r']),pvalue(h['p']),'Ja' if h['p']<.05 else 'Nee'] for h in d['heteroscedasticity']])
-        body+='<p>H₀: geen correlatie tussen de absolute residuen en de betreffende x. Een significante samenhang is volgens de cursus een signaal van heteroscedasticiteit. '
-        body+='Dit zijn afzonderlijke verkennende controles, zonder correctie voor meerdere toetsen. Ook een niet-significante correlatie sluit andere vormen van heteroscedasticiteit niet uit. '
-        body+='De grafiek van residuen tegen voorspelde waarde en de inhoud van de kenmerken blijven nodig.</p>'
-        body+='<p><strong>Vervolgactie:</strong> onderzoek gemarkeerde auto’s op invoerfouten of bijzondere omstandigheden. De dataset geeft geen vastgestelde fout die automatisch verwijderen rechtvaardigt. '
-        body+='Behoud ze in deze analyse. Alle vijf modellen geven signalen van heteroscedasticiteit. Onderzoek daarom een beter passende modelvorm of weging en herhaal daarna de diagnoses. '
-        body+='Een hoge R² en VIF onder 10 lossen ongelijke residuspreiding niet op. Tijdsvertraging en autocorrelatie passen niet bij deze crosssectie; Auto is een identificatie, geen tijdsvolgorde.</p>'
         if name=='Electrisch':
             body+='<p>De bron houdt Kilometerstand (p ≈ 0,085) en Aantal opknapbeurten (p ≈ 0,078) in dit eindmodel. '
             body+='Die zijn bij een tweezijdige α van 0,05 niet significant. De getoonde eindselectie is dus niet hetzelfde als backward met een verwijderingsgrens van 0,05. '

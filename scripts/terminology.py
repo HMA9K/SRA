@@ -159,8 +159,8 @@ _add('intervalgrenzen', 'Intervalgrenzen', ['ondergrens', 'bovengrens'],
      'De laagste en hoogste waarde van het berekende interval. Bij een symmetrisch interval trek je de marge van het midden af en tel je haar erbij op.',
      'Bij puntschatting 100 en marge 4 zijn de grenzen 96 en 104.', 'onzekerheid')
 _add('kritieke-waarde', 'Kritieke waarde', ['kritieke waarden', 'kritieke t', 'tabelwaarde', 'tabelwaarden', 'kritieke grens', 'F-grens'],
-     'Een grens uit de passende kansverdeling. Je kiest haar met de gewenste betrouwbaarheid of α, de toetsrichting en de juiste vrijheidsgraden.',
-     'Gebruik een gegeven kritieke t van 2 om de standaardfout met 2 te vermenigvuldigen.', 'onzekerheid')
+     'Het getal dat je in de statistische tabel opzoekt. Bij een t-interval vermenigvuldig je de standaardfout met dit getal om de marge te berekenen. Bij een toets is het de grens waarmee je de berekende toetsingsgrootheid vergelijkt. De rij hangt af van de vrijheidsgraden; de kolom van de staartkans en de toetsrichting.',
+     'Bij 24 vrijheidsgraden en een eenzijdige 95%-bovengrens zoek je rij 24 en rechterstaart 0,05: t = 1,711. Met gemiddelde 80 en standaardfout 2 wordt de bovengrens 80 + 1,711 × 2 = 83,422. Voor een tweezijdig 95%-interval gebruik je 0,025 per staart: t = 2,064.', 'onzekerheid', refs=[('tabellen', 12, 'Tabel 13.4, rij 24'), ('programma', 4, 'Tabelregels')])
 _add('vrijheidsgraden', 'Vrijheidsgraden', ['vrijheidsgraad', 'degrees of freedom', 'df', 'residual df'],
      'Het aantal vrij variërende componenten nadat parameters zijn geschat. Bij steekproefvariantie is dit n − 1; bij regressieresiduen met k verklarende variabelen is het n − k − 1.',
      'Bij n = 50 en k = 3 zijn er 50 − 3 − 1 = 46 residuele vrijheidsgraden.', 'anova')

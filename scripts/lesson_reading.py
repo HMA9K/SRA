@@ -121,8 +121,18 @@ READING = {
 def enhance(lessons):
     assert set(READING) == {lesson['id'] for lesson in lessons}
     for lesson in lessons:
+        if lesson['id'] == 'onzekerheid':
+            sections = lesson['sections']
+            refresher = next(s for s in sections if s['title'] == 'SET-opfrisser: betrouwbaarheid, staarten en tabellen')
+            sections.remove(refresher)
+            refresher['title'] = 'Eén of twee grenzen: uitgewerkt voorbeeld'
+            # De uitleg over langetermijndekking staat al volledig bij 'Van kans naar interval'.
+            refresher['html'] = refresher['html'].replace(' Betrouwbaarheid gaat over de dekking van de methode bij herhaalde steekproeven, niet over 95% van de losse waarnemingen.', '')
+            pos = next(i for i, s in enumerate(sections) if s['title'] == 'Waar komt de t-waarde vandaan?')
+            sections.insert(pos + 1, refresher)
         opening, example, kern, vervolg = READING[lesson['id']]
         lesson['reading'] = {'opening': opening, 'kern': kern, 'vervolg': vervolg}
+        lesson['readingHtml'] = {key: inline_formulas(html.escape(value)) for key, value in lesson['reading'].items()}
         lesson['example']['context'] = example
         for section in lesson['sections'] + lesson['formulaGuide']:
             section['html'] = inline_formulas(section['html'])

@@ -46,9 +46,9 @@ const server=http.createServer((req,res)=>{
    await page.waitForFunction(()=>document.querySelector('#onderzoek input[type=range]')?.value==='8');
    assert.match(await lab.locator('.lab-live').innerText(),/8\s*\/\s*20/);
    await range.focus();await page.keyboard.press('ArrowRight');assert.equal(await number.inputValue(),'9');
-   const selection=lab.locator('.lab-controls select').first();await selection.selectOption('cheap');
+   await lab.locator('[data-lab-setting="selection"][data-value="cheap"]').click();
    assert.equal(await lab.locator('input[type=number]').last().isDisabled(),true);
-   await selection.selectOption('spread');assert.equal(await lab.locator('input[type=number]').last().isDisabled(),false);
+   await lab.locator('[data-lab-setting="selection"][data-value="spread"]').click();assert.equal(await lab.locator('input[type=number]').last().isDisabled(),false);
    await lab.locator('.lab-all-results>summary').click();
    for(const chart of await lab.locator('.lab-result .chart-scroll svg').all())assert.ok((await chart.boundingBox()).height<=281);
    await lab.locator('.lab-all-results>summary').click();
@@ -58,7 +58,8 @@ const server=http.createServer((req,res)=>{
    const button=question.locator('[data-check]');if(await button.isEnabled())await button.click();
    const feedback=question.locator('.question-feedback').filter({visible:true});
    assert.match(await feedback.innerText(),/Goed beantwoord/);
-   assert.equal(await feedback.locator('.question-recognition dt').count(),4);
+   assert.equal(await feedback.locator('.question-recognition dt').count(),0);
+   assert.match(await feedback.locator('.question-pattern').innerText(),/^Onthoud:/);
    assert.ok(await feedback.locator('.question-trap').isVisible());
    assert.ok(await feedback.locator('.source-note').count()>0);
    const alternatives=feedback.locator('.answer-reasons>summary');await alternatives.focus();await page.keyboard.press('Enter');

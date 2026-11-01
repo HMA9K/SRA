@@ -183,6 +183,9 @@ def inline_formulas(content):
         's/√n': frac(s, root(n)),
         's / √n': frac(s, root(n)),
         's_w/√n': frac(sw, root(n)),
+        'n/N': frac(n, N),
+        'α/2': frac(v('α'), num(2)),
+        'N × s_w/√n': mul(N, frac(sw, root(n))),
         's_w/s_b': frac(sw, sb),
         's_w / s_b': frac(sw, sb),
         'Σw / n': frac(summ(w), n),
@@ -191,8 +194,14 @@ def inline_formulas(content):
         'Σb/n': frac(summ(b), n),
         '√(1 − R_bw²)': root(minus(one, sq(Rbw))),
     }
-    tokens = re.compile(r'(?<!\w)(?:' + '|'.join(re.escape(key) for key in sorted(formulas, key=len, reverse=True))
-                        + r'|[sRbŴn][²³]?_(?:MPU|test|tot|adj|bw|[wbexqQRVij01])[²³]?)(?!\w)')
+    tokens = re.compile(r'(?<![\w/])(?:' + '|'.join(re.escape(key) for key in sorted(formulas, key=len, reverse=True))
+                        + r'|[sRbŴn][²³]?_(?:MPU|test|tot|adj|bw|[wbexqQRVij01])[²³]?)(?![\w/])')
+    # Markeer alleen herkenbare rekenuitdrukkingen; gewone woorden, datums en HTML blijven intact.
+    symbol = r'(?:TotalSS|SSR|SSE|MSR|MSE|MSPR|VIF|df|[NnBWŴEqsxtkwbeRyαβγμσρŷēȳ])(?:_[A-Za-z0-9]+|[₀-₉ᵢⱼₖₑ²³\u0304])*'
+    atom = r'(?:Σ\s*|√)?(?:' + symbol + r'|[−-]?\d+(?:[.,]\d+)*|∞)'
+    operator = r'(?:[=<>≤≥≈±×÷/+−]|&lt;|&gt;|-(?=\s))'
+    expressions = re.compile(r'(?<![\w/])' + atom + r'(?:\s*' + operator + r'\s*' + atom + r')+(?![\w/])')
+    values = re.compile(r'(?<![\w/.])(?:€\s*[−-]?\d+(?:[.,]\d+)*|[−-]?\d+(?:[.,]\d+)*%|[−-]?\d+(?:\.\d{3})*,\d+)(?![\w/]|\.\w)')
 
     def replace(match):
         token = match.group()
@@ -207,40 +216,71 @@ def inline_formulas(content):
                 formula = sub(sup(v(base), num(power)), text(index)) if index == 'adj' else sup(formula, num(power))
         return mathml(formula, inline=True)
 
+    def format_plain(value):
+        parts, previous = [], 0
+        mark_values = lambda raw: values.sub(lambda match: '<span class="inline-value">' + match[0] + '</span>', raw)
+        for match in tokens.finditer(value):
+            parts.extend([mark_values(value[previous:match.start()]), replace(match)])
+            previous = match.end()
+        return ''.join(parts) + mark_values(value[previous:])
+
+    def format_text(value):
+        parts, previous = [], 0
+        for match in expressions.finditer(value):
+            parts.append(format_plain(value[previous:match.start()]))
+            content = tokens.sub(replace, match[0])
+            if re.search(r'[A-Za-zα-ωΣ√=<>≤≥≈±×÷+−]', match[0]):
+                content = '<span class="inline-expression">' + content + '</span>'
+            parts.append(content)
+            previous = match.end()
+        parts.append(format_plain(value[previous:]))
+        return ''.join(parts)
+
     class InlineParser(HTMLParser):
         def __init__(self):
             super().__init__(convert_charrefs=False)
             self.parts = []
             self.skip = 0
+            self.pending = []
+
+        def flush(self):
+            if self.pending:
+                self.parts.append(format_text(''.join(self.pending)))
+                self.pending.clear()
 
         def handle_starttag(self, name, attrs):
-            if name in ('math', 'svg', 'script', 'style'):
+            self.flush()
+            if name in ('math', 'svg', 'script', 'style', 'a', 'code', 'pre', 'span'):
                 self.skip += 1
             self.parts.append(self.get_starttag_text())
 
         def handle_endtag(self, name):
+            self.flush()
             self.parts.append(f'</{name}>')
-            if name in ('math', 'svg', 'script', 'style'):
+            if name in ('math', 'svg', 'script', 'style', 'a', 'code', 'pre', 'span'):
                 self.skip -= 1
 
         def handle_startendtag(self, name, attrs):
+            self.flush()
             self.parts.append(self.get_starttag_text())
 
         def handle_data(self, value):
-            self.parts.append(value if self.skip else tokens.sub(replace, value))
+            (self.parts if self.skip else self.pending).append(value)
 
         def handle_entityref(self, name):
-            self.parts.append(f'&{name};')
+            (self.parts if self.skip else self.pending).append(f'&{name};')
 
         def handle_charref(self, name):
-            self.parts.append(f'&#{name};')
+            (self.parts if self.skip else self.pending).append(f'&#{name};')
 
         def handle_comment(self, value):
+            self.flush()
             self.parts.append(f'<!--{value}-->')
 
     parser = InlineParser()
     parser.feed(content)
     parser.close()
+    parser.flush()
     return ''.join(parser.parts)
 
 CELL_FORMULAS = {

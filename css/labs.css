@@ -7,7 +7,7 @@
 .lab-range-hint{font-size:.68rem;color:#596d67;line-height:1.45}
 .lab-control-note{display:block;font-size:.76rem;line-height:1.5;color:#405f55;margin-top:5px;font-weight:normal}
 .lab-control-note:empty,.lab-control-note[hidden]{display:none}
-.lab-inactive input,.lab-inactive select{opacity:.55;cursor:not-allowed}
+.lab-inactive input,.lab-inactive button{opacity:.55;cursor:not-allowed}
 .lab input[readonly]{background:#edf3f0;color:#405f55}
 .lab-mode-fields[hidden]{display:none}
 .lab-mode-fields{display:contents}
@@ -29,7 +29,7 @@
 
 /* Gemaakt met Codex: bediening en het relevante resultaat blijven samen in beeld. */
 .lab{container-type:inline-size;--lab-sticky-top:calc(var(--study-header-height,64px) + var(--study-nav-height,48px) + 10px)}
-.lab-workspace{display:grid;grid-template-columns:minmax(220px,.38fr) minmax(0,.62fr);align-items:start;gap:18px;position:relative}
+.lab-workspace{display:grid;grid-template-columns:minmax(220px,.46fr) minmax(0,.54fr);align-items:start;gap:18px;position:relative}
 .lab-controls{grid-column:1;grid-row:1;min-width:0}
 .lab-intro h2{line-height:1.4;margin:0 0 12px}
 .lab-intro>p{font-size:.82rem;line-height:1.65;margin:0 0 22px}
@@ -44,8 +44,6 @@
 .lab-controls .lab-control-note{font-size:.72rem}
 .lab-output{grid-column:2;grid-row:1;position:sticky;top:var(--lab-sticky-top);align-self:start;min-width:0;max-height:calc(100dvh - var(--lab-sticky-top) - 90px);overflow:auto;scrollbar-width:thin;background:#fff;border:1px solid #bfd8cf;border-top:3px solid #008859;border-radius:6px;z-index:4;box-shadow:0 5px 16px #2449390a}
 .lab-output-head{padding:10px 12px;border-bottom:1px solid #e1ebe6;background:#f8fbf9}
-.lab-output-head label{display:block;font-size:.73rem;font-weight:700;color:#365d4e}
-.lab-output-head select{margin-top:4px;font:inherit;font-weight:400;min-height:36px;padding:6px 8px;color:#204c3d}
 .lab-output-context{font-size:.72rem!important;color:#315b4d;margin:6px 0 0;line-height:1.35}
 .lab-output-context:empty{display:none}
 .lab-live{padding:12px;min-width:0}
@@ -78,7 +76,7 @@
  .lab-workspace{display:flex;flex-direction:column;gap:0}
  .lab-controls{display:contents}
  .lab-intro{order:-2}
- .lab-output{order:-1;flex-shrink:0;width:100%;height:min(410px,calc(100dvh - var(--lab-sticky-top) - 160px));max-height:none;margin-bottom:18px}
+ .lab-output{order:-1;flex-shrink:0;width:100%;height:auto;max-height:calc(100dvh - var(--lab-sticky-top) - 160px);margin-bottom:18px}
  .lab-controls .lab-grid{width:100%}
  .lab-controls .lab-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
  .lab-controls .lab-slider-pair{grid-template-columns:minmax(50px,1fr) 82px}
@@ -87,15 +85,12 @@
  .lab-live .chart-scroll svg{max-height:220px}
  .lab-live .table-scroll{max-height:230px;overflow:auto}
  .lab-output-head{padding:7px 10px}
- .lab-output-head label{font-size:0}
- .lab-output-head select{font-size:13px;margin:0}
  .lab-live .results{margin-bottom:8px}
  .lab-live .metric{padding:6px}
  .lab-live .metric b{font-size:.92rem}
  .lab-live .metric span{font-size:.63rem;margin-top:3px}
 }
 @container (max-width:460px){
- .lab-output{height:min(350px,calc(100dvh - var(--lab-sticky-top) - 160px))}
  .lab-controls .lab-grid{grid-template-columns:1fr}
  .lab-live .chart-legend{font-size:.62rem}
  .lab-live .lab-tail-labels{font-size:.68rem;gap:6px}
@@ -120,15 +115,40 @@ body.study-shell[data-page="les"] .lab{padding:16px;margin:16px 0}
 .lab-controls .lab-control-note{margin-top:2px}
 .lab-all-results{margin-top:12px;padding-top:7px}
 
+/* Houd de begripslink en het symbool samen; een link is geen aparte invoerrij. */
+.lab-intro{margin-bottom:10px}
+body[data-page="les"] #main .lab-intro>p{margin:0;font-size:.82rem;line-height:1.5;text-align:left;hyphens:none}
+.lab-controls .lab-number-field{display:grid;grid-template-columns:minmax(0,1fr) 100px;gap:2px 10px;align-items:center}
+.lab-field-label{line-height:1.4;min-width:0}
+.lab-controls .lab-number-field>input{min-height:36px;padding:6px 8px;font-size:.85rem;text-align:right;font-variant-numeric:tabular-nums}
+.lab-controls .lab-control-note{grid-column:1/-1}
+.lab-controls .lab-slider{display:grid;grid-template-columns:minmax(0,1fr) 100px;gap:0 10px;align-items:center}
+.lab-slider>label{grid-column:1;grid-row:1;line-height:1.35}
+.lab-controls .lab-slider-pair{display:contents}
+.lab-controls .lab-slider-pair input[type=range]{grid-column:1;grid-row:2;min-height:24px;height:24px}
+.lab-controls .lab-slider-pair input[type=number]{grid-column:2;grid-row:1/span 2;min-height:40px;padding:6px 8px}
+.lab-controls .lab-range-hint{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:760px){
+ .lab-controls .lab-number-field>input,.lab-controls .lab-slider-pair input[type=number]{min-height:44px;font-size:1rem}
+ .lab-controls .lab-slider-pair input[type=range]{min-height:28px;height:28px}
+}
+
 body[data-page="les"] #main .lab-controls :is(.lab-range-hint,.lab-control-note){margin:2px 0;line-height:1.45}
 
-/* De drie perspectieven van het voorraadvoorbeeld zijn direct kiesbaar. */
+/* Grafieken en instellingen zijn in ieder experiment direct kiesbaar. */
 .lab-view-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
-.lab-view-choices button{font:inherit;text-align:left;padding:7px 8px;border:1px solid #bfd8cf;border-radius:4px;background:white;color:#204c3d;cursor:pointer;min-width:0;min-height:44px}
+.lab-view-choices:has(>button:only-child){grid-template-columns:1fr}
+.lab-view-choices:has(>button:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+.lab-view-choices:has(>button:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+.lab-controls .lab-choice-field{min-width:0;margin:0;border:0;padding:4px 0}
+.lab-choice-field legend{padding:0;margin-bottom:5px;font-size:.8rem;line-height:1.45}
+.lab-setting-choices{grid-template-columns:repeat(2,minmax(0,1fr))}
+.lab-view-choices button{font:inherit;text-align:left;padding:7px 8px;border:1px solid #bfd8cf;border-radius:4px;background:white;color:#204c3d;cursor:pointer;min-width:0;min-height:44px;overflow-wrap:anywhere;hyphens:auto}
 .lab-view-choices strong{display:block;font-size:.79rem;line-height:1.35}
 .lab-view-choices span{display:block;font-size:.68rem;line-height:1.35;margin-top:3px}
 .lab-view-choices button[aria-pressed=true]{background:#e5f4ec;border-color:#008859;box-shadow:inset 0 2px #008859}
 .lab-view-choices button:focus-visible{outline:3px solid #b7650a;outline-offset:2px}
+@container (max-width:460px){.lab-view-choices{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Ook de volledige uitwerking gebruikt kleine grafieken, zonder inhoud weg te laten. */
 .lab-all-results .lab-result{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .lab-all-results .lab-result>:not(.chart-figure){grid-column:1/-1;min-width:0}

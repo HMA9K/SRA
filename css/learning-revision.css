@@ -68,8 +68,17 @@ body[data-page="les"] .table-scroll{margin:12px 0}
 body[data-page="les"] table{margin:8px 0}
 body[data-page="les"] th,body[data-page="les"] td{padding:8px 10px}
 body.study-shell[data-page="les"] .lesson-bottom{position:static;padding:14px 0;border-width:1px 0 0;background:transparent}
-math[display="inline"]{display:inline math;math-style:normal;font-size:1.08em;white-space:nowrap}
+math[display="inline"]{display:inline math;math-style:normal;font-size:1.16em;white-space:nowrap;padding:0 .12em;background:#eef3f8;border-radius:3px}
+.inline-expression{display:inline-block;max-width:100%;font-family:"Cambria Math","STIX Two Math",math;font-size:1.12em;font-weight:600;word-spacing:normal;text-align:left;hyphens:none;background:#eef3f8;border-radius:3px;padding:0 .12em}
+.inline-value{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.inline-expression math[display="inline"]{font-size:1em;background:transparent;padding:0}
+table math[display="inline"],table .inline-expression{font-size:1.3em}
+.lesson-progress{display:flex;flex-wrap:wrap;gap:2px 9px;font-size:.73rem;font-weight:400;color:var(--study-muted);line-height:1.4;margin-top:4px}
+.lesson-progress .is-done{color:var(--study-green-dark);font-weight:600}
+.sra-learning-status .lesson-progress{margin:0;justify-content:flex-end}
+@media(max-width:760px){.sra-learning-status .lesson-progress{justify-content:flex-start}}
 @media(max-width:760px){
+ body[data-page="les"] #main li:has(.inline-expression),body[data-page="formules"] #main li:has(.inline-expression){text-align:left}
  body.study-shell[data-page="les"] main{padding:0 14px 24px}
  body.study-shell[data-page="les"] .lesson-top h1{font-size:1.15rem}
  body.study-shell[data-page="les"] .lesson-top{padding:8px 0}
@@ -226,3 +235,8 @@ body[data-page="les"] #main .question-feedback li,.question-feedback li{margin:3
 .mini-bar{fill:var(--study-teal,#008577)}
 .mini-series-1{fill:currentColor;fill-opacity:.7}
 .mini-prediction{fill:none;stroke:currentColor;stroke-width:1.5;stroke-dasharray:4 3}
+.mini-tail{fill:#b65c16;fill-opacity:.8}
+.mini-tail-pointer{fill:none;stroke:currentColor;stroke-width:1}
+.mini-table table{font-size:.8rem;margin:0}
+.mini-table caption{margin:0 0 5px;text-align:left}
+.mini-table th,.mini-table td{padding:7px!important;hyphens:none}

@@ -731,7 +731,7 @@ window.SRAMCData = {
       "questions": [
         {
           "id": "mc-rekenen-basis-1",
-          "prompt": "Voor 2 en 4: wat is Σw²?",
+          "prompt": "De twee waarnemingen zijn w₁ = 2 en w₂ = 4. Bereken Σw²: de som van hun kwadraten.",
           "options": [
             "36",
             "20",
@@ -4269,7 +4269,7 @@ window.SRAMCData = {
         },
         {
           "id": "mc-quotient-basis-2",
-          "prompt": "Welk patroon past het best?",
+          "prompt": "Welk foutpatroon past bij de quotiëntschatter?",
           "options": [
             "Elke post is circa 8% te hoog",
             "Geen enkele boekwaarde is bekend",
@@ -5314,7 +5314,7 @@ window.SRAMCData = {
         },
         {
           "id": "mc-regressieschatter-basis-3",
-          "prompt": "Wat schat je hier?",
+          "prompt": "Welke grootheid schat je met de regressieschatter?",
           "options": [
             "De waarde van één nieuwe persoon",
             "Alleen de correlatie",
@@ -7368,7 +7368,7 @@ window.SRAMCData = {
         },
         {
           "id": "mc-stratificatie-basis-2",
-          "prompt": "Twee onafhankelijke strata hebben standaardfouten 3 en 4. Gecombineerd?",
+          "prompt": "Twee onafhankelijke strata hebben standaardfouten 3 en 4. Wat is de gecombineerde standaardfout?",
           "options": [
             "25",
             "5",
@@ -10092,7 +10092,7 @@ window.SRAMCData = {
         },
         {
           "id": "mc-anova-basis-2",
-          "prompt": "n = 50 en k = 3. Hoeveel residual df?",
+          "prompt": "n = 50 en k = 3. Hoeveel residuele vrijheidsgraden (df) heeft het model?",
           "options": [
             "49",
             "47",
@@ -12627,7 +12627,7 @@ window.SRAMCData = {
         },
         {
           "id": "mc-diagnostiek-basis-3",
-          "prompt": "Shapiro-Wilk p = 0,01 bij α = 0,05. Conclusie?",
+          "prompt": "Shapiro-Wilk geeft p = 0,01 bij α = 0,05. Wat concludeer je over de normaliteit van de residuen?",
           "options": [
             "Geen uitspraak mogelijk",
             "Normaliteit bewezen",
@@ -14695,7 +14695,7 @@ window.SRAMCData = {
       "questions": [
         {
           "id": "mc-voorspellen-basis-1",
-          "prompt": "Waar is het voorspellingsinterval het smalst?",
+          "prompt": "Bij welke x-waarde is het individuele voorspellingsinterval het smalst?",
           "options": [
             "Zo ver mogelijk van x̄",
             "Bij x₀ = x̄",
@@ -14797,7 +14797,7 @@ window.SRAMCData = {
         },
         {
           "id": "mc-voorspellen-basis-2",
-          "prompt": "Welk interval is doorgaans breder?",
+          "prompt": "Welk interval is bij dezelfde gegevens, x-waarde en betrouwbaarheid breder: dat voor het gemiddelde of voor één nieuwe waarneming?",
           "options": [
             "Ze zijn altijd even breed",
             "Voor de gemiddelde respons",
@@ -14899,7 +14899,7 @@ window.SRAMCData = {
         },
         {
           "id": "mc-voorspellen-basis-3",
-          "prompt": "Een realisatie ligt buiten het interval. Wat volgt?",
+          "prompt": "Een nieuwe waarneming ligt buiten het individuele voorspellingsinterval. Welke conclusie past daarbij?",
           "options": [
             "Nader onderzoek is nodig",
             "De realisatie moet worden verwijderd",
@@ -15670,7 +15670,7 @@ window.SRAMCData = {
         },
         {
           "id": "mc-meervoudig-basis-3",
-          "prompt": "Waarom adjusted R² gebruiken?",
+          "prompt": "Waarom gebruik je adjusted R² bij het vergelijken van regressiemodellen?",
           "options": [
             "Om voor extra verklarende variabelen te corrigeren",
             "Om de richting van het verband te bepalen",
@@ -17881,7 +17881,7 @@ window.SRAMCData = {
         },
         {
           "id": "mc-modelbouw-basis-3",
-          "prompt": "Waarom opnieuw schatten na verwijderen?",
+          "prompt": "Waarom schat je het regressiemodel opnieuw nadat je een verklarende variabele hebt verwijderd?",
           "options": [
             "De andere coëfficiënten en p-waarden kunnen veranderen",
             "Om n automatisch te verdubbelen",
