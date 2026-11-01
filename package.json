@@ -19,8 +19,8 @@
     "test:points-browser": "node tests/exam-focus-browser.cjs",
     "test:lesson-panel-browser": "node tests/lesson-panel-browser.cjs",
     "test:anova-browser": "node tests/anova-reading-browser.cjs",
-    "test:learning": "node tests/learning-revision.cjs && python tests/learning-questions.py && python scripts/learning_sampling.py && python tests/lesson-reading.py && python tests/regression-reading.py && python tests/learning-transitions.py",
-    "test:learning-browser": "node tests/learning-revision-browser.cjs && node tests/learning-transitions-browser.cjs && node tests/compact-learning-browser.cjs",
+    "test:learning": "node tests/learning-revision.cjs && python tests/learning-questions.py && python scripts/learning_sampling.py && python tests/lesson-reading.py && python tests/regression-reading.py && python tests/learning-transitions.py && python tests/lesson-mini-graphs.py",
+    "test:learning-browser": "node tests/learning-revision-browser.cjs && node tests/learning-transitions-browser.cjs && node tests/compact-learning-browser.cjs && node tests/lesson-mini-graphs-browser.cjs",
     "test:parked-browser": "node tests/parked-controls-browser.cjs && node tests/exam-practice-browser.cjs && node tests/original-pdfs-browser.cjs"
   }
 }

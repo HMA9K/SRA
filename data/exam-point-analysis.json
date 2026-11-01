@@ -719,7 +719,7 @@
       "part": "-",
       "topic": "invloed",
       "points": 3,
-      "reason": "Normering Cook inclusief eigen remedie, 3 punten.",
+      "reason": "Normering Cook inclusief voorgestelde remedie, 3 punten.",
       "sharedWith": [],
       "questionPage": 9,
       "answerPage": 4
@@ -2735,7 +2735,7 @@
       "part": "-",
       "topic": "uitbijters-y",
       "points": 3,
-      "reason": "Normering: z/identificatie 2 en eigen remedie 1.",
+      "reason": "Normering: z/identificatie 2 en voorgestelde remedie 1.",
       "sharedWith": [],
       "questionPage": 4,
       "answerPage": 5

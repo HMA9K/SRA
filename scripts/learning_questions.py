@@ -1,7 +1,7 @@
 """Eigen brongebonden oefenvragen met tabellen, grafieken en volledige casusgegevens.
 
 De oorspronkelijke 134 vraag-ID's en antwoordvolgorden blijven intact. Deze vragen
-worden pas daarna toegevoegd. Brondata en eigen oefendata zijn zichtbaar onderscheiden.
+worden pas daarna toegevoegd. Brondata en oefendata zijn zichtbaar onderscheiden.
 """
 from copy import deepcopy
 from html import escape
@@ -23,7 +23,7 @@ def table(caption, headings, rows):
     return f'<div class="table-wrap"><table><caption>{escape(caption)}</caption><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
-def case(text, content='', origin='Eigen oefengegevens, volgens de genoemde cursusbronnen.'):
+def case(text, content='', origin='Oefengegevens, volgens de genoemde cursusbronnen.'):
     return f'<p class="mc-data-origin">{escape(origin)}</p><p>{escape(text)}</p>{content}'
 
 
@@ -37,7 +37,7 @@ def q(topic, key, level, prompt, stimulus, options, steps, meaning, approach, an
     p(qid, prompt, meaning, approach, answer)
     FOCUS[topic].append((f'leertoepassing-{key}', approach))
     QUESTIONS.setdefault(topic, []).append(dict(
-        id=qid, level=level, prompt='Eigen oefenvraag. '+prompt, stimulusHtml=stimulus,
+        id=qid, level=level, prompt='Oefenvraag. '+prompt, stimulusHtml=stimulus,
         options=[row[0] for row in options], optionExplanations=[row[1] for row in options], correct=0,
         steps=steps, explanation=' '.join(steps), pattern=meaning, trap=trap, refs=refs,
         practiceMode='begeleid' if guided else 'zelfstandig', kind=kind, dataOrigin=origin))
@@ -188,7 +188,7 @@ CUMULATIVE = table('Cumulatieve boekwaarde uit het collegevoorbeeld',
 q('stratificatie','cumulatieve-grens',3,
   'Je wilt vier bemonsterde strata. Welke eerste klassegrens ligt het dichtst bij het eerste cumulatieve streefbedrag?',
   case('Het topstratum wordt afzonderlijk integraal gecontroleerd. Kies een beschikbare klassegrens zonder interpolatie.',CUMULATIVE,
-       'Brongegevens: slides SRA NJ26, PDF-pagina 40. Eigen vraag bij de oorspronkelijke tabel.'),
+       'Brongegevens: slides SRA NJ26, PDF-pagina 40. Vraag bij de oorspronkelijke tabel.'),
   [('€ 3.000; cumulatief € 3.554.809','Het eerste streefbedrag is 14.306.659/4 = 3.576.664,75. De klassegrens 3.000 ligt met cumulatief 3.554.809 het dichtst erbij.'),
    ('€ 4.000; cumulatief € 5.948.884','Deze grens ligt boven het streefbedrag, maar veel verder weg dan de grens 3.000. De vraag verlangt de dichtstbijzijnde grens.'),
    ('€ 2.500, omdat 10.000/4 = 2.500','Dit verdeelt de schaal van boekwaarden in gelijke breedtes. De gevraagde methode verdeelt cumulatieve geldbedragen.'),
@@ -205,7 +205,7 @@ STRATA = table('Steekproeven per stratum uit het collegevoorbeeld',['Stratum','N
 q('stratificatie','stratum-uitwerken',3,
   'Welke combinatie hoort bij stratum 1: puntschatting en standaardfout van het stratumtotaal?',
   case('Werk stratum 1 uit met MPU en de eindigheidscorrectie. Houd tussenwaarden ongerond; de antwoordopties zijn afgerond.',STRATA,
-       'Brongegevens: slides SRA NJ26, PDF-pagina 48. Eigen vraag bij de oorspronkelijke tabel.'),
+       'Brongegevens: slides SRA NJ26, PDF-pagina 48. Vraag bij de oorspronkelijke tabel.'),
   [('Ŵ₁ ≈ € 165.789 en SE₁ ≈ € 4.949','w̄₁ = 7.000/114; s_w1 = √([475.000 − 7.000²/114]/113) ≈ 19,9946. Schaal gemiddelde en onzekerheid met N₁ = 2.700.'),
    ('Ŵ₁ = € 7.000 en SE₁ ≈ € 20','Dit zijn het steekproeftotaal en de spreiding per post. Er is nog niet naar het gehele stratum geprojecteerd.'),
    ('Ŵ₁ ≈ € 293.202 en SE₁ ≈ € 4.949','De standaardfout hoort bij stratum 1, maar het gemiddelde vermenigvuldigen met het totale aantal van alle strata telt andere strata verkeerd mee.'),
@@ -325,7 +325,7 @@ q('toetsen','richting-eenzijdig',3,
 
 q('toetsen','niet-nul-hypothese',3,
   'Toets H₀: β = 1 tegenover H₁: β ≠ 1 bij α = 0,05. Welke conclusie is juist?',
-  case('Er zijn 26 waarnemingen, één verklarende variabele en een constante. De gebruikelijke SPSS-t toetst tegen nul; deze eigen oefenvariant vraagt tegen één. Gebruik hiervoor t = (B − β₀)/Std. Error.',
+  case('Er zijn 26 waarnemingen, één verklarende variabele en een constante. De gebruikelijke SPSS-t toetst tegen nul; deze oefenvariant vraagt tegen één. Gebruik hiervoor t = (B − β₀)/Std. Error.',
        table('Coefficients',['Term','B','Std. Error','SPSS t tegen nul'],[('Activiteit','1,20','0,10','12,00')]))+bundle(12,'13.4 Student t-verdeling'),
   [('t = 2; H₀ niet verwerpen, want 2 < 2,064','Tegen β₀ = 1 is t = (1,20 − 1)/0,10 = 2. Bij df = 24 is de tweezijdige grens 2,064.'),
    ('t = 12; H₀ verwerpen','SPSS t = B/SE toetst standaard tegen nul. Dat is niet de nulhypothese β = 1 uit deze opgave.'),
@@ -336,7 +336,7 @@ q('toetsen','niet-nul-hypothese',3,
   'Bereken een nieuwe t met de gevraagde parameterwaarde en vergelijk die met de passende kritieke grens.',
   'Een toetsbeslissing over de specifieke waarde één voor de populatiehelling.',
   'Neem de standaard t-kolom niet over wanneer de nulhypothese een andere parameterwaarde bevat.',
-  [ref('formules',4,'Formule 62 toetst tegen nul; aangepaste nulwaarde en formule expliciet gegeven in eigen oefenvariant'),ref('tabellen',12,'Tabel 13.4: df 24 en 0,025')])
+  [ref('formules',4,'Formule 62 toetst tegen nul; aangepaste nulwaarde en formule expliciet gegeven in oefenvariant'),ref('tabellen',12,'Tabel 13.4: df 24 en 0,025')])
 
 
 def scatter(title, points, xlabel='x', ylabel='residu', xlim=None, ylim=None):
@@ -358,13 +358,13 @@ q('diagnostiek','residual-statistics',3,
   case('Gebruik de cursusgrenzen voor uitbijters en invloedrijke punten. De afhankelijke variabele is huur per maand in euro.',
        table('Residuals Statistics: geselecteerde rijen',['Rij','Minimum','Maximum','Mean','Std. Deviation','N'],
              [('Std. Residual','−1,352','2,490','0,000','0,987',40),('Mahal. Distance','0,000','2,388','0,975','0,815',40),("Cook’s Distance",'0,000','0,313','0,030','0,060',40)]),
-       'Brongegevens: geselecteerde rijen uit slides SRA NJ26, PDF-pagina 100. Eigen diagnosevraag.'),
+       'Brongegevens: geselecteerde rijen uit slides SRA NJ26, PDF-pagina 100. Diagnosevraag.'),
   [('Aanwijzing voor uitbijter(s) in y en invloed; geen MD-overschrijding','Bij n = 40 geldt |z| > 2. MD-grens = 0,975 + 3 × 0,815 = 3,420; CD-grens = 0,030 + 3 × 0,060 = 0,210. Alleen z_max en CD_max overschrijden hun grens.'),
-   ('Alleen een uitbijter in x, want MD_max > 2','Voor Mahalanobis Distance geldt hier de eigen cursusgrens mean + 3 × sd. De grens ±2 hoort bij gestandaardiseerde residuen.'),
+   ('Alleen een uitbijter in x, want MD_max > 2','Voor Mahalanobis Distance geldt hier de bijbehorende cursusgrens mean + 3 × sd. De grens ±2 hoort bij gestandaardiseerde residuen.'),
    ('Geen afwijkingen, omdat gemiddeld residu nul is','Een gemiddeld residu rond nul kan samengaan met grote individuele residuen. Onderzoek minimum en maximum.'),
    ('De waarneming met z = 2,490 moet direct worden verwijderd','De tabel signaleert mogelijke afwijkingen. Zij geeft geen inhoudelijke rechtvaardiging voor automatisch verwijderen en identificeert ook niet zelf de rij.')],
   ['Met n = 40 is de cursusgrens voor gestandaardiseerde residuen ±2; 2,490 overschrijdt deze, −1,352 niet.','MD_kritiek = 0,975 + 3 × 0,815 = 3,420; het maximum 2,388 blijft eronder. CD_kritiek = 0,030 + 3 × 0,060 = 0,210; 0,313 ligt erboven.','Onderzoek betrokken waarnemingen in detail. Deze samenvatting toont niet of het grote residu en de grote Cook’s Distance bij dezelfde waarneming horen.'],
-  'Drie verschillende diagnosematen staan in één tabel en vragen ieder hun eigen grens.',
+  'Drie verschillende diagnosematen staan in één tabel en vragen ieder een bijpassende grens.',
   'Lees N, controleer beide residu-extremen en bereken afzonderlijk de grenzen voor Mahalanobis en Cook.',
   'Een onderscheiden oordeel over uitbijters in y, uitbijters in x en invloed.',
   'Maak van een samengevatte tabel geen bewijs dat verschillende maxima dezelfde waarneming betreffen.',
@@ -441,7 +441,7 @@ LAG_ROWS = [(lag,len(points),f'{correlation([p[0] for p in points],[p[1] for p i
 q('diagnostiek','tijdsvertraging-grafieken',3,
   'Welke koppeling verdient op basis van deze uitvoer verder onderzoek voor een vertraagd reclame-effect?',
   case('x is reclame in maand t, y is afzet. Bij verschuiving j wordt afzet y_t gekoppeld aan reclame x_(t−j). Onderzoek ook of een vertraagd effect inhoudelijk plausibel is.',
-       table('Correlaties uit dezelfde eigen tijdreeks',['Verschuiving j','Geldige paren N','Pearson r'],LAG_ROWS)+
+       table('Correlaties uit dezelfde oefentijdreeks',['Verschuiving j','Geldige paren N','Pearson r'],LAG_ROWS)+
        scatter('Verschuiving 0',LAG_PAIRS[0],'reclame x_t','afzet y_t',(5,23),(10,45))+
        scatter('Verschuiving 2',LAG_PAIRS[2],'reclame x_(t−2)','afzet y_t',(5,23),(10,45))),
   [('Afzet deze maand koppelen aan reclame twee maanden eerder','Verschuiving 2 laat hier de sterkste positieve lineaire samenhang zien. Die koppeling moet inhoudelijk worden beoordeeld en daarna in een nieuw model worden gecontroleerd.'),
@@ -475,10 +475,10 @@ q('voorspellen','gemiddelde-individu',3,
   case('De voorspelling is 50. Er zijn n = 25 basiswaarnemingen, s_e = 5 en de gegeven kritieke t = 2. Het model is passend beoordeeld.',
        table('Twee doelen',['Doel','Wortelfactor bij x₀ = x̄'],[('Gemiddelde respons','√(1/n)'),('Eén nieuwe maand','√(1 + 1/n)')])) ,
   [('Gemiddelde: ±2; nieuwe maand: ongeveer ±10,20','Voor een gemiddelde is 2 × 5/√25 = 2. Voor een individu is 2 × 5√(1 + 1/25) ≈ 10,198.'),
-   ('Beide: ±2','Dit laat voor één nieuwe maand de eigen onverklaarde variatie weg. De extra 1 onder de wortel is daarvoor nodig.'),
+   ('Beide: ±2','Dit laat voor één nieuwe maand de individuele onverklaarde variatie weg. De extra 1 onder de wortel is daarvoor nodig.'),
    ('Gemiddelde: ongeveer ±10,20; nieuwe maand: ±2','De betekenissen zijn verwisseld. Een individuele uitkomst omvat extra spreiding en heeft bij dezelfde gegevens het bredere interval.'),
    ('Beide: ±10','Dit gebruikt alleen t × s_e. De onzekerheid van de geschatte lijn verdwijnt niet helemaal wanneer x₀ = x̄.')],
-  ['Bij x₀ = x̄ is alleen de afstandsterm nul. De onzekerheid van de geschatte lijn blijft bestaan.','Marge gemiddelde: 2 × 5 × √(1/25) = 2. Dit geeft [48; 52].','Marge individu: 2 × 5 × √(1 + 1/25) ≈ 10,198. Eén nieuwe maand is minder precies voorspelbaar door haar eigen residuele variatie.'],
+  ['Bij x₀ = x̄ is alleen de afstandsterm nul. De onzekerheid van de geschatte lijn blijft bestaan.','Marge gemiddelde: 2 × 5 × √(1/25) = 2. Dit geeft [48; 52].','Marge individu: 2 × 5 × √(1 + 1/25) ≈ 10,198. Eén nieuwe maand is minder precies voorspelbaar door de individuele residuele variatie.'],
   'Het doel van de uitspraak bepaalt of de toekomstige individuele storing moet worden meegerekend.',
   'Markeer gemiddelde of individu en kies daarna de bijbehorende wortelfactor bij dezelfde voorspelling.',
   'Twee verschillende marges met de juiste betekenis voor de controle-uitspraak.',
@@ -510,7 +510,7 @@ q('meervoudig','adjusted-vergelijking',3,
    ('Je mag R² niet vergelijken omdat k verschilt','Het verschil in k is juist waarom een gecorrigeerde maat zinvol is. Dezelfde uitkomst en waarnemingen maken de modellen vergelijkbaar.')],
   ['Gebruik R²_adj = R² − k(1 − R²)/(n − k − 1), met k zonder constante.','Klein: 0,792857; groot: 0,788077. De gewone R² stijgt, maar de aangepaste maat daalt.','Volgens adjusted R² leveren de twee extra variabelen onvoldoende winst voor hun extra complexiteit. Combineer dat met inhoudelijke reden, diagnose en validatie.'],
   'Een stijgende gewone R² kan een kleine fitwinst verbergen tegenover extra modelcomplexiteit.',
-  'Controleer vergelijkbare data en uitkomst en bereken de correctie voor het eigen k van ieder model.',
+  'Controleer vergelijkbare data en uitkomst en bereken de correctie voor het aantal verklarende variabelen k van ieder model.',
   'Een vergelijking van adjusted R² met een begrensde modelkeuzeconclusie.',
   'Een fitmaat op trainingsdata is geen onafhankelijke voorspelfout op nieuwe gegevens.',
   [ref('formules',3,'Formule 51: adjusted R²')])
@@ -532,7 +532,7 @@ q('transformaties','terugtransformeren-tabel',3,
 
 q('transformaties','modelvorm-verdubbeling',3,
   'Welke voorspelde verandering hoort bij verdubbeling van x van 10 naar 20?',
-  case('Vergelijk drie afzonderlijke modellen op hun eigen aangegeven schaal; er wordt alleen naar de gevolgen binnen ieder model gevraagd.',
+  case('Vergelijk drie afzonderlijke modellen op de aangegeven schaal; er wordt alleen naar de gevolgen binnen ieder model gevraagd.',
        table('Modelvergelijkingen',['Model','Vergelijking'],[('Lineair','ŷ = 5 + 3x'),('Logaritmisch','ŷ = 5 + 3 ln(x)'),('Macht','ln(ŷ) = 5 + 3 ln(x)')])) ,
   [('Lineair: +30; logaritmisch: +3 ln(2); macht: factor 8','De veranderingen volgen uit respectievelijk 3 × (20 − 10), 3 × ln(20/10) en (20/10)³.'),
    ('Alle drie: +30','De coëfficiënt 3 heeft door de verschillende transformaties niet in ieder model dezelfde betekenis.'),
@@ -557,7 +557,7 @@ q('modelbouw','backward-uitvoer',3,
   'Een expliciete proceduregrens en tabel met meerdere p-waarden bepalen de eerste selectiestap.',
   'Selecteer onder verklarende variabelen de grootste p boven de opgegeven grens en gebruik daarna opnieuw geschatte uitvoer.',
   'Eén eerste verwijderkandidaat met de noodzakelijke vervolgstap.',
-  'Een eigen vaste α of de grootte van B vervangt de expliciete verwijderingsregel niet.',
+  'Een zelfgekozen vaste α of de grootte van B vervangt de expliciete verwijderingsregel niet.',
   [ref('attentie',7,'PDF p. 7-8: backward en modelbouw'),ref('formules',4,'Formules 59-63: modelkeuze')])
 
 q('modelbouw','vif-tolerance',3,
@@ -586,7 +586,7 @@ q('modelbouw','extra-variabele',3,
   ['Er is één extra variabele: teller-df = 1. Noemer-df = 23 − 2 − 1 = 20.','Extra SSR = 180 − 120 = 60 en MSE_uitgebreid = 40/20 = 2; partiële F = 60/2 = 30.','Lees F_0,05(1,20) = 4,351. Omdat 30 > 4,351 verwerp je dat de extra bijdrage nul is, onder de voorwaarden van deze modelvergelijking.'],
   'Geneste modellen isoleren de bijdrage van de nieuwe variabele ten opzichte van het kleinere model.',
   'Gebruik het verschil in SSR in de teller en de residuele gemiddelde kwadratensom van het uitgebreide model in de noemer.',
-  'Een toetsconclusie over de extra variabele met eigen teller- en noemervrijheidsgraden.',
+  'Een toetsconclusie over de extra variabele met de bijbehorende teller- en noemervrijheidsgraden.',
   'De globale F van het uitgebreide model toetst een andere nulhypothese dan de partiële F.',
   [ref('formules',4,'Formule 63: bijdrage van één extra variabele'),ref('tabellen',21,'Tabel 13.8: teller-df 1, noemer-df 20, α 0,05')])
 
@@ -644,7 +644,7 @@ q('tentamen','casusconclusie',3,
   [('€ 6.000 boven de bovengrens; onderzoek gegevens en bijzondere omstandigheden','118.000 − 112.000 = 6.000. De afwijking is een statistisch signaal onder het model, waarna inhoudelijk controlebewijs nodig is.'),
    ('€ 18.000 fraude, want realisatie min voorspelling is 18.000','Het residu is inderdaad 18.000, maar het model bewijst niet dat dit fraude of zelfs een administratieve fout is.'),
    ('Geen afwijking, want 95% laat vijf procent fouten toe','De betrouwbaarheid van de methode maakt een buitenliggende waarneming niet irrelevant. Zij vraagt om een begrensde interpretatie en onderzoek.'),
-   ('Neem € 118.000 op in de basisperiode totdat de maand binnen het interval valt','De te beoordelen waarneming achteraf gebruiken om haar eigen beoordelingsgrens aan te passen maakt de controle niet onafhankelijk.')],
+   ('Neem € 118.000 op in de basisperiode totdat de maand binnen het interval valt','De te beoordelen waarneming achteraf gebruiken om de beoordelingsgrens aan te passen maakt de controle niet onafhankelijk.')],
   ['Vergelijk de realisatie met de passende bovengrens voor één nieuwe maand: 118.000 − 112.000 = 6.000.','Het residu ten opzichte van de puntvoorspelling is 18.000, maar de overschrijding van de intervalgrens is 6.000. Benoem welk verschil je rapporteert.','Onderzoek invoer, bronboekingen en gewijzigde omstandigheden met het vastgelegde model. Een statistisch signaal bewijst geen foutoorzaak of fraude.'],
   'Een nieuwe controlewaarneming wordt met een vooraf bepaald individueel interval vergeleken.',
   'Bereken de relevante overschrijding, onderscheid die van het residu en verbind de statistische conclusie aan controlewerk.',

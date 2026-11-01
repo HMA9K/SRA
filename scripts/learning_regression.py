@@ -1,7 +1,7 @@
 """Brongebonden regressieonderwijs, goedgekeurde herziening 25 september 2026.
 
 Aanroep na course_completion.enhance. Bestaande begripcheck-ID's blijven intact.
-Brontabellen zijn handmatig tegen PDF-weergaven gecontroleerd; eigen invulvoorbeelden
+Brontabellen zijn handmatig tegen PDF-weergaven gecontroleerd; invulvoorbeelden
 zijn als zodanig benoemd. Deze module doet geen I/O en wijzigt geen examenvragen.
 """
 from html import escape
@@ -98,7 +98,7 @@ def enhance(lessons, sources):
                         'Het getal +31,49 is een residu in kg, geen p-waarde en geen standaardfout.']))
         + '<p class="note">De oorspronkelijke uitwerking rondt r tussentijds af op 0,940 en vindt '
         'daardoor sₑ ≈ 17,18. Rekenen met de ongeronde brongegevens geeft circa 17,166. '
-        'Gebruik in een eigen berekening zoveel mogelijk ongeronde tussenuitkomsten.</p>',
+        'Gebruik in je berekening zoveel mogelijk ongeronde tussenuitkomsten.</p>',
         [ref('opgaven',10,'Opgavenbundel, H9.1, PDF 10'),ref('uitwerkingen',14,'Uitwerkingenbundel, H9.1, PDF 14–15'),
          ref('spss',9,'SPSS-uitwerkingen, college 3, PDF 9')])
 
@@ -132,7 +132,7 @@ def enhance(lessons, sources):
         '<p>Een <strong>vrijheidsgraad</strong> is de hoeveelheid onafhankelijke informatie die na het '
         'schatten overblijft. Het gemiddelde kost één vrijheidsgraad. Een regressiemodel schat k '
         'hellingen én een constante, zodat n − k − 1 vrijheidsgraden voor de residuen overblijven. '
-        'SS moet daarom door de eigen df worden gedeeld voordat je gemiddelde kwadraten vergelijkt.</p>'
+        'SS moet daarom door de bijbehorende df worden gedeeld voordat je gemiddelde kwadraten vergelijkt.</p>'
         '<p>Voor de accountant hangen de maatstaven samen met verschillende vragen: R² beschrijft '
         'verklaarde variatie, sₑ beschrijft de resterende spreiding in bedragen of aantallen, en F '
         'toetst of het model statistisch informatie toevoegt. Een hoge R² kan samengaan met een '
@@ -143,7 +143,7 @@ def enhance(lessons, sources):
         '<p>In cursusopgave H9.1 wordt het gewicht van een auto voorspeld met het bouwjaar. '
         'Dit is een enkelvoudige regressie: er is één verklarende variabele (k = 1). '
         'Hieronder zijn de drie kwadratensommen en het totale aantal vrijheidsgraden al gegeven.</p>'
-        '<p><strong>Oefening:</strong> bereken zelf de vijf ontbrekende waarden, op papier of in je eigen notities. '
+        '<p><strong>Oefening:</strong> bereken zelf de vijf ontbrekende waarden, op papier of in je notities. '
         'De cellen met <em>zelf berekenen</em> laten zien welke waarden je zoekt. '
         '<em>N.v.t.</em> betekent dat die cel in deze ANOVA-tabel niet wordt gebruikt. '
         'Open daarna de uitwerking om je tabel te vergelijken.</p>'
@@ -257,7 +257,7 @@ def enhance(lessons, sources):
             ['Absolute hypotheeklasten','Geen duidelijk rechtstreeks verband in de getoonde verkenning.'],
             ['Hypotheeklasten als percentage van inkomen','Wel een stijgend patroon bij beide inkomenstypen.'],
         ])
-        + '<p><strong>Methodekeuze:</strong> splitsen geeft iedere groep een eigen lijn. Een dummy kan '
+        + '<p><strong>Methodekeuze:</strong> splitsen geeft iedere groep een afzonderlijke lijn. Een dummy kan '
         'een verschil in niveau binnen één meervoudig model verwerken. Als ook de hellingen verschillen, '
         'is alleen een niveaudummy onvoldoende. Kies dus op basis van wat de groepen laten zien, niet '
         'uitsluitend op de hoogste gezamenlijke correlatie.</p>'
@@ -381,7 +381,7 @@ def enhance(lessons, sources):
             ['2,55 &lt; d &lt; 2,73','Onbeslist.'],
             ['d ≥ 2,73','Aanwijzing voor negatieve autocorrelatie.'],
         ])
-        + answer('Eigen afleesvarianten bij dezelfde brontabel: beoordeel d = 1,35, d = 1,90 en d = 2,80. '
+        + answer('Afleesvarianten bij dezelfde brontabel: beoordeel d = 1,35, d = 1,90 en d = 2,80. '
                  'Welke fout maak je als je “d dicht bij 2” als enige regel gebruikt?',
                  '<p>1,35 ligt in het onbesliste gebied; 1,90 in het gebied waarin geen autocorrelatie '
                  'wordt aangetoond; 2,80 geeft een aanwijzing voor negatieve autocorrelatie. '
@@ -428,7 +428,7 @@ def enhance(lessons, sources):
         'ook als de gegevens juist zijn. De controlevraag is daarom hoeveel afwijking bij de '
         'gebruikelijke spreiding past. Een <strong>individueel voorspellingsinterval</strong> '
         'neemt twee onzekerheden mee: we kennen de lijn niet precies en de nieuwe waarneming '
-        'heeft daarnaast haar eigen storing. Voor een gemiddelde heb je die laatste component niet nodig.</p>'
+        'heeft daarnaast een individuele storing. Voor een gemiddelde heb je die laatste component niet nodig.</p>'
         + table('Lees eerst wat wordt gevraagd', ['Gevraagd','Passend antwoord','Gevolg'], [
             ['De verwachte productie bij één gegeven hoeveelheid arbeidsuren','Puntvoorspelling ŷ₀.','Geeft één centrumwaarde; geen informatie over de marge.'],
             ['Het gemiddelde van alle vergelijkbare situaties bij x₀','Interval voor de gemiddelde respons.','Geen extra individuele storing; daarom smaller.'],
@@ -541,7 +541,7 @@ def enhance(lessons, sources):
         'of de constante ongemoeid laten geeft een ander model. '
         'Als een interval op logschaal is gegeven, transformeer je de onder- en bovengrens afzonderlijk; '
         'de resulterende marge op de oorspronkelijke schaal is meestal niet symmetrisch.</p>'
-        + answer('Eigen rekenvoorbeeld bij de cursusformules: ln(ŷ) = 2 + 0,3x. '
+        + answer('Rekenvoorbeeld bij de cursusformules: ln(ŷ) = 2 + 0,3x. '
                  'Neem x = 4 en een gegeven individueel interval [2,8; 3,6] op logschaal. '
                  'Wat zijn voorspelling, interval en het effect van één extra x op de oorspronkelijke schaal?',
                  steps(['De voorspelde logwaarde is 2 + 0,3 × 4 = 3,2. De directe terugtransformatie is '
@@ -622,7 +622,7 @@ def enhance(lessons, sources):
         '<p><strong>Genest</strong> betekent dat het kleine model in het uitgebreide model zit. '
         'De uitkomst y, waarnemingen en weging moeten gelijk zijn. Dan kun je de afname in '
         'onverklaarde variatie toeschrijven aan de extra variabelen, in plaats van aan een andere dataset.</p>'
-        + table('Eigen rekenvoorbeeld bij formule 63: dezelfde 50 waarnemingen', ['Model','k','SSR','SSE','Residual df'], [
+        + table('Rekenvoorbeeld bij formule 63: dezelfde 50 waarnemingen', ['Model','k','SSR','SSE','Residual df'], [
             ['Klein','2','800','200','47'],['Uitgebreid','3','850','150','46'],
         ])
         + answer('Bereken de partiële F voor de ene extra variabele en beide adjusted R²-waarden. '
@@ -697,7 +697,7 @@ def enhance(lessons, sources):
         [ref('attentie',8,'Attentiepunten, validatie, PDF 8–9'),ref('formules',4,'Formuleblad, validatieformule 64, PDF 4')], first=True)
 
     add(L['validatie'], sources, 'Voorspelfouten op een onafhankelijke testset uitwerken',
-        '<p><strong>Eigen rekenvoorbeeld bij de cursusmethode.</strong> Een vast regressiemodel '
+        '<p><strong>Rekenvoorbeeld bij de cursusmethode.</strong> Een vast regressiemodel '
         'voorspelt de waarden in de onderstaande testset. Neem als trainings-MSE 1. '
         'De variabelen hebben in training en test dezelfde schaal.</p>'
         + table('Testgegevens en gekwadrateerde fouten', ['Waarneming','Werkelijke y','Vaste voorspelling ŷ','y − ŷ','(y − ŷ)²'], [
@@ -779,7 +779,7 @@ def enhance(lessons, sources):
         'zuivere vergelijking van geneste modellen. De officiële uitwerking werkt de volledige '
         'diagnostiek van alle drie afzonderlijke modellen niet uit. De aanvullende '
         'herberekening hieronder vult die controle vanuit de oorspronkelijke Exceldata aan, '
-        'met herkenbaar onderscheid tussen bronuitvoer en eigen berekening.</p>',
+        'met herkenbaar onderscheid tussen bronuitvoer en herberekening.</p>',
         [ref('spss',37,'SPSS-uitwerkingen, college 8, PDF 37–47')])
 
     add(L['tentamen'], sources, 'Zelfstandige eindopdracht met bronuitvoer',
@@ -953,7 +953,7 @@ def enhance(lessons, sources):
         '<p>In de boekcasus Productiviteit geeft Weight Estimation een gewicht evenredig '
         'aan 1/x². De uitvoervoetnoot schrijft dit als ARBEIDSU**−2,000. '
         'Een waarneming bij x = 80 krijgt daardoor een kwart van het gewicht van een '
-        'waarneming bij x = 40: (1/80²)/(1/40²) = 1/4. Dit is een eigen invulvoorbeeld '
+        'waarneming bij x = 40: (1/80²)/(1/40²) = 1/4. Dit is een invulvoorbeeld '
         'bij het gewicht uit de bron; het zijn geen extra waarnemingen uit de boekdataset.</p>'
         + table('WLS-uitvoer uit het boek', ['Uitvoer','Bronwaarde','Leespunt'], [
             ['Model Summary: R²','0,934','Deze fit hoort bij de aangegeven weging.'],

@@ -15,7 +15,7 @@ ROUTES={
  'beginnen':([], 'Noodzakelijke basis', 'Bepaal populatie, steekproef, eenheid en het gevraagde totaal. Doe één uitgewerkt voorbeeld en ga daarna door naar de schatters. De punten voor deze basis zitten in de toepassingsvragen; er is geen afzonderlijke puntentoerekening.'),
  'rekenen':([], 'Noodzakelijke basis', 'Bereken gemiddelde en spreiding uit sommen en kwadratensommen. Onderscheid standaardafwijking van standaardfout. Controleer dit met één voorbeeld; oefen daarna de volledige intervalvragen waarin deze rekenstappen punten opleveren.'),
  'onzekerheid':([], 'Noodzakelijke basis', 'Vertaal een- of tweezijdige betrouwbaarheid naar de juiste staartkans. Lees de tabelrij, onderscheid marge en breedte en rond pas de eindgrenzen naar buiten af. Deze stappen zijn onderdeel van de puntenrijke schattingsvragen, geen extra puntenpot.'),
- 'mpu':(['mpu','schatterkeuze'],'Alle rekenstappen oefenen', 'Kies de schatter uit het gegevenspatroon, bereken het werkelijke totaal en de standaardfout met eindigheidscorrectie. Werk een volledig interval uit en vergelijk de benodigde hulpinformatie met verschil-, quotiënt- en regressieschatter. De vergelijkingspunten zijn hier een eigen rubriek; zij worden bij de andere schatters niet herhaald.'),
+ 'mpu':(['mpu','schatterkeuze'],'Alle rekenstappen oefenen', 'Kies de schatter uit het gegevenspatroon, bereken het werkelijke totaal en de standaardfout met eindigheidscorrectie. Werk een volledig interval uit en vergelijk de benodigde hulpinformatie met verschil-, quotiënt- en regressieschatter. De vergelijkingspunten zijn hier een afzonderlijke rubriek; zij worden bij de andere schatters niet herhaald.'),
  'verschil':(['verschil'],'Alle rekenstappen oefenen', 'Leg eerst het teken van de fout vast en controleer de toepassingsvoorwaarde. Bereken foutgemiddelde, foutspreiding, totaalschatting en interval zelfstandig. Oefen ook een grens voor de totale fout: dat is een andere gevraagde uitkomst dan een grens voor de werkelijke waarde.'),
  'quotient':(['quotient'],'Alle rekenstappen oefenen', 'Gebruik de verhouding van sommen, niet het gemiddelde van losse verhoudingen. Onderbouw evenredigheid en de cursusvoorwaarde voor het aantal fouten. Reken de resterende spreiding en het volledige interval uit. Een lagere historische frequentie vervangt deze complete vaardigheid niet.'),
  'regressieschatter':(['regressieschatter'],'Gerichte volledige toepassing', 'Deze schatter komt in twee tentamens voor, maar kan in één tentamen veel punten omvatten. Reken daarom één volledige casus uit: helling, correctie met het bekende boektotaal, onzekerheid en conclusie. Onderscheid dit hoofdstuk-8-doel van voorspellen van een losse waarneming met regressie.'),
@@ -64,7 +64,7 @@ def enhance(lessons, sources):
     L={l['id']:l for l in lessons}
     data=json.loads((ROOT/'data/college8-analysis.json').read_text(encoding='utf8'))
     models={m['name']:m for m in data['models']}
-    body='<p>De volgende tabellen zijn <strong>eigen herberekeningen uit het oorspronkelijke Excelblad College8</strong>. '
+    body='<p>De volgende tabellen zijn <strong>herberekeningen uit het oorspronkelijke Excelblad College8</strong>. '
     body+='Het blad bevat 162 auto’s: 81 benzine, 41 diesel en 40 elektrisch. Alle gegevens zijn compleet en alle verkoopwaarden zijn positief. '
     body+='De vijf regressies gebruiken de variabelen uit de oorspronkelijke eindtabellen, met constante. '
     body+='De gepubliceerde coëfficiënten zijn binnen hun afronding gereproduceerd. Dit is geen nieuwe SPSS-uitvoering of reconstructie van alle selectiestappen.</p>'
@@ -96,7 +96,7 @@ def enhance(lessons, sources):
         body+='<p>De voorspelling is de constante plus de som van B × kenmerk. Een dummy is 1 als de genoemde categorie geldt en anders 0. '
         body+='Een B bij kilometerstand is euro per kilometer, bij bouwjaar euro per later bouwjaar en bij een rapportscoreschaal euro per extra scorepunt, bij gelijkblijvende andere kenmerken.</p>'
         asset=f'assets/learning/college8-{name.lower()}.png'
-        body+=f'<figure class="learning-figure"><a href="{asset}" target="_blank" rel="noopener"><img src="{asset}" loading="lazy" style="max-width:100%;height:auto" alt="Werkelijke tegen voorspelde waarde en residuen voor {name}; gemarkeerde auto’s staan ook in de diagnosetabel."></a><figcaption>Eigen figuren uit College8. De diagonale lijn geeft werkelijke waarde = voorspelling; de tweede grafiek toont residuen en auto-nummers voor nader onderzoek. Open voor vergroting.</figcaption></figure>'
+        body+=f'<figure class="learning-figure"><a href="{asset}" target="_blank" rel="noopener"><img src="{asset}" loading="lazy" style="max-width:100%;height:auto" alt="Werkelijke tegen voorspelde waarde en residuen voor {name}; gemarkeerde auto’s staan ook in de diagnosetabel."></a><figcaption>Figuren uit College8. De diagonale lijn geeft werkelijke waarde = voorspelling; de tweede grafiek toont residuen en auto-nummers voor nader onderzoek. Open voor vergroting.</figcaption></figure>'
         listed=lambda xs:', '.join(map(str,xs)) if xs else 'Geen'
         body+=table('Diagnoses met de cursusgrenzen',['Controle','Uitkomst','Grens','Auto-nummers voor nader onderzoek'],[
             ['Uitbijters y',f"z min {num(d['zMin'])}; max {num(d['zMax'])}",f"±{d['zLimit']}",listed(d['zCandidates'])],

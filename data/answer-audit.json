@@ -930,7 +930,7 @@
           "displayNumber": "8",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "Centrum €284.490. Deel elke gegeven marge eerst door zijn eigen t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
+          "note": "Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
           "reviewed": "2026-09-20",
           "sourcePage": 4,
           "answerPage": 3

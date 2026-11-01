@@ -38,7 +38,7 @@ class LearningApplications(unittest.TestCase):
         for q in self.new.values():
             with self.subTest(question=q['id']):
                 self.assertGreater(len(q['stimulusHtml']), 180)
-                self.assertTrue(q['prompt'].startswith('Eigen oefenvraag.'))
+                self.assertTrue(q['prompt'].startswith('Oefenvraag.'))
                 self.assertIn(q['dataOrigin'], ['eigen','bron'])
                 self.assertIn(q['practiceMode'], ['begeleid','zelfstandig'])
                 self.assertEqual(len(q['steps']), 3)
@@ -58,7 +58,10 @@ class LearningApplications(unittest.TestCase):
         for previous in old:
             current = self.all[previous['id']]
             for field in ['id','options','correct','optionExplanations']:
-                self.assertEqual(previous[field],current[field],previous['id']+': '+field)
+                expected = previous[field]
+                if field == 'optionExplanations' and previous['id'] == 'mc-stratificatie-toepassing-1':
+                    expected = [text.replace('zijn eigen omvang', 'de bijbehorende omvang') for text in expected]
+                self.assertEqual(expected,current[field],previous['id']+': '+field)
 
     def test_rotation_preserves_each_new_option_explanation(self):
         for topic in QUESTIONS.values():

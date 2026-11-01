@@ -287,7 +287,7 @@ def _guides(lesson: dict) -> list[dict]:
                 p.LEGENDS[slug] + ' s_tot² is de som van de varianties van de stratumtotaalschattingen. s_tot is de wortel daarvan. Een integraal gecontroleerd topstratum heeft geen steekproefonzekerheid.',
                 ['Bereken Nᵢ × w̄ᵢ voor ieder getrokken stratum en tel die bedragen op.',
                  'Tel het bekende werkelijke totaal van het integraal gecontroleerde topstratum eenmaal erbij.',
-                 'Bereken per getrokken stratum de standaardfout van het totaal, inclusief de eigen eindigheidscorrectie.',
+                 'Bereken per getrokken stratum de standaardfout van het totaal, inclusief de eindigheidscorrectie per stratum.',
                  'Kwadrateer die standaardfouten, tel de varianties op en neem daarna één wortel.',
                  'Gebruik de gegeven effectieve vrijheidsgraden voor t. Maak het interval rond het volledige totaal.'],
                 _example(lesson, [1, 2, 3, 4, 5]),
