@@ -1,9 +1,9 @@
 """Kleine figuren naast de bestaande uitleg; alle tekst en bronlinks blijven staan."""
 from html import escape, unescape
-from math import sqrt
+from math import sqrt, gamma, pi
 import re
 from learning_transitions import chart
-from formula_visuals import num
+from formula_visuals import num, curve
 
 
 def svg(title, body, height=170):
@@ -102,18 +102,60 @@ def fan():
     return svg('Schematische trechter: de residuen spreiden verder uiteen bij grotere x.', body, 160)
 
 
+def tail_comparison():
+    density = lambda value: gamma(12.5)/(sqrt(24*pi)*gamma(12))*(1+value*value/24)**-12.5
+    body = ''
+    for left, title, critical, two in [(4, 'Tweezijdig', 2.064, True), (138, 'Eenzijdig', 1.711, False)]:
+        X = lambda value: left + 114*(value+4)/8
+        Y = lambda value: 112-145*value
+        points = curve(density, -4, 4, 120)
+        body += text(left, 16, title) + text(left+57, 53, '95%', 'middle')
+        for start, stop in ([(-4,-critical),(critical,4)] if two else [(critical,4)]):
+            shaded = [(start,0)] + curve(density,start,stop,32) + [(stop,0)]
+            body += '<polygon class="mini-tail" points="' + ' '.join(f'{X(x):.2f},{Y(y):.2f}' for x,y in shaded) + '"/>'
+        body += '<polyline class="transition-line" points="' + ' '.join(f'{X(x):.2f},{Y(y):.2f}' for x,y in points) + '"/>'
+        body += f'<path class="transition-frame" d="M{left} 112h114"/>'
+        body += text(left+114, 137, '0,025' if two else '0,05', 'end')
+        body += f'<path class="mini-tail-pointer" d="M{left+103} 123V109"/>'
+        if two:
+            body += text(left, 137, '0,025') + f'<path class="mini-tail-pointer" d="M{left+11} 123V109"/>'
+        body += text(left+57, 162, '2 × 2,5% = 5%' if two else '1 × 5% = 5%', 'middle')
+    return svg('t-verdeling met 24 vrijheidsgraden. Tweezijdig: 95% midden en 2,5% in elke staart. Eenzijdig: 95% links en 5% in de rechterstaart. Oranje zijn de staarten.', body, 170)
+
+
+def estimate_interval():
+    body = text(130, 16, 'Bedragen in euro', 'middle')
+    body += '<path class="transition-line" d="M24 84H236M24 77v14M236 77v14"/>'
+    body += '<circle class="transition-point" cx="130" cy="84" r="4"/>'
+    body += text(130, 43, 'Puntschatting', 'middle') + text(130, 62, '100.000', 'middle')
+    body += text(24, 108, '96.000', 'middle') + text(228, 108, '104.000', 'middle')
+    body += '<path class="mini-tail-pointer" d="M24 117v5h106v-5M130 117v5h106v-5"/>'
+    body += text(77, 143, 'E = 4.000', 'middle') + text(188, 143, 'E = 4.000', 'middle')
+    body += text(130, 166, 'Totale breedte: 2E = 8.000', 'middle')
+    return svg('Puntschatting 100.000 euro, marge E 4.000 euro. Interval van 96.000 tot 104.000 euro; totale breedte 8.000 euro.', body, 175)
+
+
 def enhance(lessons):
     by_id = {lesson['id']: lesson for lesson in lessons}
-    def add(key, title, paragraph_start, picture, caption):
+    def add(key, title, paragraph_start, picture, caption, graph_id=None, paragraphs=1):
         section = next(s for s in by_id[key]['sections'] if s['title'] == title)
         matches = [m for m in re.finditer(r'<p(?: [^>]*)?>.*?</p>', section['html'], re.S)
                    if unescape(re.sub('<[^>]+>', '', m[0])).startswith(paragraph_start)]
         if len(matches) != 1:
             raise ValueError(f'Mini-grafiek: uitleg niet uniek gevonden in {key}: {paragraph_start}')
         m = matches[0]
-        wrapper = (f'<div class="mini-explanation" data-mini-graph="{key}"><div class="mini-copy">{m[0]}</div>'
-                   f'<figure>{picture}<figcaption>{caption}</figcaption></figure></div>')
-        section['html'] = section['html'][:m.start()] + wrapper + section['html'][m.end():]
+        start = m.start()
+        end = start + list(re.finditer(r'<p(?: [^>]*)?>.*?</p>', section['html'][start:], re.S))[paragraphs - 1].end()
+        copy = section['html'][start:end]
+        caption_html = f'<figcaption>{caption}</figcaption>' if caption else ''
+        wrapper = (f'<div class="mini-explanation" data-mini-graph="{graph_id or key}"><div class="mini-copy">{copy}</div>'
+                   f'<figure>{picture}{caption_html}</figure></div>')
+        section['html'] = section['html'][:start] + wrapper + section['html'][end:]
+
+    add('onzekerheid', 'Eén of twee grenzen: uitgewerkt voorbeeld', 'Bij 95%', tail_comparison(),
+        'Oranje oppervlak = α = 0,05. Beide figuren gebruiken dezelfde t-verdeling (df = 24).', 'onzekerheid-staarten', paragraphs=2)
+    add('onzekerheid', 'Van kans naar interval', 'Een steekproefgemiddelde', estimate_interval(),
+        '', 'onzekerheid-interval')
 
     add('mpu', 'Wanneer gebruik je deze schatter?', 'Het idee komt rechtstreeks',
         svg('Van gemiddeld 100 euro per post naar 800 euro voor acht posten.',

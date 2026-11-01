@@ -27,7 +27,7 @@ for old, new in zip(original, updated):
         html, n = re.subn(r'<div class="mini-explanation"[^>]*><div class="mini-copy">(.*?)</div><figure>.*?</figure></div>', r'\1', b['html'], flags=re.S)
         assert a['html'] == html, (new['id'], b['title'], 'Leerstof gewijzigd bij invoegen figuur')
         count += n
-assert count == 13
+assert count == 15
 assert sum([141, 58, 30, 21]) == sum([114, 58, 36, 42]) == 250
 assert 95000 + .931 * 5000 == 99655
 assert math.isclose((4+1+9)/3, 4.666666666666667)
@@ -46,4 +46,4 @@ def check_words(value, path=''):
 for data in (build_content.lessons, build_content.TERMS, build_content.summaries): check_words(data)
 import build_mc
 check_words(build_mc.make_topics())
-print('13 mini-grafieken: uitleg, formules, vragen en bronnen volledig behouden; rekenbasis en formulering gecontroleerd.')
+print('15 mini-grafieken: uitleg, formules, vragen en bronnen volledig behouden; rekenbasis en formulering gecontroleerd.')

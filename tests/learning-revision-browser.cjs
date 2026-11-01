@@ -90,6 +90,10 @@ const server=http.createServer((req,res)=>{
   await symbol.focus();await page.keyboard.press('Enter');
   await page.locator('#formula-help-popup').waitFor({state:'visible'});await page.keyboard.press('Escape');
   await page.locator('#formula-help-popup').waitFor({state:'hidden'});
+  const spreadTable=page.locator('table').filter({has:page.locator('caption',{hasText:'Drie verschillende soorten spreiding'})});
+  const formulaSizes=await spreadTable.locator('tbody td:first-child math').evaluateAll(nodes=>nodes.map(n=>({math:parseFloat(getComputedStyle(n).fontSize),cell:parseFloat(getComputedStyle(n.closest('td')).fontSize)})));
+  assert.equal(formulaSizes.length,3);
+  assert.ok(formulaSizes.every(s=>s.math>=s.cell*1.29),'Ook samengestelde tabelformules behouden de grotere lettermaat');
   // De voorbeeldvraag is zichtbaar voordat de leerling een stap opent.
   await page.locator('[data-scroll="voorbeeld"]').click();
   await page.locator('#next-step').click();assert.equal(await page.locator('#example-steps>li').count(),1);
@@ -133,6 +137,11 @@ const server=http.createServer((req,res)=>{
    await page.setViewportSize({width,height:950});await page.evaluate(id=>location.hash='#les/'+id,id);await page.locator('.lesson-source-title').waitFor({state:'attached'});
    await page.screenshot({path:path.join(out,id+'-'+width+'.png')});
   }
+  // Vraagletters zijn geen statistische symbolen en krijgen geen formule-popup.
+  const questionLetters=page.locator('.learning-solution td>[data-no-terms]');
+  assert.equal(await questionLetters.count(),3);
+  assert.deepEqual(await questionLetters.allTextContents(),['a','b','c']);
+  assert.equal(await questionLetters.locator('[data-formula-help],[data-sra-term]').count(),0);
   await page.evaluate(()=>location.hash='#formules/stratificatie');await page.locator('.formula-guide-card').first().waitFor();
   await page.evaluate(()=>window.SRATerms.annotate(document.querySelector('#main')));assert.deepEqual(await duplicates(),[]);
   await page.goto(base+'/SRA%20interactieve%20samenvatting.html#les/diagnostiek');await page.locator('.lesson-source-title').waitFor({state:'attached'});
