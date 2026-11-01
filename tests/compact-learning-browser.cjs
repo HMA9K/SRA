@@ -58,7 +58,8 @@ const server=http.createServer((req,res)=>{
    const button=question.locator('[data-check]');if(await button.isEnabled())await button.click();
    const feedback=question.locator('.question-feedback').filter({visible:true});
    assert.match(await feedback.innerText(),/Goed beantwoord/);
-   assert.equal(await feedback.locator('.question-recognition dt').count(),4);
+   assert.equal(await feedback.locator('.question-recognition dt').count(),0);
+   assert.match(await feedback.locator('.question-pattern').innerText(),/^Onthoud:/);
    assert.ok(await feedback.locator('.question-trap').isVisible());
    assert.ok(await feedback.locator('.source-note').count()>0);
    const alternatives=feedback.locator('.answer-reasons>summary');await alternatives.focus();await page.keyboard.press('Enter');

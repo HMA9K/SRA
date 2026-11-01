@@ -69,6 +69,7 @@ body[data-page="les"] table{margin:8px 0}
 body[data-page="les"] th,body[data-page="les"] td{padding:8px 10px}
 body.study-shell[data-page="les"] .lesson-bottom{position:static;padding:14px 0;border-width:1px 0 0;background:transparent}
 math[display="inline"]{display:inline math;math-style:normal;font-size:1.08em;white-space:nowrap}
+table math[display="inline"]{font-size:1.3em}
 @media(max-width:760px){
  body.study-shell[data-page="les"] main{padding:0 14px 24px}
  body.study-shell[data-page="les"] .lesson-top h1{font-size:1.15rem}

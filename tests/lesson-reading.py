@@ -15,6 +15,11 @@ ns = {'m': 'http://www.w3.org/1998/Math/MathML'}
 assert tree.attrib['data-example'] == 's/√n', 'Attributen blijven intact'
 assert len(tree.findall('.//m:mfrac', ns)) == 2
 assert len(tree.findall('.//m:msqrt', ns)) == 1
+total_error = ET.fromstring(inline_formulas('<p>N × s_w/√n, met eindigheidscorrectie</p>'))
+assert len(total_error.findall('m:math', ns)) == 1
+assert len(total_error.findall('.//m:mfrac', ns)) == 1
+assert len(total_error.findall('.//m:msub', ns)) == 1
+assert ''.join(total_error.itertext()) == 'N×swn, met eindigheidscorrectie'
 assert inline_formulas(formatted) == formatted, 'Bestaande MathML niet opnieuw omzetten'
 protected = '<svg><text>s/√n</text></svg><!-- s/√n --><p>&amp; &#8594;</p>'
 assert inline_formulas(protected) == protected

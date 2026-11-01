@@ -731,7 +731,7 @@ window.SRAMCData = {
       "questions": [
         {
           "id": "mc-rekenen-basis-1",
-          "prompt": "Voor 2 en 4: wat is Σw²?",
+          "prompt": "De twee waarnemingen zijn w₁ = 2 en w₂ = 4. Bereken Σw²: de som van hun kwadraten.",
           "options": [
             "36",
             "20",

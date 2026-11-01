@@ -181,9 +181,9 @@ def enhance(lessons, sources):
     extend('rekenen', 'De rekenvorm op het formuleblad',
         '<h3>Controleer de betekenis vóór het getal</h3>'
         + table('Drie verschillende soorten spreiding', ['Grootheid', 'Wat varieert?', 'Waarvoor gebruik je haar?'], [
-            ['s<sub>w</sub>', 'Werkelijke waarden van individuele posten', 'Invoer voor MPU of regressieschatter'],
-            ['s<sub>w</sub>/√n, met eindigheidscorrectie', 'Het gemiddelde bij herhaalde steekproeven', 'Interval voor een gemiddelde'],
-            ['N × s<sub>w</sub>/√n, met eindigheidscorrectie', 'De schatting van het populatietotaal', 'Interval in euro voor de gehele populatie'],
+            ['s_w', 'Werkelijke waarden van individuele posten', 'Invoer voor MPU of regressieschatter'],
+            ['s_w/√n, met eindigheidscorrectie', 'Het gemiddelde bij herhaalde steekproeven', 'Interval voor een gemiddelde'],
+            ['N × s_w/√n, met eindigheidscorrectie', 'De schatting van het populatietotaal', 'Interval in euro voor de gehele populatie'],
         ])
         + '<p>Een negatieve berekende variantie is een controlesignaal: bekijk de invoer, haakjes, '
         'eenheden en afgeronde totalen. Maak die uitkomst niet positief met een absolute waarde. '

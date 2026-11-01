@@ -84,7 +84,7 @@ assert.ok(html.includes('SRA oefenvragen · Regressie en toetsen'));assert.ok(ht
 ui.node('#mc-introduction').onclick();assert.ok(ui.node('#question-overview').open);assert.ok(ui.node('#question-overview-content').innerHTML.includes('Je eerste gecontroleerde antwoord blijft bewaard'));
 ui.node('#mc-mark').onchange({target:{checked:true}});ui.select(aqWrong);ui.node('#mc-check').onclick();
 assert.equal(ui.api.summary(regression).done,1);assert.equal(ui.api.summary(anova).done,1);assert.equal(ui.api.summary().done,1);
-html=ui.render(anova.id,'1');assert.ok(/id="mc-mark"[^>]+checked/.test(html));assert.ok(html.includes('Patroonherkenning'));
+html=ui.render(anova.id,'1');assert.ok(/id="mc-mark"[^>]+checked/.test(html));assert.ok(html.includes('Onthoud:'));assert.ok(!html.includes('Patroonherkenning'));
 for(const ref of anova.refs)assert.ok(html.includes(`source:${ref.source}:${ref.page}`));
 ui.select(aq.correct);ui.node('#mc-check').onclick();
 assert.equal(ui.api.snapshot().answers[aq.id].firstChoice,aqWrong);assert.equal(ui.api.snapshot().answers[aq.id].attempts,2);assert.equal(ui.api.summary(regression).correct,1);assert.equal(ui.api.summary(regression).first,0);
@@ -93,12 +93,12 @@ html=reloadUI.render(regression.id,'resultaat');assert.ok(html.includes('href="#
 const completedGroup={version:1,answers:Object.fromEntries(regression.questions.map(item=>[item.id,{choice:item.correct,firstChoice:item.correct,attempts:1}])),marked:{}};
 const completeUI=renderFixture(D,completedGroup);assert.ok(completeUI.render().includes(`href="#tentamen/mc/${regression.id}/1"`));assert.ok(completeUI.render(regression.id,'resultaat').includes('Alle vragen zijn gecontroleerd.'));
 // Herkenningsstappen zijn uitsluitend antwoordfeedback en worden als tekst weergegeven.
-const richData=JSON.parse(JSON.stringify(D)),richQuestion=richData.topics[0].questions[0];richQuestion.recognition={signals:'<signaal> & gegeven',meaning:'Betekenis van dit gegeven',approach:'Kies de aanpak op grond van de vraag',answer:'Noem de gevraagde grootheid en eenheid'};
-const richUI=renderFixture(richData);assert.ok(!richUI.render(richData.topics[0].id,'1').includes('Dit herken je in de vraag'));
-richUI.select(richQuestion.correct);richUI.node('#mc-check').onclick();html=richUI.render(richData.topics[0].id,'1');
+const richData=JSON.parse(JSON.stringify(D)),richIndex=richData.topics[0].questions.findIndex(q=>q.id.includes('-toepassing-')),richNumber=String(richIndex+1),richQuestion=richData.topics[0].questions[richIndex];richQuestion.recognition={signals:'<signaal> & gegeven',meaning:'Betekenis van dit gegeven',approach:'Kies de aanpak op grond van de vraag',answer:'Noem de gevraagde grootheid en eenheid'};
+const richUI=renderFixture(richData);assert.ok(!richUI.render(richData.topics[0].id,richNumber).includes('Dit herken je in de vraag'));
+richUI.select(richQuestion.correct);richUI.node('#mc-check').onclick();html=richUI.render(richData.topics[0].id,richNumber);
 for(const label of ['Dit herken je in de vraag','Dit betekent het','Zo kies je de aanpak','Dit moet je antwoord bevatten'])assert.ok(html.includes(label));
 assert.ok(html.includes('&lt;signaal&gt; &amp; gegeven'));assert.ok(!html.includes('<signaal>'));
-delete richQuestion.recognition;assert.ok(richUI.render(richData.topics[0].id,'1').includes(richQuestion.pattern.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')));
+delete richQuestion.recognition;assert.ok(richUI.render(richData.topics[0].id,richNumber).includes(richQuestion.pattern.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')));
 for(const file of ['js/mc.js','js/mc-state.js','js/exams.js','js/app.js'])new vm.Script(fs.readFileSync(path.join(root,file),'utf8'),{filename:file});
 const portable=fs.readFileSync(path.join(root,'SRA interactieve samenvatting.html'),'utf8');assert.ok(portable.includes('window.SRAMCData ='));assert.ok(portable.includes('window.SRAMC='));
 console.log(`OK: ${questionCount} vragen, inclusief 134 bestaande vragen, 19 onderwerpen, gedeelde voortgang, bronnen, feedback, herladen en back-up.`);

@@ -43,7 +43,7 @@ lesson('rekenen','Gemiddelde, variantie en standaardafwijking','Basis',
  ('Vier gecontroleerde waarden: 80, 90, 110 en 120',['Som = 400; gemiddelde = 400 / 4 = 100.','Afwijkingen van 100: −20, −10, 10 en 20.','Kwadraten: 400, 100, 100 en 400; samen 1.000.','Steekproefvariantie = 1.000 / (4 − 1) = 333,3333.','Standaardafwijking = √333,3333 = 18,2574. Dit kleine voorbeeld leert het rekenen; het rechtvaardigt op zichzelf nog geen populatie-interval.'],[('formules','Formule 1 en 7, PDF-pagina 1',1)]),
  ['Deel bij de steekproefvariantie door n − 1, niet door n.','Rond tussenuitkomsten niet onnodig af.','Een variantie is geen standaardafwijking.'],
  [('formules','Formule 1 en 7, PDF-pagina 1',1),('slides','PDF-pagina 15–19',15)],[
- ('Voor 2 en 4: wat is Σw²?',['36','20','6'],1,'Je kwadrateert eerst beide waarden: 4 + 16 = 20.'),
+ ('De twee waarnemingen zijn w₁ = 2 en w₂ = 4. Bereken Σw²: de som van hun kwadraten.',['36','20','6'],1,'Je kwadrateert eerst beide waarden: 2² + 4² = 4 + 16 = 20.'),
  ('De variantie is 225 euro². Wat is s?',['225 euro','15 euro','50.625 euro'],1,'s = √225 = 15 euro.'),
  ('Wat beschrijft s / √n?',['De geschatte onzekerheid van het gemiddelde','Het populatietotaal','De spreiding van elke individuele post'],0,'Dit is de standaardfout van het gemiddelde vóór een eventuele eindigheidscorrectie.')],lab='spreiding')
 

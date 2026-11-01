@@ -183,6 +183,7 @@ def inline_formulas(content):
         's/√n': frac(s, root(n)),
         's / √n': frac(s, root(n)),
         's_w/√n': frac(sw, root(n)),
+        'N × s_w/√n': mul(N, frac(sw, root(n))),
         's_w/s_b': frac(sw, sb),
         's_w / s_b': frac(sw, sb),
         'Σw / n': frac(summ(w), n),

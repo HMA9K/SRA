@@ -37,6 +37,8 @@ app.choose(q.correct);assert.equal(app.api.answer(q.id).correct,true);assert.equ
 assert.equal(app.api.answer(q.id).attempts,2);assert.equal(app.panels[q.correct].hidden,false);
 assert.doesNotMatch(app.panels[q.correct].innerHTML,/Jouw antwoord:|Het juiste antwoord:/,'Een goed gekozen antwoord wordt onder dezelfde optie niet herhaald.');
 assert.match(app.panels[q.correct].innerHTML,/Zo werk je het uit/,'De inhoudelijke uitleg blijft staan.');
+assert.match(app.panels[q.correct].innerHTML,/Onthoud:/);
+assert.doesNotMatch(app.panels[q.correct].innerHTML,/Patroonherkenning|Dit herken je in de vraag|Herken:|Gevraagd antwoord:/,'Basischecks tonen geen uitgebreide herkenningsrubriek.');
 app.button.onclick();assert.equal(app.api.answer(q.id).attempts,2,'Dezelfde controle mag niet dubbel tellen.');
 app.choose(wrong,false);assert.equal(app.api.answer(q.id).choice,q.correct,'Terugnavigatie mag geen automatische nieuwe poging opslaan.');
 app.settings.set(false);app.choose(wrong);assert.equal(app.api.answer(q.id).choice,q.correct);
@@ -54,20 +56,21 @@ assert.ok(!app.api.renderSavedNotes().includes('<textarea'),'Het archief herintr
 const legacy={e1:'20250317/1',e2:'20250317/4',e3:'20241028/1',e4:'20241028/9',e5:'20250317/19',e6:'20250317/1'};
 for(const [id,target]of Object.entries(legacy)){app.location.hash='#tentamen/'+id;app.api.route();assert.equal(app.location.hash,'#welkom/'+target);}
 
-function loadMC(){
- const topic=D.topics[0],q=topic.questions[0],radios=q.options.map((_,i)=>input(i)),preference=input('on');
+function loadMC(index=0){
+ const topic=D.topics[0],q=topic.questions[index],radios=q.options.map((_,i)=>input(i)),preference=input('on');
  const panels=q.options.map((_,i)=>({dataset:{mcFeedback:String(i)},hidden:true,innerHTML:'',previousElementSibling:{classList:classes()}}));
  const nodes={'#mc-reset':{},'.mc-own-work':{open:false},'#main':{innerHTML:''},'#mc-mark':input('on'),'#mc-check':{},'#mc-overview':{},'#mc-introduction':{},'#mc-count':{},'#mc-choice-status':{},'#mc-answer-status':{}};
  const document={querySelector(selector){if(selector==='[data-direct-check]')return preference;if(selector==='input[name="mc-choice"]:checked')return radios.find(r=>r.checked);return nodes[selector];},querySelectorAll(selector){if(selector==='input[name="mc-choice"]')return radios;if(selector==='[data-mc-feedback]')return panels;return [];}};
  const window={SRAMCData:D,SRAMCState:require('../js/mc-state.js'),localStorage,SRAAnswerSettings:app.settings};
  vm.runInNewContext(read('js/mc.js'),{window,document},{filename:'mc.js'});
- window.SRAMC.render(topic.id,'1',{pageHead:()=>'',breadcrumb:()=>'',sourceLink:()=>''});
+ window.SRAMC.render(topic.id,String(index+1),{pageHead:()=>'',breadcrumb:()=>'',sourceLink:()=>''});
  function choose(index,trusted=true){radios.forEach((radio,i)=>{radio.checked=i===index;});radios[index].change(trusted);}
  return {q,panels,radios,preference,nodes,choose,api:window.SRAMC};
 }
 let mc=loadMC();q=mc.q;wrong=(q.correct+1)%q.options.length;
 mc.choose(wrong);assert.equal(mc.api.snapshot().answers[q.id].choice,wrong,'MC gebruikt de gedeelde directe voorkeur.');
-assert.equal(mc.panels[wrong].hidden,false);assert.match(mc.panels[wrong].innerHTML,/Patroonherkenning/);
+assert.equal(mc.panels[wrong].hidden,false);assert.match(mc.panels[wrong].innerHTML,/Onthoud:/);
+assert.doesNotMatch(mc.panels[wrong].innerHTML,/Patroonherkenning|Dit herken je in de vraag|Herken:|Gevraagd antwoord:/);
 assert.match(mc.panels[wrong].innerHTML,/Het juiste antwoord is:/);
 mc.choose(q.correct);assert.equal(mc.api.snapshot().answers[q.id].firstChoice,wrong);assert.equal(mc.api.snapshot().answers[q.id].attempts,2);
 assert.equal(mc.panels[wrong].innerHTML,'');assert.equal(mc.panels[q.correct].hidden,false);
@@ -81,4 +84,8 @@ mc.preference.checked=false;mc.preference.change();mc.choose(wrong);assert.equal
 assert.ok(mc.panels.every(panel=>panel.hidden));mc.nodes['#mc-check'].onclick();assert.equal(mc.api.snapshot().answers[q.id].attempts,3);
 mc=loadMC();assert.ok(mc.nodes['#main'].innerHTML.indexOf('data-mc-feedback=')<mc.nodes['#main'].innerHTML.indexOf('id="mc-check"'));
 assert.equal(mc.api.snapshot().answers[q.id].firstChoice,wrong);
+mc=loadMC(D.topics[0].questions.findIndex(item=>item.id.includes('-toepassing-')));
+mc.choose(mc.q.correct);mc.nodes['#mc-check'].onclick();
+assert.match(mc.panels[mc.q.correct].innerHTML,/Patroonherkenning/,'Toepassingsvragen behouden hun uitgebreide aanpak.');
+for(const label of ['Dit herken je in de vraag','Dit betekent het','Zo kies je de aanpak','Dit moet je antwoord bevatten'])assert.ok(mc.panels[mc.q.correct].innerHTML.includes(label));
 console.log('OK: handmatig en direct nakijken, geen dubbel goed antwoord bij opties, volledige losse resultaten en foutfeedback, bewaarde voorkeur, eerste poging, herladen en zes oude tentamenlinks.');
