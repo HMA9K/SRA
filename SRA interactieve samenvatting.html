@@ -1088,8 +1088,10 @@ body[data-page="les"] #main .lab-controls :is(.lab-range-hint,.lab-control-note)
 .lab-all-results .lab-result{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .lab-all-results .lab-result>:not(.chart-figure){grid-column:1/-1;min-width:0}
 .lab-all-results .chart-figure{margin:0;padding:10px}
-.lab-all-results .chart-figure:only-of-type{grid-column:1;grid-row:span 2;width:100%;align-self:start}
-.lab-all-results .lab-result:has(>.chart-figure:only-of-type)>:is(.lab-try,.lab-interpretation){grid-column:2;align-self:start}
+.lab-all-results .lab-result:has(>.chart-figure:only-of-type){display:flow-root}
+.lab-all-results .chart-figure:only-of-type{float:left;width:calc(50% - 6px);margin:0 12px 12px 0}
+body[data-page="les"] #main .lab-all-results .lab-result:has(>.chart-figure:only-of-type)>:is(.lab-try,.lab-interpretation){margin:0 0 12px calc(50% + 6px)}
+.lab-all-results .lab-result:has(>.chart-figure:only-of-type)>:not(.chart-figure):not(.lab-try):not(.lab-interpretation){clear:both}
 .lab .lab-all-results .chart-scroll svg{min-width:400px;width:100%;max-width:500px;max-height:280px;margin:0}
 .lab .lab-all-results .chart-scroll svg.chart-responsive{min-width:0}
 .lab .lab-all-results .chart-scroll svg text{font-size:18px}
@@ -1102,8 +1104,8 @@ body[data-page="les"] #main .lab-all-results .chart-note{font-size:.76rem;line-h
 body[data-page="les"] #main .lab-all-results .lab-try{margin:0;padding:8px 12px}
 @container (max-width:700px){
  .lab-all-results .lab-result{grid-template-columns:1fr}
- .lab-all-results .chart-figure:only-of-type{grid-column:1;grid-row:auto}
- .lab-all-results .lab-result:has(>.chart-figure:only-of-type)>:is(.lab-try,.lab-interpretation){grid-column:1}
+ .lab-all-results .chart-figure:only-of-type{float:none;width:100%;margin:0 0 12px}
+ body[data-page="les"] #main .lab-all-results .lab-result:has(>.chart-figure:only-of-type)>:is(.lab-try,.lab-interpretation){margin-left:0}
  .lab-view-choices button{padding:6px}
  .lab-view-choices span{font-size:.66rem}
 }
