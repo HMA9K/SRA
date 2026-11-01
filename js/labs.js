@@ -243,8 +243,10 @@
  function mount(id,container){
   mounts.get(container)?.();references.delete(container);
   const c=configs[id];if(!c)return;
-  const controls=`<div class="lab-controls"><div class="lab-intro"><div class="block-label">Zelf onderzoeken</div><h2>${c.title}</h2><p>${c.hint}</p></div><p class="lab-controls-heading" data-no-terms>Pas de gegevens aan <span>Het bijbehorende effect verschijnt direct in beeld.</span></p><div class="lab-grid">${c.fields}</div></div>`;
-  const output=`<section class="lab-output" aria-label="Direct resultaat"><div class="lab-output-head" data-no-terms><label>Bekijk het effect<select data-lab-view aria-label="Getoonde grafiek of uitkomst"></select></label><p class="lab-output-context"></p></div><div class="lab-live"></div><p class="sr-only lab-live-status" role="status" aria-live="polite" aria-atomic="true" data-no-terms></p></section>`;
+  const controls=`<div class="lab-controls"><div class="lab-intro"><div class="block-label">Zelf onderzoeken</div><h2>${c.title}</h2><p>${c.hint}</p></div><div class="lab-grid">${c.fields}</div></div>`;
+  const viewLabels=id==='populatie'?{'chart-0':['Posten','Welke artikelen onderzoek je?'],'chart-1':['Geschat totaal','Vergelijk de schatting met het werkelijke totaal.'],uitleg:['Berekening','Hoe kom je van de steekproef naar het totaal?']}:null;
+  const viewControl=viewLabels?'<div class="lab-view-choices" data-lab-view role="group" aria-label="Getoonde grafiek of uitkomst"></div>':'<label>Bekijk het effect<select data-lab-view aria-label="Getoonde grafiek of uitkomst"></select></label>';
+  const output=`<section class="lab-output" aria-label="Direct resultaat"><div class="lab-output-head" data-no-terms>${viewControl}<p class="lab-output-context"></p></div><div class="lab-live"></div><p class="sr-only lab-live-status" role="status" aria-live="polite" aria-atomic="true" data-no-terms></p></section>`;
   container.innerHTML=`<div class="lab-workspace">${controls}${output}</div><details class="lab-all-results"><summary>Toelichting, rekenstappen en alle resultaten</summary><div class="lab-result"></div></details>`;
   const layout=window.SRALabLayout,viewChoice=container.querySelector('[data-lab-view]'),live=container.querySelector('.lab-live'),context=container.querySelector('.lab-output-context');
   let presentation=null,selectedView=null,optionsSignature='';
@@ -253,8 +255,9 @@
    if(control){const input=container.querySelector(`[name="${control}"]`),label=input?.getAttribute('aria-label')?.replace(/ getal$/, '')||(control==='values'?'Waarden':control);context.innerHTML=esc('Bij: '+label);}
    selectedView=layout.choose(id,control,selectedView,presentation.views,container.querySelector('[name="mode"]')?.value);
    const signature=presentation.views.map(v=>v.key+':'+v.title).join('|');
-   if(signature!==optionsSignature){viewChoice.innerHTML=presentation.views.map(v=>`<option value="${esc(v.key)}">${esc(v.title)}</option>`).join('');optionsSignature=signature;}
+   if(signature!==optionsSignature){viewChoice.innerHTML=presentation.views.map(v=>viewLabels?`<button type="button" data-lab-choice="${esc(v.key)}" aria-pressed="false"><strong>${esc(viewLabels[v.key]?.[0]||v.title)}</strong><span>${esc(viewLabels[v.key]?.[1]||'')}</span></button>`:`<option value="${esc(v.key)}">${esc(v.title)}</option>`).join('');optionsSignature=signature;}
    viewChoice.value=selectedView;
+   viewChoice.querySelectorAll('[data-lab-choice]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.labChoice===selectedView)));
    const view=presentation.views.find(v=>v.key===selectedView);
    live.innerHTML=presentation.metrics+(view?.html||'');
    container.querySelector('.lab-live-status').innerHTML=esc((view?.title||'')+'. '+presentation.summary);
@@ -315,6 +318,8 @@
    update(e.target.dataset.sync||e.target.name);
   };
   const handleFocus=e=>{if(e.target.closest('.lab-controls')&&!e.target.disabled&&(e.target.name||e.target.dataset.sync))showLive(e.target.dataset.sync||e.target.name);};
+  const handleViewClick=e=>{const button=e.target.closest('[data-lab-choice]');if(!button)return;selectedView=button.dataset.labChoice;context.innerHTML='';showLive();};
+  container.addEventListener('click',handleViewClick);
   container.addEventListener('input',handleInput);container.addEventListener('change',handleInput);
   container.addEventListener('focusin',handleFocus);
   const fitButton=container.querySelector('#lab-fit');
@@ -323,7 +328,7 @@
   let previousWidth=container.clientWidth;
   const observer=new ResizeObserver(()=>{if(!container.isConnected){observer.disconnect();return;}if(container.clientWidth!==previousWidth){previousWidth=container.clientWidth;update();}});
   observer.observe(container);
-  mounts.set(container,()=>{observer.disconnect();container.removeEventListener('input',handleInput);container.removeEventListener('change',handleInput);container.removeEventListener('focusin',handleFocus);});
+  mounts.set(container,()=>{observer.disconnect();container.removeEventListener('input',handleInput);container.removeEventListener('change',handleInput);container.removeEventListener('focusin',handleFocus);container.removeEventListener('click',handleViewClick);});
  }
  window.SRALabs={mount,ids:Object.keys(configs),calculations:{planning,partialF,validation,collinearity,predictionBands}};
 })();

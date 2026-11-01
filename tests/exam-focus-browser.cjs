@@ -2,6 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),http=require('node:http'),path=require('node:path');
 const {chromium}=require(process.env.PLAYWRIGHT_PATH||'playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'tmp/exam-focus-qa');fs.mkdirSync(out,{recursive:true});
+const pointData=JSON.parse(fs.readFileSync(path.join(root,'data/exam-point-analysis.json'),'utf8'));
 const server=http.createServer((req,res)=>{
  const rel=decodeURIComponent(new URL(req.url,'http://localhost').pathname),file=path.resolve(root,'.'+(rel==='/'?'/index.html':rel));
  if(!file.startsWith(root+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile()){res.writeHead(404);res.end();return;}
@@ -30,8 +31,15 @@ const server=http.createServer((req,res)=>{
      if(i===0){
       assert.doesNotMatch(await block.innerText(),/Historische punten, geen voorspelling|[Rr]oute|Gemiddelden omvatten nullen|Alle tentamens, de spreiding en de puntentoerekening/);
       if(await block.locator('table').count()){
-       assert.deepEqual(await block.locator('th').allTextContents(),['Onderwerp','Tentamens','Deelvragen','Gemiddeld puntengewicht (%)']);
+       assert.deepEqual(await block.locator('th').allTextContents(),['Onderwerp','Voorkomen in Tentamens','Deelvragen (totaal)','Gemiddeld puntengewicht per tentamen (%) Alleen als het onderwerp voorkomt']);
        for(const row of await block.locator('tr').all())assert.equal(await row.locator('th,td').count(),4);
+       for(const row of await block.locator('tbody tr').all()){
+        const cells=await row.locator('td').allTextContents(),topic=pointData.topics.find(t=>t.label===cells[0]);
+        assert.ok(topic,cells[0]);
+        const scores=pointData.rows.filter(r=>r.topic===topic.id),exams=new Set(scores.map(r=>r.exam));
+        const expected=exams.size?(scores.reduce((n,r)=>n+r.points,0)/exams.size).toFixed(2).replace('.',',')+'%':'n.v.t.';
+        assert.equal(cells[3],expected,topic.id+': puntengewicht bij voorkomen');
+       }
       }
       assert.ok(await block.locator('.source-note').count()>0);
      }

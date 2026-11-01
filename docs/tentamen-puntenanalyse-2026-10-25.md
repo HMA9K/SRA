@@ -8,7 +8,8 @@ Gecontroleerd op 25 oktober 2026. Negen unieke tentamens, 196 vraagnummers en 90
 - Een genummerde vraag zonder letteronderdelen telt als één deelvraag. Bij expliciete a/b/c-onderdelen tellen die afzonderlijk. Rubricregels binnen een deelvraag leveren geen extra deelvragen op. Een deelvraag met meerdere onderwerpen kan in meerdere tellingen voorkomen; de punten nooit.
 - Een geïntegreerde stratificatieberekening telt onder stratificatie: totaalschatting en interval. MPU, verschil, t-tabellen en spreiding zijn daarbij noodzakelijke voorkennis, zonder dezelfde punten opnieuw te boeken.
 - Een onderwerp met nul afzonderlijke punten kan noodzakelijke voorkennis of een actueel leerdoel zijn. Nul betekent niet dat het onderwerp mag verdwijnen.
-- Gemiddelden en standaarddeviaties gebruiken alle negen tentamens, inclusief nullen. Spreiding is minimum, maximum en populatiestandaarddeviatie van de negen historische scores.
+- Het gemiddelde puntengewicht in de lessen telt alleen tentamens mee waarin het onderwerp voorkomt: totaalpunten gedeeld door het aantal van die tentamens. Elk tentamen heeft 100 punten, dus het aantal punten is ook het percentage. Bij geen voorkomen is er geen gemiddelde.
+- De kolom Gem./100 en de standaarddeviatie in dit rapport gebruiken alle negen tentamens, inclusief nullen. De kolom Gem. bij voorkomen (%) sluit aan op de lessen. Spreiding is minimum, maximum en populatiestandaarddeviatie van de negen historische scores.
 - Recent = de drie recentste unieke tentamens: maart 2024, oktober 2024 en maart 2025. Ook het recente gemiddelde bevat nullen. Dit is een beschrijving, geen voorspelling.
 - Gezamenlijke punten blijven in een eigen rij en staan met betrokken onderwerpen in het detailregister. Bronfouten in de bestaande antwoordcontrole veranderen de historische puntentoekenning niet.
 
@@ -29,36 +30,36 @@ Gecontroleerd op 25 oktober 2026. Negen unieke tentamens, 196 vraagnummers en 90
 
 ## Punten per onderwerp
 
-| Onderwerp | Tentamens | Vragen | Deelvragen | Totaal | Gem./100 | Aandeel | Min–max | SD |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Stratificatie: totaalschatting en interval | 9/9 | 14 | 15 | 99 | 11,00 | 11,00% | 6–16 | 2,98 |
-| Hypothesen en significantietoetsen regressie | 9/9 | 19 | 20 | 80 | 8,89 | 8,89% | 3–14 | 3,07 |
-| Multicollineariteit | 9/9 | 18 | 22 | 60 | 6,67 | 6,67% | 3–11 | 2,36 |
-| ANOVA, verklaarde variatie en residuele spreiding | 8/9 | 13 | 15 | 50 | 5,56 | 5,56% | 0–13 | 3,89 |
-| Verschilschatter | 4/9 | 10 | 10 | 44 | 4,89 | 4,89% | 0–14 | 5,65 |
-| Stratificatie: grenzen, redenen en allocatie | 9/9 | 14 | 15 | 44 | 4,89 | 4,89% | 1–10 | 2,64 |
-| Directe schatter (MPU) | 5/9 | 7 | 7 | 39 | 4,33 | 4,33% | 0–10 | 3,97 |
-| Variabelenselectie en modeluitbreiding | 9/9 | 10 | 10 | 39 | 4,33 | 4,33% | 3–8 | 1,76 |
-| Normaliteit van residuen | 9/9 | 12 | 12 | 37 | 4,11 | 4,11% | 2–7 | 1,91 |
-| Invloedrijke punten (Cook) | 9/9 | 10 | 10 | 33 | 3,67 | 3,67% | 3–6 | 0,94 |
-| Regressie: voorspellings- of schattingsinterval | 5/9 | 5 | 5 | 33 | 3,67 | 3,67% | 0–7 | 3,30 |
-| Quotiëntschatter | 4/9 | 7 | 7 | 32 | 3,56 | 3,56% | 0–10 | 4,17 |
-| Modelvergelijking met adjusted R² en spaarzaamheid | 7/9 | 9 | 9 | 31 | 3,44 | 3,44% | 0–8 | 2,54 |
-| Niet-lineaire modellen en transformaties | 7/9 | 10 | 11 | 30 | 3,33 | 3,33% | 0–6 | 2,21 |
-| Regressievergelijking, puntschatting en extrapolatie | 5/9 | 7 | 9 | 28 | 3,11 | 3,11% | 0–9 | 3,28 |
-| Regressieschatter van een populatietotaal | 2/9 | 3 | 3 | 26 | 2,89 | 2,89% | 0–16 | 5,59 |
-| Regressiebasis: gegevenstype, OLS en residuen | 6/9 | 7 | 8 | 26 | 2,89 | 2,89% | 0–7 | 2,64 |
-| Uitbijters in x (Mahalanobis) | 9/9 | 9 | 9 | 26 | 2,89 | 2,89% | 1–5 | 1,20 |
-| Uitbijters in y (gestandaardiseerd residu) | 9/9 | 9 | 9 | 25 | 2,78 | 2,78% | 2–5 | 1,03 |
-| Gezamenlijke punten zonder aantoonbare verdeling | 7/9 | 14 | 14 | 20 | 2,22 | 2,22% | 0–8 | 2,48 |
-| Steekproefomvang en uitbreiding | 4/9 | 4 | 4 | 17 | 1,89 | 1,89% | 0–5 | 2,13 |
-| Heteroscedasticiteit | 8/9 | 8 | 8 | 17 | 1,89 | 1,89% | 0–3 | 0,99 |
-| Coëfficiënten, dummyverschillen en Beta interpreteren | 5/9 | 5 | 5 | 16 | 1,78 | 1,78% | 0–4 | 1,62 |
-| Correlatie en eerste keuze van verklarende variabelen | 6/9 | 6 | 6 | 15 | 1,67 | 1,67% | 0–3 | 1,25 |
-| Schatters vergelijken en kiezen | 5/9 | 7 | 7 | 14 | 1,56 | 1,56% | 0–5 | 1,77 |
-| Samengevoegde groepen | 5/9 | 5 | 5 | 14 | 1,56 | 1,56% | 0–4 | 1,57 |
-| Toepasselijkheid tijdsvertraging en autocorrelatie | 2/9 | 2 | 2 | 5 | 0,56 | 0,56% | 0–4 | 1,26 |
-| Validatie met testset en MSPR | 0/9 | 0 | 0 | 0 | 0,00 | 0,00% | 0–0 | 0,00 |
+| Onderwerp | Tentamens | Vragen | Deelvragen | Totaal | Gem./100 | Aandeel | Gem. bij voorkomen (%) | Min–max | SD |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Stratificatie: totaalschatting en interval | 9/9 | 14 | 15 | 99 | 11,00 | 11,00% | 11,00% | 6–16 | 2,98 |
+| Hypothesen en significantietoetsen regressie | 9/9 | 19 | 20 | 80 | 8,89 | 8,89% | 8,89% | 3–14 | 3,07 |
+| Multicollineariteit | 9/9 | 18 | 22 | 60 | 6,67 | 6,67% | 6,67% | 3–11 | 2,36 |
+| ANOVA, verklaarde variatie en residuele spreiding | 8/9 | 13 | 15 | 50 | 5,56 | 5,56% | 6,25% | 0–13 | 3,89 |
+| Verschilschatter | 4/9 | 10 | 10 | 44 | 4,89 | 4,89% | 11,00% | 0–14 | 5,65 |
+| Stratificatie: grenzen, redenen en allocatie | 9/9 | 14 | 15 | 44 | 4,89 | 4,89% | 4,89% | 1–10 | 2,64 |
+| Directe schatter (MPU) | 5/9 | 7 | 7 | 39 | 4,33 | 4,33% | 7,80% | 0–10 | 3,97 |
+| Variabelenselectie en modeluitbreiding | 9/9 | 10 | 10 | 39 | 4,33 | 4,33% | 4,33% | 3–8 | 1,76 |
+| Normaliteit van residuen | 9/9 | 12 | 12 | 37 | 4,11 | 4,11% | 4,11% | 2–7 | 1,91 |
+| Invloedrijke punten (Cook) | 9/9 | 10 | 10 | 33 | 3,67 | 3,67% | 3,67% | 3–6 | 0,94 |
+| Regressie: voorspellings- of schattingsinterval | 5/9 | 5 | 5 | 33 | 3,67 | 3,67% | 6,60% | 0–7 | 3,30 |
+| Quotiëntschatter | 4/9 | 7 | 7 | 32 | 3,56 | 3,56% | 8,00% | 0–10 | 4,17 |
+| Modelvergelijking met adjusted R² en spaarzaamheid | 7/9 | 9 | 9 | 31 | 3,44 | 3,44% | 4,43% | 0–8 | 2,54 |
+| Niet-lineaire modellen en transformaties | 7/9 | 10 | 11 | 30 | 3,33 | 3,33% | 4,29% | 0–6 | 2,21 |
+| Regressievergelijking, puntschatting en extrapolatie | 5/9 | 7 | 9 | 28 | 3,11 | 3,11% | 5,60% | 0–9 | 3,28 |
+| Regressieschatter van een populatietotaal | 2/9 | 3 | 3 | 26 | 2,89 | 2,89% | 13,00% | 0–16 | 5,59 |
+| Regressiebasis: gegevenstype, OLS en residuen | 6/9 | 7 | 8 | 26 | 2,89 | 2,89% | 4,33% | 0–7 | 2,64 |
+| Uitbijters in x (Mahalanobis) | 9/9 | 9 | 9 | 26 | 2,89 | 2,89% | 2,89% | 1–5 | 1,20 |
+| Uitbijters in y (gestandaardiseerd residu) | 9/9 | 9 | 9 | 25 | 2,78 | 2,78% | 2,78% | 2–5 | 1,03 |
+| Gezamenlijke punten zonder aantoonbare verdeling | 7/9 | 14 | 14 | 20 | 2,22 | 2,22% | 2,86% | 0–8 | 2,48 |
+| Steekproefomvang en uitbreiding | 4/9 | 4 | 4 | 17 | 1,89 | 1,89% | 4,25% | 0–5 | 2,13 |
+| Heteroscedasticiteit | 8/9 | 8 | 8 | 17 | 1,89 | 1,89% | 2,13% | 0–3 | 0,99 |
+| Coëfficiënten, dummyverschillen en Beta interpreteren | 5/9 | 5 | 5 | 16 | 1,78 | 1,78% | 3,20% | 0–4 | 1,62 |
+| Correlatie en eerste keuze van verklarende variabelen | 6/9 | 6 | 6 | 15 | 1,67 | 1,67% | 2,50% | 0–3 | 1,25 |
+| Schatters vergelijken en kiezen | 5/9 | 7 | 7 | 14 | 1,56 | 1,56% | 2,80% | 0–5 | 1,77 |
+| Samengevoegde groepen | 5/9 | 5 | 5 | 14 | 1,56 | 1,56% | 2,80% | 0–4 | 1,57 |
+| Toepasselijkheid tijdsvertraging en autocorrelatie | 2/9 | 2 | 2 | 5 | 0,56 | 0,56% | 2,50% | 0–4 | 1,26 |
+| Validatie met testset en MSPR | 0/9 | 0 | 0 | 0 | 0,00 | 0,00% | n.v.t. | 0–0 | 0,00 |
 
 ## Punten per tentamen en recente periode
 

@@ -72,7 +72,7 @@ def panel(title, picture, calculations, result, meaning, intro=''):
 
 def block(key, title, panels, note=''):
     return ('<div class="learning-transition" data-learning-transition="' + key + '"><h3>' + title
-            + '</h3><div class="transition-panels">' + ''.join(panels) + '</div>'
+            + '</h3><div class="transition-panels' + (' transition-pair' if len(panels) == 2 else '') + '">' + ''.join(panels) + '</div>'
             + ('<p class="transition-note">' + note + '</p>' if note else '') + '</div>')
 
 
@@ -94,7 +94,7 @@ def spread_example(arithmetic_html, spread_html):
         '<h4>4. Van kwadraten naar variantie en standaardafwijking</h4>' + spread[1] + '</p>' + root + spread[2]
         + '<p>In dit voorbeeld: steekproefvariantie = 1.000 ÷ (4 − 1) ≈ 333,33 euro²; standaardafwijking = √(1.000 ÷ 3) ≈ € 18,26. '
         'Waarom n − 1? Rond het berekende gemiddelde tellen de afwijkingen op tot nul; na drie afwijkingen ligt de vierde vast. '
-        'Dit bestaande rekenvoorbeeld verklaart de bewerkingen, maar rechtvaardigt geen populatie-interval.</p>'
+        '</p>'
         '<h4>5. Rekenvolgorde en twee verschillende sommen</h4>' + order + arithmetic[1])
 
 
@@ -105,7 +105,7 @@ def uncertainty_example():
         panel('2. Het geschatte gemiddelde', chart('Standaardfout bij gelijkgehouden s en toenemend n', [(n, SD/sqrt(n)) for n in (4,16,64)], 'n (posten)', 'Standaardfout (€)', labels=False, line=True),
               [f'n = {n}: s ÷ √{n} ≈ € {num(SD/sqrt(n))}' for n in (4,16,64)], 'Meer posten: kleinere standaardfout', 'Een gemiddelde van meer onafhankelijke waarnemingen varieert minder tussen steekproeven.')],
         'Rekenvergelijking met dezelfde s, vóór eindigheidscorrectie. Nieuwe steekproeven kunnen een andere s opleveren. '
-        'Hieronder zie je waarom s en de standaardfout verschillende vragen beantwoorden.')
+        '')
 
 
 def distribution_example():
@@ -115,9 +115,9 @@ def distribution_example():
               ['Mogelijk: 80, 90, 110 of 120.', 'Elke waarde heeft kans 1/4.'], 'Vier mogelijke waarden', 'Deze verdeling gaat over één losse trekking.'),
         panel('2. Twee trekkingen middelen', chart('Verdeling van de gemiddelden van alle zestien geordende paren', means, 'Gemiddelde (€)', 'Kans (%)', reference=0, stems=True, labels=False),
               ['(80 + 90) ÷ 2 = 85', '(80 + 120) ÷ 2 = 100', '(110 + 120) ÷ 2 = 115'], '100 komt bij 4 van de 16 paren voor', 'Nu bestaat elke uitkomst uit een gemiddelde. De kansen liggen meer rond het midden.')],
-        'Eigen klein kansvoorbeeld: twee onafhankelijke trekkingen mét teruglegging uit 80, 90, 110 en 120. '
+        'Twee onafhankelijke trekkingen mét teruglegging uit 80, 90, 110 en 120. '
         'Alle 16 geordende paren zijn even waarschijnlijk. Dit is nog geen normale verdeling. '
-        'De bestaande uitleg hieronder behandelt wanneer een normale benadering bruikbaar is.')
+        '')
 
 
 def population_example():
@@ -125,19 +125,34 @@ def population_example():
         panel('1. Populatie', dots('Alle acht voorbeeldposten', [('Alle posten: N = 8',8)]),
               ['Je wilt de waarde van alle 8 posten weten.'], 'Het geheel waarover je iets zegt', 'Dit heet de populatie. Het werkelijke totaal is nog onbekend.'),
         panel('2. Steekproef', chart('Vier gecontroleerde voorbeeldposten met gemiddelde 100 euro', list(enumerate(VALUES,1)), 'Post', 'Waarde (€)', reference=MEAN),
-              ['4 gecontroleerd: 80, 90, 110 en 120.', 'Gemiddelde = 400 ÷ 4 = 100.'], 'Het onderzochte deel: n = 4', 'Met deze steekproef schat je iets over het geheel.')],
-        'Eigen verkleind voorbeeld: de directe totaalschatting is 8 × € 100 = € 800, geen zekerheid over het echte totaal. '
-        'Een echte controle vraagt een passende aselecte selectie. Hieronder volgt de volledige cursuscasus.')
+              ['4 gecontroleerd: 80, 90, 110 en 120.', 'Gemiddelde = 400 ÷ 4 = 100.'], 'Het onderzochte deel: n = 4', 'Geschat totaal: 8 × € 100 = € 800.')])
+
+
+def strata_diagram(planned=False):
+    title = ('A: twee gecontroleerd; B: twee gecontroleerd en één extra controle. Lege cirkels zijn nog niet gecontroleerd.'
+             if planned else 'Elke cirkel is één post. De bedragen zijn boekwaarden; A bevat lage en B hoge boekwaarden.')
+    out = [f'<svg class="transition-chart" viewBox="0 0 260 170" role="img" aria-label="{title}" xmlns="http://www.w3.org/2000/svg"><title>{title}</title>']
+    for row, (label, values) in enumerate([('A: lage boekwaarden', (80,90,110,120)), ('B: hoge boekwaarden', (800,900,1100,1200))]):
+        y = 38 + row * 78
+        out.append(f'<text x="8" y="{y-21}">{label}</text>')
+        for i, value in enumerate(values):
+            x = 30 + i * 62
+            mark = '✓' if planned and i < 2 else '+' if planned and row == 1 and i == 2 else ''
+            style = 'transition-checked' if mark == '✓' else 'transition-extra' if mark else 'transition-unchecked'
+            out.append(f'<circle class="{style}" cx="{x}" cy="{y}" r="9"/>')
+            if mark:
+                out.append(f'<text class="transition-check" x="{x}" y="{y+4}" text-anchor="middle">{mark}</text>')
+            out.append(f'<text x="{x}" y="{y+27}" text-anchor="middle">{num(value,0)}</text>')
+    return ''.join(out) + '</svg>'
 
 
 def strata_example():
     return block('steekproefomvang-strata', 'Eerst groepen maken, daarna controles per groep plannen', [
-        panel('1. Deel de populatie op', dots('Twee strata van vier posten', [('A: 4 kleine posten',4),('B: 4 grote posten',4)]),
-              ['A: boekwaarden 80, 90, 110, 120.', 'B: 800, 900, 1.100, 1.200.'], 'Elke groep heet een stratum', 'Je deelt in met bekende boekwaarden, vóórdat je de werkelijke waarden controleert.'),
-        panel('2. Plan binnen elke groep', dots('Voorbeeld van een uitbreiding: twee controles in A, drie in B', [('A: 2 controles',2),('B: 2 + 1 controles',3)]),
-              ['Eerst 2 controles in A en 2 in B.', 'Bij uitbreiding in B: 2 + 1 = 3.'], 'Totaal: 5; uitbreiding: 1', 'De echte berekening bepaalt welke groep uitbreiding nodig heeft en hoeveel.')],
-        'Eigen schematisch voorbeeld, geen berekende optimale verdeling. De omvang Nᵢ telt alle posten in een groep; nᵢ telt de controles. '
-        'Hieronder reken je met de variantiebijdragen. Les 9 werkt de groepsgrenzen, allocatie en samenvoeging volledig uit.')
+        panel('1. Deel de populatie op', strata_diagram(),
+              ['Elke cirkel is één post.', 'Het getal is de boekwaarde in euro.'], 'Elke groep heet een stratum', 'Je deelt in met bekende boekwaarden, vóórdat je de werkelijke waarden controleert.'),
+        panel('2. Plan binnen elke groep', strata_diagram(planned=True),
+              ['✓ = al gecontroleerd; + = extra controle.', 'Leeg = nog niet gecontroleerd.', 'A: 2; B: 2 + 1 = 3 controles.'], 'Totaal: 5; uitbreiding: 1', 'De echte berekening bepaalt welke groep uitbreiding nodig heeft en hoeveel.')],
+        'Nᵢ telt alle posten in een groep; nᵢ telt de controles. Dit schema toont de indeling; de optimale verdeling volgt uit de variantiebijdragen.')
 
 
 def log_example():
@@ -146,8 +161,7 @@ def log_example():
               ['x: 0, 1, 2, 3', 'y: 1; 2,72; 7,39; 20,09'], 'Bij iedere stap: maal e ≈ 2,718', 'Gelijke stappen in x geven steeds grotere toenamen van y.'),
         panel('2. Neem ln van y', chart('Dezelfde voorbeeldwaarden na logaritmeren: ln(y) = x', [(x,x) for x in range(4)], 'x', 'ln(y)', line=True),
               ['ln(1) = 0; ln(e) = 1', 'ln(e²) = 2; ln(e³) = 3'], 'Op deze schaal: steeds +1', 'Het verband is nu een rechte lijn. Met exp ga je terug naar y.')],
-        'Eigen illustratie y = eˣ, geen geschat cursusmodel. De y-waarden zijn afgerond weergegeven; de grafiek gebruikt ongeronde waarden. '
-        'Niet elk krom verband wordt recht door ln. Hierna vergelijk je welke variabele bij elke modelvorm wordt getransformeerd.')
+        'Voorbeeld y = eˣ. De y-waarden zijn afgerond; de grafiek gebruikt ongeronde waarden. Niet elk krom verband wordt recht door ln.')
 
 
 def enhance(lessons):

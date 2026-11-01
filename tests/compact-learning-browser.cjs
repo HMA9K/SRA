@@ -15,7 +15,7 @@ const server=http.createServer((req,res)=>{
   page.on('pageerror',e=>errors.push(String(e)));
   const base=process.env.TEST_BASE_URL||'http://127.0.0.1:'+server.address().port;
   await page.route('**/*',r=>r.request().url().startsWith(base)?r.continue():r.abort());
-  for(const width of [1366,900,390,320])for(const theme of ['light','dark']){
+  for(const width of [1366,1197,900,390,320])for(const theme of ['light','dark']){
    await page.setViewportSize({width,height:950});
    await page.goto(base+'/index.html#les/beginnen');
    await page.locator('.symbol-dictionary').waitFor();
@@ -23,7 +23,7 @@ const server=http.createServer((req,res)=>{
    const dictionary=page.locator('.symbol-dictionary'),text=await dictionary.locator('.symbol-explanation').boundingBox(),table=await dictionary.locator('.symbol-table').boundingBox();
    assert.equal(await dictionary.locator('td:first-child').count(),7);
    assert.match(await dictionary.innerText(),/uitspraak over de populatie blijft onzeker/);
-   if(width>760){assert.ok(table.x>=text.x+text.width);assert.ok(Math.abs(table.y-text.y)<2);}
+   if(width>760){assert.ok(table.x>=text.x+text.width);assert.ok(Math.abs(table.y-text.y)<2);if(width>=1197)assert.ok(Math.abs(table.height-text.height)<65,'Hoogteverschil: '+JSON.stringify({width,text,table}));}
    else assert.ok(table.y>=text.y+text.height);
    const answer=page.locator('.learning-solution,.worked-answer').first();
    if(await answer.getAttribute('open')!==null)await answer.locator('summary').first().click();
@@ -34,7 +34,13 @@ const server=http.createServer((req,res)=>{
    assert.ok((await answer.innerText()).length>200,'De volledige uitwerking blijft beschikbaar');
    await answer.locator('summary').first().focus();await page.keyboard.press('Enter');
    assert.ok((await page.locator('#uitleg .source-notes').first().boundingBox()).height<=26);
+   const types=page.locator('.question-types>section');assert.equal(await types.count(),2);
+   const [first,second]=await types.evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y};}));if(width>760)assert.ok(second.x>first.x&&Math.abs(first.y-second.y)<1,JSON.stringify({width,first,second}));
    const lab=page.locator('#onderzoek');
+   const views=lab.locator('[data-lab-choice]');assert.equal(await views.count(),3);
+   await views.nth(1).click();assert.equal(await views.nth(1).getAttribute('aria-pressed'),'true');assert.match(await lab.locator('.lab-live').innerText(),/Werkelijk totaal/);
+   await views.nth(2).focus();await page.keyboard.press('Enter');assert.match(await lab.locator('.lab-live').innerText(),/Je telt de geselecteerde waarden op/);
+   await views.first().click();
    const number=lab.locator('input[type=number]').first(),range=lab.locator('input[type=range]').first();
    await number.fill('8');await number.press('Tab');
    await page.waitForFunction(()=>document.querySelector('#onderzoek input[type=range]')?.value==='8');
@@ -43,6 +49,9 @@ const server=http.createServer((req,res)=>{
    const selection=lab.locator('.lab-controls select').first();await selection.selectOption('cheap');
    assert.equal(await lab.locator('input[type=number]').last().isDisabled(),true);
    await selection.selectOption('spread');assert.equal(await lab.locator('input[type=number]').last().isDisabled(),false);
+   await lab.locator('.lab-all-results>summary').click();
+   for(const chart of await lab.locator('.lab-result .chart-scroll svg').all())assert.ok((await chart.boundingBox()).height<=281);
+   await lab.locator('.lab-all-results>summary').click();
    if(width===1366)assert.ok((await lab.locator('.lab-controls').boundingBox()).height<580);
    const question=page.locator('#begrip .question').nth(1),correct=await page.evaluate(()=>SRA.lessons.find(l=>l.id==='beginnen').questions[1].correct);
    await question.locator('input[type=radio]').nth(correct).check();
@@ -56,7 +65,7 @@ const server=http.createServer((req,res)=>{
    assert.notEqual(await feedback.locator('.answer-reasons').getAttribute('open'),null);
    if(width===1366){await alternatives.press('Enter');assert.ok((await feedback.boundingBox()).height<660);}
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Geen pagina-overloop');
-   if(theme==='light'&&(width===1366||width===390)){
+   if(theme==='light'&&(width===1366||width===1197||width===390)){
     await dictionary.screenshot({path:path.join(out,'dictionary-'+width+'.png')});
     await lab.screenshot({path:path.join(out,'lab-'+width+'.png')});
     await question.screenshot({path:path.join(out,'question-'+width+'.png')});
@@ -65,6 +74,6 @@ const server=http.createServer((req,res)=>{
    assert.equal(await page.locator('#begrip .question').nth(1).locator('input[type=radio]').nth(correct).isChecked(),true);
    checks.push({width,theme});
   }
-  assert.deepEqual(errors,[]);fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({checks,errors},null,2));console.log('Compacte leerblokken: 8 weergaven, toetsenbord, invoer en antwoordbehoud gecontroleerd.');
+  assert.deepEqual(errors,[]);fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({checks,errors},null,2));console.log('Compacte leerblokken: 10 weergaven, toetsenbord, invoer en antwoordbehoud gecontroleerd.');
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

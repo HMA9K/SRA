@@ -183,7 +183,6 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-row{border-bott
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-label{color:#b1b7c9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .math-scroll:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .table-scroll:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-scroll:focus-visible{outline:3px solid #76542d}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .symbols{color:#adbdc9}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .symbols summary{color:#aebacb}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) caption{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) table.numeric{background:#152129}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) table.numeric th[scope="row"]{background:#161a2c;color:#adbdc9}
@@ -224,6 +223,9 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-live .metric{backgr
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-live .metric b{color:#8deccc}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-all-results{border-top:1px solid #3d6658}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-all-results>summary{color:#a9d1c3}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-view-choices button{border:1px solid #3e6557;background:#152129;color:#a2d8c5}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-view-choices button[aria-pressed=true]{background:#172b20;border-color:#2d765d;box-shadow:inset 0 2px #010304}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-view-choices button:focus-visible{outline:3px solid #76542d}
 /* css/terms.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-term{color:#8dc2ec;text-decoration-color:#a3c2d7}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-term:hover{color:#8dc2ec;background:#16222c}
@@ -319,6 +321,9 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .section-body details:is
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .section-body details:is(.worked-answer,.learning-solution)[open]>summary{border-bottom:1px solid #3b6956}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark] .section-body details:is(.worked-answer,.learning-solution):not(.learning-source){background:#212b38;border-color:#3b685a;color:#a4c0d5}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark] .section-body details:is(.worked-answer,.learning-solution)[open]>summary{border-bottom-color:#3b685a}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-checked{fill:var(--study-teal,#8dece2)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-extra{fill:#ecb28d}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-chart text.transition-check{fill:#f0f7fc}
 /* css/exams.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry{background:#152129;border:1px solid #3b4a54}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry h2{color:#adbdc9}
