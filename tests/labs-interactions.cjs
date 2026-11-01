@@ -161,19 +161,20 @@ for(const [id,fields]of Object.entries(scenarios)){
   assert.deepEqual(c.querySelectorAll('[name]').map(el=>[el.name,el.value]),state,id+' resize preserves inputs');
 }
 
-// All select options and diagnosis submodes are exercised through change events.
+// Every visible setting choice is exercised through its actual click handler.
 for(const [id,names]of Object.entries({strata:['method'],toets:['direction','sign'],transformatie:['model'],populatie:['selection'],keuzeroute:['goal','pattern']})){
   const c=mount(id);for(const name of names){
     if(id==='keuzeroute'&&name==='pattern')change(c,'goal','total','change',false);
     if(id==='toets'&&name==='sign')change(c,'direction','positive','change',false);
-    for(const option of control(c,name).querySelectorAll('option')){change(c,name,option.value,'change',false);healthy(c,id+'.'+name+'='+option.value);interactions++;}
+    const options=c.querySelectorAll(`[data-lab-setting="${name}"]`);assert.ok(options.length>=2);
+    for(const option of options){option.emit('click');assert.equal(control(c,name).value,option.dataset.value);assert.equal(option.getAttribute('aria-pressed'),'true');healthy(c,id+'.'+name+'='+option.dataset.value);interactions++;}
   }
 }
 for(const [mode,fields]of Object.entries({residual:{pattern:'funnel',strength:2},normal:{skew:1,n:[40,false]},outlier:{z:3.5,n:101},distance:{distance:'cd',average:1.5,distanceSD:1.5,maximum:7},dw:{d:1,dL:1.2,dU:1.6}})){
   const c=mount('diagnose');change(c,'mode',mode,'change',false);healthy(c,'diagnose '+mode);
   for(const group of c.querySelectorAll('[data-modes]'))assert.equal(group.hidden,!group.dataset.modes.split(' ').includes(mode),'mode field visibility');
   for(const [name,entry]of Object.entries(fields)){const [value,graph]=Array.isArray(entry)?entry:[entry,true];changed('diagnose',name,value,{mode},graph);}
-  if(mode==='residual')for(const option of control(c,'pattern').querySelectorAll('option')){change(c,'pattern',option.value,'change',false);healthy(c,'residual '+option.value);}
+  if(mode==='residual')for(const option of c.querySelectorAll('[data-lab-setting="pattern"]')){option.emit('click');healthy(c,'residual '+option.dataset.value);}
 }
 
 // Statistically intentional independence: do not make irrelevant sliders alter data.
@@ -288,7 +289,7 @@ for(const [id,name,bad]of [['interval','n',1001],['strata','n',1001],['anova','k
   for(const name of ['b0','b1'])assert.equal(Number(control(c,name).value),fit[name],'OLS button keeps full coefficient precision');
   const before=html(c);c.clientWidth=360;c.querySelector('.lab-result').clientWidth=320;observers.at(-1).fire();assert.notEqual(html(c),before,'Responsive regression SVG is redrawn');healthy(c,'OLS resized');
 }
-console.log(`OK: ${L.ids.length} labs; ${interactions} control changes; input/change sync, select modes, graph responses, invalid-input recovery, OLS and resizing.`);
+console.log(`OK: ${L.ids.length} labs; ${interactions} control changes; input/change sync, choice buttons, graph responses, invalid-input recovery, OLS and resizing.`);
 
 // Focusing a control exposes its result before the next keystroke; range drags
 // preserve their actual control node and the view selector stays in the DOM.
@@ -297,7 +298,7 @@ console.log(`OK: ${L.ids.length} labs; ${interactions} control changes; input/ch
   confidence.emit('focusin');assert.equal(view.value,'chart-2');assert.match(c.querySelector('.lab-live').innerHTML,/Betrouwbaarheid en de twee staarten/);
   change(c,'confidence',98);assert.match(c.querySelector('.lab-live').innerHTML,/Midden: 98%/);
   assert.equal(control(c,'confidence'),confidence,'Typing preserves number focus');assert.equal(c.querySelector('[data-sync="confidence"]'),range,'Dragging preserves range node');assert.equal(c.querySelector('[data-lab-view]'),view,'Result selector stays stable');
-  view.value='chart-1';view.emit('change');assert.match(c.querySelector('.lab-live').innerHTML,/Meer controles en de onzekerheidsmarge/);
+  view.querySelector('[data-lab-choice="chart-1"]').emit('click');assert.match(c.querySelector('.lab-live').innerHTML,/Meer controles en de onzekerheidsmarge/);
   c.clientWidth=640;observers.at(-1).fire();assert.equal(view.value,'chart-1','Resize preserves selected result');
   control(c,'mean').emit('focusin');assert.equal(view.value,'chart-0');assert.match(c.querySelector('.lab-live').innerHTML,/Schatting en onzekerheidsinterval/);
 }

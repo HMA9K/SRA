@@ -93,5 +93,40 @@
   }
   return requested&&exists(requested)?requested:fallback;
  }
- return {analyse,choose};
+ const titles={
+  spreiding:{'chart-0':'Waarden','table-0':'Berekening'},
+  interval:{'chart-0':'Interval','chart-1':'Aantal controles','chart-2':'Staarten','table-0':'Berekening'},
+  schatter:{'chart-0':'Interval','chart-1':'Aantal controles','table-0':'Berekening'},
+  strata:{'chart-0':'Controles per groep','table-0':'Methoden vergelijken'},
+  regressie:{'chart-0':'Lijn en afwijkingen','table-0':'SSE berekenen'},
+  anova:{'chart-0':'Verklaarde variatie','table-0':'ANOVA-tabel'},
+  toets:{'chart-0':'p tegenover α'},
+  voorspelling:{'chart-0':'Voorspellingsbanden','table-0':'Twee intervallen'},
+  transformatie:{'chart-0':'Oorspronkelijke schaal','chart-1':'Getransformeerd'},
+  populatie:{'chart-0':'Posten','chart-1':'Geschat totaal',uitleg:'Berekening'},
+  verschil:{'chart-0':'Verschil per post','chart-1':'Interval','table-0':'Berekening'},
+  quotient:{'chart-0':'Verhouding','chart-1':'Interval','table-0':'Percentage per post'},
+  regressieschatter:{'chart-0':'Gemiddelde corrigeren','chart-1':'Standaardfouten','chart-2':'Interval'},
+  omvang:{'chart-0':'Precisie en aantal'},
+  meervoudig:{'chart-0':'Groepen vergelijken','table-0':'Voorspelling opbouwen'},
+  modelbouw:{'chart-0':'Overlap en VIF','table-0':'Modellen vergelijken'},
+  validatie:{'chart-0':'Voorspeld en gemeten','table-0':'MSPR berekenen'},
+  keuzeroute:{route:'Passende aanpak'}
+ };
+ const diagnosisTitles={
+  residual:{'chart-0':'Residuendiagram','table-0':'Residuwaarden'},
+  normal:{'chart-0':'Q-Q-plot','chart-1':'Histogram','table-0':'Frequenties'},
+  outlier:{'chart-0':'Uitbijter en grenzen'},
+  distance:{'chart-0':'Afstand en grens'},
+  dw:{'chart-0':'Durbin-Watson','table-0':'Beslisgebieden'}
+ };
+ function describe(id,view,mode){
+  const labels=id==='diagnose'?diagnosisTitles[mode]:titles[id];
+  const title=labels?.[view.key]||(view.key==='uitleg'?'Uitleg':view.title);
+  const population={'chart-0':'Welke artikelen onderzoek je?','chart-1':'Vergelijk de schatting met het werkelijke totaal.',uitleg:'Hoe kom je van de steekproef naar het totaal?'};
+  const diagnosisTables={residual:'De berekende afwijking bij iedere waarneming.',normal:'Hoeveel residuen vallen in iedere klasse?',dw:'Welke conclusie hoort bij iedere waarde van d?'};
+  const description=(id==='populatie'&&population[view.key])||(id==='diagnose'&&view.key==='table-0'&&diagnosisTables[mode])||(view.key==='uitleg'?'Lees de betekenis van jouw uitkomst.':view.key==='route'?'Welke methode, gegevens en controles passen bij de vraag?':view.title==='Berekening'?'Volg de berekening met jouw invoer.':view.title);
+  return {title,description};
+ }
+ return {analyse,choose,describe};
 });

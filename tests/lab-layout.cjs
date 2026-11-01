@@ -57,12 +57,12 @@ const configs=sandbox.window.__labConfigs;
 assert.ok(configs,'Production configuration capture remains available');
 let actualViews=0;
 for(const [id,config] of Object.entries(configs)){
+ assert.doesNotMatch(config.fields,/<select\b/,'Geen dropdown in '+id);
  const values={},controls={};
  for(const match of config.fields.matchAll(/<input\b([^>]+)>/g)){
   const attrs=Object.fromEntries(Array.from(match[1].matchAll(/([\w-]+)="([^"]*)"/g),m=>[m[1],m[2]]));
   if(attrs.name){controls[attrs.name]={value:attrs.value||''};if(attrs.type==='number')values[attrs.name]=Number(attrs.value);}
  }
- for(const match of config.fields.matchAll(/<select\b[^>]*name="([^"]+)"[^>]*>([\s\S]*?)<\/select>/g))controls[match[1]]={value:match[2].match(/<option value="([^"]*)"/)?.[1]||''};
  const el={querySelector(selector){return selector==='.lab-result'?{clientWidth:650}:controls[selector.match(/\[name=["']?([^\]"']+)/)?.[1]];}};
  const modes=id==='diagnose'?['residual','normal','outlier','distance','dw']:[null];
  for(const mode of modes){
@@ -72,6 +72,7 @@ for(const [id,config] of Object.entries(configs)){
   assert.ok(result.summary.length,id+': short accessible summary');
   assert.doesNotMatch(result.summary,/<[^>]+>/);
   assert.ok(result.views.every(v=>v.html.length>20),id+': complete views');
+  for(const view of result.views){const label=layout.describe(id,view,mode);assert.ok(label.title.length>1&&label.description.length>15,id+': duidelijke keuzekaart');assert.doesNotMatch(label.description,/undefined|<[^>]*>/);}
   actualViews+=result.views.length;
   if(id==='interval')assert.match(result.views.find(v=>v.key===layout.choose(id,'confidence',null,result.views))?.title||'',/staarten/);
   if(id==='anova')assert.match(result.views.find(v=>v.key===layout.choose(id,'n',null,result.views))?.title||'',/ANOVA/);
