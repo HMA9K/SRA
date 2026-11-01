@@ -54,6 +54,8 @@ const server=http.createServer((req,res)=>{
      const combined=page.locator('details.section').filter({has:page.locator('[data-learning-transition="gemiddelde-kwadraten"]')});
      assert.ok((await combined.innerText()).includes('Van kwadraten naar variantie en standaardafwijking'));
      assert.ok((await combined.innerText()).includes('Rekenvolgorde en twee verschillende sommen'));
+     assert.equal(await combined.locator('.formula-typeset math[display="block"]').count(),2,'Variantie en standaardafwijking moeten zichtbaar blijven');
+     assert.ok(await combined.locator('.formula-typeset').evaluate(el=>el.getBoundingClientRect().height>0));
     }
     if(['beginnen','rekenen'].includes(id)&&[1366,390].includes(width)){
      await page.locator('.learning-transition').first().screenshot({path:path.join(out,`${id}-${width}-${theme}.png`)});

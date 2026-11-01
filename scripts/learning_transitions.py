@@ -79,8 +79,8 @@ def block(key, title, panels, note=''):
 def spread_example(arithmetic_html, spread_html):
     # ponytail: alleen deze twee vaste bronblokken; pas bij een nieuwe HTML-structuur ook de verdeling en behoudtest aan.
     arithmetic = re.findall(r'<p>.*?</p>', arithmetic_html)
-    spread = re.findall(r'<p>.*?</p>|<div class="formula">.*?</div>', spread_html)
-    assert len(arithmetic) == 2 and len(spread) == 4
+    spread = spread_html.split('</p>', 2)
+    assert len(arithmetic) == 2 and len(spread) == 3
     rules = arithmetic[0][3:-4].split('. ')
     assert len(rules) == 4
     mean, square, root, order = ('<p>' + sentence.rstrip('.') + '.</p>' for sentence in rules)
@@ -88,10 +88,10 @@ def spread_example(arithmetic_html, spread_html):
         panel('1. Gemiddelde', chart('Vier waarden; de stippellijn is het gemiddelde 100 euro', list(enumerate(VALUES, 1)), 'Post', 'Waarde (€)', reference=MEAN),
               ['80 + 90 + 110 + 120 = 400', '400 ÷ 4 = 100'], 'Gemiddelde: € 100', 'Het gemiddelde is het vertrekpunt voor de afwijkingen.', mean),
         panel('2. Afwijkingen', chart('Afwijkingen: −20, −10, +10 en +20 euro', list(enumerate(DEVIATIONS, 1)), 'Post', 'Afwijking (€)', reference=0, stems=True),
-              [f'{value} − 100 = {num(value-MEAN, 0)}' for value in VALUES], 'Som van de afwijkingen: 0', 'Min en plus heffen elkaar op. Toch verschillen de waarden.', spread[0]),
+              [f'{value} − 100 = {num(value-MEAN, 0)}' for value in VALUES], 'Som van de afwijkingen: 0', 'Min en plus heffen elkaar op. Toch verschillen de waarden.', spread[0] + '</p>'),
         panel('3. Kwadraten', chart('Gekwadrateerde afwijkingen: 400, 100, 100 en 400 euro²', list(enumerate(SQUARES, 1)), 'Post', 'Afwijking² (euro²)', reference=0, stems=True),
               ['(−20)² = (−20) × (−20) = 400'] + [f'({num(d, 0)})² = {num(d*d, 0)}' for d in DEVIATIONS[1:]], 'Samen: 1.000 euro²', 'Elke afwijking wordt met zichzelf vermenigvuldigd. Zo tellen beide kanten mee.', square)]) + (
-        '<h4>4. Van kwadraten naar variantie en standaardafwijking</h4>' + spread[1] + root + spread[2] + spread[3]
+        '<h4>4. Van kwadraten naar variantie en standaardafwijking</h4>' + spread[1] + '</p>' + root + spread[2]
         + '<p>In dit voorbeeld: steekproefvariantie = 1.000 ÷ (4 − 1) ≈ 333,33 euro²; standaardafwijking = √(1.000 ÷ 3) ≈ € 18,26. '
         'Waarom n − 1? Rond het berekende gemiddelde tellen de afwijkingen op tot nul; na drie afwijkingen ligt de vierde vast. '
         'Dit bestaande rekenvoorbeeld verklaart de bewerkingen, maar rechtvaardigt geen populatie-interval.</p>'
