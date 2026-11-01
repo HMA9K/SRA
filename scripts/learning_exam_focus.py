@@ -55,13 +55,8 @@ def enhance(lessons, sources):
             rows=[]
             for key in ids:
                 t=topics[key]
-                rows.append([t['label'],f"{t['exams']}/9",str(t['subquestions']),str(t['points']),num(t['mean'],2),num(t['share'],2)+'%',f"{t['minimum']}–{t['maximum']}",num(t['recentMean'],2)])
-            body+=table('Historische punten, geen voorspelling',['Onderwerp','Tentamens','Deelvragen','Totaal /900','Gem. /100','Aandeel','Min–max','Recent gem. /100'],rows)
-            body+='<p class="note">Gemiddelden omvatten nullen. Recent: maart 2024, oktober 2024 en maart 2025. '
-            body+='Een oorspronkelijke deelvraag kan meerdere onderwerpen bevatten; haar punten zijn gesplitst volgens de normering. '
-            body+='Geïntegreerde stratificatievragen tellen bij stratificatie, zonder dezelfde punten bij de schatter te herhalen. '
-            body+='Niet aantoonbaar te splitsen punten staan uitsluitend in de gezamenlijke rubriek van de tentamenles.</p>'
-        body+='<p>Alle tentamens, de spreiding en de puntentoerekening per deelvraag staan in de tentamenpuntenanalyse onderaan de bronnenlijst.</p>'
+                rows.append([t['label'],f"{t['exams']}/9",str(t['subquestions']),num(t['share'],2)+'%'])
+            body+=table('Historische punten, geen voorspelling',['Onderwerp','Tentamens','Deelvragen','Aandeel'],rows)
         add(lesson,sources,'Studieroute en puntengewicht',body,[ref('programma',4,'Onderwijsprogramma: toetsing en afbakening, PDF 4–5')],first=True)
 
     L={l['id']:l for l in lessons}

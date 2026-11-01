@@ -27,6 +27,14 @@ const server=http.createServer((req,res)=>{
     for(let i=0;i<await blocks.count();i++){
      const block=blocks.nth(i);sections++;
      if(await block.getAttribute('open')===null){await block.locator(':scope>summary').focus();await page.keyboard.press('Enter');}
+     if(i===0){
+      assert.doesNotMatch(await block.innerText(),/Gemiddelden omvatten nullen|Alle tentamens, de spreiding en de puntentoerekening/);
+      if(await block.locator('table').count()){
+       assert.deepEqual(await block.locator('th').allTextContents(),['Onderwerp','Tentamens','Deelvragen','Aandeel']);
+       for(const row of await block.locator('tr').all())assert.equal(await row.locator('th,td').count(),4);
+      }
+      assert.ok(await block.locator('.source-note').count()>0);
+     }
      await block.scrollIntoViewIfNeeded();
      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,`${id}/${i}/${width}/${theme}: pagina-overloop`);
      for(const img of await block.locator('img').all()){
@@ -48,6 +56,7 @@ const server=http.createServer((req,res)=>{
       await answer.locator(':scope>summary').focus();await page.keyboard.press('Enter');
      }
      if(id==='tentamen'&&i===2&&width!==320)await block.screenshot({path:path.join(out,`college8-${width}-${theme}.png`)});
+     if(id==='toetsen'&&i===0)await block.screenshot({path:path.join(out,`studieroute-${width}-${theme}.png`)});
     }
    }
   }
