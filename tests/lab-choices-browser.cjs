@@ -28,6 +28,18 @@ try{
    assert.equal(await button.getAttribute('aria-pressed'),'true');assert.equal(await lab.locator('[data-lab-choice][aria-pressed="true"]').count(),1);
    const rendered=await lab.evaluate((el,key)=>{const result=SRALabLayout.analyse(el.querySelector('.lab-result').innerHTML),expected=document.createElement('div');expected.innerHTML=result.metrics+result.views.find(v=>v.key===key).html;const content=node=>({text:node.textContent.replace(/\s+/g,' ').trim(),graphs:[...node.querySelectorAll('svg')].map(n=>n.outerHTML)});return {actual:content(el.querySelector('.lab-live')),expected:content(expected)};},key);
    assert.deepEqual(rendered.actual,rendered.expected);assert.equal(await lab.locator('.lab-result').textContent(),full);assert.deepEqual(await inputs(),before);
+   // Editing a slider must update this view without choosing a different one.
+   const slider=lab.locator('input[type=range]:not(:disabled)').first();
+   if(await slider.count()){
+    const name=await slider.getAttribute('data-sync'),number=lab.locator('[name="'+name+'"]'),original=await number.inputValue();
+    await slider.focus();await page.keyboard.press('ArrowRight');
+    assert.equal(await button.getAttribute('aria-pressed'),'true',page.url()+' '+key+' slider focus/input');
+    await slider.press('ArrowLeft');
+    // Restore exactly, including sliders initially at their upper boundary.
+    await number.evaluate((el,value)=>{el.value=value;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));},original);
+    assert.equal(await button.getAttribute('aria-pressed'),'true',page.url()+' '+key+' slider change');
+    assert.equal(await lab.locator('.lab-error').count(),0);
+   }
    if(page.viewportSize().width===390&&key.startsWith('chart-'))assert.ok(await lab.locator('.lab-output').evaluate(n=>n.scrollHeight<=n.clientHeight+2),page.url()+' '+key+': grafiek past onder de keuzes');
   }
  }

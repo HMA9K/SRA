@@ -76,7 +76,7 @@
  .lab-workspace{display:flex;flex-direction:column;gap:0}
  .lab-controls{display:contents}
  .lab-intro{order:-2}
- .lab-output{order:-1;flex-shrink:0;width:100%;height:auto;max-height:calc(100dvh - var(--lab-sticky-top) - 160px);margin-bottom:18px}
+ .lab-output{position:static;order:-1;flex-shrink:0;width:100%;height:auto;max-height:calc(100dvh - var(--lab-sticky-top) - 160px);margin-bottom:18px}
  .lab-controls .lab-grid{width:100%}
  .lab-controls .lab-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
  .lab-controls .lab-slider-pair{grid-template-columns:minmax(50px,1fr) 82px}
