@@ -97,9 +97,9 @@ const charts=c=>Array.from(html(c).matchAll(/<svg\b[\s\S]*?<\/svg>|<div class="v
 const healthy=(c,label)=>{assert.doesNotMatch(html(c),/class="lab-error"/,label+': '+html(c));assert.doesNotMatch(html(c),/NaN|Infinity|∞/,label);assert.ok(html(c).length>100,label);};
 const control=(c,name)=>{const el=c.querySelector(`[name="${name}"]`);assert.ok(el,'Missing control '+name);return el;};
 function change(c,name,value,event='input',useSlider=true){
-  const number=control(c,name), range=c.querySelector(`[data-sync="${name}"]`), target=useSlider&&range?range:number;
+  const number=control(c,name), range=c.querySelector(`[data-sync="${name}"]`), target=useSlider&&range&&Number(value)>=Number(range.min)&&Number(value)<=Number(range.max)?range:number;
   target.value=value;target.emit(event);
-  if(range){assert.equal(Number(number.value),Number(value),name+' slider → number');assert.equal(Number(range.value),Math.max(Number(range.min),Math.min(Number(range.max),Number(value))),name+' number → slider');}
+  if(range&&value!==''){assert.equal(Number(number.value),Number(value),name+' slider → number');assert.equal(Number(range.value),Math.max(Number(range.min),Math.min(Number(range.max),Number(value))),name+' number → slider');}
   return html(c);
 }
 let interactions=0;
@@ -108,11 +108,13 @@ function changed(id,name,value,setup={},graph=true){
   const c=mount(id);for(const [key,v]of Object.entries(setup))change(c,key,v,'change',false);
   if(id==='interval'&&name==='t')change(c,'criticalMode','manual','change',false);
   assert.equal(control(c,name).disabled,false,id+'.'+name+' is usable in this mode');
+  const previousView=c.querySelector('[data-lab-view]').value;
   const before=html(c),beforeChart=charts(c).join('');change(c,name,value,'input');healthy(c,id+'.'+name);
   assert.notEqual(html(c),before,id+'.'+name+' must update the result');
   const analysed=LabLayout.analyse(html(c)),chosen=c.querySelector('[data-lab-view]').value;
   const expectedView=LabLayout.choose(id,name,chosen,analysed.views,c.querySelector('[name="mode"]')?.value);
-  assert.equal(chosen,expectedView,id+'.'+name+' shows the relevant result');
+  assert.equal(chosen,previousView,id+'.'+name+' preserves the current result');
+  assert.equal(chosen,expectedView,id+'.'+name+' shows the chosen result');
   assert.equal(c.querySelector('.lab-live').innerHTML,analysed.metrics+analysed.views.find(v=>v.key===chosen).html,id+'.'+name+' direct preview matches current calculation');
   if(graph)assert.notEqual(charts(c).join(''),beforeChart,id+'.'+name+' must update a chart');
   // The number control must drive exactly the same calculation as its slider.
@@ -187,6 +189,7 @@ for(const [mode,fields]of Object.entries({residual:{pattern:'funnel',strength:2}
   const c=mount('interval');
   assert.ok(c.querySelector('[name="criticalMode"]'),'Interval supports automatic and manual critical t');
   assert.equal(control(c,'t').readOnly,true,'Automatic t cannot be edited independently');
+  assert.equal(c.querySelector('[data-sync="t"]').disabled,true,'Automatic t slider cannot overwrite the calculated value');
   const t=Number(control(c,'t').value),before=html(c);change(c,'confidence',99);healthy(c,'Confidence changes automatic t');
   assert.ok(Number(control(c,'t').value)>t,'Higher confidence requires a larger t');assert.notEqual(html(c),before);
   change(c,'criticalMode','manual','change',false);assert.equal(control(c,'t').readOnly,false);assert.equal(control(c,'confidence').disabled,true);
@@ -291,30 +294,32 @@ for(const [id,name,bad]of [['interval','n',1001],['strata','n',1001],['anova','k
 }
 console.log(`OK: ${L.ids.length} labs; ${interactions} control changes; input/change sync, choice buttons, graph responses, invalid-input recovery, OLS and resizing.`);
 
-// Focusing a control exposes its result before the next keystroke; range drags
-// preserve their actual control node and the view selector stays in the DOM.
-{
-  const c=mount('interval'),view=c.querySelector('[data-lab-view]'),confidence=control(c,'confidence'),range=c.querySelector('[data-sync="confidence"]');
-  confidence.emit('focusin');assert.equal(view.value,'chart-2');assert.match(c.querySelector('.lab-live').innerHTML,/Betrouwbaarheid en de twee staarten/);
-  change(c,'confidence',98);assert.match(c.querySelector('.lab-live').innerHTML,/Midden: 98%/);
-  assert.equal(control(c,'confidence'),confidence,'Typing preserves number focus');assert.equal(c.querySelector('[data-sync="confidence"]'),range,'Dragging preserves range node');assert.equal(c.querySelector('[data-lab-view]'),view,'Result selector stays stable');
-  view.querySelector('[data-lab-choice="chart-1"]').emit('click');assert.match(c.querySelector('.lab-live').innerHTML,/Meer controles en de onzekerheidsmarge/);
-  c.clientWidth=640;observers.at(-1).fire();assert.equal(view.value,'chart-1','Resize preserves selected result');
-  control(c,'mean').emit('focusin');assert.equal(view.value,'chart-0');assert.match(c.querySelector('.lab-live').innerHTML,/Schatting en onzekerheidsinterval/);
+// Focus, slider events, typed edits and resizing preserve every explicit result choice.
+for(const id of L.ids){
+ const c=mount(id),view=c.querySelector('[data-lab-view]');
+ const name=Object.keys(scenarios[id])[0],entry=scenarios[id][name],value=Array.isArray(entry)?entry[0]:entry;
+ for(const button of view.querySelectorAll('[data-lab-choice]')){
+  button.emit('click');const selected=view.value;
+  const field=control(c,name),range=c.querySelector('[data-sync="'+name+'"]');
+  (range||field).emit('focusin');assert.equal(view.value,selected,id+' focus');
+  change(c,name,value,'input',false);assert.equal(view.value,selected,id+' typed input');
+  if(range){range.emit('input');range.emit('change');assert.equal(view.value,selected,id+' slider');}
+  c.clientWidth=c.clientWidth===640?650:640;observers.at(-1).fire();assert.equal(view.value,selected,id+' resize');
+  assert.equal(control(c,name),field,id+' keeps input node');healthy(c,id+' selected result');
+ }
 }
-{
-  const c=mount('anova');control(c,'k').emit('focusin');assert.equal(c.querySelector('[data-lab-view]').value,'table-0');assert.match(c.querySelector('.lab-live').innerHTML,/ANOVA · opsplitsing/);
-  change(c,'SSE',150);assert.equal(c.querySelector('[data-lab-view]').value,'chart-0');assert.match(c.querySelector('.lab-live').innerHTML,/variance-bar/);
+console.log('OK: alle 19 werkbladen behouden de resultaatkeuze bij focus, invoer, schuiven en resize.');
+
+let paired=0;
+for(const id of L.ids){
+ const c=mount(id);
+ for(const input of c.querySelectorAll('input[type=number][name]')){
+  const range=c.querySelector('[data-sync="'+input.name+'"]');
+  assert.ok(range,id+'.'+input.name+' has a slider');
+  assert.equal(range.disabled,input.disabled||input.readOnly,id+'.'+input.name+' disabled state');
+  assert.ok(Number.isFinite(Number(range.min))&&Number(range.max)>Number(range.min),id+'.'+input.name+' finite bounds');
+  assert.equal(Number(range.value),Number(input.value),id+'.'+input.name+' keeps its initial precision');
+  paired++;
+ }
 }
-{
-  const c=mount('modelbouw');control(c,'q').emit('focusin');assert.match(c.querySelector('.lab-live').innerHTML,/Geneste modellen vergelijken/);
-  change(c,'auxR2',.95);assert.equal(c.querySelector('[data-lab-view]').value,'chart-0');assert.match(c.querySelector('.lab-live').innerHTML,/Sterkere overlap vergroot VIF/);
-}
-{
-  const c=mount('diagnose');change(c,'mode','normal','change',false);change(c,'n',40,'input',false);
-  assert.equal(c.querySelector('[data-lab-view]').value,'uitleg');assert.match(c.querySelector('.lab-live').innerHTML,/Shapiro-Wilk/);
-  change(c,'n',51,'input',false);assert.match(c.querySelector('.lab-live').innerHTML,/Kolmogorov-Smirnov/);
-  change(c,'skew',1);assert.equal(c.querySelector('[data-lab-view]').value,'chart-0');assert.match(c.querySelector('.lab-live').innerHTML,/Q-Q-plot/);
-  change(c,'mode','residual','change',false);assert.equal(c.querySelector('[data-lab-view]').value,'chart-0');
-}
-console.log('OK: live weergave bij focus en invoer, handmatige grafiekkeuze, mobiele resize en stabiele bedieningsvelden.');
+console.log('OK: '+paired+' numerieke velden hebben een gekoppelde schuifregelaar.');

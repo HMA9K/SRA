@@ -1031,7 +1031,7 @@ table.numeric tfoot td,table.numeric tfoot th{font-weight:700;border-top:2px sol
  .lab-workspace{display:flex;flex-direction:column;gap:0}
  .lab-controls{display:contents}
  .lab-intro{order:-2}
- .lab-output{order:-1;flex-shrink:0;width:100%;height:auto;max-height:calc(100dvh - var(--lab-sticky-top) - 160px);margin-bottom:18px}
+ .lab-output{position:static;order:-1;flex-shrink:0;width:100%;height:auto;max-height:calc(100dvh - var(--lab-sticky-top) - 160px);margin-bottom:18px}
  .lab-controls .lab-grid{width:100%}
  .lab-controls .lab-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
  .lab-controls .lab-slider-pair{grid-template-columns:minmax(50px,1fr) 82px}
@@ -65721,23 +65721,7 @@ window.SRAMCExamFrequency = {
  function choose(labId,control,currentKey,views,mode){
   const available=Array.isArray(views)?views:[],exists=key=>available.some(view=>view.key===key);
   const fallback=exists(currentKey)?currentKey:(available.find(view=>view.key.startsWith('chart-'))||available[0])?.key||null;
-  if(!control)return fallback;
-  const charts=available.filter(view=>view.key.startsWith('chart-')),lastChart=charts.at(-1)?.key;
-  let requested;
-  if(labId==='interval')requested=control==='confidence'?lastChart:control==='n'?'chart-1':'chart-0';
-  else if(labId==='schatter')requested=control==='n'?'chart-1':'chart-0';
-  else if(labId==='verschil')requested=control==='meanError'?'chart-0':lastChart;
-  else if(labId==='quotient')requested=['sumW','sumB'].includes(control)?'chart-0':lastChart;
-  else if(labId==='regressieschatter')requested=['n','t','sw'].includes(control)?lastChart:'chart-0';
-  else if(labId==='anova')requested=['n','k'].includes(control)?'table-0':['SSR','SSE'].includes(control)?'chart-0':undefined;
-  else if(labId==='modelbouw')requested=control==='auxR2'?'chart-0':'table-0';
-  else if(labId==='diagnose'){
-   if(control==='mode')requested='chart-0';
-   else if(control==='n'&&mode==='normal')requested='uitleg';
-   else if(control==='skew')requested=currentKey==='chart-1'?'chart-1':'chart-0';
-   else requested='chart-0';
-  }
-  return requested&&exists(requested)?requested:fallback;
+  return fallback;
  }
  const titles={
   spreiding:{'chart-0':'Waarden','table-0':'Berekening'},
@@ -65784,8 +65768,13 @@ window.SRAMCExamFrequency = {
  const M=window.SRAMath;
  const fmt=(x,d=2)=>Number(x).toLocaleString('nl-NL',{maximumFractionDigits:d,minimumFractionDigits:0});
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const field=(id,label,value,extra='')=>`<label class="field lab-number-field"><span class="lab-field-label">${label}</span><input id="lab-${id}" name="${id}" aria-label="${esc(label)}" type="number" ${/step=/.test(extra)?'':'step="any"'} value="${value}" ${extra}><span class="lab-control-note" data-note="${id}"></span></label>`;
- const slider=(id,label,value,min,max,step=1)=>`<div class="field lab-slider"><label for="lab-${id}">${label}</label><div class="lab-slider-pair"><input type="range" data-sync="${id}" data-min="${min}" data-max="${max}" data-step="${step}" aria-label="${esc(label)} schuifregelaar" min="${min}" max="${max}" step="${step}" value="${value}"><input type="number" id="lab-${id}" name="${id}" aria-label="${esc(label)} getal" step="any" value="${value}"></div><span class="lab-range-hint">Schuif ${fmt(min)} tot ${fmt(max)}, of typ een waarde.</span><span class="lab-control-note" data-note="${id}"></span></div>`;
+ const field=(id,label,value,extra='')=>{
+  const bound=name=>extra.match(new RegExp(name+'="([^\"]+)"'))?.[1];
+  const span=Math.max(1,Math.abs(value)*2),min=Number(bound('min')??-span),max=Number(bound('max')??span);
+  const step=Number(bound('step')??10**(Math.floor(Math.log10(span))-3));
+  return slider(id,label,value,min,max,step,extra);
+ };
+ const slider=(id,label,value,min,max,step=1,extra='')=>`<div class="field lab-slider"><label for="lab-${id}">${label}</label><div class="lab-slider-pair"><input type="range" data-sync="${id}" data-min="${min}" data-max="${max}" data-step="${step}" aria-label="${esc(label)} schuifregelaar" min="${min}" max="${max}" step="${step}" value="${value}"><input type="number" id="lab-${id}" name="${id}" aria-label="${esc(label)} getal" ${/step=/.test(extra)?'':'step="any"'} value="${value}" ${extra}></div><span class="lab-range-hint">Schuif ${fmt(min)} tot ${fmt(max)}, of typ een waarde.</span><span class="lab-control-note" data-note="${id}"></span></div>`;
  const choiceNotes={
   method:{evenredig:'Verdeel naar het aantal posten per groep.',neyman:'Weeg ook de spreiding binnen iedere groep mee.'},
   direction:{two:'Onderzoek een verschil in beide richtingen.',positive:'Onderzoek een stijgend verband.',negative:'Onderzoek een dalend verband.'},
@@ -66089,6 +66078,7 @@ window.SRAMCExamFrequency = {
    if(auto){values.t=M.studentTCritical(values.confidence/100,values.n-1);container.querySelector('[name="t"]').value=String(values.t);}
    container.querySelectorAll('[data-sync]').forEach(range=>{
     const number=container.querySelector(`[name="${range.dataset.sync}"]`),value=Number(number.value);
+    range.disabled=number.disabled||number.readOnly;
     if(number.value===''||!Number.isFinite(value))return;
     let min=Number(range.dataset.min),max=Number(range.dataset.max),step=Number(range.dataset.step);
     if(range.dataset.sync==='n'&&['interval','schatter'].includes(id)&&Number.isInteger(values.N)&&values.N>=2)max=values.N;

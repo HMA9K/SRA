@@ -75,23 +75,7 @@
  function choose(labId,control,currentKey,views,mode){
   const available=Array.isArray(views)?views:[],exists=key=>available.some(view=>view.key===key);
   const fallback=exists(currentKey)?currentKey:(available.find(view=>view.key.startsWith('chart-'))||available[0])?.key||null;
-  if(!control)return fallback;
-  const charts=available.filter(view=>view.key.startsWith('chart-')),lastChart=charts.at(-1)?.key;
-  let requested;
-  if(labId==='interval')requested=control==='confidence'?lastChart:control==='n'?'chart-1':'chart-0';
-  else if(labId==='schatter')requested=control==='n'?'chart-1':'chart-0';
-  else if(labId==='verschil')requested=control==='meanError'?'chart-0':lastChart;
-  else if(labId==='quotient')requested=['sumW','sumB'].includes(control)?'chart-0':lastChart;
-  else if(labId==='regressieschatter')requested=['n','t','sw'].includes(control)?lastChart:'chart-0';
-  else if(labId==='anova')requested=['n','k'].includes(control)?'table-0':['SSR','SSE'].includes(control)?'chart-0':undefined;
-  else if(labId==='modelbouw')requested=control==='auxR2'?'chart-0':'table-0';
-  else if(labId==='diagnose'){
-   if(control==='mode')requested='chart-0';
-   else if(control==='n'&&mode==='normal')requested='uitleg';
-   else if(control==='skew')requested=currentKey==='chart-1'?'chart-1':'chart-0';
-   else requested='chart-0';
-  }
-  return requested&&exists(requested)?requested:fallback;
+  return fallback;
  }
  const titles={
   spreiding:{'chart-0':'Waarden','table-0':'Berekening'},

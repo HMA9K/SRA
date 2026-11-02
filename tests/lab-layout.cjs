@@ -23,29 +23,13 @@ assert.equal(route.views.length,1);assert.equal(route.views[0].key,'route');asse
 
 const views=['chart-0','chart-1','chart-2','table-0','table-1','uitleg'].map(key=>({key}));
 const selected=(id,field,current='chart-0',mode)=>layout.choose(id,field,current,views,mode);
-assert.equal(selected('interval','confidence'),'chart-2');
-assert.equal(selected('interval','mean','chart-2'),'chart-0');
-assert.equal(selected('interval','n'),'chart-1');
-assert.equal(selected('schatter','n'),'chart-1');
-assert.equal(selected('schatter','sd','chart-1'),'chart-0');
-assert.equal(selected('verschil','sdError'),'chart-2');
-assert.equal(selected('verschil','meanError','chart-2'),'chart-0');
-assert.equal(selected('quotient','r'),'chart-2');
-assert.equal(selected('quotient','sumW','chart-2'),'chart-0');
-assert.equal(selected('regressieschatter','t'),'chart-2');
-assert.equal(selected('regressieschatter','mb','chart-2'),'chart-0');
-for(const field of ['n','k'])assert.equal(selected('anova',field),'table-0');
-for(const field of ['SSR','SSE'])assert.equal(selected('anova',field,'table-0'),'chart-0');
-assert.equal(selected('modelbouw','auxR2','table-0'),'chart-0');
-for(const field of ['n','k','q','SSRsmall','SSRfull','MSE'])assert.equal(selected('modelbouw',field),'table-0');
-assert.equal(selected('diagnose','n','chart-0','normal'),'uitleg');
-assert.equal(selected('diagnose','mode','uitleg','residual'),'chart-0');
-assert.equal(selected('diagnose','skew','uitleg','normal'),'chart-0');
-assert.equal(selected('diagnose','skew','chart-1','normal'),'chart-1');
-assert.equal(selected('transformatie','b1','chart-1'),'chart-1','Other labs preserve the chosen relevant view');
-assert.equal(selected('interval',null,'chart-2'),'chart-2','Resize preserves selection');
-assert.equal(layout.choose('anova','n','chart-0',[{key:'chart-0'}]),'chart-0','Missing mapped view falls back safely');
+for(const id of ['interval','schatter','verschil','quotient','regressieschatter','anova','modelbouw','diagnose']){
+ for(const field of ['n','mean','confidence','sdError','r','mode']){
+  for(const current of views.map(v=>v.key))assert.equal(selected(id,field,current),current,id+' behoudt '+current+' bij '+field);
+ }
+}
 assert.equal(layout.choose('none',null,'missing',[]),null);
+assert.equal(layout.choose('none',null,'missing',views),'chart-0');
 
 // Evaluate the actual lab configs with their normal default controls. No browser
 // replacement or duplicate statistical implementation is used in this check.
@@ -74,10 +58,6 @@ for(const [id,config] of Object.entries(configs)){
   assert.ok(result.views.every(v=>v.html.length>20),id+': complete views');
   for(const view of result.views){const label=layout.describe(id,view,mode);assert.ok(label.title.length>1&&label.description.length>15,id+': duidelijke keuzekaart');assert.doesNotMatch(label.description,/undefined|<[^>]*>/);}
   actualViews+=result.views.length;
-  if(id==='interval')assert.match(result.views.find(v=>v.key===layout.choose(id,'confidence',null,result.views))?.title||'',/staarten/);
-  if(id==='anova')assert.match(result.views.find(v=>v.key===layout.choose(id,'n',null,result.views))?.title||'',/ANOVA/);
-  if(id==='modelbouw')assert.match(result.views.find(v=>v.key===layout.choose(id,'q',null,result.views))?.title||'',/Geneste/);
-  if(id==='diagnose'&&mode==='normal')assert.match(result.views.find(v=>v.key===layout.choose(id,'n',null,result.views,mode))?.html||'',/Kolmogorov/);
  }
 }
 console.log(`OK: ${Object.keys(configs).length} labindelingen, alle diagnosemodi, ${actualViews} resultaatweergaven en veldkoppelingen.`);

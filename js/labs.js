@@ -3,8 +3,13 @@
  const M=window.SRAMath;
  const fmt=(x,d=2)=>Number(x).toLocaleString('nl-NL',{maximumFractionDigits:d,minimumFractionDigits:0});
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const field=(id,label,value,extra='')=>`<label class="field lab-number-field"><span class="lab-field-label">${label}</span><input id="lab-${id}" name="${id}" aria-label="${esc(label)}" type="number" ${/step=/.test(extra)?'':'step="any"'} value="${value}" ${extra}><span class="lab-control-note" data-note="${id}"></span></label>`;
- const slider=(id,label,value,min,max,step=1)=>`<div class="field lab-slider"><label for="lab-${id}">${label}</label><div class="lab-slider-pair"><input type="range" data-sync="${id}" data-min="${min}" data-max="${max}" data-step="${step}" aria-label="${esc(label)} schuifregelaar" min="${min}" max="${max}" step="${step}" value="${value}"><input type="number" id="lab-${id}" name="${id}" aria-label="${esc(label)} getal" step="any" value="${value}"></div><span class="lab-range-hint">Schuif ${fmt(min)} tot ${fmt(max)}, of typ een waarde.</span><span class="lab-control-note" data-note="${id}"></span></div>`;
+ const field=(id,label,value,extra='')=>{
+  const bound=name=>extra.match(new RegExp(name+'="([^\"]+)"'))?.[1];
+  const span=Math.max(1,Math.abs(value)*2),min=Number(bound('min')??-span),max=Number(bound('max')??span);
+  const step=Number(bound('step')??10**(Math.floor(Math.log10(span))-3));
+  return slider(id,label,value,min,max,step,extra);
+ };
+ const slider=(id,label,value,min,max,step=1,extra='')=>`<div class="field lab-slider"><label for="lab-${id}">${label}</label><div class="lab-slider-pair"><input type="range" data-sync="${id}" data-min="${min}" data-max="${max}" data-step="${step}" aria-label="${esc(label)} schuifregelaar" min="${min}" max="${max}" step="${step}" value="${value}"><input type="number" id="lab-${id}" name="${id}" aria-label="${esc(label)} getal" ${/step=/.test(extra)?'':'step="any"'} value="${value}" ${extra}></div><span class="lab-range-hint">Schuif ${fmt(min)} tot ${fmt(max)}, of typ een waarde.</span><span class="lab-control-note" data-note="${id}"></span></div>`;
  const choiceNotes={
   method:{evenredig:'Verdeel naar het aantal posten per groep.',neyman:'Weeg ook de spreiding binnen iedere groep mee.'},
   direction:{two:'Onderzoek een verschil in beide richtingen.',positive:'Onderzoek een stijgend verband.',negative:'Onderzoek een dalend verband.'},
@@ -308,6 +313,7 @@
    if(auto){values.t=M.studentTCritical(values.confidence/100,values.n-1);container.querySelector('[name="t"]').value=String(values.t);}
    container.querySelectorAll('[data-sync]').forEach(range=>{
     const number=container.querySelector(`[name="${range.dataset.sync}"]`),value=Number(number.value);
+    range.disabled=number.disabled||number.readOnly;
     if(number.value===''||!Number.isFinite(value))return;
     let min=Number(range.dataset.min),max=Number(range.dataset.max),step=Number(range.dataset.step);
     if(range.dataset.sync==='n'&&['interval','schatter'].includes(id)&&Number.isInteger(values.N)&&values.N>=2)max=values.N;
