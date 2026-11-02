@@ -73,4 +73,12 @@ for lesson in lessons[:9]:
             assert section['sourceNotes'], (lesson['id'], section['title'])
 for phase in ('Basis', 'Schatten'):
     assert len(summaries[phase]) > 800, phase
-print('OK: 19 lesverhalen, voorbeeldvragen en bronnummering; breuken, wortels, indices, HTML-behoud en herhaalbare opmaak.')
+# Rustige tekst: geen vette begrippen midden in een zin; koplabels en uitkomsten blijven vet.
+from lesson_reading import calm_emphasis
+assert calm_emphasis('<p>De <strong>populatie</strong> is het geheel.</p>') == '<p>De populatie is het geheel.</p>'
+for kept in ('<p><strong>Noodzakelijke basis</strong> eerst.</p>', '<p>Zie hier. <strong>Let op:</strong> t.</p>',
+             '<td><strong><span class="inline-value">1,711</span></strong></td>'):
+    assert calm_emphasis(kept) == kept, kept
+running_bold = [s['title'] for l in lessons for s in l['sections'] if '<strong>populatie</strong>' in s['html']]
+assert not running_bold, running_bold
+print('OK: 19 lesverhalen, voorbeeldvragen en bronnummering; breuken, wortels, indices, HTML-behoud, herhaalbare opmaak en rustige nadruk.')

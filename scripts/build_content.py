@@ -377,9 +377,13 @@ from lesson_mini_graphs import enhance as add_mini_graphs
 add_mini_graphs(lessons)
 from lesson_sources import enhance as number_sources
 number_sources(lessons, sources)
+from lesson_reading import calm_emphasis
+for lesson in lessons:
+    for section in lesson['sections']:
+        section['html'] = calm_emphasis(section['html'])
 from topic_summaries import SUMMARIES
 from presentation import inline_formulas
-summaries = {key: inline_formulas(value) for key, value in SUMMARIES.items()}
+summaries = {key: calm_emphasis(inline_formulas(value)) for key, value in SUMMARIES.items()}
 
 if __name__ == '__main__':
     (ROOT/'data').mkdir(parents=True,exist_ok=True)

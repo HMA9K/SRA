@@ -5,7 +5,7 @@ body.study-shell[data-page="les"] #sidebar{padding:16px 12px 24px;top:calc(var(-
 body.study-shell[data-page="les"] .side-head{margin:12px 0 6px}
 body.study-shell[data-page="les"] .phase-title{margin:16px 0 6px}
 body.study-shell[data-page="les"] .lesson-link{padding:8px 6px;gap:8px;margin:0;min-height:44px}
-body.study-shell[data-page="les"] main{max-width:1200px;padding:0 24px 24px}
+body.study-shell[data-page="les"] main{max-width:1200px;margin:0 auto;padding:0 24px 24px}
 body.study-shell[data-page="les"] .study-page-name,body.study-shell[data-page="les"] .sra-breadcrumb{display:none}
 body.study-shell[data-page="les"] .lesson-top{position:sticky;top:calc(var(--study-header-height) + var(--lesson-nav-height,49px));z-index:30;background:var(--bg);padding:12px 0 10px;margin:0;border-bottom:1px solid var(--line)}
 body.study-shell[data-page="les"] .lesson-top .eyebrow{margin:0 0 4px;font-size:.68rem}
@@ -55,7 +55,8 @@ body[data-page="les"] #main summary,body[data-page="formules"] #main summary{tex
 body[data-page="les"] #main p{margin-bottom:12px}
 body[data-page="les"] #main li{margin-bottom:6px}
 body.study-shell[data-page="les"] .section{margin:12px 0}
-body.study-shell[data-page="les"] .section>summary{padding:14px 16px;gap:10px}
+/* Tekstblokken zijn vast open: een kop zonder uitklapknop. */
+body.study-shell[data-page="les"] .section>.section-head{display:flex;align-items:center;gap:10px;margin:0;padding:14px 16px 8px;font-size:1.04rem;font-weight:700;line-height:1.4;letter-spacing:0;color:#353247}
 body.study-shell[data-page="les"] .section-body{padding:0 16px 6px;line-height:1.6}
 body.study-shell[data-page="les"] .example{margin:20px 0;padding:18px 16px}
 body[data-page="les"] .formula,body[data-page="formules"] .formula{margin:12px 0;padding:8px 14px}
@@ -65,11 +66,13 @@ body[data-page="les"] .table-scroll{margin:12px 0}
 body[data-page="les"] table{margin:8px 0}
 body[data-page="les"] th,body[data-page="les"] td{padding:8px 10px}
 body.study-shell[data-page="les"] .lesson-bottom{position:static;padding:14px 0;border-width:1px 0 0;background:transparent}
-math[display="inline"]{display:inline math;math-style:normal;font-size:1.16em;white-space:nowrap;padding:0 .12em;background:#eef3f8;border-radius:3px}
-.inline-expression{display:inline-block;max-width:100%;font-family:"Cambria Math","STIX Two Math",math;font-size:1.12em;font-weight:600;word-spacing:normal;text-align:left;hyphens:none;background:#eef3f8;border-radius:3px;padding:0 .12em}
+/* Formules in de lopende tekst: zelfde lettertype, grootte en gewicht als de tekst. */
+math[display="inline"]{display:inline math;math-style:normal;font-size:1em;white-space:nowrap;padding:0 .12em;background:#eef3f8;border-radius:3px}
+.inline-expression{display:inline-block;max-width:100%;word-spacing:normal;text-align:left;hyphens:none;background:#eef3f8;border-radius:3px;padding:0 .12em}
 .inline-value{font-variant-numeric:tabular-nums;white-space:nowrap}
 .inline-expression math[display="inline"]{font-size:1em;background:transparent;padding:0}
-table math[display="inline"],table .inline-expression{font-size:1.3em}
+/* Breuken en wortels in kleine tabeltekst blijven leesbaar: teller en noemer worden anders te klein. */
+table .inline-expression:has(mfrac,msqrt,mroot),table math[display="inline"]:has(mfrac,msqrt,mroot){font-size:1.3em}
 .lesson-progress{display:flex;flex-wrap:wrap;gap:2px 9px;font-size:.73rem;font-weight:400;color:var(--study-muted);line-height:1.4;margin-top:4px}
 .lesson-progress .is-done{color:var(--study-green-dark);font-weight:600}
 .sra-learning-status .lesson-progress{margin:0;justify-content:flex-end}
@@ -79,7 +82,7 @@ table math[display="inline"],table .inline-expression{font-size:1.3em}
  body.study-shell[data-page="les"] main{padding:0 14px 24px}
  body.study-shell[data-page="les"] .lesson-top h1{font-size:1.15rem}
  body.study-shell[data-page="les"] .lesson-top{padding:8px 0}
- body.study-shell[data-page="les"] .section>summary{padding:12px;gap:8px}
+ body.study-shell[data-page="les"] .section>.section-head{padding:12px 12px 6px;gap:8px}
  body.study-shell[data-page="les"] .section-body{padding:0 12px 6px}
  body.study-shell[data-page="les"] .jump{gap:5px;margin:10px 0}
  body.study-shell[data-page="les"] .jump a{padding:6px 8px}
@@ -87,7 +90,8 @@ table math[display="inline"],table .inline-expression{font-size:1.3em}
 @media print{body.study-shell[data-page="les"] .lesson-top{position:static}.lesson-preparation{display:none}}
 /* Use the current shared page heading, including Home, Dashboard and Meer. */
 body.study-shell.learning-page-layout[data-page="les"] .learning-page-head{position:sticky;top:var(--study-header-height);z-index:40}
-body.study-shell.learning-page-layout[data-page="les"] .lesson-top{position:static;padding:10px 0 0;border:0}
+/* De paginakop toont de titel; fase, lesnummer en bronregel staan al in het lesmenu. */
+body.study-shell.learning-page-layout[data-page="les"] .lesson-top{display:none}
 body.study-shell.learning-page-layout[data-page="les"] #sidebar{top:calc(var(--study-header-height) + var(--learning-head-height,58px));height:calc(100dvh - var(--study-header-height) - var(--learning-head-height,58px))}
 html:has(body.learning-page-layout[data-page="les"]){scroll-padding-top:0}
 body.learning-page-layout[data-page="les"] :is(#uitleg,#onderzoek,#voorbeeld,#begrip){scroll-margin-top:calc(var(--study-header-height) + var(--learning-head-height,58px) + 12px)}
@@ -146,7 +150,7 @@ html[data-study-theme=dark] .section-body p.note.learning-source{background:tran
 @media(max-width:760px){#lesson-panel-resizer{display:none}}
 
 /* Elke uitleg heeft haar eigen kleine grafiek rechts; smalle kolommen lopen door onder de tekst. */
-.learning-transition{container-type:inline-size;margin:14px 0 18px;min-width:0;color:var(--study-ink,#17364e)}
+.learning-transition{container-type:inline-size;margin:8px 0 12px;min-width:0;color:var(--study-ink,#17364e)}
 .learning-transition>h3{font-size:1rem;margin:0 0 10px}
 .transition-panels{display:grid;gap:16px}
 .transition-panel{display:flex;flex-wrap:wrap;gap:8px 20px;min-width:0;align-items:flex-start}
@@ -237,9 +241,7 @@ body[data-page="les"] #main .question-feedback li,.question-feedback li{margin:3
 .mini-table table{font-size:.8rem;margin:0}
 .mini-table caption{margin:0 0 5px;text-align:left}
 .mini-table th,.mini-table td{padding:7px!important;hyphens:none}
-.symbol-dictionary td:first-child{font-family:"Cambria Math","STIX Two Math",math;font-size:1.12em;font-weight:600}
 .symbol-dictionary td:first-child .inline-expression{font-size:1em;background:none;padding:0}
-.transition-work>div{font-family:"Cambria Math","STIX Two Math",math;font-weight:600}
 .transition-work .inline-expression{font-size:1em;background:none;padding:0}
 @media(max-width:600px){
  body[data-page="les"] #main p,body[data-page="les"] #main li,body[data-page="les"] .section-body,body[data-page="formules"] #main p,body[data-page="formules"] #main li,body[data-page="formules"] .formula-guide-card,.sra-phase-summary-body p,.sra-phase-summary-body li{text-align:left}

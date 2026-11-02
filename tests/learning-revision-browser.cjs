@@ -17,7 +17,7 @@ const server=http.createServer((req,res)=>{
   await page.goto(base+'/index.html#les/stratificatie');await page.locator('.lesson-source-title').waitFor({state:'attached'});
   const course=await page.evaluate(()=>window.SRA.lessons.map(l=>({id:l.id,sections:l.sections.length}))),mc=await page.evaluate(()=>window.SRAMCData.topics.map(t=>({id:t.id,questions:t.questions.map(q=>({id:q.id,stimulus:!!q.stimulusHtml,correct:q.correct,prompt:q.prompt}))})));
   const overflow=()=>page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
-  const duplicates=()=>page.evaluate(()=>[...document.querySelectorAll('details.section,.formula-guide-card')].flatMap(block=>{
+  const duplicates=()=>page.evaluate(()=>[...document.querySelectorAll('section.section,.formula-guide-card')].flatMap(block=>{
    const ids=[...block.querySelectorAll('[data-sra-auto-term]')].map(e=>e.dataset.sraTerm);
    return ids.filter((id,i)=>ids.indexOf(id)!==i).map(id=>block.querySelector('summary,h2')?.textContent+': '+id);
   }));
@@ -27,9 +27,9 @@ const server=http.createServer((req,res)=>{
    await page.evaluate(theme=>window.StudyTheme.setMode(theme),theme);
    for(const lesson of course){
     await page.evaluate(id=>location.hash='#les/'+id,lesson.id);
-    await page.waitForFunction(id=>document.querySelector('.lesson-top h1')?.textContent.endsWith(window.SRA.lessons.find(l=>l.id===id).title)&&location.hash==='#les/'+id&&document.querySelectorAll('#uitleg>details').length===window.SRA.lessons.find(l=>l.id===id).sections.length,lesson.id);
+    await page.waitForFunction(id=>document.querySelector('.lesson-top h1')?.textContent.endsWith(window.SRA.lessons.find(l=>l.id===id).title)&&location.hash==='#les/'+id&&document.querySelectorAll('#uitleg>section').length===window.SRA.lessons.find(l=>l.id===id).sections.length,lesson.id);
     await page.evaluate(()=>window.SRATerms.annotate(document.querySelector('#main')));
-    assert.equal(await page.locator('#uitleg>details').count(),lesson.sections);
+    assert.equal(await page.locator('#uitleg>section').count(),lesson.sections);
     assert.match(await page.locator('.lesson-source-title').textContent(),/Hoorcollege/);
     assert.equal(await page.locator('aside.learning-context').count(),1);
     assert.deepEqual(await duplicates(),[],`${lesson.id}: dubbel begrip bij ${width}px`);
@@ -84,14 +84,23 @@ const server=http.createServer((req,res)=>{
    assert.equal(await overflow(),false,href+': horizontale pagina-overloop bij 320px');
    assert.equal(await page.locator('.sra-phase-summary-body table').count(),await page.locator('.sra-phase-summary-body .table-scroll table').count());
   }
+  // Brede schermen: lesinhoud in het midden van de beschikbare ruimte en formules in één vak naast elkaar.
+  await page.setViewportSize({width:1840,height:950});
+  await page.evaluate(()=>{location.hash='#les/verschil';});
+  await page.locator('#uitleg .formula-typeset').first().waitFor();
+  // Gemeten aan de positie: de browser meldt automatische marges van een rasteritem als 0px.
+  const wide=await page.evaluate(()=>{const main=document.querySelector('#main'),m=main.getBoundingClientRect(),p=main.parentElement.getBoundingClientRect(),cols=getComputedStyle(main.parentElement).gridTemplateColumns.split(' ').map(parseFloat),colLeft=p.left+(cols.length>1?cols[0]:0);
+   return {left:Math.round(m.left-colLeft),right:Math.round(p.right-m.right),rows:[...document.querySelector('#uitleg .formula-typeset').children].map(r=>Math.round(r.getBoundingClientRect().top))};});
+  assert.ok(wide.left>0&&Math.abs(wide.left-wide.right)<=2,'lesinhoud gecentreerd: '+JSON.stringify(wide));
+  assert.equal(new Set(wide.rows).size,1,'formules staan naast elkaar: '+JSON.stringify(wide.rows));
   await page.setViewportSize({width:1366,height:950});
   // De uitleg bij een inline breuk blijft met het toetsenbord bereikbaar.
   await page.evaluate(()=>{window.StudyTheme.setMode('light');location.hash='#les/rekenen';});
   await page.locator('.section-body math[display="inline"] mfrac').first().waitFor();
-  const formulaSection=page.locator('#uitleg>details').filter({has:page.locator('math[display="inline"] [data-formula-help]')}).first();
-  if(await formulaSection.getAttribute('open')===null){
-   await formulaSection.locator(':scope>summary').focus();await page.keyboard.press('Enter');
-  }
+  const formulaSection=page.locator('#uitleg>section').filter({has:page.locator('math[display="inline"] [data-formula-help]')}).first();
+  // Tekstblokken zijn vast open: geen uitklapknop.
+  assert.equal(await formulaSection.locator(':scope>summary').count(),0);
+  assert.equal(await page.locator('#uitleg details.section').count(),0);
   const symbol=page.locator('.section-body math[display="inline"] [data-formula-help]').first();
   await symbol.scrollIntoViewIfNeeded();
   await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
@@ -99,9 +108,10 @@ const server=http.createServer((req,res)=>{
   await page.locator('#formula-help-popup').waitFor({state:'visible'});await page.keyboard.press('Escape');
   await page.locator('#formula-help-popup').waitFor({state:'hidden'});
   const spreadTable=page.locator('table').filter({has:page.locator('caption',{hasText:'Drie verschillende soorten spreiding'})});
-  const formulaSizes=await spreadTable.locator('tbody td:first-child math').evaluateAll(nodes=>nodes.map(n=>({math:parseFloat(getComputedStyle(n).fontSize),cell:parseFloat(getComputedStyle(n.closest('td')).fontSize)})));
+  const formulaSizes=await spreadTable.locator('tbody td:first-child math').evaluateAll(nodes=>nodes.map(n=>({compound:!!n.querySelector('mfrac,msqrt,mroot'),math:parseFloat(getComputedStyle(n).fontSize),cell:parseFloat(getComputedStyle(n.closest('td')).fontSize)})));
   assert.equal(formulaSizes.length,3);
-  assert.ok(formulaSizes.every(s=>s.math>=s.cell*1.29),'Ook samengestelde tabelformules behouden de grotere lettermaat');
+  // Gewone symbolen hebben de tekstgrootte; breuken en wortels zijn groter zodat teller en noemer leesbaar blijven.
+  assert.ok(formulaSizes.filter(s=>s.compound).length===2&&formulaSizes.every(s=>s.compound?s.math>=s.cell*1.29:s.math===s.cell),'Tabelformules: '+JSON.stringify(formulaSizes));
   // De voorbeeldvraag is zichtbaar voordat de leerling een stap opent.
   await page.locator('[data-scroll="voorbeeld"]').click();
   await page.locator('#next-step').click();assert.equal(await page.locator('#example-steps>li').count(),1);

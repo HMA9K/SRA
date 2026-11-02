@@ -1,5 +1,6 @@
 """Kleine figuren naast de bestaande uitleg; alle tekst en bronlinks blijven staan."""
 from html import escape, unescape
+from html.parser import HTMLParser
 from math import sqrt, gamma, pi
 import re
 from learning_transitions import chart
@@ -135,6 +136,48 @@ def estimate_interval():
     return svg('Puntschatting 100.000 euro, marge E 4.000 euro. Interval van 96.000 tot 104.000 euro; totale breedte 8.000 euro.', body, 175)
 
 
+MINI_COPY_CHARS = 650
+
+
+class TopLevelBlocks(HTMLParser):
+    """Begin, einde, tag en klassen van de elementen op het hoogste niveau van een HTML-fragment."""
+    VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'}
+
+    def __init__(self, fragment):
+        super().__init__(convert_charrefs=False)
+        self.line_starts = [0]
+        for line in fragment.splitlines(keepends=True):
+            self.line_starts.append(self.line_starts[-1] + len(line))
+        self.depth, self.blocks = 0, []
+        self.feed(fragment)
+        self.close()
+
+    def position(self):
+        line, column = self.getpos()
+        return self.line_starts[line - 1] + column
+
+    def handle_starttag(self, tag, attrs):
+        if tag in self.VOID:
+            return
+        if self.depth == 0:
+            self.blocks.append([self.position(), None, tag, (dict(attrs).get('class') or '').split()])
+        self.depth += 1
+
+    def handle_endtag(self, tag):
+        if tag in self.VOID:
+            return
+        self.depth -= 1
+        if self.depth == 0:
+            self.blocks[-1][1] = self.position() + len(f'</{tag}>')
+
+
+def fits_beside_figure(block, after=True):
+    """Tekst, lijsten en formulevakken passen naast de figuur; een tabel alleen als die op de uitleg volgt."""
+    _, _, tag, classes = block
+    wide = {'formula', 'table-wrap'} if after else {'formula'}
+    return tag in ('p', 'ul', 'ol') or (tag == 'div' and bool(wide & set(classes)))
+
+
 def enhance(lessons):
     by_id = {lesson['id']: lesson for lesson in lessons}
     def add(key, title, paragraph_start, picture, caption, graph_id=None, paragraphs=1):
@@ -146,6 +189,26 @@ def enhance(lessons):
         m = matches[0]
         start = m.start()
         end = start + list(re.finditer(r'<p(?: [^>]*)?>.*?</p>', section['html'][start:], re.S))[paragraphs - 1].end()
+        # Aangrenzende alinea's, lijsten, formulevakken en tabellen schuiven mee naast de figuur, zodat er geen lege
+        # ruimte onder de tekst blijft: eerst wat erna komt, anders wat ervoor staat. Koppen blijven op hun plek.
+        # Een formulevak of tabel is al ongeveer zo hoog als de figuur; daarna stopt het meenemen.
+        # ponytail: lengte in tekens als maat voor de figuurhoogte; meet in de browser als figuren sterk gaan verschillen.
+        blocks = TopLevelBlocks(section['html']).blocks
+        first = next((i for i, b in enumerate(blocks) if b[0] == start), None)
+        last = next((i for i, b in enumerate(blocks) if b[1] == end), None)
+        while first is not None and last is not None and len(unescape(re.sub('<[^>]+>', '', section['html'][start:end]))) < MINI_COPY_CHARS:
+            if last + 1 < len(blocks) and fits_beside_figure(blocks[last + 1]):
+                last += 1
+                end = blocks[last][1]
+                added = blocks[last]
+            elif first > 0 and fits_beside_figure(blocks[first - 1], after=False):
+                first -= 1
+                start = blocks[first][0]
+                added = blocks[first]
+            else:
+                break
+            if added[2] == 'div':
+                break
         copy = section['html'][start:end]
         caption_html = f'<figcaption>{caption}</figcaption>' if caption else ''
         wrapper = (f'<div class="mini-explanation" data-mini-graph="{graph_id or key}"><div class="mini-copy">{copy}</div>'

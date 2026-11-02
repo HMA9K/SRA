@@ -54,7 +54,7 @@ const server=http.createServer((req,res)=>{
     if(id==='rekenen'){
      assert.equal(await page.locator('.section-title').filter({hasText:'Rekenen zonder verborgen stappen'}).count(),1);
      assert.equal(await page.locator('.section-title').filter({hasText:'Waarom kwadrateren?'}).count(),0);
-     const combined=page.locator('details.section').filter({has:page.locator('[data-learning-transition="gemiddelde-kwadraten"]')});
+     const combined=page.locator('section.section').filter({has:page.locator('[data-learning-transition="gemiddelde-kwadraten"]')});
      assert.ok((await combined.innerText()).includes('Van kwadraten naar variantie en standaardafwijking'));
      assert.ok((await combined.innerText()).includes('Rekenvolgorde en twee verschillende sommen'));
      assert.equal(await combined.locator('details.symbols').count(),0);
@@ -68,7 +68,7 @@ const server=http.createServer((req,res)=>{
      assert.equal(await diagrams.locator('circle').count(),16);
      assert.equal(await diagrams.locator('.transition-checked').count(),4);
      assert.equal(await diagrams.locator('.transition-extra').count(),1);
-     const planning=page.locator('#uitleg>details').filter({has:page.locator('.section-title').filter({hasText:'Alle strata uitbreiden'})});
+     const planning=page.locator('#uitleg>section').filter({has:page.locator('.section-title').filter({hasText:'Alle strata uitbreiden'})});
      assert.equal(await planning.locator('.formula-typeset math mfrac').count(),2);
      assert.ok(await planning.locator('.formula-typeset').isVisible());
      if(width===1197&&theme==='light'){

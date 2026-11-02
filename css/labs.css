@@ -110,8 +110,9 @@ body.study-shell[data-page="les"] .lab{padding:16px;margin:16px 0}
 .lab-intro>p{margin-bottom:10px}
 .lab-controls-heading{margin-bottom:6px!important}
 .lab-controls-heading span{margin-top:2px}
-.lab-controls .lab-grid{gap:6px}
-.lab-controls .field{padding:4px 0;gap:3px}
+/* Lage invoerblokken: label en schuiver samen even hoog als het invoervak, zodat de bediening naast de grafiek past. */
+.lab-controls .lab-grid{gap:2px}
+.lab-controls .field{padding:2px 0;gap:2px}
 .lab-controls .lab-control-note{margin-top:2px}
 .lab-all-results{margin-top:12px;padding-top:7px}
 
@@ -120,13 +121,13 @@ body.study-shell[data-page="les"] .lab{padding:16px;margin:16px 0}
 body[data-page="les"] #main .lab-intro>p{margin:0;font-size:.82rem;line-height:1.5;text-align:left;hyphens:none}
 .lab-controls .lab-number-field{display:grid;grid-template-columns:minmax(0,1fr) 100px;gap:2px 10px;align-items:center}
 .lab-field-label{line-height:1.4;min-width:0}
-.lab-controls .lab-number-field>input{min-height:36px;padding:6px 8px;font-size:.85rem;text-align:right;font-variant-numeric:tabular-nums}
+.lab-controls .lab-number-field>input{min-height:30px;padding:3px 8px;font-size:.85rem;text-align:right;font-variant-numeric:tabular-nums}
 .lab-controls .lab-control-note{grid-column:1/-1}
 .lab-controls .lab-slider{display:grid;grid-template-columns:minmax(0,1fr) 100px;gap:0 10px;align-items:center}
-.lab-slider>label{grid-column:1;grid-row:1;line-height:1.35}
+.lab-slider>label{grid-column:1;grid-row:1;line-height:1.25}
 .lab-controls .lab-slider-pair{display:contents}
-.lab-controls .lab-slider-pair input[type=range]{grid-column:1;grid-row:2;min-height:24px;height:24px}
-.lab-controls .lab-slider-pair input[type=number]{grid-column:2;grid-row:1/span 2;min-height:40px;padding:6px 8px}
+.lab-controls .lab-slider-pair input[type=range]{grid-column:1;grid-row:2;min-height:22px;height:22px}
+.lab-controls .lab-slider-pair input[type=number]{grid-column:2;grid-row:1/span 2;min-height:30px;padding:3px 8px}
 .lab-controls .lab-range-hint{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 @media(max-width:760px){
  .lab-controls .lab-number-field>input,.lab-controls .lab-slider-pair input[type=number]{min-height:44px;font-size:1rem}

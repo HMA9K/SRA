@@ -41,7 +41,8 @@ def root(a):
     return tag('msqrt', a)
 
 def bar(a):
-    return '<mover accent="true"><mpadded height="+0.15em">' + a + '</mpadded><mo stretchy="true">¯</mo></mover>'
+    # Vaste hoogte: browsers negeren de relatieve vorm "+0.15em", waardoor het streepje de letter raakte.
+    return '<mover accent="true"><mpadded height="0.8em">' + a + '</mpadded><mo stretchy="true">¯</mo></mover>'
 
 def hat(a):
     return '<mover accent="true">' + a + op('^') + '</mover>'
