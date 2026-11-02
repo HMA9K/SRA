@@ -153,6 +153,8 @@ body .top-controls>.font-group,body .reader-top-tools>.font-group{order:-1!impor
 #learning-tools-menu:not([open])>nav,#learning-tools-menu:not([open])>.sra-tools-panel{display:none}
 #learning-tools-menu a{font:13px/1.4 Arial,sans-serif;padding:9px;text-decoration:none;color:inherit}
 body.learning-page-layout .study-page-name,body.learning-page-layout .sra-breadcrumb,body.learning-page-layout .exam-breadcrumb,body.learning-page-layout .study-position-bar,body.learning-page-layout .learning-original-title{display:none!important}
+/* De paginakop toont de titel al; een titelbalk met alleen de verborgen kop laat anders een lege strook achter. */
+body.learning-page-layout .study-page-title:has(>.learning-original-title:only-child){display:none!important}
 body.learning-page-layout:not(.study-inline-reader) #study-returnbar,body.learning-page-layout .study-navigation-row{display:none!important}
 body.learning-page-layout.study-inline-reader #study-returnbar .study-back,body.learning-page-layout.study-inline-reader #study-returnbar .study-origin,body.learning-page-layout.study-inline-reader #study-returnbar .question-return-links,body.learning-page-layout.study-inline-reader #study-tools-menu{display:none!important}
 body.learning-page-layout .practice-question-page{padding-top:10px!important}

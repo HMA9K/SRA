@@ -31,9 +31,17 @@
   const choices=[{id:'leren',icon:'learn',title:'Leren',description:'Begin bij nul. Begrijp de theorie met uitleg, formules, voorbeelden en interactieve rekenbladen.',count:`${LESSONS.length} lessen · stap voor stap`},{id:'tentamen/mc',icon:'practice',title:'Oefenvragen maken',description:'Kies een onderwerp en beantwoord telkens één vraag. Controleer je antwoord en lees de uitleg.',count:`${window.SRAMCData.topics.reduce((sum,t)=>sum+t.questions.length,0)} MC-vragen · ${window.SRAMCData.topics.length} onderwerpen · 3 niveaus`},{id:'tentamen/analyse',icon:'exam',title:'Tentamenanalyse',description:'Ontdek de opbouw, terugkerende onderwerpen en vraagtypen. Bekijk wat elke opgave van je vraagt.',count:`${window.SRAExamData.exams.filter(e=>!e.duplicateOf).length} verschillende tentamens · structuur en leeradvies`},{id:'tentamen',icon:'exam',title:'Tentamens oefenen',description:'Maak een volledig tentamen in de Cirrus-omgeving. Bekijk daarna je antwoorden en het antwoordmodel.',count:`${window.SRA_CIRRUS_EXAMS.length} volledige tentamens · originele vragen`}];
   $('#main').innerHTML=`<section class="sra-home"><header class="sra-home-intro"><p class="eyebrow">Sampling & Regression Analysis</p><h1>Wat wil je doen?</h1><p>Van de eerste begrippen naar zelfstandig een tentamenopgave oplossen.</p></header><div class="sra-home-choices">${choices.map((c,i)=>`<a class="sra-home-choice" href="#${c.id}"><span class="sra-choice-icon" aria-hidden="true"><svg viewBox="0 0 28 30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${icons[c.icon]}</svg></span><h2>${c.title}</h2><p>${c.description}</p><span class="sra-choice-count">${esc(c.count)}</span><span class="sra-choice-action">${['Open de leerroute','Kies je oefenvragen','Bekijk de tentamenanalyse','Open het tentamendashboard'][i]} <span aria-hidden="true">→</span></span></a>`).join('')}</div><a class="sra-formula-entry" href="#formules"><span><strong>Formules begrijpen en uitproberen</strong><br>Alle onderwerpen bij elkaar: betekenis van symbolen, voorwaarden, rekenstappen en interactieve berekeningen.</span><span aria-hidden="true">→</span></a><p class="sra-home-help">Nieuw met statistiek? Begin bij <strong>Leren</strong>. Je antwoorden en uitwerkingen blijven in deze browser bewaard.</p></section>`;
  }
+ // Eén samenvatting per fase op een eigen pagina; de fase staat als nummer in de link, zoals op Leren.
+ function renderSummary(number){
+  const phase=phases[Number(number)-1],summary=C.summaries?.[phase];
+  if(!summary){location.replace('#leren');return;}
+  const lessons=LESSONS.filter(l=>l.phase===phase);
+  $('#main').innerHTML=`${pageHead('Samenvatting: '+phase)}<div class="sra-course-overview sra-summary-page">${breadcrumb('Samenvatting: '+phase,{label:'Leren',href:'#leren'})}<header class="sra-mode-intro"><div><h2>Samenvatting: ${esc(phase)}</h2><p>${lessons.length} ${lessons.length===1?'les':'lessen'}: ${lessons.map(l=>`<a href="#les/${l.id}">${esc(l.title)}</a>`).join(', ')}</p></div><a class="study-btn" href="#leren">Terug naar Leren</a></header><article class="sra-phase-summary-body" data-term-scope>${summary}</article></div>`;
+  wrapTables();
+ }
  function renderLearning(){
   const next=LESSONS.find(l=>!state.read.includes(l.id))||LESSONS[0];
-  $('#main').innerHTML=`${pageHead('Leren')}<div class="sra-course-overview">${breadcrumb('Leren')}<header class="sra-mode-intro"><div><h2>De leerroute vanaf nul</h2><p>Volg de lessen van boven naar beneden. Elke les verbindt de uitleg met een voorbeeld, zelf onderzoeken en korte begripchecks.</p></div><a class="study-btn primary" href="#les/${next.id}">${state.read.length?'Verder leren':'Begin bij les 1'}</a></header><div class="sra-learning-phases">${phases.map((phase,i)=>{const lessons=LESSONS.filter(l=>l.phase===phase);return `<section class="sra-learning-phase"><header><span class="sra-phase-no">${i+1}</span><div><h2>${esc(phase)}</h2><p>${lessons.length} ${lessons.length===1?"les":"lessen"}</p></div></header>${C.summaries?.[phase]?`<details class="sra-phase-summary" data-term-scope><summary>Samenvatting: ${esc(phase)}</summary><div class="sra-phase-summary-body">${C.summaries[phase]}</div></details>`:''}<ol>${lessons.map(l=>`<li><a href="#les/${l.id}" class="sra-learning-item"><span class="sra-learning-no">${LESSONS.indexOf(l)+1}</span><span class="sra-learning-name">${esc(l.title)}${curriculumHeading(l,"learning-list-source")}</span><span class="sra-learning-status">${lessonProgress(l)}</span><span aria-hidden="true">→</span></a></li>`).join('')}</ol></section>`;}).join('')}</div><p class="footer-note">Je kunt ook rechtstreeks een onderwerp kiezen. Wil je alleen vragen beantwoorden? Ga naar <a href="#oefenen">Oefenvragen maken</a>.</p></div>`;
+  $('#main').innerHTML=`${pageHead('Leren')}<div class="sra-course-overview">${breadcrumb('Leren')}<header class="sra-mode-intro"><div><h2>De leerroute vanaf nul</h2><p>Volg de lessen van boven naar beneden. Elke les verbindt de uitleg met een voorbeeld, zelf onderzoeken en korte begripchecks.</p></div><a class="study-btn primary" href="#les/${next.id}">${state.read.length?'Verder leren':'Begin bij les 1'}</a></header><div class="sra-learning-phases">${phases.map((phase,i)=>{const lessons=LESSONS.filter(l=>l.phase===phase);return `<section class="sra-learning-phase"><header><span class="sra-phase-no">${i+1}</span><div><h2>${esc(phase)}</h2><p>${lessons.length} ${lessons.length===1?"les":"lessen"}</p></div>${C.summaries?.[phase]?`<a class="sra-phase-summary-link" href="#samenvatting/${i+1}">Samenvatting<span class="sr-only">: ${esc(phase)}</span> <span aria-hidden="true">→</span></a>`:''}</header><ol>${lessons.map(l=>`<li><a href="#les/${l.id}" class="sra-learning-item"><span class="sra-learning-no">${LESSONS.indexOf(l)+1}</span><span class="sra-learning-name">${esc(l.title)}${curriculumHeading(l,"learning-list-source")}</span><span class="sra-learning-status">${lessonProgress(l)}</span><span aria-hidden="true">→</span></a></li>`).join('')}</ol></section>`;}).join('')}</div><p class="footer-note">Wil je alleen vragen beantwoorden? Ga naar <a href="#oefenen">Oefenvragen maken</a>.</p></div>`;
   wrapTables();
  }
  function practiceSet(scope){
@@ -196,7 +204,7 @@
   if($('#question-overview').open)$('#question-overview').close();
   let parts;try{parts=decodeURIComponent(location.hash.slice(1)).split('/');}catch(e){parts=['home'];}
   const requested=parts[0]==='dashboard'?'home':parts[0];
-  let tab=['home','leren','les','formules','oefenen','begrippen','tentamen','welkom','toets','inzage','voortgang','bronnen'].includes(requested)?requested:'home';
+  let tab=['home','leren','samenvatting','les','formules','oefenen','begrippen','tentamen','welkom','toets','inzage','voortgang','bronnen'].includes(requested)?requested:'home';
   if((tab==='les'||tab==='formules')&&parts[1]&&!validIds.has(parts[1]))tab='leren';
   const isLesson=tab==='les';
   const isCirrus=['welkom','toets','inzage'].includes(tab)||(tab==='tentamen'&&(!parts[1]||parts[1]==='voltooid'));
@@ -208,7 +216,7 @@
   document.documentElement.classList.toggle('enhanced',isCirrus);
   if(!isCirrus)window.SRACirrus.leave();
   window.SRAMC?.leave();
-  $('#main').toggleAttribute('data-no-terms',!isLesson&&tab!=='formules'&&tab!=='begrippen');
+  $('#main').toggleAttribute('data-no-terms',!isLesson&&tab!=='formules'&&tab!=='begrippen'&&tab!=='samenvatting');
   document.body.classList.toggle('sra-full-page',!isLesson);
   document.body.dataset.page=tab;
   $('#menu-toggle').hidden=!isLesson;
@@ -216,7 +224,7 @@
   $('.sra-navigation').hidden=isCirrus||tab==='tentamen';
   $('#tools-menu').open=false;
   let current=null;
-  if(isCirrus)window.SRACirrus.mount();else if(tab==='home')renderHome();else if(tab==='leren')renderLearning();else if(tab==='les')current=renderLesson(parts[1]);else if(tab==='formules')current=renderFormulas(parts[1]);else if(tab==='oefenen')renderPractice(parts[1],parts[2]);else if(tab==='begrippen')renderGlossary();else if(tab==='tentamen')renderExams(parts[1],parts[2],parts[3]);else if(tab==='voortgang')renderProgress();else renderSources();
+  if(isCirrus)window.SRACirrus.mount();else if(tab==='home')renderHome();else if(tab==='leren')renderLearning();else if(tab==='samenvatting')renderSummary(parts[1]);else if(tab==='les')current=renderLesson(parts[1]);else if(tab==='formules')current=renderFormulas(parts[1]);else if(tab==='oefenen')renderPractice(parts[1],parts[2]);else if(tab==='begrippen')renderGlossary();else if(tab==='tentamen')renderExams(parts[1],parts[2],parts[3]);else if(tab==='voortgang')renderProgress();else renderSources();
   let trail=$('#main .sra-breadcrumb, #main .exam-breadcrumb');
   if(!trail&&!isCirrus&&!$('#main .mc-home')&&!$('#main .mc-page')){
    const host=$('#main .sra-home')||$('#main');

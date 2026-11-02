@@ -2090,12 +2090,9 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation asid
 @media (prefers-reduced-motion:reduce){.lesson-sources li.is-target{animation:none;outline:2px solid var(--green,#008859)}}
 /* Grid-items mogen smaller worden dan hun breedste tabel; die scrolt dan in zijn eigen container. */
 .sra-learning-phase{min-width:0}
-.sra-phase-summary{border-bottom:1px solid var(--study-border,var(--line));padding:0 24px;min-width:0}
 .sra-phase-summary-body{overflow-wrap:anywhere}
-.sra-phase-summary>summary{cursor:pointer;padding:14px 0;font-weight:600;color:var(--study-title,inherit)}
 .sra-phase-summary-body{padding:0 0 18px;line-height:1.6}
 .sra-phase-summary-body p,.sra-phase-summary-body li{text-align:justify;hyphens:auto}
-@media (max-width:600px){.sra-phase-summary{padding:0 18px}}
 body[data-page="les"] #main p,body[data-page="les"] #main li,body[data-page="les"] .section-body,body[data-page="formules"] #main p,body[data-page="formules"] #main li,body[data-page="formules"] .formula-guide-card{text-align:justify;hyphens:auto;text-justify:inter-word}
 body[data-page="les"] #main summary,body[data-page="formules"] #main summary{text-align:left}
 body[data-page="les"] #main p{margin-bottom:12px}
@@ -2152,7 +2149,7 @@ html[data-study-theme=dark] .formula-visual .fv-provenance,html[data-study-theme
 @media(max-width:700px){.fv-panels{grid-template-columns:1fr;gap:20px}.formula-visual{padding:12px}.fv-panels>.fv-panel{max-width:440px;width:100%}.fv-chart text{font-size:13px}}
 @media print{.formula-visual{background:white;color:#172a37;break-inside:avoid;--fv-green:#087c66;--fv-purple:#6857a0;--fv-orange:#a64b13}.fv-panels{grid-template-columns:repeat(2,minmax(0,1fr))}.fv-chart text{fill:#172a37!important}.fv-chart .fv-gridline{stroke:#d5e3dd!important}.fv-table th{background:#edf4f0!important}}
 .lesson-source-title{display:block;font-size:.48em;font-weight:600;line-height:1.6;color:#526579;margin:0 0 10px;letter-spacing:0}
-.learning-list-source{display:block;margin-top:5px;font-size:12px;font-weight:400;line-height:1.5;color:#596b78}
+.learning-list-source{display:block;margin-top:1px;font-size:12px;font-weight:400;line-height:1.5;color:#596b78}
 aside.learning-context{border:1px solid #cddcd7;border-left:4px solid #008859;border-radius:8px;background:#f6faf8;padding:22px 26px;margin:24px 0;min-width:0}
 aside.learning-context h2{font-size:1.12rem;margin:0 0 10px}aside.learning-context p{margin:10px 0}.learning-frequency{font-size:.92rem}.learning-evidence{margin:16px 0;font-size:.88rem}.learning-evidence>summary{cursor:pointer;font-weight:600;color:#285749}.learning-evidence[open]>summary{margin-bottom:10px}
 .learning-source{font-size:.8rem;line-height:1.55;margin:16px 0 10px;color:#586b76;border-top:1px solid #e1e7e9;background:transparent}
