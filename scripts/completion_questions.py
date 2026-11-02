@@ -139,7 +139,7 @@ q('diagnostiek','uitbijter',2,'Een opvallende waarneming blijkt juist ingevoerd 
  ['De invoer is gecontroleerd en de waarneming is geldig.','De bijzondere omstandigheid keert jaarlijks terug.','Onderzoek een dummy, schat opnieuw en controleer de residuen.'],
  'Een terugkerende bijzondere omstandigheid vraagt om inhoudelijke modelaanpassing.',
  'Verwijder geen geldige waarneming uitsluitend om de fit te verbeteren.')
-q('diagnostiek','autocorrectie',3,'Een opnieuw geschat model is y-hat_t = 10 + 2x_t + 0,5e_(t−1). Bij x_t = 4 en vorig residu −2 is de voorspelling:',[
+q('diagnostiek','autocorrectie',3,'Een opnieuw geschat model is ŷ_t = 10 + 2x_t + 0,5e_(t−1). Bij x_t = 4 en vorig residu −2 is de voorspelling:',[
  ('17','10 + 2 × 4 + 0,5 × (−2) = 18 − 1 = 17.'),
  ('19','Dit verliest het negatieve teken van het vorige residu en telt 1 op.'),
  ('18','Dit laat de autocorrelatiecorrectie met het vorige residu weg.'),

@@ -322,4 +322,6 @@ for(const id of L.ids){
   paired++;
  }
 }
+// Formulebladnotatie zoals s_w verschijnt in de zichtbare tekst als subscript.
+for(const id of L.ids){const c=mount(id),text=(c.innerHTML+html(c)+c.querySelector('.lab-live').innerHTML).replace(/<[^>]+>/g,' ');assert.doesNotMatch(text,/(?<![A-Za-z])[sRbxe]_(?:totaal|[a-z0-9]{1,3})(?![a-z0-9])/,id+' toont ruwe s_-notatie');}
 console.log('OK: '+paired+' numerieke velden hebben een gekoppelde schuifregelaar.');

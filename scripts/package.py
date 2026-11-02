@@ -23,6 +23,28 @@ def embed_learning_images(content):
         content = content.replace(relative, 'data:' + mime + ';base64,' + base64.b64encode(image.read_bytes()).decode('ascii'))
     return content
 
+# Zelfde regel als SRAFormulaHelp.notationParts in js/formula-help.js, voor de leesversie zonder scripts.
+LETTER = 'A-Za-zÀ-ɏͰ-Ͽ'
+NOTATION = re.compile(
+    r'(?:(?<![' + LETTER + r'_])|(?<=(?<![' + LETTER + r'_])N))'
+    r'((?:Σ)?(?:SSR|SSE|MSE|MSR|VIF|SE|MD|CD|df|[' + LETTER + r'][̀-ͯ]?)[²³]?)_'
+    r'(\([^()\s]{1,12}\)|[' + LETTER + r'0-9]+(?:,[' + LETTER + r'0-9]+)?)(?![' + LETTER + r'0-9_])')
+
+
+def plain_notation(content):
+    """Toon s_e of Ŵ_MPU als subscript in tekst; tags, MathML, SVG, scripts en stijlen blijven ongemoeid."""
+    parts, skip = [], 0
+    for piece in re.split(r'(<[^>]+>)', content):
+        if piece.startswith('<'):
+            tag = (re.match(r'</?([A-Za-z0-9]+)', piece) or [None, ''])[1].lower()
+            if tag in ('script', 'style', 'math', 'svg') and not piece.endswith('/>'):
+                skip += -1 if piece.startswith('</') else 1
+            parts.append(piece)
+        else:
+            parts.append(piece if skip else NOTATION.sub(
+                lambda m: m[1] + '<sub>' + re.sub(r'^\((.*)\)$', r'\1', m[2]) + '</sub>', piece))
+    return ''.join(parts)
+
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--without-sources', action='store_true',
                     help='Bouw zonder lokale bron-PDF\'s en maak een aparte ZIP zonder bronbestanden.')
@@ -148,7 +170,7 @@ for i,l in enumerate(build_content.lessons):
         parts.append(f'<li id="bron-{l["id"]}-{n}"><a href="{e(link[0])}">{e(link[1])}</a>: {e(ref["locator"])}</li>')
     parts.append('</ol></details></article>')
 parts.append('<style>'+presentation_css+(root/'css/learning-revision.css').read_text(encoding='utf-8')+'svg{max-width:100%;height:auto}</style></html>')
-read_version=embed_learning_images('\n'.join(parts))
+read_version=embed_learning_images(plain_notation('\n'.join(parts)))
 read_version=read_version.replace('<title>', '<script data-goatcounter="https://sra.goatcounter.com/count" data-goatcounter-settings=\'{"no_onload":true}\' async src="https://gc.zgo.at/count.js"></script><script>\n'+(root/'js/page-names.js').read_text(encoding='utf-8')+'\n</script><title>', 1)
 (root/'SRA leesversie.html').write_text(read_version,encoding='utf-8')
 

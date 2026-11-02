@@ -48,7 +48,8 @@ const server=http.createServer((req,res)=>{
     assert.ok((await page.locator('.lesson-conclusion').innerText()).length>150);
     assert.match(await page.locator('.example-context').innerText(),/\?/);
     assert.equal(await page.locator('.formula-help-hint,.term-hint').count(),0);
-    assert.equal(await page.locator('.section-body p').first().evaluate(el=>getComputedStyle(el).textAlign),'justify');
+    // Uitvullen alleen waar de regel breed genoeg is; op smalle schermen geeft het grote woordgaten.
+    assert.equal(await page.locator('.section-body p').first().evaluate(el=>getComputedStyle(el).textAlign),width<=600?'left':'justify');
     await page.evaluate(()=>window.scrollTo({top:800,behavior:'instant'}));
     await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
     const bounds=await page.evaluate(()=>{

@@ -125,7 +125,7 @@ def visuals():
     add('rekenen','Gemiddelde, variantie en standaardafwijking uitrekenen','spread','Van afwijking naar gekwadrateerde afwijking',[
         panel('De afwijkingen blijven zichtbaar',plot('Waarden rond het gemiddelde', [('Waarde',list(enumerate(vals,1)),GREEN,True)],'Postnummer','Waarde (€)',(0,5,60,140),horizontal=[(100,'gem. 100',PURPLE)],segments=[((i,100),(i,v),ORANGE) for i,v in enumerate(vals,1)]),'Afwijkingen: −20, −10, +10, +20. Hun som is nul, terwijl de posten wel verschillen.'),
         panel('Kwadraten heffen elkaar niet op',plot('Gekwadrateerde afwijkingen',[('Afwijking²',list(enumerate([(v-100)**2 for v in vals],1)),ORANGE,True)],'Postnummer','Afwijking² (euro²)',(0,5,0,500)),'400 + 100 + 100 + 400 = 1.000.<br>s² = 1.000 / 3 = 333,33 euro²; s = √333,33 ≈ € 18,26.')],
-        'Kwadrateren voorkomt opheffing; de wortel brengt de uitkomst terug naar euro. De volledige kolomtabel staat verderop bij de tweede rekenroute.',
+        'Kwadrateren voorkomt opheffing; de wortel brengt de uitkomst terug naar euro. De volledige kolomtabel staat verderop bij de tweede rekenwijze.',
         'Dezelfde vier waarden als in de formule-uitleg en de bestaande rekentabel: 80, 90, 110 en 120.')
     add('onzekerheid','Van puntschatting naar betrouwbaarheidsinterval','interval-width','De marge is de halve intervalbreedte',[
         interval_panel('Gegeven t = 2,00',100000,4000,(93000,107000),'Standaardfout € 2.000. E = 2 × 2.000 = € 4.000; breedte = € 8.000.'),
@@ -174,10 +174,10 @@ def visuals():
     add('steekproefomvang','Terugrekenen vanaf de toegestane marge','sample-margin','Meer controles verkleinen de marge',[
         panel('Marge bij een vaste spreiding en t',plot('Marge tegenover omvang',[('E(n)',curve(factor,25,1000),GREEN,False)],'Gecontroleerde posten n','Marge E (€)',(0,1000,0,8000)),'Voor dit beeld blijven N = 1.000, s = € 20 en t = 1,985 vast. Alleen n verandert.'),
         panel('Dezelfde curve in getallen',table(['n','E'],[[str(k),'€ '+num(factor(k))] for k in [25,100,400,1000]],'Controle van vier punten op de curve'),'Zonder eindigheidscorrectie geeft vier keer zoveel posten de helft van de marge. De correctie verlaagt de marge hier nog verder.')],
-        'Deze gevoeligheidsvergelijking houdt t bewust vast. Bij een echte planning volg je de cursusroute en bepaal je de vereiste kritieke waarde en afronding.')
+        'Deze gevoeligheidsvergelijking houdt t bewust vast. Bij een echte planning volg je de werkwijze uit de cursus en bepaal je de vereiste kritieke waarde en afronding.')
     add('stratificatie','De steekproef verdelen over strata','allocation','Evenredig en Neyman verdelen anders',[
         panel('Evenredig naar omvang',table(['Stratum','N_i','s_i','n_i'],[['1','500','10','50'],['2','500','30','50']],'N = 1.000; n = 100'),'De omvang is gelijk, dus ieder stratum krijgt 50 controles.'),
-        panel('Neyman naar omvang én spreiding',table(['Stratum','N_i × s_i','Aandeel','n_i'],[['1','5.000','25%','25'],['2','15.000','75%','75']],'Dezelfde populatie en totale steekproef'),'Het tweede stratum heeft driemaal zoveel spreiding. Bij gelijke kosten geeft de Neyman-route 25 en 75 controles.')],
+        panel('Neyman naar omvang én spreiding',table(['Stratum','N_i × s_i','Aandeel','n_i'],[['1','5.000','25%','25'],['2','15.000','75%','75']],'Dezelfde populatie en totale steekproef'),'Het tweede stratum heeft driemaal zoveel spreiding. Bij gelijke kosten geeft Neyman-allocatie 25 en 75 controles.')],
         'Hier is een vergelijkingstabel duidelijker dan een extra grafiek: je ziet rechtstreeks welke gewichten de twee formules gebruiken.')
     add('stratificatie','De schattingen en onzekerheid samenvoegen','strata-variance','Totalen optellen, onzekerheid via kwadraten combineren',[
         panel('De puntschattingen',table(['Deel','Geschat totaal'],[['Stratum 1','€ 40'],['Stratum 2','€ 60'],['Volledig gecontroleerde topgroep','€ 100'],['Samen','€ 200']],'Vereenvoudigd voorbeeld'),'De topgroep draagt haar gecontroleerde werkelijke totaal één keer bij.'),
@@ -214,7 +214,7 @@ def visuals():
     slope,slopese=14.73939,1.88988
     add('toetsen','Toetsen en het interval voor de regressiehelling','slope-zero','Het interval koppelen aan de passende tweezijdige toets',[
         interval_panel('Het 95%-interval voor de helling',slope,2.306*slopese,(-1,22),'Marge = 2,306 × 1,88988 ≈ 4,3581. Nul ligt buiten het interval.',xlabel='Helling (kg/jaar)'),
-        panel('De twee equivalente t-routes',table(['Route','Uitkomst'],[['b₁/s_b₁','14,73939/1,88988 ≈ 7,7991'],['r√(n−2)/√(1−r²)','Bij onafgeronde casusgegevens: dezelfde t'],['Vrijheidsgraden','10 − 2 = 8']],'Enkelvoudige regressie met constante'),'Deze overeenkomst geldt voor toetsen op nul in dit model. Een andere nulwaarde of een meervoudig model vraagt de bijpassende route.')],
+        panel('Twee gelijkwaardige manieren om t te berekenen',table(['Rekenwijze','Uitkomst'],[['b₁/s_b₁','14,73939/1,88988 ≈ 7,7991'],['r√(n−2)/√(1−r²)','Bij onafgeronde casusgegevens: dezelfde t'],['Vrijheidsgraden','10 − 2 = 8']],'Enkelvoudige regressie met constante'),'Deze overeenkomst geldt voor toetsen op nul in dit model. Een andere nulwaarde of een meervoudig model vraagt de bijpassende formule.')],
         'Een tweezijdig 95%-interval dat nul uitsluit past bij verwerpen van H₀: β₁ = 0 op 5%. Het is niet dezelfde afleesregel als een eenzijdige toets.',
         'Dezelfde b₁, s_b₁ en t-waarde als de reeds uitgewerkte cursusopgave H9.1 en het hellingsinterval.')
     add('diagnostiek','Signalen voor uitbijters en invloedrijke waarnemingen berekenen','diagnostic-signals','Een y-uitbijter en invloed zijn verschillende signalen',[

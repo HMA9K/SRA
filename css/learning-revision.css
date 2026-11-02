@@ -70,7 +70,7 @@ body[data-page="les"] th,body[data-page="les"] td{padding:8px 10px}
 body.study-shell[data-page="les"] .lesson-bottom{position:static;padding:14px 0;border-width:1px 0 0;background:transparent}
 math[display="inline"]{display:inline math;math-style:normal;font-size:1.16em;white-space:nowrap;padding:0 .12em;background:#eef3f8;border-radius:3px}
 .inline-expression{display:inline-block;max-width:100%;font-family:"Cambria Math","STIX Two Math",math;font-size:1.12em;font-weight:600;word-spacing:normal;text-align:left;hyphens:none;background:#eef3f8;border-radius:3px;padding:0 .12em}
-.inline-value{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.inline-value{font-variant-numeric:tabular-nums;white-space:nowrap}
 .inline-expression math[display="inline"]{font-size:1em;background:transparent;padding:0}
 table math[display="inline"],table .inline-expression{font-size:1.3em}
 .lesson-progress{display:flex;flex-wrap:wrap;gap:2px 9px;font-size:.73rem;font-weight:400;color:var(--study-muted);line-height:1.4;margin-top:4px}
@@ -240,3 +240,14 @@ body[data-page="les"] #main .question-feedback li,.question-feedback li{margin:3
 .mini-table table{font-size:.8rem;margin:0}
 .mini-table caption{margin:0 0 5px;text-align:left}
 .mini-table th,.mini-table td{padding:7px!important;hyphens:none}
+.symbol-dictionary td:first-child{font-family:"Cambria Math","STIX Two Math",math;font-size:1.12em;font-weight:600}
+.symbol-dictionary td:first-child .inline-expression{font-size:1em;background:none;padding:0}
+.transition-work>div{font-family:"Cambria Math","STIX Two Math",math;font-weight:600}
+.transition-work .inline-expression{font-size:1em;background:none;padding:0}
+@media(max-width:600px){
+ body[data-page="les"] #main p,body[data-page="les"] #main li,body[data-page="les"] .section-body,body[data-page="formules"] #main p,body[data-page="formules"] #main li,body[data-page="formules"] .formula-guide-card,.sra-phase-summary-body p,.sra-phase-summary-body li{text-align:left}
+ .exam-weight-table{table-layout:fixed;width:100%;min-width:0;font-size:.78rem}
+ .exam-weight-table :is(th,td){padding:6px 5px!important;hyphens:manual;overflow-wrap:break-word}
+ .exam-weight-table th{font-size:.72rem}
+ .exam-weight-table :is(th,td):is(:first-child,:last-child){width:29%}
+}

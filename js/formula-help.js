@@ -176,6 +176,32 @@
   const aliases = ['R²_adj','R²ᵢ','R²_bw','s_MPU','s_tot','s_bⱼ','s_Q','s_V','s_R','s_q','s_w','s_b','s_e','s_x','n_test','Ŵ_MPU','Ŵ_tot','Ŵ_Q','Ŵ_V','Ŵ_R','W_top','βⱼ,₀','b₀','b₁','b₂','bⱼ','bₖ','β₀','β₁','ŷᵢ','ŷ₀','x₀','x₁','x₂','xₖ','yᵢ','wᵢ','bᵢ','eᵢ','Nᵢ','nᵢ','sᵢ','w̄ᵢ','w̄','b̄','x̄','ȳ','ē','s²','R²','sₑ','MSPR','TotalSS','SSR','SSE','MSR','MSE','VIF','Tolerance','MD','CD','ln','exp','df','N','n','B','E','q','s','t','k','x','y','z','w','b','e','ŷ','Ŵ','γ','α','β','ε','Σ','±'].sort((a,b)=>b.length-a.length);
   D.VIF = D.VIFi; D.Tolerance = D.Tolerancei;
   const word = /[\p{L}\p{N}\p{M}_]/u;
+  // Formulebladnotatie in platte tekst (s_e, Ŵ_MPU, e_(t−1)) verschijnt als subscript.
+  // Eén letter of een vaste afkorting als basis; SPSS-namen zoals LN_MORT of ZRE_1 blijven letterlijk.
+  // Een cijfer of N mag direct voorafgaan, zoals in 2x_t en Ns_q.
+  const notation = /(?<=(?:^|[^\p{L}_])N?)((?:Σ)?(?:SSR|SSE|MSE|MSR|VIF|SE|MD|CD|df|\p{L}\p{M}?)[²³]?)_(\([^()\s]{1,12}\)|[\p{L}0-9]+(?:,[\p{L}0-9]+)?)(?![\p{L}0-9_])/gu;
+  const notationSkip = 'script,style,textarea,input,select,option,svg,math,code,pre,[contenteditable]';
+  function notationParts(text) {
+    const parts = []; let offset = 0;
+    for (const m of text.matchAll(notation)) {
+      parts.push(text.slice(offset, m.index) + m[1], {sub: m[2].replace(/^\((.*)\)$/, '$1')});
+      offset = m.index + m[0].length;
+    }
+    if (offset) parts.push(text.slice(offset));
+    return parts;
+  }
+  function formatNotation(container) {
+    const walker = document.createTreeWalker(container, 4), nodes = [];
+    while (walker.nextNode()) if (walker.currentNode.textContent.includes('_') && !walker.currentNode.parentElement.closest(notationSkip)) nodes.push(walker.currentNode);
+    for (const node of nodes) {
+      const parts = notationParts(node.textContent);
+      if (!parts.length) continue;
+      node.replaceWith(...parts.map(part => {
+        if (typeof part === 'string') return part;
+        const sub = document.createElement('sub'); sub.textContent = part.sub; return sub;
+      }));
+    }
+  }
   function textMatches(text, context) {
     const matches = [];
     for (let i = 0; i < text.length;) {
@@ -196,7 +222,9 @@
     const walker = document.createTreeWalker(container, 4), nodes = [];
     while (walker.nextNode()) if (!walker.currentNode.parentElement.closest(excluded + ',math')) nodes.push(walker.currentNode);
     for (const node of nodes) {
-      const context = contextOf(node.parentElement), matches = textMatches(node.textContent, context);
+      // Een losse letter binnen een index (de t in e_(t−1)) krijgt geen eigen uitleg; zo blijft de notatie heel.
+      const indexes = [...node.textContent.matchAll(notation)].map(m => [m.index + m[0].indexOf('_') + 1, m.index + m[0].length]);
+      const context = contextOf(node.parentElement), matches = textMatches(node.textContent, context).filter(m => !indexes.some(([a, b]) => m.start >= a && m.start < b));
       if (!matches.length) continue;
       const fragment = document.createDocumentFragment(); let offset = 0;
       for (const m of matches) {
@@ -212,6 +240,7 @@
     observer?.disconnect();
     host.querySelectorAll('math').forEach(math => { if (!math.closest('a,button,[contenteditable]')) annotateMath(math); });
     host.querySelectorAll('.section-body p,.section-body li,.section-body td,.formula-guide-card p,.formula-guide-card li,.lab-equation,.example li,.question-feedback .feedback,.mc-feedback p,.mc-feedback li').forEach(annotateText);
+    formatNotation(host);
     observer?.observe(host,{childList:true,subtree:true});
   }
   function close(restore = true) {
@@ -245,5 +274,5 @@
     });
     annotate();
   }
-  return {init,annotate,close,lookup,describe,textMatches,keyOf};
+  return {init,annotate,close,lookup,describe,textMatches,keyOf,notationParts};
 });
