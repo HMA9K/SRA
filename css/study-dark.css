@@ -152,6 +152,8 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-phase,html
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-phase-no{color:#f0f7fc}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-item:hover{background:#192922}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-learning-status.is-read{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-phase-summary-link{color:var(--study-ink)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-summary-page>.sra-phase-summary-body{background:#152129}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase>details>summary{color:var(--study-ink)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-phase li a:hover{background:#192922}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-practice-heading h2{color:#adbdc9}
@@ -179,7 +181,6 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-resources{bord
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-resources a{color:#99c1e1}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-help p{color:#adbdc9}
 /* css/presentation.css */
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-row{border-bottom:1px solid #35486e}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-label{color:#b1b7c9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .math-scroll:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .table-scroll:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-scroll:focus-visible{outline:3px solid #76542d}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .symbols{color:#adbdc9}
@@ -282,6 +283,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .direct
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation>summary{color:var(--study-accent)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #main .source-notes{color:var(--study-muted,#adbdc9)}
 @media (prefers-reduced-motion:reduce){html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-sources li.is-target{outline:2px solid var(--green,#2d765d)}}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell[data-page="les"] .section>.section-head{color:#e0ebf2}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) math[display="inline"]{background:#17212c}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .inline-expression{background:#17212c}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-progress .is-done{color:var(--study-accent)}

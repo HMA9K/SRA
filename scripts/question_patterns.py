@@ -260,7 +260,7 @@ p('mc-stratificatie-toepassing-1', 'Twee stratumomvangen met gemiddelden én een
   'Eén totaalbedrag voor alle strata samen.')
 p('mc-stratificatie-toepassing-2', 'N_h én s_h per stratum, “gelijke controlekosten” en “Neyman-allocatie”.',
   'De optimale verdeling weegt zowel omvang als spreiding mee.',
-  'Bereken gewichten N_hs_h en verdeel n naar elk gewicht gedeeld door hun som.',
+  'Bereken gewichten N_h × s_h en verdeel n naar elk gewicht gedeeld door hun som.',
   'Aantallen controles per stratum die samen n vormen.')
 p('mc-stratificatie-toepassing-3', 'Standaardfouten van onafhankelijke stratumtotalen, een totaalschatting en t.',
   'De intervalmarge vraagt eerst gecombineerde onzekerheid.',

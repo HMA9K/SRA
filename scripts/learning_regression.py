@@ -62,7 +62,7 @@ def enhance(lessons, sources):
         'Beide zijn nodig om een nieuwe maand te beoordelen. Controleer dus ook de gegevens waarop '
         'de verwachting berust.</p>'
         + table('Welke vraag stelt de accountant?', ['Vraag', 'Passende aanpak', 'Reden'], [
-            ['Wat is het totale werkelijke bedrag van een populatie?', 'Een schatter uit hoofdstuk 8.',
+            ['Wat is het totale werkelijke bedrag van een populatie?', 'Een schatter voor een populatietotaal, zoals MPU of de verschilschatter.',
              'Je trekt een steekproef en extrapoleert naar een populatietotaal.'],
             ['Past een nieuwe productie bij het aantal arbeidsuren?', 'Regressie met een individueel voorspellingsinterval.',
              'Je voorspelt y bij een gegeven x en beoordeelt de afwijking.'],
@@ -102,7 +102,7 @@ def enhance(lessons, sources):
         [ref('opgaven',10,'Opgavenbundel, H9.1, PDF 10'),ref('uitwerkingen',14,'Uitwerkingenbundel, H9.1, PDF 14–15'),
          ref('spss',9,'SPSS-uitwerkingen, college 3, PDF 9')])
 
-    add(L['regressielijn'], sources, 'SPSS-praktijkroute college 3: de handberekening terugvinden',
+    add(L['regressielijn'], sources, 'SPSS-praktijk college 3: de handberekening terugvinden',
         '<p><strong>Doel:</strong> verbinden wat je zelf berekent met de software-uitvoer. '
         'Gebruik het tabblad College3 van de aangeleverde SRA-dataset en cursusopgave H9.1.</p>'
         + steps(['Open de Excelgegevens via <strong>File → Open → Data</strong>; kies het tabblad College3. '
@@ -199,7 +199,7 @@ def enhance(lessons, sources):
         'voorspellingsmarge niet smaller. Beoordeel dus ook de residuele spreiding en de modelvoorwaarden.</p>',
         [bookref('boek-h9b',252),bookref('boek-h9b',256),ref('attentie',8,'Attentiepunten, toetsen meervoudige regressie, PDF 8')], first=True)
 
-    add(L['toetsen'], sources, 'Tabellenbundel gebruiken: dezelfde casus, drie toetsroutes',
+    add(L['toetsen'], sources, 'Tabellenbundel gebruiken: dezelfde casus, drie toetsvormen',
         '<p>H9.1 geeft t ≈ 7,79910, F ≈ 60,82595, n = 10 en één verklarende variabele. '
         'Neem α = 0,05. De tabellenbundel geeft <strong>overschrijdingskansen</strong>: de kans '
         'rechts van de positieve tabelwaarde.</p>'
@@ -261,7 +261,7 @@ def enhance(lessons, sources):
         'een verschil in niveau binnen één meervoudig model verwerken. Als ook de hellingen verschillen, '
         'is alleen een niveaudummy onvoldoende. Kies dus op basis van wat de groepen laten zien, niet '
         'uitsluitend op de hoogste gezamenlijke correlatie.</p>'
-        + '<h3>SPSS-praktijkroute college 4</h3>'
+        + '<h3>SPSS-praktijk college 4</h3>'
         + steps(['Lees College4 in en maak <strong>Graphs → Chart Builder → Simple Scatter</strong>, '
                  'met Gem Inkomsten p/m op x en Grootte Roodstand op y.',
                  'Maak daarna een <strong>Grouped Scatter</strong> met dezelfde assen en Type Inkomen bij '
@@ -269,7 +269,7 @@ def enhance(lessons, sources):
                  'Herhaal de verkenning met de andere kandidaten, waaronder de relatieve hypotheeklast. '
                  'Geef per kandidaat aan of het patroon binnen de groepen standhoudt.',
                  'Lever de gewone en gegroepeerde grafiek plus een gemotiveerde modelkeuze op. '
-                 'Bij deze crosssectie zijn tijdsvertraging en de cursusroute voor autocorrelatie niet van toepassing.']),
+                 'Bij deze crosssectie zijn tijdsvertraging en de cursusaanpak voor autocorrelatie niet van toepassing.']),
         [ref('spss',11,'SPSS-uitwerkingen, college 4, PDF 11–13'),bookref('boek-h9c',261)])
 
     add(L['diagnostiek'], sources, 'Tijdsvertraging lezen in grafieken én Correlations',
@@ -374,7 +374,7 @@ def enhance(lessons, sources):
         '<strong>tabel 13.9</strong> de rij n = 24, daarna de juiste α-regel en de twee kolommen '
         'voor k = 1. Je vindt d<sub>L</sub> = 1,27 en d<sub>U</sub> = 1,45. '
         'Spiegel ze om 2: 4 − d<sub>U</sub> = 2,55 en 4 − d<sub>L</sub> = 2,73.</p>'
-        + table('Beslissingsgebieden bij deze tabelkeuze', ['Gebied','Conclusie volgens de cursusroute'], [
+        + table('Beslissingsgebieden bij deze tabelkeuze', ['Gebied','Conclusie volgens de cursus'], [
             ['d ≤ 1,27','Aanwijzing voor positieve autocorrelatie.'],
             ['1,27 &lt; d &lt; 1,45','Onbeslist; de tabel geeft hier geen definitieve beslissing.'],
             ['1,45 ≤ d ≤ 2,55','Geen autocorrelatie aangetoond.'],
@@ -394,7 +394,7 @@ def enhance(lessons, sources):
         [ref('tabellen',30,'Tabellenbundel, tabel 13.9, PDF 30–31'),ref('slides',118,'Slides, Durbin-Watson, PDF 118–119'),
          bookref('boek-h9d',282)])
 
-    add(L['diagnostiek'], sources, 'SPSS-praktijkroute college 5: diagnoses en herbeoordeling',
+    add(L['diagnostiek'], sources, 'SPSS-praktijk college 5: diagnoses en herbeoordeling',
         '<p><strong>Doel:</strong> voor de 60 personen uit de leeftijd-bloeddrukcasus begrijpen '
         'waarom een significante lijn nog moet worden onderzocht. De oorspronkelijke lijn is '
         'bloeddruk = 83,463 + 1,044 × leeftijd. De bronuitvoer geeft t = 8,862 en Sig. = ,000.</p>'
@@ -557,7 +557,7 @@ def enhance(lessons, sources):
         'Rond de logwaarde niet vroeg af: exponentiëren kan de afronding zichtbaar vergroten.</p>',
         [ref('formules',3,'Formuleblad, transformaties, formules 55–58, PDF 3'),bookref('boek-h10c',321)])
 
-    add(L['transformaties'], sources, 'SPSS-praktijkroute college 6: vier patronen, vier modelkeuzes',
+    add(L['transformaties'], sources, 'SPSS-praktijk college 6: vier patronen, vier modelkeuzes',
         '<p><strong>Doel:</strong> bij de plantgegevens het patroon herkennen voordat je een '
         'regressie kiest. De steellengte is telkens de verklarende variabele. '
         'De officiële uitwerking kiest per uitkomst een andere vorm.</p>'
@@ -651,7 +651,7 @@ def enhance(lessons, sources):
          ref('tabellen',20,'Tabellenbundel, tabel 13.8, PDF 20–29'),bookref('boek-h10c',319),
          bookref('boek-h10b',308)])
 
-    add(L['modelbouw'], sources, 'SPSS-praktijkroute college 7: huizen, selectie en overlap',
+    add(L['modelbouw'], sources, 'SPSS-praktijk college 7: huizen, selectie en overlap',
         '<p><strong>Doel:</strong> uit een reeks woningkenmerken een verklaarbaar model voor '
         'Verkoopprijs maken. De officiële uitwerking laat eerst handmatige backwardselectie zien. '
         'De dependent is Verkoopprijs; de oorspronkelijke uitwerking noemt haar eenmaal ten onrechte onafhankelijk.</p>'
@@ -737,7 +737,7 @@ def enhance(lessons, sources):
         [ref('programma',4,'Onderwijsprogramma, toetsing, PDF 4'),ref('exam2025',9,'Tentamen 17 maart 2025, vragen 19–21, PDF 9'),
          ref('attentie',5,'Attentiepunten, vereiste diagnoseconclusies, PDF 5')], first=True)
 
-    add(L['tentamen'], sources, 'SPSS-praktijkroute college 8: één volledige analyse van autoverkoop',
+    add(L['tentamen'], sources, 'SPSS-praktijk college 8: één volledige analyse van autoverkoop',
         '<p><strong>Doel:</strong> de onderdelen zelfstandig verbinden. De opdrachttekst noemt 163 '
         'auto’s. Het oorspronkelijke Excelblad College8 bevat echter 162 datarijen, zonder '
         'ontbrekende waarden; alle 162 worden in de getoonde modellen gebruikt. '
@@ -963,10 +963,10 @@ def enhance(lessons, sources):
             ['Coefficients: constante B','−1,408','De coëfficiënten zijn na weging opnieuw geschat.'],
             ['Coefficients: arbeidsuren B','0,616','De vergelijking is ŷ = −1,408 + 0,616x in de oorspronkelijke variabelen van de casus.'],
         ])
-        + '<p>De bronroute is <strong>Analyze → Regression → Weight Estimation</strong>, '
+        + '<p>Het menupad in de bron is <strong>Analyze → Regression → Weight Estimation</strong>, '
         'met productie als Dependent, arbeidsuren als Independent en als Weight Variable. '
         'Bewaar het beste gewicht en geef dat bij <strong>Regression → Linear → WLS Weight</strong> '
-        'op. Gebruik de broninstelling als oefenroute; een andere dataset kan een andere '
+        'op. Gebruik de broninstelling als oefening; een andere dataset kan een andere '
         'weging vragen. Controleer daarna opnieuw de residuen en verklaar waarom de '
         'gekozen weging bij de waargenomen spreiding past.</p>'
         + '<p class="note">De ongewogen casusdiagnose vindt op zichzelf '
@@ -981,7 +981,7 @@ def enhance(lessons, sources):
     guide_titles = {
         'regressielijn':'Van gegevens naar Coefficients: cursusopgave H9.1',
         'anova':'Een volledige ANOVA-tabel reconstrueren',
-        'toetsen':'Tabellenbundel gebruiken: dezelfde casus, drie toetsroutes',
+        'toetsen':'Tabellenbundel gebruiken: dezelfde casus, drie toetsvormen',
         'diagnostiek':'Durbin-Watson: van tabellenbundel naar beslissing',
         'voorspellen':'Boekcasus Productiviteit: een controlemaand beoordelen',
         'meervoudig':'Volledige toepassing: salaris, dummy’s en modeltoets',

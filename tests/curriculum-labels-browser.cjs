@@ -17,15 +17,17 @@ if(!base)throw Error('Geef LEARNING_URL op.');fs.mkdirSync(out,{recursive:true})
   await group.scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,`overzicht-${width}-${theme}.png`)});
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
   await group.locator('a[href="#les/meervoudig"]').click();await page.locator('.lesson-opening').waitFor();
-  const label=page.locator('.lesson-top .lesson-source-title');assert.equal(await label.isVisible(),true);
-  assert.match(await label.textContent(),/H10.*Hoorcollege 6–7/);
+  // De paginakop toont de titel; fase, lesnummer en bronregel staan alleen in het lesmenu.
+  assert.equal(await page.locator('.lesson-top').isVisible(),false);
+  const label=lesson=>page.locator(`#sidebar a[href="#les/${lesson}"] .learning-list-source`);
+  assert.match(await label('meervoudig').textContent(),/H10.*Hoorcollege 6–7/);
   assert.equal(await page.locator('.lesson-preparation').getAttribute('open'),null);
   assert.equal(await page.locator('#sidebar .learning-list-source').count(),19);
   if(width<761)await page.locator('#menu-toggle').click();
-  await page.locator('#sidebar a[href="#les/validatie"]').click();await page.waitForFunction(()=>document.querySelector('.lesson-top .lesson-source-title')?.textContent.includes('geen boekparagraaf'));
-  assert.equal(await label.isVisible(),true);assert.match(await label.textContent(),/Hoorcollege 7; toepassing in 8/);
+  await page.locator('#sidebar a[href="#les/validatie"]').click();await page.waitForFunction(()=>location.hash==='#les/validatie'&&document.querySelector('.lesson-top h1')?.textContent.includes('Valideren'));
+  assert.equal(await page.locator('.lesson-top').isVisible(),false);assert.match(await label('validatie').textContent(),/geen boekparagraaf.*Hoorcollege 7; toepassing in 8/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
   await page.screenshot({path:path.join(out,`les-${width}-${theme}.png`)});
  }
- assert.deepEqual(errors,[]);console.log('OK: 19 zichtbare koppelingen, duidelijke groepsnaam, leskop buiten uitklapblok en lesmenu; drie breedtes, licht/donker.');
+ assert.deepEqual(errors,[]);console.log('OK: 19 zichtbare koppelingen, duidelijke groepsnaam, bronregel in het lesmenu in plaats van boven de les; drie breedtes, licht/donker.');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1)});

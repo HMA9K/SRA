@@ -2,7 +2,7 @@
 from collections import Counter
 from html import escape
 from itertools import product
-from math import exp, sqrt
+from math import ceil, exp, floor, log10, sqrt
 import re
 from formula_visuals import num
 
@@ -13,6 +13,22 @@ SQUARES = tuple(value ** 2 for value in DEVIATIONS)
 VARIANCE = sum(SQUARES) / (len(VALUES) - 1)
 SD = sqrt(VARIANCE)
 PAIR_MEANS = Counter((a + b) / 2 for a, b in product(VALUES, repeat=2))
+
+
+def signed(value, digits=0):
+    """Getal met typografisch minteken."""
+    return num(value, digits).replace('-', '−')
+
+
+def axis_ticks(lo, hi, min_step=0):
+    """Twee tot vier ronde asgetallen, elk op de eigen waarde in plaats van een afgeronde tussenpositie.
+    min_step houdt genoeg ruimte tussen de labels."""
+    power = floor(log10(hi - lo or 1))
+    for step in sorted(m * 10 ** e for e in range(power - 1, power + 2) for m in (1, 2, 5)):
+        values = [round(k * step, 10) for k in range(ceil(lo / step - 1e-9), floor(hi / step + 1e-9) + 1)]
+        if step >= min_step and 2 <= len(values) <= 4:
+            return values
+    return [lo, hi]
 
 
 def chart(title, points, xlabel, ylabel, *, reference=None, labels=True, stems=False, line=False):
@@ -28,11 +44,13 @@ def chart(title, points, xlabel, ylabel, *, reference=None, labels=True, stems=F
            f'aria-label="{escape(title, quote=True)}" xmlns="http://www.w3.org/2000/svg">'
            f'<title>{escape(title)}</title><rect class="transition-frame" x="48" y="28" width="198" height="102"/>'
            f'<text class="axis-title" x="4" y="16">{escape(ylabel)}</text>']
-    ticks = sorted(set((ymin, reference if reference is not None else (ymin + ymax) / 2, ymax)))
-    for y in ticks:
-        out.append(f'<text x="41" y="{Y(y)+4:.2f}" text-anchor="end">{num(y, 0)}</text>')
-    for x in sorted(set(xs)) if len(set(xs)) <= 4 else (xmin, (xmin+xmax)/2, xmax):
-        out.append(f'<text x="{X(x):.2f}" y="148" text-anchor="middle">{num(x, 0)}</text>')
+    tick = lambda value: signed(value, 0 if float(value).is_integer() else 2)
+    # Minimaal 20 px tussen y-labels en 30 px tussen x-labels in het viewBox-raster, ook bij 320 px schermbreedte.
+    y_ticks = axis_ticks(ymin, ymax, 20 * (ymax - ymin + 2 * ypad) / 96)
+    for y in sorted(set(y_ticks + ([reference] if reference is not None else []))):
+        out.append(f'<text x="41" y="{Y(y)+4:.2f}" text-anchor="end">{tick(y)}</text>')
+    for x in sorted(set(xs)) if len(set(xs)) <= 4 else axis_ticks(xmin, xmax, 30 * (xmax - xmin + 2 * xpad) / 198):
+        out.append(f'<text x="{X(x):.2f}" y="148" text-anchor="middle">{tick(x)}</text>')
     if reference is not None:
         out.append(f'<path class="transition-reference" d="M48 {Y(reference):.2f}H246"/>')
     if line:
@@ -42,7 +60,7 @@ def chart(title, points, xlabel, ylabel, *, reference=None, labels=True, stems=F
             out.append(f'<path class="transition-line" d="M{X(x):.2f} {Y(reference):.2f}V{Y(y):.2f}"/>')
         out.append(f'<circle class="transition-point" cx="{X(x):.2f}" cy="{Y(y):.2f}" r="4"/>')
         if labels:
-            label = num(y, 0 if float(y).is_integer() else 2)
+            label = signed(y, 0 if float(y).is_integer() else 2)
             if reference == 0 and y > 0 and ymin < 0:
                 label = '+' + label
             dx, dy, anchor = (8, 4, 'start') if reference is not None and y < reference else (0, -10, 'middle')
@@ -88,9 +106,9 @@ def spread_example(arithmetic_html, spread_html):
         panel('1. Gemiddelde', chart('Vier waarden; de stippellijn is het gemiddelde 100 euro', list(enumerate(VALUES, 1)), 'Post', 'Waarde (€)', reference=MEAN),
               ['80 + 90 + 110 + 120 = 400', '400 ÷ 4 = 100'], 'Gemiddelde: € 100', 'Het gemiddelde is het vertrekpunt voor de afwijkingen.', mean),
         panel('2. Afwijkingen', chart('Afwijkingen: −20, −10, +10 en +20 euro', list(enumerate(DEVIATIONS, 1)), 'Post', 'Afwijking (€)', reference=0, stems=True),
-              [f'{value} − 100 = {num(value-MEAN, 0)}' for value in VALUES], 'Som van de afwijkingen: 0', 'Min en plus heffen elkaar op. Toch verschillen de waarden.', spread[0] + '</p>'),
+              [f'{value} − 100 = {signed(value-MEAN)}' for value in VALUES], 'Som van de afwijkingen: 0', 'Min en plus heffen elkaar op. Toch verschillen de waarden.', spread[0] + '</p>'),
         panel('3. Kwadraten', chart('Gekwadrateerde afwijkingen: 400, 100, 100 en 400 euro²', list(enumerate(SQUARES, 1)), 'Post', 'Afwijking² (euro²)', reference=0, stems=True),
-              ['(−20)² = (−20) × (−20) = 400'] + [f'({num(d, 0)})² = {num(d*d, 0)}' for d in DEVIATIONS[1:]], 'Samen: 1.000 euro²', 'Elke afwijking wordt met zichzelf vermenigvuldigd. Zo tellen beide kanten mee.', square)]) + (
+              ['(−20)² = (−20) × (−20) = 400'] + [f'({"+" if d > 0 else ""}{signed(d)})² = {num(d*d, 0)}' for d in DEVIATIONS[1:]], 'Samen: 1.000 euro²', 'Elke afwijking wordt met zichzelf vermenigvuldigd. Zo tellen beide kanten mee.', square)]) + (
         '<h4>4. Van kwadraten naar variantie en standaardafwijking</h4>' + spread[1] + '</p>' + root + spread[2]
         + '<p>In dit voorbeeld: steekproefvariantie = 1.000 ÷ (4 − 1) ≈ 333,33 euro²; standaardafwijking = √(1.000 ÷ 3) ≈ € 18,26. '
         'Waarom n − 1? Rond het berekende gemiddelde tellen de afwijkingen op tot nul; na drie afwijkingen ligt de vierde vast. '
@@ -152,7 +170,7 @@ def strata_example():
               ['Elke cirkel is één post.', 'Het getal is de boekwaarde in euro.'], 'Elke groep heet een stratum', 'Je deelt in met bekende boekwaarden, vóórdat je de werkelijke waarden controleert.'),
         panel('2. Plan binnen elke groep', strata_diagram(planned=True),
               ['✓ = al gecontroleerd; + = extra controle.', 'Leeg = nog niet gecontroleerd.', 'A: 2; B: 2 + 1 = 3 controles.'], 'Totaal: 5; uitbreiding: 1', 'De echte berekening bepaalt welke groep uitbreiding nodig heeft en hoeveel.')],
-        'Nᵢ telt alle posten in een groep; nᵢ telt de controles. Dit schema toont de indeling; de optimale verdeling volgt uit de variantiebijdragen.')
+        'Nᵢ telt alle posten in een groep; nᵢ telt de controles. Dit schema toont alleen de indeling. Welke groep extra controles krijgt, volgt uit de variantiebijdragen; de verdeling vooraf volgens Neyman gebruikt Nᵢ × sᵢ.')
 
 
 def log_example():

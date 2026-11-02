@@ -3100,7 +3100,7 @@ window.SRAMCData = {
             "Alle patronen, want een bekend B maakt de foutvariantie altijd nul"
           ],
           "optionExplanations": [
-            "In A is b − w steeds 10. De werkelijke waarden lopen sterk uiteen, zodat corrigeren met vrijwel constante verschillen een precieze route kan bieden.",
+            "In A is b − w steeds 10. De werkelijke waarden lopen sterk uiteen, zodat corrigeren met vrijwel constante verschillen een precieze schatting kan opleveren.",
             "Bij B is w/b constant op 0,90, maar de verschillen zijn 10, 20 en 40. Dat past directer bij quotiëntschatten.",
             "Zonder bruikbaar verband bieden hulpvariabelen niet vanzelf winst. MPU kan dan juist een geschikte directe basis blijven.",
             "Een bekend boektotaal verwijdert alleen onzekerheid over B. De controleverschillen of verhoudingen kunnen nog steeds sterk spreiden."
@@ -4086,7 +4086,7 @@ window.SRAMCData = {
         {
           "source": "formules",
           "page": 1,
-          "locator": "Formules 12-17; twee routes voor s_q"
+          "locator": "Formules 12-17; twee rekenwijzen voor s_q"
         },
         {
           "source": "boek-h8b",
@@ -4196,7 +4196,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Formules 12-17; twee routes voor s_q"
+              "locator": "Formules 12-17; twee rekenwijzen voor s_q"
             },
             {
               "source": "boek-h8b",
@@ -4333,7 +4333,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Formules 12-17; twee routes voor s_q"
+              "locator": "Formules 12-17; twee rekenwijzen voor s_q"
             },
             {
               "source": "boek-h8b",
@@ -4470,7 +4470,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Formules 12-17; twee routes voor s_q"
+              "locator": "Formules 12-17; twee rekenwijzen voor s_q"
             },
             {
               "source": "boek-h8b",
@@ -4610,7 +4610,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Formules 12-17; twee routes voor s_q"
+              "locator": "Formules 12-17; twee rekenwijzen voor s_q"
             },
             {
               "source": "boek-h8b",
@@ -4749,7 +4749,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Formules 12-17; twee routes voor s_q"
+              "locator": "Formules 12-17; twee rekenwijzen voor s_q"
             },
             {
               "source": "boek-h8b",
@@ -4888,7 +4888,7 @@ window.SRAMCData = {
             {
               "source": "formules",
               "page": 1,
-              "locator": "Formules 12-17; twee routes voor s_q"
+              "locator": "Formules 12-17; twee rekenwijzen voor s_q"
             },
             {
               "source": "boek-h8b",
@@ -7863,7 +7863,7 @@ window.SRAMCData = {
             "Neyman-allocatie verdeelt bij gelijke controlekosten op basis van Nᵢsᵢ. Het kleinere tweede stratum krijgt hier meer controles door zijn grotere spreiding."
           ],
           "explanation": "Gewichten Nᵢsᵢ zijn 6.000 en 12.000. Verdeel 90 in de verhouding 1:2: 30 en 60. Neyman-allocatie verdeelt bij gelijke controlekosten op basis van Nᵢsᵢ. Het kleinere tweede stratum krijgt hier meer controles door zijn grotere spreiding.",
-          "pattern": "Herken: N_h én s_h per stratum, “gelijke controlekosten” en “Neyman-allocatie”. → Betekenis: De optimale verdeling weegt zowel omvang als spreiding mee. → Aanpak: Bereken gewichten N_hs_h en verdeel n naar elk gewicht gedeeld door hun som. → Gevraagd antwoord: Aantallen controles per stratum die samen n vormen.",
+          "pattern": "Herken: N_h én s_h per stratum, “gelijke controlekosten” en “Neyman-allocatie”. → Betekenis: De optimale verdeling weegt zowel omvang als spreiding mee. → Aanpak: Bereken gewichten N_h × s_h en verdeel n naar elk gewicht gedeeld door hun som. → Gevraagd antwoord: Aantallen controles per stratum die samen n vormen.",
           "trap": "54 en 36 is de evenredige allocatie, niet Neyman.",
           "optionExplanations": [
             "30 en 60 verdeelt 90 controles in de verhouding 6.000:12.000 = 1:2 en volgt de Neyman-formule.",
@@ -7986,7 +7986,7 @@ window.SRAMCData = {
           "recognition": {
             "signals": "N_h én s_h per stratum, “gelijke controlekosten” en “Neyman-allocatie”.",
             "meaning": "De optimale verdeling weegt zowel omvang als spreiding mee.",
-            "approach": "Bereken gewichten N_hs_h en verdeel n naar elk gewicht gedeeld door hun som.",
+            "approach": "Bereken gewichten N_h × s_h en verdeel n naar elk gewicht gedeeld door hun som.",
             "answer": "Aantallen controles per stratum die samen n vormen."
           },
           "guidance": {
@@ -11906,10 +11906,10 @@ window.SRAMCData = {
           "prompt": "Oefenvraag. Welke conclusie volgt bij H₁: β ≠ 0 en α = 0,05, via zowel Sig. als de kritieke t?",
           "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>Het model heeft n = 22 waarnemingen, één verklarende variabele en een constante. SPSS toont een tweezijdige Sig.</p><div class=\"table-wrap\"><table><caption>Coefficients: kosten</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">B</th><th scope=\"col\">Std. Error</th><th scope=\"col\">t</th><th scope=\"col\">Sig. (2-tailed)</th></tr></thead><tbody><tr><th scope=\"row\">Productie</th><td>0,460</td><td>0,200</td><td>2,300</td><td>0,032</td></tr></tbody></table></div><p><a href=\"bronnen/tabellenbundel.pdf#page=12\" target=\"_blank\" rel=\"noopener\">Open tabellenbundel: 13.4 Student t-verdeling, PDF-pagina 12</a>. Zoek de benodigde grens zelf op.</p>",
           "options": [
-            "Beide routes verwerpen niet: p > 0,025",
-            "Alleen de p-route verwerpt, want t moet groter zijn dan 5",
-            "Beide routes bewijzen dat β exact 0,460 is",
-            "Beide routes verwerpen H₀: p < 0,05 en |t| > 2,086"
+            "Beide methoden verwerpen niet: p > 0,025",
+            "Alleen de p-waardemethode verwerpt, want t moet groter zijn dan 5",
+            "Beide methoden bewijzen dat β exact 0,460 is",
+            "Beide methoden verwerpen H₀: p < 0,05 en |t| > 2,086"
           ],
           "optionExplanations": [
             "Een reeds tweezijdige Sig. moet met de totale α worden vergeleken. α/2 is alleen de staartkans voor het aflezen van de t-grens.",
@@ -11920,10 +11920,10 @@ window.SRAMCData = {
           "correct": 3,
           "steps": [
             "Stel H₀: β = 0 en H₁: β ≠ 0; df = 22 − 1 − 1 = 20.",
-            "P-route: 0,032 < 0,05. Kritieke route: B/SE = 2,3 en bij df = 20, staartkans 0,025 is t = 2,086.",
+            "Met de p-waarde: 0,032 < 0,05. Met de kritieke waarde: B/SE = 2,3 en bij df = 20, staartkans 0,025 is t = 2,086.",
             "Beide verwerpen H₀ omdat 2,3 > 2,086. De positieve samenhang is statistisch ondersteund; causaliteit volgt niet uit deze toets."
           ],
-          "explanation": "Stel H₀: β = 0 en H₁: β ≠ 0; df = 22 − 1 − 1 = 20. P-route: 0,032 < 0,05. Kritieke route: B/SE = 2,3 en bij df = 20, staartkans 0,025 is t = 2,086. Beide verwerpen H₀ omdat 2,3 > 2,086. De positieve samenhang is statistisch ondersteund; causaliteit volgt niet uit deze toets.",
+          "explanation": "Stel H₀: β = 0 en H₁: β ≠ 0; df = 22 − 1 − 1 = 20. Met de p-waarde: 0,032 < 0,05. Met de kritieke waarde: B/SE = 2,3 en bij df = 20, staartkans 0,025 is t = 2,086. Beide verwerpen H₀ omdat 2,3 > 2,086. De positieve samenhang is statistisch ondersteund; causaliteit volgt niet uit deze toets.",
           "pattern": "Herken: Welke conclusie volgt bij H₁: β ≠ 0 en α = 0,05, via zowel Sig. als de kritieke t? → Betekenis: Een tweezijdige Sig. en de t-statistiek zijn twee weergaven van dezelfde coëfficiënttoets. → Aanpak: Vergelijk de volledige tweezijdige p met α en vergelijk daarnaast de absolute t met de α/2-grens bij de juiste df. → Gevraagd antwoord: Twee overeenstemmende, onderbouwde beslissingen over een populatiehelling.",
           "trap": "Halveer niet zowel de p-waarde als de grens en vergelijk een tweezijdige Sig. niet automatisch met α/2.",
           "refs": [
@@ -13639,7 +13639,7 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-aanvulling-autocorrectie",
           "level": 3,
-          "prompt": "Oefenvraag. Een opnieuw geschat model is y-hat_t = 10 + 2x_t + 0,5e_(t−1). Bij x_t = 4 en vorig residu −2 is de voorspelling:",
+          "prompt": "Oefenvraag. Een opnieuw geschat model is ŷ_t = 10 + 2x_t + 0,5e_(t−1). Bij x_t = 4 en vorig residu −2 is de voorspelling:",
           "options": [
             "19",
             "18",
@@ -14284,7 +14284,7 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-leertoepassing-normaliteit-tabel",
           "level": 3,
-          "prompt": "Oefenvraag. Welke normaliteitsconclusie past bij de cursusroute en α = 0,05?",
+          "prompt": "Oefenvraag. Welke normaliteitsconclusie past bij de werkwijze uit de cursus en α = 0,05?",
           "stimulusHtml": "<p class=\"mc-data-origin\">Oefengegevens, volgens de genoemde cursusbronnen.</p><p>De tests zijn uitgevoerd op de residuen van een regressiemodel. Er zijn 40 waarnemingen.</p><div class=\"table-wrap\"><table><caption>Tests of Normality: residuen</caption><thead><tr><th scope=\"col\">Toets</th><th scope=\"col\">Statistic</th><th scope=\"col\">df</th><th scope=\"col\">Sig.</th></tr></thead><tbody><tr><th scope=\"row\">Kolmogorov-Smirnov</th><td>0,130</td><td>40</td><td>0,084</td></tr><tr><th scope=\"row\">Shapiro-Wilk</th><td>0,928</td><td>40</td><td>0,014</td></tr></tbody></table></div>",
           "options": [
             "De afhankelijke variabele y is niet normaal verdeeld",
@@ -14305,7 +14305,7 @@ window.SRAMCData = {
             "Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen."
           ],
           "explanation": "De modelvoorwaarde betreft de residuen. H₀: deze zijn normaal verdeeld; H₁: zij wijken daarvan af. Volgens de cursus gebruik je bij n = 40 Shapiro-Wilk. De bijbehorende Sig. is 0,014. Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen.",
-          "pattern": "Herken: Welke normaliteitsconclusie past bij de cursusroute en α = 0,05? → Betekenis: Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de cursuskeuze vooraf. → Aanpak: Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau. → Gevraagd antwoord: Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek.",
+          "pattern": "Herken: Welke normaliteitsconclusie past bij de werkwijze uit de cursus en α = 0,05? → Betekenis: Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de cursuskeuze vooraf. → Aanpak: Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau. → Gevraagd antwoord: Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek.",
           "trap": "Kies niet achteraf de normaliteitstoets met de prettigste p-waarde.",
           "refs": [
             {
@@ -14323,7 +14323,7 @@ window.SRAMCData = {
           "kind": "tabel",
           "dataOrigin": "eigen",
           "recognition": {
-            "signals": "Welke normaliteitsconclusie past bij de cursusroute en α = 0,05?",
+            "signals": "Welke normaliteitsconclusie past bij de werkwijze uit de cursus en α = 0,05?",
             "meaning": "Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de cursuskeuze vooraf.",
             "approach": "Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau.",
             "answer": "Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek."
@@ -14598,7 +14598,7 @@ window.SRAMCData = {
             {
               "source": "attentie",
               "page": 5,
-              "locator": "PDF p. 5: analyseroute tijdreeks"
+              "locator": "PDF p. 5: analyse van een tijdreeks"
             }
           ],
           "practiceMode": "zelfstandig",
@@ -14626,7 +14626,7 @@ window.SRAMCData = {
               {
                 "source": "attentie",
                 "page": 5,
-                "locator": "PDF p. 5: analyseroute tijdreeks"
+                "locator": "PDF p. 5: analyse van een tijdreeks"
               }
             ]
           }
@@ -17391,7 +17391,7 @@ window.SRAMCData = {
             "De cursus-terugtransformatie is exp(3) ≈ 20,09. Beoordeel modelvoorwaarden op de juiste modelschaal; voeg geen niet-gegeven correctiefactor toe."
           ],
           "explanation": "Lees de afhankelijke variabele van de tabel: LN(omzet). De formule staat dus op logschaal. Voorspelde logwaarde: 2 + 0,100 × 10 = 3. De cursus-terugtransformatie is exp(3) ≈ 20,09. Beoordeel modelvoorwaarden op de juiste modelschaal; voeg geen niet-gegeven correctiefactor toe.",
-          "pattern": "Herken: Wat is de teruggetransformeerde voorspelling bij x = 10 volgens dit exponentiële model? → Betekenis: De voetnoot of titel van de coëfficiëntentabel bepaalt op welke schaal de voorspelling staat. → Aanpak: Lees welke variabele is getransformeerd, vul x op de juiste schaal in en transformeer de gehele voorspelde logwaarde terug. → Gevraagd antwoord: Een voorspelling op de oorspronkelijke omzet-schaal volgens de opgegeven cursusroute.",
+          "pattern": "Herken: Wat is de teruggetransformeerde voorspelling bij x = 10 volgens dit exponentiële model? → Betekenis: De voetnoot of titel van de coëfficiëntentabel bepaalt op welke schaal de voorspelling staat. → Aanpak: Lees welke variabele is getransformeerd, vul x op de juiste schaal in en transformeer de gehele voorspelde logwaarde terug. → Gevraagd antwoord: Een voorspelling op de oorspronkelijke omzet-schaal volgens de opgegeven werkwijze uit de cursus.",
           "trap": "Dezelfde tabelvorm kan een ander model beschrijven zodra de afhankelijke variabele LN(y) is.",
           "refs": [
             {
@@ -17412,7 +17412,7 @@ window.SRAMCData = {
             "signals": "Wat is de teruggetransformeerde voorspelling bij x = 10 volgens dit exponentiële model?",
             "meaning": "De voetnoot of titel van de coëfficiëntentabel bepaalt op welke schaal de voorspelling staat.",
             "approach": "Lees welke variabele is getransformeerd, vul x op de juiste schaal in en transformeer de gehele voorspelde logwaarde terug.",
-            "answer": "Een voorspelling op de oorspronkelijke omzet-schaal volgens de opgegeven cursusroute."
+            "answer": "Een voorspelling op de oorspronkelijke omzet-schaal volgens de opgegeven werkwijze uit de cursus."
           },
           "guidance": {
             "title": "Welke variabele is getransformeerd?",

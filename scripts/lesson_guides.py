@@ -13,7 +13,7 @@ import presentation as p
 PREREQUISITES = {
     "beginnen": [
         "Geen statistische voorkennis nodig: begin hier met populatie, steekproef en waarneming.",
-        "SET is de door SRA veronderstelde voorkennis. De benodigde basis wordt in deze leerroute opnieuw uitgelegd.",
+        "SET is de door SRA veronderstelde voorkennis. De benodigde basis wordt in deze lessen opnieuw uitgelegd.",
     ],
     "rekenen": [
         "Les 1: onderscheid tussen populatieomvang N en steekproefomvang n.",
@@ -255,7 +255,7 @@ def _guides(lesson: dict) -> list[dict]:
     if slug == 'steekproefomvang':
         return [_guide(
             'Terugrekenen vanaf de toegestane marge',
-            'Gebruik de omvangsformule vóór of tijdens een controle als je wilt weten hoeveel posten nodig zijn om een gegeven nauwkeurigheid te bereiken. De onderstaande vorm is de planningsroute van het formuleblad.',
+            'Gebruik de omvangsformule vóór of tijdens een controle als je wilt weten hoeveel posten nodig zijn om een gegeven nauwkeurigheid te bereiken. De onderstaande vorm is de planningsformule van het formuleblad.',
             _existing(slug),
             p.LEGENDS[slug] + ' Voor MPU gebruik je s_w²; voor verschillen s_e². Bij de regressieschatter is de passende resterende variantie s_w² × (1 − R_bw²).',
             ['Vertaal de gewenste totale intervalbreedte naar E door de breedte te halveren.',
@@ -449,7 +449,7 @@ def _guides(lesson: dict) -> list[dict]:
             ),
             _guide(
                 'Een machtsmodel: zowel x als y heeft een logvorm',
-                'Gebruik een machtsfunctie als het lineair geschatte model ln(y) verbindt met ln(x). De les en het formuleblad geven twee gelijkwaardige routes om terug te rekenen.',
+                'Gebruik een machtsfunctie als het lineair geschatte model ln(y) verbindt met ln(x). De les en het formuleblad geven twee gelijkwaardige manieren om terug te rekenen.',
                 [('Lineaire vorm', p.CELL_FORMULAS['ln(ŷ) = b₀ + b₁ln(x)']), ('Machtsfunctie', p.CELL_FORMULAS['ŷ = exp(b₀) × xᵇ¹'])],
                 'b₀ is de constante op de logschaal; exp(b₀) is de factor op de oorspronkelijke schaal. b₁ is de macht van x. Voor het model moeten de gelogaritmeerde waarden positief zijn.',
                 ['Bereken ln(x) en vul die in bij b₀ + b₁ln(x).',

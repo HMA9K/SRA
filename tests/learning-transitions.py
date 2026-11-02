@@ -68,4 +68,11 @@ weighted_mean = sum(value * count for value,count in transitions.PAIR_MEANS.item
 variance_means = sum((value-weighted_mean)**2*count for value,count in transitions.PAIR_MEANS.items())/16
 variance_values = sum((value-100)**2 for value in transitions.VALUES)/4
 assert weighted_mean == 100 and variance_means == variance_values/2
+# Asgetallen staan op hun eigen waarde; eerder stond een afgeronde "2" op x = 1,5.
+assert transitions.axis_ticks(0, 3) == [0, 1, 2, 3]
+assert transitions.axis_ticks(transitions.SD/8, transitions.SD/2) == [4, 6, 8]
+assert transitions.axis_ticks(1, math.exp(3)) == [5, 10, 15, 20]
+assert re.findall(r'y="148" text-anchor="middle">([^<]+)<', transitions.log_example()) == ['0', '1', '2', '3'] * 2
+spread_text = re.sub(r'<[^>]+>', ' ', transitions.spread_example('<p>a. b. c. d.</p><p>e</p>', '<p>f</p><p>g</p>h'))
+assert not re.search(r'-\d', spread_text) and '(+10)²' in spread_text, 'Negatieve getallen gebruiken het minteken'
 print('OK: zes leesbruggen; twee rekenblokken samengevoegd; alle eerdere leerstof, bronnen, vragen en overige velden behouden; volgorde en berekeningen correct.')

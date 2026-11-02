@@ -41,7 +41,8 @@ def root(a):
     return tag('msqrt', a)
 
 def bar(a):
-    return '<mover accent="true"><mpadded height="+0.15em">' + a + '</mpadded><mo stretchy="true">¯</mo></mover>'
+    # Vaste hoogte: browsers negeren de relatieve vorm "+0.15em", waardoor het streepje de letter raakte.
+    return '<mover accent="true"><mpadded height="0.8em">' + a + '</mpadded><mo stretchy="true">¯</mo></mover>'
 
 def hat(a):
     return '<mover accent="true">' + a + op('^') + '</mover>'
@@ -197,10 +198,11 @@ def inline_formulas(content):
     tokens = re.compile(r'(?<![\w/])(?:' + '|'.join(re.escape(key) for key in sorted(formulas, key=len, reverse=True))
                         + r'|[sRbŴn][²³]?_(?:MPU|test|tot|adj|bw|[wbexqQRVij01])[²³]?)(?![\w/])')
     # Markeer alleen herkenbare rekenuitdrukkingen; gewone woorden, datums en HTML blijven intact.
-    symbol = r'(?:TotalSS|SSR|SSE|MSR|MSE|MSPR|VIF|df|[NnBWŴEqsxtkwbeRyαβγμσρŷēȳ])(?:_[A-Za-z0-9]+|[₀-₉ᵢⱼₖₑ²³\u0304])*'
+    symbol = r'(?:TotalSS|SSR|SSE|MSR|MSE|MSPR|VIF|df|[NnBWŴEqsxtkwbeRyαβγμσρŷēȳ])(?:_[A-Za-z0-9]+|_\([^()\s]+\)|[₀-₉ᵢⱼₖₑ²³\u0304])*'
     atom = r'(?:Σ\s*|√)?(?:' + symbol + r'|[−-]?\d+(?:[.,]\d+)*|∞)'
     operator = r'(?:[=<>≤≥≈±×÷/+−]|&lt;|&gt;|-(?=\s))'
-    expressions = re.compile(r'(?<![\w/])' + atom + r'(?:\s*' + operator + r'\s*' + atom + r')+(?![\w/])')
+    # Een index tussen haakjes, zoals in e_(t−1), blijft bij zijn symbool.
+    expressions = re.compile(r'(?<![\w/])(?<!_\()' + atom + r'(?:\s*' + operator + r'\s*' + atom + r')+(?![\w/])')
     values = re.compile(r'(?<![\w/.])(?:€\s*[−-]?\d+(?:[.,]\d+)*|[−-]?\d+(?:[.,]\d+)*%|[−-]?\d+(?:\.\d{3})*,\d+)(?![\w/]|\.\w)')
 
     def replace(match):

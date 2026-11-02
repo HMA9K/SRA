@@ -63,4 +63,9 @@ for (const token of ['s²','Σ','±','w̄','n','ln','exp']) assert.ok(H.lookup(t
 assert.equal(H.textMatches('s_Q en s_q', 'quotient').length,2);
 assert.notEqual(H.lookup('s_Q').title,H.lookup('s_q').title);
 assert.equal(H.lookup('onbekend'),null);
+// Platte formulebladnotatie wordt subscript; SPSS-variabelen en bestandsnamen blijven letterlijk.
+const subs = text => H.notationParts(text).filter(part => typeof part !== 'string').map(part => part.sub);
+assert.deepEqual(subs('Wat is Ŵ_MPU? s_e = √MSE; b₁s_x/s_y; 2x_t + 0,5e_(t−1); t²Ns_q²; w̄_i; SSR_klein'), ['MPU','e','x','y','t','t−1','q','i','klein']);
+assert.deepEqual(subs('s_3,totaal en d_L, d_U'), ['3,totaal','L','U']);
+for (const literal of ['LN_MORT en LN_ELECT','ln_dens','ZRE_1 en MAH_1','College8_data.sav','20241028_SRA_uitwerkingen.pdf']) assert.deepEqual(H.notationParts(literal), [], literal);
 console.log(`OK: ${formulas} formules / ${components} componenten; volledige symbooldekking, context en tekstgrenzen.`);

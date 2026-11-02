@@ -4,6 +4,7 @@ De volgorde is steeds: vertrekpunt, toepassing en conclusie. Bestaande
 berekeningen, voorwaarden en bronverwijzingen blijven in hun eigen blok staan.
 """
 import html
+import re
 from presentation import inline_formulas
 
 # Per les: inhoudelijk begin, vraag bij het bestaande voorbeeld, de kern en het vervolg.
@@ -116,6 +117,21 @@ READING = {
         'Werk nu een volledige oorspronkelijke opgave uit zonder tussentijds de uitwerking te lezen. Noteer daarna per fout of begrip, methodekeuze, rekenen of formuleren de oorzaak was en herhaal de bijbehorende les voordat je een nieuwe opgave maakt.',
     ),
 }
+
+
+LEAD_POSITION = re.compile(r'<(?:p|li|td|th|div|dd)(?:\s[^>]*)?>\s*$')
+
+
+def calm_emphasis(content):
+    """Vet blijft voor koplabels en uitkomsten; begrippen in de lopende tekst worden gewone tekst."""
+    def keep_or_unwrap(match):
+        inner = match[1]
+        label = re.sub('<[^>]+>', '', inner).strip()
+        if (label.endswith((':', '.', '?', '!')) or 'inline-value' in inner or 'inline-expression' in inner
+                or LEAD_POSITION.search(content[max(0, match.start() - 120):match.start()])):
+            return match[0]
+        return inner
+    return re.sub(r'<strong>(.*?)</strong>', keep_or_unwrap, content, flags=re.S)
 
 
 def enhance(lessons):

@@ -154,7 +154,7 @@ def enhance(lessons, sources):
     # Het rekenwerk krijgt een controleerbare tabel met eenheden.
     values = [80, 90, 110, 120]
     body = '<p>Een opgave kan losse waarden geven of alleen sommen. Onderstaande oefentabel '
-    body += 'laat zien dat de twee variantieformules hetzelfde meten. De ene route begint bij afwijkingen '
+    body += 'laat zien dat de twee variantieformules hetzelfde meten. De ene manier begint bij afwijkingen '
     body += 'van het gemiddelde; de andere gebruikt direct de kolomsommen.</p>'
     body += table('Rekenvoorbeeld: vier gecontroleerde waarden in euro',
                   ['Post', 'wᵢ', 'wᵢ²', 'wᵢ − 100', '(wᵢ − 100)²'],
@@ -162,8 +162,8 @@ def enhance(lessons, sources):
                   + [['Totaal', '400', '41.000', '0', '1.000']])
     body += steps(['Het gemiddelde is 400/4 = 100. De gewone afwijkingen tellen op tot nul, '
                    'terwijl de waarden duidelijk uiteenlopen. Kwadrateren voorkomt die opheffing.',
-                   'Afwijkingenroute: s² = 1.000/(4 − 1) = 333,3333 euro².',
-                   'Somroute: s² = [41.000 − 400²/4]/3 = [41.000 − 40.000]/3 = 333,3333 euro².',
+                   'Via de afwijkingen: s² = 1.000/(4 − 1) = 333,3333 euro².',
+                   'Via de sommen: s² = [41.000 − 400²/4]/3 = [41.000 − 40.000]/3 = 333,3333 euro².',
                    'Neem de wortel om terug te keren naar euro: s = 18,2574. '
                    'Voor de onzekerheid van het gemiddelde deel je daarna pas door √n.'])
     body += '<p>Met een berekend gemiddelde zijn maar n − 1 afwijkingen vrij te kiezen: '
@@ -320,10 +320,10 @@ def enhance(lessons, sources):
     body += 'De marge is groot doordat de afzonderlijke voorraadwaarden sterk uiteenlopen.</p>'
     body += exercise('<p>Gebruik dezelfde gegevens. De accountant mag een totale intervalbreedte '
                      'van € 2.000.000 accepteren. Voldoet deze controle? Noem twee inhoudelijke '
-                     'vervolgroutes en motiveer welke aanvullende informatie daarvoor nodig is.</p>',
+                     'vervolgstappen en motiveer welke aanvullende informatie daarvoor nodig is.</p>',
                      '<p>Nee: de toegestane marge E is € 1.000.000, terwijl de berekende marge '
-                     'ongeveer € 3.790.971 is. Route 1 is een grotere aselecte steekproef, te plannen '
-                     'met s²<sub>w</sub>. Route 2 is een passende hulpvariabeleschatter of stratificatie. '
+                     'ongeveer € 3.790.971 is. Optie 1 is een grotere aselecte steekproef, te plannen '
+                     'met s²<sub>w</sub>. Optie 2 is een passende hulpvariabeleschatter of stratificatie. '
                      'Daarvoor onderzoek je het verband met boekwaarden, het foutpatroon of de '
                      'groepsindeling. Het alleen verhogen van het betrouwbaarheidsniveau vergroot '
                      'de marge juist.</p>')
@@ -378,7 +378,7 @@ def enhance(lessons, sources):
              'consistent. Als alle € 7.755 aan fouten in 43 posten zit, is de kleinst mogelijke '
              'kwadratensom 7.755²/43 ≈ 1.398.605 euro², ruim meer dan de gegeven 395.000. '
              'De officiële uitwerking rekent toch met de gegeven Σe². Volg op het tentamen de '
-             'gegeven cijfers en deze rekenroute. Uit deze tegenstrijdige gegevens kan de werkelijke '
+             'gegeven cijfers en deze rekenwijze. Uit deze tegenstrijdige gegevens kan de werkelijke '
              'spreiding niet worden vastgesteld. Als het fouttotaal en het aantal foutposten kloppen, '
              'is de opgegeven kwadratensom te laag.</p>')
     body += exercise('<p>Gebruik dit interval om ook een interval voor de totale fout F = B − W '
@@ -421,7 +421,7 @@ def enhance(lessons, sources):
         'tussen boekwaarde en werkelijke waarde. De twee variaties onafhankelijk optellen '
         'zou de resterende onzekerheid verkeerd berekenen. q is dimensieloos, maar '
         's<sub>q</sub> staat hier in euro en is geen standaardfout van een percentage.</p>',
-        [ref('formules', 1, 'Formules 12-17; twee routes voor s_q'), bookref('boek-h8b', 212)])
+        [ref('formules', 1, 'Formules 12-17; twee rekenwijzen voor s_q'), bookref('boek-h8b', 212)])
     N, n, q, sw, sb, r = 2500, 100, .95, 38, 40, .98
     sq = sqrt(sw*sw - 2*q*r*sb*sw + q*q*sb*sb)
     se = N*sq/sqrt(n)*sqrt((N-n)/(N-1))
@@ -453,7 +453,7 @@ def enhance(lessons, sources):
     sq = sqrt((34730934-2*(1-q)*53988529+(1-q)**2*1871695609)/399)
     se = 3500*sq/sqrt(400)*sqrt(3100/3499)
     W = q*7360817
-    add('quotient', 'De tweede rekenroute: fouttotalen en productsommen',
+    add('quotient', 'De tweede rekenwijze: fouttotalen en productsommen',
         '<p>Het boek geeft sommen waarmee je formule 14 kunt invullen '
         'zonder eerst s<sub>b</sub>, s<sub>w</sub> en R afzonderlijk te berekenen. '
         'Dit is nuttig wanneer een tentamencasus juist zulke kolommen aanlevert.</p>'
@@ -801,7 +801,7 @@ def enhance(lessons, sources):
                    's<sub>Ŵ₁</sub> = 2.700 × (19,9946/√114) × √(2.586/2.699) '
                    '= € 4.949,21. Dit is de standaardfout van het stratumtotaal, '
                    'niet de spreiding van een losse post.',
-                   'Herhaal dezelfde route voor alle vier strata. De onderstaande '
+                   'Herhaal dezelfde stappen voor alle vier strata. De onderstaande '
                    'weergave is afgerond; de verdere berekening gebruikt onafgeronde waarden.'])
     body += table('Uitkomsten en variantiebijdragen per stratum',
                   ['Stratum', 'Gemiddelde (€)', 'Ŵᵢ (€)', 's<sub>w,i</sub> (€)',
@@ -845,7 +845,7 @@ def enhance(lessons, sources):
     body = '<p>Een te brede gestratificeerde schatting kun je op twee manieren '
     body += 'verbeteren: opnieuw over alle groepen verdelen, of gericht groepen met '
     body += 'een grote variantiebijdrage uitbreiden. Het boek behandelt beide. '
-    body += 'De volgende algemene route is formule 8.20 en gebruikt een directe '
+    body += 'De volgende algemene werkwijze is formule 8.20 en gebruikt een directe '
     body += 'schatter per stratum.</p>'
     body += formula_block(STRATIFIED_PLANNING)
     body += '<p>N betreft de populatie waaruit wordt getrokken; een integraal '
@@ -915,7 +915,7 @@ def enhance(lessons, sources):
         'mpu': ['Van samenvattingstabel naar een volledig voorraadinterval'],
         'verschil': ['De gegevenstabel lezen en de juiste waarde rapporteren'],
         'quotient': ['Een volledige casus: van goedratio tot interval',
-                    'De tweede rekenroute: fouttotalen en productsommen'],
+                    'De tweede rekenwijze: fouttotalen en productsommen'],
         'regressieschatter': ['De correctie verklaren en de helling uit productsommen berekenen'],
         'steekproefomvang': ['De slides doorrekenen: van gewenste marge naar extra controles'],
         'stratificatie': ['De volledige collegestabel: cumulatieve boekwaarde en grenzen',

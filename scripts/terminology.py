@@ -197,7 +197,7 @@ _add('boekwaardecorrectie', 'Correctieterm', ['correctietermen', 'boekwaardecorr
      'Bij de regressieschatter is dit b₁(B − Nb̄): de aanpassing van de directe schatting met behulp van de bekende boekwaarden.',
      'Bij b₁ = 0,8 en B − Nb̄ = −€ 1.000 verlaagt de correctieterm de schatting met € 800.', 'regressieschatter')
 _add('planningsformule', 'Planningsformule', ['omvangsformule', 'benodigde omvang', 'vereiste omvang'],
-     'De formulebladroute waarmee je vooraf de benodigde steekproefomvang berekent uit N, gewenste marge, passende variantie en kritieke t. De benodigde omvang wordt naar boven afgerond.',
+     'De formule van het formuleblad waarmee je vooraf de benodigde steekproefomvang berekent uit N, gewenste marge, passende variantie en kritieke t. De benodigde omvang wordt naar boven afgerond.',
      'Een berekende omvang van 520,122 vraagt minstens 521 controles.', 'steekproefomvang')
 _add('gamma', 'Gamma bij steekproefplanning', ['gamma', 'tussenstap gamma'],
      'De tussenuitkomst γ waarmee de cursus de omvangsformule schrijft als n = N/(1 + γ). γ hangt af van de gewenste marge en de variantie die bij de gekozen schatter hoort.',
@@ -390,10 +390,10 @@ _add('normaliteit', 'Normaliteit', ['normaliteitsaanname', 'niet-normaliteit', '
      'De aanname dat de relevante storingsterm normaal verdeeld is, onderzocht via de residuen. Een niet-significante normaliteitstoets bewijst deze aanname niet.',
      'Bij Shapiro-Wilk p = 0,20 en α = 0,05 wordt normaliteit van de residuen niet verworpen.', 'diagnostiek')
 _add('shapiro-wilk', 'Shapiro-Wilk', ['Shapiro Wilk', 'Shapiro-Wilk-toets'],
-     'Een normaliteitstoets. De SRA-analyseroute gebruikt haar voor residuen bij n ≤ 50. H₀ is normaliteit; een kleine p geeft aanleiding H₀ te verwerpen.',
+     'Een normaliteitstoets. De SRA-werkwijze gebruikt haar voor residuen bij n ≤ 50. H₀ is normaliteit; een kleine p geeft aanleiding H₀ te verwerpen.',
      'Bij n = 30 en p = 0,01 verwerp je normaliteit op niveau 0,05.', 'diagnostiek')
 _add('kolmogorov-smirnov', 'Kolmogorov-Smirnov', ['Kolmogorov Smirnov', 'Kolmogorov-Smirnov-toets'],
-     'De normaliteitstoets die de SRA-analyseroute gebruikt voor residuen bij n > 50. Beoordeel de p-waarde tegenover α.',
+     'De normaliteitstoets die de SRA-werkwijze gebruikt voor residuen bij n > 50. Beoordeel de p-waarde tegenover α.',
      'Bij n = 59 en p = 0,20 is er op niveau 0,05 onvoldoende bewijs om normaliteit te verwerpen.', 'diagnostiek',
      [('attentie', 5, 'Normaliteit van residuen'), ('spss', 19, 'Tests of Normality bij n = 59')])
 _add('histogram', 'Histogram', ['histogrammen'],
@@ -603,7 +603,7 @@ _add('resterende-ratiospreiding', 'Resterende spreiding bij de quotiëntschatter
      'De tussenmaat s_q uit formule 13 voor wat na de geschatte verhouding overblijft. Ondanks de aanduiding in het formuleblad heeft deze berekening de geldeenheid van b en w; zij is niet de standaardfout van het populatietotaal.',
      's_q = € 7,60 wordt nog met N/√n en de eindigheidscorrectie doorgerekend naar de totale standaardfout.', 'quotient')
 _add('effectieve-vrijheidsgraden', 'Effectieve vrijheidsgraden', ['effectieve df'],
-     'De vrijheidsgraden die bij het samengestelde interval horen. Volgens de SRA-formulebladroute voor strata worden ze in de opgave gegeven; neem niet automatisch het totale n − 1.',
+     'De vrijheidsgraden die bij het samengestelde interval horen. Volgens het SRA-formuleblad voor strata worden ze in de opgave gegeven; neem niet automatisch het totale n − 1.',
      'Geeft een strata-opgave effectieve df = 109, dan kies je de t-tabelrij volgens de bijbehorende cursusregel.', 'stratificatie')
 _add('kromming', 'Kromming', ['krom verband', 'kromme verbanden', 'boogvorm'],
      'Een verandering van richting of helling waardoor het patroon niet goed met één rechte lijn wordt beschreven. Kromming in residuen kan op een ongeschikte lineaire modelvorm wijzen.',

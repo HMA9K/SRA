@@ -14795,7 +14795,7 @@ window.SRAExamPractice = {
     },
     {
       "id": "exam-20250317-vraag-12",
-      "prompt": "Volg de Power-route uit de officiële uitwerking. Welke transformaties horen daarbij?",
+      "prompt": "Volg het Power-model uit de officiële uitwerking. Welke transformaties horen daarbij?",
       "originalPrompt": "Welke transformaties zijn uitgevoerd voor het best passende model?",
       "originalPromptHtml": "<p>Welke transformaties zijn uitgevoerd voor het best passende model?</p>",
       "sourceVisualHtml": "",
@@ -14803,7 +14803,7 @@ window.SRAExamPractice = {
         "Bij Power wordt alleen leeftijd gelogaritmeerd.",
         "Bij Power wordt alleen salaris gelogaritmeerd.",
         "Bij Power worden beide variabelen gekwadrateerd.",
-        "Bij de gekozen Power-route worden zowel leeftijd als salaris gelogaritmeerd."
+        "Bij het gekozen Power-model worden zowel leeftijd als salaris gelogaritmeerd."
       ],
       "correct": 3,
       "level": 3,
@@ -14823,24 +14823,24 @@ window.SRAExamPractice = {
       ],
       "officialSolutionHtml": "<p>Zowel van X = ‘Leeftijd’ als Y = ‘Salaris’ zijn de logaritme genomen</p>",
       "sourceNote": "Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
-      "explanation": "Bij de gekozen Power-route worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
+      "explanation": "Bij het gekozen Power-model worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
       "steps": [
-        "Bij de gekozen Power-route worden zowel leeftijd als salaris gelogaritmeerd.",
+        "Bij het gekozen Power-model worden zowel leeftijd als salaris gelogaritmeerd.",
         "Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden."
       ],
       "optionExplanations": [
-        "Deze optie is onjuist. Bij de gekozen Power-route worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
-        "Deze optie is onjuist. Bij de gekozen Power-route worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
-        "Deze optie is onjuist. Bij de gekozen Power-route worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
-        "Bij de gekozen Power-route worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden."
+        "Deze optie is onjuist. Bij het gekozen Power-model worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
+        "Deze optie is onjuist. Bij het gekozen Power-model worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
+        "Deze optie is onjuist. Bij het gekozen Power-model worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
+        "Bij het gekozen Power-model worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden."
       ],
-      "pattern": "Volg de Power-route uit de officiële uitwerking. Welke transformaties horen daarbij?",
+      "pattern": "Volg het Power-model uit de officiële uitwerking. Welke transformaties horen daarbij?",
       "trap": "Controleer de bronvoorwaarden, eenheden en afronding. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
       "recognition": {
         "signals": "Welke transformaties zijn uitgevoerd voor het best passende model?",
-        "meaning": "Volg de Power-route uit de officiële uitwerking. Welke transformaties horen daarbij?",
-        "approach": "Bij de gekozen Power-route worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
-        "answer": "Je antwoord moet deze conclusie onderbouwen: Bij de gekozen Power-route worden zowel leeftijd als salaris gelogaritmeerd."
+        "meaning": "Volg het Power-model uit de officiële uitwerking. Welke transformaties horen daarbij?",
+        "approach": "Bij het gekozen Power-model worden zowel leeftijd als salaris gelogaritmeerd. Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.",
+        "answer": "Je antwoord moet deze conclusie onderbouwen: Bij het gekozen Power-model worden zowel leeftijd als salaris gelogaritmeerd."
       },
       "guidance": {
         "title": "Welke variabele is getransformeerd?",
