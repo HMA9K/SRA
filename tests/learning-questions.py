@@ -6,6 +6,7 @@ met de Git-baseline vergeleken, zodat gebruikersvoortgang betekenis houdt.
 """
 import json
 import math
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -173,6 +174,8 @@ class LearningApplications(unittest.TestCase):
         self.assertEqual(700-350,350)
         self.assertEqual(self.answer('meervoudig-leertoepassing-dummy-contrast'),'WO ligt € 350 hoger dan HBO')
 
+    # De tabellenbundel staat buiten Git; de testworkflow op GitHub zet SRA_WITHOUT_SOURCES=1. Lokaal blijft deze controle verplicht.
+    @unittest.skipIf(os.environ.get('SRA_WITHOUT_SOURCES') == '1', 'bron-PDF niet in Git (SRA_WITHOUT_SOURCES=1)')
     def test_actual_table_cells_and_links(self):
         from pypdf import PdfReader
         # De gecontroleerde lokale bronkopie werkt ook in een Git-werkboom.

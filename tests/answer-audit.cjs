@@ -1,6 +1,7 @@
 /* Audit completeness, source preservation, and corrections on saved attempts. */
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),ctx={window:{}};
+const withoutSources=process.env.SRA_WITHOUT_SOURCES==='1';
 for(const f of ['data/exams.js','data/cirrus-exams.js'])vm.runInNewContext(read(f),ctx);
 const catalog=ctx.window.SRA_CIRRUS_EXAMS, originals=ctx.window.SRAExamData.exams,report=JSON.parse(read('data/answer-audit.json'));
 assert.equal(report.totalQuestions,224);assert.equal(report.uniqueQuestions,196);
@@ -16,7 +17,8 @@ for(const e of catalog){
   assert.ok(!q.promptHtml.includes('answer-audit'),'Geen feedback voor controleren');
   assert.ok(!e.sections.some(s=>s.contentHtml.includes(q.answerAudit.note)),'Geen antwoord in sectie');
  }
- for(const s of Object.values(row.sources)){
+ // De bron-PDF's staan buiten Git; de testworkflow op GitHub zet SRA_WITHOUT_SOURCES=1. Lokaal blijft deze controle verplicht.
+ if(!withoutSources)for(const s of Object.values(row.sources)){
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,s.file))).digest('hex'),s.sha256);
  }
 }
@@ -40,4 +42,4 @@ assert.equal(catalog.find(e=>e.id==='20241028').questions[12].answerAudit.status
 assert.match(catalog.find(e=>e.id==='20240318').questions[16].answerAudit.note,/inconsistent/);
 assert.equal(catalog.find(e=>e.id==='20200323').questions[16].answerAudit.status,'B');
 assert.equal(catalog.find(e=>e.id==='20200626').questions[16].answerAudit.status,'N');
-console.log('OK: 224 inhoudscontroles, bronhashes, juiste vraagkoppeling, correcties bij oude pogingen, behoud antwoorden/scoring, geen antwoordlekkage.');
+console.log(`OK: 224 inhoudscontroles, ${withoutSources?'bronhashes overgeslagen (SRA_WITHOUT_SOURCES=1)':'bronhashes'}, juiste vraagkoppeling, correcties bij oude pogingen, behoud antwoorden/scoring, geen antwoordlekkage.`);
