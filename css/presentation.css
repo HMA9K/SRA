@@ -61,3 +61,8 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-number{backgrou
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-goal{background:#172636;border-color:#2b4f73}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-steps .formula-row::before{background:#152129;border-color:#3b4a54;color:#dbe7f3}
 .lesson-bridge{margin:0 0 12px}
+.feedback{padding:12px 14px}
+.feedback h3{margin:0 0 4px;font-size:1rem}
+.feedback>p{margin:0 0 4px}
+.feedback-more{margin-top:6px}
+.feedback-more>summary{cursor:pointer;font-size:.85rem;font-weight:600}

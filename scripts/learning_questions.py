@@ -23,8 +23,8 @@ def table(caption, headings, rows):
     return f'<div class="table-wrap"><table><caption>{escape(caption)}</caption><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
-def case(text, content='', origin='Oefengegevens, volgens de genoemde cursusbronnen.'):
-    return f'<p class="mc-data-origin">{escape(origin)}</p><p>{escape(text)}</p>{content}'
+def case(text, content=''):
+    return f'<p>{escape(text)}</p>{content}'
 
 
 def bundle(page, label):

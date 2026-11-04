@@ -147,7 +147,7 @@
     }
     const walker = (container.ownerDocument || root.document).createTreeWalker(container, 4), nodes = [];
     while (walker.nextNode()) {
-      if (/[+−×÷±=]/.test(walker.currentNode.nodeValue) && !walker.currentNode.parentElement.closest(SKIP + ',.math-operator,button,a')) nodes.push(walker.currentNode);
+      if (/[+−×÷±=]/.test(walker.currentNode.nodeValue) && !walker.currentNode.parentElement.closest(SKIP + ',.math-operator,button')) nodes.push(walker.currentNode);
     }
     // Een buurformule telt ook als waarde: s_w × √n staat in drie losse stukken.
     const neighbour = node => node && (node.nodeType === 1 && !/^(BR|P|LI|DIV)$/.test(node.nodeName));
@@ -158,7 +158,7 @@
         const before = value.slice(0, match.index).trimEnd(), after = value.slice(match.index + 1).trimStart();
         const left = before ? VALUE_END.test(before) : neighbour(node.previousSibling);
         const right = after ? VALUE_START.test(after) : neighbour(node.nextSibling);
-        if (!left || !right) continue;
+        if (match[0] !== '±' && (!left || !right)) continue;
         parts.push(value.slice(offset, match.index), element(`<span class="math-operator">${match[0]}</span>`));
         offset = match.index + 1;
       }
