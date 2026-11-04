@@ -9,3 +9,4 @@ math [data-formula-help][role="group"]:hover{background:transparent}
 .formula-help-popup .formula-help-source{margin:9px 0 0;font-size:11px;line-height:1.5}
 .formula-help-source a{color:#26704b}
 @media print{math [data-formula-help],.formula-text-component{color:inherit;text-decoration:none}.formula-help-hint,.formula-help-popup{display:none!important}}
+math mfrac [data-formula-help],math msqrt [data-formula-help],.inline-expression math [data-formula-help]{text-decoration:none}

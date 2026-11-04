@@ -111,7 +111,7 @@ for tag, name, attributes in re.findall(r'(<link rel="stylesheet" href="([^"]+)"
     # Preserve stylesheet isolation when the portable app embeds CSS inline.
     portable=portable.replace(tag,'<style'+attributes+'>\n'+path.read_text(encoding='utf-8')+'\n</style>')
 presentation_css=(root/'css/presentation.css').read_text(encoding='utf-8')
-for name in ['data/course.js','data/exams.js','data/mc.js','data/exam-practice.js','data/mc-exam-frequency.js','js/math.js','js/lab-layout.js','js/labs.js','js/inline-help.js','js/terms.js','js/formula-help.js','js/navigation.js','js/exams.js','js/mc-state.js','js/mc-case-panel.js','js/mc.js','vendor/cafa2-cirrus/js/exam-engine.js','vendor/cafa2-cirrus/js/answer-editor.js','js/answer-input-tools.js','js/tinymce-answer-editor.js','data/cirrus-exams.js','data/exam-original-pdfs.js','js/cirrus.js','js/exam-study-links.js','js/calculator-input.js','js/lesson-panel.js','js/app.js','js/calculator.js','js/exam-cirrus-layout.js','js/input-table-layout.js','js/pdf-panels.js']:
+for name in ['data/course.js','data/exams.js','data/mc.js','data/exam-practice.js','data/mc-exam-frequency.js','js/math.js','js/lab-layout.js','js/labs.js','js/inline-help.js','js/formula-text.js','js/terms.js','js/formula-help.js','js/navigation.js','js/exams.js','js/mc-state.js','js/mc-case-panel.js','js/mc.js','vendor/cafa2-cirrus/js/exam-engine.js','vendor/cafa2-cirrus/js/answer-editor.js','js/answer-input-tools.js','js/tinymce-answer-editor.js','data/cirrus-exams.js','data/exam-original-pdfs.js','js/cirrus.js','js/exam-study-links.js','js/calculator-input.js','js/lesson-panel.js','js/app.js','js/calculator.js','js/exam-cirrus-layout.js','js/input-table-layout.js','js/pdf-panels.js']:
     script=(root/name).read_text(encoding='utf-8').replace('</script','<\\/script')
     portable=re.sub(r'<script defer src="'+re.escape(name)+r'(?:\?[^"<>]*)?"></script>','',portable)
     portable=portable.replace('</body>',f'<script>\n{script}\n</script>\n</body>')
@@ -169,6 +169,7 @@ for i,l in enumerate(build_content.lessons):
         link=(ref['href'],ref['title']) if 'href' in ref else (f'bronnen/{build_content.sources[ref["source"]]["file"]}#page={ref["page"]}',build_content.sources[ref['source']]['title'])
         parts.append(f'<li id="bron-{l["id"]}-{n}"><a href="{e(link[0])}">{e(link[1])}</a>: {e(ref["locator"])}</li>')
     parts.append('</ol></details></article>')
+parts.append('<script>\n'+(root/'js/formula-text.js').read_text(encoding='utf-8')+'\nSRAFormulaText.annotate(document.body);\n</script>')
 parts.append('<style>'+presentation_css+(root/'css/learning-revision.css').read_text(encoding='utf-8')+'svg{max-width:100%;height:auto}</style></html>')
 read_version=embed_learning_images(plain_notation('\n'.join(parts)))
 read_version=read_version.replace('<title>', '<script data-goatcounter="https://sra.goatcounter.com/count" data-goatcounter-settings=\'{"no_onload":true}\' async src="https://gc.zgo.at/count.js"></script><script>\n'+(root/'js/page-names.js').read_text(encoding='utf-8')+'\n</script><title>', 1)

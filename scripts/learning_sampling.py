@@ -544,7 +544,7 @@ def enhance(lessons, sources):
             ['Direct (MPU)', 'Er geen bruikbare boekwaarden zijn, of de werkelijke waarden weinig uiteenlopen', 'w̄ en s<sub>w</sub>', 'N × w̄', 's<sub>w</sub>: spreiding van de werkelijke waarden', 'Aselecte steekproef; bij n &lt; 100 normaliteit beoordelen'],
             ['Verschil', 'Het foutbedrag per post ongeveer gelijk is, los van de postgrootte', 'B, ē en s<sub>e</sub>', 'B − N × ē', 's<sub>e</sub>: spreiding van de fouten e = b − w', 'Minstens 30 fouten in de steekproef'],
             ['Quotiënt', 'Het foutpercentage ongeveer gelijk is: grote posten hebben grote fouten', 'B, Σw en Σb (of w̄, b̄), s<sub>w</sub>, s<sub>b</sub>, R<sub>bw</sub>', 'q × B met q = Σw/Σb', 's<sub>q</sub>: spreiding van w − q × b', 'Minstens 30 fouten in de steekproef'],
-            ['Regressie', 'Er een lineair verband tussen b en w is, zonder vast bedrag of vast percentage', 'B, w̄, b̄, s<sub>w</sub>, s<sub>b</sub>, R<sub>bw</sub> en b₁', 'N × w̄ + b₁(B − N × b̄)', 's<sub>w</sub> × √(1 − R²<sub>bw</sub>): het onverklaarde deel', 'Lineair verband; foutverdeling beoordelen'],
+            ['Regressie', 'Er een lineair verband tussen b en w is, zonder vast bedrag of vast percentage', 'B, w̄, b̄, s<sub>w</sub>, s<sub>b</sub>, R<sub>bw</sub> en b₁', 'N × w̄ + b₁(B − N × b̄)', 's<sub>w</sub> × √(1 − R_bw²): het onverklaarde deel', 'Lineair verband; foutverdeling beoordelen'],
         ])
         + '<h3>Zo kies je op het tentamen</h3>'
         + steps(['Zijn de boekwaarden per post en het boektotaal B bekend? Zo nee, dan kan alleen MPU.',
@@ -715,7 +715,7 @@ def enhance(lessons, sources):
                      'verloren als je alleen de frequentie gebruikt?</p>',
                      '<p>De klassen zijn ongelijk breed. Deze klasse beslaat € 2.500, '
                      'terwijl de eerste klassen € 400 breed zijn. Breedte × frequentie '
-                     'neemt dat verschil mee volgens de boekmethode. Alleen √frequentie '
+                     'neemt dat verschil mee volgens de boekmethode. Alleen √(frequentie) '
                      'gebruiken zou een andere indeling opleveren. Bij gelijke breedtes '
                      'is de breedte een gemeenschappelijke factor; hier niet.</p>')
     add('stratificatie', 'Ook de wortelmethode volledig uit een klassentabel opbouwen', body,

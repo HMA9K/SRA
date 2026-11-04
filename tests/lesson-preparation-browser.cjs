@@ -15,13 +15,11 @@ if(!base)throw Error('Geef LEARNING_URL op.');fs.mkdirSync(out,{recursive:true})
   const layout=await panel.evaluate(el=>{
    const blocks=[...el.querySelectorAll('.lesson-start>div')].map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width}});
    return {blocks,overflow:document.documentElement.scrollWidth>innerWidth+1,alignment:getComputedStyle(el.querySelector('li')).textAlign,
-    backgrounds:[...el.querySelectorAll('.lesson-start,aside.learning-context')].map(e=>getComputedStyle(e).backgroundColor),
-    source:document.querySelector('.lesson-top .lesson-source-title').textContent,score:el.querySelector('#lesson-score').textContent,
+    source:document.querySelector('.lesson-top .lesson-source-title').textContent,score:document.querySelector('.jump #lesson-score').textContent,
     goals:el.querySelectorAll('.lesson-start>div:last-child li').length,prerequisites:el.querySelectorAll('.lesson-start>div:first-child li').length};
   });
   assert.equal(layout.overflow,false);assert.equal(layout.alignment,'left');assert.ok(layout.source);assert.match(layout.score,/checks goed/);
   assert.equal(layout.goals,3);assert.equal(layout.prerequisites,2);
-  assert.deepEqual(layout.backgrounds,['rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)']);
   if(width===1600){assert.ok(Math.abs(layout.blocks[0].y-layout.blocks[1].y)<1);assert.ok(Math.abs(layout.blocks[0].width-layout.blocks[1].width)<1);}
   if(width<=390){assert.ok(layout.blocks[1].y>layout.blocks[0].y);assert.ok(Math.abs(layout.blocks[0].x-layout.blocks[1].x)<1);}
   await summary.evaluate(el=>el.blur());await panel.screenshot({path:path.join(out,`voorbereiding-${width}-${theme}.png`)});

@@ -205,6 +205,11 @@ def inline_formulas(content):
     expressions = re.compile(r'(?<![\w/])(?<!_\()' + atom + r'(?:\s*' + operator + r'\s*' + atom + r')+(?![\w/])')
     values = re.compile(r'(?<![\w/.])(?:€\s*[−-]?\d+(?:[.,]\d+)*|[−-]?\d+(?:[.,]\d+)*%|[−-]?\d+(?:\.\d{3})*,\d+)(?![\w/]|\.\w)')
 
+    # Blijft als één geheel staan; js/formula-text.js zet dit om naar een wortel of breuk.
+    group = r'\((?:[^()]|\((?:[^()]|\([^()]*\))*\))*\)'
+    wide = re.compile(r'(?<![\w/])(?:[^\s()\[\]]+\s*=\s*)?(?:\[[^\[\]]*\]|' + group + r')\s*/\s*' + group
+                      + r'|(?:(?<![\w/])[^\s()]+/)?√(?:' + group + r'|\[[^\[\]]*\])(?:/' + group + r')?')
+
     def replace(match):
         token = match.group()
         formula = formulas.get(token)
@@ -227,6 +232,13 @@ def inline_formulas(content):
         return ''.join(parts) + mark_values(value[previous:])
 
     def format_text(value):
+        parts, previous = [], 0
+        for match in wide.finditer(value):
+            parts.extend([format_chunk(value[previous:match.start()]), '<span class="inline-expression">' + match[0] + '</span>'])
+            previous = match.end()
+        return ''.join(parts) + format_chunk(value[previous:])
+
+    def format_chunk(value):
         parts, previous = [], 0
         for match in expressions.finditer(value):
             parts.append(format_plain(value[previous:match.start()]))

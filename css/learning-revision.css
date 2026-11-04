@@ -15,25 +15,35 @@ body.study-shell[data-page="les"] .jump a{border-radius:3px}
 .lesson-preparation{border:1px solid var(--line);border-radius:4px;margin:0 0 20px;padding:0 16px;min-width:0}
 .lesson-preparation>summary{cursor:pointer;font-size:.9rem;font-weight:600;padding:12px 0;min-height:44px;line-height:1.5;color:var(--green-dark)}
 .lesson-preparation[open]>summary{border-bottom:1px solid var(--line)}
-.lesson-preparation-info{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 24px;padding:16px 0}
 body.study-shell[data-page="les"] .lesson-top .lesson-source-title{font-size:.85rem;font-weight:500;line-height:1.5;margin:8px 0 4px}
-.lesson-preparation .lesson-meta{font-size:.85rem;line-height:1.5;gap:8px 24px}
-.lesson-preparation .lesson-start{grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));padding:0 0 20px;margin:0;border:0;border-radius:0;background:transparent;gap:24px}
+.lesson-preparation .lesson-start{grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));padding:0 0 16px;margin:0;border:0;border-radius:0;background:transparent;gap:16px}
 .lesson-preparation .lesson-start>div{min-width:0}
 .lesson-preparation .lesson-start h2{font-size:1rem;line-height:1.5;margin:0 0 8px}
 .lesson-preparation .lesson-start ul{padding-left:20px;margin:0}
 body[data-page="les"] #main .lesson-preparation li,body[data-page="les"] #main .lesson-preparation p{text-align:left;hyphens:none}
 body[data-page="les"] #main .lesson-preparation .lesson-start li{margin:0 0 6px;line-height:1.6}
 body[data-page="les"] #main .lesson-preparation .lesson-start li:last-child{margin-bottom:0}
-.lesson-preparation aside.learning-context{padding:20px 0;margin:0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
+.lesson-preparation aside.learning-context{padding:14px 16px;margin:0;border:1px solid var(--line);border-radius:8px;background:#fff}
 .lesson-preparation aside.learning-context h2{font-size:1rem;line-height:1.5;margin:0 0 8px}
 .lesson-preparation aside.learning-context .actions{margin-bottom:0}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation .lesson-start{background:transparent;border:0}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation aside.learning-context{background:transparent;border:0;border-top:1px solid var(--line)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation aside.learning-context{background:#152129;border:1px solid #3b4a54}
 .lesson-opening{margin:16px 0}
 .lesson-conclusion{margin:24px 0 16px;padding-top:16px;border-top:1px solid var(--line)}
 .lesson-conclusion h2{font-size:1.1rem;margin-bottom:10px}
-.lesson-conclusion h3{font-size:.95rem;margin:12px 0 4px}
+.lesson-conclusion h3{font-size:.95rem;margin:0 0 4px}
+.lesson-conclusion-blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:16px}
+body[data-page="les"] #main .lesson-conclusion-blocks p{margin-bottom:0}
+/* Groen is wat er al ligt, blauw wat volgt; dezelfde kleuren bij voorkennis en vervolg. */
+.lesson-preparation .lesson-start>div:first-child,.lesson-kern{background:#e6f4ec;border:1px solid #bfe0cc;border-radius:var(--radius);padding:14px 16px}
+.lesson-preparation .lesson-start>div:last-child,.lesson-vervolg{background:#e6f1fb;border:1px solid #bcd7ef;border-radius:var(--radius);padding:14px 16px}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation .lesson-start>div:first-child,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-kern{background:#1a2b22;border-color:#2d5a45}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation .lesson-start>div:last-child,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-vervolg{background:#172636;border-color:#2b4f73}
+body.study-shell[data-page="les"] .jump{align-items:center}
+body.study-shell[data-page="les"] .jump .lesson-meta{display:inline-flex;flex-wrap:wrap;align-items:center;gap:2px 16px;margin:0 0 0 8px;font-size:.85rem;line-height:1.4}
+body.study-shell[data-page="les"] .jump .lesson-meta span{white-space:nowrap}
+.lesson-opening{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-opening{background:#152129;border-color:#3b4a54}
 /* Bronnummers per blok; de lijst onderaan de les is standaard ingeklapt. */
 #main .source-notes{font-size:.8rem;color:var(--study-muted,#5d6170);text-align:left;margin:10px 0 0}
 .source-note{display:inline-block;min-width:24px;min-height:24px;padding:0 2px;text-align:center;text-decoration:none;font-weight:600}
@@ -69,6 +79,7 @@ body.study-shell[data-page="les"] .lesson-bottom{position:static;padding:14px 0;
 /* Formules in de lopende tekst: zelfde lettertype, grootte en gewicht als de tekst. */
 math[display="inline"]{display:inline math;math-style:normal;font-size:1em;white-space:nowrap;padding:0 .12em;background:#eef3f8;border-radius:3px}
 .inline-expression{display:inline-block;max-width:100%;word-spacing:normal;text-align:left;hyphens:none;background:#eef3f8;border-radius:3px;padding:0 .12em}
+.inline-expression:has(mfrac,msqrt){padding:.14em .2em;vertical-align:middle}
 .inline-value{font-variant-numeric:tabular-nums;white-space:nowrap}
 .inline-expression math[display="inline"]{font-size:1em;background:transparent;padding:0}
 /* Breuken en wortels in kleine tabeltekst blijven leesbaar: teller en noemer worden anders te klein. */

@@ -281,6 +281,14 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .saved-exam-notes sectio
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .direct-check-option{color:#adbdc9}
 /* css/learning-revision.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation>summary{color:var(--study-accent)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation aside.learning-context{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation aside.learning-context{background:#212b38;border:1px solid #435460}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation .lesson-start>div:first-child,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-kern{background:#172b20;border:1px solid #356e4c}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation .lesson-start>div:last-child,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-vervolg{background:#16222c;border:1px solid #2d5476}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation .lesson-start>div:first-child,html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-kern{background:#212b38;border-color:#366d53}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-preparation .lesson-start>div:last-child,html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-vervolg{background:#212b38;border-color:#2d5276}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-opening{background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-opening{background:#212b38;border-color:#435460}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #main .source-notes{color:var(--study-muted,#adbdc9)}
 @media (prefers-reduced-motion:reduce){html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-sources li.is-target{outline:2px solid var(--green,#2d765d)}}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell[data-page="les"] .section>.section-head{color:#e0ebf2}
