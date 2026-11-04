@@ -139,14 +139,44 @@ window.SRAOriginalPdfs = {
     "questions": {
       "url": "bronnen/original-pdfs/20250317/opgaven.pdf",
       "title": "opgaven",
-      "pages": 15,
-      "sha256": "c5c61416b305235792f175f5f65aedc23115eeab41b7afe4c5cd1df808415f47"
+      "pages": 10,
+      "sha256": "485b340296a84b45fbea17ebcfffd372a0b1e57ebc97dbbe603a702c40ebf194"
     },
     "solutions": {
       "url": "bronnen/original-pdfs/20250317/uitwerking.pdf",
       "title": "uitwerking",
-      "pages": 15,
-      "sha256": "c5c61416b305235792f175f5f65aedc23115eeab41b7afe4c5cd1df808415f47"
+      "pages": 5,
+      "sha256": "7d1c625bf6cf0d1b1c08180f7b61d9fd43af9700e86097ad7469033d603b9c6b"
+    }
+  },
+  "20251028": {
+    "date": "2025-10-28",
+    "questions": {
+      "url": "bronnen/original-pdfs/20251028/opgaven.pdf",
+      "title": "opgaven",
+      "pages": 9,
+      "sha256": "42598dd2b6c3fb823b9b0c13cc66ac8936327297286e1d06f6cee86d39733168"
+    },
+    "solutions": {
+      "url": "bronnen/original-pdfs/20251028/uitwerking.pdf",
+      "title": "uitwerking",
+      "pages": 4,
+      "sha256": "e0323a056094e315a177dbaeab81ea2e9a11abe40d4e04313f295fa131dc5e33"
+    }
+  },
+  "20260323": {
+    "date": "2026-03-23",
+    "questions": {
+      "url": "bronnen/original-pdfs/20260323/opgaven.pdf",
+      "title": "opgaven",
+      "pages": 7,
+      "sha256": "b211aa540d1d5ff7732d3fbb6514736779a1099b8033b27ddab538a758614112"
+    },
+    "solutions": {
+      "url": "bronnen/original-pdfs/20260323/uitwerking.pdf",
+      "title": "uitwerking",
+      "pages": 4,
+      "sha256": "c22a6d74b9d5b4abbba4afda29fe89b72a7ad42649e2e5828ebd9cc4b9ff10c4"
     }
   }
 };

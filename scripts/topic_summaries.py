@@ -9,7 +9,7 @@ from summary_regression import SUMMARIES as REGRESSION
 
 SAMPLING = {
     'Basis': (
-        '<p><strong>Tentamengewicht:</strong> geen afzonderlijke punten in de negen tentamens, maar elke '
+        '<p><strong>Tentamengewicht:</strong> geen afzonderlijke punten in de elf tentamens, maar elke '
         'rekenvraag in het schattingsdeel (35 punten per tentamen) leunt erop.</p>'
         '<ul>'
         '<li><strong>Populatie en steekproef.</strong> De populatie (N posten, totaal W, boektotaal B) '
@@ -31,9 +31,9 @@ SAMPLING = {
         '</ul>'),
     'Schatten': (
         '<p><strong>Tentamengewicht:</strong> opgave 1 van elk tentamen, 35 van de 100 punten. '
-        'Stratificatie is het zwaartepunt: 143 van de 900 historische punten (totaalschatting en '
-        'interval 99, grenzen en allocatie 44). Daarna volgen de verschilschatter (44), MPU (39), '
-        'quotiëntschatter (32), regressieschatter (26), steekproefomvang (17) en schatters kiezen (14).</p>'
+        'Stratificatie is het zwaartepunt: 171 van de 1.100 historische punten (totaalschatting en '
+        'interval 117, grenzen en allocatie 54). Daarna volgen de verschilschatter (59), MPU (48), '
+        'regressieschatter (34), quotiëntschatter (32), steekproefomvang (25) en schatters kiezen (16).</p>'
         '<table><caption>De vier schatters in één oogopslag</caption><thead><tr><th scope="col">Schatter</th>'
         '<th scope="col">Kies als</th><th scope="col">Puntschatting</th><th scope="col">Spreiding s</th>'
         '<th scope="col">Voorwaarde</th></tr></thead><tbody>'

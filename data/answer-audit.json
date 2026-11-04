@@ -1,17 +1,17 @@
 {
   "reviewed": "2026-09-20",
-  "totalQuestions": 224,
-  "uniqueQuestions": 196,
+  "totalQuestions": 267,
+  "uniqueQuestions": 239,
   "counts": {
-    "N": 64,
-    "G": 135,
-    "B": 16,
+    "N": 75,
+    "G": 158,
+    "B": 25,
     "C": 9
   },
   "uniqueCounts": {
-    "N": 55,
-    "G": 117,
-    "B": 15,
+    "N": 66,
+    "G": 140,
+    "B": 24,
     "C": 9
   },
   "exams": [
@@ -2432,6 +2432,472 @@
           "reviewed": "2026-09-20",
           "sourcePage": 10,
           "answerPage": 15
+        }
+      ]
+    },
+    {
+      "id": "20251028",
+      "duplicateOf": null,
+      "sources": {
+        "opgaven": {
+          "file": "bronnen/tentamens/20251028/opgaven.pdf",
+          "original": "SRA 20252810 Vragen_plus_uitwerkingen.pdf",
+          "sha256": "395ce26b86655ccf9b202a4c2637d5ac0cd6cf6c8029eb666e1ae78d7c67c638"
+        },
+        "uitwerking": {
+          "file": "bronnen/tentamens/20251028/uitwerking.pdf",
+          "original": "SRA 20252810 Vragen_plus_uitwerkingen.pdf",
+          "sha256": "395ce26b86655ccf9b202a4c2637d5ac0cd6cf6c8029eb666e1ae78d7c67c638"
+        }
+      },
+      "questions": [
+        {
+          "number": 1,
+          "displayNumber": "1.1",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "Ŵ 57.474.000; s_w 2.233,534; standaardfout 1.251.943; t 1,982 geeft naar buiten afgerond [54.992.000; 59.956.000]. Het antwoordmodel schrijft t 0,01[110], maar 1,982 is de tabelwaarde van t 0,025[110]. De uitkomst klopt.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 10
+        },
+        {
+          "number": 2,
+          "displayNumber": "1.2",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Marge 2.000.000 geeft γ = 32,92123 en n ≥ 182,78, dus totaal 183 en 63 extra producttypen. Breedte eerst halveren en naar boven afronden.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 10
+        },
+        {
+          "number": 3,
+          "displayNumber": "1.3",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "De boekwaarde is extra informatie, maar de verschilschatter is niet per definitie nauwkeuriger. Hij wint alleen als de verschillen minder spreiden dan de werkelijke waarden. Dat geldt hier: s_e 314,80 tegenover s_w 2.233,53.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 10
+        },
+        {
+          "number": 4,
+          "displayNumber": "1.4",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "Ŵ_v is exact 55.835.633,33; het model komt door afronden van 416,8333 op 55.835.634 uit. Standaardfout 176.452,1. Het afgeronde interval blijft [55.485.000; 56.186.000]. De cursusvoorwaarde van minstens 30 foutposten is in de opgave niet te controleren.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 10
+        },
+        {
+          "number": 5,
+          "displayNumber": "1.5",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Evenredige aandelen 56,67 / 61,33 / 52 / 30 geven 57 / 61 / 52 / 30, samen 200.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 10
+        },
+        {
+          "number": 6,
+          "displayNumber": "1.6",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Bij gelijke standaardafwijkingen valt s weg uit de Neymanformule en blijft Nᵢ/N × n over: evenredige allocatie.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 2,
+          "answerPage": 11
+        },
+        {
+          "number": 7,
+          "displayNumber": "1.7",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "Totaal 6.415.536,63, afgerond 6.415.537, volgt alleen als ∑wᵢ steekproefsommen zijn, zoals de kolomkop en het antwoordmodel aangeven. De legenda onder de tabel noemt ten onrechte de gemiddelde werkelijke waarde.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 2,
+          "answerPage": 11
+        },
+        {
+          "number": 8,
+          "displayNumber": "1.8",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Standaardfouten 48.671,82 / 33.558,67 / 32.571,14 / 15.607,23 geven s_tot 69.279,11. Eenzijdig t 1,292 geeft 6.505.045, naar boven afgerond 6.506.000.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 2,
+          "answerPage": 11
+        },
+        {
+          "number": 9,
+          "displayNumber": "2.1",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Eén meetmoment met 100 voetballers: cross-sectiedata, geen tijdreeks.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 2,
+          "answerPage": 11
+        },
+        {
+          "number": 10,
+          "displayNumber": "2.2",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "Age: H₀ β ≥ 0, H₁ β < 0. Hits: H₀ β ≤ 0, H₁ β > 0. β is de richtingscoëfficiënt in de populatie. Het model schrijft twee keer β₁; in een meervoudig model zijn dit twee parameters.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 3,
+          "answerPage": 11
+        },
+        {
+          "number": 11,
+          "displayNumber": "2.3",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "(−0,427)² = 0,1823: 18,23% van de spreiding in potential, in een enkelvoudig verband met alleen age.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 3,
+          "answerPage": 11
+        },
+        {
+          "number": 12,
+          "displayNumber": "2.4",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Uitbijters en invloedrijke punten kunnen niet-normale residuen veroorzaken. Beoordeel die daarom eerst; Afbeelding 7 is nog voorlopig.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 6,
+          "answerPage": 11
+        },
+        {
+          "number": 13,
+          "displayNumber": "2.5",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "MD-grens 13,911, maximum 24,878: gevallen 11, 24, 43. Bij n ≤ 100 geldt z ± 2: gevallen 6 en 20. Cook-grens 0,054, maximum 0,129: geval 11. Gevallen 24 en 43 gaan weg wegens de gemelde manipulatie, niet om het signaal. Het model verwijdert ook 11; een signaal alleen bewijst geen fout, dus onderzoek en motiveer dit.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 6,
+          "answerPage": 11
+        },
+        {
+          "number": 14,
+          "displayNumber": "2.6",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Na verwijderen veranderen gemiddelde en spreiding van de diagnostieken. Grenzen worden krapper, dus eerst opnieuw controleren op invloedrijke punten.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 6,
+          "answerPage": 12
+        },
+        {
+          "number": 15,
+          "displayNumber": "2.7",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "KS bij n 94: p 0,200 > 0,10. ABSRES met age p 0,347 en met hits p 0,139. Niet verwerpen is geen bewijs. n 94 betekent zes verwijderde gevallen; de bron noemt alleen vervolgonderzoek, niet welke drie extra waarnemingen zijn vervallen.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 7,
+          "answerPage": 12
+        },
+        {
+          "number": 16,
+          "displayNumber": "2.8",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de cursusgrens.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 8,
+          "answerPage": 12
+        },
+        {
+          "number": 17,
+          "displayNumber": "2.9",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "91,008 − 0,142 × 27 + 0,027 × 126 = 90,576, afgerond 90,6. Residu 92 − 90,6 = 1,4.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 8,
+          "answerPage": 12
+        },
+        {
+          "number": 18,
+          "displayNumber": "2.10",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "De coëfficiënt is negatief en H₁ is β < 0, dus eenzijdig 0,009/2 = 0,0045.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 8,
+          "answerPage": 12
+        },
+        {
+          "number": 19,
+          "displayNumber": "2.11",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "Log 0,375 en Power 0,377 liggen boven Linear en Exponential 0,318. De R² van Power hoort bij ln(y) en is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke schaal. Het logaritmische model houdt y ongewijzigd.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 8,
+          "answerPage": 12
+        },
+        {
+          "number": 20,
+          "displayNumber": "2.12",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "De vraag noemt R², het model adjusted R². De conclusie blijft: enkelvoudig 0,368 tegenover 0,353, en met R² 0,375 tegenover 0,367. Afbeeldingen 4, 13 en 17 heten correlaties, maar tonen een Model Summary.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 9,
+          "answerPage": 13
+        },
+        {
+          "number": 21,
+          "displayNumber": "2.13",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "81,361 + 1,864 × ln(126) = 90,376, afgerond 90,4. Age speelt in dit enkelvoudige model geen rol.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 9,
+          "answerPage": 13
+        },
+        {
+          "number": 22,
+          "displayNumber": "2.14",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Tabelrij 90 geeft t 1,291. t 7,425 ligt in het kritieke gebied, dus H₀ verwerpen. Significant positief verband; het α-risico is relevant.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 9,
+          "answerPage": 13
+        }
+      ]
+    },
+    {
+      "id": "20260323",
+      "duplicateOf": null,
+      "sources": {
+        "opgaven": {
+          "file": "bronnen/tentamens/20260323/opgaven.pdf",
+          "original": "SRA 20260323 Vragen en antwoorden.pdf",
+          "sha256": "667ff610f15c70849655f7871d9e65cdfcf826e3415c475246dd63130ce8908f"
+        },
+        "uitwerking": {
+          "file": "bronnen/tentamens/20260323/uitwerking.pdf",
+          "original": "SRA 20260323 Vragen en antwoorden.pdf",
+          "sha256": "667ff610f15c70849655f7871d9e65cdfcf826e3415c475246dd63130ce8908f"
+        }
+      },
+      "questions": [
+        {
+          "number": 1,
+          "displayNumber": "1.1",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "Ŵ_v 44.255.909; s_e 818,8745; standaardfout 444.664,30; t 1,984 geeft naar buiten [43.373.000; 45.139.000]. Het model verwijst bij de grenzen naar Formule 3; voor de verschilschatter hoort dat Formule 8 te zijn.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 8
+        },
+        {
+          "number": 2,
+          "displayNumber": "1.2",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Marge 800.000 geeft γ = 42,16907 en n ≥ 133,20, dus totaal 134 en 24 extra producttypen.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 8
+        },
+        {
+          "number": 3,
+          "displayNumber": "1.3",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Een constante fout staat los van de boekwaarde; een relatieve fout hangt ervan af. De regressieschatter vangt beide patronen met constante en helling.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 8
+        },
+        {
+          "number": 4,
+          "displayNumber": "1.4",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "b₁ 0,735; Ŵ_R 44.019.050; s_R 324.178,2; naar buiten [43.375.000; 44.663.000]. Drukfouten in het model: 5.750 + 8.000 moet 5.750 × 8.000 zijn en − 646.800 moet + 646.800 zijn. De factor √(1 − 0,98²) ontbreekt in de ingevulde regel, maar zit wel in de uitkomst.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 8
+        },
+        {
+          "number": 5,
+          "displayNumber": "1.5",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "Neyman-aandelen 100,94 / 66,06 / 53,00 geven 101 / 66 / 53, samen 220. Het totaal N = 2.120 is voor deze formule niet nodig, terwijl de normering er een punt aan toekent.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 8
+        },
+        {
+          "number": 6,
+          "displayNumber": "1.6",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Neyman geeft strata met veel spreiding meer waarnemingen. Bij grote verschillen in s daalt daardoor de totale onnauwkeurigheid ten opzichte van evenredig.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 1,
+          "answerPage": 9
+        },
+        {
+          "number": 7,
+          "displayNumber": "1.7",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "3.064.500 + 1.351.400 + 101.880 = 4.517.780. Stratum 3 is integraal gecontroleerd en telt met zijn volledige waarde mee.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 2,
+          "answerPage": 9
+        },
+        {
+          "number": 8,
+          "displayNumber": "1.8",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Stratum 3 heeft eindigheidscorrectie nul. s_tot 62.377,72; eenzijdig t 2,368 geeft 4.370.070, naar beneden afgerond 4.370.000.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 2,
+          "answerPage": 9
+        },
+        {
+          "number": 9,
+          "displayNumber": "2.1",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "Gegevens van 142 huizen zonder tijdsdimensie: cross-sectieanalyse.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 2,
+          "answerPage": 9
+        },
+        {
+          "number": 10,
+          "displayNumber": "2.2",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "tot_sqft heeft de grootste absolute correlatie met price: 0,758 tegenover 0,480 en −0,213.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 3,
+          "answerPage": 9
+        },
+        {
+          "number": 11,
+          "displayNumber": "2.3",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "H₀ β₁ ≥ 0 en H₁ β₁ < 0; ρ mag ook. De vraag noemt geen richting. Eenzijdig volgt uit de verwachting dat ouder goedkoper is. Afbeelding 1 toont r −0,213 en Sig. tweezijdig 0,011.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 3,
+          "answerPage": 9
+        },
+        {
+          "number": 12,
+          "displayNumber": "2.4",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "In Afbeelding 2.3 neemt de spreiding van price toe met land_sqft: dat wijst op heteroscedasticiteit. Rechts staan weinig punten, dus dit is een visuele verwachting; pas de toets op de residuen bevestigt het.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 3,
+          "answerPage": 9
+        },
+        {
+          "number": 13,
+          "displayNumber": "2.5",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "Logarithmic R² 0,286 is het hoogst, Power volgt met 0,284. De R² van Power hoort bij ln(y) en is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke schaal.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 4,
+          "answerPage": 9
+        },
+        {
+          "number": 14,
+          "displayNumber": "2.6",
+          "status": "N",
+          "label": "Nuance bij het antwoord",
+          "note": "Met ln(5.000) = 8,517193 is de uitkomst $ 500.314,41. Het model geeft $ 500.313,50; dat verschil van ongeveer een dollar komt door tussentijds afronden.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 4,
+          "answerPage": 9
+        },
+        {
+          "number": 15,
+          "displayNumber": "2.7",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "MD-grens 6,228: gevallen 20, 57, 123. Bij n > 100 geldt z ± 3: geen y-uitbijters. Cook-grens 0,068: geval 128. Het model verwijst drie keer naar Afbeelding 3.2, dat is Afbeelding 4.1. Het label 128 staat los onder de grafiek in Afbeelding 2.2, wat het opzoeken lastig maakt; het model accepteert wel of niet verwijderen.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 6,
+          "answerPage": 9
+        },
+        {
+          "number": 16,
+          "displayNumber": "2.8",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "KS bij n 142: p 0,200 > 0,05, normaliteit niet verwerpen. ABSRES met tot_sqft p 0,395 > 0,05, homoscedasticiteit niet verwerpen. Geen remedies nodig; noem wel de residuen.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 6,
+          "answerPage": 10
+        },
+        {
+          "number": 17,
+          "displayNumber": "2.9",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "ŷ 679.459,5; s_e 112.592,1; t 1,977 geeft ± 226.299,8, dus [453.159,7; 905.759,3]. Bij 10.000 ft² is dit extrapolatie: het maximum is 4.950 ft², dus geen interval.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 7,
+          "answerPage": 10
+        },
+        {
+          "number": 18,
+          "displayNumber": "2.10",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "Adjusted R² stijgt van 0,572 naar 0,667: een verbetering. De vraag verwijst naar Afbeelding 3.1; die bestaat niet, bedoeld is Afbeelding 3.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 7,
+          "answerPage": 10
+        },
+        {
+          "number": 19,
+          "displayNumber": "2.11",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "Alle drie p-waarden zijn < 0,001, dus achterwaartse eliminatie verwijdert niets. De opgave geeft 4 punten en het model 3; zonder dat punt telt het model op tot 99. De opgave is hier leidend.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 7,
+          "answerPage": 11
+        },
+        {
+          "number": 20,
+          "displayNumber": "2.12",
+          "status": "G",
+          "label": "Gecontroleerd",
+          "note": "VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de cursusgrens.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 7,
+          "answerPage": 11
+        },
+        {
+          "number": 21,
+          "displayNumber": "2.13",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "Meer verklarende variabelen of een grotere steekproef zijn passend. Het model noemt twee uitbijters in x, maar vraag 2.7 vindt er drie: 20, 57 en 123. Verwijder alleen bij een aangetoonde oorzaak.",
+          "reviewed": "2026-11-04",
+          "sourcePage": 7,
+          "answerPage": 11
         }
       ]
     }

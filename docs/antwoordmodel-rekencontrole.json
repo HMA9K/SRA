@@ -670,5 +670,257 @@
     "value": 5618,
     "expected": 5618,
     "tolerance": 0.01
+  },
+  {
+    "question": "20251028/1",
+    "calculation": "standaardafwijking",
+    "value": 2233.5335835638475,
+    "expected": 2233.534,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20251028/1",
+    "calculation": "puntschatting",
+    "value": 57474000.0,
+    "expected": 57474000,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20251028/1",
+    "calculation": "ondergrens naar buiten",
+    "value": 54992000,
+    "expected": 54992000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20251028/1",
+    "calculation": "bovengrens naar buiten",
+    "value": 59956000,
+    "expected": 59956000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20251028/2",
+    "calculation": "extra steekproef",
+    "value": 63,
+    "expected": 63,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20251028/4",
+    "calculation": "puntschatting",
+    "value": 55835633.333333336,
+    "expected": 55835633.33,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20251028/4",
+    "calculation": "ondergrens naar buiten",
+    "value": 55485000,
+    "expected": 55485000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20251028/4",
+    "calculation": "bovengrens naar buiten",
+    "value": 56186000,
+    "expected": 56186000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20251028/5",
+    "calculation": "evenredige allocatie",
+    "value": 200,
+    "expected": 200,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20251028/7",
+    "calculation": "puntschatting",
+    "value": 6415537,
+    "expected": 6415537,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20251028/8",
+    "calculation": "standaardfout",
+    "value": 69279.11455711823,
+    "expected": 69279.11,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20251028/8",
+    "calculation": "bovengrens naar boven",
+    "value": 6506000,
+    "expected": 6506000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20251028/11",
+    "calculation": "verklaarde variatie",
+    "value": 0.182329,
+    "expected": 0.182329,
+    "tolerance": 1e-07
+  },
+  {
+    "question": "20251028/13",
+    "calculation": "MD-grens",
+    "value": 13.911,
+    "expected": 13.911,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20251028/13",
+    "calculation": "Cook-grens",
+    "value": 0.054,
+    "expected": 0.054,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20251028/17",
+    "calculation": "voorspelling",
+    "value": 90.576,
+    "expected": 90.576,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20251028/18",
+    "calculation": "eenzijdige significantie",
+    "value": 0.0045,
+    "expected": 0.0045,
+    "tolerance": 1e-07
+  },
+  {
+    "question": "20251028/21",
+    "calculation": "logaritmische voorspelling",
+    "value": 90.37582947455756,
+    "expected": 90.3758,
+    "tolerance": 0.0001
+  },
+  {
+    "question": "20260323/1",
+    "calculation": "standaardafwijking verschillen",
+    "value": 818.874509852235,
+    "expected": 818.8745,
+    "tolerance": 0.0001
+  },
+  {
+    "question": "20260323/1",
+    "calculation": "puntschatting",
+    "value": 44255909.09090909,
+    "expected": 44255909,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20260323/1",
+    "calculation": "ondergrens naar buiten",
+    "value": 43373000,
+    "expected": 43373000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20260323/1",
+    "calculation": "bovengrens naar buiten",
+    "value": 45139000,
+    "expected": 45139000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20260323/2",
+    "calculation": "extra steekproef",
+    "value": 24,
+    "expected": 24,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20260323/4",
+    "calculation": "regressiestandaardfout",
+    "value": 324178.1559244398,
+    "expected": 324178.2,
+    "tolerance": 0.1
+  },
+  {
+    "question": "20260323/4",
+    "calculation": "puntschatting",
+    "value": 44019050.0,
+    "expected": 44019050,
+    "tolerance": 0.6
+  },
+  {
+    "question": "20260323/4",
+    "calculation": "ondergrens naar buiten",
+    "value": 43375000,
+    "expected": 43375000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20260323/4",
+    "calculation": "bovengrens naar buiten",
+    "value": 44663000,
+    "expected": 44663000,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20260323/5",
+    "calculation": "Neyman-allocatie",
+    "value": 220,
+    "expected": 220,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20260323/7",
+    "calculation": "puntschatting",
+    "value": 4517780.0,
+    "expected": 4517780,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20260323/8",
+    "calculation": "standaardfout zonder integraal stratum",
+    "value": 62377.717307271865,
+    "expected": 62377.72,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20260323/8",
+    "calculation": "ondergrens naar beneden",
+    "value": 4370000,
+    "expected": 4370000,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20260323/14",
+    "calculation": "puntschatting exact",
+    "value": 500314.41221806325,
+    "expected": 500314.41,
+    "tolerance": 0.01
+  },
+  {
+    "question": "20260323/15",
+    "calculation": "MD-grens",
+    "value": 6.228000000000001,
+    "expected": 6.228,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20260323/15",
+    "calculation": "Cook-grens",
+    "value": 0.068,
+    "expected": 0.068,
+    "tolerance": 1e-06
+  },
+  {
+    "question": "20260323/17",
+    "calculation": "puntvoorspelling",
+    "value": 679459.491,
+    "expected": 679459.491,
+    "tolerance": 0.001
+  },
+  {
+    "question": "20260323/17",
+    "calculation": "marge",
+    "value": 226299.7190698643,
+    "expected": 226299.8,
+    "tolerance": 0.1
   }
 ]

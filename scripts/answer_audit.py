@@ -1,11 +1,13 @@
 """Koppel de handmatige inhoudscontrole aan oorspronkelijke vragen en bronnen."""
 from pathlib import Path
 from collections import Counter
-import hashlib, json, re
+import hashlib, json, os, re
 from answer_audit_records import REVIEW
 
 ROOT = Path(__file__).resolve().parents[1]
+SOURCE_ROOT = Path(os.environ.get('SRA_BRONMAP', ROOT.parent))
 DATE = '2026-09-20'
+LATER = {'20251028':'2026-11-04','20260323':'2026-11-04'}  # later toegevoegde tentamens
 LABELS = {'G':'Gecontroleerd', 'N':'Nuance bij het antwoord',
           'C':'Correctie bij het antwoord', 'B':'Onjuistheid of tegenstrijdigheid in de bron'}
 
@@ -23,7 +25,7 @@ def attach(exams):
         assert len(reviews)==len(exam['questions']), (exam['id'],'ontbrekende beoordeling')
         for q,(status,note) in zip(exam['questions'],reviews):
             assert status in LABELS and len(note)>30
-            q['answerAudit']=dict(status=status,label=LABELS[status],note=readable(note),reviewed=DATE,
+            q['answerAudit']=dict(status=status,label=LABELS[status],note=readable(note),reviewed=LATER.get(exam['id'],DATE),
                 sourcePage=q['page'],answerPage=q['solutionPage'])
     write_report(exams)
 
@@ -34,7 +36,7 @@ def write_report(exams):
     payload=dict(reviewed=DATE,totalQuestions=sum(counts.values()),uniqueQuestions=sum(unique_counts.values()),
                  counts=dict(counts),uniqueCounts=dict(unique_counts),exams=[])
     lines=['# Controle oorspronkelijke SRA-antwoordmodellen', '',
-      'Alle 224 vraagnummers in tien versies zijn handmatig langs de opgave, het antwoordmodel en de gegeven tabellen gelegd. Maart en juni 2020 bevatten dezelfde 28 vragen: 196 inhoudelijk verschillende vragen. Deelvragen vallen onder hun oorspronkelijke vraagnummer.', '',
+      f'Alle {sum(counts.values())} vraagnummers in {len(exams)} versies zijn handmatig langs de opgave, het antwoordmodel en de gegeven tabellen gelegd. Maart en juni 2020 bevatten dezelfde 28 vragen: {sum(unique_counts.values())} inhoudelijk verschillende vragen. Deelvragen vallen onder hun oorspronkelijke vraagnummer.', '',
       'G betekent in overeenstemming met de gegeven bron en cursusconventies. N betekent een noodzakelijke nuance of voorwaarde. C betekent een inhoudelijke correctie. B betekent een verkeerde verwijzing, drukfout of interne tegenstrijdigheid. Een nuance is geen getelde rekenfout.', '',
       'De controle is gebaseerd op de aangeleverde opgaven, uitwerkingen, het [formuleblad](../bronnen/formuleblad.pdf), [attentiepunten](../bronnen/attentiepunten.pdf) en het boekmateriaal van de lessen. De bron-PDF’s zijn ongewijzigd. De toelichtingen zijn afzonderlijk herkenbaar bij het nakijken, ook bij eerder opgeslagen pogingen.', '',
       'De numerieke hoofdresultaten zijn onafhankelijk herberekend in [de rekencontrole](../tests/exam-answer-calculations.py); de uitkomsten staan in [het rekenlog](antwoordmodel-rekencontrole.json). Ruwe SPSS-datasets zijn niet meegeleverd. Intern tegenstrijdige uitvoertabellen worden daarom uitdrukkelijk als zodanig gemarkeerd; er is geen unieke vervangende dataset of gecorrigeerde tabel verzonnen.', '',
@@ -44,7 +46,7 @@ def write_report(exams):
         sources={}
         for kind,key in [('opgaven','source'),('uitwerking','answerSource')]:
             copy=ROOT/'bronnen/tentamens'/e['id']/(kind+'.pdf')
-            original=ROOT.parent/'Tentamenopgaven & Uitwerkingen'/e[key]
+            original=SOURCE_ROOT/'Tentamenopgaven & Uitwerkingen'/e[key]
             digest=hashlib.sha256(copy.read_bytes()).hexdigest()
             assert digest==hashlib.sha256(original.read_bytes()).hexdigest(), (e['id'],kind,'bron veranderd')
             sources[kind]=dict(file=copy.relative_to(ROOT).as_posix(),original=e[key],sha256=digest)

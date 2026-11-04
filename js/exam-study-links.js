@@ -12,7 +12,9 @@
     '20211101':{1:'mpu',3:'quotient',4:'quotient',9:'anova',21:'meervoudig'},
     '20220316':{12:'diagnostiek',19:'regressielijn'},
     '20230315':{1:'regressieschatter',2:'regressieschatter'},
-    '20241028':{1:'regressieschatter'}
+    '20241028':{1:'regressieschatter'},
+    '20251028':{2:'steekproefomvang',17:'voorspellen',19:'transformaties',20:'modelbouw'},
+    '20260323':{2:'steekproefomvang',10:'regressielijn',13:'transformaties',18:'modelbouw'}
   };
   function lesson(exam,q){
     const source=sourceLessons[exam.id]?.[q.number];if(source)return source;
