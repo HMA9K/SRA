@@ -640,12 +640,7 @@ def enhance(lessons, sources):
         + '<p>Bij één extra variabele sluit deze tweezijdige vergelijking aan op de gekwadrateerde '
         't-toets van die variabele in het uitgebreide model. Voor een blok van q extra variabelen '
         'deel je de toename van SSR ook door q. Vergelijk geen model voor y met een model voor ln(y) '
-        'met deze formule.</p>'
-        '<p class="note"><strong>Bronnuance.</strong> In het uitgewerkte boekvoorbeeld bij de '
-        'variabele ln_dens deelt het boek de toename van SSR door de MSE van het kleinere model. '
-        'Deze les gebruikt de gangbare vorm met de MSE van het uitgebreide model, zoals hierboven '
-        'uitgelegd. Bij een kleine toename geeft dat nauwelijks een ander getal, maar houd op het '
-        'tentamen de formule van het formuleblad aan.</p>',
+        'met deze formule.</p>',
         [ref('formules',3,'Formuleblad, adjusted R², formule 51, PDF 3'),
          ref('formules',4,'Formuleblad, partiële F, formule 63, PDF 4'),
          ref('tabellen',20,'Tabellenbundel, tabel 13.8, PDF 20–29'),bookref('boek-h10c',319),

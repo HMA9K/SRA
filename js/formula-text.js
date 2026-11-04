@@ -26,6 +26,8 @@
     `(?:(?<![\\p{L}\\p{N}_/.,])(?:${ATOM}|${GROUP})\\s*[/÷]\\s*)?${ROOT}(?:\\s*[/÷]\\s*(?:${ROOT}|${ATOM}|${GROUP}))?(?![\\p{L}\\p{N}_])`
     + `|(?<![\\p{L}\\p{N}_/])(?:${ATOM}\\s*=\\s*)?(?:\\[[^\\[\\]]*\\]|${GROUP})\\s*/\\s*${GROUP}`
     + `|${INDEXED}(?:\\s*/\\s*${ROOT})?`, 'gu');
+  // Alleen tussen twee waarden: + € 48 aan het begin blijft het teken van een bedrag.
+  const TEXT_OPERATOR = /(?<=[\p{L}\p{N})²³%]\s*)[+−×÷±=](?=\s*[\p{L}\p{N}(√Σ€−])/gu;
   const CANDIDATE = /√|[\])]\s*\/\s*\(|_/;
 
   /* Geeft MathML terug, of null als de tekst geen veilig leesbare formule is. */
@@ -134,6 +136,31 @@
     container.normalize();
   }
 
+  /* Rekentekens worden vet; het teken van een bedrag blijft gewoon. */
+  function markOperators(container, element) {
+    for (const mo of container.querySelectorAll('math mo:not(.math-operator)')) {
+      if (!/^[+−×÷±=]$/.test(mo.textContent.trim())) continue;
+      const previous = mo.previousElementSibling;
+      if (previous && !(previous.localName === 'mo' && !/^[)\]]$/.test(previous.textContent.trim()))) mo.classList.add('math-operator');
+    }
+    const walker = (container.ownerDocument || root.document).createTreeWalker(container, 4), nodes = [];
+    while (walker.nextNode()) {
+      const parent = walker.currentNode.parentElement;
+      TEXT_OPERATOR.lastIndex = 0;
+      if (TEXT_OPERATOR.test(walker.currentNode.nodeValue) && !parent.closest(SKIP + ',.math-operator,button,a')) nodes.push(walker.currentNode);
+    }
+    for (const node of nodes) {
+      const parts = [];
+      let offset = 0;
+      for (const match of node.nodeValue.matchAll(TEXT_OPERATOR)) {
+        parts.push(node.nodeValue.slice(offset, match.index), element(`<span class="math-operator">${match[0]}</span>`));
+        offset = match.index + match[0].length;
+      }
+      parts.push(node.nodeValue.slice(offset));
+      node.replaceWith(...parts.filter(Boolean));
+    }
+  }
+
   /* Twee formules met alleen een schuine streep ertussen zijn samen één breuk. */
   function joinFractions(container, element) {
     for (const math of [...container.querySelectorAll('math')]) {
@@ -161,6 +188,7 @@
       if (parts) node.replaceWith(...parts.map(part => typeof part === 'string' ? part : element(part.math)));
     }
     joinFractions(container, element);
+    markOperators(container, element);
   }
 
   return {toMathML, split, annotate};

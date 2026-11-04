@@ -201,6 +201,14 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .key.residual{border-col
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-note{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .variance-bar{background:#2c2416;border:1px solid #3b4a54}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .variance-bar span{background:#0e8159}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-number{color:#8dbdec;background:#152129;border:1px solid #3c4e67}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-goal{background:#16222c;border:1px solid #2d5476}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body[data-page] .formula-steps .formula-row{border-bottom:1px solid #3b4e68}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-steps .formula-row::before{border:1px solid #3c4e67;background:#152129;color:#aeb7cb}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-number{background:#212b38;border-color:#435460;color:#8ebdeb}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-goal{background:#212b38;border-color:#2d5276}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-steps .formula-row{border-color:#435460}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-steps .formula-row::before{background:#212b38;border-color:#435460;color:#9cbdde}
 /* css/labs.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-range-hint{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-control-note{color:#b0cac1}

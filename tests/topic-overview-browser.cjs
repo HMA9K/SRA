@@ -22,7 +22,7 @@ const server=http.createServer((req,res)=>{const rel=decodeURIComponent(new URL(
  for(const width of [1366,768,390,320]){
   await page.setViewportSize({width,height:900});await page.goto(base+'/index.html#tentamen/mc');await page.locator('.mc-main-card').first().waitFor();
   await checkOverview();
-  assert.ok(await page.locator('.topic-exam-toggle').count()>8);
+  assert.equal(await page.locator('.topic-exam-toggle').count(),0);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Geen horizontale paginaoverloop');
   const ids=await page.locator('.mc-main-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.topic));assert.equal(new Set(ids).size,19);assert.ok(ids.indexOf('stratificatie')<ids.indexOf('steekproefomvang'));
   for(const button of await page.locator('.topic-exam-toggle').all()){
