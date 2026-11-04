@@ -131,6 +131,14 @@
     return node;
   }
 
+  // De HTML komt uit de eigen build en bevat ontsnapte tekst met MathML.
+  function richText(tag, className, html, text) {
+    const node = element(tag, className);
+    if (html) node.innerHTML = html;
+    else node.textContent = text || '';
+    return node;
+  }
+
   function ensurePopup() {
     if (popup && popup.ownerDocument === documentRef && popup.isConnected) return;
     popup = element('div', 'sra-term-popup');
@@ -160,12 +168,12 @@
     const content = popup.querySelector('.sra-term-content');
     content.replaceChildren();
     popup.querySelector('#sra-term-title').textContent = term.term;
-    const definition = element('p', 'sra-term-definition', term.definition || '');
+    const definition = richText('p', 'sra-term-definition', term.definitionHtml, term.definition);
     definition.id = 'sra-term-definition';
     content.append(definition);
     if (term.example) {
       const example = element('details', 'sra-term-example');
-      example.append(element('summary', '', 'Voorbeeld'), element('p', '', term.example));
+      example.append(element('summary', '', 'Voorbeeld'), richText('p', '', term.exampleHtml, term.example));
       content.append(example);
     }
     if (Array.isArray(term.refs) && term.refs.length) {
@@ -277,6 +285,7 @@
         root.normalize();
       }
       const seenByScope = new Map();
+      const hideBasis = appRoot.hasAttribute('data-no-basis-terms');
       const nodes = [];
       if (root.nodeType === 3) nodes.push(root);
       else {
@@ -291,7 +300,7 @@
         if (!seenByScope.has(scope)) seenByScope.set(scope, new Set());
         const seen = seenByScope.get(scope);
         const matches = matcher.find(textNode.nodeValue).filter(match => {
-          if (seen.has(match.id)) return false;
+          if (seen.has(match.id) || (hideBasis && match.term.basis)) return false;
           seen.add(match.id);
           return true;
         });

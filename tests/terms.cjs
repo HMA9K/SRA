@@ -91,6 +91,20 @@ for(const term of course.terms){
 }
 assert.deepEqual([...coveredLessons].sort(),[...lessonIds].sort(),'Elk van de 19 lessen moet begrippenuitleg hebben.');
 
+// Het venster toont formules als MathML; ruwe notatie mag niet in de lopende tekst staan.
+const visibleText=html=>html.replace(/<math[\s\S]*?<\/math>/g,'').replace(/<[^>]+>/g,'').normalize('NFD');
+for(const term of course.terms)for(const field of ['definitionHtml','exampleHtml']){
+  assert.ok(typeof term[field]==='string'&&term[field].trim(),`${term.id}: ${field} ontbreekt.`);
+  assert.doesNotMatch(visibleText(term[field]),/[_^$√\u0302\u0304\u1d62\u2c7c\u2096\u2080-\u2089]/u,`${term.id}: ruwe notatie in ${field}.`);
+}
+const termById=id=>course.terms.find(term=>term.id===id);
+assert.match(termById('mpu').definitionHtml,/<msub>.*MPU/,'Ŵ_MPU moet als formule met index worden opgemaakt.');
+assert.match(termById('eindigheidscorrectie').definitionHtml,/<msqrt>.*<mfrac>/,'De eindigheidscorrectie moet als wortel met breuk worden opgemaakt.');
+
+// Basisstof is na hoofdstuk Basis niet meer klikbaar; begrippen uit latere hoofdstukken blijven dat wel.
+for(const id of ['populatie','steekproef','boekwaarde','gemiddelde'])assert.equal(termById(id).basis,true,`${id} hoort bij Basis.`);
+for(const id of ['variabele','parameter','steekproefgrootheid','somteken','standaardfout','schatting','stratum','scheefheid'])assert.equal(termById(id).basis,false,`${id} blijft klikbaar.`);
+
 // Key terminology used in explanations and labs must resolve without prior knowledge.
 for(const phrase of ['waarneming','populatie','steekproef','gemiddelde','standaardafwijking',
   'standaardfout','betrouwbaarheid','eindigheidscorrectie','MPU','verschilschatter',

@@ -160,6 +160,15 @@ const server=http.createServer((req,res)=>{
   assert.equal(await questionLetters.count(),3);
   assert.deepEqual(await questionLetters.allTextContents(),['a','b','c']);
   assert.equal(await questionLetters.locator('[data-formula-help],[data-sra-term]').count(),0);
+  // Basisbegrippen zijn alleen in hoofdstuk Basis klikbaar; latere begrippen blijven klikbaar.
+  const termCount=id=>page.locator(`#main [data-sra-term="${id}"]`).count();
+  await page.evaluate(()=>location.hash='#les/mpu');await page.waitForFunction(()=>document.querySelector('#main').hasAttribute('data-no-basis-terms')&&document.querySelector('#main [data-sra-term]'));
+  assert.equal(await termCount('boekwaarde')+await termCount('steekproef')+await termCount('populatie'),0);assert.ok(await termCount('mpu')>0);
+  await page.evaluate(()=>location.hash='#les/beginnen');await page.waitForFunction(()=>!document.querySelector('#main').hasAttribute('data-no-basis-terms')&&document.querySelector('#main [data-sra-term="steekproef"]'));
+  // Het venster toont de formule als MathML en niet als ruwe tekst.
+  await page.evaluate(()=>location.hash='#les/mpu');await page.waitForFunction(()=>document.querySelector('#main [data-sra-term="mpu"]'));
+  await page.locator('#main [data-sra-term="mpu"]:visible').first().click();await page.locator('#sra-term-popup math').first().waitFor();
+  assert.doesNotMatch(await page.locator('.sra-term-definition').innerText(),/_MPU/);await page.keyboard.press('Escape');
   await page.evaluate(()=>location.hash='#formules/stratificatie');await page.locator('.formula-guide-card').first().waitFor();
   await page.evaluate(()=>window.SRATerms.annotate(document.querySelector('#main')));assert.deepEqual(await duplicates(),[]);
   await page.goto(base+'/SRA%20interactieve%20samenvatting.html#les/diagnostiek');await page.locator('.lesson-source-title').waitFor({state:'attached'});
