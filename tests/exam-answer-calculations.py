@@ -136,7 +136,51 @@ check('20250317/19','WO-HBO',1010.210-644.888,365.322,.000001)
 check('20250317/20','salaris onafgerond',739.508+38.495*50+71.550*10+2237.947,5617.705,.000001)
 check('20250317/20','salaris hele euro',round(739.508+38.495*50+71.550*10+2237.947),5618)
 
+# Oktober 2025.
+s=sd(120,1112400,10905600000)
+check('20251028/1','standaardafwijking',s,2233.534,.001)
+interval('20251028/1',6200*1112400/120,se(6200,120,s),1.982,1000,(57474000,54992000,59956000))
+check('20251028/2','extra steekproef',ceil(6200/(1+2000000**2/(1.982**2*6200*s**2)))-120,63)
+interval('20251028/4',58420000-6200*50020/120,se(6200,120,314.80),1.982,1000,(55835633.33,55485000,56186000))
+check('20251028/5','evenredige allocatie',sum(round(N/3000*200) for N in (850,920,780,450)),200)
+rows=[(1240,28,65820,210),(610,36,92475,340),(455,41,98230,480),(310,31,84360,295)]
+center=sum(N*total/n for N,n,total,_ in rows)
+check('20251028/7','puntschatting',round(center),6415537)
+error=strata([(N,n,spread) for N,n,_,spread in rows])
+check('20251028/8','standaardfout',error,69279.11,.01)
+check('20251028/8','bovengrens naar boven',ceil((center+1.292*error)/1000)*1000,6506000)
+check('20251028/11','verklaarde variatie',.427**2,.182329,.0000001)
+check('20251028/13','MD-grens',1.980+3*3.977,13.911,.000001)
+check('20251028/13','Cook-grens',.009+3*.015,.054,.000001)
+check('20251028/17','voorspelling',91.008-.142*27+.027*126,90.576,.000001)
+check('20251028/18','eenzijdige significantie',.009/2,.0045,.0000001)
+check('20251028/21','logaritmische voorspelling',81.361+1.864*log(126),90.3758,.0001)
+
+# Maart 2026.
+s=sd(110,50200,96000000)
+check('20260323/1','standaardafwijking verschillen',s,818.8745,.0001)
+interval('20260323/1',46880000-5750*50200/110,se(5750,110,s),1.984,1000,(44255909,43373000,45139000))
+check('20260323/2','extra steekproef',ceil(5750/(1+800000**2/(1.984**2*5750*s**2)))-110,24)
+b=.98*3000/4000
+error=se(5750,110,3000)*sqrt(1-.98**2)
+check('20260323/4','regressiestandaardfout',error,324178.2,.1)
+interval('20260323/4',5750*7543+b*(46880000-5750*8000),error,1.984,1000,(44019050,43375000,44663000))
+check('20260323/5','Neyman-allocatie',sum(round(N*spread/444600*220) for N,spread in [(1020,200),(890,150),(210,510)]),220)
+rows=[(1350,32,72640,225),(580,38,88540,360),(30,30,101880,510)]
+center=sum(N*total/n for N,n,total,_ in rows)
+check('20260323/7','puntschatting',center,4517780,.001)
+error=strata([(N,n,spread) for N,n,_,spread in rows])
+check('20260323/8','standaardfout zonder integraal stratum',error,62377.72,.01)
+check('20260323/8','ondergrens naar beneden',floor((center-2.368*error)/1000)*1000,4370000)
+check('20260323/14','puntschatting exact',-667785.451+137146.104*log(5000),500314.41,.01)
+check('20260323/15','MD-grens',.993+3*1.745,6.228,.000001)
+check('20260323/15','Cook-grens',.008+3*.020,.068,.000001)
+center=112147.991+162.089*3500;spread=sqrt(12676976764)
+margin=1.977*spread*sqrt(1+1/142+(3500-1943.27)**2/(141*804.954**2))
+check('20260323/17','puntvoorspelling',center,679459.491,.001)
+check('20260323/17','marge',margin,226299.8,.1)
+
 if __name__ == '__main__':
     target=Path(__file__).resolve().parents[1]/'docs/antwoordmodel-rekencontrole.json'
     target.write_text(json.dumps(RESULTS,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-    print(f'OK: {len(RESULTS)} onafhankelijke numerieke controles uit negen verschillende tentamens; 2020 geldt voor beide versies.')
+    print(f'OK: {len(RESULTS)} onafhankelijke numerieke controles uit elf verschillende tentamens; 2020 geldt voor beide versies.')

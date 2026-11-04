@@ -17,15 +17,17 @@ Alle gemaakte appbestanden, downloads en werkbestanden staan bij elkaar in `sra-
 
 Elke les begint met verwachte voorkennis en leerdoelen. SRA bouwt voort op SET; de kennisstart is voorlopig geformuleerd vanuit de aanwezige SRA-bronnen. SET-bestanden zijn nog niet toegevoegd.
 
-De 189 vaktermen openen een compact venster met betekenis, eigen voorbeeld en bron. Het venster navigeert niet naar een andere les. De begrippenlijst zoekt ook op aliassen en betekenis. Formules uitgelegd opent per onderwerp een aparte pagina met toepassing, symbolen, berekening, interpretatie en valkuilen.
+De 214 vaktermen openen een compact venster met betekenis, eigen voorbeeld en bron. Het venster navigeert niet naar een andere les. De begrippenlijst zoekt ook op aliassen en betekenis. Formules uitgelegd opent per onderwerp een aparte pagina met toepassing, symbolen, berekening, interpretatie en valkuilen.
 
 De knop Terug staat voor Home in het kruimelpad en gebruikt de browsergeschiedenis en herstelt leespositie, geopende uitleg, voorbeeldstappen en tijdelijke invoer binnen de geopende app. Ook Vooruit van de browser werkt. Opgeslagen tentamennotities behouden altijd de nieuwste versie. Een herladen pagina start een nieuwe navigatiesessie; de gewone leer- en tentamenvoortgang blijft bewaard.
+
+Negen bekende begrippen uit hoofdstuk Basis, zoals populatie en boekwaarde, zijn in de hoofdstukken Schatten, Regressie en Verdieping gewone tekst; de lijst staat onderaan de catalogus. Formules in de catalogus staan tussen dollartekens en worden bij de build MathML.
 
 Catalogus: `scripts/terminology.py`. Kennisstart en formules: `scripts/lesson_guides.py`. Navigatie: `js/navigation.js`. Begrippenvensters: `js/terms.js`.
 
 ## Inhoud
 
-19 lessen, 57 begripchecks, 409 unieke meerkeuzevragen (175 syllabusvragen en 234 brongebonden tentamenoefeningen), 19 interactieve reken-/onderzoeksbladen, een begrippenlijst en 10 volledige tentamens met 224 vragen. Stapsgewijs geopende voorbeelden, lokale voortgang, aparte eerste/laatste pogingen, export/import, tentamenuitwerkingen en een rekenmachine.
+19 lessen, 57 begripchecks, 460 unieke meerkeuzevragen (175 syllabusvragen en 285 brongebonden tentamenoefeningen), 19 interactieve reken-/onderzoeksbladen, een begrippenlijst en 12 volledige tentamens met 267 vragen. Stapsgewijs geopende voorbeelden, lokale voortgang, aparte eerste/laatste pogingen, export/import, tentamenuitwerkingen en een rekenmachine.
 
 De cijfers bij de checks zijn geen tentamencijfer. Volledige tentamens gebruiken de oorspronkelijke vragen, casussen, tabellen en antwoordmodellen. Open antwoorden worden met het officiële model vergeleken en door de student zelf beoordeeld.
 

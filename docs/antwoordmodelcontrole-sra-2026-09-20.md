@@ -1,6 +1,6 @@
 # Controle oorspronkelijke SRA-antwoordmodellen
 
-Alle 224 vraagnummers in tien versies zijn handmatig langs de opgave, het antwoordmodel en de gegeven tabellen gelegd. Maart en juni 2020 bevatten dezelfde 28 vragen: 196 inhoudelijk verschillende vragen. Deelvragen vallen onder hun oorspronkelijke vraagnummer.
+Alle 267 vraagnummers in 12 versies zijn handmatig langs de opgave, het antwoordmodel en de gegeven tabellen gelegd. Maart en juni 2020 bevatten dezelfde 28 vragen: 239 inhoudelijk verschillende vragen. Deelvragen vallen onder hun oorspronkelijke vraagnummer.
 
 G betekent in overeenstemming met de gegeven bron en cursusconventies. N betekent een noodzakelijke nuance of voorwaarde. C betekent een inhoudelijke correctie. B betekent een verkeerde verwijzing, drukfout of interne tegenstrijdigheid. Een nuance is geen getelde rekenfout.
 
@@ -10,10 +10,10 @@ De numerieke hoofdresultaten zijn onafhankelijk herberekend in [de rekencontrole
 
 | Uitkomst | Alle versies | Inhoudelijk verschillend |
 |---|---:|---:|
-| G: Gecontroleerd | 135 | 117 |
-| N: Nuance bij het antwoord | 64 | 55 |
+| G: Gecontroleerd | 158 | 140 |
+| N: Nuance bij het antwoord | 75 | 66 |
 | C: Correctie bij het antwoord | 9 | 9 |
-| B: Onjuistheid of tegenstrijdigheid in de bron | 16 | 15 |
+| B: Onjuistheid of tegenstrijdigheid in de bron | 25 | 24 |
 
 ## 23-03-2020
 
@@ -308,3 +308,60 @@ De numerieke hoofdresultaten zijn onafhankelijk herberekend in [de rekencontrole
 | 23 | G | VIFmax 1,355 ligt onder cursusgrens 10. [Opgave p. 10](../bronnen/tentamens/20250317/opgaven.pdf#page=10); [antwoord p. 15](../bronnen/tentamens/20250317/uitwerking.pdf#page=15) |
 | 24 | N | Volgens de cursuskeuze KS bij n 200 is p 0,061 > 0,05, dus H₀ niet verwerpen. Dat bewijst normaliteit niet; Shapiro-Wilk geeft in dezelfde tabel p < 0,001. Benoem welke toets de cursus hier verlangt. [Opgave p. 10](../bronnen/tentamens/20250317/opgaven.pdf#page=10); [antwoord p. 15](../bronnen/tentamens/20250317/uitwerking.pdf#page=15) |
 | 25 | N | Aanvullende inhoudelijk relevante voorspellers kunnen resterende variatie verklaren. Een betere voorspelling verandert de werkelijke salarisverschillen niet; beoordeel nieuwe modellen ook op onafhankelijke gegevens. [Opgave p. 10](../bronnen/tentamens/20250317/opgaven.pdf#page=10); [antwoord p. 15](../bronnen/tentamens/20250317/uitwerking.pdf#page=15) |
+
+## 28-10-2025
+
+[Opgaven](../bronnen/tentamens/20251028/opgaven.pdf) · [Oorspronkelijk antwoordmodel](../bronnen/tentamens/20251028/uitwerking.pdf)
+
+| Vraag | Uitkomst | Beoordeling en bronpagina |
+|---|---|---|
+| 1.1 | B | Ŵ 57.474.000; s_w 2.233,534; standaardfout 1.251.943; t 1,982 geeft naar buiten afgerond [54.992.000; 59.956.000]. Het antwoordmodel schrijft t 0,01[110], maar 1,982 is de tabelwaarde van t 0,025[110]. De uitkomst klopt. [Opgave p. 1](../bronnen/tentamens/20251028/opgaven.pdf#page=1); [antwoord p. 10](../bronnen/tentamens/20251028/uitwerking.pdf#page=10) |
+| 1.2 | G | Marge 2.000.000 geeft γ = 32,92123 en n ≥ 182,78, dus totaal 183 en 63 extra producttypen. Breedte eerst halveren en naar boven afronden. [Opgave p. 1](../bronnen/tentamens/20251028/opgaven.pdf#page=1); [antwoord p. 10](../bronnen/tentamens/20251028/uitwerking.pdf#page=10) |
+| 1.3 | N | De boekwaarde is extra informatie, maar de verschilschatter is niet per definitie nauwkeuriger. Hij wint alleen als de verschillen minder spreiden dan de werkelijke waarden. Dat geldt hier: s_e 314,80 tegenover s_w 2.233,53. [Opgave p. 1](../bronnen/tentamens/20251028/opgaven.pdf#page=1); [antwoord p. 10](../bronnen/tentamens/20251028/uitwerking.pdf#page=10) |
+| 1.4 | N | Ŵ_v is exact 55.835.633,33; het model komt door afronden van 416,8333 op 55.835.634 uit. Standaardfout 176.452,1. Het afgeronde interval blijft [55.485.000; 56.186.000]. De cursusvoorwaarde van minstens 30 foutposten is in de opgave niet te controleren. [Opgave p. 1](../bronnen/tentamens/20251028/opgaven.pdf#page=1); [antwoord p. 10](../bronnen/tentamens/20251028/uitwerking.pdf#page=10) |
+| 1.5 | G | Evenredige aandelen 56,67 / 61,33 / 52 / 30 geven 57 / 61 / 52 / 30, samen 200. [Opgave p. 1](../bronnen/tentamens/20251028/opgaven.pdf#page=1); [antwoord p. 10](../bronnen/tentamens/20251028/uitwerking.pdf#page=10) |
+| 1.6 | G | Bij gelijke standaardafwijkingen valt s weg uit de Neymanformule en blijft Nᵢ/N × n over: evenredige allocatie. [Opgave p. 2](../bronnen/tentamens/20251028/opgaven.pdf#page=2); [antwoord p. 11](../bronnen/tentamens/20251028/uitwerking.pdf#page=11) |
+| 1.7 | B | Totaal 6.415.536,63, afgerond 6.415.537, volgt alleen als ∑wᵢ steekproefsommen zijn, zoals de kolomkop en het antwoordmodel aangeven. De legenda onder de tabel noemt ten onrechte de gemiddelde werkelijke waarde. [Opgave p. 2](../bronnen/tentamens/20251028/opgaven.pdf#page=2); [antwoord p. 11](../bronnen/tentamens/20251028/uitwerking.pdf#page=11) |
+| 1.8 | G | Standaardfouten 48.671,82 / 33.558,67 / 32.571,14 / 15.607,23 geven s_tot 69.279,11. Eenzijdig t 1,292 geeft 6.505.045, naar boven afgerond 6.506.000. [Opgave p. 2](../bronnen/tentamens/20251028/opgaven.pdf#page=2); [antwoord p. 11](../bronnen/tentamens/20251028/uitwerking.pdf#page=11) |
+| 2.1 | G | Eén meetmoment met 100 voetballers: cross-sectiedata, geen tijdreeks. [Opgave p. 2](../bronnen/tentamens/20251028/opgaven.pdf#page=2); [antwoord p. 11](../bronnen/tentamens/20251028/uitwerking.pdf#page=11) |
+| 2.2 | N | Age: H₀ β ≥ 0, H₁ β < 0. Hits: H₀ β ≤ 0, H₁ β > 0. β is de richtingscoëfficiënt in de populatie. Het model schrijft twee keer β₁; in een meervoudig model zijn dit twee parameters. [Opgave p. 3](../bronnen/tentamens/20251028/opgaven.pdf#page=3); [antwoord p. 11](../bronnen/tentamens/20251028/uitwerking.pdf#page=11) |
+| 2.3 | G | (−0,427)² = 0,1823: 18,23% van de spreiding in potential, in een enkelvoudig verband met alleen age. [Opgave p. 3](../bronnen/tentamens/20251028/opgaven.pdf#page=3); [antwoord p. 11](../bronnen/tentamens/20251028/uitwerking.pdf#page=11) |
+| 2.4 | G | Uitbijters en invloedrijke punten kunnen niet-normale residuen veroorzaken. Beoordeel die daarom eerst; Afbeelding 7 is nog voorlopig. [Opgave p. 6](../bronnen/tentamens/20251028/opgaven.pdf#page=6); [antwoord p. 11](../bronnen/tentamens/20251028/uitwerking.pdf#page=11) |
+| 2.5 | N | MD-grens 13,911, maximum 24,878: gevallen 11, 24, 43. Bij n ≤ 100 geldt z ± 2: gevallen 6 en 20. Cook-grens 0,054, maximum 0,129: geval 11. Gevallen 24 en 43 gaan weg wegens de gemelde manipulatie, niet om het signaal. Het model verwijdert ook 11; een signaal alleen bewijst geen fout, dus onderzoek en motiveer dit. [Opgave p. 6](../bronnen/tentamens/20251028/opgaven.pdf#page=6); [antwoord p. 11](../bronnen/tentamens/20251028/uitwerking.pdf#page=11) |
+| 2.6 | G | Na verwijderen veranderen gemiddelde en spreiding van de diagnostieken. Grenzen worden krapper, dus eerst opnieuw controleren op invloedrijke punten. [Opgave p. 6](../bronnen/tentamens/20251028/opgaven.pdf#page=6); [antwoord p. 12](../bronnen/tentamens/20251028/uitwerking.pdf#page=12) |
+| 2.7 | N | KS bij n 94: p 0,200 > 0,10. ABSRES met age p 0,347 en met hits p 0,139. Niet verwerpen is geen bewijs. n 94 betekent zes verwijderde gevallen; de bron noemt alleen vervolgonderzoek, niet welke drie extra waarnemingen zijn vervallen. [Opgave p. 7](../bronnen/tentamens/20251028/opgaven.pdf#page=7); [antwoord p. 12](../bronnen/tentamens/20251028/uitwerking.pdf#page=12) |
+| 2.8 | G | Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de cursusgrens. [Opgave p. 8](../bronnen/tentamens/20251028/opgaven.pdf#page=8); [antwoord p. 12](../bronnen/tentamens/20251028/uitwerking.pdf#page=12) |
+| 2.9 | G | 91,008 − 0,142 × 27 + 0,027 × 126 = 90,576, afgerond 90,6. Residu 92 − 90,6 = 1,4. [Opgave p. 8](../bronnen/tentamens/20251028/opgaven.pdf#page=8); [antwoord p. 12](../bronnen/tentamens/20251028/uitwerking.pdf#page=12) |
+| 2.10 | G | De coëfficiënt is negatief en H₁ is β < 0, dus eenzijdig 0,009/2 = 0,0045. [Opgave p. 8](../bronnen/tentamens/20251028/opgaven.pdf#page=8); [antwoord p. 12](../bronnen/tentamens/20251028/uitwerking.pdf#page=12) |
+| 2.11 | N | Log 0,375 en Power 0,377 liggen boven Linear en Exponential 0,318. De R² van Power hoort bij ln(y) en is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke schaal. Het logaritmische model houdt y ongewijzigd. [Opgave p. 8](../bronnen/tentamens/20251028/opgaven.pdf#page=8); [antwoord p. 12](../bronnen/tentamens/20251028/uitwerking.pdf#page=12) |
+| 2.12 | B | De vraag noemt R², het model adjusted R². De conclusie blijft: enkelvoudig 0,368 tegenover 0,353, en met R² 0,375 tegenover 0,367. Afbeeldingen 4, 13 en 17 heten correlaties, maar tonen een Model Summary. [Opgave p. 9](../bronnen/tentamens/20251028/opgaven.pdf#page=9); [antwoord p. 13](../bronnen/tentamens/20251028/uitwerking.pdf#page=13) |
+| 2.13 | G | 81,361 + 1,864 × ln(126) = 90,376, afgerond 90,4. Age speelt in dit enkelvoudige model geen rol. [Opgave p. 9](../bronnen/tentamens/20251028/opgaven.pdf#page=9); [antwoord p. 13](../bronnen/tentamens/20251028/uitwerking.pdf#page=13) |
+| 2.14 | G | Tabelrij 90 geeft t 1,291. t 7,425 ligt in het kritieke gebied, dus H₀ verwerpen. Significant positief verband; het α-risico is relevant. [Opgave p. 9](../bronnen/tentamens/20251028/opgaven.pdf#page=9); [antwoord p. 13](../bronnen/tentamens/20251028/uitwerking.pdf#page=13) |
+
+## 23-03-2026
+
+[Opgaven](../bronnen/tentamens/20260323/opgaven.pdf) · [Oorspronkelijk antwoordmodel](../bronnen/tentamens/20260323/uitwerking.pdf)
+
+| Vraag | Uitkomst | Beoordeling en bronpagina |
+|---|---|---|
+| 1.1 | B | Ŵ_v 44.255.909; s_e 818,8745; standaardfout 444.664,30; t 1,984 geeft naar buiten [43.373.000; 45.139.000]. Het model verwijst bij de grenzen naar Formule 3; voor de verschilschatter hoort dat Formule 8 te zijn. [Opgave p. 1](../bronnen/tentamens/20260323/opgaven.pdf#page=1); [antwoord p. 8](../bronnen/tentamens/20260323/uitwerking.pdf#page=8) |
+| 1.2 | G | Marge 800.000 geeft γ = 42,16907 en n ≥ 133,20, dus totaal 134 en 24 extra producttypen. [Opgave p. 1](../bronnen/tentamens/20260323/opgaven.pdf#page=1); [antwoord p. 8](../bronnen/tentamens/20260323/uitwerking.pdf#page=8) |
+| 1.3 | G | Een constante fout staat los van de boekwaarde; een relatieve fout hangt ervan af. De regressieschatter vangt beide patronen met constante en helling. [Opgave p. 1](../bronnen/tentamens/20260323/opgaven.pdf#page=1); [antwoord p. 8](../bronnen/tentamens/20260323/uitwerking.pdf#page=8) |
+| 1.4 | B | b₁ 0,735; Ŵ_R 44.019.050; s_R 324.178,2; naar buiten [43.375.000; 44.663.000]. Drukfouten in het model: 5.750 + 8.000 moet 5.750 × 8.000 zijn en − 646.800 moet + 646.800 zijn. De factor √(1 − 0,98²) ontbreekt in de ingevulde regel, maar zit wel in de uitkomst. [Opgave p. 1](../bronnen/tentamens/20260323/opgaven.pdf#page=1); [antwoord p. 8](../bronnen/tentamens/20260323/uitwerking.pdf#page=8) |
+| 1.5 | N | Neyman-aandelen 100,94 / 66,06 / 53,00 geven 101 / 66 / 53, samen 220. Het totaal N = 2.120 is voor deze formule niet nodig, terwijl de normering er een punt aan toekent. [Opgave p. 1](../bronnen/tentamens/20260323/opgaven.pdf#page=1); [antwoord p. 8](../bronnen/tentamens/20260323/uitwerking.pdf#page=8) |
+| 1.6 | G | Neyman geeft strata met veel spreiding meer waarnemingen. Bij grote verschillen in s daalt daardoor de totale onnauwkeurigheid ten opzichte van evenredig. [Opgave p. 1](../bronnen/tentamens/20260323/opgaven.pdf#page=1); [antwoord p. 9](../bronnen/tentamens/20260323/uitwerking.pdf#page=9) |
+| 1.7 | G | 3.064.500 + 1.351.400 + 101.880 = 4.517.780. Stratum 3 is integraal gecontroleerd en telt met zijn volledige waarde mee. [Opgave p. 2](../bronnen/tentamens/20260323/opgaven.pdf#page=2); [antwoord p. 9](../bronnen/tentamens/20260323/uitwerking.pdf#page=9) |
+| 1.8 | G | Stratum 3 heeft eindigheidscorrectie nul. s_tot 62.377,72; eenzijdig t 2,368 geeft 4.370.070, naar beneden afgerond 4.370.000. [Opgave p. 2](../bronnen/tentamens/20260323/opgaven.pdf#page=2); [antwoord p. 9](../bronnen/tentamens/20260323/uitwerking.pdf#page=9) |
+| 2.1 | G | Gegevens van 142 huizen zonder tijdsdimensie: cross-sectieanalyse. [Opgave p. 2](../bronnen/tentamens/20260323/opgaven.pdf#page=2); [antwoord p. 9](../bronnen/tentamens/20260323/uitwerking.pdf#page=9) |
+| 2.2 | G | tot_sqft heeft de grootste absolute correlatie met price: 0,758 tegenover 0,480 en −0,213. [Opgave p. 3](../bronnen/tentamens/20260323/opgaven.pdf#page=3); [antwoord p. 9](../bronnen/tentamens/20260323/uitwerking.pdf#page=9) |
+| 2.3 | N | H₀ β₁ ≥ 0 en H₁ β₁ < 0; ρ mag ook. De vraag noemt geen richting. Eenzijdig volgt uit de verwachting dat ouder goedkoper is. Afbeelding 1 toont r −0,213 en Sig. tweezijdig 0,011. [Opgave p. 3](../bronnen/tentamens/20260323/opgaven.pdf#page=3); [antwoord p. 9](../bronnen/tentamens/20260323/uitwerking.pdf#page=9) |
+| 2.4 | N | In Afbeelding 2.3 neemt de spreiding van price toe met land_sqft: dat wijst op heteroscedasticiteit. Rechts staan weinig punten, dus dit is een visuele verwachting; pas de toets op de residuen bevestigt het. [Opgave p. 3](../bronnen/tentamens/20260323/opgaven.pdf#page=3); [antwoord p. 9](../bronnen/tentamens/20260323/uitwerking.pdf#page=9) |
+| 2.5 | N | Logarithmic R² 0,286 is het hoogst, Power volgt met 0,284. De R² van Power hoort bij ln(y) en is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke schaal. [Opgave p. 4](../bronnen/tentamens/20260323/opgaven.pdf#page=4); [antwoord p. 9](../bronnen/tentamens/20260323/uitwerking.pdf#page=9) |
+| 2.6 | N | Met ln(5.000) = 8,517193 is de uitkomst $ 500.314,41. Het model geeft $ 500.313,50; dat verschil van ongeveer een dollar komt door tussentijds afronden. [Opgave p. 4](../bronnen/tentamens/20260323/opgaven.pdf#page=4); [antwoord p. 9](../bronnen/tentamens/20260323/uitwerking.pdf#page=9) |
+| 2.7 | B | MD-grens 6,228: gevallen 20, 57, 123. Bij n > 100 geldt z ± 3: geen y-uitbijters. Cook-grens 0,068: geval 128. Het model verwijst drie keer naar Afbeelding 3.2, dat is Afbeelding 4.1. Het label 128 staat los onder de grafiek in Afbeelding 2.2, wat het opzoeken lastig maakt; het model accepteert wel of niet verwijderen. [Opgave p. 6](../bronnen/tentamens/20260323/opgaven.pdf#page=6); [antwoord p. 9](../bronnen/tentamens/20260323/uitwerking.pdf#page=9) |
+| 2.8 | G | KS bij n 142: p 0,200 > 0,05, normaliteit niet verwerpen. ABSRES met tot_sqft p 0,395 > 0,05, homoscedasticiteit niet verwerpen. Geen remedies nodig; noem wel de residuen. [Opgave p. 6](../bronnen/tentamens/20260323/opgaven.pdf#page=6); [antwoord p. 10](../bronnen/tentamens/20260323/uitwerking.pdf#page=10) |
+| 2.9 | G | ŷ 679.459,5; s_e 112.592,1; t 1,977 geeft ± 226.299,8, dus [453.159,7; 905.759,3]. Bij 10.000 ft² is dit extrapolatie: het maximum is 4.950 ft², dus geen interval. [Opgave p. 7](../bronnen/tentamens/20260323/opgaven.pdf#page=7); [antwoord p. 10](../bronnen/tentamens/20260323/uitwerking.pdf#page=10) |
+| 2.10 | B | Adjusted R² stijgt van 0,572 naar 0,667: een verbetering. De vraag verwijst naar Afbeelding 3.1; die bestaat niet, bedoeld is Afbeelding 3. [Opgave p. 7](../bronnen/tentamens/20260323/opgaven.pdf#page=7); [antwoord p. 10](../bronnen/tentamens/20260323/uitwerking.pdf#page=10) |
+| 2.11 | B | Alle drie p-waarden zijn < 0,001, dus achterwaartse eliminatie verwijdert niets. De opgave geeft 4 punten en het model 3; zonder dat punt telt het model op tot 99. De opgave is hier leidend. [Opgave p. 7](../bronnen/tentamens/20260323/opgaven.pdf#page=7); [antwoord p. 11](../bronnen/tentamens/20260323/uitwerking.pdf#page=11) |
+| 2.12 | G | VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de cursusgrens. [Opgave p. 7](../bronnen/tentamens/20260323/opgaven.pdf#page=7); [antwoord p. 11](../bronnen/tentamens/20260323/uitwerking.pdf#page=11) |
+| 2.13 | B | Meer verklarende variabelen of een grotere steekproef zijn passend. Het model noemt twee uitbijters in x, maar vraag 2.7 vindt er drie: 20, 57 en 123. Verwijder alleen bij een aangetoonde oorzaak. [Opgave p. 7](../bronnen/tentamens/20260323/opgaven.pdf#page=7); [antwoord p. 11](../bronnen/tentamens/20260323/uitwerking.pdf#page=11) |

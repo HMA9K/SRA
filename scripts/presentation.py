@@ -5,6 +5,7 @@ Native MathML retains fractions, roots and indices in both HTML editions.
 """
 import html
 import re
+import unicodedata
 import xml.etree.ElementTree as ET
 
 def tag(name, value):
@@ -205,6 +206,11 @@ def inline_formulas(content):
     expressions = re.compile(r'(?<![\w/])(?<!_\()' + atom + r'(?:\s*' + operator + r'\s*' + atom + r')+(?![\w/])')
     values = re.compile(r'(?<![\w/.])(?:€\s*[−-]?\d+(?:[.,]\d+)*|[−-]?\d+(?:[.,]\d+)*%|[−-]?\d+(?:\.\d{3})*,\d+)(?![\w/]|\.\w)')
 
+    # Blijft als één geheel staan; js/formula-text.js zet dit om naar een wortel of breuk.
+    group = r'\((?:[^()]|\((?:[^()]|\([^()]*\))*\))*\)'
+    wide = re.compile(r'(?<![\w/])(?:[^\s()\[\]]+\s*=\s*)?(?:\[[^\[\]]*\]|' + group + r')\s*/\s*' + group
+                      + r'|(?:(?<![\w/])[^\s()]+/)?√(?:' + group + r'|\[[^\[\]]*\])(?:/' + group + r')?')
+
     def replace(match):
         token = match.group()
         formula = formulas.get(token)
@@ -227,6 +233,13 @@ def inline_formulas(content):
         return ''.join(parts) + mark_values(value[previous:])
 
     def format_text(value):
+        parts, previous = [], 0
+        for match in wide.finditer(value):
+            parts.extend([format_chunk(value[previous:match.start()]), '<span class="inline-expression">' + match[0] + '</span>'])
+            previous = match.end()
+        return ''.join(parts) + format_chunk(value[previous:])
+
+    def format_chunk(value):
         parts, previous = [], 0
         for match in expressions.finditer(value):
             parts.append(format_plain(value[previous:match.start()]))
@@ -284,6 +297,119 @@ def inline_formulas(content):
     parser.close()
     parser.flush()
     return ''.join(parser.parts)
+
+_MATH_TOKEN = re.compile(r'\s+|"[^"]*"|\d+(?:[.,]\d+)*|(?:[A-Za-zα-ωΑ-ΡΤ-Ω][̂̄]?)+|.', re.S)
+_MATH_SCRIPTS = str.maketrans({'²': '^2', '³': '^3', '₀': '_0', '₁': '_1', '₂': '_2', '₃': '_3', 'ᵢ': '_i', 'ⱼ': '_j', 'ₖ': '_k'})
+
+
+def formula(source):
+    """Zet lineaire notatie om, bijvoorbeeld Ŵ_MPU = N × w̄ of √{(N − n)/(N − 1)}.
+
+    Een spatie scheidt symbolen zonder teken ertussen; {...} groepeert zonder haakjes.
+    """
+    prepared = unicodedata.normalize('NFD', source).replace('≠', '≠').translate(_MATH_SCRIPTS)
+    tokens = [token for token in _MATH_TOKEN.findall(prepared) if not token.isspace()]
+    position = 0
+
+    def peek():
+        return tokens[position] if position < len(tokens) else None
+
+    def take():
+        nonlocal position
+        position += 1
+        return tokens[position - 1]
+
+    def symbol(token):
+        if len(token) == 2 and token[1] in '̂̄':
+            return (hat if token[1] == '̂' else bar)(v(token[0]))
+        if '̂' in token or '̄' in token:
+            raise ValueError(f'Zet een spatie tussen de symbolen in: {source}')
+        return v(token)
+
+    def group(closing):
+        parts = []
+        while peek() != closing:
+            if peek() is None:
+                raise ValueError(f'Haakje niet gesloten in: {source}')
+            parts.append(term())
+        take()
+        return row(*parts)
+
+    def atom():
+        """Geef de opmaak en de inhoud zonder haakjes, voor breuken en wortels."""
+        token = take()
+        if token == '{':
+            content = group('}')
+            return content, content
+        if token in ('(', '['):
+            closing = ')' if token == '(' else ']'
+            content = group(closing)
+            return row(op(token), content, op(closing)), content
+        if token == '√':
+            bare = atom()[1]
+            return root(bare), root(bare)
+        if token == 'Σ':
+            value = op('∑')
+        elif token.startswith('"'):
+            value = text(unicodedata.normalize('NFC', token[1:-1]))
+        elif token[0].isdigit():
+            value = num(token)
+        elif token[0].isalpha():
+            value = symbol(token)
+        else:
+            value = op(token)
+        return value, value
+
+    def script():
+        token = peek()
+        if token == '{':
+            return atom()[0]
+        take()
+        if token[0].isdigit():
+            return num(token)
+        return v(token) if len(token) == 1 else text(token)
+
+    def factor():
+        value, bare = atom()
+        lower = upper = None
+        while peek() in ('_', '^'):
+            if take() == '_':
+                lower = script()
+            else:
+                upper = script()
+        if lower and upper:
+            value = tag('msubsup', value + lower + upper)
+        elif lower:
+            value = sub(value, lower)
+        elif upper:
+            value = sup(value, upper)
+        return value, value if lower or upper else bare
+
+    def term():
+        value, bare = factor()
+        if peek() != '/':
+            return value
+        take()
+        return frac(bare, factor()[1])
+
+    parts = []
+    while peek() is not None:
+        parts.append(term())
+    return mathml(row(*parts), inline=True)
+
+
+def rich_text(value):
+    """Tekst met formules tussen dollartekens naar veilige HTML."""
+    parts = value.split('$')
+    if len(parts) % 2 == 0:
+        raise ValueError(f'Ongesloten formule in: {value}')
+    return ''.join(formula(part) if index % 2 else html.escape(part, quote=False) for index, part in enumerate(parts))
+
+
+def plain_text(value):
+    """Doorzoekbare tekst zonder opmaaktekens."""
+    return re.sub(r'[${}"]', '', value)
+
 
 CELL_FORMULAS = {
  'SSR/k': frac(ssr,k),

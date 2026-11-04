@@ -1,0 +1,31 @@
+/* Platte wortels en samengestelde breuken worden echte formules; gewone tekst blijft ongemoeid. */
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {toMathML,split}=require('../js/formula-text.js');
+const has=(source,...tags)=>{const math=toMathML(source);assert.ok(math,source);for(const tag of tags)assert.ok(math.includes('<'+tag),source+' mist '+tag);};
+has('√16 = 4','msqrt');
+has('s ÷ √16','mfrac','msqrt');
+has('√((N − n)/(N − 1))','msqrt','mfrac');
+has('s² = [Σw² − (Σw)²/n]/(n − 1)','mfrac','msup');
+has('√(1 + 1/21 + (5−5,6871)²/(20 × 1,25505²))','msqrt','mfrac');
+has('Ŵ_MPU = N × w̄','msub','mover');
+has('s_w/√n','mfrac','msub');
+has('Ŵ_MPU','msub','mover');
+has('√(breedte × frequentie)','msqrt','mtext');
+has('√[1 + 1/24 + (55,5 − 48,683)²/(23 × 6,31²)] ≈ 1,04519','msqrt','mfrac');
+has('t = 0,50 × √20/√0,75 ≈ 2,582','mfrac','msqrt');
+const math=parts=>(parts||[]).filter(part=>part.math).length;
+assert.equal(math(split('De correctie √((N − n)/(N − 1)) beschrijft de onzekerheid.')),1);
+assert.equal(math(split('Bereken s/√n en daarna √225.')),2);
+assert.equal(split('Bereken s/√n en daarna √225.')[0],'Bereken ');
+assert.equal(math(split('1,693 + 1,729 × 0,49095√1,0626 = 2,568')),1);
+assert.equal(math(split('s = [Σw² − (Σw)²/n]/(n − 1)')),1);
+assert.equal(math(split('s_w: standaardafwijking')),1);
+assert.equal(math(split('Bereken N × s_w/√n eerst')),1);
+for(const text of ['LN_MORT en LN_ELECT','ln_dens','ZRE_1 en MAH_1','College8_data.sav','20241028_SRA_uitwerkingen.pdf','De √-toets op je rekenmachine','√𝑀𝑆𝐸 uit de pdf','(zie bijlage)/(tabel)','Gebruik √nog niet','en/of'])assert.equal(split(text),null,text);
+const course=fs.readFileSync(path.join(__dirname,'../data/course.js'),'utf8');
+assert.ok(!/√\(<span/.test(course)&&!/√\(\\"?<span/.test(course),'Een wortel is opgeknipt in losse tekstblokken');
+global.window={};require('../data/exams.js');
+for(const exam of window.SRAExamData.exams)for(const field of ['pageText','answerText'])(exam[field]||[]).forEach((page,index)=>page.split('\n').forEach(line=>{
+ if(line.includes('√'))assert.ok(!(split(line)||[line]).some(part=>typeof part==='string'&&part.includes('√')),`${exam.id} ${field} p. ${index+1}: ${line}`);
+}));
+console.log('OK: wortels en samengestelde breuken worden formules; gewone tekst blijft tekst.');

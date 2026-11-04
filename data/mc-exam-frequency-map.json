@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewed": "2026-09-24",
+  "reviewed": "2026-11-04",
   "method": "Expliciete vragen of deelvragen per inhoudelijk verschillend tentamen; een onderwerp telt per tentamen eenmaal. De verwijzingen zijn voorbeelden die het voorkomen aantonen, geen uitputtende opsomming van alle deelvragen. Onderwerpen kunnen overlappen. Dit is geen voorspelling van een volgend tentamen.",
   "topics": {
     "beginnen": {"note": "Basisbegrippen worden binnen andere opgaven gebruikt en zijn niet afzonderlijk geïnventariseerd."},
@@ -17,7 +17,8 @@
         "20231030": {"questions": [2, 7], "reason": "Directe ondergrens en expliciet MPU per stratum in vraag 7."},
         "20240318": {"questions": [1, 2, 6, 7], "reason": "Directe schatter, vergelijking met ratio en directe schatting binnen strata."},
         "20241028": {"questions": [3, 5, 6], "reason": "Expliciete vergelijking met directe schatter en toepassing binnen strata."},
-        "20250317": {"questions": [5, 6], "reason": "Vraag 5 benoemt expliciet de MPU-schatter; vraag 6 vormt het bijbehorende interval."}
+        "20250317": {"questions": [5, 6], "reason": "Vraag 5 benoemt expliciet de MPU-schatter; vraag 6 vormt het bijbehorende interval."},
+        "20251028": {"questions": [1, 2, 3], "reason": "Directe schatter: interval, uitbreiding en vergelijking met de verschilschatter."}
       }
     },
     "verschil": {
@@ -28,7 +29,9 @@
         "20220316": {"questions": [4, 5, 6], "reason": "Toepassingsvoorwaarde, bovengrens en vergelijking met de directe schatter."},
         "20221031": {"questions": [1], "reason": "Expliciete vergelijking: waarom is de quotiëntschatter hier geschikter dan de verschilschatter?"},
         "20231030": {"questions": [3, 4, 5], "reason": "Standaardafwijking van de verschillen, ondergrens en uitbreiding op basis van de verschilschatter."},
-        "20250317": {"questions": [1, 2, 3], "reason": "Voorkeur, toepassingsvoorwaarde en schattingsinterval met de verschilschatter."}
+        "20250317": {"questions": [1, 2, 3], "reason": "Voorkeur, toepassingsvoorwaarde en schattingsinterval met de verschilschatter."},
+        "20251028": {"questions": [3, 4], "reason": "Reden voor de verschilschatter en het bijbehorende interval."},
+        "20260323": {"questions": [1, 2], "reason": "Interval met de verschilschatter en uitbreiding van de steekproef."}
       }
     },
     "quotient": {
@@ -44,7 +47,8 @@
       "scope": "De regressieschatter voor een populatietotaal met boekwaarden als hulpinformatie.",
       "manual": {
         "20230315": {"questions": [1, 2], "reason": "Elkeukapp BV kiest expliciet de regressieschatter; interval en conclusie."},
-        "20241028": {"questions": [1, 2, 3], "reason": "Witgoedelectro BV kiest expliciet de regressieschatter; interval, omvang en vergelijking."}
+        "20241028": {"questions": [1, 2, 3], "reason": "Witgoedelectro BV kiest expliciet de regressieschatter; interval, omvang en vergelijking."},
+        "20260323": {"questions": [3, 4], "reason": "Constante en relatieve fouten, en het interval met de regressieschatter."}
       }
     },
     "steekproefomvang": {"sourceThemes": ["Benodigde steekproefomvang"], "scope": "Berekening van de benodigde totale steekproefomvang of uitbreiding."},
@@ -65,7 +69,9 @@
         "20231030": {"questions": [17, 18, 21], "reason": "Meervoudige modellen vergelijken en voorspellen voor een vrouw met gegeven leeftijd en bloeddruk."},
         "20240318": {"questions": [22, 23, 24], "reason": "Meervoudige puntvoorspelling, vergelijking met enkelvoudig model en dummycoëfficiënt voor geslacht."},
         "20241028": {"questions": [16, 17, 18], "reason": "Meervoudig model met dummy geslacht vergelijken, toetsen en controleren."},
-        "20250317": {"questions": [19, 20], "reason": "Verschil tussen opleidingsdummy’s en puntvoorspelling met het meervoudige salarismodel."}
+        "20250317": {"questions": [19, 20], "reason": "Verschil tussen opleidingsdummy’s en puntvoorspelling met het meervoudige salarismodel."},
+        "20251028": {"questions": [17, 18, 20], "reason": "Vergelijking en voorspelling met het meervoudige model, significantie van age en vergelijking met het enkelvoudige model."},
+        "20260323": {"questions": [18, 19, 20], "reason": "Meervoudig model vergelijken, variabelen beoordelen en VIF controleren."}
       }
     },
     "transformaties": {"sourceThemes": ["Niet-lineaire modellen"], "scope": "Niet-lineaire modellen beoordelen of transformaties gebruiken."},

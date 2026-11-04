@@ -127,14 +127,42 @@
   },
   {
     "file": "bronnen/original-pdfs/20250317/opgaven.pdf",
-    "pages": 15,
+    "pages": 10,
     "metadataRemoved": true,
     "pageContentEqual": true,
     "textEqual": true
   },
   {
     "file": "bronnen/original-pdfs/20250317/uitwerking.pdf",
-    "pages": 15,
+    "pages": 5,
+    "metadataRemoved": true,
+    "pageContentEqual": true,
+    "textEqual": true
+  },
+  {
+    "file": "bronnen/original-pdfs/20251028/opgaven.pdf",
+    "pages": 9,
+    "metadataRemoved": true,
+    "pageContentEqual": true,
+    "textEqual": true
+  },
+  {
+    "file": "bronnen/original-pdfs/20251028/uitwerking.pdf",
+    "pages": 4,
+    "metadataRemoved": true,
+    "pageContentEqual": true,
+    "textEqual": true
+  },
+  {
+    "file": "bronnen/original-pdfs/20260323/opgaven.pdf",
+    "pages": 7,
+    "metadataRemoved": true,
+    "pageContentEqual": true,
+    "textEqual": true
+  },
+  {
+    "file": "bronnen/original-pdfs/20260323/uitwerking.pdf",
+    "pages": 4,
     "metadataRemoved": true,
     "pageContentEqual": true,
     "textEqual": true

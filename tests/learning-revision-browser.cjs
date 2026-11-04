@@ -31,7 +31,7 @@ const server=http.createServer((req,res)=>{
     await page.evaluate(()=>window.SRATerms.annotate(document.querySelector('#main')));
     assert.equal(await page.locator('#uitleg>section').count(),lesson.sections);
     assert.match(await page.locator('.lesson-source-title').textContent(),/Hoorcollege/);
-    assert.equal(await page.locator('aside.learning-context').count(),1);
+    assert.equal(await page.locator('#uitleg>.lesson-exam-focus').count(),1);
     assert.deepEqual(await duplicates(),[],`${lesson.id}: dubbel begrip bij ${width}px`);
     assert.equal(await overflow(),false,`${lesson.id}: horizontale pagina-overloop bij ${width}px`);
     const results=page.locator('#onderzoek .lab-all-results');
@@ -43,7 +43,7 @@ const server=http.createServer((req,res)=>{
     assert.equal(await overflow(),false,`${lesson.id}: open labresultaten bij ${width}px`);
     if(lesson.id==='rekenen'&&width===1366&&theme==='light')await results.screenshot({path:path.join(out,'rekenen-results.png')});
     await results.evaluate(el=>el.open=false);
-    assert.equal(await page.locator('.lesson-preparation').getAttribute('open'),null);
+    assert.equal(await page.locator('.lesson-start').isVisible(),true);
     assert.ok((await page.locator('.lesson-opening').innerText()).length>150);
     assert.ok((await page.locator('.lesson-conclusion').innerText()).length>150);
     assert.match(await page.locator('.example-context').innerText(),/\?/);
@@ -64,7 +64,7 @@ const server=http.createServer((req,res)=>{
   await page.evaluate(()=>{window.StudyTheme.setMode('light');location.hash='#les/stratificatie';});
   await page.locator('#lesson-sources').waitFor({state:'attached'});
   assert.equal(await page.locator('#lesson-sources').getAttribute('open'),null);
-  const note=page.locator('#uitleg .source-note').nth(3),noteTarget=(await note.getAttribute('href')).slice(1);
+  const note=page.locator('#uitleg .source-note:visible').nth(3),noteTarget=(await note.getAttribute('href')).slice(1);
   await note.click();
   await page.waitForFunction(id=>{const r=document.getElementById(id).getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight;},noteTarget);
   assert.notEqual(await page.locator('#lesson-sources').getAttribute('open'),null);
@@ -117,8 +117,6 @@ const server=http.createServer((req,res)=>{
   await page.locator('#next-step').click();assert.equal(await page.locator('#example-steps>li').count(),1);
   await page.locator('#all-steps').click();assert.equal(await page.locator('#example-steps>li').count(),5);
   await page.locator('#reset-steps').click();assert.equal(await page.locator('#example-steps>li').count(),0);
-  await page.locator('.lesson-preparation>summary').focus();await page.keyboard.press('Enter');
-  assert.equal(await page.locator('.lesson-preparation').getAttribute('open'),'');
   // Een begrip telt eenmaal over titel, lopende tekst, subkoppen en waarschuwing.
   await page.evaluate(()=>{
    document.querySelector('#main').insertAdjacentHTML('beforeend','<section id="term-fixture" data-term-scope><h2>Standaardfout</h2><p>standaardfout en standaardfouten</p><aside>Let op de standaardfout.</aside></section><section id="term-fixture-next" data-term-scope><p>standaardfout, standaardfout</p></section>');
@@ -160,6 +158,15 @@ const server=http.createServer((req,res)=>{
   assert.equal(await questionLetters.count(),3);
   assert.deepEqual(await questionLetters.allTextContents(),['a','b','c']);
   assert.equal(await questionLetters.locator('[data-formula-help],[data-sra-term]').count(),0);
+  // Basisbegrippen zijn alleen in hoofdstuk Basis klikbaar; latere begrippen blijven klikbaar.
+  const termCount=id=>page.locator(`#main [data-sra-term="${id}"]`).count();
+  await page.evaluate(()=>location.hash='#les/mpu');await page.waitForFunction(()=>document.querySelector('#main').hasAttribute('data-no-basis-terms')&&document.querySelector('#main [data-sra-term]'));
+  assert.equal(await termCount('boekwaarde')+await termCount('steekproef')+await termCount('populatie'),0);assert.ok(await termCount('mpu')>0);
+  await page.evaluate(()=>location.hash='#les/beginnen');await page.waitForFunction(()=>!document.querySelector('#main').hasAttribute('data-no-basis-terms')&&document.querySelector('#main [data-sra-term="steekproef"]'));
+  // Het venster toont de formule als MathML en niet als ruwe tekst.
+  await page.evaluate(()=>location.hash='#les/mpu');await page.waitForFunction(()=>document.querySelector('#main [data-sra-term="mpu"]'));
+  await page.locator('#main [data-sra-term="mpu"]:visible').first().click();await page.locator('#sra-term-popup math').first().waitFor();
+  assert.doesNotMatch(await page.locator('.sra-term-definition').innerText(),/_MPU/);await page.keyboard.press('Escape');
   await page.evaluate(()=>location.hash='#formules/stratificatie');await page.locator('.formula-guide-card').first().waitFor();
   await page.evaluate(()=>window.SRATerms.annotate(document.querySelector('#main')));assert.deepEqual(await duplicates(),[]);
   await page.goto(base+'/SRA%20interactieve%20samenvatting.html#les/diagnostiek');await page.locator('.lesson-source-title').waitFor({state:'attached'});
