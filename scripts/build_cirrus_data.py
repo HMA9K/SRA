@@ -193,6 +193,9 @@ def curate_case(exam_id,section_index,markup):
             '<p>N<sub>i</sub> = grootte van de populatie in het i-de stratum</p><p>n<sub>i</sub> = grootte van de steekproef in het i-de stratum</p>'
             '<p>w<sub>i</sub> = gemiddelde werkelijke waarde van een post in de steekproef van het i-de stratum</p>'
             '<p>s<sub>i</sub> = standaardafwijking van de werkelijke waarden in de steekproef van het i-de stratum</p>',markup,flags=re.S)
+    if exam_id=='20250317' and section_index==1:
+        markup=re.sub(r'<p>VWoee rm doeg.*?opgelost\.</p>',
+            '<p>We mogen ervan uitgaan dat eventuele problemen met uitbijters en invloedrijke punten na het uitvoeren van de remedies zijn opgelost.</p>',markup,flags=re.S)
     if exam_id=='20251028' and section_index==1:
         markup=markup.replace('vindt als uitvoer</p><p class="sra-case-caption">afbeelding 2 t/m afbeelding 10. In de spreidingsdiagrammen zijn een aantal markante punten</p><p>aangeduid.</p>',
             'vindt als uitvoer afbeelding 2 t/m afbeelding 10. In de spreidingsdiagrammen zijn een aantal markante punten aangeduid.</p>')

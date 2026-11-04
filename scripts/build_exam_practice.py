@@ -1,7 +1,8 @@
 """Build source-linked practice from existing exam records and reviewed choices."""
 from pathlib import Path
 from copy import deepcopy
-import json,html,hashlib
+from html.parser import HTMLParser
+import json,html,hashlib,re
 from exam_mc.march_2026 import ROWS as MARCH_2026
 from exam_mc.october_2025 import ROWS as OCTOBER_2025
 from exam_mc.march_2025 import ROWS as MARCH_2025
@@ -18,9 +19,39 @@ AUTHORED={'20260323':MARCH_2026,'20251028':OCTOBER_2025,'20250317':MARCH_2025,'2
 DEPENDENCIES={('20231030',5):[4],('20231030',12):[11],('20230315',2):[1],('20230315',4):[3],('20230315',12):[11],('20230315',16):[14],('20241028',2):[1],('20241028',6):[5],('20240318',3):[1],('20240318',7):[6],('20240318',15):[12,14],('20250317',6):[5],('20250317',8):[7],('20250317',12):[11],('20250317',18):[13,14]}
 DEPENDENCIES.update({('20251028',2):[1],('20251028',8):[7],('20251028',14):[13],('20251028',21):[19],('20260323',2):[1],('20260323',8):[7],('20260323',14):[13]})
 DEPENDENCIES.update({('20221031',3):[2],('20221031',6):[5],('20221031',16):[15],('20220316',2):[1],('20220316',3):[1,2],('20211101',2):[1],('20211101',7):[6],('20200323',3):[2],('20200323',7):[2,3,6],('20200323',20):[19]})
+class TopLevelStarts(HTMLParser):
+ VOID={'img','br','hr','col','wbr'}
+ def __init__(self,markup):
+  super().__init__(convert_charrefs=False);self.depth=0;self.starts=[]
+  self.lines=[0]
+  for line in markup.split(chr(10)):self.lines.append(self.lines[-1]+len(line)+1)
+  self.feed(markup)
+ def handle_starttag(self,tag,attrs):
+  if not self.depth:self.starts.append(self.lines[self.getpos()[0]-1]+self.getpos()[1])
+  self.depth+=tag not in self.VOID
+ def handle_endtag(self,tag):self.depth-=tag not in self.VOID
+def case_cuts(exam,section,boundaries):
+ """Return where the case text continues after each question of this opgave."""
+ markup=section['caseHtml'];starts=TopLevelStarts(markup).starts+[len(markup)];cuts={};position=0
+ for question in exam['questions']:
+  text=boundaries.get(str(question['number']))
+  if question['sectionId']!=section['id'] or not text:continue
+  for start,stop in zip(starts,starts[1:]):
+   plain=' '.join(html.unescape(re.sub(r'<[^>]+>','',markup[start:stop])).split())
+   if start>=position and plain.startswith(text):
+    cuts[question['number']]=start;position=start+1;break
+  else:raise ValueError(f"Casusgrens ontbreekt: {exam['id']} vraag {question['number']}: {text}")
+ return cuts
+def case_for_question(markup,cuts,number):
+ """Show what stood above the question in the exam and mark the piece directly above it."""
+ start=max((cut for n,cut in cuts.items() if n<number),default=0)
+ stop=min((cut for n,cut in cuts.items() if n>=number),default=len(markup))
+ note='<p class="mc-case-note">Het gemarkeerde stuk hoort bij deze vraag. Gegevens uit de tekst erboven kunnen ook nodig zijn.</p>' if start else ''
+ return note+markup[:start]+'<section class="mc-case-current" aria-label="Casustekst bij deze vraag"><p class="mc-case-current-label">Nodig voor deze vraag</p>'+markup[start:stop]+'</section>'
 def read_data(path,marker):return json.loads((ROOT/path).read_text(encoding='utf-8').split(marker,1)[1].rstrip(';\n'))
 def build():
  exams=read_data('data/cirrus-exams.js','window.SRA_CIRRUS_EXAMS = ')
+ boundaries=json.loads((ROOT/'data/exam-question-boundaries.json').read_text(encoding='utf-8'))
  topics=read_data('data/mc.js','window.SRAMCData = ')['topics'];topicmap={t['id']:t for t in topics}
  output=[];coverage=[]
  for exam in exams:
@@ -48,7 +79,7 @@ def build():
     guidance=deepcopy(topicmap[row['topics'][0]]['questions'][0]['guidance'])
     question=dict(id=id,prompt=focus,originalPrompt=source['prompt'],originalPromptHtml=source['promptHtml'],sourceVisualHtml=source['promptHtml'] if source['hasSourceVisual'] else '',options=options,correct=target,level=3,
       topics=row['topics'],sourceExamId=canonical,sourceQuestionId=source['id'],sourceQuestionNumber=source['displayNumber'],sourcePart=row['part'],sourcePage=source['sourcePage'],sourceAnswerPage=audit.get('answerPage',1),
-      caseHtml=section['caseHtml'],prerequisitesHtml=prerequisites,prerequisiteIds=[q['id'] for q in needed],
+      caseHtml=case_for_question(section['caseHtml'],case_cuts(exam,section,boundaries.get(canonical,{})),source['number']),prerequisitesHtml=prerequisites,prerequisiteIds=[q['id'] for q in needed],
       officialSolutionHtml=source['solutionHtml'],sourceNote=note,explanation=explanation,steps=[correct]+([note] if note and note!=correct else []),
       optionExplanations=reasons,pattern=focus,trap='Controleer de bronvoorwaarden, eenheden en afronding. '+note,
       recognition={'signals':source['prompt'],'meaning':focus,'approach':explanation,'answer':'Je antwoord moet deze conclusie onderbouwen: '+correct},guidance=guidance)

@@ -445,6 +445,9 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-result-list details{
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-guidance-sources{border-top:1px solid #454261}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-source-filter select{background:var(--study-surface,#152129)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-panel{background:var(--study-surface,#152129)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-note{color:var(--study-muted,#adbdc9)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-current{border-left:3px solid var(--study-teal,#2d766f);background:var(--study-wash,#17202b)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-current-label{color:var(--study-teal,#8dece2)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-resizer:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-resizer:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-resizer[data-dragging]{background:var(--study-teal,#0e8174)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help>details[open]>div{border:1px solid #454261;background:#1b1b27;box-shadow:0 6px 18px rgba(1,3,4,.14)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help>details[open]>div{background:#212b38;border-color:#435460}
