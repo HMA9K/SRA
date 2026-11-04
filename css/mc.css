@@ -243,7 +243,7 @@ html:has(.mc-page){scroll-padding-top:75px;scroll-padding-bottom:145px}
 .mc-primary{min-width:0}.mc-question-tools{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px}.mc-question-tools .mc-question-help{margin:0;padding:0;width:min(100%,280px);border:0}.mc-question-tools>.study-btn{flex-shrink:0}.mc-case-layout.mc-case-closed{grid-template-columns:minmax(0,1fr)}
 .mc-case-panel{min-width:0;max-height:calc(100dvh - 210px);overflow:auto;padding:16px;background:var(--study-surface,#fff);border-right:1px solid var(--line);position:sticky;top:150px}
 .mc-case-note{margin:0 0 12px;font-size:.8rem;color:var(--study-muted,#58677a)}.mc-case-panel p.mc-case-note,.mc-case-panel p.mc-case-current-label{text-align:left;hyphens:manual}
-.mc-case-current{margin:0 -8px 12px;padding:8px 8px 2px;border-left:3px solid var(--study-teal,#008577);background:var(--study-wash,#f3f6fa)}
+.mc-case-current{margin:0 0 12px;padding:8px 10px 2px;border-left:3px solid var(--study-teal,#008577);background:var(--study-wash,#f3f6fa)}
 .mc-case-current-label{margin:0 0 8px;font-size:.8rem;font-weight:700;color:var(--study-teal,#008577)}
 /* Zonder casusinhoud klapt het vak in; de PDF heeft de volle kolomhoogte nodig. */
 .mc-case-panel.original-pdf-left{height:calc(100dvh - 216px)}
