@@ -92,7 +92,7 @@ try{
     const feedback=question.locator('.question-feedback').filter({visible:true});
     assert.match(await feedback.innerText(),/Goed beantwoord/);
     assert.equal(await feedback.locator('.question-recognition dt').count(),0);
-    assert.match(await feedback.locator('.question-pattern').innerText(),/^Onthoud:/);
+    assert.match((await feedback.locator('.question-pattern').textContent()).trim(),/^Onthoud:/);
     assert.ok(await feedback.locator('.source-note').count()>0);
     assert.ok(parseFloat(await feedback.evaluate(n=>getComputedStyle(n).paddingTop))<=16);
     feedbackChecks++;

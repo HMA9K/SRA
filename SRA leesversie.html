@@ -1964,6 +1964,8 @@
     + `|${INDEXED}(?:\\s*/\\s*${ROOT})?`, 'gu');
   // Alleen tussen twee waarden: +€ 48 aan het begin blijft het teken van een bedrag.
   const VALUE_END = /[\p{L}\p{N})\]²³%]$/u, VALUE_START = /^[\p{L}\p{N}(\[√Σ€−]/u;
+  // 1 / 409 is buiten de leerstof een score, geen breuk.
+  const SPACED = /^\d[\d.,]*\s+\/\s+\d/, LEARNING_TEXT = '.section-body,.example,.feedback,.mc-feedback,.mc-stimulus,.formula-guide-card,.sra-term-popup';
   const CANDIDATE = /√|[\])]\s*\/\s*[(\d]|_|\d\s+\/\s+\d|[\p{L}\d²³]\s*\/\s*\(/u;
 
   /* Geeft MathML terug, of null als de tekst geen veilig leesbare formule is. */
@@ -2037,12 +2039,12 @@
   }
 
   /* Deelt tekst in gewone stukken en stukken {math}. */
-  function split(text) {
+  function split(text, spaced = true) {
     const parts = [];
     let offset = 0;
     for (const match of text.matchAll(FORMULA)) {
       const math = toMathML(match[0]);
-      if (!math) continue;
+      if (!math || (!spaced && SPACED.test(match[0]))) continue;
       parts.push(text.slice(offset, match.index), {math});
       offset = match.index + match[0].length;
     }
@@ -2081,7 +2083,7 @@
     }
     const walker = (container.ownerDocument || root.document).createTreeWalker(container, 4), nodes = [];
     while (walker.nextNode()) {
-      if (/[+−×÷±=]/.test(walker.currentNode.nodeValue) && !walker.currentNode.parentElement.closest(SKIP + ',.math-operator,button,a')) nodes.push(walker.currentNode);
+      if (/[+−×÷±=]/.test(walker.currentNode.nodeValue) && !walker.currentNode.parentElement.closest(SKIP + ',.math-operator,button')) nodes.push(walker.currentNode);
     }
     // Een buurformule telt ook als waarde: s_w × √n staat in drie losse stukken.
     const neighbour = node => node && (node.nodeType === 1 && !/^(BR|P|LI|DIV)$/.test(node.nodeName));
@@ -2092,7 +2094,7 @@
         const before = value.slice(0, match.index).trimEnd(), after = value.slice(match.index + 1).trimStart();
         const left = before ? VALUE_END.test(before) : neighbour(node.previousSibling);
         const right = after ? VALUE_START.test(after) : neighbour(node.nextSibling);
-        if (!left || !right) continue;
+        if (match[0] !== '±' && (!left || !right)) continue;
         parts.push(value.slice(offset, match.index), element(`<span class="math-operator">${match[0]}</span>`));
         offset = match.index + 1;
       }
@@ -2126,7 +2128,7 @@
     }
     for (const node of nodes) {
       const whole = node.parentElement.matches('.inline-expression') && node.parentElement.childNodes.length === 1 && toMathML(node.nodeValue);
-      const parts = whole ? [{math: whole}] : split(node.nodeValue);
+      const parts = whole ? [{math: whole}] : split(node.nodeValue, !!node.parentElement.closest(LEARNING_TEXT));
       if (parts) node.replaceWith(...parts.map(part => typeof part === 'string' ? part : element(/<m(?:frac|sqrt)/.test(part.math) && !node.parentElement.closest('.inline-expression') ? `<span class="inline-expression">${part.math}</span>` : part.math)));
     }
     // Een grote wortel met breuk krijgt een eigen regel, met het leesteken erachter.
@@ -2212,6 +2214,11 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-number{backgrou
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-goal{background:#172636;border-color:#2b4f73}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-steps .formula-row::before{background:#152129;border-color:#3b4a54;color:#dbe7f3}
 .lesson-bridge{margin:0 0 12px}
+.feedback{padding:12px 14px}
+.feedback h3{margin:0 0 4px;font-size:1rem}
+.feedback>p{margin:0 0 4px}
+.feedback-more{margin-top:6px}
+.feedback-more>summary{cursor:pointer;font-size:.85rem;font-weight:600}
 /* Compact reading layout. Equations and tables retain their own alignment. */
 body.study-shell[data-page="les"]{--study-sidebar-width:248px}
 body.study-shell[data-page="les"] .layout{max-width:none;align-items:start}

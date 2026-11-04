@@ -30,6 +30,8 @@
     + `|${INDEXED}(?:\\s*/\\s*${ROOT})?`, 'gu');
   // Alleen tussen twee waarden: +€ 48 aan het begin blijft het teken van een bedrag.
   const VALUE_END = /[\p{L}\p{N})\]²³%]$/u, VALUE_START = /^[\p{L}\p{N}(\[√Σ€−]/u;
+  // 1 / 409 is buiten de leerstof een score, geen breuk.
+  const SPACED = /^\d[\d.,]*\s+\/\s+\d/, LEARNING_TEXT = '.section-body,.example,.feedback,.mc-feedback,.mc-stimulus,.formula-guide-card,.sra-term-popup';
   const CANDIDATE = /√|[\])]\s*\/\s*[(\d]|_|\d\s+\/\s+\d|[\p{L}\d²³]\s*\/\s*\(/u;
 
   /* Geeft MathML terug, of null als de tekst geen veilig leesbare formule is. */
@@ -103,12 +105,12 @@
   }
 
   /* Deelt tekst in gewone stukken en stukken {math}. */
-  function split(text) {
+  function split(text, spaced = true) {
     const parts = [];
     let offset = 0;
     for (const match of text.matchAll(FORMULA)) {
       const math = toMathML(match[0]);
-      if (!math) continue;
+      if (!math || (!spaced && SPACED.test(match[0]))) continue;
       parts.push(text.slice(offset, match.index), {math});
       offset = match.index + match[0].length;
     }
@@ -192,7 +194,7 @@
     }
     for (const node of nodes) {
       const whole = node.parentElement.matches('.inline-expression') && node.parentElement.childNodes.length === 1 && toMathML(node.nodeValue);
-      const parts = whole ? [{math: whole}] : split(node.nodeValue);
+      const parts = whole ? [{math: whole}] : split(node.nodeValue, !!node.parentElement.closest(LEARNING_TEXT));
       if (parts) node.replaceWith(...parts.map(part => typeof part === 'string' ? part : element(/<m(?:frac|sqrt)/.test(part.math) && !node.parentElement.closest('.inline-expression') ? `<span class="inline-expression">${part.math}</span>` : part.math)));
     }
     // Een grote wortel met breuk krijgt een eigen regel, met het leesteken erachter.
