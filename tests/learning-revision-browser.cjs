@@ -90,9 +90,9 @@ const server=http.createServer((req,res)=>{
   await page.locator('#uitleg .formula-typeset').first().waitFor();
   // Gemeten aan de positie: de browser meldt automatische marges van een rasteritem als 0px.
   const wide=await page.evaluate(()=>{const main=document.querySelector('#main'),m=main.getBoundingClientRect(),p=main.parentElement.getBoundingClientRect(),cols=getComputedStyle(main.parentElement).gridTemplateColumns.split(' ').map(parseFloat),colLeft=p.left+(cols.length>1?cols[0]:0);
-   return {left:Math.round(m.left-colLeft),right:Math.round(p.right-m.right),rows:[...document.querySelector('#uitleg .formula-typeset').children].map(r=>Math.round(r.getBoundingClientRect().top))};});
+   return {left:Math.round(m.left-colLeft),right:Math.round(p.right-m.right),steps:!!document.querySelector('#uitleg .formula-typeset.formula-steps'),rows:[...document.querySelector('#uitleg .formula-typeset').children].map(r=>Math.round(r.getBoundingClientRect().top))};});
   assert.ok(wide.left>0&&Math.abs(wide.left-wide.right)<=2,'lesinhoud gecentreerd: '+JSON.stringify(wide));
-  assert.equal(new Set(wide.rows).size,1,'formules staan naast elkaar: '+JSON.stringify(wide.rows));
+  assert.equal(new Set(wide.rows).size,wide.steps?wide.rows.length:1,'formules staan in de juiste volgorde: '+JSON.stringify(wide.rows));
   await page.setViewportSize({width:1366,height:950});
   // De uitleg bij een inline breuk blijft met het toetsenbord bereikbaar.
   await page.evaluate(()=>{window.StudyTheme.setMode('light');location.hash='#les/rekenen';});

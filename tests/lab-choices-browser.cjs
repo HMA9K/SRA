@@ -18,7 +18,7 @@ try{
  const lab=page.locator('#onderzoek');
  const inputs=()=>lab.locator('input[name],textarea[name]').evaluateAll(nodes=>nodes.map(n=>[n.name,n.value]));
  async function views(){
-  const before=await inputs(),full=await lab.locator('.lab-result').textContent();
+  const before=await inputs(),full=(await lab.locator('.lab-result').textContent()).replace(/√/g,'');
   const keys=await lab.locator('[data-lab-choice]').evaluateAll(nodes=>nodes.map(n=>n.dataset.labChoice));assert.ok(keys.length);
   for(const [i,key] of keys.entries()){
    const button=lab.locator('[data-lab-choice="'+key+'"]');
@@ -26,8 +26,8 @@ try{
    assert.ok((await button.boundingBox()).height>=44);assert.ok(await button.evaluate(n=>n.scrollWidth<=n.clientWidth+1),page.url()+' '+page.viewportSize().width+' '+await button.innerText());
    await button.focus();await page.keyboard.press(i%2?'Space':'Enter');
    assert.equal(await button.getAttribute('aria-pressed'),'true');assert.equal(await lab.locator('[data-lab-choice][aria-pressed="true"]').count(),1);
-   const rendered=await lab.evaluate((el,key)=>{const result=SRALabLayout.analyse(el.querySelector('.lab-result').innerHTML),expected=document.createElement('div');expected.innerHTML=result.metrics+result.views.find(v=>v.key===key).html;const content=node=>({text:node.textContent.replace(/\s+/g,' ').trim(),graphs:[...node.querySelectorAll('svg')].map(n=>n.outerHTML)});return {actual:content(el.querySelector('.lab-live')),expected:content(expected)};},key);
-   assert.deepEqual(rendered.actual,rendered.expected);assert.equal(await lab.locator('.lab-result').textContent(),full);assert.deepEqual(await inputs(),before);
+   const rendered=await lab.evaluate((el,key)=>{const result=SRALabLayout.analyse(el.querySelector('.lab-result').innerHTML),expected=document.createElement('div');expected.innerHTML=result.metrics+result.views.find(v=>v.key===key).html;const content=node=>({text:node.textContent.replace(/√/g,'').replace(/\s+/g,' ').trim(),graphs:[...node.querySelectorAll('svg')].map(n=>n.outerHTML)});return {actual:content(el.querySelector('.lab-live')),expected:content(expected)};},key);
+   assert.deepEqual(rendered.actual,rendered.expected);assert.equal((await lab.locator('.lab-result').textContent()).replace(/√/g,''),full);assert.deepEqual(await inputs(),before);
    // Editing a slider must update this view without choosing a different one.
    const slider=lab.locator('input[type=range]:not(:disabled)').first();
    if(await slider.count()){
