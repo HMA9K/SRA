@@ -238,6 +238,7 @@
   function annotate() {
     if (!host) return;
     observer?.disconnect();
+    root.SRAFormulaText?.annotate(host);
     host.querySelectorAll('math').forEach(math => { if (!math.closest('a,button,[contenteditable]')) annotateMath(math); });
     host.querySelectorAll('.section-body p,.section-body li,.section-body td,.formula-guide-card p,.formula-guide-card li,.lab-equation,.example li,.question-feedback .feedback,.mc-feedback p,.mc-feedback li').forEach(annotateText);
     formatNotation(host);

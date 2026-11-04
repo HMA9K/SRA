@@ -29,6 +29,7 @@
     frame = requestAnimationFrame(() => {frame = null; position();});
   }
   function open(panel, anchor) {
+    window.SRAFormulaText?.annotate(panel);
     if (active?.panel === panel && active.anchor === anchor) { close(panel); return; }
     close(null, false);
     active = {panel, anchor};
