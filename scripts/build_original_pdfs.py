@@ -1,18 +1,34 @@
-"""Prepare metadata-free copies of original SRA exam PDFs; never change sources."""
+"""Prepare metadata-free copies of original SRA exam PDFs; never change sources.
+
+Een bronbestand met opgaven en uitwerkingen samen wordt gesplitst, zodat de
+opgaven-PDF tijdens het oefenen geen antwoorden bevat.
+"""
 from pathlib import Path
 import hashlib,json
 from pypdf import PdfReader,PdfWriter
 from pypdf.generic import NameObject
 ROOT=Path(__file__).resolve().parents[1]
+def combined():
+ records=json.loads((ROOT/'data/exam-analysis.json').read_text(encoding='utf-8'))['tentamens']
+ parts={}
+ for r in records:
+  if r.get('vraag_paginas'):
+   d,m,y=r['datum'].split('-')
+   parts[y+m+d]={'opgaven':(0,r['vraag_paginas']),'uitwerking':(r['antwoord_vanaf_pagina']-1,None)}
+ return parts
 def build():
- manifest={};proof=[]
+ manifest={};proof=[];parts=combined()
  for folder in sorted((ROOT/'bronnen/tentamens').iterdir()):
   if not folder.is_dir():continue
   entry={'date':folder.name[:4]+'-'+folder.name[4:6]+'-'+folder.name[6:],'questions':{},'solutions':{}}
   for kind,name in [('questions','opgaven'),('solutions','uitwerking')]:
    source=folder/(name+'.pdf')
    if not source.exists():entry[kind]={'url':None,'reason':'Het oorspronkelijke document is niet beschikbaar.'};continue
-   reader=PdfReader(source);writer=PdfWriter();writer.clone_document_from_reader(reader);writer.metadata=None;writer.root_object.pop('/Metadata',None)
+   reader=PdfReader(source);writer=PdfWriter();first,last=parts.get(folder.name,{}).get(name,(0,None));pages=reader.pages[first:last]
+   # append neemt alleen het eigen deel mee; klonen zou de andere pagina's in het bestand laten staan.
+   if folder.name in parts:writer.append(reader,pages=(first,last or len(reader.pages)),import_outline=False)
+   else:writer.clone_document_from_reader(reader)
+   writer.metadata=None;writer.root_object.pop('/Metadata',None)
    for page in writer.pages:
     page.pop('/Metadata',None)
     for annotation in page.get('/Annots',[]):
@@ -20,8 +36,8 @@ def build():
    output=ROOT/'bronnen/original-pdfs'/folder.name/(name+'.pdf');output.parent.mkdir(parents=True,exist_ok=True)
    with output.open('wb') as f:writer.write(f)
    clean=PdfReader(output);assert not clean.metadata
-   assert len(clean.pages)==len(reader.pages)
-   for old,new in zip(reader.pages,clean.pages):
+   assert len(clean.pages)==len(pages)
+   for old,new in zip(pages,clean.pages):
     assert old.mediabox==new.mediabox
     assert old.extract_text()==new.extract_text()
     assert old.get_contents().get_data()==new.get_contents().get_data()

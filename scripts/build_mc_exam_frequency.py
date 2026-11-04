@@ -57,10 +57,10 @@ def build_payload(check_sources=False):
                 image = exam["documents"]["opgaven"][page - 1]
                 if check_sources:
                     assert (ROOT / image).is_file(), image
-                    assert (ROOT / "bronnen/tentamens" / exam["id"] / "opgaven.pdf").is_file(), exam["id"]
+                    assert (ROOT / "bronnen/original-pdfs" / exam["id"] / "opgaven.pdf").is_file(), exam["id"]
                 evidence.append(dict(question=number, displayNumber=question["displayNumber"],
                                      page=page, source=exam["source"],
-                                     href=f"bronnen/tentamens/{exam['id']}/opgaven.pdf#page={page}",
+                                     href=f"bronnen/original-pdfs/{exam['id']}/opgaven.pdf#page={page}",
                                      image=image, reasons=reasons[number]))
             occurrences.append(dict(id=exam["id"], label=exam["date"], date=exam["date"],
                                     questions=sorted(reasons), evidence=evidence,

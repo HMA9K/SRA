@@ -12,7 +12,7 @@ Wijzig inhoud in de bouwmodules onder `scripts/`, nooit uitsluitend in gegeneree
 
 ## Lokale bronnen
 
-Originele cursusbestanden staan lokaal buiten Git. De volledige build verwacht de bronindeling uit `build_content.sources` in de bovenliggende projectmap. In een werkboom kan zonder herinlezen worden gebouwd met `python scripts/package.py --without-sources`, mits de reeds gecontroleerde data en benodigde lokale bronkopieën beschikbaar zijn. `bronnen/tentamens/<datum>/opgaven.pdf` en `uitwerking.pdf` zijn de oorspronkelijke tentamenkopieën. `build_original_pdfs.py` maakt metadata-vrije readerkopieën onder `bronnen/original-pdfs`, zonder het origineel te veranderen. Beide documenten per tentamen zijn vereist voor publicatie.
+Originele cursusbestanden staan lokaal buiten Git. De volledige build verwacht de bronindeling uit `build_content.sources` in de bovenliggende projectmap. Staat een werkboom elders, wijs de bronmap dan aan met de omgevingsvariabele `SRA_BRONMAP`. In een werkboom kan zonder herinlezen worden gebouwd met `python scripts/package.py --without-sources`, mits de reeds gecontroleerde data en benodigde lokale bronkopieën beschikbaar zijn. `bronnen/tentamens/<datum>/opgaven.pdf` en `uitwerking.pdf` zijn de oorspronkelijke tentamenkopieën. `build_original_pdfs.py` maakt metadata-vrije readerkopieën onder `bronnen/original-pdfs`, zonder het origineel te veranderen. Beide documenten per tentamen zijn vereist voor publicatie.
 
 Een volgende uitvoerder moet de werkelijke bronbeschikbaarheid controleren met `npm run test:sources`. Een verwijzing of eerdere overdracht bewijst geen toegang. Gebruik geen absolute gebruikerspaden in gedeelde documenten. Voeg geen volledige cursusboeken aan de website toe.
 

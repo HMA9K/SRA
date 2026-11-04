@@ -10,7 +10,21 @@ Alle beschikbare volledige tentamens uit de aangeleverde map staan in het dashbo
 
 De toegevoegde oorspronkelijke opgaven van 28 oktober 2024 zijn verwerkt als volledig oefententamen, met het officiële antwoordmodel. Ook de overige beschikbare tentamens zijn opgenomen. Inhoudelijk gelijke datumversies zijn afzonderlijk te openen, maar tellen eenmaal mee in de analyse. De oude e1-e6-routes blijven bereikbaar voor bestaande bladwijzers en notities, maar zijn geen toetsen in het nieuwe dashboard.
 
-Het dashboard bevat tien tentamendata en 224 vragen. De analyse telt negen verschillende vraagverzamelingen en 196 vragen. De extra uitwerkingsversies voor oktober 2022 en oktober 2024 zijn geen afzonderlijke tentamens. Bij oktober 2024 blijven de oorspronkelijke beelden intact; het antwoordpaneel licht een drukfout in de ANOVA-tabel, afwijkende figuurnummers en het verschil tussen de formulering van vraag 13 en het officiële interval toe.
+Het dashboard bevat twaalf tentamendata en 267 vragen. De analyse telt elf verschillende vraagverzamelingen en 239 vragen. De extra uitwerkingsversies voor oktober 2022 en oktober 2024 zijn geen afzonderlijke tentamens. Bij oktober 2024 blijven de oorspronkelijke beelden intact; het antwoordpaneel licht een drukfout in de ANOVA-tabel, afwijkende figuurnummers en het verschil tussen de formulering van vraag 13 en het officiële interval toe.
+
+## Een nieuw tentamen toevoegen
+
+Op 4 november 2026 zijn 28 oktober 2025 en 23 maart 2026 op deze manier toegevoegd. Beide bestanden bevatten opgaven en uitwerkingen samen.
+
+1. Zet de PDF in de bronmap en voeg een record toe aan `data/exam-analysis.json`: punten, thema's per vraag, secties, `vraag_paginas`, `antwoord_vanaf_pagina` en bronopmerkingen.
+2. Leg de contextgrenzen vast in `data/exam-question-boundaries.json` en zet kapotte formuleregels recht in `scripts/exam_text_repairs.py`.
+3. Beoordeel iedere vraag in `scripts/answer_audit_records.py` en reken de getallen na in `tests/exam-answer-calculations.py`.
+4. Voeg de rubricering toe aan `scripts/exam_point_rules.py`, de meerkeuzeopties aan `scripts/exam_mc/` en de koppelingen aan `data/mc-exam-frequency-map.json` en `js/exam-study-links.js`.
+5. Werk `RECENT` in `scripts/build_exam_points.py` bij, en de vaste teksten met aantallen tentamens en punten in de lessen en samenvattingen.
+
+Staan opgaven en uitwerkingen in één bronbestand, dan splitst `scripts/build_original_pdfs.py` dat op `vraag_paginas` en `antwoord_vanaf_pagina` in twee PDF's. De knoppen en oefenlinks gebruiken die gesplitste bestanden onder `bronnen/original-pdfs`. De volledige bronkopie blijft in `bronnen/tentamens`, voor de bronhash en het controlerapport.
+
+Vanaf oktober 2025 staan vragen als `1.3) (2 punten)` in de bron. Een PDF uit macOS Quartz wordt met pdfplumber gelezen, omdat pypdf daar geen regeleinden levert.
 
 ## Referenties
 

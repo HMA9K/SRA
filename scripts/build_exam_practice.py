@@ -2,6 +2,8 @@
 from pathlib import Path
 from copy import deepcopy
 import json,html,hashlib
+from exam_mc.march_2026 import ROWS as MARCH_2026
+from exam_mc.october_2025 import ROWS as OCTOBER_2025
 from exam_mc.march_2025 import ROWS as MARCH_2025
 ROOT=Path(__file__).resolve().parents[1]
 from exam_mc.october_2024 import ROWS as OCTOBER_2024
@@ -12,8 +14,9 @@ from exam_mc.october_2022 import ROWS as OCTOBER_2022
 from exam_mc.march_2022 import ROWS as MARCH_2022
 from exam_mc.november_2021 import ROWS as NOVEMBER_2021
 from exam_mc.march_2020 import ROWS as MARCH_2020
-AUTHORED={'20250317':MARCH_2025,'20241028':OCTOBER_2024,'20240318':MARCH_2024,'20231030':OCTOBER_2023,'20230315':MARCH_2023,'20221031':OCTOBER_2022,'20220316':MARCH_2022,'20211101':NOVEMBER_2021,'20200323':MARCH_2020}
+AUTHORED={'20260323':MARCH_2026,'20251028':OCTOBER_2025,'20250317':MARCH_2025,'20241028':OCTOBER_2024,'20240318':MARCH_2024,'20231030':OCTOBER_2023,'20230315':MARCH_2023,'20221031':OCTOBER_2022,'20220316':MARCH_2022,'20211101':NOVEMBER_2021,'20200323':MARCH_2020}
 DEPENDENCIES={('20231030',5):[4],('20231030',12):[11],('20230315',2):[1],('20230315',4):[3],('20230315',12):[11],('20230315',16):[14],('20241028',2):[1],('20241028',6):[5],('20240318',3):[1],('20240318',7):[6],('20240318',15):[12,14],('20250317',6):[5],('20250317',8):[7],('20250317',12):[11],('20250317',18):[13,14]}
+DEPENDENCIES.update({('20251028',2):[1],('20251028',8):[7],('20251028',14):[13],('20251028',21):[19],('20260323',2):[1],('20260323',8):[7],('20260323',14):[13]})
 DEPENDENCIES.update({('20221031',3):[2],('20221031',6):[5],('20221031',16):[15],('20220316',2):[1],('20220316',3):[1,2],('20211101',2):[1],('20211101',7):[6],('20200323',3):[2],('20200323',7):[2,3,6],('20200323',20):[19]})
 def read_data(path,marker):return json.loads((ROOT/path).read_text(encoding='utf-8').split(marker,1)[1].rstrip(';\n'))
 def build():

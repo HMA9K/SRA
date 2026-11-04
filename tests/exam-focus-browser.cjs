@@ -68,7 +68,7 @@ const server=http.createServer((req,res)=>{
     }
    }
   }
-  const report=await page.request.get(base+'/docs/tentamen-puntenanalyse-2026-10-25.md');assert.equal(report.status(),200);assert.match(await report.text(),/900 punten/);
+  const report=await page.request.get(base+'/docs/tentamen-puntenanalyse-2026-10-25.md');assert.equal(report.status(),200);assert.match(await report.text(),/1100 punten/);
   assert.deepEqual(errors,[]);console.log(JSON.stringify({ok:true,openedSections:sections,viewports:[1366,390,320],themes:['light','dark'],checks:['toetsenbord open/dicht','tabellen horizontaal bereikbaar','vijf figuren geladen','open uitwerkingen','puntenrapport bereikbaar']}));
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

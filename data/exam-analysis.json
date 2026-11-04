@@ -1,18 +1,18 @@
 {
-  "methode": "Alle tien beschikbare tentamendata; negen verschillende vraagverzamelingen. Maart en juni 2020 bevatten dezelfde vragen en tellen voor themafrequenties eenmaal. Expliciete vragen/deelvragen; thema’s overlappen; geen puntentoerekening per thema.",
+  "methode": "Alle twaalf beschikbare tentamendata; elf verschillende vraagverzamelingen. Maart en juni 2020 bevatten dezelfde vragen en tellen voor themafrequenties eenmaal. Expliciete vragen/deelvragen; thema’s overlappen; geen puntentoerekening per thema.",
   "frequenties": {
-    "Betrouwbaarheidsinterval steekproef": 9,
-    "Stratificatie": 9,
-    "Verklaarde variatie / modelvergelijking": 9,
-    "Hypothesen / significantie": 9,
-    "Uitschieters / invloed": 9,
-    "Normaliteit": 9,
-    "Heteroscedasticiteit": 8,
-    "Multicollineariteit": 9,
-    "Variabelenselectie": 9,
-    "Niet-lineaire modellen": 7,
-    "Voorspellingsinterval regressie": 5,
-    "Benodigde steekproefomvang": 4
+    "Betrouwbaarheidsinterval steekproef": 11,
+    "Stratificatie": 11,
+    "Verklaarde variatie / modelvergelijking": 11,
+    "Hypothesen / significantie": 11,
+    "Uitschieters / invloed": 11,
+    "Normaliteit": 11,
+    "Heteroscedasticiteit": 10,
+    "Multicollineariteit": 11,
+    "Variabelenselectie": 10,
+    "Niet-lineaire modellen": 9,
+    "Voorspellingsinterval regressie": 6,
+    "Benodigde steekproefomvang": 6
   },
   "tentamens": [
     {
@@ -1065,6 +1065,267 @@
       ],
       "vraag_paginas": 10,
       "antwoord_vanaf_pagina": 11
+    },
+    {
+      "datum": "28-10-2025",
+      "bron": "SRA 20252810 Vragen_plus_uitwerkingen.pdf",
+      "uitwerking": null,
+      "aantal_vragen": 22,
+      "punten": {
+        "1": 9,
+        "2": 4,
+        "3": 2,
+        "4": 6,
+        "5": 3,
+        "6": 2,
+        "7": 3,
+        "8": 6,
+        "9": 3,
+        "10": 6,
+        "11": 3,
+        "12": 6,
+        "13": 11,
+        "14": 3,
+        "15": 7,
+        "16": 3,
+        "17": 6,
+        "18": 3,
+        "19": 4,
+        "20": 3,
+        "21": 4,
+        "22": 3
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          1,
+          4
+        ],
+        "Stratificatie": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          11,
+          19,
+          20
+        ],
+        "Hypothesen / significantie": [
+          10,
+          18,
+          22
+        ],
+        "Uitschieters / invloed": [
+          13,
+          14
+        ],
+        "Normaliteit": [
+          12,
+          15
+        ],
+        "Heteroscedasticiteit": [
+          15
+        ],
+        "Multicollineariteit": [
+          16
+        ],
+        "Variabelenselectie": [],
+        "Niet-lineaire modellen": [
+          19,
+          21
+        ],
+        "Voorspellingsinterval regressie": [],
+        "Benodigde steekproefomvang": [
+          2
+        ]
+      },
+      "duur_minuten": null,
+      "herstart_nummering": true,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 – Schattingsmethoden en stratificatie",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 8,
+          "description": "Directe schatter, uitbreiding van de steekproef, verschilschatter, evenredige allocatie en gestratificeerde bovengrens."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 – Regressie",
+          "points": 65,
+          "firstQuestion": 9,
+          "lastQuestion": 22,
+          "description": "Hypothesen, diagnose van uitbijters en invloed, aannames, multicollineariteit, voorspellen, niet-lineaire modellen en toetsen."
+        }
+      ],
+      "vraag_paginas": 9,
+      "antwoord_vanaf_pagina": 10,
+      "bronopmerkingen": [
+        {
+          "questions": [
+            1
+          ],
+          "text": "Drukfout in het antwoordmodel: er staat t0,01[110], maar voor een tweezijdig 95%-interval is t0,025[110] = 1,982 bedoeld. De uitkomst klopt."
+        },
+        {
+          "questions": [
+            7,
+            8
+          ],
+          "text": "De tabel noemt de kolom ∑wᵢ en het antwoordmodel deelt door nᵢ, terwijl de legenda onder de tabel “gemiddelde werkelijke waarde” zegt. De legenda is onjuist: de kolom bevat steekproefsommen."
+        },
+        {
+          "questions": [
+            20
+          ],
+          "text": "De vraag noemt R², het antwoordmodel gebruikt adjusted R². De conclusie blijft gelijk: 0,368 tegenover 0,353, en ook met R² 0,375 tegenover 0,367."
+        }
+      ]
+    },
+    {
+      "datum": "23-03-2026",
+      "bron": "SRA 20260323 Vragen en antwoorden.pdf",
+      "uitwerking": null,
+      "aantal_vragen": 21,
+      "punten": {
+        "1": 9,
+        "2": 4,
+        "3": 2,
+        "4": 6,
+        "5": 3,
+        "6": 2,
+        "7": 3,
+        "8": 6,
+        "9": 3,
+        "10": 3,
+        "11": 6,
+        "12": 4,
+        "13": 3,
+        "14": 4,
+        "15": 9,
+        "16": 7,
+        "17": 12,
+        "18": 4,
+        "19": 4,
+        "20": 3,
+        "21": 3
+      },
+      "steekproeven": 35,
+      "regressie": 65,
+      "themas": {
+        "Betrouwbaarheidsinterval steekproef": [
+          1,
+          4
+        ],
+        "Stratificatie": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "Verklaarde variatie / modelvergelijking": [
+          13,
+          18
+        ],
+        "Hypothesen / significantie": [
+          11
+        ],
+        "Uitschieters / invloed": [
+          15
+        ],
+        "Normaliteit": [
+          16
+        ],
+        "Heteroscedasticiteit": [
+          12,
+          16
+        ],
+        "Multicollineariteit": [
+          20
+        ],
+        "Variabelenselectie": [
+          19,
+          21
+        ],
+        "Niet-lineaire modellen": [
+          13,
+          14
+        ],
+        "Voorspellingsinterval regressie": [
+          17
+        ],
+        "Benodigde steekproefomvang": [
+          2
+        ]
+      },
+      "duur_minuten": null,
+      "herstart_nummering": true,
+      "secties": [
+        {
+          "id": "opgave-1",
+          "number": 1,
+          "title": "Opgave 1 – Steekproeven",
+          "points": 35,
+          "firstQuestion": 1,
+          "lastQuestion": 8,
+          "description": "Verschilschatter, uitbreiding van de steekproef, regressieschatter, Neyman-allocatie en gestratificeerde ondergrens."
+        },
+        {
+          "id": "opgave-2",
+          "number": 2,
+          "title": "Opgave 2 – Regressieanalyse",
+          "points": 65,
+          "firstQuestion": 9,
+          "lastQuestion": 21,
+          "description": "Correlatie, hypothesen, spreidingsdiagrammen, niet-lineaire modellen, diagnose, voorspellingsinterval en modeluitbreiding."
+        }
+      ],
+      "vraag_paginas": 7,
+      "antwoord_vanaf_pagina": 8,
+      "bronopmerkingen": [
+        {
+          "questions": [
+            1
+          ],
+          "text": "Verwijzing in het antwoordmodel: de grenzen staan bij Formule 3, maar voor de verschilschatter hoort Formule 8. Vraag 1.4 gebruikt die wel. De uitkomst klopt."
+        },
+        {
+          "questions": [
+            4
+          ],
+          "text": "Drukfouten in het antwoordmodel. Er moet staan: 0,735 × (46.880.000 − 5.750 × 8.000) en 43.372.250 + 646.800 = 44.019.050. Ook ontbreekt in de ingevulde regel de factor √(1 − 0,98²), die wel in de uitkomst 324.178,2 zit."
+        },
+        {
+          "questions": [
+            15
+          ],
+          "text": "Figuurnummers in het antwoordmodel: Afbeelding 3.2 bestaat niet. Bedoeld is Afbeelding 4.1, de residuentabel."
+        },
+        {
+          "questions": [
+            18
+          ],
+          "text": "De vraag verwijst naar Afbeelding 3.1. Die bestaat niet; bedoeld is Afbeelding 3."
+        },
+        {
+          "questions": [
+            19
+          ],
+          "text": "De opgave geeft 4 punten, het antwoordmodel noemt 3. Zonder dat ene punt telt het model op tot 99. Hier gelden de 4 punten uit de opgave."
+        },
+        {
+          "questions": [
+            21
+          ],
+          "text": "Het antwoordmodel noemt twee uitbijters in x, maar bij vraag 2.7 zijn het er drie: waarnemingen 20, 57 en 123."
+        }
+      ]
     }
   ]
 }

@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),asse
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),ctx={window:{}};
 for(const f of ['data/exams.js','data/cirrus-exams.js'])vm.runInNewContext(read(f),ctx);
 const catalog=ctx.window.SRA_CIRRUS_EXAMS, originals=ctx.window.SRAExamData.exams,report=JSON.parse(read('data/answer-audit.json'));
-assert.equal(report.totalQuestions,224);assert.equal(report.uniqueQuestions,196);
+assert.equal(report.totalQuestions,267);assert.equal(report.uniqueQuestions,239);
 let count=0;
 for(const e of catalog){
  const source=originals.find(x=>x.id===e.id),row=report.exams.find(x=>x.id===e.id);
@@ -20,7 +20,7 @@ for(const e of catalog){
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,s.file))).digest('hex'),s.sha256);
  }
 }
-assert.equal(count,224);
+assert.equal(count,267);
 const js=read('js/cirrus.js'),start=js.indexOf('  function auditedAnswer('),end=js.indexOf('  function ownAnswer(',start);
 assert.ok(start>0&&end>start);
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -40,4 +40,4 @@ assert.equal(catalog.find(e=>e.id==='20241028').questions[12].answerAudit.status
 assert.match(catalog.find(e=>e.id==='20240318').questions[16].answerAudit.note,/inconsistent/);
 assert.equal(catalog.find(e=>e.id==='20200323').questions[16].answerAudit.status,'B');
 assert.equal(catalog.find(e=>e.id==='20200626').questions[16].answerAudit.status,'N');
-console.log('OK: 224 inhoudscontroles, bronhashes, juiste vraagkoppeling, correcties bij oude pogingen, behoud antwoorden/scoring, geen antwoordlekkage.');
+console.log('OK: 267 inhoudscontroles, bronhashes, juiste vraagkoppeling, correcties bij oude pogingen, behoud antwoorden/scoring, geen antwoordlekkage.');

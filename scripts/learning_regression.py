@@ -675,7 +675,7 @@ def enhance(lessons, sources):
         [ref('spss',28,'SPSS-uitwerkingen, college 7, PDF 28–36'),ref('attentie',7,'Attentiepunten, backward, PDF 7')])
 
     add(L['validatie'], sources, 'Een sterke fit in de training kan buiten de training tegenvallen',
-        '<p><strong>Niet getentamineerd in de negen onderzochte tentamens.</strong> '
+        '<p><strong>Niet getentamineerd in de elf onderzochte tentamens.</strong> '
         'Validatie met testset en MSPR blijft aanvullende programmastof. De kern is eenvoudig: '
         'beoordeel het model ook op gegevens die niet hielpen om het te kiezen.</p>'
         '<p>Gebruik de training voor coëfficiënten, selectie en transformaties. Houd dat '
@@ -726,7 +726,7 @@ def enhance(lessons, sources):
             ['Modelbouw','Selectiecriterium, één wijziging per stap, opnieuw schatten, overlap en bruikbaarheid beoordelen.'],
             ['Validatie','Vast model op ongebruikte gegevens, MSPR correct berekenen en met passende MSE vergelijken.'],
         ])
-        + '<p>Validatie in dit overzicht is aanvullende programmastof: testset en MSPR kwamen niet voor in de negen onderzochte tentamens.</p><p>Oefen eerst met markeringen bij de relevante cellen en daarna met volledige '
+        + '<p>Validatie in dit overzicht is aanvullende programmastof: testset en MSPR kwamen niet voor in de elf onderzochte tentamens.</p><p>Oefen eerst met markeringen bij de relevante cellen en daarna met volledige '
         'ongemarkeerde uitvoer. Gebruik zowel open berekeningen als MC-vragen: de eerste '
         'controleren je gehele redenering, de tweede helpen veelgemaakte interpretatiefouten herkennen.</p>',
         [ref('programma',4,'Onderwijsprogramma, toetsing, PDF 4'),ref('exam2025',9,'Tentamen 17 maart 2025, vragen 19–21, PDF 9'),
