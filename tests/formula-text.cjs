@@ -20,4 +20,8 @@ assert.equal(math(split('s = [Σw² − (Σw)²/n]/(n − 1)')),1);
 for(const text of ['De √-toets op je rekenmachine','√𝑀𝑆𝐸 uit de pdf','(zie bijlage)/(tabel)','Gebruik √nog niet','en/of'])assert.equal(split(text),null,text);
 const course=fs.readFileSync(path.join(__dirname,'../data/course.js'),'utf8');
 assert.ok(!/√\(<span/.test(course)&&!/√\(\\"?<span/.test(course),'Een wortel is opgeknipt in losse tekstblokken');
+global.window={};require('../data/exams.js');
+for(const exam of window.SRAExamData.exams)for(const field of ['pageText','answerText'])(exam[field]||[]).forEach((page,index)=>page.split('\n').forEach(line=>{
+ if(line.includes('√'))assert.ok(!(split(line)||[line]).some(part=>typeof part==='string'&&part.includes('√')),`${exam.id} ${field} p. ${index+1}: ${line}`);
+}));
 console.log('OK: wortels en samengestelde breuken worden formules; gewone tekst blijft tekst.');
