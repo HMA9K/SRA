@@ -21,6 +21,14 @@
   handle.onpointerup=handle.onpointercancel=e=>{delete handle.dataset.dragging;if(handle.hasPointerCapture(e.pointerId))handle.releasePointerCapture(e.pointerId);remember();};
   handle.onkeydown=e=>{let value=width;if(e.key==='ArrowLeft')value-=5;else if(e.key==='ArrowRight')value+=5;else if(e.key==='Home')value=25;else if(e.key==='End')value=55;else return;e.preventDefault();resize(value);remember();};
   update();
+  // Figuren boven het gemarkeerde stuk laden later; blijf erbij totdat de lezer zelf scrolt.
+  const current=panel.querySelector('.mc-case-current');
+  if(current?.previousElementSibling){
+   const reveal=()=>{panel.scrollTop+=current.getBoundingClientRect().top-panel.getBoundingClientRect().top-8;};
+   const stop=()=>panel.removeEventListener('load',reveal,true);
+   reveal();panel.addEventListener('load',reveal,true);
+   for(const type of ['wheel','touchstart','pointerdown','keydown'])panel.addEventListener(type,stop,{once:true});
+  }
  }
  window.SRAMCCase={mount};
 })();
