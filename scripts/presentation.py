@@ -137,23 +137,56 @@ FORMULAS = {
 }
 
 LEGENDS = {
- 'rekenen':'Σ betekent optellen; wᵢ is waarde i; w̄ is het gemiddelde; n is het aantal waarden; s² is de variantie; s is de standaardafwijking.',
- 'onzekerheid':'± betekent: één keer aftrekken voor de ondergrens en één keer optellen voor de bovengrens. E is de halve intervalbreedte.',
- 'mpu':'N = populatieomvang; n = steekproefomvang; w̄ = gemiddelde werkelijke waarde; s_w = standaardafwijking; t = kritieke tabelwaarde. Het dakje op W betekent geschat.',
- 'verschil':'e = boekwaarde minus werkelijke waarde; B = bekend boekwaardetotaal; s_e = spreiding van de verschillen; s_V = standaardfout van het geschatte totaal.',
- 'quotient':'q = goedratio; R_bw = correlatie tussen b en w; s_b en s_w = standaardafwijkingen; s_Q = standaardfout van het geschatte totaal.',
- 'regressieschatter':'b₁ = helling; R_bw = correlatie; B = bekend boekwaardetotaal. De factor √(1 − R²_bw) verlaagt de standaardfout ten opzichte van MPU.',
- 'steekproefomvang':'E = toegestane marge aan één kant; t = kritieke waarde; N = populatieomvang; s² = de variantie passend bij de schatter; γ = tussenuitkomst.',
- 'stratificatie':'Index i verwijst naar stratum i. Nᵢ = groepsomvang; nᵢ = controles; sᵢ = spreiding. W_top is het bekende werkelijke totaal van het volledig gecontroleerde topstratum.',
- 'regressielijn':'β = onbekende populatiecoëfficiënt; b = geschatte coëfficiënt; ŷ = voorspelde y; ε = storing; eᵢ = residu bij waarneming i.',
- 'anova':'SSR = verklaarde kwadratensom; SSE = residuele kwadratensom; TotalSS = totale kwadratensom; MSR en MSE zijn kwadratensommen gedeeld door hun vrijheidsgraden.',
- 'toetsen':'bⱼ = geschatte coëfficiënt; βⱼ,₀ = waarde onder H₀; s_bⱼ = standaardfout van die coëfficiënt; k = aantal verklarende variabelen, zonder constante.',
- 'diagnostiek':'MD = Mahalanobis Distance; CD = Cook’s Distance. Een streep boven MD of CD betekent gemiddelde; s is de standaardafwijking.',
- 'voorspellen':'x₀ = nieuwe x; x̄ = gemiddelde x; s_x = standaardafwijking van x; s_e = residuele standaardfout; t hoort hier bij n − 2 vrijheidsgraden.',
- 'meervoudig':'k = aantal verklarende variabelen; bⱼ is het effect bij gelijkblijvende overige variabelen. R²_adj corrigeert voor het aantal verklarende variabelen.',
- 'modelbouw':'R²ᵢ hoort bij de hulpregressie van xᵢ op de overige verklarende variabelen. In de F-formule voor geneste modellen, verderop in deze les, gaat het om precies één extra variabele.',
- 'validatie':'n_test = aantal testwaarnemingen; yᵢ = werkelijk gemeten testwaarde; ŷᵢ = voorspelling met het model uit de trainingsset.',
+ 'rekenen':'wᵢ = waarde i; w̄ = gemiddelde; n = aantal waarden; s² = variantie; s = standaardafwijking',
+ 'onzekerheid':'E = halve intervalbreedte',
+ 'mpu':'N = populatieomvang; n = steekproefomvang; w̄ = gemiddelde werkelijke waarde; s_w = standaardafwijking; t = kritieke tabelwaarde',
+ 'verschil':'e = boekwaarde minus werkelijke waarde; B = bekend boekwaardetotaal; s_e = spreiding van de verschillen; s_V = standaardfout van het geschatte totaal',
+ 'quotient':'q = goedratio; R_bw = correlatie tussen b en w; s_b en s_w = standaardafwijkingen; s_Q = standaardfout van het geschatte totaal',
+ 'regressieschatter':'b₁ = helling; R_bw = correlatie; B = bekend boekwaardetotaal',
+ 'steekproefomvang':'E = toegestane marge aan één kant; t = kritieke waarde; N = populatieomvang; s² = de variantie passend bij de schatter; γ = tussenuitkomst',
+ 'stratificatie':'Nᵢ = groepsomvang; nᵢ = controles; sᵢ = spreiding; W_top = bekend werkelijk totaal van het topstratum',
+ 'regressielijn':'β = onbekende populatiecoëfficiënt; b = geschatte coëfficiënt; ŷ = voorspelde y; ε = storing; eᵢ = residu bij waarneming i',
+ 'anova':'SSR = verklaarde kwadratensom; SSE = residuele kwadratensom; TotalSS = totale kwadratensom',
+ 'toetsen':'bⱼ = geschatte coëfficiënt; βⱼ,₀ = waarde onder H₀; s_bⱼ = standaardfout van die coëfficiënt; k = aantal verklarende variabelen',
+ 'diagnostiek':'MD = Mahalanobis Distance; CD = Cook’s Distance; s = standaardafwijking',
+ 'voorspellen':'x₀ = nieuwe x; x̄ = gemiddelde x; s_x = standaardafwijking van x; s_e = residuele standaardfout; t = kritieke tabelwaarde',
+ 'meervoudig':'k = aantal verklarende variabelen; bⱼ = geschatte coëfficiënt; R²_adj = gecorrigeerde verklaarde variatie',
+ 'modelbouw':'VIFᵢ = variantie-inflatiefactor; R²ᵢ = verklaarde variatie in de hulpregressie',
+ 'validatie':'n_test = aantal testwaarnemingen; yᵢ = werkelijk gemeten testwaarde; ŷᵢ = voorspelling met het model',
 }
+
+# Per formuleblok wat de symbolenlijst zelf niet zegt; de plek volgt het blok waar de formule staat.
+LEGEND_NOTES = {
+ 'onzekerheid':['E is de halve intervalbreedte.'],
+ 'mpu':['Het dakje op W betekent geschat.'],
+ 'regressieschatter':['','De factor √(1 − R²_bw) verlaagt de standaardfout ten opzichte van MPU.'],
+ 'stratificatie':['Index i verwijst naar stratum i.','W_top is het bekende werkelijke totaal van het volledig gecontroleerde topstratum.'],
+ 'anova':['MSR en MSE zijn kwadratensommen gedeeld door hun vrijheidsgraden.'],
+ 'toetsen':['k telt de verklarende variabelen, zonder constante.'],
+ 'diagnostiek':['Een streep boven MD of CD betekent gemiddelde.'],
+ 'voorspellen':['t hoort hier bij n − 2 vrijheidsgraden.'],
+ 'meervoudig':['bⱼ is het effect bij gelijkblijvende overige variabelen.','R²_adj corrigeert voor het aantal verklarende variabelen.'],
+ 'modelbouw':['R²ᵢ hoort bij de hulpregressie van xᵢ op de overige verklarende variabelen.','In deze F-formule voor geneste modellen gaat het om precies één extra variabele.'],
+ 'validatie':['ŷᵢ komt uit het model dat op de trainingsset is geschat.'],
+}
+
+
+def symbol_list(lesson_id):
+    """Symbolen zonder scripts, zoals in de leesversie; js/formula-help.js maakt hier de lijst per formule van."""
+    rows = ''.join(f'<dt>{html.escape(symbol)}</dt><dd>{html.escape(meaning)}</dd>'
+                   for symbol, meaning in (part.split(' = ', 1) for part in LEGENDS[lesson_id].split('; ')))
+    return f'<div class="symbols" data-no-terms data-no-formula-text><dl>{rows}</dl></div>'
+
+
+def note_list(text):
+    """Eén opmerking per regel; de punt in 'SPSS Sig.' sluit geen zin af."""
+    notes = [note for note in re.split(r'(?<!Sig\.)(?<=\.)\s+', text.strip()) if note]
+    return ('<ul class="symbols-notes">' + ''.join(f'<li>{html.escape(note, quote=False)}</li>' for note in notes) + '</ul>') if notes else ''
+
+
+def legend_html(lesson_id, extra=''):
+    return symbol_list(lesson_id) + note_list(' '.join(LEGEND_NOTES.get(lesson_id, [])) + extra)
+
 
 def mathml(content, inline=False):
     result = f'<math xmlns="http://www.w3.org/1998/Math/MathML" display="{"inline" if inline else "block"}">{row(content)}</math>'
@@ -437,10 +470,11 @@ def enhance(lessons):
                 raise ValueError(f'Unmapped formula in {lesson["id"]}')
             used+=1
             out=formula_block(formulas)
+            notes=LEGEND_NOTES.get(lesson['id'],[])
             if used==1:
-                legend=LEGENDS[lesson['id']]
-                note=' '.join(part.strip().rstrip('.')+'.' for part in re.split(r'(?<=\.)\s+|;\s*',legend) if 'betekent' in part or part.startswith('De factor'))
-                out+=f'<p class="symbols" data-note="{html.escape(note,quote=True)}">{legend}</p>'
+                out+=symbol_list(lesson['id'])
+            if used<=len(notes):
+                out+=note_list(notes[used-1])
             return out
         for section in lesson['sections']:
             section['html']=re.sub(r'<div class="formula">(.*?)</div>',replace,section['html'],flags=re.S)

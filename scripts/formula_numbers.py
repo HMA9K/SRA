@@ -28,7 +28,7 @@ NUMBERS = {
     'quotient': {'Goedratio': number(12), 'Puntschatting': number(16), 'Resterende spreiding': number(13), 'Standaardfout': number(17)},
     'regressieschatter': {'Helling': number(19), 'Puntschatting': number(21), 'Standaardfout': number(22), 'Vergelijk met MPU': number(23)},
     'steekproefomvang': {'Tussenstap': number(5, 11), 'Benodigde omvang': number(5, 11)},
-    'stratificatie': {'Evenredig': number(26), 'Neyman': number(25), 'Totaalschatting': number(28),
+    'stratificatie': {'Evenredig': number(26), 'Neyman': number(25), 'Totaalschatting': derived(28),
                       'Gecombineerde variantie': number(29), 'Interval': number(27)},
     'regressielijn': {'Populatiemodel': number(30), 'Geschatte lijn': number(31), 'Residu': NOT_ON_SHEET, 'Helling': number(32),
                       'Constante': number(32), 'Residuele variantie': number(34)},
