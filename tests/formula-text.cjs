@@ -26,7 +26,7 @@ for(const text of ['LN_MORT en LN_ELECT','ln_dens','ZRE_1 en MAH_1','College8_da
 const course=fs.readFileSync(path.join(__dirname,'../data/course.js'),'utf8');
 assert.ok(!/√\(<span/.test(course)&&!/√\(\\"?<span/.test(course),'Een wortel is opgeknipt in losse tekstblokken');
 const numbers=fs.readFileSync(path.join(__dirname,'../data/course.js'),'utf8');
-assert.ok(numbers.includes('Afgeleid van (')&&numbers.includes('formula-goal'),'Formulenummers en doelen ontbreken');
+assert.ok(numbers.includes('Afgeleid van formule ')&&numbers.includes('formula-goal'),'Formulenummers en doelen ontbreken');
 global.window={};require('../data/exams.js');
 for(const exam of window.SRAExamData.exams)for(const field of ['pageText','answerText'])(exam[field]||[]).forEach((page,index)=>page.split('\n').forEach(line=>{
  if(line.includes('√'))assert.ok(!(split(line)||[line]).some(part=>typeof part==='string'&&part.includes('√')),`${exam.id} ${field} p. ${index+1}: ${line}`);

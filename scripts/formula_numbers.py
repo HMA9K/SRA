@@ -14,7 +14,7 @@ def number(*values):
 
 
 def derived(*values):
-    return 'Afgeleid van ' + ' en '.join(f'({value})' for value in values)
+    return 'Afgeleid van ' + number(*values).lower()
 
 
 # Lesnaam, formulelabel. Zelfde label in uitleg en formulepagina betekent dezelfde formule.
