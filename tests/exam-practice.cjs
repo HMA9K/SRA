@@ -7,6 +7,9 @@ vm.runInContext(fs.readFileSync('data/exam-practice.js','utf8'),context);
 vm.runInContext(fs.readFileSync('js/mc-state.js','utf8'),context);
 const {SRAMCData:data,SRAExamPractice:practice,SRA_CIRRUS_EXAMS:exams,SRAMCState}=context.window;
 const coverage=JSON.parse(fs.readFileSync('docs/exam-practice-coverage.json'));
+const casePart=number=>practice.questions.find(q=>q.sourceExamId==='20211101'&&q.sourceQuestionNumber===String(number)||q.id==='exam-20211101-vraag-'+number).caseHtml;
+assert.ok(!casePart(1).includes('Filiaal Zwolle'),'Vraag 1 toont geen latere casus');
+assert.match(casePart(3),/mc-case-current.*Filiaal Zwolle/s,'Vraag 3 markeert het stuk erboven');assert.ok(casePart(3).includes('Filiaal Groningen'),'Eerdere casus blijft staan');assert.ok(!casePart(3).includes('Gezien de relatief'),'Vraag 3 toont geen latere casus');
 assert.equal(coverage.total,267);assert.equal(coverage.mapped,267);assert.equal(coverage.questions.length,267);
 assert.equal(JSON.stringify({...data,topics:data.topics.map(t=>({...t,questions:t.questions.filter(q=>!q.sourceExamId)}))}),before,'Existing questions and answer indices must stay intact');
 const ids=new Set(practice.questions.map(q=>q.id));assert.equal(ids.size,practice.questions.length);
@@ -17,7 +20,8 @@ for(const exam of exams)for(const source of exam.questions){
 }
 for(const q of practice.questions){
  const exam=exams.find(e=>e.id===q.sourceExamId),source=exam.questions.find(x=>x.id===q.sourceQuestionId),section=exam.sections.find(s=>s.id===source.sectionId);
- assert.equal(q.caseHtml,section.caseHtml);assert.equal(q.originalPrompt,source.prompt);assert.equal(q.originalPromptHtml,source.promptHtml);assert.equal(q.officialSolutionHtml,source.solutionHtml);assert.equal(q.sourceNote,source.answerAudit.note);
+ assert.equal((q.caseHtml.match(/mc-case-current"/g)||[]).length,1,q.id);const shownCase=q.caseHtml.replace(/<p class="mc-case-note">.*?<\/p>/,'').replace(/<section class="mc-case-current"[^>]*><p class="mc-case-current-label">.*?<\/p>/,'').replace(/<\/section>$/,'');assert.ok(section.caseHtml.startsWith(shownCase),q.id+': casus is een begin van de opgave');
+ assert.equal(q.originalPrompt,source.prompt);assert.equal(q.originalPromptHtml,source.promptHtml);assert.equal(q.officialSolutionHtml,source.solutionHtml);assert.equal(q.sourceNote,source.answerAudit.note);
  if(source.hasSourceVisual)assert.equal(q.sourceVisualHtml,source.promptHtml);
  assert.equal(q.options.length,4);assert.equal(new Set(q.options).size,4);assert.ok(q.correct>=0&&q.correct<4);assert.ok(q.explanation.includes(q.options[q.correct]));
  for(const field of ['signals','meaning','approach','answer'])assert.ok(q.recognition[field].length>15);
