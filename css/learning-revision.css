@@ -79,6 +79,7 @@ body.study-shell[data-page="les"] .lesson-bottom{position:static;padding:14px 0;
 /* Formules in de lopende tekst: zelfde lettertype, grootte en gewicht als de tekst. */
 math[display="inline"]{display:inline math;math-style:normal;font-size:1em;white-space:nowrap;padding:0 .12em;background:#eef3f8;border-radius:3px}
 .inline-expression{display:inline-block;max-width:100%;word-spacing:normal;text-align:left;hyphens:none;background:#eef3f8;border-radius:3px;padding:0 .12em}
+.inline-expression:has(mfrac,msqrt){padding:.14em .2em;vertical-align:middle}
 .inline-value{font-variant-numeric:tabular-nums;white-space:nowrap}
 .inline-expression math[display="inline"]{font-size:1em;background:transparent;padding:0}
 /* Breuken en wortels in kleine tabeltekst blijven leesbaar: teller en noemer worden anders te klein. */
