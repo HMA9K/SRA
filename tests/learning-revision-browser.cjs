@@ -15,7 +15,7 @@ const server=http.createServer((req,res)=>{
   page.on('pageerror',e=>errors.push(String(e)));
   const base=process.env.TEST_BASE_URL||'http://127.0.0.1:'+server.address().port;
   await page.goto(base+'/index.html#les/stratificatie');await page.locator('.lesson-source-title').waitFor({state:'attached'});
-  const course=await page.evaluate(()=>window.SRA.lessons.map(l=>({id:l.id,sections:l.sections.length}))),mc=await page.evaluate(()=>window.SRAMCData.topics.map(t=>({id:t.id,questions:t.questions.map(q=>({id:q.id,stimulus:!!q.stimulusHtml,correct:q.correct,prompt:q.prompt}))})));
+  const course=await page.evaluate(()=>window.SRA.lessons.map(l=>({id:l.id,sections:l.sections.filter((s,i)=>i||/<table/.test(s.html)).length}))),mc=await page.evaluate(()=>window.SRAMCData.topics.map(t=>({id:t.id,questions:t.questions.map(q=>({id:q.id,stimulus:!!q.stimulusHtml,correct:q.correct,prompt:q.prompt}))})));
   const overflow=()=>page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
   const duplicates=()=>page.evaluate(()=>[...document.querySelectorAll('section.section,.formula-guide-card')].flatMap(block=>{
    const ids=[...block.querySelectorAll('[data-sra-auto-term]')].map(e=>e.dataset.sraTerm);
@@ -27,9 +27,9 @@ const server=http.createServer((req,res)=>{
    await page.evaluate(theme=>window.StudyTheme.setMode(theme),theme);
    for(const lesson of course){
     await page.evaluate(id=>location.hash='#les/'+id,lesson.id);
-    await page.waitForFunction(id=>document.querySelector('.lesson-top h1')?.textContent.endsWith(window.SRA.lessons.find(l=>l.id===id).title)&&location.hash==='#les/'+id&&document.querySelectorAll('#uitleg>section').length===window.SRA.lessons.find(l=>l.id===id).sections.filter((s,i)=>i||/<table/.test(s.html)).length,lesson.id);
+    await page.waitForFunction(id=>document.querySelector('.lesson-top h1')?.textContent.endsWith(window.SRA.lessons.find(l=>l.id===id).title)&&location.hash==='#les/'+id&&document.querySelectorAll('#main section.section').length===window.SRA.lessons.find(l=>l.id===id).sections.filter((s,i)=>i||/<table/.test(s.html)).length,lesson.id);
     await page.evaluate(()=>window.SRATerms.annotate(document.querySelector('#main')));
-    assert.equal(await page.locator('#uitleg>section').count(),lesson.sections);
+    assert.equal(await page.locator('#main section.section').count(),lesson.sections);
     assert.match(await page.locator('.lesson-source-title').textContent(),/Hoorcollege/);
     assert.equal(await page.locator('#uitleg>.lesson-exam-focus').count(),['beginnen','rekenen','onzekerheid'].includes(lesson.id)?0:1);
     assert.deepEqual(await duplicates(),[],`${lesson.id}: dubbel begrip bij ${width}px`);

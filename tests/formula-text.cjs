@@ -10,6 +10,7 @@ has('√(1 + 1/21 + (5−5,6871)²/(20 × 1,25505²))','msqrt','mfrac');
 has('Ŵ_MPU = N × w̄','msub','mover');
 has('s_w/√n','mfrac','msub');
 has('Ŵ_MPU','msub','mover');
+has('s² = [5.378.400.500 − 398.000²/180]/179','mfrac','msup');
 has('√(breedte × frequentie)','msqrt','mtext');
 has('√[1 + 1/24 + (55,5 − 48,683)²/(23 × 6,31²)] ≈ 1,04519','msqrt','mfrac');
 has('t = 0,50 × √20/√0,75 ≈ 2,582','mfrac','msqrt');

@@ -208,7 +208,7 @@ def inline_formulas(content):
 
     # Blijft als één geheel staan; js/formula-text.js zet dit om naar een wortel of breuk.
     group = r'\((?:[^()]|\((?:[^()]|\([^()]*\))*\))*\)'
-    wide = re.compile(r'(?<![\w/])(?:[^\s()\[\]]+\s*=\s*)?(?:\[[^\[\]]*\]|' + group + r')\s*/\s*' + group
+    wide = re.compile(r'(?<![\w/])(?:[^\s()\[\]]+\s*=\s*)?(?:\[[^\[\]]*\]\s*/\s*\d[\d.,]*\d|(?:\[[^\[\]]*\]|' + group + r')\s*/\s*' + group + r')'
                       + r'|(?:(?<![\w/])[^\s()]+/)?√(?:' + group + r'|\[[^\[\]]*\])(?:/' + group + r')?')
 
     def replace(match):

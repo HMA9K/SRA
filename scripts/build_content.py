@@ -375,6 +375,8 @@ from lesson_reading import enhance as improve_reading
 improve_reading(lessons)
 from lesson_mini_graphs import enhance as add_mini_graphs
 add_mini_graphs(lessons)
+from lesson_structure import enhance as follow_lesson_line
+follow_lesson_line(lessons)
 from lesson_sources import enhance as number_sources
 number_sources(lessons, sources)
 from lesson_reading import calm_emphasis

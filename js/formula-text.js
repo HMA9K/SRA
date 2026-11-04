@@ -24,11 +24,11 @@
   // Een wortel mag direct na een getal staan (0,49 √2); de teller van een breuk niet midden in een woord.
   const FORMULA = new RegExp(
     `(?:(?<![\\p{L}\\p{N}_/.,])(?:${ATOM}|${GROUP})\\s*[/÷]\\s*)?${ROOT}(?:\\s*[/÷]\\s*(?:${ROOT}|${ATOM}|${GROUP}))?(?![\\p{L}\\p{N}_])`
-    + `|(?<![\\p{L}\\p{N}_/])(?:${ATOM}\\s*=\\s*)?(?:\\[[^\\[\\]]*\\]|${GROUP})\\s*/\\s*${GROUP}`
+    + `|(?<![\\p{L}\\p{N}_/])(?:${ATOM}\\s*=\\s*)?(?:\\[[^\\[\\]]*\\]\\s*/\\s*\\d[\\d.,]*\\d|(?:\\[[^\\[\\]]*\\]|${GROUP})\\s*/\\s*${GROUP})`
     + `|${INDEXED}(?:\\s*/\\s*${ROOT})?`, 'gu');
   // Alleen tussen twee waarden: + € 48 aan het begin blijft het teken van een bedrag.
   const TEXT_OPERATOR = /(?<=[\p{L}\p{N})²³%]\s*)[+−×÷±=](?=\s*[\p{L}\p{N}(√Σ€−])/gu;
-  const CANDIDATE = /√|[\])]\s*\/\s*\(|_/;
+  const CANDIDATE = /√|[\])]\s*\/\s*[(\d]|_/;
 
   /* Geeft MathML terug, of null als de tekst geen veilig leesbare formule is. */
   function toMathML(source) {
