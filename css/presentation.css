@@ -10,7 +10,13 @@ math{font-family:"Cambria Math","STIX Two Math",math;font-size:1.2em;line-height
 /* Letters, cijfers en het gemiddeldestreepje in hetzelfde lettertype als de tekst; tekens als √ en haakjes houden het wiskundefont om mee te rekken. */
 math :is(mi,mn,mtext),math mover>mpadded+mo{font-family:Arial,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-transform:none}
 math[display="block"]{display:block;width:max-content;min-width:0;margin:0;text-align:left;math-style:normal}
-.symbols{padding:0;margin:4px 0 12px;color:#505c73;font-size:.82rem;line-height:1.55}
+.symbols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px 28px;padding:0;margin:10px 0 12px;color:#505c73;font-size:.82rem;line-height:1.45;text-align:left;hyphens:manual}
+.symbol-group{min-width:0}
+.symbols .symbol-group-title{margin:0 0 4px;font-weight:700}
+.symbols dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:3px 12px;margin:0}
+.symbols dt{font-weight:400}
+.symbols dd{margin:0}
+.symbols-notes{margin:0 0 12px;padding-left:18px;color:#505c73;font-size:.82rem;line-height:1.5;text-align:left}
 caption{text-align:left;font-weight:700;color:#444159;font-size:.9rem;padding:0 0 10px;caption-side:top}
 .table-scroll{position:relative;overscroll-behavior-inline:contain;scrollbar-width:thin}
 .table-scroll>table{margin:0}

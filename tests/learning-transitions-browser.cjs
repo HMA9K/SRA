@@ -58,8 +58,8 @@ const server=http.createServer((req,res)=>{
      assert.ok((await combined.innerText()).includes('Van kwadraten naar variantie en standaardafwijking'));
      assert.ok((await combined.innerText()).includes('Rekenvolgorde en twee verschillende sommen'));
      assert.equal(await combined.locator('details.symbols').count(),0);
-     assert.ok(await combined.locator('p.symbols').isVisible());
-     assert.match(await combined.locator('p.symbols').innerText(),/Σ betekent optellen/);
+     assert.ok(await combined.locator('.symbols dt').first().isVisible());
+     assert.doesNotMatch(await combined.locator('.symbols').first().innerText(),/somteken|plus én min/);
      assert.equal(await combined.locator('.formula-typeset math[display="block"]').count(),2,'Variantie en standaardafwijking moeten zichtbaar blijven');
      assert.ok(await combined.locator('.formula-typeset').evaluate(el=>el.getBoundingClientRect().height>0));
     }

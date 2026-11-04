@@ -24,21 +24,22 @@
     s: entry('s: standaardafwijking', 'Dit getal beschrijft hoeveel de afzonderlijke waarnemingen rond hun gemiddelde verspreid liggen. De standaardafwijking heeft dezelfde eenheid als de waarnemingen, bijvoorbeeld euro.'),
     s2: entry('s²: variantie', 'Dit is een maat voor de spreiding, gebaseerd op gekwadrateerde afwijkingen van het gemiddelde. De standaardafwijking s is de vierkantswortel van deze variantie.'),
     sw: entry('s_w: standaardafwijking van werkelijke waarden', 'Dit meet de spreiding van de gecontroleerde werkelijke waarden in de steekproef. Het beschrijft verschillen tussen posten en is nog niet de standaardfout van een geschat totaal.'),
+    sy: entry('s_y: standaardafwijking van y', 'Dit meet de spreiding van de waargenomen y-waarden in de steekproef. Je gebruikt deze spreiding bij de residuele variantie en de standaardfout van de helling.'),
     sb: entry('s_b: standaardafwijking van boekwaarden', 'Dit meet de spreiding van de boekwaarden van de gecontroleerde posten. Bij een regressieschatter gebruik je deze spreiding samen met die van de werkelijke waarden en hun correlatie.'),
     E: entry('E: onzekerheidsmarge', 'Dit is de afstand van de puntschatting tot één grens van het interval. Bij een tweezijdig interval is de totale breedte dus 2 × E.'),
     t: entry('t: kritieke tabelwaarde', 'Dit is de grenswaarde uit de t-verdeling die past bij je betrouwbaarheid, vrijheidsgraden en keuze voor één of twee zijden. Je vermenigvuldigt deze waarde met de standaardfout om de onzekerheidsmarge te krijgen.'),
     q: entry('q: goedratio', 'Dit is de som van de werkelijke waarden gedeeld door de som van de boekwaarden in de steekproef. Je vermenigvuldigt deze verhouding met B om het werkelijke populatietotaal te schatten.'),
-    sq: entry('s_q: resterende spreiding bij de ratioschatter', 'Dit is de spreiding van de verschillen tussen w en q × b. De ratioschatter gebruikt deze resterende spreiding om de standaardfout van het geschatte totaal te bepalen.'),
+    sq: entry('s_q: resterende spreiding bij de quotiëntschatter', 'Dit is de spreiding van de verschillen tussen w en q × b. De quotiëntschatter gebruikt deze resterende spreiding om de standaardfout van het geschatte totaal te bepalen.'),
     Rbw: entry('R_bw: correlatie tussen boekwaarde en werkelijke waarde', 'Dit getal tussen −1 en 1 beschrijft hun lineaire samenhang. Een sterke samenhang kan de onzekerheid van een schatter die boekwaarden gebruikt verkleinen.'),
     R: entry('R: correlatiecoëfficiënt', 'Dit getal beschrijft de richting en sterkte van een lineair verband. Het ligt tussen −1 en 1 en bewijst op zichzelf geen oorzakelijk verband.'),
     'W^': entry('Ŵ: geschat werkelijk totaal', 'Dit is een schatting van de som van alle werkelijke waarden in de populatie. Het dakje geeft aan dat het totaal uit steekproefgegevens is geschat.'),
     'W^MPU': entry('Ŵ_MPU: directe totaalschatting', 'Dit is de populatieomvang N maal de gemiddelde gecontroleerde werkelijke waarde. De MPU-schatter trekt het steekproefgemiddelde door naar de hele populatie.'),
-    'W^V': entry('Ŵ_V: verschilsschatter', 'Dit is het boekwaardetotaal B, gecorrigeerd voor het geschatte totale verschil tussen boekwaarde en werkelijke waarde. Bij e = b − w trek je N × ē van B af.'),
-    'W^Q': entry('Ŵ_Q: ratioschatter', 'Dit is het geschatte werkelijke totaal dat je krijgt door B met de goedratio q te vermenigvuldigen. De steekproefverhouding tussen werkelijke waarde en boekwaarde wordt toegepast op de hele populatie.'),
+    'W^V': entry('Ŵ_V: verschilschatter', 'Dit is het boekwaardetotaal B, gecorrigeerd voor het geschatte totale verschil tussen boekwaarde en werkelijke waarde. Bij e = b − w trek je N × ē van B af.'),
+    'W^Q': entry('Ŵ_Q: quotiëntschatter', 'Dit is het geschatte werkelijke totaal dat je krijgt door B met de goedratio q te vermenigvuldigen. De steekproefverhouding tussen werkelijke waarde en boekwaarde wordt toegepast op de hele populatie.'),
     'W^R': entry('Ŵ_R: regressieschatter', 'Dit is een totaalschatting die de MPU-schatting corrigeert met behulp van de regressiehelling en het bekende boekwaardetotaal. De correctie gebruikt het verschil tussen B en N × b̄.'),
     sMPU: entry('s_MPU: standaardfout van de MPU-schatter', 'Dit beschrijft de onzekerheid van het geschatte populatietotaal volgens MPU. Vermenigvuldigen met de passende t-waarde geeft de marge rond die totaalschatting.'),
-    sV: entry('s_V: standaardfout van de verschilsschatter', 'Dit beschrijft de onzekerheid van het geschatte totaal volgens de verschilsschatter. Je berekent deze met de spreiding van de verschillen e, de aantallen n en N en de eindigheidscorrectie.'),
-    sQ: entry('s_Q: standaardfout van de ratioschatter', 'Dit beschrijft de onzekerheid van het totaal dat met q × B is geschat. Hoofdletter Q duidt de schatter aan; de kleine q bij s_q hoort bij de resterende spreiding per post.'),
+    sV: entry('s_V: standaardfout van de verschilschatter', 'Dit beschrijft de onzekerheid van het geschatte totaal volgens de verschilschatter. Je berekent deze met de spreiding van de verschillen e, de aantallen n en N en de eindigheidscorrectie.'),
+    sQ: entry('s_Q: standaardfout van de quotiëntschatter', 'Dit beschrijft de onzekerheid van het totaal dat met q × B is geschat. Hoofdletter Q duidt de schatter aan; de kleine q bij s_q hoort bij de resterende spreiding per post.'),
     sR: entry('s_R: standaardfout van de regressieschatter', 'Dit beschrijft de onzekerheid van het geschatte populatietotaal met regressie. In de getoonde formule verlaagt de factor √(1 − R²_bw) de standaardfout ten opzichte van MPU.'),
     'γ': entry('γ: tussenuitkomst voor steekproefplanning', 'Gamma bundelt de toegestane marge E, de kritieke t-waarde, de populatieomvang en de variantie. Je vult deze tussenuitkomst daarna in bij n = N / (1 + γ).'),
     Ni: entry('Nᵢ: omvang van stratum i', 'Dit is het aantal posten in één deelpopulatie of stratum. De index i geeft aan over welke groep de formule gaat.'),
@@ -98,13 +99,13 @@
     i: entry('i: index van een waarneming', 'Deze letter geeft aan welke waarneming of post wordt bedoeld. In een som loop je de bijbehorende waarnemingen één voor één langs.'),
     j: entry('j: index van een verklarende variabele', 'Deze letter wijst een specifieke verklarende variabele of coëfficiënt aan. Bij bⱼ gaat het om de coëfficiënt die bij variabele j hoort.'),
     Interval: entry('Interval: ondergrens en bovengrens', 'Dit is het bereik rond de puntschatting dat je met de gekozen methode en betrouwbaarheid berekent. Trek de marge af voor de ondergrens en tel haar op voor de bovengrens.'),
-    puntschatting: entry('Puntschatting', 'Dit is één getal waarmee je een onbekende populatiegrootheid schat. In de getoonde intervalformule ligt deze schatting in het midden tussen ondergrens en bovengrens.'),
-    standaardfout: entry('Standaardfout', 'Dit meet de onzekerheid van een schatting door het gebruik van een steekproef. Het is iets anders dan de spreiding van de afzonderlijke waarnemingen.'),
-    'kritieke waarde': entry('Kritieke waarde', 'Dit is de tabelgrens die bij de gekozen verdeling, betrouwbaarheid en vrijheidsgraden hoort. Vermenigvuldigd met de standaardfout bepaalt zij de marge van het interval.'),
+    puntschatting: entry('Puntschatting: één getal als schatting', 'Dit is één getal waarmee je een onbekende populatiegrootheid schat. In de getoonde intervalformule ligt deze schatting in het midden tussen ondergrens en bovengrens.'),
+    standaardfout: entry('Standaardfout: onzekerheid van de schatting', 'Dit meet de onzekerheid van een schatting door het gebruik van een steekproef. Het is iets anders dan de spreiding van de afzonderlijke waarnemingen.'),
+    'kritieke waarde': entry('Kritieke waarde: grens uit de tabel', 'Dit is de tabelgrens die bij de gekozen verdeling, betrouwbaarheid en vrijheidsgraden hoort. Vermenigvuldigd met de standaardfout bepaalt zij de marge van het interval.'),
     Rbw2: entry('R²_bw: determinatiecoëfficiënt van boekwaarde en werkelijke waarde', 'Dit is het kwadraat van de correlatie R_bw: het deel van de spreiding in de werkelijke waarden dat met de boekwaarden samenhangt. Hoe hoger, hoe meer de regressieschatter de standaardfout verlaagt.'),
     frequentie: entry('Frequentie: aantal posten in de klasse', 'Dit is het aantal posten dat in deze klasse valt. Bij ongelijke klassen vermenigvuldig je de frequentie eerst met de klassebreedte en neem je daarna de wortel.'),
-    klassebreedte: entry('Klassebreedte', 'Dit is de afstand tussen de onder- en bovengrens van een klasse. Bij ongelijke klassebreedtes hoort deze breedte onder de wortel.'),
-    breedte: entry('Breedte van het interval', 'Dit is de bovengrens min de ondergrens. Bij het getoonde symmetrische interval is dit tweemaal de marge E.'),
+    klassebreedte: entry('Klassebreedte: afstand tussen de klassegrenzen', 'Dit is de afstand tussen de onder- en bovengrens van een klasse. Bij ongelijke klassebreedtes hoort deze breedte onder de wortel.'),
+    breedte: entry('Breedte: bovengrens min ondergrens', 'Dit is de bovengrens min de ondergrens. Bij het getoonde symmetrische interval is dit tweemaal de marge E.'),
     'α': entry('α: significantieniveau', 'Dit is het vooraf gekozen risico dat je de nulhypothese verwerpt terwijl die waar is. Bij een tweezijdig interval hoort α/2 bij elke staart van de verdeling.'),
     '±': entry('±: plus én min', 'Maak twee berekeningen: één met aftrekken en één met optellen. Daarmee krijg je de ondergrens en bovengrens van het interval.'),
     '∑': entry('Σ: somteken', 'Tel de waarden of uitdrukkingen achter dit teken over de betreffende waarnemingen bij elkaar op. Bij Σw² kwadrateer je elke waarde vóór het optellen; bij (Σw)² kwadrateer je de uiteindelijke som.'),
@@ -113,12 +114,13 @@
   D['Σ'] = D['∑'];
   const difference = {
     e: entry('e: verschil tussen boekwaarde en werkelijke waarde', 'In deze les is e gedefinieerd als b − w. Een positief verschil betekent dat de boekwaarde hoger is dan de gecontroleerde werkelijke waarde.'),
-    ei: entry('eᵢ: verschil bij post i', 'Hier bereken je eᵢ als bᵢ − wᵢ voor dezelfde post. Dit teken bepaalt of je bij de verschilsschatter een bedrag van het boekwaardetotaal aftrekt of erbij optelt.'),
+    ei: entry('eᵢ: verschil bij post i', 'Hier bereken je eᵢ als bᵢ − wᵢ voor dezelfde post. Dit teken bepaalt of je bij de verschilschatter een bedrag van het boekwaardetotaal aftrekt of erbij optelt.'),
     'e¯': entry('ē: gemiddeld verschil per post', 'Dit is het gemiddelde van de verschillen bᵢ − wᵢ in de steekproef. Vermenigvuldigen met N geeft het geschatte totale verschil dat je van B aftrekt.'),
-    se: entry('s_e: standaardafwijking van de verschillen', 'Dit is de spreiding van de verschillen e = b − w tussen de gecontroleerde posten. Bij de verschilsschatter gebruik je deze spreiding om de standaardfout van het geschatte totaal te berekenen.'),
+    se: entry('s_e: standaardafwijking van de verschillen', 'Dit is de spreiding van de verschillen e = b − w tussen de gecontroleerde posten. Bij de verschilschatter gebruik je deze spreiding om de standaardfout van het geschatte totaal te berekenen.'),
   };
   const testT = entry('t: berekende toetsingsgrootheid', 'Dit is het verschil tussen de geschatte coëfficiënt en de waarde onder H₀, gedeeld door de standaardfout. Je vergelijkt deze berekende t met een kritieke tabelwaarde of gebruikt de bijbehorende p-waarde.');
   const normalized = text => String(text).replace(/[\s_{}]/g, '').replace(/₀/g,'0').replace(/₁/g,'1').replace(/₂/g,'2').replace(/ᵢ/g,'i').replace(/ⱼ/g,'j').replace(/ₖ/g,'k').replace(/²/g,'2').replace(/ŷ/g,'y^').replace(/Ŵ/g,'W^').replace(/ȳ/g,'y¯').replace(/ē/g,'e¯').replace(/([wbxe])\u0304/g,'$1¯').replace(/ₑ/g,'e');
+  const distance = key => key.includes('MD') ? 'Mahalanobis-afstand' : 'Cook-afstand';
   function lookup(key, context = '', formula = '') {
     if (!D[key]) key = normalized(key);
     if (key === 'R2i') key = 'Ri2';
@@ -130,12 +132,15 @@
     if (context === 'verschil' && difference[key]) return difference[key];
     if (key === 't' && /±/.test(formula)) return D.t;
     if (key === 't' && (context === 'toetsen' || (context === 'tentamen' && /β|b[jⱼ]/u.test(formula)))) return testT;
+    if (key === 's2' && context === 'steekproefomvang') return entry('s²: variantie die bij de schatter hoort', 'Vul de variantie in van de schatter die je gebruikt: s_w² bij MPU en s_e² bij de verschilschatter. Bij de regressieschatter is dat s_w² × (1 − R²_bw).');
+    if (key === 'z' && context === 'diagnostiek') return entry('z: gestandaardiseerd residu', 'Dit is het residu uitgedrukt in aantallen standaardafwijkingen. Bij n ≤ 100 is |z| > 2 een signaal voor een uitbijter in de y-richting, bij n > 100 geldt |z| > 3.');
+    if (key === 'b1' && /x1/.test(formula)) return entry('b₁: geschatte coëfficiënt van de eerste variabele', D.b1.text);
     if (key === 'b1' && context === 'regressieschatter') return entry('b₁: helling tussen boekwaarde en werkelijke waarde', 'Deze helling geeft de verandering van de geschatte werkelijke waarde als de boekwaarde één eenheid stijgt. Je berekent haar met de correlatie en de verhouding tussen de twee standaardafwijkingen.');
     if (key === 'i' && context === 'stratificatie') return entry('i: index van een stratum', 'Deze index geeft aan welke deelpopulatie of welk stratum wordt bedoeld. Bij een som over i tel je de bijdragen van de verschillende strata op.');
     if (D[key]) return D[key];
-    if (/^x[12k]$/.test(key)) return entry(`${key.replace(/1/g,'₁').replace(/2/g,'₂').replace(/k/g,'ₖ')}: verklarende variabele`, 'Dit is de waarde van de verklarende variabele met dit nummer of deze index. Vermenigvuldig haar met de coëfficiënt met dezelfde index.');
-    if (/^(MD|CD)(¯|kritiek)$/.test(key)) return entry(`${key.startsWith('MD')?'MD':'CD'}: ${key.endsWith('¯')?'gemiddelde afstand':'kritieke grens'}`, key.endsWith('¯') ? 'Dit is het gemiddelde van deze afstandsmaat over de waarnemingen. De getoonde grensregel telt hier drie standaardafwijkingen bij op.' : 'Dit is de signaleringsgrens die je met de getoonde regel berekent. Waarden erboven zijn aanleiding om de betreffende waarneming nader te onderzoeken.');
-    if (/^s(MD|CD)$/.test(key)) return entry(`${key}: standaardafwijking van de afstandsmaat`, 'Dit beschrijft de spreiding van deze afstandsmaat over de waarnemingen. In de getoonde grensregel wordt driemaal deze spreiding bij het gemiddelde opgeteld.');
+    if (/^x[12k]$/.test(key)) return entry(`${key.replace(/1/g,'₁').replace(/2/g,'₂').replace(/k/g,'ₖ')}: ${{1:'eerste',2:'tweede',k:'laatste'}[key[1]]} verklarende variabele`, 'Dit is de waarde van de verklarende variabele met dit nummer of deze index. Vermenigvuldig haar met de coëfficiënt met dezelfde index.');
+    if (/^(MD|CD)(¯|kritiek)$/.test(key)) return entry(key.endsWith('¯') ? `${key.slice(0,2)}\u0304: gemiddelde ${distance(key)}` : `${key.slice(0,2)}_kritiek: kritieke grens voor de ${distance(key)}`, key.endsWith('¯') ? 'Dit is het gemiddelde van deze afstandsmaat over de waarnemingen. De getoonde grensregel telt hier drie standaardafwijkingen bij op.' : 'Dit is de signaleringsgrens die je met de getoonde regel berekent. Waarden erboven zijn aanleiding om de betreffende waarneming nader te onderzoeken.');
+    if (/^s(MD|CD)$/.test(key)) return entry(`s_${key.slice(1)}: standaardafwijking van de ${distance(key)}`, 'Dit beschrijft de spreiding van deze afstandsmaat over de waarnemingen. In de getoonde grensregel wordt driemaal deze spreiding bij het gemiddelde opgeteld.');
     return null;
   }
   function keyOf(node) { return normalized(node.textContent || ''); }
@@ -177,7 +182,7 @@
     visit(math);
   }
   // Alleen tekst in de uitleg en rekenregels; nooit een antwoordeditor of invoerveld.
-  const aliases = ['R²_adj','R²ᵢ','R²_bw','s_MPU','s_tot','s_bⱼ','s_Q','s_V','s_R','s_q','s_w','s_b','s_e','s_x','n_test','Ŵ_MPU','Ŵ_tot','Ŵ_Q','Ŵ_V','Ŵ_R','W_top','βⱼ,₀','b₀','b₁','b₂','bⱼ','bₖ','β₀','β₁','ŷᵢ','ŷ₀','x₀','x₁','x₂','xₖ','yᵢ','wᵢ','bᵢ','eᵢ','Nᵢ','nᵢ','sᵢ','w̄ᵢ','w̄','b̄','x̄','ȳ','ē','s²','R²','sₑ','MSPR','TotalSS','SSR','SSE','MSR','MSE','VIF','Tolerance','MD','CD','ln','exp','df','N','n','B','E','q','s','t','k','x','y','z','w','b','e','ŷ','Ŵ','γ','α','β','ε','Σ','±'].sort((a,b)=>b.length-a.length);
+  const aliases = ['R²_adj','R²ᵢ','R²_bw','s_MPU','s_tot','s_bⱼ','s_Q','s_V','s_R','s_q','s_w','s_b','s_e','s_x','s_y','n_test','Ŵ_MPU','Ŵ_tot','Ŵ_Q','Ŵ_V','Ŵ_R','W_top','βⱼ,₀','b₀','b₁','b₂','bⱼ','bₖ','β₀','β₁','ŷᵢ','ŷ₀','x₀','x₁','x₂','xₖ','yᵢ','wᵢ','bᵢ','eᵢ','Nᵢ','nᵢ','sᵢ','w̄ᵢ','w̄','b̄','x̄','ȳ','ē','s²','R²','sₑ','MSPR','TotalSS','SSR','SSE','MSR','MSE','VIF','Tolerance','MD','CD','ln','exp','df','N','n','B','E','q','s','t','k','x','y','z','w','b','e','ŷ','Ŵ','γ','α','β','ε','Σ','±'].sort((a,b)=>b.length-a.length);
   D.VIF = D.VIFi; D.Tolerance = D.Tolerancei;
   const word = /[\p{L}\p{N}\p{M}_]/u;
   // Formulebladnotatie in platte tekst (s_e, Ŵ_MPU, e_(t−1)) verschijnt als subscript.
@@ -239,20 +244,55 @@
       fragment.append(document.createTextNode(node.textContent.slice(offset))); node.replaceWith(fragment);
     }
   }
-  // De symbolenregel volgt uit de uitleg per onderdeel, dus ieder klikbaar symbool staat erin.
+  // De lijst volgt de formuleregels: per regel de symbolen die daar voor het eerst voorkomen.
+  // Tekens als ± horen niet in de lijst; zij houden alleen hun klikuitleg in de formule.
+  function legendGroups(block) {
+    const seen = new Set(), rows = block.querySelectorAll('.formula-row');
+    return [...(rows.length ? rows : [block])].map(row => {
+      const label = row.querySelector('.formula-label')?.cloneNode(true);
+      label?.querySelector('.formula-number')?.remove();
+      const items = [...row.querySelectorAll('[data-formula-help]')].map(node => help.get(node))
+        .filter(info => info && !/^[Σ±…]:/.test(info.title) && !seen.has(info.title) && seen.add(info.title));
+      return { label: label?.textContent.trim() || '', items };
+    }).filter(group => group.items.length);
+  }
+  function legendGroup(group, titled) {
+    const box = document.createElement('div'), list = document.createElement('dl');
+    box.className = 'symbol-group';
+    if (titled) {
+      const title = document.createElement('p');
+      title.className = 'symbol-group-title';
+      title.textContent = group.label;
+      box.append(title);
+    }
+    for (const info of group.items) {
+      const split = info.title.indexOf(': ');
+      const symbol = document.createElement('dt'), meaning = document.createElement('dd'), trigger = document.createElement('span');
+      trigger.className = 'formula-text-component';
+      trigger.textContent = info.title.slice(0, split);
+      mark(trigger, info, info.context);
+      symbol.append(trigger);
+      meaning.textContent = info.title.slice(split + 2);
+      list.append(symbol, meaning);
+    }
+    box.append(list);
+    return box;
+  }
   function legends() {
     for (const block of host.querySelectorAll('.formula-typeset:not([data-legend])')) {
-      const titles = [...new Set([...block.querySelectorAll('[data-formula-help]')].map(node => help.get(node)?.title).filter(Boolean))];
-      if (!titles.length) continue;
+      const groups = legendGroups(block);
+      if (!groups.length) continue;
       block.setAttribute('data-legend', '');
-      let line = block.nextElementSibling;
-      if (!line?.matches('p.symbols')) {
-        line = document.createElement('p');
+      let anchor = block, line = block.nextElementSibling;
+      if (line?.matches('.symbols-heading')) { anchor = line; line = line.nextElementSibling; }
+      if (!line?.matches('.symbols')) {
+        line = document.createElement('div');
         line.className = 'symbols';
-        block.after(line);
+        line.setAttribute('data-no-terms', '');
+        line.setAttribute('data-no-formula-text', '');
+        anchor.after(line);
       }
-      line.textContent = `${titles.join('; ')}. ${line.dataset.note || ''}`.trim();
-      root.SRAFormulaText?.annotate(line);
+      line.replaceChildren(...groups.map(group => legendGroup(group, groups.length > 1)));
     }
   }
   function annotate() {
