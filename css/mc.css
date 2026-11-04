@@ -253,3 +253,6 @@ html:has(.mc-page){scroll-padding-top:75px;scroll-padding-bottom:145px}
 .mc-feedback>p{margin:0 0 4px}
 .feedback-more{margin-top:6px}
 .feedback-more>summary{cursor:pointer;font-size:13px;font-weight:600}
+.mc-question-help{position:relative}
+.mc-question-help>details[open]>div{position:absolute;top:100%;right:0;z-index:30;width:min(380px,calc(100vw - 32px));max-height:70vh;overflow:auto;margin-top:4px;padding:12px 16px;border:1px solid #d7d6e3;border-radius:12px;background:#f7f7fa;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help>details[open]>div{background:#152129;border-color:#3b4a54}

@@ -987,15 +987,17 @@ window.SRAMCData = {
           "correct": 0,
           "level": 2,
           "steps": [
-            "Het gemiddelde is 4. De gekwadrateerde afwijkingen zijn 4, 0 en 4.",
-            "Deel 8 door n − 1 = 2: s² = 4.",
+            "Gemiddelde: (2 + 4 + 6)/3 = 4.",
+            "Afwijkingen van het gemiddelde: −2, 0 en 2.",
+            "Kwadrateren: 4, 0 en 4, samen 8.",
+            "Delen door n − 1 = 2: s² = 8/2 = 4.",
             "s² = 4 is de variantie; de bijbehorende standaardafwijking is √4 = 2. Houd die twee uitkomsten apart."
           ],
-          "explanation": "Het gemiddelde is 4. De gekwadrateerde afwijkingen zijn 4, 0 en 4. Deel 8 door n − 1 = 2: s² = 4. s² = 4 is de variantie; de bijbehorende standaardafwijking is √4 = 2. Houd die twee uitkomsten apart.",
+          "explanation": "Gemiddelde: (2 + 4 + 6)/3 = 4. Afwijkingen van het gemiddelde: −2, 0 en 2. Kwadrateren: 4, 0 en 4, samen 8. Delen door n − 1 = 2: s² = 8/2 = 4. s² = 4 is de variantie; de bijbehorende standaardafwijking is √4 = 2. Houd die twee uitkomsten apart.",
           "pattern": "Herken: Een rij losse waarden en het woord “steekproefvariantie s²”. → Betekenis: De spreiding moet uit de waarnemingen worden opgebouwd. → Aanpak: Bepaal het gemiddelde, kwadrateer de afwijkingen en deel hun som door n − 1. → Gevraagd antwoord: Een variantie; neem geen wortel als s² gevraagd blijft.",
           "trap": "De wortel, 2, is s en niet s².",
           "optionExplanations": [
-            "4 klopt: het gemiddelde is 4 en de kwadratensom van de afwijkingen is 8; delen door n − 1 = 2 geeft 4.",
+            "4 klopt: variantie is de kwadratensom gedeeld door n − 1, dus 8/2 = 4.",
             "8/3 deelt de kwadratensom door n. De gevraagde steekproefvariantie gebruikt n − 1 omdat het gemiddelde uit deze steekproef is geschat.",
             "8 is alleen de som van de gekwadrateerde afwijkingen. Delen door de vrijheidsgraden ontbreekt nog.",
             "2 is de wortel uit de variantie, dus de standaardafwijking s. Gevraagd is s²."

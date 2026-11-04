@@ -446,6 +446,8 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-guidance-sources{bor
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-source-filter select{background:var(--study-surface,#152129)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-panel{background:var(--study-surface,#152129)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-resizer:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-resizer:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-resizer[data-dragging]{background:var(--study-teal,#0e8174)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help>details[open]>div{border:1px solid #454261;background:#1b1b27;box-shadow:0 6px 18px rgba(1,3,4,.14)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help>details[open]>div{background:#212b38;border-color:#435460}
 /* css/cirrus.css */
 html[data-study-theme=dark] body.cirrus-mode a{color:#8dcaec}
 html[data-study-theme=dark] body.cirrus-mode button:focus-visible,html[data-study-theme=dark] body.cirrus-mode a:focus-visible,html[data-study-theme=dark] body.cirrus-mode label:focus-visible,html[data-study-theme=dark] body.cirrus-mode summary:focus-visible{outline:2px solid #76562d}
