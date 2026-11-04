@@ -343,13 +343,8 @@ def enhance(lessons, sources):
         'een negatieve e onderwaardering. De voorbeelden met uitsluitend positieve fouten '
         'in het boek horen bij hun specifieke controlevraag. Verander bij gemengde verschillen '
         'de tekens niet zonder een expliciete opdracht of afbakening.</p>'
-        '<p><strong>Bronnuance bij H8, opgave 5:</strong> de kolom <em>Fout</em> gebruikt '
-        'juist w − b. Daarom hoort bij boekwaarde € 513 en Fout −€ 48 een werkelijke '
-        'waarde van € 465; in onze formuleconventie is e = +€ 48. Lees eerst een '
-        'controleregel en vertaal daarna het teken. Hier is Σw = € 179.044 + € 1.606 '
-        '= € 180.650. De opgave bevat 22 fouten in 148 posten; de officiële uitwerking '
-        'gebruikt MPU. Een andere kolomtitel heft de cursusvoorwaarde van dertig fouten '
-        'voor de verschilschatter niet op.</p>',
+        '<p><strong>Let op bij H8, opgave 5:</strong> de kolom <em>Fout</em> gebruikt daar juist w − b. '
+        'Keer het teken dus om voordat je met e = b − w rekent.</p>',
         [ref('slides', 20, 'PDF 20-22: constant verschil en minimaal 30 fouten'),
          ref('formules', 1, 'Formule 6: e = b − w'), bookref('boek-h8a', 208),
          ref('opgaven', 5, 'H8, opgave 5: tegengestelde tekenrichting in kolom Fout'),
@@ -374,13 +369,7 @@ def enhance(lessons, sources):
                    's<sub>V</sub> = € 3.883,5123; met t = 1,975 is E = € 7.669,9368.',
                    'Het interval voor W is [€ 1.796.550,06; € 1.811.889,94]. '
                    'Afronden naar buiten op € 10.000 geeft [€ 1.790.000; € 1.820.000].'])
-    body += ('<p class="note"><strong>Bronnuance.</strong> De opgavecijfers zijn onderling niet helemaal '
-             'consistent. Als alle € 7.755 aan fouten in 43 posten zit, is de kleinst mogelijke '
-             'kwadratensom 7.755²/43 ≈ 1.398.605 euro², ruim meer dan de gegeven 395.000. '
-             'De officiële uitwerking rekent toch met de gegeven Σe². Volg op het tentamen de '
-             'gegeven cijfers en deze rekenwijze. Uit deze tegenstrijdige gegevens kan de werkelijke '
-             'spreiding niet worden vastgesteld. Als het fouttotaal en het aantal foutposten kloppen, '
-             'is de opgegeven kwadratensom te laag.</p>')
+    body += '<p class="note"><strong>Let op:</strong> de opgavecijfers zijn onderling niet helemaal consistent. Reken op het tentamen met de gegeven cijfers.</p>'
     body += exercise('<p>Gebruik dit interval om ook een interval voor de totale fout F = B − W '
                      'te bepalen. Welke grens moet je van B aftrekken voor de ondergrens van F?</p>',
                      '<p>Bij F = B − W keert de volgorde om. De kleinste fout hoort bij de grootste '

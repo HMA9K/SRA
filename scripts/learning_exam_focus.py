@@ -50,8 +50,8 @@ def enhance(lessons, sources):
     topics={t['id']:t for t in point_data['topics']}
     assert sorted(t for ids,_,_ in ROUTES.values() for t in ids)==sorted(topics)
     for lesson in lessons:
-        ids, depth, route=ROUTES[lesson['id']]
-        body=f'<p><strong>{depth}.</strong> {route}</p>'
+        ids=ROUTES[lesson['id']][0]
+        body=''
         if ids:
             rows=[]
             for key in ids:

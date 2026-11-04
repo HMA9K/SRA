@@ -208,8 +208,8 @@ def inline_formulas(content):
 
     # Blijft als één geheel staan; js/formula-text.js zet dit om naar een wortel of breuk.
     group = r'\((?:[^()]|\((?:[^()]|\([^()]*\))*\))*\)'
-    wide = re.compile(r'(?<![\w/])(?:[^\s()\[\]]+\s*=\s*)?(?:\[[^\[\]]*\]|' + group + r')\s*/\s*' + group
-                      + r'|(?:(?<![\w/])[^\s()]+/)?√(?:' + group + r'|\[[^\[\]]*\])(?:/' + group + r')?')
+    wide = re.compile(r'(?<![\w/])(?:[^\s()\[\]]+\s*=\s*)?(?:\[[^\[\]]*\]\s*/\s*\d[\d.,]*\d|(?:\[[^\[\]]*\]|[^\s()\[\]/]+|' + group + r')\s*/\s*' + group + r')'
+                      + r'|(?:(?<![\w/])[^\s()\[\]]+\s*=\s*)?(?:(?<![\w/])[^\s()]+/)?√(?:' + group + r'|\[[^\[\]]*\])(?:/' + group + r')?')
 
     def replace(match):
         token = match.group()
@@ -438,7 +438,9 @@ def enhance(lessons):
             used+=1
             out=formula_block(formulas)
             if used==1:
-                out+=f'<p class="symbols">{LEGENDS[lesson["id"]]}</p>'
+                legend=LEGENDS[lesson['id']]
+                note=' '.join(part.strip().rstrip('.')+'.' for part in re.split(r'(?<=\.)\s+|;\s*',legend) if 'betekent' in part or part.startswith('De factor'))
+                out+=f'<p class="symbols" data-note="{html.escape(note,quote=True)}">{legend}</p>'
             return out
         for section in lesson['sections']:
             section['html']=re.sub(r'<div class="formula">(.*?)</div>',replace,section['html'],flags=re.S)

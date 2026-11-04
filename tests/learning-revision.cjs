@@ -24,7 +24,7 @@ for(const l of C.lessons){
 }
 const diagnostic=C.lessons.find(l=>l.id==='diagnostiek').sections.map(s=>s.html).join(' ');
 // Controleer de nieuw getoonde antwoordtabel via ANOVA-relaties, niet alleen op tekstaanwezigheid.
-const anova=C.lessons.find(l=>l.id==='anova').sections.find(s=>s.title==='Een volledige ANOVA-tabel reconstrueren').html;
+const anova=C.lessons.find(l=>l.id==='anova').sections.find(s=>s.title==='Zelf oefenen: een onvolledige ANOVA-tabel aanvullen').html;
 const completed=anova.match(/<table><caption>Uitwerking H9\.1:[\s\S]*?<\/table>/)[0];
 const rows=[...completed.matchAll(/<tr>([\s\S]*?)<\/tr>/g)].slice(1).map(r=>[...r[1].matchAll(/<td>([\s\S]*?)<\/td>/g)].map(c=>Number(c[1].replace(/<[^>]+>/g,'').replaceAll('.','').replace(',','.'))));
 const [reg,res,total]=rows;

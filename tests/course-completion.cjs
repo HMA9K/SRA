@@ -37,7 +37,7 @@ for(const l of C.lessons){
   assert.ok(!text.includes('gelogaritmeerde waarden positief'),l.id);
   for(const ref of l.refs)assert.ok(C.sources[ref.source],ref.source);
 }
-for(const id of ['beginnen','rekenen','toetsen'])assert.ok(C.lessons.find(l=>l.id===id).sections.some(s=>s.title.startsWith('SET-opfrisser')));
+for(const id of ['beginnen','rekenen','toetsen'])assert.ok(C.lessons.find(l=>l.id===id).sections.some(s=>(s.sourceTitles||[s.title]).some(t=>t.startsWith('SET-opfrisser'))));
 // Klik-uitleg onderscheidt een berekende t van de kritieke t in een interval.
 const help=require('../js/formula-help.js');
 assert.match(help.lookup('t','toetsen','b1 ± t × sb1').title,/kritieke/);

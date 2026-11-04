@@ -9,7 +9,7 @@ if(!base)throw Error('Geef LEARNING_URL op.');fs.mkdirSync(out,{recursive:true})
   page.on('pageerror',e=>errors.push(e.message));await page.route('**/*',r=>r.request().url().startsWith(base)?r.continue():r.abort());
   await page.goto(base+'#les/anova');await page.locator('.lesson-opening').waitFor();await page.evaluate(t=>StudyTheme.setMode(t),theme);
   assert.equal(await page.locator('.learning-page-head .learning-context').isVisible(),false);
-  const section=page.locator('#uitleg>section').filter({has:page.locator('.section-head').filter({hasText:'Een volledige ANOVA-tabel reconstrueren'})});
+  const section=page.locator('#main section.section').filter({has:page.locator('.section-head').filter({hasText:'Zelf oefenen: een onvolledige ANOVA-tabel aanvullen'})});
   assert.equal(await section.locator(':scope>summary').count(),0,'tekstblok is vast open');
   const exercise=section.locator('table').first(),answer=section.locator('.worked-answer');
   assert.equal(await exercise.getByRole('cell',{name:'Zelf berekenen',exact:true}).count(),5);

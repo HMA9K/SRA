@@ -28,7 +28,7 @@ for old, new in zip(before, lessons):
     for original in old['sections']:
         merged = old['id'] == 'rekenen' and original['title'] in ('Rekenen zonder verborgen stappen', 'Waarom kwadrateren?')
         title = 'Rekenen zonder verborgen stappen' if merged else original['title']
-        updated = next(s for s in new['sections'] if s['title'] == title)
+        updated = next(s for s in new['sections'] if title in s.get('sourceTitles', [s['title']]))
         if merged:
             text = unescape(re.sub(r'<[^>]+>', '', updated['html']))
             for paragraph in re.findall(r'<p>(.*?)</p>', original['html']):
@@ -50,11 +50,11 @@ for old, new in zip(before, lessons):
             assert '<button' not in example and '<details' not in example
 assert len(keys) == len(set(keys)) == 6, keys
 def order(slug, a, b):
-    titles = [s['title'] for l in lessons if l['id'] == slug for s in l['sections']]
+    titles = [t for l in lessons if l['id'] == slug for s in l['sections'] for t in s.get('sourceTitles', [s['title']])]
     assert titles.index(a) < titles.index(b), slug
 order('beginnen', 'Een klein woordenboek voor formules', 'SET-opfrisser: populatie en een eerlijke steekproef')
 order('rekenen', 'Rekenen zonder verborgen stappen', 'SET-opfrisser: spreiding tegenover onzekerheid')
-arithmetic = next(s for l in lessons if l['id'] == 'rekenen' for s in l['sections'] if s['title'] == 'Rekenen zonder verborgen stappen')
+arithmetic = next(s for l in lessons if l['id'] == 'rekenen' for s in l['sections'] if 'Rekenen zonder verborgen stappen' in s.get('sourceTitles', [s['title']]))
 assert arithmetic['html'].count('class="transition-panel"') == 3
 assert not any(s['title'] == 'Waarom kwadrateren?' for l in lessons if l['id'] == 'rekenen' for s in l['sections'])
 assert 'viewBox="0 0 260 68"' in transitions.population_example()

@@ -611,7 +611,7 @@ application('beginnen-3', 'De standaardfout van € 5.000 beschrijft onzekerheid
     'Het interval heeft betrekking op het populatietotaal W. Het zegt niet welk aandeel afzonderlijke posten binnen die bedragen ligt.'
 ])
 application('rekenen-1', 's² = 4 is de variantie; de bijbehorende standaardafwijking is √4 = 2. Houd die twee uitkomsten apart.', [
-    '4 klopt: het gemiddelde is 4 en de kwadratensom van de afwijkingen is 8; delen door n − 1 = 2 geeft 4.',
+    '4 klopt: variantie is de kwadratensom gedeeld door n − 1, dus 8/2 = 4.',
     '8/3 deelt de kwadratensom door n. De gevraagde steekproefvariantie gebruikt n − 1 omdat het gemiddelde uit deze steekproef is geschat.',
     '8 is alleen de som van de gekwadrateerde afwijkingen. Delen door de vrijheidsgraden ontbreekt nog.',
     '2 is de wortel uit de variantie, dus de standaardafwijking s. Gevraagd is s².'

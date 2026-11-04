@@ -72,8 +72,9 @@ body[data-page="les"] th,body[data-page="les"] td{padding:8px 10px}
 body.study-shell[data-page="les"] .lesson-bottom{position:static;padding:14px 0;border-width:1px 0 0;background:transparent}
 /* Formules in de lopende tekst: zelfde lettertype, grootte en gewicht als de tekst. */
 math[display="inline"]{display:inline math;math-style:normal;font-size:1em;white-space:nowrap;padding:0 .12em;background:#eef3f8;border-radius:3px}
-.inline-expression{display:inline-block;max-width:100%;word-spacing:normal;text-align:left;hyphens:none;background:#eef3f8;border-radius:3px;padding:0 .12em}
-.inline-expression:has(mfrac,msqrt){padding:.14em .2em;vertical-align:middle}
+.inline-expression{display:inline-block;max-width:100%;word-spacing:normal;text-align:left;hyphens:none;padding:0 .12em}
+.inline-expression:has(mfrac,msqrt){padding:.14em 0;vertical-align:middle;overflow-x:auto;overflow-y:hidden}
+.inline-expression.formula-line{display:block;margin:8px 0}
 .inline-value{font-variant-numeric:tabular-nums;white-space:nowrap}
 .inline-expression math[display="inline"]{font-size:1em;background:transparent;padding:0}
 /* Breuken en wortels in kleine tabeltekst blijven leesbaar: teller en noemer worden anders te klein. */
@@ -132,13 +133,13 @@ html[data-study-theme=dark] .section-body p.note.learning-source{background:tran
 .learning-figure{margin:24px 0;max-width:100%;min-width:0}.learning-figure img{display:block;max-width:100%;height:auto;border:1px solid #dce4ec;border-radius:6px}.learning-figure figcaption{font-size:.87rem;line-height:1.5;color:#526579;margin-top:9px}
 .section-body svg,.mc-stimulus svg{max-width:100%;height:auto;display:block}
 .section-body .table-wrap,.mc-stimulus .table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
-.section-body details:not(.learning-source,.learning-evidence){margin:18px 0;padding:16px 18px;border:1px solid #dce4ec;border-radius:6px;min-width:0}
-.section-body details:not(.learning-source,.learning-evidence)>summary{font-weight:600;cursor:pointer;line-height:1.5}
+.section-body details:not(.learning-source){margin:18px 0;padding:16px 18px;border:1px solid #dce4ec;border-radius:6px;min-width:0}
+.section-body details:not(.learning-source)>summary{font-weight:600;cursor:pointer;line-height:1.5}
 .section-body details[open]:not(.learning-source)>summary{margin-bottom:14px}
 .section-body table caption,.mc-stimulus table caption{font-weight:600;text-align:left;margin-bottom:10px;line-height:1.5}
 .mc-stimulus{margin:12px 0 24px;padding:16px;background:#f6f8fb;border:1px solid #d9e2eb;border-radius:6px;min-width:0;max-width:100%;overflow-x:auto;font-size:.94rem;line-height:1.6}
 .mc-stimulus p:first-child{margin-top:0}.mc-stimulus p:last-child{margin-bottom:0}.mc-stimulus table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}.mc-stimulus th,.mc-stimulus td{padding:9px 11px;border:1px solid #cdd7e1;text-align:left;vertical-align:top}.mc-stimulus th{background:#eaf0f5;font-weight:600}.mc-stimulus figure{margin:12px 0}.mc-stimulus figcaption{font-size:.85rem;margin-top:8px}
-@media(max-width:680px){.lesson-source-title{font-size:.52em}.section-body details:not(.learning-source,.learning-evidence){padding:12px}.mc-stimulus{padding:10px;font-size:.9rem}.mc-stimulus th,.mc-stimulus td{padding:7px 9px}.learning-figure figcaption{font-size:.8rem}}
+@media(max-width:680px){.lesson-source-title{font-size:.52em}.section-body details:not(.learning-source){padding:12px}.mc-stimulus{padding:10px;font-size:.9rem}.mc-stimulus th,.mc-stimulus td{padding:7px 9px}.learning-figure figcaption{font-size:.8rem}}
 @media print{.learning-figure{break-inside:avoid}}
 .section-title{flex:1;min-width:0}
 @media(min-width:761px){
@@ -251,7 +252,3 @@ body[data-page="les"] #main .question-feedback li,.question-feedback li{margin:3
 }
 .lesson-exam-focus h3{font-size:1rem;margin:16px 0 8px}
 .lesson-exam-focus .actions{margin-bottom:8px}
-body.study-shell[data-page="les"] #main .lesson-exam-focus .learning-evidence>summary{display:list-item;list-style:disclosure-closed inside;padding:0;margin:0;min-height:0;font-size:.88rem;line-height:1.5;background:transparent;color:#285749}
-body.study-shell[data-page="les"] #main .lesson-exam-focus .learning-evidence>summary::after{content:none;display:none}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell[data-page="les"] #main .lesson-exam-focus .learning-evidence>summary{color:#a4d5c7}
-body.study-shell[data-page="les"] #main .lesson-exam-focus .learning-evidence[open]>summary{list-style:disclosure-open inside}

@@ -23,8 +23,8 @@ def table(caption, headings, rows):
     return f'<div class="table-wrap"><table><caption>{escape(caption)}</caption><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
-def case(text, content='', origin='Oefengegevens, volgens de genoemde cursusbronnen.'):
-    return f'<p class="mc-data-origin">{escape(origin)}</p><p>{escape(text)}</p>{content}'
+def case(text, content=''):
+    return f'<p>{escape(text)}</p>{content}'
 
 
 def bundle(page, label):
@@ -187,8 +187,7 @@ CUMULATIVE = table('Cumulatieve boekwaarde uit het collegevoorbeeld',
   ('Topstratum ≥10.000',48,'621.778','Buiten cumulatie')])
 q('stratificatie','cumulatieve-grens',3,
   'Je wilt vier bemonsterde strata. Welke eerste klassegrens ligt het dichtst bij het eerste cumulatieve streefbedrag?',
-  case('Het topstratum wordt afzonderlijk integraal gecontroleerd. Kies een beschikbare klassegrens zonder interpolatie.',CUMULATIVE,
-       'Brongegevens: slides SRA NJ26, PDF-pagina 40. Vraag bij de oorspronkelijke tabel.'),
+  case('Het topstratum wordt afzonderlijk integraal gecontroleerd. Kies een beschikbare klassegrens zonder interpolatie.',CUMULATIVE),
   [('€ 3.000; cumulatief € 3.554.809','Het eerste streefbedrag is 14.306.659/4 = 3.576.664,75. De klassegrens 3.000 ligt met cumulatief 3.554.809 het dichtst erbij.'),
    ('€ 4.000; cumulatief € 5.948.884','Deze grens ligt boven het streefbedrag, maar veel verder weg dan de grens 3.000. De vraag verlangt de dichtstbijzijnde grens.'),
    ('€ 2.500, omdat 10.000/4 = 2.500','Dit verdeelt de schaal van boekwaarden in gelijke breedtes. De gevraagde methode verdeelt cumulatieve geldbedragen.'),
@@ -204,8 +203,7 @@ STRATA = table('Steekproeven per stratum uit het collegevoorbeeld',['Stratum','N
  [(1,2700,114,'7.000','475.000'),(2,1111,58,'8.000','1.175.000'),(3,567,36,'12.000','4.030.000'),(4,397,42,'20.000','9.600.000')])
 q('stratificatie','stratum-uitwerken',3,
   'Welke combinatie hoort bij stratum 1: puntschatting en standaardfout van het stratumtotaal?',
-  case('Werk stratum 1 uit met MPU en de eindigheidscorrectie. Houd tussenwaarden ongerond; de antwoordopties zijn afgerond.',STRATA,
-       'Brongegevens: slides SRA NJ26, PDF-pagina 48. Vraag bij de oorspronkelijke tabel.'),
+  case('Werk stratum 1 uit met MPU en de eindigheidscorrectie. Houd tussenwaarden ongerond; de antwoordopties zijn afgerond.',STRATA),
   [('Ŵ₁ ≈ € 165.789 en SE₁ ≈ € 4.949','w̄₁ = 7.000/114; s_w1 = √([475.000 − 7.000²/114]/113) ≈ 19,9946. Schaal gemiddelde en onzekerheid met N₁ = 2.700.'),
    ('Ŵ₁ = € 7.000 en SE₁ ≈ € 20','Dit zijn het steekproeftotaal en de spreiding per post. Er is nog niet naar het gehele stratum geprojecteerd.'),
    ('Ŵ₁ ≈ € 293.202 en SE₁ ≈ € 4.949','De standaardfout hoort bij stratum 1, maar het gemiddelde vermenigvuldigen met het totale aantal van alle strata telt andere strata verkeerd mee.'),
@@ -357,8 +355,7 @@ q('diagnostiek','residual-statistics',3,
   'Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen?',
   case('Gebruik de cursusgrenzen voor uitbijters en invloedrijke punten. De afhankelijke variabele is huur per maand in euro.',
        table('Residuals Statistics: geselecteerde rijen',['Rij','Minimum','Maximum','Mean','Std. Deviation','N'],
-             [('Std. Residual','−1,352','2,490','0,000','0,987',40),('Mahal. Distance','0,000','2,388','0,975','0,815',40),("Cook’s Distance",'0,000','0,313','0,030','0,060',40)]),
-       'Brongegevens: geselecteerde rijen uit slides SRA NJ26, PDF-pagina 100. Diagnosevraag.'),
+             [('Std. Residual','−1,352','2,490','0,000','0,987',40),('Mahal. Distance','0,000','2,388','0,975','0,815',40),("Cook’s Distance",'0,000','0,313','0,030','0,060',40)])),
   [('Aanwijzing voor uitbijter(s) in y en invloed; geen MD-overschrijding','Bij n = 40 geldt |z| > 2. MD-grens = 0,975 + 3 × 0,815 = 3,420; CD-grens = 0,030 + 3 × 0,060 = 0,210. Alleen z_max en CD_max overschrijden hun grens.'),
    ('Alleen een uitbijter in x, want MD_max > 2','Voor Mahalanobis Distance geldt hier de bijbehorende cursusgrens mean + 3 × sd. De grens ±2 hoort bij gestandaardiseerde residuen.'),
    ('Geen afwijkingen, omdat gemiddeld residu nul is','Een gemiddeld residu rond nul kan samengaan met grote individuele residuen. Onderzoek minimum en maximum.'),
