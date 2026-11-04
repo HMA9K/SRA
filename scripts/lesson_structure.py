@@ -29,7 +29,7 @@ def _mpu(lesson):
     case = sections['Van samenvattingstabel naar een volledig voorraadinterval']
 
     paragraphs = re.findall(r'<p>.*?</p>', use['html'], flags=re.S)
-    figure = re.search(r'<figure.*?</figure>', use['html'], flags=re.S)[0]
+    idea = re.search(r'<div class="mini-explanation".*?</figure>\s*</div>', use['html'], flags=re.S)[0]
     assert len(paragraphs) == 4, 'Controleer de opbouw van de MPU-les'
     worked, exercise = case['html'].split('<h3>Zelf toepassen</h3>')
     worked = worked.split('</p>', 1)[1]
@@ -71,7 +71,7 @@ def _mpu(lesson):
     lesson['sections'] = [
         focus,
         dict(title='Welke vraag beantwoordt de directe schatter?', html=question, refs=_refs(use)),
-        dict(title='Het idee: van gemiddelde per post naar totaal', html=paragraphs[1] + figure, refs=_refs(use)),
+        dict(title='Het idee: van gemiddelde per post naar totaal', html=idea, refs=_refs(use)),
         formula,
         dict(title='Zo pak je een tentamenvraag aan', html=approach, refs=_refs(steps, case), afterExample=True),
         dict(title='Waar je op moet letten', html=watch, refs=_refs(use, limit), afterExample=True),
