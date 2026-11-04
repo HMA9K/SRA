@@ -212,7 +212,7 @@ REVIEW['20200323'] = [
 ('G','Hellingstoets in afbeelding 6c en correlatietoets in afbeelding 8 geven p<0,001. De enkelvoudige ANOVA-toets in 6b geeft dezelfde conclusie over een lineair verband.'),
 ('G','R²=13,449/18,029≈0,746; ook 0,864²≈0,746. Kleine verschillen zijn afronding van de tabellen.'),
 ('B','Shapiro-Wilk p=0,641: normaliteit niet verwerpen. ABSRES-inequality p=0,389: homoscedasticiteit niet verwerpen. De verwijzing naar afbeelding 9 in het maartantwoordmodel is onjuist: de correlatie staat in afbeelding 8. Het juniantwoordmodel verwijst hier wel correct.'),
-('N','MSR=13,449 en MSE=4,580/19≈0,241053, dus F≈55,793. De bronwaarde 55,799 komt door tussentijds afronden van MSE op 0,241; t²=7,470²≈55,801 is ook consistent met afgeronde uitvoer.'),
+('N','MSR=13,449 en MSE=4,580/19≈0,241053, dus F≈55,793. De bronwaarde 55,799 wijkt daar iets van af, waarschijnlijk door afronding in de uitvoer; t²=7,470²≈55,801 is ook consistent met afgeronde uitvoer.'),
 ('G','Voorspelling socialproblems=−1,572+0,653×inequality; bij 5 volgt 1,693.'),
 ('G','Eenzijdige individuele voorspellingsgrens: 1,693+1,729×0,49095×√(1+1/21+(5−5,6871)²/(20×1,25505²))≈2,568. De extra 1 hoort bij één land, niet bij een gemiddelde respons.'),
 ('N','Inhabitants heeft bivariate p=0,779 en lijkt op deze basis ongeschikt. Een ontbrekend bivariabel verband sluit een nuttige bijdrage in een meervoudig model niet uit.'),
