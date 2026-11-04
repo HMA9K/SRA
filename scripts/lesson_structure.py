@@ -98,7 +98,8 @@ def _line(lesson, blocks):
             if part.get('heading'):
                 body += f'<h3>{html.escape(part["heading"], quote=False)}</h3>'
             body += old[part['old']]['html']
-        section = dict(title=block['title'], html=body, refs=_refs(*(old[p['old']] for p in block['parts'])))
+        section = dict(title=block['title'], html=body, refs=_refs(*(old[p['old']] for p in block['parts'])),
+                       sourceTitles=[p['old'] for p in block['parts']])
         if block.get('afterExample'):
             section['afterExample'] = True
         sections.append(section)

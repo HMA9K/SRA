@@ -21,7 +21,7 @@ for lesson_id, lesson in selected.items():
         assert len(text) >= minimum_length, (lesson_id, field, len(text))
         assert len(sentences) >= minimum_sentences, (lesson_id, field, sentences)
     for section in lesson['sections']:
-        if section['title'] in EXCEPTIONS:
+        if set(section.get('sourceTitles', [section['title']])) <= EXCEPTIONS:
             continue
         notes = [int(n) for n in re.findall(r'data-source-note="(\d+)"', section['html'])]
         assert section.get('refs'), (lesson_id, section['title'], 'gestructureerde bron ontbreekt')

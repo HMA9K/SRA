@@ -57,6 +57,10 @@ window.SRA = {
               "locator": "PDF 6-10: veel of weinig verwachte fouten"
             }
           ],
+          "sourceTitles": [
+            "Begin met een concrete vraag",
+            "Schatten en toetsen: twee soorten vragen"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -74,6 +78,9 @@ window.SRA = {
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
             }
+          ],
+          "sourceTitles": [
+            "SET-opfrisser: populatie en een eerlijke steekproef"
           ],
           "sourceNotes": [
             8
@@ -94,6 +101,9 @@ window.SRA = {
               "page": 4
             }
           ],
+          "sourceTitles": [
+            "Een klein woordenboek voor formules"
+          ],
           "sourceNotes": [
             9,
             10
@@ -108,6 +118,9 @@ window.SRA = {
               "page": 4,
               "locator": "Boek p. 204; oorspronkelijke PDF p. 222; uitsnede p. 4"
             }
+          ],
+          "sourceTitles": [
+            "Een aselecte selectie navolgbaar uitvoeren"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -578,6 +591,9 @@ window.SRA = {
               "page": 15
             }
           ],
+          "sourceTitles": [
+            "Rekenen zonder verborgen stappen"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -593,6 +609,9 @@ window.SRA = {
               "page": 1,
               "locator": "SET-attentiepunten, oorspronkelijke PDF p. 3; uitsnede p. 1"
             }
+          ],
+          "sourceTitles": [
+            "SET-opfrisser: spreiding tegenover onzekerheid"
           ],
           "sourceNotes": [
             6
@@ -623,6 +642,9 @@ window.SRA = {
               "locator": "Boek p. 205; oorspronkelijke PDF p. 223; uitsnede p. 5"
             }
           ],
+          "sourceTitles": [
+            "De rekenvorm op het formuleblad"
+          ],
           "sourceNotes": [
             3,
             7,
@@ -644,6 +666,9 @@ window.SRA = {
               "page": 15,
               "locator": "PDF 15-16: equivalente variantieformules"
             }
+          ],
+          "sourceTitles": [
+            "Een gegevenstabel in beide richtingen doorrekenen"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -1108,6 +1133,9 @@ window.SRA = {
               "page": 5
             }
           ],
+          "sourceTitles": [
+            "Van kans naar interval"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -1133,6 +1161,9 @@ window.SRA = {
               "locator": "Modelvoorwaarden en normaliteit, boek p. 271; uitsnede p. 12",
               "page": 12
             }
+          ],
+          "sourceTitles": [
+            "Wat is een verdeling?"
           ],
           "sourceNotes": [
             6,
@@ -1169,6 +1200,9 @@ window.SRA = {
               "page": 34,
               "locator": "PDF 34: vergelijking van onnauwkeurigheidsmarges"
             }
+          ],
+          "sourceTitles": [
+            "Wat maakt een interval breder?"
           ],
           "sourceNotes": [
             4,
@@ -1218,6 +1252,11 @@ window.SRA = {
               "locator": "Tabelregels: naast lagere df; bij df > 200 onderste rij"
             }
           ],
+          "sourceTitles": [
+            "Waar komt de t-waarde vandaan?",
+            "Eén of twee grenzen: uitgewerkt voorbeeld",
+            "De tabellenbundel gebruiken: pagina, rij, kolom en conclusie"
+          ],
           "afterExample": true,
           "sourceNotes": [
             5,
@@ -1253,6 +1292,9 @@ window.SRA = {
               "page": 9,
               "locator": "Boek p. 219; oorspronkelijke PDF p. 237; uitsnede p. 9"
             }
+          ],
+          "sourceTitles": [
+            "Intervalgrafieken lezen: één vaste populatiewaarde, verschillende schattingen"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -2556,6 +2598,9 @@ window.SRA = {
               "locator": "H8, opgave 5: werkelijke som en MPU-uitwerking"
             }
           ],
+          "sourceTitles": [
+            "Wat is hier een fout?"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -2586,6 +2631,9 @@ window.SRA = {
               "page": 10
             }
           ],
+          "sourceTitles": [
+            "De spreiding van de verschillen"
+          ],
           "sourceNotes": [
             10,
             4,
@@ -2611,6 +2659,9 @@ window.SRA = {
               "page": 13,
               "locator": "Rij 160; kolom 0,025"
             }
+          ],
+          "sourceTitles": [
+            "De gegevenstabel lezen en de juiste waarde rapporteren"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -3229,6 +3280,9 @@ window.SRA = {
               "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
             }
           ],
+          "sourceTitles": [
+            "Een vast percentage herkennen"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -3269,6 +3323,9 @@ window.SRA = {
               "page": 2,
               "locator": "Boek p. 212; oorspronkelijke PDF p. 230; uitsnede p. 2"
             }
+          ],
+          "sourceTitles": [
+            "Spreiding die na de verhouding overblijft"
           ],
           "sourceNotes": [
             11,
@@ -3318,6 +3375,10 @@ window.SRA = {
               "locator": "Huidige cursusregel voor df > 200"
             }
           ],
+          "sourceTitles": [
+            "Een volledige casus: van goedratio tot interval",
+            "De tweede rekenwijze: fouttotalen en productsommen"
+          ],
           "afterExample": true,
           "sourceNotes": [
             14,
@@ -3343,6 +3404,9 @@ window.SRA = {
               "page": 3,
               "locator": "Boek p. 213; oorspronkelijke PDF p. 231; uitsnede p. 3"
             }
+          ],
+          "sourceTitles": [
+            "Boekverdieping: wanneer verbetert de quotiëntschatter MPU?"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -4071,6 +4135,9 @@ window.SRA = {
               "page": 2
             }
           ],
+          "sourceTitles": [
+            "Corrigeren voor een afwijkende steekproef"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -4097,6 +4164,9 @@ window.SRA = {
               "page": 2
             }
           ],
+          "sourceTitles": [
+            "Waarom kan het interval smaller worden?"
+          ],
           "sourceNotes": [
             4,
             6,
@@ -4122,6 +4192,9 @@ window.SRA = {
               "page": 4,
               "locator": "Boek p. 214; oorspronkelijke PDF p. 232; uitsnede p. 4"
             }
+          ],
+          "sourceTitles": [
+            "De correctie verklaren en de helling uit productsommen berekenen"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -4160,6 +4233,9 @@ window.SRA = {
               "locator": "Gerealiseerde marges per schatter"
             }
           ],
+          "sourceTitles": [
+            "De vier schatters vergeleken"
+          ],
           "afterExample": true,
           "sourceNotes": [
             9,
@@ -4178,6 +4254,9 @@ window.SRA = {
               "page": 6,
               "locator": "Boek p. 216; oorspronkelijke PDF p. 234; uitsnede p. 6"
             }
+          ],
+          "sourceTitles": [
+            "Een smaller interval moet ook geldig zijn"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -4801,6 +4880,10 @@ window.SRA = {
               "locator": "Formules 12–17, PDF-pagina 1"
             }
           ],
+          "sourceTitles": [
+            "Werk terug vanaf de gewenste precisie",
+            "Omvang bij de quotiëntschatter"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -4823,6 +4906,9 @@ window.SRA = {
               "locator": "PDF 34-36: vergelijking, uitbreiding en nieuwe evaluatie"
             }
           ],
+          "sourceTitles": [
+            "De slides doorrekenen: van gewenste marge naar extra controles"
+          ],
           "afterExample": true,
           "sourceNotes": [
             12
@@ -4842,6 +4928,9 @@ window.SRA = {
               "locator": "Formule 5, PDF-pagina 1",
               "page": 1
             }
+          ],
+          "sourceTitles": [
+            "Rond in de veilige richting"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -4879,6 +4968,10 @@ window.SRA = {
               "locator": "H8.9c: gerichte uitbreiding van stratum 3"
             }
           ],
+          "sourceTitles": [
+            "Uitbreiding na stratificatie",
+            "Alle strata uitbreiden of gericht één bijdrage verkleinen"
+          ],
           "afterExample": true,
           "sourceNotes": [
             15,
@@ -4892,6 +4985,9 @@ window.SRA = {
           "title": "Zelf oefenen",
           "html": "<p class=\"lesson-bridge\">Let bij het oefenen op de vaste volgorde: bepaal eerst E, kies de spreiding die bij de schatter hoort, rond naar boven af en houd totale omvang en uitbreiding uit elkaar.</p><p>Maak de oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/steekproefomvang\">Oefen Hoeveel posten moet je controleren?</a></p>",
           "refs": [],
+          "sourceTitles": [
+            "Zelf oefenen met deze aanvulling"
+          ],
           "afterExample": true,
           "sourceNotes": []
         }
@@ -5519,6 +5615,9 @@ window.SRA = {
               "locator": "PDF 38-39: nut, inhoudelijk inzicht en indelingsmethoden"
             }
           ],
+          "sourceTitles": [
+            "Waarom opdelen?"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -5550,6 +5649,9 @@ window.SRA = {
               "locator": "Boek p. 230; oorspronkelijke PDF p. 248; uitsnede p. 10",
               "page": 10
             }
+          ],
+          "sourceTitles": [
+            "Hoe kies je de grenzen van de strata?"
           ],
           "sourceNotes": [
             7,
@@ -5592,6 +5694,10 @@ window.SRA = {
               "locator": "Boek p. 228; oorspronkelijke PDF p. 246; uitsnede p. 8",
               "page": 8
             }
+          ],
+          "sourceTitles": [
+            "Hoe verdeel je de steekproef?",
+            "De groepen samenvoegen"
           ],
           "sourceNotes": [
             9,
@@ -5641,6 +5747,11 @@ window.SRA = {
               "page": 10,
               "locator": "H8 opgave 8a/b, PDF 10–11"
             }
+          ],
+          "sourceTitles": [
+            "De volledige collegestabel: cumulatieve boekwaarde en grenzen",
+            "Ook de wortelmethode volledig uit een klassentabel opbouwen",
+            "Stratagrenzen bepalen vanuit de cursusopgave"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -5703,6 +5814,11 @@ window.SRA = {
               "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
+          "sourceTitles": [
+            "Neyman en evenredige allocatie naast elkaar uitrekenen",
+            "De volledige MPU-stratacase: iedere rij tot en met het interval",
+            "Van tabel naar een onderbouwde tentamenuitwerking"
+          ],
           "afterExample": true,
           "sourceNotes": [
             21,
@@ -5736,6 +5852,9 @@ window.SRA = {
               "locator": "Boek p. 231; oorspronkelijke PDF p. 249; uitsnede p. 11"
             }
           ],
+          "sourceTitles": [
+            "Gericht extra controles in één stratum"
+          ],
           "afterExample": true,
           "sourceNotes": [
             28,
@@ -5747,6 +5866,9 @@ window.SRA = {
           "title": "Zelf oefenen",
           "html": "<p class=\"lesson-bridge\">Let bij het oefenen op de volgorde: eerst de grenzen, dan de allocatie, dan schatten per stratum en varianties optellen. Tel geen standaardafwijkingen op en gebruik de werkelijk gecontroleerde nᵢ.</p><p>Maak de oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/stratificatie\">Oefen Stratificatie en allocatie</a></p>",
           "refs": [],
+          "sourceTitles": [
+            "Zelf oefenen met deze aanvulling"
+          ],
           "afterExample": true,
           "sourceNotes": []
         }
@@ -6692,6 +6814,9 @@ window.SRA = {
               "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
             }
           ],
+          "sourceTitles": [
+            "Van controleverwachting naar regressiemodel"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -6712,6 +6837,9 @@ window.SRA = {
               "locator": "Boek p. 240; oorspronkelijke PDF p. 258; uitsnede p. 8",
               "page": 8
             }
+          ],
+          "sourceTitles": [
+            "Een rechte lijn leren lezen"
           ],
           "sourceNotes": [
             6,
@@ -6768,6 +6896,11 @@ window.SRA = {
               "locator": "H9.1: uitwerking, PDF 14–15"
             }
           ],
+          "sourceTitles": [
+            "Hoe wordt de lijn gekozen?",
+            "Correlatie: richting en sterkte",
+            "Residuele variantie berekenen zonder ANOVA-tabel"
+          ],
           "sourceNotes": [
             7,
             8,
@@ -6805,6 +6938,10 @@ window.SRA = {
               "locator": "SPSS-uitwerkingen, college 3, PDF 5–10"
             }
           ],
+          "sourceTitles": [
+            "Van gegevens naar Coefficients: cursusopgave H9.1",
+            "SPSS-praktijk college 3: de handberekening terugvinden"
+          ],
           "afterExample": true,
           "sourceNotes": [
             16,
@@ -6817,6 +6954,9 @@ window.SRA = {
           "title": "Zelf oefenen met lijn, residu en correlatie",
           "html": "<p class=\"lesson-bridge\">Je hebt de lijn nu gelezen, berekend en in SPSS teruggevonden. Met de oefenvarianten controleer je of je dat ook zelf kunt; na controle krijg je de rekenstappen en uitleg per antwoord.</p><p>Maak de oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/regressielijn\">Oefen Regressie: een lijn door gegevens</a></p>",
           "refs": [],
+          "sourceTitles": [
+            "Zelf oefenen met deze aanvulling"
+          ],
           "afterExample": true,
           "sourceNotes": []
         }
@@ -7487,6 +7627,9 @@ window.SRA = {
               "locator": "Attentiepunten, variantieanalyse, PDF 4"
             }
           ],
+          "sourceTitles": [
+            "ANOVA vergelijkt de lijn met voorspellen door het gemiddelde"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -7513,6 +7656,9 @@ window.SRA = {
               "page": 2
             }
           ],
+          "sourceTitles": [
+            "Drie soorten kwadratensommen"
+          ],
           "sourceNotes": [
             3,
             6,
@@ -7534,6 +7680,9 @@ window.SRA = {
               "page": 8
             }
           ],
+          "sourceTitles": [
+            "Van de tabel naar betekenis"
+          ],
           "sourceNotes": [
             7,
             8
@@ -7553,6 +7702,9 @@ window.SRA = {
               "page": 86,
               "locator": "Slides, F-toets huurcasus, PDF 86–87"
             }
+          ],
+          "sourceTitles": [
+            "De huurcasus: correlatie, ANOVA en voorspelling verbinden"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -7575,6 +7727,9 @@ window.SRA = {
               "page": 3,
               "locator": "Formuleblad, formules 35–43, PDF 3"
             }
+          ],
+          "sourceTitles": [
+            "Een volledige ANOVA-tabel reconstrueren"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -8117,6 +8272,9 @@ window.SRA = {
               "locator": "Attentiepunten, toetsen meervoudige regressie, PDF 8"
             }
           ],
+          "sourceTitles": [
+            "Van de onderzoeksvraag naar de juiste toets"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -8142,6 +8300,10 @@ window.SRA = {
               "locator": "Boek p. 253; oorspronkelijke PDF p. 271; uitsnede p. 5",
               "page": 5
             }
+          ],
+          "sourceTitles": [
+            "SET-opfrisser: hypothesen en foutkansen",
+            "Begin bij wat je wilt aantonen"
           ],
           "sourceNotes": [
             6,
@@ -8209,6 +8371,11 @@ window.SRA = {
               "page": 8
             }
           ],
+          "sourceTitles": [
+            "t en de p-waarde",
+            "Toetsen en het interval voor de regressiehelling",
+            "Het hele model toetsen met F"
+          ],
           "sourceNotes": [
             7,
             8,
@@ -8258,6 +8425,10 @@ window.SRA = {
               "locator": "Uitwerkingenbundel, H9.1g/h, PDF 15"
             }
           ],
+          "sourceTitles": [
+            "De conclusie in vier stappen",
+            "Tabellenbundel gebruiken: dezelfde casus, drie toetsvormen"
+          ],
           "afterExample": true,
           "sourceNotes": [
             17,
@@ -8272,6 +8443,9 @@ window.SRA = {
           "title": "Zelf oefenen met hypothesen, t en F",
           "html": "<p class=\"lesson-bridge\">Je kunt nu van vraag via toets naar conclusie werken. Met de oefenvarianten herhaal je die route; na controle krijg je de rekenstappen en uitleg per antwoord.</p><p>Maak de oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/toetsen\">Oefen Hypothesen, t-toets en F-toets</a></p>",
           "refs": [],
+          "sourceTitles": [
+            "Zelf oefenen met deze aanvulling"
+          ],
           "afterExample": true,
           "sourceNotes": []
         }
@@ -8943,6 +9117,9 @@ window.SRA = {
               "locator": "Attentiepunten, analyses 1–4, PDF 5–6"
             }
           ],
+          "sourceTitles": [
+            "Een modelcontrole begint bij het gegevensproces"
+          ],
           "sourceNotes": [
             3,
             4
@@ -8982,6 +9159,11 @@ window.SRA = {
               "page": 94,
               "locator": "Slides, tijdsvertraging, PDF 94–99"
             }
+          ],
+          "sourceTitles": [
+            "Eerst de structuur van de gegevens",
+            "Samengevoegde groepen: eerst zichtbaar maken, dan modelleren",
+            "Tijdsvertraging lezen in grafieken én Correlations"
           ],
           "sourceNotes": [
             5,
@@ -9044,6 +9226,11 @@ window.SRA = {
               "locator": "Onderbouwing behandeling uitbijters, PDF 5–6"
             }
           ],
+          "sourceTitles": [
+            "Uitbijter is niet hetzelfde als invloedrijk punt",
+            "Residuals Statistics: drie verschillende waarschuwingen",
+            "Van uitbijtersignaal naar onderbouwde aanpassing"
+          ],
           "sourceNotes": [
             13,
             14,
@@ -9096,6 +9283,10 @@ window.SRA = {
               "page": 6,
               "locator": "Attentiepunten, diagnoses 5 en 6, PDF 6"
             }
+          ],
+          "sourceTitles": [
+            "De drie modelvoorwaarden",
+            "Tests of Normality en ABSRES: kies de juiste rij en grootheid"
           ],
           "sourceNotes": [
             23,
@@ -9159,6 +9350,12 @@ window.SRA = {
               "locator": "Boek p. 283; oorspronkelijke PDF p. 301; uitsnede p. 11"
             }
           ],
+          "sourceTitles": [
+            "Durbin-Watson heeft ook onbesliste gebieden",
+            "Diagnostische toetsingsgrootheden zelf berekenen",
+            "Durbin-Watson: van tabellenbundel naar beslissing",
+            "Autocorrelatie corrigeren en opnieuw controleren"
+          ],
           "afterExample": true,
           "sourceNotes": [
             32,
@@ -9197,6 +9394,9 @@ window.SRA = {
               "locator": "Boek p. 278; oorspronkelijke PDF p. 296; uitsnede p. 6"
             }
           ],
+          "sourceTitles": [
+            "Gewogen regressie: de WLS-voetnoot bepaalt hoe je uitvoer leest"
+          ],
           "afterExample": true,
           "sourceNotes": [
             40,
@@ -9214,6 +9414,9 @@ window.SRA = {
               "page": 14,
               "locator": "SPSS-uitwerkingen, college 5, PDF 14–21"
             }
+          ],
+          "sourceTitles": [
+            "SPSS-praktijk college 5: diagnoses en herbeoordeling"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -9235,6 +9438,9 @@ window.SRA = {
               "locator": "Attentiepunten, onderbouwing behandeling uitbijters, PDF 5–6"
             }
           ],
+          "sourceTitles": [
+            "Meervoudige diagnostiek: samenhangende keuzes in Life Expectancy"
+          ],
           "afterExample": true,
           "sourceNotes": [
             44,
@@ -9245,6 +9451,9 @@ window.SRA = {
           "title": "Zelf oefenen met de diagnoses",
           "html": "<p class=\"lesson-bridge\">Je hebt de analyses nu met signaal, betekenis en vervolgstap gezien. Met de oefenvarianten controleer je of je ze zelf kunt toepassen; na controle krijg je de rekenstappen en uitleg per antwoord.</p><p>Maak de oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/diagnostiek\">Oefen Controleer of je het model kunt gebruiken</a></p>",
           "refs": [],
+          "sourceTitles": [
+            "Zelf oefenen met deze aanvulling"
+          ],
           "afterExample": true,
           "sourceNotes": []
         }
@@ -10310,6 +10519,9 @@ window.SRA = {
               "locator": "Formuleblad, individueel voorspellingsinterval, formule 50, PDF 3"
             }
           ],
+          "sourceTitles": [
+            "De voorspelling is een verwachting met een onzekerheidsmarge"
+          ],
           "sourceNotes": [
             3,
             4
@@ -10334,6 +10546,9 @@ window.SRA = {
               "locator": "Voorspelling binnen het relevante gebied",
               "page": 6
             }
+          ],
+          "sourceTitles": [
+            "Eerst de puntvoorspelling"
           ],
           "sourceNotes": [
             3,
@@ -10365,6 +10580,9 @@ window.SRA = {
               "locator": "Vraag 13: verschil tussen gemiddelde en individueel interval",
               "page": 5
             }
+          ],
+          "sourceTitles": [
+            "Waarom staat er een 1 onder de wortel?"
           ],
           "sourceNotes": [
             3,
@@ -10403,6 +10621,10 @@ window.SRA = {
               "locator": "Tabellenbundel, tabel 13.4, df 22, PDF 12"
             }
           ],
+          "sourceTitles": [
+            "Een werkelijke uitkomst vergelijken",
+            "Boekcasus Productiviteit: een controlemaand beoordelen"
+          ],
           "afterExample": true,
           "sourceNotes": [
             5,
@@ -10432,6 +10654,9 @@ window.SRA = {
               "locator": "Boek p. 285; oorspronkelijke PDF p. 303; uitsnede p. 13"
             }
           ],
+          "sourceTitles": [
+            "Basisperiode en controleperiode gescheiden houden"
+          ],
           "afterExample": true,
           "sourceNotes": [
             12,
@@ -10458,6 +10683,9 @@ window.SRA = {
               "page": 12,
               "locator": "Tabellenbundel, tabel 13.4, rij 35, PDF 12"
             }
+          ],
+          "sourceTitles": [
+            "Voorspellen met de huurcasus na modelaanpassing"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -11017,6 +11245,9 @@ window.SRA = {
               "locator": "Tentamen 17 maart 2025, salarisuitvoer, PDF 9"
             }
           ],
+          "sourceTitles": [
+            "Een extra variabele verandert de vraag die de helling beantwoordt"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -11058,6 +11289,10 @@ window.SRA = {
               "page": 9
             }
           ],
+          "sourceTitles": [
+            "Eén model, meerdere verklaringen",
+            "Een categorie in cijfers"
+          ],
           "sourceNotes": [
             6,
             7,
@@ -11097,6 +11332,10 @@ window.SRA = {
               "locator": "Boek p. 321; oorspronkelijke PDF p. 339; uitsnede p. 8"
             }
           ],
+          "sourceTitles": [
+            "Vergelijk modellen met beleid",
+            "B en gestandaardiseerde Beta vergelijken"
+          ],
           "sourceNotes": [
             3,
             12,
@@ -11135,6 +11374,10 @@ window.SRA = {
               "locator": "Tabellenbundel, tabel 13.8, PDF 20–29"
             }
           ],
+          "sourceTitles": [
+            "Volledige toepassing: salaris, dummy’s en modeltoets",
+            "Life Expectancy: eindmodel, globale toets en voorspelling"
+          ],
           "afterExample": true,
           "sourceNotes": [
             15,
@@ -11148,6 +11391,9 @@ window.SRA = {
           "title": "Zelf oefenen met meervoudige regressie en dummy’s",
           "html": "<p class=\"lesson-bridge\">Werk nu zonder voorbeeld ernaast. Schrijf bij elke variant eerst de codering van de dummy’s op en bepaal welke toets de vraag nodig heeft, zoals je in de casussen hebt gedaan.</p><p>Maak de oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/meervoudig\">Oefen Meervoudige regressie en dummyvariabelen</a></p>",
           "refs": [],
+          "sourceTitles": [
+            "Zelf oefenen met deze aanvulling"
+          ],
           "afterExample": true,
           "sourceNotes": []
         }
@@ -11776,6 +12022,9 @@ window.SRA = {
               "locator": "Attentiepunten, transformaties, PDF 7"
             }
           ],
+          "sourceTitles": [
+            "Een transformatie verandert welk patroon lineair wordt"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -11801,6 +12050,9 @@ window.SRA = {
               "locator": "College 6: alle transformaties behalve de inverse functie",
               "page": 5
             }
+          ],
+          "sourceTitles": [
+            "Wat doet een logaritme?"
           ],
           "sourceNotes": [
             3,
@@ -11843,6 +12095,10 @@ window.SRA = {
               "page": 2
             }
           ],
+          "sourceTitles": [
+            "Drie modelvormen",
+            "Wat verandert er aan de interpretatie?"
+          ],
           "sourceNotes": [
             4,
             8,
@@ -11882,6 +12138,11 @@ window.SRA = {
               "locator": "Attentiepunten, transformaties, PDF 7"
             }
           ],
+          "sourceTitles": [
+            "Terugtransformeren: de hele logwaarde en beide intervalgrenzen",
+            "Een meervoudig logmodel terugtransformeren",
+            "SPSS-praktijk college 6: vier patronen, vier modelkeuzes"
+          ],
           "afterExample": true,
           "sourceNotes": [
             13,
@@ -11916,6 +12177,9 @@ window.SRA = {
               "locator": "Transformaties en modelkeuze, vragen 11–12"
             }
           ],
+          "sourceTitles": [
+            "R² vergelijken na een transformatie"
+          ],
           "afterExample": true,
           "sourceNotes": [
             9,
@@ -11928,6 +12192,9 @@ window.SRA = {
           "title": "Zelf oefenen met kromme verbanden en logaritmen",
           "html": "<p class=\"lesson-bridge\">Oefen nu de rekenvolgorde uit deze les: vul de juiste schaal in, reken de hele logwaarde uit en transformeer pas daarna terug.</p><p>Maak de oefenvarianten bij dit onderwerp. Je krijgt na controle rekenstappen, uitleg per antwoord en de gebruikte bronnen.</p><p><a class=\"study-btn\" href=\"#tentamen/mc/transformaties\">Oefen Kromme verbanden en logaritmen</a></p>",
           "refs": [],
+          "sourceTitles": [
+            "Zelf oefenen met deze aanvulling"
+          ],
           "afterExample": true,
           "sourceNotes": []
         }
@@ -12520,6 +12787,9 @@ window.SRA = {
               "locator": "Attentiepunten, modelbouw en multicollineariteit, PDF 7–8"
             }
           ],
+          "sourceTitles": [
+            "Modelbouw balanceert extra informatie en onnodige complexiteit"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -12551,6 +12821,9 @@ window.SRA = {
               "locator": "Handmatige backwardselectie, college 7",
               "page": 28
             }
+          ],
+          "sourceTitles": [
+            "Hoe komt een variabele in het model?"
           ],
           "sourceNotes": [
             4,
@@ -12604,6 +12877,10 @@ window.SRA = {
               "page": 8
             }
           ],
+          "sourceTitles": [
+            "Overlap tussen verklarende variabelen",
+            "Een extra variabele toetsen"
+          ],
           "sourceNotes": [
             5,
             10,
@@ -12655,6 +12932,10 @@ window.SRA = {
               "locator": "Boek p. 308; oorspronkelijke PDF p. 326; uitsnede p. 6"
             }
           ],
+          "sourceTitles": [
+            "VIF lezen: van hulpregressie naar conclusie",
+            "Geneste modellen: de extra bijdrage zichtbaar berekenen"
+          ],
           "afterExample": true,
           "sourceNotes": [
             10,
@@ -12690,6 +12971,10 @@ window.SRA = {
               "page": 7,
               "locator": "Attentiepunten, backward, PDF 7"
             }
+          ],
+          "sourceTitles": [
+            "Doorlopende collegecasus Life Expectancy: selecteren met uitvoer",
+            "SPSS-praktijk college 7: huizen, selectie en overlap"
           ],
           "afterExample": true,
           "sourceNotes": [
@@ -13476,6 +13761,10 @@ window.SRA = {
               "locator": "College 7: notitie validatie"
             }
           ],
+          "sourceTitles": [
+            "Een sterke fit in de training kan buiten de training tegenvallen",
+            "Herkomst van validatie"
+          ],
           "sourceNotes": [
             3,
             4,
@@ -13497,6 +13786,9 @@ window.SRA = {
               "locator": "Validatie, formule 64",
               "page": 4
             }
+          ],
+          "sourceTitles": [
+            "Beoordelen op ongebruikte gegevens"
           ],
           "sourceNotes": [
             7,
@@ -13538,6 +13830,10 @@ window.SRA = {
               "page": 8
             }
           ],
+          "sourceTitles": [
+            "Voorspelfouten op een onafhankelijke testset uitwerken",
+            "SPSS-uitvoer stap voor stap lezen"
+          ],
           "afterExample": true,
           "sourceNotes": [
             9,
@@ -13567,6 +13863,9 @@ window.SRA = {
               "locator": "Validatie en interpretatie van MSPR",
               "page": 9
             }
+          ],
+          "sourceTitles": [
+            "Geen conclusie zonder context"
           ],
           "afterExample": true,
           "sourceNotes": [

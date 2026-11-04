@@ -52,7 +52,7 @@ const server=http.createServer((req,res)=>{
     checks.push({id,width,theme,blocks:info.length});
     if(id==='beginnen'){assert.equal(await page.locator('[data-learning-transition="populatie-steekproef"] .transition-note').count(),0);assert.match(await page.locator('[data-learning-transition="populatie-steekproef"]').innerText(),/8 × € 100 = € 800/);}
     if(id==='rekenen'){
-     assert.equal(await page.locator('.section-title').filter({hasText:'Rekenen zonder verborgen stappen'}).count(),1);
+     assert.equal(await page.locator('.section-title').filter({hasText:'Hoe ver liggen de waarden uit elkaar?'}).count(),1);
      assert.equal(await page.locator('.section-title').filter({hasText:'Waarom kwadrateren?'}).count(),0);
      const combined=page.locator('section.section').filter({has:page.locator('[data-learning-transition="gemiddelde-kwadraten"]')});
      assert.ok((await combined.innerText()).includes('Van kwadraten naar variantie en standaardafwijking'));

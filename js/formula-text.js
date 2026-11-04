@@ -186,7 +186,7 @@
     for (const node of nodes) {
       const whole = node.parentElement.matches('.inline-expression') && node.parentElement.childNodes.length === 1 && toMathML(node.nodeValue);
       const parts = whole ? [{math: whole}] : split(node.nodeValue);
-      if (parts) node.replaceWith(...parts.map(part => typeof part === 'string' ? part : element(part.math)));
+      if (parts) node.replaceWith(...parts.map(part => typeof part === 'string' ? part : element(/<m(?:frac|sqrt)/.test(part.math) && !node.parentElement.closest('.inline-expression') ? `<span class="inline-expression">${part.math}</span>` : part.math)));
     }
     joinFractions(container, element);
     markOperators(container, element);

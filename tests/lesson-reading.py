@@ -42,7 +42,7 @@ for value in ('95%', '€ 100.000', '0,025', '123.456,789'):
 assert inline_formulas('PDF 13, rij 160, 3 lessen') == 'PDF 13, rij 160, 3 lessen'
 assert len(lessons) == 19
 uncertainty = next(lesson for lesson in lessons if lesson['id'] == 'onzekerheid')
-titles = [section['title'] for section in uncertainty['sections']]
+titles = [title for section in uncertainty['sections'] for title in section.get('sourceTitles', [section['title']])]
 assert titles.index('Van kans naar interval') < titles.index('Waar komt de t-waarde vandaan?') < titles.index('Eén of twee grenzen: uitgewerkt voorbeeld') < titles.index('De tabellenbundel gebruiken: pagina, rij, kolom en conclusie')
 assert any('data-mini-table="t-waarde"' in section['html'] and '1,711' in section['html'] and '2,064' in section['html'] for section in uncertainty['sections'])
 for lesson in lessons:
@@ -69,7 +69,7 @@ for lesson in lessons[:9]:
     assert len(kern) >= 300 and sentences(kern) >= 4, lesson['id']
     assert len(vervolg) >= 150 and sentences(vervolg) >= 2, lesson['id']
     for section in lesson['sections']:
-        if section['title'] != 'Zelf oefenen met deze aanvulling':
+        if 'Zelf oefenen met deze aanvulling' not in section.get('sourceTitles', [section['title']]):
             assert section['sourceNotes'], (lesson['id'], section['title'])
 for phase in ('Basis', 'Schatten'):
     assert len(summaries[phase]) > 800, phase
