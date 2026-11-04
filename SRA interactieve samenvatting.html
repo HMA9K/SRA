@@ -28111,21 +28111,21 @@ window.SRAMCData = {
         },
         {
           "id": "mc-rekenen-toepassing-3",
-          "prompt": "s = 12 en n = 36. Negeer de eindigheidscorrectie. Welke combinatie klopt?",
+          "prompt": "Een steekproef van 36 posten heeft een standaardafwijking van s = 12 euro. Reken zonder eindigheidscorrectie. Hoe groot zijn de spreiding van de losse posten en de standaardfout van het gemiddelde?",
           "options": [
-            "Beide zijn 144",
-            "Spreiding posten 2; standaardfout gemiddelde 12",
-            "Spreiding posten 12; standaardfout gemiddelde 2",
-            "Beide zijn 12"
+            "Beide 144",
+            "Spreiding losse posten 2 euro; standaardfout 12 euro",
+            "Spreiding losse posten 12 euro; standaardfout 2 euro",
+            "Beide 12 euro"
           ],
           "correct": 2,
           "level": 3,
           "steps": [
-            "s beschrijft de spreiding van individuele posten.",
-            "De standaardfout van het gemiddelde is 12/√36 = 2.",
+            "De spreiding van de losse posten is s zelf: 12 euro.",
+            "De standaardfout van het gemiddelde is s/√n = 12/√36 = 12/6 = 2 euro.",
             "Het gemiddelde van 36 waarnemingen is minder onzeker dan één afzonderlijke waarneming, terwijl de gemeten spreiding van de posten zelf 12 blijft."
           ],
-          "explanation": "s beschrijft de spreiding van individuele posten. De standaardfout van het gemiddelde is 12/√36 = 2. Het gemiddelde van 36 waarnemingen is minder onzeker dan één afzonderlijke waarneming, terwijl de gemeten spreiding van de posten zelf 12 blijft.",
+          "explanation": "De spreiding van de losse posten is s zelf: 12 euro. De standaardfout van het gemiddelde is s/√n = 12/√36 = 12/6 = 2 euro. Het gemiddelde van 36 waarnemingen is minder onzeker dan één afzonderlijke waarneming, terwijl de gemeten spreiding van de posten zelf 12 blijft.",
           "pattern": "Herken: s en n zijn gegeven; de eindigheidscorrectie moet worden genegeerd. → Betekenis: Je moet de individuele spreiding onderscheiden van de onzekerheid van het gemiddelde. → Aanpak: Behoud s als spreiding en bereken daarnaast s/√n als standaardfout. → Gevraagd antwoord: Een combinatie van beide maten met hun juiste betekenis.",
           "trap": "De standaardfout vervangen door s maakt de intervalmarge te groot.",
           "optionExplanations": [
@@ -49688,8 +49688,7 @@ window.SRAExamPractice = {
       "correct": 0,
       "level": 3,
       "topics": [
-        "anova",
-        "rekenen"
+        "anova"
       ],
       "sourceExamId": "20211101",
       "sourceQuestionId": "vraag-9",
