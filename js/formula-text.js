@@ -16,19 +16,21 @@
 
   const parens = (inner => `\\((?:[^()]|${inner})*\\)`);
   const GROUP = parens(parens('\\([^()]*\\)'));
-  const ATOM = `(?:Σ\\s*)?(?:\\d+(?:[.,]\\d+)*|(?:${WORDS}|[A-Za-zα-ωŴŵŷȳē]{1,2})[\\u0302\\u0304]?(?:_\\([^()\\s]+\\)|_[A-Za-z0-9]+)?[${SUB}²³]*)`;
+  const ATOM = `(?:Σ\\s*)?(?:\\d+(?:[.,]\\d+)*[²³]*|(?:${WORDS}|[A-Za-zα-ωŴŵŷȳē]{1,2})[\\u0302\\u0304]?(?:_\\([^()\\s]+\\)|_[A-Za-z0-9]+)?[${SUB}²³]*)`;
   const ROOT = `√(?:${GROUP}|\\[[^\\[\\]]*\\]|${ATOM})`;
   // Eén letter met index, zoals s_w of Ŵ_MPU; bestandsnamen als LN_MORT vallen hierbuiten.
   const INDEXED = `(?<![\\p{L}\\p{N}_.])[A-Za-zα-ωŴŵŷȳē][\\u0302\\u0304]?[²³]?_(?:\\([^()\\s]+\\)|[A-Za-z0-9]+)[²³]?(?![\\p{L}\\p{N}_])`;
   const BASE = new RegExp(`(?<![\\p{L}\\p{N}_.])(${WORDS}|MD|CD|VC|[A-Za-zα-ωŴŵŷȳē][\\u0302\\u0304]?)([²³]?)$`, 'u');
   // Een wortel mag direct na een getal staan (0,49 √2); de teller van een breuk niet midden in een woord.
   const FORMULA = new RegExp(
-    `(?:(?<![\\p{L}\\p{N}_/.,])(?:${ATOM}|${GROUP})\\s*[/÷]\\s*)?${ROOT}(?:\\s*[/÷]\\s*(?:${ROOT}|${ATOM}|${GROUP}))?(?![\\p{L}\\p{N}_])`
+    `(?:(?<![\\p{L}\\p{N}_/.,])${ATOM}\\s*=\\s*)?(?:(?<![\\p{L}\\p{N}_/.,])(?:${ATOM}|${GROUP})\\s*[/÷]\\s*)?${ROOT}(?:\\s*[/÷]\\s*(?:${ROOT}|${ATOM}|${GROUP}))?(?![\\p{L}\\p{N}_])`
     + `|(?<![\\p{L}\\p{N}_/])(?:${ATOM}\\s*=\\s*)?(?:\\[[^\\[\\]]*\\]\\s*/\\s*\\d[\\d.,]*\\d|(?:\\[[^\\[\\]]*\\]|${GROUP})\\s*/\\s*${GROUP})`
+    + `|(?<![\\p{L}\\p{N}_/.,])\\d[\\d.,]*\\d?\\s+/\\s+\\d[\\d.,]*\\d?(?![\\p{L}\\p{N}_/])`
+    + `|(?<![\\p{L}\\p{N}_/])${ATOM}\\s*/\\s*${GROUP}`
     + `|${INDEXED}(?:\\s*/\\s*${ROOT})?`, 'gu');
-  // Alleen tussen twee waarden: + € 48 aan het begin blijft het teken van een bedrag.
-  const TEXT_OPERATOR = /(?<=[\p{L}\p{N})²³%]\s*)[+−×÷±=](?=\s*[\p{L}\p{N}(√Σ€−])/gu;
-  const CANDIDATE = /√|[\])]\s*\/\s*[(\d]|_/;
+  // Alleen tussen twee waarden: +€ 48 aan het begin blijft het teken van een bedrag.
+  const VALUE_END = /[\p{L}\p{N})\]²³%]$/u, VALUE_START = /^[\p{L}\p{N}(\[√Σ€−]/u;
+  const CANDIDATE = /√|[\])]\s*\/\s*[(\d]|_|\d\s+\/\s+\d|[\p{L}\d²³]\s*\/\s*\(/u;
 
   /* Geeft MathML terug, of null als de tekst geen veilig leesbare formule is. */
   function toMathML(source) {
@@ -145,20 +147,22 @@
     }
     const walker = (container.ownerDocument || root.document).createTreeWalker(container, 4), nodes = [];
     while (walker.nextNode()) {
-      const value = walker.currentNode.nodeValue;
-      if (!/[+−×÷±=]/.test(value) || walker.currentNode.parentElement.closest(SKIP + ',.math-operator,button,a')) continue;
-      TEXT_OPERATOR.lastIndex = 0;
-      if (TEXT_OPERATOR.test(value)) nodes.push(walker.currentNode);
+      if (/[+−×÷±=]/.test(walker.currentNode.nodeValue) && !walker.currentNode.parentElement.closest(SKIP + ',.math-operator,button,a')) nodes.push(walker.currentNode);
     }
+    // Een buurformule telt ook als waarde: s_w × √n staat in drie losse stukken.
+    const neighbour = node => node && (node.nodeType === 1 && !/^(BR|P|LI|DIV)$/.test(node.nodeName));
     for (const node of nodes) {
-      const parts = [];
+      const value = node.nodeValue, parts = [];
       let offset = 0;
-      for (const match of node.nodeValue.matchAll(TEXT_OPERATOR)) {
-        parts.push(node.nodeValue.slice(offset, match.index), element(`<span class="math-operator">${match[0]}</span>`));
-        offset = match.index + match[0].length;
+      for (const match of value.matchAll(/[+−×÷±=]/g)) {
+        const before = value.slice(0, match.index).trimEnd(), after = value.slice(match.index + 1).trimStart();
+        const left = before ? VALUE_END.test(before) : neighbour(node.previousSibling);
+        const right = after ? VALUE_START.test(after) : neighbour(node.nextSibling);
+        if (!left || !right) continue;
+        parts.push(value.slice(offset, match.index), element(`<span class="math-operator">${match[0]}</span>`));
+        offset = match.index + 1;
       }
-      parts.push(node.nodeValue.slice(offset));
-      node.replaceWith(...parts.filter(Boolean));
+      if (offset) node.replaceWith(...[...parts, value.slice(offset)].filter(Boolean));
     }
   }
 
@@ -182,11 +186,24 @@
     };
     joinIndexes(container, element);
     const walker = documentRef.createTreeWalker(container, 4), nodes = [];
-    while (walker.nextNode()) if (CANDIDATE.test(walker.currentNode.nodeValue) && !walker.currentNode.parentElement.closest(SKIP)) nodes.push(walker.currentNode);
+    while (walker.nextNode()) {
+      const value = walker.currentNode.nodeValue, parent = walker.currentNode.parentElement;
+      if ((CANDIDATE.test(value) || (value.includes('/') && parent.matches('.inline-expression'))) && !parent.closest(SKIP)) nodes.push(walker.currentNode);
+    }
     for (const node of nodes) {
       const whole = node.parentElement.matches('.inline-expression') && node.parentElement.childNodes.length === 1 && toMathML(node.nodeValue);
       const parts = whole ? [{math: whole}] : split(node.nodeValue);
       if (parts) node.replaceWith(...parts.map(part => typeof part === 'string' ? part : element(/<m(?:frac|sqrt)/.test(part.math) && !node.parentElement.closest('.inline-expression') ? `<span class="inline-expression">${part.math}</span>` : part.math)));
+    }
+    // Een grote wortel met breuk krijgt een eigen regel, met het leesteken erachter.
+    for (const math of container.querySelectorAll('.inline-expression:not(.formula-line) msqrt mfrac')) {
+      const line = math.closest('.inline-expression'), next = line.nextSibling;
+      if (line.textContent.length < 24 || line.closest(SKIP.replace('math,', '') + ',table')) continue;
+      line.classList.add('formula-line');
+      if (next?.nodeType === 3 && /^[.,;:]/.test(next.nodeValue)) {
+        line.append(next.nodeValue[0]);
+        next.nodeValue = next.nodeValue.slice(1).replace(/^\s+/, '');
+      }
     }
     joinFractions(container, element);
     markOperators(container, element);

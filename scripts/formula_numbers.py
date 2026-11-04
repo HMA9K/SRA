@@ -50,7 +50,7 @@ NUMBERS = {
 
 # Dezelfde labelnaam met een andere formule, per bloktitel.
 OVERRIDES = {
-    ('steekproefomvang', 'Alle strata uitbreiden of gericht één bijdrage verkleinen', 'Tussenstap'): NOT_ON_SHEET,
+    ('steekproefomvang', 'Alle strata uitbreiden of gericht één bijdrage verkleinen', 'Tussenstap'): derived(5),
     ('steekproefomvang', 'Alle strata uitbreiden of gericht één bijdrage verkleinen', 'Benodigde omvang'): number(5, 11),
     ('transformaties', 'Een exponentieel model: terug van ln(y) naar y', 'Lineaire vorm'): number(55),
     ('transformaties', 'Een machtsmodel: zowel x als y heeft een logvorm', 'Lineaire vorm'): number(57),
@@ -68,8 +68,8 @@ GOALS = {
     ('quotient', 'Spreiding die na de verhouding overblijft'): ('de standaardfout van de quotiëntschatter, die je nodig hebt voor het interval.', True),
     ('regressieschatter', 'Corrigeren voor een afwijkende steekproef'): ('de puntschatting: het MPU-totaal, gecorrigeerd voor het verschil tussen steekproef en boektotaal.', True),
     ('regressieschatter', 'Waarom kan het interval smaller worden?'): ('de standaardfout van de regressieschatter, en hoeveel kleiner die is dan bij MPU.', False),
-    ('steekproefomvang', 'Werk terug vanaf de gewenste precisie'): ('het aantal posten n dat je moet controleren om de gewenste marge te halen.', True),
-    ('steekproefomvang', 'Alle strata uitbreiden of gericht één bijdrage verkleinen'): ('de benodigde omvang wanneer ieder stratum meetelt.', True),
+    ('steekproefomvang', 'Werk terug vanaf de gewenste precisie'): ('het aantal posten n dat je moet controleren om de gewenste marge te halen. De tussenstap γ is een rekenhulp: hij vergelijkt de toegestane variantie (E/t)² met de spreiding in de populatie.', True),
+    ('steekproefomvang', 'Alle strata uitbreiden of gericht één bijdrage verkleinen'): ('de benodigde omvang wanneer ieder stratum meetelt. De tussenstap γ werkt als bij formule 5, maar Σ(Nᵢ × sᵢ²) staat op de plek van N × s².', True),
     ('stratificatie', 'Hoe verdeel je de steekproef?'): ('de verdeling van de steekproef over de strata. Dit zijn twee manieren; je kiest er één.', False),
     ('stratificatie', 'De groepen samenvoegen'): ('één interval voor de totale werkelijke waarde van alle strata samen.', True),
     ('regressielijn', 'Een rechte lijn leren lezen'): ('de lijn die je uit de steekproef schat, en het residu als verschil tussen waarneming en lijn.', False),
