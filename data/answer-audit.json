@@ -206,7 +206,7 @@
           "displayNumber": "2.7",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "MSR = 13,449 en MSE = 4,580/19≈0,241053, dus F≈55,793. De bronwaarde 55,799 komt door tussentijds afronden van MSE op 0,241; t² = 7,470²≈55,801 is ook consistent met afgeronde uitvoer.",
+          "note": "MSR = 13,449 en MSE = 4,580/19≈0,241053, dus F≈55,793. De bronwaarde 55,799 wijkt daar iets van af, waarschijnlijk door afronding in de uitvoer; t² = 7,470²≈55,801 is ook consistent met afgeronde uitvoer.",
           "reviewed": "2026-09-20",
           "sourcePage": 10,
           "answerPage": 6
@@ -504,7 +504,7 @@
           "displayNumber": "2.7",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "MSR = 13,449 en MSE = 4,580/19≈0,241053, dus F≈55,793. De bronwaarde 55,799 komt door tussentijds afronden van MSE op 0,241; t² = 7,470²≈55,801 is ook consistent met afgeronde uitvoer.",
+          "note": "MSR = 13,449 en MSE = 4,580/19≈0,241053, dus F≈55,793. De bronwaarde 55,799 wijkt daar iets van af, waarschijnlijk door afronding in de uitvoer; t² = 7,470²≈55,801 is ook consistent met afgeronde uitvoer.",
           "reviewed": "2026-09-20",
           "sourcePage": 10,
           "answerPage": 6

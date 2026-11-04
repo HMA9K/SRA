@@ -24,7 +24,7 @@ for(const q of practice.questions){
  assert.equal(q.originalPrompt,source.prompt);assert.equal(q.originalPromptHtml,source.promptHtml);assert.equal(q.officialSolutionHtml,source.solutionHtml);assert.equal(q.sourceNote,source.answerAudit.note);
  if(source.hasSourceVisual)assert.equal(q.sourceVisualHtml,source.promptHtml);
  assert.equal(q.options.length,4);assert.equal(new Set(q.options).size,4);assert.ok(q.correct>=0&&q.correct<4);assert.ok(q.explanation.includes(q.options[q.correct]));
- for(const field of ['signals','meaning','approach','answer'])assert.ok(q.recognition[field].length>15);
+ for(const field of ['signals','meaning','approach','answer'])assert.ok(q.recognition[field].length>15,q.id);assert.equal(new Set(Object.values(q.recognition)).size,4,q.id+': geen herhaling');assert.ok(q.steps.length>=2&&q.trap.length>20,q.id);assert.equal(new Set(q.optionExplanations).size,4,q.id);assert.ok(!q.optionExplanations.includes(q.options[q.correct]),q.id);
  for(const id of q.prerequisiteIds){const prior=exam.questions.find(p=>p.id===id);assert.ok(prior.number<source.number);assert.ok(q.prerequisitesHtml.includes(prior.solutionHtml));}
  for(const topic of q.topics)assert.equal(data.topics.find(t=>t.id===topic).questions.filter(x=>x.id===q.id).length,1);
  for(const match of (q.caseHtml+q.originalPromptHtml+q.officialSolutionHtml+q.prerequisitesHtml).matchAll(/src="([^"]+)"/g))assert.ok(fs.existsSync(match[1]),match[1]);
