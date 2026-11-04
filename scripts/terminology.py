@@ -77,7 +77,7 @@ _add('parameter', 'Parameter', ['parameters', 'populatieparameter', 'populatiepa
 _add('steekproefgrootheid', 'Steekproefgrootheid', ['steekproefgrootheden'],
      'Een getal dat je uit de steekproef berekent. De uitkomst kan anders zijn als je een andere steekproef trekt.',
      'Het gemiddelde van de gecontroleerde artikelen is een steekproefgrootheid.', 'beginnen')
-_add('boekwaarde', 'Boekwaarde', ['boekwaarden', 'boekwaardetotaal'],
+_add('boekwaarde', 'Boekwaarde', ['boekwaarden'],
      'De administratief geregistreerde waarde. In de schatters staat bᵢ voor een post en B voor het bekende boekwaardetotaal van de populatie.',
      'Een artikel staat voor € 100 in de administratie: de boekwaarde is € 100.', 'beginnen')
 _add('werkelijke-waarde', 'Werkelijke waarde', ['werkelijke waarden', 'werkelijk totaal'],
@@ -149,7 +149,7 @@ _add('betrouwbaarheidsinterval', 'Betrouwbaarheidsinterval', ['betrouwbaarheidsi
 _add('puntschatting', 'Puntschatting', ['puntschattingen'],
      'Eén getal als schatting van een onbekende populatiewaarde. Een puntschatting alleen laat de onzekerheid nog niet zien.',
      '€ 100.000 is de puntschatting van de totale voorraadwaarde.', 'onzekerheid')
-_add('marge', 'Onnauwkeurigheidsmarge', ['onnauwkeurigheidsmarges', 'onzekerheidsmarge', 'onzekerheidsmarges', 'marge', 'marges', 'onnauwkeurigheid'],
+_add('marge', 'Onnauwkeurigheidsmarge', ['onnauwkeurigheidsmarges', 'onzekerheidsmarge', 'onzekerheidsmarges', 'marge', 'marges', 'onnauwkeurigheid', 'halve intervalbreedte'],
      'De afstand van de puntschatting tot één intervalgrens bij een symmetrisch interval. Deze marge E is de kritieke waarde maal de standaardfout.',
      'Een standaardfout van € 2.000 en kritieke t = 2 geven E = € 4.000.', 'onzekerheid')
 _add('intervalbreedte', 'Intervalbreedte', ['totale breedte', 'totale intervalbreedte'],
@@ -161,7 +161,7 @@ _add('intervalgrenzen', 'Intervalgrenzen', ['ondergrens', 'bovengrens'],
 _add('kritieke-waarde', 'Kritieke waarde', ['kritieke waarden', 'kritieke t', 'tabelwaarde', 'tabelwaarden', 'kritieke grens', 'F-grens'],
      'Het getal dat je in de statistische tabel opzoekt. Bij een t-interval vermenigvuldig je de standaardfout met dit getal om de marge te berekenen. Bij een toets is het de grens waarmee je de berekende toetsingsgrootheid vergelijkt. De rij hangt af van de vrijheidsgraden; de kolom van de staartkans en de toetsrichting.',
      'Bij 24 vrijheidsgraden en een eenzijdige 95%-bovengrens zoek je rij 24 en rechterstaart 0,05: t = 1,711. Met gemiddelde 80 en standaardfout 2 wordt de bovengrens 80 + 1,711 × 2 = 83,422. Voor een tweezijdig 95%-interval gebruik je 0,025 per staart: t = 2,064.', 'onzekerheid', refs=[('tabellen', 12, 'Tabel 13.4, rij 24'), ('programma', 4, 'Tabelregels')])
-_add('vrijheidsgraden', 'Vrijheidsgraden', ['vrijheidsgraad', 'degrees of freedom', 'df', 'residual df'],
+_add('vrijheidsgraden', 'Vrijheidsgraden', ['vrijheidsgraad', 'aantal vrijheidsgraden', 'degrees of freedom', 'df', 'residual df'],
      'Het aantal vrij variërende componenten nadat parameters zijn geschat. Bij steekproefvariantie is dit n − 1; bij regressieresiduen met k verklarende variabelen is het n − k − 1.',
      'Bij n = 50 en k = 3 zijn er 50 − 3 − 1 = 46 residuele vrijheidsgraden.', 'anova')
 _add('eindigheidscorrectie', 'Eindigheidscorrectie', ['eindige-populatiecorrectie', 'finite population correction'],
@@ -175,16 +175,16 @@ _add('afronden-buiten', 'Afronden naar buiten', ['afronding naar buiten', 'naar 
 _add('schatter', 'Schatter', ['schatters', 'schattingsmethode', 'schattingsmethoden'],
      'Een rekenregel waarmee je uit steekproefgegevens een onbekende populatiewaarde schat. De uitkomst van de regel is de schatting.',
      'De regel N × steekproefgemiddelde is een schatter van het populatietotaal.', 'mpu')
-_add('mpu', 'Directe schatter (MPU)', ['directe schatter', 'MPU', 'Mean Per Unit', 'MPU-schatter'],
+_add('mpu', 'Directe schatter (MPU)', ['directe schatter', 'directe schatting', 'MPU', 'Mean Per Unit', 'MPU-schatter'],
      'De schatter die het gemiddelde van de gecontroleerde werkelijke waarden met N vermenigvuldigt. MPU betekent Mean Per Unit: gemiddelde per eenheid.',
      'Bij N = 1.000 en een steekproefgemiddelde van € 80 is Ŵ_MPU = € 80.000.', 'mpu')
 _add('controlefout', 'Controlefout', ['controlefouten', 'boekwaardefout', 'verschil per post'],
      'In de schattingslessen is dit boekwaarde minus werkelijke waarde: e = b − w. Een positieve e betekent dat de boekwaarde te hoog is. Deze e is iets anders dan een regressieresidu.',
      'Boekwaarde € 100 en werkelijke waarde € 90 geven e = +€ 10.', 'verschil')
-_add('verschilschatter', 'Verschilschatter', ['verschilschatting', 'verschilschattingen'],
+_add('verschilschatter', 'Verschilschatter', ['verschilschatting', 'verschilschattingen', 'verschil-'],
      'Een methode die de gemiddelde boekwaardefout naar de populatie doorrekent en van B aftrekt: Ŵ = B − Nē. Zij past bij ongeveer constante foutbedragen; de cursus noemt minstens 30 afwijkende posten als voorwaarde.',
      'Bij B = € 100.000, N = 1.000 en ē = € 10 wordt het geschatte werkelijke totaal € 90.000.', 'verschil')
-_add('goedratio', 'Goedratio', ['goedratio’s', 'goedratios', 'verhouding van de sommen'],
+_add('goedratio', 'Goedratio', ['goedratio’s', 'goedratios', 'verhouding van de sommen', 'goedratio q', 'dimensieloze goedratio', 'dimensieloze goedratio q'],
      'De verhouding van de som van werkelijke waarden tot de som van boekwaarden in de steekproef: q = Σw/Σb. Dit is niet in het algemeen het gemiddelde van losse postverhoudingen.',
      'Σw = € 19.000 en Σb = € 20.000 geven q = 0,95.', 'quotient')
 _add('quotientschatter', 'Quotiëntschatter', ['quotiëntschatting', 'quotientschatter', 'ratioschatter'],
@@ -211,7 +211,7 @@ _add('stratificatie', 'Stratificatie', ['stratificeren', 'gestratificeerd', 'ges
 _add('stratum', 'Stratum', ['strata', 'stratums', 'deelpopulatie', 'deelpopulaties'],
      'Eén van de groepen waarin een populatie bij stratificatie is verdeeld. Elke groep heeft een afzonderlijke omvang, gemiddelde en spreiding.',
      'Alle artikelen met boekwaarde van € 100 tot € 500 vormen één stratum.', 'stratificatie')
-_add('topstratum', 'Topstratum', ['topstrata'],
+_add('topstratum', 'Topstratum', ['topstrata', 'gecontroleerd topstratum', 'gecontroleerde topstratum', 'integraal gecontroleerd topstratum', 'integraal gecontroleerde topstratum', 'volledig gecontroleerd topstratum'],
      'Een apart stratum met bijvoorbeeld de posten boven een hoog grensbedrag. Bij integrale controle ken je de werkelijke waarde ervan en is er voor dat deel geen steekproefonzekerheid.',
      'Je controleert alle zeer dure machines en telt hun vastgestelde werkelijke waarde bij de overige schattingen op.', 'stratificatie')
 _add('integrale-controle', 'Integrale controle', ['integraal gecontroleerd', 'integraal gecontroleerde', 'volledige controle'],
@@ -267,7 +267,7 @@ _add('gestandaardiseerde-coefficient', 'Gestandaardiseerde coëfficiënt', ['ges
 _add('correlatie', 'Correlatie', ['correlaties', 'correlatiecoëfficiënt', 'correlatiecoëfficiënten', 'Pearsons correlatie', 'Pearson'],
      'Pearsons r beschrijft richting en sterkte van lineaire samenhang en ligt tussen −1 en 1. Een r dicht bij nul sluit een krom verband niet uit.',
      'r = −0,8 wijst op een sterk dalend lineair verband; het bewijst geen oorzaak-gevolgrelatie.', 'regressielijn')
-_add('causaliteit', 'Causaliteit', ['causaal', 'causale', 'oorzaak-gevolgrelatie'],
+_add('causaliteit', 'Causaliteit', ['causaal', 'causale', 'causaal verband', 'oorzaak-gevolgrelatie'],
      'Een oorzaak-gevolgrelatie. Een correlatie of regressie op zichzelf laat zo’n relatie niet zien; andere variabelen of groepsverschillen kunnen de samenhang beïnvloeden.',
      'Dat salaris met leeftijd samenhangt, toont op zichzelf niet aan dat één extra verjaardag het salaris veroorzaakt.', 'regressielijn')
 _add('scatterplot', 'Spreidingsdiagram', ['spreidingsdiagrammen', 'scatterplot', 'scatter plot', 'scatterplots', 'puntenwolk'],
@@ -298,7 +298,7 @@ _add('msr', 'MSR', ['Mean Square Regression'],
 _add('mse', 'MSE', ['Mean Squared Error', 'Mean Square Error', 'Mean Square Residual', 'residuele variantie', 'trainings-MSE'],
      'De residuele kwadratensom gedeeld door de residuele vrijheidsgraden: SSE/(n − k − 1). De wortel is de geschatte residuele standaardfout.',
      'SSE = 112 en 28 residuele vrijheidsgraden geven MSE = 4.', 'anova')
-_add('residuele-standaardfout', 'Residuele standaardfout', ['Std. Error of the Estimate', 'standaardfout van het regressiemodel'],
+_add('residuele-standaardfout', 'Residuele standaardfout', ['Std. Error of the Estimate', 'standaardfout van het regressiemodel', 'residuele standaardafwijking'],
      'De wortel uit MSE, in de eenheid van y. Zij beschrijft de geschatte spreiding rond de regressielijn en wordt in het voorspellingsinterval gebruikt.',
      'MSE = 16 geeft Std. Error of the Estimate = 4.', 'anova')
 _add('r-kwadraat', 'R²', ['R-kwadraat', 'R2', 'R Square', 'determinatiecoëfficiënt'],
@@ -374,7 +374,7 @@ _add('residuendiagram', 'Residuendiagram', ['residuenplot', 'residuendiagrammen'
 _add('uitbijter', 'Uitbijter', ['uitbijters', 'uitschieter', 'uitschieters', 'outlier', 'outliers'],
      'Een waarneming die ongewoon ver van het patroon ligt. Onderscheid afwijking in y, afwijking in x en invloed op het model; een signaal is geen automatische reden om een geldige waarneming te verwijderen.',
      'Een ongewoon salaris kan een invoerfout zijn, maar ook een geldige bijzondere functie betreffen.', 'diagnostiek')
-_add('gestandaardiseerd-residu', 'Gestandaardiseerd residu', ['gestandaardiseerde residuen', 'Standardized Residual', 'Standardized Residuals', 'Std. Residual'],
+_add('gestandaardiseerd-residu', 'Gestandaardiseerd residu', ['gestandaardiseerde residuen', 'gestandaardiseerde residu', 'Standardized Residual', 'Standardized Residuals', 'Std. Residual'],
      'Een residu uitgedrukt op een standaardafwijkingsschaal. De cursus signaleert een y-uitbijter bij |z| > 2 als n ≤ 100 en bij |z| > 3 als n > 100.',
      'z = 2,5 overschrijdt de cursusgrens bij n = 100, maar niet bij n = 101.', 'diagnostiek')
 _add('mahalanobis', 'Mahalanobis Distance', ['Mahalanobis', 'MD', 'Mahal.Distance', 'uitbijter in x'],
@@ -652,3 +652,93 @@ _add('scheefheid', 'Scheefheid', ['scheef', 'scheve', 'schevere'],
      'Een asymmetrische verdelingsvorm waarbij de waarden aan de ene kant anders uitlopen dan aan de andere kant. In het normaliteitslab kun je zo’n vormverschil tegenover de symmetrische normaalreferentie bekijken.',
      'Enkele grote positieve residuen kunnen de rechterkant verder laten uitlopen dan de linkerkant.', 'diagnostiek',
      [('spss', 19, 'Residuenhistogram bij de normaliteitsanalyse; vormillustratie in het SRA-lab')])
+
+
+# Samengestelde begrippen: de combinatie heeft een eigen betekenis en krijgt daarom een eigen uitleg.
+_BOOK_PARTS = {'boek-basis': (92, 99, 110), 'boek-h8a': (201, 210, 219), 'boek-h8b': (211, 220, 229), 'boek-h8c': (221, 232, 239),
+               'boek-h9a': (233, 248, 251), 'boek-h9b': (249, 259, 267), 'boek-h9c': (260, 272, 278), 'boek-h9d': (273, 286, 291)}
+
+
+def _book(printed, subject):
+    """Verwijs naar de bronuitsnede die de gedrukte boekpagina bevat."""
+    for source, (first, last, pdf) in _BOOK_PARTS.items():
+        if first <= printed <= last:
+            return [(source, printed + 18 - pdf + 1, f'Boek p. {printed}: {subject}')]
+    raise ValueError(f'Geen bronuitsnede voor boekpagina {printed}')
+
+
+_add('totale-boekwaarde', 'Totale boekwaarde', ['boekwaardetotaal', 'boektotaal', 'bekende boekwaardetotaal', 'bekend boekwaardetotaal'],
+     'De som van de boekwaarden van alle posten in de populatie, geschreven als B. Dit bedrag staat al in de administratie; je hoeft het dus niet te schatten.',
+     'Een voorraad van 3.500 artikelen heeft in het boek een totale boekwaarde van € 7.360.817.', 'verschil', _book(209, 'B als totale boekwaarde'))
+_add('gemiddelde-boekwaarde', 'Gemiddelde boekwaarde', ['gemiddelde boekwaarden'],
+     'Het gemiddelde van de boekwaarden in de steekproef, geschreven als b̄ = Σb/n.',
+     'Boekwaarden van 100, 200 en 300 geven een gemiddelde boekwaarde van 600 / 3 = 200.', 'regressieschatter', _book(214, 'gemiddelde boekwaarde in de steekproef'))
+_add('gemiddelde-werkelijke-waarde', 'Gemiddelde werkelijke waarde', ['gemiddelde werkelijke waarden'],
+     'Het gemiddelde van de gecontroleerde werkelijke waarden in de steekproef, geschreven als w̄ = Σw/n.',
+     'Werkelijke waarden van 90, 200 en 310 geven een gemiddelde werkelijke waarde van 600 / 3 = 200.', 'mpu', _book(205, 'gemiddelde werkelijke waarde'))
+_add('totale-werkelijke-waarde', 'Totale werkelijke waarde', ['werkelijk populatietotaal', 'werkelijke populatietotaal'],
+     'De som van de juiste waarden van alle posten in de populatie, geschreven als W. Dit bedrag is onbekend; daarom schat je het uit de steekproef.',
+     'In het boek is het werkelijke populatietotaal alleen bekend omdat het om een oefenbestand gaat. In een echte controle ken je W niet.', 'mpu', _book(205, 'totale werkelijke waarde als populatietotaal'))
+_add('geschatte-werkelijke-waarde', 'Geschatte werkelijke waarde', ['geschatte totale werkelijke waarde', 'geschat totaal', 'geschatte totaal'],
+     'De puntschatting van de totale werkelijke waarde, geschreven als Ŵ. Het dakje laat zien dat dit een schatting is en niet de echte W.',
+     'Bij N = 1.000 en w̄ = 95 geeft de directe schatter Ŵ = 1.000 × 95 = € 95.000.', 'mpu', _book(205, 'schatting van de totale werkelijke waarde'))
+_add('gemiddelde-fout', 'Gemiddeld verschil', ['gemiddelde verschil', 'gemiddelde fout', 'gemiddelde boekwaardefout', 'gemiddelde fouten'],
+     'Het gemiddelde van de verschillen tussen boekwaarde en werkelijke waarde in de steekproef: ē = Σe/n, wat gelijk is aan b̄ − w̄. Het boek noemt dit de gemiddelde fout.',
+     'In het boek is de gemiddelde fout € 66,66 per artikel. Bij N = 3.500 is de geschatte totale fout dus 3.500 × 66,66 = € 233.310.', 'verschil', _book(209, 'gemiddelde fout'))
+_add('geschatte-totale-fout', 'Geschatte totale fout', ['totale fout'],
+     'Het gemiddelde verschil doorgerekend naar de hele populatie: Ê = N × ē. De verschilschatter trekt dit bedrag af van de totale boekwaarde.',
+     '€ 7.360.817 − € 233.310 = € 7.127.507 is de schatting van het werkelijke populatietotaal in het boek.', 'verschil', _book(209, 'geschatte totale fout'))
+_add('variantie-verschillen', 'Variantie van de verschillen', ['variantie verschillen', 'variantie van de fout', 'variantie van de fouten'],
+     'De steekproefvariantie van de verschillen e, geschreven als s²_e. Zij meet hoe sterk de fouten per post uiteenlopen, niet hoe groot de fout gemiddeld is.',
+     'De verschillen 1, 2 en 3 hebben ē = 2 en een variantie van (1 + 0 + 1) / 2 = 1.', 'verschil', _book(209, 'spreiding van de fout'))
+_add('standaardafwijking-verschillen', 'Standaardafwijking van de verschillen', ['standaardafwijking van de fout', 'standaardafwijking van de fouten', 'spreiding van de verschillen', 'spreiding van de fouten', 'spreiding in de fout'],
+     'De wortel uit de variantie van de verschillen, geschreven als s_e. De verschilschatter werkt het best als deze spreiding klein is, dus als fouten ongeveer even groot zijn, ongeacht de boekwaarde.',
+     'Een variantie van de verschillen van 16 geeft s_e = √16 = 4.', 'verschil', _book(210, 'kleine spreiding in de fout'))
+_add('gewenste-nauwkeurigheid', 'Gewenste nauwkeurigheid', ['vereiste nauwkeurigheid', 'gewenste marge', 'vereiste marge', 'nauwkeurigheidseis'],
+     'De grootste marge E die je vooraf accepteert. Samen met de betrouwbaarheid en de spreiding bepaalt zij hoe groot de steekproef moet zijn.',
+     'Wil je het totaal tot op € 500.000 kennen, dan is E = € 500.000 de gewenste nauwkeurigheid.', 'steekproefomvang', _book(210, 'nauwkeurigheidseis'))
+_add('maximaal-toegestane-standaardfout', 'Maximaal toegestane standaardfout', ['maximale standaardfout', 'toegestane standaardfout'],
+     'De grootste standaardfout waarbij je de gewenste marge nog haalt. Uit E = t × standaardfout volgt dat dit E/t is. Dit is een rekenstap van de leeromgeving, geen vaste boekterm.',
+     'Bij E = € 500.000 en t = 1,978 is de maximaal toegestane standaardfout 500.000 / 1,978 ≈ € 252.780.', 'steekproefomvang')
+_add('benodigde-steekproefomvang', 'Benodigde steekproefomvang', ['benodigde steekproefgrootte', 'benodigde steekproef', 'vereiste steekproefomvang'],
+     'Het aantal posten dat je minimaal moet controleren om bij de gekozen betrouwbaarheid de gewenste nauwkeurigheid te halen. Rond dit aantal naar boven af.',
+     'Levert de formule 94,2 op, dan is de benodigde steekproefomvang 95 posten.', 'steekproefomvang', _book(210, 'benodigde steekproefgrootte'))
+_add('cumulatieve-boekwaarde', 'Cumulatieve boekwaarde', ['cumulatieve boekwaarden'],
+     'De opgetelde boekwaarde nadat je de posten van laag naar hoog hebt gesorteerd. Bij stratificatie op deze basis krijgt elk stratum ongeveer hetzelfde deel van de totale boekwaarde.',
+     'Het boek verdeelt € 7.360.817 over 5 strata: ongeveer € 1.472.163 boekwaarde per stratum.', 'stratificatie', _book(221, 'stratificatie op basis van de cumulatieve boekwaarde'))
+_add('gestratificeerde-schatter', 'Gestratificeerde schatter', ['gestratificeerde schatting', 'gestratificeerde schattingen'],
+     'Een schatting die je per stratum maakt en daarna optelt tot één totaal. De onnauwkeurigheid volgt uit de opgetelde variantiebijdragen van de strata.',
+     'Stratum 1 geeft € 40.000 en stratum 2 € 60.000; de gestratificeerde schatting is € 100.000.', 'stratificatie', _book(230, 'gestratificeerde schatter'))
+_add('bemonsterde-strata', 'Bemonsterde strata', ['bemonsterd stratum', 'bemonsterde stratum'],
+     'De strata waarin je een steekproef trekt, tegenover een topstratum dat je volledig controleert. Alleen bemonsterde strata dragen bij aan de steekproefonzekerheid.',
+     'Vier bemonsterde strata hebben elk een standaardfout; een integraal gecontroleerd topstratum voegt alleen een bekend bedrag toe.', 'stratificatie')
+_add('gecombineerde-standaardfout', 'Gecombineerde standaardfout', ['gezamenlijke standaardfout', 'gecombineerde standaardfouten'],
+     'De standaardfout van het totaal over onafhankelijke strata, geschreven als s_tot. Je telt de varianties op en neemt daarna de wortel; je telt de standaardfouten dus niet zelf op.',
+     'Standaardfouten 3 en 4 geven √(3² + 4²) = √25 = 5, niet 7.', 'stratificatie')
+_add('significant-verband', 'Significant verband', ['significant lineair verband', 'significante verband', 'significant lineaire verband'],
+     'Een verband waarvan de toets laat zien dat het waarschijnlijk niet door toeval in de steekproef komt. Dit zegt niets over oorzaak en gevolg: een significant verband is nog geen causaal verband.',
+     'Bij p = 0,001 en α = 0,05 verwerp je H₀: er is een significant lineair verband. Dat bewijst niet dat x de oorzaak is van y.', 'toetsen', _book(246, 'significant verband en causaal verband'))
+_add('gekwadrateerde-residuen', 'Gekwadrateerde residuen', ['gekwadrateerd residu'],
+     'De residuen na kwadrateren: e². Hun som is SSE. De kleinste-kwadratenmethode kiest de lijn waarbij deze som zo klein mogelijk is.',
+     'De residuen 2 en −3 geven gekwadrateerde residuen 4 en 9, samen 13.', 'regressielijn', _book(240, 'kleinste-kwadratenmethode'))
+_add('samengevoegde-groepen', 'Samengevoegde groepen', ['samengevoegde groep'],
+     'Gegevens die in het spreidingsdiagram uiteenvallen in te onderscheiden subgroepen. Daardoor kun je een verband vinden dat er in werkelijkheid niet is, of juist een verband missen.',
+     'Twee vestigingen met een verschillend niveau kunnen samen een schijnbaar stijgende lijn geven, terwijl er binnen elke vestiging geen verband is.', 'diagnostiek', _book(261, 'samengevoegde groepen'))
+_add('positieve-autocorrelatie', 'Positieve autocorrelatie', [],
+     'Opeenvolgende residuen lijken op elkaar: na een relatief hoge waarneming verwacht je weer een relatief hoge, na een lage weer een lage. De Durbin-Watson-waarde ligt dan onder 2.',
+     'Maandcijfers die maanden achter elkaar boven de lijn liggen en daarna maanden eronder, wijzen op positieve autocorrelatie.', 'diagnostiek', _book(278, 'positieve autocorrelatie'))
+_add('negatieve-autocorrelatie', 'Negatieve autocorrelatie', [],
+     'Opeenvolgende residuen wisselen steeds van teken: na een relatief hoge waarneming volgt een relatief lage en andersom. De Durbin-Watson-waarde ligt dan boven 2.',
+     'Residuen die elke maand om en om positief en negatief zijn, wijzen op negatieve autocorrelatie.', 'diagnostiek', _book(280, 'Durbin-Watson-waarde bij negatieve autocorrelatie'))
+_add('individuele-storing', 'Individuele storing', ['individuele storingen'],
+     'De afwijking van één nieuwe waarneming ten opzichte van de echte regressielijn. Deze zit wel in het voorspellingsinterval, maar niet in het interval voor de gemiddelde respons. Daarom is dat laatste smaller.',
+     'Twee maanden met dezelfde x kunnen toch een andere y hebben. Dat verschil is de individuele storing.', 'voorspellen')
+_add('aantal-verklarende-variabelen', 'Aantal verklarende variabelen', ['aantal x-variabelen'],
+     'Het aantal x-variabelen in het model, geschreven als k. De constante telt niet mee. Je gebruikt k onder meer in de residuele vrijheidsgraden n − k − 1.',
+     'Een model met omzet, activa en een dummy heeft k = 3.', 'meervoudig')
+_add('centrale-limietstelling', 'Centrale limietstelling', [],
+     'Hoe groter de steekproef, hoe meer de verdeling van het steekproefgemiddelde op een normale verdeling gaat lijken, ook als de losse waarden dat niet doen. Het boek hanteert n = 100 als grens.',
+     'Bij n = 150 mag je het steekproefgemiddelde normaal verdeeld nemen, ook als de boekwaarden scheef zijn.', 'onzekerheid', _book(92, 'Centrale Limietstelling'))
+_add('zonder-teruglegging', 'Zonder teruglegging', ['zonder terugleggen'],
+     'Een getrokken post gaat niet terug in de populatie en kan dus niet nog eens worden getrokken. Daarom is de eindigheidscorrectie nodig als je een flink deel van de populatie controleert.',
+     'Trek je 100 van de 1.000 posten zonder teruglegging, dan blijven na de eerste trekking 999 posten over.', 'mpu')

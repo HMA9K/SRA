@@ -15883,8 +15883,7 @@ window.SRA = {
       "id": "boekwaarde",
       "term": "Boekwaarde",
       "aliases": [
-        "boekwaarden",
-        "boekwaardetotaal"
+        "boekwaarden"
       ],
       "definition": "De administratief geregistreerde waarde. In de schatters staat bᵢ voor een post en B voor het bekende boekwaardetotaal van de populatie.",
       "example": "Een artikel staat voor € 100 in de administratie: de boekwaarde is € 100.",
@@ -16354,7 +16353,8 @@ window.SRA = {
         "onzekerheidsmarges",
         "marge",
         "marges",
-        "onnauwkeurigheid"
+        "onnauwkeurigheid",
+        "halve intervalbreedte"
       ],
       "definition": "De afstand van de puntschatting tot één intervalgrens bij een symmetrisch interval. Deze marge E is de kritieke waarde maal de standaardfout.",
       "example": "Een standaardfout van € 2.000 en kritieke t = 2 geven E = € 4.000.",
@@ -16450,6 +16450,7 @@ window.SRA = {
       "term": "Vrijheidsgraden",
       "aliases": [
         "vrijheidsgraad",
+        "aantal vrijheidsgraden",
         "degrees of freedom",
         "df",
         "residual df"
@@ -16545,6 +16546,7 @@ window.SRA = {
       "term": "Directe schatter (MPU)",
       "aliases": [
         "directe schatter",
+        "directe schatting",
         "MPU",
         "Mean Per Unit",
         "MPU-schatter"
@@ -16594,7 +16596,8 @@ window.SRA = {
       "term": "Verschilschatter",
       "aliases": [
         "verschilschatting",
-        "verschilschattingen"
+        "verschilschattingen",
+        "verschil-"
       ],
       "definition": "Een methode die de gemiddelde boekwaardefout naar de populatie doorrekent en van B aftrekt: Ŵ = B − Nē. Zij past bij ongeveer constante foutbedragen; de cursus noemt minstens 30 afwijkende posten als voorwaarde.",
       "example": "Bij B = € 100.000, N = 1.000 en ē = € 10 wordt het geschatte werkelijke totaal € 90.000.",
@@ -16618,7 +16621,10 @@ window.SRA = {
       "aliases": [
         "goedratio’s",
         "goedratios",
-        "verhouding van de sommen"
+        "verhouding van de sommen",
+        "goedratio q",
+        "dimensieloze goedratio",
+        "dimensieloze goedratio q"
       ],
       "definition": "De verhouding van de som van werkelijke waarden tot de som van boekwaarden in de steekproef: q = Σw/Σb. Dit is niet in het algemeen het gemiddelde van losse postverhoudingen.",
       "example": "Σw = € 19.000 en Σb = € 20.000 geven q = 0,95.",
@@ -16829,7 +16835,12 @@ window.SRA = {
       "id": "topstratum",
       "term": "Topstratum",
       "aliases": [
-        "topstrata"
+        "topstrata",
+        "gecontroleerd topstratum",
+        "gecontroleerde topstratum",
+        "integraal gecontroleerd topstratum",
+        "integraal gecontroleerde topstratum",
+        "volledig gecontroleerd topstratum"
       ],
       "definition": "Een apart stratum met bijvoorbeeld de posten boven een hoog grensbedrag. Bij integrale controle ken je de werkelijke waarde ervan en is er voor dat deel geen steekproefonzekerheid.",
       "example": "Je controleert alle zeer dure machines en telt hun vastgestelde werkelijke waarde bij de overige schattingen op.",
@@ -17268,6 +17279,7 @@ window.SRA = {
       "aliases": [
         "causaal",
         "causale",
+        "causaal verband",
         "oorzaak-gevolgrelatie"
       ],
       "definition": "Een oorzaak-gevolgrelatie. Een correlatie of regressie op zichzelf laat zo’n relatie niet zien; andere variabelen of groepsverschillen kunnen de samenhang beïnvloeden.",
@@ -17510,7 +17522,8 @@ window.SRA = {
       "term": "Residuele standaardfout",
       "aliases": [
         "Std. Error of the Estimate",
-        "standaardfout van het regressiemodel"
+        "standaardfout van het regressiemodel",
+        "residuele standaardafwijking"
       ],
       "definition": "De wortel uit MSE, in de eenheid van y. Zij beschrijft de geschatte spreiding rond de regressielijn en wordt in het voorspellingsinterval gebruikt.",
       "example": "MSE = 16 geeft Std. Error of the Estimate = 4.",
@@ -18094,6 +18107,7 @@ window.SRA = {
       "term": "Gestandaardiseerd residu",
       "aliases": [
         "gestandaardiseerde residuen",
+        "gestandaardiseerde residu",
         "Standardized Residual",
         "Standardized Residuals",
         "Std. Residual"
@@ -20064,6 +20078,486 @@ window.SRA = {
           "source": "spss",
           "page": 19,
           "locator": "Residuenhistogram bij de normaliteitsanalyse; vormillustratie in het SRA-lab"
+        }
+      ]
+    },
+    {
+      "id": "totale-boekwaarde",
+      "term": "Totale boekwaarde",
+      "aliases": [
+        "boekwaardetotaal",
+        "boektotaal",
+        "bekende boekwaardetotaal",
+        "bekend boekwaardetotaal"
+      ],
+      "definition": "De som van de boekwaarden van alle posten in de populatie, geschreven als B. Dit bedrag staat al in de administratie; je hoeft het dus niet te schatten.",
+      "example": "Een voorraad van 3.500 artikelen heeft in het boek een totale boekwaarde van € 7.360.817.",
+      "lesson": "verschil",
+      "refs": [
+        {
+          "source": "boek-h8a",
+          "page": 9,
+          "locator": "Boek p. 209: B als totale boekwaarde"
+        }
+      ]
+    },
+    {
+      "id": "gemiddelde-boekwaarde",
+      "term": "Gemiddelde boekwaarde",
+      "aliases": [
+        "gemiddelde boekwaarden"
+      ],
+      "definition": "Het gemiddelde van de boekwaarden in de steekproef, geschreven als b̄ = Σb/n.",
+      "example": "Boekwaarden van 100, 200 en 300 geven een gemiddelde boekwaarde van 600 / 3 = 200.",
+      "lesson": "regressieschatter",
+      "refs": [
+        {
+          "source": "boek-h8b",
+          "page": 4,
+          "locator": "Boek p. 214: gemiddelde boekwaarde in de steekproef"
+        }
+      ]
+    },
+    {
+      "id": "gemiddelde-werkelijke-waarde",
+      "term": "Gemiddelde werkelijke waarde",
+      "aliases": [
+        "gemiddelde werkelijke waarden"
+      ],
+      "definition": "Het gemiddelde van de gecontroleerde werkelijke waarden in de steekproef, geschreven als w̄ = Σw/n.",
+      "example": "Werkelijke waarden van 90, 200 en 310 geven een gemiddelde werkelijke waarde van 600 / 3 = 200.",
+      "lesson": "mpu",
+      "refs": [
+        {
+          "source": "boek-h8a",
+          "page": 5,
+          "locator": "Boek p. 205: gemiddelde werkelijke waarde"
+        }
+      ]
+    },
+    {
+      "id": "totale-werkelijke-waarde",
+      "term": "Totale werkelijke waarde",
+      "aliases": [
+        "werkelijk populatietotaal",
+        "werkelijke populatietotaal"
+      ],
+      "definition": "De som van de juiste waarden van alle posten in de populatie, geschreven als W. Dit bedrag is onbekend; daarom schat je het uit de steekproef.",
+      "example": "In het boek is het werkelijke populatietotaal alleen bekend omdat het om een oefenbestand gaat. In een echte controle ken je W niet.",
+      "lesson": "mpu",
+      "refs": [
+        {
+          "source": "boek-h8a",
+          "page": 5,
+          "locator": "Boek p. 205: totale werkelijke waarde als populatietotaal"
+        }
+      ]
+    },
+    {
+      "id": "geschatte-werkelijke-waarde",
+      "term": "Geschatte werkelijke waarde",
+      "aliases": [
+        "geschatte totale werkelijke waarde",
+        "geschat totaal",
+        "geschatte totaal"
+      ],
+      "definition": "De puntschatting van de totale werkelijke waarde, geschreven als Ŵ. Het dakje laat zien dat dit een schatting is en niet de echte W.",
+      "example": "Bij N = 1.000 en w̄ = 95 geeft de directe schatter Ŵ = 1.000 × 95 = € 95.000.",
+      "lesson": "mpu",
+      "refs": [
+        {
+          "source": "boek-h8a",
+          "page": 5,
+          "locator": "Boek p. 205: schatting van de totale werkelijke waarde"
+        }
+      ]
+    },
+    {
+      "id": "gemiddelde-fout",
+      "term": "Gemiddeld verschil",
+      "aliases": [
+        "gemiddelde verschil",
+        "gemiddelde fout",
+        "gemiddelde boekwaardefout",
+        "gemiddelde fouten"
+      ],
+      "definition": "Het gemiddelde van de verschillen tussen boekwaarde en werkelijke waarde in de steekproef: ē = Σe/n, wat gelijk is aan b̄ − w̄. Het boek noemt dit de gemiddelde fout.",
+      "example": "In het boek is de gemiddelde fout € 66,66 per artikel. Bij N = 3.500 is de geschatte totale fout dus 3.500 × 66,66 = € 233.310.",
+      "lesson": "verschil",
+      "refs": [
+        {
+          "source": "boek-h8a",
+          "page": 9,
+          "locator": "Boek p. 209: gemiddelde fout"
+        }
+      ]
+    },
+    {
+      "id": "geschatte-totale-fout",
+      "term": "Geschatte totale fout",
+      "aliases": [
+        "totale fout"
+      ],
+      "definition": "Het gemiddelde verschil doorgerekend naar de hele populatie: Ê = N × ē. De verschilschatter trekt dit bedrag af van de totale boekwaarde.",
+      "example": "€ 7.360.817 − € 233.310 = € 7.127.507 is de schatting van het werkelijke populatietotaal in het boek.",
+      "lesson": "verschil",
+      "refs": [
+        {
+          "source": "boek-h8a",
+          "page": 9,
+          "locator": "Boek p. 209: geschatte totale fout"
+        }
+      ]
+    },
+    {
+      "id": "variantie-verschillen",
+      "term": "Variantie van de verschillen",
+      "aliases": [
+        "variantie verschillen",
+        "variantie van de fout",
+        "variantie van de fouten"
+      ],
+      "definition": "De steekproefvariantie van de verschillen e, geschreven als s²_e. Zij meet hoe sterk de fouten per post uiteenlopen, niet hoe groot de fout gemiddeld is.",
+      "example": "De verschillen 1, 2 en 3 hebben ē = 2 en een variantie van (1 + 0 + 1) / 2 = 1.",
+      "lesson": "verschil",
+      "refs": [
+        {
+          "source": "boek-h8a",
+          "page": 9,
+          "locator": "Boek p. 209: spreiding van de fout"
+        }
+      ]
+    },
+    {
+      "id": "standaardafwijking-verschillen",
+      "term": "Standaardafwijking van de verschillen",
+      "aliases": [
+        "standaardafwijking van de fout",
+        "standaardafwijking van de fouten",
+        "spreiding van de verschillen",
+        "spreiding van de fouten",
+        "spreiding in de fout"
+      ],
+      "definition": "De wortel uit de variantie van de verschillen, geschreven als s_e. De verschilschatter werkt het best als deze spreiding klein is, dus als fouten ongeveer even groot zijn, ongeacht de boekwaarde.",
+      "example": "Een variantie van de verschillen van 16 geeft s_e = √16 = 4.",
+      "lesson": "verschil",
+      "refs": [
+        {
+          "source": "boek-h8a",
+          "page": 10,
+          "locator": "Boek p. 210: kleine spreiding in de fout"
+        }
+      ]
+    },
+    {
+      "id": "gewenste-nauwkeurigheid",
+      "term": "Gewenste nauwkeurigheid",
+      "aliases": [
+        "vereiste nauwkeurigheid",
+        "gewenste marge",
+        "vereiste marge",
+        "nauwkeurigheidseis"
+      ],
+      "definition": "De grootste marge E die je vooraf accepteert. Samen met de betrouwbaarheid en de spreiding bepaalt zij hoe groot de steekproef moet zijn.",
+      "example": "Wil je het totaal tot op € 500.000 kennen, dan is E = € 500.000 de gewenste nauwkeurigheid.",
+      "lesson": "steekproefomvang",
+      "refs": [
+        {
+          "source": "boek-h8a",
+          "page": 10,
+          "locator": "Boek p. 210: nauwkeurigheidseis"
+        }
+      ]
+    },
+    {
+      "id": "maximaal-toegestane-standaardfout",
+      "term": "Maximaal toegestane standaardfout",
+      "aliases": [
+        "maximale standaardfout",
+        "toegestane standaardfout"
+      ],
+      "definition": "De grootste standaardfout waarbij je de gewenste marge nog haalt. Uit E = t × standaardfout volgt dat dit E/t is. Dit is een rekenstap van de leeromgeving, geen vaste boekterm.",
+      "example": "Bij E = € 500.000 en t = 1,978 is de maximaal toegestane standaardfout 500.000 / 1,978 ≈ € 252.780.",
+      "lesson": "steekproefomvang",
+      "refs": [
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Formule 24; vergelijk ook formule 5 en 11 op PDF-pagina 1"
+        },
+        {
+          "source": "exam2024",
+          "page": 1,
+          "locator": "Vraag 2: omvang en uitbreiding"
+        }
+      ]
+    },
+    {
+      "id": "benodigde-steekproefomvang",
+      "term": "Benodigde steekproefomvang",
+      "aliases": [
+        "benodigde steekproefgrootte",
+        "benodigde steekproef",
+        "vereiste steekproefomvang"
+      ],
+      "definition": "Het aantal posten dat je minimaal moet controleren om bij de gekozen betrouwbaarheid de gewenste nauwkeurigheid te halen. Rond dit aantal naar boven af.",
+      "example": "Levert de formule 94,2 op, dan is de benodigde steekproefomvang 95 posten.",
+      "lesson": "steekproefomvang",
+      "refs": [
+        {
+          "source": "boek-h8a",
+          "page": 10,
+          "locator": "Boek p. 210: benodigde steekproefgrootte"
+        }
+      ]
+    },
+    {
+      "id": "cumulatieve-boekwaarde",
+      "term": "Cumulatieve boekwaarde",
+      "aliases": [
+        "cumulatieve boekwaarden"
+      ],
+      "definition": "De opgetelde boekwaarde nadat je de posten van laag naar hoog hebt gesorteerd. Bij stratificatie op deze basis krijgt elk stratum ongeveer hetzelfde deel van de totale boekwaarde.",
+      "example": "Het boek verdeelt € 7.360.817 over 5 strata: ongeveer € 1.472.163 boekwaarde per stratum.",
+      "lesson": "stratificatie",
+      "refs": [
+        {
+          "source": "boek-h8c",
+          "page": 1,
+          "locator": "Boek p. 221: stratificatie op basis van de cumulatieve boekwaarde"
+        }
+      ]
+    },
+    {
+      "id": "gestratificeerde-schatter",
+      "term": "Gestratificeerde schatter",
+      "aliases": [
+        "gestratificeerde schatting",
+        "gestratificeerde schattingen"
+      ],
+      "definition": "Een schatting die je per stratum maakt en daarna optelt tot één totaal. De onnauwkeurigheid volgt uit de opgetelde variantiebijdragen van de strata.",
+      "example": "Stratum 1 geeft € 40.000 en stratum 2 € 60.000; de gestratificeerde schatting is € 100.000.",
+      "lesson": "stratificatie",
+      "refs": [
+        {
+          "source": "boek-h8c",
+          "page": 10,
+          "locator": "Boek p. 230: gestratificeerde schatter"
+        }
+      ]
+    },
+    {
+      "id": "bemonsterde-strata",
+      "term": "Bemonsterde strata",
+      "aliases": [
+        "bemonsterd stratum",
+        "bemonsterde stratum"
+      ],
+      "definition": "De strata waarin je een steekproef trekt, tegenover een topstratum dat je volledig controleert. Alleen bemonsterde strata dragen bij aan de steekproefonzekerheid.",
+      "example": "Vier bemonsterde strata hebben elk een standaardfout; een integraal gecontroleerd topstratum voegt alleen een bekend bedrag toe.",
+      "lesson": "stratificatie",
+      "refs": [
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Formules 25 tot en met 29"
+        },
+        {
+          "source": "exam2025",
+          "page": 12,
+          "locator": "Vraag 4 tot en met 6: allocatie en topstratum"
+        }
+      ]
+    },
+    {
+      "id": "gecombineerde-standaardfout",
+      "term": "Gecombineerde standaardfout",
+      "aliases": [
+        "gezamenlijke standaardfout",
+        "gecombineerde standaardfouten"
+      ],
+      "definition": "De standaardfout van het totaal over onafhankelijke strata, geschreven als s_tot. Je telt de varianties op en neemt daarna de wortel; je telt de standaardfouten dus niet zelf op.",
+      "example": "Standaardfouten 3 en 4 geven √(3² + 4²) = √25 = 5, niet 7.",
+      "lesson": "stratificatie",
+      "refs": [
+        {
+          "source": "formules",
+          "page": 2,
+          "locator": "Formules 25 tot en met 29"
+        },
+        {
+          "source": "exam2025",
+          "page": 12,
+          "locator": "Vraag 4 tot en met 6: allocatie en topstratum"
+        }
+      ]
+    },
+    {
+      "id": "significant-verband",
+      "term": "Significant verband",
+      "aliases": [
+        "significant lineair verband",
+        "significante verband",
+        "significant lineaire verband"
+      ],
+      "definition": "Een verband waarvan de toets laat zien dat het waarschijnlijk niet door toeval in de steekproef komt. Dit zegt niets over oorzaak en gevolg: een significant verband is nog geen causaal verband.",
+      "example": "Bij p = 0,001 en α = 0,05 verwerp je H₀: er is een significant lineair verband. Dat bewijst niet dat x de oorzaak is van y.",
+      "lesson": "toetsen",
+      "refs": [
+        {
+          "source": "boek-h9a",
+          "page": 14,
+          "locator": "Boek p. 246: significant verband en causaal verband"
+        }
+      ]
+    },
+    {
+      "id": "gekwadrateerde-residuen",
+      "term": "Gekwadrateerde residuen",
+      "aliases": [
+        "gekwadrateerd residu"
+      ],
+      "definition": "De residuen na kwadrateren: e². Hun som is SSE. De kleinste-kwadratenmethode kiest de lijn waarbij deze som zo klein mogelijk is.",
+      "example": "De residuen 2 en −3 geven gekwadrateerde residuen 4 en 9, samen 13.",
+      "lesson": "regressielijn",
+      "refs": [
+        {
+          "source": "boek-h9a",
+          "page": 8,
+          "locator": "Boek p. 240: kleinste-kwadratenmethode"
+        }
+      ]
+    },
+    {
+      "id": "samengevoegde-groepen",
+      "term": "Samengevoegde groepen",
+      "aliases": [
+        "samengevoegde groep"
+      ],
+      "definition": "Gegevens die in het spreidingsdiagram uiteenvallen in te onderscheiden subgroepen. Daardoor kun je een verband vinden dat er in werkelijkheid niet is, of juist een verband missen.",
+      "example": "Twee vestigingen met een verschillend niveau kunnen samen een schijnbaar stijgende lijn geven, terwijl er binnen elke vestiging geen verband is.",
+      "lesson": "diagnostiek",
+      "refs": [
+        {
+          "source": "boek-h9c",
+          "page": 2,
+          "locator": "Boek p. 261: samengevoegde groepen"
+        }
+      ]
+    },
+    {
+      "id": "positieve-autocorrelatie",
+      "term": "Positieve autocorrelatie",
+      "aliases": [],
+      "definition": "Opeenvolgende residuen lijken op elkaar: na een relatief hoge waarneming verwacht je weer een relatief hoge, na een lage weer een lage. De Durbin-Watson-waarde ligt dan onder 2.",
+      "example": "Maandcijfers die maanden achter elkaar boven de lijn liggen en daarna maanden eronder, wijzen op positieve autocorrelatie.",
+      "lesson": "diagnostiek",
+      "refs": [
+        {
+          "source": "boek-h9d",
+          "page": 6,
+          "locator": "Boek p. 278: positieve autocorrelatie"
+        }
+      ]
+    },
+    {
+      "id": "negatieve-autocorrelatie",
+      "term": "Negatieve autocorrelatie",
+      "aliases": [],
+      "definition": "Opeenvolgende residuen wisselen steeds van teken: na een relatief hoge waarneming volgt een relatief lage en andersom. De Durbin-Watson-waarde ligt dan boven 2.",
+      "example": "Residuen die elke maand om en om positief en negatief zijn, wijzen op negatieve autocorrelatie.",
+      "lesson": "diagnostiek",
+      "refs": [
+        {
+          "source": "boek-h9d",
+          "page": 8,
+          "locator": "Boek p. 280: Durbin-Watson-waarde bij negatieve autocorrelatie"
+        }
+      ]
+    },
+    {
+      "id": "individuele-storing",
+      "term": "Individuele storing",
+      "aliases": [
+        "individuele storingen"
+      ],
+      "definition": "De afwijking van één nieuwe waarneming ten opzichte van de echte regressielijn. Deze zit wel in het voorspellingsinterval, maar niet in het interval voor de gemiddelde respons. Daarom is dat laatste smaller.",
+      "example": "Twee maanden met dezelfde x kunnen toch een andere y hebben. Dat verschil is de individuele storing.",
+      "lesson": "voorspellen",
+      "refs": [
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formule 50: individueel voorspellingsinterval"
+        },
+        {
+          "source": "attentie",
+          "page": 6,
+          "locator": "Voorspelling"
+        }
+      ]
+    },
+    {
+      "id": "aantal-verklarende-variabelen",
+      "term": "Aantal verklarende variabelen",
+      "aliases": [
+        "aantal x-variabelen"
+      ],
+      "definition": "Het aantal x-variabelen in het model, geschreven als k. De constante telt niet mee. Je gebruikt k onder meer in de residuele vrijheidsgraden n − k − 1.",
+      "example": "Een model met omzet, activa en een dummy heeft k = 3.",
+      "lesson": "meervoudig",
+      "refs": [
+        {
+          "source": "formules",
+          "page": 3,
+          "locator": "Formules 51 tot en met 54; vergelijk formule 61 en 62 op PDF-pagina 4"
+        },
+        {
+          "source": "attentie",
+          "page": 7,
+          "locator": "Meervoudige regressie"
+        },
+        {
+          "source": "exam2025",
+          "page": 14,
+          "locator": "Vraag 19 tot en met 20: salaris en dummyvariabelen"
+        }
+      ]
+    },
+    {
+      "id": "centrale-limietstelling",
+      "term": "Centrale limietstelling",
+      "aliases": [],
+      "definition": "Hoe groter de steekproef, hoe meer de verdeling van het steekproefgemiddelde op een normale verdeling gaat lijken, ook als de losse waarden dat niet doen. Het boek hanteert n = 100 als grens.",
+      "example": "Bij n = 150 mag je het steekproefgemiddelde normaal verdeeld nemen, ook als de boekwaarden scheef zijn.",
+      "lesson": "onzekerheid",
+      "refs": [
+        {
+          "source": "boek-basis",
+          "page": 1,
+          "locator": "Boek p. 92: Centrale Limietstelling"
+        }
+      ]
+    },
+    {
+      "id": "zonder-teruglegging",
+      "term": "Zonder teruglegging",
+      "aliases": [
+        "zonder terugleggen"
+      ],
+      "definition": "Een getrokken post gaat niet terug in de populatie en kan dus niet nog eens worden getrokken. Daarom is de eindigheidscorrectie nodig als je een flink deel van de populatie controleert.",
+      "example": "Trek je 100 van de 1.000 posten zonder teruglegging, dan blijven na de eerste trekking 999 posten over.",
+      "lesson": "mpu",
+      "refs": [
+        {
+          "source": "formules",
+          "page": 1,
+          "locator": "Formules 1 tot en met 5: directe schatter"
+        },
+        {
+          "source": "slides",
+          "page": 13,
+          "locator": "MPU, PDF-pagina 13 tot en met 19"
         }
       ]
     }

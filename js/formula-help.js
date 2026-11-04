@@ -101,6 +101,9 @@
     puntschatting: entry('Puntschatting', 'Dit is één getal waarmee je een onbekende populatiegrootheid schat. In de getoonde intervalformule ligt deze schatting in het midden tussen ondergrens en bovengrens.'),
     standaardfout: entry('Standaardfout', 'Dit meet de onzekerheid van een schatting door het gebruik van een steekproef. Het is iets anders dan de spreiding van de afzonderlijke waarnemingen.'),
     'kritieke waarde': entry('Kritieke waarde', 'Dit is de tabelgrens die bij de gekozen verdeling, betrouwbaarheid en vrijheidsgraden hoort. Vermenigvuldigd met de standaardfout bepaalt zij de marge van het interval.'),
+    Rbw2: entry('R²_bw: determinatiecoëfficiënt van boekwaarde en werkelijke waarde', 'Dit is het kwadraat van de correlatie R_bw: het deel van de spreiding in de werkelijke waarden dat met de boekwaarden samenhangt. Hoe hoger, hoe meer de regressieschatter de standaardfout verlaagt.'),
+    frequentie: entry('Frequentie: aantal posten in de klasse', 'Dit is het aantal posten dat in deze klasse valt. Bij ongelijke klassen vermenigvuldig je de frequentie eerst met de klassebreedte en neem je daarna de wortel.'),
+    klassebreedte: entry('Klassebreedte', 'Dit is de afstand tussen de onder- en bovengrens van een klasse. Bij ongelijke klassebreedtes hoort deze breedte onder de wortel.'),
     breedte: entry('Breedte van het interval', 'Dit is de bovengrens min de ondergrens. Bij het getoonde symmetrische interval is dit tweemaal de marge E.'),
     'α': entry('α: significantieniveau', 'Dit is het vooraf gekozen risico dat je de nulhypothese verwerpt terwijl die waar is. Bij een tweezijdig interval hoort α/2 bij elke staart van de verdeling.'),
     '±': entry('±: plus én min', 'Maak twee berekeningen: één met aftrekken en één met optellen. Daarmee krijg je de ondergrens en bovengrens van het interval.'),
@@ -120,6 +123,7 @@
     if (!D[key]) key = normalized(key);
     if (key === 'R2i') key = 'Ri2';
     if (key === 'R2bw') key = 'Rbw2';
+    if (key === 'breedte' && context === 'stratificatie') key = 'klassebreedte';
     if (context === 'transformaties' && key === 'e') return entry('e: grondtal van de natuurlijke logaritme', 'Dit is het vaste getal e ≈ 2,718. Bij exp(z) bereken je e tot de macht z; de natuurlijke logaritme ln draait die bewerking om.');
     if (context === 'transformaties' && key === 'z') return entry('z: invoer van de exponentiële functie', 'Hier is z de waarde die je als exponent invoert bij exp(z). Het is in deze uitleg een tijdelijke naam voor die invoer en geen gestandaardiseerd residu.');
     if (key === 'b' && ['regressielijn','anova','toetsen','diagnostiek','voorspellen','meervoudig','transformaties','modelbouw','validatie','tentamen'].includes(context)) return entry('b: geschatte regressiecoëfficiënt', 'De letter b staat hier voor een coëfficiënt die met de steekproef is geschat. De index geeft aan of het om de constante b₀ of het effect van een verklarende variabele gaat.');
@@ -166,7 +170,7 @@
     function visit(node) {
       if (node.hasAttribute('data-formula-help')) return;
       const tag = node.localName, info = describe(node, context, formula);
-      const atomic = ['mi','mtext','mo','msub','mover','msup'].includes(tag) && info;
+      const atomic = ['mi','mtext','mo','msub','msubsup','mover','msup'].includes(tag) && info;
       if (atomic) { mark(node, info, context); return; }
       for (const child of node.children) visit(child);
     }
