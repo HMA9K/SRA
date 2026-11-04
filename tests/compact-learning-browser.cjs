@@ -59,6 +59,7 @@ const server=http.createServer((req,res)=>{
    const feedback=question.locator('.question-feedback').filter({visible:true});
    assert.match(await feedback.innerText(),/Goed beantwoord/);
    assert.equal(await feedback.locator('.question-recognition dt').count(),0);
+   await feedback.locator('.feedback-more summary').first().click();
    assert.match(await feedback.locator('.question-pattern').innerText(),/^Onthoud:/);
    assert.ok(await feedback.locator('.question-trap').isVisible());
    assert.ok(await feedback.locator('.source-note').count()>0);

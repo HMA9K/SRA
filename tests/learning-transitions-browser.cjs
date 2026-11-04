@@ -68,7 +68,7 @@ const server=http.createServer((req,res)=>{
      assert.equal(await diagrams.locator('circle').count(),16);
      assert.equal(await diagrams.locator('.transition-checked').count(),4);
      assert.equal(await diagrams.locator('.transition-extra').count(),1);
-     const planning=page.locator('#uitleg>section').filter({has:page.locator('.section-title').filter({hasText:'Alle strata uitbreiden'})});
+     const planning=page.locator('section.section').filter({has:page.locator('.section-title').filter({hasText:'Uitbreiden als de populatie in strata'})});
      assert.equal(await planning.locator('.formula-typeset math mfrac').count(),2);
      assert.ok(await planning.locator('.formula-typeset').isVisible());
      if(width===1197&&theme==='light'){
