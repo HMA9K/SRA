@@ -184,6 +184,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-exam-help p{color:#
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-label{color:#b1b7c9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .math-scroll:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .table-scroll:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-scroll:focus-visible{outline:3px solid #76542d}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .symbols{color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .symbols-notes{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) caption{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) table.numeric{background:#152129}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) table.numeric th[scope="row"]{background:#161a2c;color:#adbdc9}

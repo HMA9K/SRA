@@ -28,6 +28,7 @@ for(const lesson of C.lessons) {
         const info=H.describe(node,lesson.id,tree.textContent);
         if (['mi','mn','mo','mtext','msub','mover','msup'].includes(node.localName) && info && !info.title.startsWith('Macht:')) {
           components++;
+          assert.match(info.title,/^\S.*?: \S/u,'De symbolenlijst splitst op symbool en betekenis: '+info.title);
           assert.ok(info.text.length>50 && info.text.length<550,info.title);
           assert.ok(info.text.split(/(?<=[.!?])\s+(?=[A-ZÉ])/u).length<=3,info.title);
           return;
@@ -41,6 +42,12 @@ for(const lesson of C.lessons) {
 }
 assert.deepEqual(missing,[],'Elk variabel symbool in de les- en formulepagina’s heeft uitleg');
 assert.ok(formulas>100);
+assert.match(H.lookup('s_y').title,/standaardafwijking van y/);
+assert.equal(H.lookup('s_e','verschil').text.includes('verschilsschatter'),false);
+assert.match(H.lookup('Ŵ_Q').title,/quotiëntschatter/,'Zelfde naam als het formuleblad');
+assert.match(H.lookup('MDkritiek').title,/^MD_kritiek: .*Mahalanobis/);
+const regression=C.lessons.find(l=>l.id==='regressieschatter').sections.map(s=>s.html).join('');
+assert.ok(regression.indexOf('De factor')>regression.indexOf('Vergelijk met MPU'),'De toelichting op de factor staat onder de formule met die factor');
 assert.match(H.lookup('e','transformaties').text,/2,718/);
 assert.match(H.lookup('e','verschil').text,/b − w/);
 assert.match(H.lookup('e','regressielijn').text,/residu|waargenomen/);
@@ -59,7 +66,7 @@ assert.equal(H.textMatches('b₁ln(x) + b₀', 'transformaties').length,4,'Wel c
 for (const token of ['+','−','-','×','*','/','=','(',')','√','^']) assert.equal(H.lookup(token),null,'Geen basisrekenuitleg bij '+token);
 for (const tag of ['mn','mfrac','msqrt']) assert.equal(H.describe({localName:tag,textContent:'2'},'rekenen',''),null);
 assert.equal(H.describe({localName:'msup',textContent:'w2'},'rekenen',''),null,'Geen algemene uitleg van kwadrateren');
-for (const token of ['s²','Σ','±','w̄','n','ln','exp']) assert.ok(H.lookup(token),'Statistische uitleg behouden: '+token);
+for (const token of ['s²','Σ','±','…','w̄','n','ln','exp']) assert.ok(H.lookup(token),'Statistische uitleg behouden: '+token);
 assert.equal(H.textMatches('s_Q en s_q', 'quotient').length,2);
 assert.notEqual(H.lookup('s_Q').title,H.lookup('s_q').title);
 assert.equal(H.lookup('onbekend'),null);
