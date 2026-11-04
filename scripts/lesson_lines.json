@@ -1,0 +1,1145 @@
+{
+ "beginnen": [
+  {
+   "title": "Wat wil je over het geheel weten?",
+   "intro": "Een accountant controleert een deel van de posten en wil iets zeggen over het geheel. Daarom leg je eerst vast wat één post is, wat je meet en of je een bedrag wilt schatten of een bewering wilt toetsen.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Begin met een concrete vraag",
+     "heading": null
+    },
+    {
+     "old": "Schatten en toetsen: twee soorten vragen",
+     "heading": "Schatten of toetsen: kies bij je vraag"
+    }
+   ]
+  },
+  {
+   "title": "Waarom de steekproef eerlijk moet zijn",
+   "intro": "Of je nu schat of toetst, je uitspraak over de populatie is alleen zo goed als de selectie. Hier zie je wat een parameter is en waarom een grotere steekproef een scheve selectie niet herstelt.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "SET-opfrisser: populatie en een eerlijke steekproef",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "De letters in een formule lezen",
+   "intro": "Populatie en steekproef komen in elke formule terug als letters. Met deze afspraken zie je straks direct of een getal over het geheel gaat of over de gecontroleerde posten.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Een klein woordenboek voor formules",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zo trek je een aselecte steekproef",
+   "intro": "Het voorbeeld ging uit van 100 gecontroleerde artikelen. Hier zie je de stap die daaraan voorafgaat: hoe je de posten navolgbaar en aselect kiest. Een steekproef die in de opgave gegeven is, trek je niet opnieuw.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Een aselecte selectie navolgbaar uitvoeren",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "rekenen": [
+  {
+   "title": "Hoe ver liggen de waarden uit elkaar?",
+   "intro": "Na het afbakenen van de steekproef heb je een reeks gemeten waarden. Het gemiddelde zegt waar ze liggen. Hier bouw je met vier posten stap voor stap de maat op die zegt hoe ver ze uit elkaar liggen.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Rekenen zonder verborgen stappen",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Spreiding van posten of onzekerheid van het gemiddelde",
+   "intro": "De standaardafwijking s gaat over losse posten. Voor een schatting wil je weten hoe onzeker het gemiddelde is, en dat is een ander getal: de standaardfout s/√n.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "SET-opfrisser: spreiding tegenover onzekerheid",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "De variantie rechtstreeks uit de sommen",
+   "intro": "Een tentamenopgave geeft vaak juist Σw en Σw² in plaats van losse waarden. Dan gebruik je deze vorm van het formuleblad. De uitkomst is dezelfde als via de afwijkingen.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "De rekenvorm op het formuleblad",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zo reken je een gegevenstabel door",
+   "intro": "Een opgave kan losse waarden geven of alleen sommen. Je rekent de vier posten uit het voorbeeld langs beide routes door, ziet dat de uitkomst gelijk is en past dat daarna zelf toe op gegeven sommen.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Een gegevenstabel in beide richtingen doorrekenen",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "onzekerheid": [
+  {
+   "title": "Van één schatting naar een interval",
+   "intro": "Trek je andere posten, dan krijg je een andere schatting. Daarom geef je naast de puntschatting ook een marge E. Hier zie je hoe kans, betrouwbaarheid en marge samen een interval vormen.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Van kans naar interval",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Welke verdeling achter het interval zit",
+   "intro": "De marge rust op een aanname over hoe het steekproefgemiddelde varieert. Daarom kijk je nu wat een verdeling is en wanneer je het gemiddelde ongeveer normaal verdeeld mag noemen.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Wat is een verdeling?",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Wat maakt een interval breder?",
+   "intro": "Je weet nu waaruit de marge E is opgebouwd. Hier zie je welke vier knoppen die marge groter of kleiner maken en waarom een smaller interval niet automatisch betrouwbaarder is.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Wat maakt een interval breder?",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zo vind je de kritieke waarde in de tabel",
+   "intro": "In het voorbeeld was de kritieke waarde gegeven. Je moet haar ook zelf kunnen opzoeken: bepaal of je één of twee grenzen nodig hebt, reken df uit en lees de juiste rij en kolom af.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Waar komt de t-waarde vandaan?",
+     "heading": null
+    },
+    {
+     "old": "Eén of twee grenzen: uitgewerkt voorbeeld",
+     "heading": "Eén grens of twee grenzen"
+    },
+    {
+     "old": "De tabellenbundel gebruiken: pagina, rij, kolom en conclusie",
+     "heading": "Pagina, rij en kolom kiezen in de bundel"
+    }
+   ]
+  },
+  {
+   "title": "Een interval goed lezen en uitleggen",
+   "intro": "Met een berekend interval ben je er nog niet: je moet ook goed zeggen wat het betekent. De 95% gaat over de methode bij herhaling, en deze grafieken laten dat zien met twintig steekproeven uit dezelfde populatie.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Intervalgrafieken lezen: één vaste populatiewaarde, verschillende schattingen",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "verschil": [
+  {
+   "title": "Wanneer corrigeer je de boekwaarde met een foutbedrag?",
+   "intro": "Je kent de totale boekwaarde B al en wilt weten hoeveel die afwijkt van de werkelijke waarde. Kies deze schatter als de fouten ongeveer even groot zijn, los van de grootte van de post, en de steekproef minstens 30 fouten bevat.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Wat is hier een fout?",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Van de verschillen naar een interval",
+   "intro": "De puntschatting B − N × ē is één getal. Voor de marge heb je de spreiding van de verschillen s_e nodig. Die staat in de standaardfout op de plek waar bij MPU de spreiding van de werkelijke waarden staat.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "De spreiding van de verschillen",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zo lees je de gegevens in een tentamenvraag",
+   "intro": "Het voorbeeld liet de berekening van Elektroconsum zien. Nu kijk je hoe je de gegeven tabel vertaalt naar sommen en hoe je de geschatte totale fout en de geschatte werkelijke waarde uit elkaar houdt.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "De gegevenstabel lezen en de juiste waarde rapporteren",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "quotient": [
+  {
+   "title": "Wanneer past een vast percentage?",
+   "intro": "Bij de verschilschatter was het foutbedrag ongeveer gelijk. Groeit de fout juist mee met de post, dan gebruik je de verhouding q tussen werkelijke waarde en boekwaarde. Ook hier zijn minstens 30 fouten nodig.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Een vast percentage herkennen",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "De spreiding die de verhouding niet verklaart",
+   "intro": "Met q en B heb je de puntschatting. Voor de marge heb je s_q nodig: de spreiding van wat de verhouding per post niet verklaart.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Spreiding die na de verhouding overblijft",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zo werk je een quotiëntcasus uit",
+   "intro": "Het voorbeeld gaf de totaalschatting en de resterende spreiding. Hier maak je de berekening af tot een interval, eerst met s_b, s_w en R en daarna met de sommen die een opgave ook kan geven.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Een volledige casus: van goedratio tot interval",
+     "heading": null
+    },
+    {
+     "old": "De tweede rekenwijze: fouttotalen en productsommen",
+     "heading": "Rekenen met fouttotalen en productsommen"
+    }
+   ]
+  },
+  {
+   "title": "Wanneer is de quotiëntschatter beter dan MPU?",
+   "intro": "De quotiëntschatter is niet vanzelf nauwkeuriger dan MPU. Met de variatiecoëfficiënten en R beoordeel je of de verhouding minder onzekerheid overlaat. De overige voorwaarden voor een bruikbaar interval blijven gelden.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Boekverdieping: wanneer verbetert de quotiëntschatter MPU?",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "regressieschatter": [
+  {
+   "title": "Corrigeren voor een afwijkende steekproef",
+   "intro": "Boekwaarde en werkelijke waarde kunnen samenhangen zonder vast verschil of vast percentage. Dan start je bij MPU en corrigeer je met de lijn tussen b en w voor een steekproef die toevallig relatief hoge of lage boekwaarden bevat.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Corrigeren voor een afwijkende steekproef",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Waarom het interval smaller kan worden",
+   "intro": "De correctie verschuift de puntschatting. De samenhang tussen b en w verkleint daarnaast de standaardfout: die is de standaardfout van MPU maal √(1 − R²).",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Waarom kan het interval smaller worden?",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zo bereken je de correctie en de helling",
+   "intro": "Het voorbeeld paste de schatter toe op een tentamencasus. Nu lees je per onderdeel wat de correctie met MPU doet en bereken je de helling b₁ ook als de opgave alleen productsommen geeft.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "De correctie verklaren en de helling uit productsommen berekenen",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Vier schatters naast elkaar: welke kies je?",
+   "intro": "Alle vier de schatters schatten het totaal W. Je keuze onderbouw je met het patroon in de gegevens. Daarom volgen hier de keuzestappen, de resultaten uit het boek en de onderlinge relaties.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "De vier schatters vergeleken",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Een smaller interval moet ook geldig zijn",
+   "intro": "Bij veel nulfouten kan het berekende interval te smal uitvallen. Beoordeel daarom niet alleen de breedte, maar ook het verband en de foutstructuur.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Een smaller interval moet ook geldig zijn",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "steekproefomvang": [
+  {
+   "title": "Van gewenste marge naar aantal posten",
+   "intro": "Een berekend interval kan te breed zijn voor de controlevraag. Dan werk je terug: je neemt de gewenste marge E als uitgangspunt en berekent hoeveel posten nodig zijn, met de spreiding die bij je schatter hoort.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Werk terug vanaf de gewenste precisie",
+     "heading": null
+    },
+    {
+     "old": "Omvang bij de quotiëntschatter",
+     "heading": "De spreiding bij de quotiëntschatter"
+    }
+   ]
+  },
+  {
+   "title": "Zo reken je een omvangsvraag uit",
+   "intro": "Het voorbeeld deed dit met de regressieschatter. Hier doorloop je dezelfde stappen met de quotiëntschatter: van gewenste breedte naar E, via γ naar n en dan naar de extra controles.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "De slides doorrekenen: van gewenste marge naar extra controles",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Rond in de veilige richting",
+   "intro": "Aan het eind van een omvangsvraag bepalen twee dingen of je antwoord klopt: hoe je afrondt en welk aantal je noemt. Controleer beide voordat je de uitkomst opschrijft.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Rond in de veilige richting",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Uitbreiden als de populatie in strata is verdeeld",
+   "intro": "Bij een gestratificeerde schatting is de totale variantie de som van de bijdragen van de strata. Je kunt daarom gericht één stratum uitbreiden of de controles opnieuw over alle groepen verdelen.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Uitbreiding na stratificatie",
+     "heading": null
+    },
+    {
+     "old": "Alle strata uitbreiden of gericht één bijdrage verkleinen",
+     "heading": "Alle strata uitbreiden of één bijdrage verkleinen"
+    }
+   ]
+  },
+  {
+   "title": "Zelf oefenen",
+   "intro": "Let bij het oefenen op de vaste volgorde: bepaal eerst E, kies de spreiding die bij de schatter hoort, rond naar boven af en houd totale omvang en uitbreiding uit elkaar.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Zelf oefenen met deze aanvulling",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "stratificatie": [
+  {
+   "title": "Waarom je een populatie opdeelt",
+   "intro": "MPU geeft een breed interval als de posten sterk in grootte verschillen. Kies stratificatie als je een gemengde populatie kunt opdelen in groepen waarin de posten op elkaar lijken, of als een van de andere redenen in dit blok speelt.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Waarom opdelen?",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Hoe kies je de grenzen van de strata?",
+   "intro": "Weet je waarom je opdeelt, dan is de volgende vraag waar de grenzen komen te liggen. Hier vergelijk je de methoden. De uitgewerkte tabellen volgen na het voorbeeld.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Hoe kies je de grenzen van de strata?",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Controles verdelen en strata samenvoegen",
+   "intro": "Met de grenzen staan de groepen vast. Je hebt dan nog twee soorten formules nodig: voor de verdeling van de controles over de strata en voor het samenvoegen tot één interval.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Hoe verdeel je de steekproef?",
+     "heading": null
+    },
+    {
+     "old": "De groepen samenvoegen",
+     "heading": "Eén interval voor alle strata samen"
+    }
+   ]
+  },
+  {
+   "title": "Zo bepaal je grenzen uit een klassentabel",
+   "intro": "Het voorbeeld begon bij strata die al vaststonden. Hier doe je de stap daarvoor: je haalt het topstratum apart en bepaalt de grenzen met de cumulatieve boekwaarde en met de cumulatieve wortel.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "De volledige collegestabel: cumulatieve boekwaarde en grenzen",
+     "heading": null
+    },
+    {
+     "old": "Ook de wortelmethode volledig uit een klassentabel opbouwen",
+     "heading": "De cumulatieve wortel uit een klassentabel"
+    },
+    {
+     "old": "Stratagrenzen bepalen vanuit de cursusopgave",
+     "heading": "Beide methoden op dezelfde populatie"
+    }
+   ]
+  },
+  {
+   "title": "Van allocatie tot interval: de hele casus",
+   "intro": "Zijn de grenzen bepaald, dan verdeel je de controles en schat je per stratum. Hier reken je één casus door van allocatie tot interval en zie je hoe je de stappen op het tentamen opschrijft.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Neyman en evenredige allocatie naast elkaar uitrekenen",
+     "heading": null
+    },
+    {
+     "old": "De volledige MPU-stratacase: iedere rij tot en met het interval",
+     "heading": "Alle strata doorrekenen tot het interval"
+    },
+    {
+     "old": "Van tabel naar een onderbouwde tentamenuitwerking",
+     "heading": "Je uitwerking stap voor stap onderbouwen"
+    }
+   ]
+  },
+  {
+   "title": "Gericht extra controles in één stratum",
+   "intro": "Is de marge na het samenvoegen te groot, dan kun je gericht uitbreiden. Je kijkt welk stratum het meest bijdraagt aan de variantie en berekent hoeveel controles daar nodig zijn.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Gericht extra controles in één stratum",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zelf oefenen",
+   "intro": "Let bij het oefenen op de volgorde: eerst de grenzen, dan de allocatie, dan schatten per stratum en varianties optellen. Tel geen standaardafwijkingen op en gebruik de werkelijk gecontroleerde nᵢ.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Zelf oefenen met deze aanvulling",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "regressielijn": [
+  {
+   "title": "Wanneer je een verwachting laat afhangen van x",
+   "intro": "Bij cijferbeoordeling vergelijk je een werkelijk bedrag met een onderbouwde verwachting. Regressie kies je wanneer die verwachting afhangt van een kenmerk, zoals arbeidsuren, omdat één vast gemiddelde geen rekening houdt met drukke en rustige maanden.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Van controleverwachting naar regressiemodel",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Het idee: voor iedere x één verwachte y",
+   "intro": "Nu je y en x hebt gekozen, bekijk je wat de lijn zegt. Je leert model en geschatte lijn uit elkaar te houden en de constante, de helling en het residu in woorden te lezen.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Een rechte lijn leren lezen",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zo bereken je de lijn en de spreiding eromheen",
+   "intro": "Je weet nu wat b_0 en b_1 betekenen; hier zie je hoe je ze berekent. Daarna meet je met r hoe strak de punten de lijn volgen en met s_e hoeveel spreiding rond de lijn overblijft.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Hoe wordt de lijn gekozen?",
+     "heading": null
+    },
+    {
+     "old": "Correlatie: richting en sterkte",
+     "heading": "Hoe strak de punten de lijn volgen"
+    },
+    {
+     "old": "Residuele variantie berekenen zonder ANOVA-tabel",
+     "heading": "Hoeveel spreiding rond de lijn overblijft"
+    }
+   ]
+  },
+  {
+   "title": "Zo pak je een vraag over de lijn aan: van gegevens naar Coefficients",
+   "intro": "Na het voorbeeld doorloop je de hele route met de autogewichten uit cursusopgave H9.1. Je gebruikt dit wanneer een vraag gegevens of SPSS-uitvoer geeft en je de lijn, een voorspelling of een residu moet bepalen.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Van gegevens naar Coefficients: cursusopgave H9.1",
+     "heading": null
+    },
+    {
+     "old": "SPSS-praktijk college 3: de handberekening terugvinden",
+     "heading": "Je handberekening terugvinden in SPSS"
+    }
+   ]
+  },
+  {
+   "title": "Zelf oefenen met lijn, residu en correlatie",
+   "intro": "Je hebt de lijn nu gelezen, berekend en in SPSS teruggevonden. Met de oefenvarianten controleer je of je dat ook zelf kunt; na controle krijg je de rekenstappen en uitleg per antwoord.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Zelf oefenen met deze aanvulling",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "anova": [
+  {
+   "title": "Hoeveel beter voorspelt de lijn dan het gemiddelde?",
+   "intro": "Een regressielijn sluit meestal niet precies op alle waarnemingen aan. Je gebruikt ANOVA wanneer je wilt weten hoeveel de lijn oplevert ten opzichte van voor iedereen hetzelfde gemiddelde voorspellen.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "ANOVA vergelijkt de lijn met voorspellen door het gemiddelde",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Het idee: de totale variatie in twee delen splitsen",
+   "intro": "De vergelijking met het gemiddelde levert drie kwadratensommen op. Hier zie je wat iedere som telt en hoe SSR en SSE samen TotalSS vormen; zo bouw je de rijen van de ANOVA-tabel op.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Drie soorten kwadratensommen",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "De formules: R², sₑ en F uit de tabel halen",
+   "intro": "Met de rijen van de tabel beantwoord je nu drie verschillende vragen: hoeveel is verklaard, hoeveel spreiding blijft over en is de verbetering statistisch aantoonbaar? Bij iedere vraag hoort een andere formule.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Van de tabel naar betekenis",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zo lees je ANOVA-uitvoer in een casus: huur en oppervlakte",
+   "intro": "Na het tentamenvoorbeeld zie je dezelfde berekeningen in een doorlopende casus. Je gebruikt deze aanpak wanneer een vraag je een ANOVA-tabel geeft en je R², s_e, F en een voorspelling moet verbinden.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "De huurcasus: correlatie, ANOVA en voorspelling verbinden",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zelf oefenen: een onvolledige ANOVA-tabel aanvullen",
+   "intro": "Je hebt de tabel nu in een voorbeeld en een casus zien gebruiken. Hier reken je de ontbrekende cellen zelf uit en vergelijk je daarna je tabel met de uitwerking in zes stappen.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Een volledige ANOVA-tabel reconstrueren",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "toetsen": [
+  {
+   "title": "Welke toets past bij je vraag?",
+   "intro": "Een berekende helling vertelt nog niet of de gegevens genoeg bewijs leveren. Daarom bepaal je eerst wat je wilt weten, want dat doel bepaalt welke toets past.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Van de onderzoeksvraag naar de juiste toets",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Het idee: je vraag omzetten in H₀ en H₁",
+   "intro": "Heb je het doel gekozen, dan maak je er een uitspraak over de populatie van. Je frist de hypothesen en foutkansen op en legt vóór het rekenen de richting en α vast.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "SET-opfrisser: hypothesen en foutkansen",
+     "heading": null
+    },
+    {
+     "old": "Begin bij wat je wilt aantonen",
+     "heading": "Kies H₀, H₁ en de richting vooraf"
+    }
+   ]
+  },
+  {
+   "title": "De formules: t voor één helling, F voor het hele model",
+   "intro": "Met de hypothesen op papier bereken je de toetsingsgrootheid. Gaat je vraag over één coëfficiënt, dan gebruik je t, de p-waarde en zo nodig een interval; gaat hij over alle hellingen samen, dan gebruik je F.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "t en de p-waarde",
+     "heading": null
+    },
+    {
+     "old": "Toetsen en het interval voor de regressiehelling",
+     "heading": "Standaardfout en interval als de SPSS-tabel ontbreekt"
+    },
+    {
+     "old": "Het hele model toetsen met F",
+     "heading": "Alle hellingen samen toetsen met F"
+    }
+   ]
+  },
+  {
+   "title": "Zo pak je een toetsvraag aan: van tabelgrens naar conclusie",
+   "intro": "Het voorbeeld eindigde met een conclusie binnen het model. Hier leer je zo'n conclusie in vier stappen opschrijven en lees je de juiste grens af uit de tabellenbundel, voor een eenzijdige t, een tweezijdige t en F.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "De conclusie in vier stappen",
+     "heading": null
+    },
+    {
+     "old": "Tabellenbundel gebruiken: dezelfde casus, drie toetsvormen",
+     "heading": "De juiste grens aflezen: één casus, drie toetsvormen"
+    }
+   ]
+  },
+  {
+   "title": "Zelf oefenen met hypothesen, t en F",
+   "intro": "Je kunt nu van vraag via toets naar conclusie werken. Met de oefenvarianten herhaal je die route; na controle krijg je de rekenstappen en uitleg per antwoord.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Zelf oefenen met deze aanvulling",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "diagnostiek": [
+  {
+   "title": "Waarom je een model controleert voordat je het gebruikt",
+   "intro": "Een regressietoets steunt op aannames over model en gegevens. Je doet deze controle voordat je een uitkomst gebruikt, omdat een kleine p-waarde anders te overtuigend kan lijken en een interval te smal kan zijn.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Een modelcontrole begint bij het gegevensproces",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Structuur: groepen en tijdsvertraging",
+   "intro": "De controle begint bij wat de waarnemingen voorstellen. Je onderzoekt eerst samengevoegde groepen en, bij tijdreeksen, tijdsvertraging, omdat deze oorzaken ook in de latere diagnoses kunnen doorwerken.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Eerst de structuur van de gegevens",
+     "heading": null
+    },
+    {
+     "old": "Samengevoegde groepen: eerst zichtbaar maken, dan modelleren",
+     "heading": "Groepen zichtbaar maken en daarna modelleren"
+    },
+    {
+     "old": "Tijdsvertraging lezen in grafieken én Correlations",
+     "heading": "Tijdsvertraging vinden in grafieken en Correlations"
+    }
+   ]
+  },
+  {
+   "title": "Uitbijters en invloedrijke punten",
+   "intro": "Staat de structuur vast, dan bekijk je of enkele waarnemingen de uitkomst sterk bepalen. Je stelt drie afzonderlijke vragen, over y, over x en over de invloed op de lijn, en leest de antwoorden uit Residuals Statistics.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Uitbijter is niet hetzelfde als invloedrijk punt",
+     "heading": null
+    },
+    {
+     "old": "Residuals Statistics: drie verschillende waarschuwingen",
+     "heading": "De grenzen toepassen op Residuals Statistics"
+    },
+    {
+     "old": "Van uitbijtersignaal naar onderbouwde aanpassing",
+     "heading": "Wat je doet na een uitbijtersignaal"
+    }
+   ]
+  },
+  {
+   "title": "Normaliteit en constante spreiding van de residuen",
+   "intro": "Na de bijzondere waarnemingen beoordeel je de residuen als geheel: normaliteit gaat over de vorm van hun verdeling en homoscedasticiteit over hun spreiding. De derde voorwaarde, autocorrelatie, komt na het voorbeeld aan bod.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "De drie modelvoorwaarden",
+     "heading": null
+    },
+    {
+     "old": "Tests of Normality en ABSRES: kies de juiste rij en grootheid",
+     "heading": "De juiste rij kiezen in Tests of Normality en Correlations"
+    }
+   ]
+  },
+  {
+   "title": "Autocorrelatie: Durbin-Watson berekenen, beslissen en corrigeren",
+   "intro": "Bij een tijdreeks komt de derde voorwaarde erbij: opeenvolgende storingen moeten onafhankelijk zijn. Alles over Durbin-Watson staat hier bij elkaar, van de betekenis van d tot de correctie; bij een crosssectie is deze controle niet van toepassing.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Durbin-Watson heeft ook onbesliste gebieden",
+     "heading": null
+    },
+    {
+     "old": "Diagnostische toetsingsgrootheden zelf berekenen",
+     "heading": "d en ABSRES zelf berekenen uit residuen"
+    },
+    {
+     "old": "Durbin-Watson: van tabellenbundel naar beslissing",
+     "heading": "De grenzen aflezen en beslissen"
+    },
+    {
+     "old": "Autocorrelatie corrigeren en opnieuw controleren",
+     "heading": "Corrigeren en opnieuw controleren"
+    }
+   ]
+  },
+  {
+   "title": "Remedie bij veranderende spreiding: gewogen regressie",
+   "intro": "Bij de modelvoorwaarden kwam WLS al naar voren als mogelijke reactie op veranderende spreiding. Hier leer je hoe gewichten werken en hoe je de uitvoer leest; je gebruikt het alleen als de gekozen weging bij de waargenomen spreiding past.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Gewogen regressie: de WLS-voetnoot bepaalt hoe je uitvoer leest",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Alle diagnoses op rij: zo pak je een vraag aan",
+   "intro": "Je kent nu de losse diagnoses; hier doorloop je ze achter elkaar met de leeftijd-bloeddrukcasus. Deze volgorde gebruik je wanneer je per analyse de tabel of grafiek, de waarden, de conclusie en een eventuele remedie moet geven.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "SPSS-praktijk college 5: diagnoses en herbeoordeling",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Waar je op let bij meerdere verklarende variabelen",
+   "intro": "De controles uit deze les blijven nodig als het model meer verklarende variabelen heeft, en multicollineariteit komt erbij. Met Life Expectancy zie je hoe keuzes samenhangen en waarom je iedere uitsluiting onderbouwt.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Meervoudige diagnostiek: samenhangende keuzes in Life Expectancy",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zelf oefenen met de diagnoses",
+   "intro": "Je hebt de analyses nu met signaal, betekenis en vervolgstap gezien. Met de oefenvarianten controleer je of je ze zelf kunt toepassen; na controle krijg je de rekenstappen en uitleg per antwoord.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Zelf oefenen met deze aanvulling",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "voorspellen": [
+  {
+   "title": "Gemiddelde of één nieuwe waarneming?",
+   "intro": "Met een beoordeeld model kun je een uitkomst bij een gekozen x voorspellen. Lees eerst wat de vraag zoekt, een verwachte waarde, een gemiddelde of één nieuwe waarneming, want dat bepaalt de marge.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "De voorspelling is een verwachting met een onzekerheidsmarge",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Het idee: eerst één getal, de puntvoorspelling",
+   "intro": "Ieder interval ligt rond een centrumwaarde, dus die bepaal je eerst met de lijn. Je controleert daarbij ook of x_0 binnen het onderzochte gebied ligt.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Eerst de puntvoorspelling",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "De formule: de marge rond de voorspelling",
+   "intro": "Rond de puntvoorspelling zet je nu de marge. Formule 50 gebruik je voor één nieuwe waarneming; vraagt de opgave om een gemiddelde, dan vervalt de eerste 1 onder de wortel.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Waarom staat er een 1 onder de wortel?",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zo pak je een controlevraag aan: realisatie tegen interval",
+   "intro": "Met het interval beoordeel je wat werkelijk gebeurde. Je leert eerst hoe je een realisatie met de grenzen vergelijkt en past dat daarna toe op januari in de productiecasus.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Een werkelijke uitkomst vergelijken",
+     "heading": null
+    },
+    {
+     "old": "Boekcasus Productiviteit: een controlemaand beoordelen",
+     "heading": "Uitgewerkte casus: een controlemaand beoordelen"
+    }
+   ]
+  },
+  {
+   "title": "Waar je op let: houd de lijn vast tijdens de controle",
+   "intro": "De vergelijking met januari werkt alleen als de meetlat niet meeschuift. Daarom houd je basisperiode en controleperiode uit elkaar zodra je nieuwe maanden beoordeelt.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Basisperiode en controleperiode gescheiden houden",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zelf oefenen: voorspellen met de huurcasus",
+   "intro": "Nu stel je zelf een individueel interval op, met het model dat na de aanpassing overblijft. Let erop dat je alle onderdelen uit ditzelfde model haalt.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Voorspellen met de huurcasus na modelaanpassing",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "meervoudig": [
+  {
+   "title": "Waarom één verklarende variabele vaak te weinig zegt",
+   "intro": "Je kiest meervoudige regressie als een uitkomst met meerdere kenmerken tegelijk samenhangt en je die bijdragen uit elkaar wilt houden. Hier zie je welke vraag het model dan beantwoordt en waarom categorieën dummy’s nodig hebben.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Een extra variabele verandert de vraag die de helling beantwoordt",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Eén vergelijking voor getallen en categorieën",
+   "intro": "De vergelijking bij gelijkblijvende overige variabelen schrijf je nu op als één formule. Daarna zie je hoe een categorie als dummy in diezelfde formule past, want zo’n kenmerk heeft geen gewone meeteenheid.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Eén model, meerdere verklaringen",
+     "heading": null
+    },
+    {
+     "old": "Een categorie in cijfers",
+     "heading": "Een categorie invoeren als dummy"
+    }
+   ]
+  },
+  {
+   "title": "Modellen en coëfficiënten eerlijk vergelijken",
+   "intro": "Nu je de vergelijking kunt opstellen, wil je ook vergelijken: is een groter model echt beter, en welke samenhang is binnen één model het grootst? Adjusted R² helpt bij de eerste vraag, de absolute Beta bij de tweede.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Vergelijk modellen met beleid",
+     "heading": null
+    },
+    {
+     "old": "B en gestandaardiseerde Beta vergelijken",
+     "heading": "Wanneer je B gebruikt en wanneer Beta"
+    }
+   ]
+  },
+  {
+   "title": "Zo pak je een tentamenvraag aan: van SPSS-tabel naar conclusie",
+   "intro": "Het uitgewerkte voorbeeld rekende met de coëfficiënten uit het salarismodel. Hier krijg je de SPSS-uitvoer van dat tentamen en voeg je de toetsen toe; de casus over levensverwachting laat daarna dezelfde aanpak zien met de globale F-toets.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Volledige toepassing: salaris, dummy’s en modeltoets",
+     "heading": null
+    },
+    {
+     "old": "Life Expectancy: eindmodel, globale toets en voorspelling",
+     "heading": "Levensverwachting: F-toets en voorspelling uit één eindmodel"
+    }
+   ]
+  },
+  {
+   "title": "Zelf oefenen met meervoudige regressie en dummy’s",
+   "intro": "Werk nu zonder voorbeeld ernaast. Schrijf bij elke variant eerst de codering van de dummy’s op en bepaal welke toets de vraag nodig heeft, zoals je in de casussen hebt gedaan.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Zelf oefenen met deze aanvulling",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "transformaties": [
+  {
+   "title": "Wanneer een rechte lijn niet bij je gegevens past",
+   "intro": "Je zoekt een transformatie als de puntenwolk krom loopt en een rechte lijn systematisch te hoog of te laag voorspelt. Bepaal eerst welk patroon je ziet; wat ln en exp in de tabel precies doen, volgt in het volgende blok.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Een transformatie verandert welk patroon lineair wordt",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Wat een logaritme met de schaal doet",
+   "intro": "De modellen uit de herkenningstabel gebruiken ln en exp. Hier leer je wat die twee bewerkingen doen, zodat je ziet waarom een krom verband op een andere schaal recht kan worden.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Wat doet een logaritme?",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Drie modelvormen en wat hun coëfficiënten betekenen",
+   "intro": "Met ln en exp kun je de modelvormen nu als formule lezen. Kijk bij elke vorm welke variabele van schaal verandert, want dat bepaalt hoe je rekent en wat een coëfficiënt zegt.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Drie modelvormen",
+     "heading": null
+    },
+    {
+     "old": "Wat verandert er aan de interpretatie?",
+     "heading": "Wat een coëfficiënt op logschaal betekent"
+    }
+   ]
+  },
+  {
+   "title": "Zo pak je een tentamenvraag aan: terugrekenen naar de oorspronkelijke eenheid",
+   "intro": "Het voorbeeld rekende met één x terug naar de oorspronkelijke schaal. Hier staat de vaste rekenvolgorde, ook voor intervallen en voor modellen met meerdere verklarende variabelen, en daarna de aanpak in SPSS.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Terugtransformeren: de hele logwaarde en beide intervalgrenzen",
+     "heading": null
+    },
+    {
+     "old": "Een meervoudig logmodel terugtransformeren",
+     "heading": "Terugrekenen bij meerdere verklarende variabelen"
+    },
+    {
+     "old": "SPSS-praktijk college 6: vier patronen, vier modelkeuzes",
+     "heading": "Per uitkomst het passende model kiezen in SPSS"
+    }
+   ]
+  },
+  {
+   "title": "Waar je op moet letten: R² op twee schalen",
+   "intro": "Zodra je modelvormen naast elkaar legt, kijk je al snel naar de hoogste R². Hier lees je waarom die vergelijking na een transformatie niet vanzelf klopt en wat je dan bij je antwoord benoemt.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "R² vergelijken na een transformatie",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zelf oefenen met kromme verbanden en logaritmen",
+   "intro": "Oefen nu de rekenvolgorde uit deze les: vul de juiste schaal in, reken de hele logwaarde uit en transformeer pas daarna terug.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Zelf oefenen met deze aanvulling",
+     "heading": null
+    }
+   ]
+  }
+ ],
+ "modelbouw": [
+  {
+   "title": "Welke variabelen horen in je model?",
+   "intro": "Voor dezelfde uitkomst kun je vaak meerdere modellen maken. Dit blok laat zien wat je afweegt als je een variabele toevoegt of weglaat: extra informatie tegenover onnodige complexiteit en overlap.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Modelbouw balanceert extra informatie en onnodige complexiteit",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Variabelen selecteren: enter, backward, forward en stepwise",
+   "intro": "Na die afweging heb je een werkwijze nodig. Je begint met kenmerken waarvoor je een inhoudelijke reden hebt; de selectiemethode bepaalt in welke volgorde je hun extra bijdrage onderzoekt.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Hoe komt een variabele in het model?",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Twee controles als formule: VIF en partiële F",
+   "intro": "Tijdens het selecteren wil je twee dingen weten: hoe sterk een variabele overlapt met de andere variabelen en wat zij toevoegt. VIF meet het eerste, de F-toets voor geneste modellen het tweede.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Overlap tussen verklarende variabelen",
+     "heading": null
+    },
+    {
+     "old": "Een extra variabele toetsen",
+     "heading": "De extra bijdrage van één variabele toetsen"
+    }
+   ]
+  },
+  {
+   "title": "Zo pak je een tentamenvraag aan: VIF en partiële F uitwerken",
+   "intro": "Het voorbeeld liet zien dat overlap en extra bijdrage twee afzonderlijke controles zijn. Hier werk je beide helemaal uit: van een VIF-uitkomst naar een conclusie en van twee geneste modellen naar een F-waarde.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "VIF lezen: van hulpregressie naar conclusie",
+     "heading": null
+    },
+    {
+     "old": "Geneste modellen: de extra bijdrage zichtbaar berekenen",
+     "heading": "Van twee geneste modellen naar F en adjusted R²"
+    }
+   ]
+  },
+  {
+   "title": "Een hele selectie doorlopen met SPSS-uitvoer",
+   "intro": "Nu komen selectie, VIF en opnieuw schatten samen. Bij Life Expectancy volg je backward aan de hand van uitvoer; bij de huizen voer je de selectie zelf uit in SPSS en let je op de grens uit de opgave.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Doorlopende collegecasus Life Expectancy: selecteren met uitvoer",
+     "heading": null
+    },
+    {
+     "old": "SPSS-praktijk college 7: huizen, selectie en overlap",
+     "heading": "Zelf selecteren in SPSS: een model voor de verkoopprijs"
+    }
+   ]
+  }
+ ],
+ "validatie": [
+  {
+   "title": "Werkt je model ook op gegevens die het niet kent?",
+   "intro": "De aansluiting op de gegevens waarmee je een model hebt gemaakt, kan gunstiger lijken dan de prestatie op nieuwe gegevens. Je valideert als je wilt weten of het gekozen model ook buiten de training bruikbaar is.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Een sterke fit in de training kan buiten de training tegenvallen",
+     "heading": null
+    },
+    {
+     "old": "Herkomst van validatie",
+     "heading": "Validatie stelt een andere vraag dan de fit"
+    }
+   ]
+  },
+  {
+   "title": "De testset apart houden en MSPR berekenen",
+   "intro": "Het vorige blok zette MSPR al naast de MSE. Hier zie je hoe je de gegevens splitst en hoe de formule de voorspelfout op de testset meet.",
+   "afterExample": false,
+   "parts": [
+    {
+     "old": "Beoordelen op ongebruikte gegevens",
+     "heading": null
+    }
+   ]
+  },
+  {
+   "title": "Zo pak je een opgave aan: testfouten uitwerken en SPSS-uitvoer lezen",
+   "intro": "Je gebruikt hier dezelfde testgegevens als in het voorbeeld, maar je werkt ook uit wat de uitkomst betekent voor het gebruik van het model. Daarna leer je bij iedere vraag de juiste SPSS-tabel kiezen.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Voorspelfouten op een onafhankelijke testset uitwerken",
+     "heading": null
+    },
+    {
+     "old": "SPSS-uitvoer stap voor stap lezen",
+     "heading": "Bij iedere vraag de juiste SPSS-tabel kiezen"
+    }
+   ]
+  },
+  {
+   "title": "Waar je op moet letten: een getal is nog geen conclusie",
+   "intro": "Een juist berekende MSPR of R² beantwoordt de vraag pas als je erbij zegt wat het getal meet. Sluit je antwoord daarom af met de gebruikte gegevens, de schaal en de betekenis voor de toepassing.",
+   "afterExample": true,
+   "parts": [
+    {
+     "old": "Geen conclusie zonder context",
+     "heading": null
+    }
+   ]
+  }
+ ]
+}

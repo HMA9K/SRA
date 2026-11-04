@@ -133,7 +133,7 @@ lesson('stratificatie','Stratificatie en allocatie','Schatten',
   '<tr><td>Resultaat</td><td>Veel kleine posten in de lage strata, weinig grote posten in de hoge strata</td><td>De grenzen volgen de frequentieverdeling van de populatie</td></tr>'
   '<tr><td>Nauwkeurigheid volgens het boek</td><td>Goed: gemiddelde marge € 148.012 over tien steekproeven</td><td>Beter: gemiddelde marge € 123.673; de meest nauwkeurige methode, wel meer rekenwerk</td></tr>'
   '<tr><td>Valkuil</td><td>Cumulatieve bedragen lezen alsof het boekwaardegrenzen per post zijn</td><td>De wortel van de totale cumulatieve frequentie nemen, of de klassebreedte vergeten bij ongelijke klassen</td></tr>'
-  '</tbody></table></div><p>Beide methoden kiezen een bestaande klassegrens; je splitst geen klasse met verzonnen gegevens. Daarom zijn de strata zelden precies even groot. Hieronder staan beide methoden volledig uitgewerkt op de tabel uit de colleges en op cursusopgave H8.8.</p>',[book('boek-h8c',221),book('boek-h8c',222),book('boek-h8c',224),book('boek-h8c',230)]),
+  '</tbody></table></div><p>Beide methoden kiezen een bestaande klassegrens; je splitst geen klasse met verzonnen gegevens. Daarom zijn de strata zelden precies even groot. Na het voorbeeld staan beide methoden volledig uitgewerkt op de tabel uit de colleges en op cursusopgave H8.8.</p>',[book('boek-h8c',221),book('boek-h8c',222),book('boek-h8c',224),book('boek-h8c',230)]),
  ('Hoe verdeel je de steekproef?','<div class="formula">Evenredig: nᵢ = (Nᵢ / N) × n<br>Neyman: nᵢ = [Nᵢsᵢ / Σ(Nᵢsᵢ)] × n</div><p>Zijn de strata gevormd, dan moet je de beschikbare controles erover verdelen. Dat heet <strong>allocatie</strong>. Het boek behandelt twee methoden.</p>'
   '<div class="table-wrap"><table><caption>Evenredige en Neyman-allocatie vergeleken</caption><thead><tr><th scope="col"></th><th scope="col">Evenredige allocatie</th><th scope="col">Neyman-allocatie</th></tr></thead><tbody>'
   '<tr><td>Grondslag</td><td>Alleen de omvang Nᵢ van het stratum</td><td>Omvang Nᵢ én spreiding sᵢ van het stratum</td></tr>'
@@ -375,6 +375,8 @@ from lesson_reading import enhance as improve_reading
 improve_reading(lessons)
 from lesson_mini_graphs import enhance as add_mini_graphs
 add_mini_graphs(lessons)
+from formula_numbers import enhance as add_formula_numbers
+add_formula_numbers(lessons)
 from lesson_structure import enhance as follow_lesson_line
 follow_lesson_line(lessons)
 from lesson_sources import enhance as number_sources
@@ -383,8 +385,6 @@ from lesson_reading import calm_emphasis
 for lesson in lessons:
     for section in lesson['sections']:
         section['html'] = calm_emphasis(section['html'])
-from formula_numbers import enhance as add_formula_numbers
-add_formula_numbers(lessons)
 from topic_summaries import SUMMARIES
 from presentation import inline_formulas
 summaries = {key: calm_emphasis(inline_formulas(value)) for key, value in SUMMARIES.items()}

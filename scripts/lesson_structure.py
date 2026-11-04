@@ -4,9 +4,14 @@ De lessen zijn in lagen gegroeid. Deze stap zet een les in de vaste lijn en bewa
 tekst, figuren, bronnen en oefeningen. Proefles: de directe schatter.
 Blokken met `afterExample` staan op de pagina na het uitgewerkte voorbeeld.
 """
+import html
+import json
 import re
+from pathlib import Path
 
 from presentation import inline_formulas
+
+LINES = json.loads((Path(__file__).with_name('lesson_lines.json')).read_text(encoding='utf-8'))
 
 
 def _refs(*sections):
@@ -80,5 +85,29 @@ def _mpu(lesson):
     lesson['pitfalls'] = []
 
 
+def _line(lesson, blocks):
+    """Zet bestaande blokken in de vaste lijn; ieder oud blok komt precies één keer terug."""
+    old = {s['title']: s for s in lesson['sections'][1:]}
+    used = [part['old'] for block in blocks for part in block['parts']]
+    if sorted(used) != sorted(old):
+        raise ValueError(f'Leslijn {lesson["id"]} klopt niet: {sorted(set(used) ^ set(old))}')
+    sections = lesson['sections'][:1]
+    for block in blocks:
+        body = inline_formulas(f'<p class="lesson-bridge">{html.escape(block["intro"], quote=False)}</p>')
+        for part in block['parts']:
+            if part.get('heading'):
+                body += f'<h3>{html.escape(part["heading"], quote=False)}</h3>'
+            body += old[part['old']]['html']
+        section = dict(title=block['title'], html=body, refs=_refs(*(old[p['old']] for p in block['parts'])))
+        if block.get('afterExample'):
+            section['afterExample'] = True
+        sections.append(section)
+    lesson['sections'] = sections
+
+
 def enhance(lessons):
-    _mpu(next(lesson for lesson in lessons if lesson['id'] == 'mpu'))
+    for lesson in lessons:
+        if lesson['id'] == 'mpu':
+            _mpu(lesson)
+        elif lesson['id'] in LINES:
+            _line(lesson, LINES[lesson['id']])
