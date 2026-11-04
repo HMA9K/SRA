@@ -46,7 +46,7 @@ def case_for_question(markup,cuts,number):
  """Show what stood above the question in the exam and mark the piece directly above it."""
  start=max((cut for n,cut in cuts.items() if n<number),default=0)
  stop=min((cut for n,cut in cuts.items() if n>=number),default=len(markup))
- note='<p class="mc-case-note">Het gemarkeerde stuk hoort bij deze vraag. Gegevens uit de tekst erboven kunnen ook nodig zijn.</p>' if start else ''
+ note='<p class="mc-case-note">Het stuk onder ‘Nodig voor deze vraag’ hoort bij deze vraag. Gegevens uit de tekst erboven kunnen ook nodig zijn.</p>' if start else ''
  return note+markup[:start]+'<section class="mc-case-current" aria-label="Casustekst bij deze vraag"><p class="mc-case-current-label">Nodig voor deze vraag</p>'+markup[start:stop]+'</section>'
 def read_data(path,marker):return json.loads((ROOT/path).read_text(encoding='utf-8').split(marker,1)[1].rstrip(';\n'))
 def build():
