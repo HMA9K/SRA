@@ -165,4 +165,6 @@ body.original-pdf-open .study-assistant-launch-wrap{display:none!important}
 body.original-pdf-open .study-assistant-launch{display:none!important}
 /* Keep both the menu opener and its entries above the persistent PDF panel. */
 body.original-pdf-open :is(.learning-page-head,.cirrus-page-head,#study-returnbar):has(.study-tools-menu){z-index:100}
+/* Op mobiel begrenzen de casusregels het vak tot 35-45dvh; dat is te laag voor de lezer met werkbalken. */
+@media(max-width:760px){.original-pdf-left{height:65dvh!important;max-height:none!important}}
 @media(max-width:859px){.original-pdf-dashboard-layout{display:flex;flex-direction:column}.original-pdf-dashboard-pane{width:100%;height:65dvh}.original-pdf-left{height:65dvh;flex:none}.original-pdf-actions{max-width:100%}.original-pdf-head{font-size:12px}}
