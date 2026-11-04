@@ -8,9 +8,9 @@ if(!base)throw Error('Geef LEARNING_URL op.');fs.mkdirSync(out,{recursive:true})
  await page.route('**/*',r=>r.request().url().startsWith(base)?r.continue():r.abort());
  for(const width of [1600,1024,390,320])for(const theme of ['light','dark']){
   await page.setViewportSize({width,height:1100});await page.goto(base+'#les/anova');
-  const panel=page.locator('.lesson-preparation'),summary=panel.locator(':scope>summary');await summary.waitFor();
+  const panel=page.locator('.lesson-preparation');await panel.locator('.lesson-start').waitFor();
   await page.evaluate(t=>StudyTheme.setMode(t),theme);
-  if(await panel.getAttribute('open')===null){await summary.focus();await page.keyboard.press('Enter');}
+  assert.equal(await panel.locator('summary').count(),0,'voorkennis en leerdoelen staan altijd open');
   assert.equal(await panel.locator('.lesson-start').isVisible(),true);
   const layout=await panel.evaluate(el=>{
    const blocks=[...el.querySelectorAll('.lesson-start>div')].map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width}});
@@ -22,8 +22,7 @@ if(!base)throw Error('Geef LEARNING_URL op.');fs.mkdirSync(out,{recursive:true})
   assert.equal(layout.goals,3);assert.equal(layout.prerequisites,2);
   if(width===1600){assert.ok(Math.abs(layout.blocks[0].y-layout.blocks[1].y)<1);assert.ok(Math.abs(layout.blocks[0].width-layout.blocks[1].width)<1);}
   if(width<=390){assert.ok(layout.blocks[1].y>layout.blocks[0].y);assert.ok(Math.abs(layout.blocks[0].x-layout.blocks[1].x)<1);}
-  await summary.evaluate(el=>el.blur());await panel.screenshot({path:path.join(out,`voorbereiding-${width}-${theme}.png`)});
-  await summary.focus();await page.keyboard.press('Enter');assert.equal(await panel.locator('.lesson-start').isVisible(),false);
+  await panel.screenshot({path:path.join(out,`voorbereiding-${width}-${theme}.png`)});
  }
- assert.deepEqual(errors,[]);console.log('OK: uitlijning, volledige voorkennis/leerdoelen, metadata, toetsenbord en geen pagina-overloop; vier breedtes, twee thema’s.');
+ assert.deepEqual(errors,[]);console.log('OK: uitlijning, volledige voorkennis/leerdoelen, metadata, altijd zichtbaar en geen pagina-overloop; vier breedtes, twee thema’s.');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1)});

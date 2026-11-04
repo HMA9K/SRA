@@ -21,7 +21,7 @@ if(!base)throw Error('Geef LEARNING_URL op.');fs.mkdirSync(out,{recursive:true})
   assert.equal(await page.locator('.lesson-top').isVisible(),false);
   const label=lesson=>page.locator(`#sidebar a[href="#les/${lesson}"] .learning-list-source`);
   assert.match(await label('meervoudig').textContent(),/H10.*Hoorcollege 6–7/);
-  assert.equal(await page.locator('.lesson-preparation').getAttribute('open'),null);
+  assert.equal(await page.locator('.lesson-start').isVisible(),true);
   assert.equal(await page.locator('#sidebar .learning-list-source').count(),19);
   if(width<761)await page.locator('#menu-toggle').click();
   await page.locator('#sidebar a[href="#les/validatie"]').click();await page.waitForFunction(()=>location.hash==='#les/validatie'&&document.querySelector('.lesson-top h1')?.textContent.includes('Valideren'));

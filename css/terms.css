@@ -117,3 +117,7 @@ body.study-shell .sra-term:focus-visible { outline: 2px solid #2786da; outline-o
 .sra-term-popup .sra-term-sources li{font-size:11px;margin:3px 0}
 .sra-term-popup .formula-help-source{font-size:11px;margin:9px 0 0;line-height:1.5}
 [data-sra-term][aria-expanded="true"],[data-formula-help][aria-expanded="true"]{background:#eaf3ee}
+
+/* Formules lopen mee in de tekst en blijven even goed leesbaar als de lessen. */
+.sra-term-popup math { font-size: 1.08em; }
+.sra-term-popup mfrac { font-size: 1.1em; }
