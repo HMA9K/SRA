@@ -142,9 +142,10 @@ for i,l in enumerate(build_content.lessons):
     parts.append('</details>')
     parts.append(f'<h3>{e(l["example"]["title"])}</h3><p>{e(l["example"]["context"])}</p><ol>')
     parts.extend('<li>'+s+'</li>' for s in l['example']['stepsHtml'])
-    parts.append('</ol>'+l['example']['notesHtml']+'<h3>Hier gaat het vaak mis</h3><ul>')
-    parts.extend('<li>'+e(s)+'</li>' for s in l['pitfalls'])
-    parts.append('</ul><h3>Check je begrip</h3>')
+    parts.append('</ol>'+l['example']['notesHtml'])
+    if l['pitfalls']:
+        parts.append('<h3>Hier gaat het vaak mis</h3><ul>'+''.join('<li>'+e(s)+'</li>' for s in l['pitfalls'])+'</ul>')
+    parts.append('<h3>Check je begrip</h3>')
     for q in l['questions']:
         parts.append('<p><strong>'+e(q['prompt'])+'</strong></p><ol type="A">'+''.join('<li>'+e(o)+'</li>' for o in q['options'])+'</ol><details><summary>Antwoord en uitleg</summary><p>'+e(q['options'][q['correct']])+'.'+(' '+e(q['explanation']) if not q.get('steps') else '')+'</p>')
         if q.get('steps'):

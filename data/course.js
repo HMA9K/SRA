@@ -158,10 +158,7 @@ window.SRA = {
         ],
         "notesHtml": "<p class=\"source-notes\" data-no-terms>Bronnen: <a class=\"source-note\" href=\"#bron-beginnen-11\" data-source-note=\"11\" aria-label=\"Bron 11\">[11]</a></p>"
       },
-      "pitfalls": [
-        "N en n verwisselen verandert de betekenis van je berekening.",
-        "De som van de steekproef is niet de totale populatiewaarde."
-      ],
+      "pitfalls": [],
       "refs": [
         {
           "source": "slides",
