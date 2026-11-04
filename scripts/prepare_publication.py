@@ -4,8 +4,8 @@ import hashlib,os,subprocess,urllib.request
 import build_site
 
 ROOT=Path(__file__).resolve().parents[1]
-BUILD_URL='https://leeromgeving-statistieken.pages.dev/privacy-build-20260928.cjs'
-BUILD_SHA='639e5a7fca4501c8cabcd1294fc882d2b590c11d18a21457cf5047b03f56b03b'
+BUILD_URL='https://leeromgeving-statistieken.pages.dev/privacy-build-20261104.cjs'
+BUILD_SHA='ac379cd6c5c73a14d31af8d15da57b9ba88cd7a83aa8422a680e6287dde6dde4'
 
 def build():
  build_site.build()
