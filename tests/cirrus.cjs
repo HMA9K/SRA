@@ -4,7 +4,7 @@ const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p
 vm.runInNewContext(read('data/cirrus-exams.js'),sandbox);
 vm.runInNewContext(read('data/course.js'),sandbox);
 const exams=sandbox.window.SRA_CIRRUS_EXAMS, E=require('../vendor/cafa2-cirrus/js/exam-engine.js');
-assert.equal(exams.length,10);assert.equal(exams.reduce((n,e)=>n+e.questions.length,0),224);
+assert.equal(exams.length,12);assert.equal(exams.reduce((n,e)=>n+e.questions.length,0),267);
 assert.equal(exams.find(e=>e.id==='20241028').questions.length,18);
 assert.deepEqual(Array.from(exams.filter(e=>e.id.startsWith('2020')),e=>e.id),['20200323','20200626']);
 const cuts=JSON.parse(read('data/exam-question-boundaries.json'));
@@ -43,6 +43,12 @@ assert.ok(!october.questions[13].solution.includes('Deel B: meervoudige regressi
 assert.match(october.questions[12].solutionHtml,/Bronverschil/);
 assert.match(october.questions[8].solutionHtml,/44,105/);
 assert.equal(exams.find(e=>e.id==='20250317').durationUnconfirmed,true);
+for(const [id,count,last] of [['20251028',22,'2.14'],['20260323',21,'2.13']]){
+ const added=exams.find(e=>e.id===id);assert.equal(added.questions.length,count);assert.equal(added.questions.at(-1).displayNumber,last);
+ assert.ok(!/Bij nade r|In afbee lding|De over ige|€²\d/.test(added.sections.map(s=>s.caseHtml).join('')),id+': tekstresten in casus');
+ assert.ok(!/(?:O2\.1p|ANTWOORDEN)/.test(added.questions.map(q=>q.solutionHtml).join('')),id+': koptekst in antwoord');
+}
+assert.match(exams.find(e=>e.id==='20260323').sections[0].caseHtml,/€200/,'Bedrag € 200 is geen eurokwadraat');
 assert.equal(exams.find(e=>e.id==='20240318').durationUnconfirmed,false);
 const exam=exams[0],now=1800000000000,a=E.createAttempt(exam,{now,id:'test'});
 assert.equal(E.remainingSeconds(a,now),exam.durationMinutes*60);
@@ -59,4 +65,4 @@ for(const [file,hash] of Object.entries(manifest.files))assert.equal(crypto.crea
 for(const l of sandbox.window.SRA.lessons){assert.ok(l.formulaGuide.length);assert.ok(l.lab,l.id+' heeft een interactief rekenblad');}
 for(const file of ['js/cirrus.js','js/app.js','js/exams.js'])new vm.Script(read(file),{filename:file});
 const portable=read('SRA interactieve samenvatting.html');assert.ok(portable.includes('window.SRACirrus='));assert.ok(portable.includes('window.SRA_CIRRUS_EXAMS ='));
-console.log('OK: 10 Cirrus-tentamens / 224 vragen, originele secties en nummering, bronbeelden en formules, contextgrenzen, punten, pogingen, klok/pauze/inleveren en CAFA2-herkomst.');
+console.log('OK: 12 Cirrus-tentamens / 267 vragen, originele secties en nummering, bronbeelden en formules, contextgrenzen, punten, pogingen, klok/pauze/inleveren en CAFA2-herkomst.');

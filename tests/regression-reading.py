@@ -31,7 +31,7 @@ for lesson_id, lesson in selected.items():
         assert not re.search(r'(?i)\b(?:PDF(?:-pagina)?|slides?|bronpagina|boek p\.)\s*\d+', text), (lesson_id, section['title'], 'bronlocatie in uitleg')
         blocks += 1
 opening = selected['validatie']['reading']['opening'].lower()
-assert 'niet getentamineerd' in opening and '0/900' in opening
+assert 'niet getentamineerd' in opening and '0/1.100' in opening
 for topic in ['Regressie', 'Meervoudige regressie en modelcontrole']:
     assert summaries[topic].strip()
     assert 'data-source-note' not in summaries[topic]

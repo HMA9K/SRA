@@ -1,16 +1,29 @@
 """Gemaakt met Codex. Originele SRA-opgaven en antwoorden, per bronsectie."""
 from pathlib import Path
 import exam_text_repairs
-import json, re, subprocess, shutil
+import json, os, re, subprocess, shutil
+import pdfplumber
 from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
-QUESTION = re.compile(r'(?im)^\s*Vraag\s+(\d+)\s*[\.:]?\s*\((\d+)\s*punt(?:en)?[^)]*\)')
-ANSWER = re.compile(r'(?im)^\s*Vraag\s+(\d+)\s*[.:(]')
+SOURCE_ROOT = Path(os.environ.get('SRA_BRONMAP', ROOT.parent))  # werkbomen staan buiten de bronmap
+# Bronnen tot 2025 schrijven "Vraag 3 (2 punten)"; vanaf oktober 2025 "1.3) (2 punten)".
+LABEL = r'(?:Vraag\s+|\d\.(?=\d+\)))'
+QUESTION = re.compile(r'(?im)^\s*' + LABEL + r'(\d+)\s*[\.:)]?\s*\((\d+)\s*punt(?:en)?[^)]*\)')
+ANSWER = re.compile(r'(?im)^\s*' + LABEL + r'(\d+)\s*[.:()]')
 
 def page_text(page):
     # Some 2020 PDFs store the first capital of a heading as a separate text run.
     return re.sub(r'\bV\s*\n\s*raag\b', 'Vraag', page.extract_text() or '')
+
+
+def pdf_pages(path):
+    reader = PdfReader(path)
+    if 'Quartz' not in (reader.metadata.producer or ''):
+        return [page_text(p) for p in reader.pages]
+    # pypdf levert bij macOS Quartz-PDF's geen regeleinden; de regelkoppen vereisen die.
+    with pdfplumber.open(path) as doc:
+        return [p.extract_text() or '' for p in doc.pages]
 
 
 def build():
@@ -20,10 +33,10 @@ def build():
         d, m, y = record['datum'].split('-')
         code = y + m + d
         dest = ROOT / 'bronnen/tentamens' / code
-        src = ROOT.parent / 'Tentamenopgaven & Uitwerkingen' / record['bron']
-        answer = ROOT.parent / 'Tentamenopgaven & Uitwerkingen' / (record['uitwerking'] or record['bron'])
-        pages = [page_text(p) for p in PdfReader(src).pages]
-        apages = [page_text(p) for p in PdfReader(answer).pages]
+        src = SOURCE_ROOT / 'Tentamenopgaven & Uitwerkingen' / record['bron']
+        answer = SOURCE_ROOT / 'Tentamenopgaven & Uitwerkingen' / (record['uitwerking'] or record['bron'])
+        pages = pdf_pages(src)
+        apages = pdf_pages(answer)
         last = record.get('vraag_paginas', len(pages))
         answer_start = record.get('antwoord_vanaf_pagina', 1)
         sections = record['secties']

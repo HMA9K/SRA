@@ -10,7 +10,8 @@ from decimal import Decimal, ROUND_HALF_UP
 from exam_point_rules import BASE, SPLITS, TOPICS, JOINT_TOPICS
 
 ROOT = Path(__file__).resolve().parents[1]
-RECENT = '20240318'  # de drie recentste unieke tentamens, vooraf afgebakend
+WORDS = {9:'Negen',10:'Tien',11:'Elf',12:'Twaalf'}
+RECENT = '20250317'  # de drie recentste unieke tentamens, vooraf afgebakend
 
 
 def load_exams():
@@ -22,6 +23,7 @@ def analyze():
     all_exams = load_exams()
     exams = [e for e in all_exams if not e['duplicateOf']]
     assert {e['id'] for e in exams} == set(BASE)
+    total_points = 100 * len(exams)
     rows = []
     for e in exams:
         topics = BASE[e['id']].split()
@@ -50,7 +52,7 @@ def analyze():
         result['topics'].append(dict(id=topic, label=label, byExam=scores,
             exams=sum(v > 0 for v in values), questions=len({(r['exam'], r['question']) for r in own}),
             subquestions=len({(r['exam'],r['question'],r['part']) for r in own}),
-            points=sum(values), mean=statistics.mean(values), share=100*sum(values)/900,
+            points=sum(values), mean=statistics.mean(values), share=100*sum(values)/total_points,
             meanWhenPresent=statistics.mean(present) if present else None,
             minimum=min(values), maximum=max(values), sd=statistics.pstdev(values),
             recentPoints=sum(recent), recentMean=statistics.mean(recent), recentShare=100*sum(recent)/300,
@@ -58,7 +60,7 @@ def analyze():
             recentExams=sum(v > 0 for v in recent),
             recentQuestions=len({(r['exam'],r['question']) for r in recent_rows}),
             recentSubquestions=len({(r['exam'],r['question'],r['part']) for r in recent_rows})))
-    assert sum(r['points'] for r in rows) == 900
+    assert sum(r['points'] for r in rows) == total_points
     for e in exams:
         assert sum(r['points'] for r in rows if r['exam'] == e['id']) == 100
     return result
@@ -66,11 +68,11 @@ def analyze():
 
 def verify_sources():
     from pypdf import PdfReader
-    from build_exams import page_text, QUESTION
+    from build_exams import pdf_pages, QUESTION
     evidence = []
     for e in load_exams():
         folder = ROOT / 'bronnen/tentamens' / e['id']
-        pages = [page_text(p) for p in PdfReader(folder / 'opgaven.pdf').pages]
+        pages = pdf_pages(folder / 'opgaven.pdf')
         markers = [(int(m[1]), int(m[2])) for p in pages[:e['questionPages']] for m in QUESTION.finditer(p)]
         assert markers == [(q['originalNumber'],q['points']) for q in e['questions']], e['id']
         evidence.append(dict(exam=e['id'], questions=len(markers), points=sum(p for _,p in markers),
@@ -92,8 +94,10 @@ def verify_sources():
 
 def markdown(data):
     def f(v): return f'{v:.2f}'.replace('.', ',')
+    count = exam_count = len(data['exams'])
+    questions = sum(e['questions'] for e in data['exams'])
     lines = ['# SRA: puntengewicht uit oorspronkelijke tentamens', '',
-        'Gecontroleerd op 25 oktober 2026. Negen unieke tentamens, 196 vraagnummers en 900 punten. '
+        f'Gecontroleerd op 4 november 2026. {WORDS[count]} unieke tentamens, {questions} vraagnummers en {100*count} punten. '
         'Juni 2020 is dezelfde vraagverzameling als maart 2020 en telt niet opnieuw mee.', '',
         '## Leeswijze', '',
         '- Punten komen uit oorspronkelijke opgaven en officiële normering, niet uit MC-aantallen of themafrequenties.',
@@ -101,20 +105,20 @@ def markdown(data):
         '- Een geïntegreerde stratificatieberekening telt onder stratificatie: totaalschatting en interval. MPU, verschil, t-tabellen en spreiding zijn daarbij noodzakelijke voorkennis, zonder dezelfde punten opnieuw te boeken.',
         '- Een onderwerp met nul afzonderlijke punten kan noodzakelijke voorkennis of een actueel leerdoel zijn. Nul betekent niet dat het onderwerp mag verdwijnen.',
         '- Het gemiddelde puntengewicht in de lessen telt alleen tentamens mee waarin het onderwerp voorkomt: totaalpunten gedeeld door het aantal van die tentamens. Elk tentamen heeft 100 punten, dus het aantal punten is ook het percentage. Bij geen voorkomen is er geen gemiddelde.',
-        '- De kolom Gem./100 en de standaarddeviatie in dit rapport gebruiken alle negen tentamens, inclusief nullen. De kolom Gem. bij voorkomen (%) sluit aan op de lessen. Spreiding is minimum, maximum en populatiestandaarddeviatie van de negen historische scores.',
-        '- Recent = de drie recentste unieke tentamens: maart 2024, oktober 2024 en maart 2025. Ook het recente gemiddelde bevat nullen. Dit is een beschrijving, geen voorspelling.',
+        '- De kolom Gem./100 en de standaarddeviatie in dit rapport gebruiken alle tentamens, inclusief nullen. De kolom Gem. bij voorkomen (%) sluit aan op de lessen. Spreiding is minimum, maximum en populatiestandaarddeviatie van de historische scores.',
+        '- Recent = de drie recentste unieke tentamens: maart 2025, oktober 2025 en maart 2026. Ook het recente gemiddelde bevat nullen. Dit is een beschrijving, geen voorspelling.',
         '- Gezamenlijke punten blijven in een afzonderlijke rij en staan met betrokken onderwerpen in het detailregister. Bronfouten in de bestaande antwoordcontrole veranderen de historische puntentoekenning niet.', '',
         '## Aansluiting per tentamen', '', '| Tentamen | Vraagnummers | Deelvragen | Punten |', '|---|---:|---:|---:|']
     for e in data['exams']:
         count=len({(r['question'],r['part']) for r in data['rows'] if r['exam']==e['id']})
         lines.append(f"| {e['date']} | {e['questions']} | {count} | {e['points']} |")
-    count=len({(r['exam'],r['question'],r['part']) for r in data['rows']})
-    lines += [f'| Totaal | 196 | {count} | 900 |', '', '## Punten per onderwerp', '',
+    parts=len({(r['exam'],r['question'],r['part']) for r in data['rows']})
+    lines += [f'| Totaal | {questions} | {parts} | {100*exam_count} |', '', '## Punten per onderwerp', '',
         '| Onderwerp | Tentamens | Vragen | Deelvragen | Totaal | Gem./100 | Aandeel | Gem. bij voorkomen (%) | Min–max | SD |',
         '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
     for t in sorted(data['topics'],key=lambda t:-t['points']):
         conditional = f(Decimal(str(t['meanWhenPresent'])).quantize(Decimal('.01'), rounding=ROUND_HALF_UP))+'%' if t['meanWhenPresent'] is not None else 'n.v.t.'
-        lines.append(f"| {t['label']} | {t['exams']}/9 | {t['questions']} | {t['subquestions']} | {t['points']} | {f(t['mean'])} | {f(t['share'])}% | {conditional} | {t['minimum']}–{t['maximum']} | {f(t['sd'])} |")
+        lines.append(f"| {t['label']} | {t['exams']}/{exam_count} | {t['questions']} | {t['subquestions']} | {t['points']} | {f(t['mean'])} | {f(t['share'])}% | {conditional} | {t['minimum']}–{t['maximum']} | {f(t['sd'])} |")
     lines += ['', '## Punten per tentamen en recente periode', '',
         '| Onderwerp | '+' | '.join(e['id'] for e in data['exams'])+' | Recent totaal | Recent gem./100 | Recent aandeel | Recent min–max |',
         '|---|'+ '---:|'*(len(data['exams'])+4)]
@@ -141,7 +145,7 @@ def markdown(data):
         '`python scripts/build_exam_points.py --check --sources` controleert de bestanden en oorspronkelijke puntmarkeringen. '
         '`scripts/exam_point_rules.py` bevat de beoordeelde toerekeningen; `data/exam-point-analysis.json` bevat alle uitkomsten. '
         'De broncontrole controleert cijfers automatisch; de inhoudelijke rubricering is handmatig beoordeeld.', '',
-        'Bronnen: oorspronkelijke SRA-tentamens en officiële uitwerkingen 2020–2025, per regel gekoppeld. '
+        'Bronnen: oorspronkelijke SRA-tentamens en officiële uitwerkingen 2020–2026, per regel gekoppeld. '
         '[Bronnenoverzicht](https://sra-2xt.pages.dev/#bronnen).']
     return '\n'.join(lines)+'\n'
 
@@ -165,4 +169,4 @@ if __name__ == '__main__':
         dest=ROOT/'tmp/puntenanalyse/source-verification.json'
         dest.parent.mkdir(parents=True,exist_ok=True)
         dest.write_text(json.dumps(evidence,indent=2)+'\n',encoding='utf8')
-    print('OK: 9 unieke tentamens, 196 vraagnummers, 900 punten; elke vraag sluit aan; gezamenlijke punten eenmaal.')
+    print(f"OK: {len(data['exams'])} unieke tentamens, {sum(e['questions'] for e in data['exams'])} vraagnummers, {100*len(data['exams'])} punten; elke vraag sluit aan; gezamenlijke punten eenmaal.")

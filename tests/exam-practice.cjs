@@ -7,7 +7,7 @@ vm.runInContext(fs.readFileSync('data/exam-practice.js','utf8'),context);
 vm.runInContext(fs.readFileSync('js/mc-state.js','utf8'),context);
 const {SRAMCData:data,SRAExamPractice:practice,SRA_CIRRUS_EXAMS:exams,SRAMCState}=context.window;
 const coverage=JSON.parse(fs.readFileSync('docs/exam-practice-coverage.json'));
-assert.equal(coverage.total,224);assert.equal(coverage.mapped,224);assert.equal(coverage.questions.length,224);
+assert.equal(coverage.total,267);assert.equal(coverage.mapped,267);assert.equal(coverage.questions.length,267);
 assert.equal(JSON.stringify({...data,topics:data.topics.map(t=>({...t,questions:t.questions.filter(q=>!q.sourceExamId)}))}),before,'Existing questions and answer indices must stay intact');
 const ids=new Set(practice.questions.map(q=>q.id));assert.equal(ids.size,practice.questions.length);
 for(const exam of exams)for(const source of exam.questions){
@@ -32,4 +32,4 @@ const saved=state.snapshot();for(const id of q.topics)assert.ok(state.summary(da
 assert.equal(state.summary().total,175+ids.size);fail=true;assert.equal(state.reset([q.id]),false);assert.deepEqual(state.snapshot(),saved);
 fail=false;assert.equal(state.reset([q.id]),true);assert.ok(state.get(old.id));assert.equal(state.get(q.id),undefined);
 const restored=SRAMCState.create(data,{getItem:()=>JSON.stringify(saved),setItem(){}});assert.equal(restored.draft(q.id),'<p>Eigen uitwerking</p>');assert.equal(restored.get(q.id).choice,q.correct);
-console.log(`OK: 224/224 source mappings, ${ids.size} unique exam exercises, preserved sources, shared progress, draft roundtrip and selective reset.`);
+console.log(`OK: 267/267 source mappings, ${ids.size} unique exam exercises, preserved sources, shared progress, draft roundtrip and selective reset.`);

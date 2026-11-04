@@ -2280,9 +2280,447 @@
       ],
       "status": "mapped",
       "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-1",
+      "displayNumber": "1.1",
+      "practiceIds": [
+        "exam-20251028-vraag-1"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-2",
+      "displayNumber": "1.2",
+      "practiceIds": [
+        "exam-20251028-vraag-2"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-3",
+      "displayNumber": "1.3",
+      "practiceIds": [
+        "exam-20251028-vraag-3"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-4",
+      "displayNumber": "1.4",
+      "practiceIds": [
+        "exam-20251028-vraag-4"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-5",
+      "displayNumber": "1.5",
+      "practiceIds": [
+        "exam-20251028-vraag-5"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-6",
+      "displayNumber": "1.6",
+      "practiceIds": [
+        "exam-20251028-vraag-6"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-7",
+      "displayNumber": "1.7",
+      "practiceIds": [
+        "exam-20251028-vraag-7"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-8",
+      "displayNumber": "1.8",
+      "practiceIds": [
+        "exam-20251028-vraag-8"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-9",
+      "displayNumber": "2.1",
+      "practiceIds": [
+        "exam-20251028-vraag-9"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-10",
+      "displayNumber": "2.2",
+      "practiceIds": [
+        "exam-20251028-vraag-10"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-11",
+      "displayNumber": "2.3",
+      "practiceIds": [
+        "exam-20251028-vraag-11"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-12",
+      "displayNumber": "2.4",
+      "practiceIds": [
+        "exam-20251028-vraag-12"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-13",
+      "displayNumber": "2.5",
+      "practiceIds": [
+        "exam-20251028-vraag-13-x",
+        "exam-20251028-vraag-13-y",
+        "exam-20251028-vraag-13-remedie",
+        "exam-20251028-vraag-13-cook"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-14",
+      "displayNumber": "2.6",
+      "practiceIds": [
+        "exam-20251028-vraag-14"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-15",
+      "displayNumber": "2.7",
+      "practiceIds": [
+        "exam-20251028-vraag-15-normaal",
+        "exam-20251028-vraag-15-homo"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-16",
+      "displayNumber": "2.8",
+      "practiceIds": [
+        "exam-20251028-vraag-16"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-17",
+      "displayNumber": "2.9",
+      "practiceIds": [
+        "exam-20251028-vraag-17"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-18",
+      "displayNumber": "2.10",
+      "practiceIds": [
+        "exam-20251028-vraag-18"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-19",
+      "displayNumber": "2.11",
+      "practiceIds": [
+        "exam-20251028-vraag-19"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-20",
+      "displayNumber": "2.12",
+      "practiceIds": [
+        "exam-20251028-vraag-20"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-21",
+      "displayNumber": "2.13",
+      "practiceIds": [
+        "exam-20251028-vraag-21"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20251028",
+      "question": "vraag-22",
+      "displayNumber": "2.14",
+      "practiceIds": [
+        "exam-20251028-vraag-22"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-1",
+      "displayNumber": "1.1",
+      "practiceIds": [
+        "exam-20260323-vraag-1"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-2",
+      "displayNumber": "1.2",
+      "practiceIds": [
+        "exam-20260323-vraag-2"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-3",
+      "displayNumber": "1.3",
+      "practiceIds": [
+        "exam-20260323-vraag-3"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-4",
+      "displayNumber": "1.4",
+      "practiceIds": [
+        "exam-20260323-vraag-4"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-5",
+      "displayNumber": "1.5",
+      "practiceIds": [
+        "exam-20260323-vraag-5"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-6",
+      "displayNumber": "1.6",
+      "practiceIds": [
+        "exam-20260323-vraag-6"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-7",
+      "displayNumber": "1.7",
+      "practiceIds": [
+        "exam-20260323-vraag-7"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-8",
+      "displayNumber": "1.8",
+      "practiceIds": [
+        "exam-20260323-vraag-8"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-9",
+      "displayNumber": "2.1",
+      "practiceIds": [
+        "exam-20260323-vraag-9"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-10",
+      "displayNumber": "2.2",
+      "practiceIds": [
+        "exam-20260323-vraag-10"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-11",
+      "displayNumber": "2.3",
+      "practiceIds": [
+        "exam-20260323-vraag-11"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-12",
+      "displayNumber": "2.4",
+      "practiceIds": [
+        "exam-20260323-vraag-12"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-13",
+      "displayNumber": "2.5",
+      "practiceIds": [
+        "exam-20260323-vraag-13"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-14",
+      "displayNumber": "2.6",
+      "practiceIds": [
+        "exam-20260323-vraag-14"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-15",
+      "displayNumber": "2.7",
+      "practiceIds": [
+        "exam-20260323-vraag-15-x",
+        "exam-20260323-vraag-15-y",
+        "exam-20260323-vraag-15-cook"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-16",
+      "displayNumber": "2.8",
+      "practiceIds": [
+        "exam-20260323-vraag-16-normaal",
+        "exam-20260323-vraag-16-homo"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-17",
+      "displayNumber": "2.9",
+      "practiceIds": [
+        "exam-20260323-vraag-17-a",
+        "exam-20260323-vraag-17-b"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-18",
+      "displayNumber": "2.10",
+      "practiceIds": [
+        "exam-20260323-vraag-18"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-19",
+      "displayNumber": "2.11",
+      "practiceIds": [
+        "exam-20260323-vraag-19"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-20",
+      "displayNumber": "2.12",
+      "practiceIds": [
+        "exam-20260323-vraag-20"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
+    },
+    {
+      "exam": "20260323",
+      "question": "vraag-21",
+      "displayNumber": "2.13",
+      "practiceIds": [
+        "exam-20260323-vraag-21"
+      ],
+      "status": "mapped",
+      "duplicateOf": null
     }
   ],
-  "mapped": 224,
-  "total": 224,
-  "practiceCount": 234
+  "mapped": 267,
+  "total": 267,
+  "practiceCount": 285
 }

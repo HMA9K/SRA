@@ -8,11 +8,12 @@ import zipfile
 import hashlib
 import re
 import base64
+import os
 import build_content
 import build_mc
 
 root = Path(__file__).resolve().parents[1]
-workspace = root.parent
+workspace = Path(os.environ.get('SRA_BRONMAP', root.parent))
 def embed_learning_images(content):
     """Behoud lesfiguren ook als alleen de zelfstandige HTML wordt geopend."""
     for relative in set(re.findall(r'assets/learning/[A-Za-z0-9_.-]+\.(?:png|jpg)', content)):

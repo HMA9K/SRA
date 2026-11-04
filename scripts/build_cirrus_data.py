@@ -9,8 +9,16 @@ import pdfplumber
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-Q = re.compile(r'^Vraag\s+(\d+)\s*[.:]?\s*\((\d+)\s*punt', re.I)
-AQ = re.compile(r'^Vraag\s+(\d+)\s*[.:(]', re.I)
+LABEL = r'(?:Vraag\s+|\d\.(?=\d+\)))'  # ook 1.3) vanaf oktober 2025
+Q = re.compile(r'^' + LABEL + r'(\d+)\s*[.:)]?\s*\((\d+)\s*punt', re.I)
+AQ = re.compile(r'^' + LABEL + r'(\d+)\s*[.:()]', re.I)
+HEAD = r'^(?:Vraag\s+\d+\s*[.:]?\s*\([^\n]*?\)|\d\.\d+\)\s*\(\d+\s*punt[^\n]*?\)|\d\.\d+\))\s*'
+MODERN = '20251028'  # eerste tentamen met krappe Word-regels en labels als 1.3)
+CAPTION = r'^Afbeelding\s+\d+(?:\.\d+)?[a-z]?(?:[\s:]|$)'
+
+def tidy(text):
+    """Herstel superscripts die in de PDF-tekst als gewone 2 staan."""
+    return re.sub(r'\bft2\b','ft²',re.sub(r'\)2(?=\s|$)',')²',re.sub(r'\bR2(?=Adj\b|\b)','R²',text)))
 
 def case_fragments(doc, source_pages, folder, start, stop, label):
     """Zet een casusbereik om naar lopende tekst, tabellen en losse figuren."""
@@ -45,7 +53,7 @@ def case_fragments(doc, source_pages, folder, start, stop, label):
         prose=[]; previous=None; image_number=0; last_bullet=False
         def flush():
             if prose:
-                value=' '.join(prose).replace(' €2',' €²')
+                value=re.sub(r' €2(?!\d)',' €²',' '.join(prose))
                 parts.append('<p>'+html.escape(value)+'</p>')
                 prose.clear()
         for _,_,kind,obj in blocks:
@@ -55,7 +63,7 @@ def case_fragments(doc, source_pages, folder, start, stop, label):
                 if gap>7: flush();last_bullet=False
                 if re.match(r'^Opgave\s+\d',value,re.I):
                     flush();parts.append('<h3>'+html.escape(value)+'</h3>');last_bullet=False
-                elif re.match(r'^Afbeelding\s+\d+[a-z]?(?:\s|$)',value,re.I):
+                elif re.match(CAPTION,value,re.I):
                     flush();parts.append('<p class="sra-case-caption">'+html.escape(value)+'</p>');last_bullet=False
                 elif value.startswith(('●','•','- ')):
                     flush();parts.append('<p class="sra-case-list-item">'+html.escape(value.lstrip('●•- '))+'</p>');last_bullet=True
@@ -88,7 +96,7 @@ def case_fragments(doc, source_pages, folder, start, stop, label):
                 path=target.relative_to(ROOT).as_posix()
                 nearby=[]
                 for line in text_lines:
-                    if not re.match(r'^Afbeelding\s+\d+[a-z]?',line['text'].strip(),re.I): continue
+                    if not re.match(CAPTION,line['text'].strip(),re.I): continue
                     vertical=max(0,image['top']-line['bottom'],line['top']-image['bottom'])
                     horizontal=max(0,image['x0']-line['x1'],line['x0']-image['x1'])
                     distance=vertical*3+horizontal
@@ -176,6 +184,25 @@ def curate_case(exam_id,section_index,markup):
         markup=re.sub(r'<p>𝑤̅ is de gemiddelde werkelijk waarde.*?i-de stratum</p>',
             '<p>w̄<sub>i</sub> is de gemiddelde werkelijke waarde en s<sub>i</sub> de standaardafwijking van de werkelijke waarden in de steekproef van het i-de stratum.</p>',markup,flags=re.S)
         markup=re.sub(r'<p>𝑠 is de standaardafwijking van de werkelijke waarden van de steekproef in het i-de stratum</p>','',markup)
+    if exam_id>=MODERN:
+        # Losse spaties ontstaan waar pdfplumber een regel op de contextgrens afsnijdt.
+        for broken,whole in [('Bij nade r inzien','Bij nader inzien'),('In afbee lding','In afbeelding'),('De over ige','De overige')]:
+            markup=markup.replace(broken,whole)
+    if exam_id=='20251028' and section_index==0:
+        markup=re.sub(r'<p>N = grootte van de populatie.*$',
+            '<p>N<sub>i</sub> = grootte van de populatie in het i-de stratum</p><p>n<sub>i</sub> = grootte van de steekproef in het i-de stratum</p>'
+            '<p>w<sub>i</sub> = gemiddelde werkelijke waarde van een post in de steekproef van het i-de stratum</p>'
+            '<p>s<sub>i</sub> = standaardafwijking van de werkelijke waarden in de steekproef van het i-de stratum</p>',markup,flags=re.S)
+    if exam_id=='20251028' and section_index==1:
+        markup=markup.replace('vindt als uitvoer</p><p class="sra-case-caption">afbeelding 2 t/m afbeelding 10. In de spreidingsdiagrammen zijn een aantal markante punten</p><p>aangeduid.</p>',
+            'vindt als uitvoer afbeelding 2 t/m afbeelding 10. In de spreidingsdiagrammen zijn een aantal markante punten aangeduid.</p>')
+        markup=markup.replace('oplevert.</p><p class="sra-case-caption">Afbeelding 16 vergelijkt het enkelvoudige lineaire model met een drietal niet-lineaire</p><p>modellen.</p>',
+            'oplevert. Afbeelding 16 vergelijkt het enkelvoudige lineaire model met een drietal niet-lineaire modellen.</p>')
+    if exam_id=='20260323' and section_index==0:
+        markup=re.sub(r'<p>N = grootte van de populatie.*$',
+            '<p>N<sub>i</sub> = grootte van de populatie in het i-de stratum</p><p>n<sub>i</sub> = grootte van de steekproef in het i-de stratum</p>'
+            '<p>∑w<sub>i</sub> = som van de werkelijke waarde van de posten in de steekproef van het i-de stratum</p>'
+            '<p>s<sub>i</sub> = standaardafwijking van de werkelijke waarden in de steekproef van het i-de stratum</p>',markup,flags=re.S)
     return markup
 
 def build():
@@ -234,7 +261,7 @@ def build():
         candidates={s['number']:[] for s in e['sections']}
         for page,ls in enumerate(lines):
             for line in ls:
-                m=re.match(r'^Opgave\s+(\d+)\b',line['text'],re.I)
+                m=re.match(r'^Opgave\s+(\d+)a?\b',line['text'],re.I)
                 if m and int(m[1]) in candidates: candidates[int(m[1])].append((page,max(35,line['top']-3)))
         boundaries=[]
         for section in e['sections']:
@@ -286,12 +313,15 @@ def build():
                     named_boundary=e.get('answerBoundaries',{}).get(str(n))
                     if (apage,atop)<(pi,line['top'])<astop and (re.match(r'^Opgave\s+\d',line['text'],re.I) or (named_boundary and line['text'].startswith(named_boundary))):
                         astop=(pi,line['top']-3)
-            solution,solutiontext,answer_visual=fragments('uitwerking',ap,(apage,atop-2),astop,f'antwoord-{n}')
-            clean_solution=re.sub(r'^Vraag\s+\d+\s*[.:]?\s*\([^\n]*?\)\s*','',solutiontext,count=1,flags=re.I).strip()
+            # De kop boven een antwoord raakt bij krappe regels de uitsnede; dan begint die exact op de regel.
+            solution,solutiontext,answer_visual=fragments('uitwerking',ap,(apage,atop if e['id']>=MODERN else atop-2),astop,f'antwoord-{n}')
+            clean_solution=re.sub(HEAD,'',solutiontext,count=1,flags=re.I).strip()
+            if e['id']>=MODERN: clean_solution=tidy(clean_solution)
             if not answer_visual and len(clean_solution)<750 and not re.search(r'[\ufffd\U0001d400-\U0001d7ffα-ωΑ-Ω₀-₉]|\bH\s*:|Tabel|Figuur|Stratum|ANOVA|Coefficients',clean_solution,re.I):
                 solution='<p>'+html.escape(clean_solution).replace('\n','<br>')+'</p>'
-            prompt=re.sub(r'^Vraag\s+\d+\s*[.:]?\s*\([^\n]*?\)\s*','',text,count=1,flags=re.I).strip()
+            prompt=re.sub(HEAD,'',text,count=1,flags=re.I).strip()
             prompt=re.sub(r'Pagina\s+\d+\s+van\s+\d+','',prompt,flags=re.I).strip()
+            if e['id']>=MODERN: prompt=tidy(prompt)
             # Short, text-only questions use the same reflowing text presentation as CAFA2.
             # Complex source expressions, tables and figures retain their verified image.
             if not question_visual and len(prompt)<1200 and not re.search(r'[\ufffd\U0001d400-\U0001d7ff]|[αβ]|Model Summary|Coefficients',prompt,re.I):
@@ -307,7 +337,7 @@ def build():
         for j,section in enumerate(sections):
             section['caseHtml']=curate_case(e['id'],j,''.join(case_parts[j]))
             section['caseText']='\n'.join(case_texts[j])
-            assert not re.search(r'^Vraag\s+\d+\s*[.:]?\s*\(\d+\s*punt',section['caseText'],re.I|re.M), (e['id'],section['id'],'question in case')
+            assert not re.search(r'^'+LABEL+r'\d+\s*[.:)]?\s*\(\d+\s*punt',section['caseText'],re.I|re.M), (e['id'],section['id'],'question in case')
         introduction=''
         if boundaries[0][0]>0:
             introduction,_,_=fragments('opgaven',p,(0,35),(boundaries[0][0],boundaries[0][1]-3),'introductie')

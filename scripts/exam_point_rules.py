@@ -46,6 +46,8 @@ BASE = {
     '20240318': 'mpu schatterkeuze quotient strata-ontwerp strata-ontwerp strata-schatten strata-schatten correlatie multicol multicol toetsen anova transformaties puntvoorspelling interval basis invloed invloed normaliteit multicol selectie puntvoorspelling modelvergelijking coefficienten',
     '20241028': 'regressieschatter omvang schatterkeuze strata-ontwerp strata-schatten strata-schatten strata-ontwerp toetsen anova anova invloed normaliteit interval basis selectie modelvergelijking toetsen multicol',
     '20250317': 'verschil verschil verschil strata-ontwerp strata-schatten strata-schatten correlatie anova toetsen groepen transformaties transformaties invloed invloed normaliteit hetero gezamenlijk gezamenlijk coefficienten puntvoorspelling toetsen selectie multicol normaliteit selectie',
+    '20251028': 'mpu omvang schatterkeuze verschil strata-ontwerp strata-ontwerp strata-schatten strata-schatten basis toetsen anova normaliteit invloed invloed normaliteit multicol puntvoorspelling toetsen transformaties modelvergelijking transformaties toetsen',
+    '20260323': 'verschil omvang regressieschatter regressieschatter strata-ontwerp strata-ontwerp strata-schatten strata-schatten basis correlatie toetsen hetero transformaties transformaties invloed normaliteit interval modelvergelijking selectie multicol selectie',
 }
 
 # (brononderdeel, onderwerp, punten, onderbouwing). Een '-' is een ongesplitste
@@ -96,6 +98,11 @@ SPLITS = {
  ('20250317',15): [('-', 'normaliteit',3,'Normering: keuze, p en conclusie elk 1.'),('-', 'gezamenlijk',1,'Normering noemt hypothesen voor twee vragen samen, maar verwijst abusievelijk naar 8 en 9. Conservatief gezamenlijk gehouden voor normaliteit/heteroscedasticiteit.')],
  ('20250317',17): [('-', 'gezamenlijk',2,'Twee remedies voor normaliteit én heteroscedasticiteit, samen 2 punten; geen verdeling per diagnose.')],
  ('20250317',18): [('-', 'gezamenlijk',3,'Herbeoordeling uitbijters om normaliteit te verbeteren; gezamenlijke 3 punten zonder splitsing. Broncorrectie op verwijderen blijft zichtbaar.')],
+ ('20251028',13): [('-', 'uitbijters-x',2,'Normering MD: 1+1.'),('-', 'uitbijters-y',2,'Normering z: 1+1.'),('-', 'gezamenlijk',2,'Remedie uitbijters in x en y gezamenlijk 2 punten.'),('-', 'invloed',5,'Normering Cook: 1+1+1, remedie 2.')],
+ ('20251028',15): [('-', 'normaliteit',3,'Normering: hypothesen, toets/p en conclusie elk 1.'),('-', 'hetero',4,'Normering: hypothesen 1, ABSRES/p 2, conclusie 1.')],
+ ('20260323',15): [('-', 'uitbijters-x',4,'Normering MD: 1+1, remedie 2; alleen in x zijn er signalen.'),('-', 'uitbijters-y',1,'Normering z-grens 1 punt.'),('-', 'invloed',4,'Normering Cook: 1+1, remedie 2.')],
+ ('20260323',16): [('-', 'normaliteit',4,'Normering: hypothesen, toetskeuze, p en conclusie elk 1.'),('-', 'hetero',3,'Normering: hypothesen, p en conclusie elk 1.')],
+ ('20260323',17): [('a','interval',9,'Opgave 2.9a: 9 punten.'),('b','puntvoorspelling',3,'Opgave 2.9b: 3 punten voor herkennen van extrapolatie.')],
 }
 
 JOINT_TOPICS = {
@@ -113,4 +120,5 @@ JOINT_TOPICS = {
  ('20250317',15): ['normaliteit','hetero'],
  ('20250317',17): ['normaliteit','hetero'],
  ('20250317',18): ['uitbijters-y','normaliteit'],
+ ('20251028',13): ['uitbijters-x','uitbijters-y'],
 }
