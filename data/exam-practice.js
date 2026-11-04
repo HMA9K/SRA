@@ -2632,8 +2632,7 @@ window.SRAExamPractice = {
       "correct": 0,
       "level": 3,
       "topics": [
-        "anova",
-        "rekenen"
+        "anova"
       ],
       "sourceExamId": "20211101",
       "sourceQuestionId": "vraag-9",

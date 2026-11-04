@@ -239,12 +239,29 @@
       fragment.append(document.createTextNode(node.textContent.slice(offset))); node.replaceWith(fragment);
     }
   }
+  // De symbolenregel volgt uit de uitleg per onderdeel, dus ieder klikbaar symbool staat erin.
+  function legends() {
+    for (const block of host.querySelectorAll('.formula-typeset:not([data-legend])')) {
+      const titles = [...new Set([...block.querySelectorAll('[data-formula-help]')].map(node => help.get(node)?.title).filter(Boolean))];
+      if (!titles.length) continue;
+      block.setAttribute('data-legend', '');
+      let line = block.nextElementSibling;
+      if (!line?.matches('p.symbols')) {
+        line = document.createElement('p');
+        line.className = 'symbols';
+        block.after(line);
+      }
+      line.textContent = `${titles.join('; ')}. ${line.dataset.note || ''}`.trim();
+      root.SRAFormulaText?.annotate(line);
+    }
+  }
   function annotate() {
     if (!host) return;
     observer?.disconnect();
     root.SRAFormulaText?.annotate(host);
     host.querySelectorAll('math').forEach(math => { if (!math.closest('a,button,[contenteditable]')) annotateMath(math); });
     host.querySelectorAll('.section-body p,.section-body li,.section-body td,.formula-guide-card p,.formula-guide-card li,.lab-equation,.example li,.question-feedback .feedback,.mc-feedback p,.mc-feedback li').forEach(annotateText);
+    legends();
     formatNotation(host);
     observer?.observe(host,{childList:true,subtree:true});
   }

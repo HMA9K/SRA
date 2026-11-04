@@ -16,17 +16,23 @@
 
   const parens = (inner => `\\((?:[^()]|${inner})*\\)`);
   const GROUP = parens(parens('\\([^()]*\\)'));
-  const ATOM = `(?:Σ\\s*)?(?:\\d+(?:[.,]\\d+)*|(?:${WORDS}|[A-Za-zα-ωŴŵŷȳē]{1,2})[\\u0302\\u0304]?(?:_\\([^()\\s]+\\)|_[A-Za-z0-9]+)?[${SUB}²³]*)`;
+  const ATOM = `(?:Σ\\s*)?(?:\\d+(?:[.,]\\d+)*[²³]*|(?:${WORDS}|[A-Za-zα-ωŴŵŷȳē]{1,2})[\\u0302\\u0304]?(?:_\\([^()\\s]+\\)|_[A-Za-z0-9]+)?[${SUB}²³]*)`;
   const ROOT = `√(?:${GROUP}|\\[[^\\[\\]]*\\]|${ATOM})`;
   // Eén letter met index, zoals s_w of Ŵ_MPU; bestandsnamen als LN_MORT vallen hierbuiten.
   const INDEXED = `(?<![\\p{L}\\p{N}_.])[A-Za-zα-ωŴŵŷȳē][\\u0302\\u0304]?[²³]?_(?:\\([^()\\s]+\\)|[A-Za-z0-9]+)[²³]?(?![\\p{L}\\p{N}_])`;
   const BASE = new RegExp(`(?<![\\p{L}\\p{N}_.])(${WORDS}|MD|CD|VC|[A-Za-zα-ωŴŵŷȳē][\\u0302\\u0304]?)([²³]?)$`, 'u');
   // Een wortel mag direct na een getal staan (0,49 √2); de teller van een breuk niet midden in een woord.
   const FORMULA = new RegExp(
-    `(?:(?<![\\p{L}\\p{N}_/.,])(?:${ATOM}|${GROUP})\\s*[/÷]\\s*)?${ROOT}(?:\\s*[/÷]\\s*(?:${ROOT}|${ATOM}|${GROUP}))?(?![\\p{L}\\p{N}_])`
-    + `|(?<![\\p{L}\\p{N}_/])(?:${ATOM}\\s*=\\s*)?(?:\\[[^\\[\\]]*\\]|${GROUP})\\s*/\\s*${GROUP}`
+    `(?:(?<![\\p{L}\\p{N}_/.,])${ATOM}\\s*=\\s*)?(?:(?<![\\p{L}\\p{N}_/.,])(?:${ATOM}|${GROUP})\\s*[/÷]\\s*)?${ROOT}(?:\\s*[/÷]\\s*(?:${ROOT}|${ATOM}|${GROUP}))?(?![\\p{L}\\p{N}_])`
+    + `|(?<![\\p{L}\\p{N}_/])(?:${ATOM}\\s*=\\s*)?(?:\\[[^\\[\\]]*\\]\\s*/\\s*\\d[\\d.,]*\\d|(?:\\[[^\\[\\]]*\\]|${GROUP})\\s*/\\s*${GROUP})`
+    + `|(?<![\\p{L}\\p{N}_/.,])\\d[\\d.,]*\\d?\\s+/\\s+\\d[\\d.,]*\\d?(?![\\p{L}\\p{N}_/])`
+    + `|(?<![\\p{L}\\p{N}_/])${ATOM}\\s*/\\s*${GROUP}`
     + `|${INDEXED}(?:\\s*/\\s*${ROOT})?`, 'gu');
-  const CANDIDATE = /√|[\])]\s*\/\s*\(|_/;
+  // Alleen tussen twee waarden: +€ 48 aan het begin blijft het teken van een bedrag.
+  const VALUE_END = /[\p{L}\p{N})\]²³%]$/u, VALUE_START = /^[\p{L}\p{N}(\[√Σ€−]/u;
+  // 1 / 409 is buiten de leerstof een score, geen breuk.
+  const SPACED = /^\d[\d.,]*\s+\/\s+\d/, LEARNING_TEXT = '.section-body,.example,.feedback,.mc-feedback,.mc-stimulus,.formula-guide-card,.sra-term-popup';
+  const CANDIDATE = /√|[\])]\s*\/\s*[(\d]|_|\d\s+\/\s+\d|[\p{L}\d²³]\s*\/\s*\(/u;
 
   /* Geeft MathML terug, of null als de tekst geen veilig leesbare formule is. */
   function toMathML(source) {
@@ -99,12 +105,12 @@
   }
 
   /* Deelt tekst in gewone stukken en stukken {math}. */
-  function split(text) {
+  function split(text, spaced = true) {
     const parts = [];
     let offset = 0;
     for (const match of text.matchAll(FORMULA)) {
       const math = toMathML(match[0]);
-      if (!math) continue;
+      if (!math || (!spaced && SPACED.test(match[0]))) continue;
       parts.push(text.slice(offset, match.index), {math});
       offset = match.index + match[0].length;
     }
@@ -130,8 +136,36 @@
         previous.nodeValue = previous.nodeValue.slice(0, base.index);
         index.replaceWith(element(`<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">${power ? `<msubsup>${symbol}${lower}${power}</msubsup>` : `<msub>${symbol}${lower}</msub>`}</math>`));
       }
+      previous.parentNode.normalize();
     }
-    container.normalize();
+  }
+
+  /* Rekentekens worden vet; het teken van een bedrag blijft gewoon. */
+  function markOperators(container, element) {
+    for (const mo of container.querySelectorAll('math mo:not(.math-operator)')) {
+      if (!/^[+−×÷±=]$/.test(mo.textContent.trim())) continue;
+      const previous = mo.previousElementSibling;
+      if (previous && !(previous.localName === 'mo' && !/^[)\]]$/.test(previous.textContent.trim()))) mo.classList.add('math-operator');
+    }
+    const walker = (container.ownerDocument || root.document).createTreeWalker(container, 4), nodes = [];
+    while (walker.nextNode()) {
+      if (/[+−×÷±=]/.test(walker.currentNode.nodeValue) && !walker.currentNode.parentElement.closest(SKIP + ',.math-operator,button')) nodes.push(walker.currentNode);
+    }
+    // Een buurformule telt ook als waarde: s_w × √n staat in drie losse stukken.
+    const neighbour = node => node && (node.nodeType === 1 && !/^(BR|P|LI|DIV)$/.test(node.nodeName));
+    for (const node of nodes) {
+      const value = node.nodeValue, parts = [];
+      let offset = 0;
+      for (const match of value.matchAll(/[+−×÷±=]/g)) {
+        const before = value.slice(0, match.index).trimEnd(), after = value.slice(match.index + 1).trimStart();
+        const left = before ? VALUE_END.test(before) : neighbour(node.previousSibling);
+        const right = after ? VALUE_START.test(after) : neighbour(node.nextSibling);
+        if (match[0] !== '±' && (!left || !right)) continue;
+        parts.push(value.slice(offset, match.index), element(`<span class="math-operator">${match[0]}</span>`));
+        offset = match.index + 1;
+      }
+      if (offset) node.replaceWith(...[...parts, value.slice(offset)].filter(Boolean));
+    }
   }
 
   /* Twee formules met alleen een schuine streep ertussen zijn samen één breuk. */
@@ -154,13 +188,27 @@
     };
     joinIndexes(container, element);
     const walker = documentRef.createTreeWalker(container, 4), nodes = [];
-    while (walker.nextNode()) if (CANDIDATE.test(walker.currentNode.nodeValue) && !walker.currentNode.parentElement.closest(SKIP)) nodes.push(walker.currentNode);
+    while (walker.nextNode()) {
+      const value = walker.currentNode.nodeValue, parent = walker.currentNode.parentElement;
+      if ((CANDIDATE.test(value) || (value.includes('/') && parent.matches('.inline-expression'))) && !parent.closest(SKIP)) nodes.push(walker.currentNode);
+    }
     for (const node of nodes) {
       const whole = node.parentElement.matches('.inline-expression') && node.parentElement.childNodes.length === 1 && toMathML(node.nodeValue);
-      const parts = whole ? [{math: whole}] : split(node.nodeValue);
-      if (parts) node.replaceWith(...parts.map(part => typeof part === 'string' ? part : element(part.math)));
+      const parts = whole ? [{math: whole}] : split(node.nodeValue, !!node.parentElement.closest(LEARNING_TEXT));
+      if (parts) node.replaceWith(...parts.map(part => typeof part === 'string' ? part : element(/<m(?:frac|sqrt)/.test(part.math) && !node.parentElement.closest('.inline-expression') ? `<span class="inline-expression">${part.math}</span>` : part.math)));
+    }
+    // Een grote wortel met breuk krijgt een eigen regel, met het leesteken erachter.
+    for (const math of container.querySelectorAll('.inline-expression:not(.formula-line) msqrt mfrac')) {
+      const line = math.closest('.inline-expression'), next = line.nextSibling;
+      if (line.textContent.length < 24 || line.closest(SKIP.replace('math,', '') + ',table')) continue;
+      line.classList.add('formula-line');
+      if (next?.nodeType === 3 && /^[.,;:]/.test(next.nodeValue)) {
+        line.append(next.nodeValue[0]);
+        next.nodeValue = next.nodeValue.slice(1).replace(/^\s+/, '');
+      }
     }
     joinFractions(container, element);
+    markOperators(container, element);
   }
 
   return {toMathML, split, annotate};

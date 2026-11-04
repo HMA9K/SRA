@@ -143,9 +143,10 @@ for i,l in enumerate(build_content.lessons):
     parts.append('</details>')
     parts.append(f'<h3>{e(l["example"]["title"])}</h3><p>{e(l["example"]["context"])}</p><ol>')
     parts.extend('<li>'+s+'</li>' for s in l['example']['stepsHtml'])
-    parts.append('</ol>'+l['example']['notesHtml']+'<h3>Hier gaat het vaak mis</h3><ul>')
-    parts.extend('<li>'+e(s)+'</li>' for s in l['pitfalls'])
-    parts.append('</ul><h3>Check je begrip</h3>')
+    parts.append('</ol>'+l['example']['notesHtml'])
+    if l['pitfalls']:
+        parts.append('<h3>Hier gaat het vaak mis</h3><ul>'+''.join('<li>'+e(s)+'</li>' for s in l['pitfalls'])+'</ul>')
+    parts.append('<h3>Check je begrip</h3>')
     for q in l['questions']:
         parts.append('<p><strong>'+e(q['prompt'])+'</strong></p><ol type="A">'+''.join('<li>'+e(o)+'</li>' for o in q['options'])+'</ol><details><summary>Antwoord en uitleg</summary><p>'+e(q['options'][q['correct']])+'.'+(' '+e(q['explanation']) if not q.get('steps') else '')+'</p>')
         if q.get('steps'):
@@ -170,7 +171,8 @@ for i,l in enumerate(build_content.lessons):
         link=(ref['href'],ref['title']) if 'href' in ref else (f'bronnen/{build_content.sources[ref["source"]]["file"]}#page={ref["page"]}',build_content.sources[ref['source']]['title'])
         parts.append(f'<li id="bron-{l["id"]}-{n}"><a href="{e(link[0])}">{e(link[1])}</a>: {e(ref["locator"])}</li>')
     parts.append('</ol></details></article>')
-parts.append('<script>\n'+(root/'js/formula-text.js').read_text(encoding='utf-8')+'\nSRAFormulaText.annotate(document.body);\n</script>')
+parts.append('<script>\n'+(root/'js/formula-text.js').read_text(encoding='utf-8')+'\nSRAFormulaText.annotate(document.body);\n'
+             "document.querySelectorAll('math').forEach(m=>{if(m.getBoundingClientRect().width<240)return;const s=document.createElement('span');s.style.cssText='display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle';m.replaceWith(s);s.append(m);});\n</script>")
 parts.append('<style>'+presentation_css+(root/'css/learning-revision.css').read_text(encoding='utf-8')+'svg{max-width:100%;height:auto}</style></html>')
 read_version=embed_learning_images(plain_notation('\n'.join(parts)))
 read_version=read_version.replace('<title>', '<script data-goatcounter="https://sra.goatcounter.com/count" data-goatcounter-settings=\'{"no_onload":true}\' async src="https://gc.zgo.at/count.js"></script><script>\n'+(root/'js/page-names.js').read_text(encoding='utf-8')+'\n</script><title>', 1)

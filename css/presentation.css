@@ -50,3 +50,19 @@ table.numeric tfoot td,table.numeric tfoot th{font-weight:700;border-top:2px sol
  .math-scroll,.table-scroll,.chart-scroll{overflow:visible}.formula-typeset{break-inside:avoid}
  math{font-size:1em}.formula-label{color:#333}table.numeric{min-width:0}
 }
+.math-operator{font-family:Arial,sans-serif;font-weight:700}
+.formula-label{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 12px}
+.formula-number{font-size:.72rem;font-weight:600;letter-spacing:0;color:#0c447c;background:#fff;border:1px solid #b9c5d6;border-radius:4px;padding:0 6px;white-space:nowrap}
+.formula-goal{background:#e6f1fb;border:1px solid #bcd7ef;border-radius:8px;padding:10px 14px;margin:12px 0}
+.formula-steps{counter-reset:formula-step}
+body[data-page] .formula-steps .formula-row{position:relative;counter-increment:formula-step;padding-left:34px}
+.formula-steps .formula-row::before{content:counter(formula-step);position:absolute;left:0;top:10px;width:22px;height:22px;border:1px solid #b9c5d6;border-radius:50%;background:#fff;font:600 .75rem/20px Arial,sans-serif;text-align:center;color:#3f4a63}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-number{background:#152129;border-color:#3b4a54;color:#a9cdf0}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-goal{background:#172636;border-color:#2b4f73}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-steps .formula-row::before{background:#152129;border-color:#3b4a54;color:#dbe7f3}
+.lesson-bridge{margin:0 0 12px}
+.feedback{padding:12px 14px}
+.feedback h3{margin:0 0 4px;font-size:1rem}
+.feedback>p{margin:0 0 4px}
+.feedback-more{margin-top:6px}
+.feedback-more>summary{cursor:pointer;font-size:.85rem;font-weight:600}

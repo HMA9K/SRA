@@ -18,7 +18,7 @@ try{
  const lab=page.locator('#onderzoek');
  const inputs=()=>lab.locator('input[name],textarea[name]').evaluateAll(nodes=>nodes.map(n=>[n.name,n.value]));
  async function views(){
-  const before=await inputs(),full=await lab.locator('.lab-result').textContent();
+  const before=await inputs(),full=(await lab.locator('.lab-result').textContent()).replace(/√/g,'');
   const keys=await lab.locator('[data-lab-choice]').evaluateAll(nodes=>nodes.map(n=>n.dataset.labChoice));assert.ok(keys.length);
   for(const [i,key] of keys.entries()){
    const button=lab.locator('[data-lab-choice="'+key+'"]');
@@ -28,8 +28,8 @@ try{
    assert.equal(await button.getAttribute('aria-pressed'),'true');assert.equal(await lab.locator('[data-lab-choice][aria-pressed="true"]').count(),1);
    // De formuleopmaak volgt een beeldje later; vergelijk de weergave pas daarna.
    await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
-   const rendered=await lab.evaluate((el,key)=>{const result=SRALabLayout.analyse(el.querySelector('.lab-result').innerHTML),expected=document.createElement('div');expected.innerHTML=result.metrics+result.views.find(v=>v.key===key).html;const content=node=>({text:node.textContent.replace(/\s+/g,' ').trim(),graphs:[...node.querySelectorAll('svg')].map(n=>n.outerHTML)});return {actual:content(el.querySelector('.lab-live')),expected:content(expected)};},key);
-   assert.deepEqual(rendered.actual,rendered.expected);assert.equal(await lab.locator('.lab-result').textContent(),full);assert.deepEqual(await inputs(),before);
+   const rendered=await lab.evaluate((el,key)=>{const result=SRALabLayout.analyse(el.querySelector('.lab-result').innerHTML),expected=document.createElement('div');expected.innerHTML=result.metrics+result.views.find(v=>v.key===key).html;const content=node=>({text:node.textContent.replace(/√/g,'').replace(/\s+/g,' ').trim(),graphs:[...node.querySelectorAll('svg')].map(n=>n.outerHTML)});return {actual:content(el.querySelector('.lab-live')),expected:content(expected)};},key);
+   assert.deepEqual(rendered.actual,rendered.expected);assert.equal((await lab.locator('.lab-result').textContent()).replace(/√/g,''),full);assert.deepEqual(await inputs(),before);
    // Editing a slider must update this view without choosing a different one.
    const slider=lab.locator('input[type=range]:not(:disabled)').first();
    if(await slider.count()){
@@ -92,7 +92,7 @@ try{
     const feedback=question.locator('.question-feedback').filter({visible:true});
     assert.match(await feedback.innerText(),/Goed beantwoord/);
     assert.equal(await feedback.locator('.question-recognition dt').count(),0);
-    assert.match(await feedback.locator('.question-pattern').innerText(),/^Onthoud:/);
+    assert.match((await feedback.locator('.question-pattern').textContent()).trim(),/^Onthoud:/);
     assert.ok(await feedback.locator('.source-note').count()>0);
     assert.ok(parseFloat(await feedback.evaluate(n=>getComputedStyle(n).paddingTop))<=16);
     feedbackChecks++;

@@ -201,6 +201,12 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .key.residual{border-col
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-note{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .variance-bar{background:#2c2416;border:1px solid #3b4a54}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .variance-bar span{background:#0e8159}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-number{color:#8dbdec;background:#152129;border:1px solid #3c4e67}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-goal{background:#16222c;border:1px solid #2d5476}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-steps .formula-row::before{border:1px solid #3c4e67;background:#152129;color:#aeb7cb}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-number{background:#212b38;border-color:#435460;color:#8ebdeb}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-goal{background:#212b38;border-color:#2d5276}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-steps .formula-row::before{background:#212b38;border-color:#435460;color:#9cbdde}
 /* css/labs.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-range-hint{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lab-control-note{color:#b0cac1}
@@ -290,7 +296,6 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #main .source-notes{colo
 @media (prefers-reduced-motion:reduce){html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-sources li.is-target{outline:2px solid var(--green,#2d765d)}}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell[data-page="les"] .section>.section-head{color:#e0ebf2}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) math[display="inline"]{background:#17212c}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .inline-expression{background:#17212c}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .lesson-progress .is-done{color:var(--study-accent)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-visual{border:1px solid #416254;background:#1a2823}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .formula-visual .fv-provenance{color:#b0bcc9}
@@ -316,7 +321,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) details.learning-source>
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) details.learning-source>summary:focus-visible{outline:2px solid #425761}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .learning-figure img{border:1px solid #39526a}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .learning-figure figcaption{color:#b0bcc9}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .section-body details:not(.learning-source,.learning-evidence){border:1px solid #39526a}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .section-body details:not(.learning-source){border:1px solid #39526a}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-stimulus{background:#181f2b;border:1px solid #38526b}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-stimulus th,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-stimulus td{border:1px solid #3d5266}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-stimulus th{background:#18222a}
@@ -333,8 +338,6 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-extra{fill:#
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .transition-chart text.transition-check{fill:#f0f7fc}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mini-bar{fill:var(--study-teal,#8dece2)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mini-tail{fill:#ecb78d}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell[data-page="les"] #main .lesson-exam-focus .learning-evidence>summary{color:#a4d5c7}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell[data-page="les"] #main .lesson-exam-focus .learning-evidence>summary{color:#a4d5c7}
 /* css/exams.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry{background:#152129;border:1px solid #3b4a54}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-entry h2{color:#adbdc9}
@@ -443,6 +446,8 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-guidance-sources{bor
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-source-filter select{background:var(--study-surface,#152129)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-panel{background:var(--study-surface,#152129)}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-resizer:focus-visible,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-resizer:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-case-resizer[data-dragging]{background:var(--study-teal,#0e8174)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help>details[open]>div{border:1px solid #454261;background:#1b1b27;box-shadow:0 6px 18px rgba(1,3,4,.14)}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode))[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-question-help>details[open]>div{background:#212b38;border-color:#435460}
 /* css/cirrus.css */
 html[data-study-theme=dark] body.cirrus-mode a{color:#8dcaec}
 html[data-study-theme=dark] body.cirrus-mode button:focus-visible,html[data-study-theme=dark] body.cirrus-mode a:focus-visible,html[data-study-theme=dark] body.cirrus-mode label:focus-visible,html[data-study-theme=dark] body.cirrus-mode summary:focus-visible{outline:2px solid #76562d}
