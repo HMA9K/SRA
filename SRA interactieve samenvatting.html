@@ -1286,7 +1286,6 @@ math [data-formula-help][role="group"]:hover{background:transparent}
 .formula-help-popup .formula-help-source{margin:9px 0 0;font-size:11px;line-height:1.5}
 .formula-help-source a{color:#26704b}
 @media print{math [data-formula-help],.formula-text-component{color:inherit;text-decoration:none}.formula-help-hint,.formula-help-popup{display:none!important}}
-math mfrac [data-formula-help],math msqrt [data-formula-help]{text-underline-offset:2px}
 
 </style>
   <style data-study-style>
@@ -67388,11 +67387,15 @@ window.SRAMCExamFrequency = {
   const GROUP = parens(parens('\\([^()]*\\)'));
   const ATOM = `(?:Σ\\s*)?(?:\\d+(?:[.,]\\d+)*|(?:${WORDS}|[A-Za-zα-ωŴŵŷȳē]{1,2})[\\u0302\\u0304]?(?:_\\([^()\\s]+\\)|_[A-Za-z0-9]+)?[${SUB}²³]*)`;
   const ROOT = `√(?:${GROUP}|\\[[^\\[\\]]*\\]|${ATOM})`;
+  // Eén letter met index, zoals s_w of Ŵ_MPU; bestandsnamen als LN_MORT vallen hierbuiten.
+  const INDEXED = `(?<![\\p{L}\\p{N}_.])[A-Za-zα-ωŴŵŷȳē][\\u0302\\u0304]?[²³]?_(?:\\([^()\\s]+\\)|[A-Za-z0-9]+)[²³]?(?![\\p{L}\\p{N}_])`;
+  const BASE = new RegExp(`(?<![\\p{L}\\p{N}_.])(${WORDS}|MD|CD|VC|[A-Za-zα-ωŴŵŷȳē][\\u0302\\u0304]?)([²³]?)$`, 'u');
   // Een wortel mag direct na een getal staan (0,49 √2); de teller van een breuk niet midden in een woord.
   const FORMULA = new RegExp(
     `(?:(?<![\\p{L}\\p{N}_/.,])(?:${ATOM}|${GROUP})\\s*[/÷]\\s*)?${ROOT}(?:\\s*[/÷]\\s*(?:${ROOT}|${ATOM}|${GROUP}))?(?![\\p{L}\\p{N}_])`
-    + `|(?<![\\p{L}\\p{N}_/])(?:${ATOM}\\s*=\\s*)?(?:\\[[^\\[\\]]*\\]|${GROUP})\\s*/\\s*${GROUP}`, 'gu');
-  const CANDIDATE = /√|[\])]\s*\/\s*\(/;
+    + `|(?<![\\p{L}\\p{N}_/])(?:${ATOM}\\s*=\\s*)?(?:\\[[^\\[\\]]*\\]|${GROUP})\\s*/\\s*${GROUP}`
+    + `|${INDEXED}(?:\\s*/\\s*${ROOT})?`, 'gu');
+  const CANDIDATE = /√|[\])]\s*\/\s*\(|_/;
 
   /* Geeft MathML terug, of null als de tekst geen veilig leesbare formule is. */
   function toMathML(source) {
@@ -67479,20 +67482,54 @@ window.SRAMCExamFrequency = {
     return parts.filter(Boolean);
   }
 
+  /* Maak van s<sub>w</sub> één geheel: eenvoudige indexen als s_w, andere direct als formule. */
+  function joinIndexes(container, element) {
+    for (const index of container.querySelectorAll('sub')) {
+      const previous = index.previousSibling, value = index.textContent;
+      if (index.closest(SKIP) || previous?.nodeType !== 3 || !/^[\p{L}\p{N},ᵢⱼₖ]+$/u.test(value)) continue;
+      const base = previous.nodeValue.match(BASE);
+      if (!base) continue;
+      if (/^[A-Za-z0-9]+$/.test(value) && base[1].length === 1) {
+        previous.nodeValue += '_' + value;
+        index.remove();
+      } else {
+        const symbol = base[1].length > 1 ? `<mi mathvariant="normal">${base[1]}</mi>` : `<mi>${base[1]}</mi>`;
+        const lower = value.length > 1 ? `<mtext>${value}</mtext>` : `<mi>${value}</mi>`;
+        const power = base[2] ? `<mn>${base[2] === '²' ? 2 : 3}</mn>` : '';
+        previous.nodeValue = previous.nodeValue.slice(0, base.index);
+        index.replaceWith(element(`<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">${power ? `<msubsup>${symbol}${lower}${power}</msubsup>` : `<msub>${symbol}${lower}</msub>`}</math>`));
+      }
+    }
+    container.normalize();
+  }
+
+  /* Twee formules met alleen een schuine streep ertussen zijn samen één breuk. */
+  function joinFractions(container, element) {
+    for (const math of [...container.querySelectorAll('math')]) {
+      const slash = math.nextSibling, next = slash?.nextSibling;
+      if (slash?.nodeType !== 3 || slash.nodeValue.trim() !== '/' || next?.nodeName?.toLowerCase() !== 'math' || math.closest(SKIP.replace('math,', ''))) continue;
+      next.replaceWith(element(`<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mfrac><mrow>${math.innerHTML}</mrow><mrow>${next.innerHTML}</mrow></mfrac></math>`));
+      slash.remove();
+      math.remove();
+    }
+  }
+
   function annotate(container) {
     const documentRef = container.ownerDocument || root.document;
-    const walker = documentRef.createTreeWalker(container, 4), nodes = [];
-    while (walker.nextNode()) if (CANDIDATE.test(walker.currentNode.nodeValue) && !walker.currentNode.parentElement.closest(SKIP)) nodes.push(walker.currentNode);
     const element = html => {
       const template = documentRef.createElement('template');
       template.innerHTML = html;
       return template.content.firstChild;
     };
+    joinIndexes(container, element);
+    const walker = documentRef.createTreeWalker(container, 4), nodes = [];
+    while (walker.nextNode()) if (CANDIDATE.test(walker.currentNode.nodeValue) && !walker.currentNode.parentElement.closest(SKIP)) nodes.push(walker.currentNode);
     for (const node of nodes) {
       const whole = node.parentElement.matches('.inline-expression') && node.parentElement.childNodes.length === 1 && toMathML(node.nodeValue);
       const parts = whole ? [{math: whole}] : split(node.nodeValue);
       if (parts) node.replaceWith(...parts.map(part => typeof part === 'string' ? part : element(part.math)));
     }
+    joinFractions(container, element);
   }
 
   return {toMathML, split, annotate};
