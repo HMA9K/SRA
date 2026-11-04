@@ -2168,6 +2168,7 @@
 });
 
 SRAFormulaText.annotate(document.body);
+document.querySelectorAll('math').forEach(m=>{if(m.getBoundingClientRect().width<240)return;const s=document.createElement('span');s.style.cssText='display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle';m.replaceWith(s);s.append(m);});
 </script>
 <style>/* Shared mathematical layout for the interactive and independent reading editions. */
 /* Formules staan naast elkaar zolang ze passen; een te brede formule krijgt een eigen regel. */

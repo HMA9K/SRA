@@ -170,7 +170,8 @@ for i,l in enumerate(build_content.lessons):
         link=(ref['href'],ref['title']) if 'href' in ref else (f'bronnen/{build_content.sources[ref["source"]]["file"]}#page={ref["page"]}',build_content.sources[ref['source']]['title'])
         parts.append(f'<li id="bron-{l["id"]}-{n}"><a href="{e(link[0])}">{e(link[1])}</a>: {e(ref["locator"])}</li>')
     parts.append('</ol></details></article>')
-parts.append('<script>\n'+(root/'js/formula-text.js').read_text(encoding='utf-8')+'\nSRAFormulaText.annotate(document.body);\n</script>')
+parts.append('<script>\n'+(root/'js/formula-text.js').read_text(encoding='utf-8')+'\nSRAFormulaText.annotate(document.body);\n'
+             "document.querySelectorAll('math').forEach(m=>{if(m.getBoundingClientRect().width<240)return;const s=document.createElement('span');s.style.cssText='display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle';m.replaceWith(s);s.append(m);});\n</script>")
 parts.append('<style>'+presentation_css+(root/'css/learning-revision.css').read_text(encoding='utf-8')+'svg{max-width:100%;height:auto}</style></html>')
 read_version=embed_learning_images(plain_notation('\n'.join(parts)))
 read_version=read_version.replace('<title>', '<script data-goatcounter="https://sra.goatcounter.com/count" data-goatcounter-settings=\'{"no_onload":true}\' async src="https://gc.zgo.at/count.js"></script><script>\n'+(root/'js/page-names.js').read_text(encoding='utf-8')+'\n</script><title>', 1)
