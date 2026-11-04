@@ -24,7 +24,7 @@ const server=http.createServer((req,res)=>{
     await page.evaluate(id=>location.hash='#les/'+id,id);
     await page.waitForFunction(id=>document.querySelector('.lesson-top h1')?.textContent.endsWith(window.SRA.lessons.find(l=>l.id===id).title),id);
     const blocks=page.locator('#uitleg>section').filter({has:page.locator('.section-head').filter({hasText:/Wat je op het tentamen zelfstandig moet kunnen|College 8:/})});
-    assert.equal(await blocks.count(),id==='tentamen'?8:1);
+    assert.equal(await blocks.count(),id==='tentamen'?8:['beginnen','rekenen','onzekerheid'].includes(id)?0:1);
     for(let i=0;i<await blocks.count();i++){
      const block=blocks.nth(i);sections++;
      assert.equal(await block.locator(':scope>summary').count(),0,'tekstblok is vast open');

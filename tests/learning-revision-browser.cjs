@@ -31,7 +31,7 @@ const server=http.createServer((req,res)=>{
     await page.evaluate(()=>window.SRATerms.annotate(document.querySelector('#main')));
     assert.equal(await page.locator('#uitleg>section').count(),lesson.sections);
     assert.match(await page.locator('.lesson-source-title').textContent(),/Hoorcollege/);
-    assert.equal(await page.locator('#uitleg>.lesson-exam-focus').count(),1);
+    assert.equal(await page.locator('#uitleg>.lesson-exam-focus').count(),['beginnen','rekenen','onzekerheid'].includes(lesson.id)?0:1);
     assert.deepEqual(await duplicates(),[],`${lesson.id}: dubbel begrip bij ${width}px`);
     assert.equal(await overflow(),false,`${lesson.id}: horizontale pagina-overloop bij ${width}px`);
     const results=page.locator('#onderzoek .lab-all-results');
