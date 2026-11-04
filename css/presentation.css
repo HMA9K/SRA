@@ -50,7 +50,7 @@ table.numeric tfoot td,table.numeric tfoot th{font-weight:700;border-top:2px sol
  .math-scroll,.table-scroll,.chart-scroll{overflow:visible}.formula-typeset{break-inside:avoid}
  math{font-size:1em}.formula-label{color:#333}table.numeric{min-width:0}
 }
-.math-operator{font-weight:700;-webkit-text-stroke:.35px currentColor}
+.math-operator{font-family:Arial,sans-serif;font-weight:700}
 .formula-label{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 12px}
 .formula-number{font-size:.72rem;font-weight:600;letter-spacing:0;color:#0c447c;background:#fff;border:1px solid #b9c5d6;border-radius:4px;padding:0 6px;white-space:nowrap}
 .formula-goal{background:#e6f1fb;border:1px solid #bcd7ef;border-radius:8px;padding:10px 14px;margin:12px 0}

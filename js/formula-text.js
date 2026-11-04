@@ -132,8 +132,8 @@
         previous.nodeValue = previous.nodeValue.slice(0, base.index);
         index.replaceWith(element(`<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">${power ? `<msubsup>${symbol}${lower}${power}</msubsup>` : `<msub>${symbol}${lower}</msub>`}</math>`));
       }
+      previous.parentNode.normalize();
     }
-    container.normalize();
   }
 
   /* Rekentekens worden vet; het teken van een bedrag blijft gewoon. */
@@ -145,9 +145,10 @@
     }
     const walker = (container.ownerDocument || root.document).createTreeWalker(container, 4), nodes = [];
     while (walker.nextNode()) {
-      const parent = walker.currentNode.parentElement;
+      const value = walker.currentNode.nodeValue;
+      if (!/[+−×÷±=]/.test(value) || walker.currentNode.parentElement.closest(SKIP + ',.math-operator,button,a')) continue;
       TEXT_OPERATOR.lastIndex = 0;
-      if (TEXT_OPERATOR.test(walker.currentNode.nodeValue) && !parent.closest(SKIP + ',.math-operator,button,a')) nodes.push(walker.currentNode);
+      if (TEXT_OPERATOR.test(value)) nodes.push(walker.currentNode);
     }
     for (const node of nodes) {
       const parts = [];
