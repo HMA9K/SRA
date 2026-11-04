@@ -1,5 +1,6 @@
 """Gemaakt met Codex. Originele SRA-opgaven en antwoorden, per bronsectie."""
 from pathlib import Path
+import exam_text_repairs
 import json, re, subprocess, shutil
 from pypdf import PdfReader
 
@@ -64,6 +65,8 @@ def build():
                           answerSource=record['uitwerking'] or record['bron'], evidence=record['themas'],
                           duplicateOf=record.get('duplicateOf'), sourceNotes=record.get('bronopmerkingen', []),
                           answerBoundaries=record.get('antwoord_grenzen', {})))
+    for exam in exams:
+        exam_text_repairs.apply(exam)
     unique = [e for e in exams if not e['duplicateOf']]
     frequencies = {topic: sum(bool(e['evidence'].get(topic)) for e in unique) for topic in analysis['frequenties']}
     assert frequencies == analysis['frequenties'], 'Actualiseer frequenties op basis van inhoudelijk verschillende tentamens.'
