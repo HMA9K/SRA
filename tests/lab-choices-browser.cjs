@@ -26,6 +26,8 @@ try{
    assert.ok((await button.boundingBox()).height>=44);assert.ok(await button.evaluate(n=>n.scrollWidth<=n.clientWidth+1),page.url()+' '+page.viewportSize().width+' '+await button.innerText());
    await button.focus();await page.keyboard.press(i%2?'Space':'Enter');
    assert.equal(await button.getAttribute('aria-pressed'),'true');assert.equal(await lab.locator('[data-lab-choice][aria-pressed="true"]').count(),1);
+   // De formuleopmaak volgt een beeldje later; vergelijk de weergave pas daarna.
+   await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
    const rendered=await lab.evaluate((el,key)=>{const result=SRALabLayout.analyse(el.querySelector('.lab-result').innerHTML),expected=document.createElement('div');expected.innerHTML=result.metrics+result.views.find(v=>v.key===key).html;const content=node=>({text:node.textContent.replace(/\s+/g,' ').trim(),graphs:[...node.querySelectorAll('svg')].map(n=>n.outerHTML)});return {actual:content(el.querySelector('.lab-live')),expected:content(expected)};},key);
    assert.deepEqual(rendered.actual,rendered.expected);assert.equal(await lab.locator('.lab-result').textContent(),full);assert.deepEqual(await inputs(),before);
    // Editing a slider must update this view without choosing a different one.
