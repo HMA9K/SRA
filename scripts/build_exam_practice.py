@@ -14,6 +14,7 @@ from exam_mc.march_2023 import ROWS as MARCH_2023
 from exam_mc.october_2022 import ROWS as OCTOBER_2022
 from exam_mc.march_2022 import ROWS as MARCH_2022
 from exam_mc.november_2021 import ROWS as NOVEMBER_2021
+from exam_mc.november_2021_uitleg import UITLEG as NOVEMBER_2021_UITLEG
 from exam_mc.march_2020 import ROWS as MARCH_2020
 AUTHORED={'20260323':MARCH_2026,'20251028':OCTOBER_2025,'20250317':MARCH_2025,'20241028':OCTOBER_2024,'20240318':MARCH_2024,'20231030':OCTOBER_2023,'20230315':MARCH_2023,'20221031':OCTOBER_2022,'20220316':MARCH_2022,'20211101':NOVEMBER_2021,'20200323':MARCH_2020}
 DEPENDENCIES={('20231030',5):[4],('20231030',12):[11],('20230315',2):[1],('20230315',4):[3],('20230315',12):[11],('20230315',16):[14],('20241028',2):[1],('20241028',6):[5],('20240318',3):[1],('20240318',7):[6],('20240318',15):[12,14],('20250317',6):[5],('20250317',8):[7],('20250317',12):[11],('20250317',18):[13,14]}
@@ -48,6 +49,7 @@ def case_for_question(markup,cuts,number):
  stop=min((cut for n,cut in cuts.items() if n>=number),default=len(markup))
  note='<p class="mc-case-note">Het stuk onder ‘Nodig voor deze vraag’ hoort bij deze vraag. Gegevens uit de tekst erboven kunnen ook nodig zijn.</p>' if start else ''
  return note+markup[:start]+'<section class="mc-case-current" aria-label="Casustekst bij deze vraag"><p class="mc-case-current-label">Nodig voor deze vraag</p>'+markup[start:stop]+'</section>'
+EXPLANATIONS={'20211101':NOVEMBER_2021_UITLEG}
 def read_data(path,marker):return json.loads((ROOT/path).read_text(encoding='utf-8').split(marker,1)[1].rstrip(';\n'))
 def build():
  exams=read_data('data/cirrus-exams.js','window.SRA_CIRRUS_EXAMS = ')
@@ -72,7 +74,12 @@ def build():
     prerequisites='<details class="mc-prerequisites"><summary>Eerdere uitkomsten voor deze vraag</summary>'+''.join('<h3>Vraag '+html.escape(str(q['displayNumber']))+'</h3>'+q['solutionHtml']+'<p>'+html.escape(q.get('answerAudit',{}).get('note',''))+'</p>' for q in needed)+'</details>' if needed else ''
     focus=row['focus'] or source['prompt']
     explanation=correct+(' '+note if note and note!=correct else '')
-    options=resolved;reasons=[explanation]+['Deze optie is onjuist. '+explanation for _ in options[1:]]
+    options=resolved
+    written=EXPLANATIONS.get(canonical,{}).get((source['number'],row['part']))
+    # Zonder geschreven uitleg blijft alleen het antwoord met de officiële uitwerking staan; geen herhaling als schijnuitleg.
+    assert not EXPLANATIONS.get(canonical) or written,id
+    reasons=[written['why']]+written['wrong'] if written else []
+    assert not written or len(reasons)==len(options),id
     target=int(hashlib.sha256(id.encode()).hexdigest()[:8],16)%4
     options=options[-target:]+options[:-target] if target else options
     reasons=reasons[-target:]+reasons[:-target] if target else reasons
@@ -80,9 +87,9 @@ def build():
     question=dict(id=id,prompt=focus,originalPrompt=source['prompt'],originalPromptHtml=source['promptHtml'],sourceVisualHtml=source['promptHtml'] if source['hasSourceVisual'] else '',options=options,correct=target,level=3,
       topics=row['topics'],sourceExamId=canonical,sourceQuestionId=source['id'],sourceQuestionNumber=source['displayNumber'],sourcePart=row['part'],sourcePage=source['sourcePage'],sourceAnswerPage=audit.get('answerPage',1),
       caseHtml=case_for_question(section['caseHtml'],case_cuts(exam,section,boundaries.get(canonical,{})),source['number']),prerequisitesHtml=prerequisites,prerequisiteIds=[q['id'] for q in needed],
-      officialSolutionHtml=source['solutionHtml'],sourceNote=note,explanation=explanation,steps=[correct]+([note] if note and note!=correct else []),
-      optionExplanations=reasons,pattern=focus,trap='Controleer de bronvoorwaarden, eenheden en afronding. '+note,
-      recognition={'signals':source['prompt'],'meaning':focus,'approach':explanation,'answer':'Je antwoord moet deze conclusie onderbouwen: '+correct},guidance=guidance)
+      officialSolutionHtml=source['solutionHtml'],sourceNote=note,explanation=explanation,steps=written['steps'] if written else [],
+      optionExplanations=reasons,pattern=focus,trap=written['trap'] if written else '',
+      recognition={key:written[key] for key in ('signals','meaning','approach','answer')} if written else None,guidance=guidance)
     output.append(question)
  payload={'version':1,'questions':output}
  script='/* Oefeningen bij bestaande oorspronkelijke tentamenrecords. */\nwindow.SRAExamPractice = '+json.dumps(payload,ensure_ascii=False,indent=2)+';\n'
