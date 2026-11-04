@@ -22,7 +22,7 @@ const server=http.createServer((req,res)=>{const rel=decodeURIComponent(new URL(
  for(const width of [1366,768,390,320]){
   await page.setViewportSize({width,height:900});await page.goto(base+'/index.html#tentamen/mc');await page.locator('.mc-main-card').first().waitFor();
   await checkOverview();
-  assert.equal(await page.locator('.topic-exam-toggle').count(),0);
+  assert.ok(await page.locator('.topic-exam-toggle').count()>8);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Geen horizontale paginaoverloop');
   const ids=await page.locator('.mc-main-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.topic));assert.equal(new Set(ids).size,19);assert.ok(ids.indexOf('stratificatie')<ids.indexOf('steekproefomvang'));
   for(const button of await page.locator('.topic-exam-toggle').all()){
@@ -36,20 +36,20 @@ const server=http.createServer((req,res)=>{const rel=decodeURIComponent(new URL(
   await page.getByRole('link',{name:'Alle resultaten',exact:true}).click();await page.locator('.mc-all-results').waitFor();assert.equal(await page.locator('.mc-total-row').count(),19);assert.equal(await page.locator('.mc-part-card,.mc-main-card').count(),0);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));assert.ok((await page.locator('.mc-total-row').first().innerText()).includes('Nog niet gemaakt'));
   await page.screenshot({path:path.join(out,`sra-results-${width}.png`)});await page.getByRole('link',{name:'Terug naar onderwerpen',exact:true}).click();await checkOverview();
  }
- await page.setViewportSize({width:1366,height:900});await page.goto(base+'/index.html#tentamen/mc');await page.locator('#mc-home-direct').check();
+ await page.setViewportSize({width:1366,height:900});await page.goto(base+'/index.html#tentamen/mc');assert.equal(await page.locator('[data-direct-check]').count(),0,'Direct nakijken staat alleen bij de vragen');
  const first=await page.evaluate(()=>{const group=SRAMC.groups.find(g=>g.id==='hoofd-steekproeven'),q=group.questions[0];return {id:q.id,correct:q.correct,prompt:q.prompt,topic:SRAMCData.topics.find(t=>t.questions.some(item=>item.id===q.id)).id};});
  assert.equal(first.topic,'mpu');assert.equal(await samplingPart().locator('a.primary').getAttribute('href'),'#tentamen/mc/hoofd-steekproeven/1');await samplingPart().locator('a.primary').click();
- assert.match(page.url(),/#tentamen\/mc\/hoofd-steekproeven\/1$/);await page.locator('.mc-question-title').waitFor();
+ assert.match(page.url(),/#tentamen\/mc\/hoofd-steekproeven\/1$/);await page.locator('.mc-question-title').waitFor();await page.locator('[data-direct-check]').check();
  // Formulebladnotatie zoals Ŵ_MPU verschijnt als subscript; de tekst is verder letterlijk de vraag.
  const shown=await page.evaluate(p=>{const parts=window.SRAFormulaHelp.notationParts(p);return {text:parts.length?parts.map(x=>typeof x==='string'?x:x.sub).join(''):p,subs:parts.filter(x=>typeof x!=='string').length};},first.prompt);
- const plain=text=>text.normalize('NFD').replace(/[\u0302\u0304^¯\s]/g,'');assert.equal(plain(await page.locator('#mc-prompt').innerText()),plain(shown.text));assert.equal(await page.locator('#mc-prompt sub,#mc-prompt math').count(),Math.max(shown.subs,await page.locator('#mc-prompt math').count()));
+ assert.equal(await page.locator('#mc-prompt').innerText(),shown.text);assert.equal(await page.locator('#mc-prompt sub').count(),shown.subs);
  await page.locator('.mc-option>label').nth(first.correct).click();await page.locator('[data-mc-feedback="'+first.correct+'"] .is-correct').waitFor();
- await page.goto(base+'/index.html#tentamen/mc');assert.ok(await page.locator('#mc-home-direct').isChecked());assert.match(await samplingPart().locator('.mc-topic-score').innerText(),/^1 \/.*1 goed$/);assert.match(await subjects.locator('[data-topic="mpu"] .mc-topic-score').innerText(),/^1 \/.*1 goed$/);
+ await page.goto(base+'/index.html#tentamen/mc');assert.match(await samplingPart().locator('.mc-topic-score').innerText(),/^1 \/.*1 goed$/);assert.match(await subjects.locator('[data-topic="mpu"] .mc-topic-score').innerText(),/^1 \/.*1 goed$/);
  assert.equal(await samplingPart().locator('a.primary').getAttribute('href'),'#tentamen/mc/hoofd-steekproeven/2','De groepskaart hervat na de beantwoorde vraag');
  await subjects.locator('[data-topic="mpu"]').getByRole('link',{name:'Resultaten',exact:true}).click();await page.locator('.mc-result-list>details').first().locator(':scope>summary').click();await page.getByRole('link',{name:'Open vraag 1',exact:true}).click();
- assert.match(page.url(),/#tentamen\/mc\/mpu\/1$/);assert.equal(plain(await page.locator('#mc-prompt').innerText()),plain(shown.text));assert.ok(await page.locator('[data-direct-check]').isChecked());assert.ok(await page.locator('[data-mc-feedback="'+first.correct+'"] .is-correct').isVisible(),'Het antwoord uit de groepsreeks blijft bij hetzelfde deelonderwerp zichtbaar');
- await page.evaluate(()=>location.hash='#tentamen/mc/resultaten');await page.locator('.mc-all-results').waitFor();assert.match(await page.locator('.mc-stats').innerText(),/1 \/ 409/);assert.match(await page.locator('[data-result-topic="mpu"]').innerText(),/1 \/ 1 laatste poging goed/);assert.match(await page.locator('[data-result-topic="mpu"]').innerText(),/1 \/ 1 eerste poging goed/);
- await page.goto(base+'/SRA%20interactieve%20samenvatting.html#tentamen/mc');await page.locator('.mc-main-card').first().waitFor();await checkOverview();assert.equal(await page.locator('.topic-exam-toggle').count(),0);
+ assert.match(page.url(),/#tentamen\/mc\/mpu\/1$/);assert.equal(await page.locator('#mc-prompt').innerText(),shown.text);assert.ok(await page.locator('[data-direct-check]').isChecked());assert.ok(await page.locator('[data-mc-feedback="'+first.correct+'"] .is-correct').isVisible(),'Het antwoord uit de groepsreeks blijft bij hetzelfde deelonderwerp zichtbaar');
+ await page.evaluate(()=>location.hash='#tentamen/mc/resultaten');await page.locator('.mc-all-results').waitFor();assert.match(await page.locator('.mc-stats').innerText(),/1 \/ 134/);assert.match(await page.locator('[data-result-topic="mpu"]').innerText(),/1 \/ 1 laatste poging goed/);assert.match(await page.locator('[data-result-topic="mpu"]').innerText(),/1 \/ 1 eerste poging goed/);
+ await page.goto(base+'/SRA%20interactieve%20samenvatting.html#tentamen/mc');await page.locator('.mc-main-card').first().waitFor();await checkOverview();assert.ok(await page.locator('.topic-exam-toggle').count()>8);
  assert.deepEqual(errors,[]);console.log(JSON.stringify({ok:true,viewports:[1366,768,390,320],toggles,checks:'Eerst 4 delen en daarna 19 onderwerpen, basislabel, koppenhiërarchie, stabiele kaarten/paginahoogte/scrollpositie, toetsenbord, lichte/donkere weergave, groep starten en hervatten, gedeeld antwoord bij deelonderwerp, directe feedback en zelfstandige HTML',screenshots:out}));
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}})().catch(e=>{console.error(e);process.exitCode=1;});
 
