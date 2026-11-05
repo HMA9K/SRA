@@ -4071,19 +4071,9 @@ window.SRAMCData = {
           "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
         },
         {
-          "source": "opgaven",
-          "page": 6,
-          "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
-        },
-        {
           "source": "uitwerkingen",
           "page": 6,
-          "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
-        },
-        {
-          "source": "uitwerkingen",
-          "page": 8,
-          "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+          "locator": "H8, opgave 6, PDF 6-8: goedratio, standaardfout en interval"
         },
         {
           "source": "formules",
@@ -4181,19 +4171,9 @@ window.SRAMCData = {
               "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
             },
             {
-              "source": "opgaven",
-              "page": 6,
-              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
-            },
-            {
               "source": "uitwerkingen",
               "page": 6,
-              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
-            },
-            {
-              "source": "uitwerkingen",
-              "page": 8,
-              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+              "locator": "H8, opgave 6, PDF 6-8: goedratio, standaardfout en interval"
             },
             {
               "source": "formules",
@@ -4318,19 +4298,9 @@ window.SRAMCData = {
               "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
             },
             {
-              "source": "opgaven",
-              "page": 6,
-              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
-            },
-            {
               "source": "uitwerkingen",
               "page": 6,
-              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
-            },
-            {
-              "source": "uitwerkingen",
-              "page": 8,
-              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+              "locator": "H8, opgave 6, PDF 6-8: goedratio, standaardfout en interval"
             },
             {
               "source": "formules",
@@ -4455,19 +4425,9 @@ window.SRAMCData = {
               "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
             },
             {
-              "source": "opgaven",
-              "page": 6,
-              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
-            },
-            {
               "source": "uitwerkingen",
               "page": 6,
-              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
-            },
-            {
-              "source": "uitwerkingen",
-              "page": 8,
-              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+              "locator": "H8, opgave 6, PDF 6-8: goedratio, standaardfout en interval"
             },
             {
               "source": "formules",
@@ -4595,19 +4555,9 @@ window.SRAMCData = {
               "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
             },
             {
-              "source": "opgaven",
-              "page": 6,
-              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
-            },
-            {
               "source": "uitwerkingen",
               "page": 6,
-              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
-            },
-            {
-              "source": "uitwerkingen",
-              "page": 8,
-              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+              "locator": "H8, opgave 6, PDF 6-8: goedratio, standaardfout en interval"
             },
             {
               "source": "formules",
@@ -4734,19 +4684,9 @@ window.SRAMCData = {
               "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
             },
             {
-              "source": "opgaven",
-              "page": 6,
-              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
-            },
-            {
               "source": "uitwerkingen",
               "page": 6,
-              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
-            },
-            {
-              "source": "uitwerkingen",
-              "page": 8,
-              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+              "locator": "H8, opgave 6, PDF 6-8: goedratio, standaardfout en interval"
             },
             {
               "source": "formules",
@@ -4873,19 +4813,9 @@ window.SRAMCData = {
               "locator": "H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar"
             },
             {
-              "source": "opgaven",
-              "page": 6,
-              "locator": "H8, opgave 7: omzet voor en tijdens de campagne"
-            },
-            {
               "source": "uitwerkingen",
               "page": 6,
-              "locator": "H8, opgave 6, PDF 6-8: betekenis b en w"
-            },
-            {
-              "source": "uitwerkingen",
-              "page": 8,
-              "locator": "H8, opgave 7, PDF 8-9: betekenis b en w"
+              "locator": "H8, opgave 6, PDF 6-8: goedratio, standaardfout en interval"
             },
             {
               "source": "formules",

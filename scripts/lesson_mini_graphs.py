@@ -228,17 +228,17 @@ def enhance(lessons):
         'Dezelfde vier waarden als eerder: 80, 90, 110 en 120. Het totaal blijft een schatting.')
     add('verschil', 'Wat is hier een fout?', 'Het bedrag is constant',
         chart('Bij boekwaarden 100, 200 en 500 euro is de fout steeds 10 euro.', [(100,10),(200,10),(500,10)],
-              'Boekwaarde (€)', 'Fout (€)', reference=0, line=True), 'Vast bedrag: € 10 per post.')
+              'Boekwaarde (€)', 'Fout (€)', reference=0, line=True), 'De fout blijft € 10, hoe groot de post ook is.')
     add('quotient', 'Een vast percentage herkennen', 'Bij grotere boekwaarden',
         chart('Bij boekwaarden 100, 200 en 500 euro groeit de fout van 10 naar 20 naar 50 euro.', [(100,10),(200,20),(500,50)],
-              'Boekwaarde (€)', 'Fout (€)', reference=0, line=True), 'Vast percentage: 10% fout, dus 90% goed.')
+              'Boekwaarde (€)', 'Fout (€)', reference=0, line=True), 'De fout groeit mee: steeds 10% van de boekwaarde. Van iedere euro boekwaarde is 90 cent goed.')
     add('regressieschatter', 'De correctie verklaren en de helling uit productsommen berekenen', 'De correctie is positief',
         bars('MPU 95.000 euro plus correctie 4.655 euro geeft 99.655 euro.', ['MPU', 'Regressieschatter'], [95000,99655], 'Geschat totaal (€)'),
-        '€ 95.000 + 0,931 × € 5.000 = € 99.655.')
+        'MPU schat € 95.000. De correctie 0,931 × € 5.000 brengt de schatting op € 99.655.')
     add('stratificatie', 'Neyman en evenredige allocatie naast elkaar uitrekenen', 'Allocatie bepaalt',
         allocation(), 'De vier groepen uit de tabel. Bij Neyman verschuiven controles naar groepen met meer spreiding.')
     add('regressielijn', 'Hoe wordt de lijn gekozen?', 'Er zijn veel lijnen', residuals(),
-        'Elke verticale afstand is y − ŷ. Hier: 1² + (−2)² + 1² = 6.')
+        'Elke verticale afstand is y − ŷ. De som van de kwadraten is hier 1² + (−2)² + 1² = 6.')
     add('anova', 'Van de tabel naar betekenis', 'R² is het verklaarde', variance_share(),
         'Verklaard en resterend tellen samen op tot 100%.')
     add('toetsen', 'Toetsen en het interval voor de regressiehelling', 'Deze vormen', slope_interval(),
@@ -250,7 +250,7 @@ def enhance(lessons):
     add('meervoudig', 'Een categorie in cijfers', 'Een categorie zoals',
         bars('Dummy 0: bijdrage nul. Dummy 1: bijdrage 500 eenheden, bij gelijke overige kenmerken.',
              ['Geen leiding: dummy 0', 'Wel leiding: dummy 1'], [0,500], 'Bijdrage aan voorspelde y'),
-        'Het verschil is 500. De constante en overige modeltermen komen daar nog bij.')
+        'Met leiding is de voorspelling 500 hoger dan zonder leiding, bij gelijke overige kenmerken. De constante en overige modeltermen komen daar nog bij.')
     add('modelbouw', 'VIF lezen: van hulpregressie naar conclusie', 'Een VIF-uitkomst',
         bars('VIF 2,634 ligt onder de cursusgrens 10.', ['VIF uit het voorbeeld', 'Cursusgrens'], [2.634,10], 'VIF', digits=3),
         '2,634 &lt; 10: geen overschrijding van deze cursusgrens.')

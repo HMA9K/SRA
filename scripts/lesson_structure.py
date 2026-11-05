@@ -52,9 +52,9 @@ def _mpu(lesson):
         '<p>Gebruik deze stappen zodra een opgave om het totaal of een interval met de directe schatter vraagt. '
         'Elke stap gebruikt de uitkomst van de vorige; een fout in het begin werkt dus door in alles daarna.</p>'
     ) + re.search(r'<ol.*?</ol>', steps['html'], flags=re.S)[0] + inline_formulas(
-        '<h3>Dezelfde stappen met gegevens uit de colleges</h3>'
-        '<p>Op een tentamen krijg je meestal geen losse waarden, maar een samenvattingstabel. Dit zijn de '
-        'voorraadgegevens uit de colleges. De kwadratensom is in euro²; deze is dus niet de som van de waarden '
+        '<h3>Dezelfde stappen met een volledig voorbeeld</h3>'
+        '<p>Op een tentamen krijg je meestal geen losse waarden, maar een samenvattingstabel. Neem een '
+        'voorraad van 5.230 artikelen, waarvan er 180 zijn gecontroleerd. De kwadratensom is in euro²; deze is dus niet de som van de waarden '
         'nogmaals in euro.</p>') + worked
     watch = inline_formulas(
         '<p>De berekening kan kloppen terwijl de uitkomst toch weinig zegt. Let daarom op deze punten.</p><ul>'
