@@ -433,7 +433,9 @@ def enhance(lessons, sources):
                  'Laatste deel: q²s<sub>b</sub>² = 0,95² × 40² = 1.444.',
                  'Middelste term: 2 × 0,95 × 0,98 × 40 × 38 = 2.830,24. Deze trek je af.',
                  'Uitkomst: s<sub>q</sub>² = 1.444 − 2.830,24 + 1.444 = 57,76, dus s<sub>q</sub> = € 7,60.'])
-        + '<p>Zonder de middelste term zou je √2.888 ≈ € 53,74 vinden, veel te veel: de sterke samenhang '
+        + '<p>Op het tentamen schrijf je dit als één invulling: s<sub>q</sub> = √(38² − 2 × 0,95 × 0,98 × 40 × 38 '
+        '+ 0,95² × 40²) = € 7,60. De losse delen hierboven zijn alleen bedoeld om de term te begrijpen.</p>'
+        '<p>Zonder de middelste term zou je √2.888 ≈ € 53,74 vinden, veel te veel: de sterke samenhang '
         'blijft dan onbenut. q is een verhouding zonder eenheid, maar s<sub>q</sub> staat in euro en is '
         'geen standaardfout van een percentage.</p>',
         [ref('formules', 1, 'Formules 12-17; twee rekenwijzen voor s_q'), bookref('boek-h8b', 212)])
@@ -473,12 +475,12 @@ def enhance(lessons, sources):
         'zonder eerst s<sub>b</sub>, s<sub>w</sub> en R afzonderlijk te berekenen. '
         'Dit is nuttig wanneer een tentamencasus juist zulke kolommen aanlevert.</p>'
         + table('Sommen en populatiegegevens van een voorraadcontrole',
-                ['Grootheid', 'Waarde'], [
-                    ['N / n / B', '3.500 / 400 / € 7.360.817'],
-                    ['Σw / Σb', '€ 803.403 / € 830.066'],
-                    ['Σe²', '34.730.934 euro²'],
-                    ['Σbe', '53.988.529 euro²'],
-                    ['Σb²', '1.871.695.609 euro²'],
+                ['Grootheid', 'Waarde', 'Betekenis'], [
+                    ['N / n / B', '3.500 / 400 / € 7.360.817', 'Populatie, steekproef en totale boekwaarde'],
+                    ['Σw / Σb', '€ 803.403 / € 830.066', 'Som van de werkelijke waarden en van de boekwaarden'],
+                    ['Σe²', '34.730.934 euro²', 'Kwadrateer per post de fout e = b − w en tel op'],
+                    ['Σbe', '53.988.529 euro²', 'Vermenigvuldig per post b met e en tel op'],
+                    ['Σb²', '1.871.695.609 euro²', 'Kwadrateer per post de boekwaarde en tel op'],
                 ])
         + steps(['q = 803.403/830.066 = ' + number(q, 8) + '.',
                  's²<sub>q</sub> = [34.730.934 − 2(1 − q) × 53.988.529 '

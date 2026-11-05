@@ -675,6 +675,16 @@ def _book(printed, subject):
 _add('totale-boekwaarde', 'Totale boekwaarde', ['boekwaardetotaal', 'boektotaal', 'bekende boekwaardetotaal', 'bekend boekwaardetotaal'],
      'De som van de boekwaarden van alle posten in de populatie, geschreven als $B$. Dit bedrag staat al in de administratie; je hoeft het dus niet te schatten.',
      'Een voorraad van 3.500 artikelen heeft in het boek een totale boekwaarde van € 7.360.817.', 'verschil', _book(209, 'B als totale boekwaarde'))
+_SOMMEN = [('formules', 1, 'Formule 14: sommen voor s_q')]
+_add('som-gekwadrateerde-fouten', 'Som van de gekwadrateerde fouten', ['Σe²'],
+     'Kwadrateer per post de fout $e = b − w$ en tel de uitkomsten op. Bij regressie staat $e$ voor het residu, maar de rekenstap is hetzelfde.',
+     'Fouten 1, −2 en 3 geven $Σe²$ = 1 + 4 + 9 = 14.', 'quotient', _SOMMEN)
+_add('som-boekwaarde-maal-fout', 'Som van boekwaarde maal fout', ['Σbe'],
+     'Vermenigvuldig per post de boekwaarde $b$ met de fout $e$ en tel de uitkomsten op. Deze som laat zien of grote posten ook grote fouten hebben.',
+     'Een post met $b$ = 100 en $e$ = 10 en een post met $b$ = 200 en $e$ = 20 geven $Σbe$ = 1.000 + 4.000 = 5.000.', 'quotient', _SOMMEN)
+_add('som-gekwadrateerde-boekwaarden', 'Som van de gekwadrateerde boekwaarden', ['Σb²'],
+     'Kwadrateer per post de boekwaarde $b$ en tel de uitkomsten op. Dit is iets anders dan eerst optellen en daarna kwadrateren.',
+     'Boekwaarden 100 en 200 geven $Σb²$ = 10.000 + 40.000 = 50.000. Eerst optellen zou 300² = 90.000 geven.', 'quotient', _SOMMEN)
 _add('gemiddelde-boekwaarde', 'Gemiddelde boekwaarde', ['gemiddelde boekwaarden'],
      'Het gemiddelde van de boekwaarden in de steekproef, geschreven als $b̄ = {Σb}/n$.',
      'Boekwaarden van 100, 200 en 300 geven een gemiddelde boekwaarde van 600 / 3 = 200.', 'regressieschatter', _book(214, 'gemiddelde boekwaarde in de steekproef'))
