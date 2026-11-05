@@ -873,16 +873,14 @@ def enhance(lessons, sources):
     # Boek 8.20 was in de eerdere aanvulling alleen genoemd, niet als route uitgewerkt.
     body = '<p>Een te brede gestratificeerde schatting kun je op twee manieren '
     body += 'verbeteren: opnieuw over alle groepen verdelen, of gericht groepen met '
-    body += 'een grote variantiebijdrage uitbreiden. Het boek behandelt beide. '
-    body += 'De volgende algemene werkwijze is formule 8.20 en gebruikt een directe '
-    body += 'schatter per stratum.</p>'
+    body += 'een grote variantiebijdrage uitbreiden. De werkwijze hieronder gebruikt een '
+    body += 'directe schatter per stratum. Neyman verdeelt de controles naar omvang én '
+    body += 'spreiding: een groep met meer posten of meer spreiding krijgt meer controles.</p>'
     body += formula_block(STRATIFIED_PLANNING)
     body += '<p>N betreft de populatie waaruit wordt getrokken; een integraal '
-    body += 'gecontroleerd topstratum staat daarbuiten. De formule sluit aan op '
-    body += 'de cursusbenadering bij evenredige verdeling en vastgehouden '
-    body += 'stratumspreidingen. Voor een andere allocatie mag je niet zonder '
-    body += 'controle dezelfde n-verdeling invullen. E is de gewenste marge voor '
-    body += 'de totaalschatting.</p>'
+    body += 'gecontroleerd topstratum staat daarbuiten. De formule voor γ hoort bij een '
+    body += 'evenredige verdeling en vastgehouden spreidingen. Verdeel je met Neyman, reken '
+    body += 'de marge dan opnieuw na. E is de gewenste marge voor de totaalschatting.</p>'
     body += table('Invulvoorbeeld', ['Stratum', 'Nᵢ', 'sᵢ', 'Nᵢs²ᵢ'], [
         [1, 600, 20, '240.000'], [2, 400, 40, '640.000'], ['Som', '1.000', '', '880.000']])
     gamma = 3000**2/(2**2*880000)
@@ -893,7 +891,12 @@ def enhance(lessons, sources):
                    'afgerond 282. Een evenredige verdeling is 282 × 0,6 ≈ 169 en 282 × 0,4 ≈ 113 controles.',
                    'Reken de marge vervolgens na met deze gehele aantallen en '
                    'de twee afzonderlijke eindigheidscorrecties: E = t × √(variantie stratum 1 + variantie stratum 2) = 2 × √(613.093 + 1.629.561). Die is ongeveer '
-                   '€ 2.995,10 en voldoet dus aan de gestelde € 3.000.'])
+                   '€ 2.995,10 en voldoet dus aan de gestelde € 3.000.',
+                   'Verdelen met Neyman: Nᵢsᵢ is 600 × 20 = 12.000 en 400 × 40 = 16.000, samen 28.000. '
+                   'Dan is n₁ = 12.000/28.000 × 282 ≈ 121 en n₂ = 16.000/28.000 × 282 ≈ 161. '
+                   'Stratum 2 krijgt meer controles, omdat de spreiding daar groter is.',
+                   'Marge vergelijken: met 121 en 161 controles is E = 2 × √(951.669 + 952.443) ≈ € 2.759,79. '
+                   'Dat is kleiner dan € 2.995,10, met evenveel controles.'])
     body += '<p>Het alternatief is de al behandelde uitbreiding van één stratum: '
     body += 'doelvariantie (E/t)² minus de ongewijzigde bijdragen van andere strata '
     body += 'geeft de maximaal toegestane bijdrage van de te vergroten groep. '

@@ -108,7 +108,7 @@ def enhance(lessons,sources):
         'Hulpgrootheid: deel de gewenste variantiebijdrage door N₃ × s₃². Met N₃ = 300 en s₃ = 2.606,15 volgt γ₃ = 16.683.000.000 / (300 × 2.606,15²) ≈ 8,1876.',
         'Nieuwe totale n₃ = 300 / (1 + 8,1876) ≈ 32,65. Rond omhoog naar 33. Er waren 30 controles, dus voeg 33 − 30 = 3 toe.',
         'Controleer de marge met n₃ = 33 en de overige strata ongewijzigd. Bij de vastgehouden planningswaarden wordt s_tot ≈ € 252.499, dus de marge daalt tot 1,978 × 252.499, ongeveer € 499.443.'])
-    extension+='<p class="note">De cursusuitwerking gebruikt de gebruikelijke N − 1 ≈ N-benadering bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>'
+    extension+='<p class="note">Hier is N − 1 ≈ N gebruikt bij het terugrekenen van n. Met de exacte eindigheidscorrectie volgt hier eveneens 33. Wordt de benodigde bijdrage negatief, dan kan uitbreiding van alleen dit stratum niet volstaan. Meer controles dan Nᵢ zijn onmogelijk. Voeg varianties samen, niet standaardfouten.</p>'
     extension_refs=[dict(source='opgaven',page=8,locator='H8 opgave 9b/c, PDF 8'),dict(source='uitwerkingen',page=13,locator='H8 opgave 9c, PDF 13'),bookref('boek-h8c',231)]
     add(L['stratificatie'],'Gericht extra controles in één stratum',extension,refs=extension_refs)
     add(L['steekproefomvang'],'Uitbreiding na stratificatie',extension,refs=extension_refs)

@@ -206,7 +206,7 @@ def formula_block(formulas):
 
 STRATIFIED_PLANNING = [
     ('Tussenstap', eq(v('γ'), frac(sq(v('E')), mul(sq(t), summ(group(row(Ni, sq(si)))))))),
-    ('Benodigde omvang', eq(n, frac(N, add(one, v('γ'))))),
+    ('Neyman-verdeling', eq(ni, mul(frac(row(Ni, si), summ(group(row(Ni, si)))), n))),
 ]
 
 
