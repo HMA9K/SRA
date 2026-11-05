@@ -27,6 +27,11 @@ if(!base)throw Error('Geef LEARNING_URL op.');fs.mkdirSync(out,{recursive:true})
   await page.locator('#sidebar a[href="#les/validatie"]').click();await page.waitForFunction(()=>location.hash==='#les/validatie'&&document.querySelector('.lesson-top h1')?.textContent.includes('Valideren'));
   assert.equal(await page.locator('.lesson-top').isVisible(),false);assert.match(await label('validatie').textContent(),/geen boekparagraaf.*Hoorcollege 7; toepassing in 8/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
+  // Het bronlabel staat naast de kop, anders plakt het tegen de paginatitel aan.
+  await page.evaluate(()=>{location.hash='#formules/verschil'});await page.waitForFunction(()=>document.querySelector('.formula-guide h1'));
+  assert.match(await page.locator('.formula-guide .lesson-source-title').textContent(),/Hoorcollege/);
+  assert.match(await page.title(),/^Formules: /);
+  await page.evaluate(()=>{location.hash='#les/validatie'});await page.waitForFunction(()=>document.querySelector('.lesson-top h1'));
   await page.screenshot({path:path.join(out,`les-${width}-${theme}.png`)});
  }
  assert.deepEqual(errors,[]);console.log('OK: 19 zichtbare koppelingen, duidelijke groepsnaam, bronregel in het lesmenu in plaats van boven de les; drie breedtes, licht/donker.');
