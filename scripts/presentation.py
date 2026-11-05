@@ -211,6 +211,8 @@ STRATIFIED_PLANNING = [
 
 
 def inline_formulas(content):
+    # s<sub>w</sub> blijft zo één geheel met de rest van de rekenregel, ook in een breuk.
+    content = re.sub(r'(?<![\w])([A-Za-zŴŷ])([²³]?)<sub>([A-Za-z0-9]{1,3})</sub>([²³]?)', r'\1\2_\3\4', content)
     """Typeset known inline notation without touching markup or existing MathML."""
     from html.parser import HTMLParser
 
@@ -241,7 +243,10 @@ def inline_formulas(content):
 
     # Blijft als één geheel staan; js/formula-text.js zet dit om naar een wortel of breuk.
     group = r'\((?:[^()]|\((?:[^()]|\([^()]*\))*\))*\)'
-    wide = re.compile(r'(?<![\w/])(?:[^\s()\[\]]+\s*=\s*)?(?:\[[^\[\]]*\]\s*/\s*\d[\d.,]*\d|(?:\[[^\[\]]*\]|[^\s()\[\]/]+|' + group + r')\s*/\s*' + group + r')'
+    bracket = r'\[[^\[\]]*\]'
+    power = r'[²³]?'
+    wide = re.compile(r'(?<![\w/])(?:[^\s()\[\]]+\s*=\s*)?(?:(?:' + bracket + '|' + group + ')' + power + r'\s*/\s*(?:\d(?:[\d.,]*\d)?|[A-Za-zΣ][\w²³]*)(?![\w/])'
+                      + r'|(?:' + bracket + r'|[^\s()\[\]/]+|' + group + ')' + power + r'\s*/\s*(?:' + group + '|' + bracket + '))'
                       + r'|(?:(?<![\w/])[^\s()\[\]]+\s*=\s*)?(?:(?<![\w/])[^\s()]+/)?√(?:' + group + r'|\[[^\[\]]*\])(?:/' + group + r')?')
 
     def replace(match):
@@ -277,7 +282,7 @@ def inline_formulas(content):
         for match in expressions.finditer(value):
             parts.append(format_plain(value[previous:match.start()]))
             content = tokens.sub(replace, match[0])
-            if re.search(r'[A-Za-zα-ωΣ√=<>≤≥≈±×÷+−]', match[0]):
+            if re.search(r'[A-Za-zα-ωΣ√=<>≤≥≈±×÷+−]', match[0]) or ('/' in match[0] and not re.fullmatch(r'0/1|\d{4}/\d{4}', match[0])):
                 content = '<span class="inline-expression">' + content + '</span>'
             parts.append(content)
             previous = match.end()

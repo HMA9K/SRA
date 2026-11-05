@@ -164,7 +164,7 @@ def enhance(lessons, sources):
                    'terwijl de waarden duidelijk uiteenlopen. Kwadrateren voorkomt die opheffing.',
                    'Via de afwijkingen: s² = 1.000/(4 − 1) = 333,3333 euro².',
                    'Via de sommen: s² = [41.000 − 400²/4]/3 = [41.000 − 40.000]/3 = 333,3333 euro².',
-                   'Neem de wortel om terug te keren naar euro: s = 18,2574. '
+                   'Neem de wortel om terug te keren naar euro: s = √333,3333 = 18,2574. '
                    'Voor de onzekerheid van het gemiddelde deel je daarna pas door √n.'])
     body += '<p>Met een berekend gemiddelde zijn maar n − 1 afwijkingen vrij te kiezen: '
     body += 'de laatste afwijking ligt vast doordat ze samen nul moeten zijn. '
@@ -277,11 +277,11 @@ def enhance(lessons, sources):
     # Corrigeer aantoonbare bestaande tabelkeuze in het MPU-voorbeeld.
     L['mpu']['example']['steps'] = [
         'Gegevens: N = 1.000, n = 100, w̄ = € 80, s_w = € 20.',
-        'Kritieke waarde: tweezijdig 95% en df = n − 1 = 99. Tabellenbundel PDF 13, rij 95, kolom 0,025: t = 1,985.',
+        'Kritieke waarde: tweezijdig 95% en df = n − 1 = 99. Rij 99 ontbreekt, dus tabellenbundel PDF 13, rij 95, kolom 0,025: t = 1,985.',
         'Puntschatting: reken het gemiddelde door naar alle artikelen: Ŵ = N × w̄ = 1.000 × 80 = € 80.000.',
-        'Eindigheidscorrectie: √((N − n)/(N − 1)) = √(900/999) ≈ 0,9492. De 100 al gecontroleerde posten verkleinen de resterende onzekerheid.',
-        'Standaardfout: s_MPU = N × s_w / √n × correctie = 1.000 × (20/10) × √(900/999) ≈ € 1.898,32.',
-        'Marge: reken onafgerond door: E = 1,985 × 1.898,31599 ≈ € 3.768,16.',
+        'Eindigheidscorrectie: √((N − n)/(N − 1)) = √((1.000 − 100)/(1.000 − 1)) = √(900/999) ≈ 0,9492. De 100 al gecontroleerde posten verkleinen de resterende onzekerheid.',
+        'Standaardfout: s_MPU = N × s_w / √n × correctie = 1.000 × (20/√100) × √(900/999) = 1.000 × 2 × 0,949158 ≈ € 1.898,32.',
+        'Marge: reken onafgerond door: E = t × s_MPU = 1,985 × 1.898,31599 ≈ € 3.768,16.',
         'Interval: 80.000 − 3.768,16 en 80.000 + 3.768,16 geven [€ 76.231,84; € 83.768,16].']
     # Ook de formulegids bevat een kopie van het oude voorbeeld.
     for guide in L['mpu']['formulaGuide']:
@@ -305,13 +305,13 @@ def enhance(lessons, sources):
         ['Σw²', '5.378.400.500 euro²', 'Berekening van de steekproefvariantie'],
         ['Betrouwbaarheid', '95%, tweezijdig', 'Kolom 0,025 van de t-tabel'],
     ])
-    body += steps(['Gemiddelde en totaal: w̄ = Σw/n = 398.000/180 = € 2.211,1111; Ŵ = N × w̄ = 5.230 × w̄ = ' + money(result['estimate']) + '.',
-                   'Spreiding: s² = [Σw² − (Σw)²/n]/(n − 1) = [5.378.400.500 − 398.000²/180]/179 = ' + number(result['variance'])
-                   + ' euro². Neem de wortel: s<sub>w</sub> = ' + money(result['sd'], 4) + '.',
-                   'Standaardfout: s<sub>MPU</sub> = 5.230 × (s<sub>w</sub>/√180) × √(5.050/5.229) = '
+    body += steps(['Gemiddelde en totaal: w̄ = Σw/n = 398.000/180 = € 2.211,1111; Ŵ = N × w̄ = 5.230 × 398.000/180 = ' + money(result['estimate']) + '.',
+                   'Spreiding: s² = [Σw² − (Σw)²/n]/(n − 1) = [5.378.400.500 − 398.000²/180]/179 = [5.378.400.500 − 880.022.222,22]/179 = 4.498.378.277,78/179 = ' + number(result['variance'])
+                   + ' euro². Neem de wortel: s<sub>w</sub> = √25.130.604,90 = ' + money(result['sd'], 4) + '.',
+                   'Standaardfout: s<sub>MPU</sub> = N × s<sub>w</sub>/√n × √((N − n)/(N − 1)) = 5.230 × (5.013,04348/√180) × √(5.050/5.229) = '
                    + money(result['se']) + '. Elke factor heeft een doel: gemiddelde, totaal en resterende populatie.',
-                   'Kritieke waarde: df = n − 1 = 179. Tabellenbundel PDF 13, rij 170, kolom 0,025 geeft t = 1,974.',
-                   'Marge en interval: E = 1,974 × s<sub>MPU</sub> = ' + money(1.974*result['se']) + '. Interval: ['
+                   'Kritieke waarde: df = n − 1 = 179. Rij 179 ontbreekt, dus tabellenbundel PDF 13, rij 170, kolom 0,025 geeft t = 1,974.',
+                   'Marge en interval: E = t × s<sub>MPU</sub> = 1,974 × 1.920.451,20 = ' + money(1.974*result['se']) + '. Interval: 11.564.111,11 − 3.790.970,67 en 11.564.111,11 + 3.790.970,67 geven ['
                    + money(result['estimate']-1.974*result['se']) + '; '
                    + money(result['estimate']+1.974*result['se']) + '].'])
     body += '<p class="note">Reken met de gegeven sommen onafgerond door: tussentijds afronden '
@@ -361,12 +361,12 @@ def enhance(lessons, sources):
     ])
     body += steps(['Fouttotaal: Σb = n × b̄ = 165 × 636 = € 104.940. Daardoor Σe = Σb − Σw = 104.940 − 97.185 = € 7.755 en ē = 7.755/165 = € 47.',
                    'De geschatte totale fout is Nē = 3.740 × 47 = € 175.780. '
-                   'De geschatte werkelijke waarde is B − Nē = € 1.804.220. Dit zijn twee verschillende antwoorden.',
-                   'Gebruik alle 165 posten, ook de 122 posten met e = 0: '
-                   'Spreiding van de fouten: s²<sub>e</sub> = [395.000 − 7.755²/165]/164 = 186,0671 euro².',
-                   'Vermenigvuldig √186,0671/√165 met N en de eindigheidscorrectie. '
-                   's<sub>V</sub> = € 3.883,5123; met t = 1,975 is E = € 7.669,9368.',
-                   'Het interval voor W is [€ 1.796.550,06; € 1.811.889,94]. '
+                   'De geschatte werkelijke waarde is B − Nē = 1.980.000 − 175.780 = € 1.804.220. Dit zijn twee verschillende antwoorden.',
+                   'Spreiding van de fouten: gebruik alle 165 posten, ook de 165 − 43 = 122 posten met e = 0. '
+                   's²<sub>e</sub> = [395.000 − 7.755²/165]/164 = [395.000 − 364.485]/164 = 30.515/164 = 186,0670732 euro²; s<sub>e</sub> = √186,0670732 = € 13,6406405.',
+                   'Standaardfout en marge: vermenigvuldig s<sub>e</sub>/√165 met N en de eindigheidscorrectie. '
+                   's<sub>V</sub> = 3.740 × (13,6406405/√165) × √(3.575/3.739) = € 3.883,5123. Met t = 1,975 is E = 1,975 × 3.883,5123 = € 7.669,9368.',
+                   'Interval voor W: 1.804.220 − 7.669,94 en 1.804.220 + 7.669,94 geven [€ 1.796.550,06; € 1.811.889,94]. '
                    'Afronden naar buiten op € 10.000 geeft [€ 1.790.000; € 1.820.000].'])
     body += '<p class="note"><strong>Let op:</strong> de opgavecijfers zijn onderling niet helemaal consistent. Reken op het tentamen met de gegeven cijfers.</p>'
     body += exercise('<p>Gebruik dit interval om ook een interval voor de totale fout F = B − W '
@@ -408,11 +408,11 @@ def enhance(lessons, sources):
             ['Som vorig jaar, steekproef', 'Σb = € 12.000, dus b̄ = € 120'],
             ['Som dit jaar, steekproef', 'Σw = € 17.500, dus w̄ = € 175'],
             ['Spreiding en samenhang', 'sb = 35,104; sw = 32,177; R = 0,94946']])
-        + steps(['Goedratio: q = 17.500/12.000 = 1,4583. De werknemers in de steekproef declareren dit jaar ongeveer 46% meer.',
-                 'Puntschatting: Ŵ = 17.500/12.000 × € 125.000 = € 182.291,67.',
-                 'Resterende spreiding: sq = √(32,177² − 2 × 1,4583 × 0,94946 × 35,104 × 32,177 + 1,4583² × 35,104²) ≈ 22,98.',
-                 'Standaardfout van het totaal: 1.000 × 22,98/√100 × √(900/999) ≈ € 2.181.',
-                 'Interval: df = 99, dus tabelrij 95 met t = 1,985. De marge is 1,985 × € 2.181 ≈ € 4.330. Dat geeft ongeveer [€ 177.962; € 186.622].'])
+        + steps(['Goedratio: q = Σw/Σb = 17.500/12.000 = 1,4583. Omdat 1,4583 − 1 = 0,4583, declareren de werknemers in de steekproef dit jaar ongeveer 46% meer.',
+                 'Puntschatting: Ŵ = q × B = 17.500/12.000 × € 125.000 = € 182.291,67.',
+                 'Resterende spreiding: s<sub>q</sub> = √(s<sub>w</sub>² − 2 × q × R × s<sub>b</sub> × s<sub>w</sub> + q² × s<sub>b</sub>²) = √(32,177² − 2 × 1,4583 × 0,94946 × 35,104 × 32,177 + 1,4583² × 35,104²) = √(1.035,36 − 3.127,92 + 2.620,64) = √528,08 ≈ 22,98.',
+                 'Standaardfout van het totaal: s<sub>Q</sub> = N × s<sub>q</sub>/√n × √((N − n)/(N − 1)) = 1.000 × 22,98/√100 × √(900/999) ≈ € 2.181,17.',
+                 'Interval: df = n − 1 = 99. Rij 99 ontbreekt, dus tabelrij 95 met t = 1,985. De marge is E = 1,985 × € 2.181,17 ≈ € 4.330. Dan geven 182.291,67 − 4.330 en 182.291,67 + 4.330 ongeveer [€ 177.962; € 186.622].'])
         + '<p>Koppel in zo’n vergelijking steeds dezelfde werknemer en gebruik het bekende '
         'totaal van de gehele populatie.</p>'
         '<p>Let ook op de beperking: de eerste honderd binnengekomen declaraties vormen niet vanzelf '
@@ -430,9 +430,9 @@ def enhance(lessons, sources):
         'verhouding al, dus het hoort niet bij de onzekerheid die overblijft.</p>'
         + steps(['Neem q = 0,95, s<sub>b</sub> = 40, s<sub>w</sub> = 38 en R<sub>bw</sub> = 0,98.',
                  'Eerste deel: s<sub>w</sub>² = 38² = 1.444.',
-                 'Laatste deel: q²s<sub>b</sub>² = 0,95² × 40² = 1.444.',
+                 'Laatste deel: q²s<sub>b</sub>² = 0,95² × 40² = 0,9025 × 1.600 = 1.444.',
                  'Middelste term: 2 × 0,95 × 0,98 × 40 × 38 = 2.830,24. Deze trek je af.',
-                 'Uitkomst: s<sub>q</sub>² = 1.444 − 2.830,24 + 1.444 = 57,76, dus s<sub>q</sub> = € 7,60.'])
+                 'Uitkomst: s<sub>q</sub>² = 1.444 − 2.830,24 + 1.444 = 57,76, dus s<sub>q</sub> = √57,76 = € 7,60.'])
         + '<p>Op het tentamen schrijf je dit als één invulling: s<sub>q</sub> = √(38² − 2 × 0,95 × 0,98 × 40 × 38 '
         '+ 0,95² × 40²) = € 7,60. De losse delen hierboven zijn alleen bedoeld om de term te begrijpen.</p>'
         '<p>Zonder de middelste term zou je √2.888 ≈ € 53,74 vinden, veel te veel: de sterke samenhang '
@@ -450,11 +450,11 @@ def enhance(lessons, sources):
         ['Σb / Σw', '€ 20.000 / € 19.000'], ['s<sub>b</sub> / s<sub>w</sub>', '€ 40 / € 38'],
         ['R<sub>bw</sub>', '0,98'], ['N / n / B', '2.500 / 100 / € 500.000']])
     body += steps(['Goedratio en totaal: q = Σw/Σb = 19.000/20.000 = 0,95; Ŵ<sub>Q</sub> = q × B = 0,95 × 500.000 = € 475.000.',
-                   'Resterende spreiding: s²<sub>q</sub> = 38² − 2 × 0,95 × 0,98 × 40 × 38 + 0,95² × 40² '
-                   '= 57,76 euro²; s<sub>q</sub> = € 7,60.',
+                   'Resterende spreiding: s²<sub>q</sub> = s<sub>w</sub>² − 2 × q × R<sub>bw</sub> × s<sub>b</sub> × s<sub>w</sub> + q²s<sub>b</sub>² = 38² − 2 × 0,95 × 0,98 × 40 × 38 + 0,95² × 40² '
+                   '= 1.444 − 2.830,24 + 1.444 = 57,76 euro²; s<sub>q</sub> = √57,76 = € 7,60.',
                    'Standaardfout van het totaal: s<sub>Q</sub> = N × s<sub>q</sub>/√n × √((N − n)/(N − 1)) = 2.500 × (7,60/√100) × √(2.400/2.499) = ' + money(se) + '.',
-                   'Kritieke waarde: df = n − 1 = 99: tabellenbundel PDF 13, rij 95, kolom 0,025 geeft t = 1,985.',
-                   'Marge en interval: E = 1,985 × ' + money(se) + ' = ' + money(1.985*se) + '; interval [' + money(475000-1.985*se)
+                   'Kritieke waarde: df = n − 1 = 99. Rij 99 ontbreekt, dus tabellenbundel PDF 13, rij 95, kolom 0,025 geeft t = 1,985.',
+                   'Marge en interval: reken onafgerond door: E = t × s<sub>Q</sub> = 1,985 × ' + money(se) + ' = ' + money(1.985*se) + '; interval: 475.000 − 3.696,04 en 475.000 + 3.696,04 geven [' + money(475000-1.985*se)
                    + '; ' + money(475000+1.985*se) + '].'])
     body += exercise('<p>De accountant wil daarnaast de geschatte totale overwaardering rapporteren. '
                      'Bereken dat bedrag. Leg uit waarom € 7,60 niet de marge van deze schatting is.</p>',
@@ -484,12 +484,12 @@ def enhance(lessons, sources):
                 ])
         + steps(['Goedratio: q = Σw/Σb = 803.403/830.066 = ' + number(q, 8) + '.',
                  'Resterende spreiding met formule 14: s²<sub>q</sub> = [34.730.934 − 2(1 − q) × 53.988.529 '
-                 '+ (1 − q)² × 1.871.695.609]/399. Neem de wortel: '
+                 '+ (1 − q)² × 1.871.695.609]/399, met 1 − q = 0,03212154. Dat is [34.730.934 − 3.468.389,62 + 1.931.203,31]/399 = 33.193.747,69/399 = 83.192,35. Neem de wortel van 83.192,35: '
                  's<sub>q</sub> = ' + money(sq, 4) + '.',
-                 'Puntschatting en standaardfout: Ŵ<sub>Q</sub> = q × B = ' + money(W) + '; s<sub>Q</sub> = '
+                 'Puntschatting en standaardfout: Ŵ<sub>Q</sub> = q × B = 803.403/830.066 × 7.360.817 = ' + money(W) + '; s<sub>Q</sub> = N × s<sub>q</sub>/√n × √((N − n)/(N − 1)) = 3.500 × (288,4308/√400) × √(3.100/3.499) = '
                  + money(se) + '.',
-                 'De actuele cursusregel geeft bij df = 399 de onderste t-rij: '
-                 't = 1,960 bij 95% tweezijdig. Daarmee wordt het interval ['
+                 'Kritieke waarde en interval: df = n − 1 = 399 is groter dan 200, dus de actuele cursusregel geeft de onderste t-rij: '
+                 't = 1,960 bij 95% tweezijdig. Marge: E = 1,960 × 47.510,3928 = € 93.120,37. Interval: 7.124.376,21 − 93.120,37 en 7.124.376,21 + 93.120,37 geven ['
                  + money(W-1.96*se) + '; ' + money(W+1.96*se) + '].'])
         + '<p class="note">Let op: deze steekproef bevat 28 fouten. Dat is minder dan de '
         'voorwaarde van minstens 30 fouten, dus dit voorbeeld oefent alleen de berekening. '
@@ -571,11 +571,11 @@ def enhance(lessons, sources):
         'de marge gemiddeld is en hoe vaak het interval de werkelijke waarde W mist.</p>'
         + '<p><strong>Hoe kom je aan de marge?</strong> Iedere marge is t × vaste factor × spreiding. '
         'Alleen de spreiding verschilt per schatter.</p>'
-        + steps(['Vaste factor: N/√n × √((N − n)/(N − 1)) = 3.500/20 × √(3.100/3.499) ≈ 164,72.',
-                 'Kritieke waarde: bij 95% en df = 399 is t = 1,966.',
+        + steps(['Vaste factor: N/√n × √((N − n)/(N − 1)) = 3.500/√400 × √(3.100/3.499) = 175 × 0,94126 ≈ 164,72.',
+                 'Kritieke waarde: bij 95% en df = 400 − 1 = 399 is t = 1,966 (exacte waarde, niet uit een tabelrij).',
                  'MPU: de spreiding van w is 680,58, dus 1,966 × 164,72 × 680,58 ≈ € 220.399.',
-                 'Quotiënt: de resterende spreiding is 288,44, dus 1,966 × 164,72 × 288,44 ≈ € 93.409.',
-                 'Verschil en regressie: ook daar is de spreiding ongeveer 287, dus de marge is ongeveer € 93.000.'])
+                 'Quotiënt: de resterende spreiding is 288,44, dus 1,966 × 164,72 × 288,44 ≈ € 93.409 (onafgerond gerekend).',
+                 'Verschil en regressie: ook daar is de spreiding ongeveer 287, dus de marge is 1,966 × 164,72 × 287, ongeveer € 93.000.'])
         + table('Gerealiseerde marge per schatter', ['Schatter', 'Marge steekproef 1', 'Gemiddelde marge', 'Interval mist W'], [
             ['Direct (MPU)', '€ 220.399', '€ 221.864 (20 steekproeven)', '2 van 20'],
             ['Verschil', '€ 93.068', '€ 108.856 (20 steekproeven)', '2 van 20'],
@@ -643,12 +643,12 @@ def enhance(lessons, sources):
         + table('Invoer voor de berekening', ['Grootheid', 'Waarde'], [
             ['N', '28.946'], ['Reeds gecontroleerd n', '1.000'], ['s<sub>q</sub>', '€ 213,51'],
             ['t', '1,960'], ['E', '€ 310.000']])
-        + steps(['Hulpgrootheid: γ = E²/(t² × N × s<sub>q</sub>²) = 310.000²/(1,960² × 28.946 × 213,51²) = ' + number(gamma, 5) + '.',
-                 'Benodigde omvang: n = N/(1 + γ) = 28.946/(1 + γ) = ' + number(required, 5) + '; rond omhoog naar '
+        + steps(['Hulpgrootheid: γ = E²/(t² × N × s<sub>q</sub>²) = 310.000²/(1,960² × 28.946 × 213,51²) = 96.100.000.000/5.069.173.333 = ' + number(gamma, 5) + '.',
+                 'Benodigde omvang: n = N/(1 + γ) = 28.946/(1 + 18,95773) = ' + number(required, 5) + '; rond omhoog naar '
                  + number(ceil(required), 0) + '.',
-                 'Er zijn al 1.000 controles: aanvullend nodig ' + str(ceil(required)-1000) + '.',
-                 'Na de uitbreiding blijkt s<sub>q</sub> € 195,17 te zijn, met '
-                 'een gerealiseerde marge van circa € 283.305. Die is kleiner dan de '
+                 'Extra controles: er zijn al 1.000 posten gecontroleerd, dus nog 1.451 − 1.000 = ' + str(ceil(required)-1000) + '.',
+                 'Marge na uitbreiding: s<sub>q</sub> blijkt € 195,17 te zijn. Dat geeft een standaardfout van circa € 144.544, met '
+                 'een gerealiseerde marge van 1,960 × 144.544, circa € 283.305. Die is kleiner dan de '
                  'geplande € 310.000 doordat de nieuwe spreiding lager is.'])
         + exercise('<p><strong>Vervolg.</strong> Een collega wil in γ '
                    '€ 620.000 invullen, omdat dat de toegestane totale breedte is. '
@@ -679,12 +679,12 @@ def enhance(lessons, sources):
     body += steps(['Haal de 48 posten met boekwaarde ≥ € 10.000 apart voor volledige controle. '
                    'De overige 4.775 posten hebben samen € 14.306.659 boekwaarde.',
                    'Voor vier steekproefstrata is het streefbedrag per groep '
-                   '14.306.659/4 = € 3.576.664,75. Cumulatieve doelen: '
+                   '14.306.659/4 = € 3.576.664,75. Cumulatieve doelen (1, 2 en 3 keer dit bedrag): '
                    '€ 3.576.664,75; € 7.153.329,50; € 10.729.994,25.',
                    'Vergelijk ieder doel met de beschikbare cumulatieve bedragen. '
                    'Bij het eerste doel ligt € 3.554.809 dichtbij: de bijbehorende '
                    'boekwaardegrens per post is € 3.000, niet € 3.554.809.',
-                   'Bij het tweede doel kies je € 7.807.828 (grens € 5.000); '
+                   'Bij het tweede doel ligt € 7.807.828 het dichtst bij (grens € 5.000); '
                    'bij het derde € 11.176.794 (grens € 7.000). Zonder individuele '
                    'postgegevens splits je de beschikbare klassen niet willekeurig.'])
     body += table('Resultaat: van cumulatieve bedragen naar afzonderlijke strata',
@@ -724,12 +724,12 @@ def enhance(lessons, sources):
     body += table('Volledige rekenkolommen, zonder het 100%-stratum',
                   ['Boekwaardeklasse (€)', 'Breedte', 'Frequentie', 'Breedte × frequentie', 'Wortel', 'Cumulatief'], rows)
     body += steps(['Het cumulatieve worteltotaal is ' + number(cumulative) + '. '
-                   'De vier streefdelen zijn elk ' + number(cumulative/4) + '.',
-                   'Vergelijk doelen 1.802,20; 3.604,40 en 5.406,60 met de cumulatieve '
-                   'kolom. De nabije beschikbare grenzen zijn 1.943,67; 3.671,02 en 5.618,65.',
+                   'De vier streefdelen zijn elk 7.208,78 / 4 ≈ ' + number(cumulative/4) + '.',
+                   'Vergelijk doelen 1.802,19; 3.604,39 en 5.406,58 met de cumulatieve '
+                   'kolom. De nabije beschikbare grenzen zijn 1.943,66; 3.671,01 en 5.618,63.',
                    'Lees vervolgens de bijbehorende bovengrenzen uit de boekwaardeklassen: '
                    '€ 1.200, € 2.500 en € 5.000. De vierde groep eindigt bij € 10.000.',
-                   'Tel de frequenties binnen de nieuwe groepen op. Gebruik pas die '
+                   'Tel de frequenties binnen de nieuwe groepen op, bijvoorbeeld 772 + 1.016 + 1.408 = 3.196 posten. Gebruik pas die '
                    'groepsomvangen bij de allocatie.'])
     body += table('Twee indelingen van dezelfde populatie',
                   ['Methode', 'Grenzen van vier strata (€)', 'Aantallen Nᵢ'], [
@@ -769,15 +769,15 @@ def enhance(lessons, sources):
                   ['Stratum', 'Nᵢ', 'Vooraf sᵢ', 'Nᵢsᵢ', 'Neyman onafgerond', 'Neyman geheel', 'Evenredig onafgerond'], alloc_rows)
     body += '<div class="formula">Neyman: nᵢ = n × Nᵢsᵢ / ΣNᵢsᵢ<br>'
     body += 'Evenredig: nᵢ = n × Nᵢ / N</div>'
-    body += steps(['Neyman-allocatie: ΣNᵢsᵢ = 1.186.350. Voor stratum 1: 250 × 540.000/1.186.350 '
+    body += steps(['Neyman-allocatie: ΣNᵢsᵢ = 540.000 + 277.750 + 170.100 + 198.500 = 1.186.350. Voor stratum 1: 250 × 540.000/1.186.350 '
                    '= 113,794 en dus 114 controles.',
                    'Bij Neyman worden de aantallen 114, 58, 36 en 42. Controleer '
-                   'dat ze samen 250 zijn. De 48 integraal gecontroleerde posten '
-                   'vallen buiten deze verdeling; totale controle-inspanning is dan 298 posten.',
-                   'Bij evenredige verdeling zijn de onafgeronde aantallen circa '
+                   'dat ze samen 250 zijn: 114 + 58 + 36 + 42 = 250. De 48 integraal gecontroleerde posten '
+                   'vallen buiten deze verdeling; totale controle-inspanning is dan 250 + 48 = 298 posten.',
+                   'Bij evenredige verdeling (250 × Nᵢ / 4.775) zijn de onafgeronde aantallen circa '
                    '141,361; 58,168; 29,686 en 20,785. Een verdeling met som 250 '
                    'is 141, 58, 30 en 21.',
-                   'Stratum 4 krijgt bij Neyman meer controles: zijn sᵢ = 500 is '
+                   'Stratum 4 krijgt bij Neyman meer controles (42 in plaats van 21): zijn sᵢ = 500 is '
                    'groter dan bij de andere strata. Bij gelijke sᵢ vallen die '
                    'spreidingsfactoren weg en wordt Neyman gelijk aan evenredige allocatie.'])
     body += '<p>Een vast totaal n moet behouden blijven. Als gewoon afronden een '
@@ -823,12 +823,12 @@ def enhance(lessons, sources):
                   [[i, number(N, 0), n, number(total, 0), number(square, 0)]
                    for i, (N, n, total, square) in enumerate(SLIDE_STRATA, 1)])
     body += steps(['Stratum 1: gemiddelde = 7.000/114 = € 61,4035. '
-                   'Ŵ₁ = 2.700 × 61,4035 = € 165.789,47. De factor is 2.700 '
+                   'Ŵ₁ = 2.700 × 7.000/114 = € 165.789,47. De factor is 2.700 '
                    'omdat dit stratum die omvang heeft.',
-                   's²<sub>w,1</sub> = [475.000 − 7.000²/114]/113 = 399,7826 euro². '
+                   'Spreiding: s²<sub>w,1</sub> = [475.000 − 7.000²/114]/113 = 45.175,44/113 = 399,7826 euro². '
                    'De wortel is € 19,9946. De vooraf gebruikte 200 uit de allocatie '
                    'vervang je dus door de werkelijk gevonden spreiding.',
-                   's<sub>Ŵ₁</sub> = 2.700 × (19,9946/√114) × √(2.586/2.699) '
+                   'Standaardfout: s<sub>Ŵ₁</sub> = 2.700 × (19,9946/√114) × √(2.586/2.699) '
                    '= € 4.949,21. Dit is de standaardfout van het stratumtotaal, '
                    'niet de spreiding van een losse post.',
                    'Herhaal dezelfde stappen voor alle vier strata. De onderstaande '
@@ -888,11 +888,11 @@ def enhance(lessons, sources):
     gamma = 3000**2/(2**2*880000)
     required = 1000/(1+gamma)
     body += steps(['Gegeven planningswaarde t = 2 en gewenste marge E = € 3.000.',
-                   'Hulpgrootheid: γ = E²/(t² × ΣNᵢs²ᵢ) = 3.000²/(2² × 880.000) = ' + number(gamma, 6) + '.',
-                   'Benodigde omvang: n = N/(1 + γ) = 1.000/(1 + γ) = ' + number(required, 6) + '; naar boven '
-                   'afgerond 282. Een evenredige verdeling is 169 en 113 controles.',
+                   'Hulpgrootheid: γ = E²/(t² × ΣNᵢs²ᵢ) = 3.000²/(2² × 880.000) = 9.000.000/3.520.000 = ' + number(gamma, 6) + '.',
+                   'Benodigde omvang: n = N/(1 + γ) = 1.000/(1 + 2,556818) = ' + number(required, 6) + '; naar boven '
+                   'afgerond 282. Een evenredige verdeling is 282 × 0,6 ≈ 169 en 282 × 0,4 ≈ 113 controles.',
                    'Reken de marge vervolgens na met deze gehele aantallen en '
-                   'de twee afzonderlijke eindigheidscorrecties. Die is ongeveer '
+                   'de twee afzonderlijke eindigheidscorrecties: E = t × √(variantie stratum 1 + variantie stratum 2) = 2 × √(613.093 + 1.629.561). Die is ongeveer '
                    '€ 2.995,10 en voldoet dus aan de gestelde € 3.000.'])
     body += '<p>Het alternatief is de al behandelde uitbreiding van één stratum: '
     body += 'doelvariantie (E/t)² minus de ongewijzigde bijdragen van andere strata '

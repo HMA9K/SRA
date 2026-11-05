@@ -91,9 +91,9 @@ def enhance(lessons, sources):
         ])
         + answer('Bereken de voorspelling en het residu voor x = 7, y = 1.055. Waarom is dit residu '
                  'geen bewijs van een fout in het gewicht?',
-                 steps(['Voorspelling: vul x = 7 in: ŷ = 920,33333 + 14,73939 × 7 ≈ 1.023,51 kg.',
+                 steps(['Voorspelling: vul x = 7 in: ŷ = 920,33333 + 14,73939 × 7 = 920,33333 + 103,17573 ≈ 1.023,51 kg.',
                         'Residu: e = y − ŷ = 1.055 − 1.023,51 ≈ +31,49 kg. Het gewicht ligt boven de lijn.',
-                        'Een regressielijn voorspelt niet elke waarneming exact. De afwijking moet worden '
+                        'Geen bewijs van een fout: een regressielijn voorspelt niet elke waarneming exact. De afwijking moet worden '
                         'beoordeeld met de resterende spreiding, relevante diagnoses en inhoudelijke informatie.',
                         'Het getal +31,49 is een residu in kg, geen p-waarde en geen standaardfout.']))
         + '<p class="note">Gebruik in je berekening zoveel mogelijk ongeronde tussenuitkomsten.</p>',
@@ -213,12 +213,12 @@ def enhance(lessons, sources):
         'maar niet zelfstandig vaststellen dat de richting positief is.</p>'
         + answer('Schrijf het volledige antwoord voor een positief verband tussen gecodeerd bouwjaar en gewicht. '
                  'Wat verandert er wanneer de vraag alleen “een verband” zegt?',
-                 steps(['H₀: β₁ ≤ 0; H₁: β₁ &gt; 0. β₁ is de populatiehelling voor gewicht ten opzichte van bouwjaar.',
+                 steps(['Hypothesen: H₀: β₁ ≤ 0; H₁: β₁ &gt; 0. β₁ is de populatiehelling voor gewicht ten opzichte van bouwjaar.',
                         'Grens: t ≈ 7,79910, df = 8; uit tabel 13.4 volgt t<sub>0,05;8</sub> = 1,860.',
                         'Vergelijken: 7,79910 &gt; 1,860, dus H₀ verwerpen. Er is een significant positief lineair verband '
                         'tussen bouwjaar en gewicht. Het α-risico is relevant.',
-                        'Voor “een verband” gebruik je H₀: β₁ = 0 en H₁: β₁ ≠ 0. Dan geldt |t| &gt; 2,306 '
-                        'of F &gt; 5,32. Ook die H₀ wordt verworpen; de onderzoeksconclusie is tweezijdig.']))
+                        'Voor “een verband” gebruik je H₀: β₁ = 0 en H₁: β₁ ≠ 0. Dan geldt |t| = 7,79910 &gt; 2,306 '
+                        'of F = 60,826 &gt; 5,32. Ook die H₀ wordt verworpen; de onderzoeksconclusie is tweezijdig.']))
         + '<p class="note">SPSS Sig. = ,000 betekent een zeer kleine afgeronde p-waarde, '
         'geen kans van exact nul. Noteer bij een weergave met drie decimalen bijvoorbeeld p &lt; 0,001. '
         'Vergelijk een reeds tweezijdige Sig. met α; verdeel die α niet nogmaals over twee staarten.</p>',
@@ -291,9 +291,9 @@ def enhance(lessons, sources):
         + answer('Hoe formuleer je het aangepaste model en waarom verandert n? Betekent een gekozen vertraging '
                  'dat autocorrelatie niet meer hoeft te worden onderzocht?',
                  steps(['Koppel afzet in periode t aan reclame in periode t − 2: ŷₜ = b₀ + b₁xₜ₋₂.',
-                        'Voor de eerste twee afzetperioden ontbreken binnen deze reeks de bijpassende eerdere '
-                        'reclamewaarden. Er blijven 22 complete paren over; gebruik niet automatisch n = 24.',
-                        'Dit gaat over de koppeling tussen x en y. Autocorrelatie gaat over samenhang tussen '
+                        'Aantal paren: voor de eerste twee afzetperioden ontbreken binnen deze reeks de bijpassende eerdere '
+                        'reclamewaarden. Er blijven 24 − 2 = 22 complete paren over; gebruik niet automatisch n = 24.',
+                        'Vertraging en autocorrelatie: de vertraging gaat over de koppeling tussen x en y. Autocorrelatie gaat over samenhang tussen '
                         'opeenvolgende storingen. Controleer daarom ook de residuen van het aangepaste tijdreeksmodel.',
                         'Een grote correlatie bewijst geen oorzaak. Onderbouw de vertraging inhoudelijk en beoordeel '
                         'de bruikbaarheid op nieuwe perioden; kies niet achteraf onbeperkt uit verschuivingen alleen om een kleine p te vinden.'])),
@@ -313,9 +313,9 @@ def enhance(lessons, sources):
             steps(['Grenzen: n = 40 ≤ 100, dus de grenzen voor Std. Residual zijn −2 en +2. '
                    'Het minimum −1,352 blijft binnen de grens; het maximum 2,490 overschrijdt +2. '
                    'Er is minstens één potentiële uitbijter in y.',
-                   'MD<sub>kritiek</sub> = 0,975 + 3 × 0,815 = 3,420. Het maximum 2,388 is lager; '
+                   'Uitbijters in x: MD<sub>kritiek</sub> = gemiddelde + 3 × standaardafwijking = 0,975 + 3 × 0,815 = 0,975 + 2,445 = 3,420. Het maximum 2,388 is lager; '
                    'geen x-uitbijtersignaal volgens deze cursusregel.',
-                   'CD<sub>kritiek</sub> = 0,030 + 3 × 0,060 = 0,210. Het maximum 0,313 is hoger; '
+                   'Invloed: CD<sub>kritiek</sub> = gemiddelde + 3 × standaardafwijking = 0,030 + 3 × 0,060 = 0,030 + 0,180 = 0,210. Het maximum 0,313 is hoger; '
                    'onderzoek het potentiële invloedrijke punt.',
                    'Deze samenvatting identificeert niet welke rijen het betreft. Zoek de individuele '
                    'residuen/afstanden en het spreidingsdiagram op. Onderbouw een behandeling met de casusinformatie.']))
@@ -401,18 +401,18 @@ def enhance(lessons, sources):
                  'Bewaar onder <strong>Save</strong> de relevante residuen en afstanden: '
                  'gestandaardiseerde residuen, Mahalanobis en Cook. Hiermee kun je de samenvatting '
                  'in Residuals Statistics terugvoeren naar individuele personen.',
-                 'De Std. Residual minimumwaarde is −6,166, MD<sub>max</sub> = 3,380 '
-                 'bij grens 4,088, en CD<sub>max</sub> = 0,328 bij grens 0,140. Onderzoek de '
+                 'Signalen: n = 60 ≤ 100, dus Std. Residual heeft de grenzen −2 en +2; het minimum −6,166 ligt eronder. MD-grens = 0,983 + 3 × 1,035 = 0,983 + 3,105 = 4,088; MD<sub>max</sub> = 3,380 '
+                 'is lager. CD-grens = 0,011 + 3 × 0,043 = 0,011 + 0,129 = 0,140; CD<sub>max</sub> = 0,328 is hoger. Onderzoek de '
                  'betreffende personen met hun omschrijvingen.',
-                 'Persoon 33 wordt uitgesloten voor bloeddruk; de sportieve persoon 24 '
+                 'Beslissing: persoon 33 wordt uitgesloten voor bloeddruk; de sportieve persoon 24 '
                  'blijft behouden. Behandel dit als een casusbeslissing die toelichting vereist. Bewaar '
                  'de oorspronkelijke gegevens en documenteer een uitsluiting, zodat de keuze controleerbaar blijft.',
                  'Voer de regressie opnieuw uit. Gebruik vervolgens in <strong>Analyze → Descriptive '
                  'Statistics → Explore → Plots → Normality plots with tests</strong> de residuen '
-                 'van juist dit nieuwe model. De nieuwe n is 59; de cursus kiest dus Kolmogorov-Smirnov.',
+                 'van juist dit nieuwe model. De nieuwe n is 60 − 1 = 59. Dat is meer dan 50, dus de cursus kiest Kolmogorov-Smirnov.',
                  'Maak via <strong>Transform → Compute Variable</strong> ABSRES = ABS(residu van het '
                  'actuele model). Bereken via <strong>Analyze → Correlate → Bivariate</strong> de '
-                 'Pearson-correlatie met Age. De bron vindt p = 0,470: geen heteroscedasticiteit aangetoond.',
+                 'Pearson-correlatie met Age. Uitkomst: p = 0,470 &gt; 0,05, dus geen heteroscedasticiteit aangetoond.',
                  'Rapporteer per analyse de tabel of grafiek, relevante waarden, conclusie en eventuele '
                  'remedie. Tijdsvertraging en autocorrelatie zijn in deze crosssectie niet van toepassing.'])
         + '<p class="note">SPSS kan bij herhalen ZRE_1, ZRE_2 of andere volgnummers maken. '
@@ -496,12 +496,12 @@ def enhance(lessons, sources):
             steps(['WO en HBO worden allebei met dezelfde referentiegroep vergeleken. Het verschil is '
                    '1.010,210 − 644,888 = € 365,322. Het antwoord is dus circa € 365,32; '
                    '1.010,210 is het verschil met de referentie, niet met HBO.',
-                   'De dummy’s Vrouw, HBO en WO zijn nul, Leidinggevende is één. '
-                   'ŷ = 739,508 + 38,495 × 50 + 71,550 × 10 + 2.237,947 = € 5.617,705. '
+                   'Voorspelling: de dummy’s Vrouw, HBO en WO zijn nul, Leidinggevende is één. '
+                   'ŷ = 739,508 + 38,495 × 50 + 71,550 × 10 + 2.237,947 = 739,508 + 1.924,750 + 715,500 + 2.237,947 = € 5.617,705. '
                    'Op hele euro’s afgerond: € 5.618.',
-                   'H₀: β<sub>Vrouw</sub> ≥ 0, H₁: β<sub>Vrouw</sub> &lt; 0. Gebruik t = −2,444 '
-                   'en df = 193. Tabelrij 190 geeft de t-grens −1,653 '
-                   'bij eenzijdig α = 0,05. H₀ verwerpen: binnen dit model is de voorspelling voor '
+                   'Toets Vrouw: H₀: β<sub>Vrouw</sub> ≥ 0, H₁: β<sub>Vrouw</sub> &lt; 0. Gebruik t = −2,444 '
+                   'en df = n − k − 1 = 200 − 6 − 1 = 193. Tabelrij 190 geeft de t-grens −1,653 '
+                   'bij eenzijdig α = 0,05. −2,444 &lt; −1,653, dus H₀ verwerpen: binnen dit model is de voorspelling voor '
                    'vrouwen significant lager bij gelijke opgenomen kenmerken. Het α-risico is relevant.',
                    'De globale F = 58,923 met p &lt; 0,001 levert statistisch bewijs dat minstens één hellingscoëfficiënt '
                    'niet nul is. Beoordeling kan tegelijk individueel niet significant zijn (p = 0,179).']))
@@ -538,11 +538,11 @@ def enhance(lessons, sources):
         + answer('Rekenvoorbeeld bij de cursusformules: ln(ŷ) = 2 + 0,3x. '
                  'Neem x = 4 en een gegeven individueel interval [2,8; 3,6] op logschaal. '
                  'Wat zijn voorspelling, interval en het effect van één extra x op de oorspronkelijke schaal?',
-                 steps(['De voorspelde logwaarde is 2 + 0,3 × 4 = 3,2. De directe terugtransformatie is '
+                 steps(['De voorspelde logwaarde is 2 + 0,3 × 4 = 2 + 1,2 = 3,2. De directe terugtransformatie is '
                         'exp(3,2) ≈ 24,5325 oorspronkelijke eenheden.',
                         'De grenzen worden exp(2,8) ≈ 16,4446 en exp(3,6) ≈ 36,5982. '
-                        'De afstanden tot 24,5325 zijn ongelijk: circa 8,0878 omlaag en 12,0657 omhoog.',
-                        'Eén extra x geeft factor exp(0,3) ≈ 1,34986, dus circa 34,99% hoger. '
+                        'De afstanden tot 24,5325 zijn ongelijk: 24,5325 − 16,4446 ≈ 8,0879 omlaag en 36,5982 − 24,5325 ≈ 12,0657 omhoog.',
+                        'Eén extra x geeft factor exp(0,3) ≈ 1,34986, dus (1,34986 − 1) × 100% ≈ 34,99% hoger. '
                         'De coëfficiënt 0,3 is geen toename van 0,3 oorspronkelijke eenheden.',
                         'Dit is de directe terugtransformatie volgens de cursus. Zonder aanvullende '
                         'aannames is exp(voorspelde logwaarde) niet automatisch het rekenkundig gemiddelde van y.']))
@@ -569,7 +569,7 @@ def enhance(lessons, sources):
                  'Schat per uitkomst het lineaire model en de in de tabel gekozen getransformeerde variant '
                  'via <strong>Analyze → Regression → Linear</strong>. Bewaar welke y-schaal bij welke uitvoer hoort.',
                  'Vergelijk de vorm van de puntenwolk en de residuen; noteer ook R² en sₑ met hun modelschaal. '
-                 'De bronopgave vraagt expliciet om R² te vergelijken, maar R² van y en R² van ln(y) '
+                 'De opdracht vraagt expliciet om R² te vergelijken, maar R² van y en R² van ln(y) '
                  'meten variatie in verschillende grootheden. Een hogere waarde bewijst daarom op zichzelf '
                  'geen betere voorspelling op de oorspronkelijke schaal.',
                  'Maak ten minste één voorspelling per gekozen model en toon de benodigde '
@@ -599,9 +599,9 @@ def enhance(lessons, sources):
         '<p>Een VIF-uitkomst vraagt om drie stappen: bepalen wat de maat vergelijkt, '
         'de grens toepassen en uitleggen wat dit betekent voor het gebruik van het model. '
         'In het GDP-model hebben LN_MORT en LN_ELECT beide VIF = 2,634.</p>'
-        + steps(['Bereken tolerance = 1/2,634 ≈ 0,380. Ongeveer dit aandeel van de variatie '
+        + steps(['Bereken tolerance = 1/VIF = 1/2,634 ≈ 0,380. Ongeveer dit aandeel van de variatie '
                  'in de betreffende x blijft over nadat je haar uit de andere x hebt voorspeld.',
-                 'De hulpregressie heeft R² = 1 − 0,380 = 0,620. Dit gaat over samenhang '
+                 'De hulpregressie heeft R² = 1 − tolerance = 1 − 0,380 = 0,620. Dit gaat over samenhang '
                  'tussen de verklarende variabelen, niet over het verklaarde aandeel GDP.',
                  'Vergelijk 2,634 met de cursusgrens 10. De grens wordt niet overschreden. '
                  'Schrijf dat er volgens deze regel geen multicollineariteitsprobleem is aangetoond.',
@@ -621,14 +621,14 @@ def enhance(lessons, sources):
         ])
         + answer('Bereken de partiële F voor de ene extra variabele en beide adjusted R²-waarden. '
                  'Waarom gebruik je de MSE van het uitgebreide model?',
-            steps(['TotalSS is in beide modellen 1.000. De extra variabele verklaart 850 − 800 = 50 extra.',
-                   'Partiële F: MSE<sub>uitgebreid</sub> = 150/46 ≈ 3,26087. '
-                   'F = (850 − 800)/(150/46) ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.',
+            steps(['TotalSS = SSR + SSE is in beide modellen 1.000: 800 + 200 en 850 + 150. De extra variabele verklaart 850 − 800 = 50 extra.',
+                   'Partiële F: MSE<sub>uitgebreid</sub> = SSE/df = 150/46 ≈ 3,26087. '
+                   'F = (850 − 800)/(150/46) = 50/3,26087 ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.',
                    'Deze MSE beschrijft de resterende foutvariatie nadat de extra variabele is opgenomen. '
                    'De teller meet de verbetering door precies die toevoeging.',
-                   'Klein: adjusted R² = 1 − (200/47)/(1.000/49) ≈ 0,79149. '
-                   'Uitgebreid: 1 − (150/46)/(1.000/49) ≈ 0,84022.',
-                   'De fit na correctie verbetert. Voor een formele toets kies je vooraf α en zoek je '
+                   'Klein: adjusted R² = 1 − (200/47)/(1.000/49) = 1 − 4,25532/20,40816 ≈ 0,79149. '
+                   'Uitgebreid: 1 − (150/46)/(1.000/49) = 1 − 3,26087/20,40816 ≈ 0,84022.',
+                   'Adjusted R² stijgt van 0,79149 naar 0,84022: de fit na correctie verbetert. Voor een formele toets kies je vooraf α en zoek je '
                    'de bijbehorende F-grens met 1 en 46 vrijheidsgraden in tabel 13.8. '
                    'Een betere fit vervangt validatie en modeldiagnoses niet.']))
         + '<p>Bij één extra variabele sluit deze tweezijdige vergelijking aan op de gekwadrateerde '
@@ -736,14 +736,14 @@ def enhance(lessons, sources):
                  'de dependent is en welke bouwjaar- of leeftijdcodering je gebruikt. '
                  'Maak spreidingsdiagrammen, ook met groepen zichtbaar.',
                  'Schat de enkelvoudige regressie en bewaar actuele residuen, Mahalanobis en Cook. '
-                 'De bron geeft Std. Residual maximum 3,469 bij grens 3; MD maximum 2,813 '
-                 'bij grens 3,634; Cook maximum 0,075 bij grens 0,039. '
+                 'Signalen: n = 162 &gt; 100, dus Std. Residual heeft de grenzen −3 en +3; het maximum 3,469 ligt erboven. MD-grens = 0,994 + 3 × 0,880 = 0,994 + 2,640 = 3,634; het MD-maximum 2,813 '
+                 'is lager. CD-grens = 0,006 + 3 × 0,011 = 0,006 + 0,033 = 0,039; het Cook-maximum 0,075 is hoger. '
                  'De afwijkende auto’s lijken in de casus geen invoerfouten en blijven behouden.',
                  'Voer <strong>Explore → Normality plots with tests</strong> uit op de actuele '
                  'residuen. Bij n = 162 gebruik je volgens de cursus Kolmogorov-Smirnov. '
                  'De tabel toont Statistic = 0,059 en Sig. = 0,200*. '
                  'Verwar de toetsingsgrootheid niet met de p-waarde. '
-                 'Het sterretje betekent dat 0,200 een ondergrens is; H₀ wordt niet verworpen. '
+                 'Het sterretje betekent dat 0,200 een ondergrens is; 0,200 &gt; 0,05, dus H₀ wordt niet verworpen. '
                  'Maak ABSRES = ABS(RES van dit model) en correleer met Bouwjaar: '
                  'Sig. = ,000 wijst hier wel op heteroscedasticiteit. Leg uit waarom deze '
                  'twee diagnoses verschillende conclusies kunnen geven.',
@@ -752,7 +752,7 @@ def enhance(lessons, sources):
                  'vóór transformatie. Een werkelijke nul mag je niet logaritmeren of stilzwijgend verwijderen; '
                  'in het hier gecontroleerde Excelblad zijn verkoopwaarde en kilometerstand positief.',
                  'Schat het meervoudige model, voer backwardselectie uit en beoordeel VIF. '
-                 'De uitwerking kiest in deze casus Kilometerstand óf LnKmStand. Leg de gemaakte '
+                 'Kies in deze casus Kilometerstand óf LnKmStand. Leg de gemaakte '
                  'keuze uit en controleer na de selectiestappen opnieuw de residuen.',
                  'De eerste groepscontrole keek naar merk; later blijkt Aandrijving relevant. '
                  'Vergelijk daarom een model met aandrijvingsdummy’s met inhoudelijk verdedigbare '
@@ -774,8 +774,8 @@ def enhance(lessons, sources):
         'onderzoeksvraag en variabelen als uitgangspunt.</p>'
         + steps(['Reconstrueer n en k uit ANOVA en leg R² = 0,647 en adjusted R² = 0,636 uit.',
                  'Stel de vergelijking op met alle B-coëfficiënten en benoem de referentiegroepen.',
-                 'Beantwoord vragen 19–21 met berekening, correcte tabelkeuze en volledige conclusie.',
-                 'Bepaal de eerste backwardkandidaat bij de in de vraag gebruikte grens en beoordeel '
+                 'Beantwoord de vragen over WO tegenover HBO, de puntvoorspelling en de toets op Vrouw met berekening, correcte tabelkeuze en volledige conclusie.',
+                 'Bepaal de eerste backwardkandidaat bij grens 0,05 en beoordeel '
                  'de VIF-uitvoer. Voer geen voorspelling uit met een denkbeeldig opnieuw geschat model.',
                  'Schrijf welke diagnoses en nieuwe gegevens nog nodig zijn voordat je het model '
                  'als betrouwbare controleverwachting gebruikt.'])
@@ -803,14 +803,14 @@ def enhance(lessons, sources):
             ['Residual','121.859,201','38','3.206,821'],
             ['Total','594.437,500','39',''],
         ])
-        + steps(['Verklaard deel: n = 40 en k = 1. R² = 472.578,299/594.437,500 ≈ 0,7950. '
+        + steps(['Verklaard deel: n = 40 en k = 1. R² = SSR/TotalSS = 472.578,299/594.437,500 ≈ 0,7950. '
                  'De oppervlakte verklaart circa 79,5% van de huurvariatie in deze dataset.',
-                 'sₑ = √(121.859,201/38) ≈ € 56,63 per maand. Dit is de spreiding rond '
+                 'Resterende spreiding: sₑ = √MSE = √(121.859,201/38) = √3.206,821 ≈ € 56,63 per maand. Dit is de spreiding rond '
                  'de lijn; het is geen standaardfout van de helling.',
-                 'F-toets: F = 472.578,299/(121.859,201/38) ≈ 147,367. Toets het model met '
+                 'F-toets: F = MSR/MSE = 472.578,299/(121.859,201/38) = 472.578,299/3.206,821 ≈ 147,367. Toets het model met '
                  'ν₁ = 1 en ν₂ = 38; lees bij gebruik van een tabelbenadering de gekozen rij expliciet af.',
-                 'De lijn is ŷ = 485,971 + 6,757x. Bij 100 m² volgt met deze afgedrukte '
-                 'coëfficiënten ŷ = € 1.161,671, afgerond € 1.161,67 per maand.',
+                 'Voorspelling: de lijn is ŷ = 485,971 + 6,757x. Bij 100 m² volgt met deze afgedrukte '
+                 'coëfficiënten ŷ = 485,971 + 6,757 × 100 = 485,971 + 675,7 = € 1.161,671, afgerond € 1.161,67 per maand.',
                  'De combinatie van hoge R² en significante F maakt de diagnoses niet overbodig. '
                  'In de les diagnostiek blijkt dezelfde casus een normaliteitsprobleem te hebben.'])
         ,
@@ -823,13 +823,13 @@ def enhance(lessons, sources):
         'Een oude helling combineren met de nieuwe MSE levert geen geldig interval op.</p>'
         + answer('Bereken voor 80 m² een individueel 95%-voorspellingsinterval met de '
                  'gegeven tabelbenadering: df = 37, tabelrij 35, t = 2,030.',
-                 steps(['Puntvoorspelling: 512,479 + 6,388 × 80 = 1.023,519, dus circa € 1.023,52.',
+                 steps(['Puntvoorspelling: 512,479 + 6,388 × 80 = 512,479 + 511,040 = 1.023,519, dus circa € 1.023,52.',
                         'Neem de wortel van de MSE: sₑ = √2.706,538 ≈ 52,0244.',
-                        'Marge = 2,030 × 52,0244 × √[1 + 1/39 + (80 − 81,54)²/(38 × 15,992²)] '
+                        'Marge = 2,030 × 52,0244 × √[1 + 1/39 + (80 − 81,54)²/(38 × 15,992²)] = 2,030 × 52,0244 × √(1 + 0,025641 + 0,000244) = 2,030 × 52,0244 × 1,01286 '
                         '≈ € 106,97.',
-                        'Het interval met de ongeronde tussenwaarde is ongeveer [€ 916,55; € 1.130,49] '
+                        'Interval: 1.023,519 − 106,97 en 1.023,519 + 106,97 geven ongeveer [€ 916,55; € 1.130,49] '
                         'per maand. Een huur buiten dit interval is een onderzoeksaanleiding, geen automatische boekingsfout.',
-                        'De oppervlakte 80 ligt dicht bij x̄; de afstandsterm is klein. '
+                        'Afstandsterm: de oppervlakte 80 ligt dicht bij x̄ = 81,54, dus deze term is met 0,000244 klein. '
                         'Bij een ver weg gelegen oppervlakte wordt de marge groter.']))
         + '<p>Kies je een lagere beschikbare df-rij als benadering, vermeld die keuze dan '
         'in je antwoord. Houd daarnaast het verschil tussen een statistische verbetering '
@@ -853,9 +853,9 @@ def enhance(lessons, sources):
                  steps(['Schooling heeft met 0,570 de grootste p-waarde boven 0,05. '
                         'De constante telt niet als gewone selectiekandidaat.',
                         'Na verwijderen wordt het model opnieuw geschat. De tweede uitvoer geeft '
-                        'voor BMI p = 0,545; daarna valt ook BMI af.',
+                        'voor BMI p = 0,545 &gt; 0,05; daarna valt ook BMI af.',
                         'Het derde model bevat Adult Mortality, HIV/AIDS en ICOR. '
-                        'Op dezelfde 171 waarnemingen zijn de residuele df achtereenvolgens 165, 166 en 167.',
+                        'Op dezelfde 171 waarnemingen zijn de residuele df (n − k − 1 met k = 5, 4 en 3) achtereenvolgens 165, 166 en 167.',
                         'De coëfficiënt ICOR verandert van 35,523 naar 37,792 en vervolgens 37,138. '
                         'Een effectschatting hangt dus af van welke andere kenmerken zijn opgenomen.',
                         'De grootste VIF in het beginmodel is 8,476 &lt; 10. Dat overschrijdt de '
@@ -911,13 +911,13 @@ def enhance(lessons, sources):
         + answer('Bereken de globale F en interpreteer B tegenover Beta. Maak daarna de Nederlandse '
                  'puntvoorspelling met de afgedrukte invoer ICOR = 0,92, Adult Mortality = 58 en HIV/AIDS = 0,1.',
             steps(['Modeltoets: MSR = 8.173,121/3 ≈ 2.724,374; MSE = 1.372,702/159 ≈ 8,633. '
-                   'F ≈ 315,564. Toets H₀: alle drie hellingen nul tegenover H₁: minstens één niet nul.',
+                   'F = MSR/MSE = 2.724,374/8,633 ≈ 315,564 (met de onafgeronde waarden). Toets H₀: alle drie hellingen nul tegenover H₁: minstens één niet nul.',
                    'Benader F<sub>0,05;3;159</sub> met tabelrij ν₂ = 100: 2,696. '
                    '315,564 &gt; 2,696, dus H₀ verwerpen. Dit is een uitspraak over het gezamenlijke model.',
                    'B voor ICOR is 36,011 in de modelvergelijking. Beta = 0,694 '
                    'is gestandaardiseerd en beschrijft verandering in standaardafwijkingen. '
                    'Gebruik B voor een voorspelling in jaren.',
-                   'Voorspelling: 50,065 + 36,011 × 0,92 − 0,015 × 58 − 1,409 × 0,1 = 82,18422, '
+                   'Voorspelling: 50,065 + 36,011 × 0,92 − 0,015 × 58 − 1,409 × 0,1 = 50,065 + 33,13012 − 0,87 − 0,1409 = 82,18422, '
                    'dus circa 82,18 jaar met de afgedrukte getallen.',
                    'De casus geeft als werkelijke Nederlandse waarde 81,7. Het residu op basis '
                    'van deze afgedrukte invoer is 81,7 − 82,18422 ≈ −0,48 jaar. '
