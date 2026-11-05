@@ -2,7 +2,7 @@
 ROWS=[]
 def add(number,topics,wrong,correct=None,focus='',part=''):
  ROWS.append(dict(number=number,topics=topics.split(),options=[correct]+wrong,focus=focus,part=part))
-add(1,'verschil',['33 fouten voldoet niet aan de cursusvoorwaarde van 30.','Het totale aantal van 50 bewijst op zichzelf dat er minstens 30 fouten zijn.','De verschilschatter vereist dat iedere post fout is.'])
+add(1,'verschil',['33 fouten voldoet niet aan de voorwaarde van 30.','Het totale aantal van 50 bewijst op zichzelf dat er minstens 30 fouten zijn.','De verschilschatter vereist dat iedere post fout is.'])
 add(2,'verschil',['€170.000 is de totale fout in de hele populatie.','Deel de som van fouten door alleen de 33 foutieve posten.','Vermenigvuldig de gemiddelde fout met n = 50 in plaats van N = 912.'])
 add(3,'verschil onzekerheid',['Rond de bovengrens naar beneden af op €3.716.000.','Laat de centrering met 170.000²/50 weg bij de steekproefvariantie.','Gebruik t = 1,96 voor deze eenzijdige 95%-grens.'])
 add(4,'quotient verschil',['Quotiëntschatter bij constante absolute fouten, verschilschatter bij vaste percentages.','De quotiëntschatter is altijd nauwkeuriger.','Het foutpatroon heeft geen invloed op de keuze van de schatter.'])

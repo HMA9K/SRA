@@ -135,7 +135,7 @@ p('verschil-1', 'Een boekwaarde, een werkelijke waarde en de letter e.',
   'Trek de werkelijke waarde van de boekwaarde af en behoud het teken.',
   'Een getekend verschil: positief is overwaardering, negatief onderwaardering.')
 p('verschil-2', 'Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten.',
-  'De genoemde cursusvoorwaarde gaat over fouten, niet over alle controles.',
+  'De genoemde voorwaarde gaat over fouten, niet over alle controles.',
   'Vergelijk het aantal aangetroffen fouten met het cursusminimum van 30.',
   'Een oordeel of juist deze toepassingsvoorwaarde is vervuld.')
 p('verschil-3', '“Waarom nauwkeurig” bij de verschilschatter.',

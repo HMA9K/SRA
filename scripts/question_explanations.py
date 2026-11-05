@@ -151,14 +151,14 @@ basic('verschil-1', [
     '255 telt boekwaarde en werkelijke waarde op. Een controlefout is juist het verschil tussen beide.'
 ])
 basic('verschil-2', [
-    'De les verwijst voor deze toepassing naar de cursusvoorwaarde van minstens 30 aangetroffen fouten.',
+    'De les verwijst voor deze toepassing naar de voorwaarde van minstens 30 aangetroffen fouten.',
     'Er zijn 200 posten gecontroleerd, maar slechts 12 daarvan bevatten een fout.',
     '12 is kleiner dan 30. De genoemde voorwaarde is dus niet vervuld, ondanks de grotere steekproefomvang.'
 ], 'Let op de eenheid achter een minimum: aantal fouten is iets anders dan aantal controles.',
-    'Maak van de cursusvoorwaarde “30 fouten” niet ongemerkt “30 waarnemingen”.', [
-    'n = 200 is groter dan 30, maar de lesvoorwaarde gaat over het aantal aangetroffen fouten. Daarvan zijn er slechts 12.',
-    'De cursusvoorwaarde is hier niet vervuld: 12 fouten is minder dan de genoemde 30.',
-    'De genoemde cursusvoorwaarde gaat om het aantal fouten, niet om hun teken. Ook alleen positieve fouten maken 12 niet tot 30.'
+    'Maak van de voorwaarde “30 fouten” niet ongemerkt “30 waarnemingen”.', [
+    'n = 200 is groter dan 30, maar de voorwaarde gaat over het aantal aangetroffen fouten. Daarvan zijn er slechts 12.',
+    'De voorwaarde is hier niet vervuld: 12 fouten is minder dan de genoemde 30.',
+    'De genoemde voorwaarde gaat om het aantal fouten, niet om hun teken. Ook alleen positieve fouten maken 12 niet tot 30.'
 ])
 basic('verschil-3', [
     'De verschilschatter corrigeert het bekende boektotaal B met de geschatte totale fout Nē.',

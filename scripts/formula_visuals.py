@@ -156,7 +156,7 @@ def visuals():
     add('verschil','Boekwaarde corrigeren met het gemiddelde controleverschil','absolute-errors','Een vaste absolute afwijking',[
         panel('Boekwaarde tegenover werkelijke waarde',plot('Vaste euro-afwijking',[('w = b − 2',pairs,GREEN,True),('w = b',[(0,0),(90,90)],PURPLE,False)],'Boekwaarde b (€)','Werkelijke waarde w (€)',(0,90,0,90)),'Iedere werkelijke waarde ligt € 2 onder de boekwaarde.'),
         panel('De verschillen tegenover de boekwaarde',plot('Absolute verschillen',[('e = b − w',[(b,b-w) for b,w in pairs],ORANGE,True)],'Boekwaarde b (€)','Verschil e (€)',(0,90,0,4),horizontal=[(2,'e = 2',ORANGE)]),'Voor N = 1.000 en B = € 50.000: Nē = € 2.000; Ŵ_V = € 48.000.')],
-        'De verhouding verandert per post, maar de euro-afwijking blijft gelijk. Dit kleine beeld verduidelijkt het patroon; vier posten voldoen niet aan de cursusvoorwaarde voor toepassing van de schatter.')
+        'De verhouding verandert per post, maar de euro-afwijking blijft gelijk. Dit kleine beeld verduidelijkt het patroon; vier posten voldoen niet aan de voorwaarde voor toepassing van de schatter.')
     pairs=[(20,19),(40,38),(60,57),(80,76)]
     add('quotient','Een redelijk vaste verhouding gebruiken','ratio-pattern','Een vaste verhouding is geen vast euroverschil',[
         panel('Een lijn door de oorsprong',plot('Proportioneel verband',[('w = 0,95b',[(0,0),(90,85.5)],GREEN,False),('Gecontroleerde posten',pairs,GREEN,True),('w = b',[(0,0),(90,90)],PURPLE,False)],'Boekwaarde b (€)','Werkelijke waarde w (€)',(0,90,0,90)),'Σw / Σb = 190 / 200 = 0,95. Elke post behoudt dezelfde verhouding.'),
@@ -225,7 +225,7 @@ def visuals():
     add('diagnostiek','Autocorrelatie corrigeren en opnieuw controleren','autocorrelation','Residuen in tijdsvolgorde houden',[
         panel('Opeenvolgende residuen lijken op elkaar',plot('Positief samenhangende residuen',[('e_t',[(i+1,v) for i,v in enumerate([1,2,3,2,1,-1,-2,-3])],GREEN,False)],'Tijdstip t','Residu e',(1,8,-4,4),horizontal=[(0,'nul',PURPLE)]),'Σ(e_t − e_(t−1))² = 10; Σe_t² = 33; d = 10/33 ≈ 0,303.'),
         panel('De verschillen gebruiken maar n − 1 paren',table(['t','e_t','e_t − e_(t−1)'],[['1','1','geen voorganger'],['2','2','1'],['3','3','1'],['…','…','…'],['8','−3','−1']],'De teller van Durbin-Watson'),'Kleine opeenvolgende verschillen tegenover de totale residuele grootte leiden hier tot een lage d.')],
-        'Dit is alleen een illustratieve residureeks, geen nieuw geschat model. Gebruik voor de formele conclusie de cursusvoorwaarden en grenzen uit de tabellenbundel. Controleer een aangepast model opnieuw.')
+        'Dit is alleen een illustratieve residureeks, geen nieuw geschat model. Gebruik voor de formele conclusie de voorwaarden en grenzen uit de tabellenbundel. Controleer een aangepast model opnieuw.')
     residuals=[(i,(-1 if i%2 else 1)*i*.3) for i in range(1,9)]
     add('diagnostiek','Diagnostische toetsingsgrootheden zelf berekenen','absres','De absolute residuen maken toenemende spreiding zichtbaar',[
         panel('Residuen hebben beide tekens',plot('Residuen met toenemende grootte',[('e',residuals,GREEN,True)],'x','Residu e',(0,9,-3,3),horizontal=[(0,'nul',PURPLE)]),'De negatieve en positieve afwijkingen wisselen elkaar af, maar worden groter bij grotere x.'),

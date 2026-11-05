@@ -338,7 +338,7 @@ def enhance(lessons, sources):
         'De verschilschatter verwijdert het gemeenschappelijke niveau van de boekwaarde en '
         'schat de resterende fout. Een quotiëntschatter zou hier ten onrechte een vast percentage '
         'als beste beschrijving kiezen. Drie regels tonen het patroon; ze zijn op zichzelf geen '
-        'steekproef die aan de cursusvoorwaarde van dertig fouten voldoet.</p>'
+        'steekproef die aan de voorwaarde van dertig fouten voldoet.</p>'
         '<p>Houd de tekenafspraak e = b − w vast. Een positieve e betekent overwaardering; '
         'een negatieve e onderwaardering. De voorbeelden met uitsluitend positieve fouten '
         'in het boek horen bij hun specifieke controlevraag. Verander bij gemengde verschillen '
@@ -358,7 +358,7 @@ def enhance(lessons, sources):
         ['b̄', '€ 636', 'Gemiddelde boekwaarde van de steekproef'],
         ['Σw', '€ 97.185', 'Som gecontroleerde werkelijke waarden'],
         ['Σe²', '395.000 euro²', 'Kwadratensom van de verschillen'],
-        ['Aantal afwijkende posten', '43', 'Cursusvoorwaarde minstens 30 fouten is vervuld'],
+        ['Aantal afwijkende posten', '43', 'Voorwaarde van minstens 30 fouten is vervuld'],
     ])
     body += steps(['Σb = 165 × 636 = € 104.940. Daardoor Σe = 104.940 − 97.185 = € 7.755 en ē = € 47.',
                    'De geschatte totale fout is Nē = 3.740 × 47 = € 175.780. '
@@ -390,9 +390,9 @@ def enhance(lessons, sources):
         'Bijvoorbeeld b = 100 en 900 met w = 50 en 900 geven q = 950/1.000 = 0,95; '
         'het ongewogen gemiddelde van 0,50 en 1,00 zou 0,75 zijn en beantwoordt een andere vraag.</p>'
         '<p><strong>Een eerdere meting als hulpvariabele:</strong> in H8, opgave 6 is b '
-        'het gedeclareerde bedrag van vorig jaar en w dat van dit jaar; B = € 125.000 '
+        'het gedeclareerde bedrag van vorig jaar en w dat van dit jaar; B '
         'is het bekende totaal van vorig jaar voor alle werknemers. In opgave 7 zijn '
-        'b en w de winkelomzetten vóór en tijdens de campagne; B = € 1.282.000. '
+        'b en w de winkelomzetten vóór en tijdens de campagne. '
         'Dezelfde schatters gebruiken nu een verandering in plaats van een administratieve '
         'fout. Een ratio boven één kan dus groei betekenen. Koppel steeds dezelfde werknemer '
         'of winkel en gebruik het bekende totaal van de gehele populatie.</p>'
@@ -465,7 +465,7 @@ def enhance(lessons, sources):
                  + money(W-1.96*se) + '; ' + money(W+1.96*se) + '].'])
         + '<p class="note">Dit is een rekenillustratie uit het boek. Het boek '
         'meldt voor deze steekproef 28 fouten en rekent ondanks die uitzondering '
-        'verder. Op het tentamen toets je de expliciete cursusvoorwaarde van '
+        'verder. Op het tentamen toets je de expliciete voorwaarde van '
         'minstens 30 fouten; deze boekuitzondering heft die niet op. '
         'Ook gebruikt het boek afgeronde invoer en t = 1,966. De uitkomst '
         'hierboven gebruikt de gepubliceerde sommen en de huidige tabelregel. '
