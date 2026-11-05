@@ -23432,10 +23432,10 @@ window.SRA = {
         "R Square",
         "determinatiecoëfficiënt"
       ],
-      "definition": "Het deel van de totale variatie in y dat het model verklaart: R² = SSR/TotalSS. Het is niet het percentage waarnemingen dat precies goed voorspeld is.",
-      "definitionHtml": "Het deel van de totale variatie in <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><mi>y</mi></mrow></mrow></math> dat het model verklaart: <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac></mrow></mrow></math>. Het is niet het percentage waarnemingen dat precies goed voorspeld is.",
-      "example": "SSR = 70 en TotalSS = 100 geven R² = 70 / 100 = 0,70: het model verklaart 70% van de variatie in y binnen deze gegevens.",
-      "exampleHtml": "SSR = 70 en TotalSS = 100 geven <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow></math> = 70 / 100 = 0,70: het model verklaart 70% van de variatie in <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><mi>y</mi></mrow></mrow></math> binnen deze gegevens.",
+      "definition": "R² zegt welk deel van de verschillen in y het model verklaart. Het ligt tussen 0 en 1. Je rekent het uit als R² = SSR/TotalSS. Het is niet het percentage waarnemingen dat precies goed voorspeld is.",
+      "definitionHtml": "R² zegt welk deel van de verschillen in <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><mi>y</mi></mrow></mrow></math> het model verklaart. Het ligt tussen 0 en 1. Je rekent het uit als <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac></mrow></mrow></math>. Het is niet het percentage waarnemingen dat precies goed voorspeld is.",
+      "example": "Huren verschillen per woning. Bij R² = 0,80 hangt 80% van die verschillen samen met de oppervlakte; 20% blijft onverklaard. In de tabel: SSR = 80 en TotalSS = 100 geven 80 / 100 = 0,80.",
+      "exampleHtml": "Huren verschillen per woning. Bij <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow></math> = 0,80 hangt 80% van die verschillen samen met de oppervlakte; 20% blijft onverklaard. In de tabel: SSR = 80 en TotalSS = 100 geven 80 / 100 = 0,80.",
       "lesson": "anova",
       "refs": [
         {
@@ -73083,7 +73083,7 @@ window.SRAMCExamFrequency = {
     MSE: entry('MSE: gemiddelde residuele kwadratensom', 'Dit is SSE gedeeld door de residuele vrijheidsgraden n − k − 1. Het schat de residuele variantie; de wortel is de residuele standaardfout s_e.'),
     MSR: entry('MSR: gemiddelde verklaarde kwadratensom', 'Dit is SSR gedeeld door het aantal verklarende variabelen k. De globale F-toets vergelijkt deze waarde met MSE.'),
     F: entry('F: toetsingsgrootheid', 'Dit vergelijkt de verklaarde bijdrage van een model of uitbreiding met de overgebleven residuele variatie. De precieze teller en vrijheidsgraden hangen af van de globale toets of de toets op een modeluitbreiding.'),
-    R2: entry('R²: verklaarde fractie van de variatie', 'Dit is SSR gedeeld door TotalSS. Een waarde van 0,80 betekent dat het model 80% van de variatie in y binnen deze gegevens verklaart.'),
+    R2: entry('R²: welk deel is verklaard?', 'R² zegt welk deel van de verschillen tussen de waarden je kunt verklaren. Het ligt tussen 0 en 1: bij 0,80 is 80% verklaard en blijft 20% onverklaard. Bij de schatters is het de correlatie R in het kwadraat (R = 0,9 geeft 0,81), in een ANOVA-tabel SSR gedeeld door TotalSS.'),
     R2adj: entry('R²_adj: gecorrigeerde verklaarde variatie', 'Dit is R² met een correctie voor het aantal verklarende variabelen en waarnemingen. De correctie voorkomt dat iedere extra variabele automatisch als verbetering wordt gezien.'),
     MD: entry('MD: Mahalanobis-afstand', 'Dit meet hoe ongewoon de combinatie van verklarende waarden van een waarneming is. Een grote MD wijst op een bijzondere positie in de x-ruimte en zegt op zichzelf niet dat het residu groot is.'),
     CD: entry('CD: Cook-afstand', 'Dit meet hoeveel invloed één waarneming op het geschatte regressiemodel heeft. Een grote CD is aanleiding om te onderzoeken hoe sterk het model verandert als dat punt wordt weggelaten.'),

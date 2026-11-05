@@ -17646,10 +17646,10 @@ window.SRA = {
         "R Square",
         "determinatiecoëfficiënt"
       ],
-      "definition": "Het deel van de totale variatie in y dat het model verklaart: R² = SSR/TotalSS. Het is niet het percentage waarnemingen dat precies goed voorspeld is.",
-      "definitionHtml": "Het deel van de totale variatie in <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><mi>y</mi></mrow></mrow></math> dat het model verklaart: <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac></mrow></mrow></math>. Het is niet het percentage waarnemingen dat precies goed voorspeld is.",
-      "example": "SSR = 70 en TotalSS = 100 geven R² = 70 / 100 = 0,70: het model verklaart 70% van de variatie in y binnen deze gegevens.",
-      "exampleHtml": "SSR = 70 en TotalSS = 100 geven <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow></math> = 70 / 100 = 0,70: het model verklaart 70% van de variatie in <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><mi>y</mi></mrow></mrow></math> binnen deze gegevens.",
+      "definition": "R² zegt welk deel van de verschillen in y het model verklaart. Het ligt tussen 0 en 1. Je rekent het uit als R² = SSR/TotalSS. Het is niet het percentage waarnemingen dat precies goed voorspeld is.",
+      "definitionHtml": "R² zegt welk deel van de verschillen in <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><mi>y</mi></mrow></mrow></math> het model verklaart. Het ligt tussen 0 en 1. Je rekent het uit als <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>SSR</mi></mrow><mrow><mi>TotalSS</mi></mrow></mfrac></mrow></mrow></math>. Het is niet het percentage waarnemingen dat precies goed voorspeld is.",
+      "example": "Huren verschillen per woning. Bij R² = 0,80 hangt 80% van die verschillen samen met de oppervlakte; 20% blijft onverklaard. In de tabel: SSR = 80 en TotalSS = 100 geven 80 / 100 = 0,80.",
+      "exampleHtml": "Huren verschillen per woning. Bij <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow></math> = 0,80 hangt 80% van die verschillen samen met de oppervlakte; 20% blijft onverklaard. In de tabel: SSR = 80 en TotalSS = 100 geven 80 / 100 = 0,80.",
       "lesson": "anova",
       "refs": [
         {
