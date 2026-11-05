@@ -153,4 +153,4 @@ def enhance(lessons):
         for section in lesson['sections'] + lesson['formulaGuide']:
             section['html'] = inline_formulas(section['html'])
         # Steps retain their plain-text source for checks and other consumers.
-        lesson['example']['stepsHtml'] = [inline_formulas(html.escape(step)) for step in lesson['example']['steps']]
+        lesson['example']['stepsHtml'] = [re.sub(r'^([^:<=]{3,32}:)', r'<strong>\1</strong>', inline_formulas(html.escape(step))) for step in lesson['example']['steps']]

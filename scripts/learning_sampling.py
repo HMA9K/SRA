@@ -276,13 +276,13 @@ def enhance(lessons, sources):
 
     # Corrigeer aantoonbare bestaande tabelkeuze in het MPU-voorbeeld.
     L['mpu']['example']['steps'] = [
-        'Gegeven: N = 1.000, n = 100, w̄ = € 80, s_w = € 20. Voor een tweezijdig 95%-interval is df = 99. '
-        'Tabellenbundel PDF 13: naast lagere rij 95, kolom 0,025; t = 1,985.',
-        'Ŵ = 1.000 × 80 = € 80.000. Het gemiddelde wordt naar alle 1.000 artikelen doorgerekend.',
-        'Eindigheidscorrectie = √(900/999) ≈ 0,9492. De 100 al gecontroleerde posten verkleinen de resterende steekproefonzekerheid.',
-        's_MPU = 1.000 × (20/10) × √(900/999) ≈ € 1.898,32. Dit is de standaardfout van het totaal.',
-        'Reken met onafgeronde tussenwaarden: E = 1,985 × 1.898,31599 ≈ € 3.768,16. '
-        'Interval ≈ [€ 76.231,84; € 83.768,16].']
+        'Gegevens: N = 1.000, n = 100, w̄ = € 80, s_w = € 20.',
+        'Kritieke waarde: tweezijdig 95% en df = n − 1 = 99. Tabellenbundel PDF 13, rij 95, kolom 0,025: t = 1,985.',
+        'Puntschatting: reken het gemiddelde door naar alle artikelen: Ŵ = N × w̄ = 1.000 × 80 = € 80.000.',
+        'Eindigheidscorrectie: √((N − n)/(N − 1)) = √(900/999) ≈ 0,9492. De 100 al gecontroleerde posten verkleinen de resterende onzekerheid.',
+        'Standaardfout: s_MPU = N × s_w / √n × correctie = 1.000 × (20/10) × √(900/999) ≈ € 1.898,32.',
+        'Marge: reken onafgerond door: E = 1,985 × 1.898,31599 ≈ € 3.768,16.',
+        'Interval: 80.000 − 3.768,16 en 80.000 + 3.768,16 geven [€ 76.231,84; € 83.768,16].']
     # Ook de formulegids bevat een kopie van het oude voorbeeld.
     for guide in L['mpu']['formulaGuide']:
         for old, new in [('tabelrij 90 en t = 1,987', 'tabelrij 95 en t = 1,985'),
@@ -412,7 +412,7 @@ def enhance(lessons, sources):
                  'Puntschatting: Ŵ = 17.500/12.000 × € 125.000 = € 182.291,67.',
                  'Resterende spreiding: sq = √(32,177² − 2 × 1,4583 × 0,94946 × 35,104 × 32,177 + 1,4583² × 35,104²) ≈ 22,98.',
                  'Standaardfout van het totaal: 1.000 × 22,98/√100 × √(900/999) ≈ € 2.181.',
-                 'Interval: df = 99, dus tabelrij 90 met t = 1,987. De marge is 1,987 × € 2.181 ≈ € 4.334. Dat geeft ongeveer [€ 177.957; € 186.626].'])
+                 'Interval: df = 99, dus tabelrij 95 met t = 1,985. De marge is 1,985 × € 2.181 ≈ € 4.330. Dat geeft ongeveer [€ 177.962; € 186.622].'])
         + '<p>Koppel in zo’n vergelijking steeds dezelfde werknemer en gebruik het bekende '
         'totaal van de gehele populatie.</p>'
         '<p>Let ook op de beperking: de eerste honderd binnengekomen declaraties vormen niet vanzelf '
