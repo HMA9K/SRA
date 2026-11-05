@@ -241,7 +241,7 @@ def enhance(lessons, sources):
         'De gekozen schatter en intervalaannamen moeten ook passen bij de gegevens.</p>',
         [bookref('boek-h8b', 216), ref('slides', 34, 'PDF 34: vergelijking van onnauwkeurigheidsmarges')])
     add('onzekerheid', 'Intervalgrafieken lezen: één vaste populatiewaarde, verschillende schattingen',
-        '<p>De intervalgrafieken in het boek tonen '
+        '<p>De intervalgrafieken tonen '
         'twintig opnieuw getrokken steekproeven uit dezelfde populatie. '
         'De horizontale referentielijn is het vaste werkelijke totaal van '
         '€ 7.029.580. Elke verticale lijn is één berekend interval; het midden '
@@ -296,9 +296,9 @@ def enhance(lessons, sources):
         'berekende interval smaller uitvalt.</p>',
         [bookref('boek-h8a', 203), bookref('boek-h8b', 217)])
     result = mpu(5230, 180, 398000, 5378400500)
-    body = '<p>De slides geven de onderstaande voorraadgegevens. De kwadratensom is in euro²; '
+    body = '<p>Een voorraad bestaat uit 5.230 artikelen. Daarvan zijn er 180 gecontroleerd. De kwadratensom is in euro²; '
     body += 'deze is dus niet de som van de waarden nogmaals in euro.</p>'
-    body += table('Voorraadcontrole uit de colleges', ['Gegeven', 'Waarde', 'Functie in de berekening'], [
+    body += table('Gegevens van de voorraadcontrole', ['Gegeven', 'Waarde', 'Functie in de berekening'], [
         ['N', '5.230', 'Van gemiddelde naar populatietotaal'],
         ['n', '180', 'Gemiddelde, spreiding, standaardfout en vrijheidsgraden'],
         ['Σw', '€ 398.000', 'Totaal van de gecontroleerde werkelijke waarden'],
@@ -314,9 +314,8 @@ def enhance(lessons, sources):
                    'E = 1,974 × s<sub>MPU</sub> = ' + money(1.974*result['se']) + '. Interval: ['
                    + money(result['estimate']-1.974*result['se']) + '; '
                    + money(result['estimate']+1.974*result['se']) + '].'])
-    body += '<p class="note">De slides rekenen met afgeronde s<sub>w</sub> = 5.013 en tonen '
-    body += 'een marge van € 3.790.938. Hier wordt met de gegeven sommen onafgerond doorgerekend: '
-    body += '€ 3.790.970,67. Dit verschil komt door tussenafronding. '
+    body += '<p class="note">Reken met de gegeven sommen onafgerond door: tussentijds afronden '
+    body += 'verandert de marge. '
     body += 'De marge is groot doordat de afzonderlijke voorraadwaarden sterk uiteenlopen.</p>'
     body += exercise('<p>Gebruik dezelfde gegevens. De accountant mag een totale intervalbreedte '
                      'van € 2.000.000 accepteren. Voldoet deze controle? Noem twee inhoudelijke '
@@ -340,16 +339,16 @@ def enhance(lessons, sources):
         'als beste beschrijving kiezen. Drie regels tonen het patroon; ze zijn op zichzelf geen '
         'steekproef die aan de voorwaarde van dertig fouten voldoet.</p>'
         '<p>Houd de tekenafspraak e = b − w vast. Een positieve e betekent overwaardering; '
-        'een negatieve e onderwaardering. De voorbeelden met uitsluitend positieve fouten '
-        'in het boek horen bij hun specifieke controlevraag. Verander bij gemengde verschillen '
+        'een negatieve e onderwaardering. Verander bij gemengde verschillen '
         'de tekens niet zonder een expliciete opdracht of afbakening.</p>'
-        '<p><strong>Let op bij H8, opgave 5:</strong> de kolom <em>Fout</em> gebruikt daar juist w − b. '
-        'Keer het teken dus om voordat je met e = b − w rekent.</p>',
+        '<p><strong>Let op het teken in een opgave:</strong> een kolom <em>Fout</em> kan juist '
+        'w − b bevatten, dus werkelijke waarde min boekwaarde. Bij b = 100 en w = 120 staat daar '
+        '+20, terwijl e = b − w = −20. Keer het teken dan om voordat je rekent.</p>',
         [ref('slides', 20, 'PDF 20-22: constant verschil en minimaal 30 fouten'),
          ref('formules', 1, 'Formule 6: e = b − w'), bookref('boek-h8a', 208),
          ref('opgaven', 5, 'H8, opgave 5: tegengestelde tekenrichting in kolom Fout'),
          ref('uitwerkingen', 6, 'H8, opgave 5: werkelijke som en MPU-uitwerking')])
-    body = '<p>De cijfers uit tentamen maart 2025 vragen om twee vertalingen: van een '
+    body = '<p>Deze cijfers vragen om twee vertalingen: van een '
     body += 'gegeven gemiddelde boekwaarde naar een steekproeftotaal, en van een totale fout '
     body += 'naar een werkelijke populatiewaarde. Schrijf die vertalingen op vóór de variantieformule.</p>'
     body += table('Elektroconsum: gegevens voor de verschilschatter', ['Invoer', 'Waarde', 'Betekenis'], [
@@ -385,26 +384,43 @@ def enhance(lessons, sources):
             ['€ 100', '€ 90', '€ 10', '0,90'], ['€ 200', '€ 180', '€ 20', '0,90'],
             ['€ 500', '€ 450', '€ 50', '0,90']])
         + '<p>Bij grotere boekwaarden groeit het foutbedrag mee. Een vast bedrag aftrekken '
-        'past dan minder goed dan vermenigvuldigen met een verhouding. De goedratio gebruikt '
-        'Σw/Σb en geeft daardoor grote boekwaarden het passende gewicht in de totale verhouding. '
-        'Bijvoorbeeld b = 100 en 900 met w = 50 en 900 geven q = 950/1.000 = 0,95; '
-        'het ongewogen gemiddelde van 0,50 en 1,00 zou 0,75 zijn en beantwoordt een andere vraag.</p>'
-        '<p><strong>Een eerdere meting als hulpvariabele:</strong> in H8, opgave 6 is b '
-        'het gedeclareerde bedrag van vorig jaar en w dat van dit jaar; B '
-        'is het bekende totaal van vorig jaar voor alle werknemers. In opgave 7 zijn '
-        'b en w de winkelomzetten vóór en tijdens de campagne. '
-        'Dezelfde schatters gebruiken nu een verandering in plaats van een administratieve '
-        'fout. Een ratio boven één kan dus groei betekenen. Koppel steeds dezelfde werknemer '
-        'of winkel en gebruik het bekende totaal van de gehele populatie.</p>'
-        '<p>Maak ook de beperking zichtbaar: de eerste honderd binnengekomen declaraties '
-        'in opgave 6 vormen niet vanzelf een aselecte steekproef. Een rekenuitkomst herstelt '
-        'die selectie niet. De vergelijking vóór en tijdens de campagne in opgave 7 '
-        'bewijst op zichzelf geen oorzakelijk campagne-effect.</p>',
+        'past dan minder goed dan vermenigvuldigen met een verhouding.</p>'
+        '<p><strong>Eerst optellen, dan delen.</strong> De goedratio is Σw/Σb: je telt alle '
+        'werkelijke waarden op en deelt door alle boekwaarden. Neem een steekproef met één '
+        'kleine en één grote post.</p>'
+        + table('Twee posten: de verhouding van de sommen', ['Post', 'Boekwaarde b', 'Werkelijke waarde w', 'w/b'], [
+            ['Klein', '€ 100', '€ 50', '0,50'], ['Groot', '€ 900', '€ 900', '1,00'],
+            ['Samen', '€ 1.000', '€ 950', '0,95']])
+        + '<p>Van iedere euro boekwaarde blijkt dus 95 cent goed: q = 950/1.000 = 0,95. Het gemiddelde '
+        'van de losse verhoudingen is (0,50 + 1,00)/2 = 0,75. Dat laat de post van € 100 even zwaar '
+        'meetellen als de post van € 900. Met 0,75 zou je € 750 schatten, terwijl de twee posten '
+        'samen € 950 waard zijn.</p>'
+        '<p><strong>Ook bij groei werkt deze schatter.</strong> De boekwaarde b hoeft geen '
+        'administratief bedrag te zijn. Het kan ook een eerdere meting zijn. De schatter gebruikt '
+        'dan een verandering in plaats van een fout, dus q kan boven 1 liggen.</p>'
+        '<p>Een bedrijf met 1.000 werknemers wil het totaal aan declaraties van het eerste kwartaal '
+        'schatten, maar veel declaraties komen laat binnen. Van de eerste 100 werknemers zijn de '
+        'bedragen van dit jaar (w) en van vorig jaar (b) bekend. Bekend is ook wat alle 1.000 '
+        'werknemers vorig jaar samen declareerden (B).</p>'
+        + table('Gegevens van de declaraties', ['Gegeven', 'Waarde'], [
+            ['Populatie en steekproef', 'N = 1.000; n = 100'],
+            ['Totaal vorig jaar, alle werknemers', 'B = € 125.000'],
+            ['Som vorig jaar, steekproef', 'Σb = € 12.000, dus b̄ = € 120'],
+            ['Som dit jaar, steekproef', 'Σw = € 17.500, dus w̄ = € 175'],
+            ['Spreiding en samenhang', 'sb = 35,104; sw = 32,177; R = 0,94946']])
+        + steps(['Goedratio: q = 17.500/12.000 = 1,4583. De werknemers in de steekproef declareren dit jaar ongeveer 46% meer.',
+                 'Puntschatting: Ŵ = 17.500/12.000 × € 125.000 = € 182.291,67.',
+                 'Resterende spreiding: sq = √(32,177² − 2 × 1,4583 × 0,94946 × 35,104 × 32,177 + 1,4583² × 35,104²) ≈ 22,98.',
+                 'Standaardfout van het totaal: 1.000 × 22,98/√100 × √(900/999) ≈ € 2.181.',
+                 'Interval: df = 99, dus tabelrij 90 met t = 1,987. De marge is 1,987 × € 2.181 ≈ € 4.334. Dat geeft ongeveer [€ 177.957; € 186.626].'])
+        + '<p>Koppel in zo’n vergelijking steeds dezelfde werknemer en gebruik het bekende '
+        'totaal van de gehele populatie.</p>'
+        '<p>Let ook op de beperking: de eerste honderd binnengekomen declaraties vormen niet vanzelf '
+        'een aselecte steekproef. Een rekenuitkomst herstelt die selectie niet. Een stijging tussen '
+        'twee perioden bewijst bovendien op zichzelf niet wat de oorzaak is.</p>',
         [ref('slides', 23, 'PDF 23-26: quotiëntschatter'), bookref('boek-h8b', 211),
          ref('opgaven', 5, 'H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar'),
-         ref('opgaven', 6, 'H8, opgave 7: omzet voor en tijdens de campagne'),
-         ref('uitwerkingen', 6, 'H8, opgave 6, PDF 6-8: betekenis b en w'),
-         ref('uitwerkingen', 8, 'H8, opgave 7, PDF 8-9: betekenis b en w')])
+         ref('uitwerkingen', 6, 'H8, opgave 6, PDF 6-8: goedratio, standaardfout en interval')])
     extend('quotient', 'Spreiding die na de verhouding overblijft',
         '<p>De term −2qR<sub>bw</sub>s<sub>b</sub>s<sub>w</sub> corrigeert voor de samenhang '
         'tussen boekwaarde en werkelijke waarde. De twee variaties onafhankelijk optellen '
@@ -443,10 +459,10 @@ def enhance(lessons, sources):
     se = 3500*sq/sqrt(400)*sqrt(3100/3499)
     W = q*7360817
     add('quotient', 'De tweede rekenwijze: fouttotalen en productsommen',
-        '<p>Het boek geeft sommen waarmee je formule 14 kunt invullen '
+        '<p>Soms krijg je sommen waarmee je formule 14 kunt invullen '
         'zonder eerst s<sub>b</sub>, s<sub>w</sub> en R afzonderlijk te berekenen. '
         'Dit is nuttig wanneer een tentamencasus juist zulke kolommen aanlevert.</p>'
-        + table('Sommen en populatiegegevens van de voorraadcasus uit het boek',
+        + table('Sommen en populatiegegevens van een voorraadcontrole',
                 ['Grootheid', 'Waarde'], [
                     ['N / n / B', '3.500 / 400 / € 7.360.817'],
                     ['Σw / Σb', '€ 803.403 / € 830.066'],
@@ -463,13 +479,9 @@ def enhance(lessons, sources):
                  'De actuele cursusregel geeft bij df = 399 de onderste t-rij: '
                  't = 1,960 bij 95% tweezijdig. Daarmee wordt het interval ['
                  + money(W-1.96*se) + '; ' + money(W+1.96*se) + '].'])
-        + '<p class="note">Dit is een rekenillustratie uit het boek. Het boek '
-        'meldt voor deze steekproef 28 fouten en rekent ondanks die uitzondering '
-        'verder. Op het tentamen toets je de expliciete voorwaarde van '
-        'minstens 30 fouten; deze boekuitzondering heft die niet op. '
-        'Ook gebruikt het boek afgeronde invoer en t = 1,966. De uitkomst '
-        'hierboven gebruikt de gepubliceerde sommen en de huidige tabelregel. '
-        'Daarom wijkt zij enigszins af van het afgedrukte boekinterval.</p>',
+        + '<p class="note">Let op: deze steekproef bevat 28 fouten. Dat is minder dan de '
+        'voorwaarde van minstens 30 fouten, dus dit voorbeeld oefent alleen de berekening. '
+        'Op het tentamen toets je die voorwaarde expliciet.</p>',
         [bookref('boek-h8a', 209), bookref('boek-h8b', 213),
          ref('formules', 1, 'Formule 14: resterende spreiding uit fouttotalen'),
          ref('programma', 4, 'Huidige cursusregel voor df > 200')])
@@ -540,10 +552,12 @@ def enhance(lessons, sources):
                  'Bevat de steekproef minstens 30 fouten? Zo nee, dan vallen verschil- en quotiëntschatter af.',
                  'Kijk naar het foutpatroon: een vast foutbedrag wijst op de verschilschatter, een vast foutpercentage op de quotiëntschatter, een algemeen lineair verband op de regressieschatter.',
                  'Onderbouw je keuze in woorden met het patroon uit de gegevens, niet alleen met het kleinste interval.'])
-        + '<h3>Hoe goed werken ze? De resultaten uit het boek</h3>'
-        + '<p>Het boek past alle schatters toe op dezelfde voorraadcase (N = 3.500, n = 400, '
-        'gewenste marge € 150.000) en herhaalt dat met twintig steekproeven.</p>'
-        + table('Gerealiseerde marge per schatter in de boekcase', ['Schatter', 'Marge steekproef 1', 'Gemiddelde marge', 'Interval mist W'], [
+        + '<h3>Hoe goed werken ze? Eén voorraad, alle schatters</h3>'
+        + '<p>Neem een voorraad van 3.500 artikelen met een gewenste marge van € 150.000. '
+        'Alle schatters zijn toegepast op dezelfde steekproef van 400 artikelen. Daarna is '
+        'dat herhaald met nieuwe steekproeven uit dezelfde voorraad, zodat je ziet hoe groot '
+        'de marge gemiddeld is en hoe vaak het interval de werkelijke waarde W mist.</p>'
+        + table('Gerealiseerde marge per schatter', ['Schatter', 'Marge steekproef 1', 'Gemiddelde marge', 'Interval mist W'], [
             ['Direct (MPU)', '€ 220.399', '€ 221.864 (20 steekproeven)', '2 van 20'],
             ['Verschil', '€ 93.068', '€ 108.856 (20 steekproeven)', '2 van 20'],
             ['Quotiënt', '€ 93.409', '€ 109.117 (20 steekproeven)', '2 van 20'],
@@ -596,20 +610,20 @@ def enhance(lessons, sources):
     gamma = E*E/(t*t*N*sq*sq)
     required = N/(1+gamma)
     add('steekproefomvang', 'De slides doorrekenen: van gewenste marge naar extra controles',
-        '<p>De slides vergelijken vier gerealiseerde marges en willen de quotiëntschatter '
-        'nauwkeuriger maken. De gewenste <em>marge</em> is € 310.000, dus de gewenste '
+        '<p>Een populatie bestaat uit 28.946 posten. Daarvan zijn er 1.000 gecontroleerd, en de '
+        'quotiëntschatter moet nauwkeuriger worden. De gewenste <em>marge</em> is € 310.000, dus de gewenste '
         'totale breedte € 620.000.</p>'
-        + table('Invoer uit de colleges', ['Grootheid', 'Waarde'], [
+        + table('Invoer voor de berekening', ['Grootheid', 'Waarde'], [
             ['N', '28.946'], ['Reeds gecontroleerd n', '1.000'], ['s<sub>q</sub>', '€ 213,51'],
             ['t', '1,960'], ['E', '€ 310.000']])
         + steps(['γ = 310.000²/(1,960² × 28.946 × 213,51²) = ' + number(gamma, 5) + '.',
                  'n = 28.946/(1 + γ) = ' + number(required, 5) + '; rond omhoog naar '
                  + number(ceil(required), 0) + '.',
                  'Er zijn al 1.000 controles: aanvullend nodig ' + str(ceil(required)-1000) + '.',
-                 'Na uitbreiding tonen de slides een nieuwe s<sub>q</sub> van € 195,17 en '
+                 'Na de uitbreiding blijkt s<sub>q</sub> € 195,17 te zijn, met '
                  'een gerealiseerde marge van circa € 283.305. Die is kleiner dan de '
                  'geplande € 310.000 doordat de nieuwe spreiding lager is.'])
-        + exercise('<p><strong>Vervolg op de cursuscasus.</strong> Een collega wil in γ '
+        + exercise('<p><strong>Vervolg.</strong> Een collega wil in γ '
                    '€ 620.000 invullen, omdat dat de toegestane totale breedte is. '
                    'Wat gebeurt er en waarom is dat onjuist?</p>',
                    '<p>De ingevoerde E verdubbelt. Door E² wordt γ vier keer zo groot '
@@ -630,10 +644,10 @@ def enhance(lessons, sources):
         cumulative += amount
         rows.append([label, number(count, 0), number(amount, 0), number(cumulative, 0)])
     rows.append(['≥ 10.000: volledige controle', '48', '621.778', 'Buiten de cumulatie'])
-    body = '<p>Dit is de volledige tabel uit de colleges. De grenzen in de eerste kolom '
+    body = '<p>De tabel toont een populatie, ingedeeld naar boekwaarde. De grenzen in de eerste kolom '
     body += 'betreffen <strong>boekwaarde per post</strong>; de laatste kolom telt eurobedragen '
     body += 'van alle posten tot die grens op. Verwar die twee eurogrootheden niet.</p>'
-    body += table('Collegetabel: boekwaarde per klasse en cumulatief bedrag',
+    body += table('Boekwaarde per klasse en cumulatief bedrag',
                   ['Boekwaarde per post (€)', 'Aantal posten', 'Som boekwaarden (€)', 'Cumulatief (€)'], rows)
     body += steps(['Haal de 48 posten met boekwaarde ≥ € 10.000 apart voor volledige controle. '
                    'De overige 4.775 posten hebben samen € 14.306.659 boekwaarde.',
@@ -657,7 +671,7 @@ def enhance(lessons, sources):
     body += '= € 4.253.019. Een cumulatief totaal is dus niet hetzelfde als de '
     body += 'boekwaarde van dat ene stratum. De aantallen hoeven niet gelijk te zijn: '
     body += 'deze methode streeft naar ongeveer gelijke totale boekwaarde.</p>'
-    body += exercise('<p>Verklaar met de oorspronkelijke tabel waarom de grens tussen '
+    body += exercise('<p>Verklaar met de tabel waarom de grens tussen '
                      'stratum 2 en 3 bij € 5.000 ligt en niet bij € 4.000. '
                      'Bereken ook het aantal posten in stratum 3.</p>',
                      '<p>Doel 2 is € 7.153.329,50. Bij grens € 4.000 is het cumulatieve '
@@ -675,12 +689,12 @@ def enhance(lessons, sources):
         cumulative += root
         rows.append([label, number(width, 0), number(count, 0), number(width*count, 0),
                      number(root), number(cumulative)])
-    body = '<p>De tweede boekmethode houdt rekening met de verdeling van de aantallen '
-    body += 'en de breedte van de boekwaardeklassen. In cursusopgave H8.8 hebben de '
+    body = '<p>De tweede methode houdt rekening met de verdeling van de aantallen '
+    body += 'en de breedte van de boekwaardeklassen. In dit voorbeeld hebben de '
     body += 'klassen verschillende breedtes. Bereken per klasse √(breedte × frequentie) '
     body += 'en tel die <em>wortels</em> op. Neem niet eerst de totale frequentie en '
     body += 'daarna één wortel.</p>'
-    body += table('H8.8b: volledige rekenkolommen, zonder het 100%-stratum',
+    body += table('Volledige rekenkolommen, zonder het 100%-stratum',
                   ['Boekwaardeklasse (€)', 'Breedte', 'Frequentie', 'Breedte × frequentie', 'Wortel', 'Cumulatief'], rows)
     body += steps(['Het cumulatieve worteltotaal is ' + number(cumulative) + '. '
                    'De vier streefdelen zijn elk ' + number(cumulative/4) + '.',
@@ -690,14 +704,14 @@ def enhance(lessons, sources):
                    '€ 1.200, € 2.500 en € 5.000. De vierde groep eindigt bij € 10.000.',
                    'Tel de frequenties binnen de nieuwe groepen op. Gebruik pas die '
                    'groepsomvangen bij de allocatie.'])
-    body += table('Twee indelingen van dezelfde cursuspopulatie H8.8',
+    body += table('Twee indelingen van dezelfde populatie',
                   ['Methode', 'Grenzen van vier strata (€)', 'Aantallen Nᵢ'], [
                       ['Cumulatieve boekwaarde', '0 / 1.600 / 3.000 / 5.000 / 10.000', '4.078 / 1.927 / 1.107 / 547'],
                       ['Cumulatieve wortel', '0 / 1.200 / 2.500 / 5.000 / 10.000', '3.196 / 2.329 / 1.587 / 547']])
     body += '<p>Beide indelingen tellen op tot 7.659 posten. De verschillen zijn '
     body += 'inhoudelijk: de eerste verdeelt ongeveer het bedrag, de tweede benut '
-    body += 'de vorm van de frequentieverdeling. Het boek vindt in zijn voorbeeld '
-    body += 'een betere precisie met de wortelmethode; dat is geen garantie voor '
+    body += 'de vorm van de frequentieverdeling. De wortelmethode kan een betere precisie '
+    body += 'geven, maar dat is geen garantie voor '
     body += 'iedere populatie. Vergelijk uiteindelijk de gerealiseerde standaardfouten.</p>'
     body += exercise('<p>Waarom is voor de klasse € 5.000 tot € 7.500 de rekenwaarde '
                      '√(2.500 × 418) en niet √418? Welke gegeven informatie gaat '
@@ -724,7 +738,7 @@ def enhance(lessons, sources):
     body += 'Neyman-allocatie gebruikt omvang én vooraf geschatte spreiding. '
     body += 'Bij gelijke controlekosten krijgen grotere en meer variabele groepen '
     body += 'meer waarnemingen, omdat daar meer onzekerheid te verminderen is.</p>'
-    body += table('Collegevoorbeeld: 250 controles verdelen over 4.775 posten',
+    body += table('Voorbeeld: 250 controles verdelen over 4.775 posten',
                   ['Stratum', 'Nᵢ', 'Vooraf sᵢ', 'Nᵢsᵢ', 'Neyman onafgerond', 'Neyman geheel', 'Evenredig onafgerond'], alloc_rows)
     body += '<div class="formula">Neyman: nᵢ = n × Nᵢsᵢ / ΣNᵢsᵢ<br>'
     body += 'Evenredig: nᵢ = n × Nᵢ / N</div>'
@@ -748,10 +762,10 @@ def enhance(lessons, sources):
     body += '<p><strong>Planning versus uitvoering:</strong> de vooraf geschatte '
     body += 'sᵢ uit deze allocatietabel is niet automatisch de werkelijk gevonden '
     body += 's<sub>w,i</sub>. Gebruik bij de schatting de na controle gegeven '
-    body += 'sommen, kwadratensommen en gerealiseerde nᵢ. De collegecasus hieronder '
+    body += 'sommen, kwadratensommen en gerealiseerde nᵢ. Het voorbeeld hieronder '
     body += 'illustreert dat onderscheid.</p>'
-    body += '<p><strong>Aanvullende boekvariant:</strong> het boek noemt '
-    body += 'ook allocatie evenredig aan de totale <em>boekwaarde</em> per '
+    body += '<p><strong>Nog een variant:</strong> je kunt '
+    body += 'ook kiezen voor allocatie evenredig aan de totale <em>boekwaarde</em> per '
     body += 'stratum. Als die bedragen ongeveer gelijk zijn, leidt dat '
     body += 'tot ongeveer gelijke aantallen controles. Dat is een andere '
     body += 'keuze dan de standaard evenredige allocatie Nᵢ/N. '
@@ -774,10 +788,10 @@ def enhance(lessons, sources):
     W = sum(v['estimate'] for v in estimates) + 621778
     se = sqrt(sum(v['se']**2 for v in estimates))
     body = '<p>Na de controles worden per stratum de werkelijke waarden '
-    body += 'samengevat. Deze oorspronkelijke collegedata sluiten aan op de '
+    body += 'samengevat. Deze gegevens sluiten aan op de '
     body += 'Neyman-aantallen hierboven. Gebruik bij elke rij de Nᵢ en nᵢ van die groep, '
     body += 'ook in de eindigheidscorrectie.</p>'
-    body += table('Collegevoorbeeld: invoer voor de gestratificeerde MPU-schatting',
+    body += table('Invoer voor de gestratificeerde MPU-schatting',
                   ['Stratum', 'Nᵢ', 'nᵢ', 'Σwᵢ (€)', 'Σwᵢ² (euro²)'],
                   [[i, number(N, 0), n, number(total, 0), number(square, 0)]
                    for i, (N, n, total, square) in enumerate(SLIDE_STRATA, 1)])
@@ -798,7 +812,7 @@ def enhance(lessons, sources):
                   [[i, number(v['mean']), number(v['estimate']), number(v['sd'], 4),
                     number(v['se']), number(v['se']**2)] for i, v in enumerate(estimates, 1)])
     body += '<p>De vier puntschattingen tellen op tot € 697.078,47. '
-    body += 'De controle van de 48 grote posten levert volgens het collegevoorbeeld '
+    body += 'De controle van de 48 grote posten levert '
     body += 'een werkelijk totaal van € 621.778 op. Tel dit één keer erbij: '
     body += 'Ŵ = ' + money(W) + '. Als bij volledige controle een ander werkelijk '
     body += 'totaal wordt gevonden dan de boekwaarde, gebruik je dat gecontroleerde totaal.</p>'
@@ -814,8 +828,7 @@ def enhance(lessons, sources):
     body += 'kolom 0,025 geeft t = 1,960. E = ' + money(1.96*se) + '. '
     body += 'Het tweezijdige 95%-interval is [' + money(W-1.96*se) + '; '
     body += money(W+1.96*se) + ']. Bij afronding naar buiten op € 1.000 '
-    body += 'wordt dit [€ 1.303.000; € 1.335.000]. De collegedia rondt het '
-    body += 'midden tot € 1.318.856 en de marge tot € 15.590 af.</p>'
+    body += 'wordt dit [€ 1.303.000; € 1.335.000].</p>'
     body += exercise('<p>Stel dat dezelfde integrale controle een werkelijke topwaarde '
                      'van € 600.000 oplevert. De vier steekproeven blijven gelijk. '
                      'Wat verandert aan het midden en de marge?</p>',
@@ -843,7 +856,7 @@ def enhance(lessons, sources):
     body += 'stratumspreidingen. Voor een andere allocatie mag je niet zonder '
     body += 'controle dezelfde n-verdeling invullen. E is de gewenste marge voor '
     body += 'de totaalschatting.</p>'
-    body += table('Invulvoorbeeld bij boekformule 8.20', ['Stratum', 'Nᵢ', 'sᵢ', 'Nᵢs²ᵢ'], [
+    body += table('Invulvoorbeeld', ['Stratum', 'Nᵢ', 'sᵢ', 'Nᵢs²ᵢ'], [
         [1, 600, 20, '240.000'], [2, 400, 40, '640.000'], ['Som', '1.000', '', '880.000']])
     gamma = 3000**2/(2**2*880000)
     required = 1000/(1+gamma)

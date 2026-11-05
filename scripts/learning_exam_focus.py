@@ -66,7 +66,7 @@ def enhance(lessons, sources):
     L={l['id']:l for l in lessons}
     data=json.loads((ROOT/'data/college8-analysis.json').read_text(encoding='utf8'))
     models={m['name']:m for m in data['models']}
-    body='<p>De volgende tabellen zijn <strong>herberekeningen uit het oorspronkelijke Excelblad College8</strong>. '
+    body='<p>De volgende tabellen zijn <strong>herberekeningen uit het Excelblad College8</strong>. '
     body+='Het blad bevat 162 auto’s: 81 benzine, 41 diesel en 40 elektrisch. Alle gegevens zijn compleet en alle verkoopwaarden zijn positief. '
     body+='De vijf regressies gebruiken de variabelen uit de oorspronkelijke eindtabellen, met constante. '
     body+='De gepubliceerde coëfficiënten zijn binnen hun afronding gereproduceerd. Dit is geen nieuwe SPSS-uitvoering of reconstructie van alle selectiestappen.</p>'
@@ -84,7 +84,7 @@ def enhance(lessons, sources):
     shared+='<p>De voorspelling is de constante plus de som van B × kenmerk. Een dummy is 1 als de genoemde categorie geldt en anders 0. '
     shared+='Een B bij kilometerstand is euro per kilometer, bij bouwjaar euro per later bouwjaar en bij een rapportscoreschaal euro per extra scorepunt, bij gelijkblijvende andere kenmerken.</p>'
     shared+='<p class="note"><strong>Bij modellen met meer dan 50 waarnemingen:</strong> De KS-p is een Lilliefors-benadering uit de herberekening. De SPSS-tabel kan p boven 0,200 afkappen als 0,200*. '
-    shared+='Bij het enkelvoudige model is 0,059 de Statistic; de oorspronkelijke tabel heeft Sig. 0,200*. De tekst onder die brontabel verwisselt die kolommen.</p>'
+    shared+='Bij het enkelvoudige model is 0,059 de Statistic; de tabel heeft Sig. 0,200*. Verwissel die kolommen niet.</p>'
     shared+='<p>H₀: geen correlatie tussen de absolute residuen en de betreffende x. Een significante samenhang is volgens de cursus een signaal van heteroscedasticiteit. '
     shared+='Dit zijn afzonderlijke verkennende controles, zonder correctie voor meerdere toetsen. Ook een niet-significante correlatie sluit andere vormen van heteroscedasticiteit niet uit. '
     shared+='De grafiek van residuen tegen voorspelde waarde en de inhoud van de kenmerken blijven nodig.</p>'
@@ -109,7 +109,7 @@ def enhance(lessons, sources):
         body+=table('Coëfficiënten van '+name,['Term','B','SE(B)','t','p (tweezijdig)','VIF'],[
             [escape(c['term']),num(c['b']),num(c['se']),num(c['t']),pvalue(c['p']),num(c['vif']) if c['vif'] is not None else 'n.v.t.'] for c in model['coefficients']])
         asset=f'assets/learning/college8-{name.lower()}.png'
-        body+=f'<figure class="learning-figure"><a href="{asset}" target="_blank" rel="noopener"><img src="{asset}" loading="lazy" style="max-width:100%;height:auto" alt="Werkelijke tegen voorspelde waarde en residuen voor {name}; gemarkeerde auto’s staan ook in de diagnosetabel."></a><figcaption>Figuren uit College8. De diagonale lijn geeft werkelijke waarde = voorspelling; de tweede grafiek toont residuen en auto-nummers voor nader onderzoek. Open voor vergroting.</figcaption></figure>'
+        body+=f'<figure class="learning-figure"><a href="{asset}" target="_blank" rel="noopener"><img src="{asset}" loading="lazy" style="max-width:100%;height:auto" alt="Werkelijke tegen voorspelde waarde en residuen voor {name}; gemarkeerde auto’s staan ook in de diagnosetabel."></a><figcaption>De diagonale lijn geeft werkelijke waarde = voorspelling; de tweede grafiek toont residuen en auto-nummers voor nader onderzoek. Open voor vergroting.</figcaption></figure>'
         listed=lambda xs:', '.join(map(str,xs)) if xs else 'Geen'
         body+=table('Diagnoses met de cursusgrenzen',['Controle','Uitkomst','Grens','Auto-nummers voor nader onderzoek'],[
             ['Uitbijters y',f"z min {num(d['zMin'])}; max {num(d['zMax'])}",f"±{d['zLimit']}",listed(d['zCandidates'])],
@@ -133,7 +133,7 @@ def enhance(lessons, sources):
         '<p>Bij gelijk bouwjaar, kilometerstand, nieuwprijs nu, aantal schademeldingen, lakscore en motorscore is de voorspelde verkoopwaarde van een dieselauto € 2.879,45 lager. '
         'De referentie bestaat in dit geselecteerde model uit benzine en elektrisch samen. Het is geen uitspraak dat diesel de waardedaling veroorzaakt en ook geen afzonderlijke helling voor diesel.</p>')
     body+=answer('2. Een benzineauto heeft 10.000 km meer gereden. Hoeveel verandert de voorspelling als alle andere kenmerken gelijk blijven?',
-        '<p>Gebruik de B uit het benzinemodel, niet die uit het gezamenlijke model. Met de bronafronding −0,019 wordt het verschil −0,019 × 10.000 = −€ 190. '
+        '<p>Gebruik de B uit het benzinemodel, niet die uit het gezamenlijke model. Met de afgeronde −0,019 wordt het verschil −0,019 × 10.000 = −€ 190. '
         'Met de ongeronde herberekening is de uitkomst circa −€ '+num(abs(models['Benzine']['coefficients'][1]['b'])*10000,2)+'. '
         'Het verschil ontstaat door afronding van een kleine coëfficiënt die met een groot aantal kilometers wordt vermenigvuldigd.</p>')
     body+=answer('3. Is het benzinemodel met adjusted R² 0,919 gereed voor een betrouwbare controleverwachting?',
