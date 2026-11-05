@@ -30,7 +30,7 @@ if(!base)throw Error('Geef LEARNING_URL op.');fs.mkdirSync(out,{recursive:true})
   // Het bronlabel staat naast de kop, anders plakt het tegen de paginatitel aan.
   await page.evaluate(()=>{location.hash='#formules/verschil'});await page.waitForFunction(()=>document.querySelector('.formula-guide h1'));
   assert.match(await page.locator('.formula-guide .lesson-source-title').textContent(),/Hoorcollege/);
-  assert.match(await page.title(),/^Formules: /);
+  assert.equal(await page.title(),'SRA / Formules / De verschilschatter');
   await page.evaluate(()=>{location.hash='#les/validatie'});await page.waitForFunction(()=>document.querySelector('.lesson-top h1'));
   await page.screenshot({path:path.join(out,`les-${width}-${theme}.png`)});
  }
