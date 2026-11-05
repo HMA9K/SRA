@@ -422,10 +422,20 @@ def enhance(lessons, sources):
          ref('opgaven', 5, 'H8, opgave 6, PDF 5-6: declaraties vorig en huidig jaar'),
          ref('uitwerkingen', 6, 'H8, opgave 6, PDF 6-8: goedratio, standaardfout en interval')])
     extend('quotient', 'Spreiding die na de verhouding overblijft',
-        '<p>De term −2qR<sub>bw</sub>s<sub>b</sub>s<sub>w</sub> corrigeert voor de samenhang '
-        'tussen boekwaarde en werkelijke waarde. De twee variaties onafhankelijk optellen '
-        'zou de resterende onzekerheid verkeerd berekenen. q is dimensieloos, maar '
-        's<sub>q</sub> staat hier in euro en is geen standaardfout van een percentage.</p>',
+        '<p><strong>Wat doet de middelste term?</strong> De formule voor s<sub>q</sub>² heeft drie delen. '
+        's<sub>w</sub>² is de spreiding van de werkelijke waarden. q²s<sub>b</sub>² is de spreiding van '
+        'de boekwaarden, omgerekend met q. De middelste term −2 × q × R<sub>bw</sub> × s<sub>b</sub> × '
+        's<sub>w</sub> trekt daar de spreiding van af die b en w gemeenschappelijk hebben: is de '
+        'boekwaarde hoog, dan is de werkelijke waarde meestal ook hoog. Dat deel verklaart de '
+        'verhouding al, dus het hoort niet bij de onzekerheid die overblijft.</p>'
+        + steps(['Neem q = 0,95, s<sub>b</sub> = 40, s<sub>w</sub> = 38 en R<sub>bw</sub> = 0,98.',
+                 'Eerste deel: s<sub>w</sub>² = 38² = 1.444.',
+                 'Laatste deel: q²s<sub>b</sub>² = 0,95² × 40² = 1.444.',
+                 'Middelste term: 2 × 0,95 × 0,98 × 40 × 38 = 2.830,24. Deze trek je af.',
+                 'Uitkomst: s<sub>q</sub>² = 1.444 − 2.830,24 + 1.444 = 57,76, dus s<sub>q</sub> = € 7,60.'])
+        + '<p>Zonder de middelste term zou je √2.888 ≈ € 53,74 vinden, veel te veel: de sterke samenhang '
+        'blijft dan onbenut. q is een verhouding zonder eenheid, maar s<sub>q</sub> staat in euro en is '
+        'geen standaardfout van een percentage.</p>',
         [ref('formules', 1, 'Formules 12-17; twee rekenwijzen voor s_q'), bookref('boek-h8b', 212)])
     N, n, q, sw, sb, r = 2500, 100, .95, 38, 40, .98
     sq = sqrt(sw*sw - 2*q*r*sb*sw + q*q*sb*sb)
