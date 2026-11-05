@@ -113,7 +113,7 @@ def enhance(lessons,sources):
     add(L['stratificatie'],'Gericht extra controles in één stratum',extension,refs=extension_refs)
     add(L['steekproefomvang'],'Uitbreiding na stratificatie',extension,refs=extension_refs)
     add(L['steekproefomvang'],'Omvang bij de quotiëntschatter',
-        '<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld</h3>'+steps(['N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.','γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.','n = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.','Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.']),refs=[dict(source='slides',page=34,locator='PDF 34–36: omvang bij de quotiëntschatter'),dict(source='formules',page=1,locator='Formules 12–17, PDF-pagina 1')])
+        '<p>Gebruik dezelfde planningsstructuur als bij de andere totaalschatters, met de resterende spreiding s_q van de quotiëntschatter: γ = E²/(t² × N × s_q²) en n = N/(1 + γ). Dit is de cursusbenadering met N − 1 ≈ N. s_q heeft een waarde-eenheid; vul hier niet de dimensieloze goedratio q in. Houd bij planning de gegeven t en spreiding vast en rond n naar boven af.</p><h3>Voorbeeld</h3>'+steps(['Gegevens: N = 1.000, t = 2, s_q = 7,60 en gewenste marge E = € 1.000.','Hulpgrootheid: γ = E²/(t² × N × s_q²) = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.','Benodigde omvang: n = N/(1 + γ) = 1.000/(1 + 4,32825) ≈ 187,679. Plan dus minimaal 188 controles.','Als al 100 posten zijn gecontroleerd, zijn volgens deze planning nog 88 nodig. Herbeoordeel het interval na de uitbreiding.']),refs=[dict(source='slides',page=34,locator='PDF 34–36: omvang bij de quotiëntschatter'),dict(source='formules',page=1,locator='Formules 12–17, PDF-pagina 1')])
     for slug in ['stratificatie','steekproefomvang']:
         L[slug]['refs'].extend([dict(source='opgaven',page=8,locator='H8 opgave 9b/c, PDF 8'),dict(source='uitwerkingen',page=13,locator='H8 opgave 9c, PDF 13')])
     L['stratificatie']['goals'].extend(['Stratagrenzen bepalen met beide cursusmethoden','De steekproef gericht binnen één stratum uitbreiden'])
@@ -125,7 +125,7 @@ def enhance(lessons,sources):
     residual+='<p>Je gebruikt deze vorm bij enkelvoudige regressie met een constante wanneer n, r en sᵧ gegeven zijn. sₑ² is de resterende variantie rond de regressielijn; sₑ = √sₑ². Vanuit een ANOVA-tabel krijg je hetzelfde met SSE/(n − 2). Het aandeel 1 − r² is niet verklaard door de lijn.</p><h3>Autogewichten</h3>'+steps([
         'De tien gewichten zijn 946, 950, 965, 978, 980, 990, 1.055, 1.015, 1.055 en 1.080 kg; x loopt van 1 tot en met 10.',
         'Met de onafgeronde brongegevens: sᵧ ≈ 47,46976, sₓ ≈ 3,02765 en r ≈ 0,940088. Gebruik de afgeronde r = 0,940 alleen als niet meer cijfers beschikbaar zijn.',
-        'sₑ² = (9/8) × (1 − r²) × sᵧ² ≈ 294,66212 kg². Neem de wortel: sₑ ≈ 17,16572 kg.',
+        'Resterende variantie: sₑ² = (9/8) × (1 − r²) × sᵧ² ≈ 294,66212 kg². Neem de wortel: sₑ ≈ 17,16572 kg.',
         'Controle: de ANOVA-tabel geeft SSE = 2.357,29697 en df = 8. SSE/df = 294,66212. Beide berekeningen beschrijven dezelfde resterende spreiding.'])
     add(L['regressielijn'],'Residuele variantie berekenen zonder ANOVA-tabel',residual,refs=[bookref('boek-h9a',246),bookref('boek-h9a',247),dict(source='opgaven',page=10,locator='H9.1: autogewichten'),dict(source='uitwerkingen',page=14,locator='H9.1: uitwerking, PDF 14–15')])
     infer=formula('Formule 39: standaardfout van de helling',p.eq(sb1,p.mul(p.frac(sy,sx),p.root(p.frac(remainder,df)))))
@@ -133,7 +133,7 @@ def enhance(lessons,sources):
     infer+=formula('Interval voor de populatiehelling',p.row(p.sub(p.b,p.num(1)),p.op('±'),p.mul(p.t,sb1)))
     infer+='<p>Deze vormen met de gewone Pearson-correlatie r horen bij enkelvoudige regressie met constante. Voor H₀: ρ = 0 of H₀: β₁ = 0 geven ze dezelfde t als b₁/s_b₁. Gebruik ze niet met de totale R van een meervoudig model. Voor H₀: β₁ = een andere waarde neem je (b₁ − die waarde)/s_b₁.</p><h3>Voorbeeld</h3>'+steps([
         'De regressiehelling is b₁ ≈ 14,73939 kg/jaar. Met n = 10, r ≈ 0,940088, sᵧ ≈ 47,46976 en sₓ ≈ 3,02765 volgt s_b₁ ≈ 1,88988 kg/jaar.',
-        't = b₁/s_b₁ ≈ 7,79910. Formule 40 geeft dezelfde waarde; df = 10 − 2 = 8.',
+        'Toetsingsgrootheid: t = b₁/s_b₁ ≈ 7,79910. Formule 40 geeft dezelfde waarde; df = 10 − 2 = 8.',
         'De cursusvraag vraagt een positief verband: H₀: β₁ ≤ 0, H₁: β₁ > 0. Bij α = 0,05 is de eenzijdige grens 1,860. Verwerp H₀: er is statistisch bewijs voor een positief lineair verband.',
         'Voor een tweezijdig 95%-interval gebruik je t = 2,306. Het interval is 14,73939 ± 2,306 × 1,88988 ≈ [10,38; 19,10] kg/jaar.',
         'Nul ligt buiten dit tweezijdige interval. Daarmee verwerp je ook H₀: β₁ = 0 bij een tweezijdige toets met α = 0,05. Koppel een interval alleen aan een toets met passend niveau en passende richting.'])

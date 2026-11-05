@@ -350,8 +350,8 @@ def _guides(lesson: dict) -> list[dict]:
                  'Vergelijk F met de F-tabelgrens met beide vrijheidsgraden, of vergelijk de globale Sig. met α.',
                  'Concludeer bij verwerpen dat minstens één opgenomen hellingscoëfficiënt afwijkt van nul.'],
                 _own_example('de ANOVA-gegevens uit de bestaande les',
-                    'Bij n = 30, k = 1, SSR = 1.351,262 en SSE = 44,105 is MSE = 44,105/28 ≈ 1,57518.',
-                    'MSR = 1.351,262/1 = 1.351,262. Dus F ≈ 857,85.',
+                    'Residuele variantie: bij n = 30, k = 1, SSR = 1.351,262 en SSE = 44,105 is MSE = SSE/(n − k − 1) = 44,105/28 ≈ 1,57518.',
+                    'F-waarde: MSR = SSR/k = 1.351,262/1 = 1.351,262, dus F = MSR/MSE = 1.351,262/1,57518 ≈ 857,85.',
                     'Voor een formele conclusie hoort daarbij de gegeven α en de passende F-grens of globale p-waarde.'),
                 'Een significante globale F-toets maakt niet alle afzonderlijke coëfficiënten significant. Halveer α niet voor de rechterstaart van deze F-toets.'
             ),
@@ -429,7 +429,7 @@ def _guides(lesson: dict) -> list[dict]:
                  'Bij verdubbeling van x neemt de voorspelde y toe met b₁ × ln(2), als deze modelvorm passend blijft.'],
                 _own_example('dezelfde getallen op de logaritmische schaal van x',
                     'Stel ŷ = 1 + 0,5ln(x) en x = 16.',
-                    'ln(16) ≈ 2,772589, dus ŷ = 1 + 0,5 × 2,772589 ≈ 2,386294.',
+                    'Invullen: ln(16) ≈ 2,772589, dus ŷ = 1 + 0,5 × 2,772589 ≈ 2,386294.',
                     'Deze 2,386294 is al de voorspelde y, geen voorspelde ln(y).'),
                 'Kijk welke variabele is getransformeerd. Alleen het voorkomen van ln in de vergelijking betekent niet dat je de hele uitkomst moet terugtransformeren.'
             ),

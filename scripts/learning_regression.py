@@ -91,8 +91,8 @@ def enhance(lessons, sources):
         ])
         + answer('Bereken de voorspelling en het residu voor x = 7, y = 1.055. Waarom is dit residu '
                  'geen bewijs van een fout in het gewicht?',
-                 steps(['ŷ = 920,33333 + 14,73939 × 7 ≈ 1.023,51 kg.',
-                        'e = y − ŷ = 1.055 − 1.023,51 ≈ +31,49 kg. Het gewicht ligt boven de lijn.',
+                 steps(['Voorspelling: vul x = 7 in: ŷ = 920,33333 + 14,73939 × 7 ≈ 1.023,51 kg.',
+                        'Residu: e = y − ŷ = 1.055 − 1.023,51 ≈ +31,49 kg. Het gewicht ligt boven de lijn.',
                         'Een regressielijn voorspelt niet elke waarneming exact. De afwijking moet worden '
                         'beoordeeld met de resterende spreiding, relevante diagnoses en inhoudelijke informatie.',
                         'Het getal +31,49 is een residu in kg, geen p-waarde en geen standaardfout.']))
@@ -214,8 +214,8 @@ def enhance(lessons, sources):
         + answer('Schrijf het volledige antwoord voor een positief verband tussen gecodeerd bouwjaar en gewicht. '
                  'Wat verandert er wanneer de vraag alleen “een verband” zegt?',
                  steps(['H₀: β₁ ≤ 0; H₁: β₁ &gt; 0. β₁ is de populatiehelling voor gewicht ten opzichte van bouwjaar.',
-                        't ≈ 7,79910, df = 8; uit tabel 13.4 volgt t<sub>0,05;8</sub> = 1,860.',
-                        '7,79910 &gt; 1,860, dus H₀ verwerpen. Er is een significant positief lineair verband '
+                        'Grens: t ≈ 7,79910, df = 8; uit tabel 13.4 volgt t<sub>0,05;8</sub> = 1,860.',
+                        'Vergelijken: 7,79910 &gt; 1,860, dus H₀ verwerpen. Er is een significant positief lineair verband '
                         'tussen bouwjaar en gewicht. Het α-risico is relevant.',
                         'Voor “een verband” gebruik je H₀: β₁ = 0 en H₁: β₁ ≠ 0. Dan geldt |t| &gt; 2,306 '
                         'of F &gt; 5,32. Ook die H₀ wordt verworpen; de onderzoeksconclusie is tweezijdig.']))
@@ -310,7 +310,7 @@ def enhance(lessons, sources):
             ["Cook’s Distance",'0,000','0,313','0,030','0,060','40'],
         ])
         + answer('Beoordeel uitbijters in y, uitbijters in x en invloedrijke punten met de cursusgrenzen.',
-            steps(['n = 40 ≤ 100, dus de grenzen voor Std. Residual zijn −2 en +2. '
+            steps(['Grenzen: n = 40 ≤ 100, dus de grenzen voor Std. Residual zijn −2 en +2. '
                    'Het minimum −1,352 blijft binnen de grens; het maximum 2,490 overschrijdt +2. '
                    'Er is minstens één potentiële uitbijter in y.',
                    'MD<sub>kritiek</sub> = 0,975 + 3 × 0,815 = 3,420. Het maximum 2,388 is lager; '
@@ -622,7 +622,7 @@ def enhance(lessons, sources):
         + answer('Bereken de partiële F voor de ene extra variabele en beide adjusted R²-waarden. '
                  'Waarom gebruik je de MSE van het uitgebreide model?',
             steps(['TotalSS is in beide modellen 1.000. De extra variabele verklaart 850 − 800 = 50 extra.',
-                   'MSE<sub>uitgebreid</sub> = 150/46 ≈ 3,26087. '
+                   'Partiële F: MSE<sub>uitgebreid</sub> = 150/46 ≈ 3,26087. '
                    'F = (850 − 800)/(150/46) ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.',
                    'Deze MSE beschrijft de resterende foutvariatie nadat de extra variabele is opgenomen. '
                    'De teller meet de verbetering door precies die toevoeging.',
@@ -803,11 +803,11 @@ def enhance(lessons, sources):
             ['Residual','121.859,201','38','3.206,821'],
             ['Total','594.437,500','39',''],
         ])
-        + steps(['n = 40 en k = 1. R² = 472.578,299/594.437,500 ≈ 0,7950. '
+        + steps(['Verklaard deel: n = 40 en k = 1. R² = 472.578,299/594.437,500 ≈ 0,7950. '
                  'De oppervlakte verklaart circa 79,5% van de huurvariatie in deze dataset.',
                  'sₑ = √(121.859,201/38) ≈ € 56,63 per maand. Dit is de spreiding rond '
                  'de lijn; het is geen standaardfout van de helling.',
-                 'F = 472.578,299/(121.859,201/38) ≈ 147,367. Toets het model met '
+                 'F-toets: F = 472.578,299/(121.859,201/38) ≈ 147,367. Toets het model met '
                  'ν₁ = 1 en ν₂ = 38; lees bij gebruik van een tabelbenadering de gekozen rij expliciet af.',
                  'De lijn is ŷ = 485,971 + 6,757x. Bij 100 m² volgt met deze afgedrukte '
                  'coëfficiënten ŷ = € 1.161,671, afgerond € 1.161,67 per maand.',
@@ -910,14 +910,14 @@ def enhance(lessons, sources):
         ])
         + answer('Bereken de globale F en interpreteer B tegenover Beta. Maak daarna de Nederlandse '
                  'puntvoorspelling met de afgedrukte invoer ICOR = 0,92, Adult Mortality = 58 en HIV/AIDS = 0,1.',
-            steps(['MSR = 8.173,121/3 ≈ 2.724,374; MSE = 1.372,702/159 ≈ 8,633. '
+            steps(['Modeltoets: MSR = 8.173,121/3 ≈ 2.724,374; MSE = 1.372,702/159 ≈ 8,633. '
                    'F ≈ 315,564. Toets H₀: alle drie hellingen nul tegenover H₁: minstens één niet nul.',
                    'Benader F<sub>0,05;3;159</sub> met tabelrij ν₂ = 100: 2,696. '
                    '315,564 &gt; 2,696, dus H₀ verwerpen. Dit is een uitspraak over het gezamenlijke model.',
                    'B voor ICOR is 36,011 in de modelvergelijking. Beta = 0,694 '
                    'is gestandaardiseerd en beschrijft verandering in standaardafwijkingen. '
                    'Gebruik B voor een voorspelling in jaren.',
-                   '50,065 + 36,011 × 0,92 − 0,015 × 58 − 1,409 × 0,1 = 82,18422, '
+                   'Voorspelling: 50,065 + 36,011 × 0,92 − 0,015 × 58 − 1,409 × 0,1 = 82,18422, '
                    'dus circa 82,18 jaar met de afgedrukte getallen.',
                    'De casus geeft als werkelijke Nederlandse waarde 81,7. Het residu op basis '
                    'van deze afgedrukte invoer is 81,7 − 82,18422 ≈ −0,48 jaar. '
