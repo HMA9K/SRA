@@ -11,8 +11,8 @@ window.SRAExamPractice = {
       "options": [
         "Het totale aantal van 50 bewijst op zichzelf dat er minstens 30 fouten zijn.",
         "De verschilschatter vereist dat iedere post fout is.",
-        "33 niet-nulfouten voldoet aan de cursusvoorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.",
-        "33 fouten voldoet niet aan de cursusvoorwaarde van 30."
+        "33 niet-nulfouten voldoet aan de voorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.",
+        "33 fouten voldoet niet aan de voorwaarde van 30."
       ],
       "correct": 2,
       "level": 3,
@@ -29,8 +29,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>De verschilschatter mag worden toegepast omdat het aantal fouten in de steekproef 33 is, dus<br>minstens 30.<br>1 punt g/f</p>",
-      "sourceNote": "33 niet-nulfouten voldoet aan de cursusvoorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.",
-      "explanation": "33 niet-nulfouten voldoet aan de cursusvoorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.",
+      "sourceNote": "33 niet-nulfouten voldoet aan de voorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.",
+      "explanation": "33 niet-nulfouten voldoet aan de voorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.",
       "steps": [
         "Aantal gecontroleerde hypotheken: n = 50.",
         "Aantal hypotheken met een fout: 33. De overige 17 tellen niet mee voor de grens.",
@@ -2412,9 +2412,9 @@ window.SRAExamPractice = {
       "originalPromptHtml": "<p>Welk argument zou de accountant hebben gebruikt in de discussie met de directeur?</p>",
       "sourceVisualHtml": "",
       "options": [
-        "De geschatte 15,6 fouten zijn voldoende voor de cursusvoorwaarde 30.",
+        "De geschatte 15,6 fouten zijn voldoende voor de voorwaarde van 30 fouten.",
         "Bij een kleinere steekproef neemt het verwachte aantal fouten evenredig toe.",
-        "Bij 130 in plaats van 275 artikelen verwacht men circa 130 × 33/275 = 15,6 fouten, onder de cursusvoorwaarde 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.",
+        "Bij 130 in plaats van 275 artikelen verwacht men circa 130 × 33/275 = 15,6 fouten, minder dan de vereiste 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.",
         "130 waarnemingen garanderen minstens 30 fouten."
       ],
       "correct": 2,
@@ -2433,8 +2433,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>De accountant zou als volgt geredeneerd hebben. Bij een steekproefgrootte van 275<br>bleek dat er 33 artikelen waren waarbij de boekwaarde afweek van de werkelijke<br>waarde. De verwachting is dat als de steekproefgrootte 130 wordt het aantal artikelen<br>waarbij de boekwaarde afwijkt van de werkelijke waarde onder de 30 zal komen te<br>liggen. En dan wordt niet meer voldaan aan de voorwaarde waaronder de<br>quotiëntschatter toegepast mag worden.<br>Normering (2):<br>g/f</p>",
-      "sourceNote": "Bij 130 in plaats van 275 artikelen verwacht men circa 130 × 33/275 = 15,6 fouten, onder de cursusvoorwaarde 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.",
-      "explanation": "Bij 130 in plaats van 275 artikelen verwacht men circa 130 × 33/275 = 15,6 fouten, onder de cursusvoorwaarde 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.",
+      "sourceNote": "Bij 130 in plaats van 275 artikelen verwacht men circa 130 × 33/275 = 15,6 fouten, minder dan de vereiste 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.",
+      "explanation": "Bij 130 in plaats van 275 artikelen verwacht men circa 130 × 33/275 = 15,6 fouten, minder dan de vereiste 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.",
       "steps": [
         "Foutpercentage in de steekproef: 33 / 275 = 12%.",
         "Verwachting bij 130 artikelen: 0,12 × 130 = 15,6 fouten.",
@@ -4099,7 +4099,7 @@ window.SRAExamPractice = {
       "options": [
         "Alleen het totale aantal 160 bewijst dat er minimaal 30 fouten zijn.",
         "Bij voldoende fouten zijn aselecte trekking en onafhankelijkheid overbodig.",
-        "42 niet-nulfouten voldoet aan de cursusvoorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
+        "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
         "42 fouten zijn minder dan de cursusgrens 30."
       ],
       "correct": 2,
@@ -4117,8 +4117,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Er is sprake van 42 fouten en dus wordt voldaan aan de voorwaarde dat er minstens<br>30 fouten in de steekproef moeten voorkomen.<br>Normering (1):<br>g/f</p>",
-      "sourceNote": "42 niet-nulfouten voldoet aan de cursusvoorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
-      "explanation": "42 niet-nulfouten voldoet aan de cursusvoorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
+      "sourceNote": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
+      "explanation": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
       "steps": [
         "Aantal fouten in de steekproef: 42 afwijkingen.",
         "Voorwaarde: minstens 30 fouten.",
@@ -16812,8 +16812,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20251028/antwoord-4-10.jpg\" alt=\"antwoord-4 · bronpagina 10\">",
-      "sourceNote": "Ŵ_v is exact 55.835.633,33; het model komt door afronden van 416,8333 op 55.835.634 uit. Standaardfout 176.452,1. Het afgeronde interval blijft [55.485.000; 56.186.000]. De cursusvoorwaarde van minstens 30 foutposten is in de opgave niet te controleren.",
-      "explanation": "[€ 55.485.000; € 56.186.000]: Ŵ_v = € 55.835.634 en standaardfout € 176.452,1. Ŵ_v is exact 55.835.633,33; het model komt door afronden van 416,8333 op 55.835.634 uit. Standaardfout 176.452,1. Het afgeronde interval blijft [55.485.000; 56.186.000]. De cursusvoorwaarde van minstens 30 foutposten is in de opgave niet te controleren.",
+      "sourceNote": "Ŵ_v is exact 55.835.633,33; het model komt door afronden van 416,8333 op 55.835.634 uit. Standaardfout 176.452,1. Het afgeronde interval blijft [55.485.000; 56.186.000]. De voorwaarde van minstens 30 foutposten is in de opgave niet te controleren.",
+      "explanation": "[€ 55.485.000; € 56.186.000]: Ŵ_v = € 55.835.634 en standaardfout € 176.452,1. Ŵ_v is exact 55.835.633,33; het model komt door afronden van 416,8333 op 55.835.634 uit. Standaardfout 176.452,1. Het afgeronde interval blijft [55.485.000; 56.186.000]. De voorwaarde van minstens 30 foutposten is in de opgave niet te controleren.",
       "steps": [
         "Gemiddeld verschil: ē = 50.020 / 120 = 416,8333.",
         "Puntschatting: 58.420.000 − 6.200 × 416,8333 = 55.835.634.",

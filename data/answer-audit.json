@@ -36,7 +36,7 @@
           "displayNumber": "1.1",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "33 niet-nulfouten voldoet aan de cursusvoorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.",
+          "note": "33 niet-nulfouten voldoet aan de voorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.",
           "reviewed": "2026-09-20",
           "sourcePage": 3,
           "answerPage": 1
@@ -334,7 +334,7 @@
           "displayNumber": "1.1",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "33 niet-nulfouten voldoet aan de cursusvoorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.",
+          "note": "33 niet-nulfouten voldoet aan de voorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.",
           "reviewed": "2026-09-20",
           "sourcePage": 3,
           "answerPage": 1
@@ -662,7 +662,7 @@
           "displayNumber": "4",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "Bij 130 in plaats van 275 artikelen verwacht men circa 130 × 33/275 = 15,6 fouten, onder de cursusvoorwaarde 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.",
+          "note": "Bij 130 in plaats van 275 artikelen verwacht men circa 130 × 33/275 = 15,6 fouten, minder dan de vereiste 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.",
           "reviewed": "2026-09-20",
           "sourcePage": 3,
           "answerPage": 2
@@ -890,7 +890,7 @@
           "displayNumber": "4",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "42 niet-nulfouten voldoet aan de cursusvoorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
+          "note": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
           "reviewed": "2026-09-20",
           "sourcePage": 3,
           "answerPage": 2
@@ -2486,7 +2486,7 @@
           "displayNumber": "1.4",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "Ŵ_v is exact 55.835.633,33; het model komt door afronden van 416,8333 op 55.835.634 uit. Standaardfout 176.452,1. Het afgeronde interval blijft [55.485.000; 56.186.000]. De cursusvoorwaarde van minstens 30 foutposten is in de opgave niet te controleren.",
+          "note": "Ŵ_v is exact 55.835.633,33; het model komt door afronden van 416,8333 op 55.835.634 uit. Standaardfout 176.452,1. Het afgeronde interval blijft [55.485.000; 56.186.000]. De voorwaarde van minstens 30 foutposten is in de opgave niet te controleren.",
           "reviewed": "2026-11-04",
           "sourcePage": 1,
           "answerPage": 10

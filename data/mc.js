@@ -3344,25 +3344,25 @@ window.SRAMCData = {
         },
         {
           "id": "mc-verschil-basis-2",
-          "prompt": "Je controleert 200 posten en vindt 12 fouten. Is de cursusvoorwaarde vervuld?",
+          "prompt": "Je controleert 200 posten en vindt 12 fouten. Is de voorwaarde voor de verschilschatter vervuld?",
           "options": [
             "Alleen als de fouten positief zijn",
             "Ja, n is groter dan 30",
             "Nee, er zijn minder dan 30 fouten"
           ],
           "correct": 2,
-          "explanation": "De les verwijst voor deze toepassing naar de cursusvoorwaarde van minstens 30 aangetroffen fouten. Er zijn 200 posten gecontroleerd, maar slechts 12 daarvan bevatten een fout. 12 is kleiner dan 30. De genoemde voorwaarde is dus niet vervuld, ondanks de grotere steekproefomvang.",
+          "explanation": "De les verwijst voor deze toepassing naar de voorwaarde van minstens 30 aangetroffen fouten. Er zijn 200 posten gecontroleerd, maar slechts 12 daarvan bevatten een fout. 12 is kleiner dan 30. De genoemde voorwaarde is dus niet vervuld, ondanks de grotere steekproefomvang.",
           "steps": [
-            "De les verwijst voor deze toepassing naar de cursusvoorwaarde van minstens 30 aangetroffen fouten.",
+            "De les verwijst voor deze toepassing naar de voorwaarde van minstens 30 aangetroffen fouten.",
             "Er zijn 200 posten gecontroleerd, maar slechts 12 daarvan bevatten een fout.",
             "12 is kleiner dan 30. De genoemde voorwaarde is dus niet vervuld, ondanks de grotere steekproefomvang."
           ],
-          "pattern": "Herken: Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten. → Betekenis: De genoemde cursusvoorwaarde gaat over fouten, niet over alle controles. → Aanpak: Vergelijk het aantal aangetroffen fouten met het cursusminimum van 30. → Gevraagd antwoord: Een oordeel of juist deze toepassingsvoorwaarde is vervuld.",
-          "trap": "Maak van de cursusvoorwaarde “30 fouten” niet ongemerkt “30 waarnemingen”.",
+          "pattern": "Herken: Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten. → Betekenis: De genoemde voorwaarde gaat over fouten, niet over alle controles. → Aanpak: Vergelijk het aantal aangetroffen fouten met het cursusminimum van 30. → Gevraagd antwoord: Een oordeel of juist deze toepassingsvoorwaarde is vervuld.",
+          "trap": "Maak van de voorwaarde “30 fouten” niet ongemerkt “30 waarnemingen”.",
           "optionExplanations": [
-            "De genoemde cursusvoorwaarde gaat om het aantal fouten, niet om hun teken. Ook alleen positieve fouten maken 12 niet tot 30.",
-            "n = 200 is groter dan 30, maar de lesvoorwaarde gaat over het aantal aangetroffen fouten. Daarvan zijn er slechts 12.",
-            "De cursusvoorwaarde is hier niet vervuld: 12 fouten is minder dan de genoemde 30."
+            "De genoemde voorwaarde gaat om het aantal fouten, niet om hun teken. Ook alleen positieve fouten maken 12 niet tot 30.",
+            "n = 200 is groter dan 30, maar de voorwaarde gaat over het aantal aangetroffen fouten. Daarvan zijn er slechts 12.",
+            "De voorwaarde is hier niet vervuld: 12 fouten is minder dan de genoemde 30."
           ],
           "refs": [
             {
@@ -3428,7 +3428,7 @@ window.SRAMCData = {
           ],
           "recognition": {
             "signals": "Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten.",
-            "meaning": "De genoemde cursusvoorwaarde gaat over fouten, niet over alle controles.",
+            "meaning": "De genoemde voorwaarde gaat over fouten, niet over alle controles.",
             "approach": "Vergelijk het aantal aangetroffen fouten met het cursusminimum van 30.",
             "answer": "Een oordeel of juist deze toepassingsvoorwaarde is vervuld."
           },
@@ -3981,7 +3981,7 @@ window.SRAMCData = {
           "id": "mc-verschil-leertoepassing-verschilvariantie",
           "level": 3,
           "prompt": "Oefenvraag. Welke spreiding hoort bij de onzekerheid van de verschilschatter?",
-          "stimulusHtml": "<p>N = 2.000 en n = 100. De fouten in de volledige gecontroleerde steekproef voldoen aan de cursusvoorwaarden. De tabel bevat alle 100 controles, ook de nulverschillen.</p><div class=\"table-wrap\"><table><caption>Samenvatting controleverschillen e = b − w</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Σe</th><td>300</td></tr><tr><th scope=\"row\">Σe²</th><td>2.880</td></tr><tr><th scope=\"row\">s_w</th><td>30</td></tr></tbody></table></div>",
+          "stimulusHtml": "<p>N = 2.000 en n = 100. De fouten in de volledige gecontroleerde steekproef voldoen aan de voorwaarden. De tabel bevat alle 100 controles, ook de nulverschillen.</p><div class=\"table-wrap\"><table><caption>Samenvatting controleverschillen e = b − w</caption><thead><tr><th scope=\"col\">Grootheid</th><th scope=\"col\">Waarde</th></tr></thead><tbody><tr><th scope=\"row\">Σe</th><td>300</td></tr><tr><th scope=\"row\">Σe²</th><td>2.880</td></tr><tr><th scope=\"row\">s_w</th><td>30</td></tr></tbody></table></div>",
           "options": [
             "s_e = 20; een variantie hoeft niet te worden geworteld",
             "s_e = √20 ≈ 4,47; gebruik deze in de standaardfout van het totaal",

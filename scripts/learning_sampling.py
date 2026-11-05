@@ -338,7 +338,7 @@ def enhance(lessons, sources):
         'De verschilschatter verwijdert het gemeenschappelijke niveau van de boekwaarde en '
         'schat de resterende fout. Een quotiëntschatter zou hier ten onrechte een vast percentage '
         'als beste beschrijving kiezen. Drie regels tonen het patroon; ze zijn op zichzelf geen '
-        'steekproef die aan de cursusvoorwaarde van dertig fouten voldoet.</p>'
+        'steekproef die aan de voorwaarde van dertig fouten voldoet.</p>'
         '<p>Houd de tekenafspraak e = b − w vast. Een positieve e betekent overwaardering; '
         'een negatieve e onderwaardering. De voorbeelden met uitsluitend positieve fouten '
         'in het boek horen bij hun specifieke controlevraag. Verander bij gemengde verschillen '
@@ -358,7 +358,7 @@ def enhance(lessons, sources):
         ['b̄', '€ 636', 'Gemiddelde boekwaarde van de steekproef'],
         ['Σw', '€ 97.185', 'Som gecontroleerde werkelijke waarden'],
         ['Σe²', '395.000 euro²', 'Kwadratensom van de verschillen'],
-        ['Aantal afwijkende posten', '43', 'Cursusvoorwaarde minstens 30 fouten is vervuld'],
+        ['Aantal afwijkende posten', '43', 'Voorwaarde van minstens 30 fouten is vervuld'],
     ])
     body += steps(['Σb = 165 × 636 = € 104.940. Daardoor Σe = 104.940 − 97.185 = € 7.755 en ē = € 47.',
                    'De geschatte totale fout is Nē = 3.740 × 47 = € 175.780. '
@@ -465,7 +465,7 @@ def enhance(lessons, sources):
                  + money(W-1.96*se) + '; ' + money(W+1.96*se) + '].'])
         + '<p class="note">Dit is een rekenillustratie uit het boek. Het boek '
         'meldt voor deze steekproef 28 fouten en rekent ondanks die uitzondering '
-        'verder. Op het tentamen toets je de expliciete cursusvoorwaarde van '
+        'verder. Op het tentamen toets je de expliciete voorwaarde van '
         'minstens 30 fouten; deze boekuitzondering heft die niet op. '
         'Ook gebruikt het boek afgeronde invoer en t = 1,966. De uitkomst '
         'hierboven gebruikt de gepubliceerde sommen en de huidige tabelregel. '

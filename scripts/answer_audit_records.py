@@ -148,7 +148,7 @@ REVIEW['20220316'] = [
 ('G','Gemiddelde=490.000/160=3.062,50; maal N=3.450 geeft €10.565.625.'),
 ('G','Eenzijdig 90% gebruikt t=1,287. Met eindigheidscorrectie en s=4.969,13: bovengrens circa €12.269.232, naar boven afgerond €12.270.000.'),
 ('G','Cursusformule: γ≈0,0143512, n≈3.401,19, naar boven 3.402. Dit ligt dicht bij N=3.450; integrale controle ligt dan praktisch voor de hand.'),
-('N','42 niet-nulfouten voldoet aan de cursusvoorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.'),
+('N','42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.'),
 ('G','Som fouten 27.990; gemiddelde 174,9375 over alle 160 posten. Verschilschatting €10.726.465,625; s_e≈119,06. Bovengrens met t=1,287 circa €10.767.284, naar boven €10.768.000.'),
 ('N','In deze opgave is s_e≈119 veel kleiner dan s_w≈4.969, waardoor het interval smaller wordt. Kleine foutbedragen op zichzelf bewijzen in het algemeen niet dat hun standaardafwijking kleiner is; het verband tussen boek- en werkelijke waarde is bepalend.'),
 ('N','Evenredig verdeelt naar stratumomvang; Neyman naar omvang maal standaardafwijking. Neyman heeft bij vergelijkbare kosten en bruikbare spreidingsschattingen de kleinste variantie. Een grotere standaardafwijking alleen garandeert geen grotere steekproef als de omvang verschilt.'),
@@ -174,7 +174,7 @@ REVIEW['20211101'] = [
 ('G','Gemiddelde 842; s=385; totaal €1.271.420. Met t=1,985 en eindigheidscorrectie: naar buiten afgerond [€1.159.000;€1.383.000].'),
 ('G','Breedte maximaal €120.000 betekent E=€60.000. Cursusformule geeft n≈297,1, dus 298 totaal en 198 extra artikelen.'),
 ('G','q=0,94; totaal €1.571.680. Met cursusbenadering t=1,282 en s_q=208: ondergrens circa €1.549.714, naar beneden €1.549.000.'),
-('N','Bij 130 in plaats van 275 artikelen verwacht men circa 130×33/275=15,6 fouten, onder de cursusvoorwaarde 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.'),
+('N','Bij 130 in plaats van 275 artikelen verwacht men circa 130×33/275=15,6 fouten, minder dan de vereiste 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.'),
 ('G','Kies strata met relatief homogene waarden binnen elk stratum en verschillen tussen strata, om de variantie van de schatting te verkleinen.'),
 ('G','Verschilschattingen per stratum: €6.346.000, €7.802.000 en €9.928.000; totaal €24.076.000.'),
 ('G','Combineer de standaardfouten circa 28.475, 41.587 en 101.852 kwadratisch. Met t=1,974 is het interval naar buiten afgerond [€23.851.000;€24.301.000].'),
@@ -195,7 +195,7 @@ REVIEW['20211101'] = [
 ]
 
 REVIEW['20200323'] = [
-('N','33 niet-nulfouten voldoet aan de cursusvoorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.'),
+('N','33 niet-nulfouten voldoet aan de voorwaarde van ten minste 30 fouten voor de verschilschatter; de willekeurige trekking is in de opgave vermeld.'),
 ('G','Gemiddelde fout=(10.740.000−10.570.000)/50=€3.400; totale fout=912×3.400=€3.100.800.'),
 ('G','s_e=√((996.000.000−170.000²/50)/49)≈2.920,721. Met t=1,679 en eindigheidscorrectie: foutbovengrens circa €3.716.041, naar boven €3.717.000.'),
 ('G','Verschilschatter past bij ongeveer constante absolute fouten; quotiëntschatter bij ongeveer evenredige fouten of werkelijke waarden.'),
@@ -233,7 +233,7 @@ REVIEW['20251028'] = [
 ('B','Ŵ 57.474.000; s_w 2.233,534; standaardfout 1.251.943; t 1,982 geeft naar buiten afgerond [54.992.000; 59.956.000]. Het antwoordmodel schrijft t0,01[110], maar 1,982 is de tabelwaarde van t0,025[110]. De uitkomst klopt.'),
 ('G','Marge 2.000.000 geeft γ = 32,92123 en n ≥ 182,78, dus totaal 183 en 63 extra producttypen. Breedte eerst halveren en naar boven afronden.'),
 ('N','De boekwaarde is extra informatie, maar de verschilschatter is niet per definitie nauwkeuriger. Hij wint alleen als de verschillen minder spreiden dan de werkelijke waarden. Dat geldt hier: s_e 314,80 tegenover s_w 2.233,53.'),
-('N','Ŵ_v is exact 55.835.633,33; het model komt door afronden van 416,8333 op 55.835.634 uit. Standaardfout 176.452,1. Het afgeronde interval blijft [55.485.000; 56.186.000]. De cursusvoorwaarde van minstens 30 foutposten is in de opgave niet te controleren.'),
+('N','Ŵ_v is exact 55.835.633,33; het model komt door afronden van 416,8333 op 55.835.634 uit. Standaardfout 176.452,1. Het afgeronde interval blijft [55.485.000; 56.186.000]. De voorwaarde van minstens 30 foutposten is in de opgave niet te controleren.'),
 ('G','Evenredige aandelen 56,67 / 61,33 / 52 / 30 geven 57 / 61 / 52 / 30, samen 200.'),
 ('G','Bij gelijke standaardafwijkingen valt s weg uit de Neymanformule en blijft Nᵢ/N × n over: evenredige allocatie.'),
 ('B','Totaal 6.415.536,63, afgerond 6.415.537, volgt alleen als ∑wᵢ steekproefsommen zijn, zoals de kolomkop en het antwoordmodel aangeven. De legenda onder de tabel noemt ten onrechte de gemiddelde werkelijke waarde.'),

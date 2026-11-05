@@ -193,7 +193,7 @@ _add('goedratio', 'Goedratio', ['goedratio’s', 'goedratios', 'verhouding van d
      'De verhouding tussen werkelijke waarde en boekwaarde in de steekproef: $q = {Σw}/{Σb}$. Je telt dus eerst alle werkelijke waarden en alle boekwaarden op en deelt daarna. Dit is niet in het algemeen het gemiddelde van de verhoudingen per post.',
      'In de steekproef is $Σw$ = € 19.000 en $Σb$ = € 20.000. Dan is $q$ = 19.000 / 20.000 = 0,95: per euro boekwaarde is € 0,95 werkelijk aanwezig.', 'quotient')
 _add('quotientschatter', 'Quotiëntschatter', ['quotiëntschatting', 'quotientschatter', 'ratioschatter'],
-     'Schat het werkelijke totaal door het bekende boekwaardetotaal met de goedratio te vermenigvuldigen: $Ŵ_Q = q × B$. Deze methode past bij een ongeveer vaste verhouding tussen $w$ en $b$. Controleer ook de cursusvoorwaarde van minstens 30 afwijkende posten.',
+     'Schat het werkelijke totaal door het bekende boekwaardetotaal met de goedratio te vermenigvuldigen: $Ŵ_Q = q × B$. Deze methode past bij een ongeveer vaste verhouding tussen $w$ en $b$. Controleer ook de voorwaarde van minstens 30 afwijkende posten.',
      'Bij $q$ = 0,95 en $B$ = € 500.000 is $Ŵ_Q$ = 0,95 × € 500.000 = € 475.000.', 'quotient')
 _add('regressieschatter', 'Regressieschatter', ['regressieschatting'],
      'Begint bij de directe schatting $N w̄$ en corrigeert die met het verschil tussen het bekende boekwaardetotaal $B$ en de doorgerekende steekproefboekwaarde $N b̄$: $Ŵ_R = N w̄ + b_1(B − N b̄)$. Je schat hier een populatietotaal; dat is iets anders dan een nieuwe $y$ voorspellen.',
@@ -574,7 +574,7 @@ _add('tests-normality', 'Tests of Normality', ['normaliteitstoetsen'],
 # De volledige antwoordroute.
 _add('toepassingsvoorwaarde', 'Toepassingsvoorwaarde', ['toepassingsvoorwaarden'],
      'Een eis die je controleert voordat je een methode gebruikt. Dat je een formule kunt uitrekenen, betekent nog niet dat de methode inhoudelijk past.',
-     'Bij de verschilschatter controleer je het foutpatroon en de cursusvoorwaarde van minstens 30 afwijkende posten.', 'tentamen')
+     'Bij de verschilschatter controleer je het foutpatroon en de voorwaarde van minstens 30 afwijkende posten.', 'tentamen')
 _add('interpretatie', 'Interpretatie', ['interpreteren'],
      'De uitkomst in woorden verbinden met de variabelen, eenheden en vraag van de casus. Benoem wat de berekening ondersteunt en wat daar niet uit volgt.',
      'Schrijf bij $R²$ = 0,70 dat het model 70% van de variatie in salaris verklaart, niet alleen het getal.', 'tentamen')

@@ -666,7 +666,7 @@ q('mpu','schatterkeuze-patronen',3,
 
 q('verschil','verschilvariantie',3,
   'Welke spreiding hoort bij de onzekerheid van de verschilschatter?',
-  case('N = 2.000 en n = 100. De fouten in de volledige gecontroleerde steekproef voldoen aan de cursusvoorwaarden. De tabel bevat alle 100 controles, ook de nulverschillen.',
+  case('N = 2.000 en n = 100. De fouten in de volledige gecontroleerde steekproef voldoen aan de voorwaarden. De tabel bevat alle 100 controles, ook de nulverschillen.',
        table('Samenvatting controleverschillen e = b − w',['Grootheid','Waarde'],[('Σe','300'),('Σe²','2.880'),('s_w','30')])) ,
   [('s_e = √20 ≈ 4,47; gebruik deze in de standaardfout van het totaal','s_e² = [2.880 − 300²/100]/99 = 20. Deze resterende verschilspreiding hoort bij de verschilschatter.'),
    ('s_e = 30; gebruik altijd de spreiding van werkelijke waarden','s_w = 30 hoort bij MPU. De verschilschatter projecteert de verschillen en gebruikt daarom hun spreiding.'),
