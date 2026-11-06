@@ -91,7 +91,7 @@ def enhance(lessons, sources):
         ])
         + answer('Bereken de voorspelling en het residu voor x = 7, y = 1.055. Waarom is dit residu '
                  'geen bewijs van een fout in het gewicht?',
-                 steps(['Voorspelling: vul x = 7 in: ŷ = 920,33333 + 14,73939 × 7 = 920,33333 + 103,17573 ≈ 1.023,51 kg.',
+                 steps(['Voorspelling: vul x = 7 in: ŷ = 920,33333 + 14,73939 × 7 ≈ 1.023,51 kg.',
                         'Residu: e = y − ŷ = 1.055 − 1.023,51 ≈ +31,49 kg. Het gewicht ligt boven de lijn.',
                         'Geen bewijs van een fout: een regressielijn voorspelt niet elke waarneming exact. De afwijking moet worden '
                         'beoordeeld met de resterende spreiding, relevante diagnoses en inhoudelijke informatie.',
@@ -313,9 +313,9 @@ def enhance(lessons, sources):
             steps(['Grenzen: n = 40 ≤ 100, dus de grenzen voor Std. Residual zijn −2 en +2. '
                    'Het minimum −1,352 blijft binnen de grens; het maximum 2,490 overschrijdt +2. '
                    'Er is minstens één potentiële uitbijter in y.',
-                   'Uitbijters in x: MD<sub>kritiek</sub> = gemiddelde + 3 × standaardafwijking = 0,975 + 3 × 0,815 = 0,975 + 2,445 = 3,420. Het maximum 2,388 is lager; '
+                   'Uitbijters in x: MD<sub>kritiek</sub> = gemiddelde + 3 × standaardafwijking = 0,975 + 3 × 0,815 = 3,420. Het maximum 2,388 is lager; '
                    'geen x-uitbijtersignaal volgens deze cursusregel.',
-                   'Invloed: CD<sub>kritiek</sub> = gemiddelde + 3 × standaardafwijking = 0,030 + 3 × 0,060 = 0,030 + 0,180 = 0,210. Het maximum 0,313 is hoger; '
+                   'Invloed: CD<sub>kritiek</sub> = gemiddelde + 3 × standaardafwijking = 0,030 + 3 × 0,060 = 0,210. Het maximum 0,313 is hoger; '
                    'onderzoek het potentiële invloedrijke punt.',
                    'Deze samenvatting identificeert niet welke rijen het betreft. Zoek de individuele '
                    'residuen/afstanden en het spreidingsdiagram op. Onderbouw een behandeling met de casusinformatie.']))
@@ -401,8 +401,8 @@ def enhance(lessons, sources):
                  'Bewaar onder <strong>Save</strong> de relevante residuen en afstanden: '
                  'gestandaardiseerde residuen, Mahalanobis en Cook. Hiermee kun je de samenvatting '
                  'in Residuals Statistics terugvoeren naar individuele personen.',
-                 'Signalen: n = 60 ≤ 100, dus Std. Residual heeft de grenzen −2 en +2; het minimum −6,166 ligt eronder. MD-grens = 0,983 + 3 × 1,035 = 0,983 + 3,105 = 4,088; MD<sub>max</sub> = 3,380 '
-                 'is lager. CD-grens = 0,011 + 3 × 0,043 = 0,011 + 0,129 = 0,140; CD<sub>max</sub> = 0,328 is hoger. Onderzoek de '
+                 'Signalen: n = 60 ≤ 100, dus Std. Residual heeft de grenzen −2 en +2; het minimum −6,166 ligt eronder. MD-grens = 0,983 + 3 × 1,035 = 4,088; MD<sub>max</sub> = 3,380 '
+                 'is lager. CD-grens = 0,011 + 3 × 0,043 = 0,140; CD<sub>max</sub> = 0,328 is hoger. Onderzoek de '
                  'betreffende personen met hun omschrijvingen.',
                  'Beslissing: persoon 33 wordt uitgesloten voor bloeddruk; de sportieve persoon 24 '
                  'blijft behouden. Behandel dit als een casusbeslissing die toelichting vereist. Bewaar '
@@ -497,7 +497,7 @@ def enhance(lessons, sources):
                    '1.010,210 − 644,888 = € 365,322. Het antwoord is dus circa € 365,32; '
                    '1.010,210 is het verschil met de referentie, niet met HBO.',
                    'Voorspelling: de dummy’s Vrouw, HBO en WO zijn nul, Leidinggevende is één. '
-                   'ŷ = 739,508 + 38,495 × 50 + 71,550 × 10 + 2.237,947 = 739,508 + 1.924,750 + 715,500 + 2.237,947 = € 5.617,705. '
+                   'ŷ = 739,508 + 38,495 × 50 + 71,550 × 10 + 2.237,947 = € 5.617,705. '
                    'Op hele euro’s afgerond: € 5.618.',
                    'Toets Vrouw: H₀: β<sub>Vrouw</sub> ≥ 0, H₁: β<sub>Vrouw</sub> &lt; 0. Gebruik t = −2,444 '
                    'en df = n − k − 1 = 200 − 6 − 1 = 193. Tabelrij 190 geeft de t-grens −1,653 '
@@ -538,7 +538,7 @@ def enhance(lessons, sources):
         + answer('Rekenvoorbeeld bij de cursusformules: ln(ŷ) = 2 + 0,3x. '
                  'Neem x = 4 en een gegeven individueel interval [2,8; 3,6] op logschaal. '
                  'Wat zijn voorspelling, interval en het effect van één extra x op de oorspronkelijke schaal?',
-                 steps(['De voorspelde logwaarde is 2 + 0,3 × 4 = 2 + 1,2 = 3,2. De directe terugtransformatie is '
+                 steps(['De voorspelde logwaarde is 2 + 0,3 × 4 = 3,2. De directe terugtransformatie is '
                         'exp(3,2) ≈ 24,5325 oorspronkelijke eenheden.',
                         'De grenzen worden exp(2,8) ≈ 16,4446 en exp(3,6) ≈ 36,5982. '
                         'De afstanden tot 24,5325 zijn ongelijk: 24,5325 − 16,4446 ≈ 8,0879 omlaag en 36,5982 − 24,5325 ≈ 12,0657 omhoog.',
@@ -623,11 +623,11 @@ def enhance(lessons, sources):
                  'Waarom gebruik je de MSE van het uitgebreide model?',
             steps(['TotalSS = SSR + SSE is in beide modellen 1.000: 800 + 200 en 850 + 150. De extra variabele verklaart 850 − 800 = 50 extra.',
                    'Partiële F: MSE<sub>uitgebreid</sub> = SSE/df = 150/46 ≈ 3,26087. '
-                   'F = (850 − 800)/(150/46) = 50/3,26087 ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.',
+                   'F = (850 − 800)/(150/46) ≈ 15,3333, met ν₁ = 1 en ν₂ = 46.',
                    'Deze MSE beschrijft de resterende foutvariatie nadat de extra variabele is opgenomen. '
                    'De teller meet de verbetering door precies die toevoeging.',
-                   'Klein: adjusted R² = 1 − (200/47)/(1.000/49) = 1 − 4,25532/20,40816 ≈ 0,79149. '
-                   'Uitgebreid: 1 − (150/46)/(1.000/49) = 1 − 3,26087/20,40816 ≈ 0,84022.',
+                   'Klein: adjusted R² = 1 − (200/47)/(1.000/49) ≈ 0,79149. '
+                   'Uitgebreid: 1 − (150/46)/(1.000/49) ≈ 0,84022.',
                    'Adjusted R² stijgt van 0,79149 naar 0,84022: de fit na correctie verbetert. Voor een formele toets kies je vooraf α en zoek je '
                    'de bijbehorende F-grens met 1 en 46 vrijheidsgraden in tabel 13.8. '
                    'Een betere fit vervangt validatie en modeldiagnoses niet.']))
@@ -736,8 +736,8 @@ def enhance(lessons, sources):
                  'de dependent is en welke bouwjaar- of leeftijdcodering je gebruikt. '
                  'Maak spreidingsdiagrammen, ook met groepen zichtbaar.',
                  'Schat de enkelvoudige regressie en bewaar actuele residuen, Mahalanobis en Cook. '
-                 'Signalen: n = 162 &gt; 100, dus Std. Residual heeft de grenzen −3 en +3; het maximum 3,469 ligt erboven. MD-grens = 0,994 + 3 × 0,880 = 0,994 + 2,640 = 3,634; het MD-maximum 2,813 '
-                 'is lager. CD-grens = 0,006 + 3 × 0,011 = 0,006 + 0,033 = 0,039; het Cook-maximum 0,075 is hoger. '
+                 'Signalen: n = 162 &gt; 100, dus Std. Residual heeft de grenzen −3 en +3; het maximum 3,469 ligt erboven. MD-grens = 0,994 + 3 × 0,880 = 3,634; het MD-maximum 2,813 '
+                 'is lager. CD-grens = 0,006 + 3 × 0,011 = 0,039; het Cook-maximum 0,075 is hoger. '
                  'De afwijkende auto’s lijken in de casus geen invoerfouten en blijven behouden.',
                  'Voer <strong>Explore → Normality plots with tests</strong> uit op de actuele '
                  'residuen. Bij n = 162 gebruik je volgens de cursus Kolmogorov-Smirnov. '
@@ -805,12 +805,12 @@ def enhance(lessons, sources):
         ])
         + steps(['Verklaard deel: n = 40 en k = 1. R² = SSR/TotalSS = 472.578,299/594.437,500 ≈ 0,7950. '
                  'De oppervlakte verklaart circa 79,5% van de huurvariatie in deze dataset.',
-                 'Resterende spreiding: sₑ = √MSE = √(121.859,201/38) = √3.206,821 ≈ € 56,63 per maand. Dit is de spreiding rond '
+                 'Resterende spreiding: sₑ = √MSE = √3.206,821 ≈ € 56,63 per maand. Dit is de spreiding rond '
                  'de lijn; het is geen standaardfout van de helling.',
-                 'F-toets: F = MSR/MSE = 472.578,299/(121.859,201/38) = 472.578,299/3.206,821 ≈ 147,367. Toets het model met '
+                 'F-toets: F = MSR/MSE = 472.578,299/3.206,821 ≈ 147,367. Toets het model met '
                  'ν₁ = 1 en ν₂ = 38; lees bij gebruik van een tabelbenadering de gekozen rij expliciet af.',
                  'Voorspelling: de lijn is ŷ = 485,971 + 6,757x. Bij 100 m² volgt met deze afgedrukte '
-                 'coëfficiënten ŷ = 485,971 + 6,757 × 100 = 485,971 + 675,7 = € 1.161,671, afgerond € 1.161,67 per maand.',
+                 'coëfficiënten ŷ = 485,971 + 6,757 × 100 = € 1.161,671, afgerond € 1.161,67 per maand.',
                  'De combinatie van hoge R² en significante F maakt de diagnoses niet overbodig. '
                  'In de les diagnostiek blijkt dezelfde casus een normaliteitsprobleem te hebben.'])
         ,
@@ -825,9 +825,9 @@ def enhance(lessons, sources):
                  'gegeven tabelbenadering: df = 37, tabelrij 35, t = 2,030.',
                  steps(['Puntvoorspelling: 512,479 + 6,388 × 80 = 512,479 + 511,040 = 1.023,519, dus circa € 1.023,52.',
                         'Neem de wortel van de MSE: sₑ = √2.706,538 ≈ 52,0244.',
-                        'Marge = 2,030 × 52,0244 × √[1 + 1/39 + (80 − 81,54)²/(38 × 15,992²)] = 2,030 × 52,0244 × √(1 + 0,025641 + 0,000244) = 2,030 × 52,0244 × 1,01286 '
+                        'Marge = 2,030 × 52,0244 × √[1 + 1/39 + (80 − 81,54)²/(38 × 15,992²)] '
                         '≈ € 106,97.',
-                        'Interval: 1.023,519 − 106,97 en 1.023,519 + 106,97 geven ongeveer [€ 916,55; € 1.130,49] '
+                        'Interval: 1.023,519 ± 106,97 geeft ongeveer [€ 916,55; € 1.130,49] '
                         'per maand. Een huur buiten dit interval is een onderzoeksaanleiding, geen automatische boekingsfout.',
                         'Afstandsterm: de oppervlakte 80 ligt dicht bij x̄ = 81,54, dus deze term is met 0,000244 klein. '
                         'Bij een ver weg gelegen oppervlakte wordt de marge groter.']))
