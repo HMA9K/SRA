@@ -228,12 +228,16 @@ function context(){
  return {id:match?.[1],host:document.getElementById('exam-app'),key:location.hash};
 }
 
+// Naslag bij iedere vraag, ook zonder eigen tentamen-PDF. Opent net als een bronverwijzing in een nieuw tabblad.
+const REFERENCE_PDFS=[['Formuleblad','bronnen/formuleblad.pdf'],['Tabellenbundel','bronnen/tabellenbundel.pdf']];
 function actions(id,download=false){
-  const source=originalPdfs[id];if(!source)return null;
-  const group=document.createElement('span');group.className='original-pdf-actions';group.dataset.pdfExam=id;
-  for(const [kind,label] of [['questions','Tentamen PDF'],['solutions','Uitwerking PDF']]){
+  const source=originalPdfs[id];if(!source&&download)return null;
+  // In de oefenomgeving dezelfde knop als de buren in de onderbalk.
+  const buttonClass=document.querySelector('.mc-page')?'study-btn':'btn';
+  const group=document.createElement('span');group.className='original-pdf-actions';if(source)group.dataset.pdfExam=id;
+  if(source)for(const [kind,label] of [['questions','Tentamen PDF'],['solutions','Uitwerking PDF']]){
     const directDownload=false;
-    const button=document.createElement(directDownload&&source[kind].url?'a':'button');button.className='btn';
+    const button=document.createElement(directDownload&&source[kind].url?'a':'button');button.className=buttonClass;
     button.dataset.pdfExam=id;button.textContent=label+(kind==='questions'&&directDownload?' downloaden':'');
     if(directDownload&&source[kind].url){
       button.href=source[kind].url;button.download='CAFA2-'+source.date+'-'+(kind==='questions'?'tentamen':'uitwerking')+'.pdf';
@@ -241,6 +245,10 @@ function actions(id,download=false){
     }else{button.type='button';button.dataset.originalPdf=kind;button.setAttribute('aria-pressed','false');}
     if(!source[kind].url){button.disabled=true;button.title=source[kind].reason;button.setAttribute('aria-describedby','original-pdf-missing');}
     group.append(button);
+  }
+  if(!download)for(const [label,file] of REFERENCE_PDFS){
+    const button=document.createElement('button');button.type='button';button.className=buttonClass;button.textContent=label;
+    button.dataset.referencePdf=file;button.title='Opent in een nieuw tabblad';group.append(button);
   }
   return group;
 }
@@ -332,7 +340,7 @@ function mount(){
   if(left&&(!left.panel.isConnected||!ctx.host?.contains(left.panel)))openLeft(left.id,left.opener,true);
   placeLeft();if(right?.open)dock.refresh();
   const target=ctx.host?.querySelector('.exam-footer .actions,.mc-footer-tools,.question-nav .nav-left')||ctx.host?.querySelector('.question-nav,.exam-welcome-actions,.exam-paper .actions');
-  if(target&&originalPdfs[ctx.id]&&!target.querySelector('.original-pdf-actions'))target.append(actions(ctx.id));
+  if(target&&!target.querySelector('.original-pdf-actions'))target.append(actions(ctx.id));
   const welcome=ctx.host?.querySelector('.exam-paper');
   if(location.hash.startsWith('#welkom/')&&welcome&&originalPdfs[ctx.id]&&!welcome.querySelector('.original-pdf-actions'))welcome.append(actions(ctx.id));
   document.querySelectorAll('#exam-app a.exam-name').forEach(link=>{
@@ -351,6 +359,7 @@ document.addEventListener('click',event=>{
   if(event.target.closest('[data-cirrus-float],[data-exam-action="section"],[data-practice-case]')&&left)closeLeft();
   const close=event.target.closest('[data-pdf-close]');if(close){if(close.dataset.pdfClose==='questions')closeLeft();else closeRight();return;}
   if(event.target.closest('[data-pdf-assistant]')){window.StudyAssistant?.resume();return;}
+  const reference=event.target.closest('[data-reference-pdf]');if(reference){window.open(reference.dataset.referencePdf,'_blank','noopener');return;}
   const button=event.target.closest('[data-original-pdf]');if(!button||button.disabled)return;
   if(button.dataset.originalPdf==='questions')openLeft(button.dataset.pdfExam,button);else openRight(button.dataset.pdfExam,button);
 },true);

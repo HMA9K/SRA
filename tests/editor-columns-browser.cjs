@@ -28,7 +28,7 @@ const base=process.env.EDITOR_URL||`http://127.0.0.1:8870/${sra?'sra':'cafa2'}/`
   assert.equal(await table.locator('tr').first().locator('td').count(),2);assert.ok((await editor.innerText()).includes('456'));
   if(!sra){
    await page.locator('.exam-footer .actions [data-original-pdf]').first().waitFor();
-   assert.deepEqual(await page.locator('.exam-footer .actions').evaluate(e=>[...e.children].map(c=>c.textContent.trim())),['‹ Vorige','Volgende ›','Tentamen PDFUitwerking PDF']);
+   assert.deepEqual(await page.locator('.exam-footer .actions').evaluate(e=>[...e.children].map(c=>c.textContent.trim())),['‹ Vorige','Volgende ›','Tentamen PDFUitwerking PDFFormulebladTabellenbundel']);
    const hash=await page.evaluate(()=>location.hash);
    await page.getByRole('link',{name:'Uitleg bij deze vraag in de samenvatting'}).click();
    const back=page.locator('[data-study-origin]');await back.waitFor();assert.ok(await back.isVisible());
