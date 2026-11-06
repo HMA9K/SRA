@@ -18298,7 +18298,7 @@ window.SRAExamPractice = {
         "Afbeelding 18: potential = 81,361 + 1,864 × ln(hits).",
         "Logaritme: ln(126) = 4,836.",
         "Product: 1,864 × 4,836 = 9,014.",
-        "Uitkomst: 81,361 + 9,014 = 90,375, afgerond 90,4."
+        "Logvoorspelling: 81,361 + 9,014 = 90,375, afgerond 90,4."
       ],
       "optionExplanations": [
         "Dan vergeet je de transformatie: 81,361 + 1,864 × 126 = 316,2. Dat kan niet, want het hoogste potential in Afbeelding 2 is 95.",

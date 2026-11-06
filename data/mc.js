@@ -11096,10 +11096,10 @@ window.SRAMCData = {
           "level": 2,
           "steps": [
             "t = (B − 0)/Std. Error.",
-            "Invullen: t = (6 − 0)/2 = 3.",
+            "Toetsingsgrootheid: t = (6 − 0)/2 = 3.",
             "De t-waarde drukt uit hoeveel geschatte standaardfouten B van de nulwaarde af ligt. Hier zijn dat drie standaardfouten."
           ],
-          "explanation": "t = (B − 0)/Std. Error. Invullen: t = (6 − 0)/2 = 3. De t-waarde drukt uit hoeveel geschatte standaardfouten B van de nulwaarde af ligt. Hier zijn dat drie standaardfouten.",
+          "explanation": "t = (B − 0)/Std. Error. Toetsingsgrootheid: t = (6 − 0)/2 = 3. De t-waarde drukt uit hoeveel geschatte standaardfouten B van de nulwaarde af ligt. Hier zijn dat drie standaardfouten.",
           "pattern": "Herken: B en Std. Error uit Coefficients, met H₀: β = 0. → Betekenis: De geschatte coëfficiënt wordt uitgedrukt in aantallen standaardfouten van nul. → Aanpak: Bereken t = (B − 0)/Std. Error en behoud het teken. → Gevraagd antwoord: Een t-toetsingsgrootheid voor deze coëfficiënt.",
           "trap": "B × standaardfout is geen toetsingsgrootheid.",
           "optionExplanations": [
