@@ -84,7 +84,7 @@ FOCUS = {
  'onzekerheid': [
   ('basis-1 toepassing-1', 'Zet betrouwbaarheid eerst om in α. Verdeel die resterende kans alleen over twee staarten wanneer twee grenzen worden gevraagd.'),
   ('basis-2', 'Breedte loopt van ondergrens tot bovengrens; de marge E loopt van de puntschatting tot één grens.'),
-  ('basis-3', 'Volgens de cursusafspraak kies je bij ontbrekende exacte vrijheidsgraden de eerst lagere beschikbare rij in de t-tabel. Bij df > 200 gebruik je echter de onderste rij van de tabel. Houd de staartkans hetzelfde.'),
+  ('basis-3', 'Volgens de afspraak kies je bij ontbrekende exacte vrijheidsgraden de eerst lagere beschikbare rij in de t-tabel. Bij df > 200 gebruik je echter de onderste rij van de tabel. Houd de staartkans hetzelfde.'),
   ('aanvulling-bovengrens', 'Gebruik voor een bovengrens de puntschatting plus de marge en de gegeven eenzijdige kritieke waarde.'),
   ('toepassing-2', 'Werk eerst de berekening uit met ongeronde tussenwaarden. Bij naar buiten afronden gaat de ondergrens omlaag en de bovengrens omhoog op de gevraagde eenheid.'),
   ('toepassing-3', 'Bij gelijkblijvende betrouwbaarheid en spreiding vermindert een grotere geschikte steekproef de standaardfout. Afronden is geen statistische verbetering.')],
@@ -177,7 +177,7 @@ FOCUS = {
   ('toepassing-3', 'In ŷ = a × x^b geeft vermenigvuldiging van x met c een factor c^b in de voorspelling.'),
   ('aanvulling-meervoudig', 'Bij ln(ŷ) = b₀ + b₁ln(x₁) + b₂ln(x₂) wordt ŷ = exp(b₀) × x₁^b₁ × x₂^b₂. Een negatieve macht betekent delen.')],
  'modelbouw': [
-  ('basis-1 toepassing-1', 'Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.'),
+  ('basis-1 toepassing-1', 'Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.'),
   ('basis-2', 'Let op het beginpunt van de procedure: alle kandidaatvariabelen tegelijk, of juist één voor één toevoegen.'),
   ('basis-3 toepassing-3', 'Een selectiebesluit verandert het geschatte model. Gebruik voor een volgende beslissing de nieuwe coëfficiënten en p-waarden, niet die van het vorige model.'),
   ('toepassing-2', 'Voor één toegevoegde variabele in geneste modellen op dezelfde data is de partiële F gelijk aan (SSR_groot − SSR_klein)/MSE_groot. Gebruik het uitgebreide model in de noemer.')],

@@ -411,7 +411,7 @@ add(25,why='De methode werkt van groot naar klein en kijkt na elke verwijdering 
 
 add(26,why='Twee voorspellers meten bijna hetzelfde, en daardoor kan het model hun afzonderlijke effecten niet betrouwbaar schatten.',
  signals='Afbeelding 12c: VIF = 216,623 bij Inhabitants en 216,879 bij Inhabitants unemployed, met Tolerance 0,005. De R² is wel 0,958.',
- meaning='De VIF meet hoeveel een voorspeller overlapt met de andere voorspellers. De cursusgrens is 10. Een VIF van ongeveer 217 wijst op zeer hoge multicollineariteit.',
+ meaning='De VIF meet hoeveel een voorspeller overlapt met de andere voorspellers. De grens is 10. Een VIF van ongeveer 217 wijst op zeer hoge multicollineariteit.',
  approach='Kijk ook bij een model met goede p-waarden in de kolommen Collinearity Statistics. Vergelijk elke VIF met 10.',
  answer='Hoge multicollineariteit, de twee variabelen met VIF rond 217, en dat dit veel groter is dan de toegestane 10.',
  steps=['Afbeelding 12c, kolom VIF: 216,623, 2,781, 216,879 en 2,978.',

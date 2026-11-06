@@ -381,7 +381,7 @@ add(22,why='Achterwaartse selectie haalt een variabele weg als Sig. boven 0,05 l
   'Dit is omgekeerd: Sig. onder 0,05 betekent significant, en zulke variabelen blijven. Alleen Sig. boven 0,05 valt af.',
   'Na verwijderen schat je opnieuw, en de overige coëfficiënten kunnen dan veranderen. Beoordeling hangt in Afbeelding 1 ook licht samen met andere variabelen, bijvoorbeeld −0,095 met Leeftijd.'])
 
-add(23,why='De hoogste VIF ligt ver onder de cursusgrens, dus alle lagere VIF-waarden ook.',
+add(23,why='De hoogste VIF ligt ver onder de grens, dus alle lagere VIF-waarden ook.',
  signals='Afbeelding 13 heeft rechts de kolommen Tolerance en VIF. De VIF-waarden lopen van 1,043 tot 1,355.',
  meaning='De VIF laat zien hoe sterk een verklarende variabele samenhangt met de andere verklarende variabelen.',
  approach='Zoek de grootste VIF in de kolom en vergelijk die met de grens 10.',

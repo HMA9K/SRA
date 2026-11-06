@@ -342,7 +342,7 @@ add(19,why='Achterwaartse eliminatie haalt alleen niet-significante variabelen w
 
 add(20,why='Multicollineariteit beoordeel je met de VIF van elke verklarende variabele, en alle drie blijven ver onder de grens.',
  signals='Afbeelding 6.2 heeft de kolommen Tolerance en VIF. De VIF-waarden zijn 1,308, 1,478 en 1,349.',
- meaning='De VIF laat zien hoeveel een verklarende variabele overlapt met de andere verklarende variabelen. Pas een waarde vanaf de cursusgrens 10 is een probleem.',
+ meaning='De VIF laat zien hoeveel een verklarende variabele overlapt met de andere verklarende variabelen. Pas een waarde vanaf de grens 10 is een probleem.',
  approach='Lees per variabele de VIF af en vergelijk die met 10.',
  answer='De VIF-waarden, de vergelijking met 10 en de conclusie dat er geen probleem met multicollineariteit is.',
  steps=['Afbeelding 6.2: VIF van tot_sqft = 1,308, land_sqft = 1,478 en age = 1,349.',

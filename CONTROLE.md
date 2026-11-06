@@ -48,7 +48,7 @@ De oorspronkelijke bronbestanden zijn niet gewijzigd. De website is lokaal besch
 - Mobiele leerroute openen bij les 17 maakt de actieve les zichtbaar. Escape sluit het menu. Ongeldige oefenscopes en ongeldige URL-encoding vallen veilig terug.
 - De OLS-knop geeft opnieuw SSE = 11,12, gelijk aan het optimum. Bij x₀ = 300 toont het voorspellingslab een individuele marge 2,8523 en een gemiddelde-responsmarge 1,2365. De banden zijn op desktop visueel gecontroleerd.
 - Diagnostiek: maximale trechtersterkte blijft binnen de grafiek; normaliteitsplot/histogram, y-uitbijter, afstanden en Durbin-Watson geven geen ongeldige uitvoer. Hulp-R² = 0,9 geeft VIF = 10 en wordt niet als grensoverschrijding gemeld.
-- Nieuwe rekentests controleren cursusplanningsformule, afronding, geneste modellen, voorspellingsbanden, VIF en MSPR. De gewone tests vereisen geen lokale bron-PDF's; de afzonderlijke broncontrole controleert aanwezigheid en PDF-headers.
+- Nieuwe rekentests controleren planningsformule, afronding, geneste modellen, voorspellingsbanden, VIF en MSPR. De gewone tests vereisen geen lokale bron-PDF's; de afzonderlijke broncontrole controleert aanwezigheid en PDF-headers.
 - Een tijdelijke clone zonder bronnen is gebouwd en getest. De bronloze ZIP bevat ook geen oude PDF's; de complete lokale ZIP blijft apart bestaan. Geen browserconsolefouten in de gecontroleerde nieuwe routes.
 
 ## Begrippen, kennisstart, formulepagina's en terugnavigatie

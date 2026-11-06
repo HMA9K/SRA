@@ -31,7 +31,7 @@ Alle 19 werkbladen zijn gecontroleerd op invoer, berekening, getekende waarden e
 | Regressielijn (`regressie`) | b₀ en b₁ wijzigen lijn, residuen en SSE. De OLS-knop vindt de kleinste SSE. | Waargenomen punten blijven vast. |
 | ANOVA (`anova`) | SSR/SSE wijzigen de verklaarde variatie; n/k wijzigen ook vrijheidsgraden, F en standaardfout. | Bij vaste SSR/SSE blijft de R²-balk gelijk als alleen n/k veranderen. |
 | Toetsen (`toets`) | p, α en eenzijdige richting bepalen marker, grens en beslissing. | Het teken van B is uitgeschakeld bij een tweezijdige toets. |
-| Diagnose (`diagnose`) | Patroonsterkte, scheefheid, residu, afstanden en DW-invoer wijzigen hun eigen diagram of grenscontrole. | Normaliteits-n kiest de cursusnormaliteitstoets, niet het aantal van de 12 demonstratiepunten. De uitbijtergrens verandert bij n = 100 naar 101. |
+| Diagnose (`diagnose`) | Patroonsterkte, scheefheid, residu, afstanden en DW-invoer wijzigen hun eigen diagram of grenscontrole. | Normaliteits-n kiest de normaliteitstoets, niet het aantal van de 12 demonstratiepunten. De uitbijtergrens verandert bij n = 100 naar 101. |
 | Voorspelling (`voorspelling`) | x₀ verplaatst de gekozen voorspelling; model, n, spreidingen en t bepalen de onzekerheidsbanden. | Bij x₀ = x̄ heeft sₓ geen invloed op de marge van precies die geselecteerde voorspelling. |
 | Transformaties (`transformatie`) | Model en coëfficiënten wijzigen beide lijnen; de gekozen x krijgt in beide grafieken een marker. | Bij b₁ = 0 is de voorspelling onafhankelijk van x. |
 | Meervoudige regressie (`meervoudig`) | Coëfficiënten en beoordeling wijzigen groepslijnen; leeftijd en groep bepalen de gekozen persoon. | Bij een dummycoëfficiënt van nul vallen de groepslijnen samen. |

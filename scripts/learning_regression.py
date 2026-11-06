@@ -268,7 +268,7 @@ def enhance(lessons, sources):
                  'Herhaal de verkenning met de andere kandidaten, waaronder de relatieve hypotheeklast. '
                  'Geef per kandidaat aan of het patroon binnen de groepen standhoudt.',
                  'Lever de gewone en gegroepeerde grafiek plus een gemotiveerde modelkeuze op. '
-                 'Bij deze crosssectie zijn tijdsvertraging en de cursusaanpak voor autocorrelatie niet van toepassing.']),
+                 'Bij deze crosssectie zijn tijdsvertraging en de aanpak voor autocorrelatie niet van toepassing.']),
         [ref('spss',11,'SPSS-uitwerkingen, college 4, PDF 11–13'),bookref('boek-h9c',261)])
 
     add(L['diagnostiek'], sources, 'Tijdsvertraging lezen in grafieken én Correlations',
@@ -309,21 +309,21 @@ def enhance(lessons, sources):
             ['Mahal. Distance','0,000','2,388','0,975','0,815','40'],
             ["Cook’s Distance",'0,000','0,313','0,030','0,060','40'],
         ])
-        + answer('Beoordeel uitbijters in y, uitbijters in x en invloedrijke punten met de cursusgrenzen.',
+        + answer('Beoordeel uitbijters in y, uitbijters in x en invloedrijke punten met de grenzen.',
             steps(['Grenzen: n = 40 ≤ 100, dus de grenzen voor Std. Residual zijn −2 en +2. '
                    'Het minimum −1,352 blijft binnen de grens; het maximum 2,490 overschrijdt +2. '
                    'Er is minstens één potentiële uitbijter in y.',
                    'Uitbijters in x: MD<sub>kritiek</sub> = gemiddelde + 3 × standaardafwijking = 0,975 + 3 × 0,815 = 3,420. Het maximum 2,388 is lager; '
-                   'geen x-uitbijtersignaal volgens deze cursusregel.',
+                   'geen x-uitbijtersignaal volgens deze regel.',
                    'Invloed: CD<sub>kritiek</sub> = gemiddelde + 3 × standaardafwijking = 0,030 + 3 × 0,060 = 0,210. Het maximum 0,313 is hoger; '
                    'onderzoek het potentiële invloedrijke punt.',
                    'Deze samenvatting identificeert niet welke rijen het betreft. Zoek de individuele '
                    'residuen/afstanden en het spreidingsdiagram op. Onderbouw een behandeling met de casusinformatie.']))
         + figure('residuals',100,'Volledige oorspronkelijke Residuals Statistics met het omcirkelde maximum Std. Residual van 2,490.',
-                 'De volledige tabel bevat ook andere soorten residuen. Gebruik voor deze cursusregel de rij Std. Residual.')
+                 'De volledige tabel bevat ook andere soorten residuen. Gebruik voor deze regel de rij Std. Residual.')
         + '<p><strong>Let op:</strong> 2,490 is hier geen t-toetsingsgrootheid uit Coefficients. '
         'Zoek er dus geen t-grens uit de tabellenbundel bij. Het is evenmin de ruwe afwijking in euro’s. '
-        'De standaardisering maakt afwijkingen vergelijkbaar met de cursusvuistregel.</p>',
+        'De standaardisering maakt afwijkingen vergelijkbaar met de grenzen −2 en +2.</p>',
         [ref('slides',100,'Slides, uitbijters en invloed, PDF 100–108'),ref('formules',3,'Formuleblad, formules 44–45 en 48, PDF 3')])
 
     add(L['diagnostiek'], sources, 'Tests of Normality en ABSRES: kies de juiste rij en grootheid',
@@ -340,7 +340,7 @@ def enhance(lessons, sources):
         'om toch een gunstige conclusie te krijgen. Het sterretje bij 0,200 zegt bovendien '
         'dat deze uitvoer een ondergrens voor die p-waarde weergeeft.</p>'
         + figure('normality',110,'Tests of Normality met Shapiro-Wilk p 0,014 voor veertig gestandaardiseerde residuen en een histogram.',
-                 'Het histogram geeft een beeld; de cursusbeslissing gebruikt de toets die bij n past.')
+                 'Het histogram geeft een beeld; de beslissing gebruikt de toets die bij n past.')
         + '<h3>Waarom absolute residuen?</h3><p>Een gewoon residu kan positief of negatief zijn. '
         'Voor de spreiding telt de grootte van de afwijking, ongeacht de richting. '
         'Daarom neem je ABSRES = |e| en onderzoek je de samenhang met de verklarende variabele.</p>'
@@ -603,7 +603,7 @@ def enhance(lessons, sources):
                  'in de betreffende x blijft over nadat je haar uit de andere x hebt voorspeld.',
                  'De hulpregressie heeft R² = 1 − tolerance = 1 − 0,380 = 0,620. Dit gaat over samenhang '
                  'tussen de verklarende variabelen, niet over het verklaarde aandeel GDP.',
-                 'Vergelijk 2,634 met de cursusgrens 10. De grens wordt niet overschreden. '
+                 'Vergelijk 2,634 met de grens 10. De grens wordt niet overschreden. '
                  'Schrijf dat er volgens deze regel geen multicollineariteitsprobleem is aangetoond.',
                  'De overlap is daarmee niet verdwenen. Beoordeel de afzonderlijke B’s met hun '
                  'standaardfouten en de overige diagnoses; VIF alleen beslist niet of het model bruikbaar is.'])
@@ -787,7 +787,7 @@ def enhance(lessons, sources):
         '(afgerond € 5.618). '
         'De eenzijdige t voor Vrouw is −2,444 met kritieke grens −1,653. '
         'Beoordeling heeft p = 0,179 en is de eerste selectiekandidaat; maximale VIF '
-        '1,355 geeft volgens de cursusgrens geen multicollineariteitssignaal. '
+        '1,355 geeft volgens de grens geen multicollineariteitssignaal. '
         'Significantie en VIF alleen bewijzen nog geen bruikbaarheid op nieuwe gegevens.</p></details>',
         [ref('exam2025',9,'Tentamen 17 maart 2025, PDF 9–10'),ref('exam2025',14,'Officiële uitwerking, PDF 14–15')])
 
@@ -859,7 +859,7 @@ def enhance(lessons, sources):
                         'De coëfficiënt ICOR verandert van 35,523 naar 37,792 en vervolgens 37,138. '
                         'Een effectschatting hangt dus af van welke andere kenmerken zijn opgenomen.',
                         'De grootste VIF in het beginmodel is 8,476 &lt; 10. Dat overschrijdt de '
-                        'cursusgrens niet, maar er is wel merkbare overlap. Een grenswaarde is geen bewijs '
+                        'grens niet, maar er is wel merkbare overlap. Een grenswaarde is geen bewijs '
                         'dat de verklarende variabelen volledig onafhankelijk zijn.']))
         + figure('life-backward',143,'Oorspronkelijke ANOVA en Coefficients voor drie backwardstappen met 171 landen.',
                  'Lees bij iedere berekening hetzelfde modelnummer in beide tabellen.')
