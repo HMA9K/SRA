@@ -307,8 +307,8 @@ _add('residuele-standaardfout', 'Residuele standaardfout', ['Std. Error of the E
      'De wortel uit MSE, in de eenheid van $y$. Zij beschrijft de geschatte spreiding rond de regressielijn en je gebruikt haar in het voorspellingsinterval. SPSS noemt haar Std. Error of the Estimate.',
      'MSE = 16 geeft Std. Error of the Estimate = $√16$ = 4. Staat $y$ in euro’s, dan is deze spreiding € 4.', 'anova')
 _add('r-kwadraat', 'R²', ['R-kwadraat', 'R2', 'R Square', 'determinatiecoëfficiënt'],
-     'Het deel van de totale variatie in $y$ dat het model verklaart: $R² = SSR/TotalSS$. Het is niet het percentage waarnemingen dat precies goed voorspeld is.',
-     'SSR = 70 en TotalSS = 100 geven $R²$ = 70 / 100 = 0,70: het model verklaart 70% van de variatie in $y$ binnen deze gegevens.', 'anova')
+     'R² zegt welk deel van de verschillen in $y$ het model verklaart. Het ligt tussen 0 en 1. Je rekent het uit als $R² = SSR/TotalSS$. Het is niet het percentage waarnemingen dat precies goed voorspeld is.',
+     'Huren verschillen per woning. Bij $R²$ = 0,80 hangt 80% van die verschillen samen met de oppervlakte; 20% blijft onverklaard. In de tabel: SSR = 80 en TotalSS = 100 geven 80 / 100 = 0,80.', 'anova')
 
 # Hypothesetoetsen en betekenis van beslissingen.
 _add('hypothese', 'Hypothese', ['hypothesen', 'hypotheses'],

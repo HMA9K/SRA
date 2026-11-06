@@ -249,7 +249,7 @@ def _guides(lesson: dict) -> list[dict]:
              'Bereken B − N × b̄. Dit is het verschil tussen het bekende boekwaardetotaal en het boekwaardetotaal dat de steekproef suggereert.',
              'Vermenigvuldig dit verschil met b₁ en tel de correctie bij N × w̄ op.',
              'Bereken de MPU-standaardfout uit s_w en vermenigvuldig met √(1 − R_bw²).',
-             'Gebruik die s_R voor de intervalmarge. Bewaar voldoende decimalen en vermeld een relevant afrondingsverschil met de uitwerking.'],
+             'Gebruik die s_R voor de intervalmarge: E = t × s_R. Bewaar voldoende decimalen en vermeld een relevant afrondingsverschil.'],
             example,
             'Σb is alleen de som in de steekproef; B is het bekende populatietotaal. Dit interval hoort bij de totale waarde, niet bij één toekomstige individuele waarneming.'
         )]
@@ -261,7 +261,7 @@ def _guides(lesson: dict) -> list[dict]:
             p.legend_html(slug, ' Voor MPU gebruik je s_w²; voor verschillen s_e². Bij de regressieschatter is de passende resterende variantie s_w² × (1 − R_bw²).'),
             ['Vertaal de gewenste totale intervalbreedte naar E door de breedte te halveren.',
              'Kies de variantie die bij de schatter hoort. Bij regressie moet de factor 1 − R_bw² dus worden meegenomen.',
-             'Gebruik de t-waarde volgens de opgave of de gevolgde uitwerking en bereken γ.',
+             'Gebruik de gegeven t-waarde, of lees t af bij de juiste df, en bereken γ.',
              'Bereken n = N/(1 + γ). Rond het vereiste aantal altijd naar boven af.',
              'Wordt om uitbreiding gevraagd? Trek het aantal al gecontroleerde posten van het benodigde totale aantal af.'],
             example,
@@ -350,8 +350,8 @@ def _guides(lesson: dict) -> list[dict]:
                  'Vergelijk F met de F-tabelgrens met beide vrijheidsgraden, of vergelijk de globale Sig. met α.',
                  'Concludeer bij verwerpen dat minstens één opgenomen hellingscoëfficiënt afwijkt van nul.'],
                 _own_example('de ANOVA-gegevens uit de bestaande les',
-                    'Bij n = 30, k = 1, SSR = 1.351,262 en SSE = 44,105 is MSE = 44,105/28 ≈ 1,57518.',
-                    'MSR = 1.351,262/1 = 1.351,262. Dus F ≈ 857,85.',
+                    'Residuele variantie: bij n = 30, k = 1, SSR = 1.351,262 en SSE = 44,105 is MSE = SSE/(n − k − 1) = 44,105/28 ≈ 1,57518.',
+                    'F-waarde: MSR = SSR/k = 1.351,262/1 = 1.351,262, dus F = MSR/MSE = 1.351,262/1,57518 ≈ 857,85.',
                     'Voor een formele conclusie hoort daarbij de gegeven α en de passende F-grens of globale p-waarde.'),
                 'Een significante globale F-toets maakt niet alle afzonderlijke coëfficiënten significant. Halveer α niet voor de rechterstaart van deze F-toets.'
             ),
@@ -396,7 +396,7 @@ def _guides(lesson: dict) -> list[dict]:
                  'Vertaal de beschreven persoon of situatie naar een waarde voor iedere x en een 0/1 voor iedere dummy.',
                  'Vermenigvuldig iedere coëfficiënt met de juiste waarde. Tel de producten en de constante op.',
                  'Vergelijk twee categorieën via hun verschil in voorspelling, met de andere kenmerken gelijk.',
-                 'Controleer eenheid en afronding. Maak een relevant verschil met het bronantwoord zichtbaar.'],
+                 'Controleer eenheid en afronding. Maak een relevant verschil met het gegeven antwoord zichtbaar.'],
                 example,
                 'De dummycodering bepaalt de betekenis van het teken. Bij meerdere dummies voor één categorische variabele staan niet zomaar alle dummies tegelijk op 1.'
             ),
@@ -411,8 +411,8 @@ def _guides(lesson: dict) -> list[dict]:
                  'Beoordeel de uitkomst naast inhoud, modelvoorwaarden en validatie.'],
                 _own_example('een correctie voor twee verklarende variabelen',
                     'Stel n = 30, k = 2 en R² = 0,80.',
-                    'Correctie = 2 × (1 − 0,80)/(30 − 2 − 1) = 0,4/27 ≈ 0,01481.',
-                    'Adjusted R² ≈ 0,78519. De correctie ligt hier onder de gewone R² van 0,80.'),
+                    'Correctie = k × (1 − R²)/(n − k − 1) = 2 × (1 − 0,80)/(30 − 2 − 1) = 2 × 0,20/27 = 0,4/27 ≈ 0,01481.',
+                    'Adjusted R² = R² − correctie = 0,80 − 0,01481 ≈ 0,78519. Dit ligt hier onder de gewone R² van 0,80.'),
                 'Een hoge adjusted R² vervangt geen controle van aannamen en maakt een individueel effect nog niet significant.'
             ),
         ]
@@ -429,7 +429,7 @@ def _guides(lesson: dict) -> list[dict]:
                  'Bij verdubbeling van x neemt de voorspelde y toe met b₁ × ln(2), als deze modelvorm passend blijft.'],
                 _own_example('dezelfde getallen op de logaritmische schaal van x',
                     'Stel ŷ = 1 + 0,5ln(x) en x = 16.',
-                    'ln(16) ≈ 2,772589, dus ŷ = 1 + 0,5 × 2,772589 ≈ 2,386294.',
+                    'Invullen: ln(16) ≈ 2,772589, dus ŷ = 1 + 0,5 × 2,772589 = 1 + 1,386294 ≈ 2,386294.',
                     'Deze 2,386294 is al de voorspelde y, geen voorspelde ln(y).'),
                 'Kijk welke variabele is getransformeerd. Alleen het voorkomen van ln in de vergelijking betekent niet dat je de hele uitkomst moet terugtransformeren.'
             ),
@@ -444,7 +444,7 @@ def _guides(lesson: dict) -> list[dict]:
                  'Beoordeel de residuen van het gekozen model opnieuw; de transformatie garandeert geen goed model.'],
                 _own_example('een voorspelde logwaarde terugrekenen',
                     'Stel ln(ŷ) = 1 + 0,5x en x = 2.',
-                    'De voorspelde logwaarde is 1 + 0,5 × 2 = 2.',
+                    'De voorspelde logwaarde is 1 + 0,5 × 2 = 1 + 1 = 2.',
                     'Terug volgens het formuleblad: ŷ = exp(2) ≈ 7,3891.'),
                 'De waarde 2 is hier niet de voorspelde y. Gebruik exp en niet de inverse van de gewone logaritme met grondtal 10.'
             ),

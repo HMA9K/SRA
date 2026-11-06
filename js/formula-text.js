@@ -24,20 +24,22 @@
   // Een wortel mag direct na een getal staan (0,49 √2); de teller van een breuk niet midden in een woord.
   const FORMULA = new RegExp(
     `(?:(?<![\\p{L}\\p{N}_/.,])${ATOM}\\s*=\\s*)?(?:(?<![\\p{L}\\p{N}_/.,])(?:${ATOM}|${GROUP})\\s*[/÷]\\s*)?${ROOT}(?:\\s*[/÷]\\s*(?:${ROOT}|${ATOM}|${GROUP}))?(?![\\p{L}\\p{N}_])`
-    + `|(?<![\\p{L}\\p{N}_/])(?:${ATOM}\\s*=\\s*)?(?:\\[[^\\[\\]]*\\]\\s*/\\s*\\d[\\d.,]*\\d|(?:\\[[^\\[\\]]*\\]|${GROUP})\\s*/\\s*${GROUP})`
+    + `|(?<![\\p{L}\\p{N}_/])(?:${ATOM}\\s*=\\s*)?(?:\\[[^\\[\\]]*\\]\\s*/\\s*\\d(?:[\\d.,]*\\d)?|(?:\\[[^\\[\\]]*\\]|${GROUP})\\s*/\\s*(?:${GROUP}|\\[[^\\[\\]]*\\]))`
     + `|(?<![\\p{L}\\p{N}_/.,])\\d[\\d.,]*\\d?\\s+/\\s+\\d[\\d.,]*\\d?(?![\\p{L}\\p{N}_/])`
-    + `|(?<![\\p{L}\\p{N}_/])${ATOM}\\s*/\\s*${GROUP}`
+    + `|(?<![\\p{L}\\p{N}_/])${ATOM}\\s*/\\s*(?:${GROUP}|\\[[^\\[\\]]*\\])`
     + `|${INDEXED}(?:\\s*/\\s*${ROOT})?`, 'gu');
+  // Binnen een rekenregel is ook a/b een breuk; in gewone tekst blijven p/m en 0/1 staan.
+  const EXPRESSION = new RegExp(`${FORMULA.source}|(?<![\\p{L}\\p{N}_/.,])(?:${ATOM}|${GROUP})\\s*/\\s*(?:${ATOM}|${GROUP})(?![\\p{L}\\p{N}_/])`, 'gu');
   // Alleen tussen twee waarden: +€ 48 aan het begin blijft het teken van een bedrag.
   const VALUE_END = /[\p{L}\p{N})\]²³%]$/u, VALUE_START = /^[\p{L}\p{N}(\[√Σ€−]/u;
   // 1 / 409 is buiten de leerstof een score, geen breuk.
   const SPACED = /^\d[\d.,]*\s+\/\s+\d/, LEARNING_TEXT = '.section-body,.example,.feedback,.mc-feedback,.mc-stimulus,.formula-guide-card,.sra-term-popup';
-  const CANDIDATE = /√|[\])]\s*\/\s*[(\d]|_|\d\s+\/\s+\d|[\p{L}\d²³]\s*\/\s*\(/u;
+  const CANDIDATE = /√|[\])]\s*\/\s*[(\[\d]|_|\d\s+\/\s+\d|[\p{L}\d²³]\s*\/\s*[(\[]/u;
 
   /* Geeft MathML terug, of null als de tekst geen veilig leesbare formule is. */
   function toMathML(source) {
     // Woorden horen alleen onder een wortel, zoals √(breedte × frequentie); anders is het gewone tekst.
-    if (!source.includes('√') && /[a-zà-ÿ]{3,}/.test(source.replace(new RegExp(WORDS, 'g'), ''))) return null;
+    if (!source.includes('√') && /[a-zà-ÿ]{3,}/.test(source.replace(new RegExp(WORDS, 'g'), '').replace(/_[A-Za-z0-9]+/g, ''))) return null;
     const tokens = source.normalize('NFD').replace(/≠/g, '≠').match(TOKEN).filter(token => token.trim());
     let position = 0;
     const peek = () => tokens[position], take = () => tokens[position++];
@@ -105,10 +107,10 @@
   }
 
   /* Deelt tekst in gewone stukken en stukken {math}. */
-  function split(text, spaced = true) {
+  function split(text, spaced = true, expression = false) {
     const parts = [];
     let offset = 0;
-    for (const match of text.matchAll(FORMULA)) {
+    for (const match of text.matchAll(expression ? EXPRESSION : FORMULA)) {
       const math = toMathML(match[0]);
       if (!math || (!spaced && SPACED.test(match[0]))) continue;
       parts.push(text.slice(offset, match.index), {math});
@@ -194,7 +196,7 @@
     }
     for (const node of nodes) {
       const whole = node.parentElement.matches('.inline-expression') && node.parentElement.childNodes.length === 1 && toMathML(node.nodeValue);
-      const parts = whole ? [{math: whole}] : split(node.nodeValue, !!node.parentElement.closest(LEARNING_TEXT));
+      const parts = whole ? [{math: whole}] : split(node.nodeValue, !!node.parentElement.closest(LEARNING_TEXT), node.parentElement.matches('.inline-expression'));
       if (parts) node.replaceWith(...parts.map(part => typeof part === 'string' ? part : element(/<m(?:frac|sqrt)/.test(part.math) && !node.parentElement.closest('.inline-expression') ? `<span class="inline-expression">${part.math}</span>` : part.math)));
     }
     // Een grote wortel met breuk krijgt een eigen regel, met het leesteken erachter.
