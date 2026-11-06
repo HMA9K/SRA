@@ -1947,6 +1947,8 @@
   const SUB_VALUE = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','ᵢ':'i','ⱼ':'j','ₖ':'k','ₑ':'e'};
   const TOKEN = new RegExp(`\\s+|\\d+(?:[.,]\\d+)*|_\\([^()\\s]+\\)|_[A-Za-z0-9]+|${WORDS}|[a-zà-ÿ]{3,}|[A-Za-zα-ωΑ-Ω][\\u0302\\u0304]?|.`, 'gsu');
   const OPERATORS = {'+':'+','−':'−','-':'−','×':'×','*':'×','∗':'×','·':'·','=':'=','≈':'≈','≠':'≠','<':'&lt;','>':'&gt;','≤':'≤','≥':'≥','±':'±'};
+  // Alleen voor zelf getypte formules: deze tekens blijven in lopende tekst gewone tekst.
+  const TYPED_SYMBOLS = {...OPERATORS, '%':'%', '€':'€', ':':':', ',':',', ';':';'};
   const SKIP = 'script,style,textarea,input,select,option,svg,math,code,pre,[contenteditable],[data-no-formula-text]';
 
   const parens = (inner => `\\((?:[^()]|${inner})*\\)`);
@@ -1971,10 +1973,12 @@
   const SPACED = /^\d[\d.,]*\s+\/\s+\d/, LEARNING_TEXT = '.section-body,.example,.feedback,.mc-feedback,.mc-stimulus,.formula-guide-card,.sra-term-popup';
   const CANDIDATE = /√|[\])]\s*\/\s*[(\[\d]|_|\d\s+\/\s+\d|[\p{L}\d²³]\s*\/\s*[(\[]/u;
 
-  /* Geeft MathML terug, of null als de tekst geen veilig leesbare formule is. */
-  function toMathML(source) {
+  /* Geeft MathML terug, of null als de tekst geen veilig leesbare formule is.
+     typed: de gebruiker typt bewust een formule, dus woorden, ^ en tekens als % mogen ook. */
+  function toMathML(source, typed = false) {
+    const symbols = typed ? TYPED_SYMBOLS : OPERATORS;
     // Woorden horen alleen onder een wortel, zoals √(breedte × frequentie); anders is het gewone tekst.
-    if (!source.includes('√') && /[a-zà-ÿ]{3,}/.test(source.replace(new RegExp(WORDS, 'g'), '').replace(/_[A-Za-z0-9]+/g, ''))) return null;
+    if (!typed && !source.includes('√') && /[a-zà-ÿ]{3,}/.test(source.replace(new RegExp(WORDS, 'g'), '').replace(/_[A-Za-z0-9]+/g, ''))) return null;
     const tokens = source.normalize('NFD').replace(/≠/g, '≠').match(TOKEN).filter(token => token.trim());
     let position = 0;
     const peek = () => tokens[position], take = () => tokens[position++];
@@ -1984,7 +1988,7 @@
       const parts = [];
       while (peek() !== closing) {
         if (peek() === undefined) fail();
-        parts.push(OPERATORS[peek()] ? `<mo>${OPERATORS[take()]}</mo>` : term());
+        parts.push(symbols[peek()] ? `<mo>${symbols[take()]}</mo>` : term());
       }
       take();
       return `<mrow>${parts.join('')}</mrow>`;
@@ -2013,6 +2017,11 @@
       let lower = '', upper = '';
       while (peek() !== undefined) {
         const token = peek();
+        if (typed && token === '^') {
+          take();
+          upper = primary().bare;
+          continue;
+        }
         if (token === '²' || token === '³') upper = `<mn>${token === '²' ? 2 : 3}</mn>`;
         else if (token === ',' && lower && SUB_VALUE[tokens[position + 1]]) {
           take();

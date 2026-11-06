@@ -37,4 +37,17 @@ for(const exam of window.SRAExamData.exams)for(const field of ['pageText','answe
 assert.ok(split('γ = 5.000² / [1,974² × 2.130] ≈ 3,1').some(part=>part.math?.includes('<mfrac>')),'Noemer tussen vierkante haken wordt een breuk');
 const index=toMathML('t = (bⱼ − βⱼ,₀)/s_bⱼ');
 assert.ok(index?.includes('<mfrac>')&&index.includes('<mo>,</mo>')&&index.includes('<mi>b</mi><mi>j</mi>'),'Dubbele index blijft in de breuk staan');
+// Zelf getypt in het antwoordveld: ook ^, % en woorden; lopende tekst blijft strikt.
+const typed=source=>toMathML(source,true);
+assert.ok(typed('Ni / N × n')?.includes('<mfrac>'),'Gewone breuk uit het antwoordveld');
+assert.ok(typed('n_i = N_i / N * n')?.includes('<msub>'),'Index en sterretje');
+assert.ok(typed('s^2')?.includes('<msup><mi>s</mi>'),'Macht met dakje');
+assert.ok(typed('s_i^(n − 1)')?.includes('<msubsup>'),'Index en macht samen');
+assert.ok(typed('(a + b) / (c − d)')?.match(/<mfrac><mrow><mi>a/),'Haakjes om teller vallen weg');
+assert.ok(typed('95% van € 1.000 : 2')?.includes('<mo>%</mo>'),'Procent, euro en deelteken');
+assert.ok(typed('breedte / aantal')?.includes('<mtext>breedte</mtext>'),'Woorden in een bewust getypte formule');
+assert.ok(!typed('<b>').includes('<b>'),'Getypte HTML blijft tekst');
+for(const broken of ['(a + b','a /','s^','a & b','"'])assert.equal(typed(broken),null,broken);
+assert.equal(toMathML('s^2'),null,'Lopende tekst krijgt geen dakjes-macht');
+assert.equal(toMathML('95%'),null,'Lopende tekst krijgt geen procentformule');
 console.log('OK: wortels en samengestelde breuken worden formules; gewone tekst blijft tekst.');
