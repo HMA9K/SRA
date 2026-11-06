@@ -60,7 +60,7 @@ const base=process.env.LEARNING_URL||'http://127.0.0.1:8769/';
   await page.keyboard.type(' z');
   assert.equal(await body.locator('[class^=answer-tall-]').last().textContent(),')','Doortypen landt naast het grote haakje');
   assert.ok((await body.innerText()).includes('z'));
-  await toEnd();await page.locator('.mc-own-work [aria-label="Speciale tekens"]').click();
+  await toEnd();await page.locator('.mc-own-work .tox-tbtn[aria-label="Speciale tekens"]').click();
   const symbols=page.locator('.mc-own-work .answer-symbols');await symbols.waitFor();
   assert.equal(await page.locator('.tox-dialog').count(),0,'Speciale tekens is geen pop-up');
   await symbols.locator('[data-char="≈"]').click();await page.keyboard.type('y');
