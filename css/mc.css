@@ -254,6 +254,8 @@ html:has(.mc-page){scroll-padding-top:75px;scroll-padding-bottom:145px}
 /* Naast een open uitwerking scrollt de vraagkolom zelf: de casus staat dan bovenaan die kolom. */
 .study-assistant-layout .mc-case-panel{top:0;max-height:var(--sa-pane-height)}
 .study-assistant-layout .mc-case-panel.original-pdf-left{height:var(--sa-pane-height)}
+/* Op een gewoon scherm past alles in beeld en scrollt de pagina niet mee. Lage of smalle schermen houden paginascroll. */
+@media(min-width:901px) and (min-height:600px){html:has(.mc-page .study-assistant-layout:not(.is-stacked)),html:has(.mc-page .study-assistant-layout:not(.is-stacked)) body{overflow:hidden}}
 .mc-case-panel h2{font-size:1rem;margin:0 0 12px}.mc-case-panel table{display:block;max-width:100%;overflow-x:auto}.mc-case-panel img{max-width:100%;height:auto}.mc-case-panel p{text-align:justify;hyphens:auto}
 .mc-case-panel .mc-stimulus{padding:0;margin:0;border:0;background:transparent}.mc-question-tools .mc-source-filter{margin:8px 0 0}.mc-question-tools .mc-source-filter select{min-width:0}
 .mc-case-resizer{min-height:350px;align-self:stretch;cursor:col-resize;touch-action:none;border-inline:1px solid var(--line)}.mc-case-resizer:focus-visible,.mc-case-resizer:hover,.mc-case-resizer[data-dragging]{background:var(--study-teal,#008577)}

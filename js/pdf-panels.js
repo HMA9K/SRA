@@ -117,6 +117,8 @@ function createAssistantPanel(panel,options={}){
     const metrics=panelMetrics(layout.getBoundingClientRect().width/(win.StudyScale?.get()||1),width,fraction);
     const stacked=metrics.stacked||v.w<900;
     layout.classList.toggle('is-stacked',stacked);separator.hidden=stacked;
+    // Naast een oefenvraag scrollen alleen de kolommen; de pagina staat stil, dus begin bovenaan.
+    if(!stacked&&win.scrollY&&doc.querySelector('.mc-page'))win.scrollTo({top:0,behavior:'instant'});
     doc.body.classList.toggle('study-assistant-stacked',stacked&&!modal);
     layout.style.setProperty('--sa-column-width',metrics.width+'px');
     separator.setAttribute('aria-valuenow',String(Math.round(width)));separator.setAttribute('aria-valuetext',Math.round(width)+' procent uitwerkingbreedte');
