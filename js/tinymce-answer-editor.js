@@ -174,9 +174,11 @@
     var editor = null, disposed = false, initialized = false, last = fallback.getHTML(), observer, widthObserver, resizeCleanup, applyingBounds = false, previousWidth = 0, initialization = 0;
     var sizeKey = "learning-answer-editor-size-v2:" + location.hash;
     var widthRatio = 1;
+    // Het onzichtbare cursorteken naast een breuk hoort niet in het bewaarde antwoord.
+    function editorHTML() { return original.sanitize(editor.getContent()).replace(/\uFEFF/g, ''); }
     function sync() {
       if (!initialized || disposed || !editor) return;
-      var value = original.sanitize(editor.getContent());
+      var value = editorHTML();
       if (value === last) return;
       last = value; fallback.setHTML(value);
       if (typeof options.onChange === 'function') options.onChange(value);
@@ -281,7 +283,7 @@
             insertFormula = installFormulas(instance);
             var autoSize = installAutoSize(instance, sync);
             instance.setContent(fallback.getHTML());
-            last = original.sanitize(instance.getContent()); initialized = true;
+            last = editorHTML(); initialized = true;
             autoSize();
             wrapper.classList.add('has-tinymce'); theme();
             var count = wrapper.querySelector('.cae-count'), statusbar = instance.getContainer().querySelector('.tox-statusbar__right-container') || instance.getContainer().querySelector('.tox-statusbar');
@@ -323,7 +325,7 @@
     instances.set(wrapper, record);
     load().then(initialize).catch(unavailable);
     return {
-      getHTML: function () { return initialized && editor ? original.sanitize(editor.getContent()) : fallback.getHTML(); },
+      getHTML: function () { return initialized && editor ? editorHTML() : fallback.getHTML(); },
       setHTML: function (value) { last = original.sanitize(value); fallback.setHTML(last); if (initialized && editor) editor.setContent(last); },
       focus: function () { if (initialized && editor) editor.focus(); else fallback.focus(); },
       destroy: function () { if (disposed) return; sync(); disposed = true; instances.delete(wrapper); if(resizeCleanup)resizeCleanup();if (observer) observer.disconnect(); if (widthObserver) widthObserver.disconnect(); window.removeEventListener('resize', resizeBounds); if (editor) editor.remove(); fallback.destroy(); }
