@@ -20,5 +20,7 @@ const assert=require('node:assert/strict');const {chromium}=require(process.env.
  assert.deepEqual(await page.evaluate(()=>[getComputedStyle(document.documentElement).overflowY,window.scrollY]),['hidden',0],'De pagina scrolt niet mee naast een zijvenster');
  assert.ok(docked.left<8,'Panelen houden een minimale buitenrand '+JSON.stringify(docked));
  assert.ok(Math.abs(docked.panel-docked.layout)<2,'Casus start bovenaan naast de uitwerking '+JSON.stringify(docked));assert.ok(docked.bottom<=docked.footer+1,'Paneel stopt boven de onderbalk '+JSON.stringify(docked));
+ const caseWidth=()=>page.locator('.mc-case-panel').evaluate(e=>e.getBoundingClientRect().width),before=await caseWidth();await page.locator('.study-assistant-resizer').focus();await page.keyboard.press('ArrowLeft');await page.waitForTimeout(100);
+ assert.ok(Math.abs(await caseWidth()-before)<2,'De rechterschuiver neemt de casus niet mee');
  assert.deepEqual(errors,[]);console.log('OK: PDF-knoppen voor 12 tentamens, beide lezers, persistent vraagvenster, vraagwissel en antwoorden behouden, mobiel.');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1);});
