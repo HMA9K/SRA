@@ -270,7 +270,14 @@ body.learning-page-layout .mc-page:is(:has(.study-assistant-layout:not(.is-stack
 .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-own-work{margin:8px 0}
 }
 /* Op een gewoon scherm past alles in beeld en scrollt de pagina niet mee. Lage of smalle schermen houden paginascroll. */
-@media(min-width:901px) and (min-height:600px){html:has(.mc-page .study-assistant-layout:not(.is-stacked)),html:has(.mc-page .study-assistant-layout:not(.is-stacked)) body{overflow:hidden}}
+@media(min-width:901px) and (min-height:600px){
+html:has(.mc-page .mc-question-layout),html:has(.mc-page .mc-question-layout) body{overflow:hidden}
+.mc-page .mc-question-layout{height:var(--mc-fit-height,auto);overflow:auto}
+.mc-page .mc-question-layout.mc-case-layout{grid-template-rows:minmax(0,1fr);overflow:hidden}
+.mc-page .mc-case-layout>.mc-primary{height:100%;overflow:auto}
+.mc-page .mc-case-layout>.mc-case-panel{position:static;height:100%;max-height:none}
+.mc-page .study-assistant-layout .mc-question-layout{height:100%}
+}
 .mc-case-panel h2{font-size:1rem;margin:0 0 12px}.mc-case-panel table{display:block;max-width:100%;overflow-x:auto}.mc-case-panel img{max-width:100%;height:auto}.mc-case-panel p{text-align:justify;hyphens:auto}
 .mc-case-panel .mc-stimulus{padding:0;margin:0;border:0;background:transparent}.mc-question-tools .mc-source-filter{margin:8px 0 0}.mc-question-tools .mc-source-filter select{min-width:0}
 .mc-case-resizer{min-height:350px;align-self:stretch;cursor:col-resize;touch-action:none;border-inline:1px solid var(--line)}.mc-case-resizer:focus-visible,.mc-case-resizer:hover,.mc-case-resizer[data-dragging]{background:var(--study-teal,#008577)}

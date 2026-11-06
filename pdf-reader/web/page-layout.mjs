@@ -42,9 +42,11 @@ export function installPageLayout(app,onLayoutChange){
       onLayoutChange({top:changed});
     }
   }
+  // Op een smal paneel loopt de balk door op een tweede regel; de lezer schuift dan mee.
+  const bar=document.getElementById('toolbarContainer');
   new ResizeObserver(()=>{
-    document.documentElement.style.setProperty('--cafa-mark-toolbar-height',Math.ceil(toolbar.getBoundingClientRect().height)+'px');
-  }).observe(toolbar);
+    document.documentElement.style.setProperty('--toolbar-height',Math.ceil(bar.getBoundingClientRect().height)+'px');
+  }).observe(bar);
   app.eventBus.on('pagesinit',apply);
   app.eventBus.on('documentinit',apply);
   app.eventBus.on('pagechanging',updateNavigation);
