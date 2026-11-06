@@ -165,6 +165,48 @@
     }, true);
     return insert;
   }
+  // Blijft open onder de knoppenbalk, zodat je tekens kiest en meteen doortypt.
+  function installSymbols(instance, changed) {
+    var groups = instance.plugins.charmap.getCharMap(), all = groups[0], current = groups.find(function (group) { return group.name === 'Mathematical'; }) || all;
+    var panel = document.createElement('div');
+    panel.className = 'answer-symbols'; panel.hidden = true;
+    panel.setAttribute('role', 'group'); panel.setAttribute('aria-label', 'Speciale tekens');
+    panel.innerHTML = '<div class="answer-symbols-head"><div class="answer-symbols-tabs"></div><input type="search" placeholder="Zoeken" aria-label="Speciale tekens zoeken" autocomplete="off"><button type="button" class="answer-symbols-close" aria-label="Speciale tekens sluiten">×</button></div><div class="answer-symbols-grid"></div>';
+    var tabs = panel.querySelector('.answer-symbols-tabs'), grid = panel.querySelector('.answer-symbols-grid'), search = panel.querySelector('input');
+    groups.forEach(function (group) {
+      var tab = document.createElement('button');
+      tab.type = 'button'; tab.textContent = instance.translate(group.name); tab.group = group;
+      tabs.append(tab);
+    });
+    function render() {
+      var query = search.value.trim().toLowerCase();
+      Array.from(tabs.children).forEach(function (tab) { tab.setAttribute('aria-pressed', String(tab.group === current)); });
+      grid.replaceChildren.apply(grid, (query ? all : current).characters.filter(function (entry) { return !query || entry[1].toLowerCase().includes(query); }).map(function (entry) {
+        var button = document.createElement('button'), character = String.fromCodePoint(entry[0]);
+        button.type = 'button'; button.textContent = character; button.title = entry[1];
+        button.dataset.char = character; button.setAttribute('aria-label', entry[1]);
+        return button;
+      }));
+    }
+    function toggle(open) {
+      panel.hidden = !open;
+      if (open) render(); else instance.focus();
+      changed(open);
+    }
+    // De cursor blijft in het antwoord staan terwijl je een teken aanklikt.
+    panel.addEventListener('mousedown', function (event) { if (event.target !== search) event.preventDefault(); });
+    panel.addEventListener('click', function (event) {
+      var button = event.target.closest('button');
+      if (!button) return;
+      if (button.group) { current = button.group; search.value = ''; render(); }
+      else if (button.dataset.char) instance.plugins.charmap.insertChar(button.dataset.char);
+      else toggle(false);
+    });
+    panel.addEventListener('keydown', function (event) { if (event.key === 'Escape') toggle(false); });
+    search.addEventListener('input', render);
+    instance.getContainer().querySelector('.tox-sidebar-wrap').before(panel);
+    return function () { toggle(panel.hidden); };
+  }
   var contentStyle = '.answer-tall-2,.answer-tall-3,.answer-tall-4{line-height:1;vertical-align:middle;font-weight:300}.answer-tall-2{font-size:2.1em}.answer-tall-3{font-size:3em}.answer-tall-4{font-size:3.9em}.answer-formula{display:inline-flex;max-width:100%;margin:0 .15em;vertical-align:middle}.answer-frac{flex-direction:column;text-align:center}.answer-root{align-items:stretch}.answer-root::before{content:"";flex:none;background:currentColor;-webkit-mask:var(--answer-shape) center/100% 100% no-repeat;mask:var(--answer-shape) center/100% 100% no-repeat;width:.85em;--answer-shape:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' preserveAspectRatio=\'none\'%3E%3Cpath d=\'M2 62 L20 54 L46 97 L99 1\' fill=\'none\' stroke=\'black\' stroke-width=\'1.6\' vector-effect=\'non-scaling-stroke\'/%3E%3C/svg%3E")}.answer-box{display:block;min-width:1.3em;min-height:1.3em;padding:0 .25em;line-height:1.3;outline:none}.answer-frac>.answer-box+.answer-box,.answer-root>.answer-box{border-top:1px solid currentColor}.answer-box:empty{background:rgba(0,108,71,.1)}.answer-box:focus{box-shadow:0 0 0 1px #006c47}body[data-editor-theme=dark] .answer-box:empty{background:rgba(158,223,201,.18)}body[data-editor-theme=dark] .answer-box:focus{box-shadow:0 0 0 1px #9edfc9}body{font:14px/1.55 Arial,sans-serif;margin:12px;color:#252b34;background:#fff;overflow-wrap:anywhere}p{margin:0 0 .6em}table{border-collapse:collapse;table-layout:fixed;max-width:100%}body table td,body table th{border:1px solid #afb7c0!important;min-width:30px;padding:6px;vertical-align:top;overflow-wrap:anywhere}th{background:#f4f6f8}body[data-editor-theme=dark]{background:#152129;color:#e0ebf2}body[data-editor-theme=dark] td,body[data-editor-theme=dark] th{border-color:#667681!important}body[data-editor-theme=dark] th{background:#263540}';
   function mount(container, options) {
     options = options || {};
@@ -261,7 +303,7 @@
         width: widthRatio >= 0.995 ? '100%' : Math.max(Math.min(260, width), width * widthRatio), min_height: 220, min_width: Math.min(260, width), max_width: width,
         language: 'nl', language_url: new URL('langs/nl.js', base).href,
         plugins: 'table lists charmap fullscreen',
-        toolbar: 'undo redo | blocks | bold italic underline subscript superscript | answerfrac answerroot answersum | bullist numlist | alignleft aligncenter alignright | table charmap | removeformat fullscreen',
+        toolbar: 'undo redo | blocks | bold italic underline subscript superscript | answerfrac answerroot answersum | bullist numlist | alignleft aligncenter alignright | table answersymbols | removeformat fullscreen',
         toolbar_mode: 'sliding', contextmenu: 'table',
         table_toolbar: 'tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol | tablemergecells tablesplitcells tabledelete',
         table_resize_bars: true, table_sizing_mode: 'relative', table_default_attributes: {border: '1'},
@@ -273,7 +315,8 @@
         valid_elements: 'p[style],div[style],br,strong,b,em,i,u,s,strike,sub,sup,h2[style],h3[style],h4[style],ul,ol[type|start],li,blockquote,pre,code,table[style],colgroup,col[style],thead,tbody,tfoot,tr,td[style|colspan|rowspan],th[style|colspan|rowspan|scope],caption,span[style|class]',
         setup: function (instance) {
           editor = instance;
-          var insertFormula;
+          var insertFormula, toggleSymbols, symbolButton;
+          instance.ui.registry.addToggleButton('answersymbols', {icon: 'insert-character', tooltip: 'Speciale tekens', onAction: function () { toggleSymbols(); }, onSetup: function (api) { symbolButton = api; return function () {}; }});
           instance.ui.registry.addButton('answerfrac', {text: 'Breuk', tooltip: 'Breuk invoegen; Tab gaat naar het volgende vak', onAction: function () { insertFormula('frac'); instance.dispatch('change'); }});
           // De leerstof schrijft Σw en Σ(...)² zonder grenzen; het teken werkt ook in een vakje.
           instance.ui.registry.addButton('answersum', {text: 'Σ', tooltip: 'Somteken invoegen', onAction: function () { instance.insertContent('Σ'); }});
@@ -281,6 +324,7 @@
           instance.on('init', function () {
             if (disposed || generation !== initialization || !target.isConnected) { instance.remove(); return; }
             insertFormula = installFormulas(instance);
+            toggleSymbols = installSymbols(instance, function (open) { if (symbolButton) symbolButton.setActive(open); });
             var autoSize = installAutoSize(instance, sync);
             instance.setContent(fallback.getHTML());
             last = editorHTML(); initialized = true;
