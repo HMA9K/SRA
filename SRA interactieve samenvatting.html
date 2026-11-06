@@ -1911,10 +1911,12 @@ html:has(.mc-page){scroll-padding-top:75px;scroll-padding-bottom:145px}
 /* Naast een open uitwerking scrollt de vraagkolom zelf: de casus staat dan bovenaan die kolom. */
 .study-assistant-layout .mc-case-panel{top:0;max-height:var(--sa-pane-height)}
 .study-assistant-layout .mc-case-panel.original-pdf-left{height:var(--sa-pane-height)}
-/* Met een open zijvenster gaat alle ruimte naar de panelen: tot de schermrand en met een smallere middenkolom. */
+/* De titelbalk loopt zonder lijn over in het vraaggebied. */
+body:has(.mc-page) .learning-page-head{border-bottom:0}
+.mc-page .sra-exam-paper{border-top:0}
+/* Met een open zijvenster gaat de ruimte naar de panelen: een minimale buitenrand en een smallere middenkolom. */
 @media(min-width:761px){
-.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-runner{padding:0}
-.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .sra-exam-paper{border-inline:0}
+.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-runner{padding:0 4px}
 .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-layout,.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-layout.mc-case-layout{padding:0}
 body.learning-page-layout .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-body{padding:14px!important}
 }
@@ -4807,8 +4809,7 @@ html[data-study-theme=dark] .study-assistant-intro :is(button,input):focus-visib
 html[data-study-theme=dark] .study-assistant :is(button,input,textarea,select,summary):focus-visible,html[data-study-theme=dark] .study-assistant-launch:focus-visible,html[data-study-theme=dark] .study-inline-launch:focus-visible{outline:3px solid #76572d}
 html[data-study-theme=dark] .study-head{color:#f0f7fc}
 html[data-study-theme=dark] .study-assistant .study-icon-button{color:#f0f7fc;border-color:#3b4a546b}
-html[data-study-theme=dark] .study-assistant-resizer{background:var(--study-wash,#17202b);color:var(--study-muted,#adbdc9)}
-html[data-study-theme=dark] .study-assistant-resizer:hover,html[data-study-theme=dark] .study-assistant-resizer:focus-visible{color:var(--study-accent,#8decda);outline:2px solid var(--study-accent,#2d7668)}
+html[data-study-theme=dark] .study-assistant-resizer:hover,html[data-study-theme=dark] .study-assistant-resizer:focus-visible,html[data-study-theme=dark] .study-assistant-layout.is-resizing>.study-assistant-resizer{background:var(--study-teal,#0e8174)}
 html[data-study-theme=dark] .study-send-row [data-send],html[data-study-theme=dark] .study-code-row button{color:#f0f7fc}
 html[data-study-theme=dark] .study-assistant-launch-wrap{background:#212b38;color:#f0f7fc;border:1px solid #3b4a54;box-shadow:0 5px 20px #01030433}
 html[data-study-theme=dark] .study-assistant-launch-hide:hover{background:#15212926}
@@ -4824,6 +4825,7 @@ html[data-study-theme=dark] .original-pdf-viewer iframe{background:#152129}
 html[data-study-theme=dark] .original-pdf-right .original-pdf-head{background:#212b38;color:#f0f7fc}
 html[data-study-theme=dark] .original-pdf-right .original-pdf-head button{color:#f0f7fc;border-color:#3b4a5480}
 html[data-study-theme=dark] .original-pdf-missing{color:var(--study-muted,#adbdc9)}
+html[data-study-theme=dark] body.cirrus-mode .exam-case-resizer:hover,html[data-study-theme=dark] body.cirrus-mode .exam-case-resizer:focus-visible{background:var(--study-teal,#0e8174)}
 /* css/input-table-layout.css */
 html[data-study-theme=dark] .input-table-handles button{color:var(--study-ink,#adbdc9)}
 html[data-study-theme=dark] .input-table-column-grip:hover::after,html[data-study-theme=dark] .input-table-column-grip:focus-visible::after{background:#212b38}
@@ -5671,11 +5673,11 @@ body.exam-running .exam-answer-actions .study-inline-launch{display:inline-flex;
 .study-head h2{font-size:17px;margin:0;line-height:1.25;color:inherit}
 .study-eyebrow{font-size:10px;letter-spacing:.1em;margin:0 0 3px;opacity:.9}
 .study-assistant .study-icon-button{color:#fff;background:transparent;border-color:#ffffff6b;font-size:22px;line-height:1;min-width:32px;min-height:34px;padding:4px 6px}
-.study-assistant-layout{display:grid;grid-template-columns:minmax(0,1fr) 14px minmax(0,var(--sa-column-width,33.333333%));align-items:stretch;min-width:0;min-height:0;height:var(--sa-pane-height,680px);overflow:hidden}
+.study-assistant-layout{display:grid;grid-template-columns:minmax(0,1fr) 8px minmax(0,var(--sa-column-width,33.333333%));align-items:stretch;min-width:0;min-height:0;height:var(--sa-pane-height,680px);overflow:hidden}
 .study-assistant-primary{min-width:0;min-height:0;height:100%;overflow:auto;container-type:inline-size}
-.study-assistant-resizer{display:flex;align-items:center;justify-content:center;min-width:14px;cursor:col-resize;touch-action:none;background:var(--study-wash,#f3f6fa);border-inline:1px solid var(--study-line,#d9e2eb);color:var(--study-muted,#58677a)}
-.study-assistant-resizer>span{font-size:23px;line-height:1;display:grid;place-items:center;min-height:56px}
-.study-assistant-resizer:hover,.study-assistant-resizer:focus-visible{color:var(--study-accent,#087c66);outline:2px solid var(--study-accent,#087c66);outline-offset:-2px}
+.study-assistant-resizer{min-width:8px;cursor:col-resize;touch-action:none;border-inline:1px solid var(--study-line,#d9e2eb)}
+.study-assistant-resizer>span{display:none}
+.study-assistant-resizer:hover,.study-assistant-resizer:focus-visible,.study-assistant-layout.is-resizing>.study-assistant-resizer{background:var(--study-teal,#008577);outline:0}
 .study-assistant-layout.is-resizing{user-select:none;cursor:col-resize}
 .study-assistant-layout>[hidden]{display:none!important}
 .study-assistant-layout.is-stacked{display:flex;flex-direction:column;height:auto;overflow:visible}
@@ -5799,8 +5801,12 @@ body.original-pdf-open :is(.learning-page-head,.cirrus-page-head,#study-returnba
 /* Op mobiel begrenzen de casusregels het vak tot 35-45dvh; dat is te laag voor de lezer met werkbalken. */
 @media(max-width:760px){.original-pdf-left{height:65dvh!important;max-height:none!important}}
 @media(max-width:859px){.original-pdf-dashboard-layout{display:flex;flex-direction:column}.original-pdf-dashboard-pane{width:100%;height:65dvh}.original-pdf-left{height:65dvh;flex:none}.original-pdf-actions{max-width:100%}.original-pdf-head{font-size:12px}}
-/* Tentamen met open zijvenster: panelen tot de schermrand. */
-@media(min-width:761px){body.exam-running:has(.study-assistant-layout:not(.is-stacked)) main,body.exam-running:has(.original-pdf-left) main{padding-inline:0!important}}
+/* Tentamen met open zijvenster: minimale buitenrand. */
+@media(min-width:761px){body.exam-running:has(.study-assistant-layout:not(.is-stacked)) main,body.exam-running:has(.original-pdf-left) main{padding-inline:4px!important}}
+/* Dezelfde dunne schuiver als bij oefenvragen. */
+body.cirrus-mode .exam-case-resizer{background:transparent}
+body.cirrus-mode .exam-case-resizer::after{content:none}
+body.cirrus-mode .exam-case-resizer:hover,body.cirrus-mode .exam-case-resizer:focus-visible{background:var(--study-teal,#008577);outline:0}
 
 </style>
 
@@ -76962,7 +76968,7 @@ const api=setupHistoryCalculator(panel,trigger,evaluate,{storageKey:courseOption
 'use strict';
 const originalPdfs=window.SRAOriginalPdfs;
 /** Layout only: reserve a right column without reading or changing study data. */
-const DEFAULT_WIDTH=100/3,KEY='sra-pdf-panel-v1',DIVIDER=14;
+const DEFAULT_WIDTH=100/3,KEY='sra-pdf-panel-v1',DIVIDER=8;
 const clamp=(value,min,max)=>Math.max(min,Math.min(max,value));
 function move(parent,node,before=null){
   const editor=parent.ownerDocument.defaultView?.CafaAnswerEditor;

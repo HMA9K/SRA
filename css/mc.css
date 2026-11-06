@@ -254,10 +254,12 @@ html:has(.mc-page){scroll-padding-top:75px;scroll-padding-bottom:145px}
 /* Naast een open uitwerking scrollt de vraagkolom zelf: de casus staat dan bovenaan die kolom. */
 .study-assistant-layout .mc-case-panel{top:0;max-height:var(--sa-pane-height)}
 .study-assistant-layout .mc-case-panel.original-pdf-left{height:var(--sa-pane-height)}
-/* Met een open zijvenster gaat alle ruimte naar de panelen: tot de schermrand en met een smallere middenkolom. */
+/* De titelbalk loopt zonder lijn over in het vraaggebied. */
+body:has(.mc-page) .learning-page-head{border-bottom:0}
+.mc-page .sra-exam-paper{border-top:0}
+/* Met een open zijvenster gaat de ruimte naar de panelen: een minimale buitenrand en een smallere middenkolom. */
 @media(min-width:761px){
-.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-runner{padding:0}
-.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .sra-exam-paper{border-inline:0}
+.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-runner{padding:0 4px}
 .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-layout,.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-layout.mc-case-layout{padding:0}
 body.learning-page-layout .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-body{padding:14px!important}
 }

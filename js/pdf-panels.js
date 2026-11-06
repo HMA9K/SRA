@@ -3,7 +3,7 @@
 'use strict';
 const originalPdfs=window.SRAOriginalPdfs;
 /** Layout only: reserve a right column without reading or changing study data. */
-const DEFAULT_WIDTH=100/3,KEY='sra-pdf-panel-v1',DIVIDER=14;
+const DEFAULT_WIDTH=100/3,KEY='sra-pdf-panel-v1',DIVIDER=8;
 const clamp=(value,min,max)=>Math.max(min,Math.min(max,value));
 function move(parent,node,before=null){
   const editor=parent.ownerDocument.defaultView?.CafaAnswerEditor;
