@@ -26,7 +26,10 @@ const base=process.env.LEARNING_URL||'http://127.0.0.1:8769/';
   assert.deepEqual(await boxes.allTextContents(),['503','912'],'Tab loopt door de vakjes');
   assert.ok((await body.innerText()).includes('× 130 = 71,7'),'Doortypen na de breuk');
   assert.equal(await body.locator('.answer-frac').evaluate(e=>e.textContent.includes('71')),false,'Typen landt niet in de breuk');
-  await page.waitForFunction(id=>{const d=SRAMC.snapshot().drafts[id];return d?.includes('answer-frac')&&d.includes('71,7');},id);
+  await page.waitForFunction(id=>{const d=SRAMC.snapshot().drafts[id];return d?.includes('answer-frac')&&d.includes('71,7');},id,{timeout:8000}).catch(async error=>{
+   console.error(errors,await page.evaluate(id=>({id,ids:Object.keys(SRAMC.snapshot().drafts),draft:SRAMC.snapshot().drafts[id],content:tinymce.activeEditor.getContent(),clean:CafaAnswerEditor.sanitize(tinymce.activeEditor.getContent()),status:document.querySelector('#mc-work-status')?.textContent}),id));
+   throw error;
+  });
   assert.equal(await page.evaluate(id=>SRAMC.snapshot().drafts[id].includes('\uFEFF'),id),false,'Cursorteken blijft uit het bewaarde antwoord');
   await page.reload();await open();
   await body.locator('.answer-frac').waitFor();
