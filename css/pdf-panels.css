@@ -159,8 +159,6 @@ body.original-pdf-open .study-assistant-launch-wrap{display:none!important}
 .original-pdf-dashboard-pane{height:calc(100dvh - 180px);min-height:350px;border:0}
 .original-pdf-right[open]{display:block!important;height:100%;padding:0}
 .original-pdf-right>.original-pdf-viewer{height:100%}
-.original-pdf-right .original-pdf-head{background:#444159;color:#fff}
-.original-pdf-right .original-pdf-head button{color:#fff;background:transparent;border-color:#ffffff80}
 .original-pdf-missing{font-size:12px;color:var(--study-muted,#58677a)}
 body.original-pdf-open .study-assistant-launch{display:none!important}
 /* Keep both the menu opener and its entries above the persistent PDF panel. */
