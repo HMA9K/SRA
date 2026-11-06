@@ -38,3 +38,5 @@ const portable=fs.readFileSync(path.join(root,'SRA interactieve samenvatting.htm
 assert.ok(portable.includes('window.SRAExams='));assert.ok(portable.includes('window.SRAExamData ='));
 assert.ok(!portable.includes('src="js/exams.js"'));
 console.log('OK: 12 tentamendata / 267 vragen, 11 inhoudelijk verschillende tentamens, oorspronkelijke opgaven, 35/65 punten, bron- en antwoordpagina’s en onderwerpverwijzingen.');
+// De zoomknoppen schakelen de inhoudsbreedte uit; hun id's moeten bestaan in de lezer.
+for(const id of fs.readFileSync(path.join(root,'pdf-reader/web/content-view.mjs'),'utf8').match(/closest\('([^']+)'\)/)[1].split(',')){if(!fs.readFileSync(path.join(root,'pdf-reader/web/viewer.html'),'utf8').includes('id="'+id.slice(1)+'"'))throw Error('Onbekende zoomknop: '+id);}

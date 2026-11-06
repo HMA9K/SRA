@@ -45,7 +45,7 @@ export function installContentView(app,{key,restored=false}){
   },true);
   button.addEventListener('click',()=>{active=true;remember();void focus({fit:true,top:true});});
   const manualZoom=()=>{active=false;remember();};
-  document.addEventListener('click',event=>{if(event.target.closest('#zoomIn,#zoomOut'))manualZoom();},true);
+  document.addEventListener('click',event=>{if(event.target.closest('#zoomInButton,#zoomOutButton'))manualZoom();},true);
   document.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&['+','-','=','0'].includes(event.key))manualZoom();},true);
   container.addEventListener('wheel',event=>{if(event.ctrlKey||event.metaKey)manualZoom();},{capture:true,passive:true});
   app.eventBus.on('scalechanging',()=>{if(!applying)void focus({fit:active});});
