@@ -66,3 +66,13 @@ html[data-study-theme=dark] .tox .answer-symbols-tabs button[aria-pressed=true]{
 .answer-tall-2{font-size:2.1em}
 .answer-tall-3{font-size:3em}
 .answer-tall-4{font-size:3.9em}
+/* Compacte balk met muis: past zo vaak mogelijk op één regel naast twee zijvensters. Aanraakschermen houden grote knoppen. */
+@media(pointer:fine){
+.cafa-answer-editor.has-tinymce .tox .tox-toolbar__group{padding:0 2px}
+.cafa-answer-editor.has-tinymce .tox .tox-tbtn{width:24px;margin-right:0}
+.cafa-answer-editor.has-tinymce .tox .tox-tbtn__icon-wrap svg{width:20px;height:20px}
+.cafa-answer-editor.has-tinymce .tox .tox-tbtn--select{width:auto;padding:0 2px}
+.cafa-answer-editor.has-tinymce .tox .tox-tbtn__select-label{margin:0 2px;font-size:12px}
+.cafa-answer-editor.has-tinymce .tox .tox-tbtn--bespoke .tox-tbtn__select-label{width:6.6em}
+.cafa-answer-editor.has-tinymce .tox .tox-tbtn__select-chevron{width:12px}
+}
