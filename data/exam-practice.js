@@ -174,7 +174,7 @@ window.SRAExamPractice = {
       "sourceNote": "s_e = √((996.000.000−170.000²/50)/49)≈2.920,721. Met t = 1,679 en eindigheidscorrectie: foutbovengrens circa €3.716.041, naar boven €3.717.000.",
       "explanation": "s_e = √((996.000.000−170.000²/50)/49)≈2.920,721. Met t = 1,679 en eindigheidscorrectie: foutbovengrens circa €3.716.041, naar boven €3.717.000.",
       "steps": [
-        "Kwadratensom: 170.000² / 50 = 578.000.000, dus 996.000.000 − 578.000.000 = 418.000.000.",
+        "Kwadratensom: 996.000.000 − 170.000² / 50 = 418.000.000.",
         "Standaardafwijking: s_e² = 418.000.000 / 49 = 8.530.612, dus s_e = 2.920,72.",
         "t-waarde: t₀,₀₅[49]. De tabel heeft geen 49, dus neem t₀,₀₅[45] = 1,679.",
         "Foutmarge: 1,679 × 2.920,72 × 912 / √50 × √(862 / 911) = 615.241.",
@@ -387,9 +387,9 @@ window.SRAExamPractice = {
       "explanation": "q = 10.570.000/10.740.000≈0,9841713222; q × 181.000.000 = €178.135.009,31. Reken met de onafgeronde ratio; de gedrukte 0,9842 is alleen een weergaveafronding.",
       "steps": [
         "Goedratio: q = 10.570.000 / 10.740.000 = 0,98417132.",
-        "Controle met vraag 1.2: 1 − 170.000 / 10.740.000 = 1 − 0,0158 = 0,9842.",
+        "Controle met vraag 1.2: 1 − 170.000 / 10.740.000 = 0,9842.",
         "Puntschatting: 181.000.000 × 0,98417132 = €178.135.009.",
-        "De uitwerking drukt q af als 0,9842, maar rekent door met de onafgeronde waarde. Met 0,9842 zelf krijg je 178.140.200."
+        "Reken door met de onafgeronde q, niet met 0,9842. Met 0,9842 zelf krijg je 178.140.200."
       ],
       "optionExplanations": [
         "Dat geeft 1,0161 en een schatting van 183.911.069, hoger dan de boekwaarde van 181 miljoen. De hypotheken zijn juist te hoog geboekt, dus q moet onder 1 liggen.",
@@ -731,9 +731,9 @@ window.SRAExamPractice = {
       "sourceNote": "Combineer de drie stratumvarianties, totaal circa 303.034.007; standaardfout circa €17.408. Met t = 1,667 is de ondergrens circa €178.128.981, naar beneden €178.128.000.",
       "explanation": "Combineer de drie stratumvarianties, totaal circa 303.034.007; standaardfout circa €17.408. Met t = 1,667 is de ondergrens circa €178.128.981, naar beneden €178.128.000.",
       "steps": [
-        "Stratum 1: 170 × 503 / √44 × √(459 / 502) = 12.327, kwadraat 151.946.291.",
-        "Stratum 2: 214 × 321 / √46 × √(275 / 320) = 9.389, kwadraat 88.158.156.",
-        "Stratum 3: 456 × 88 / √20 × √(68 / 87) = 7.933, kwadraat 62.929.560.",
+        "Standaardfout stratum 1: 170 × 503 / √44 × √(459 / 502) = 12.327, kwadraat 151.946.291.",
+        "Standaardfout stratum 2: 214 × 321 / √46 × √(275 / 320) = 9.389, kwadraat 88.158.156.",
+        "Standaardfout stratum 3: 456 × 88 / √20 × √(68 / 87) = 7.933, kwadraat 62.929.560.",
         "Totale variantie: 151.946.291 + 88.158.156 + 62.929.560 = 303.034.007.",
         "Totale standaardfout: √303.034.007 = 17.408.",
         "t-waarde: t₀,₀₅[70] = 1,667.",
@@ -1011,7 +1011,7 @@ window.SRAExamPractice = {
       "steps": [
         "Grens: n = 22 ≤ 100, dus z = ±2.",
         "Afbeelding 2: z_min = −1,752 en z_max = 1,258. Beide liggen binnen ±2.",
-        "Conclusie volgens de uitwerking: geen potentiële uitbijters in y. Ook afbeelding 4 laat geen land buiten ±2 zien.",
+        "Conclusie: geen potentiële uitbijters in y. Ook afbeelding 4 laat geen land buiten ±2 zien.",
         "Controle: −2,01152 / −1,752 = 1,148 en 1,65040 / 1,258 = 1,312.",
         "Met één gemeenschappelijke standaardafwijking zouden die twee delers gelijk zijn. De tabel spreekt zichzelf dus tegen.",
         "Zonder de ruwe gegevens is niet vast te stellen welke getallen fout zijn."
@@ -1367,7 +1367,7 @@ window.SRAExamPractice = {
         "Afbeelding 8: ABSRES met inequality geeft r = 0,198 en Sig. = 0,389.",
         "0,389 > 0,05, dus H₀ wordt niet verworpen.",
         "Er is geen remedie nodig.",
-        "De uitwerking van maart noemt hier afbeelding 9, maar de correlatie staat in afbeelding 8."
+        "Let op: deze correlatie staat in afbeelding 8, niet in afbeelding 9."
       ],
       "optionExplanations": [
         "De correlatie tussen de absolute residuen en inequality is niet significant, dus de spreiding hangt niet aantoonbaar samen met x.",
@@ -1435,11 +1435,11 @@ window.SRAExamPractice = {
       "sourceNote": "MSR = 13,449 en MSE = 4,580/19≈0,241053, dus F≈55,793. De bronwaarde 55,799 wijkt daar iets van af, waarschijnlijk door afronding in de uitvoer; t² = 7,470²≈55,801 is ook consistent met afgeronde uitvoer.",
       "explanation": "MSR = 13,449 en MSE = 4,580/19≈0,241053, dus F≈55,793. De bronwaarde 55,799 wijkt daar iets van af, waarschijnlijk door afronding in de uitvoer; t² = 7,470²≈55,801 is ook consistent met afgeronde uitvoer.",
       "steps": [
-        "MSR = 13,449 / 1 = 13,449.",
-        "MSE = 4,580 / 19 = 0,241053.",
-        "F = 13,449 / 0,241053 = 55,793.",
+        "Regressie: MSR = 13,449 / 1 = 13,449.",
+        "Residu: MSE = 4,580 / 19 = 0,241053.",
+        "F-waarde: F = 13,449 / 0,241053 = 55,793.",
         "Controle: bij één voorspeller is F = t². Afbeelding 6c geeft 7,470² = 55,801.",
-        "De uitwerking drukt 55,799 af. Met de afgeronde MSE van 0,241 krijg je zelf 55,805. Deze kleine verschillen komen door afronding, en alle waarden zijn afgerond 55,8."
+        "Met de afgeronde MSE van 0,241 krijg je 55,805, en ook 55,799 komt voor. Deze kleine verschillen komen door afronding, en alle waarden zijn afgerond 55,8."
       ],
       "optionExplanations": [
         "F is de verklaarde gemiddelde kwadratensom gedeeld door de onverklaarde, en daarvoor deel je elke kwadratensom eerst door zijn eigen vrijheidsgraden.",
@@ -1577,7 +1577,7 @@ window.SRAExamPractice = {
       "steps": [
         "t-waarde: t₀,₀₅[21 − 2] = t₀,₀₅[19] = 1,729.",
         "Uit afbeelding 6a: s_e = 0,49095. Uit afbeelding 9: x̄ = 5,6871 en s_x = 1,25505.",
-        "Afstandsterm: (5 − 5,6871)² / (20 × 1,25505²) = 0,47211 / 31,50301 = 0,01499.",
+        "Afstandsterm: (5 − 5,6871)² / (20 × 1,25505²) = 0,01499.",
         "Onder de wortel: 1 + 1/21 + 0,01499 = 1,0626.",
         "Foutmarge: 1,729 × 0,49095 × √1,0626 = 0,875.",
         "Bovengrens: 1,693 + 0,875 = 2,568."
@@ -2222,7 +2222,7 @@ window.SRAExamPractice = {
         "Standaardafwijking: s² = (85.570.675 − 84.200² / 100) / 99 = 148.225, dus s = 385.",
         "t-waarde: 95% tweezijdig met 99 vrijheidsgraden. De tabel heeft geen 99, dus neem t₀,₀₂₅[95] = 1,985.",
         "Foutmarge: 1,985 × 1.510 × 385 / √100 × √((1.510 − 100) / (1.510 − 1)) = 111.548.",
-        "Grenzen: 1.159.872 en 1.382.968. Naar buiten afgerond op duizendtallen: [€1.159.000; €1.383.000]."
+        "Grenzen: 1.271.420 ± 111.548 = 1.159.872 en 1.382.968. Naar buiten afgerond op duizendtallen: [€1.159.000; €1.383.000]."
       ],
       "optionExplanations": [
         "De grenzen kloppen bijna, maar naar binnen afronden maakt het interval smaller dan berekend. Daarmee haal je de 95% betrouwbaarheid niet meer.",
@@ -2294,7 +2294,7 @@ window.SRAExamPractice = {
         "Foutmarge: de breedte is 2 × E, dus E = 120.000 / 2 = 60.000.",
         "Uit vraag 1: N = 1.510, s = 385 en t = 1,985.",
         "Hulpgetal: E² / (t² × N × s²) = 60.000² / (1,985² × 1.510 × 385²) = 4,082.",
-        "Steekproefomvang: n = N / (1 + 4,082) = 1.510 / 5,082 = 297,1. Omhoog afgerond: n = 298.",
+        "Steekproefomvang: n = 1.510 / (1 + 4,082) = 297,1. Omhoog afgerond: n = 298.",
         "Uitbreiding: 298 − 100 = 198 artikelen."
       ],
       "optionExplanations": [
@@ -2639,10 +2639,10 @@ window.SRAExamPractice = {
       "sourceNote": "Combineer de standaardfouten circa 28.475, 41.587 en 101.852 kwadratisch. Met t = 1,974 is het interval naar buiten afgerond [€23.851.000;€24.301.000].",
       "explanation": "Combineer de standaardfouten circa 28.475, 41.587 en 101.852 kwadratisch. Met t = 1,974 is het interval naar buiten afgerond [€23.851.000;€24.301.000].",
       "steps": [
-        "Stratum 1: 1.000 × 300 / √100 × √(900 / 999) = 28.475.",
-        "Stratum 2: 1.200 × 400 / √120 × √(1.080 / 1.199) = 41.587.",
-        "Stratum 3: 1.800 × 800 / √180 × √(1.620 / 1.799) = 101.852.",
-        "Totale standaardfout: √(28.475² + 41.587² + 101.852²) = √12.914.134.100 = 113.640.",
+        "Standaardfout stratum 1: 1.000 × 300 / √100 × √(900 / 999) = 28.475.",
+        "Standaardfout stratum 2: 1.200 × 400 / √120 × √(1.080 / 1.199) = 41.587.",
+        "Standaardfout stratum 3: 1.800 × 800 / √180 × √(1.620 / 1.799) = 101.852.",
+        "Totale standaardfout: √(28.475² + 41.587² + 101.852²) = 113.640.",
         "t-waarde: t₀,₀₂₅[175] benader je met t₀,₀₂₅[170] = 1,974.",
         "Foutmarge: 1,974 × 113.640 = 224.325.",
         "Interval: 24.076.000 ± 224.325 = [23.851.675; 24.300.325]. Naar buiten afgerond: [€23.851.000; €24.301.000]."
@@ -3834,7 +3834,7 @@ window.SRAExamPractice = {
       "explanation": "Het antwoordmodel rangschikt op B per extra rapportpunt: prijskwaliteit (0,349), sanitair (0,264), klantvriendelijkheid (0,250). Rangschik je op gestandaardiseerde Beta, dan is restaurant (0,241) derde vóór klantvriendelijkheid (0,214). Benoem je maatstaf; deze observationele regressie bewijst niet dat een ingreep het algehele cijfer veroorzaakt.",
       "steps": [
         "Afbeelding 16, Model 2, kolom B: prijs/kwaliteit 0,349, sanitair 0,264, klantvriendelijkheid 0,250 en restaurant 0,242.",
-        "Het antwoordmodel neemt de drie hoogste: prijskwaliteit, sanitair en klantvriendelijkheid.",
+        "De drie hoogste: prijskwaliteit, sanitair en klantvriendelijkheid.",
         "In de kolom Beta staat restaurant (0,241) boven klantvriendelijkheid (0,214). Noem daarom welke maatstaf je gebruikt."
       ],
       "optionExplanations": [
@@ -4194,7 +4194,7 @@ window.SRAExamPractice = {
         "Som van de verschillen: 517.990 − 490.000 = 27.990.",
         "Gemiddeld verschil over alle posten: ē = 27.990 / 160 = 174,9375.",
         "Puntschatting: 11.330.000 − 3.450 × 174,9375 = 10.726.465,63.",
-        "Spreiding: s_e = √((7.150.220 − 27.990² / 160) / 159) = √14.174,34 = 119,06.",
+        "Spreiding: s_e = √((7.150.220 − 27.990² / 160) / 159) = 119,06.",
         "Standaardfout: 3.450 × 119,06 / √160 × √((3.450 − 160) / (3.450 − 1)) = 31.715,85.",
         "Bovengrens: 10.726.465,63 + 1,287 × 31.715,85 = 10.767.283,93.",
         "Omhoog afgerond op €1.000: €10.768.000."
@@ -4401,10 +4401,10 @@ window.SRAExamPractice = {
       "explanation": "Centrum €284.490. Deel elke gegeven marge eerst door de bijbehorende t, tel de kwadraten van deze standaardfouten op en trek de wortel: circa €9.677. Bovengrens met t = 1,660 circa €300.554. De afzonderlijke bovengrenzen mogen niet worden opgeteld.",
       "steps": [
         "Puntschatting uit de drie stratumregels: 69.520 + 77.770 + 137.200 = 284.490.",
-        "Stratum 1: (6.496 / 1,703)² = 14.549.991.",
-        "Stratum 2: (9.410 / 1,725)² = 29.757.816.",
-        "Stratum 3: (11.681 / 1,663)² = 49.337.319.",
-        "Standaardafwijking van het totaal: √(14.549.991 + 29.757.816 + 49.337.319) = √93.645.126 = 9.677.",
+        "Variantie stratum 1, marge gedeeld door t en dan kwadrateren: (6.496 / 1,703)² = 14.549.991.",
+        "Variantie stratum 2: (9.410 / 1,725)² = 29.757.816.",
+        "Variantie stratum 3: (11.681 / 1,663)² = 49.337.319.",
+        "Standaardafwijking van het totaal: √(14.549.991 + 29.757.816 + 49.337.319) = 9.677.",
         "Bovengrens: 284.490 + 1,660 × 9.677 = 300.554."
       ],
       "optionExplanations": [
@@ -4621,7 +4621,7 @@ window.SRAExamPractice = {
         "Afbeelding 1, rij Korting: leeftijd −0,272 (Sig. 0,006), inkomen −0,725 (Sig. 0,000) en geslacht 0,617 (Sig. 0,000).",
         "Inkomen en geslacht hebben allebei Sig. = 0,000. De sterkste correlatie geeft de doorslag: 0,725 is meer dan 0,617.",
         "Verklaarde spreiding: R² = (−0,725)² = 0,525625, afgerond 53%.",
-        "De uitwerking drukt 0,5265 af. Dat is een tikfout, de eindconclusie van 53% blijft gelijk."
+        "Let op: 0,5265 is een tikfout. De eindconclusie van 53% blijft gelijk."
       ],
       "optionExplanations": [
         "72,5% is r zelf. Het verklaarde deel is r², dus ongeveer 53%.",
@@ -5753,7 +5753,7 @@ window.SRAExamPractice = {
         "Wie een inkomen bewust hoger opgeeft, verhoogt een groot inkomen met meer euro’s dan een klein inkomen.",
         "De absolute fout hangt dan af van het inkomen. De procentuele fout blijft min of meer gelijk.",
         "Bij een min of meer constante procentuele fout komt de quotiëntschatter het best tot zijn recht.",
-        "Hangt de absolute fout niet af van het inkomen, dan is de verschilschatter beter. De uitwerking noemt het patroon dan ook alleen waarschijnlijk."
+        "Hangt de absolute fout niet af van het inkomen, dan is de verschilschatter beter. Het patroon is dus alleen waarschijnlijk."
       ],
       "optionExplanations": [
         "De uitwerking zegt dat de verschilschatter beter is als de absolute fout niet van het inkomen afhangt. Het foutpatroon beslist dus.",
@@ -5971,7 +5971,7 @@ window.SRAExamPractice = {
         "Standaardafwijking: s_w² = (6.507.800.000 − 438.000² / 190) / 189 = 29.090.448, dus s_w = 5.393,6.",
         "Standaardfout: s_MPU = 5.700 × 5.393,6 / √190 × √((5.700 − 190) / (5.700 − 1)) = 2.193.073,9.",
         "Foutmarge: 1,653 × 2.193.073,9 = 3.625.151.",
-        "Grenzen: 9.514.849 en 16.765.151. Naar buiten afgerond op duizendtallen: [€9.514.000; €16.766.000]."
+        "Grenzen: 13.140.000 ± 3.625.151 = 9.514.849 en 16.765.151. Naar buiten afgerond op duizendtallen: [€9.514.000; €16.766.000]."
       ],
       "optionExplanations": [
         "6.507.800.000 is de som van de gekwadrateerde waarden, geen spreiding in euro. De standaardafwijking volgt daaruit en is 5.393,6.",
@@ -6105,8 +6105,8 @@ window.SRAExamPractice = {
       "sourceNote": "Standaardfouten strata circa 630.588,2 en 716.565,7; gecombineerd circa 954.520. Met t = 1,658: [€10.282.000;€13.448.000], naar buiten afgerond.",
       "explanation": "Standaardfouten strata circa 630.588,2 en 716.565,7; gecombineerd circa 954.520. Met t = 1,658: [€10.282.000;€13.448.000], naar buiten afgerond.",
       "steps": [
-        "Stratum A: 1.230 × 6.950 / √160 × √((1.230 − 160) / (1.230 − 1)) = 630.588,2.",
-        "Stratum B: 4.470 × 1.250 / √60 × √((4.470 − 60) / (4.470 − 1)) = 716.565,7.",
+        "Standaardfout stratum A: 1.230 × 6.950 / √160 × √((1.230 − 160) / (1.230 − 1)) = 630.588,2.",
+        "Standaardfout stratum B: 4.470 × 1.250 / √60 × √((4.470 − 60) / (4.470 − 1)) = 716.565,7.",
         "Samen: s_tot = √(630.588,2² + 716.565,7²) = 954.520.",
         "t-waarde: tweezijdig 90% met 129 vrijheidsgraden. De tabel heeft geen 129, dus neem t₀,₀₅[120] = 1,658.",
         "Foutmarge: 1,658 × 954.520 = 1.582.594.",
@@ -6174,7 +6174,7 @@ window.SRAExamPractice = {
       "steps": [
         "De casus geeft: stratum A heeft grote posten met een grote spreiding, stratum B kleinere posten met geringere spreiding.",
         "Evenredig zou A 220 × 1.230 / 5.700 = 47,5 posten krijgen. A krijgt er 160, dus de omvang is niet de reden.",
-        "De tabel bevestigt het verschil in spreiding: s = 6.950 in A tegen s = 1.250 in B."
+        "De tabel bevestigt het verschil in spreiding: s = 6.950 in A tegen s = 1.250 in B. De grote spreiding in A is dus de reden."
       ],
       "optionExplanations": [
         "De casus zegt dat de Neyman-berekening niet is toegepast. Met de tabelwaarden zou Neyman ongeveer 133 posten aan A geven, niet 160.",
@@ -6239,7 +6239,7 @@ window.SRAExamPractice = {
         "Verwachting uit de casus: groter scherm, hogere prijs. Het verband is dus positief.",
         "H₁ bevat de verwachting: β₁ > 0.",
         "H₀ is het tegendeel en bevat het gelijkheidsteken: β₁ ≤ 0.",
-        "Ook goed volgens de uitwerking: H₀: ρ ≤ 0 tegen H₁: ρ > 0."
+        "Ook goed: H₀: ρ ≤ 0 tegen H₁: ρ > 0."
       ],
       "optionExplanations": [
         "Dit is de richting van gewicht uit vraag 8b. Bij schermdiagonaal is een positief verband verwacht, dus hoort > 0 in H₁.",
@@ -6314,7 +6314,7 @@ window.SRAExamPractice = {
         "Verwachting uit de casus: zwaarder, lagere prijs. Het verband is dus negatief.",
         "H₁ bevat de verwachting: β₁ < 0.",
         "H₀ is het tegendeel en bevat het gelijkheidsteken: β₁ ≥ 0.",
-        "Ook goed volgens de uitwerking: H₀: ρ ≥ 0 tegen H₁: ρ < 0."
+        "Ook goed: H₀: ρ ≥ 0 tegen H₁: ρ < 0."
       ],
       "optionExplanations": [
         "De casus noemt voor zwaardere tablets een negatief effect, dus die dalende richting hoort in H₁.",
@@ -6460,7 +6460,7 @@ window.SRAExamPractice = {
         "Opslaggeheugen en schermdiagonaal: 0,584, Sig. 0,000.",
         "Gewicht en schermdiagonaal: 0,780, Sig. 0,000. Dit is de hoogste correlatie tussen verklarende variabelen.",
         "Opslaggeheugen en gewicht: 0,629, Sig. 0,000.",
-        "De uitwerking verwacht daarom problemen. Of die er echt zijn, blijkt uit de VIF in Afbeelding 4 (vraag 10c)."
+        "Verwacht daarom problemen. Of die er echt zijn, blijkt uit de VIF in Afbeelding 4 (vraag 10c)."
       ],
       "optionExplanations": [
         "Een correlatie van 0,780 is juist een sterke samenhang tussen twee verklarende variabelen, en dus een reden om multicollineariteit te verwachten.",
@@ -6880,11 +6880,11 @@ window.SRAExamPractice = {
       "steps": [
         "Uitbijters in x: grens = 3,886 + 3 × 5,120 = 19,246. Het maximum in Afbeelding 5 is 26,944, dus er zijn potentiële uitbijters in x.",
         "Afbeelding 6: waarneming 35 is de potentiële uitbijter. Waarneming 31 blijft met ongeveer 14 onder de grens.",
-        "Remedie in x: er is geen fout in de gegevens maar een bijzondere omstandigheid, en of die vaker voorkomt is moeilijk te beoordelen. De uitwerking keurt daarom zowel verwijderen als handmatig corrigeren goed.",
+        "Remedie in x: er is geen fout in de gegevens maar een bijzondere omstandigheid, en of die vaker voorkomt is moeilijk te beoordelen. Daarom tellen zowel verwijderen als handmatig corrigeren als goed antwoord.",
         "Invloedrijke punten: grens = 0,216 + 3 × 0,979 = 3,153. Het maximum in Afbeelding 5 is 5,773, dus er zijn potentiële invloedrijke punten.",
         "Afbeelding 7: waarneming 35 is het potentieel invloedrijke punt.",
         "Afbeelding 8: waarneming 35 ligt met 16 GB en een lage prijs ver van de andere punten, en is herkenbaar als invloedrijk punt.",
-        "Conclusie van de uitwerking: waarneming 35 verwijderen. De latere uitvoer rekent ook met 34 tablets: df2 = 32 in Afbeelding 9 en df = 34 in Afbeelding 13."
+        "Conclusie: waarneming 35 verwijderen. De latere uitvoer rekent ook met 34 tablets: df2 = 32 in Afbeelding 9 en df = 34 in Afbeelding 13."
       ],
       "optionExplanations": [
         "De conclusie verwijderen volgt pas na onderzoek: de grenzen 19,246 en 3,153, de combinatie van 16 GB en 8 GB, en Afbeelding 8. Zonder die stappen is er geen grond.",
@@ -7452,9 +7452,9 @@ window.SRAExamPractice = {
         "Helling: b₁ = R × sw / sb = 0,942 × 81,7 / 83,0 = 0,9272458.",
         "Gemiddelden: w̄ = 904.498 / 190 = 4.760,5158 en b̄ = 920.345 / 190 = 4.843,9211.",
         "Correctieterm: B − N × b̄ = 9.350.480 − 1.935 × 4.843,9211 = −22.507. De steekproef heeft dus een iets hogere gemiddelde boekwaarde dan de hele voorraad.",
-        "Puntschatting: Ŵ = 1.935 × 4.760,5158 + 0,9272458 × (−22.507) = 9.211.598 − 20.870 = 9.190.728.",
-        "Standaardfout: sr = 1.935 × 81,7 / √190 × √((1.935 − 190) / (1.935 − 1)) × √(1 − 0,942²) = 11.469,02 × 0,3187925 = 3.656,24.",
-        "t-waarde: 99% tweezijdig, dus α/2 = 0,005. De uitwerking gebruikt t = 2,603.",
+        "Puntschatting: Ŵ = 1.935 × 4.760,5158 + 0,9272458 × (−22.507) = 9.190.728.",
+        "Standaardfout: sr = 1.935 × 81,7 / √190 × √((1.935 − 190) / (1.935 − 1)) × √(1 − 0,942²) = 3.656,24.",
+        "t-waarde: 99% tweezijdig, dus α/2 = 0,005, en df = 190 − 1 = 189. De tabel heeft geen 189, dus neem t₀,₀₀₅[180] = 2,603.",
         "Foutmarge: 2,603 × 3.656,24 = 9.517,19.",
         "Grenzen: 9.190.728,25 ± 9.517,19 = [9.181.211,06; 9.200.245,44]. Naar buiten afgerond op €1.000: [€9.181.000; €9.201.000]."
       ],
@@ -7732,7 +7732,7 @@ window.SRAExamPractice = {
       "sourceNote": "Som van N_i maal gemiddelde_i is €5.587.966. Combineer de gegeven standaardfouten kwadratisch: circa €66.221,24. Met t = 1,96 en naar buiten afronden op €100: [€5.458.100; €5.717.800].",
       "explanation": "Som van N_i maal gemiddelde_i is €5.587.966. Combineer de gegeven standaardfouten kwadratisch: circa €66.221,24. Met t = 1,96 en naar buiten afronden op €100: [€5.458.100; €5.717.800].",
       "steps": [
-        "Puntschatting, tabel: 560 × 1.332,0 + 1.240 × 1.754,6 + 1.135 × 2.349,2 = 745.920 + 2.175.704 + 2.666.342 = 5.587.966.",
+        "Puntschatting, tabel: 560 × 1.332,0 + 1.240 × 1.754,6 + 1.135 × 2.349,2 = 5.587.966.",
         "Kwadraten: 22.155,05² + 46.306,90² + 41.833,92² = 4.385.252.091.",
         "Totale standaardfout: √4.385.252.091 = 66.221,24.",
         "t-waarde: t₀,₀₂₅[245] ≈ t₀,₀₂₅[∞] = 1,960.",
@@ -8086,7 +8086,7 @@ window.SRAExamPractice = {
       "steps": [
         "Afbeelding 2: de punten van beide chauffeurs liggen grotendeels door elkaar.",
         "Er zijn dus geen twee gescheiden puntenwolken. Dat pleit tegen samengevoegde groepen.",
-        "De rondjes liggen wel wat hoger en de plusjes wat lager. Daarom accepteert de uitwerking ook het antwoord “mogelijk samengevoegde groepen”.",
+        "De rondjes liggen wel wat hoger en de plusjes wat lager. Daarom is ook het antwoord “mogelijk samengevoegde groepen” goed.",
         "Afbeelding 1 past hierbij: Chauffeur met Tijd heeft r = −0,117 en Sig. = 0,374, dus een klein verschil dat niet significant is."
       ],
       "optionExplanations": [
@@ -8228,7 +8228,7 @@ window.SRAExamPractice = {
         "n = 60 ≤ 100, dus zkritiek = ± 2.",
         "Afbeelding 4: minimum −2,491 en maximum 2,460 liggen buiten ± 2, dus er zijn potentiële uitbijters.",
         "Afbeelding 5: rit 2 zit rond −2,5, rit 22 rond 2,5 en rit 58 rond 2,2.",
-        "Casus: bij rit 22 en 58 was er langdurig oponthoud. De uitwerking verwijdert daarom beide ritten.",
+        "Casus: bij rit 22 en 58 was er langdurig oponthoud. Verwijder daarom beide ritten.",
         "Rit 2 heeft geen genoemde bijzondere omstandigheid en blijft staan.",
         "Afbeelding 6 heeft daarna N = 58, dus er zijn precies twee ritten weggehaald."
       ],
@@ -8302,7 +8302,7 @@ window.SRAExamPractice = {
         "Grens, Afbeelding 6: MDkr = 0,983 + 3 × 1,377 = 5,114.",
         "Maximum: MDmax = 7,195 > 5,114, dus er is minstens één uitbijter in x.",
         "Afbeelding 7: waarneming 30 (rond 6,6) en 58 (7,195) liggen boven 5,114. De volgende piek, bij 18, blijft rond 3,6.",
-        "Remedie volgens de uitwerking: 58 verwijderen vanwege de bijzondere omstandigheid en 30 handhaven.",
+        "Remedie: 58 verwijderen vanwege de bijzondere omstandigheid en 30 handhaven.",
         "Let op de nummering: rit 58 is in vraag 11 al weggehaald, want Afbeelding 6 heeft N = 58. De nummers in Afbeelding 7 lopen tot 58, dus dit nummer hoort mogelijk bij een andere rit.",
         "Afbeelding 9 steunt dat: punt 58 ligt bij ongeveer 8 km en 91 minuten, onder de lijn. De oude rit 58 had in Afbeelding 5 juist een residu van rond +2,2."
       ],
@@ -8377,8 +8377,8 @@ window.SRAExamPractice = {
         "Maximum: CDmax = 0,168 > 0,124, dus er is minstens één potentieel invloedrijk punt.",
         "Afbeelding 8: waarneming 2 (0,168), 30 (rond 0,16) en 50 (rond 0,15) liggen boven 0,124. De rest blijft rond of onder 0,05.",
         "Afbeelding 9: waarneming 2 ligt bij ongeveer 13 km en 76 minuten, 30 bij 28 km en 213 minuten, en 50 bij 24 km en 129 minuten.",
-        "Remedie: zijn deze punten duidelijk te onderscheiden in Afbeelding 9, dan verwijderen. Zo niet, dan handhaven. De uitwerking laat beide toe.",
-        "Afbeelding 10 heeft N = 55, dus na Afbeelding 6 zijn er nog drie waarnemingen weggehaald. De uitwerking zegt niet welke."
+        "Remedie: zijn deze punten duidelijk te onderscheiden in Afbeelding 9, dan verwijderen. Zo niet, dan handhaven. Beide keuzes zijn goed.",
+        "Afbeelding 10 heeft N = 55, dus na Afbeelding 6 zijn er nog drie waarnemingen weggehaald. Welke dat zijn, wordt niet vermeld."
       ],
       "optionExplanations": [
         "Het maximum ligt boven de grens, maar de remedie hangt af van wat je in het spreidingsdiagram ziet en niet van een betere passing.",
@@ -8739,9 +8739,9 @@ window.SRAExamPractice = {
         "Voorspelling, Afbeelding 13: ŷ₀ = 71,129 + 4,078 × 20 = 152,69 minuten.",
         "Spreiding: se = 16,92 uit vraag 14.",
         "Afbeelding 14: n = 55, x̄ = 18,04 en sx = 3,522.",
-        "t-waarde: 90% tweezijdig met 53 vrijheidsgraden, dus t₀,₀₅[53] = 1,676.",
-        "Onder de wortel: 1 + 1/55 + (20 − 18,04)² / (54 × 3,522²) = 1 + 0,01818 + 0,00574 = 1,02392. De wortel is 1,01189.",
-        "Foutmarge: 1,676 × 16,92 × 1,01189 = 28,70. De uitwerking noemt ook 28,83 als alternatief.",
+        "t-waarde: 90% tweezijdig met 53 vrijheidsgraden, dus t₀,₀₅[53] ≈ t₀,₀₅[50] = 1,676.",
+        "Onder de wortel: 1 + 1/55 + (20 − 18,04)² / (54 × 3,522²) = 1,02392. De wortel is 1,01189.",
+        "Foutmarge: 1,676 × 16,92 × 1,01189 = 28,70. Met se = 17 uit de vraag wordt dat 28,83.",
         "Grenzen: 152,69 ± 28,70 = [123,99; 181,39]. Naar buiten afgerond: [123; 182] minuten. Met 28,83 geeft de afronding hetzelfde."
       ],
       "optionExplanations": [
@@ -9238,7 +9238,7 @@ window.SRAExamPractice = {
       "steps": [
         "Bij de directe schatter was s_w = €210. Dat is de spreiding van de werkelijke waarden zelf.",
         "De verschilschatter gebruikt per post boekwaarde min werkelijke waarde. Gemiddeld is dat €24, tegenover een gemiddelde waarde van €416.",
-        "De uitwerking redeneert: verschillen zijn in het algemeen kleiner dan de waarden, dus de spreiding is ook kleiner. Dan past €71, want 71 < 210 en 332 > 210.",
+        "Redenering: verschillen zijn in het algemeen kleiner dan de waarden, dus de spreiding is ook kleiner. Dan past €71, want 71 < 210 en 332 > 210.",
         "Ter vergelijking: s = 332 geeft een standaardfout van 76.718, meer dan de 48.526 van de directe schatter. Bij s = 71 is dat 16.406.",
         "Dit blijft een verwachting. Er geldt Var(b − w) = Var(b) + Var(w) − 2 × Cov(b, w), en spreiding en samenhang van de boekwaarden b zijn niet gegeven."
       ],
@@ -9660,7 +9660,7 @@ window.SRAExamPractice = {
         "Cholesterol en Bloeddruk: r = 0,096, Sig. = 0,009.",
         "Leeftijd en Bloeddruk: r = 0,260, Sig. < 0,001.",
         "De andere drie paren zijn niet significant: Cholesterol en Leeftijd (0,109), Leeftijd en Geslacht (0,264), Geslacht en Bloeddruk (0,349).",
-        "De uitwerking noemt deze drie paren als antwoord. De drie correlaties zijn wel klein, en Afbeelding 11 geeft in Model 1 VIF-waarden van hoogstens 1,081."
+        "De drie significante paren zijn het antwoord. De correlaties zijn wel klein, en Afbeelding 11 geeft in Model 1 VIF-waarden van hoogstens 1,081."
       ],
       "optionExplanations": [
         "Hartritme_max is de te verklaren variabele. Een verband daarmee is juist gewenst en heeft niets met multicollineariteit te maken.",
@@ -10005,8 +10005,8 @@ window.SRAExamPractice = {
       "steps": [
         "Afbeelding 2: de oudste proefpersoon is ongeveer 77 jaar.",
         "95 jaar ligt daar ongeveer 18 jaar boven, dus dit is extrapolatie.",
-        "Rekenkundig: 192 − 0,99 × 95 = 192 − 94,05 = 97,95.",
-        "De uitwerking geeft de punten voor de opmerking dat 95 jaar buiten de gegevens ligt en een schatting onwenselijk is."
+        "Rekenkundig: 192 − 0,99 × 95 = 97,95.",
+        "Noem daarom ook dat 95 jaar buiten de gegevens ligt en een schatting onwenselijk is."
       ],
       "optionExplanations": [
         "137,55 is de voorspelling bij 55 jaar. De helling van −0,99 laat zien dat leeftijd wel degelijk verschil maakt.",
@@ -10078,7 +10078,7 @@ window.SRAExamPractice = {
         "Uit vraag 11a: ŷ₀ = 137,55 bij x₀ = 55.",
         "Afbeelding 3: s_e = 22,678. Afbeelding 4: n = 746, x̄ = 52,88 en s_x = 9,506.",
         "t-waarde: bij zo veel vrijheidsgraden benader je t₀,₀₂₅ met z₀,₀₂₅ = 1,960.",
-        "Wortelterm: √(1 + 1/746 + (55 − 52,88)² / (745 × 9,506²)) = √(1 + 0,00134 + 0,00007) = 1,0007.",
+        "Wortelterm: √(1 + 1/746 + (55 − 52,88)² / (745 × 9,506²)) = 1,0007.",
         "Foutmarge: 1,960 × 22,678 × 1,0007 = 44,48.",
         "Grenzen: 137,55 − 44,48 = 93,07 en 137,55 + 44,48 = 182,03. Naar buiten afgerond: [93; 183]."
       ],
@@ -10433,7 +10433,7 @@ window.SRAExamPractice = {
         "Toetskeuze: n = 746 > 50, dus Kolmogorov-Smirnov.",
         "Afbeelding 8: Sig. < 0,001, en dat is kleiner dan 0,05. H₀ wordt verworpen.",
         "Conclusie: de residuen wijken significant af van de normale verdeling.",
-        "Remedies volgens de uitwerking: een andere verklarende variabele, niet-lineaire regressie, verklarende variabelen toevoegen of Weighted Least Squares. Controleer daarna opnieuw."
+        "Remedies: een andere verklarende variabele, niet-lineaire regressie, verklarende variabelen toevoegen of Weighted Least Squares. Controleer daarna opnieuw."
       ],
       "optionExplanations": [
         "De nulhypothese zegt dat de residuen normaal zijn, en de kans op dit resultaat onder die aanname is te klein.",
@@ -10853,7 +10853,7 @@ window.SRAExamPractice = {
       "explanation": "H₀: βleeftijd ≥ 0; H₁: βleeftijd < 0. df = 746−2−1 = 743; t = −11,223 < −1,645 volgens de gebruikte z-benadering, dus H₀ verwerpen. Voor model 3 zijn er twee voorspellers: df = 746−2−1 = 743, niet 744 zoals in het antwoordmodel. Met de gehanteerde z-benadering blijft de grens−1,645 en t−11,223 ligt in het kritieke gebied.",
       "steps": [
         "Hypothesen: H₀: β₁ ≥ 0 en H₁: β₁ < 0, met β₁ de helling van Leeftijd.",
-        "Vrijheidsgraden: Model 3 heeft twee verklarende variabelen, dus df = 746 − 2 − 1 = 743. De uitwerking schrijft df = n − 2 = 744, maar de grens blijft gelijk.",
+        "Vrijheidsgraden: Model 3 heeft twee verklarende variabelen, dus df = 746 − 2 − 1 = 743.",
         "Kritieke waarde: bij zo veel vrijheidsgraden benader je t₀,₀₅ met z₀,₀₅, dus −1,645.",
         "Kritiek gebied: t ≤ −1,645.",
         "Toetsingsgrootheid: Afbeelding 11 geeft t = −11,223, en −11,223 < −1,645.",
@@ -11001,7 +11001,7 @@ window.SRAExamPractice = {
       "explanation": "Met KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
       "steps": [
         "Reden 1: het histogram in Afbeelding 14 heeft één top. De dubbele top uit Afbeelding 13 is verdwenen.",
-        "Toetskeuze: n = 564, dus Kolmogorov-Smirnov. De uitwerking schrijft hier n > 100, bij vraag 15 n > 50. Bij n = 564 komen beide op dezelfde toets uit.",
+        "Toetskeuze: n = 564 > 50, dus Kolmogorov-Smirnov.",
         "Reden 2: Afbeelding 15 geeft Sig. = 0,098, en dat is groter dan 0,05. H₀ wordt niet verworpen.",
         "Conclusie: de residuen wijken niet langer significant af van de normale verdeling.",
         "Nuance: niet verwerpen is geen bewijs van normaliteit. Shapiro-Wilk geeft 0,010, maar die toets kies je bij deze n niet."
@@ -11289,7 +11289,7 @@ window.SRAExamPractice = {
       "sourceNote": "Uitspraken per centrum en kleinere spreiding binnen strata zijn goede redenen. Stratificatie verandert de werkelijke variabiliteit van de populatie niet. Vertegenwoordiging naar rato vereist bovendien evenredige allocatie, niet alleen stratificatie.",
       "explanation": "Uitspraken per centrum en kleinere spreiding binnen strata zijn goede redenen. Stratificatie verandert de werkelijke variabiliteit van de populatie niet. Vertegenwoordiging naar rato vereist bovendien evenredige allocatie, niet alleen stratificatie.",
       "steps": [
-        "De uitwerking noemt vier mogelijke redenen. Twee daarvan zijn genoeg voor 2 × 1 punt.",
+        "Er zijn vier mogelijke redenen. Twee daarvan zijn genoeg voor 2 × 1 punt.",
         "Reden 1: je kunt een uitspraak doen per distributiecentrum.",
         "Reden 2: de nauwkeurigheid van de totale schatting kan verbeteren.",
         "Reden 3: een betere representativiteit, omdat alle centra naar rato in de steekproef zitten. Dat vraagt wel evenredige allocatie, zoals in vraag 5.",
@@ -11771,7 +11771,7 @@ window.SRAExamPractice = {
       "sourceNote": "Niet iedere onderlinge correlatie is problematische multicollineariteit: het gaat om sterke lineaire afhankelijkheid tussen voorspellers, die afzonderlijke coëfficiënten onzeker maakt.",
       "explanation": "Niet iedere onderlinge correlatie is problematische multicollineariteit: het gaat om sterke lineaire afhankelijkheid tussen voorspellers, die afzonderlijke coëfficiënten onzeker maakt.",
       "steps": [
-        "De uitwerking geeft: verklarende variabelen zijn onderling gecorreleerd.",
+        "Kern: verklarende variabelen zijn onderling gecorreleerd.",
         "Het gaat dus om variabelen aan dezelfde kant van het model: Leeftijd, Geslacht, BMI en Aantal kinderen.",
         "Een probleem wordt het bij een sterke lineaire samenhang. Dan zijn de afzonderlijke coëfficiënten onzeker.",
         "Voorbeeld uit afbeelding 1: Leeftijd en BMI hebben R = 0,124. Die correlatie is niet nul, maar wel zwak."
@@ -11843,8 +11843,8 @@ window.SRAExamPractice = {
       "steps": [
         "Het model is kosten = β₀ + β₁ × leeftijd, en de toets gaat over β₁.",
         "De inleiding verwacht een positief verband, dus H₁: β₁ > 0.",
-        "H₀ is het tegendeel: β₁ ≤ 0. De uitwerking rekent H₀: β₁ = 0 ook goed.",
-        "In de normering telt H₀ voor 1 punt en H₁ voor 2 punten."
+        "H₀ is het tegendeel: β₁ ≤ 0. Ook H₀: β₁ = 0 wordt goed gerekend.",
+        "H₀ levert 1 punt op en H₁ 2 punten."
       ],
       "optionExplanations": [
         "Dit draait de richting om. H₁ moet het verwachte positieve verband bevatten, niet een negatief verband.",
@@ -12199,8 +12199,8 @@ window.SRAExamPractice = {
         "Puntschatting uit vraag 14a: ŷ₀ = 12.880.",
         "t-waarde: t₀,₀₂₅[958] ≈ z₀,₀₂₅ = 1,960.",
         "Standaardfout van de regressie: s_e = √MSE = √879.987 = 938,08.",
-        "Onder de wortel: 1 + 1 / 960 + (61 − 39,47)² / (959 × 14,0²) = 1 + 0,00104 + 0,00247 = 1,00351.",
-        "Foutmarge: 1,960 × 938,08 × √1,00351 = 1.838,64 × 1,00175 = 1.842.",
+        "Onder de wortel: 1 + 1 / 960 + (61 − 39,47)² / (959 × 14,0²) = 1,00351.",
+        "Foutmarge: 1,960 × 938,08 × √1,00351 = 1.842.",
         "Grenzen: 12.880 − 1.842 = 11.038 en 12.880 + 1.842 = 14.722.",
         "Naar buiten afgerond op honderdtallen: [11.000; 14.800] dollar."
       ],
@@ -12480,7 +12480,7 @@ window.SRAExamPractice = {
       "steps": [
         "Grens: n = 960 > 100, dus de kritieke grenzen zijn z = ±3.",
         "Afbeelding 4, Std. Residual: 2,991 < 3 en −2,707 > −3.",
-        "De uitwerking concludeert daaruit: er zijn geen uitbijters in y.",
+        "Conclusie uit deze rij: er zijn geen uitbijters in y.",
         "Narekenen van het minimum: −2.539,796 / 938,076 = −2,707. Dat klopt met de tabel.",
         "Narekenen van het maximum: 3.248,623 / 938,076 = 3,463. Dat ligt boven 3 en klopt niet met 2,991.",
         "De rij Stud. Residual geeft maximum 3,470, dicht bij 3,463. Zonder de ruwe gegevens is niet vast te stellen welke cel fout is, dus noem welke kolom je volgt."
@@ -12553,7 +12553,7 @@ window.SRAExamPractice = {
         "Het enkelvoudige model heeft twee variabelen: kosten en leeftijd.",
         "Zet ze samen in een spreidingsdiagram, met leeftijd op de x-as en kosten op de y-as.",
         "Bekijk of de verdachte punten afwijken van de puntenwolk en de lijn.",
-        "Daarnaast is er een formele maat: afbeelding 4 toont Cook's Distance met maximum 0,023. De uitwerking vraagt alleen de grafiek."
+        "Daarnaast is er een formele maat: afbeelding 4 toont Cook's Distance met maximum 0,023. Gevraagd is alleen de grafiek."
       ],
       "optionExplanations": [
         "In één plaatje van beide variabelen zie je waar een punt ligt ten opzichte van de andere punten en de lijn.",
@@ -13117,11 +13117,11 @@ window.SRAExamPractice = {
       "steps": [
         "Helling: b₁ = R × s_w / s_b = 0,925 × 82,1 / 83,3 = 0,9116747.",
         "Gemiddelden: w̄ = 161.300 / 180 = 896,1111 en b̄ = 164.500 / 180 = 913,8889.",
-        "Puntschatting: 2.130 × 896,1111 + 0,9116747 × (1.810.500 − 2.130 × 913,8889) = 1.908.716,64 − 124.063,75 = 1.784.652,89.",
-        "Standaardfout: S_R = 2.130 × 82,1 / √180 × √((2.130 − 180) / (2.130 − 1)) × √(1 − 0,925²) = 13.034,26 × 0,95704 × 0,37997 = 4.739,86.",
+        "Puntschatting: 2.130 × 896,1111 + 0,9116747 × (1.810.500 − 2.130 × 913,8889) = 1.784.652,89.",
+        "Standaardfout: S_R = 2.130 × 82,1 / √180 × √((2.130 − 180) / (2.130 − 1)) × √(1 − 0,925²) = 4.739,86.",
         "t-waarde: 95% tweezijdig met 179 vrijheidsgraden. De tabel heeft geen 179, dus neem t₀,₀₂₅[170] = 1,974.",
         "Marge: 1,974 × 4.739,86 = 9.356,49.",
-        "Grenzen: 1.775.296,40 en 1.794.009,38. Naar buiten afgerond op honderdtallen: [€1.775.200; €1.794.100]. Zonder tussentijds afronden schuiven de grenzen minder dan €1 op, de afronding blijft gelijk."
+        "Grenzen: 1.784.652,89 ± 9.356,49 = [1.775.296,40; 1.794.009,38]. Naar buiten afgerond op honderdtallen: [€1.775.200; €1.794.100]. Zonder tussentijds afronden schuiven de grenzen minder dan €1 op, de afronding blijft gelijk."
       ],
       "optionExplanations": [
         "De regressieschatter corrigeert het steekproefgemiddelde met de bekende totale boekwaarde, de factor √(1 − R²) maakt de marge klein, en naar buiten afronden houdt de 95% intact.",
@@ -13194,7 +13194,7 @@ window.SRAExamPractice = {
         "Foutmarge: E = 10.000 / 2 = 5.000.",
         "Uit vraag 1: N = 2.130, s_w = 82,1, R = 0,925 en t = 1,974.",
         "Noemer: 1,974² × 2.130 × 82,1² × (1 − 0,925²) = 8.077.039,59.",
-        "Hulpgetal: γ = 5.000² / 8.077.039,59 = 25.000.000 / 8.077.039,59 = 3,09519.",
+        "Hulpgetal: γ = 5.000² / 8.077.039,59 = 3,09519.",
         "Omvang: n = 2.130 / (1 + 3,09519) = 520,12. Omhoog afgerond: n = 521.",
         "Uitbreiding: 521 − 180 = 341 posten."
       ],
@@ -13264,7 +13264,7 @@ window.SRAExamPractice = {
       "sourceNote": "Factor √(1−0,925²)≈0,37997 verkleint de berekende marge bij dezelfde gegevens en voorwaarden.",
       "explanation": "Factor √(1−0,925²)≈0,37997 verkleint de berekende marge bij dezelfde gegevens en voorwaarden.",
       "steps": [
-        "Directe schatter: de standaardfout is 13.034,26 × 0,95704 = 12.474,3.",
+        "Directe schatter: de standaardfout is 2.130 × 82,1 / √180 × √((2.130 − 180) / (2.130 − 1)) = 12.474,3.",
         "Regressieschatter: hetzelfde getal maal √(1 − 0,925²) = 0,37997, dus 4.739,86.",
         "Marges met t = 1,974: directe schatter 24.624, regressieschatter 9.356.",
         "Breedtes: ongeveer 49.248 tegen 18.713, dus het interval van de regressieschatter is veel smaller.",
@@ -13407,7 +13407,7 @@ window.SRAExamPractice = {
         "Stratum 3: 123.495 / 60 = 2.058,25 per post. 600 × 2.058,25 = 1.234.950.",
         "Stratum 4: 93.176 / 38 = 2.452 per post. 500 × 2.452 = 1.226.000.",
         "Som van de strata: 1.610.000 + 1.339.200 + 1.234.950 + 1.226.000 = 5.410.150.",
-        "Hele populatie: 5.410.150 + 1.107.500 = €6.517.650."
+        "Hele populatie: tel de 250 volledig gecontroleerde grote posten erbij, 5.410.150 + 1.107.500 = €6.517.650."
       ],
       "optionExplanations": [
         "Per stratum schat je met Nᵢ maal het steekproefgemiddelde, en de integraal gecontroleerde posten tel je met hun bekende waarde op.",
@@ -13476,7 +13476,7 @@ window.SRAExamPractice = {
         "Standaardfout: √7.403.586.600 = 86.044,10.",
         "t-waarde: 90% tweezijdig, dus α/2 = 0,05. De tabel heeft geen 178, dus neem t₀,₀₅[170] = 1,654.",
         "Marge: 1,654 × 86.044,10 = 142.316,94.",
-        "Grenzen rond 6.517.650 uit vraag 5: 6.375.333,06 en 6.659.966,94.",
+        "Grenzen rond de puntschatting uit vraag 5: 6.517.650 ± 142.316,94 = [6.375.333,06; 6.659.966,94].",
         "Naar buiten afgerond op tienduizendtallen: [€6.370.000; €6.660.000]."
       ],
       "optionExplanations": [
@@ -13749,7 +13749,7 @@ window.SRAExamPractice = {
         "Vrijheidsgraden: regressie 1, residu 30 − 2 = 28, totaal 29.",
         "MSR = 1351,262 / 1 = 1351,262.",
         "MSE = 44,105 / 28 = 1,57518.",
-        "F = 1351,262 / 1,57518 = 857,85. Met het afgeronde 1,575 krijg je 857,94, en dat keurt de uitwerking ook goed.",
+        "F = 1351,262 / 1,57518 = 857,85. Met het afgeronde 1,575 krijg je 857,94, en dat is ook goed.",
         "F-tabel bij df (1, 28) en α = 0,05: Fkritiek = 4,196.",
         "857,85 > 4,196, dus Sig. < 0,05. F ligt zo ver boven de grens dat < 0,001 aannemelijk is, maar de grens bij 0,05 bewijst dat niet.",
         "Controle met afbeelding 10: bij Leg power staat t = 29,289, en 29,289² = 857,85."
@@ -13886,7 +13886,7 @@ window.SRAExamPractice = {
       "steps": [
         "Grens: n = 30, dus zkr = ±2.",
         "Afbeelding 3: zmax = 2,053 > 2 en zmin = −2,016 < −2.",
-        "Afbeelding 5: de potentiële uitbijters in y zijn waarneming 14 en waarneming 22. De uitwerking schrijft hier afbeelding 10.",
+        "Afbeelding 5: de potentiële uitbijters in y zijn waarneming 14 en waarneming 22.",
         "Remedie: de casus vermeldt geen fouten in de gegevens en geen bijzondere omstandigheden, dus de waarnemingen blijven staan."
       ],
       "optionExplanations": [
@@ -13956,7 +13956,7 @@ window.SRAExamPractice = {
       "steps": [
         "Grens: 0,045 + 3 × 0,071 = 0,258.",
         "CDmax = 0,284 is groter dan 0,258, dus er zijn potentieel invloedrijke punten.",
-        "Afbeelding 6: alleen geval 12 komt boven 0,258. De uitwerking schrijft hier afbeelding 11. De gevallen 3 en 22 blijven rond 0,20 en dus eronder.",
+        "Afbeelding 6: alleen geval 12 komt boven 0,258. De gevallen 3 en 22 blijven rond 0,20 en dus eronder.",
         "Afbeelding 1: er is geen duidelijk invloedrijk punt te zien, de punten volgen één lijn.",
         "Remedie: waarneming 12 handhaven."
       ],
@@ -14169,11 +14169,11 @@ window.SRAExamPractice = {
       "steps": [
         "Puntschatting uit afbeelding 10: ŷ₀ = 7,159 + 0,099 × 228,1 = 29,74.",
         "t-waarde: t₀,₀₂₅[28] = 2,048, want n − 2 = 28.",
-        "Spreiding: s_e = 1,25506 uit afbeelding 9. De uitwerking noemt dit afbeelding 3. Ook √1,575 = 1,255 uit de ANOVA geeft dit getal.",
-        "Officiële uitwerking, formule 50 met de 1: 29,74 ± 2,048 × 1,25506 × √(1 + 1/30) = 29,74 ± 2,61, dus [27,1; 32,4].",
+        "Spreiding: s_e = 1,25506 uit afbeelding 9. Ook √1,575 = 1,255 uit de ANOVA geeft dit getal.",
+        "Met de 1 onder de wortel: 29,74 ± 2,048 × 1,25506 × √(1 + 1/30) = 29,74 ± 2,61, dus [27,1; 32,4].",
         "Die formule hoort bij één nieuwe patiënt. Voor het gemiddelde vervalt de 1: 29,74 ± 2,048 × 1,25506 × √(1/30) = 29,74 ± 0,47.",
         "Grenzen van het gemiddelde: 29,27 en 30,21. Gewoon afgerond [29,3; 30,2], naar buiten afgerond [29,2; 30,3].",
-        "De normering van het tentamen geeft de punten aan [27,1; 32,4]. Deze oefenvraag volgt de letterlijke tekst, dus het gemiddelde."
+        "Op het tentamen leverde [27,1; 32,4] de punten op. Deze oefenvraag volgt de letterlijke tekst, dus het gemiddelde."
       ],
       "optionExplanations": [
         "Zonder 1/√n is de marge 2,048 × 1,25506 = 2,57. Dat is de spreiding van losse patiënten. Een gemiddelde is nauwkeuriger, dus de factor √(1/30) = 0,183 hoort erbij.",
@@ -14384,7 +14384,7 @@ window.SRAExamPractice = {
         "Maat: Adjusted R², want het aantal verklarende variabelen verschilt.",
         "Enkelvoudig, afbeelding 9: 0,967.",
         "Meervoudig, afbeelding 12: 0,988.",
-        "0,988 > 0,967, dus het meervoudige model is beter. De uitwerking noemt hier afbeelding 3 en 13, in de opgaven zijn dat 9 en 12.",
+        "0,988 > 0,967, dus het meervoudige model is beter.",
         "Dat past bij de Std. Error of the Estimate: die daalt van 1,25506 naar 0,75618."
       ],
       "optionExplanations": [
@@ -14453,7 +14453,7 @@ window.SRAExamPractice = {
       "sourceNote": "Beide p < 0,001 klopt. Afbeelding 15 in het model is afbeelding 14 in de opgaven.",
       "explanation": "Beide p < 0,001 klopt. Afbeelding 15 in het model is afbeelding 14 in de opgaven.",
       "steps": [
-        "Afbeelding 14, rij Leg power: Sig. < 0,001. De uitwerking noemt dit afbeelding 15.",
+        "Afbeelding 14, rij Leg power: Sig. < 0,001.",
         "Afbeelding 14, rij gender: Sig. < 0,001.",
         "Beide liggen onder α = 0,05, dus beide verklarende variabelen zijn significant."
       ],
@@ -14529,8 +14529,8 @@ window.SRAExamPractice = {
       "explanation": "Multicollineariteit gaat om sterke lineaire afhankelijkheid tussen voorspellers, niet om iedere statistisch significante onderlinge correlatie. VIF 1,000 < 10 levert hier geen probleemsignaal. De bron verwijst naar 15; bedoeld is afbeelding 14.",
       "steps": [
         "Analyse: multicollineariteit.",
-        "Wat ze doet: ze controleert of er significante correlatie is tussen de verklarende variabelen, hier Leg power en gender.",
-        "Afbeelding 14: VIF = 1,000 bij beide variabelen. De uitwerking noemt dit afbeelding 15.",
+        "Wat ze doet: ze controleert of de verklarende variabelen, hier Leg power en gender, sterk lineair samenhangen.",
+        "Afbeelding 14: VIF = 1,000 bij beide variabelen.",
         "1,000 < 10, dus er zijn geen problemen met multicollineariteit."
       ],
       "optionExplanations": [
@@ -14740,10 +14740,10 @@ window.SRAExamPractice = {
       "explanation": "[€ 1.790.000; € 1.820.000], volgens de afronding naar buiten in de cursus. Puntschatting 1.804.220; standaardfout 3.883,51229; ongeronde grenzen 1.796.550,06 en 1.811.889,94. De officiële grenzen 1.790.000 en 1.820.000 gebruiken bewust naar buiten afronden op 10.000, niet gewoon afronden naar het dichtstbijzijnde bedrag.",
       "steps": [
         "Gemiddelde werkelijke waarde: 97.185 / 165 = 589. Gemiddeld verschil: ē = 636 − 589 = 47.",
-        "Puntschatting: 1.980.000 − 3.740 × 47 = 1.980.000 − 175.780 = 1.804.220.",
+        "Puntschatting: 1.980.000 − 3.740 × 47 = 1.804.220.",
         "Som van de verschillen: Σe = 165 × 47 = 7.755.",
-        "Variantie: s²ₑ = (395.000 − 7.755² / 165) / 164 = (395.000 − 364.485) / 164 = 186,067, dus sₑ = 13,6406.",
-        "Standaardfout: 3.740 × 13,6406 / √165 × √((3.740 − 165) / (3.740 − 1)) = 3.740 × 1,061922 × 0,977823 = 3.883,51.",
+        "Variantie: s²ₑ = (395.000 − 7.755² / 165) / 164 = 186,067, dus sₑ = 13,6406.",
+        "Standaardfout: 3.740 × 13,6406 / √165 × √((3.740 − 165) / (3.740 − 1)) = 3.883,51.",
         "t-waarde: 95% tweezijdig met 164 vrijheidsgraden. De tabel heeft geen 164, dus neem t₀,₀₂₅[160] = 1,975.",
         "Foutmarge: 1,975 × 3.883,512 = 7.669,94.",
         "Grenzen: 1.804.220 − 7.669,94 = 1.796.550,06 en 1.804.220 + 7.669,94 = 1.811.889,94.",
@@ -15454,7 +15454,7 @@ window.SRAExamPractice = {
       "explanation": "Het antwoordmodel kiest Power (R² = 0,117) en accepteert ook Logarithmic. Dit bewijst geen betere voorspelling op de oorspronkelijke euroschaal. Het antwoordmodel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de keuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.",
       "steps": [
         "Afbeelding 4, kolom R Square: Power 0,117, Logarithmic 0,103, Exponential 0,077 en Linear 0,072.",
-        "De hoogste waarde is 0,117, dus de uitwerking kiest Power.",
+        "De hoogste waarde is 0,117, dus kies Power.",
         "Logarithmic verschilt maar 0,117 − 0,103 = 0,014 en wordt ook goed gerekend.",
         "Blijf voorzichtig: Power gebruikt een gelogaritmeerde y. Zijn R² is daardoor niet rechtstreeks te vergelijken met een R² op de euroschaal."
       ],
@@ -15741,8 +15741,8 @@ window.SRAExamPractice = {
       "steps": [
         "Afbeelding 5, kritieke grens: 0,008 + 3 × 0,018 = 0,062.",
         "CDmax = 0,145, groter dan 0,062. Er zijn dus potentiële invloedrijke punten.",
-        "Afbeelding 8: de uitwerking noemt de gevallen 1, 41, 57 en 112. Een niet benoemde piek rond geval 13 komt op het oog ook net boven 0,062.",
-        "Afbeelding 3: beoordeel of geval 57 herkenbaar is als invloedrijk punt. De uitwerking rekent wel en niet allebei goed.",
+        "Afbeelding 8: boven 0,062 uit komen de gevallen 1, 41, 57 en 112. Een piek rond geval 13 komt op het oog ook net boven de grens.",
+        "Afbeelding 3: beoordeel of geval 57 herkenbaar is als invloedrijk punt. Wel en niet worden allebei goed gerekend.",
         "Remedie: geval 57 wel of niet verwijderen. Onderzoek de oorzaak en geef je reden."
       ],
       "optionExplanations": [
@@ -15953,7 +15953,7 @@ window.SRAExamPractice = {
       "sourceNote": "Passende transformatie/modelaanpassing of gewogen regressie als remedies; daarna opnieuw diagnostiek.",
       "explanation": "Een passende transformatie/modelaanpassing en eventueel gewogen regressie; daarna opnieuw diagnostiek. Passende transformatie/modelaanpassing of gewogen regressie als remedies; daarna opnieuw diagnostiek.",
       "steps": [
-        "De uitwerking noemt vier remedies: een andere verklarende variabele, niet-lineaire regressie, meervoudige regressie en WLS.",
+        "Vier remedies: een andere verklarende variabele, niet-lineaire regressie, meervoudige regressie en WLS.",
         "WLS is gewogen regressie. Een transformatie hoort bij niet-lineaire regressie.",
         "Voor de volle 2 punten zijn twee remedies genoeg.",
         "Na een aanpassing bekijk je residuen en toetsen opnieuw. De onderzoeker doet dat later met meervoudige regressie in Afbeelding 14."
@@ -16028,7 +16028,7 @@ window.SRAExamPractice = {
       "steps": [
         "Uit vraag 13: geval 57 is de uitbijter in y en bleef gehandhaafd.",
         "De toets uit vraag 15 gaat over de residuen, dus een extreem residu telt daarin mee.",
-        "De uitwerking zegt ja: kijk of ten onrechte niet verwijderde uitbijters alsnog weg kunnen, want waarneming 57 kan de oorzaak zijn.",
+        "Het plan is goed: kijk of ten onrechte niet verwijderde uitbijters alsnog weg kunnen, want waarneming 57 kan de oorzaak zijn.",
         "Afbeelding 9 en 10 tonen 177 waarnemingen in plaats van 178. Er is dus al een waarneming weg, maar de uitvoer laat niet zien welke.",
         "Vind je een echte oorzaak, dan kan het geval weg. Vind je niets, dan blijft het staan."
       ],
@@ -16172,7 +16172,7 @@ window.SRAExamPractice = {
         "Beoordeling: 71,550 × 10 = 715,50.",
         "Vrouw, HBO en WO staan op 0 en leveren niets op.",
         "Som: 739,508 + 1.924,75 + 715,50 + 2.237,947 = 5.617,705.",
-        "Op hele euro’s afgerond is dat €5.618. De uitwerking noteert €5.617, dus daar zijn de decimalen weggelaten."
+        "Op hele euro’s afgerond is dat €5.618."
       ],
       "optionExplanations": [
         "Je vult de persoon in de regressievergelijking in, waarbij alleen de dummy Leidinggevende op 1 staat.",
@@ -16455,7 +16455,7 @@ window.SRAExamPractice = {
       "steps": [
         "n = 200, dus n > 50: gebruik Kolmogorov-Smirnov.",
         "Afbeelding 14: Sig. = 0,061, groter dan 0,05.",
-        "H₀ niet verwerpen. Volgens de uitwerking is er geen probleem meer met niet-normaliteit.",
+        "H₀ niet verwerpen: er is geen probleem meer met niet-normaliteit.",
         "In vraag 15 was Sig. = 0,001. Met het meervoudige model is de uitslag dus veranderd.",
         "Niet verwerpen bewijst geen normaliteit. Shapiro-Wilk staat met Sig. < 0,001 in dezelfde tabel, maar is hier niet de gekozen toets."
       ],
@@ -16527,7 +16527,7 @@ window.SRAExamPractice = {
       "steps": [
         "Afbeelding 11: R² = 0,647, dus 1 − 0,647 = 0,353 blijft onverklaard.",
         "Afbeelding 15: de residuen hebben een standaardafwijking van ongeveer €746,54 en lopen op tot ongeveer €3.000.",
-        "De uitwerking noemt één oplossing: meer verklarende variabelen vinden die de verschillen kunnen verklaren.",
+        "Oplossing: meer verklarende variabelen vinden die de verschillen kunnen verklaren.",
         "Zulke variabelen moeten inhoudelijk bij salaris passen. Daarna beoordeel je het nieuwe model ook op andere gegevens.",
         "Het gaat om verschillen tussen voorspelling en werkelijkheid. De werkelijke salarissen blijven gelijk."
       ],
@@ -16601,7 +16601,7 @@ window.SRAExamPractice = {
         "Puntschatting: 6.200 × 9.270 = 57.474.000.",
         "Variantie: s_w² = (10.905.600.000 − 1.112.400² / 120) / 119 = 4.988.672, dus s_w = 2.233,534.",
         "Standaardfout: 6.200 × 2.233,534 / √120 × √((6.200 − 120) / (6.200 − 1)) = 1.251.943.",
-        "t-waarde: 95% tweezijdig met 119 vrijheidsgraden. De uitwerking neemt tabelrij 110, met t₀,₀₂₅[110] = 1,982.",
+        "t-waarde: 95% tweezijdig met 119 vrijheidsgraden. De tabel heeft geen 119, dus neem t₀,₀₂₅[110] = 1,982.",
         "Grenzen: 57.474.000 − 1,982 × 1.251.943 = 54.992.649 en 57.474.000 + 1,982 × 1.251.943 = 59.955.351.",
         "Naar buiten afgerond op € 1.000: [€ 54.992.000; € 59.956.000]."
       ],
@@ -17231,7 +17231,7 @@ window.SRAExamPractice = {
         "Age heeft naar verwachting een negatieve invloed. H₁: β < 0, dus H₀: β ≥ 0.",
         "Hits heeft naar verwachting een positieve invloed. H₁: β > 0, dus H₀: β ≤ 0.",
         "β is de richtingscoëfficiënt van het populatiemodel: de verandering in potential als de variabele één eenheid stijgt.",
-        "De uitwerking schrijft beide keren β₁. In een meervoudig model zijn het twee aparte parameters."
+        "In een meervoudig model zijn het twee aparte parameters, één voor age en één voor hits."
       ],
       "optionExplanations": [
         "Hier zijn de richtingen omgedraaid. H₁ zegt nu dat age positief werkt en hits negatief, en dat is het tegendeel van het uitgangspunt.",
@@ -17579,9 +17579,9 @@ window.SRAExamPractice = {
       "explanation": "Verwijder 24 en 43 om de gemelde manipulatie. Bij 6 en 20 is niets bekend: handhaven. MD-grens 13,911, maximum 24,878: gevallen 11, 24, 43. Bij n ≤ 100 geldt z ± 2: gevallen 6 en 20. Cook-grens 0,054, maximum 0,129: geval 11. Gevallen 24 en 43 gaan weg wegens de gemelde manipulatie, niet om het signaal. Het model verwijdert ook 11; een signaal alleen bewijst geen fout, dus onderzoek en motiveer dit.",
       "steps": [
         "Gesignaleerde uitbijters: 11, 24 en 43 in x, en 6 en 20 in y.",
-        "Waarneming 24 en 43: de uitwerking gaat uit van manipulatie, dus verwijderen.",
+        "Waarneming 24 en 43: de casus meldt geruchten over manipulatie, dus verwijderen.",
         "Waarneming 6, 11 en 20: hierover is niets bekend, dus als uitbijter handhaven.",
-        "De uitwerking rekent handmatig corrigeren ook goed als je ervan uitgaat dat de manipulatie vaker zal optreden.",
+        "Handmatig corrigeren wordt ook goed gerekend als je ervan uitgaat dat de manipulatie vaker zal optreden.",
         "Waarneming 11 komt daarna nog terug bij de invloedrijke punten."
       ],
       "optionExplanations": [
@@ -17654,7 +17654,7 @@ window.SRAExamPractice = {
         "Maximum: 0,129 > 0,054, dus er zijn potentiële invloedrijke punten.",
         "Afbeelding 10: alleen waarneming 11 komt boven 0,054.",
         "Afbeelding 2 en 3: als 24 en 43 weg zijn, is waarneming 11 duidelijk als invloedrijk punt te herkennen, met age 20 en ongeveer 300 hits.",
-        "Remedie volgens de uitwerking: waarneming 11 verwijderen."
+        "Remedie: waarneming 11 verwijderen."
       ],
       "optionExplanations": [
         "De grens klopt, maar 24 en 43 zijn pieken in Afbeelding 9. In Afbeelding 10 steekt alleen waarneming 11 boven 0,054 uit.",
@@ -18008,7 +18008,7 @@ window.SRAExamPractice = {
       "steps": [
         "Afbeelding 15: constante 91,008, age −0,142 en hits 0,027.",
         "Vergelijking: potential = 91,008 − 0,142 age + 0,027 hits.",
-        "Invullen: 91,008 − 0,142 × 27 + 0,027 × 126 = 91,008 − 3,834 + 3,402 = 90,576, afgerond 90,6.",
+        "Invullen: 91,008 − 0,142 × 27 + 0,027 × 126 = 90,576, afgerond 90,6.",
         "Residu: 92 − 90,6 = 1,4."
       ],
       "optionExplanations": [
@@ -18296,9 +18296,9 @@ window.SRAExamPractice = {
       "explanation": "90,4: 81,361 + 1,864 × ln(126). 81,361 + 1,864 × ln(126) = 90,376, afgerond 90,4. Age speelt in dit enkelvoudige model geen rol.",
       "steps": [
         "Afbeelding 18: potential = 81,361 + 1,864 × ln(hits).",
-        "ln(126) = 4,836.",
-        "1,864 × 4,836 = 9,014.",
-        "81,361 + 9,014 = 90,375, afgerond 90,4."
+        "Logaritme: ln(126) = 4,836.",
+        "Product: 1,864 × 4,836 = 9,014.",
+        "Uitkomst: 81,361 + 9,014 = 90,375, afgerond 90,4."
       ],
       "optionExplanations": [
         "Dan vergeet je de transformatie: 81,361 + 1,864 × 126 = 316,2. Dat kan niet, want het hoogste potential in Afbeelding 2 is 95.",
@@ -18367,7 +18367,7 @@ window.SRAExamPractice = {
       "explanation": "Kritieke grens t₀,₁₀[90] = 1,291. t = 7,425 ligt in het kritieke gebied: H₀ verwerpen, significant stijgend verband, α-risico is relevant. Tabelrij 90 geeft t 1,291. t 7,425 ligt in het kritieke gebied, dus H₀ verwerpen. Significant positief verband; het α-risico is relevant.",
       "steps": [
         "H₀: β ≤ 0 tegen H₁: β > 0, dus een rechtszijdige toets.",
-        "Vrijheidsgraden: 92. De uitwerking neemt tabelrij 90: t₀,₁₀[90] = 1,291.",
+        "Vrijheidsgraden: 92. De tabel heeft geen 92, dus neem t₀,₁₀[90] = 1,291.",
         "t = 7,425 > 1,291, dus t ligt in het kritieke gebied.",
         "H₀ verwerpen: er is een significant stijgend verband tussen hits en potential.",
         "H₀ is verworpen, dus het α-risico is relevant."
@@ -18443,8 +18443,8 @@ window.SRAExamPractice = {
       "sourceNote": "Ŵ_v 44.255.909; s_e 818,8745; standaardfout 444.664,30; t 1,984 geeft naar buiten [43.373.000; 45.139.000]. Het model verwijst bij de grenzen naar Formule 3; voor de verschilschatter hoort dat Formule 8 te zijn.",
       "explanation": "[€ 43.373.000; € 45.139.000]: Ŵ_v = € 44.255.909, standaardfout € 444.664,30 en t = 1,984. Ŵ_v 44.255.909; s_e 818,8745; standaardfout 444.664,30; t 1,984 geeft naar buiten [43.373.000; 45.139.000]. Het model verwijst bij de grenzen naar Formule 3; voor de verschilschatter hoort dat Formule 8 te zijn.",
       "steps": [
-        "Puntschatting: Ŵ_v = B − N × ē = 46.880.000 − 5.750 × (50.200 / 110) = 46.880.000 − 2.624.091 = 44.255.909.",
-        "Spreiding van de verschillen: s_e² = (96.000.000 − 50.200² / 110) / 109 = 670.555,46, dus s_e = 818,8745. Het antwoordmodel schrijft 670.555,50, maar s_e blijft gelijk.",
+        "Puntschatting: Ŵ_v = B − N × ē = 46.880.000 − 5.750 × (50.200 / 110) = 44.255.909.",
+        "Spreiding van de verschillen: s_e² = (96.000.000 − 50.200² / 110) / 109 = 670.555,46, afgerond 670.555,50, dus s_e = 818,8745.",
         "Standaardfout: s_v = 5.750 × 818,8745 / √110 × √((5.750 − 110) / (5.750 − 1)) = 444.664,30.",
         "t-waarde: tweezijdig 95% met df = 109. De tabel heeft geen 109, dus neem t₀,₀₂₅[100] = 1,984.",
         "Foutmarge: 1,984 × 444.664,30 = 882.214.",
@@ -18661,8 +18661,8 @@ window.SRAExamPractice = {
         "Helling: b₁ = 0,98 × 3.000 / 4.000 = 0,735.",
         "Startwaarde: N × w̄ = 5.750 × 7.543 = 43.372.250.",
         "Correctie: B − N × b̄ = 46.880.000 − 5.750 × 8.000 = 880.000. Keer 0,735 geeft dat +646.800.",
-        "Puntschatting: 43.372.250 + 646.800 = 44.019.050. Het antwoordmodel drukt hier + 8.000 en − 646.800 af. Dat zijn drukfouten, de uitkomst klopt wel.",
-        "Standaardfout: s_R = 5.750 × 3.000 / √110 × √((5.750 − 110) / (5.750 − 1)) × √(1 − 0,98²) = 324.178,2. In de ingevulde regel van het model ontbreekt de laatste factor, de uitkomst bevat hem wel.",
+        "Puntschatting: 43.372.250 + 646.800 = 44.019.050.",
+        "Standaardfout: s_R = 5.750 × 3.000 / √110 × √((5.750 − 110) / (5.750 − 1)) × √(1 − 0,98²) = 324.178,2.",
         "Foutmarge: dezelfde t als in vraag 1.1, dus 1,984 × 324.178,2 = 643.170.",
         "Grenzen: 44.019.050 − 643.170 = 43.375.880 en 44.019.050 + 643.170 = 44.662.220. Naar buiten afgerond: [€43.375.000; €44.663.000]."
       ],
@@ -18798,7 +18798,7 @@ window.SRAExamPractice = {
       "sourceNote": "Neyman geeft strata met veel spreiding meer waarnemingen. Bij grote verschillen in s daalt daardoor de totale onnauwkeurigheid ten opzichte van evenredig.",
       "explanation": "Neyman geeft strata met veel spreiding extra waarnemingen, waardoor de totale onnauwkeurigheid kleiner wordt dan bij evenredige allocatie. Neyman geeft strata met veel spreiding meer waarnemingen. Bij grote verschillen in s daalt daardoor de totale onnauwkeurigheid ten opzichte van evenredig.",
       "steps": [
-        "Evenredig zou stratum 3 in vraag 1.5 afgerond 22 artikelen krijgen. Neyman geeft er 53, omdat s = 510 veel hoger is dan 200 en 150.",
+        "Evenredig zou stratum 3 in vraag 1.5 krijgen: 210 / 2.120 × 220 = 21,79, afgerond 22 artikelen. Neyman geeft er 53, omdat s = 510 veel hoger is dan 200 en 150.",
         "Die extra waarnemingen komen uit de strata met minder spreiding: stratum 1 gaat van 106 naar 101 en stratum 2 van 92 naar 66.",
         "De steekproef blijft 220, maar de waarnemingen staan nu waar de meeste onzekerheid zit.",
         "De totale onnauwkeurigheid wordt daardoor kleiner dan bij evenredige allocatie."
@@ -18937,7 +18937,7 @@ window.SRAExamPractice = {
         "Stratum 3: √((30 − 30) / (30 − 1)) = 0, dus geen bijdrage.",
         "Totaal: s²_tot = 53.075,37² + 32.771,71² = 3.890.979.877, dus s_tot = 62.377,72.",
         "t-waarde: eenzijdig 99% met df = 90 geeft t₀,₀₁[90] = 2,368.",
-        "Ondergrens: 4.517.780 − 2,368 × 62.377,72 = 4.517.780 − 147.710 = 4.370.070. Omlaag afgerond: €4.370.000."
+        "Ondergrens: 4.517.780 − 2,368 × 62.377,72 = 4.370.070. Omlaag afgerond: €4.370.000."
       ],
       "optionExplanations": [
         "Met 2,326 komt de grens op 4.372.689. Het effectieve aantal vrijheidsgraden is gegeven, dus je gebruikt t met df = 90 en niet z.",
@@ -19142,7 +19142,7 @@ window.SRAExamPractice = {
         "De vraag noemt geen richting. De eenzijdige toets volgt uit de verwachting dat een ouder huis goedkoper is.",
         "H₁ krijgt de verwachte richting: β₁ < 0.",
         "H₀ krijgt het tegendeel met de gelijkheid: β₁ ≥ 0.",
-        "Betekenis: als de leeftijd stijgt, hoort daar een lagere prijs bij. Het antwoordmodel staat ρ ook toe in plaats van β₁."
+        "Betekenis: als de leeftijd stijgt, hoort daar een lagere prijs bij. Je mag ook ρ gebruiken in plaats van β₁."
       ],
       "optionExplanations": [
         "De verwachte richting staat in H₁ met een strikt teken, en de gelijkheid hoort in H₀.",
@@ -19359,7 +19359,7 @@ window.SRAExamPractice = {
         "Coëfficiënten uit Afbeelding 2.4, regel Logarithmic: −667.785,451 en 137.146,104.",
         "Logaritme: ln(5.000) = 8,517193.",
         "Product: 137.146,104 × ln(5.000) = 1.168.099,86.",
-        "Uitkomst: −667.785,451 + 1.168.099,86 = 500.314,41. Het antwoordmodel geeft $ 500.313,50. Dat verschil van minder dan een dollar verandert de schatting niet."
+        "Uitkomst: −667.785,451 + 1.168.099,86 = 500.314,41."
       ],
       "optionExplanations": [
         "Dit is 295.800,504 + 36,678 × 5.000 uit de regel Linear. In vraag 2.5 is juist het logaritmische model gekozen.",
@@ -19426,7 +19426,7 @@ window.SRAExamPractice = {
       "sourceNote": "MD-grens 6,228: gevallen 20, 57, 123. Bij n > 100 geldt z ± 3: geen y-uitbijters. Cook-grens 0,068: geval 128. Het model verwijst drie keer naar Afbeelding 3.2, dat is Afbeelding 4.1. Het label 128 staat los onder de grafiek in Afbeelding 2.2, wat het opzoeken lastig maakt; het model accepteert wel of niet verwijderen.",
       "explanation": "MD-grens 0,993 + 3 × 1,745 = 6,228. Gevallen 20, 57 en 123 zijn potentiële uitbijters in x; zonder bekende oorzaak handhaven. MD-grens 6,228: gevallen 20, 57, 123. Bij n > 100 geldt z ± 3: geen y-uitbijters. Cook-grens 0,068: geval 128. Het model verwijst drie keer naar Afbeelding 3.2, dat is Afbeelding 4.1. Het label 128 staat los onder de grafiek in Afbeelding 2.2, wat het opzoeken lastig maakt; het model accepteert wel of niet verwijderen.",
       "steps": [
-        "Grens: 0,993 + 3 × 1,745 = 6,228. De getallen staan in Afbeelding 4.1. Het antwoordmodel noemt dit Afbeelding 3.2, maar dat nummer bestaat niet.",
+        "Grens: 0,993 + 3 × 1,745 = 6,228. De getallen staan in Afbeelding 4.1.",
         "Afbeelding 4.2: de pieken bij 20 (ongeveer 8,7), 57 (ongeveer 6,6) en 123 (het maximum 13,952) liggen boven 6,228.",
         "De overige pieken blijven eronder. De hoogste daarvan ligt rond 5,2.",
         "Remedie: er is niets bekend over fouten of bijzondere omstandigheden, dus 20, 57 en 123 blijven in de analyse."
@@ -19570,7 +19570,7 @@ window.SRAExamPractice = {
         "Grens: 0,008 + 3 × 0,020 = 0,068.",
         "Afbeelding 4.4: geval 128 piekt op 0,210, het maximum uit Afbeelding 4.1. De andere pieken blijven rond 0,05 of lager.",
         "Beoordeling: zoek geval 128 op in Afbeelding 2.2. Het label staat daar los onder de grafiek, dus de stip aanwijzen is lastig.",
-        "Remedie: het antwoordmodel accepteert wel of niet verwijderen. Koppel je keuze aan de vraag of het punt in Afbeelding 2.2 te onderscheiden is."
+        "Remedie: wel of niet verwijderen wordt allebei goed gerekend. Koppel je keuze aan de vraag of het punt in Afbeelding 2.2 te onderscheiden is."
       ],
       "optionExplanations": [
         "De grens klopt, maar 0,210 ligt ver boven 0,068. Er is dus wel een invloedrijk punt.",
@@ -19782,7 +19782,7 @@ window.SRAExamPractice = {
         "Voorspelling: ŷ₀ = 112.147,991 + 162,089 × 3.500 = 679.459,5.",
         "Standaardfout: s_e = √12.676.976.764 = 112.592,1.",
         "t-waarde: tweezijdig 95% met df = 140 geeft t₀,₀₂₅[140] = 1,977.",
-        "Laatste term onder de wortel: (3.500 − 1.943,27)² / (141 × 804,954²) = 2.423.408 / 91.361.083 = 0,026526.",
+        "Laatste term onder de wortel: (3.500 − 1.943,27)² / (141 × 804,954²) = 0,026526.",
         "Wortel: √(1 + 1/142 + 0,026526) = 1,0166454.",
         "Marge: 1,977 × 112.592,1 × 1,0166454 = 226.299,8.",
         "Interval: 679.459,5 ± 226.299,8 = [453.159,7; 905.759,3]."
@@ -20137,7 +20137,7 @@ window.SRAExamPractice = {
         "Onverklaard deel: 1 − 0,674 = 0,326, dus 32,6% van de variatie in price.",
         "Voorstel 1: voeg meer verklarende variabelen toe. Dat levert 2 punten op.",
         "Voorstel 2: breid de steekproef uit. Voorstel 3: onderzoek de oorzaken van de uitbijters in x. Eén van deze twee levert 1 punt op.",
-        "Verwijder een uitbijter alleen bij een aangetoonde oorzaak. Het antwoordmodel spreekt van twee uitbijters, maar vraag 2.7 vindt er drie: 20, 57 en 123."
+        "Verwijder een uitbijter alleen bij een aangetoonde oorzaak. Vraag 2.7 vindt er drie in x: 20, 57 en 123."
       ],
       "optionExplanations": [
         "Bijna elk huis heeft een residu ongelijk aan nul, dus dan blijft er vrijwel niets over. Residuen horen gewoon bij een regressiemodel.",

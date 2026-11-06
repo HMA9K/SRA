@@ -98,7 +98,7 @@ def enhance(lessons,sources):
         'Gebruik de nieuwe groepsomvangen 3.196, 2.329, 1.587 en 547 pas daarna voor de allocatie van 300 controles. De 54 topstratumposten komen daar apart bij.'])
     boundary+='<p class="note">De twee methoden verdelen verschillende grootheden en hoeven dus niet dezelfde grenzen op te leveren.</p>'
     boundary_refs=[dict(source='opgaven',page=7,locator='H8 opgave 8a/b, PDF 7'),dict(source='uitwerkingen',page=10,locator='H8 opgave 8a/b, PDF 10–11'),bookref('boek-h8c',222)]
-    add(L['stratificatie'],'Stratagrenzen bepalen vanuit de cursusopgave',boundary,refs=boundary_refs)
+    add(L['stratificatie'],'Stratagrenzen bepalen vanuit een klassentabel',boundary,refs=boundary_refs)
     L['stratificatie']['refs'].extend(boundary_refs)
 
     extension='<p>De totale variantie is de som van de variantiebijdragen van de strata. Bij een gewenste marge E hoort maximaal (E/t)² totale variantie. Houd voor een planningsberekening de gegeven t-waarde en geschatte spreidingen vast; na de aanvullende controle beoordeel je de nieuwe uitkomsten opnieuw.</p><h3>Voorbeeld</h3>'+steps([

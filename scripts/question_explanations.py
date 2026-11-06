@@ -102,7 +102,7 @@ basic('onzekerheid-2', [
 ])
 basic('onzekerheid-3', [
     'De berekende vrijheidsgraden zijn 164, maar die rij is niet beschikbaar in de opgegeven tabel.',
-    'Volgens de tabelafspraak in het SRA-onderwijsprogramma neem je de naast lagere beschikbare waarde.',
+    'Bij een ontbrekende rij neem je de naast lagere beschikbare waarde.',
     'Van 160 en 170 is 160 de naast lagere rij. Dit is een tabelkeuze; de berekende df blijven 164.'
 ], 'Een df ontbreekt in de tabel? Pas de afspraak voor de naast lagere tabelrij toe.',
     'Ga niet afronden naar de dichtstbijzijnde rij of zelf interpoleren als de cursus een vaste tabelafspraak geeft.', [
@@ -151,7 +151,7 @@ basic('verschil-1', [
     '255 telt boekwaarde en werkelijke waarde op. Een controlefout is juist het verschil tussen beide.'
 ])
 basic('verschil-2', [
-    'De les verwijst voor deze toepassing naar de voorwaarde van minstens 30 aangetroffen fouten.',
+    'Voor deze toepassing geldt de voorwaarde van minstens 30 aangetroffen fouten.',
     'Er zijn 200 posten gecontroleerd, maar slechts 12 daarvan bevatten een fout.',
     '12 is kleiner dan 30. De genoemde voorwaarde is dus niet vervuld, ondanks de grotere steekproefomvang.'
 ], 'Let op de eenheid achter een minimum: aantal fouten is iets anders dan aantal controles.',
@@ -192,7 +192,7 @@ basic('quotient-2', [
 ])
 basic('quotient-3', [
     'De goedratio geeft welk deel van de boekwaarde als werkelijke waarde wordt geschat.',
-    'Ŵ_Q = qB = 0,96 × 1.000.000 = 960.000.',
+    'Vermenigvuldig met B: Ŵ_Q = qB = 0,96 × 1.000.000 = 960.000.',
     'De bijbehorende geschatte totale overwaardering is B − Ŵ_Q = 40.000, maar dat is niet het gevraagde werkelijke totaal.'
 ], 'Lees of de vraag het werkelijke bedrag qB of de fout (1 − q)B verlangt.',
     'Een juist berekend foutbedrag beantwoordt geen vraag naar de werkelijke waarde.', [
@@ -211,7 +211,7 @@ basic('regressieschatter-1', [
     'b₁ is alleen de helling. Voor de correctie moet je die vermenigvuldigen met B − Nb̄, en dat verschil is nul.'
 ])
 basic('regressieschatter-2', [
-    'Volgens de behandelde formule vermenigvuldig je s_MPU met √(1 − R²).',
+    'Vermenigvuldig s_MPU met √(1 − R²).',
     'Bij R = 0,8 is R² = 0,64 en 1 − R² = 0,36.',
     'Neem de wortel: √0,36 = 0,6. De nieuwe standaardfout is dus 60% van s_MPU.'
 ], 'Een correctie op een standaardfout bevat hier een wortel uit de resterende variantiefractie.',
@@ -221,7 +221,7 @@ basic('regressieschatter-2', [
     '0,6 klopt: √(1 − 0,8²) = √0,36 = 0,6.'
 ])
 basic('regressieschatter-3', [
-    'Deze regressieschatter staat in het onderdeel schatten van totale populatiewaarden.',
+    'Deze regressieschatter hoort bij het schatten van totale populatiewaarden.',
     'Het lineaire verband tussen boekwaarde b en werkelijke waarde w helpt het populatietotaal W te schatten.',
     'Dat is een ander doel dan een regressielijn gebruiken om y voor één nieuwe persoon te voorspellen.'
 ], 'Let op het doel en de hoofdletter W: een populatietotaal, met B als hulpinformatie.',
