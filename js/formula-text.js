@@ -74,11 +74,15 @@
     }
     function factor() {
       const value = primary();
+      const index = token => /\d/.test(SUB_VALUE[token]) ? `<mn>${SUB_VALUE[token]}</mn>` : `<mi>${SUB_VALUE[token]}</mi>`;
       let lower = '', upper = '';
       while (peek() !== undefined) {
         const token = peek();
         if (token === '²' || token === '³') upper = `<mn>${token === '²' ? 2 : 3}</mn>`;
-        else if (SUB_VALUE[token]) lower = /\d/.test(SUB_VALUE[token]) ? `<mn>${SUB_VALUE[token]}</mn>` : `<mi>${SUB_VALUE[token]}</mi>`;
+        else if (token === ',' && lower && SUB_VALUE[tokens[position + 1]]) {
+          take();
+          lower = `<mrow>${lower}<mo>,</mo>${index(peek())}</mrow>`;
+        } else if (SUB_VALUE[token]) lower = lower ? `<mrow>${lower}${index(token)}</mrow>` : index(token);
         else if (token[0] === '_' && token.length > 1) {
           const index = token.slice(1).replace(/^\((.*)\)$/, '$1');
           lower = index.length === 1 ? `<mi>${index}</mi>` : `<mtext>${index}</mtext>`;
@@ -147,7 +151,7 @@
     for (const mo of container.querySelectorAll('math mo:not(.math-operator)')) {
       if (!/^[+−×÷±=]$/.test(mo.textContent.trim())) continue;
       const previous = mo.previousElementSibling;
-      if (previous && !(previous.localName === 'mo' && !/^[)\]]$/.test(previous.textContent.trim()))) mo.classList.add('math-operator');
+      if (previous && !(previous.localName === 'mo' && !/^[)\]]$/.test(previous.textContent.trim()))) mo.classList.add('math-operator', ...(mo.textContent.trim() === '=' ? ['math-equals'] : []));
     }
     const walker = (container.ownerDocument || root.document).createTreeWalker(container, 4), nodes = [];
     while (walker.nextNode()) {
@@ -163,7 +167,7 @@
         const left = before ? VALUE_END.test(before) : neighbour(node.previousSibling);
         const right = after ? VALUE_START.test(after) : neighbour(node.nextSibling);
         if (match[0] !== '±' && (!left || !right)) continue;
-        parts.push(value.slice(offset, match.index), element(`<span class="math-operator">${match[0]}</span>`));
+        parts.push(value.slice(offset, match.index), element(`<span class="math-operator${match[0] === '=' ? ' math-equals' : ''}">${match[0]}</span>`));
         offset = match.index + 1;
       }
       if (offset) node.replaceWith(...[...parts, value.slice(offset)].filter(Boolean));

@@ -6709,10 +6709,10 @@ window.SRAMCData = {
           ],
           "steps": [
             "Gebruik s_q = 7,60 als resterende spreiding, niet de dimensieloze goedratio q.",
-            "γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.",
+            "γ = E²/(t² × N × s_q²) = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.",
             "n = 1.000/(1 + γ) ≈ 187,679; rond naar boven af op 188."
           ],
-          "explanation": "Gebruik s_q = 7,60 als resterende spreiding, niet de dimensieloze goedratio q. γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825. n = 1.000/(1 + γ) ≈ 187,679; rond naar boven af op 188.",
+          "explanation": "Gebruik s_q = 7,60 als resterende spreiding, niet de dimensieloze goedratio q. γ = E²/(t² × N × s_q²) = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825. n = 1.000/(1 + γ) ≈ 187,679; rond naar boven af op 188.",
           "pattern": "Herken: “Quotiëntschatter” en s_q in de gegeven γ-formule. → Betekenis: De planning gebruikt resterende spreiding s_q, niet de dimensieloze goedratio q. → Aanpak: Vul s_q² in γ in, bereken N/(1 + γ) en rond de uitkomst naar boven af. → Gevraagd antwoord: Een minimale totale n; geen ratio of aanvullend aantal.",
           "trap": "Vul niet de goedratio q in waar de spreiding s_q moet staan.",
           "refs": [

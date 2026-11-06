@@ -35,4 +35,6 @@ for(const exam of window.SRAExamData.exams)for(const field of ['pageText','answe
  if(line.includes('√'))assert.ok(!(split(line)||[line]).some(part=>typeof part==='string'&&part.includes('√')),`${exam.id} ${field} p. ${index+1}: ${line}`);
 }));
 assert.ok(split('γ = 5.000² / [1,974² × 2.130] ≈ 3,1').some(part=>part.math?.includes('<mfrac>')),'Noemer tussen vierkante haken wordt een breuk');
+const index=toMathML('t = (bⱼ − βⱼ,₀)/s_bⱼ');
+assert.ok(index?.includes('<mfrac>')&&index.includes('<mo>,</mo>')&&index.includes('<mi>b</mi><mi>j</mi>'),'Dubbele index blijft in de breuk staan');
 console.log('OK: wortels en samengestelde breuken worden formules; gewone tekst blijft tekst.');
