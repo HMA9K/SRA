@@ -411,7 +411,7 @@ def _guides(lesson: dict) -> list[dict]:
                  'Beoordeel de uitkomst naast inhoud, modelvoorwaarden en validatie.'],
                 _own_example('een correctie voor twee verklarende variabelen',
                     'Stel n = 30, k = 2 en R² = 0,80.',
-                    'Correctie = k × (1 − R²)/(n − k − 1) = 2 × (1 − 0,80)/(30 − 2 − 1) = 2 × 0,20/27 = 0,4/27 ≈ 0,01481.',
+                    'Correctie = k × (1 − R²)/(n − k − 1) = 2 × (1 − 0,80)/(30 − 2 − 1) = 0,4/27 ≈ 0,01481.',
                     'Adjusted R² = R² − correctie = 0,80 − 0,01481 ≈ 0,78519. Dit ligt hier onder de gewone R² van 0,80.'),
                 'Een hoge adjusted R² vervangt geen controle van aannamen en maakt een individueel effect nog niet significant.'
             ),
@@ -429,7 +429,7 @@ def _guides(lesson: dict) -> list[dict]:
                  'Bij verdubbeling van x neemt de voorspelde y toe met b₁ × ln(2), als deze modelvorm passend blijft.'],
                 _own_example('dezelfde getallen op de logaritmische schaal van x',
                     'Stel ŷ = 1 + 0,5ln(x) en x = 16.',
-                    'Invullen: ln(16) ≈ 2,772589, dus ŷ = 1 + 0,5 × 2,772589 = 1 + 1,386294 ≈ 2,386294.',
+                    'Invullen: ln(16) ≈ 2,772589, dus ŷ = 1 + 0,5 × 2,772589 ≈ 2,386294.',
                     'Deze 2,386294 is al de voorspelde y, geen voorspelde ln(y).'),
                 'Kijk welke variabele is getransformeerd. Alleen het voorkomen van ln in de vergelijking betekent niet dat je de hele uitkomst moet terugtransformeren.'
             ),
