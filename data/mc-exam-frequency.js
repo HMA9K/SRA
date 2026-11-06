@@ -17,11 +17,11 @@ window.SRAMCExamFrequency = {
   "sources": [
     {
       "path": "data/exam-analysis.json",
-      "sha256": "62b586049cee7d47e67f829887bfc75addc41d1734dc556e0c81ae2a31be6503"
+      "sha256": "4bba1142858b5294897254dba9d1a98471dd41bd854fc47fbad14426e8e75eea"
     },
     {
       "path": "data/exams.js",
-      "sha256": "ffcc0feec8773b5fea75d10e8055180ae448b8ede0f5bd977e8e8cba1fd0839a"
+      "sha256": "f1ea60e70e7f4f29b0fb51a35f3fbcabc8232e554a8e4004d9edeeffeb022ccb"
     },
     {
       "path": "data/mc-exam-frequency-map.json",
@@ -1114,12 +1114,24 @@ window.SRAMCExamFrequency = {
           "label": "01-11-2021",
           "date": "01-11-2021",
           "questions": [
-            2
+            2,
+            4
           ],
           "evidence": [
             {
               "question": 2,
               "displayNumber": "2",
+              "page": 3,
+              "source": "20211101_Opgaven SRA.pdf",
+              "href": "bronnen/original-pdfs/20211101/opgaven.pdf#page=3",
+              "image": "bronnen/tentamens/20211101/opgaven-03.jpg",
+              "reasons": [
+                "Benodigde steekproefomvang"
+              ]
+            },
+            {
+              "question": 4,
+              "displayNumber": "4",
               "page": 3,
               "source": "20211101_Opgaven SRA.pdf",
               "href": "bronnen/original-pdfs/20211101/opgaven.pdf#page=3",
@@ -1854,10 +1866,22 @@ window.SRAMCExamFrequency = {
           "label": "01-11-2021",
           "date": "01-11-2021",
           "questions": [
+            9,
             15,
             16
           ],
           "evidence": [
+            {
+              "question": 9,
+              "displayNumber": "9",
+              "page": 5,
+              "source": "20211101_Opgaven SRA.pdf",
+              "href": "bronnen/original-pdfs/20211101/opgaven.pdf#page=5",
+              "image": "bronnen/tentamens/20211101/opgaven-05.jpg",
+              "reasons": [
+                "Verklaarde variatie / modelvergelijking"
+              ]
+            },
             {
               "question": 15,
               "displayNumber": "15",
@@ -1881,7 +1905,7 @@ window.SRAMCExamFrequency = {
               ]
             }
           ],
-          "href": "bronnen/original-pdfs/20211101/opgaven.pdf#page=11"
+          "href": "bronnen/original-pdfs/20211101/opgaven.pdf#page=5"
         },
         {
           "id": "20220316",
@@ -2256,10 +2280,22 @@ window.SRAMCExamFrequency = {
           "label": "23-03-2026",
           "date": "23-03-2026",
           "questions": [
+            10,
             13,
             18
           ],
           "evidence": [
+            {
+              "question": 10,
+              "displayNumber": "2.2",
+              "page": 3,
+              "source": "SRA 20260323 Vragen en antwoorden.pdf",
+              "href": "bronnen/original-pdfs/20260323/opgaven.pdf#page=3",
+              "image": "bronnen/tentamens/20260323/opgaven-03.jpg",
+              "reasons": [
+                "Verklaarde variatie / modelvergelijking"
+              ]
+            },
             {
               "question": 13,
               "displayNumber": "2.5",
@@ -2283,7 +2319,7 @@ window.SRAMCExamFrequency = {
               ]
             }
           ],
-          "href": "bronnen/original-pdfs/20260323/opgaven.pdf#page=4"
+          "href": "bronnen/original-pdfs/20260323/opgaven.pdf#page=3"
         }
       ],
       "note": "Verklaarde variatie, ANOVA of vergelijking van modelkwaliteit."
@@ -2355,9 +2391,21 @@ window.SRAMCExamFrequency = {
           "label": "01-11-2021",
           "date": "01-11-2021",
           "questions": [
+            14,
             19
           ],
           "evidence": [
+            {
+              "question": 14,
+              "displayNumber": "14",
+              "page": 10,
+              "source": "20211101_Opgaven SRA.pdf",
+              "href": "bronnen/original-pdfs/20211101/opgaven.pdf#page=10",
+              "image": "bronnen/tentamens/20211101/opgaven-10.jpg",
+              "reasons": [
+                "Hypothesen / significantie"
+              ]
+            },
             {
               "question": 19,
               "displayNumber": "19",
@@ -2370,7 +2418,7 @@ window.SRAMCExamFrequency = {
               ]
             }
           ],
-          "href": "bronnen/original-pdfs/20211101/opgaven.pdf#page=13"
+          "href": "bronnen/original-pdfs/20211101/opgaven.pdf#page=10"
         },
         {
           "id": "20220316",
@@ -2378,12 +2426,24 @@ window.SRAMCExamFrequency = {
           "date": "16-03-2022",
           "questions": [
             9,
+            10,
             18
           ],
           "evidence": [
             {
               "question": 9,
               "displayNumber": "9",
+              "page": 5,
+              "source": "20220316_Opgaven SRA.pdf",
+              "href": "bronnen/original-pdfs/20220316/opgaven.pdf#page=5",
+              "image": "bronnen/tentamens/20220316/opgaven-05.jpg",
+              "reasons": [
+                "Hypothesen / significantie"
+              ]
+            },
+            {
+              "question": 10,
+              "displayNumber": "10",
               "page": 5,
               "source": "20220316_Opgaven SRA.pdf",
               "href": "bronnen/original-pdfs/20220316/opgaven.pdf#page=5",
@@ -2412,6 +2472,7 @@ window.SRAMCExamFrequency = {
           "date": "31-10-2022",
           "questions": [
             8,
+            9,
             10,
             16
           ],
@@ -2419,6 +2480,17 @@ window.SRAMCExamFrequency = {
             {
               "question": 8,
               "displayNumber": "8",
+              "page": 5,
+              "source": "20221031_SRA_Opgaven.pdf",
+              "href": "bronnen/original-pdfs/20221031/opgaven.pdf#page=5",
+              "image": "bronnen/tentamens/20221031/opgaven-05.jpg",
+              "reasons": [
+                "Hypothesen / significantie"
+              ]
+            },
+            {
+              "question": 9,
+              "displayNumber": "9",
               "page": 5,
               "source": "20221031_SRA_Opgaven.pdf",
               "href": "bronnen/original-pdfs/20221031/opgaven.pdf#page=5",
@@ -2457,10 +2529,23 @@ window.SRAMCExamFrequency = {
           "label": "15-03-2023",
           "date": "15-03-2023",
           "questions": [
+            6,
             8,
+            13,
             15
           ],
           "evidence": [
+            {
+              "question": 6,
+              "displayNumber": "6",
+              "page": 5,
+              "source": "20230315_SRA_Opgaven.pdf",
+              "href": "bronnen/original-pdfs/20230315/opgaven.pdf#page=5",
+              "image": "bronnen/tentamens/20230315/opgaven-05.jpg",
+              "reasons": [
+                "Hypothesen / significantie"
+              ]
+            },
             {
               "question": 8,
               "displayNumber": "8",
@@ -2468,6 +2553,17 @@ window.SRAMCExamFrequency = {
               "source": "20230315_SRA_Opgaven.pdf",
               "href": "bronnen/original-pdfs/20230315/opgaven.pdf#page=6",
               "image": "bronnen/tentamens/20230315/opgaven-06.jpg",
+              "reasons": [
+                "Hypothesen / significantie"
+              ]
+            },
+            {
+              "question": 13,
+              "displayNumber": "13",
+              "page": 10,
+              "source": "20230315_SRA_Opgaven.pdf",
+              "href": "bronnen/original-pdfs/20230315/opgaven.pdf#page=10",
+              "image": "bronnen/tentamens/20230315/opgaven-10.jpg",
               "reasons": [
                 "Hypothesen / significantie"
               ]
@@ -2484,16 +2580,28 @@ window.SRAMCExamFrequency = {
               ]
             }
           ],
-          "href": "bronnen/original-pdfs/20230315/opgaven.pdf#page=6"
+          "href": "bronnen/original-pdfs/20230315/opgaven.pdf#page=5"
         },
         {
           "id": "20231030",
           "label": "30-10-2023",
           "date": "30-10-2023",
           "questions": [
+            15,
             20
           ],
           "evidence": [
+            {
+              "question": 15,
+              "displayNumber": "15",
+              "page": 9,
+              "source": "20231030_SRA_Opgaven.pdf",
+              "href": "bronnen/original-pdfs/20231030/opgaven.pdf#page=9",
+              "image": "bronnen/tentamens/20231030/opgaven-09.jpg",
+              "reasons": [
+                "Hypothesen / significantie"
+              ]
+            },
             {
               "question": 20,
               "displayNumber": "20",
@@ -2506,7 +2614,7 @@ window.SRAMCExamFrequency = {
               ]
             }
           ],
-          "href": "bronnen/original-pdfs/20231030/opgaven.pdf#page=11"
+          "href": "bronnen/original-pdfs/20231030/opgaven.pdf#page=9"
         },
         {
           "id": "20240318",
@@ -2537,6 +2645,7 @@ window.SRAMCExamFrequency = {
           "questions": [
             8,
             10,
+            12,
             17
           ],
           "evidence": [
@@ -2558,6 +2667,17 @@ window.SRAMCExamFrequency = {
               "source": "20241028 SRA Opgaven.pdf",
               "href": "bronnen/original-pdfs/20241028/opgaven.pdf#page=4",
               "image": "bronnen/tentamens/20241028/opgaven-04.jpg",
+              "reasons": [
+                "Hypothesen / significantie"
+              ]
+            },
+            {
+              "question": 12,
+              "displayNumber": "12",
+              "page": 6,
+              "source": "20241028 SRA Opgaven.pdf",
+              "href": "bronnen/original-pdfs/20241028/opgaven.pdf#page=6",
+              "image": "bronnen/tentamens/20241028/opgaven-06.jpg",
               "reasons": [
                 "Hypothesen / significantie"
               ]
@@ -3056,6 +3176,8 @@ window.SRAMCExamFrequency = {
             14,
             15,
             16,
+            17,
+            18,
             24
           ],
           "evidence": [
@@ -3104,6 +3226,30 @@ window.SRAMCExamFrequency = {
               ]
             },
             {
+              "question": 17,
+              "displayNumber": "17",
+              "page": 8,
+              "source": "20250317 SRA _Opgaven+uitwerkingen.pdf",
+              "href": "bronnen/original-pdfs/20250317/opgaven.pdf#page=8",
+              "image": "bronnen/tentamens/20250317/opgaven-08.jpg",
+              "reasons": [
+                "Normaliteit",
+                "Heteroscedasticiteit"
+              ]
+            },
+            {
+              "question": 18,
+              "displayNumber": "18",
+              "page": 8,
+              "source": "20250317 SRA _Opgaven+uitwerkingen.pdf",
+              "href": "bronnen/original-pdfs/20250317/opgaven.pdf#page=8",
+              "image": "bronnen/tentamens/20250317/opgaven-08.jpg",
+              "reasons": [
+                "Uitschieters / invloed",
+                "Normaliteit"
+              ]
+            },
+            {
               "question": 24,
               "displayNumber": "24",
               "page": 10,
@@ -3136,6 +3282,7 @@ window.SRAMCExamFrequency = {
               "href": "bronnen/original-pdfs/20251028/opgaven.pdf#page=6",
               "image": "bronnen/tentamens/20251028/opgaven-06.jpg",
               "reasons": [
+                "Uitschieters / invloed",
                 "Normaliteit"
               ]
             },
@@ -4276,10 +4423,23 @@ window.SRAMCExamFrequency = {
           "label": "15-03-2023",
           "date": "15-03-2023",
           "questions": [
+            6,
             17,
-            18
+            18,
+            19
           ],
           "evidence": [
+            {
+              "question": 6,
+              "displayNumber": "6",
+              "page": 5,
+              "source": "20230315_SRA_Opgaven.pdf",
+              "href": "bronnen/original-pdfs/20230315/opgaven.pdf#page=5",
+              "image": "bronnen/tentamens/20230315/opgaven-05.jpg",
+              "reasons": [
+                "Multicollineariteit"
+              ]
+            },
             {
               "question": 17,
               "displayNumber": "17",
@@ -4301,9 +4461,20 @@ window.SRAMCExamFrequency = {
               "reasons": [
                 "Variabelenselectie"
               ]
+            },
+            {
+              "question": 19,
+              "displayNumber": "19",
+              "page": 13,
+              "source": "20230315_SRA_Opgaven.pdf",
+              "href": "bronnen/original-pdfs/20230315/opgaven.pdf#page=13",
+              "image": "bronnen/tentamens/20230315/opgaven-13.jpg",
+              "reasons": [
+                "Variabelenselectie"
+              ]
             }
           ],
-          "href": "bronnen/original-pdfs/20230315/opgaven.pdf#page=12"
+          "href": "bronnen/original-pdfs/20230315/opgaven.pdf#page=5"
         },
         {
           "id": "20231030",
@@ -4311,6 +4482,7 @@ window.SRAMCExamFrequency = {
           "date": "30-10-2023",
           "questions": [
             8,
+            9,
             16,
             17,
             19
@@ -4325,6 +4497,17 @@ window.SRAMCExamFrequency = {
               "image": "bronnen/tentamens/20231030/opgaven-05.jpg",
               "reasons": [
                 "Multicollineariteit"
+              ]
+            },
+            {
+              "question": 9,
+              "displayNumber": "9",
+              "page": 5,
+              "source": "20231030_SRA_Opgaven.pdf",
+              "href": "bronnen/original-pdfs/20231030/opgaven.pdf#page=5",
+              "image": "bronnen/tentamens/20231030/opgaven-05.jpg",
+              "reasons": [
+                "Variabelenselectie"
               ]
             },
             {
@@ -4461,7 +4644,8 @@ window.SRAMCExamFrequency = {
           "date": "17-03-2025",
           "questions": [
             22,
-            23
+            23,
+            25
           ],
           "evidence": [
             {
@@ -4484,6 +4668,17 @@ window.SRAMCExamFrequency = {
               "image": "bronnen/tentamens/20250317/opgaven-10.jpg",
               "reasons": [
                 "Multicollineariteit"
+              ]
+            },
+            {
+              "question": 25,
+              "displayNumber": "25",
+              "page": 10,
+              "source": "20250317 SRA _Opgaven+uitwerkingen.pdf",
+              "href": "bronnen/original-pdfs/20250317/opgaven.pdf#page=10",
+              "image": "bronnen/tentamens/20250317/opgaven-10.jpg",
+              "reasons": [
+                "Variabelenselectie"
               ]
             }
           ],

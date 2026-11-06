@@ -6,7 +6,9 @@ Gemaakt met Codex, 18 september 2026.
 
 Alle beschikbare volledige tentamens uit de aangeleverde map staan in het dashboard. De analyse telt inhoudelijk gelijke tentamens één keer: 23 maart en 26 juni 2020 bevatten dezelfde vragen. Aantal tentamens, datumbereik, totaal aantal vragen en punten, frequentienoemer en kleinste en grootste vraagaantal worden rechtstreeks uit de tentamengegevens berekend. Opgave 1 gaat over steekproeven (35 punten). Regressie telt samen 65 punten: in de nieuwere reeks één hoofdopgave; in beide versies uit 2020 twee hoofdopgaven van 40 en 25 punten. De oorspronkelijke vraagnummering per opgave blijft herkenbaar. De indeling per tentamen laat de vragen, punten en onderwerpen zien.
 
-`data/exam-analysis.json` bewaart de gecontroleerde onderwerpverwijzingen per vraag. De vijf vraagtypen in de HTML zijn een didactische indeling met concrete voorbeelden. Ze overlappen en vormen geen exclusieve verdeling van vragen of punten.
+`data/exam-analysis.json` bewaart de gecontroleerde themaverwijzingen per vraag; die voeden de koppelingen naar lessen en oefenvragen. De analysepagina gebruikt de fijnere puntenrubricering uit `scripts/exam_point_rules.py`, via `data/exam-topics.js`. `js/exam-topic-views.js` toont die in vier weergaven met één filter: tabel, heatmap, prioriteitenkaart en voortgang. De voortgang leest gelezen lessen, oefenvragen en tentamenpogingen uit de bestaande opslag en bewaart handmatige aanpassingen apart in `sra-topic-progress-v1`. Prioriteit wordt per pakket bepaald met `PRIORITY_PACKAGES`; de regels staan in `priority_level` en `tests/exam-points.py` bewaakt dat de indeling blijft staan als één tentamen wegvalt of een grensgeval anders uitvalt. Daar staan ook de doorlopende vaardigheden en de stof die niet is gevraagd. De vijf vraagtypen in de HTML zijn een didactische indeling met concrete voorbeelden. Ze overlappen en vormen geen exclusieve verdeling van vragen of punten.
+
+Op 5 november 2026 zijn alle 239 vragen nagelopen tegen opgave en normering. Grensgevallen, zoals een puntschatting binnen een intervalvraag, zijn bewust niet gesplitst als de normering dat niet afdwingt.
 
 De toegevoegde oorspronkelijke opgaven van 28 oktober 2024 zijn verwerkt als volledig oefententamen, met het officiële antwoordmodel. Ook de overige beschikbare tentamens zijn opgenomen. Inhoudelijk gelijke datumversies zijn afzonderlijk te openen, maar tellen eenmaal mee in de analyse. De oude e1-e6-routes blijven bereikbaar voor bestaande bladwijzers en notities, maar zijn geen toetsen in het nieuwe dashboard.
 
@@ -20,7 +22,7 @@ Op 4 november 2026 zijn 28 oktober 2025 en 23 maart 2026 op deze manier toegevoe
 2. Leg de contextgrenzen vast in `data/exam-question-boundaries.json` en zet kapotte formuleregels recht in `scripts/exam_text_repairs.py`.
 3. Beoordeel iedere vraag in `scripts/answer_audit_records.py` en reken de getallen na in `tests/exam-answer-calculations.py`.
 4. Voeg de rubricering toe aan `scripts/exam_point_rules.py`, de meerkeuzeopties aan `scripts/exam_mc/` en de koppelingen aan `data/mc-exam-frequency-map.json` en `js/exam-study-links.js`.
-5. Werk `RECENT` in `scripts/build_exam_points.py` bij, en de vaste teksten met aantallen tentamens en punten in de lessen en samenvattingen.
+5. Vul in `scripts/exam_point_rules.py` zo nodig `SKILLS` en `NOT_ASKED` aan. Werk `RECENT` in `scripts/build_exam_points.py` bij, en de vaste teksten met aantallen tentamens en punten in de lessen en samenvattingen.
 
 Staan opgaven en uitwerkingen in één bronbestand, dan splitst `scripts/build_original_pdfs.py` dat op `vraag_paginas` en `antwoord_vanaf_pagina` in twee PDF's. De knoppen en oefenlinks gebruiken die gesplitste bestanden onder `bronnen/original-pdfs`. De volledige bronkopie blijft in `bronnen/tentamens`, voor de bronhash en het controlerapport.
 

@@ -45,9 +45,9 @@ BASE = {
     '20231030': 'mpu mpu verschil verschil omvang strata-ontwerp strata-schatten multicol correlatie anova puntvoorspelling interval groepen invloed normaliteit selectie modelvergelijking anova multicol toetsen puntvoorspelling normaliteit',
     '20240318': 'mpu schatterkeuze quotient strata-ontwerp strata-ontwerp strata-schatten strata-schatten correlatie multicol multicol toetsen anova transformaties puntvoorspelling interval basis invloed invloed normaliteit multicol selectie puntvoorspelling modelvergelijking coefficienten',
     '20241028': 'regressieschatter omvang schatterkeuze strata-ontwerp strata-schatten strata-schatten strata-ontwerp toetsen anova anova invloed normaliteit interval basis selectie modelvergelijking toetsen multicol',
-    '20250317': 'verschil verschil verschil strata-ontwerp strata-schatten strata-schatten correlatie anova toetsen groepen transformaties transformaties invloed invloed normaliteit hetero gezamenlijk gezamenlijk coefficienten puntvoorspelling toetsen selectie multicol normaliteit selectie',
+    '20250317': 'schatterkeuze verschil verschil strata-ontwerp strata-schatten strata-schatten correlatie anova toetsen groepen transformaties transformaties invloed invloed normaliteit hetero gezamenlijk gezamenlijk coefficienten puntvoorspelling toetsen selectie multicol normaliteit selectie',
     '20251028': 'mpu omvang schatterkeuze verschil strata-ontwerp strata-ontwerp strata-schatten strata-schatten basis toetsen anova normaliteit invloed invloed normaliteit multicol puntvoorspelling toetsen transformaties modelvergelijking transformaties toetsen',
-    '20260323': 'verschil omvang regressieschatter regressieschatter strata-ontwerp strata-ontwerp strata-schatten strata-schatten basis correlatie toetsen hetero transformaties transformaties invloed normaliteit interval modelvergelijking selectie multicol selectie',
+    '20260323': 'verschil omvang schatterkeuze regressieschatter strata-ontwerp strata-ontwerp strata-schatten strata-schatten basis correlatie toetsen hetero transformaties transformaties invloed normaliteit interval modelvergelijking selectie multicol selectie',
 }
 
 # (brononderdeel, onderwerp, punten, onderbouwing). Een '-' is een ongesplitste
@@ -69,13 +69,13 @@ SPLITS = {
  ('20220316',16): [('-', 'normaliteit',3,'Testkeuze, p en conclusie elk 1 punt.'),('-', 'gezamenlijk',1,'Normering kent bij vraag 16 één punt toe aan de hypothesen van vragen 16 én 17. Hier eenmaal geboekt.')],
  ('20220316',23): [('a','puntvoorspelling',4,'Opgave 23a: 4 punten.'),('b','puntvoorspelling',5,'Opgave 23b: 5 punten voor herkennen van extrapolatie.')],
  ('20221031',8): [('a','toetsen',2,'Opgave 8a: 2 punten.'),('b','toetsen',2,'Opgave 8b: 2 punten.')],
- ('20221031',9): [('a','toetsen',3,'Opgave 9a: 3 punten voor significantie.'),('b','multicol',3,'Opgave 9b: 3 punten.'),('c','correlatie',3,'Opgave 9c: 3 punten voor richting tegenover verwachting.')],
+ ('20221031',9): [('a','correlatie',3,'Opgave 9a: 3 punten; het antwoord leest de significante correlaties met Prijs af uit afbeelding 1.'),('b','multicol',3,'Opgave 9b: 3 punten.'),('c','correlatie',3,'Opgave 9c: 3 punten voor richting tegenover verwachting.')],
  ('20221031',10): [('a','anova',3,'Opgave 10a: 3 punten voor R².'),('b','toetsen',3,'Opgave 10b: 3 punten.'),('c','multicol',2,'Opgave 10c: 2 punten.'),('d','modelvergelijking',4,'Opgave 10d: 4 punten.')],
  ('20221031',11): [('-', 'uitbijters-x',4,'Normering: MD 1+1, remedie 2.'),('-', 'invloed',4,'Normering: Cook 1+1, remedie 2.')],
  ('20221031',13): [('a','coefficienten',3,'Opgave 13a: 3 punten voor verschil 4 maal B.'),('b','selectie',3,'Opgave 13b: 3 punten.'),('c','normaliteit',3,'Opgave 13c: 3 punten.')],
  ('20221031',14): [('-', 'uitbijters-y',4,'Normering: uitbijters in y 4 punten.'),('-', 'invloed',2,'Normering: invloedrijke punten 2 punten.')],
  ('20221031',15): [('a','anova',1,'Opgave 15a: SSR 1 punt.'),('b','anova',3,'Opgave 15b: SSE en MSE 3 punten.'),('c','anova',6,'Opgave 15c: R², F en t reconstrueren 2+3+1 punten; toetsconclusie apart in 16.')],
- ('20230315',6): [('-', 'toetsen',3,'Normering: significantie verklarende variabelen met Tijd 3 punten.'),('-', 'multicol',1,'Normering: onderlinge correlaties verklarende variabelen 1 punt.')],
+ ('20230315',6): [('-', 'correlatie',3,'Normering: significante correlatie van Afstand en Lading met Tijd, afgelezen uit de correlatietabel, 3 punten.'),('-', 'multicol',1,'Normering: onderlinge correlaties verklarende variabelen 1 punt.')],
  ('20230315',7): [('a','basis',2,'Opgave 7a: crosssectie 2 punten.'),('b','tijd',4,'Normering 7b: niet-toepasselijke tijdsvertraging en autocorrelatie elk 2 punten.')],
  ('20230315',12): [('-', 'uitbijters-x',5,'Normering: MD 1+1+1, remedie 2.'),('-', 'invloed',4,'Normering: Cook 1+1, remedie 2.')],
  ('20230315',13): [('-', 'normaliteit',2,'Normering: testkeuze en conclusie elk 1.'),('-', 'hetero',2,'Normering: ABSRES-conclusie 2 punten.'),('-', 'gezamenlijk',1,'Beide sets hypothesen samen 1 punt.')],
@@ -98,6 +98,7 @@ SPLITS = {
  ('20250317',15): [('-', 'normaliteit',3,'Normering: keuze, p en conclusie elk 1.'),('-', 'gezamenlijk',1,'Normering noemt hypothesen voor twee vragen samen, maar verwijst abusievelijk naar 8 en 9. Conservatief gezamenlijk gehouden voor normaliteit/heteroscedasticiteit.')],
  ('20250317',17): [('-', 'gezamenlijk',2,'Twee remedies voor normaliteit én heteroscedasticiteit, samen 2 punten; geen verdeling per diagnose.')],
  ('20250317',18): [('-', 'gezamenlijk',3,'Herbeoordeling uitbijters om normaliteit te verbeteren; gezamenlijke 3 punten zonder splitsing. Broncorrectie op verwijderen blijft zichtbaar.')],
+ ('20251028',17): [('-', 'puntvoorspelling',4,'Normering: vergelijking 2 en invullen 2 punten.'),('-', 'basis',2,'Normering: residu 92 − 90,6 apart 2 punten.')],
  ('20251028',13): [('-', 'uitbijters-x',2,'Normering MD: 1+1.'),('-', 'uitbijters-y',2,'Normering z: 1+1.'),('-', 'gezamenlijk',2,'Remedie uitbijters in x en y gezamenlijk 2 punten.'),('-', 'invloed',5,'Normering Cook: 1+1+1, remedie 2.')],
  ('20251028',15): [('-', 'normaliteit',3,'Normering: hypothesen, toets/p en conclusie elk 1.'),('-', 'hetero',4,'Normering: hypothesen 1, ABSRES/p 2, conclusie 1.')],
  ('20260323',15): [('-', 'uitbijters-x',4,'Normering MD: 1+1, remedie 2; alleen in x zijn er signalen.'),('-', 'uitbijters-y',1,'Normering z-grens 1 punt.'),('-', 'invloed',4,'Normering Cook: 1+1, remedie 2.')],
@@ -109,7 +110,7 @@ JOINT_TOPICS = {
  ('20200323',17): ['normaliteit','hetero'],
  ('20211101',13): ['uitbijters-x','uitbijters-y'],
  ('20211101',14): ['normaliteit','hetero'],
- ('20220316',10): ['toetsen','anova'],
+ ('20220316',10): ['correlatie','anova'],
  ('20220316',14): ['uitbijters-x','uitbijters-y'],
  ('20220316',16): ['normaliteit','hetero'],
  ('20230315',13): ['normaliteit','hetero'],
@@ -122,3 +123,138 @@ JOINT_TOPICS = {
  ('20250317',18): ['uitbijters-y','normaliteit'],
  ('20251028',13): ['uitbijters-x','uitbijters-y'],
 }
+
+# Les waarin elk onderwerp wordt uitgelegd; moet aansluiten op ROUTES in learning_exam_focus.py.
+TOPIC_LESSONS = {
+    'mpu':'mpu', 'schatterkeuze':'mpu', 'verschil':'verschil', 'quotient':'quotient',
+    'regressieschatter':'regressieschatter', 'omvang':'steekproefomvang',
+    'strata-ontwerp':'stratificatie', 'strata-schatten':'stratificatie',
+    'basis':'regressielijn', 'correlatie':'regressielijn', 'anova':'anova', 'toetsen':'toetsen',
+    'groepen':'diagnostiek', 'tijd':'diagnostiek', 'uitbijters-x':'diagnostiek', 'uitbijters-y':'diagnostiek',
+    'invloed':'diagnostiek', 'normaliteit':'diagnostiek', 'hetero':'diagnostiek',
+    'puntvoorspelling':'voorspellen', 'interval':'voorspellen', 'coefficienten':'meervoudig',
+    'transformaties':'transformaties', 'modelvergelijking':'modelbouw', 'multicol':'modelbouw',
+    'selectie':'modelbouw', 'validatie':'validatie', 'gezamenlijk':'tentamen',
+}
+
+# Indeling van de tentamenanalyse. Volgorde: per opgave, daarna per lesblok.
+TOPIC_GROUPS = [
+ ('Opgave 1 · Steekproeven', [
+  ('Schatters', ['mpu','verschil','quotient','regressieschatter','schatterkeuze']),
+  ('Steekproefomvang', ['omvang']),
+  ('Stratificatie', ['strata-ontwerp','strata-schatten']),
+ ]),
+ ('Opgave 2 · Regressie', [
+  ('Model opbouwen en lezen', ['basis','correlatie','anova','coefficienten']),
+  ('Toetsen', ['toetsen']),
+  ('Modeldiagnose', ['groepen','tijd','uitbijters-x','uitbijters-y','invloed','normaliteit','hetero']),
+  ('Modelkeuze', ['modelvergelijking','multicol','selectie','transformaties','validatie']),
+  ('Voorspellen', ['puntvoorspelling','interval']),
+  ('Gedeelde punten', ['gezamenlijk']),
+ ]),
+]
+
+# Prioriteit wordt per pakket beoordeeld: onderwerpen die in één vraag samenkomen of
+# elkaar per tentamen afwisselen. Los geteld lijken die te klein of te zeldzaam.
+# De grenzen vallen in gaten in de cijfers; tests/exam-points.py bewaakt dat de indeling
+# gelijk blijft als één tentamen wegvalt of een grensgeval anders wordt gerubriceerd.
+PRIORITY_LEVELS = [
+ dict(level=1, label='Altijd beheersen', rule='In meer dan twee derde van de tentamens en gemiddeld 5,5 punten of meer per tentamen.'),
+ dict(level=2, label='Goed oefenen', rule='In meer dan twee derde van de tentamens en gemiddeld 2,5 tot 5,5 punten per tentamen.'),
+ dict(level=3, label='Gericht oefenen', rule='In minstens een derde van de tentamens, maar minder vaak of minder punten dan hierboven.'),
+ dict(level=4, label='Kern kennen', rule='In minder dan een derde van de tentamens.'),
+]
+PRIORITY_PACKAGES = [
+ dict(id='schatters', label='De vier schatters', topics=['mpu','verschil','quotient','regressieschatter'],
+      why='In elk tentamen staat minstens één van deze schatters, maar welke wisselt. Je kunt er dus geen overslaan. De schatters zijn ook voorkennis voor stratificatie.'),
+ dict(id='strata-rekenen', label='Stratificatie: totaalschatting en interval', topics=['strata-schatten'],
+      why='Het grootste onderwerp van de reeks: puntschatting, spreiding per stratum en interval staan in elk tentamen.'),
+ dict(id='uitbijters-invloed', label='Uitbijters en invloedrijke punten', topics=['uitbijters-x','uitbijters-y','invloed'],
+      why='Deze analyses staan meestal samen in één diagnosevraag. Los lijken ze klein, samen zijn ze zwaar.'),
+ dict(id='toetsen', label='Hypothesen en significantietoetsen', topics=['toetsen'],
+      why='Hypothesen, toetsingsgrootheid en conclusie staan in elk tentamen, vaak meer dan eens.'),
+ dict(id='aannames', label='Normaliteit en heteroscedasticiteit', topics=['normaliteit','hetero'],
+      why='Deze twee aannames worden meestal samen gevraagd, met toets, conclusie en soms remedies.'),
+ dict(id='voorspellen', label='Voorspellen: puntschatting en interval', topics=['puntvoorspelling','interval'],
+      why='De puntschatting is de eerste stap van het interval. Daarom hoort het oefenen ervan bij elkaar.'),
+ dict(id='multicol', label='Multicollineariteit', topics=['multicol'],
+      why='Staat in elk tentamen, via correlaties, VIF of beide. In de laatste drie tentamens leverde het wel minder punten op.'),
+ dict(id='strata-ontwerp', label='Stratificatie: grenzen, redenen en allocatie', topics=['strata-ontwerp'],
+      why='Staat in elk tentamen, maar in kortere vragen dan de berekening.'),
+ dict(id='anova', label='ANOVA en verklaarde variatie', topics=['anova'],
+      why='Komt bijna altijd voor. De omvang wisselt sterk: van een losse R² tot een hele tabel aanvullen.'),
+ dict(id='selectie', label='Variabelenselectie en modeluitbreiding', topics=['selectie'],
+      why='Bijna elk tentamen vraagt welke variabelen in het model blijven of erbij moeten.'),
+ dict(id='transformaties', label='Niet-lineaire modellen', topics=['transformaties'],
+      why='Meestal een vergelijking van lineair en niet-lineair, vaak met terugrekenen naar de oorspronkelijke eenheid.'),
+ dict(id='modelvergelijking', label='Modelvergelijking met adjusted R²', topics=['modelvergelijking'],
+      why='Komt vaak terug in korte redeneervragen over spaarzaamheid.'),
+ dict(id='basis', label='Regressiebasis: gegevenstype, OLS en residuen', topics=['basis'],
+      why='Vaak kort gevraagd, en voorkennis voor alle andere regressievragen.'),
+ dict(id='correlatie', label='Correlatie en eerste keuze van variabelen', topics=['correlatie'],
+      why='Komt vaak voor, maar levert per keer weinig punten op.'),
+ dict(id='schatterkeuze', label='Schatters vergelijken en kiezen', topics=['schatterkeuze'],
+      why='Korte uitlegvragen. De kennis ervoor bouw je op bij de vier schatters.'),
+ dict(id='omvang', label='Steekproefomvang en uitbreiding', topics=['omvang'],
+      why='Staat in ongeveer de helft van de tentamens, steeds als rekenvraag van 4 of 5 punten.'),
+ dict(id='coefficienten', label='Coëfficiënten en dummy’s interpreteren', topics=['coefficienten'],
+      why='Kleine vragen in ongeveer de helft van de tentamens.'),
+ dict(id='groepen', label='Samengevoegde groepen', topics=['groepen'],
+      why='Een korte analyse die in ongeveer de helft van de tentamens staat.'),
+ dict(id='tijd', label='Tijdsvertraging en autocorrelatie', topics=['tijd'],
+      why='Kwam alleen voor als analyse die bij cross-sectiegegevens niet nodig is.'),
+ dict(id='validatie', label='Validatie met testset en MSPR', topics=['validatie'],
+      why='Staat in het programma, maar is in deze tentamens niet gevraagd. Ken de kern.'),
+]
+
+# Vaardigheden lopen door meerdere onderwerpen heen en krijgen daarom geen eigen
+# puntenrubriek: dezelfde punt zou anders twee keer tellen. Vragen zijn voorbeelden
+# uit opgave of normering; alleen de t- en F-tabel is over alle tentamens nagelopen.
+SKILLS = [
+ dict(label='Kritieke waarde uit de t- of F-tabel', lesson='onzekerheid',
+      note='Bij bijna elk interval en elke toets staat hier een eigen punt. Kies de juiste staart en vrijheidsgraden. Staat het aantal vrijheidsgraden niet in de tabel, neem dan het naast lagere aantal; boven 200 geldt de onderste regel.',
+      questions={'20200323':[3,11,20],'20211101':[1,3,7,19],'20220316':[2,18],'20221031':[2,4,6,16],'20230315':[1,5,15],'20231030':[2,12,20],'20240318':[1,7,15],'20241028':[1,6,10,13],'20250317':[3,6,21],'20251028':[1,8,22],'20260323':[1,8,17]}),
+ dict(label='Afronden zoals de vraag zegt', lesson='onzekerheid',
+      note='Bij intervalvragen staat vaak op welk bedrag je afrondt. De normering geeft daar een punt voor of trekt er een af. Een bovengrens rond je naar boven af, een ondergrens naar beneden.',
+      questions={'20200323':[3,7,11],'20211101':[1,3,7],'20220316':[2,5],'20221031':[4,6]}),
+ dict(label='Spreiding uit sommen en kwadratensommen', lesson='rekenen',
+      note='Veel casussen geven geen standaardafwijking maar een kwadratensom. Die stap levert 2 of 3 punten op voordat het interval begint.',
+      questions={'20200323':[3],'20211101':[1],'20220316':[5],'20221031':[4]}),
+ dict(label='Eindigheidscorrectie', lesson='mpu',
+      note='Hoort in de formules van de schatters. Soms gaat een hele vraag over de correctie, en weglaten kan punten kosten.',
+      questions={'20211101':[3],'20231030':[1]}),
+ dict(label='Voorwaarde van ten minste 30 fouten', lesson='verschil',
+      note='Controleer bij de verschil- en quotiëntschatter eerst of de steekproef genoeg fouten bevat.',
+      questions={'20200323':[1],'20211101':[4],'20220316':[4],'20250317':[2]}),
+ dict(label='Constante en relatieve fouten', lesson='regressieschatter',
+      note='Het soort fout bepaalt welke schatter past.',
+      questions={'20250317':[1],'20260323':[3]}),
+ dict(label='Conclusie uit een interval of grens', lesson='verschil',
+      note='Vergelijk de boekwaarde met het interval en zeg wat dat voor de jaarrekening betekent.',
+      questions={'20221031':[3],'20230315':[2]}),
+ dict(label='Volledig gecontroleerd stratum', lesson='stratificatie',
+      note='Een topstratum of integraal gecontroleerde categorie telt mee in het totaal, maar draagt niet bij aan de spreiding.',
+      questions={'20241028':[5],'20250317':[5,6],'20260323':[8]}),
+ dict(label='Hypothesen bij een diagnose', lesson='diagnostiek',
+      note='Ook bij normaliteit en heteroscedasticiteit vraagt de opgave of normering de nul- en alternatieve hypothese.',
+      questions={'20200323':[17],'20211101':[14],'20230315':[13],'20231030':[15],'20241028':[12]}),
+ dict(label='Volgorde van de diagnose', lesson='diagnostiek',
+      note='Eerst uitbijters en invloedrijke punten, daarna de aannames. Na een aanpassing beoordeel je opnieuw.',
+      questions={'20250317':[18],'20251028':[12,14]}),
+ dict(label='Genoeg waarnemingen per variabele', lesson='modelbouw',
+      note='Vuistregel n ≥ 10k: met te weinig waarnemingen dreigt overfitting.',
+      questions={'20211101':[10]}),
+]
+
+# Stof uit het programma die in de onderzochte reeks niet is gevraagd. Dit is een
+# beschrijving van de reeks en geen reden om de stof over te slaan.
+NOT_ASKED = [
+ dict(label='Validatie met testset en MSPR', lesson='validatie',
+      note='Staat in college 7 met de notitie validatie, maar is in deze reeks niet gevraagd.'),
+ dict(label='Durbin-Watson berekenen', lesson='diagnostiek',
+      note='Autocorrelatie kwam alleen voor als analyse die bij cross-sectiegegevens niet nodig is.'),
+ dict(label='Gewogen regressie uitrekenen', lesson='diagnostiek',
+      note='Kwam alleen voor als een van de genoemde remedies.'),
+ dict(label='Partiële F-toets', lesson='modelbouw',
+      note='Staat in de les, maar niet in de opgaven en uitwerkingen van deze reeks.'),
+]

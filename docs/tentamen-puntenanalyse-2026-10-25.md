@@ -35,9 +35,9 @@ Gecontroleerd op 4 november 2026. Elf unieke tentamens, 239 vraagnummers en 1100
 | Onderwerp | Tentamens | Vragen | Deelvragen | Totaal | Gem./100 | Aandeel | Gem. bij voorkomen (%) | Min–max | SD |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Stratificatie: totaalschatting en interval | 11/11 | 18 | 19 | 117 | 10,64 | 10,64% | 10,64% | 6–16 | 2,80 |
-| Hypothesen en significantietoetsen regressie | 11/11 | 23 | 24 | 98 | 8,91 | 8,91% | 8,91% | 3–14 | 3,06 |
+| Hypothesen en significantietoetsen regressie | 11/11 | 21 | 22 | 92 | 8,36 | 8,36% | 8,36% | 3–12 | 2,71 |
 | Multicollineariteit | 11/11 | 20 | 24 | 66 | 6,00 | 6,00% | 6,00% | 3–11 | 2,56 |
-| Verschilschatter | 6/11 | 12 | 12 | 59 | 5,36 | 5,36% | 9,83% | 0–14 | 5,24 |
+| Verschilschatter | 6/11 | 11 | 11 | 57 | 5,18 | 5,18% | 9,50% | 0–12 | 4,97 |
 | Stratificatie: grenzen, redenen en allocatie | 11/11 | 18 | 19 | 54 | 4,91 | 4,91% | 4,91% | 1–10 | 2,39 |
 | ANOVA, verklaarde variatie en residuele spreiding | 9/11 | 14 | 16 | 53 | 4,82 | 4,82% | 5,89% | 0–13 | 3,90 |
 | Normaliteit van residuen | 11/11 | 15 | 15 | 50 | 4,55 | 4,55% | 4,55% | 2–9 | 2,23 |
@@ -47,17 +47,17 @@ Gecontroleerd op 4 november 2026. Elf unieke tentamens, 239 vraagnummers en 1100
 | Niet-lineaire modellen en transformaties | 9/11 | 14 | 15 | 45 | 4,09 | 4,09% | 5,00% | 0–8 | 2,57 |
 | Regressie: voorspellings- of schattingsinterval | 6/11 | 6 | 6 | 42 | 3,82 | 3,82% | 7,00% | 0–9 | 3,56 |
 | Modelvergelijking met adjusted R² en spaarzaamheid | 9/11 | 11 | 11 | 38 | 3,45 | 3,45% | 4,22% | 0–8 | 2,31 |
-| Regressievergelijking, puntschatting en extrapolatie | 7/11 | 9 | 11 | 37 | 3,36 | 3,36% | 5,29% | 0–9 | 3,08 |
-| Regressieschatter van een populatietotaal | 3/11 | 5 | 5 | 34 | 3,09 | 3,09% | 11,33% | 0–16 | 5,35 |
+| Regressievergelijking, puntschatting en extrapolatie | 7/11 | 9 | 11 | 35 | 3,18 | 3,18% | 5,00% | 0–9 | 2,98 |
+| Regressiebasis: gegevenstype, OLS en residuen | 8/11 | 10 | 11 | 34 | 3,09 | 3,09% | 4,25% | 0–7 | 2,47 |
 | Quotiëntschatter | 4/11 | 7 | 7 | 32 | 2,91 | 2,91% | 8,00% | 0–10 | 4,01 |
-| Regressiebasis: gegevenstype, OLS en residuen | 8/11 | 9 | 10 | 32 | 2,91 | 2,91% | 4,00% | 0–7 | 2,39 |
+| Regressieschatter van een populatietotaal | 3/11 | 4 | 4 | 32 | 2,91 | 2,91% | 10,67% | 0–16 | 5,21 |
 | Uitbijters in x (Mahalanobis) | 11/11 | 11 | 11 | 32 | 2,91 | 2,91% | 2,91% | 1–5 | 1,16 |
 | Uitbijters in y (gestandaardiseerd residu) | 11/11 | 11 | 11 | 28 | 2,55 | 2,55% | 2,55% | 1–5 | 1,08 |
 | Heteroscedasticiteit | 10/11 | 11 | 11 | 28 | 2,55 | 2,55% | 2,80% | 0–7 | 1,78 |
 | Steekproefomvang en uitbreiding | 6/11 | 6 | 6 | 25 | 2,27 | 2,27% | 4,17% | 0–5 | 2,09 |
+| Correlatie en eerste keuze van verklarende variabelen | 8/11 | 8 | 9 | 24 | 2,18 | 2,18% | 3,00% | 0–6 | 1,70 |
 | Gezamenlijke punten zonder aantoonbare verdeling | 8/11 | 15 | 15 | 22 | 2,00 | 2,00% | 2,75% | 0–8 | 2,34 |
-| Correlatie en eerste keuze van verklarende variabelen | 7/11 | 7 | 7 | 18 | 1,64 | 1,64% | 2,57% | 0–3 | 1,30 |
-| Schatters vergelijken en kiezen | 6/11 | 8 | 8 | 16 | 1,45 | 1,45% | 2,67% | 0–5 | 1,67 |
+| Schatters vergelijken en kiezen | 8/11 | 10 | 10 | 20 | 1,82 | 1,82% | 2,50% | 0–5 | 1,53 |
 | Coëfficiënten, dummyverschillen en Beta interpreteren | 5/11 | 5 | 5 | 16 | 1,45 | 1,45% | 3,20% | 0–4 | 1,62 |
 | Samengevoegde groepen | 5/11 | 5 | 5 | 14 | 1,27 | 1,27% | 2,80% | 0–4 | 1,54 |
 | Toepasselijkheid tijdsvertraging en autocorrelatie | 2/11 | 2 | 2 | 5 | 0,45 | 0,45% | 2,50% | 0–4 | 1,16 |
@@ -68,18 +68,18 @@ Gecontroleerd op 4 november 2026. Elf unieke tentamens, 239 vraagnummers en 1100
 | Onderwerp | 20200323 | 20211101 | 20220316 | 20221031 | 20230315 | 20231030 | 20240318 | 20241028 | 20250317 | 20251028 | 20260323 | Recent totaal | Recent gem./100 | Recent aandeel | Recent min–max |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Directe schatter (MPU) | 0 | 7 | 7 | 10 | 0 | 8 | 7 | 0 | 0 | 9 | 0 | 9 | 3,00 | 3,00% | 0–9 |
-| Verschilschatter | 11 | 0 | 11 | 0 | 0 | 8 | 0 | 0 | 14 | 6 | 9 | 29 | 9,67 | 9,67% | 6–14 |
+| Verschilschatter | 11 | 0 | 11 | 0 | 0 | 8 | 0 | 0 | 12 | 6 | 9 | 27 | 9,00 | 9,00% | 6–12 |
 | Quotiëntschatter | 5 | 9 | 0 | 10 | 0 | 0 | 8 | 0 | 0 | 0 | 0 | 0 | 0,00 | 0,00% | 0–0 |
-| Regressieschatter van een populatietotaal | 0 | 0 | 0 | 0 | 16 | 0 | 0 | 10 | 0 | 0 | 8 | 8 | 2,67 | 2,67% | 0–8 |
-| Schatters vergelijken en kiezen | 5 | 0 | 2 | 1 | 0 | 0 | 2 | 4 | 0 | 2 | 0 | 2 | 0,67 | 0,67% | 0–2 |
+| Regressieschatter van een populatietotaal | 0 | 0 | 0 | 0 | 16 | 0 | 0 | 10 | 0 | 0 | 6 | 6 | 2,00 | 2,00% | 0–6 |
+| Schatters vergelijken en kiezen | 5 | 0 | 2 | 1 | 0 | 0 | 2 | 4 | 2 | 2 | 2 | 6 | 2,00 | 2,00% | 2–2 |
 | Steekproefomvang en uitbreiding | 0 | 4 | 4 | 0 | 0 | 5 | 0 | 4 | 0 | 4 | 4 | 8 | 2,67 | 2,67% | 0–4 |
 | Stratificatie: grenzen, redenen en allocatie | 8 | 2 | 3 | 1 | 10 | 5 | 5 | 5 | 5 | 5 | 5 | 15 | 5,00 | 5,00% | 5–5 |
 | Stratificatie: totaalschatting en interval | 6 | 13 | 8 | 13 | 9 | 9 | 13 | 12 | 16 | 9 | 9 | 34 | 11,33 | 11,33% | 9–16 |
-| Regressiebasis: gegevenstype, OLS en residuen | 2 | 6 | 3 | 0 | 2 | 0 | 6 | 7 | 0 | 3 | 3 | 6 | 2,00 | 2,00% | 0–3 |
-| Correlatie en eerste keuze van verklarende variabelen | 3 | 2 | 0 | 3 | 0 | 3 | 2 | 0 | 2 | 0 | 3 | 5 | 1,67 | 1,67% | 0–3 |
+| Regressiebasis: gegevenstype, OLS en residuen | 2 | 6 | 3 | 0 | 2 | 0 | 6 | 7 | 0 | 5 | 3 | 8 | 2,67 | 2,67% | 0–5 |
+| Correlatie en eerste keuze van verklarende variabelen | 3 | 2 | 0 | 6 | 3 | 3 | 2 | 0 | 2 | 0 | 3 | 5 | 1,67 | 1,67% | 0–3 |
 | ANOVA, verklaarde variatie en residuele spreiding | 7 | 4 | 0 | 13 | 2 | 6 | 6 | 10 | 2 | 3 | 0 | 5 | 1,67 | 1,67% | 0–3 |
 | Modelvergelijking met adjusted R² en spaarzaamheid | 3 | 7 | 0 | 4 | 8 | 3 | 3 | 3 | 0 | 3 | 4 | 7 | 2,33 | 2,33% | 0–4 |
-| Hypothesen en significantietoetsen regressie | 6 | 7 | 10 | 14 | 10 | 8 | 3 | 11 | 11 | 12 | 6 | 29 | 9,67 | 9,67% | 6–12 |
+| Hypothesen en significantietoetsen regressie | 6 | 7 | 10 | 11 | 7 | 8 | 3 | 11 | 11 | 12 | 6 | 29 | 9,67 | 9,67% | 6–12 |
 | Samengevoegde groepen | 1 | 0 | 4 | 0 | 3 | 3 | 0 | 0 | 3 | 0 | 0 | 3 | 1,00 | 1,00% | 0–3 |
 | Toepasselijkheid tijdsvertraging en autocorrelatie | 1 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0,00 | 0,00% | 0–0 |
 | Uitbijters in x (Mahalanobis) | 4 | 3 | 2 | 4 | 5 | 2 | 3 | 1 | 2 | 2 | 4 | 8 | 2,67 | 2,67% | 2–4 |
@@ -89,7 +89,7 @@ Gecontroleerd op 4 november 2026. Elf unieke tentamens, 239 vraagnummers en 1100
 | Heteroscedasticiteit | 3 | 1 | 2 | 0 | 2 | 1 | 2 | 3 | 3 | 4 | 7 | 14 | 4,67 | 4,67% | 3–7 |
 | Multicollineariteit | 7 | 11 | 7 | 5 | 4 | 8 | 9 | 6 | 3 | 3 | 3 | 9 | 3,00 | 3,00% | 3–3 |
 | Niet-lineaire modellen en transformaties | 6 | 3 | 6 | 3 | 2 | 0 | 5 | 0 | 5 | 8 | 7 | 20 | 6,67 | 6,67% | 5–8 |
-| Regressievergelijking, puntschatting en extrapolatie | 3 | 0 | 9 | 0 | 0 | 7 | 6 | 0 | 3 | 6 | 3 | 12 | 4,00 | 4,00% | 3–6 |
+| Regressievergelijking, puntschatting en extrapolatie | 3 | 0 | 9 | 0 | 0 | 7 | 6 | 0 | 3 | 4 | 3 | 10 | 3,33 | 3,33% | 3–4 |
 | Regressie: voorspellings- of schattingsinterval | 6 | 0 | 0 | 0 | 7 | 7 | 6 | 7 | 0 | 0 | 9 | 9 | 3,00 | 3,00% | 0–9 |
 | Coëfficiënten, dummyverschillen en Beta interpreteren | 0 | 3 | 4 | 3 | 0 | 0 | 3 | 0 | 3 | 0 | 0 | 3 | 1,00 | 1,00% | 0–3 |
 | Variabelenselectie en modeluitbreiding | 3 | 4 | 4 | 3 | 4 | 3 | 3 | 7 | 8 | 0 | 7 | 15 | 5,00 | 5,00% | 0–8 |
@@ -102,14 +102,14 @@ Gecontroleerd op 4 november 2026. Elf unieke tentamens, 239 vraagnummers en 1100
 | Onderwerp | Tentamens | Vragen | Deelvragen | SD punten |
 |---|---:|---:|---:|---:|
 | Directe schatter (MPU) | 1/3 | 1 | 1 | 4,24 |
-| Verschilschatter | 3/3 | 5 | 5 | 3,30 |
+| Verschilschatter | 3/3 | 4 | 4 | 2,45 |
 | Quotiëntschatter | 0/3 | 0 | 0 | 0,00 |
-| Regressieschatter van een populatietotaal | 1/3 | 2 | 2 | 3,77 |
-| Schatters vergelijken en kiezen | 1/3 | 1 | 1 | 0,94 |
+| Regressieschatter van een populatietotaal | 1/3 | 1 | 1 | 2,83 |
+| Schatters vergelijken en kiezen | 3/3 | 3 | 3 | 0,00 |
 | Steekproefomvang en uitbreiding | 2/3 | 2 | 2 | 1,89 |
 | Stratificatie: grenzen, redenen en allocatie | 3/3 | 5 | 6 | 0,00 |
 | Stratificatie: totaalschatting en interval | 3/3 | 6 | 6 | 3,30 |
-| Regressiebasis: gegevenstype, OLS en residuen | 2/3 | 2 | 2 | 1,41 |
+| Regressiebasis: gegevenstype, OLS en residuen | 2/3 | 3 | 3 | 2,05 |
 | Correlatie en eerste keuze van verklarende variabelen | 2/3 | 2 | 2 | 1,25 |
 | ANOVA, verklaarde variatie en residuele spreiding | 2/3 | 2 | 2 | 1,25 |
 | Modelvergelijking met adjusted R² en spaarzaamheid | 2/3 | 2 | 2 | 1,70 |
@@ -123,7 +123,7 @@ Gecontroleerd op 4 november 2026. Elf unieke tentamens, 239 vraagnummers en 1100
 | Heteroscedasticiteit | 3/3 | 4 | 4 | 1,70 |
 | Multicollineariteit | 3/3 | 3 | 3 | 0,00 |
 | Niet-lineaire modellen en transformaties | 3/3 | 6 | 6 | 1,25 |
-| Regressievergelijking, puntschatting en extrapolatie | 3/3 | 3 | 3 | 1,41 |
+| Regressievergelijking, puntschatting en extrapolatie | 3/3 | 3 | 3 | 0,47 |
 | Regressie: voorspellings- of schattingsinterval | 1/3 | 1 | 1 | 4,24 |
 | Coëfficiënten, dummyverschillen en Beta interpreteren | 1/3 | 1 | 1 | 1,41 |
 | Variabelenselectie en modeluitbreiding | 2/3 | 4 | 4 | 3,56 |
@@ -209,7 +209,7 @@ Q is het doorgaande vraagnummer. Bij maart 2020 staat daarnaast het oorspronkeli
 | 20220316 | 7 (7) | - | Stratificatie: grenzen, redenen en allocatie | 3 | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/opgaven.pdf#page=4) | [p. 3](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/uitwerking.pdf#page=3) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20220316 | 8 (8) | - | Stratificatie: totaalschatting en interval | 8 | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/opgaven.pdf#page=4) | [p. 3](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/uitwerking.pdf#page=3) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20220316 | 9 (9) | - | Hypothesen en significantietoetsen regressie | 4 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/opgaven.pdf#page=5) | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/uitwerking.pdf#page=5) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
-| 20220316 | 10 (10) | - | Gezamenlijke punten zonder aantoonbare verdeling | 3 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/opgaven.pdf#page=5) | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/uitwerking.pdf#page=5) | Meest significante variabele en verklaarde spreiding gezamenlijk 3 punten; rubric splitst deze niet. Betrokken: Hypothesen en significantietoetsen regressie, ANOVA, verklaarde variatie en residuele spreiding. |
+| 20220316 | 10 (10) | - | Gezamenlijke punten zonder aantoonbare verdeling | 3 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/opgaven.pdf#page=5) | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/uitwerking.pdf#page=5) | Meest significante variabele en verklaarde spreiding gezamenlijk 3 punten; rubric splitst deze niet. Betrokken: Correlatie en eerste keuze van verklarende variabelen, ANOVA, verklaarde variatie en residuele spreiding. |
 | 20220316 | 11 (11) | a | Multicollineariteit | 2 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/opgaven.pdf#page=5) | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/uitwerking.pdf#page=5) | Opgave 11a: 2 punten. |
 | 20220316 | 11 (11) | b | Multicollineariteit | 2 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/opgaven.pdf#page=5) | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/uitwerking.pdf#page=5) | Opgave 11b: 2 punten. |
 | 20220316 | 12 (12) | - | Samengevoegde groepen | 4 | [p. 6](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/opgaven.pdf#page=6) | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20220316/uitwerking.pdf#page=5) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
@@ -238,7 +238,7 @@ Q is het doorgaande vraagnummer. Bij maart 2020 staat daarnaast het oorspronkeli
 | 20221031 | 7 (7) | - | Stratificatie: grenzen, redenen en allocatie | 1 | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/opgaven.pdf#page=4) | [p. 3](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/uitwerking.pdf#page=3) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20221031 | 8 (8) | a | Hypothesen en significantietoetsen regressie | 2 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/opgaven.pdf#page=5) | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/uitwerking.pdf#page=4) | Opgave 8a: 2 punten. |
 | 20221031 | 8 (8) | b | Hypothesen en significantietoetsen regressie | 2 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/opgaven.pdf#page=5) | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/uitwerking.pdf#page=4) | Opgave 8b: 2 punten. |
-| 20221031 | 9 (9) | a | Hypothesen en significantietoetsen regressie | 3 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/opgaven.pdf#page=5) | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/uitwerking.pdf#page=4) | Opgave 9a: 3 punten voor significantie. |
+| 20221031 | 9 (9) | a | Correlatie en eerste keuze van verklarende variabelen | 3 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/opgaven.pdf#page=5) | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/uitwerking.pdf#page=4) | Opgave 9a: 3 punten; het antwoord leest de significante correlaties met Prijs af uit afbeelding 1. |
 | 20221031 | 9 (9) | b | Multicollineariteit | 3 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/opgaven.pdf#page=5) | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/uitwerking.pdf#page=4) | Opgave 9b: 3 punten. |
 | 20221031 | 9 (9) | c | Correlatie en eerste keuze van verklarende variabelen | 3 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/opgaven.pdf#page=5) | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/uitwerking.pdf#page=4) | Opgave 9c: 3 punten voor richting tegenover verwachting. |
 | 20221031 | 10 (10) | a | ANOVA, verklaarde variatie en residuele spreiding | 3 | [p. 6](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/opgaven.pdf#page=6) | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20221031/uitwerking.pdf#page=4) | Opgave 10a: 3 punten voor R². |
@@ -262,7 +262,7 @@ Q is het doorgaande vraagnummer. Bij maart 2020 staat daarnaast het oorspronkeli
 | 20230315 | 3 (3) | - | Stratificatie: grenzen, redenen en allocatie | 5 | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/opgaven.pdf#page=4) | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/uitwerking.pdf#page=1) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20230315 | 4 (4) | - | Stratificatie: grenzen, redenen en allocatie | 5 | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/opgaven.pdf#page=4) | [p. 2](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/uitwerking.pdf#page=2) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20230315 | 5 (5) | - | Stratificatie: totaalschatting en interval | 9 | [p. 4](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/opgaven.pdf#page=4) | [p. 2](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/uitwerking.pdf#page=2) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
-| 20230315 | 6 (6) | - | Hypothesen en significantietoetsen regressie | 3 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/opgaven.pdf#page=5) | [p. 3](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/uitwerking.pdf#page=3) | Normering: significantie verklarende variabelen met Tijd 3 punten. |
+| 20230315 | 6 (6) | - | Correlatie en eerste keuze van verklarende variabelen | 3 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/opgaven.pdf#page=5) | [p. 3](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/uitwerking.pdf#page=3) | Normering: significante correlatie van Afstand en Lading met Tijd, afgelezen uit de correlatietabel, 3 punten. |
 | 20230315 | 6 (6) | - | Multicollineariteit | 1 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/opgaven.pdf#page=5) | [p. 3](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/uitwerking.pdf#page=3) | Normering: onderlinge correlaties verklarende variabelen 1 punt. |
 | 20230315 | 7 (7) | a | Regressiebasis: gegevenstype, OLS en residuen | 2 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/opgaven.pdf#page=5) | [p. 3](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/uitwerking.pdf#page=3) | Opgave 7a: crosssectie 2 punten. |
 | 20230315 | 7 (7) | b | Toepasselijkheid tijdsvertraging en autocorrelatie | 4 | [p. 5](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/opgaven.pdf#page=5) | [p. 3](https://sra-2xt.pages.dev/bronnen/tentamens/20230315/uitwerking.pdf#page=3) | Normering 7b: niet-toepasselijke tijdsvertraging en autocorrelatie elk 2 punten. |
@@ -364,7 +364,7 @@ Q is het doorgaande vraagnummer. Bij maart 2020 staat daarnaast het oorspronkeli
 | 20241028 | 16 (16) | - | Modelvergelijking met adjusted R² en spaarzaamheid | 3 | [p. 9](https://sra-2xt.pages.dev/bronnen/tentamens/20241028/opgaven.pdf#page=9) | [p. 6](https://sra-2xt.pages.dev/bronnen/tentamens/20241028/uitwerking.pdf#page=6) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20241028 | 17 (17) | - | Hypothesen en significantietoetsen regressie | 3 | [p. 10](https://sra-2xt.pages.dev/bronnen/tentamens/20241028/opgaven.pdf#page=10) | [p. 6](https://sra-2xt.pages.dev/bronnen/tentamens/20241028/uitwerking.pdf#page=6) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20241028 | 18 (18) | - | Multicollineariteit | 6 | [p. 10](https://sra-2xt.pages.dev/bronnen/tentamens/20241028/opgaven.pdf#page=10) | [p. 6](https://sra-2xt.pages.dev/bronnen/tentamens/20241028/uitwerking.pdf#page=6) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
-| 20250317 | 1 (1) | - | Verschilschatter | 2 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20250317/opgaven.pdf#page=1) | [p. 11](https://sra-2xt.pages.dev/bronnen/tentamens/20250317/uitwerking.pdf#page=11) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
+| 20250317 | 1 (1) | - | Schatters vergelijken en kiezen | 2 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20250317/opgaven.pdf#page=1) | [p. 11](https://sra-2xt.pages.dev/bronnen/tentamens/20250317/uitwerking.pdf#page=11) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20250317 | 2 (2) | - | Verschilschatter | 1 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20250317/opgaven.pdf#page=1) | [p. 11](https://sra-2xt.pages.dev/bronnen/tentamens/20250317/uitwerking.pdf#page=11) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20250317 | 3 (3) | - | Verschilschatter | 11 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20250317/opgaven.pdf#page=1) | [p. 11](https://sra-2xt.pages.dev/bronnen/tentamens/20250317/uitwerking.pdf#page=11) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20250317 | 4 (4) | a | Stratificatie: grenzen, redenen en allocatie | 3 | [p. 2](https://sra-2xt.pages.dev/bronnen/tentamens/20250317/opgaven.pdf#page=2) | [p. 11](https://sra-2xt.pages.dev/bronnen/tentamens/20250317/uitwerking.pdf#page=11) | Opgave 4a: evenredige allocatie 3 punten. |
@@ -413,7 +413,8 @@ Q is het doorgaande vraagnummer. Bij maart 2020 staat daarnaast het oorspronkeli
 | 20251028 | 15 (2.7) | - | Normaliteit van residuen | 3 | [p. 7](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/opgaven.pdf#page=7) | [p. 12](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/uitwerking.pdf#page=12) | Normering: hypothesen, toets/p en conclusie elk 1. |
 | 20251028 | 15 (2.7) | - | Heteroscedasticiteit | 4 | [p. 7](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/opgaven.pdf#page=7) | [p. 12](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/uitwerking.pdf#page=12) | Normering: hypothesen 1, ABSRES/p 2, conclusie 1. |
 | 20251028 | 16 (2.8) | - | Multicollineariteit | 3 | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/opgaven.pdf#page=8) | [p. 12](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/uitwerking.pdf#page=12) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
-| 20251028 | 17 (2.9) | - | Regressievergelijking, puntschatting en extrapolatie | 6 | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/opgaven.pdf#page=8) | [p. 12](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/uitwerking.pdf#page=12) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
+| 20251028 | 17 (2.9) | - | Regressievergelijking, puntschatting en extrapolatie | 4 | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/opgaven.pdf#page=8) | [p. 12](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/uitwerking.pdf#page=12) | Normering: vergelijking 2 en invullen 2 punten. |
+| 20251028 | 17 (2.9) | - | Regressiebasis: gegevenstype, OLS en residuen | 2 | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/opgaven.pdf#page=8) | [p. 12](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/uitwerking.pdf#page=12) | Normering: residu 92 − 90,6 apart 2 punten. |
 | 20251028 | 18 (2.10) | - | Hypothesen en significantietoetsen regressie | 3 | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/opgaven.pdf#page=8) | [p. 12](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/uitwerking.pdf#page=12) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20251028 | 19 (2.11) | - | Niet-lineaire modellen en transformaties | 4 | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/opgaven.pdf#page=8) | [p. 12](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/uitwerking.pdf#page=12) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20251028 | 20 (2.12) | - | Modelvergelijking met adjusted R² en spaarzaamheid | 3 | [p. 9](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/opgaven.pdf#page=9) | [p. 13](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/uitwerking.pdf#page=13) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
@@ -421,7 +422,7 @@ Q is het doorgaande vraagnummer. Bij maart 2020 staat daarnaast het oorspronkeli
 | 20251028 | 22 (2.14) | - | Hypothesen en significantietoetsen regressie | 3 | [p. 9](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/opgaven.pdf#page=9) | [p. 13](https://sra-2xt.pages.dev/bronnen/tentamens/20251028/uitwerking.pdf#page=13) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20260323 | 1 (1.1) | - | Verschilschatter | 9 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/opgaven.pdf#page=1) | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/uitwerking.pdf#page=8) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20260323 | 2 (1.2) | - | Steekproefomvang en uitbreiding | 4 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/opgaven.pdf#page=1) | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/uitwerking.pdf#page=8) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
-| 20260323 | 3 (1.3) | - | Regressieschatter van een populatietotaal | 2 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/opgaven.pdf#page=1) | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/uitwerking.pdf#page=8) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
+| 20260323 | 3 (1.3) | - | Schatters vergelijken en kiezen | 2 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/opgaven.pdf#page=1) | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/uitwerking.pdf#page=8) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20260323 | 4 (1.4) | - | Regressieschatter van een populatietotaal | 6 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/opgaven.pdf#page=1) | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/uitwerking.pdf#page=8) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20260323 | 5 (1.5) | - | Stratificatie: grenzen, redenen en allocatie | 3 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/opgaven.pdf#page=1) | [p. 8](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/uitwerking.pdf#page=8) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |
 | 20260323 | 6 (1.6) | - | Stratificatie: grenzen, redenen en allocatie | 2 | [p. 1](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/opgaven.pdf#page=1) | [p. 9](https://sra-2xt.pages.dev/bronnen/tentamens/20260323/uitwerking.pdf#page=9) | Volledige bronvraag binnen dit onderwerp; geen punten bij ondersteunende onderwerpen opnieuw geteld. |

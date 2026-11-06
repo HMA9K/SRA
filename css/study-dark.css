@@ -365,6 +365,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis .jump{back
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-table{background:#152129;border:1px solid #3b4a54}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-table th,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-table td{border-bottom:1px solid #3b4a54}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-table th{background:#1e1c26;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-table .sra-analysis-block th{background:#1e1b27}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-weight-bar{color:#f0f7fc}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-weight-bar>span{background:#0e8159}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-weight-bar>span+span{background:#212b38}
