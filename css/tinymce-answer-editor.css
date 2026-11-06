@@ -39,3 +39,7 @@ html[data-study-theme=dark] .cafa-answer-editor.has-tinymce .tox .cae-count{colo
 .answer-frac>.answer-box+.answer-box,.answer-root>.answer-box{border-top:1px solid currentColor}
 /* Schermlezers horen in de ingeleverde versie dat het om een breuk gaat. */
 .answer-frac>.answer-box+.answer-box::before{content:"gedeeld door";position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.answer-tall-2,.answer-tall-3,.answer-tall-4{line-height:1;vertical-align:middle;font-weight:300}
+.answer-tall-2{font-size:2.1em}
+.answer-tall-3{font-size:3em}
+.answer-tall-4{font-size:3.9em}

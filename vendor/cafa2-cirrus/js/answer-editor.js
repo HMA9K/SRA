@@ -18,7 +18,7 @@
       if (allowed.has(node.tagName)) {
         target = document.createElement(node.tagName.toLowerCase());
         var styles = node.style;
-        if (node.tagName === 'SPAN' && /^(answer-formula answer-(frac|root)|answer-box)$/.test(node.className)) target.className = node.className;
+        if (node.tagName === 'SPAN' && /^(answer-formula answer-(frac|root)|answer-box|answer-tall-[234])$/.test(node.className)) target.className = node.className;
         if (/^(left|right|center|justify)$/.test(styles.textAlign)) target.style.textAlign = styles.textAlign;
         if (/^(bold|[6-9]00)$/.test(styles.fontWeight)) target.style.fontWeight = styles.fontWeight;
         if (styles.fontStyle === 'italic') target.style.fontStyle = 'italic';
