@@ -12,7 +12,7 @@ for(const [id,steps] of Object.entries(data.questions)){
  assert.equal(new Set(keys).size,keys.length,`Formule dubbel getoond: ${id}`);
  for(const key of keys)assert.ok(data.formulas[key],`Formule ontbreekt: ${key}`);
 }
-for(const [key,formula] of Object.entries(data.formulas))assert.match(formula.source,/^(Formules? \d|Afgeleid van formules? \d|Niet op het formuleblad)/,`Geen verwijzing: ${key}`);
+for(const [key,formula] of Object.entries(data.formulas))assert.match(formula.source,/^(Formules? \d|Afgeleid van formules? \d)/,`Geen verwijzing: ${key}`);
 
 // Het voorbeeld van de gebruiker: variantie uit strata en het interval.
 const stratified=data.html('exam-20200323-vraag-11',0);

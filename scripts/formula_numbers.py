@@ -1,11 +1,10 @@
 """Formulenummers van het formuleblad en het doel van ieder formuleblok.
 
 Het formuleblad (versie augustus 2024) is leidend. Een formule die er niet op staat
-krijgt geen nummer, maar een herkomst: afgeleid van een nummer of niet op het blad.
+krijgt geen eigen nummer, maar de verwijzing waarvan zij is afgeleid.
 """
 import re
 
-NOT_ON_SHEET = 'Niet op het formuleblad'
 
 
 def number(*values):
@@ -19,8 +18,8 @@ def derived(*values):
 
 # Lesnaam, formulelabel. Zelfde label in uitleg en formulepagina betekent dezelfde formule.
 NUMBERS = {
-    'beginnen': {'Gemiddelde in de steekproef': NOT_ON_SHEET, 'Puntschatting': number(3)},
-    'rekenen': {'Gemiddelde': NOT_ON_SHEET, 'Variantie': derived(1), 'Standaardafwijking': derived(1), 'Rekenen met totalen': number(1)},
+    'beginnen': {'Gemiddelde in de steekproef': derived(3), 'Puntschatting': number(3)},
+    'rekenen': {'Gemiddelde': derived(3), 'Variantie': derived(1), 'Standaardafwijking': derived(1), 'Rekenen met totalen': number(1)},
     'onzekerheid': {'Interval': derived(2), 'Marge': derived(2), 'Totale breedte': derived(2)},
     'mpu': {'Puntschatting': number(3), 'Standaardfout': number(4), 'Interval': number(2)},
     'verschil': {'Verschil per post': number(6), 'Gemiddeld verschil': derived(6), 'Puntschatting': number(9),
