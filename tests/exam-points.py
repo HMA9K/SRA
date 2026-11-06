@@ -2,7 +2,8 @@
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from build_exam_points import analyze, load_exams
+from build_exam_points import analyze, browser_data, load_exams, package_level, priority_packages, question_types
+from exam_point_rules import PRIORITY_PACKAGES
 
 d=analyze()
 assert len(d['exams'])==11
@@ -38,6 +39,35 @@ assert next(t for t in d['topics'] if t['id']=='validatie')['points']==0
 print('OK: 1100 punten, 385 sampling/715 regressie, 265 oorspronkelijke deelvragen, recente nullen en gedeelde punten.')
 
 basis = next(t for t in d['topics'] if t['id'] == 'basis')
-assert (basis['points'], basis['exams'], basis['subquestions']) == (32, 8, 10)
-assert round(basis['share'], 2) == 2.91  # Alle elf tentamens, ook de drie nullen.
-assert round(basis['meanWhenPresent'], 2) == 4  # Alleen de acht tentamens met regressiebasis.
+assert (basis['points'], basis['exams'], basis['subquestions']) == (34, 8, 11)
+assert round(basis['share'], 2) == 3.09  # Alle elf tentamens, ook de drie nullen.
+assert round(basis['meanWhenPresent'], 2) == 4.25  # Alleen de acht tentamens met regressiebasis.
+
+# De tentamenanalyse toont ieder onderwerp eenmaal en sluit per opgave aan op 35 en 65 punten.
+b=browser_data(d)
+assert [g['points'] for g in b['groups']]==[35,65]
+assert abs(sum(block['mean'] for g in b['groups'] for block in g['blocks'])-100)<1e-9
+assert sorted(t for g in b['groups'] for block in g['blocks'] for t in block['topics'])==sorted(b['topics'])
+assert len(b['skills'][0]['questions'])==11  # t- en F-tabel: over alle tentamens nagelopen.
+
+# Iedere vraag en deelvraag heeft één vraagtype.
+types=question_types(d)
+assert sum(t['count'] for t in types)==265 and abs(sum(t['pointsShare'] for t in types)-100)<1e-9
+assert [t['id'] for t in types]==['R','L','I','T','H']
+
+# Prioriteit: geen enkel pakket verschuift als één tentamen wegvalt.
+packages=priority_packages(d)
+assert all(p['stable'] for p in packages),[p['id'] for p in packages if not p['stable']]
+levels={p['id']:p['level'] for p in packages}
+assert [sum(v==n for v in levels.values()) for n in (1,2,3,4)]==[7,6,5,2]
+# Elk tentamen bevat minstens één van de vier schatters, dus overslaan kan niet.
+assert min(next(p for p in packages if p['id']=='schatters')['byExam'])>0
+# Grensgevallen uit de rubricering veranderen de indeling niet als ze anders uitvallen.
+by_exam={t['id']:dict(t['byExam']) for t in d['topics']}
+exam_ids=[e['id'] for e in d['exams']]
+for topic,exam,change in [('normaliteit','20251028',-6),('transformaties','20251028',-4),('transformaties','20260323',-4),
+                          ('selectie','20260323',-1),('toetsen','20221031',3),('correlatie','20221031',-3),
+                          ('verschil','20250317',2),('schatterkeuze','20250317',-2),('puntvoorspelling','20251028',2),('basis','20251028',-2)]:
+    by_exam[topic][exam]+=change
+    assert all(package_level(p,by_exam,exam_ids)==levels[p['id']] for p in PRIORITY_PACKAGES),(topic,exam)
+    by_exam[topic][exam]-=change

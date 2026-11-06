@@ -7,7 +7,7 @@ import re
 import statistics
 from decimal import Decimal, ROUND_HALF_UP
 
-from exam_point_rules import BASE, SPLITS, TOPICS, JOINT_TOPICS
+from exam_point_rules import BASE, SPLITS, TOPICS, JOINT_TOPICS, TOPIC_GROUPS, TOPIC_LESSONS, TOPIC_SHORT, SKILLS, PRIORITY_LEVELS, QUESTION_TYPES, PRIORITY_PACKAGES
 
 ROOT = Path(__file__).resolve().parents[1]
 WORDS = {9:'Negen',10:'Tien',11:'Elf',12:'Twaalf'}
@@ -64,6 +64,97 @@ def analyze():
     for e in exams:
         assert sum(r['points'] for r in rows if r['exam'] == e['id']) == 100
     return result
+
+
+def priority_level(seen, count, weight):
+    share = seen / count
+    if share < 1 / 3:
+        return 4
+    if share > 2 / 3 and weight >= 5.5:
+        return 1
+    if share > 2 / 3 and weight >= 2.5:
+        return 2
+    return 3
+
+
+def package_scores(package, by_exam, exams):
+    """Punten per tentamen van een pakket; by_exam is {onderwerp: {tentamen: punten}}."""
+    return [sum(by_exam[t][e] for t in package['topics']) for e in exams]
+
+
+def package_level(package, by_exam, exams):
+    scores = package_scores(package, by_exam, exams)
+    return priority_level(sum(v > 0 for v in scores), len(scores), sum(scores) / len(scores))
+
+
+def priority_packages(data):
+    exams = [e['id'] for e in data['exams']]
+    recent = [e for e in exams if e >= RECENT]
+    by_exam = {t['id']: t['byExam'] for t in data['topics']}
+    result = []
+    for package in PRIORITY_PACKAGES:
+        scores = package_scores(package, by_exam, exams)
+        level = package_level(package, by_exam, exams)
+        stable = all(package_level(package, by_exam, [e for e in exams if e != left]) == level for left in exams)
+        recent_scores = package_scores(package, by_exam, recent)
+        result.append(dict(package, level=level, stable=stable, exams=sum(v > 0 for v in scores),
+                           recentExams=sum(v > 0 for v in recent_scores), weight=sum(scores) / len(scores),
+                           recentWeight=sum(recent_scores) / len(recent_scores), byExam=scores))
+    return result
+
+
+def question_types(data):
+    """Aantallen per vraagtype; een deelvraag met letter telt apart, net als in de rubricering."""
+    points = {}
+    for r in data['rows']:
+        key = (r['exam'], str(r['question']) + ('' if r['part'] == '-' else r['part']))
+        points[key] = points.get(key, 0) + r['points']
+    labels = {(exam, item.split('=')[0]): item.split('=')[1] for exam, line in QUESTION_TYPES.items() for item in line.split()}
+    assert set(labels) == set(points)
+    total, count = sum(points.values()), len(data['exams'])
+    result = []
+    for letter in 'RLITH':
+        own = [k for k, v in labels.items() if v == letter]
+        result.append(dict(id=letter, count=len(own), perExam=len(own) / count, share=100 * len(own) / len(labels),
+                           pointsShare=100 * sum(points[k] for k in own) / total))
+    return sorted(result, key=lambda t: -t['share'])
+
+
+def browser_data(data):
+    """Gegevens voor de tentamenanalyse op de site; geen nieuwe telling, alleen een selectie."""
+    count = len(data['exams'])
+    topics = {t['id']: t for t in data['topics']}
+    grouped = [topic for _, blocks in TOPIC_GROUPS for _, ids in blocks for topic in ids]
+    assert sorted(grouped) == sorted(TOPICS) == sorted(TOPIC_LESSONS)
+    questions = {(r['exam'], r['question']) for r in data['rows']}
+    for skill in SKILLS:
+        assert all((exam, n) in questions for exam, numbers in skill['questions'].items() for n in numbers), skill['label']
+    def total(ids):
+        return sum(topics[t]['points'] for t in ids)
+    groups = [dict(title=title, points=round(sum(total(ids) for _, ids in blocks) / count),
+                   blocks=[dict(title=name, mean=total(ids) / count, topics=ids) for name, ids in blocks])
+              for title, blocks in TOPIC_GROUPS]
+    shown = {}
+    for key, t in topics.items():
+        present = [v for v in t['byExam'].values() if v]
+        shown[key] = dict(label=t['label'], short=TOPIC_SHORT[key], lesson=TOPIC_LESSONS[key], exams=t['exams'], recentExams=t['recentExams'],
+                          points=t['points'], mean=t['meanWhenPresent'],
+                          low=min(present, default=0), high=max(present, default=0))
+    packages = priority_packages(data)
+    assert sorted(t for p in packages for t in p['topics']) == sorted(set(TOPICS) - {'gezamenlijk'})
+    for package in packages:
+        for topic in package['topics']:
+            shown[topic].update(level=package['level'], package=package['id'])
+    rows = [dict(exam=r['exam'], question=r['question'], part=r['part'], topic=r['topic'],
+                 points=r['points'], sharedWith=r['sharedWith']) for r in data['rows']]
+    return dict(recentCount=sum(e['id'] >= RECENT for e in data['exams']), groups=groups, topics=shown,
+                rows=rows, skills=SKILLS, questionTypes=question_types(data), levels=PRIORITY_LEVELS, packages=packages,
+                exams=[dict(id=e['id'], date=e['date']) for e in data['exams']], byExam={t['id']: list(t['byExam'].values()) for t in data['topics']})
+
+
+def browser_script(data):
+    return ('/* Gegenereerd met scripts/build_exam_points.py uit scripts/exam_point_rules.py. */\n'
+            'window.SRAExamTopics = ' + json.dumps(browser_data(data), ensure_ascii=False) + ';\n')
 
 
 def verify_sources():
@@ -157,6 +248,7 @@ if __name__ == '__main__':
     args=parser.parse_args()
     data=analyze()
     outputs={'data/exam-point-analysis.json':json.dumps(data,ensure_ascii=False,indent=2)+'\n',
+             'data/exam-topics.js':browser_script(data),
              'docs/tentamen-puntenanalyse-2026-10-25.md':markdown(data)}
     for relative, content in outputs.items():
         target=ROOT/relative

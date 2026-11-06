@@ -120,7 +120,7 @@
           "points": 40,
           "firstQuestion": 12,
           "lastQuestion": 20,
-          "description": "Cross-sectieanalyse, uitschieters en invloed; significantie, R², normaliteit, homoscedasticiteit, ANOVA en eenzijdig voorspellen."
+          "description": "Cross-sectieanalyse, samengevoegde groepen en tijdsaspecten; uitschieters en invloed; significantie, R², normaliteit, homoscedasticiteit, ANOVA en eenzijdig voorspellen."
         },
         {
           "id": "opgave-3",
@@ -246,7 +246,7 @@
           "points": 40,
           "firstQuestion": 12,
           "lastQuestion": 20,
-          "description": "Cross-sectieanalyse, uitschieters en invloed; significantie, R², normaliteit, homoscedasticiteit, ANOVA en eenzijdig voorspellen."
+          "description": "Cross-sectieanalyse, samengevoegde groepen en tijdsaspecten; uitschieters en invloed; significantie, R², normaliteit, homoscedasticiteit, ANOVA en eenzijdig voorspellen."
         },
         {
           "id": "opgave-3",
@@ -302,10 +302,12 @@
           7
         ],
         "Verklaarde variatie / modelvergelijking": [
+          9,
           15,
           16
         ],
         "Hypothesen / significantie": [
+          14,
           19
         ],
         "Uitschieters / invloed": [
@@ -330,7 +332,8 @@
         ],
         "Voorspellingsinterval regressie": [],
         "Benodigde steekproefomvang": [
-          2
+          2,
+          4
         ]
       },
       "duur_minuten": 150,
@@ -342,7 +345,7 @@
           "points": 35,
           "firstQuestion": 1,
           "lastQuestion": 7,
-          "description": "MPU en ratio; omvang; gestratificeerde verschilschatter."
+          "description": "Directe schatter en quotiëntschatter; omvang; gestratificeerde verschilschatter."
         },
         {
           "id": "opgave-2",
@@ -351,7 +354,7 @@
           "points": 65,
           "firstQuestion": 8,
           "lastQuestion": 21,
-          "description": "Modelaannames, uitschieters, R², modelkeuze, VIF en t-toets."
+          "description": "Correlaties, modelaannames, uitschieters, R², niet-lineaire modellen, modelkeuze, achterwaartse eliminatie, VIF en t-toets."
         }
       ]
     },
@@ -403,6 +406,7 @@
         ],
         "Hypothesen / significantie": [
           9,
+          10,
           18
         ],
         "Uitschieters / invloed": [
@@ -439,7 +443,7 @@
           "points": 35,
           "firstQuestion": 1,
           "lastQuestion": 8,
-          "description": "MPU en verschil; omvang; stratificatie en interval."
+          "description": "Directe schatter en verschilschatter; omvang; stratificatie en interval."
         },
         {
           "id": "opgave-2",
@@ -448,7 +452,7 @@
           "points": 65,
           "firstQuestion": 9,
           "lastQuestion": 23,
-          "description": "Modelkeuze, logaritmisch model, diagnose, t-toets en voorspellen."
+          "description": "Hypothesen en correlaties, samengevoegde groepen, logaritmisch model, diagnose, t-toets, dummyvariabele, stapsgewijze selectie, voorspellen en extrapolatie."
         }
       ]
     },
@@ -495,6 +499,7 @@
         ],
         "Hypothesen / significantie": [
           8,
+          9,
           10,
           16
         ],
@@ -528,7 +533,7 @@
           "points": 35,
           "firstQuestion": 1,
           "lastQuestion": 7,
-          "description": "Ratio en MPU; stratificatie en interval."
+          "description": "Quotiëntschatter en directe schatter; stratificatie en interval."
         },
         {
           "id": "opgave-2",
@@ -537,7 +542,7 @@
           "points": 65,
           "firstQuestion": 8,
           "lastQuestion": 16,
-          "description": "Deel A: meervoudig model (45 p). Deel B: enkelvoudig model (20 p). ANOVA, diagnose en toetsing."
+          "description": "Deel A: meervoudig model (45 p). Deel B: enkelvoudig model (20 p). Correlaties, multicollineariteit, stapsgewijze selectie, niet-lineaire vergelijking, ANOVA, diagnose en toetsing."
         }
       ]
     },
@@ -572,6 +577,7 @@
       "themas": {
         "Betrouwbaarheidsinterval steekproef": [
           1,
+          2,
           5
         ],
         "Stratificatie": [
@@ -585,7 +591,9 @@
           19
         ],
         "Hypothesen / significantie": [
+          6,
           8,
+          13,
           15
         ],
         "Uitschieters / invloed": [
@@ -599,10 +607,12 @@
           13
         ],
         "Multicollineariteit": [
+          6,
           17
         ],
         "Variabelenselectie": [
-          18
+          18,
+          19
         ],
         "Niet-lineaire modellen": [
           10
@@ -630,7 +640,7 @@
           "points": 65,
           "firstQuestion": 6,
           "lastQuestion": 19,
-          "description": "Diagnose, modelvergelijking, t-toets, voorspellingsinterval en variabelenselectie."
+          "description": "Correlaties, type analyse en tijdsaspecten, diagnose, modelvergelijking, t-toets, voorspellingsinterval en variabelenselectie."
         }
       ]
     },
@@ -667,6 +677,7 @@
       "regressie": 65,
       "themas": {
         "Betrouwbaarheidsinterval steekproef": [
+          1,
           2,
           4,
           7
@@ -681,6 +692,7 @@
           18
         ],
         "Hypothesen / significantie": [
+          15,
           20
         ],
         "Uitschieters / invloed": [
@@ -698,6 +710,7 @@
           19
         ],
         "Variabelenselectie": [
+          9,
           16,
           17
         ],
@@ -718,7 +731,7 @@
           "points": 35,
           "firstQuestion": 1,
           "lastQuestion": 7,
-          "description": "MPU en verschil; omvang; stratificatie en interval."
+          "description": "Directe schatter en verschilschatter; omvang; stratificatie en interval."
         },
         {
           "id": "opgave-2",
@@ -727,7 +740,7 @@
           "points": 65,
           "firstQuestion": 8,
           "lastQuestion": 22,
-          "description": "Correlaties, voorspellen, diagnose, selectie, adjusted R² en t-toets."
+          "description": "Correlaties en multicollineariteit, voorspellen en voorspellingsinterval, diagnose, selectie, adjusted R² en t-toets."
         }
       ]
     },
@@ -821,7 +834,7 @@
           "points": 35,
           "firstQuestion": 1,
           "lastQuestion": 7,
-          "description": "MPU en ratio; stratificatie, allocatie en interval."
+          "description": "Directe schatter en quotiëntschatter; stratificatie, allocatie en interval."
         },
         {
           "id": "opgave-2",
@@ -830,7 +843,7 @@
           "points": 65,
           "firstQuestion": 8,
           "lastQuestion": 24,
-          "description": "ANOVA, lineair/logaritmisch voorspellen, interval, OLS, diagnose en dummyvariabelen."
+          "description": "Correlatie en multicollineariteit, ANOVA, lineair en logaritmisch voorspellen, interval, OLS, diagnose, variabelenselectie, dummyvariabelen en hypothesen."
         }
       ]
     },
@@ -864,6 +877,7 @@
       "themas": {
         "Betrouwbaarheidsinterval steekproef": [
           1,
+          3,
           6
         ],
         "Stratificatie": [
@@ -880,6 +894,7 @@
         "Hypothesen / significantie": [
           8,
           10,
+          12,
           17
         ],
         "Uitschieters / invloed": [
@@ -923,7 +938,7 @@
           "points": 65,
           "firstQuestion": 8,
           "lastQuestion": 18,
-          "description": "Deel A: enkelvoudig (46 p). Deel B: meervoudig (19 p). ANOVA, diagnose, interval, OLS en VIF."
+          "description": "Deel A: enkelvoudig (46 p). Deel B: meervoudig (19 p). Hypothesen, ANOVA, diagnose, interval, OLS, achterwaartse eliminatie, adjusted R² en VIF."
         }
       ],
       "bronopmerkingen": [
@@ -1020,20 +1035,25 @@
         ],
         "Uitschieters / invloed": [
           13,
-          14
+          14,
+          18
         ],
         "Normaliteit": [
           15,
+          17,
+          18,
           24
         ],
         "Heteroscedasticiteit": [
-          16
+          16,
+          17
         ],
         "Multicollineariteit": [
           23
         ],
         "Variabelenselectie": [
-          22
+          22,
+          25
         ],
         "Niet-lineaire modellen": [
           11,
@@ -1051,7 +1071,7 @@
           "points": 35,
           "firstQuestion": 1,
           "lastQuestion": 6,
-          "description": "Verschilschatter; stratificatie en MPU per stratum."
+          "description": "Verschilschatter; evenredige en Neyman-allocatie; stratificatie met de directe schatter per stratum."
         },
         {
           "id": "opgave-2",
@@ -1060,7 +1080,7 @@
           "points": 65,
           "firstQuestion": 7,
           "lastQuestion": 25,
-          "description": "Modelkwaliteit, transformaties, diagnose, dummyvariabelen, voorspellen en toetsen."
+          "description": "Correlatie en modelkwaliteit, samengevoegde groepen, transformaties, diagnose, dummyvariabelen, voorspellen, toetsen, multicollineariteit, achterwaartse selectie en modeluitbreiding."
         }
       ],
       "vraag_paginas": 10,
@@ -1100,7 +1120,8 @@
       "themas": {
         "Betrouwbaarheidsinterval steekproef": [
           1,
-          4
+          4,
+          8
         ],
         "Stratificatie": [
           5,
@@ -1119,6 +1140,7 @@
           22
         ],
         "Uitschieters / invloed": [
+          12,
           13,
           14
         ],
@@ -1161,7 +1183,7 @@
           "points": 65,
           "firstQuestion": 9,
           "lastQuestion": 22,
-          "description": "Hypothesen, diagnose van uitbijters en invloed, aannames, multicollineariteit, voorspellen, niet-lineaire modellen en toetsen."
+          "description": "Hypothesen, type regressieanalyse, verklaarde variatie, diagnose van uitbijters en invloed, aannames, multicollineariteit, voorspellen, niet-lineaire modellen, vergelijking van enkelvoudig en meervoudig model, en toetsen."
         }
       ],
       "vraag_paginas": 9,
@@ -1221,7 +1243,8 @@
       "themas": {
         "Betrouwbaarheidsinterval steekproef": [
           1,
-          4
+          4,
+          8
         ],
         "Stratificatie": [
           5,
@@ -1230,6 +1253,7 @@
           8
         ],
         "Verklaarde variatie / modelvergelijking": [
+          10,
           13,
           18
         ],
@@ -1283,7 +1307,7 @@
           "points": 65,
           "firstQuestion": 9,
           "lastQuestion": 21,
-          "description": "Correlatie, hypothesen, spreidingsdiagrammen, niet-lineaire modellen, diagnose, voorspellingsinterval en modeluitbreiding."
+          "description": "Type regressieanalyse, correlatie, hypothesen, spreidingsdiagrammen, niet-lineaire modellen, diagnose, voorspellingsinterval, extrapolatie, multicollineariteit en modeluitbreiding."
         }
       ],
       "vraag_paginas": 7,
