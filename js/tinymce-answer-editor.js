@@ -24,54 +24,78 @@
     });
     return loading;
   }
-  // ponytail: de knop zit alleen in TinyMCE; de eenvoudige noodeditor toont bewaarde formules wel, maar voegt ze niet toe.
-  var formulaKeys = [['Breuk', '(', ')/()'], ['Wortel', '√(', ')'], ['Macht', '^', ''], ['Index', '_', ''], ['Streep', '\u0304', ''], ['Dakje', '\u0302', ''], ['Σ', 'Σ', ''], ['×', '×', ''], ['≈', '≈', ''], ['±', '±', ''], ['≤', '≤', ''], ['≥', '≥', '']];
-  var formulaPrompt;
-  function createFormulaPrompt() {
-    var dialog = document.createElement('dialog'), done = null, result = null;
-    dialog.className = 'answer-formula-dialog';
-    dialog.setAttribute('aria-labelledby', 'answer-formula-title');
-    dialog.setAttribute('data-no-formula-text', '');
-    dialog.innerHTML = '<form><h2 id="answer-formula-title">Formule invoegen</h2><label for="answer-formula-input">Typ je formule</label><input id="answer-formula-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="N_i / N × n"><div class="answer-formula-keys" role="group" aria-label="Formuletekens">' + formulaKeys.map(function (key, index) { return '<button type="button" data-key="' + index + '">' + key[0] + '</button>'; }).join('') + '</div><p class="answer-formula-hint">Een / maakt een breuk. Zet een langere teller of noemer tussen haakjes: <code>(a + b) / (c − d)</code>. Index: <code>N_i</code>. Macht: <code>s^2</code>.</p><div class="answer-formula-preview" role="status"></div><div class="answer-formula-actions"><button type="submit">Invoegen</button><button type="button" data-cancel>Annuleren</button></div></form>';
-    var input = dialog.querySelector('input'), preview = dialog.querySelector('.answer-formula-preview'), submit = dialog.querySelector('[type=submit]');
-    function render() {
-      var source = input.value.trim(), math = source ? window.SRAFormulaText.toMathML(source, true) : null;
-      submit.disabled = !math || /\(\s*\)|\[\s*\]/.test(source);
-      preview.innerHTML = math || '';
-      if (source && !math) preview.textContent = 'Nog niet compleet. Controleer de haakjes en tekens.';
-      return math;
+  // ponytail: de knoppen zitten alleen in TinyMCE; de eenvoudige noodeditor toont bewaarde breuken wel, maar voegt ze niet toe.
+  function installFormulas(instance) {
+    var doc = instance.getDoc();
+    function makeBox(text) {
+      var box = doc.createElement('span');
+      box.className = 'answer-box'; box.contentEditable = 'true'; box.textContent = text || '';
+      return box;
     }
-    input.addEventListener('input', render);
-    dialog.querySelector('.answer-formula-keys').addEventListener('click', function (event) {
-      var button = event.target.closest('[data-key]');
-      if (!button) return;
-      var key = formulaKeys[Number(button.dataset.key)], start = input.selectionStart, end = input.selectionEnd, selected = input.value.slice(start, end);
-      input.setRangeText(key[1] + selected + key[2], start, end, 'end');
-      // Zonder selectie begint de cursor in het eerste vak; met selectie in het volgende lege vak.
-      var caret = start + key[1].length + selected.length + (selected && key[2].includes('()') ? key[2].indexOf('()') + 1 : 0);
-      if (key[2]) input.setSelectionRange(caret, caret);
-      input.focus(); render();
-    });
-    dialog.querySelector('[data-cancel]').addEventListener('click', function () { dialog.close(); });
-    dialog.querySelector('form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      var math = render();
-      if (!math || submit.disabled) return;
-      var template = document.createElement('template'), wrapper = document.createElement('span');
-      template.innerHTML = math;
-      template.content.firstChild.setAttribute('alttext', input.value.trim());
-      wrapper.className = 'answer-formula'; wrapper.append(template.content.firstChild);
-      result = wrapper.outerHTML; dialog.close();
-    });
-    dialog.addEventListener('close', function () { var finish = done, html = result; done = result = null; if (finish) finish(html); });
-    document.body.append(dialog);
-    return function (source, finish) { done = finish; input.value = source; render(); dialog.showModal(); input.focus(); };
+    function place(node, offset) { if (node.focus) node.focus(); instance.selection.setCursorLocation(node, offset); }
+    function placeInBox(box, end) { place(box, end ? box.childNodes.length : 0); }
+    // Een onzichtbaar teken geeft de cursor naast het blok een plek; bij het bewaren valt het weg.
+    function leave(formula, forward) {
+      var anchor = doc.createTextNode('\uFEFF'), host = formula.parentElement.closest('.answer-box');
+      formula[forward ? 'after' : 'before'](anchor);
+      if (host) host.focus(); else instance.getBody().focus();
+      instance.selection.setCursorLocation(anchor, forward ? 1 : 0);
+    }
+    function insert(kind) {
+      instance.focus();
+      var text = instance.selection.getContent({format: 'text'}).trim();
+      if (text.includes('\n')) { instance.selection.collapse(false); text = ''; }
+      instance.undoManager.transact(function () {
+        var formula = doc.createElement('span'), first = makeBox(text), range = instance.selection.getRng();
+        formula.className = 'answer-formula answer-' + kind; formula.contentEditable = 'false';
+        formula.append(first);
+        if (kind === 'frac') formula.append(makeBox());
+        range.deleteContents(); range.insertNode(formula);
+        // Bij geselecteerde tekst is de teller al gevuld; dan begint de cursor in de noemer.
+        if (text && kind === 'frac') placeInBox(formula.lastChild); else placeInBox(first, true);
+      });
+    }
+    function currentBox() {
+      var range = instance.selection.getRng(), node = range.startContainer, element = node.nodeType === 1 ? node : node.parentElement;
+      return range.collapsed && element && element.closest('.answer-box');
+    }
+    function empty(box) { return !box.textContent.replace(/\uFEFF/g, '').length; }
+    function atEdge(box, end) {
+      var range = instance.selection.getRng(), rest = range.cloneRange();
+      rest.selectNodeContents(box);
+      if (end) rest.setStart(range.endContainer, range.endOffset); else rest.setEnd(range.startContainer, range.startOffset);
+      return !rest.toString().replace(/\uFEFF/g, '').length;
+    }
+    function step(box, forward) {
+      var list = Array.from(box.parentElement.children), next = list[list.indexOf(box) + (forward ? 1 : -1)];
+      if (next) placeInBox(next, !forward); else leave(box.parentElement, forward);
+    }
+    function remove(formula) {
+      instance.undoManager.transact(function () {
+        var anchor = doc.createTextNode('\uFEFF'), host = formula.parentElement.closest('.answer-box');
+        formula.replaceWith(anchor);
+        if (host) host.focus(); else instance.getBody().focus();
+        instance.selection.setCursorLocation(anchor, 0);
+      });
+    }
+    doc.addEventListener('keydown', function (event) {
+      var box = currentBox();
+      if (!box || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
+      var key = event.key, handled = true;
+      if (key === 'Tab' || key === 'Enter') step(box, !event.shiftKey);
+      else if (event.shiftKey) handled = false;
+      else if (key === 'ArrowDown' || key === 'ArrowUp') step(box, key === 'ArrowDown');
+      else if (key === 'ArrowRight' && atEdge(box, true)) step(box, true);
+      else if (key === 'ArrowLeft' && atEdge(box, false)) step(box, false);
+      else if (key === 'Backspace' && atEdge(box, false)) { if (Array.from(box.parentElement.children).every(empty)) remove(box.parentElement); }
+      else if (key === 'Delete' && atEdge(box, true)) { if (Array.from(box.parentElement.children).every(empty)) remove(box.parentElement); }
+      else handled = false;
+      if (!handled) return;
+      event.preventDefault(); event.stopImmediatePropagation();
+    }, true);
+    return insert;
   }
-  function openFormula(source, finish) {
-    formulaPrompt = formulaPrompt || createFormulaPrompt();
-    formulaPrompt(source, finish);
-  }
-  var contentStyle = '.answer-formula{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;padding:.14em .1em;vertical-align:middle;cursor:pointer;border-radius:3px}.answer-formula:hover{background:#eef3f7}.answer-formula[data-mce-selected]{outline:2px solid #006c47}.answer-formula math{font-size:1.2em}body[data-editor-theme=dark] .answer-formula:hover{background:#263540}body[data-editor-theme=dark] .answer-formula[data-mce-selected]{outline-color:#9edfc9}body{font:14px/1.55 Arial,sans-serif;margin:12px;color:#252b34;background:#fff;overflow-wrap:anywhere}p{margin:0 0 .6em}table{border-collapse:collapse;table-layout:fixed;max-width:100%}body table td,body table th{border:1px solid #afb7c0!important;min-width:30px;padding:6px;vertical-align:top;overflow-wrap:anywhere}th{background:#f4f6f8}body[data-editor-theme=dark]{background:#152129;color:#e0ebf2}body[data-editor-theme=dark] td,body[data-editor-theme=dark] th{border-color:#667681!important}body[data-editor-theme=dark] th{background:#263540}';
+  var contentStyle = '.answer-formula{display:inline-flex;max-width:100%;margin:0 .15em;vertical-align:middle}.answer-frac{flex-direction:column;text-align:center}.answer-root{align-items:flex-start}.answer-root::before{content:"√";font-size:1.25em;line-height:1.1}.answer-box{display:block;min-width:1.3em;min-height:1.3em;padding:0 .25em;line-height:1.3;outline:none}.answer-frac>.answer-box+.answer-box,.answer-root>.answer-box{border-top:1px solid currentColor}.answer-box:empty{background:rgba(0,108,71,.1)}.answer-box:focus{box-shadow:0 0 0 1px #006c47}body[data-editor-theme=dark] .answer-box:empty{background:rgba(158,223,201,.18)}body[data-editor-theme=dark] .answer-box:focus{box-shadow:0 0 0 1px #9edfc9}body{font:14px/1.55 Arial,sans-serif;margin:12px;color:#252b34;background:#fff;overflow-wrap:anywhere}p{margin:0 0 .6em}table{border-collapse:collapse;table-layout:fixed;max-width:100%}body table td,body table th{border:1px solid #afb7c0!important;min-width:30px;padding:6px;vertical-align:top;overflow-wrap:anywhere}th{background:#f4f6f8}body[data-editor-theme=dark]{background:#152129;color:#e0ebf2}body[data-editor-theme=dark] td,body[data-editor-theme=dark] th{border-color:#667681!important}body[data-editor-theme=dark] th{background:#263540}';
   function mount(container, options) {
     options = options || {};
     var fallback = original.mount(container, options);
@@ -86,21 +110,6 @@
       if (value === last) return;
       last = value; fallback.setHTML(value);
       if (typeof options.onChange === 'function') options.onChange(value);
-    }
-    function editFormula(formula) {
-      var node = editor.selection.getNode();
-      formula = formula || (node.closest && node.closest('.answer-formula'));
-      var math = formula && formula.querySelector('math'), instance = editor;
-      openFormula(math ? math.getAttribute('alttext') || '' : instance.selection.getContent({format: 'text'}), function (html) {
-        if (disposed || instance !== editor) return;
-        instance.focus();
-        if (!html) return;
-        if (formula) instance.selection.select(formula);
-        instance.insertContent(html);
-        // Laat de duizendtallen-instelling ook de nieuwe formule bijwerken.
-        instance.getBody().dispatchEvent(new InputEvent('input', {bubbles: true}));
-        sync();
-      });
     }
     function theme() {
       var dark = document.documentElement.getAttribute('data-study-theme') === 'dark';
@@ -180,7 +189,7 @@
         width: widthRatio >= 0.995 ? '100%' : Math.max(Math.min(260, width), width * widthRatio), min_height: 220, min_width: Math.min(260, width), max_width: width,
         language: 'nl', language_url: new URL('langs/nl.js', base).href,
         plugins: 'table lists charmap fullscreen',
-        toolbar: 'undo redo | blocks | bold italic underline subscript superscript | answerformula | bullist numlist | alignleft aligncenter alignright | table charmap | removeformat fullscreen',
+        toolbar: 'undo redo | blocks | bold italic underline subscript superscript | answerfrac answerroot | bullist numlist | alignleft aligncenter alignright | table charmap | removeformat fullscreen',
         toolbar_mode: 'sliding', contextmenu: 'table',
         table_toolbar: 'tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol | tablemergecells tablesplitcells tabledelete',
         table_resize_bars: true, table_sizing_mode: 'relative', table_default_attributes: {border: '1'},
@@ -188,17 +197,16 @@
         block_formats: 'Normale tekst=p;Kop=h2;Tussenkop=h3;Vaste breedte=pre',
         skin: 'oxide', content_css: false, content_style: contentStyle,
         browser_spellcheck: true, paste_data_images: false, automatic_uploads: false,
-        noneditable_class: 'answer-formula', extended_mathml_attributes: ['alttext'], valid_children: '+span[math]',
-        valid_elements: 'math[alttext|display],p[style],div[style],br,strong,b,em,i,u,s,strike,sub,sup,h2[style],h3[style],h4[style],ul,ol[type|start],li,blockquote,pre,code,table[style],colgroup,col[style],thead,tbody,tfoot,tr,td[style|colspan|rowspan],th[style|colspan|rowspan|scope],caption,span[style|class]',
+        noneditable_class: 'answer-formula', editable_class: 'answer-box',
+        valid_elements: 'p[style],div[style],br,strong,b,em,i,u,s,strike,sub,sup,h2[style],h3[style],h4[style],ul,ol[type|start],li,blockquote,pre,code,table[style],colgroup,col[style],thead,tbody,tfoot,tr,td[style|colspan|rowspan],th[style|colspan|rowspan|scope],caption,span[style|class]',
         setup: function (instance) {
           editor = instance;
-          instance.ui.registry.addButton('answerformula', {text: 'Formule', tooltip: 'Formule invoegen, zoals een breuk of wortel', onAction: function () { editFormula(); }});
-          instance.on('dblclick', function (event) {
-            var formula = event.target.closest && event.target.closest('.answer-formula');
-            if (formula) editFormula(formula);
-          });
+          var insertFormula;
+          instance.ui.registry.addButton('answerfrac', {text: 'Breuk', tooltip: 'Breuk invoegen; Tab gaat naar het volgende vak', onAction: function () { insertFormula('frac'); }});
+          instance.ui.registry.addButton('answerroot', {text: 'Wortel', tooltip: 'Wortel invoegen; Tab gaat verder na de wortel', onAction: function () { insertFormula('root'); }});
           instance.on('init', function () {
             if (disposed || generation !== initialization || !target.isConnected) { instance.remove(); return; }
+            insertFormula = installFormulas(instance);
             instance.setContent(fallback.getHTML());
             last = original.sanitize(instance.getContent()); initialized = true;
             wrapper.classList.add('has-tinymce'); theme();

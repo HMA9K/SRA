@@ -4,24 +4,7 @@
   var sequence = 0;
   var allowed = new Set(('P DIV BR STRONG B EM I U S STRIKE SUB SUP H2 H3 H4 UL OL LI BLOCKQUOTE PRE CODE TABLE COLGROUP COL THEAD TBODY TFOOT TR TH TD CAPTION SPAN').split(' '));
   var discarded = new Set(('SCRIPT STYLE SVG MATH IFRAME OBJECT TEMPLATE EMBED LINK META BASE INPUT FORM BUTTON SELECT TEXTAREA VIDEO AUDIO IMG PICTURE SOURCE NOSCRIPT').split(' '));
-  var mathNamespace = 'http://www.w3.org/1998/Math/MathML';
-  var mathTags = new Set(('math mrow mfrac msqrt msub msup msubsup mi mn mo mtext mover').split(' '));
   var block = new Set(('P DIV H2 H3 H4 UL OL LI BLOCKQUOTE PRE TABLE TR').split(' '));
-
-  // Formulas keep only known MathML tags and text; HTML inside a formula is dropped.
-  function copyMath(node, parent) {
-    if (node.nodeType === 3) { parent.appendChild(document.createTextNode(node.data)); return; }
-    if (node.nodeType !== 1 || node.namespaceURI !== mathNamespace || !mathTags.has(node.localName)) return;
-    var target = document.createElementNS(mathNamespace, node.localName);
-    if (node.localName === 'math') {
-      if (node.hasAttribute('alttext')) target.setAttribute('alttext', node.getAttribute('alttext'));
-      if (/^(inline|block)$/.test(node.getAttribute('display') || '')) target.setAttribute('display', node.getAttribute('display'));
-    }
-    if (node.localName === 'mover' && node.getAttribute('accent') === 'true') target.setAttribute('accent', 'true');
-    if (node.localName === 'mi' && node.getAttribute('mathvariant') === 'normal') target.setAttribute('mathvariant', 'normal');
-    parent.appendChild(target);
-    Array.from(node.childNodes).forEach(function (child) { copyMath(child, target); });
-  }
 
   // Rebuild from an inert fragment: no scripts, resources, URLs, IDs or event attributes survive.
   function sanitize(value) {
@@ -31,12 +14,11 @@
     function copy(node, parent) {
       if (node.nodeType === 3) { parent.appendChild(document.createTextNode(node.data)); return; }
       if (node.nodeType !== 1 || discarded.has(node.tagName)) return;
-      if (node.namespaceURI === mathNamespace && node.localName === 'math') { copyMath(node, parent); return; }
       var target = parent;
       if (allowed.has(node.tagName)) {
         target = document.createElement(node.tagName.toLowerCase());
         var styles = node.style;
-        if (node.tagName === 'SPAN' && node.className === 'answer-formula') target.className = 'answer-formula';
+        if (node.tagName === 'SPAN' && /^(answer-formula answer-(frac|root)|answer-box)$/.test(node.className)) target.className = node.className;
         if (/^(left|right|center|justify)$/.test(styles.textAlign)) target.style.textAlign = styles.textAlign;
         if (/^(bold|[6-9]00)$/.test(styles.fontWeight)) target.style.fontWeight = styles.fontWeight;
         if (styles.fontStyle === 'italic') target.style.fontStyle = 'italic';

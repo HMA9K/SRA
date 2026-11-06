@@ -8,11 +8,11 @@
     "css/exam-experience.css": "7776cb29daf6a5ed2c9924d89b83c0ebae502a1ffd0623ffbf79dba53786ebb8",
     "css/exams.css": "9e07ea42d3bc9141e7bd6897f1a2d84be40c8f56782ae10b99df5fc4188ecd0d",
     "css/question-overview.css": "7b57f6607e1aca5e8ea051457d0bfee7867038a6212a0916034f15e1da6a5da6",
-    "js/answer-editor.js": "8322f9fc7a0889703d4ab481059a2c8202793fbb009511c732eef391cc6b949f",
+    "js/answer-editor.js": "d0b5774be0f69770e80d78d43bcc1eb4c549a1f14c0de495c301b3a097d134f6",
     "js/exam-engine.js": "35330d64e346bad2ec7e16b3d235872e09a9bbef97f565d22a9213f3270cc55e",
     "js/exams.js": "786a68cb7a9be63de3a3415024087a3e1b646adaeaaec005591d907cd1ab3d37"
   },
   "localChanges": {
-    "js/answer-editor.js": "Kolommen direct verdelen na toevoegen of verwijderen; gedeelde reparatie met CAFA2. Formules (MathML) en de klasse answer-formula blijven bewaard; alleen voor SRA."
+    "js/answer-editor.js": "Kolommen direct verdelen na toevoegen of verwijderen; gedeelde reparatie met CAFA2. Klassen voor breuken en wortels in antwoorden blijven bewaard; alleen voor SRA."
   }
 }
