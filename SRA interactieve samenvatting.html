@@ -75100,7 +75100,7 @@ window.SRAMCExamFrequency = {
         width: widthRatio >= 0.995 ? '100%' : Math.max(Math.min(260, width), width * widthRatio), min_height: 220, min_width: Math.min(260, width), max_width: width,
         language: 'nl', language_url: new URL('langs/nl.js', base).href,
         plugins: 'table lists charmap fullscreen',
-        toolbar: 'undo redo | blocks | bold italic underline subscript superscript | answerfrac answerroot | bullist numlist | alignleft aligncenter alignright | table charmap | removeformat fullscreen',
+        toolbar: 'undo redo | blocks | bold italic underline subscript superscript | answerfrac answerroot answersum | bullist numlist | alignleft aligncenter alignright | table charmap | removeformat fullscreen',
         toolbar_mode: 'sliding', contextmenu: 'table',
         table_toolbar: 'tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol | tablemergecells tablesplitcells tabledelete',
         table_resize_bars: true, table_sizing_mode: 'relative', table_default_attributes: {border: '1'},
@@ -75114,6 +75114,8 @@ window.SRAMCExamFrequency = {
           editor = instance;
           var insertFormula;
           instance.ui.registry.addButton('answerfrac', {text: 'Breuk', tooltip: 'Breuk invoegen; Tab gaat naar het volgende vak', onAction: function () { insertFormula('frac'); }});
+          // De leerstof schrijft Σw en Σ(...)² zonder grenzen; het teken werkt ook in een vakje.
+          instance.ui.registry.addButton('answersum', {text: 'Σ', tooltip: 'Somteken invoegen', onAction: function () { instance.insertContent('Σ'); }});
           instance.ui.registry.addButton('answerroot', {text: 'Wortel', tooltip: 'Wortel invoegen; Tab gaat verder na de wortel', onAction: function () { insertFormula('root'); }});
           instance.on('init', function () {
             if (disposed || generation !== initialization || !target.isConnected) { instance.remove(); return; }

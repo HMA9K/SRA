@@ -48,6 +48,10 @@ const base=process.env.LEARNING_URL||'http://127.0.0.1:8769/';
   const empty=body.locator('.answer-frac').nth(1).locator('.answer-box').nth(1);
   await empty.click();await page.keyboard.type('2');
   assert.equal(await empty.textContent(),'2','Leeg vakje blijft na herladen typbaar');
+  await button('Σ');await page.keyboard.type('w');
+  assert.equal(await empty.textContent(),'2Σw','Somteken werkt in een vakje');
+  await toEnd();await button('Σ');await page.keyboard.type('v');
+  assert.ok((await body.innerText()).includes('Σv'),'Somteken werkt in de tekst');
   for(const width of [390,320]){
    await page.setViewportSize({width,height:800});await page.waitForTimeout(100);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,'Geen zijwaarts scrollen op '+width);
