@@ -83,7 +83,7 @@
 .mc-question-title{font-size:16px;line-height:1.5;font-weight:600;letter-spacing:0;margin:0 0 4px}
 .mc-question-meta{margin:0 0 18px;font-size:12px;color:#6b6873}
 .mc-prompt{white-space:pre-line;font-size:16px;font-weight:600;line-height:1.7;margin:0 0 20px;overflow-wrap:anywhere}
-.mc-question-source{margin:0 0 16px;font-size:12px}
+.mc-question-source{margin:12px 0 0;font-size:12px}
 .mc-question-source>summary{cursor:pointer;color:#5a5969;font-size:11px;width:fit-content}
 .mc-question-source .mc-sources{margin:12px 0 0}
 .mc-question-help>details{border:1px solid #d7d6e3;border-radius:12px;background:#f7f7fa;font-size:13px;line-height:1.6}
@@ -267,7 +267,6 @@ body.learning-page-layout .mc-page:is(:has(.study-assistant-layout:not(.is-stack
 body.learning-page-layout .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-body>.sra-runner-head{margin-bottom:10px!important}
 .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-tools{margin-bottom:8px}
 .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-prompt{margin-bottom:10px;line-height:1.5}
-.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-source{margin-bottom:8px}
 .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-own-work{margin:8px 0}
 }
 /* Op een gewoon scherm past alles in beeld en scrollt de pagina niet mee. Lage of smalle schermen houden paginascroll. */
