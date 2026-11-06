@@ -143,8 +143,8 @@ body.original-pdf-open .study-assistant-launch-wrap{display:none!important}
 
 .original-pdf-actions{display:inline-flex;gap:6px;flex-wrap:wrap;align-items:center}
 .exam-dashboard-content td .original-pdf-actions{display:flex;margin-top:8px}
-.original-pdf-actions .btn{white-space:nowrap}
-.original-pdf-actions .btn[aria-pressed=true]{border-color:#00866a;background:#edf8f3;color:#006d55}
+.original-pdf-actions .btn,.original-pdf-actions .study-btn{white-space:nowrap}
+.original-pdf-actions [aria-pressed=true]{border-color:#00866a;background:#edf8f3;color:#006d55}
 .original-pdf-viewer{display:flex;flex-direction:column;min-width:0;min-height:0;height:100%;background:var(--study-surface,#fff);color:var(--study-text,#172c48)}
 .original-pdf-head{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;padding:10px;border-bottom:1px solid var(--study-line,#d9e2eb);font-size:14px}
 .original-pdf-head .btn{font-size:12px;min-height:30px;padding:5px 8px}
