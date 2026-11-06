@@ -13,7 +13,8 @@ const base=process.env.LEARNING_URL||'http://127.0.0.1:8769/';
   assert.ok(clean.includes('<span class="answer-formula answer-frac"><span class="answer-box">a</span><span class="answer-box">b</span></span>'),clean);
   assert.ok(!/onclick|img|iets/.test(clean),clean);
   await page.locator('[data-topic="verschil"] a').filter({hasText:'Start'}).click();
-  const open=async()=>{await page.locator('.mc-own-work summary').click();await page.locator('.mc-own-work .has-tinymce').waitFor();};
+  // Met een bewaarde uitwerking staat het blok na herladen al open.
+  const open=async()=>{if(!await page.locator('.mc-own-work').evaluate(e=>e.open))await page.locator('.mc-own-work summary').click();await page.locator('.mc-own-work .has-tinymce').waitFor();};
   await open();
   const body=page.frameLocator('iframe.tox-edit-area__iframe').locator('body'),boxes=body.locator('.answer-box');
   const button=name=>page.locator('.mc-own-work .tox-tbtn',{hasText:name}).click();
