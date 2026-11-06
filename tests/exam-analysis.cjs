@@ -16,12 +16,12 @@ clean(html,'analyse');
 assert.ok(!html.includes('BELRE3: kies')&&!html.includes('ratio-'),'Oude tekst op de analysepagina');
 const plain=s=>s.replace(/&/g,'&amp;').replace(/'/g,'&#39;');
 for(const s of T.skills)assert.ok(html.includes(`>${plain(s.label)}</a>`),s.label);
-assert.ok(!html.includes('Ook stof, niet gevraagd'));
+assert.ok(!/Ook stof, niet gevraagd|analyse-structuur/.test(html));
 for(const t of T.questionTypes)assert.ok(html.includes(`>${Math.round(t.share)}%</td>`),t.id);
 assert.equal((html.match(/<tr><td><strong>[A-Z]/g)||[]).length,5);
-assert.equal((html.match(/<h2>/g)||[]).length,6);
+assert.equal((html.match(/<h2>/g)||[]).length,5);
 assert.ok(html.length<16000,'De pagina moet compact blijven: '+html.length);
-for(const id of ['analyse-structuur','analyse-typen','analyse-onderwerpen','analyse-vaardigheden','analyse-per-tentamen','analyse-aanpak'])assert.ok(html.includes(`id="${id}"`),id);
+for(const id of ['analyse-typen','analyse-onderwerpen','analyse-vaardigheden','analyse-per-tentamen','analyse-aanpak'])assert.ok(html.includes(`id="${id}"`),id);
 
 // Vier knoppen en één filter in elke weergave, via dezelfde afhandeling als op de site.
 const click=dataset=>handlers['#exam-topic-viewsclick']({target:{closest:()=>({dataset})}});
