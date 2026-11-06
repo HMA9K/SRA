@@ -307,7 +307,7 @@
       var body='<p>'+esc(audit.note)+'</p><p class="answer-audit-meta">Afzonderlijke broncontrole · '+esc(audit.reviewed)+' · het oorspronkelijke antwoord staat hieronder.</p>';
       note=audit.status==='G'?'<details class="answer-audit answer-audit-checked"><summary>Gecontroleerd aan de bron</summary>'+body+'</details>':'<aside class="answer-audit" role="note"><h3>'+esc(audit.label)+'</h3>'+body+'</aside>';
     }
-    return note+documentHtml(a.exam,'solution',q.solutionHtml,q.solution||'Er is nog geen antwoordmodel toegevoegd.');
+    return note+(globalThis.SRAStepFormulas?globalThis.SRAStepFormulas.exam(a.exam.id,q.id):'')+documentHtml(a.exam,'solution',q.solutionHtml,q.solution||'Er is nog geen antwoordmodel toegevoegd.');
   }
   function ownAnswer(a,q){var answer=answerFor(a,q),html='';
     if(q.type==='mc')return '<div class="exam-review-answer">'+esc((q.options.find(function(o){return o.id===answer.optionId;})||{text:'Niet beantwoord'}).text)+'</div>';

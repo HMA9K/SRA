@@ -9,6 +9,8 @@ Gebruikerseis 6 november 2026: bij de uitleg van oefenvragen en tentamenvragen s
 - Stappen die alleen aflezen of concluderen krijgen geen formule.
 - Nieuw tentamen: draai de bouw en bekijk welke rekenstappen geen formule kregen. Vul zo nodig `STEPS` aan.
 
-De antwoordmodellen bij de open tentamens zijn oorspronkelijke documenten en vallen hierbuiten.
+Een formule die niet letterlijk op het blad staat maar eruit volgt, draagt de verwijzing "Afgeleid van formule X". "Niet op het formuleblad" blijft alleen staan bij wat er niet uit volgt, zoals het gemiddelde.
+
+Open tentamens: boven het oorspronkelijke antwoordmodel staat het blok "Formules bij deze vraag", met de formules uit de uitwerking van dezelfde bronvraag. Het antwoordmodel zelf blijft ongewijzigd.
 
 Controle: `node tests/step-formulas.cjs`, onderdeel van `npm test`.

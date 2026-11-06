@@ -27,6 +27,16 @@ assert.match(data.html('exam-20240318-vraag-3',0),/Formule 12</);
 assert.match(data.html('exam-20260323-vraag-2',2),/Formule 11</);
 assert.match(data.html('exam-20200323-vraag-20',0),/Formule 50</);
 assert.equal(data.html('exam-20260323-vraag-18',0),'','Een afgelezen waarde krijgt geen formule.');
+// Afgeleide formules noemen de bron op het blad.
+assert.match(data.html('exam-20241028-vraag-10',6),/Afgeleid van formules 40 en 42</);
+assert.match(data.html('exam-20241028-vraag-13',4),/Afgeleid van formule 50</);
+assert.match(data.html('mc-regressielijn-basis-2',0),/Afgeleid van formules 30 en 31</);
+assert.equal(data.formulas['onzekerheid|Totale breedte'].source,'Afgeleid van formule 2');
+// Open tentamens: formuleblok boven het antwoordmodel, ook bij het gelijke tentamen van juni 2020.
+assert.match(data.exam('20200323','vraag-11'),/Formules bij deze vraag.*Formule 29/s);
+assert.equal(data.exam('20200626','vraag-11'),data.exam('20200323','vraag-11'));
+assert.equal(data.exam('20200323','bestaat-niet'),'');
+assert.match(fs.readFileSync(path.join(root,'js/cirrus.js'),'utf8'),/SRAStepFormulas\.exam\(a\.exam\.id,q\.id\)/);
 // Staat de formule al in letters in de stap, dan alleen de verwijzing.
 assert.doesNotMatch(data.html('mc-anova-basis-1',1),/<math/);
 assert.match(data.html('mc-anova-basis-1',1),/Formule 38</);

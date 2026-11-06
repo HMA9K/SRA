@@ -31,6 +31,10 @@ EXTRA = {
     'quotient|Interval': ('Interval', number(15), 'Ŵ_Q ± t × s_Q'),
     'regressieschatter|Interval': ('Interval', number(20), 'Ŵ_R ± t × s_R'),
     'variantie-ms': ('Variantie of Mean Square', number(35), 'MS = SS/df'),
+    'se-uit-marge': ('Standaardfout uit de marge', derived(27), 's = E/t'),
+    't-en-f': ('Verband tussen t en F bij k = 1', derived(40, 42), 't² = F'),
+    'interval-gemiddelde': ('Interval voor het gemiddelde', derived(50), 'ŷ_0 ± t × s_e × √{1/n + (x_0 − x̄)²/{(n − 1) × s_x²}}'),
+    'z-residu': ('Gestandaardiseerd residu', derived(44), 'z = e/s_e'),
     'strata-puntschatting': ('Puntschatting', number(28), 'Ŵ_tot = Σ(N_i × w̄_i)'),
     'se-gemiddelde': ('Standaardfout van het gemiddelde', derived(4), 's/√n'),
     'multicollineariteit': ('Multicollineariteit', number(60), 'VIF_i > 10'),
@@ -211,6 +215,16 @@ STEPS.setdefault('exam-20240318-vraag-14-b', {})[3] = [LOG]
 STEPS.setdefault('exam-20260323-vraag-14', {})[3] = [LOG]
 STEPS.setdefault('mc-rekenen-toepassing-1', {})[3] = ['rekenen|Variantie']
 STEPS.setdefault('mc-mpu-leertoepassing-controleoverzicht', {})[0] = [MEAN, VARIANCE]
+# Afgeleide formules: de verwijzing noemt de formule op het blad waaruit ze volgen.
+STEPS['exam-20220316-vraag-8'][1] = ['se-uit-marge', SE['stratificatie']]
+STEPS['mc-stratificatie-aanvulling-varianties'][0] = ['se-uit-marge']
+STEPS['exam-20221031-vraag-15'][5] = ['t-en-f']
+STEPS.setdefault('exam-20200323-vraag-18', {})[3] = ['t-en-f']
+STEPS.setdefault('exam-20241028-vraag-10', {})[6] = ['t-en-f']
+STEPS['exam-20241028-vraag-13'][4] = ['interval-gemiddelde']
+STEPS['mc-voorspellen-leertoepassing-gemiddelde-individu'][1] = ['interval-gemiddelde']
+STEPS.setdefault('exam-20200323-vraag-14-y', {})[3] = ['z-residu']
+STEPS.setdefault('exam-20240318-vraag-17-y', {})[3] = ['z-residu']
 STEPS['exam-20241028-vraag-3'][2] = ['mpu|Interval', 'regressieschatter|Interval']
 STEPS['exam-20260323-vraag-6'][0] = [NEYMAN, EVEN]
 
@@ -433,11 +447,18 @@ def payload():
     catalog = lesson_formulas(lessons) | extra_formulas()
     mapped = {q['id']: question_steps(q) for q in q_with_steps(questions)}
     mapped = {id: steps for id, steps in mapped.items() if any(steps)}
+    exams = {}
+    for q in questions:
+        if q.get('sourceExamId') and q['id'] in mapped:
+            keys = exams.setdefault(f"{q['sourceExamId']}|{q['sourceQuestionId']}", [])
+            keys += [key.lstrip('=') for step in mapped[q['id']] for key in step if key.lstrip('=') not in keys]
+    # Het tentamen van juni 2020 is gelijk aan dat van maart; zie build_exam_practice.
+    exams |= {key.replace('20200323|', '20200626|'): value for key, value in exams.items() if key.startswith('20200323|')}
     used = {key.lstrip('=') for steps in mapped.values() for keys in steps for key in keys}
     missing = used - catalog.keys()
     if missing:
         raise ValueError('Formule niet gevonden: ' + ', '.join(sorted(missing)))
-    return dict(formulas={key: catalog[key] for key in sorted(used)}, questions=mapped)
+    return dict(formulas={key: catalog[key] for key in sorted(used)}, questions=mapped, exams=exams)
 
 
 def q_with_steps(questions):
@@ -459,10 +480,15 @@ def step_html(data, question_id, index):
 
 SCRIPT = '''/* Gegenereerd door scripts/step_formulas.py: formules bij rekenstappen. */
 window.SRAStepFormulas = %s;
-window.SRAStepFormulas.html = (id, index) => (window.SRAStepFormulas.questions[id]?.[index] || []).map(key => {
+window.SRAStepFormulas.row = key => {
   const brief = key.startsWith('='), entry = window.SRAStepFormulas.formulas[brief ? key.slice(1) : key];
   return `<div class="step-formula" data-no-terms><span class="formula-label">${entry.label}<span class="formula-number">${entry.source}</span></span>${brief ? '' : `<div class="math-scroll" tabindex="0" role="region" aria-label="Formule: ${entry.label}">${entry.html}</div>`}</div>`;
-}).join('');
+};
+window.SRAStepFormulas.html = (id, index) => (window.SRAStepFormulas.questions[id]?.[index] || []).map(window.SRAStepFormulas.row).join('');
+window.SRAStepFormulas.exam = (examId, questionId) => {
+  const keys = window.SRAStepFormulas.exams[`${examId}|${questionId}`];
+  return keys ? `<section class="step-formula-list"><h3>Formules bij deze vraag</h3>${keys.map(window.SRAStepFormulas.row).join('')}</section>` : '';
+};
 '''
 
 
