@@ -500,7 +500,7 @@ def enhance(lessons, sources):
                    'ŷ = 739,508 + 38,495 × 50 + 71,550 × 10 + 2.237,947 = € 5.617,705. '
                    'Op hele euro’s afgerond: € 5.618.',
                    'Toets Vrouw: H₀: β<sub>Vrouw</sub> ≥ 0, H₁: β<sub>Vrouw</sub> &lt; 0. Gebruik t = −2,444 '
-                   'en df = n − k − 1 = 200 − 6 − 1 = 193. Tabelrij 190 geeft de t-grens −1,653 '
+                   'en df = 193. Tabelrij 190 geeft de t-grens −1,653 '
                    'bij eenzijdig α = 0,05. −2,444 &lt; −1,653, dus H₀ verwerpen: binnen dit model is de voorspelling voor '
                    'vrouwen significant lager bij gelijke opgenomen kenmerken. Het α-risico is relevant.',
                    'De globale F = 58,923 met p &lt; 0,001 levert statistisch bewijs dat minstens één hellingscoëfficiënt '
@@ -911,7 +911,7 @@ def enhance(lessons, sources):
         + answer('Bereken de globale F en interpreteer B tegenover Beta. Maak daarna de Nederlandse '
                  'puntvoorspelling met de afgedrukte invoer ICOR = 0,92, Adult Mortality = 58 en HIV/AIDS = 0,1.',
             steps(['Modeltoets: MSR = 8.173,121/3 ≈ 2.724,374; MSE = 1.372,702/159 ≈ 8,633. '
-                   'F = MSR/MSE = 2.724,374/8,633 ≈ 315,564 (met de onafgeronde waarden). Toets H₀: alle drie hellingen nul tegenover H₁: minstens één niet nul.',
+                   'F ≈ 315,564. Toets H₀: alle drie hellingen nul tegenover H₁: minstens één niet nul.',
                    'Benader F<sub>0,05;3;159</sub> met tabelrij ν₂ = 100: 2,696. '
                    '315,564 &gt; 2,696, dus H₀ verwerpen. Dit is een uitspraak over het gezamenlijke model.',
                    'B voor ICOR is 36,011 in de modelvergelijking. Beta = 0,694 '

@@ -132,7 +132,7 @@ def enhance(lessons,sources):
     infer+=formula('Formule 40: correlatie toetsen',p.eq(p.t,p.frac(p.mul(r,p.root(df)),p.root(remainder))))
     infer+=formula('Interval voor de populatiehelling',p.row(p.sub(p.b,p.num(1)),p.op('±'),p.mul(p.t,sb1)))
     infer+='<p>Deze vormen met de gewone Pearson-correlatie r horen bij enkelvoudige regressie met constante. Voor H₀: ρ = 0 of H₀: β₁ = 0 geven ze dezelfde t als b₁/s_b₁. Gebruik ze niet met de totale R van een meervoudig model. Voor H₀: β₁ = een andere waarde neem je (b₁ − die waarde)/s_b₁.</p><h3>Voorbeeld</h3>'+steps([
-        'Standaardfout: de regressiehelling is b₁ ≈ 14,73939 kg/jaar. Met n = 10, r ≈ 0,940088, sᵧ ≈ 47,46976 en sₓ ≈ 3,02765 volgt s_b₁ = 47,46976/3,02765 × √((1 − 0,940088²)/8) ≈ 1,88988 kg/jaar.',
+        'Standaardfout: s_b₁ = 47,46976/3,02765 × √((1 − 0,940088²)/8) ≈ 1,88988 kg/jaar.',
         'Toetsingsgrootheid: t = b₁/s_b₁ = 14,73939/1,88988 ≈ 7,79910 (onafgerond gerekend). Formule 40 geeft dezelfde waarde; df = 10 − 2 = 8.',
         'Eenzijdige toets op een positief verband: H₀: β₁ ≤ 0, H₁: β₁ > 0. Bij α = 0,05 en df = 8 is de grens 1,860. Omdat 7,79910 > 1,860, verwerp je H₀: er is statistisch bewijs voor een positief lineair verband.',
         'Interval: voor een tweezijdig 95%-interval gebruik je t = 2,306. Dat geeft 14,73939 ± 2,306 × 1,88988 ≈ [10,38; 19,10] kg/jaar.',

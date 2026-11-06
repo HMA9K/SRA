@@ -771,9 +771,8 @@ def enhance(lessons, sources):
     body += 'Evenredig: nᵢ = n × Nᵢ / N</div>'
     body += steps(['Neyman-allocatie: ΣNᵢsᵢ = 540.000 + 277.750 + 170.100 + 198.500 = 1.186.350. Voor stratum 1: 250 × 540.000/1.186.350 '
                    '= 113,794 en dus 114 controles.',
-                   'Bij Neyman worden de aantallen 114, 58, 36 en 42. Controleer '
-                   'dat ze samen 250 zijn: 114 + 58 + 36 + 42 = 250. De 48 integraal gecontroleerde posten '
-                   'vallen buiten deze verdeling; totale controle-inspanning is dan 250 + 48 = 298 posten.',
+                   'Bij Neyman worden de aantallen 114, 58, 36 en 42, samen 250. De 48 integraal gecontroleerde '
+                   'posten komen daar los bij, dus in totaal 298 posten.',
                    'Bij evenredige verdeling (250 × Nᵢ / 4.775) zijn de onafgeronde aantallen circa '
                    '141,361; 58,168; 29,686 en 20,785. Een verdeling met som 250 '
                    'is 141, 58, 30 en 21.',
@@ -825,7 +824,7 @@ def enhance(lessons, sources):
     body += steps(['Stratum 1: gemiddelde = 7.000/114 = € 61,4035. '
                    'Ŵ₁ = 2.700 × 7.000/114 = € 165.789,47. De factor is 2.700 '
                    'omdat dit stratum die omvang heeft.',
-                   'Spreiding: s²<sub>w,1</sub> = [475.000 − 7.000²/114]/113 = 45.175,44/113 = 399,7826 euro². '
+                   'Spreiding: s²<sub>w,1</sub> = [475.000 − 7.000²/114]/113 = 399,7826 euro². '
                    'De wortel is € 19,9946. De vooraf gebruikte 200 uit de allocatie '
                    'vervang je dus door de werkelijk gevonden spreiding.',
                    'Standaardfout: s<sub>Ŵ₁</sub> = 2.700 × (19,9946/√114) × √(2.586/2.699) '
@@ -889,12 +888,9 @@ def enhance(lessons, sources):
                    'Hulpgrootheid: γ = 3.000²/(2² × 880.000) = ' + number(gamma, 6) + '.',
                    'Benodigde omvang: n = 1.000/(1 + 2,556818) = ' + number(required, 6) + '; naar boven '
                    'afgerond 282. Een evenredige verdeling is 282 × 0,6 ≈ 169 en 282 × 0,4 ≈ 113 controles.',
-                   'Reken de marge vervolgens na met deze gehele aantallen en '
-                   'de twee afzonderlijke eindigheidscorrecties: E = t × √(variantie stratum 1 + variantie stratum 2) = 2 × √(613.093 + 1.629.561). Die is ongeveer '
-                   '€ 2.995,10 en voldoet dus aan de gestelde € 3.000.',
-                   'Verdelen met Neyman: Nᵢsᵢ is 600 × 20 = 12.000 en 400 × 40 = 16.000, samen 28.000. '
-                   'Dan is n₁ = 12.000/28.000 × 282 ≈ 121 en n₂ = 16.000/28.000 × 282 ≈ 161. '
-                   'Stratum 2 krijgt meer controles, omdat de spreiding daar groter is.',
+                   'Controle: met deze aantallen is E = 2 × √(613.093 + 1.629.561) ≈ € 2.995,10. Dat voldoet aan de gestelde € 3.000.',
+                   'Verdelen met Neyman: 600 × 20 = 12.000 en 400 × 40 = 16.000, samen 28.000. '
+                   'Dan is n₁ = 12.000/28.000 × 282 ≈ 121 en n₂ ≈ 161. Stratum 2 heeft de grootste spreiding.',
                    'Marge vergelijken: met 121 en 161 controles is E = 2 × √(951.669 + 952.443) ≈ € 2.759,79. '
                    'Dat is kleiner dan € 2.995,10, met evenveel controles.'])
     body += '<p>Het alternatief is de al behandelde uitbreiding van één stratum: '
