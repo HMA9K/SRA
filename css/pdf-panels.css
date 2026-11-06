@@ -168,3 +168,5 @@ body.original-pdf-open :is(.learning-page-head,.cirrus-page-head,#study-returnba
 /* Op mobiel begrenzen de casusregels het vak tot 35-45dvh; dat is te laag voor de lezer met werkbalken. */
 @media(max-width:760px){.original-pdf-left{height:65dvh!important;max-height:none!important}}
 @media(max-width:859px){.original-pdf-dashboard-layout{display:flex;flex-direction:column}.original-pdf-dashboard-pane{width:100%;height:65dvh}.original-pdf-left{height:65dvh;flex:none}.original-pdf-actions{max-width:100%}.original-pdf-head{font-size:12px}}
+/* Tentamen met open zijvenster: panelen tot de schermrand. */
+@media(min-width:761px){body.exam-running:has(.study-assistant-layout:not(.is-stacked)) main,body.exam-running:has(.original-pdf-left) main{padding-inline:0!important}}

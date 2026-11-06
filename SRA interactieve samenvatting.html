@@ -1911,6 +1911,13 @@ html:has(.mc-page){scroll-padding-top:75px;scroll-padding-bottom:145px}
 /* Naast een open uitwerking scrollt de vraagkolom zelf: de casus staat dan bovenaan die kolom. */
 .study-assistant-layout .mc-case-panel{top:0;max-height:var(--sa-pane-height)}
 .study-assistant-layout .mc-case-panel.original-pdf-left{height:var(--sa-pane-height)}
+/* Met een open zijvenster gaat alle ruimte naar de panelen: tot de schermrand en met een smallere middenkolom. */
+@media(min-width:761px){
+.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-runner{padding:0}
+.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .sra-exam-paper{border-inline:0}
+.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-layout,.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-layout.mc-case-layout{padding:0}
+body.learning-page-layout .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-body{padding:14px!important}
+}
 /* Op een gewoon scherm past alles in beeld en scrollt de pagina niet mee. Lage of smalle schermen houden paginascroll. */
 @media(min-width:901px) and (min-height:600px){html:has(.mc-page .study-assistant-layout:not(.is-stacked)),html:has(.mc-page .study-assistant-layout:not(.is-stacked)) body{overflow:hidden}}
 .mc-case-panel h2{font-size:1rem;margin:0 0 12px}.mc-case-panel table{display:block;max-width:100%;overflow-x:auto}.mc-case-panel img{max-width:100%;height:auto}.mc-case-panel p{text-align:justify;hyphens:auto}
@@ -5792,6 +5799,8 @@ body.original-pdf-open :is(.learning-page-head,.cirrus-page-head,#study-returnba
 /* Op mobiel begrenzen de casusregels het vak tot 35-45dvh; dat is te laag voor de lezer met werkbalken. */
 @media(max-width:760px){.original-pdf-left{height:65dvh!important;max-height:none!important}}
 @media(max-width:859px){.original-pdf-dashboard-layout{display:flex;flex-direction:column}.original-pdf-dashboard-pane{width:100%;height:65dvh}.original-pdf-left{height:65dvh;flex:none}.original-pdf-actions{max-width:100%}.original-pdf-head{font-size:12px}}
+/* Tentamen met open zijvenster: panelen tot de schermrand. */
+@media(min-width:761px){body.exam-running:has(.study-assistant-layout:not(.is-stacked)) main,body.exam-running:has(.original-pdf-left) main{padding-inline:0!important}}
 
 </style>
 

@@ -16,8 +16,9 @@ const assert=require('node:assert/strict');const {chromium}=require(process.env.
  assert.ok(mcPdf.height>500,'PDF vult de casuskolom bij een oefenvraag '+JSON.stringify(mcPdf));assert.ok(mcPdf.bottom<=mcPdf.footer+1,'PDF stopt boven de voettekst '+JSON.stringify(mcPdf));assert.equal(mcPdf.overflow,0,'Lezer past in een smalle casuskolom');
  await page.setViewportSize({width:1440,height:1100});await page.locator('[data-original-pdf="solutions"]').click();await page.locator('#exam-original-solutions[open]').waitFor();
  await page.waitForFunction(()=>document.querySelector('.study-assistant-layout')?.getBoundingClientRect().height>680);
- const docked=await page.evaluate(()=>{const l=document.querySelector('.study-assistant-layout').getBoundingClientRect();return {layout:l.top,bottom:l.bottom,panel:document.querySelector('.mc-case-panel').getBoundingClientRect().top,footer:document.querySelector('.mc-runner .sra-exam-footer').getBoundingClientRect().top};});
+ const docked=await page.evaluate(()=>{const l=document.querySelector('.study-assistant-layout').getBoundingClientRect();return {layout:l.top,left:l.left,bottom:l.bottom,panel:document.querySelector('.mc-case-panel').getBoundingClientRect().top,footer:document.querySelector('.mc-runner .sra-exam-footer').getBoundingClientRect().top};});
  assert.deepEqual(await page.evaluate(()=>[getComputedStyle(document.documentElement).overflowY,window.scrollY]),['hidden',0],'De pagina scrolt niet mee naast een zijvenster');
+ assert.ok(docked.left<2,'Panelen lopen tot de schermrand '+JSON.stringify(docked));
  assert.ok(Math.abs(docked.panel-docked.layout)<2,'Casus start bovenaan naast de uitwerking '+JSON.stringify(docked));assert.ok(docked.bottom<=docked.footer+1,'Paneel stopt boven de onderbalk '+JSON.stringify(docked));
  assert.deepEqual(errors,[]);console.log('OK: PDF-knoppen voor 12 tentamens, beide lezers, persistent vraagvenster, vraagwissel en antwoorden behouden, mobiel.');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1);});
