@@ -911,7 +911,7 @@ def enhance(lessons, sources):
         + answer('Bereken de globale F en interpreteer B tegenover Beta. Maak daarna de Nederlandse '
                  'puntvoorspelling met de afgedrukte invoer ICOR = 0,92, Adult Mortality = 58 en HIV/AIDS = 0,1.',
             steps(['Modeltoets: MSR = 8.173,121/3 ≈ 2.724,374; MSE = 1.372,702/159 ≈ 8,633. '
-                   'F ≈ 315,564. Toets H₀: alle drie hellingen nul tegenover H₁: minstens één niet nul.',
+                   'F = MSR/MSE ≈ 315,564. Toets H₀: alle drie hellingen nul tegenover H₁: minstens één niet nul.',
                    'Benader F<sub>0,05;3;159</sub> met tabelrij ν₂ = 100: 2,696. '
                    '315,564 &gt; 2,696, dus H₀ verwerpen. Dit is een uitspraak over het gezamenlijke model.',
                    'B voor ICOR is 36,011 in de modelvergelijking. Beta = 0,694 '

@@ -72,7 +72,7 @@ q('steekproefomvang','quotient',3,'Bij steekproefplanning met de quotiëntschatt
  ('187','Dit rondt naar beneden af en kan daardoor de vereiste marge overschrijden.'),
  ('760','Dit vermenigvuldigt de resterende spreiding willekeurig en volgt de omvangsformule niet.'),
  ('1.000','Alle posten controleren is hier niet de minimaal berekende omvang volgens de gegeven formule.')],
- ['Gebruik s_q = 7,60 als resterende spreiding, niet de dimensieloze goedratio q.','γ = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.','n = 1.000/(1 + γ) ≈ 187,679; rond naar boven af op 188.'],
+ ['Gebruik s_q = 7,60 als resterende spreiding, niet de dimensieloze goedratio q.','γ = E²/(t² × N × s_q²) = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.','n = 1.000/(1 + γ) ≈ 187,679; rond naar boven af op 188.'],
  'De omvangsformule gebruikt de resterende spreiding van de gekozen schatter.',
  'Vul niet de goedratio q in waar de spreiding s_q moet staan.')
 q('regressielijn','mse',3,'Bij enkelvoudige regressie zijn n = 12, r = 0,80 en s_y = 5. Wat is de residuele variantie volgens formule 34?',[
