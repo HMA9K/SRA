@@ -24,6 +24,76 @@
     });
     return loading;
   }
+  // Bepaalt per teken hoe hoog het wordt. items: tekens, of een getal voor een blok met die hoogte.
+  function tallLevels(items) {
+    var out = items.map(function () { return 0; }), open = [];
+    items.forEach(function (item, index) {
+      if (item === '(') open.push({index: index, level: 0});
+      else if (item === ')') { var pair = open.pop(); if (pair) out[pair.index] = out[index] = pair.level; }
+      else if (typeof item === 'number') open.forEach(function (pair) { pair.level = Math.max(pair.level, item); });
+    });
+    // Een haakje dat nog niet gesloten is, groeit alvast mee met wat erachter staat.
+    open.forEach(function (pair) { out[pair.index] = pair.level; });
+    items.forEach(function (item, index) {
+      if (item !== 'Σ') return;
+      var next = index + 1;
+      while (items[next] === ' ') next++;
+      if (typeof items[next] === 'number') out[index] = items[next];
+      else if (items[next] === '(') out[index] = out[next];
+    });
+    return out;
+  }
+  function installAutoSize(instance, changed) {
+    var doc = instance.getDoc(), busy = false;
+    function formulaLevel(formula, size) {
+      var ratio = formula.getBoundingClientRect().height / size;
+      return ratio < 1.9 ? 0 : ratio < 3.4 ? 2 : ratio < 4.8 ? 3 : 4;
+    }
+    function tokens(container) {
+      var size = parseFloat(doc.defaultView.getComputedStyle(container).fontSize) || 14, list = [];
+      Array.from(container.childNodes).forEach(function (node) {
+        if (node.nodeType === 3) Array.from(node.data).forEach(function (character, index) { list.push({item: /[\s\uFEFF]/.test(character) ? ' ' : character, node: node, index: index}); });
+        else if (node.nodeType !== 1) return;
+        else if (node.matches('.answer-formula')) list.push({item: formulaLevel(node, size)});
+        else if (/^answer-tall-/.test(node.className)) list.push({item: node.textContent, span: node});
+        else list.push({item: 'x'});
+      });
+      return list;
+    }
+    function apply(token, level) {
+      var name = level ? 'answer-tall-' + level : '';
+      if (token.span) {
+        if (token.span.className === name) return false;
+        if (level) { token.span.className = name; return true; }
+        token.span.replaceWith(doc.createTextNode(token.item));
+        return true;
+      }
+      if (!level) return false;
+      var range = instance.selection.getRng(), after = range.collapsed && range.startContainer === token.node && range.startOffset === token.index + 1;
+      var rest = token.node.splitText(token.index + 1), middle = token.node.splitText(token.index), span = doc.createElement('span');
+      span.className = name; middle.replaceWith(span); span.append(middle);
+      // Doortypen moet naast het grote teken landen en niet erin.
+      if (after) { if (!rest.data) rest.data = '\uFEFF'; instance.selection.setCursorLocation(rest, rest.data === '\uFEFF' ? 1 : 0); }
+      return true;
+    }
+    function run() {
+      if (busy) return;
+      busy = true;
+      var touched = false;
+      instance.undoManager.ignore(function () {
+        // Tekst die in een groot teken terechtkwam, wordt weer gewone tekst.
+        doc.querySelectorAll('[class^=answer-tall-]').forEach(function (span) { if (Array.from(span.textContent).length !== 1) { span.replaceWith(doc.createTextNode(span.textContent)); touched = true; } });
+        instance.getBody().querySelectorAll('p,li,td,th,h2,h3,h4,.answer-box').forEach(function (container) {
+          var list = tokens(container), levels = tallLevels(list.map(function (token) { return token.item; }));
+          for (var index = list.length - 1; index >= 0; index--) if (/^[()Σ]$/.test(list[index].item) && apply(list[index], levels[index])) touched = true;
+        });
+      });
+      busy = false;
+      if (touched) changed();
+    }
+    instance.on('input change', run);
+    return run;
+  }
   // ponytail: de knoppen zitten alleen in TinyMCE; de eenvoudige noodeditor toont bewaarde breuken wel, maar voegt ze niet toe.
   function installFormulas(instance) {
     var doc = instance.getDoc();
@@ -137,7 +207,7 @@
     instance.getContainer().querySelector('.tox-sidebar-wrap').before(panel);
     return function () { toggle(panel.hidden); };
   }
-  var contentStyle = '.answer-sum,.answer-paren{align-items:stretch}.answer-sum::before,.answer-paren::before,.answer-paren::after{content:"";flex:none;background:currentColor;-webkit-mask:var(--answer-shape) center/100% 100% no-repeat;mask:var(--answer-shape) center/100% 100% no-repeat}.answer-sum::before{width:1em;margin-right:.1em;--answer-shape:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' preserveAspectRatio=\'none\'%3E%3Cpath d=\'M96 16 L90 3 L6 3 L54 50 L6 97 L90 97 L96 84\' fill=\'none\' stroke=\'black\' stroke-width=\'1.8\' vector-effect=\'non-scaling-stroke\'/%3E%3C/svg%3E")}.answer-paren::before,.answer-paren::after{width:.42em;--answer-shape:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' preserveAspectRatio=\'none\'%3E%3Cpath d=\'M90 2 C10 25 10 75 90 98\' fill=\'none\' stroke=\'black\' stroke-width=\'1.5\' vector-effect=\'non-scaling-stroke\'/%3E%3C/svg%3E")}.answer-paren::after{transform:scaleX(-1)}.answer-formula{display:inline-flex;max-width:100%;margin:0 .15em;vertical-align:middle}.answer-frac{flex-direction:column;text-align:center}.answer-root{align-items:stretch}.answer-root::before{content:"";flex:none;background:currentColor;-webkit-mask:var(--answer-shape) center/100% 100% no-repeat;mask:var(--answer-shape) center/100% 100% no-repeat;width:.85em;--answer-shape:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' preserveAspectRatio=\'none\'%3E%3Cpath d=\'M2 62 L20 54 L46 97 L99 1\' fill=\'none\' stroke=\'black\' stroke-width=\'1.6\' vector-effect=\'non-scaling-stroke\'/%3E%3C/svg%3E")}.answer-box{display:block;min-width:1.3em;min-height:1.3em;padding:0 .25em;line-height:1.3;outline:none}.answer-frac>.answer-box+.answer-box,.answer-root>.answer-box{border-top:1px solid currentColor}.answer-box:empty{background:rgba(0,108,71,.1)}.answer-box:focus{box-shadow:0 0 0 1px #006c47}body[data-editor-theme=dark] .answer-box:empty{background:rgba(158,223,201,.18)}body[data-editor-theme=dark] .answer-box:focus{box-shadow:0 0 0 1px #9edfc9}body{font:14px/1.55 Arial,sans-serif;margin:12px;color:#252b34;background:#fff;overflow-wrap:anywhere}p{margin:0 0 .6em}table{border-collapse:collapse;table-layout:fixed;max-width:100%}body table td,body table th{border:1px solid #afb7c0!important;min-width:30px;padding:6px;vertical-align:top;overflow-wrap:anywhere}th{background:#f4f6f8}body[data-editor-theme=dark]{background:#152129;color:#e0ebf2}body[data-editor-theme=dark] td,body[data-editor-theme=dark] th{border-color:#667681!important}body[data-editor-theme=dark] th{background:#263540}';
+  var contentStyle = '.answer-tall-2,.answer-tall-3,.answer-tall-4{line-height:1;vertical-align:middle;font-weight:300}.answer-tall-2{font-size:2.1em}.answer-tall-3{font-size:3em}.answer-tall-4{font-size:3.9em}.answer-sum,.answer-paren{align-items:stretch}.answer-sum::before,.answer-paren::before,.answer-paren::after{content:"";flex:none;background:currentColor;-webkit-mask:var(--answer-shape) center/100% 100% no-repeat;mask:var(--answer-shape) center/100% 100% no-repeat}.answer-sum::before{width:1em;margin-right:.1em;--answer-shape:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' preserveAspectRatio=\'none\'%3E%3Cpath d=\'M96 16 L90 3 L6 3 L54 50 L6 97 L90 97 L96 84\' fill=\'none\' stroke=\'black\' stroke-width=\'1.8\' vector-effect=\'non-scaling-stroke\'/%3E%3C/svg%3E")}.answer-paren::before,.answer-paren::after{width:.42em;--answer-shape:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' preserveAspectRatio=\'none\'%3E%3Cpath d=\'M90 2 C10 25 10 75 90 98\' fill=\'none\' stroke=\'black\' stroke-width=\'1.5\' vector-effect=\'non-scaling-stroke\'/%3E%3C/svg%3E")}.answer-paren::after{transform:scaleX(-1)}.answer-formula{display:inline-flex;max-width:100%;margin:0 .15em;vertical-align:middle}.answer-frac{flex-direction:column;text-align:center}.answer-root{align-items:stretch}.answer-root::before{content:"";flex:none;background:currentColor;-webkit-mask:var(--answer-shape) center/100% 100% no-repeat;mask:var(--answer-shape) center/100% 100% no-repeat;width:.85em;--answer-shape:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' preserveAspectRatio=\'none\'%3E%3Cpath d=\'M2 62 L20 54 L46 97 L99 1\' fill=\'none\' stroke=\'black\' stroke-width=\'1.6\' vector-effect=\'non-scaling-stroke\'/%3E%3C/svg%3E")}.answer-box{display:block;min-width:1.3em;min-height:1.3em;padding:0 .25em;line-height:1.3;outline:none}.answer-frac>.answer-box+.answer-box,.answer-root>.answer-box{border-top:1px solid currentColor}.answer-box:empty{background:rgba(0,108,71,.1)}.answer-box:focus{box-shadow:0 0 0 1px #006c47}body[data-editor-theme=dark] .answer-box:empty{background:rgba(158,223,201,.18)}body[data-editor-theme=dark] .answer-box:focus{box-shadow:0 0 0 1px #9edfc9}body{font:14px/1.55 Arial,sans-serif;margin:12px;color:#252b34;background:#fff;overflow-wrap:anywhere}p{margin:0 0 .6em}table{border-collapse:collapse;table-layout:fixed;max-width:100%}body table td,body table th{border:1px solid #afb7c0!important;min-width:30px;padding:6px;vertical-align:top;overflow-wrap:anywhere}th{background:#f4f6f8}body[data-editor-theme=dark]{background:#152129;color:#e0ebf2}body[data-editor-theme=dark] td,body[data-editor-theme=dark] th{border-color:#667681!important}body[data-editor-theme=dark] th{background:#263540}';
   function mount(container, options) {
     options = options || {};
     var fallback = original.mount(container, options);
@@ -247,16 +317,18 @@
           editor = instance;
           var insertFormula, toggleSymbols, symbolButton;
           instance.ui.registry.addToggleButton('answersymbols', {icon: 'insert-character', tooltip: 'Speciale tekens', onAction: function () { toggleSymbols(); }, onSetup: function (api) { symbolButton = api; return function () {}; }});
-          instance.ui.registry.addButton('answerfrac', {text: 'Breuk', tooltip: 'Breuk invoegen; Tab gaat naar het volgende vak', onAction: function () { insertFormula('frac'); }});
-          instance.ui.registry.addButton('answersum', {text: 'Σ', tooltip: 'Somteken met vakje; het teken groeit mee met de inhoud', onAction: function () { insertFormula('sum'); }});
-          instance.ui.registry.addButton('answerparen', {text: '( )', tooltip: 'Haakjes met vakje; de haakjes groeien mee met de inhoud', onAction: function () { insertFormula('paren'); }});
-          instance.ui.registry.addButton('answerroot', {text: 'Wortel', tooltip: 'Wortel invoegen; Tab gaat verder na de wortel', onAction: function () { insertFormula('root'); }});
+          instance.ui.registry.addButton('answerfrac', {text: 'Breuk', tooltip: 'Breuk invoegen; Tab gaat naar het volgende vak', onAction: function () { insertFormula('frac'); instance.dispatch('change'); }});
+          instance.ui.registry.addButton('answersum', {text: 'Σ', tooltip: 'Somteken met vakje; het teken groeit mee met de inhoud', onAction: function () { insertFormula('sum'); instance.dispatch('change'); }});
+          instance.ui.registry.addButton('answerparen', {text: '( )', tooltip: 'Haakjes met vakje; de haakjes groeien mee met de inhoud', onAction: function () { insertFormula('paren'); instance.dispatch('change'); }});
+          instance.ui.registry.addButton('answerroot', {text: 'Wortel', tooltip: 'Wortel invoegen; Tab gaat verder na de wortel', onAction: function () { insertFormula('root'); instance.dispatch('change'); }});
           instance.on('init', function () {
             if (disposed || generation !== initialization || !target.isConnected) { instance.remove(); return; }
             insertFormula = installFormulas(instance);
             toggleSymbols = installSymbols(instance, function (open) { if (symbolButton) symbolButton.setActive(open); });
+            var autoSize = installAutoSize(instance, sync);
             instance.setContent(fallback.getHTML());
             last = editorHTML(); initialized = true;
+            autoSize();
             wrapper.classList.add('has-tinymce'); theme();
             var count = wrapper.querySelector('.cae-count'), statusbar = instance.getContainer().querySelector('.tox-statusbar__right-container') || instance.getContainer().querySelector('.tox-statusbar');
             if (count && statusbar) statusbar.prepend(count);

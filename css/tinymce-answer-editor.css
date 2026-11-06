@@ -62,3 +62,7 @@ html[data-study-theme=dark] .tox .answer-symbols-tabs button[aria-pressed=true]{
 .answer-sum::before{width:1em;margin-right:.1em;--answer-shape:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M96 16 L90 3 L6 3 L54 50 L6 97 L90 97 L96 84' fill='none' stroke='black' stroke-width='1.8' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E")}
 .answer-paren::before,.answer-paren::after{width:.42em;--answer-shape:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M90 2 C10 25 10 75 90 98' fill='none' stroke='black' stroke-width='1.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E")}
 .answer-paren::after{transform:scaleX(-1)}
+.answer-tall-2,.answer-tall-3,.answer-tall-4{line-height:1;vertical-align:middle;font-weight:300}
+.answer-tall-2{font-size:2.1em}
+.answer-tall-3{font-size:3em}
+.answer-tall-4{font-size:3.9em}
