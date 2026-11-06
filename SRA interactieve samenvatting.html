@@ -72498,11 +72498,15 @@ window.SRAMCExamFrequency = {
     }
     function factor() {
       const value = primary();
+      const index = token => /\d/.test(SUB_VALUE[token]) ? `<mn>${SUB_VALUE[token]}</mn>` : `<mi>${SUB_VALUE[token]}</mi>`;
       let lower = '', upper = '';
       while (peek() !== undefined) {
         const token = peek();
         if (token === '²' || token === '³') upper = `<mn>${token === '²' ? 2 : 3}</mn>`;
-        else if (SUB_VALUE[token]) lower = /\d/.test(SUB_VALUE[token]) ? `<mn>${SUB_VALUE[token]}</mn>` : `<mi>${SUB_VALUE[token]}</mi>`;
+        else if (token === ',' && lower && SUB_VALUE[tokens[position + 1]]) {
+          take();
+          lower = `<mrow>${lower}<mo>,</mo>${index(peek())}</mrow>`;
+        } else if (SUB_VALUE[token]) lower = lower ? `<mrow>${lower}${index(token)}</mrow>` : index(token);
         else if (token[0] === '_' && token.length > 1) {
           const index = token.slice(1).replace(/^\((.*)\)$/, '$1');
           lower = index.length === 1 ? `<mi>${index}</mi>` : `<mtext>${index}</mtext>`;
