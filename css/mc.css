@@ -125,6 +125,8 @@
 .mc-runner .direct-check-option input{width:16px;height:16px;accent-color:#008859}
 #mc-choice-status{margin-left:auto;font-size:11px;color:#6b6873}
 .mc-runner #mc-answer-status{font-size:12px;min-height:18px;margin:10px 0}
+/* Geen melding, geen hoogte: anders scrolt de kolom voor een lege regel. */
+.mc-runner #mc-answer-status:empty{min-height:0;margin:0}
 .mc-runner .sra-exam-footer{position:fixed;left:0;right:0;bottom:0;z-index:81;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 24px;background:#fff;border-top:1px solid #dfe2e8;box-shadow:0 -2px 8px #00000003}
 .mc-runner .sra-exam-footer>div{display:flex;align-items:center;gap:8px}
 .mc-runner .sra-exam-footer .study-btn{font-size:12px;white-space:nowrap;min-height:33px;display:inline-flex;align-items:center;justify-content:center}
@@ -261,7 +263,12 @@ body:has(.mc-page) .learning-page-head{border-bottom:0}
 @media(min-width:761px){
 .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-runner{padding:0 4px}
 .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-layout,.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-layout.mc-case-layout{padding:0}
-body.learning-page-layout .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-body{padding:14px!important}
+body.learning-page-layout .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-body{padding:10px 14px 8px!important}
+body.learning-page-layout .mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-body>.sra-runner-head{margin-bottom:10px!important}
+.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-tools{margin-bottom:8px}
+.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-prompt{margin-bottom:10px;line-height:1.5}
+.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-question-source{margin-bottom:8px}
+.mc-page:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .mc-own-work{margin:8px 0}
 }
 /* Op een gewoon scherm past alles in beeld en scrollt de pagina niet mee. Lage of smalle schermen houden paginascroll. */
 @media(min-width:901px) and (min-height:600px){html:has(.mc-page .study-assistant-layout:not(.is-stacked)),html:has(.mc-page .study-assistant-layout:not(.is-stacked)) body{overflow:hidden}}
