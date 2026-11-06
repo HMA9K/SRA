@@ -384,9 +384,9 @@ _add('gestandaardiseerd-residu', 'Gestandaardiseerd residu', ['gestandaardiseerd
      '$z$ = 2,5 ligt bij $n$ = 100 boven de grens 2 en is dan een signaal. Bij $n$ = 101 geldt grens 3 en is het geen signaal.', 'diagnostiek')
 _add('mahalanobis', 'Mahalanobis Distance', ['Mahalanobis', 'MD', 'Mahal.Distance', 'uitbijter in x'],
      'Een maat voor hoe ongewoon een waarneming ligt qua verklarende variabelen. De SRA-cursus vergelijkt het maximum met gemiddelde MD + 3 × standaardafwijking MD.',
-     'Gemiddelde MD = 1 en $s_MD$ = 0,5 geven een cursusgrens van 1 + 3 × 0,5 = 2,5. Een maximum van 3 ligt daarboven.', 'diagnostiek')
+     'Gemiddelde MD = 1 en $s_MD$ = 0,5 geven een grens van 1 + 3 × 0,5 = 2,5. Een maximum van 3 ligt daarboven.', 'diagnostiek')
 _add('cooks-distance', 'Cook’s Distance', ["Cook's Distance", 'Cooks Distance', 'Cook’s', 'CD'],
-     'Een maat voor de mogelijke invloed van één waarneming op de geschatte regressie. De cursusgrens is gemiddelde CD + 3 × standaardafwijking CD.',
+     'Een maat voor de mogelijke invloed van één waarneming op de geschatte regressie. De grens is gemiddelde CD + 3 × standaardafwijking CD.',
      'Gemiddelde CD = 0,04 en $s_CD$ = 0,07 geven een grens van 0,04 + 3 × 0,07 = 0,25. Een maximum van 0,30 ligt daarboven en vraagt om onderzoek.', 'diagnostiek')
 _add('invloedrijk-punt', 'Invloedrijk punt', ['invloedrijke punten', 'invloedrijke waarneming', 'invloedrijke waarnemingen'],
      'Een waarneming waarvan de aanwezigheid de geschatte regressie sterk kan veranderen. Een groot residu alleen is daarvoor niet genoeg; SRA gebruikt Cook’s Distance.',
@@ -394,10 +394,10 @@ _add('invloedrijk-punt', 'Invloedrijk punt', ['invloedrijke punten', 'invloedrij
 _add('normaliteit', 'Normaliteit', ['normaliteitsaanname', 'niet-normaliteit', 'normaliteit van de residuen'],
      'De aanname dat de relevante storingsterm normaal verdeeld is. Je onderzoekt dat via de residuen. Een niet-significante normaliteitstoets bewijst de aanname niet.',
      'Shapiro-Wilk geeft $p$ = 0,20. Bij $α$ = 0,05 verwerp je normaliteit van de residuen niet.', 'diagnostiek')
-_add('shapiro-wilk', 'Shapiro-Wilk', ['Shapiro Wilk', 'Shapiro-Wilk-toets'],
+_add('shapiro-wilk', 'Shapiro-Wilk', ['Shapiro Wilk', 'Shapiro-Wilk-toets', 'SW'],
      'Een normaliteitstoets. De SRA-werkwijze gebruikt haar voor residuen bij $n ≤ 50$. $H_0$ is normaliteit, dus een kleine $p$ geeft aanleiding om $H_0$ te verwerpen.',
      'Bij $n$ = 30 en $p$ = 0,01 is $p$ kleiner dan 0,05: je verwerpt normaliteit op niveau 0,05.', 'diagnostiek')
-_add('kolmogorov-smirnov', 'Kolmogorov-Smirnov', ['Kolmogorov Smirnov', 'Kolmogorov-Smirnov-toets'],
+_add('kolmogorov-smirnov', 'Kolmogorov-Smirnov', ['Kolmogorov Smirnov', 'Kolmogorov-Smirnov-toets', 'KS'],
      'De normaliteitstoets die de SRA-werkwijze gebruikt voor residuen bij $n > 50$. Beoordeel de $p$-waarde tegenover $α$.',
      'Bij $n$ = 59 en $p$ = 0,20 is er op niveau 0,05 onvoldoende bewijs om normaliteit te verwerpen.', 'diagnostiek',
      [('attentie', 5, 'Normaliteit van residuen'), ('spss', 19, 'Tests of Normality bij n = 59')])
@@ -473,7 +473,7 @@ _add('adjusted-r2', 'Adjusted R²', ['Adjusted R Square', 'adjusted R2', 'gecorr
      '$R²$ gecorrigeerd voor het aantal verklarende variabelen en de beschikbare waarnemingen. Deze maat kan dalen als een extra variabele onvoldoende toevoegt.',
      'Na toevoegen van $x_2$ stijgt $R²$ van 0,70 naar 0,71, maar adjusted $R²$ daalt van 0,68 naar 0,67. De extra verbetering is dan te klein.', 'meervoudig')
 _add('overfitting', 'Overfitting', ['overfit', 'overfitted'],
-     'Een model past zich ook aan toevalligheden in de trainingsgegevens aan en werkt daardoor op nieuwe gegevens minder goed. De cursusvuistregel $n ≥ 10k$ vervangt geen validatie.',
+     'Een model past zich ook aan toevalligheden in de trainingsgegevens aan en werkt daardoor op nieuwe gegevens minder goed. De vuistregel $n ≥ 10k$ vervangt geen validatie.',
      'Een model met veel variabelen voorspelt de trainingsgegevens goed, maar maakt grote fouten op een ongebruikte testset.', 'meervoudig')
 _add('transformatie', 'Transformatie', ['transformaties', 'transformeren', 'getransformeerd', 'getransformeerde'],
      'Een variabele met een wiskundige bewerking op een andere schaal zetten, bijvoorbeeld $ln(x)$. Hierdoor kan een krom verband beter bij een lineair geschatte vorm passen.',
@@ -488,10 +488,10 @@ _add('logaritmisch-model', 'Logaritmisch model', ['logaritmische functie', 'loga
      'Een model met $ln(x)$ als verklarende grootheid en $y$ op de oorspronkelijke schaal: $ŷ = b_0 + b_1 ln(x)$.',
      'Bij $b_1$ = 2 gaat de voorspelde $y$ bij een verdubbeling van $x$ omhoog met 2 × $ln(2)$ ≈ 1,39.', 'transformaties')
 _add('exponentieel-model', 'Exponentieel model', ['exponentiële regressie', 'exponentieel'],
-     'Een model met $ln(y)$ lineair in $x$: $ln(ŷ) = b_0 + b_1 x$. Na terugtransformatie is de cursusvorm $ŷ = exp(b_0 + b_1 x)$.',
+     'Een model met $ln(y)$ lineair in $x$: $ln(ŷ) = b_0 + b_1 x$. Na terugtransformatie is de vorm $ŷ = exp(b_0 + b_1 x)$.',
      'Bij $b_1$ = 0,1 wordt de voorspelde $y$ per extra $x$ vermenigvuldigd met $exp(0,1)$ ≈ 1,105.', 'transformaties')
 _add('machtsmodel', 'Machtsmodel', ['machtsfunctie', 'machtsfuncties', 'Power', 'power-model'],
-     'Een model dat lineair wordt geschreven met $ln(y)$ en $ln(x)$: $ln(ŷ) = b_0 + b_1 ln(x)$. Op de oorspronkelijke schaal is de cursusvorm $ŷ = exp(b_0) × x^{b_1}$.',
+     'Een model dat lineair wordt geschreven met $ln(y)$ en $ln(x)$: $ln(ŷ) = b_0 + b_1 ln(x)$. Op de oorspronkelijke schaal is de vorm $ŷ = exp(b_0) × x^{b_1}$.',
      'Bij $b_1$ = 0,5 wordt de voorspelde $y$ bij een verdubbeling van $x$ vermenigvuldigd met $2^{0,5}$ = $√2$ ≈ 1,41.', 'transformaties')
 _add('terugtransformatie', 'Terugtransformatie', ['terugtransformeren', 'teruggetransformeerd'],
      'De voorspelde uitkomst terugzetten naar de oorspronkelijke schaal, volgens de gekozen modelvorm. Is $y$ gelogaritmeerd, dan is de lineaire uitkomst nog geen voorspelling in de oorspronkelijke eenheid.',
@@ -609,7 +609,7 @@ _add('resterende-ratiospreiding', 'Resterende spreiding bij de quotiëntschatter
      '$s_q$ = € 7,60 is nog geen eindantwoord. Je rekent door met $N/√n$ en de eindigheidscorrectie naar de standaardfout van het totaal.', 'quotient')
 _add('effectieve-vrijheidsgraden', 'Effectieve vrijheidsgraden', ['effectieve df'],
      'De vrijheidsgraden die bij het samengestelde interval van strata horen. Volgens het SRA-formuleblad worden ze in de opgave gegeven; neem niet automatisch het totale $n − 1$.',
-     'De opgave geeft effectieve df = 109. Dan kies je de rij in de $t$-tabel volgens de bijbehorende cursusregel.', 'stratificatie')
+     'De opgave geeft effectieve df = 109. Dan kies je de rij in de $t$-tabel volgens de bijbehorende regel.', 'stratificatie')
 _add('kromming', 'Kromming', ['krom verband', 'kromme verbanden', 'boogvorm'],
      'Een verandering van richting of helling, waardoor één rechte lijn het patroon niet goed beschrijft. Kromming in residuen kan wijzen op een ongeschikte lineaire modelvorm.',
      'Negatieve residuen in het midden en positieve aan beide randen vormen een boog.', 'diagnostiek')

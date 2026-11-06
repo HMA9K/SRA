@@ -218,7 +218,7 @@ def visuals():
         'Een tweezijdig 95%-interval dat nul uitsluit past bij verwerpen van H₀: β₁ = 0 op 5%. Het is niet dezelfde afleesregel als een eenzijdige toets.',
         'Dezelfde b₁, s_b₁ en t-waarde als de reeds uitgewerkte cursusopgave H9.1 en het hellingsinterval.')
     add('diagnostiek','Signalen voor uitbijters en invloedrijke waarnemingen berekenen','diagnostic-signals','Een y-uitbijter en invloed zijn verschillende signalen',[
-        panel('Gestandaardiseerd residu bij n = 40',plot('Minimum en maximum gestandaardiseerd residu',[('Minimum / maximum',[(-1.352,.4),(2.490,.6)],GREEN,True)],'Gestandaardiseerd residu z','Signaalpositie',(-3,3,0,1),vertical=[(-2,'−2',ORANGE),(2,'+2',ORANGE)]),'Maximum 2,490 > 2. Minimum −1,352 blijft binnen de cursusgrens. Dit zijn geen t-waarden uit Coefficients.'),
+        panel('Gestandaardiseerd residu bij n = 40',plot('Minimum en maximum gestandaardiseerd residu',[('Minimum / maximum',[(-1.352,.4),(2.490,.6)],GREEN,True)],'Gestandaardiseerd residu z','Signaalpositie',(-3,3,0,1),vertical=[(-2,'−2',ORANGE),(2,'+2',ORANGE)]),'Maximum 2,490 > 2. Minimum −1,352 blijft binnen de grens. Dit zijn geen t-waarden uit Coefficients.'),
         panel('Cook’s Distance uit dezelfde uitvoer',table(['Grootheid','Waarde'],[['Gemiddelde / s','0,030 / 0,060'],['Grens: gemiddelde + 3s','0,210'],['Maximum','0,313 > 0,210']],'De invloed apart beoordelen'),'Cook signaleert invloed op de schatting. Voor Mahalanobis: 0,975 + 3 × 0,815 = 3,420; maximum 2,388 blijft daaronder.')],
         'Onderzoek de betreffende waarnemingen. Een overschrijding geeft geen automatische opdracht om een post te verwijderen.',
         'De waarden uit de reeds opgenomen Residuals Statistics van de slides: n = 40, Std. Residual, Mahalanobis en Cook’s Distance.')
@@ -273,9 +273,9 @@ def visuals():
         'Gebruik de teruggetransformeerde grenzen. Een symmetrische ±-marge op de oorspronkelijke schaal zou hier de gegeven intervaltransformatie veranderen.',
         'Dezelfde logwaarde en grenzen als het bestaande rekenvoorbeeld. In het linkerbeeld worden log-eenheden gebruikt, geen euro.')
     add('modelbouw','Overlap tussen verklarende variabelen meten met VIF','vif','Een kleine tolerance geeft een grote VIF',[
-        panel('De omgekeerde relatie',plot('VIF tegenover tolerance',[('VIF = 1/tolerance',curve(lambda v:1/v,.05,1),GREEN,False)],'Tolerance','VIF',(.05,1,0,21),horizontal=[(10,'cursusgrens 10',ORANGE)]),'Tolerance 0,08 → VIF 12,5. Tolerance 0,10 → VIF 10.'),
+        panel('De omgekeerde relatie',plot('VIF tegenover tolerance',[('VIF = 1/tolerance',curve(lambda v:1/v,.05,1),GREEN,False)],'Tolerance','VIF',(.05,1,0,21),horizontal=[(10,'grens 10',ORANGE)]),'Tolerance 0,08 → VIF 12,5. Tolerance 0,10 → VIF 10.'),
         panel('De hulpregressie herkennen',table(['R_i²','Tolerance','VIF'],[['0,50','0,50','2'],['0,90','0,10','10'],['0,92','0,08','12,5']],'x_i verklaard uit de overige x-variabelen'),'Het gaat om onderlinge overlap tussen verklarende variabelen; niet om R² van y in het hoofdmodel.')],
-        'De cursusgrens is een onderzoekssignaal. Weglaten van een variabele vraagt een inhoudelijke keuze en opnieuw schatten.')
+        'De grens is een onderzoekssignaal. Weglaten van een variabele vraagt een inhoudelijke keuze en opnieuw schatten.')
     add('modelbouw','Geneste modellen: de extra bijdrage zichtbaar berekenen','nested-model','De extra verklaring tegenover de resterende foutvariatie',[
         panel('Dezelfde totale variatie',table(['Model','SSR','SSE','Totaal'],[['Klein','800','200','1.000'],['Uitgebreid','850','150','1.000'],['Verschil','+50','−50','0']],'De bestaande casus: dezelfde 50 waarnemingen'),'De extra variabele verklaart 50 van de voorheen onverklaarde variatie.'),
         panel('De partiële F afmaken',table(['Stap','Waarde'],[['Extra variabelen','1'],['Residual df uitgebreid','50 − 3 − 1 = 46'],['MSE uitgebreid','150/46 ≈ 3,26087'],['F','50/3,26087 ≈ 15,3333']],'De noemer hoort bij het uitgebreide model'),'De verbetering wordt gedeeld door de foutvariatie na uitbreiding, niet door die van het kleine model.')],
