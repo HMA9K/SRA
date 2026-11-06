@@ -283,19 +283,19 @@ def sampling(question, text):
         return [VARIANCE]
     if re.search(r'Eindigheidscorrectie|^Standaardfout van het totaal|^De eindigheidscorrectie', text) and method:
         return [SE[method]]
-    if re.search(r'^(SE|Standaardfout|S_R|sr|s_[A-Za-z]+ =)|^Ŵ = .*SE =|Voor de standaardfout|SE_R|^s_V|^s_MPU', text) and method:
+    if re.search(r'^(SE|Standaardfout|S_R|sr|s_[A-Za-z]+ =)|^(Puntschatting: )?Ŵ = .*SE =|Voor de standaardfout|SE_R|^s_V|^s_MPU', text) and method:
         if 'SE_R' in text or '× √(1 − ' in text and method == 'regressieschatter' and 'N' not in text and '/ √' not in text:
             return ['regressieschatter|Vergelijk met MPU']
         return [SE[method]]
-    if re.search(r'^(Correctiefactor|Volgens de behandelde formule|De factor √\(1 − R²\)|Bij R = 0,8|Neem de wortel: √0,36|10\.000 × 0,8)', text):
+    if re.search(r'^(Correctiefactor|Vermenigvuldig s_MPU|De factor √\(1 − R²\)|Bij R = 0,8|Neem de wortel: √0,36|10\.000 × 0,8)', text):
         return ['regressieschatter|Vergelijk met MPU']
     if re.search(r'^(Hulpgrootheid|Hulpgetal|Noemer: 1,974|γ = )|γ = ', text):
         return [size_keys(question, 'gamma')]
-    if re.search(r'^(Steekproefomvang|Omvang)\b|^n ≥ |^n = .*(1 \+|/1,4)', text):
+    if re.search(r'^(Steekproefomvang|Omvang|Bereken de omvang)\b|^n ≥ |^n = .*(1 \+|/1,4)', text):
         return [size_keys(question, 'n')]
-    if re.search(r'^(Puntschatting|Schatting van het totaal|Geschatte werkelijke waarde|Startwaarde|Correctie|Correctieterm|MPU geeft)\b|^Ŵ|^Projecteer|^Schat het totaal'
+    if re.search(r'^(Puntschatting|Schatting van het totaal|Geschatte werkelijke waarde|Startwaarde|Correctie|Correctieterm|MPU geeft)\b|^Ŵ|^Vermenigvuldig met B|^Projecteer|^Schat het totaal'
                  r'|^Het totaal is|^Invullen geeft 2\.000|^Vermenigvuldig het gemiddelde|^B − Nb̄|^De regressieschatter is|^Als B = Nb̄|^De volledige correctie'
-                 r'|^B − Nē|^De totale geschatte fout|^Nē|^Geschat totaal verschil|^Totale fout|^Daarna trekt hij|^Het bekende B', text) and method:
+                 r'|^B − Nē|^De totale geschatte fout|^Totale geschatte fout|^Nē|^Geschat totaal verschil|^Totale fout|^Daarna trekt hij|^Het bekende B', text) and method:
         return [POINT[method]]
     if re.search(r'E = [\d.]+ ?/ ?2|^De totale breedte is 2E', text):
         return [WIDTH]
@@ -379,9 +379,9 @@ def rekenen(text):
         return [MEAN]
     if re.search(r'^(De standaardfout van het gemiddelde|Delen door √n)', text):
         return ['se-gemiddelde']
-    if re.search(r'^(s²? = \[|Delen door n − 1)', text):
+    if re.search(r'^((Variantie: |Steekproefvariantie: )?s²? = \[|Delen door n − 1)', text):
         return [VARIANCE]
-    if re.search(r'^(s = √|De standaardafwijking is de wortel|s² = 4)', text):
+    if re.search(r'^((Standaardafwijking: )?s = √|De standaardafwijking is de wortel|s² = 4)', text):
         return [ROOT_S]
     return []
 

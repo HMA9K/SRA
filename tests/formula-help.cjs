@@ -75,4 +75,9 @@ const subs = text => H.notationParts(text).filter(part => typeof part !== 'strin
 assert.deepEqual(subs('Wat is Ŵ_MPU? s_e = √MSE; b₁s_x/s_y; 2x_t + 0,5e_(t−1); t²Ns_q²; w̄_i; SSR_klein'), ['MPU','e','x','y','t','t−1','q','i','klein']);
 assert.deepEqual(subs('s_3,totaal en d_L, d_U'), ['3,totaal','L','U']);
 for (const literal of ['LN_MORT en LN_ELECT','ln_dens','ZRE_1 en MAH_1','College8_data.sav','20241028_SRA_uitwerkingen.pdf']) assert.deepEqual(H.notationParts(literal), [], literal);
+assert.match(H.lookup('sₑ','steekproefomvang').title,/verschillen/,'s_e is bij de schatters de spreiding van de fouten');
+assert.equal(H.textMatches('n.v.t.','anova').length,0,'Een afkorting is geen symbool');
+assert.equal(H.textMatches('(b) een tweezijdig','onzekerheid').length,0,'Een opsomming is geen symbool');
+assert.equal(H.textMatches('B: 2 controles','steekproefomvang').filter(m=>m.start===0).length,0,'Een stratumnaam is geen symbool');
+assert.match(H.lookup('t','diagnostiek','d = Σ(e_t − e_(t−1))²').title,/tijdsperiode/);
 console.log(`OK: ${formulas} formules / ${components} componenten; volledige symbooldekking, context en tekstgrenzen.`);

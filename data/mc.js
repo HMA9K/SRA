@@ -601,10 +601,10 @@ window.SRAMCData = {
           "level": 3,
           "steps": [
             "De marge is 2 × 5.000 = 10.000.",
-            "Het interval rond het totale W is 240.000 ± 10.000.",
+            "Het interval rond het totale W is 240.000 ± 10.000 = [230.000; 250.000].",
             "De standaardfout van € 5.000 beschrijft onzekerheid van de totaalschatting. De intervalgrenzen zijn dus grenzen voor W, niet voor aantallen of afzonderlijke facturen."
           ],
-          "explanation": "De marge is 2 × 5.000 = 10.000. Het interval rond het totale W is 240.000 ± 10.000. De standaardfout van € 5.000 beschrijft onzekerheid van de totaalschatting. De intervalgrenzen zijn dus grenzen voor W, niet voor aantallen of afzonderlijke facturen.",
+          "explanation": "De marge is 2 × 5.000 = 10.000. Het interval rond het totale W is 240.000 ± 10.000 = [230.000; 250.000]. De standaardfout van € 5.000 beschrijft onzekerheid van de totaalschatting. De intervalgrenzen zijn dus grenzen voor W, niet voor aantallen of afzonderlijke facturen.",
           "pattern": "Herken: Ŵ, een standaardfout, t en de vraag naar een volledige uitspraak. → Betekenis: Naast de puntschatting is ook de onzekerheid van het totaal gegeven. → Aanpak: Bereken de marge t × standaardfout en plaats die aan beide kanten van Ŵ. → Gevraagd antwoord: Een geschat totaal met onder- en bovengrens, zonder zekerheid over de werkelijke waarde te claimen.",
           "trap": "Een interval voor een totaal is geen interval voor individuele posten.",
           "optionExplanations": [
@@ -1081,10 +1081,10 @@ window.SRAMCData = {
           "correct": 1,
           "steps": [
             "Lees n = 4, Σw = 100 en Σw² = 3.000 uit verschillende onderdelen van de tabel.",
-            "s² = [3.000 − 100²/4]/(4 − 1) = 166,6667 euro².",
+            "Steekproefvariantie: s² = [3.000 − 100²/4]/(4 − 1) = 166,6667 euro².",
             "s = √166,6667 ≈ 12,91 euro. Deze spreiding van posten is niet de standaardfout van een populatietotaal."
           ],
-          "explanation": "Lees n = 4, Σw = 100 en Σw² = 3.000 uit verschillende onderdelen van de tabel. s² = [3.000 − 100²/4]/(4 − 1) = 166,6667 euro². s = √166,6667 ≈ 12,91 euro. Deze spreiding van posten is niet de standaardfout van een populatietotaal.",
+          "explanation": "Lees n = 4, Σw = 100 en Σw² = 3.000 uit verschillende onderdelen van de tabel. Steekproefvariantie: s² = [3.000 − 100²/4]/(4 − 1) = 166,6667 euro². s = √166,6667 ≈ 12,91 euro. Deze spreiding van posten is niet de standaardfout van een populatietotaal.",
           "pattern": "Herken: Welke combinatie van steekproefvariantie en standaardafwijking volgt uit deze tabel? → Betekenis: De tabel biedt zowel de som als de som van afzonderlijke kwadraten voor de rekenformule. → Aanpak: Vul de som en kwadratensom afzonderlijk in en controleer of de uitkomst in euro of euro² gevraagd is. → Gevraagd antwoord: Een variantie in euro² en de bijbehorende standaardafwijking in euro.",
           "trap": "Σw² en (Σw)² verschillen; de somregel is geen extra waarneming.",
           "refs": [
@@ -1131,11 +1131,11 @@ window.SRAMCData = {
           "correct": 1,
           "level": 3,
           "steps": [
-            "s² = [120 − 20²/4]/3 = 20/3.",
-            "s = √(20/3) ≈ 2,58.",
+            "Variantie: s² = [120 − 20²/4]/3 = 20/3.",
+            "Standaardafwijking: s = √(20/3) ≈ 2,58.",
             "Rond de variantie niet onnodig vroeg af. Bereken de wortel uit 20/3 en rond pas de gevraagde standaardafwijking af."
           ],
-          "explanation": "s² = [120 − 20²/4]/3 = 20/3. s = √(20/3) ≈ 2,58. Rond de variantie niet onnodig vroeg af. Bereken de wortel uit 20/3 en rond pas de gevraagde standaardafwijking af.",
+          "explanation": "Variantie: s² = [120 − 20²/4]/3 = 20/3. Standaardafwijking: s = √(20/3) ≈ 2,58. Rond de variantie niet onnodig vroeg af. Bereken de wortel uit 20/3 en rond pas de gevraagde standaardafwijking af.",
           "pattern": "Herken: n, Σw en Σw² zijn gegeven; gevraagd is s op twee decimalen. → Betekenis: Dit zijn samenvattingen voor de rekenformule van de steekproefvariantie. → Aanpak: Bereken s² = [Σw² − (Σw)²/n]/(n − 1), neem daarna de wortel en rond pas af. → Gevraagd antwoord: De standaardafwijking in oorspronkelijke eenheden op twee decimalen.",
           "trap": "6,67 is de variantie; neem nog de wortel.",
           "optionExplanations": [
@@ -1592,10 +1592,10 @@ window.SRAMCData = {
             "170"
           ],
           "correct": 1,
-          "explanation": "De berekende vrijheidsgraden zijn 164, maar die rij is niet beschikbaar in de opgegeven tabel. Volgens de tabelafspraak in het SRA-onderwijsprogramma neem je de naast lagere beschikbare waarde. Van 160 en 170 is 160 de naast lagere rij. Dit is een tabelkeuze; de berekende df blijven 164.",
+          "explanation": "De berekende vrijheidsgraden zijn 164, maar die rij is niet beschikbaar in de opgegeven tabel. Bij een ontbrekende rij neem je de naast lagere beschikbare waarde. Van 160 en 170 is 160 de naast lagere rij. Dit is een tabelkeuze; de berekende df blijven 164.",
           "steps": [
             "De berekende vrijheidsgraden zijn 164, maar die rij is niet beschikbaar in de opgegeven tabel.",
-            "Volgens de tabelafspraak in het SRA-onderwijsprogramma neem je de naast lagere beschikbare waarde.",
+            "Bij een ontbrekende rij neem je de naast lagere beschikbare waarde.",
             "Van 160 en 170 is 160 de naast lagere rij. Dit is een tabelkeuze; de berekende df blijven 164."
           ],
           "pattern": "Herken: De berekende df ontbreken, maar een lagere en hogere tabelrij zijn beschikbaar. → Betekenis: Dit is een tabelkeuze volgens de afspraak, geen nieuwe df-berekening. → Aanpak: Kies de naast lagere beschikbare rij; interpoleer niet. → Gevraagd antwoord: De te gebruiken tabelrij, met behoud van de oorspronkelijk berekende df.",
@@ -1707,11 +1707,11 @@ window.SRAMCData = {
           "correct": 1,
           "level": 2,
           "steps": [
-            "α = 1 − 0,95 = 0,05.",
-            "Verdeel α over twee staarten: 0,025 per staart.",
+            "Kans buiten het interval: α = 1 − 0,95 = 0,05.",
+            "Verdeel α over twee staarten: 0,05/2 = 0,025 per staart.",
             "Het centrale gebied bevat 95%; de twee buitengebieden bevatten samen 5%. Bij gelijke verdeling is ieder buitengebied 2,5%."
           ],
-          "explanation": "α = 1 − 0,95 = 0,05. Verdeel α over twee staarten: 0,025 per staart. Het centrale gebied bevat 95%; de twee buitengebieden bevatten samen 5%. Bij gelijke verdeling is ieder buitengebied 2,5%.",
+          "explanation": "Kans buiten het interval: α = 1 − 0,95 = 0,05. Verdeel α over twee staarten: 0,05/2 = 0,025 per staart. Het centrale gebied bevat 95%; de twee buitengebieden bevatten samen 5%. Bij gelijke verdeling is ieder buitengebied 2,5%.",
           "pattern": "Herken: “Tweezijdig 95%” en “per staart”. → Betekenis: De totale overschrijdingskans ligt buiten het middengebied. → Aanpak: Trek de betrouwbaarheid van 1 af en verdeel de rest gelijk over twee staarten. → Gevraagd antwoord: Een kans per staart, passend bij de kolom van een tweezijdige t-tabel.",
           "trap": "De tweezijdige p-waarde wordt later met α vergeleken, niet met α/2.",
           "optionExplanations": [
@@ -2003,11 +2003,11 @@ window.SRAMCData = {
           "correct": 2,
           "level": 3,
           "steps": [
-            "De marge is 2.400: exacte grenzen 98.850 en 103.650.",
+            "De marge is 2 × 1.200 = 2.400. De exacte grenzen zijn 101.250 ± 2.400 = 98.850 en 103.650.",
             "Naar buiten afronden geeft onder 98.800 en boven 103.700.",
             "Naar buiten afronden mag het berekende interval verruimen, maar geen mogelijke waarden uit het oorspronkelijke interval afsnijden."
           ],
-          "explanation": "De marge is 2.400: exacte grenzen 98.850 en 103.650. Naar buiten afronden geeft onder 98.800 en boven 103.700. Naar buiten afronden mag het berekende interval verruimen, maar geen mogelijke waarden uit het oorspronkelijke interval afsnijden.",
+          "explanation": "De marge is 2 × 1.200 = 2.400. De exacte grenzen zijn 101.250 ± 2.400 = 98.850 en 103.650. Naar buiten afronden geeft onder 98.800 en boven 103.700. Naar buiten afronden mag het berekende interval verruimen, maar geen mogelijke waarden uit het oorspronkelijke interval afsnijden.",
           "pattern": "Herken: Ŵ, standaardfout, t en “naar buiten afronden op honderden”. → Betekenis: Je zoekt een interval dat door afronding niet smaller wordt. → Aanpak: Bereken Ŵ ± t × standaardfout; rond de ondergrens omlaag en de bovengrens omhoog. → Gevraagd antwoord: Twee grenzen in honderden euro, met de juiste afrondingsrichting.",
           "trap": "Gewoon afronden kan een grens naar binnen verschuiven.",
           "optionExplanations": [
@@ -2239,10 +2239,10 @@ window.SRAMCData = {
           "correct": 3,
           "steps": [
             "Een tweezijdig 95%-interval gebruikt overschrijdingskans 0,025.",
-            "Zoek de aangrenzende rijen in de bundel: 95 en 100. Kies de naast lagere rij 95.",
+            "Zoek de aangrenzende rijen in de tabel: 95 en 100. Kies de naast lagere rij 95.",
             "Lees t = 1,985 af. De effectieve df blijven inhoudelijk 99; alleen voor het tabelgebruik neem je rij 95."
           ],
-          "explanation": "Een tweezijdig 95%-interval gebruikt overschrijdingskans 0,025. Zoek de aangrenzende rijen in de bundel: 95 en 100. Kies de naast lagere rij 95. Lees t = 1,985 af. De effectieve df blijven inhoudelijk 99; alleen voor het tabelgebruik neem je rij 95.",
+          "explanation": "Een tweezijdig 95%-interval gebruikt overschrijdingskans 0,025. Zoek de aangrenzende rijen in de tabel: 95 en 100. Kies de naast lagere rij 95. Lees t = 1,985 af. De effectieve df blijven inhoudelijk 99; alleen voor het tabelgebruik neem je rij 95.",
           "pattern": "Herken: Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval? → Betekenis: Een ontbrekende exacte rij vereist de concrete afspraak over tabelgebruik. → Aanpak: Bekijk daadwerkelijk welke rijen aanwezig zijn en kies de naast lagere beschikbare rij bij dezelfde staartkans. → Gevraagd antwoord: De gebruikte tabelrij en bijbehorende kritieke waarde.",
           "trap": "Een eerder onthouden tabelwaarde vervangt het aflezen van de aangeleverde bundel niet.",
           "refs": [
@@ -2648,10 +2648,10 @@ window.SRAMCData = {
           "level": 2,
           "steps": [
             "De standaardfout van het gemiddelde is 20/√100 = 2.",
-            "Voor het totaal: N × 2 = 2.000.",
+            "Voor het totaal: 1.000 × 2 = 2.000.",
             "De standaardfout hoort bij de gevraagde grootheid. Opschalen van een gemiddelde naar een totaal met N schaalt ook de standaardfout met N."
           ],
-          "explanation": "De standaardfout van het gemiddelde is 20/√100 = 2. Voor het totaal: N × 2 = 2.000. De standaardfout hoort bij de gevraagde grootheid. Opschalen van een gemiddelde naar een totaal met N schaalt ook de standaardfout met N.",
+          "explanation": "De standaardfout van het gemiddelde is 20/√100 = 2. Voor het totaal: 1.000 × 2 = 2.000. De standaardfout hoort bij de gevraagde grootheid. Opschalen van een gemiddelde naar een totaal met N schaalt ook de standaardfout met N.",
           "pattern": "Herken: “Standaardfout van het geschatte totaal”, N, n en s_w; zonder eindigheidscorrectie. → Betekenis: De standaardfout van een gemiddelde moet worden opgeschaald naar alle posten. → Aanpak: Bereken eerst s_w/√n en vermenigvuldig daarna met N. → Gevraagd antwoord: Een standaardfout van het totaal, geen totaalschatting Nw̄.",
           "trap": "2 hoort bij het gemiddelde, niet bij het totaal.",
           "optionExplanations": [
@@ -2753,10 +2753,10 @@ window.SRAMCData = {
           ],
           "steps": [
             "De selectie is aselect, maar de populatie is extreem scheef.",
-            "Het boek nuanceert de grens n ≥ 100.",
+            "De grens n ≥ 100 is geen garantie: bij extreme scheefheid kan een grotere steekproef nodig zijn.",
             "Beoordeel de benadering en de spreiding voordat je de intervaluitkomst gebruikt."
           ],
-          "explanation": "De selectie is aselect, maar de populatie is extreem scheef. Het boek nuanceert de grens n ≥ 100. Beoordeel de benadering en de spreiding voordat je de intervaluitkomst gebruikt.",
+          "explanation": "De selectie is aselect, maar de populatie is extreem scheef. De grens n ≥ 100 is geen garantie: bij extreme scheefheid kan een grotere steekproef nodig zijn. Beoordeel de benadering en de spreiding voordat je de intervaluitkomst gebruikt.",
           "pattern": "Herken: Een aselecte steekproef boven de grens én “extreem scheve populatie”. → Betekenis: Aselecte selectie en bruikbaarheid van de normale benadering zijn afzonderlijke voorwaarden. → Aanpak: Beoordeel of de scheefheid de benadering problematisch maakt ondanks de omvangsvuistregel. → Gevraagd antwoord: Een voorwaardelijk oordeel over het interval, geen automatische garantie door n alleen.",
           "trap": "Een grenswaarde is geen garantie voor iedere verdeling.",
           "refs": [
@@ -2845,12 +2845,12 @@ window.SRAMCData = {
           "correct": 3,
           "level": 3,
           "steps": [
-            "Ŵ = 1.000 × 80 = 80.000.",
-            "s_MPU = 1.000 × 20/10 × √(900/999) ≈ 1.898,32.",
-            "De marge is circa 3.796,63.",
+            "Puntschatting: Ŵ = 1.000 × 80 = 80.000.",
+            "Standaardfout: s_MPU = 1.000 × 20/√100 × √(900/999) ≈ 1.898,316.",
+            "De marge is 2 × 1.898,316 ≈ 3.796,63, dus het interval is 80.000 ± 3.796,63 ≈ [76.203; 83.797].",
             "De eindigheidscorrectie verlaagt de standaardfout omdat 100 van de 1.000 posten zijn waargenomen. De marge blijft t maal die gecorrigeerde standaardfout."
           ],
-          "explanation": "Ŵ = 1.000 × 80 = 80.000. s_MPU = 1.000 × 20/10 × √(900/999) ≈ 1.898,32. De marge is circa 3.796,63. De eindigheidscorrectie verlaagt de standaardfout omdat 100 van de 1.000 posten zijn waargenomen. De marge blijft t maal die gecorrigeerde standaardfout.",
+          "explanation": "Puntschatting: Ŵ = 1.000 × 80 = 80.000. Standaardfout: s_MPU = 1.000 × 20/√100 × √(900/999) ≈ 1.898,316. De marge is 2 × 1.898,316 ≈ 3.796,63, dus het interval is 80.000 ± 3.796,63 ≈ [76.203; 83.797]. De eindigheidscorrectie verlaagt de standaardfout omdat 100 van de 1.000 posten zijn waargenomen. De marge blijft t maal die gecorrigeerde standaardfout.",
           "pattern": "Herken: MPU-gegevens, t en een expliciete eindigheidscorrectie; gevraagd is een interval. → Betekenis: Het middelpunt en de marge gebruiken verschillende gegevens. → Aanpak: Neem Nw̄ als middelpunt en t × N × s_w/√n × correctiefactor als marge. → Gevraagd antwoord: Een onder- en bovengrens voor het werkelijke populatietotaal.",
           "trap": "De factor t moet ook worden toegepast.",
           "optionExplanations": [
@@ -3052,10 +3052,10 @@ window.SRAMCData = {
           "correct": 3,
           "steps": [
             "Gemiddelde: 8.000/100 = 80. Variantie: [679.600 − 8.000²/100]/99 = 400, dus s_w = 20.",
-            "Ŵ = 1.000 × 80 = 80.000; SE = 1.000 × 20/√100 × √(900/999) ≈ 1.898,316.",
+            "Puntschatting: Ŵ = 1.000 × 80 = 80.000. Standaardfout: SE = 1.000 × 20/√100 × √(900/999) ≈ 1.898,316.",
             "80.000 ± 2 × 1.898,316 geeft [76.203,368; 83.796,632]. Naar buiten op euro’s: [76.203; 83.797]."
           ],
-          "explanation": "Gemiddelde: 8.000/100 = 80. Variantie: [679.600 − 8.000²/100]/99 = 400, dus s_w = 20. Ŵ = 1.000 × 80 = 80.000; SE = 1.000 × 20/√100 × √(900/999) ≈ 1.898,316. 80.000 ± 2 × 1.898,316 geeft [76.203,368; 83.796,632]. Naar buiten op euro’s: [76.203; 83.797].",
+          "explanation": "Gemiddelde: 8.000/100 = 80. Variantie: [679.600 − 8.000²/100]/99 = 400, dus s_w = 20. Puntschatting: Ŵ = 1.000 × 80 = 80.000. Standaardfout: SE = 1.000 × 20/√100 × √(900/999) ≈ 1.898,316. 80.000 ± 2 × 1.898,316 geeft [76.203,368; 83.796,632]. Naar buiten op euro’s: [76.203; 83.797].",
           "pattern": "Herken: Welk MPU-interval volgt, op hele euro’s naar buiten afgerond, met gegeven t = 2? → Betekenis: De samenvatting bevat voldoende gegevens voor gemiddelde, spreiding en totale schattingsonzekerheid. → Aanpak: Bereken eerst gemiddelde en spreiding uit de somkolommen, schaal vervolgens naar N en pas de eindigheidscorrectie toe. → Gevraagd antwoord: Een interval voor de gehele voorraadwaarde, naar buiten afgerond op euro’s.",
           "trap": "Rond tussenuitkomsten niet vroeg af en gebruik de standaardfout van het totaal.",
           "refs": [
@@ -3351,9 +3351,9 @@ window.SRAMCData = {
             "Nee, er zijn minder dan 30 fouten"
           ],
           "correct": 2,
-          "explanation": "De les verwijst voor deze toepassing naar de voorwaarde van minstens 30 aangetroffen fouten. Er zijn 200 posten gecontroleerd, maar slechts 12 daarvan bevatten een fout. 12 is kleiner dan 30. De genoemde voorwaarde is dus niet vervuld, ondanks de grotere steekproefomvang.",
+          "explanation": "Voor deze toepassing geldt de voorwaarde van minstens 30 aangetroffen fouten. Er zijn 200 posten gecontroleerd, maar slechts 12 daarvan bevatten een fout. 12 is kleiner dan 30. De genoemde voorwaarde is dus niet vervuld, ondanks de grotere steekproefomvang.",
           "steps": [
-            "De les verwijst voor deze toepassing naar de voorwaarde van minstens 30 aangetroffen fouten.",
+            "Voor deze toepassing geldt de voorwaarde van minstens 30 aangetroffen fouten.",
             "Er zijn 200 posten gecontroleerd, maar slechts 12 daarvan bevatten een fout.",
             "12 is kleiner dan 30. De genoemde voorwaarde is dus niet vervuld, ondanks de grotere steekproefomvang."
           ],
@@ -3578,11 +3578,11 @@ window.SRAMCData = {
           "correct": 3,
           "level": 2,
           "steps": [
-            "De totale geschatte fout is Nē = 4.000.",
-            "Ŵ_V = B − Nē = 96.000.",
+            "De totale geschatte fout is Nē = 1.000 × 4 = 4.000.",
+            "Geschatte werkelijke waarde: Ŵ_V = B − Nē = 100.000 − 4.000 = 96.000.",
             "Een positieve fout e = b − w betekent dat de boekwaarde te hoog is. De geschatte totale fout moet daarom van B worden afgetrokken."
           ],
-          "explanation": "De totale geschatte fout is Nē = 4.000. Ŵ_V = B − Nē = 96.000. Een positieve fout e = b − w betekent dat de boekwaarde te hoog is. De geschatte totale fout moet daarom van B worden afgetrokken.",
+          "explanation": "De totale geschatte fout is Nē = 1.000 × 4 = 4.000. Geschatte werkelijke waarde: Ŵ_V = B − Nē = 100.000 − 4.000 = 96.000. Een positieve fout e = b − w betekent dat de boekwaarde te hoog is. De geschatte totale fout moet daarom van B worden afgetrokken.",
           "pattern": "Herken: B, N en een positieve gemiddelde fout ē; gevraagd is de werkelijke waarde. → Betekenis: Het bekende boektotaal moet worden gecorrigeerd voor totale overwaardering. → Aanpak: Schat de totale fout als Nē en trek die van B af. → Gevraagd antwoord: Een geschat werkelijk totaal B − Nē, niet alleen het foutbedrag.",
           "trap": "De geschatte fout is niet het geschatte werkelijke totaal.",
           "optionExplanations": [
@@ -3692,11 +3692,11 @@ window.SRAMCData = {
           "correct": 0,
           "level": 3,
           "steps": [
-            "Nē = −1.500.",
-            "B − Nē = 10.000 − (−1.500) = 11.500.",
+            "Totale geschatte fout: Nē = 500 × (−3) = −1.500.",
+            "Geschatte werkelijke waarde: Ŵ_V = B − Nē = 10.000 − (−1.500) = 11.500.",
             "Een negatieve gemiddelde fout betekent dat de werkelijke waarden hoger liggen dan de boekwaarden. Daarom verhoogt de verschilschatter hier het totaal."
           ],
-          "explanation": "Nē = −1.500. B − Nē = 10.000 − (−1.500) = 11.500. Een negatieve gemiddelde fout betekent dat de werkelijke waarden hoger liggen dan de boekwaarden. Daarom verhoogt de verschilschatter hier het totaal.",
+          "explanation": "Totale geschatte fout: Nē = 500 × (−3) = −1.500. Geschatte werkelijke waarde: Ŵ_V = B − Nē = 10.000 − (−1.500) = 11.500. Een negatieve gemiddelde fout betekent dat de werkelijke waarden hoger liggen dan de boekwaarden. Daarom verhoogt de verschilschatter hier het totaal.",
           "pattern": "Herken: B, N en een negatieve gemiddelde fout ē. → Betekenis: Een negatieve b − w duidt op onderwaardering in de boeken. → Aanpak: Vul het minteken mee in B − Nē; werk de aftrekking van een negatief bedrag uit. → Gevraagd antwoord: Een geschat werkelijk totaal met het juiste teken van de correctie.",
           "trap": "Twee mintekens geven hier een verhoging van het totaal.",
           "optionExplanations": [
@@ -3806,12 +3806,12 @@ window.SRAMCData = {
           "correct": 1,
           "level": 3,
           "steps": [
-            "Ŵ_V = 10.000 − 500 × 2 = 9.000.",
-            "s_V = 500 × 5/√50 ≈ 353,55.",
+            "Puntschatting: Ŵ_V = 10.000 − 500 × 2 = 9.000.",
+            "Standaardfout: s_V = 500 × 5/√50 ≈ 353,55.",
             "9.000 ± 2 × 353,55 geeft circa [8.293; 9.707].",
             "De foutcorrectie bepaalt het centrum € 9.000; s_e bepaalt de onzekerheid rond dat centrum. Dat zijn twee afzonderlijke onderdelen van de berekening."
           ],
-          "explanation": "Ŵ_V = 10.000 − 500 × 2 = 9.000. s_V = 500 × 5/√50 ≈ 353,55. 9.000 ± 2 × 353,55 geeft circa [8.293; 9.707]. De foutcorrectie bepaalt het centrum € 9.000; s_e bepaalt de onzekerheid rond dat centrum. Dat zijn twee afzonderlijke onderdelen van de berekening.",
+          "explanation": "Puntschatting: Ŵ_V = 10.000 − 500 × 2 = 9.000. Standaardfout: s_V = 500 × 5/√50 ≈ 353,55. 9.000 ± 2 × 353,55 geeft circa [8.293; 9.707]. De foutcorrectie bepaalt het centrum € 9.000; s_e bepaalt de onzekerheid rond dat centrum. Dat zijn twee afzonderlijke onderdelen van de berekening.",
           "pattern": "Herken: B, ē en s_e met n, N en t; gevraagd is een interval zonder eindigheidscorrectie. → Betekenis: De fout bepaalt zowel de correctie op het boektotaal als de onzekerheid daarvan. → Aanpak: Gebruik B − Nē als middelpunt en t × N × s_e/√n als marge. → Gevraagd antwoord: Twee grenzen voor de werkelijke totale waarde, geen interval rond alleen ē.",
           "trap": "Centreer het interval rond Ŵ_V, niet rond B.",
           "optionExplanations": [
@@ -3928,11 +3928,11 @@ window.SRAMCData = {
           ],
           "correct": 0,
           "steps": [
-            "Definieer e = b − w. Over alle gecontroleerde posten is Σe = 300.",
-            "Deel door n = 100, ook al hebben slechts 40 posten een niet-nulverschil: ē = 3.",
+            "Definieer e = b − w. Over alle gecontroleerde posten is Σe = 10.500 − 10.200 = 300.",
+            "Deel door n = 100, ook al hebben slechts 40 posten een niet-nulverschil: ē = 300/100 = 3.",
             "Ŵ_V = 210.000 − 2.000 × 3 = 204.000. Voor het interval gebruik je de spreiding van e; de kwadratensom ondersteunt die vervolgstap."
           ],
-          "explanation": "Definieer e = b − w. Over alle gecontroleerde posten is Σe = 300. Deel door n = 100, ook al hebben slechts 40 posten een niet-nulverschil: ē = 3. Ŵ_V = 210.000 − 2.000 × 3 = 204.000. Voor het interval gebruik je de spreiding van e; de kwadratensom ondersteunt die vervolgstap.",
+          "explanation": "Definieer e = b − w. Over alle gecontroleerde posten is Σe = 10.500 − 10.200 = 300. Deel door n = 100, ook al hebben slechts 40 posten een niet-nulverschil: ē = 300/100 = 3. Ŵ_V = 210.000 − 2.000 × 3 = 204.000. Voor het interval gebruik je de spreiding van e; de kwadratensom ondersteunt die vervolgstap.",
           "pattern": "Herken: Wat is de verschilschatting van de werkelijke voorraadwaarde? → Betekenis: De bekende populatieboekwaarde wordt met een geprojecteerd absoluut controleverschil gecorrigeerd. → Aanpak: Trek de twee steekproefsommen af, deel door alle gecontroleerde posten en trek N maal dat gemiddelde van het boektotaal af. → Gevraagd antwoord: Een geschatte werkelijke populatiewaarde na correctie van de boeken.",
           "trap": "Deel de som van verschillen niet uitsluitend door het aantal posten met een fout.",
           "refs": [
@@ -4385,10 +4385,10 @@ window.SRAMCData = {
             "1.040.000"
           ],
           "correct": 1,
-          "explanation": "De goedratio geeft welk deel van de boekwaarde als werkelijke waarde wordt geschat. Ŵ_Q = qB = 0,96 × 1.000.000 = 960.000. De bijbehorende geschatte totale overwaardering is B − Ŵ_Q = 40.000, maar dat is niet het gevraagde werkelijke totaal.",
+          "explanation": "De goedratio geeft welk deel van de boekwaarde als werkelijke waarde wordt geschat. Vermenigvuldig met B: Ŵ_Q = qB = 0,96 × 1.000.000 = 960.000. De bijbehorende geschatte totale overwaardering is B − Ŵ_Q = 40.000, maar dat is niet het gevraagde werkelijke totaal.",
           "steps": [
             "De goedratio geeft welk deel van de boekwaarde als werkelijke waarde wordt geschat.",
-            "Ŵ_Q = qB = 0,96 × 1.000.000 = 960.000.",
+            "Vermenigvuldig met B: Ŵ_Q = qB = 0,96 × 1.000.000 = 960.000.",
             "De bijbehorende geschatte totale overwaardering is B − Ŵ_Q = 40.000, maar dat is niet het gevraagde werkelijke totaal."
           ],
           "pattern": "Herken: Een goedratio q en boektotaal B; gevraagd is de werkelijke waarde. → Betekenis: q is het deel van B dat als werkelijk aanwezig wordt geschat. → Aanpak: Vermenigvuldig q met B; gebruik 1 − q alleen bij een vraag naar de fout. → Gevraagd antwoord: Een geschat werkelijk totaalbedrag, geen overwaardering.",
@@ -4515,11 +4515,11 @@ window.SRAMCData = {
           "correct": 0,
           "level": 2,
           "steps": [
-            "q = 72.000/80.000 = 0,90.",
-            "Ŵ_Q = 0,90 × 200.000 = 180.000.",
+            "Goedratio: q = 72.000/80.000 = 0,90.",
+            "Geschatte werkelijke waarde: Ŵ_Q = 0,90 × 200.000 = 180.000.",
             "De goedratio past het in de steekproef gevonden goedaandeel toe op het bekende populatieboektotaal. Het overblijvende verschil is de geschatte fout."
           ],
-          "explanation": "q = 72.000/80.000 = 0,90. Ŵ_Q = 0,90 × 200.000 = 180.000. De goedratio past het in de steekproef gevonden goedaandeel toe op het bekende populatieboektotaal. Het overblijvende verschil is de geschatte fout.",
+          "explanation": "Goedratio: q = 72.000/80.000 = 0,90. Geschatte werkelijke waarde: Ŵ_Q = 0,90 × 200.000 = 180.000. De goedratio past het in de steekproef gevonden goedaandeel toe op het bekende populatieboektotaal. Het overblijvende verschil is de geschatte fout.",
           "pattern": "Herken: Beide steekproefsommen én het boektotaal van de populatie. → Betekenis: Eerst moet een steekproefratio worden bepaald, daarna toegepast op de populatie. → Aanpak: Bereken q = Σw/Σb en vervolgens Ŵ_Q = qB. → Gevraagd antwoord: Een geschat werkelijk populatietotaal in euro.",
           "trap": "20.000 is de geschatte fout; 180.000 is de werkelijke waarde.",
           "optionExplanations": [
@@ -4644,11 +4644,11 @@ window.SRAMCData = {
           "correct": 1,
           "level": 3,
           "steps": [
-            "De verhoudingen zijn steeds 0,90.",
+            "De verhoudingen w/b zijn 90/100, 180/200 en 360/400: steeds 0,90.",
             "De verschillen zijn 10, 20 en 40 en dus niet constant.",
             "De absolute fout wordt groter bij grotere posten, maar het goedaandeel blijft steeds 90%. Juist dat relatieve patroon is van belang."
           ],
-          "explanation": "De verhoudingen zijn steeds 0,90. De verschillen zijn 10, 20 en 40 en dus niet constant. De absolute fout wordt groter bij grotere posten, maar het goedaandeel blijft steeds 90%. Juist dat relatieve patroon is van belang.",
+          "explanation": "De verhoudingen w/b zijn 90/100, 180/200 en 360/400: steeds 0,90. De verschillen zijn 10, 20 en 40 en dus niet constant. De absolute fout wordt groter bij grotere posten, maar het goedaandeel blijft steeds 90%. Juist dat relatieve patroon is van belang.",
           "pattern": "Herken: Paarsgewijze boekwaarden en werkelijke waarden voor kleine en grote posten. → Betekenis: Het relevante onderscheid is een vast bedrag tegenover een vaste verhouding. → Aanpak: Vergelijk per post zowel b − w als w/b en herken welk patroon gelijk blijft. → Gevraagd antwoord: Het constante foutbedrag of de constante goedratio, als herkenningsgrond voor een passende schatter.",
           "trap": "Het eerste verschil van 10 geldt niet voor alle posten.",
           "optionExplanations": [
@@ -4774,10 +4774,10 @@ window.SRAMCData = {
           "level": 3,
           "steps": [
             "Geschatte werkelijke waarde: 0,96 × 500.000 = 480.000.",
-            "Overwaardering: B − Ŵ_Q = 20.000.",
+            "Overwaardering: B − Ŵ_Q = 500.000 − 480.000 = 20.000.",
             "De vraag vraagt de overwaardering in de boeken. Rond de berekening daarom af met B − Ŵ_Q, niet met alleen het geschatte werkelijke bedrag."
           ],
-          "explanation": "Geschatte werkelijke waarde: 0,96 × 500.000 = 480.000. Overwaardering: B − Ŵ_Q = 20.000. De vraag vraagt de overwaardering in de boeken. Rond de berekening daarom af met B − Ŵ_Q, niet met alleen het geschatte werkelijke bedrag.",
+          "explanation": "Geschatte werkelijke waarde: 0,96 × 500.000 = 480.000. Overwaardering: B − Ŵ_Q = 500.000 − 480.000 = 20.000. De vraag vraagt de overwaardering in de boeken. Rond de berekening daarom af met B − Ŵ_Q, niet met alleen het geschatte werkelijke bedrag.",
           "pattern": "Herken: “Goedratio” gegeven, maar “totale overwaardering” gevraagd. → Betekenis: Je zoekt het foutdeel van de boekwaarde, niet het goede deel. → Aanpak: Bereken eerst 1 − q en pas dat aandeel toe op B. → Gevraagd antwoord: Een geschat totaal foutbedrag in euro.",
           "trap": "Een juiste formule kan alsnog het verkeerde gevraagde bedrag opleveren.",
           "optionExplanations": [
@@ -5141,9 +5141,9 @@ window.SRAMCData = {
             "0,2"
           ],
           "correct": 1,
-          "explanation": "Volgens de behandelde formule vermenigvuldig je s_MPU met √(1 − R²). Bij R = 0,8 is R² = 0,64 en 1 − R² = 0,36. Neem de wortel: √0,36 = 0,6. De nieuwe standaardfout is dus 60% van s_MPU.",
+          "explanation": "Vermenigvuldig s_MPU met √(1 − R²). Bij R = 0,8 is R² = 0,64 en 1 − R² = 0,36. Neem de wortel: √0,36 = 0,6. De nieuwe standaardfout is dus 60% van s_MPU.",
           "steps": [
-            "Volgens de behandelde formule vermenigvuldig je s_MPU met √(1 − R²).",
+            "Vermenigvuldig s_MPU met √(1 − R²).",
             "Bij R = 0,8 is R² = 0,64 en 1 − R² = 0,36.",
             "Neem de wortel: √0,36 = 0,6. De nieuwe standaardfout is dus 60% van s_MPU."
           ],
@@ -5253,9 +5253,9 @@ window.SRAMCData = {
             "Het totale W van de populatie"
           ],
           "correct": 2,
-          "explanation": "Deze regressieschatter staat in het onderdeel schatten van totale populatiewaarden. Het lineaire verband tussen boekwaarde b en werkelijke waarde w helpt het populatietotaal W te schatten. Dat is een ander doel dan een regressielijn gebruiken om y voor één nieuwe persoon te voorspellen.",
+          "explanation": "Deze regressieschatter hoort bij het schatten van totale populatiewaarden. Het lineaire verband tussen boekwaarde b en werkelijke waarde w helpt het populatietotaal W te schatten. Dat is een ander doel dan een regressielijn gebruiken om y voor één nieuwe persoon te voorspellen.",
           "steps": [
-            "Deze regressieschatter staat in het onderdeel schatten van totale populatiewaarden.",
+            "Deze regressieschatter hoort bij het schatten van totale populatiewaarden.",
             "Het lineaire verband tussen boekwaarde b en werkelijke waarde w helpt het populatietotaal W te schatten.",
             "Dat is een ander doel dan een regressielijn gebruiken om y voor één nieuwe persoon te voorspellen."
           ],
@@ -5369,10 +5369,10 @@ window.SRAMCData = {
           "level": 2,
           "steps": [
             "b₁ = R_bw × s_w/s_b.",
-            "0,8 × 30/20 = 1,2.",
+            "Invullen: 0,8 × 30/20 = 1,2.",
             "Correlatie is dimensieloos. De verhouding s_w/s_b zet haar om in een helling met de schaal van w per eenheid b."
           ],
-          "explanation": "b₁ = R_bw × s_w/s_b. 0,8 × 30/20 = 1,2. Correlatie is dimensieloos. De verhouding s_w/s_b zet haar om in een helling met de schaal van w per eenheid b.",
+          "explanation": "b₁ = R_bw × s_w/s_b. Invullen: 0,8 × 30/20 = 1,2. Correlatie is dimensieloos. De verhouding s_w/s_b zet haar om in een helling met de schaal van w per eenheid b.",
           "pattern": "Herken: R_bw en de spreidingen van w en b; gevraagd is b₁. → Betekenis: Dit zijn de onderdelen van de regressiehelling van werkelijk op geboekt. → Aanpak: Gebruik b₁ = R_bw × s_w/s_b en zet de spreidingen niet omgekeerd. → Gevraagd antwoord: Een hellingscoëfficiënt in werkelijke waarde per eenheid boekwaarde.",
           "trap": "Verwissel s_w/s_b niet met s_b/s_w.",
           "optionExplanations": [
@@ -5596,12 +5596,12 @@ window.SRAMCData = {
           "correct": 2,
           "level": 3,
           "steps": [
-            "MPU geeft Nw̄ = 90.000.",
-            "B − Nb̄ = 105.000 − 100.000 = 5.000.",
-            "Correctie: 0,8 × 5.000 = 4.000; totaal 94.000.",
+            "MPU geeft Nw̄ = 1.000 × 90 = 90.000.",
+            "Verschil met het boektotaal: B − Nb̄ = 105.000 − 1.000 × 100 = 5.000.",
+            "Correctie: 0,8 × 5.000 = 4.000. Totaal: 90.000 + 4.000 = 94.000.",
             "De steekproef onderschat hier het bekende boektotaal met € 5.000. De regressiehelling vertaalt dat verschil naar een correctie van € 4.000 op de werkelijke totaalschatting."
           ],
-          "explanation": "MPU geeft Nw̄ = 90.000. B − Nb̄ = 105.000 − 100.000 = 5.000. Correctie: 0,8 × 5.000 = 4.000; totaal 94.000. De steekproef onderschat hier het bekende boektotaal met € 5.000. De regressiehelling vertaalt dat verschil naar een correctie van € 4.000 op de werkelijke totaalschatting.",
+          "explanation": "MPU geeft Nw̄ = 1.000 × 90 = 90.000. Verschil met het boektotaal: B − Nb̄ = 105.000 − 1.000 × 100 = 5.000. Correctie: 0,8 × 5.000 = 4.000. Totaal: 90.000 + 4.000 = 94.000. De steekproef onderschat hier het bekende boektotaal met € 5.000. De regressiehelling vertaalt dat verschil naar een correctie van € 4.000 op de werkelijke totaalschatting.",
           "pattern": "Herken: Nw̄, Nb̄, bekend B en een helling b₁ kunnen uit de gegevens worden opgebouwd. → Betekenis: Het verschil in boektotalen corrigeert de directe schatting van W. → Aanpak: Bereken Nw̄ + b₁(B − Nb̄), met haakjes rond het hele verschil. → Gevraagd antwoord: De volledige regressieschatting van het werkelijke populatietotaal.",
           "trap": "B is de hulpinformatie, niet automatisch het antwoord.",
           "optionExplanations": [
@@ -5712,10 +5712,10 @@ window.SRAMCData = {
           "level": 3,
           "steps": [
             "Correctiefactor = √(1 − 0,6²) = √0,64 = 0,8.",
-            "10.000 × 0,8 = 8.000.",
+            "Standaardfout regressieschatter: 10.000 × 0,8 = 8.000.",
             "De resterende variantiefractie is 1 − R² = 0,64. Een standaardfout staat op wortelschaal, zodat de vermenigvuldigingsfactor 0,8 is."
           ],
-          "explanation": "Correctiefactor = √(1 − 0,6²) = √0,64 = 0,8. 10.000 × 0,8 = 8.000. De resterende variantiefractie is 1 − R² = 0,64. Een standaardfout staat op wortelschaal, zodat de vermenigvuldigingsfactor 0,8 is.",
+          "explanation": "Correctiefactor = √(1 − 0,6²) = √0,64 = 0,8. Standaardfout regressieschatter: 10.000 × 0,8 = 8.000. De resterende variantiefractie is 1 − R² = 0,64. Een standaardfout staat op wortelschaal, zodat de vermenigvuldigingsfactor 0,8 is.",
           "pattern": "Herken: De standaardfout van MPU en R_bw; gevraagd is de nieuwe standaardfout. → Betekenis: Het verband met boekwaarde vermindert volgens de behandelde formule de resterende onzekerheid. → Aanpak: Vermenigvuldig de bestaande standaardfout met √(1 − R_bw²). → Gevraagd antwoord: Een standaardfout in dezelfde eenheid als de gegeven MPU-standaardfout.",
           "trap": "1 − R en 1 − R² zijn geen standaardfoutfactoren zonder wortel.",
           "optionExplanations": [
@@ -5832,11 +5832,11 @@ window.SRAMCData = {
           ],
           "correct": 2,
           "steps": [
-            "Bereken b₁ = R_bw × s_w/s_b = 1,2. De directe MPU-schatting is 90.000.",
-            "Het bekende B overschrijdt N × b̄ met 5.000. De regressiecorrectie van 6.000 geeft Ŵ_R = 96.000.",
+            "Bereken b₁ = R_bw × s_w/s_b = 0,80 × 30/20 = 1,2. De directe MPU-schatting is 1.000 × 90 = 90.000.",
+            "Het bekende B overschrijdt N × b̄ met 105.000 − 100.000 = 5.000. De regressiecorrectie 1,2 × 5.000 = 6.000 geeft Ŵ_R = 90.000 + 6.000 = 96.000.",
             "SE_R = 3.000 × √(1 − 0,80²) = 1.800. Dit is meer berekende precisie, geen garantie dat het model passend is."
           ],
-          "explanation": "Bereken b₁ = R_bw × s_w/s_b = 1,2. De directe MPU-schatting is 90.000. Het bekende B overschrijdt N × b̄ met 5.000. De regressiecorrectie van 6.000 geeft Ŵ_R = 96.000. SE_R = 3.000 × √(1 − 0,80²) = 1.800. Dit is meer berekende precisie, geen garantie dat het model passend is.",
+          "explanation": "Bereken b₁ = R_bw × s_w/s_b = 0,80 × 30/20 = 1,2. De directe MPU-schatting is 1.000 × 90 = 90.000. Het bekende B overschrijdt N × b̄ met 105.000 − 100.000 = 5.000. De regressiecorrectie 1,2 × 5.000 = 6.000 geeft Ŵ_R = 90.000 + 6.000 = 96.000. SE_R = 3.000 × √(1 − 0,80²) = 1.800. Dit is meer berekende precisie, geen garantie dat het model passend is.",
           "pattern": "Herken: Welke regressieschatting en standaardfout volgen uit het overzicht? → Betekenis: Boekwaarden geven bekende hulpinformatie en de tabel geeft het verband met werkelijke waarden. → Aanpak: Bepaal de regressiehelling uit correlatie en spreidingen, corrigeer de MPU-schatting en bereken afzonderlijk de resterende onzekerheid. → Gevraagd antwoord: Een totale schatting plus de standaardfout van datzelfde totaal.",
           "trap": "Gebruik de correlatie niet rechtstreeks als helling en verwar variantiefactor niet met standaardfoutfactor.",
           "refs": [
@@ -6360,10 +6360,10 @@ window.SRAMCData = {
           "level": 2,
           "steps": [
             "De breedte van het interval is 2E.",
-            "E = 8.000/2 = 4.000.",
+            "Halveer de breedte: E = 8.000/2 = 4.000.",
             "E staat voor de afstand van de schatting tot één grens. Een verkeerde E werkt in γ door via E² en verandert de berekende omvang sterk."
           ],
-          "explanation": "De breedte van het interval is 2E. E = 8.000/2 = 4.000. E staat voor de afstand van de schatting tot één grens. Een verkeerde E werkt in γ door via E² en verandert de berekende omvang sterk.",
+          "explanation": "De breedte van het interval is 2E. Halveer de breedte: E = 8.000/2 = 4.000. E staat voor de afstand van de schatting tot één grens. Een verkeerde E werkt in γ door via E² en verandert de berekende omvang sterk.",
           "pattern": "Herken: Een “totale intervalbreedte” wordt gegeven; de formule vraagt E. → Betekenis: E is de marge aan één kant van het middelpunt. → Aanpak: Halveer de totale breedte vóór je E kwadrateert in γ. → Gevraagd antwoord: De halve breedte die als invoer voor de omvangsformule dient.",
           "trap": "Een dubbele E wordt in de formule gekwadrateerd en heeft dus veel effect.",
           "optionExplanations": [
@@ -6473,12 +6473,12 @@ window.SRAMCData = {
           "correct": 3,
           "level": 3,
           "steps": [
-            "γ = 400²/(2² × 1.000 × 100) = 0,4.",
-            "n = 1.000/1,4 ≈ 714,286.",
+            "Bereken eerst γ = 400²/(2² × 1.000 × 100) = 0,4.",
+            "Bereken de omvang: n = 1.000/(1 + 0,4) ≈ 714,286.",
             "Rond naar boven: 715.",
             "De formule geeft de totale vereiste omvang. Naar boven afronden garandeert dat het gehele aantal niet onder de berekende 714,286 ligt."
           ],
-          "explanation": "γ = 400²/(2² × 1.000 × 100) = 0,4. n = 1.000/1,4 ≈ 714,286. Rond naar boven: 715. De formule geeft de totale vereiste omvang. Naar boven afronden garandeert dat het gehele aantal niet onder de berekende 714,286 ligt.",
+          "explanation": "Bereken eerst γ = 400²/(2² × 1.000 × 100) = 0,4. Bereken de omvang: n = 1.000/(1 + 0,4) ≈ 714,286. Rond naar boven: 715. De formule geeft de totale vereiste omvang. Naar boven afronden garandeert dat het gehele aantal niet onder de berekende 714,286 ligt.",
           "pattern": "Herken: De twee formules voor γ en n, met E, t, N en s². → Betekenis: Een maximale marge wordt teruggerekend naar benodigde totale omvang. → Aanpak: Bereken eerst γ, daarna N/(1 + γ), en rond alleen de uiteindelijke n omhoog af. → Gevraagd antwoord: Een minimaal geheel aantal te controleren posten.",
           "trap": "Afronden op het dichtstbijzijnde gehele getal is hier niet voldoende.",
           "optionExplanations": [
@@ -6709,10 +6709,10 @@ window.SRAMCData = {
           ],
           "steps": [
             "Gebruik s_q = 7,60 als resterende spreiding, niet de dimensieloze goedratio q.",
-            "γ = E²/(t² × N × s_q²) = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.",
+            "Bereken γ = E²/(t² × N × s_q²) = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.",
             "n = 1.000/(1 + γ) ≈ 187,679; rond naar boven af op 188."
           ],
-          "explanation": "Gebruik s_q = 7,60 als resterende spreiding, niet de dimensieloze goedratio q. γ = E²/(t² × N × s_q²) = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825. n = 1.000/(1 + γ) ≈ 187,679; rond naar boven af op 188.",
+          "explanation": "Gebruik s_q = 7,60 als resterende spreiding, niet de dimensieloze goedratio q. Bereken γ = E²/(t² × N × s_q²) = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825. n = 1.000/(1 + γ) ≈ 187,679; rond naar boven af op 188.",
           "pattern": "Herken: “Quotiëntschatter” en s_q in de gegeven γ-formule. → Betekenis: De planning gebruikt resterende spreiding s_q, niet de dimensieloze goedratio q. → Aanpak: Vul s_q² in γ in, bereken N/(1 + γ) en rond de uitkomst naar boven af. → Gevraagd antwoord: Een minimale totale n; geen ratio of aanvullend aantal.",
           "trap": "Vul niet de goedratio q in waar de spreiding s_q moet staan.",
           "refs": [
@@ -6824,10 +6824,10 @@ window.SRAMCData = {
           "correct": 3,
           "steps": [
             "De totale breedte is 2E, dus E = 800/2 = 400.",
-            "γ = 400²/(2² × 1.000 × 10²) = 0,4; n = 1.000/1,4 = 714,2857.",
+            "Bereken γ = 400²/(2² × 1.000 × 10²) = 0,4 en daarna n = 1.000/(1 + 0,4) = 714,2857.",
             "Rond omhoog naar 715. Er zijn 200 bruikbare controles uitgevoerd: uitbreiding = 715 − 200 = 515."
           ],
-          "explanation": "De totale breedte is 2E, dus E = 800/2 = 400. γ = 400²/(2² × 1.000 × 10²) = 0,4; n = 1.000/1,4 = 714,2857. Rond omhoog naar 715. Er zijn 200 bruikbare controles uitgevoerd: uitbreiding = 715 − 200 = 515.",
+          "explanation": "De totale breedte is 2E, dus E = 800/2 = 400. Bereken γ = 400²/(2² × 1.000 × 10²) = 0,4 en daarna n = 1.000/(1 + 0,4) = 714,2857. Rond omhoog naar 715. Er zijn 200 bruikbare controles uitgevoerd: uitbreiding = 715 − 200 = 515.",
           "pattern": "Herken: Hoeveel aanvullende controles zijn minimaal nodig volgens de gegeven planningsformule? → Betekenis: De gewenste breedte en een vooronderzoek bepalen de aanvullende controle-inspanning. → Aanpak: Halveer de breedte, gebruik de passende spreiding, rond de totale behoefte omhoog af en trek bestaande controles af. → Gevraagd antwoord: Het extra aantal controles met het nieuwe totaal ter controle.",
           "trap": "De formule berekent het totaal; de vraag vraagt de uitbreiding.",
           "refs": [
@@ -7467,11 +7467,11 @@ window.SRAMCData = {
           "correct": 3,
           "level": 2,
           "steps": [
-            "100 × 20 + 200 × 30 = 8.000.",
-            "Tel het bekende werkelijke topstratumtotaal 1.000 erbij: 9.000.",
+            "Tel de geschatte stratumtotalen op: 100 × 20 + 200 × 30 = 8.000.",
+            "Tel het bekende werkelijke topstratumtotaal 1.000 erbij: 8.000 + 1.000 = 9.000.",
             "Het volledig gecontroleerde topstratum is een extra bekend onderdeel van het populatietotaal. Het moet één keer naast de geschatte overige strata worden opgenomen."
           ],
-          "explanation": "100 × 20 + 200 × 30 = 8.000. Tel het bekende werkelijke topstratumtotaal 1.000 erbij: 9.000. Het volledig gecontroleerde topstratum is een extra bekend onderdeel van het populatietotaal. Het moet één keer naast de geschatte overige strata worden opgenomen.",
+          "explanation": "Tel de geschatte stratumtotalen op: 100 × 20 + 200 × 30 = 8.000. Tel het bekende werkelijke topstratumtotaal 1.000 erbij: 8.000 + 1.000 = 9.000. Het volledig gecontroleerde topstratum is een extra bekend onderdeel van het populatietotaal. Het moet één keer naast de geschatte overige strata worden opgenomen.",
           "pattern": "Herken: Twee stratumomvangen met gemiddelden én een bekend werkelijk topstratumtotaal. → Betekenis: De gewone strata worden geschat; het gecontroleerde topstratum staat al vast. → Aanpak: Bereken per gewoon stratum N_h × gemiddelde en tel het bekende toptotaal eenmaal erbij. → Gevraagd antwoord: Eén totaalbedrag voor alle strata samen.",
           "trap": "Vergeet het integraal gecontroleerde deel niet.",
           "optionExplanations": [
@@ -7790,11 +7790,11 @@ window.SRAMCData = {
           "correct": 0,
           "level": 3,
           "steps": [
-            "Gewichten Nᵢsᵢ zijn 6.000 en 12.000.",
+            "Gewichten Nᵢsᵢ zijn 600 × 10 = 6.000 en 400 × 30 = 12.000.",
             "Verdeel 90 in de verhouding 1:2: 30 en 60.",
             "Neyman-allocatie verdeelt bij gelijke controlekosten op basis van Nᵢsᵢ. Het kleinere tweede stratum krijgt hier meer controles door zijn grotere spreiding."
           ],
-          "explanation": "Gewichten Nᵢsᵢ zijn 6.000 en 12.000. Verdeel 90 in de verhouding 1:2: 30 en 60. Neyman-allocatie verdeelt bij gelijke controlekosten op basis van Nᵢsᵢ. Het kleinere tweede stratum krijgt hier meer controles door zijn grotere spreiding.",
+          "explanation": "Gewichten Nᵢsᵢ zijn 600 × 10 = 6.000 en 400 × 30 = 12.000. Verdeel 90 in de verhouding 1:2: 30 en 60. Neyman-allocatie verdeelt bij gelijke controlekosten op basis van Nᵢsᵢ. Het kleinere tweede stratum krijgt hier meer controles door zijn grotere spreiding.",
           "pattern": "Herken: N_h én s_h per stratum, “gelijke controlekosten” en “Neyman-allocatie”. → Betekenis: De optimale verdeling weegt zowel omvang als spreiding mee. → Aanpak: Bereken gewichten N_h × s_h en verdeel n naar elk gewicht gedeeld door hun som. → Gevraagd antwoord: Aantallen controles per stratum die samen n vormen.",
           "trap": "54 en 36 is de evenredige allocatie, niet Neyman.",
           "optionExplanations": [
@@ -7951,10 +7951,10 @@ window.SRAMCData = {
           "steps": [
             "Gecombineerde standaardfout = √(300² + 400²) = 500.",
             "Marge = 2 × 500 = 1.000.",
-            "Het interval is 20.000 ± 1.000.",
+            "Het interval is 20.000 ± 1.000 = [19.000; 21.000].",
             "Het gegeven totaal van € 20.000 bevat het topstratum al. Voeg dat niet opnieuw toe; combineer alleen de onzekerheid van de onafhankelijke schattingen."
           ],
-          "explanation": "Gecombineerde standaardfout = √(300² + 400²) = 500. Marge = 2 × 500 = 1.000. Het interval is 20.000 ± 1.000. Het gegeven totaal van € 20.000 bevat het topstratum al. Voeg dat niet opnieuw toe; combineer alleen de onzekerheid van de onafhankelijke schattingen.",
+          "explanation": "Gecombineerde standaardfout = √(300² + 400²) = 500. Marge = 2 × 500 = 1.000. Het interval is 20.000 ± 1.000 = [19.000; 21.000]. Het gegeven totaal van € 20.000 bevat het topstratum al. Voeg dat niet opnieuw toe; combineer alleen de onzekerheid van de onafhankelijke schattingen.",
           "pattern": "Herken: Standaardfouten van onafhankelijke stratumtotalen, een totaalschatting en t. → Betekenis: De intervalmarge vraagt eerst gecombineerde onzekerheid. → Aanpak: Neem √(s₁² + s₂²), vermenigvuldig met t en zet de marge rond het gegeven totaal. → Gevraagd antwoord: Een interval voor alle strata samen; het bekende topstratum voegt geen steekproefvariantie toe.",
           "trap": "300 + 400 gebruiken maakt de marge onjuist.",
           "optionExplanations": [
@@ -8117,9 +8117,9 @@ window.SRAMCData = {
           "steps": [
             "De klassebreedte is 400 en de frequentie is 772.",
             "Bereken het product: 400 × 772 = 308.800.",
-            "Neem de wortel en tel 555,70 bij de eerdere wortelbijdragen op."
+            "Neem de wortel: √308.800 ≈ 555,70. Tel dat op bij de eerdere wortelbijdragen."
           ],
-          "explanation": "De klassebreedte is 400 en de frequentie is 772. Bereken het product: 400 × 772 = 308.800. Neem de wortel en tel 555,70 bij de eerdere wortelbijdragen op.",
+          "explanation": "De klassebreedte is 400 en de frequentie is 772. Bereken het product: 400 × 772 = 308.800. Neem de wortel: √308.800 ≈ 555,70. Tel dat op bij de eerdere wortelbijdragen.",
           "pattern": "Herken: Klassebreedte én frequentie, met “toevoegen aan de cumulatieve wortelsom”. → Betekenis: De wortelmethode verwerkt per klasse zowel breedte als aantal posten. → Aanpak: Bereken √(klassebreedte × frequentie) vóór je de klassebijdragen cumuleert. → Gevraagd antwoord: De bijdrage van deze klasse aan de wortelsom, niet de ruwe frequentie.",
           "trap": "Neem de wortel per klasse, niet pas na het cumuleren.",
           "refs": [
@@ -8443,11 +8443,11 @@ window.SRAMCData = {
             "3 is de maximaal toegestane standaardfout van dit stratum. Gevraagd is de variantiebijdrage."
           ],
           "steps": [
-            "De maximaal toegestane totale standaardfout is E/t = 5.",
-            "Kwadrateer: de totale variantie mag maximaal 25 zijn.",
+            "De maximaal toegestane totale standaardfout is E/t = 10/2 = 5.",
+            "Kwadrateer: de totale variantie mag maximaal 5² = 25 zijn.",
             "Voor dit stratum resteert maximaal 25 − 16 = 9 aan variantiebijdrage; dat komt overeen met standaardfout 3."
           ],
-          "explanation": "De maximaal toegestane totale standaardfout is E/t = 5. Kwadrateer: de totale variantie mag maximaal 25 zijn. Voor dit stratum resteert maximaal 25 − 16 = 9 aan variantiebijdrage; dat komt overeen met standaardfout 3.",
+          "explanation": "De maximaal toegestane totale standaardfout is E/t = 10/2 = 5. Kwadrateer: de totale variantie mag maximaal 5² = 25 zijn. Voor dit stratum resteert maximaal 25 − 16 = 9 aan variantiebijdrage; dat komt overeen met standaardfout 3.",
           "pattern": "Herken: Een gewenste totale marge E, t en de variantiebijdrage van andere strata. → Betekenis: Van de maximaal toegestane totale variantie is al een deel in gebruik. → Aanpak: Bereken (E/t)² en trek de varianties van de overige strata af. → Gevraagd antwoord: De maximaal toegestane variantiebijdrage van het aan te passen stratum.",
           "trap": "Trek geen variantie af van een standaardfout.",
           "refs": [
@@ -8744,11 +8744,11 @@ window.SRAMCData = {
           ],
           "correct": 2,
           "steps": [
-            "Tel de werkelijke totalen op: Ŵ = 450.000, inclusief het topstratum eenmaal.",
-            "Tel de onafhankelijke variantiebijdragen op: 9.000.000 + 16.000.000 + 0 = 25.000.000; SE = 5.000.",
+            "Tel de werkelijke totalen op: Ŵ = 160.000 + 240.000 + 50.000 = 450.000, inclusief het topstratum eenmaal.",
+            "Tel de onafhankelijke variantiebijdragen op: 9.000.000 + 16.000.000 + 0 = 25.000.000; SE = √25.000.000 = 5.000.",
             "De marge is 2 × 5.000 = 10.000. Het interval is [440.000; 460.000]; de topgroep vergroot het centrum zonder steekproefvariantie toe te voegen."
           ],
-          "explanation": "Tel de werkelijke totalen op: Ŵ = 450.000, inclusief het topstratum eenmaal. Tel de onafhankelijke variantiebijdragen op: 9.000.000 + 16.000.000 + 0 = 25.000.000; SE = 5.000. De marge is 2 × 5.000 = 10.000. Het interval is [440.000; 460.000]; de topgroep vergroot het centrum zonder steekproefvariantie toe te voegen.",
+          "explanation": "Tel de werkelijke totalen op: Ŵ = 160.000 + 240.000 + 50.000 = 450.000, inclusief het topstratum eenmaal. Tel de onafhankelijke variantiebijdragen op: 9.000.000 + 16.000.000 + 0 = 25.000.000; SE = √25.000.000 = 5.000. De marge is 2 × 5.000 = 10.000. Het interval is [440.000; 460.000]; de topgroep vergroot het centrum zonder steekproefvariantie toe te voegen.",
           "pattern": "Herken: Welk totaalinterval volgt bij t = 2 uit deze onafhankelijk getrokken strata? → Betekenis: Afzonderlijke stratumresultaten moeten worden gecombineerd tot één populatie-uitspraak. → Aanpak: Tel de totalen op, combineer onafhankelijke onzekerheden via de som van varianties en voeg de topgroep eenmaal toe. → Gevraagd antwoord: Eén totaalinterval voor alle strata inclusief de gecontroleerde topgroep.",
           "trap": "Standaardfouten optellen overschat de gecombineerde fout en heeft een andere betekenis dan varianties optellen.",
           "refs": [
@@ -9453,10 +9453,10 @@ window.SRAMCData = {
           "correct": 1,
           "steps": [
             "Lees de vergelijking uit B: ŷ = 12 + 3x. Std. Error beschrijft coëfficiëntonzekerheid en is geen helling.",
-            "Vul x = 8 in: ŷ = 36 duizend euro.",
+            "Vul x = 8 in: ŷ = 12 + 3 × 8 = 36 duizend euro.",
             "e = y − ŷ = 41 − 36 = 5 duizend euro. De kosten liggen boven de verwachting; de oorzaak moet inhoudelijk worden onderzocht."
           ],
-          "explanation": "Lees de vergelijking uit B: ŷ = 12 + 3x. Std. Error beschrijft coëfficiëntonzekerheid en is geen helling. Vul x = 8 in: ŷ = 36 duizend euro. e = y − ŷ = 41 − 36 = 5 duizend euro. De kosten liggen boven de verwachting; de oorzaak moet inhoudelijk worden onderzocht.",
+          "explanation": "Lees de vergelijking uit B: ŷ = 12 + 3x. Std. Error beschrijft coëfficiëntonzekerheid en is geen helling. Vul x = 8 in: ŷ = 12 + 3 × 8 = 36 duizend euro. e = y − ŷ = 41 − 36 = 5 duizend euro. De kosten liggen boven de verwachting; de oorzaak moet inhoudelijk worden onderzocht.",
           "pattern": "Herken: Wat zijn de voorspelde kosten en het residu van de getoonde controlemaand? → Betekenis: Coëfficiënten en de waargenomen uitkomst komen uit verschillende tabellen. → Aanpak: Lees B inclusief de constante, bereken de verwachting en trek deze van de werkelijke uitkomst af. → Gevraagd antwoord: Een voorspelling en een residu in de oorspronkelijke kosten-eenheid.",
           "trap": "Een positief residu betekent hogere werkelijke kosten dan voorspeld; het is nog geen verklaring van de oorzaak.",
           "refs": [
@@ -9503,11 +9503,11 @@ window.SRAMCData = {
           "correct": 1,
           "level": 3,
           "steps": [
-            "A: 4 + 4 = 8. B: 9 + 9 = 18.",
-            "OLS vergelijkt de som van gekwadrateerde residuen.",
+            "Kwadrateer en tel op. A: (−2)² + 2² = 8. B: (−3)² + 3² = 18.",
+            "OLS vergelijkt de som van gekwadrateerde residuen: model A heeft met 8 de kleinste.",
             "Beide modellen hebben een residusom van nul, maar model B maakt grotere afwijkingen. De kwadratensom legt dat verschil wel vast."
           ],
-          "explanation": "A: 4 + 4 = 8. B: 9 + 9 = 18. OLS vergelijkt de som van gekwadrateerde residuen. Beide modellen hebben een residusom van nul, maar model B maakt grotere afwijkingen. De kwadratensom legt dat verschil wel vast.",
+          "explanation": "Kwadrateer en tel op. A: (−2)² + 2² = 8. B: (−3)² + 3² = 18. OLS vergelijkt de som van gekwadrateerde residuen: model A heeft met 8 de kleinste. Beide modellen hebben een residusom van nul, maar model B maakt grotere afwijkingen. De kwadratensom legt dat verschil wel vast.",
           "pattern": "Herken: Twee modellen voor dezelfde data, met hun residuen en “OLS-criterium”. → Betekenis: De vergelijking gaat om de som van gekwadrateerde fouten. → Aanpak: Bereken voor elk model Σe²; laat positieve en negatieve fouten elkaar niet opheffen. → Gevraagd antwoord: Het model met de kleinste kwadratensom, met dat criterium als onderbouwing.",
           "trap": "Een som van nul kan grote positieve en negatieve fouten verbergen.",
           "optionExplanations": [
@@ -9759,9 +9759,9 @@ window.SRAMCData = {
           "steps": [
             "Het model heeft één verklarende variabele en een constante: df = n − 2 = 10.",
             "Het onverklaarde aandeel is 1 − 0,80² = 0,36.",
-            "Residuele variantie = 11/10 × 0,36 × 25 = 9,9."
+            "Residuele variantie = (12 − 1)/10 × 0,36 × 5² = 9,9."
           ],
-          "explanation": "Het model heeft één verklarende variabele en een constante: df = n − 2 = 10. Het onverklaarde aandeel is 1 − 0,80² = 0,36. Residuele variantie = 11/10 × 0,36 × 25 = 9,9.",
+          "explanation": "Het model heeft één verklarende variabele en een constante: df = n − 2 = 10. Het onverklaarde aandeel is 1 − 0,80² = 0,36. Residuele variantie = (12 − 1)/10 × 0,36 × 5² = 9,9.",
           "pattern": "Herken: Enkelvoudige regressie, n, r en s_y; gevraagd is residuele variantie volgens formule 34. → Betekenis: De onverklaarde variatie moet worden aangepast voor twee geschatte coëfficiënten. → Aanpak: Bereken [(n − 1)/(n − 2)] × (1 − r²) × s_y². → Gevraagd antwoord: Een residuele variantie in y-eenheden², geen residuele standaardafwijking.",
           "trap": "Varianties zijn gekwadrateerd; neem alleen een wortel als s_e gevraagd wordt.",
           "refs": [
@@ -10228,11 +10228,11 @@ window.SRAMCData = {
           "correct": 1,
           "level": 2,
           "steps": [
-            "SSE = TotalSS − SSR = 50.",
+            "SSE = TotalSS − SSR = 200 − 150 = 50.",
             "R² = SSR/TotalSS = 150/200 = 0,75.",
             "De drie kwadratensommen horen bij dezelfde verdeling van variatie. Controleer altijd dat verklaard plus onverklaard weer het totaal oplevert."
           ],
-          "explanation": "SSE = TotalSS − SSR = 50. R² = SSR/TotalSS = 150/200 = 0,75. De drie kwadratensommen horen bij dezelfde verdeling van variatie. Controleer altijd dat verklaard plus onverklaard weer het totaal oplevert.",
+          "explanation": "SSE = TotalSS − SSR = 200 − 150 = 50. R² = SSR/TotalSS = 150/200 = 0,75. De drie kwadratensommen horen bij dezelfde verdeling van variatie. Controleer altijd dat verklaard plus onverklaard weer het totaal oplevert.",
           "pattern": "Herken: TotalSS en SSR als twee delen van de ANOVA-opsplitsing. → Betekenis: Hieruit volgen de onverklaarde kwadratensom en het verklaarde aandeel. → Aanpak: Gebruik SSE = TotalSS − SSR en R² = SSR/TotalSS. → Gevraagd antwoord: Een combinatie van een kwadratensom en een dimensieloos verklaard aandeel.",
           "trap": "1 − R² is de onverklaarde fractie.",
           "optionExplanations": [
@@ -10327,12 +10327,12 @@ window.SRAMCData = {
           "correct": 2,
           "level": 3,
           "steps": [
-            "MSR = SSR/k = 90.",
+            "MSR = SSR/k = 180/2 = 90.",
             "Residual df = 20 − 2 − 1 = 17; MSE = 34/17 = 2.",
-            "F = MSR/MSE = 45.",
+            "F = MSR/MSE = 90/2 = 45.",
             "Een F-verhouding gebruikt Mean Squares, dus variatie per vrijheid. De twee kwadratensommen hebben verschillende aantallen vrijheidsgraden."
           ],
-          "explanation": "MSR = SSR/k = 90. Residual df = 20 − 2 − 1 = 17; MSE = 34/17 = 2. F = MSR/MSE = 45. Een F-verhouding gebruikt Mean Squares, dus variatie per vrijheid. De twee kwadratensommen hebben verschillende aantallen vrijheidsgraden.",
+          "explanation": "MSR = SSR/k = 180/2 = 90. Residual df = 20 − 2 − 1 = 17; MSE = 34/17 = 2. F = MSR/MSE = 90/2 = 45. Een F-verhouding gebruikt Mean Squares, dus variatie per vrijheid. De twee kwadratensommen hebben verschillende aantallen vrijheidsgraden.",
           "pattern": "Herken: n, k, SSR en SSE; gevraagd is de globale F. → Betekenis: F vergelijkt verklaarde en onverklaarde variatie per vrijheidsgraad. → Aanpak: Bereken (SSR/k)/(SSE/(n − k − 1)). → Gevraagd antwoord: Een globale F-toetsingsgrootheid, nog zonder significantiebeslissing als grens of p ontbreekt.",
           "trap": "SSR/SSE is niet de globale F.",
           "optionExplanations": [
@@ -10428,10 +10428,10 @@ window.SRAMCData = {
           "level": 3,
           "steps": [
             "R² meet de verklaarde fractie van de variatie.",
-            "De residuele standaardafwijking is √MSE = 5.",
+            "De residuele standaardafwijking is √MSE = √25 = 5.",
             "R² is dimensieloos; √MSE heeft de eenheid van salaris. Ze beschrijven verschillende kanten van het model en mogen niet onderling worden verwisseld."
           ],
-          "explanation": "R² meet de verklaarde fractie van de variatie. De residuele standaardafwijking is √MSE = 5. R² is dimensieloos; √MSE heeft de eenheid van salaris. Ze beschrijven verschillende kanten van het model en mogen niet onderling worden verwisseld.",
+          "explanation": "R² meet de verklaarde fractie van de variatie. De residuele standaardafwijking is √MSE = √25 = 5. R² is dimensieloos; √MSE heeft de eenheid van salaris. Ze beschrijven verschillende kanten van het model en mogen niet onderling worden verwisseld.",
           "pattern": "Herken: R² én MSE bij een salaris-model; gevraagd is interpretatie. → Betekenis: R² beschrijft een variatieaandeel, terwijl √MSE de residuele spreiding beschrijft. → Aanpak: Vertaal R² naar verklaarde variatie en neem de wortel van MSE voor de salariseenheid. → Gevraagd antwoord: Twee onderscheiden interpretaties; geen individuele juistheidskans of causaliteitsbewijs.",
           "trap": "Een hoge R² betekent geen foutloze individuele voorspellingen.",
           "optionExplanations": [
@@ -10534,10 +10534,10 @@ window.SRAMCData = {
           "correct": 2,
           "steps": [
             "Total df = 22 betekent n = 23; de regressierij heeft k = 2 verklarende variabelen.",
-            "MSR = 180/2 = 90 en MSE = 40/20 = 2, zodat F = 45.",
+            "MSR = 180/2 = 90 en MSE = 40/20 = 2, zodat F = 90/2 = 45.",
             "R² = 180/220 ≈ 0,818: circa 81,8% van de kostenvariatie is verklaard in deze steekproef. Dat bewijst geen causaliteit of geldige residuvoorwaarden."
           ],
-          "explanation": "Total df = 22 betekent n = 23; de regressierij heeft k = 2 verklarende variabelen. MSR = 180/2 = 90 en MSE = 40/20 = 2, zodat F = 45. R² = 180/220 ≈ 0,818: circa 81,8% van de kostenvariatie is verklaard in deze steekproef. Dat bewijst geen causaliteit of geldige residuvoorwaarden.",
+          "explanation": "Total df = 22 betekent n = 23; de regressierij heeft k = 2 verklarende variabelen. MSR = 180/2 = 90 en MSE = 40/20 = 2, zodat F = 90/2 = 45. R² = 180/220 ≈ 0,818: circa 81,8% van de kostenvariatie is verklaard in deze steekproef. Dat bewijst geen causaliteit of geldige residuvoorwaarden.",
           "pattern": "Herken: Welke combinatie vult de ANOVA-uitvoer correct aan? → Betekenis: De ANOVA-tabel biedt aantallen, verklaarde variatie en resterende spreiding in één samenhangend geheel. → Aanpak: Koppel iedere kwadratensom aan de df van dezelfde rij en bereken daarna F en het verklaarde aandeel. → Gevraagd antwoord: Een consistente combinatie van aantal waarnemingen, residuele variantie, F en R².",
           "trap": "Verwar Sum of Squares niet met Mean Square en Total df niet met n.",
           "refs": [
@@ -10592,10 +10592,10 @@ window.SRAMCData = {
           "correct": 3,
           "steps": [
             "H₀: β_productie = β_bezetting = 0; H₁: ten minste één helling wijkt van nul af.",
-            "Bereken F = 45 en lees tabel 13.8: kolom teller-df 2, rij noemer-df 20 en α = 0,05 geeft 3,493.",
+            "Bereken F = (180/2)/(40/20) = 45 en lees tabel 13.8: kolom teller-df 2, rij noemer-df 20 en α = 0,05 geeft 3,493.",
             "45 > 3,493, dus verwerp H₀. Het model bevat gezamenlijk verklarende informatie; individuele effecten vereisen afzonderlijke t-toetsen."
           ],
-          "explanation": "H₀: β_productie = β_bezetting = 0; H₁: ten minste één helling wijkt van nul af. Bereken F = 45 en lees tabel 13.8: kolom teller-df 2, rij noemer-df 20 en α = 0,05 geeft 3,493. 45 > 3,493, dus verwerp H₀. Het model bevat gezamenlijk verklarende informatie; individuele effecten vereisen afzonderlijke t-toetsen.",
+          "explanation": "H₀: β_productie = β_bezetting = 0; H₁: ten minste één helling wijkt van nul af. Bereken F = (180/2)/(40/20) = 45 en lees tabel 13.8: kolom teller-df 2, rij noemer-df 20 en α = 0,05 geeft 3,493. 45 > 3,493, dus verwerp H₀. Het model bevat gezamenlijk verklarende informatie; individuele effecten vereisen afzonderlijke t-toetsen.",
           "pattern": "Herken: Toets het gehele model bij α = 0,05. Welke kritieke F en conclusie volgen uit de tabellenbundel? → Betekenis: De globale toets vergelijkt verklaarde variatie per vrijheidsgraad met residuele variatie. → Aanpak: Bepaal teller- en noemervrijheidsgraden, kies de α-rij zonder halvering en vergelijk de berekende F met de tabelgrens. → Gevraagd antwoord: Een globale toetsconclusie over de gezamenlijke regressiehellingen.",
           "trap": "Een significant geheel garandeert niet dat iedere afzonderlijke variabele significant is.",
           "refs": [
@@ -11096,10 +11096,10 @@ window.SRAMCData = {
           "level": 2,
           "steps": [
             "t = (B − 0)/Std. Error.",
-            "6/2 = 3.",
+            "Toetsingsgrootheid: t = (6 − 0)/2 = 3.",
             "De t-waarde drukt uit hoeveel geschatte standaardfouten B van de nulwaarde af ligt. Hier zijn dat drie standaardfouten."
           ],
-          "explanation": "t = (B − 0)/Std. Error. 6/2 = 3. De t-waarde drukt uit hoeveel geschatte standaardfouten B van de nulwaarde af ligt. Hier zijn dat drie standaardfouten.",
+          "explanation": "t = (B − 0)/Std. Error. Toetsingsgrootheid: t = (6 − 0)/2 = 3. De t-waarde drukt uit hoeveel geschatte standaardfouten B van de nulwaarde af ligt. Hier zijn dat drie standaardfouten.",
           "pattern": "Herken: B en Std. Error uit Coefficients, met H₀: β = 0. → Betekenis: De geschatte coëfficiënt wordt uitgedrukt in aantallen standaardfouten van nul. → Aanpak: Bereken t = (B − 0)/Std. Error en behoud het teken. → Gevraagd antwoord: Een t-toetsingsgrootheid voor deze coëfficiënt.",
           "trap": "B × standaardfout is geen toetsingsgrootheid.",
           "optionExplanations": [
@@ -11474,10 +11474,10 @@ window.SRAMCData = {
           ],
           "steps": [
             "Vrijheidsgraden: 12 − 2 = 10.",
-            "De wortelfactor is √(0,36/10).",
+            "De wortelfactor is √((1 − 0,80²)/10) = √(0,36/10).",
             "Vermenigvuldig met s_y/s_x = 5/2: s_b1 ≈ 0,47434. Dit is de onzekerheid van de geschatte helling, niet de helling zelf."
           ],
-          "explanation": "Vrijheidsgraden: 12 − 2 = 10. De wortelfactor is √(0,36/10). Vermenigvuldig met s_y/s_x = 5/2: s_b1 ≈ 0,47434. Dit is de onzekerheid van de geschatte helling, niet de helling zelf.",
+          "explanation": "Vrijheidsgraden: 12 − 2 = 10. De wortelfactor is √((1 − 0,80²)/10) = √(0,36/10). Vermenigvuldig met s_y/s_x = 5/2: s_b1 ≈ 0,47434. Dit is de onzekerheid van de geschatte helling, niet de helling zelf.",
           "pattern": "Herken: n, r, s_x en s_y; gevraagd is s_b1 volgens formule 39. → Betekenis: De vraag betreft onzekerheid van de helling, niet de helling zelf. → Aanpak: Bereken (s_y/s_x) × √((1 − r²)/(n − 2)). → Gevraagd antwoord: Een standaardfout van b₁, in dezelfde eenheid als de helling.",
           "trap": "De geschatte helling b1 en haar standaardfout s_b1 zijn verschillende grootheden.",
           "refs": [
@@ -11852,10 +11852,10 @@ window.SRAMCData = {
           "correct": 3,
           "steps": [
             "Stel H₀: β = 0 en H₁: β ≠ 0; df = 22 − 1 − 1 = 20.",
-            "Met de p-waarde: 0,032 < 0,05. Met de kritieke waarde: B/SE = 2,3 en bij df = 20, staartkans 0,025 is t = 2,086.",
+            "Met de p-waarde: 0,032 < 0,05. Met de kritieke waarde: B/SE = 0,460/0,200 = 2,3 en bij df = 20, staartkans 0,025 is t = 2,086.",
             "Beide verwerpen H₀ omdat 2,3 > 2,086. De positieve samenhang is statistisch ondersteund; causaliteit volgt niet uit deze toets."
           ],
-          "explanation": "Stel H₀: β = 0 en H₁: β ≠ 0; df = 22 − 1 − 1 = 20. Met de p-waarde: 0,032 < 0,05. Met de kritieke waarde: B/SE = 2,3 en bij df = 20, staartkans 0,025 is t = 2,086. Beide verwerpen H₀ omdat 2,3 > 2,086. De positieve samenhang is statistisch ondersteund; causaliteit volgt niet uit deze toets.",
+          "explanation": "Stel H₀: β = 0 en H₁: β ≠ 0; df = 22 − 1 − 1 = 20. Met de p-waarde: 0,032 < 0,05. Met de kritieke waarde: B/SE = 0,460/0,200 = 2,3 en bij df = 20, staartkans 0,025 is t = 2,086. Beide verwerpen H₀ omdat 2,3 > 2,086. De positieve samenhang is statistisch ondersteund; causaliteit volgt niet uit deze toets.",
           "pattern": "Herken: Welke conclusie volgt bij H₁: β ≠ 0 en α = 0,05, via zowel Sig. als de kritieke t? → Betekenis: Een tweezijdige Sig. en de t-statistiek zijn twee weergaven van dezelfde coëfficiënttoets. → Aanpak: Vergelijk de volledige tweezijdige p met α en vergelijk daarnaast de absolute t met de α/2-grens bij de juiste df. → Gevraagd antwoord: Twee overeenstemmende, onderbouwde beslissingen over een populatiehelling.",
           "trap": "Halveer niet zowel de p-waarde als de grens en vergelijk een tweezijdige Sig. niet automatisch met α/2.",
           "refs": [
@@ -11988,10 +11988,10 @@ window.SRAMCData = {
           "correct": 1,
           "steps": [
             "Neem de nulwaarde uit de hypothese: β₀ = 1, niet de standaardwaarde nul van SPSS.",
-            "t = (B − β₀)/SE = 0,20/0,10 = 2; df = 26 − 2 = 24.",
+            "t = (B − β₀)/SE = (1,20 − 1)/0,10 = 2; df = 26 − 2 = 24.",
             "Lees 2,064 bij df = 24 en staartkans 0,025. Omdat |2| < 2,064 verwerp je H₀ niet; de gegeven t = 12 beantwoordt een andere toetsvraag."
           ],
-          "explanation": "Neem de nulwaarde uit de hypothese: β₀ = 1, niet de standaardwaarde nul van SPSS. t = (B − β₀)/SE = 0,20/0,10 = 2; df = 26 − 2 = 24. Lees 2,064 bij df = 24 en staartkans 0,025. Omdat |2| < 2,064 verwerp je H₀ niet; de gegeven t = 12 beantwoordt een andere toetsvraag.",
+          "explanation": "Neem de nulwaarde uit de hypothese: β₀ = 1, niet de standaardwaarde nul van SPSS. t = (B − β₀)/SE = (1,20 − 1)/0,10 = 2; df = 26 − 2 = 24. Lees 2,064 bij df = 24 en staartkans 0,025. Omdat |2| < 2,064 verwerp je H₀ niet; de gegeven t = 12 beantwoordt een andere toetsvraag.",
           "pattern": "Herken: Toets H₀: β = 1 tegenover H₁: β ≠ 1 bij α = 0,05. Welke conclusie is juist? → Betekenis: De gevraagde hypothese wijkt af van de nulwaarde van de standaardcoëfficiëntentabel. → Aanpak: Bereken een nieuwe t met de gevraagde parameterwaarde en vergelijk die met de passende kritieke grens. → Gevraagd antwoord: Een toetsbeslissing over de specifieke waarde één voor de populatiehelling.",
           "trap": "Neem de standaard t-kolom niet over wanneer de nulhypothese een andere parameterwaarde bevat.",
           "refs": [
@@ -13588,9 +13588,9 @@ window.SRAMCData = {
           "steps": [
             "De lineaire component is 10 + 2 × 4 = 18.",
             "De correctieterm is 0,5 × (−2) = −1.",
-            "De voorspelling is 17; beoordeel daarna de residuen van het aangepaste model."
+            "De voorspelling is 18 − 1 = 17; beoordeel daarna de residuen van het aangepaste model."
           ],
-          "explanation": "De lineaire component is 10 + 2 × 4 = 18. De correctieterm is 0,5 × (−2) = −1. De voorspelling is 17; beoordeel daarna de residuen van het aangepaste model.",
+          "explanation": "De lineaire component is 10 + 2 × 4 = 18. De correctieterm is 0,5 × (−2) = −1. De voorspelling is 18 − 1 = 17; beoordeel daarna de residuen van het aangepaste model.",
           "pattern": "Herken: Een vergelijking met x_t én het vertraagde residu e_(t−1). → Betekenis: Het vorige residu is een bekende extra voorspeller in het opnieuw geschatte model. → Aanpak: Vul x_t en het vorige residu met hun tekens in alle termen van de vergelijking in. → Gevraagd antwoord: Een voorspelling voor tijdstip t, zonder een onbekend huidig residu te gebruiken.",
           "trap": "Verwar het bekende vorige residu niet met het nog onbekende huidige residu.",
           "refs": [
@@ -13781,10 +13781,10 @@ window.SRAMCData = {
           ],
           "steps": [
             "Opeenvolgende verschillen zijn 0, −2 en 0.",
-            "De som van de gekwadrateerde verschillen is 4.",
-            "De som van alle gekwadrateerde residuen is 4: d = 4/4 = 1. Voor een toetsbeslissing heb je vervolgens de passende tabelgrenzen nodig."
+            "De som van de gekwadrateerde verschillen is 0 + 4 + 0 = 4.",
+            "De som van alle gekwadrateerde residuen is 1 + 1 + 1 + 1 = 4: d = 4/4 = 1. Voor een toetsbeslissing heb je vervolgens de passende tabelgrenzen nodig."
           ],
-          "explanation": "Opeenvolgende verschillen zijn 0, −2 en 0. De som van de gekwadrateerde verschillen is 4. De som van alle gekwadrateerde residuen is 4: d = 4/4 = 1. Voor een toetsbeslissing heb je vervolgens de passende tabelgrenzen nodig.",
+          "explanation": "Opeenvolgende verschillen zijn 0, −2 en 0. De som van de gekwadrateerde verschillen is 0 + 4 + 0 = 4. De som van alle gekwadrateerde residuen is 1 + 1 + 1 + 1 = 4: d = 4/4 = 1. Voor een toetsbeslissing heb je vervolgens de passende tabelgrenzen nodig.",
           "pattern": "Herken: Een geordende reeks residuen en de naam Durbin-Watson. → Betekenis: d vergelijkt opeenvolgende verschillen met de totale residugrootte. → Aanpak: Behoud de tijdsvolgorde; deel Σ(e_t − e_(t−1))² door Σe_t². → Gevraagd antwoord: De d-grootheid; een toetsbeslissing vraagt daarnaast passende tabelgrenzen.",
           "trap": "Een berekende d alleen is nog geen toetsbeslissing zonder geschikte tabelgrenzen.",
           "refs": [
@@ -14233,10 +14233,10 @@ window.SRAMCData = {
           "correct": 1,
           "steps": [
             "De modelvoorwaarde betreft de residuen. H₀: deze zijn normaal verdeeld; H₁: zij wijken daarvan af.",
-            "Volgens de cursus gebruik je bij n = 40 Shapiro-Wilk. De bijbehorende Sig. is 0,014.",
+            "Omdat n = 40 niet groter is dan 50, gebruik je Shapiro-Wilk. De bijbehorende Sig. is 0,014.",
             "Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen."
           ],
-          "explanation": "De modelvoorwaarde betreft de residuen. H₀: deze zijn normaal verdeeld; H₁: zij wijken daarvan af. Volgens de cursus gebruik je bij n = 40 Shapiro-Wilk. De bijbehorende Sig. is 0,014. Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen.",
+          "explanation": "De modelvoorwaarde betreft de residuen. H₀: deze zijn normaal verdeeld; H₁: zij wijken daarvan af. Omdat n = 40 niet groter is dan 50, gebruik je Shapiro-Wilk. De bijbehorende Sig. is 0,014. Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen.",
           "pattern": "Herken: Welke normaliteitsconclusie past bij de werkwijze uit de cursus en α = 0,05? → Betekenis: Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de keuze vooraf. → Aanpak: Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau. → Gevraagd antwoord: Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek.",
           "trap": "Kies niet achteraf de normaliteitstoets met de prettigste p-waarde.",
           "refs": [
@@ -14515,10 +14515,10 @@ window.SRAMCData = {
           "correct": 1,
           "steps": [
             "Vergelijk richting en sterkte van de correlaties en spreidingsdiagrammen; verschuiving 2 toont het sterkste positieve lineaire patroon.",
-            "Bij j = 2 hoort x_(t−2) bij y_t. Er blijven 10 paren over omdat de eerste twee afzetmaanden geen twee maanden eerdere reclame binnen deze reeks hebben.",
+            "Bij j = 2 hoort x_(t−2) bij y_t. Er blijven 12 − 2 = 10 paren over omdat de eerste twee afzetmaanden geen twee maanden eerdere reclame binnen deze reeks hebben.",
             "Beoordeel het veronderstelde uitgestelde reclame-effect inhoudelijk, schat het aangepaste model en controleer de residuen opnieuw. Maximale correlatie alleen bewijst geen oorzaak."
           ],
-          "explanation": "Vergelijk richting en sterkte van de correlaties en spreidingsdiagrammen; verschuiving 2 toont het sterkste positieve lineaire patroon. Bij j = 2 hoort x_(t−2) bij y_t. Er blijven 10 paren over omdat de eerste twee afzetmaanden geen twee maanden eerdere reclame binnen deze reeks hebben. Beoordeel het veronderstelde uitgestelde reclame-effect inhoudelijk, schat het aangepaste model en controleer de residuen opnieuw. Maximale correlatie alleen bewijst geen oorzaak.",
+          "explanation": "Vergelijk richting en sterkte van de correlaties en spreidingsdiagrammen; verschuiving 2 toont het sterkste positieve lineaire patroon. Bij j = 2 hoort x_(t−2) bij y_t. Er blijven 12 − 2 = 10 paren over omdat de eerste twee afzetmaanden geen twee maanden eerdere reclame binnen deze reeks hebben. Beoordeel het veronderstelde uitgestelde reclame-effect inhoudelijk, schat het aangepaste model en controleer de residuen opnieuw. Maximale correlatie alleen bewijst geen oorzaak.",
           "pattern": "Herken: Welke koppeling verdient op basis van deze uitvoer verder onderzoek voor een vertraagd reclame-effect? → Betekenis: Verschuivingsdiagrammen laten zien op welke tijdsafstand het verband het duidelijkst is. → Aanpak: Vergelijk de grafieken en correlaties, lees de lag-richting zorgvuldig en controleer welke beginwaarnemingen wegvallen. → Gevraagd antwoord: Een inhoudelijk te onderzoeken koppeling van huidige afzet met eerdere reclame.",
           "trap": "Een tijdsverschuiving en autocorrelatie zijn verschillende problemen; een sterke lag-correlatie vervangt residudiagnostiek niet.",
           "refs": [
@@ -15151,12 +15151,12 @@ window.SRAMCData = {
           "correct": 1,
           "level": 3,
           "steps": [
-            "√(1 + 1/25) = √1,04.",
+            "Wortelfactor: √(1 + 1/25) = √1,04.",
             "De marge is 2 × 5 × √1,04 ≈ 10,198.",
-            "Dus ongeveer [39,80; 60,20].",
+            "Interval: 50 ± 10,198, dus ongeveer [39,80; 60,20].",
             "Zelfs bij x₀ = x̄ blijft individuele storing bestaan. Daarom verdwijnt alleen de afstandsterm, niet de extra 1 voor een nieuwe waarneming."
           ],
-          "explanation": "√(1 + 1/25) = √1,04. De marge is 2 × 5 × √1,04 ≈ 10,198. Dus ongeveer [39,80; 60,20]. Zelfs bij x₀ = x̄ blijft individuele storing bestaan. Daarom verdwijnt alleen de afstandsterm, niet de extra 1 voor een nieuwe waarneming.",
+          "explanation": "Wortelfactor: √(1 + 1/25) = √1,04. De marge is 2 × 5 × √1,04 ≈ 10,198. Interval: 50 ± 10,198, dus ongeveer [39,80; 60,20]. Zelfs bij x₀ = x̄ blijft individuele storing bestaan. Daarom verdwijnt alleen de afstandsterm, niet de extra 1 voor een nieuwe waarneming.",
           "pattern": "Herken: “Eén nieuwe waarneming”, x₀ = x̄ en de formule met 1 + 1/n. → Betekenis: Dit is een individueel voorspellingsinterval in het centrum van de data. → Aanpak: Gebruik de extra 1 voor individuele spreiding en bereken ŷ ± t s_e√(1 + 1/n). → Gevraagd antwoord: Twee grenzen voor één toekomstige waarneming, niet voor het groepsgemiddelde.",
           "trap": "Die 1 weglaten geeft het veel smallere interval voor de gemiddelde respons.",
           "optionExplanations": [
@@ -15837,10 +15837,10 @@ window.SRAMCData = {
           "level": 2,
           "steps": [
             "Vul x = 4 en D = 1 in.",
-            "1.000 + 50 × 4 + 200 = 1.400.",
+            "ŷ = 1.000 + 50 × 4 + 200 × 1 = 1.400.",
             "De dummy D is voor groep B gelijk aan 1. Het groepseffect van 200 komt daardoor boven op de constante en de bijdrage van x."
           ],
-          "explanation": "Vul x = 4 en D = 1 in. 1.000 + 50 × 4 + 200 = 1.400. De dummy D is voor groep B gelijk aan 1. Het groepseffect van 200 komt daardoor boven op de constante en de bijdrage van x.",
+          "explanation": "Vul x = 4 en D = 1 in. ŷ = 1.000 + 50 × 4 + 200 × 1 = 1.400. De dummy D is voor groep B gelijk aan 1. Het groepseffect van 200 komt daardoor boven op de constante en de bijdrage van x.",
           "pattern": "Herken: Een vergelijking met x én een dummy D, plus de codering voor groep B. → Betekenis: Groepslidmaatschap wordt via de dummy als extra modelterm verwerkt. → Aanpak: Zet D op de code van de genoemde groep en vul zowel x als D in. → Gevraagd antwoord: Eén voorspelde y inclusief constante, continue bijdrage en groepsbijdrage.",
           "trap": "De constante wordt één keer meegenomen.",
           "optionExplanations": [
@@ -16069,11 +16069,11 @@ window.SRAMCData = {
           "correct": 2,
           "level": 3,
           "steps": [
-            "A: 1.000 + 300 = 1.300. B: 1.000 + 200 + 200 = 1.400.",
-            "Verschil B − A = 100.",
+            "A: 1.000 + 50 × 6 = 1.300. B: 1.000 + 50 × 4 + 200 = 1.400.",
+            "Verschil B − A = 1.400 − 1.300 = 100.",
             "De dummycoëfficiënt van 200 is het groepsverschil bij gelijke x. Deze personen hebben verschillende x, dus het verschil in x moet ook worden meegenomen."
           ],
-          "explanation": "A: 1.000 + 300 = 1.300. B: 1.000 + 200 + 200 = 1.400. Verschil B − A = 100. De dummycoëfficiënt van 200 is het groepsverschil bij gelijke x. Deze personen hebben verschillende x, dus het verschil in x moet ook worden meegenomen.",
+          "explanation": "A: 1.000 + 50 × 6 = 1.300. B: 1.000 + 50 × 4 + 200 = 1.400. Verschil B − A = 1.400 − 1.300 = 100. De dummycoëfficiënt van 200 is het groepsverschil bij gelijke x. Deze personen hebben verschillende x, dus het verschil in x moet ook worden meegenomen.",
           "pattern": "Herken: Twee personen verschillen zowel in x als in dummycode; gevraagd is hoeveel hoger B is. → Betekenis: Het totale voorspelde verschil bevat meer dan alleen het dummy-effect. → Aanpak: Bereken voorspelling B − voorspelling A, of tel b_x(x_B − x_A) en b_D(D_B − D_A) op. → Gevraagd antwoord: Een getekend totaalverschil; de gelijke constante valt weg.",
           "trap": "Alleen het dummy-effect 200 nemen negeert het verschil in x.",
           "optionExplanations": [
@@ -16373,10 +16373,10 @@ window.SRAMCData = {
           "correct": 3,
           "steps": [
             "Gebruik R²_adj = R² − k(1 − R²)/(n − k − 1), met k zonder constante.",
-            "Klein: 0,792857; groot: 0,788077. De gewone R² stijgt, maar de aangepaste maat daalt.",
+            "Klein: 0,800 − 1 × 0,200/28 = 0,792857; groot: 0,810 − 3 × 0,190/26 = 0,788077. De gewone R² stijgt, maar de aangepaste maat daalt.",
             "Volgens adjusted R² leveren de twee extra variabelen onvoldoende winst voor hun extra complexiteit. Combineer dat met inhoudelijke reden, diagnose en validatie."
           ],
-          "explanation": "Gebruik R²_adj = R² − k(1 − R²)/(n − k − 1), met k zonder constante. Klein: 0,792857; groot: 0,788077. De gewone R² stijgt, maar de aangepaste maat daalt. Volgens adjusted R² leveren de twee extra variabelen onvoldoende winst voor hun extra complexiteit. Combineer dat met inhoudelijke reden, diagnose en validatie.",
+          "explanation": "Gebruik R²_adj = R² − k(1 − R²)/(n − k − 1), met k zonder constante. Klein: 0,800 − 1 × 0,200/28 = 0,792857; groot: 0,810 − 3 × 0,190/26 = 0,788077. De gewone R² stijgt, maar de aangepaste maat daalt. Volgens adjusted R² leveren de twee extra variabelen onvoldoende winst voor hun extra complexiteit. Combineer dat met inhoudelijke reden, diagnose en validatie.",
           "pattern": "Herken: Welke uitspraak over toevoeging van twee variabelen wordt door deze vergelijking ondersteund? → Betekenis: Een stijgende gewone R² kan een kleine fitwinst verbergen tegenover extra modelcomplexiteit. → Aanpak: Controleer vergelijkbare data en uitkomst en bereken de correctie voor het aantal verklarende variabelen k van ieder model. → Gevraagd antwoord: Een vergelijking van adjusted R² met een begrensde modelkeuzeconclusie.",
           "trap": "Een fitmaat op trainingsdata is geen onafhankelijke voorspelfout op nieuwe gegevens.",
           "refs": [
@@ -17104,10 +17104,10 @@ window.SRAMCData = {
           "level": 3,
           "steps": [
             "Bij 2x wordt de voorspelling 3(2x)² = 12x².",
-            "Verhouding tot 3x² is 4.",
+            "Verhouding tot 3x²: 12x²/3x² = 4.",
             "De voorfactor 3 komt voor in zowel de oude als de nieuwe voorspelling en valt bij de verhouding weg. De exponent 2 bepaalt de factor 2²."
           ],
-          "explanation": "Bij 2x wordt de voorspelling 3(2x)² = 12x². Verhouding tot 3x² is 4. De voorfactor 3 komt voor in zowel de oude als de nieuwe voorspelling en valt bij de verhouding weg. De exponent 2 bepaalt de factor 2².",
+          "explanation": "Bij 2x wordt de voorspelling 3(2x)² = 12x². Verhouding tot 3x²: 12x²/3x² = 4. De voorfactor 3 komt voor in zowel de oude als de nieuwe voorspelling en valt bij de verhouding weg. De exponent 2 bepaalt de factor 2².",
           "pattern": "Herken: Een machtsmodel ax^b en een verdubbeling van x; gevraagd is een factor. → Betekenis: De verhouding tussen nieuwe en oude voorspelling wordt door de exponent bepaald. → Aanpak: Deel a(2x)^b door ax^b; de voorfactor a valt weg. → Gevraagd antwoord: Een vermenigvuldigingsfactor voor ŷ, geen nieuwe absolute voorspelling.",
           "trap": "Verdubbelen van x betekent niet automatisch verdubbelen van y.",
           "optionExplanations": [
@@ -17320,9 +17320,9 @@ window.SRAMCData = {
           "steps": [
             "Lees de afhankelijke variabele van de tabel: LN(omzet). De formule staat dus op logschaal.",
             "Voorspelde logwaarde: 2 + 0,100 × 10 = 3.",
-            "De cursus-terugtransformatie is exp(3) ≈ 20,09. Beoordeel modelvoorwaarden op de juiste modelschaal; voeg geen niet-gegeven correctiefactor toe."
+            "Terugtransformeren geeft exp(3) ≈ 20,09. Beoordeel modelvoorwaarden op de juiste modelschaal; voeg geen niet-gegeven correctiefactor toe."
           ],
-          "explanation": "Lees de afhankelijke variabele van de tabel: LN(omzet). De formule staat dus op logschaal. Voorspelde logwaarde: 2 + 0,100 × 10 = 3. De cursus-terugtransformatie is exp(3) ≈ 20,09. Beoordeel modelvoorwaarden op de juiste modelschaal; voeg geen niet-gegeven correctiefactor toe.",
+          "explanation": "Lees de afhankelijke variabele van de tabel: LN(omzet). De formule staat dus op logschaal. Voorspelde logwaarde: 2 + 0,100 × 10 = 3. Terugtransformeren geeft exp(3) ≈ 20,09. Beoordeel modelvoorwaarden op de juiste modelschaal; voeg geen niet-gegeven correctiefactor toe.",
           "pattern": "Herken: Wat is de teruggetransformeerde voorspelling bij x = 10 volgens dit exponentiële model? → Betekenis: De voetnoot of titel van de coëfficiëntentabel bepaalt op welke schaal de voorspelling staat. → Aanpak: Lees welke variabele is getransformeerd, vul x op de juiste schaal in en transformeer de gehele voorspelde logwaarde terug. → Gevraagd antwoord: Een voorspelling op de oorspronkelijke omzet-schaal volgens de opgegeven werkwijze uit de cursus.",
           "trap": "Dezelfde tabelvorm kan een ander model beschrijven zodra de afhankelijke variabele LN(y) is.",
           "refs": [
@@ -20023,10 +20023,10 @@ window.SRAMCData = {
           "correct": 2,
           "steps": [
             "Vergelijk de realisatie met de passende bovengrens voor één nieuwe maand: 118.000 − 112.000 = 6.000.",
-            "Het residu ten opzichte van de puntvoorspelling is 18.000, maar de overschrijding van de intervalgrens is 6.000. Benoem welk verschil je rapporteert.",
+            "Het residu ten opzichte van de puntvoorspelling is 118.000 − 100.000 = 18.000, maar de overschrijding van de intervalgrens is 6.000. Benoem welk verschil je rapporteert.",
             "Onderzoek invoer, bronboekingen en gewijzigde omstandigheden met het vastgelegde model. Een statistisch signaal bewijst geen foutoorzaak of fraude."
           ],
-          "explanation": "Vergelijk de realisatie met de passende bovengrens voor één nieuwe maand: 118.000 − 112.000 = 6.000. Het residu ten opzichte van de puntvoorspelling is 18.000, maar de overschrijding van de intervalgrens is 6.000. Benoem welk verschil je rapporteert. Onderzoek invoer, bronboekingen en gewijzigde omstandigheden met het vastgelegde model. Een statistisch signaal bewijst geen foutoorzaak of fraude.",
+          "explanation": "Vergelijk de realisatie met de passende bovengrens voor één nieuwe maand: 118.000 − 112.000 = 6.000. Het residu ten opzichte van de puntvoorspelling is 118.000 − 100.000 = 18.000, maar de overschrijding van de intervalgrens is 6.000. Benoem welk verschil je rapporteert. Onderzoek invoer, bronboekingen en gewijzigde omstandigheden met het vastgelegde model. Een statistisch signaal bewijst geen foutoorzaak of fraude.",
           "pattern": "Herken: Welke rapportage bevat een controleerbare berekening, een begrensde conclusie en een passende vervolgactie? → Betekenis: Een nieuwe controlewaarneming wordt met een vooraf bepaald individueel interval vergeleken. → Aanpak: Bereken de relevante overschrijding, onderscheid die van het residu en verbind de statistische conclusie aan controlewerk. → Gevraagd antwoord: Een onderbouwde auditconclusie met concrete, passende vervolgactie.",
           "trap": "Een voorspelfout, een grensoverschrijding en een bewezen administratieve fout zijn verschillende uitspraken.",
           "refs": [

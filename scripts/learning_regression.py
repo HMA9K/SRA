@@ -75,7 +75,7 @@ def enhance(lessons, sources):
         [bookref('boek-h9a',233), bookref('boek-h9a',237), ref('attentie',3,'Attentiepunten, PDF 3: doel en regressiemodel')], first=True)
 
     car_rows = [[i, w] for i, w in enumerate([946,950,965,978,980,990,1055,1015,1055,1080],1)]
-    add(L['regressielijn'], sources, 'Van gegevens naar Coefficients: cursusopgave H9.1',
+    add(L['regressielijn'], sources, 'Van gegevens naar Coefficients: autogewichten',
         '<p>Deze casus bevat tien autogewichten. x is het gecodeerde bouwjaar 1 tot en met 10; '
         'y is het gewicht in kg. De codering is onderdeel van het model: vul niet ongemerkt een volledig '
         'kalenderjaar in een vergelijking in die op x = 1, …, 10 is geschat.</p>'
@@ -960,7 +960,7 @@ def enhance(lessons, sources):
     # Een gerichte rekenroute per les is ook beschikbaar bij de formulegids.
     # De eigen bronlinks en refs blijven behouden, zonder alle bronfiguren te dupliceren.
     guide_titles = {
-        'regressielijn':'Van gegevens naar Coefficients: cursusopgave H9.1',
+        'regressielijn':'Van gegevens naar Coefficients: autogewichten',
         'anova':'Een volledige ANOVA-tabel reconstrueren',
         'toetsen':'Tabellenbundel gebruiken: dezelfde casus, drie toetsvormen',
         'diagnostiek':'Durbin-Watson: van tabellenbundel naar beslissing',

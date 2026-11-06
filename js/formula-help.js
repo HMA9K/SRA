@@ -10,7 +10,7 @@
   'use strict';
   const entry = (title, text) => ({ title, text });
   const D = {
-    r: entry('r: Pearson-correlatie', 'Dit is de steekproefcorrelatie tussen twee variabelen, met een waarde tussen −1 en 1. Bij enkelvoudige regressie gebruik je r voor de richting, de residuele variantie en de toets op een lineair verband.'),
+    r: entry('r: Pearson-correlatie', 'r zegt hoe strak de punten een rechte lijn volgen. Het ligt tussen −1 en 1: het teken geeft de richting, en hoe dichter bij −1 of 1, hoe sterker het lineaire verband. Bij enkelvoudige regressie gebruik je r ook om de spreiding rond de lijn te berekenen en om het verband te toetsen.'),
     sb1: entry('s_b₁: standaardfout van de regressiehelling', 'Dit beschrijft de onzekerheid van de geschatte helling b₁ over mogelijke steekproeven. Je gebruikt deze standaardfout voor de t-toets en het betrouwbaarheidsinterval van de populatiehelling.'),
     N: entry('N: populatieomvang', 'Dit is het aantal posten of eenheden in de hele populatie. Je gebruikt N bijvoorbeeld om een gemiddelde per post om te rekenen naar een geschat totaal.'),
     n: entry('n: steekproefomvang', 'Dit is het aantal waarnemingen in je steekproef. De kleine n gaat dus over de onderzochte eenheden, terwijl de hoofdletter N de hele populatie beschrijft.'),
@@ -25,7 +25,7 @@
     s2: entry('s²: variantie', 'Dit is een maat voor de spreiding, gebaseerd op gekwadrateerde afwijkingen van het gemiddelde. De standaardafwijking s is de vierkantswortel van deze variantie.'),
     sw: entry('s_w: standaardafwijking van werkelijke waarden', 'Dit meet de spreiding van de gecontroleerde werkelijke waarden in de steekproef. Het beschrijft verschillen tussen posten en is nog niet de standaardfout van een geschat totaal.'),
     sy: entry('s_y: standaardafwijking van y', 'Dit meet de spreiding van de waargenomen y-waarden in de steekproef. Je gebruikt deze spreiding bij de residuele variantie en de standaardfout van de helling.'),
-    sb: entry('s_b: standaardafwijking van boekwaarden', 'Dit meet de spreiding van de boekwaarden van de gecontroleerde posten. Bij een regressieschatter gebruik je deze spreiding samen met die van de werkelijke waarden en hun correlatie.'),
+    sb: entry('s_b: standaardafwijking van boekwaarden', 'Dit meet de spreiding van de boekwaarden van de gecontroleerde posten. Bij de quotiëntschatter en de regressieschatter gebruik je deze spreiding samen met die van de werkelijke waarden en hun correlatie.'),
     E: entry('E: onzekerheidsmarge', 'Dit is de afstand van de puntschatting tot één grens van het interval. Bij een tweezijdig interval is de totale breedte dus 2 × E.'),
     t: entry('t: kritieke tabelwaarde', 'Dit is de grenswaarde uit de t-verdeling die past bij je betrouwbaarheid, vrijheidsgraden en keuze voor één of twee zijden. Je vermenigvuldigt deze waarde met de standaardfout om de onzekerheidsmarge te krijgen.'),
     q: entry('q: goedratio', 'Dit is de som van de werkelijke waarden gedeeld door de som van de boekwaarden in de steekproef. Je vermenigvuldigt deze verhouding met B om het werkelijke populatietotaal te schatten.'),
@@ -49,11 +49,11 @@
     'W^tot': entry('Ŵ_tot: gecombineerde totaalschatting', 'Dit is de som van de geschatte totalen van de afzonderlijke strata en het bekende totaal van het topstratum. Zo combineer je de deelpopulaties tot één schatting voor de hele populatie.'),
     Wtop: entry('W_top: werkelijk totaal van het topstratum', 'Dit is het bekende werkelijke totaal van de volledig gecontroleerde grote posten. Het heeft geen steekproefonzekerheid, omdat alle posten in deze groep zijn gecontroleerd.'),
     stot: entry('s_tot: gecombineerde standaardfout', 'Dit beschrijft de onzekerheid van de gezamenlijke totaalschatting over de strata. Je telt daarvoor de varianties op en neemt daarna de wortel, niet de som van de afzonderlijke standaardfouten.'),
-    x: entry('x: verklarende variabele', 'Dit is de invoervariabele waarmee je de uitkomst y probeert te verklaren of voorspellen. Bij een getransformeerd model moet je x gebruiken in precies de vorm die in de formule staat.'),
+    x: entry('x: verklarende variabele', 'Dit is de variabele waarmee je de uitkomst y probeert te verklaren of voorspellen. Vul x in zoals het in de formule staat: is x omgerekend, dan gebruik je de omgerekende waarde.'),
     y: entry('y: waargenomen uitkomst', 'Dit is de werkelijk gemeten waarde van de variabele die je wilt verklaren of voorspellen. Het verschil tussen y en de voorspelde waarde ŷ is het residu.'),
-    'y^': entry('ŷ: voorspelde uitkomst', 'Dit is de waarde die het geschatte regressiemodel voorspelt. Het dakje onderscheidt de voorspelling van de werkelijk waargenomen y; let bij ln(ŷ) ook op de logaritmische schaal.'),
-    b0: entry('b₀: geschatte constante', 'Dit is het vaste begingetal in de geschatte regressievergelijking. Het geeft de voorspelde uitkomst op de gemodelleerde schaal wanneer alle verklarende termen nul zijn; bij ln(x) is die term nul als x = 1.'),
-    b1: entry('b₁: geschatte regressiecoëfficiënt', 'Deze coëfficiënt bepaalt hoeveel de voorspelde uitkomst op de gemodelleerde schaal verandert als de bijbehorende verklarende term één eenheid stijgt. Kijk daarom of de formule x of ln(x) en ŷ of ln(ŷ) gebruikt.'),
+    'y^': entry('ŷ: voorspelde uitkomst', 'Dit is de waarde die het geschatte regressiemodel voorspelt. Het dakje onderscheidt de voorspelling van de werkelijk waargenomen y. Is de uitkomst omgerekend, dan staat ook de voorspelling op die omgerekende schaal.'),
+    b0: entry('b₀: geschatte constante', 'Dit is het vaste begingetal in de geschatte regressievergelijking: de voorspelling als alle variabelen in de formule nul zijn. Is een variabele omgerekend, dan gaat het om de omgerekende waarde.'),
+    b1: entry('b₁: geschatte regressiecoëfficiënt', 'Dit getal zegt hoeveel de voorspelling verandert als de bijbehorende variabele één eenheid stijgt; bij meer variabelen blijven de andere daarbij gelijk. Bij één variabele is dit de helling van de lijn. Is een variabele of de uitkomst omgerekend, dan geldt dit voor de omgerekende waarden.'),
     bj: entry('bⱼ: geschatte coëfficiënt van variabele j', 'Dit is het geschatte effect van de j-de verklarende variabele. Bij meervoudige regressie lees je dit effect terwijl de andere verklarende variabelen gelijk blijven.'),
     bk: entry('bₖ: geschatte coëfficiënt van variabele k', 'Dit is de coëfficiënt bij de laatste van de k verklarende variabelen in het model. Je vermenigvuldigt hem met de bijbehorende waarde xₖ.'),
     b2: entry('b₂: geschatte coëfficiënt van de tweede variabele', 'Dit is het geschatte effect van de tweede verklarende variabele. De interpretatie geldt terwijl de overige verklarende variabelen in het model gelijk blijven.'),
@@ -68,25 +68,25 @@
     yi: entry('yᵢ: waargenomen uitkomst van waarneming i', 'Dit is de werkelijk gemeten uitkomst voor één waarneming. Vergelijk deze met ŷᵢ om de bijbehorende voorspellingsfout te vinden.'),
     'y^i': entry('ŷᵢ: voorspelling voor waarneming i', 'Dit is de voorspelde uitkomst voor één waarneming, berekend met het geschatte model. Dezelfde index i bij y en ŷ zorgt dat je de juiste waarneming en voorspelling vergelijkt.'),
     'y^0': entry('ŷ₀: voorspelling bij de nieuwe x₀', 'Dit is de voorspelde uitkomst voor de nieuwe invoerwaarde x₀. Het vormt het midden van het getoonde voorspellingsinterval.'),
-    'x¯': entry('x̄: gemiddelde van x', 'Dit is het gemiddelde van de x-waarden in de steekproef waarmee het model is geschat. Een voorspelling verder van dit gemiddelde heeft in de getoonde intervalformule meer onzekerheid.'),
-    'y¯': entry('ȳ: gemiddelde van y', 'Dit is het gemiddelde van de waargenomen y-waarden. In de kwadratensommen vergelijk je uitkomsten of voorspellingen met dit gemiddelde.'),
+    'x¯': entry('x̄: gemiddelde van x', 'Dit is het gemiddelde van de x-waarden in de steekproef waarmee het model is geschat. Je gebruikt het om de lijn te berekenen; hoe verder een nieuwe x hiervan ligt, hoe onzekerder de voorspelling.'),
+    'y¯': entry('ȳ: gemiddelde van y', 'Dit is het gemiddelde van de waargenomen y-waarden. Je gebruikt het om de lijn te berekenen en om te zien hoeveel de uitkomsten en voorspellingen hiervan afwijken.'),
     x0: entry('x₀: nieuwe invoerwaarde', 'Dit is de waarde van x waarvoor je een voorspelling wilt maken. Je vult deze waarde in het geschatte regressiemodel in.'),
-    sx: entry('s_x: standaardafwijking van x', 'Dit meet de spreiding van de x-waarden in de steekproef. In de intervalformule helpt deze spreiding bepalen hoe ver de nieuwe x₀ van de gebruikte gegevens ligt.'),
-    se: entry('s_e: residuele standaardfout', 'Dit is de geschatte spreiding van de residuen rond het regressiemodel. Je berekent deze als √MSE en gebruikt haar onder meer bij voorspellingsintervallen.'),
+    sx: entry('s_x: standaardafwijking van x', 'Dit meet de spreiding van de x-waarden in de steekproef. Je gebruikt deze spreiding bij de helling en, in de intervalformule, om te bepalen hoe ver de nieuwe x₀ van de gebruikte gegevens ligt.'),
+    se: entry('s_e: residuele standaardfout', 'Dit is de spreiding van de waarnemingen rond de voorspellingen van het model, in de eenheid van y. Je gebruikt haar onder meer bij voorspellingsintervallen; in een ANOVA-tabel vind je haar als √MSE.'),
     k: entry('k: aantal verklarende variabelen', 'Dit is het aantal verklarende variabelen in het regressiemodel, zonder de constante. Daarom zijn de residuele vrijheidsgraden n − k − 1.'),
-    df: entry('df: vrijheidsgraden', 'Dit geeft aan hoeveel onafhankelijke informatie na het schatten van parameters overblijft. Je gebruikt de juiste vrijheidsgraden bij het kiezen van een t- of F-grenswaarde.'),
+    df: entry('df: vrijheidsgraden', 'Dit getal bepaalt welke rij of kolom je in de t- of F-tabel gebruikt. Het geeft aan hoeveel waarnemingen overblijven na het schatten: bij de schatters meestal n − 1, bij regressie n − k − 1.'),
     SSR: entry('SSR: verklaarde kwadratensom', 'Dit is de som van de gekwadrateerde verschillen tussen de voorspelde waarden en het gemiddelde van y. Het beschrijft het deel van de variatie dat het regressiemodel verklaart.'),
     SSE: entry('SSE: residuele kwadratensom', 'Dit is de som van de gekwadrateerde residuen yᵢ − ŷᵢ. Het meet de variatie die het geschatte regressiemodel niet verklaart.'),
     TotalSS: entry('TotalSS: totale kwadratensom', 'Dit is de som van de gekwadrateerde afwijkingen van de waargenomen y-waarden ten opzichte van hun gemiddelde. In het getoonde model met constante geldt TotalSS = SSR + SSE.'),
     MSE: entry('MSE: gemiddelde residuele kwadratensom', 'Dit is SSE gedeeld door de residuele vrijheidsgraden n − k − 1. Het schat de residuele variantie; de wortel is de residuele standaardfout s_e.'),
     MSR: entry('MSR: gemiddelde verklaarde kwadratensom', 'Dit is SSR gedeeld door het aantal verklarende variabelen k. De globale F-toets vergelijkt deze waarde met MSE.'),
-    F: entry('F: toetsingsgrootheid', 'Dit vergelijkt de verklaarde bijdrage van een model of uitbreiding met de overgebleven residuele variatie. De precieze teller en vrijheidsgraden hangen af van de globale toets of de toets op een modeluitbreiding.'),
+    F: entry('F: toetsingsgrootheid', 'F is een verhouding: wat het model of de uitbreiding verklaart, gedeeld door de variatie die onverklaard blijft. Hoe groter F, hoe sterker de aanwijzing dat het model iets toevoegt. De precieze teller en vrijheidsgraden hangen af van de globale toets of de toets op een modeluitbreiding.'),
     R2: entry('R²: welk deel is verklaard?', 'R² zegt welk deel van de verschillen tussen de waarden je kunt verklaren. Het ligt tussen 0 en 1: bij 0,80 is 80% verklaard en blijft 20% onverklaard. Bij de schatters is het de correlatie R in het kwadraat (R = 0,9 geeft 0,81), in een ANOVA-tabel SSR gedeeld door TotalSS.'),
     R2adj: entry('R²_adj: gecorrigeerde verklaarde variatie', 'Dit is R² met een correctie voor het aantal verklarende variabelen en waarnemingen. De correctie voorkomt dat iedere extra variabele automatisch als verbetering wordt gezien.'),
-    MD: entry('MD: Mahalanobis-afstand', 'Dit meet hoe ongewoon de combinatie van verklarende waarden van een waarneming is. Een grote MD wijst op een bijzondere positie in de x-ruimte en zegt op zichzelf niet dat het residu groot is.'),
+    MD: entry('MD: Mahalanobis-afstand', 'Dit meet hoe ongewoon de combinatie van x-waarden van een waarneming is. Een grote MD betekent dat de waarneming ver van de andere x-waarden ligt; het zegt op zichzelf niet dat het residu groot is.'),
     CD: entry('CD: Cook-afstand', 'Dit meet hoeveel invloed één waarneming op het geschatte regressiemodel heeft. Een grote CD is aanleiding om te onderzoeken hoe sterk het model verandert als dat punt wordt weggelaten.'),
     z: entry('z: gestandaardiseerde afwijking', 'Dit drukt een afwijking uit in aantallen standaardafwijkingen. Daardoor kun je de grootte van de afwijking beoordelen zonder de oorspronkelijke meeteenheid.'),
-    ln: entry('ln: natuurlijke logaritme', 'De natuurlijke logaritme zet een positief getal om naar de macht waartoe je het getal e moet verheffen om dat getal te krijgen. In regressie verandert ln de schaal van een variabele; ln(x) is dus niet hetzelfde als x.'),
+    ln: entry('ln: natuurlijke logaritme', 'ln vraagt tot welke macht je het getal e ≈ 2,718 moet verheffen om een positief getal te krijgen. In regressie verandert ln de schaal van een variabele; ln(x) is dus niet hetzelfde als x.'),
     exp: entry('exp: terugrekenen vanuit een natuurlijke logaritme', 'exp(a) betekent e tot de macht a en is de omgekeerde bewerking van ln. Wanneer je model ln(y) voorspelt, reken je met exp terug naar de oorspronkelijke schaal van y.'),
     VIFi: entry('VIFᵢ: variantie-inflatiefactor', 'Dit meet hoeveel de variantie van een regressiecoëfficiënt wordt vergroot doordat de bijbehorende verklarende variabele met andere verklarende variabelen samenhangt. Je berekent VIFᵢ als 1 / (1 − R²ᵢ).'),
     Tolerancei: entry('Toleranceᵢ: tolerantie', 'Dit is 1 − R²ᵢ uit de hulpregressie van xᵢ op de overige verklarende variabelen. Een lage tolerantie betekent veel overlap en hoort bij een hoge VIF.'),
@@ -102,11 +102,11 @@
     puntschatting: entry('Puntschatting: één getal als schatting', 'Dit is één getal waarmee je een onbekende populatiegrootheid schat. In de getoonde intervalformule ligt deze schatting in het midden tussen ondergrens en bovengrens.'),
     standaardfout: entry('Standaardfout: onzekerheid van de schatting', 'Dit meet de onzekerheid van een schatting door het gebruik van een steekproef. Het is iets anders dan de spreiding van de afzonderlijke waarnemingen.'),
     'kritieke waarde': entry('Kritieke waarde: grens uit de tabel', 'Dit is de tabelgrens die bij de gekozen verdeling, betrouwbaarheid en vrijheidsgraden hoort. Vermenigvuldigd met de standaardfout bepaalt zij de marge van het interval.'),
-    Rbw2: entry('R²_bw: determinatiecoëfficiënt van boekwaarde en werkelijke waarde', 'Dit is het kwadraat van de correlatie R_bw: het deel van de spreiding in de werkelijke waarden dat met de boekwaarden samenhangt. Hoe hoger, hoe meer de regressieschatter de standaardfout verlaagt.'),
+    Rbw2: entry('R²_bw: welk deel hangt samen met de boekwaarde?', 'Dit is het kwadraat van de correlatie R_bw: het deel van de spreiding in de werkelijke waarden dat met de boekwaarden samenhangt. Hoe hoger, hoe meer de regressieschatter de standaardfout verlaagt.'),
     frequentie: entry('Frequentie: aantal posten in de klasse', 'Dit is het aantal posten dat in deze klasse valt. Bij ongelijke klassen vermenigvuldig je de frequentie eerst met de klassebreedte en neem je daarna de wortel.'),
     klassebreedte: entry('Klassebreedte: afstand tussen de klassegrenzen', 'Dit is de afstand tussen de onder- en bovengrens van een klasse. Bij ongelijke klassebreedtes hoort deze breedte onder de wortel.'),
     breedte: entry('Breedte: bovengrens min ondergrens', 'Dit is de bovengrens min de ondergrens. Bij het getoonde symmetrische interval is dit tweemaal de marge E.'),
-    'α': entry('α: significantieniveau', 'Dit is het vooraf gekozen risico dat je de nulhypothese verwerpt terwijl die waar is. Bij een tweezijdig interval hoort α/2 bij elke staart van de verdeling.'),
+    'α': entry('α: kans om ernaast te zitten', 'Dit is de kans die je vooraf accepteert om ernaast te zitten. Bij een interval heet dat de onbetrouwbaarheid (de betrouwbaarheid is 1 − α), bij een toets het significantieniveau: de kans dat je de nulhypothese verwerpt terwijl die waar is. Bij een tweezijdig interval hoort α/2 bij elke staart van de verdeling.'),
     '±': entry('±: plus én min', 'Maak twee berekeningen: één met aftrekken en één met optellen. Daarmee krijg je de ondergrens en bovengrens van het interval.'),
     '∑': entry('Σ: somteken', 'Tel de waarden of uitdrukkingen achter dit teken over de betreffende waarnemingen bij elkaar op. Bij Σw² kwadrateer je elke waarde vóór het optellen; bij (Σw)² kwadrateer je de uiteindelijke som.'),
     '…': entry('…: hetzelfde patroon voortzetten', 'De weggelaten termen volgen hetzelfde patroon als de termen ernaast. Bij meervoudige regressie loopt bⱼxⱼ zo door tot de laatste verklarende variabele.'),
@@ -114,10 +114,11 @@
   D['Σ'] = D['∑'];
   const difference = {
     e: entry('e: verschil tussen boekwaarde en werkelijke waarde', 'In deze les is e gedefinieerd als b − w. Een positief verschil betekent dat de boekwaarde hoger is dan de gecontroleerde werkelijke waarde.'),
-    ei: entry('eᵢ: verschil bij post i', 'Hier bereken je eᵢ als bᵢ − wᵢ voor dezelfde post. Dit teken bepaalt of je bij de verschilschatter een bedrag van het boekwaardetotaal aftrekt of erbij optelt.'),
+    ei: entry('eᵢ: verschil bij post i', 'Hier bereken je eᵢ als bᵢ − wᵢ voor dezelfde post. Positief betekent dat de boekwaarde hoger is dan de werkelijke waarde, negatief dat die lager is.'),
     'e¯': entry('ē: gemiddeld verschil per post', 'Dit is het gemiddelde van de verschillen bᵢ − wᵢ in de steekproef. Vermenigvuldigen met N geeft het geschatte totale verschil dat je van B aftrekt.'),
     se: entry('s_e: standaardafwijking van de verschillen', 'Dit is de spreiding van de verschillen e = b − w tussen de gecontroleerde posten. Bij de verschilschatter gebruik je deze spreiding om de standaardfout van het geschatte totaal te berekenen.'),
   };
+  const regressionLessons = ['regressielijn','anova','toetsen','diagnostiek','voorspellen','meervoudig','transformaties','modelbouw','validatie','tentamen'];
   const testT = entry('t: berekende toetsingsgrootheid', 'Dit is het verschil tussen de geschatte coëfficiënt en de waarde onder H₀, gedeeld door de standaardfout. Je vergelijkt deze berekende t met een kritieke tabelwaarde of gebruikt de bijbehorende p-waarde.');
   const normalized = text => String(text).replace(/[\s_{}]/g, '').replace(/₀/g,'0').replace(/₁/g,'1').replace(/₂/g,'2').replace(/ᵢ/g,'i').replace(/ⱼ/g,'j').replace(/ₖ/g,'k').replace(/²/g,'2').replace(/ŷ/g,'y^').replace(/Ŵ/g,'W^').replace(/ȳ/g,'y¯').replace(/ē/g,'e¯').replace(/([wbxe])\u0304/g,'$1¯').replace(/ₑ/g,'e');
   const distance = key => key.includes('MD') ? 'Mahalanobis-afstand' : 'Cook-afstand';
@@ -128,11 +129,14 @@
     if (key === 'breedte' && context === 'stratificatie') key = 'klassebreedte';
     if (context === 'transformaties' && key === 'e') return entry('e: grondtal van de natuurlijke logaritme', 'Dit is het vaste getal e ≈ 2,718. Bij exp(z) bereken je e tot de macht z; de natuurlijke logaritme ln draait die bewerking om.');
     if (context === 'transformaties' && key === 'z') return entry('z: invoer van de exponentiële functie', 'Hier is z de waarde die je als exponent invoert bij exp(z). Het is in deze uitleg een tijdelijke naam voor die invoer en geen gestandaardiseerd residu.');
-    if (key === 'b' && ['regressielijn','anova','toetsen','diagnostiek','voorspellen','meervoudig','transformaties','modelbouw','validatie','tentamen'].includes(context)) return entry('b: geschatte regressiecoëfficiënt', 'De letter b staat hier voor een coëfficiënt die met de steekproef is geschat. De index geeft aan of het om de constante b₀ of het effect van een verklarende variabele gaat.');
-    if (context === 'verschil' && difference[key]) return difference[key];
+    if (key === 'B' && regressionLessons.includes(context) && !/N, n, B/.test(formula)) return entry('B: geschatte coëfficiënt in SPSS', 'Dit is de kolom in de SPSS-tabel Coefficients met de geschatte coëfficiënten, zoals b₀ bij de constante en b₁ bij een variabele. Uit deze kolom lees je de regressievergelijking af.');
+    if (key === 'b' && regressionLessons.includes(context)) return entry('b: geschatte regressiecoëfficiënt', 'De letter b staat hier voor een coëfficiënt die met de steekproef is geschat. De index geeft aan of het om de constante b₀ of het effect van een verklarende variabele gaat.');
+    if (['beginnen','verschil','quotient','regressieschatter','steekproefomvang'].includes(context) && difference[key]) return difference[key];
+    if (key === 't' && context === 'diagnostiek' && /[ex]_\(?t|[ex]_t/.test(formula)) return entry('t: tijdsperiode', 'Dit is het nummer van de periode in een reeks waarnemingen. e_t is het residu van periode t en e_(t−1) dat van de periode ervoor.');
     if (key === 't' && /±/.test(formula)) return D.t;
-    if (key === 't' && (context === 'toetsen' || (context === 'tentamen' && /β|b[jⱼ]/u.test(formula)))) return testT;
-    if (key === 's2' && context === 'steekproefomvang') return entry('s²: variantie die bij de schatter hoort', 'Vul de variantie in van de schatter die je gebruikt: s_w² bij MPU en s_e² bij de verschilschatter. Bij de regressieschatter is dat s_w² × (1 − R²_bw).');
+    if (key === 't' && (['toetsen','meervoudig','validatie'].includes(context) || (context === 'tentamen' && /β|b[jⱼ]/u.test(formula)))) return testT;
+    if (key === 'q' && context === 'modelbouw') return entry('q: aantal extra variabelen', 'Dit is het aantal variabelen dat je in één keer aan het model toevoegt. Bij de F-toets op dit blok deel je de toename van SSR ook door q.');
+    if (key === 's2' && context === 'steekproefomvang') return entry('s²: variantie die bij de schatter hoort', 'Vul de variantie in van de schatter die je gebruikt: s_w² bij MPU, s_e² bij de verschilschatter en s_q² bij de quotiëntschatter. Bij de regressieschatter is dat s_w² × (1 − R²_bw).');
     if (key === 'z' && context === 'diagnostiek') return entry('z: gestandaardiseerd residu', 'Dit is het residu uitgedrukt in aantallen standaardafwijkingen. Bij n ≤ 100 is |z| > 2 een signaal voor een uitbijter in de y-richting, bij n > 100 geldt |z| > 3.');
     if (key === 'b1' && /x1/.test(formula)) return entry('b₁: geschatte coëfficiënt van de eerste variabele', D.b1.text);
     if (key === 'b1' && context === 'regressieschatter') return entry('b₁: helling tussen boekwaarde en werkelijke waarde', 'Deze helling geeft de verandering van de geschatte werkelijke waarde als de boekwaarde één eenheid stijgt. Je berekent haar met de correlatie en de verhouding tussen de twee standaardafwijkingen.');
@@ -184,7 +188,7 @@
   // Alleen tekst in de uitleg en rekenregels; nooit een antwoordeditor of invoerveld.
   const aliases = ['R²_adj','R²ᵢ','R²_bw','s_MPU','s_tot','s_bⱼ','s_Q','s_V','s_R','s_q','s_w','s_b','s_e','s_x','s_y','n_test','Ŵ_MPU','Ŵ_tot','Ŵ_Q','Ŵ_V','Ŵ_R','W_top','βⱼ,₀','b₀','b₁','b₂','bⱼ','bₖ','β₀','β₁','ŷᵢ','ŷ₀','x₀','x₁','x₂','xₖ','yᵢ','wᵢ','bᵢ','eᵢ','Nᵢ','nᵢ','sᵢ','w̄ᵢ','w̄','b̄','x̄','ȳ','ē','s²','R²','sₑ','MSPR','TotalSS','SSR','SSE','MSR','MSE','VIF','Tolerance','MD','CD','ln','exp','df','N','n','B','E','q','s','t','k','x','y','z','w','b','e','ŷ','Ŵ','γ','α','β','ε','Σ','±'].sort((a,b)=>b.length-a.length);
   D.VIF = D.VIFi; D.Tolerance = D.Tolerancei;
-  const word = /[\p{L}\p{N}\p{M}_]/u;
+  const word = /[\p{L}\p{N}\p{M}_’]/u;
   // Formulebladnotatie in platte tekst (s_e, Ŵ_MPU, e_(t−1)) verschijnt als subscript.
   // Eén letter of een vaste afkorting als basis; SPSS-namen zoals LN_MORT of ZRE_1 blijven letterlijk.
   // Een cijfer of N mag direct voorafgaan, zoals in 2x_t en Ns_q.
@@ -214,6 +218,9 @@
   function textMatches(text, context) {
     const matches = [];
     for (let i = 0; i < text.length;) {
+      // Afkortingen en opsommingen zijn geen symbolen: n.v.t., (b) in een lijst, stratumnaam B:
+      if (text.startsWith('n.v.t.', i)) { i += 6; continue; }
+      if ((context === 'onzekerheid' && text.startsWith('b)', i) && text[i-1] === '(') || (context === 'steekproefomvang' && text.startsWith('B:', i))) { i += 1; continue; }
       const token = aliases.find(a => {
         if (!text.startsWith(a,i)) return false;
         if (!word.test(a)) return true;

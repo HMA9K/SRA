@@ -959,7 +959,7 @@ def enhance(lessons, sources):
     order = ['SET-opfrisser', 'Waarom opdelen?', 'Hoe kies je de grenzen van de strata?',
              'De volledige collegestabel: cumulatieve boekwaarde en grenzen',
              'Ook de wortelmethode volledig uit een klassentabel opbouwen',
-             'Stratagrenzen bepalen vanuit de cursusopgave',
+             'Stratagrenzen bepalen vanuit een klassentabel',
              'Hoe verdeel je de steekproef?', 'Neyman en evenredige allocatie naast elkaar uitrekenen',
              'De groepen samenvoegen', 'De volledige MPU-stratacase: iedere rij tot en met het interval',
              'Van tabel naar een onderbouwde tentamenuitwerking', 'Gericht extra controles in één stratum']

@@ -24,7 +24,7 @@ q('mpu','scheef',2,'Je hebt aselect 120 posten gekozen uit een extreem scheve po
  ('Vanaf n = 100 is ieder interval gegarandeerd geldig','De vuistregel garandeert geen geldige benadering bij iedere mogelijke populatieverdeling.'),
  ('De populatie wordt normaal verdeeld door de steekproef','Meer controles veranderen de verdeling van de oorspronkelijke populatie niet.'),
  ('De t-waarde mag altijd nul worden','Een grotere steekproef neemt de gekozen onzekerheidsmarge niet automatisch volledig weg.')],
- ['De selectie is aselect, maar de populatie is extreem scheef.','Het boek nuanceert de grens n ≥ 100.','Beoordeel de benadering en de spreiding voordat je de intervaluitkomst gebruikt.'],
+ ['De selectie is aselect, maar de populatie is extreem scheef.','De grens n ≥ 100 is geen garantie: bij extreme scheefheid kan een grotere steekproef nodig zijn.','Beoordeel de benadering en de spreiding voordat je de intervaluitkomst gebruikt.'],
  'Een omvangsgrens en extreme scheefheid samen vragen om controle van de benadering.',
  'Een grenswaarde is geen garantie voor iedere verdeling.')
 q('regressieschatter','dekking',2,'Bij gelijk betrouwbaarheidsniveau is het berekende regressieschattingsinterval smaller dan het MPU-interval. Wat volgt daaruit?',[
@@ -48,7 +48,7 @@ q('stratificatie','wortel',3,'Een klasse is € 400 breed en bevat 772 posten. W
  ('Ongeveer 27,78','Dit is alleen √772. Bij deze methode moet ook de klassebreedte meetellen.'),
  ('308.800','Dit is het product breedte × frequentie. De methode neemt daarvan eerst de wortel.'),
  ('1.172','Optellen van breedte en frequentie is niet de berekening uit deze stratificatiemethode.')],
- ['De klassebreedte is 400 en de frequentie is 772.','Bereken het product: 400 × 772 = 308.800.','Neem de wortel en tel 555,70 bij de eerdere wortelbijdragen op.'],
+ ['De klassebreedte is 400 en de frequentie is 772.','Bereken het product: 400 × 772 = 308.800.','Neem de wortel: √308.800 ≈ 555,70. Tel dat op bij de eerdere wortelbijdragen.'],
  'Bij ongelijke klassebreedtes gebruik je per klasse √(breedte × frequentie).',
  'Neem de wortel per klasse, niet pas na het cumuleren.')
 q('stratificatie','uitbreiding',3,'Voor één stratum volgt een benodigde totale steekproefomvang van 32,65. Er zijn al 30 posten gecontroleerd. Hoeveel komen erbij?',[
@@ -64,7 +64,7 @@ q('stratificatie','varianties',3,'De gewenste totale marge E is 10 en t = 2. De 
  ('25','Dit is de maximaal toegestane totale variantie. De bijdrage 16 van de andere strata moet er nog af.'),
  ('3','3 is de maximaal toegestane standaardfout van dit stratum. Gevraagd is de variantiebijdrage.'),
  ('−11','Dit trekt variantie 16 af van standaardfout 5. Die grootheden hebben verschillende eenheden.')],
- ['De maximaal toegestane totale standaardfout is E/t = 5.','Kwadrateer: de totale variantie mag maximaal 25 zijn.','Voor dit stratum resteert maximaal 25 − 16 = 9 aan variantiebijdrage; dat komt overeen met standaardfout 3.'],
+ ['De maximaal toegestane totale standaardfout is E/t = 10/2 = 5.','Kwadrateer: de totale variantie mag maximaal 5² = 25 zijn.','Voor dit stratum resteert maximaal 25 − 16 = 9 aan variantiebijdrage; dat komt overeen met standaardfout 3.'],
  'Reken de gewenste totale marge eerst terug naar totale variantie en trek daarna de andere bijdragen af.',
  'Trek geen variantie af van een standaardfout.')
 q('steekproefomvang','quotient',3,'Bij steekproefplanning met de quotiëntschatter zijn N = 1.000, t = 2, s_q = 7,60 en E = 1.000 gegeven. Gebruik γ = E²/(t²Ns_q²). Wat is de minimaal geplande totale n?',[
@@ -72,7 +72,7 @@ q('steekproefomvang','quotient',3,'Bij steekproefplanning met de quotiëntschatt
  ('187','Dit rondt naar beneden af en kan daardoor de vereiste marge overschrijden.'),
  ('760','Dit vermenigvuldigt de resterende spreiding willekeurig en volgt de omvangsformule niet.'),
  ('1.000','Alle posten controleren is hier niet de minimaal berekende omvang volgens de gegeven formule.')],
- ['Gebruik s_q = 7,60 als resterende spreiding, niet de dimensieloze goedratio q.','γ = E²/(t² × N × s_q²) = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.','n = 1.000/(1 + γ) ≈ 187,679; rond naar boven af op 188.'],
+ ['Gebruik s_q = 7,60 als resterende spreiding, niet de dimensieloze goedratio q.','Bereken γ = E²/(t² × N × s_q²) = 1.000²/(2² × 1.000 × 7,60²) ≈ 4,32825.','n = 1.000/(1 + γ) ≈ 187,679; rond naar boven af op 188.'],
  'De omvangsformule gebruikt de resterende spreiding van de gekozen schatter.',
  'Vul niet de goedratio q in waar de spreiding s_q moet staan.')
 q('regressielijn','mse',3,'Bij enkelvoudige regressie zijn n = 12, r = 0,80 en s_y = 5. Wat is de residuele variantie volgens formule 34?',[
@@ -80,7 +80,7 @@ q('regressielijn','mse',3,'Bij enkelvoudige regressie zijn n = 12, r = 0,80 en s
  ('9','Dit mist de factor (n − 1)/(n − 2), die hier gelijk is aan 11/10.'),
  ('17,6','Dit gebruikt r² in plaats van het onverklaarde aandeel 1 − r².'),
  ('Ongeveer 3,146','Dit is de wortel van 9,9, dus de residuele standaardafwijking en niet de variantie.')],
- ['Het model heeft één verklarende variabele en een constante: df = n − 2 = 10.','Het onverklaarde aandeel is 1 − 0,80² = 0,36.','Residuele variantie = 11/10 × 0,36 × 25 = 9,9.'],
+ ['Het model heeft één verklarende variabele en een constante: df = n − 2 = 10.','Het onverklaarde aandeel is 1 − 0,80² = 0,36.','Residuele variantie = (12 − 1)/10 × 0,36 × 5² = 9,9.'],
  'Zijn n, r en s_y gegeven zonder ANOVA, dan past formule 34 bij enkelvoudige regressie.',
  'Varianties zijn gekwadrateerd; neem alleen een wortel als s_e gevraagd wordt.')
 q('toetsen','hellingse',3,'n = 12, r = 0,80, s_x = 2 en s_y = 5. Wat is s_b1 volgens formule 39?',[
@@ -88,7 +88,7 @@ q('toetsen','hellingse',3,'n = 12, r = 0,80, s_x = 2 en s_y = 5. Wat is s_b1 vol
  ('2,5','Dit is alleen de verhouding s_y/s_x. De wortelfactor ontbreekt.'),
  ('2','Dit is de regressiehelling r × s_y/s_x, niet de onzekerheid van die helling.'),
  ('0,036','Dit is alleen (1 − r²)/(n − 2), zonder wortel en zonder de verhouding van spreidingen.')],
- ['Vrijheidsgraden: 12 − 2 = 10.','De wortelfactor is √(0,36/10).','Vermenigvuldig met s_y/s_x = 5/2: s_b1 ≈ 0,47434. Dit is de onzekerheid van de geschatte helling, niet de helling zelf.'],
+ ['Vrijheidsgraden: 12 − 2 = 10.','De wortelfactor is √((1 − 0,80²)/10) = √(0,36/10).','Vermenigvuldig met s_y/s_x = 5/2: s_b1 ≈ 0,47434. Dit is de onzekerheid van de geschatte helling, niet de helling zelf.'],
  'De standaardfout van de helling combineert beide spreidingen, r en de vrijheidsgraden.',
  'De geschatte helling b1 en haar standaardfout s_b1 zijn verschillende grootheden.')
 q('toetsen','correlatie',3,'Bij enkelvoudige regressie zijn n = 12 en r = −0,80. Welke t hoort bij H0: rho = 0?',[
@@ -144,7 +144,7 @@ q('diagnostiek','autocorrectie',3,'Een opnieuw geschat model is ŷ_t = 10 + 2x_t
  ('19','Dit verliest het negatieve teken van het vorige residu en telt 1 op.'),
  ('18','Dit laat de autocorrelatiecorrectie met het vorige residu weg.'),
  ('Niet te bepalen zonder het huidige residu','Het model gebruikt het bekende vorige residu. Het huidige residu is niet nodig voor deze voorspelling.')],
- ['De lineaire component is 10 + 2 × 4 = 18.','De correctieterm is 0,5 × (−2) = −1.','De voorspelling is 17; beoordeel daarna de residuen van het aangepaste model.'],
+ ['De lineaire component is 10 + 2 × 4 = 18.','De correctieterm is 0,5 × (−2) = −1.','De voorspelling is 18 − 1 = 17; beoordeel daarna de residuen van het aangepaste model.'],
  'Bij een lag-1-correctie gebruik je het residu van de vorige periode.',
  'Verwar het bekende vorige residu niet met het nog onbekende huidige residu.')
 q('diagnostiek','dw',3,'Residuvolgorde: 1, 1, −1, −1. Wat is de Durbin-Watson-grootheid d?',[
@@ -152,7 +152,7 @@ q('diagnostiek','dw',3,'Residuvolgorde: 1, 1, −1, −1. Wat is de Durbin-Watso
  ('0','Alleen de som van de residuen is nul. De Durbin-Watson-formule gebruikt gekwadrateerde verschillen.'),
  ('4','4 is de teller. Je moet nog delen door de som van alle gekwadrateerde residuen.'),
  ('2','Dit is geen uitkomst van de gegeven residuen; d moet uit hun opeenvolgende verschillen worden berekend.')],
- ['Opeenvolgende verschillen zijn 0, −2 en 0.','De som van de gekwadrateerde verschillen is 4.','De som van alle gekwadrateerde residuen is 4: d = 4/4 = 1. Voor een toetsbeslissing heb je vervolgens de passende tabelgrenzen nodig.'],
+ ['Opeenvolgende verschillen zijn 0, −2 en 0.','De som van de gekwadrateerde verschillen is 0 + 4 + 0 = 4.','De som van alle gekwadrateerde residuen is 1 + 1 + 1 + 1 = 4: d = 4/4 = 1. Voor een toetsbeslissing heb je vervolgens de passende tabelgrenzen nodig.'],
  'Durbin-Watson gebruikt de oorspronkelijke tijdsvolgorde van de residuen.',
  'Een berekende d alleen is nog geen toetsbeslissing zonder geschikte tabelgrenzen.')
 q('diagnostiek','absres',3,'Voor n = 22 is r(x, |e|) = 0,50. De tweezijdige kritieke t is 2,086. Wat concludeer je met t ≈ 2,582?',[
