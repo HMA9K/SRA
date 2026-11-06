@@ -430,7 +430,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-options label.is-inc
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #mc-choice-status{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-runner .sra-exam-footer{background:#152129;border-top:1px solid #444d5f;box-shadow:0 -2px 8px #01030403}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>#mc-count{color:#adbdc9}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>.study-btn{border-color:#3b4a54;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>.study-btn,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools .original-pdf-actions .study-btn{border-color:#3b4a54;color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>.study-btn:last-child{border-color:#2d765d;color:#8deccb}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-mark-control:has(input:checked){background:#21172c}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-feedback{border:1px solid #3c6754;background:#182a1e;color:#99c1e1}
@@ -1449,7 +1449,7 @@ html[data-study-theme=dark] #calculator-dialog .calculator-float-head .study-cal
 html[data-study-theme=dark] .study-inline-launch{border:1px solid #3b4a54;background:#212b38;color:#f0f7fc}
 html[data-study-theme=dark] .study-tools-menu>nav>button[data-assistant-menu]{box-shadow:inset 0 0 0 1px #010304;background:#212b38;color:#f0f7fc}
 html[data-study-theme=dark] .study-tools-menu>nav>button[data-assistant-menu]:hover{background:#212b38;color:#f0f7fc}
-html[data-study-theme=dark] .original-pdf-actions .btn[aria-pressed=true]{border-color:#2d7667;background:#162c22;color:#8decd7}
+html[data-study-theme=dark] .original-pdf-actions [aria-pressed=true]{border-color:#2d7667;background:#162c22;color:#8decd7}
 html[data-study-theme=dark] .original-pdf-viewer{background:var(--study-surface,#152129);color:var(--study-text,#9bb8df)}
 html[data-study-theme=dark] .original-pdf-head{border-bottom:1px solid var(--study-line,#38526b)}
 html[data-study-theme=dark] .original-pdf-viewer iframe{background:#152129}

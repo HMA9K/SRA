@@ -1786,7 +1786,8 @@ html[data-study-theme=dark] .sra-analysis{--tv-panel:#152129;--tv-soft:#1e2a33;-
 .mc-runner .sra-exam-footer>div{display:flex;align-items:center;gap:8px}
 .mc-runner .sra-exam-footer .study-btn{font-size:12px;white-space:nowrap;min-height:33px;display:inline-flex;align-items:center;justify-content:center}
 .mc-footer-tools>#mc-count{font-size:11px;margin-right:10px;color:#666370}
-.mc-footer-tools>.study-btn{border-color:#6b5e76;color:#61526f}
+.mc-footer-tools>.study-btn,.mc-footer-tools .original-pdf-actions .study-btn{border-color:#6b5e76;color:#61526f}
+.mc-footer-tools .original-pdf-actions{gap:8px}
 .mc-footer-tools>.study-btn:last-child{border-color:#008859;color:#008859}
 .mc-mark-control{gap:6px;cursor:pointer}
 .mc-mark-control input{accent-color:#008859}
@@ -1829,6 +1830,13 @@ html[data-study-theme=dark] .sra-analysis{--tv-panel:#152129;--tv-soft:#1e2a33;-
 .mc-result-list .mc-feedback{margin:0 18px 18px}
 .mc-result-list details>.study-btn{margin:0 18px 18px}
 .mc-result-list details>p{padding:0 18px}
+/* Vier PDF-knoppen naast de vraagknoppen: eerder over twee regels dan onder de rand. */
+@media(max-width:1300px){
+ .mc-page{padding-bottom:122px}
+ .mc-runner .sra-exam-footer{flex-wrap:wrap}
+ .mc-runner .sra-exam-footer .mc-footer-tools{flex-wrap:wrap;margin-left:auto;justify-content:flex-end}
+ .mc-footer-tools>#mc-count{flex-basis:100%;text-align:right}
+}
 @media(max-width:1100px){
  .mc-question-layout{grid-template-columns:minmax(0,1fr) 260px;padding:0 28px 28px}
  .mc-runner .sra-runner-head{padding:28px}
@@ -1839,10 +1847,6 @@ html[data-study-theme=dark] .sra-analysis{--tv-panel:#152129;--tv-soft:#1e2a33;-
  .mc-question-layout{grid-template-columns:minmax(0,1fr);gap:20px}
  .mc-question-help{grid-row:1}
  .mc-question-help>details{max-width:100%}
- .mc-page{padding-bottom:122px}
- .mc-runner .sra-exam-footer{flex-wrap:wrap}
- .mc-runner .sra-exam-footer .mc-footer-tools{flex-wrap:wrap;margin-left:auto;justify-content:flex-end}
- .mc-footer-tools>#mc-count{flex-basis:100%;text-align:right}
 }
 @media(max-width:600px){
  .mc-intro h2{font-size:22px}
@@ -1904,6 +1908,9 @@ html:has(.mc-page){scroll-padding-top:75px;scroll-padding-bottom:145px}
 .mc-case-current-label{margin:0 0 8px;font-size:.8rem;font-weight:700;color:var(--study-teal,#008577)}
 /* Zonder casusinhoud klapt het vak in; de PDF heeft de volle kolomhoogte nodig. */
 .mc-case-panel.original-pdf-left{height:calc(100dvh - 216px)}
+/* Naast een open uitwerking scrollt de vraagkolom zelf: de casus staat dan bovenaan die kolom. */
+.study-assistant-layout .mc-case-panel{top:0;max-height:var(--sa-pane-height)}
+.study-assistant-layout .mc-case-panel.original-pdf-left{height:var(--sa-pane-height)}
 .mc-case-panel h2{font-size:1rem;margin:0 0 12px}.mc-case-panel table{display:block;max-width:100%;overflow-x:auto}.mc-case-panel img{max-width:100%;height:auto}.mc-case-panel p{text-align:justify;hyphens:auto}
 .mc-case-panel .mc-stimulus{padding:0;margin:0;border:0;background:transparent}.mc-question-tools .mc-source-filter{margin:8px 0 0}.mc-question-tools .mc-source-filter select{min-width:0}
 .mc-case-resizer{min-height:350px;align-self:stretch;cursor:col-resize;touch-action:none;border-inline:1px solid var(--line)}.mc-case-resizer:focus-visible,.mc-case-resizer:hover,.mc-case-resizer[data-dragging]{background:var(--study-teal,#008577)}
@@ -3782,7 +3789,7 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-options label.is-inc
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) #mc-choice-status{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-runner .sra-exam-footer{background:#152129;border-top:1px solid #444d5f;box-shadow:0 -2px 8px #01030403}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>#mc-count{color:#adbdc9}
-html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>.study-btn{border-color:#3b4a54;color:#adbdc9}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>.study-btn,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools .original-pdf-actions .study-btn{border-color:#3b4a54;color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-footer-tools>.study-btn:last-child{border-color:#2d765d;color:#8deccb}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-mark-control:has(input:checked){background:#21172c}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-feedback{border:1px solid #3c6754;background:#182a1e;color:#99c1e1}
@@ -4801,7 +4808,7 @@ html[data-study-theme=dark] #calculator-dialog .calculator-float-head .study-cal
 html[data-study-theme=dark] .study-inline-launch{border:1px solid #3b4a54;background:#212b38;color:#f0f7fc}
 html[data-study-theme=dark] .study-tools-menu>nav>button[data-assistant-menu]{box-shadow:inset 0 0 0 1px #010304;background:#212b38;color:#f0f7fc}
 html[data-study-theme=dark] .study-tools-menu>nav>button[data-assistant-menu]:hover{background:#212b38;color:#f0f7fc}
-html[data-study-theme=dark] .original-pdf-actions .btn[aria-pressed=true]{border-color:#2d7667;background:#162c22;color:#8decd7}
+html[data-study-theme=dark] .original-pdf-actions [aria-pressed=true]{border-color:#2d7667;background:#162c22;color:#8decd7}
 html[data-study-theme=dark] .original-pdf-viewer{background:var(--study-surface,#152129);color:var(--study-text,#9bb8df)}
 html[data-study-theme=dark] .original-pdf-head{border-bottom:1px solid var(--study-line,#38526b)}
 html[data-study-theme=dark] .original-pdf-viewer iframe{background:#152129}
@@ -5748,8 +5755,8 @@ body.original-pdf-open .study-assistant-launch-wrap{display:none!important}
 
 .original-pdf-actions{display:inline-flex;gap:6px;flex-wrap:wrap;align-items:center}
 .exam-dashboard-content td .original-pdf-actions{display:flex;margin-top:8px}
-.original-pdf-actions .btn{white-space:nowrap}
-.original-pdf-actions .btn[aria-pressed=true]{border-color:#00866a;background:#edf8f3;color:#006d55}
+.original-pdf-actions .btn,.original-pdf-actions .study-btn{white-space:nowrap}
+.original-pdf-actions [aria-pressed=true]{border-color:#00866a;background:#edf8f3;color:#006d55}
 .original-pdf-viewer{display:flex;flex-direction:column;min-width:0;min-height:0;height:100%;background:var(--study-surface,#fff);color:var(--study-text,#172c48)}
 .original-pdf-head{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;padding:10px;border-bottom:1px solid var(--study-line,#d9e2eb);font-size:14px}
 .original-pdf-head .btn{font-size:12px;min-height:30px;padding:5px 8px}
@@ -77056,11 +77063,13 @@ function createAssistantPanel(panel,options={}){
     separator.setAttribute('aria-valuenow',String(Math.round(width)));separator.setAttribute('aria-valuetext',Math.round(width)+' procent uitwerkingbreedte');
     const short=stacked&&v.h<500;doc.body.classList.toggle('study-assistant-short',short);
     page?.classList.toggle('study-assistant-short-page',v.h<600);
-    const footer=page?.querySelector('.question-nav')||doc.querySelector('#exam-app:not([hidden]) .exam-footer');
+    const footer=page?.querySelector('.question-nav')||doc.querySelector('#exam-app:not([hidden]) .exam-footer,.mc-runner .sra-exam-footer');
     const top=safeTop(v),footerHeight=!short&&!modal?(footer?.getBoundingClientRect().height||0):0;
     const scale=win.StudyScale?.get()||1;
     const available=Math.max(100,(v.h-top+v.y-footerHeight)/scale-12);
-    layout.style.setProperty('--sa-pane-height',Math.min(modal?620:680,available)+'px');
+    // Naast de vraag vult het paneel de ruimte tot de onderbalk; 680 blijft de maat voor regels verderop in een lijst.
+    const room=(v.h-Math.max(top,layout.getBoundingClientRect().top)+v.y-footerHeight)/scale-12;
+    layout.style.setProperty('--sa-pane-height',(modal?Math.min(620,available):stacked?Math.min(680,available):Math.max(Math.min(680,available),room))+'px');
     if(page)page.style.setProperty('--sa-page-height',Math.max(160,(v.h-Math.max(top,page.getBoundingClientRect().top)+v.y)/scale-12)+'px');
     const renderedHeight=stacked?Math.min(680,available):layout.getBoundingClientRect().height;
     if(slot!==panel){
@@ -77162,12 +77171,16 @@ function context(){
  return {id:match?.[1],host:document.getElementById('exam-app'),key:location.hash};
 }
 
+// Naslag bij iedere vraag, ook zonder eigen tentamen-PDF. Opent net als een bronverwijzing in een nieuw tabblad.
+const REFERENCE_PDFS=[['Formuleblad','bronnen/formuleblad.pdf'],['Tabellenbundel','bronnen/tabellenbundel.pdf']];
 function actions(id,download=false){
-  const source=originalPdfs[id];if(!source)return null;
-  const group=document.createElement('span');group.className='original-pdf-actions';group.dataset.pdfExam=id;
-  for(const [kind,label] of [['questions','Tentamen PDF'],['solutions','Uitwerking PDF']]){
+  const source=originalPdfs[id];if(!source&&download)return null;
+  // In de oefenomgeving dezelfde knop als de buren in de onderbalk.
+  const buttonClass=document.querySelector('.mc-page')?'study-btn':'btn';
+  const group=document.createElement('span');group.className='original-pdf-actions';if(source)group.dataset.pdfExam=id;
+  if(source)for(const [kind,label] of [['questions','Tentamen PDF'],['solutions','Uitwerking PDF']]){
     const directDownload=false;
-    const button=document.createElement(directDownload&&source[kind].url?'a':'button');button.className='btn';
+    const button=document.createElement(directDownload&&source[kind].url?'a':'button');button.className=buttonClass;
     button.dataset.pdfExam=id;button.textContent=label+(kind==='questions'&&directDownload?' downloaden':'');
     if(directDownload&&source[kind].url){
       button.href=source[kind].url;button.download='CAFA2-'+source.date+'-'+(kind==='questions'?'tentamen':'uitwerking')+'.pdf';
@@ -77175,6 +77188,10 @@ function actions(id,download=false){
     }else{button.type='button';button.dataset.originalPdf=kind;button.setAttribute('aria-pressed','false');}
     if(!source[kind].url){button.disabled=true;button.title=source[kind].reason;button.setAttribute('aria-describedby','original-pdf-missing');}
     group.append(button);
+  }
+  if(!download)for(const [label,file] of REFERENCE_PDFS){
+    const button=document.createElement('button');button.type='button';button.className=buttonClass;button.textContent=label;
+    button.dataset.referencePdf=file;button.title='Opent in een nieuw tabblad';group.append(button);
   }
   return group;
 }
@@ -77266,7 +77283,7 @@ function mount(){
   if(left&&(!left.panel.isConnected||!ctx.host?.contains(left.panel)))openLeft(left.id,left.opener,true);
   placeLeft();if(right?.open)dock.refresh();
   const target=ctx.host?.querySelector('.exam-footer .actions,.mc-footer-tools,.question-nav .nav-left')||ctx.host?.querySelector('.question-nav,.exam-welcome-actions,.exam-paper .actions');
-  if(target&&originalPdfs[ctx.id]&&!target.querySelector('.original-pdf-actions'))target.append(actions(ctx.id));
+  if(target&&!target.querySelector('.original-pdf-actions'))target.append(actions(ctx.id));
   const welcome=ctx.host?.querySelector('.exam-paper');
   if(location.hash.startsWith('#welkom/')&&welcome&&originalPdfs[ctx.id]&&!welcome.querySelector('.original-pdf-actions'))welcome.append(actions(ctx.id));
   document.querySelectorAll('#exam-app a.exam-name').forEach(link=>{
@@ -77285,6 +77302,7 @@ document.addEventListener('click',event=>{
   if(event.target.closest('[data-cirrus-float],[data-exam-action="section"],[data-practice-case]')&&left)closeLeft();
   const close=event.target.closest('[data-pdf-close]');if(close){if(close.dataset.pdfClose==='questions')closeLeft();else closeRight();return;}
   if(event.target.closest('[data-pdf-assistant]')){window.StudyAssistant?.resume();return;}
+  const reference=event.target.closest('[data-reference-pdf]');if(reference){window.open(reference.dataset.referencePdf,'_blank','noopener');return;}
   const button=event.target.closest('[data-original-pdf]');if(!button||button.disabled)return;
   if(button.dataset.originalPdf==='questions')openLeft(button.dataset.pdfExam,button);else openRight(button.dataset.pdfExam,button);
 },true);
