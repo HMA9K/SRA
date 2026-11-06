@@ -92,7 +92,7 @@ def enhance(lessons, sources):
     shared+='Behoud ze in deze analyse. Alle vijf modellen geven signalen van heteroscedasticiteit. Onderzoek daarom een beter passende modelvorm of weging en herhaal daarna de diagnoses. '
     shared+='Een hoge R² en VIF onder 10 lossen ongelijke residuspreiding niet op. Tijdsvertraging en autocorrelatie passen niet bij deze crosssectie; Auto is een identificatie, geen tijdsvolgorde.</p>'
     body+=shared
-    add(L['tentamen'],sources,'College 8: brondata en modelkeuze',body,[ref('spss',37,'College 8: opdracht, PDF 37'),ref('spss',45,'Gezamenlijke en groepsmodellen, PDF 45–47'),ref('spss',39,'Enkelvoudige diagnoses, PDF 39–42'),ref('formules',3,'Cursusgrenzen voor regressiediagnostiek')])
+    add(L['tentamen'],sources,'College 8: brondata en modelkeuze',body,[ref('spss',37,'College 8: opdracht, PDF 37'),ref('spss',45,'Gezamenlijke en groepsmodellen, PDF 45–47'),ref('spss',39,'Enkelvoudige diagnoses, PDF 39–42'),ref('formules',3,'Grenzen voor regressiediagnostiek')])
 
     for name,model in models.items():
         d=model['diagnostics']
@@ -111,7 +111,7 @@ def enhance(lessons, sources):
         asset=f'assets/learning/college8-{name.lower()}.png'
         body+=f'<figure class="learning-figure"><a href="{asset}" target="_blank" rel="noopener"><img src="{asset}" loading="lazy" style="max-width:100%;height:auto" alt="Werkelijke tegen voorspelde waarde en residuen voor {name}; gemarkeerde auto’s staan ook in de diagnosetabel."></a><figcaption>De diagonale lijn geeft werkelijke waarde = voorspelling; de tweede grafiek toont residuen en auto-nummers voor nader onderzoek. Open voor vergroting.</figcaption></figure>'
         listed=lambda xs:', '.join(map(str,xs)) if xs else 'Geen'
-        body+=table('Diagnoses met de cursusgrenzen',['Controle','Uitkomst','Grens','Auto-nummers voor nader onderzoek'],[
+        body+=table('Diagnoses met de grenzen',['Controle','Uitkomst','Grens','Auto-nummers voor nader onderzoek'],[
             ['Uitbijters y',f"z min {num(d['zMin'])}; max {num(d['zMax'])}",f"±{d['zLimit']}",listed(d['zCandidates'])],
             ['Uitbijters x',f"MD max {num(d['mdMax'])}",f"Gemiddelde + 3s = {num(d['mdLimit'])}",listed(d['mdCandidates'])],
             ['Invloed',f"Cook max {num(d['cookMax'])}",f"Gemiddelde + 3s = {num(d['cookLimit'])}",listed(d['cookCandidates'])],
@@ -126,7 +126,7 @@ def enhance(lessons, sources):
             body+='<p>De bron houdt Kilometerstand (p ≈ 0,085) en Aantal opknapbeurten (p ≈ 0,078) in dit eindmodel. '
             body+='Die zijn bij een tweezijdige α van 0,05 niet significant. De getoonde eindselectie is dus niet hetzelfde als backward met een verwijderingsgrens van 0,05. '
             body+='Vermeld het gekozen criterium; bij een andere grens moet het model opnieuw worden geschat. Een variabele wegstrepen terwijl de andere B’s gelijk blijven is onjuist.</p>'
-        add(L['tentamen'],sources,'College 8: volledige uitwerking '+name,body,[ref('spss',39,'Enkelvoudige diagnoses, PDF 39–42'),ref('spss',45,'Gepubliceerde eindmodellen, PDF 45–47'),ref('formules',3,'Cursusgrenzen voor regressiediagnostiek')])
+        add(L['tentamen'],sources,'College 8: volledige uitwerking '+name,body,[ref('spss',39,'Enkelvoudige diagnoses, PDF 39–42'),ref('spss',45,'Gepubliceerde eindmodellen, PDF 45–47'),ref('formules',3,'Grenzen voor regressiediagnostiek')])
 
     body='<p>Werk eerst zelf. Gebruik de tabellen hierboven als uitvoer, net als bij een tentamen. Schrijf bij ieder antwoord de gebruikte modelnaam op.</p>'
     body+=answer('1. Wat betekent B = −2.879,450 bij Aandrijving=Diesel in het gezamenlijke model?',

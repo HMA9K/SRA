@@ -24,10 +24,10 @@ REVIEW['20231030'] = [
 ('G','Backward begint met alle kandidaten en verwijdert telkens de minst significante, met herschatting na iedere stap.'),
 ('G','Model3 heeft hoogste adjusted R²0,164 tegenover0,162/0,163.'),
 ('G','R²0,166 is beperkte verklaringskracht ondanks kleine p-waarden; significantie is niet hetzelfde als bruikbare voorspelkwaliteit.'),
-('G','Model 3 heeft VIF=1,002<10: geen probleem volgens de cursusgrens.'),
+('G','Model 3 heeft VIF=1,002<10: geen probleem volgens de grens.'),
 ('B','Voor model3 zijn er twee voorspellers: df=746−2−1=743, niet744 zoals in het antwoordmodel. Met de gehanteerde z-benadering blijft de grens−1,645 en t−11,223 ligt in het kritieke gebied.'),
 ('G','189,596−0,971×60+8,081=139,417≈139,42 per minuut; bloeddruk staat niet in model3.'),
-('N','Volgens de cursuskeuze KS bij n564 is p0,098>0,05; de dubbele top is verdwenen. De algemene cursusgrens voor KS is n>50, niet n>100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p0,010.'),
+('N','Volgens de cursuskeuze KS bij n564 is p0,098>0,05; de dubbele top is verdwenen. De algemene grens voor KS is n>50, niet n>100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p0,010.'),
 ]
 REVIEW['20240318'] = [
 ('G','MPU: gemiddelde9278, s572, totaal44.070.500; eenzijdige t1,661 geeft ondergrens43.623.935, naar beneden43.623.000.'),
@@ -49,7 +49,7 @@ REVIEW['20240318'] = [
 ('B','MD-grens3,594 en maximum3,070 geven geen x-signaal. Voor y volgt de sleutel de afgedrukte Std.Residual-max2,991. Dezelfde tabel geeft echter maximaal residu3.248,623; delen door s_e938,0776 geeft circa3,463>3. Die bronwaarden zijn onderling inconsistent. Zonder ruwe data is niet vast te stellen welke cel fout is; noem expliciet welke kolom je volgt.'),
 ('G','Spreidingsdiagram van kosten tegen leeftijd is de gevraagde grafiek; formele invloed beoordeel je daarnaast met Cook en modelsensitiviteit.'),
 ('G','KS-p≥0,200 en ABSRES/leeftijd p0,123: beide H0 niet verwerpen op5%.'),
-('G','Model 3 heeft een maximale VIF van 1,003<10: geen probleem volgens de cursusgrens.'),
+('G','Model 3 heeft een maximale VIF van 1,003<10: geen probleem volgens de grens.'),
 ('G','BMI heeft bij toevoegen aan model3 p0,865 en voldoet niet aan de forward-toelatingsgrens0,05.'),
 ('G','Model3 geeft−4195,957+269,056×61+400,700=12.617,159, afgerond12.617 dollar.'),
 ('G','Adjusted R² stijgt van0,942 naar0,959 bij dezelfde respons/data.'),
@@ -77,7 +77,7 @@ REVIEW['20241028'] = [
 ]
 REVIEW['20250317'] = [
 ('G','Verschilschatter: fouten niet afhankelijk van boekwaarde.'),
-('G','43 foutposten voldoet aan de cursusgrens van minstens 30.'),
+('G','43 foutposten voldoet aan de grens van minstens 30.'),
 ('N','Puntschatting 1.804.220; standaardfout 3.883,51229; ongeronde grenzen 1.796.550,06 en 1.811.889,94. De officiële grenzen 1.790.000 en 1.820.000 gebruiken bewust naar buiten afronden op 10.000, niet gewoon afronden naar het dichtstbijzijnde bedrag.'),
 ('G','Evenredige verdeling 43/31/29/27 telt op tot 130; Neyman vereist spreidingen per stratum.'),
 ('G','Vier strata 148.503 plus werkelijk topstratum 22.580 geeft 171.083.'),
@@ -98,7 +98,7 @@ REVIEW['20250317'] = [
 ('C','De bronberekening is 739,508+38,495×50+71,550×10+2.237,947=5.617,705. Op gehele euro’s afgerond is dit €5.618, niet €5.617 zoals in het antwoordmodel.'),
 ('G','Gebruik n200 uit de ANOVA, k6 en df193. t−2,444<−1,653: eenzijdig negatief verband voor vrouw bij gelijkblijvende overige variabelen.'),
 ('N','Beoordeling heeft p0,179 en valt bij de eerste backwardstap af. Schat daarna opnieuw; de huidige tabel bepaalt niet automatisch de volledige verdere selectie of de nieuwe coëfficiënten.'),
-('G','VIFmax1,355 ligt onder cursusgrens10.'),
+('G','VIFmax1,355 ligt onder grens10.'),
 ('N','Volgens de cursuskeuze KS bij n200 is p0,061>0,05, dus H0 niet verwerpen. Dat bewijst normaliteit niet; Shapiro-Wilk geeft in dezelfde tabel p<0,001. Benoem welke toets de cursus hier verlangt.'),
 ('N','Aanvullende inhoudelijk relevante voorspellers kunnen resterende variatie verklaren. Een betere voorspelling verandert de werkelijke salarisverschillen niet; beoordeel nieuwe modellen ook op onafhankelijke gegevens.'),
 ]
@@ -120,7 +120,7 @@ REVIEW['20230315'] = [
 ('G','MSE=15.173,681/53=286,296; residuele standaardafwijking is de wortel, circa 16,92 minuten.'),
 ('G','t=6,237 is groter dan de tabelgrens 1,676 bij circa 50 vrijheidsgraden: H0 verwerpen ten gunste van een positieve helling.'),
 ('B','Gebruik de residuele standaardafwijking uit vraag 14, niet uit vraag 15 zoals de terugverwijzing luidt. Bij 20 km: voorspelling 152,689; n=55, gemiddelde afstand 18,04, s_x=3,522. Met cursus-t=1,676 is het 90%-voorspellingsinterval circa [123,99;181,39], naar buiten afgerond [123;182] minuten.'),
-('G','Adjusted R² stijgt van 0,412 naar 0,805. VIFmax=1,073 ligt onder de cursusgrens 10: geen aanwijzing voor problematische multicollineariteit.'),
+('G','Adjusted R² stijgt van 0,412 naar 0,805. VIFmax=1,073 ligt onder de grens 10: geen aanwijzing voor problematische multicollineariteit.'),
 ('G','Chauffeur is uitgesloten met p=0,206>0,05; dat is de gegeven selectiereden.'),
 ('N','De stelling dat het model met alle voorspellers altijd het beste is, is onjuist. Gewoon R² daalt niet bij toevoegen op dezelfde gegevens, maar onnodige variabelen kunnen de voorspelkwaliteit schaden. Gebruik adjusted R², inhoudelijke relevantie en modelcontrole.'),
 ]
@@ -220,7 +220,7 @@ REVIEW['20200323'] = [
 ('G','PercCityLiving vertoont in de onderste rechtergrafiek kromming; deze voorspeller komt in aanmerking voor een transformatie.'),
 ('G','Transformatie van de afhankelijke variabele verandert de relaties met alle voorspellers. Controleer daarna opnieuw hun vorm, de residuen en de interpretatie.'),
 ('N','Begin met het volledige model, verwijder de hoogste p-waarde als die het criterium overschrijdt en schat daarna opnieuw. Stop zodra geen voorspeller meer voldoet aan het verwijdercriterium; beoordeel steeds de nieuwe p-waarden.'),
-('G','VIF=216,623 en 216,879 liggen ver boven cursusgrens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.'),
+('G','VIF=216,623 en 216,879 liggen ver boven grens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.'),
 ('G','Van de drie getoonde modellen heeft model 2 het hoogste adjusted R²: 0,927 tegenover 0,901 en 0,924; op het gevraagde criterium is model 2 de keuze.'),
 ('G','Meest significant: PercCityLiving, p=0,001 en |t|=4,306. Minst significant: PercLowIncomeUnempl, p=0,073 en |t|=1,940. Vergelijk p of absolute t, niet B of Beta.'),
 ]
@@ -245,7 +245,7 @@ REVIEW['20251028'] = [
 ('N','MD-grens 13,911, maximum 24,878: gevallen 11, 24, 43. Bij n ≤ 100 geldt z ±2: gevallen 6 en 20. Cook-grens 0,054, maximum 0,129: geval 11. Gevallen 24 en 43 gaan weg wegens de gemelde manipulatie, niet om het signaal. Het model verwijdert ook 11; een signaal alleen bewijst geen fout, dus onderzoek en motiveer dit.'),
 ('G','Na verwijderen veranderen gemiddelde en spreiding van de diagnostieken. Grenzen worden krapper, dus eerst opnieuw controleren op invloedrijke punten.'),
 ('N','KS bij n 94: p 0,200 > 0,10. ABSRES met age p 0,347 en met hits p 0,139. Niet verwerpen is geen bewijs. n 94 betekent zes verwijderde gevallen; de bron noemt alleen vervolgonderzoek, niet welke drie extra waarnemingen zijn vervallen.'),
-('G','Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de cursusgrens.'),
+('G','Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de grens.'),
 ('G','91,008 − 0,142 × 27 + 0,027 × 126 = 90,576, afgerond 90,6. Residu 92 − 90,6 = 1,4.'),
 ('G','De coëfficiënt is negatief en H1 is β < 0, dus eenzijdig 0,009/2 = 0,0045.'),
 ('N','Log 0,375 en Power 0,377 liggen boven Linear en Exponential 0,318. De R² van Power hoort bij ln(y) en is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke schaal. Het logaritmische model houdt y ongewijzigd.'),
@@ -273,6 +273,6 @@ REVIEW['20260323'] = [
 ('G','ŷ 679.459,5; s_e 112.592,1; t 1,977 geeft ± 226.299,8, dus [453.159,7; 905.759,3]. Bij 10.000 ft² is dit extrapolatie: het maximum is 4.950 ft², dus geen interval.'),
 ('B','Adjusted R² stijgt van 0,572 naar 0,667: een verbetering. De vraag verwijst naar Afbeelding 3.1; die bestaat niet, bedoeld is Afbeelding 3.'),
 ('B','Alle drie p-waarden zijn < 0,001, dus achterwaartse eliminatie verwijdert niets. De opgave geeft 4 punten en het model 3; zonder dat punt telt het model op tot 99. De opgave is hier leidend.'),
-('G','VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de cursusgrens.'),
+('G','VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de grens.'),
 ('B','Meer verklarende variabelen of een grotere steekproef zijn passend. Het model noemt twee uitbijters in x, maar vraag 2.7 vindt er drie: 20, 57 en 123. Verwijder alleen bij een aangetoonde oorzaak.'),
 ]

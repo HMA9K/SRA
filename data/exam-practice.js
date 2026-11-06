@@ -1950,7 +1950,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -1976,8 +1976,8 @@ window.SRAExamPractice = {
       "originalPromptHtml": "<p>De onderzoekers zijn niet tevreden over het model uit afbeelding 12. Zij achten het model niet bruikbaar. Wat is er mis met dit model?</p>",
       "sourceVisualHtml": "",
       "options": [
-        "VIF = 216,623 en 216,879 liggen ver boven cursusgrens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
-        "VIF rond 217 ligt onder de cursusgrens 10.",
+        "VIF = 216,623 en 216,879 liggen ver boven grens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
+        "VIF rond 217 ligt onder de grens 10.",
         "Grote VIF maakt afzonderlijke coefficienten juist extra stabiel.",
         "VIF rond 217 bewijst uitsluitend niet-normaliteit."
       ],
@@ -1997,8 +1997,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Hoge multicollineariteit, twee variabelen hebben hoge VIF (VIF~217) 2 punten<br>en dat is veel groter dan de toegestane 10. 1 punt</p>",
-      "sourceNote": "VIF = 216,623 en 216,879 liggen ver boven cursusgrens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
-      "explanation": "VIF = 216,623 en 216,879 liggen ver boven cursusgrens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
+      "sourceNote": "VIF = 216,623 en 216,879 liggen ver boven grens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
+      "explanation": "VIF = 216,623 en 216,879 liggen ver boven grens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
       "steps": [
         "Afbeelding 12c, kolom VIF: 216,623, 2,781, 216,879 en 2,978.",
         "Vergelijk met de grens 10: twee waarden liggen daar ver boven.",
@@ -2015,7 +2015,7 @@ window.SRAExamPractice = {
       "trap": "Laat je niet afleiden door de hoge R² van 0,958 en de lage p-waarden. Die laten dit probleem niet zien. Alleen de VIF-kolom doet dat.",
       "recognition": {
         "signals": "Afbeelding 12c: VIF = 216,623 bij Inhabitants en 216,879 bij Inhabitants unemployed, met Tolerance 0,005. De R² is wel 0,958.",
-        "meaning": "De VIF meet hoeveel een voorspeller overlapt met de andere voorspellers. De cursusgrens is 10. Een VIF van ongeveer 217 wijst op zeer hoge multicollineariteit.",
+        "meaning": "De VIF meet hoeveel een voorspeller overlapt met de andere voorspellers. De grens is 10. Een VIF van ongeveer 217 wijst op zeer hoge multicollineariteit.",
         "approach": "Kijk ook bij een model met goede p-waarden in de kolommen Collinearity Statistics. Vergelijk elke VIF met 10.",
         "answer": "Hoge multicollineariteit, de twee variabelen met VIF rond 217, en dat dit veel groter is dan de toegestane 10."
       },
@@ -2091,7 +2091,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -2820,7 +2820,7 @@ window.SRAExamPractice = {
       "options": [
         "Volgens de vuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
         "50 waarnemingen bewijzen zonder nadere controle dat het model overfit is.",
-        "Tien voorspellers vereisen volgens de cursusregel slechts tien waarnemingen.",
+        "Tien voorspellers vereisen volgens de regel slechts tien waarnemingen.",
         "Meer voorspellers kunnen het risico op overfitting nooit vergroten."
       ],
       "correct": 0,
@@ -2863,7 +2863,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -3426,7 +3426,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -3495,7 +3495,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -3594,7 +3594,7 @@ window.SRAExamPractice = {
         "Iedere VIF groter dan 1 vereist verwijdering.",
         "VIF = 2,669 bewijst exacte residunormaliteit.",
         "Model 2: VIFmax = 2,669 < 10, dus volgens de cursus geen problematische multicollineariteit.",
-        "VIFmax = 2,669 overschrijdt de cursusgrens 10."
+        "VIFmax = 2,669 overschrijdt de grens 10."
       ],
       "correct": 2,
       "level": 3,
@@ -4100,7 +4100,7 @@ window.SRAExamPractice = {
         "Alleen het totale aantal 160 bewijst dat er minimaal 30 fouten zijn.",
         "Bij voldoende fouten zijn aselecte trekking en onafhankelijkheid overbodig.",
         "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een vuistregel.",
-        "42 fouten zijn minder dan de cursusgrens 30."
+        "42 fouten zijn minder dan de grens 30."
       ],
       "correct": 2,
       "level": 3,
@@ -4947,7 +4947,7 @@ window.SRAExamPractice = {
       "sourceVisualHtml": "",
       "options": [
         "Bij n = 54 gebruikt de cursus ±2. Gevallen 19, 25, 53 en 71 vallen op; zonder aangetoonde fout of bijzondere oorzaak behouden.",
-        "Bij n = 54 is de cursusgrens ±3.",
+        "Bij n = 54 is de grens ±3.",
         "Verwijder alle vier gevallen uitsluitend omdat hun residu groot is.",
         "Een groot residu bewijst dat de bijbehorende invoer fout is."
       ],
@@ -5375,7 +5375,7 @@ window.SRAExamPractice = {
       "sourceVisualHtml": "",
       "options": [
         "VIFmax = 1,550 < 10: volgens de cursus geen problematische multicollineariteit.",
-        "VIF = 1,550 overschrijdt de cursusgrens 10.",
+        "VIF = 1,550 overschrijdt de grens 10.",
         "Elke VIF boven 1 vereist verwijdering van alle voorspellers.",
         "VIF = 1,550 betekent dat 155% van de variatie is verklaard."
       ],
@@ -5558,7 +5558,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -6715,7 +6715,7 @@ window.SRAExamPractice = {
       "sourceVisualHtml": "",
       "options": [
         "VIFmax = 3,056 < 10: volgens de cursus geen problematische multicollineariteit.",
-        "VIFmax = 3,056 overschrijdt de cursusgrens 10.",
+        "VIFmax = 3,056 overschrijdt de grens 10.",
         "Iedere VIF boven 1 bewijst een ernstig probleem.",
         "VIF meet het percentage verklaarde variatie in prijs."
       ],
@@ -6829,7 +6829,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -7112,7 +7112,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -8807,8 +8807,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20230315/antwoord-17-4.jpg\" alt=\"antwoord-17 · bronpagina 4\">",
-      "sourceNote": "Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de cursusgrens 10: geen aanwijzing voor problematische multicollineariteit.",
-      "explanation": "Op dezelfde respons en gegevens stijgt adjusted R² van 0,412 naar 0,805; dit ondersteunt het meervoudige model. Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de cursusgrens 10: geen aanwijzing voor problematische multicollineariteit.",
+      "sourceNote": "Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de grens 10: geen aanwijzing voor problematische multicollineariteit.",
+      "explanation": "Op dezelfde respons en gegevens stijgt adjusted R² van 0,412 naar 0,805; dit ondersteunt het meervoudige model. Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de grens 10: geen aanwijzing voor problematische multicollineariteit.",
       "steps": [
         "Enkelvoudig Model, Afbeelding 15: adjusted R² = 0,412.",
         "Meervoudig Model, Afbeelding 16: adjusted R² = 0,805.",
@@ -8831,7 +8831,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -8857,7 +8857,7 @@ window.SRAExamPractice = {
       "originalPromptHtml": "<p>a. (3) Geef gemotiveerd aan welk model de voorkeur verdient.</p><p>b. (3) Heeft het toevoegen van meerdere variabelen tot problemen geleid met multicollineariteit?</p>",
       "sourceVisualHtml": "",
       "options": [
-        "VIFmax = 1,073 < 10: volgens de cursusgrens geen aanwijzing voor problematische multicollineariteit.",
+        "VIFmax = 1,073 < 10: volgens de grens geen aanwijzing voor problematische multicollineariteit.",
         "VIFmax = 1,073 is problematisch omdat elke VIF boven 1 fout is.",
         "Een stijging van adjusted R² bewijst ernstige multicollineariteit.",
         "Multicollineariteit kan alleen bij enkelvoudige regressie optreden."
@@ -8878,8 +8878,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20230315/antwoord-17-4.jpg\" alt=\"antwoord-17 · bronpagina 4\">",
-      "sourceNote": "Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de cursusgrens 10: geen aanwijzing voor problematische multicollineariteit.",
-      "explanation": "VIFmax = 1,073 < 10: volgens de cursusgrens geen aanwijzing voor problematische multicollineariteit. Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de cursusgrens 10: geen aanwijzing voor problematische multicollineariteit.",
+      "sourceNote": "Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de grens 10: geen aanwijzing voor problematische multicollineariteit.",
+      "explanation": "VIFmax = 1,073 < 10: volgens de grens geen aanwijzing voor problematische multicollineariteit. Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de grens 10: geen aanwijzing voor problematische multicollineariteit.",
       "steps": [
         "Afbeelding 17: de VIF-waarden zijn 1,050, 1,023 en 1,073.",
         "VIFmax = 1,073.",
@@ -8971,7 +8971,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -9044,7 +9044,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -9819,7 +9819,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -10592,7 +10592,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -10661,7 +10661,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -10732,7 +10732,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -10758,8 +10758,8 @@ window.SRAExamPractice = {
       "originalPromptHtml": "<p>Voer de controle uit op multicollineariteit.</p>",
       "sourceVisualHtml": "",
       "options": [
-        "Model 3 heeft VIF = 1,002 < 10: geen probleem volgens de cursusgrens.",
-        "VIF = 1,002 overschrijdt de cursusgrens van 1 en is daarom ernstig.",
+        "Model 3 heeft VIF = 1,002 < 10: geen probleem volgens de grens.",
+        "VIF = 1,002 overschrijdt de grens van 1 en is daarom ernstig.",
         "Multicollineariteit wordt uitsluitend bepaald door het model-R².",
         "Alle meervoudige regressiemodellen hebben noodzakelijk problematische multicollineariteit."
       ],
@@ -10779,8 +10779,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Afbeelding 11: Model 3: VIF = 1,002 &lt; 10 dus geen probleem met multicollineariteit</p>",
-      "sourceNote": "Model 3 heeft VIF = 1,002 < 10: geen probleem volgens de cursusgrens.",
-      "explanation": "Model 3 heeft VIF = 1,002 < 10: geen probleem volgens de cursusgrens.",
+      "sourceNote": "Model 3 heeft VIF = 1,002 < 10: geen probleem volgens de grens.",
+      "explanation": "Model 3 heeft VIF = 1,002 < 10: geen probleem volgens de grens.",
       "steps": [
         "Afbeelding 11, Model 3: VIF = 1,002 voor beide variabelen.",
         "Grens: een probleem pas bij VIF boven 10.",
@@ -10977,9 +10977,9 @@ window.SRAExamPractice = {
       "sourceVisualHtml": "",
       "options": [
         "p = 0,098 bewijst normale residuen en maakt het histogram irrelevant.",
-        "KS wordt volgens de algemene cursusregel pas vanaf n > 100 gebruikt.",
+        "KS wordt volgens de algemene regel pas vanaf n > 100 gebruikt.",
         "De dubbele histogramtop is gebleven en p = 0,098 < 0,05.",
-        "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene cursusgrens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010."
+        "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010."
       ],
       "correct": 3,
       "level": 3,
@@ -10997,8 +10997,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Ja, Afbeelding 14: de dubbele top in het histogram is verdwenen (1)<br>Afbeelding 15: n = 564 &gt; 100 dus Kolmogorov-Smirnov (0)<br>Sig = 0,098 &gt; 0,05 dus residuen niet langer afwijkend van een normale verdeling (2)<br>Pagina 5 van 5</p>",
-      "sourceNote": "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene cursusgrens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
-      "explanation": "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene cursusgrens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
+      "sourceNote": "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
+      "explanation": "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
       "steps": [
         "Reden 1: het histogram in Afbeelding 14 heeft één top. De dubbele top uit Afbeelding 13 is verdwenen.",
         "Toetskeuze: n = 564, dus Kolmogorov-Smirnov. De uitwerking schrijft hier n > 100, bij vraag 15 n > 50. Bij n = 564 komen beide op dezelfde toets uit.",
@@ -12739,8 +12739,8 @@ window.SRAExamPractice = {
       "originalPromptHtml": "<p>Zijn er problemen te verwachten met multicollineariteit? Verwijs naar de relevante afbeelding.</p>",
       "sourceVisualHtml": "",
       "options": [
-        "Model 3 heeft een maximale VIF van 1,003 < 10: geen probleem volgens de cursusgrens.",
-        "VIFmax = 1,003 is groter dan 1 en dus volgens de cursusgrens problematisch.",
+        "Model 3 heeft een maximale VIF van 1,003 < 10: geen probleem volgens de grens.",
+        "VIFmax = 1,003 is groter dan 1 en dus volgens de grens problematisch.",
         "Een significante model-F maakt controle van multicollineariteit overbodig.",
         "De maximale VIF moet kleiner dan nul zijn om een probleem uit te sluiten."
       ],
@@ -12760,8 +12760,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Afbeelding 10: Nee, voor elke verklarende variabele is VIF &lt; 10 (Model 3)</p>",
-      "sourceNote": "Model 3 heeft een maximale VIF van 1,003 < 10: geen probleem volgens de cursusgrens.",
-      "explanation": "Model 3 heeft een maximale VIF van 1,003 < 10: geen probleem volgens de cursusgrens.",
+      "sourceNote": "Model 3 heeft een maximale VIF van 1,003 < 10: geen probleem volgens de grens.",
+      "explanation": "Model 3 heeft een maximale VIF van 1,003 < 10: geen probleem volgens de grens.",
       "steps": [
         "Afbeelding 10, model 3: VIF Leeftijd 1,003, Aantal kinderen 1,003 en Geslacht 1,001.",
         "De grens is 10, en de grootste waarde is 1,003.",
@@ -12853,7 +12853,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -14331,7 +14331,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -14403,7 +14403,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -14665,8 +14665,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Het gebruik van de verschilschatter is toegestaan omdat het aantal fouten in de steekproef 43 is, dus<br>minstens 30. (1)</p>",
-      "sourceNote": "43 foutposten voldoet aan de cursusgrens van minstens 30.",
-      "explanation": "Ja: er zijn 43 foutposten, dus minstens 30. 43 foutposten voldoet aan de cursusgrens van minstens 30.",
+      "sourceNote": "43 foutposten voldoet aan de grens van minstens 30.",
+      "explanation": "Ja: er zijn 43 foutposten, dus minstens 30. 43 foutposten voldoet aan de grens van minstens 30.",
       "steps": [
         "Aantal artikelen met een verschil: 43.",
         "Eis voor de verschilschatter: minstens 30 fouten in de steekproef.",
@@ -16333,7 +16333,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -16360,7 +16360,7 @@ window.SRAExamPractice = {
       "sourceVisualHtml": "",
       "options": [
         "Een significant model kan per definitie geen multicollineariteit bevatten.",
-        "VIFmax = 1,355 < 10; volgens de cursusgrens geen probleem met multicollineariteit.",
+        "VIFmax = 1,355 < 10; volgens de grens geen probleem met multicollineariteit.",
         "VIFmax = 1,355 > 1; volgens de cursus is dat al ernstige multicollineariteit.",
         "De VIF moet negatief zijn om multicollineariteit uit te sluiten."
       ],
@@ -16380,8 +16380,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Afbeelding 13:<br>[Formule 60] VIF = 1,355 &lt; 10 dus geen probleem met multicollineariteit<br>max</p>",
-      "sourceNote": "VIFmax 1,355 ligt onder cursusgrens 10.",
-      "explanation": "VIFmax = 1,355 < 10; volgens de cursusgrens geen probleem met multicollineariteit. VIFmax 1,355 ligt onder cursusgrens 10.",
+      "sourceNote": "VIFmax 1,355 ligt onder grens 10.",
+      "explanation": "VIFmax = 1,355 < 10; volgens de grens geen probleem met multicollineariteit. VIFmax 1,355 ligt onder grens 10.",
       "steps": [
         "Afbeelding 13, kolom VIF: Leeftijd 1,054, Beoordeling 1,043, Vrouw 1,073, HBO 1,334, WO 1,355 en Leidinggevende 1,120.",
         "De grootste waarde is 1,355, bij WO.",
@@ -16389,7 +16389,7 @@ window.SRAExamPractice = {
       ],
       "optionExplanations": [
         "Significantie en multicollineariteit zijn twee aparte zaken. De F-toets gaat over het verband met Salaris, de VIF over samenhang tussen de verklarende variabelen.",
-        "De hoogste VIF ligt ver onder de cursusgrens, dus alle lagere VIF-waarden ook.",
+        "De hoogste VIF ligt ver onder de grens, dus alle lagere VIF-waarden ook.",
         "Een VIF boven 1 is geen probleem. De grens is 10, en 1,355 ligt daar ver onder.",
         "Een VIF kan niet negatief zijn, want VIF = 1 / Tolerance en Tolerance is positief. Bij WO is 1 / 0,738 = 1,355."
       ],
@@ -16547,7 +16547,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -17933,8 +17933,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Afbeelding 15: Nee, VIF = 1,328 &lt; 10 (3 punten)</p>",
-      "sourceNote": "Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de cursusgrens.",
-      "explanation": "Nee: in Afbeelding 15 is VIF = 1,328 < 10. Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de cursusgrens.",
+      "sourceNote": "Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de grens.",
+      "explanation": "Nee: in Afbeelding 15 is VIF = 1,328 < 10. Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de grens.",
       "steps": [
         "Gebruik Afbeelding 15, want die hoort bij het model na de remedies.",
         "VIF = 1,328 voor age en hits. Dat klopt met 1 / 0,753 = 1,328.",
@@ -17956,7 +17956,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -18243,7 +18243,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -19944,7 +19944,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -20014,7 +20014,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -20061,8 +20061,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>[Formule 60] Afbeelding 6.2: alle drie VIF-waarden liggen beneden de 10, dus geen<br>probleem met multicollineariteit. (3 punten)</p>",
-      "sourceNote": "VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de cursusgrens.",
-      "explanation": "VIF 1,308, 1,478 en 1,349 liggen alle drie onder 10: geen probleem met multicollineariteit. VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de cursusgrens.",
+      "sourceNote": "VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de grens.",
+      "explanation": "VIF 1,308, 1,478 en 1,349 liggen alle drie onder 10: geen probleem met multicollineariteit. VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de grens.",
       "steps": [
         "Afbeelding 6.2: VIF van tot_sqft = 1,308, land_sqft = 1,478 en age = 1,349.",
         "Grens: alle VIF-waarden moeten onder de 10 liggen.",
@@ -20079,13 +20079,13 @@ window.SRAExamPractice = {
       "trap": "Het gaat om samenhang tussen de verklarende variabelen onderling. De hoge correlatie van tot_sqft met price is juist gewenst.",
       "recognition": {
         "signals": "Afbeelding 6.2 heeft de kolommen Tolerance en VIF. De VIF-waarden zijn 1,308, 1,478 en 1,349.",
-        "meaning": "De VIF laat zien hoeveel een verklarende variabele overlapt met de andere verklarende variabelen. Pas een waarde vanaf de cursusgrens 10 is een probleem.",
+        "meaning": "De VIF laat zien hoeveel een verklarende variabele overlapt met de andere verklarende variabelen. Pas een waarde vanaf de grens 10 is een probleem.",
         "approach": "Lees per variabele de VIF af en vergelijk die met 10.",
         "answer": "De VIF-waarden, de vergelijking met 10 en de conclusie dat er geen probleem met multicollineariteit is."
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -20155,7 +20155,7 @@ window.SRAExamPractice = {
       },
       "guidance": {
         "title": "Variabelenselectie en multicollineariteit",
-        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+        "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
         "rules": [
           "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
           "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."

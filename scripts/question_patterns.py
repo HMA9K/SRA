@@ -124,7 +124,7 @@ p('mc-mpu-toepassing-3', '“Alle 500 posten” gecontroleerd en een werkelijk g
   'Dit is integrale controle: n = N.',
   'Vermenigvuldig N met het gemiddelde en pas de eindigheidscorrectie voor n = N toe.',
   'Het totaal met nul steekproefonzekerheid; niet de uitspraak dat alle posten gelijk zijn.')
-p('mc-mpu-aanvulling-scheef', 'Een aselecte steekproef boven de cursusgrens én “extreem scheve populatie”.',
+p('mc-mpu-aanvulling-scheef', 'Een aselecte steekproef boven de grens én “extreem scheve populatie”.',
   'Aselecte selectie en bruikbaarheid van de normale benadering zijn afzonderlijke voorwaarden.',
   'Beoordeel of de scheefheid de benadering problematisch maakt ondanks de omvangsvuistregel.',
   'Een voorwaardelijk oordeel over het interval, geen automatische garantie door n alleen.')
@@ -378,8 +378,8 @@ p('mc-toetsen-aanvulling-interval', 'b₁, zijn standaardfout en een passende tw
   'Het interval plus de passende tweezijdige toetsbeslissing op hetzelfde niveau.')
 
 # Diagnostiek: herken het aspect van de residuen, niet alleen een toetsnaam.
-p('diagnostiek-1', 'n en “cursusgrenzen voor gestandaardiseerde residuen”.',
-  'Je zoekt de cursusregel voor opvallende residuen, afhankelijk van de omvangscategorie.',
+p('diagnostiek-1', 'n en “grenzen voor gestandaardiseerde residuen”.',
+  'Je zoekt de regel voor opvallende residuen, afhankelijk van de omvangscategorie.',
   'Vergelijk n met 100: de cursus gebruikt ±2 bij n ≤ 100 en ±3 bij n > 100.',
   'Twee residugrenzen, geen Cook-grens of toets op normaliteit.')
 p('diagnostiek-2', 'Het woord “invloedrijke” bij waarnemingen.',
@@ -526,9 +526,9 @@ p('modelbouw-3', 'Een variabele wordt verwijderd en het model moet opnieuw worde
   'Coëfficiënten en toetsen zijn conditioneel op welke voorspellers zijn opgenomen.',
   'Beoordeel de resterende effecten met uitvoer uit het gewijzigde model.',
   'Een verklaring waarom oude coëfficiënten en p-waarden niet klakkeloos door kunnen worden gebruikt.')
-p('mc-modelbouw-toepassing-1', 'Tolerance en een expliciete cursusgrens VIF > 10.',
+p('mc-modelbouw-toepassing-1', 'Tolerance en een expliciete grens VIF > 10.',
   'Je moet eerst de maat omzetten en daarna het aangegeven criterium toepassen.',
-  'Bereken 1/tolerance en vergelijk de VIF met de cursusgrens.',
+  'Bereken 1/tolerance en vergelijk de VIF met de grens.',
   'De VIF én een oordeel over een multicollineariteitssignaal volgens die grens.')
 p('mc-modelbouw-toepassing-2', 'Geneste modellen met dezelfde data en y, één extra variabele, twee SSR’s en MSE van het grote model.',
   'Een partiële F-toets beoordeelt de extra verklaarde variatie van de toegevoegde voorspeller.',

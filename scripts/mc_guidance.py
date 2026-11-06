@@ -177,7 +177,7 @@ FOCUS = {
   ('toepassing-3', 'In ŷ = a × x^b geeft vermenigvuldiging van x met c een factor c^b in de voorspelling.'),
   ('aanvulling-meervoudig', 'Bij ln(ŷ) = b₀ + b₁ln(x₁) + b₂ln(x₂) wordt ŷ = exp(b₀) × x₁^b₁ × x₂^b₂. Een negatieve macht betekent delen.')],
  'modelbouw': [
-  ('basis-1 toepassing-1', 'Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.'),
+  ('basis-1 toepassing-1', 'Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.'),
   ('basis-2', 'Let op het beginpunt van de procedure: alle kandidaatvariabelen tegelijk, of juist één voor één toevoegen.'),
   ('basis-3 toepassing-3', 'Een selectiebesluit verandert het geschatte model. Gebruik voor een volgende beslissing de nieuwe coëfficiënten en p-waarden, niet die van het vorige model.'),
   ('toepassing-2', 'Voor één toegevoegde variabele in geneste modellen op dezelfde data is de partiële F gelijk aan (SSR_groot − SSR_klein)/MSE_groot. Gebruik het uitgebreide model in de noemer.')],

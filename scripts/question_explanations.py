@@ -382,13 +382,13 @@ basic('toetsen-3', [
 ])
 basic('diagnostiek-1', [
     'Het formuleblad gebruikt voor mogelijke y-uitbijters grenzen voor gestandaardiseerde residuen.',
-    'Bij n ≤ 100 zijn de cursusgrenzen ±2; bij n > 100 zijn ze ±3.',
+    'Bij n ≤ 100 zijn de grenzen ±2; bij n > 100 zijn ze ±3.',
     'Omdat 178 > 100 gebruik je −3 en +3. Controleer zowel het minimum als het maximum van de residuen.'
-], 'Voor de cursusgrens bij gestandaardiseerde residuen eerst n vergelijken met 100.',
+], 'Voor de grens bij gestandaardiseerde residuen eerst n vergelijken met 100.',
     'De grens signaleert een mogelijk afwijkende waarneming; zij is geen automatische verwijderregel.', [
-    '±2 hoort volgens het formuleblad bij n ≤ 100. Hier is n = 178, dus geldt de andere cursusgrens.',
+    '±2 hoort volgens het formuleblad bij n ≤ 100. Hier is n = 178, dus geldt de andere grens.',
     '±3 is de behandelde grens voor n > 100. Zowel grote negatieve als grote positieve residuen verdienen aandacht.',
-    '±1 is niet de cursusgrens voor deze uitbijtercontrole.'
+    '±1 is niet de grens voor deze uitbijtercontrole.'
 ])
 basic('diagnostiek-2', [
     'Een invloedrijk punt kan de geschatte regressie sterk veranderen.',
@@ -880,9 +880,9 @@ application('transformaties-3', 'De voorfactor 3 komt voor in zowel de oude als 
     '4 = (2x)²/x². De exponent 2 maakt van de verdubbeling van x een verviervoudiging van de voorspelling.',
     '6 vermenigvuldigt de verdubbeling met de voorfactor 3. Die voorfactor is al in zowel de oude als de nieuwe waarde aanwezig en valt weg in de verhouding.'
 ])
-application('modelbouw-1', 'Tolerance en VIF meten hetzelfde overlapprobleem vanuit tegengestelde richting. Vergelijk pas na de omzetting de VIF met de genoemde cursusgrens.', [
+application('modelbouw-1', 'Tolerance en VIF meten hetzelfde overlapprobleem vanuit tegengestelde richting. Vergelijk pas na de omzetting de VIF met de genoemde grens.', [
     '0,92 is 1 − 0,08, niet 1/0,08. De berekende VIF is 12,5 en ligt wel boven de grens.',
-    'VIF = 1/0,08 = 12,5 en 12,5 > 10. Dat levert volgens de genoemde cursusgrens een probleemsignaal op.',
+    'VIF = 1/0,08 = 12,5 en 12,5 > 10. Dat levert volgens de genoemde grens een probleemsignaal op.',
     '8 volgt niet uit de omgekeerde van 0,08. Bovendien zou 8 niet boven de aangegeven grens VIF > 10 liggen.',
     '0,08 is tolerance zelf. VIF is het omgekeerde en bedraagt 12,5.'
 ])

@@ -286,7 +286,7 @@
           "displayNumber": "3.6",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "VIF = 216,623 en 216,879 liggen ver boven cursusgrens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
+          "note": "VIF = 216,623 en 216,879 liggen ver boven grens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
           "reviewed": "2026-09-20",
           "sourcePage": 15,
           "answerPage": 8
@@ -584,7 +584,7 @@
           "displayNumber": "3.6",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "VIF = 216,623 en 216,879 liggen ver boven cursusgrens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
+          "note": "VIF = 216,623 en 216,879 liggen ver boven grens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
           "reviewed": "2026-09-20",
           "sourcePage": 15,
           "answerPage": 8
@@ -1446,7 +1446,7 @@
           "displayNumber": "17",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de cursusgrens 10: geen aanwijzing voor problematische multicollineariteit.",
+          "note": "Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de grens 10: geen aanwijzing voor problematische multicollineariteit.",
           "reviewed": "2026-09-20",
           "sourcePage": 12,
           "answerPage": 4
@@ -1674,7 +1674,7 @@
           "displayNumber": "19",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "Model 3 heeft VIF = 1,002 < 10: geen probleem volgens de cursusgrens.",
+          "note": "Model 3 heeft VIF = 1,002 < 10: geen probleem volgens de grens.",
           "reviewed": "2026-09-20",
           "sourcePage": 10,
           "answerPage": 4
@@ -1704,7 +1704,7 @@
           "displayNumber": "22",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene cursusgrens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
+          "note": "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
           "reviewed": "2026-09-20",
           "sourcePage": 12,
           "answerPage": 5
@@ -1922,7 +1922,7 @@
           "displayNumber": "20",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "Model 3 heeft een maximale VIF van 1,003 < 10: geen probleem volgens de cursusgrens.",
+          "note": "Model 3 heeft een maximale VIF van 1,003 < 10: geen probleem volgens de grens.",
           "reviewed": "2026-09-20",
           "sourcePage": 9,
           "answerPage": 5
@@ -2198,7 +2198,7 @@
           "displayNumber": "2",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "43 foutposten voldoet aan de cursusgrens van minstens 30.",
+          "note": "43 foutposten voldoet aan de grens van minstens 30.",
           "reviewed": "2026-09-20",
           "sourcePage": 1,
           "answerPage": 11
@@ -2408,7 +2408,7 @@
           "displayNumber": "23",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "VIFmax 1,355 ligt onder cursusgrens 10.",
+          "note": "VIFmax 1,355 ligt onder grens 10.",
           "reviewed": "2026-09-20",
           "sourcePage": 10,
           "answerPage": 15
@@ -2606,7 +2606,7 @@
           "displayNumber": "2.8",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de cursusgrens.",
+          "note": "Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de grens.",
           "reviewed": "2026-11-04",
           "sourcePage": 8,
           "answerPage": 12
@@ -2884,7 +2884,7 @@
           "displayNumber": "2.12",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de cursusgrens.",
+          "note": "VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de grens.",
           "reviewed": "2026-11-04",
           "sourcePage": 7,
           "answerPage": 11

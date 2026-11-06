@@ -384,9 +384,9 @@ _add('gestandaardiseerd-residu', 'Gestandaardiseerd residu', ['gestandaardiseerd
      '$z$ = 2,5 ligt bij $n$ = 100 boven de grens 2 en is dan een signaal. Bij $n$ = 101 geldt grens 3 en is het geen signaal.', 'diagnostiek')
 _add('mahalanobis', 'Mahalanobis Distance', ['Mahalanobis', 'MD', 'Mahal.Distance', 'uitbijter in x'],
      'Een maat voor hoe ongewoon een waarneming ligt qua verklarende variabelen. De SRA-cursus vergelijkt het maximum met gemiddelde MD + 3 × standaardafwijking MD.',
-     'Gemiddelde MD = 1 en $s_MD$ = 0,5 geven een cursusgrens van 1 + 3 × 0,5 = 2,5. Een maximum van 3 ligt daarboven.', 'diagnostiek')
+     'Gemiddelde MD = 1 en $s_MD$ = 0,5 geven een grens van 1 + 3 × 0,5 = 2,5. Een maximum van 3 ligt daarboven.', 'diagnostiek')
 _add('cooks-distance', 'Cook’s Distance', ["Cook's Distance", 'Cooks Distance', 'Cook’s', 'CD'],
-     'Een maat voor de mogelijke invloed van één waarneming op de geschatte regressie. De cursusgrens is gemiddelde CD + 3 × standaardafwijking CD.',
+     'Een maat voor de mogelijke invloed van één waarneming op de geschatte regressie. De grens is gemiddelde CD + 3 × standaardafwijking CD.',
      'Gemiddelde CD = 0,04 en $s_CD$ = 0,07 geven een grens van 0,04 + 3 × 0,07 = 0,25. Een maximum van 0,30 ligt daarboven en vraagt om onderzoek.', 'diagnostiek')
 _add('invloedrijk-punt', 'Invloedrijk punt', ['invloedrijke punten', 'invloedrijke waarneming', 'invloedrijke waarnemingen'],
      'Een waarneming waarvan de aanwezigheid de geschatte regressie sterk kan veranderen. Een groot residu alleen is daarvoor niet genoeg; SRA gebruikt Cook’s Distance.',
@@ -609,7 +609,7 @@ _add('resterende-ratiospreiding', 'Resterende spreiding bij de quotiëntschatter
      '$s_q$ = € 7,60 is nog geen eindantwoord. Je rekent door met $N/√n$ en de eindigheidscorrectie naar de standaardfout van het totaal.', 'quotient')
 _add('effectieve-vrijheidsgraden', 'Effectieve vrijheidsgraden', ['effectieve df'],
      'De vrijheidsgraden die bij het samengestelde interval van strata horen. Volgens het SRA-formuleblad worden ze in de opgave gegeven; neem niet automatisch het totale $n − 1$.',
-     'De opgave geeft effectieve df = 109. Dan kies je de rij in de $t$-tabel volgens de bijbehorende cursusregel.', 'stratificatie')
+     'De opgave geeft effectieve df = 109. Dan kies je de rij in de $t$-tabel volgens de bijbehorende regel.', 'stratificatie')
 _add('kromming', 'Kromming', ['krom verband', 'kromme verbanden', 'boogvorm'],
      'Een verandering van richting of helling, waardoor één rechte lijn het patroon niet goed beschrijft. Kromming in residuen kan wijzen op een ongeschikte lineaire modelvorm.',
      'Negatieve residuen in het midden en positieve aan beide randen vormen een boog.', 'diagnostiek')
