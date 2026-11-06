@@ -10052,7 +10052,7 @@ window.SRAExamPractice = {
       "options": [
         "Laat de extra 1 weg onder de wortel voor een individuele proefpersoon.",
         "Gebruik de variantiemaat rechtstreeks als standaardafwijking in de marge.",
-        "Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
+        "De opgave noemt dit een betrouwbaarheidsinterval, maar voor één proefpersoon is het een voorspellingsinterval. Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
         "[93;182], met de bovengrens naar binnen afgerond."
       ],
       "correct": 2,
@@ -10072,8 +10072,8 @@ window.SRAExamPractice = {
         "vraag-11"
       ],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20231030/antwoord-12-3.jpg\" alt=\"antwoord-12 · bronpagina 3\">",
-      "sourceNote": "Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
-      "explanation": "Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
+      "sourceNote": "De opgave noemt dit een betrouwbaarheidsinterval, maar voor één proefpersoon is het een voorspellingsinterval. Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
+      "explanation": "De opgave noemt dit een betrouwbaarheidsinterval, maar voor één proefpersoon is het een voorspellingsinterval. Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
       "steps": [
         "Uit vraag 11a: ŷ₀ = 137,55 bij x₀ = 55.",
         "Afbeelding 3: s_e = 22,678. Afbeelding 4: n = 746, x̄ = 52,88 en s_x = 9,506.",
@@ -15808,8 +15808,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20250317/antwoord-15-14.jpg\" alt=\"antwoord-15 · bronpagina 14\">",
-      "sourceNote": "KS-p = 0,001 bij n 177: normaliteit verwerpen op 5%; hypotheses gaan over residuen.",
-      "explanation": "H₀: normale residuen. Bij n = 177 gebruikt de cursus KS; p = 0,001 < 0,05, dus H₀ verwerpen. KS-p = 0,001 bij n 177: normaliteit verwerpen op 5%; hypotheses gaan over residuen.",
+      "sourceNote": "KS-p = 0,001 bij n 177: normaliteit verwerpen op 5%; hypotheses gaan over residuen. De normering noemt bij de hypothesen ‘voor vraag 8 en 9 samen’; dat moet vermoedelijk vraag 15 en 16 zijn.",
+      "explanation": "H₀: normale residuen. Bij n = 177 gebruikt de cursus KS; p = 0,001 < 0,05, dus H₀ verwerpen. KS-p = 0,001 bij n 177: normaliteit verwerpen op 5%; hypotheses gaan over residuen. De normering noemt bij de hypothesen ‘voor vraag 8 en 9 samen’; dat moet vermoedelijk vraag 15 en 16 zijn.",
       "steps": [
         "H₀: de residuen zijn normaal verdeeld. H₁: de residuen zijn niet normaal verdeeld.",
         "n = 177, dus n > 50: gebruik Kolmogorov-Smirnov.",
