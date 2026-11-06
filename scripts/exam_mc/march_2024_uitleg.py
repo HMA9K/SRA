@@ -63,7 +63,7 @@ add(4,why='Stratificatie levert informatie per groep op, en verlaagt de onzekerh
   'Reden 2: de nauwkeurigheid van de totale schatting kan verbeteren.',
   'Reden 3: een betere representativiteit, omdat alle centra naar rato in de steekproef zitten. Dat vraagt wel evenredige allocatie, zoals in vraag 5.',
   'Reden 4: minder variabiliteit doordat de strata homogener zijn. Het gaat dan om de spreiding binnen een stratum.'],
- trap='De uitwerking spreekt van minder variabiliteit in de populatie. Bedoeld is de spreiding binnen de strata, want de werkelijke waarden van de voorraad veranderen niet door een indeling.',
+ trap='Minder variabiliteit gaat over de spreiding binnen de strata, niet over de populatie, want de werkelijke waarden van de voorraad veranderen niet door een indeling.',
  wrong=['Een indeling in strata is alleen een manier van trekken. De waarden in de centra blijven wat ze zijn, en de centra worden er niet gelijk door.',
   'Stratificatie legt alleen de groepen vast. Hoeveel posten je per groep trekt, bepaalt de allocatie. Pas evenredige allocatie zoals in vraag 5 geeft een steekproef naar rato.',
   'Het is andersom: elk centrum heeft een eigen deelsteekproef, en daardoor kun je juist per centrum een uitspraak doen.'])
@@ -208,7 +208,7 @@ add(12,why='De totale kwadratensom valt uiteen in een verklaard en een onverklaa
 
 add(13,why='Een verbetering zou een hogere score dan het lineaire model vragen, en die staat niet in afbeelding 3.',
  signals='Afbeelding 3 zet vier modellen naast elkaar met R Square en F. Bij Linear staat R² = 0,943.',
- meaning='Een beter model verklaart meer variatie. Daarvoor vergelijk je R². Volgens de uitwerking mag je ook de F-waarden vergelijken.',
+ meaning='Een beter model verklaart meer variatie. Daarvoor vergelijk je R². Je mag ook de F-waarden vergelijken.',
  approach='Lees R² van alle vier de modellen af en kijk of een niet lineair model boven 0,943 uitkomt.',
  answer='Nee, met de R²-waarden of de F-waarden uit afbeelding 3 als motivatie.',
  steps=['Afbeelding 3, R²: Linear 0,943, Power 0,909, Logarithmic 0,890 en Exponential 0,877.',
@@ -308,7 +308,7 @@ add(17,'x',why='De hoogste afstand blijft onder de grens die je uit het gemiddel
 add(17,'y',why='In de kolom Std. Residual blijven beide uitersten binnen de grenzen, maar het grootste gewone residu past niet bij die kolom.',
  signals='Afbeelding 4: Std. Residual minimum −2,707 en maximum 2,991. In dezelfde tabel staat Residual maximum 3.248,623, en afbeelding 8 geeft s_e = 938,076.',
  meaning='Een gestandaardiseerd residu is het residu gedeeld door s_e. Het minimum in de tabel klopt daarmee, het maximum niet.',
- approach='Gebruik zoals de uitwerking de kolom Std. Residual met de grens ±3, want n = 960 > 100. Reken daarna het maximum na en zeg welke kolom je volgt.',
+ approach='Gebruik de kolom Std. Residual met de grens ±3, want n = 960 > 100. Reken daarna het maximum na en zeg welke kolom je volgt.',
  answer='De grens ±3 bij n > 100, zmax = 2,991 en zmin = −2,707, de conclusie geen uitbijters in y, en dat 3.248,623 / 938,076 = 3,463 daarvan afwijkt.',
  steps=['Grens: n = 960 > 100, dus de kritieke grenzen zijn z = ±3.',
   'Afbeelding 4, Std. Residual: 2,991 < 3 en −2,707 > −3.',
@@ -316,7 +316,7 @@ add(17,'y',why='In de kolom Std. Residual blijven beide uitersten binnen de gren
   'Narekenen van het minimum: −2.539,796 / 938,076 = −2,707. Dat klopt met de tabel.',
   'Narekenen van het maximum: 3.248,623 / 938,076 = 3,463. Dat ligt boven 3 en klopt niet met 2,991.',
   'De rij Stud. Residual geeft maximum 3,470, dicht bij 3,463. Zonder de ruwe gegevens is niet vast te stellen welke cel fout is, dus noem welke kolom je volgt.'],
- trap='De uitwerking kijkt alleen naar de kolom Std. Residual. Wie dat ook doet, ziet niet dat het gewone residu van 3.248,623 daarmee in strijd is.',
+ trap='Wie alleen naar de kolom Std. Residual kijkt, ziet niet dat het gewone residu van 3.248,623 daarmee in strijd is.',
  wrong=['De waarden zijn niet consistent: 3.248,623 / 938,076 = 3,463, terwijl de kolom Std. Residual 2,991 geeft.',
   'Bij n = 960 > 100 is de grens ±3, niet ±2. Daarbinnen blijft 2,991, dus deze waarde geeft geen signaal.',
   '3.248,623 is een bedrag in dollars. Pas na delen door s_e = 938,076 krijg je een getal zonder eenheid dat je met ±3 kunt vergelijken.'])

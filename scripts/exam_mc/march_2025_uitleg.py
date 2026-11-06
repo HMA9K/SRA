@@ -10,7 +10,7 @@ add(1,why='De verschilschatter trekt per artikel één gemiddeld foutbedrag af, 
  signals='De vraag is algemeen gesteld en noemt geen getallen. De casus erboven noemt boekwaarden en verschillen bij 165 artikelen.',
  meaning='Het gaat om de vorm van de fouten: blijft het foutbedrag ongeveer gelijk, of groeit het mee met de boekwaarde?',
  approach='Vergelijk wat de schatter doet met het gedrag van de fouten. Een vast bedrag past bij de verschilschatter, een vaste verhouding bij de quotiëntschatter.',
- answer='De twee situaties uit de uitwerking: de verschillen zijn redelijk constant, of ze hangen niet af van de grootte van de boekwaarde.',
+ answer='Twee situaties: de verschillen zijn redelijk constant, of ze hangen niet af van de grootte van de boekwaarde.',
  steps=['De verschilschatter berekent ē, het gemiddelde verschil per artikel.',
   'Daarna trekt hij N × ē af van de totale boekwaarde. Elk artikel krijgt dus dezelfde correctie in euro’s.',
   'Die correctie past alleen als de verschillen redelijk constant zijn of niet afhangen van de grootte van de boekwaarde.',
@@ -49,7 +49,7 @@ add(3,why='De schatting begint bij de boekwaarde, trekt de geschatte totale fout
   'Grenzen: 1.804.220 − 7.669,94 = 1.796.550,06 en 1.804.220 + 7.669,94 = 1.811.889,94.',
   'Naar buiten afgerond op €10.000: [€1.790.000; €1.820.000].'],
  trap='ē is het gemiddelde over alle 165 artikelen, niet over de 43 fouten. Deel Σe dus niet door 43. Let ook op de afronding: 1.796.550 gaat omlaag naar 1.790.000, ook al ligt 1.800.000 dichterbij.',
- wrong=['Gewoon afronden maakt 1.796.550 tot 1.800.000 en 1.811.890 tot 1.810.000. Het interval wordt dan smaller dan berekend, terwijl de uitwerking naar buiten afrondt.',
+ wrong=['Gewoon afronden maakt 1.796.550 tot 1.800.000 en 1.811.890 tot 1.810.000. Het interval wordt dan smaller dan berekend, terwijl je naar buiten moet afronden.',
   '€1.980.000 is de boekwaarde. De steekproef laat zien dat die gemiddeld €47 per artikel te hoog is, dus de puntschatting is €1.804.220.',
   'De berekening klopt, maar de vraag eist grenzen op €10.000. Die laatste stap ontbreekt: het moet €1.790.000 en €1.820.000 worden.'])
 
@@ -78,7 +78,7 @@ add(4,'b',why='Deze methode kijkt ook naar de spreiding per stratum, en juist di
   'Benodigde gegevens: Nᵢ en de standaardafwijking van de boekwaarden per stratum.',
   'Beschikbaar in de eerste tabel: alleen 940, 677, 639 en 592. Neyman is hier dus niet toepasbaar.',
   'Vergelijking: Neyman is in het algemeen beter dan evenredige allocatie, want de methode geeft een nauwkeuriger resultaat.'],
- trap='De tweede tabel bevat wel sᵢ, maar dat zijn standaardafwijkingen van de werkelijke waarden uit de steekproef. Die komen pas na de steekproef, en de uitwerking vraagt spreidingen van de boekwaarden.',
+ trap='De tweede tabel bevat wel sᵢ, maar dat zijn standaardafwijkingen van de werkelijke waarden uit de steekproef. Die komen pas na de steekproef, en Neyman vraagt spreidingen van de boekwaarden.',
  wrong=['Populatieaantallen zijn genoeg voor evenredige allocatie. Neyman vraagt ook de spreiding per stratum, en die ontbreekt.',
   'Evenredige allocatie is de methode uit onderdeel a, dus niet de andere methode. Gelijke strata zijn ook geen eis: hier lopen ze van 592 tot 940 artikelen.',
   'Integrale controle betekent alle artikelen controleren. Dat is geen manier om een steekproef over strata te verdelen.'])
@@ -200,7 +200,7 @@ add(11,why='Je vergelijkt de vier modellen op R², waarbij Power het hoogst scoo
   'Blijf voorzichtig: Power gebruikt een gelogaritmeerde y. Zijn R² is daardoor niet rechtstreeks te vergelijken met een R² op de euroschaal.'],
  trap='Kijk in de kolom R Square en niet naar b1 of de constante, want die staan op verschillende schalen. Zelfs het beste model verklaart maar 11,7%.',
  wrong=['Het verschil van 0,014 is klein en de R² van Power staat op een logschaal. Daarmee is niet bewezen dat Power op de euroschaal beter voorspelt.',
-  'De uitwerking noemt Power juist als beste model, met 0,117. Logarithmic is een toegestaan alternatief, niet het enige goede antwoord.',
+  'Power is juist het beste model, met 0,117. Logarithmic is een toegestaan alternatief, niet het enige goede antwoord.',
   'Linear heeft met 0,072 de laagste R² van de vier. Geen transformatie gebruiken maakt een model niet beter.'])
 
 add(12,why='Een Power-model wordt pas een rechte lijn als je aan beide kanten van de vergelijking de logaritme neemt.',
@@ -249,7 +249,7 @@ add(13,'y',why='Bij deze steekproefomvang geldt een vaste grens, alleen de boven
   'Minimum en maximum staan los van elkaar. −1,885 zegt alleen iets over de onderkant, en aan de bovenkant is 4,557 groter dan 3.',
   '5,824 is de grens voor de Mahalanobis-afstand, dus voor x. Voor residuen geldt ±3, en 4,557 ligt daarboven.'])
 
-add(14,why='De grens wordt ruim overschreden, maar de uitwerking laat de keuze open om geval 57 wel of niet te verwijderen, dus de motivering telt.',
+add(14,why='De grens wordt ruim overschreden, maar de keuze om geval 57 wel of niet te verwijderen blijft open, dus de motivering telt.',
  signals='Afbeelding 5 geeft bij Cook’s Distance: gemiddelde 0,008, standaardafwijking 0,018 en maximum 0,145. Afbeelding 8 toont de afstand per geval.',
  meaning='De Cook-afstand laat zien hoeveel invloed een geval op de regressie heeft. Boven de grens is een geval een potentieel invloedrijk punt.',
  approach='Bereken de grens net als bij de Mahalanobis-afstand, lees de gevallen af in Afbeelding 8 en bekijk geval 57 in Afbeelding 3.',
@@ -295,7 +295,7 @@ add(16,why='De grootte van de residuen hangt significant samen met de verklarend
 add(17,why='De problemen zitten in het model, dus de oplossing is een ander model of een andere schatting, gevolgd door een nieuwe controle.',
  signals='De vragen 15 en 16 lieten problemen zien met normaliteit en heteroscedasticiteit, in het enkelvoudige model met alleen Leeftijd.',
  meaning='Het model heeft één x en R² = 0,072. De remedies veranderen daarom het model of de schatting, niet de uitkomst van de toets.',
- approach='Noem twee remedies uit de uitwerking die het model aanpassen en de gegevens laten zoals ze zijn.',
+ approach='Noem twee remedies die het model aanpassen en de gegevens laten zoals ze zijn.',
  answer='Twee remedies, bijvoorbeeld meervoudige regressie en WLS. Ook goed zijn een andere verklarende variabele en niet-lineaire regressie.',
  steps=['Vier remedies: een andere verklarende variabele, niet-lineaire regressie, meervoudige regressie en WLS.',
   'WLS is gewogen regressie. Een transformatie hoort bij niet-lineaire regressie.',
@@ -304,7 +304,7 @@ add(17,why='De problemen zitten in het model, dus de oplossing is een ander mode
  trap='Een remedie verandert het model, niet de toetsuitslag. De eis verlagen of residuen aanpassen lost niets op.',
  wrong=['Residuen zijn de uitkomst van het model en liepen hier van −1.504 tot 3.635 (Afbeelding 5). Ze op nul zetten is gegevens vervalsen, en het model blijft gelijk.',
   'Met Sig. = 0,001 los je niets op door de grens te verschuiven. De opgave legt 95% vast, en het probleem in de residuen blijft bestaan.',
-  'Leeftijd is in dit model de enige verklarende variabele. De uitwerking gaat de andere kant op: een andere variabele of meer variabelen, niet minder.'])
+  'Leeftijd is in dit model de enige verklarende variabele. De remedie gaat de andere kant op: een andere variabele of meer variabelen, niet minder.'])
 
 add(18,why='Een bijzondere oorzaak mag een reden zijn om een uitbijter alsnog te verwijderen, maar een gewenste toetsuitslag niet.',
  signals='De uitbijter in y is geval 57, met gestandaardiseerd residu 4,557. Die bleef eerder gehandhaafd omdat geen fout of bijzondere omstandigheid bekend was. Afbeelding 10 toont Sig. = 0,001.',
@@ -319,7 +319,7 @@ add(18,why='Een bijzondere oorzaak mag een reden zijn om een uitbijter alsnog te
  trap='Het plan is alleen goed als het onderzoek eerlijk is. Zoeken naar een fout is iets anders dan zoeken naar een reden om de toets te laten slagen.',
  wrong=['Zonder oorzaak is er geen reden om te verwijderen. Bij vraag 13 bleef de waarneming daarom juist staan.',
   'Dan stuur je de gegevens naar de uitslag toe. Verwijderen hoort te volgen uit een fout of bijzondere oorzaak, niet uit de p-waarde.',
-  'De toets gaat juist over de residuen, dus een residu van 4,557 telt mee. De uitwerking noemt waarneming 57 als mogelijke oorzaak.'])
+  'De toets gaat juist over de residuen, dus een residu van 4,557 telt mee. Waarneming 57 is dus een mogelijke oorzaak.'])
 
 add(19,why='Beide dummy-coëfficiënten meten het verschil met dezelfde basisgroep, dus het gevraagde verschil is hun onderlinge verschil.',
  signals='Afbeelding 13 geeft de coëfficiënten HBO = 644,888 en WO = 1.010,210. Beide zijn dummy’s voor het hoogst genoten opleidingsniveau.',
@@ -347,7 +347,7 @@ add(20,why='Je vult de persoon in de regressievergelijking in, waarbij alleen de
   'Som: 739,508 + 1.924,75 + 715,50 + 2.237,947 = 5.617,705.',
   'Op hele euro’s afgerond is dat €5.618.'],
  trap='Vergeet de constante niet, en laat alleen de dummy’s weg die echt op 0 staan. Afronden is iets anders dan de decimalen afkappen.',
- wrong=['0,705 is meer dan een halve euro, dus gewoon afronden geeft €5.618. De uitwerking noteert wel €5.617, maar decimalen weglaten is geen afronden.',
+ wrong=['0,705 is meer dan een halve euro, dus gewoon afronden geeft €5.618. €5.617 ontstaat door de decimalen weg te laten, en dat is geen afronden.',
   '€3.380 is de uitkomst zonder 2.237,947. De man is leidinggevende, dus die dummy staat op 1.',
   '€6.628 ontstaat door ook 1.010,210 op te tellen. Hij heeft geen WO-opleiding, dus die dummy staat op 0.'])
 

@@ -34,7 +34,7 @@ add(2,why='De intervalbreedte is twee keer de marge, en de uitbreiding is de ben
   'Hulpgetal: γ = 5.000² / 8.077.039,59 = 3,09519.',
   'Omvang: n = 2.130 / (1 + 3,09519) = 520,12. Omhoog afgerond: n = 521.',
   'Uitbreiding: 521 − 180 = 341 posten.'],
- trap='De vraag is met hoeveel posten je uitbreidt, niet hoe groot de steekproef wordt. Rond n omhoog af, ook bij 520,12. De normering rekent een uitwerking met de z-waarde ook goed: met 1,96 kom je op n = 515, dus 335 posten.',
+ trap='De vraag is met hoeveel posten je uitbreidt, niet hoe groot de steekproef wordt. Rond n omhoog af, ook bij 520,12. Rekenen met de z-waarde is ook goed: met 1,96 kom je op n = 515, dus 335 posten.',
  wrong=['521 is de totale steekproef. De 180 getrokken posten tellen mee, dus er komen 521 − 180 = 341 posten bij.',
   'Met 340 posten erbij is n = 520. De marge is dan ongeveer €5.002, net boven de toegestane €5.000. Daarom rond je omhoog af.',
   '€10.000 is de hele breedte. Met E = 10.000 kom je op n = 159,2. Dat is minder dan de 180 die je al hebt, en dan zou er geen uitbreiding nodig zijn.'])
@@ -49,7 +49,7 @@ add(3,why='Bij R = 0,925 is √(1 − R²) veel kleiner dan 1, omdat de boekwaar
   'Marges met t = 1,974: directe schatter 24.624, regressieschatter 9.356.',
   'Breedtes: ongeveer 49.248 tegen 18.713, dus het interval van de regressieschatter is veel smaller.',
   'Oorzaak: de regressieschatter houdt ook rekening met de boekwaarden, en die hangen sterk samen met de werkelijke waarden.'],
- trap='Noem zowel de richting als de oorzaak. De normering geeft 2 punten voor smaller en 2 punten voor de boekwaarden, dus alleen smaller is de helft van het antwoord.',
+ trap='Noem zowel de richting als de oorzaak. Smaller noemen levert 2 punten op en de boekwaarden noemen ook 2, dus alleen smaller is de helft van het antwoord.',
  wrong=['Extra informatie maakt het interval juist smaller. De marge daalt van ongeveer 24.624 naar 9.356.',
   'n en t zijn gelijk, maar de standaardfout niet: 12.474 bij de directe schatter tegen 4.740 bij de regressieschatter.',
   '1 / 0,37997 = 2,63 is groter dan 1. Dat is de stap terug van regressieschatter naar directe schatter. De regressiemarge krijg je door te vermenigvuldigen met 0,37997.'])
@@ -119,7 +119,7 @@ add(8,why='De casus verwacht een positief verband, dus dat hoort in H₁, en hyp
  signals='De casus zegt dat meer beenkracht leidt tot een grotere spronghoogte. Afbeelding 1 toont een stijgende puntenwolk van 30 patiënten.',
  meaning='De verwachting heeft een richting, dus je toetst eenzijdig. De parameter is de helling in het populatiemodel, niet de helling uit de steekproef.',
  approach='Zet wat je wilt aantonen in H₁: een positieve helling. H₀ krijgt de rest, inclusief de gelijkheid. Benoem daarna wat de parameter is.',
- answer='Beide hypothesen en de omschrijving van β₁ als richtingscoëfficiënt van het populatiemodel. De normering keurt H₀: β₁ = 0 ook goed.',
+ answer='Beide hypothesen en de omschrijving van β₁ als richtingscoëfficiënt van het populatiemodel. H₀: β₁ = 0 is ook goed.',
  steps=['Verwachting uit de casus: meer beenkracht geeft een grotere spronghoogte, dus een positieve helling.',
   'H₁ bevat die verwachting: β₁ > 0.',
   'H₀ is het tegendeel: β₁ ≤ 0.',
@@ -139,7 +139,7 @@ add(9,why='R² is de verklaarde kwadratensom gedeeld door de totale kwadratensom
   'Betekenis: 96,84% van de spreiding in de spronghoogte wordt verklaard door de beenkracht.',
   'Controle van de tabel: 1395,367 − 1351,262 = 44,105, dus de Residual van 4,105 is een drukfout.',
   'Controle met afbeelding 8: 0,984² = 0,9683, op afronding na hetzelfde.'],
- trap='Schrijf variatie, variantie of spreiding. De uitwerking keurt het woord standaardafwijking uitdrukkelijk af. Geef R² op 4 decimalen, zoals gevraagd.',
+ trap='Schrijf variatie, variantie of spreiding. Het woord standaardafwijking wordt afgekeurd. Geef R² op 4 decimalen, zoals gevraagd.',
  wrong=['0,0316 is 1 − 0,9684. Dat is juist het deel dat niet verklaard wordt.',
   'Het getal klopt, maar de uitleg niet. R² gaat over kwadratensommen, dus over variatie en niet over de standaardafwijking.',
   '1351,262 / 4,105 = 329,2, en een R² kan nooit boven 1 liggen. De deler is Total, en 4,105 is een drukfout voor 44,105.'])
@@ -185,9 +185,9 @@ add(11,'y',why='Bij deze steekproefomvang geldt de grens ±2, de twee uitersten 
   'Afbeelding 5: de potentiële uitbijters in y zijn waarneming 14 en waarneming 22.',
   'Remedie: de casus vermeldt geen fouten in de gegevens en geen bijzondere omstandigheden, dus de waarnemingen blijven staan.'],
  trap='Stop niet bij het signaal. De remedie hoort bij het antwoord en levert een eigen punt op.',
- wrong=['De uitwerking gebruikt bij n = 30 de grens ±2. Met ±3 zou je de gevallen 14 en 22 ten onrechte missen.',
+ wrong=['Bij n = 30 is de grens ±2. Met ±3 zou je de gevallen 14 en 22 ten onrechte missen.',
   'De casus noemt geen meetfout en geen bijzondere omstandigheid. Zonder die reden is er geen grond om waarnemingen te verwijderen.',
-  'Afbeelding 10 is in de opgaven de tabel Coefficients. De uitwerking gebruikt hier een andere nummering: de residuen staan in afbeelding 5.'])
+  'Afbeelding 10 is in de opgaven de tabel Coefficients. De residuen staan in afbeelding 5.'])
 
 add(11,'invloed',why='Het maximum van Cook’s Distance ligt boven de grens, maar de puntenwolk laat geen duidelijk invloedrijk punt zien.',
  signals='De rij Cook’s Distance in afbeelding 3 toont gemiddelde 0,045, standaardafwijking 0,071 en maximum 0,284. In afbeelding 6 steekt geval 12 boven de rest uit.',
@@ -202,7 +202,7 @@ add(11,'invloed',why='Het maximum van Cook’s Distance ligt boven de grens, maa
  trap='De grens overschrijden is geen reden om te verwijderen. De laatste stap is de beoordeling met afbeelding 1, en ook die levert een punt op.',
  wrong=['De vergelijking staat verkeerd om: 0,284 is groter dan 0,258, dus er is wel een signaal.',
   'De grens geeft alleen een potentieel invloedrijk punt. In afbeelding 1 is geen duidelijk invloedrijk punt te zien, dus geval 12 blijft staan.',
-  'Afbeelding 11 is in de opgaven de tabel Variables Entered/Removed. De uitwerking gebruikt een andere nummering: Cook’s Distance staat in afbeelding 6.'])
+  'Afbeelding 11 is in de opgaven de tabel Variables Entered/Removed. Cook’s Distance staat in afbeelding 6.'])
 
 add(12,'normaliteit',why='De toets past bij n = 30, en een Sig. ver boven 0,05 geeft geen reden om H₀ te verwerpen.',
  signals='Afbeelding 7 toont twee toetsen op Standardized Residual: Kolmogorov-Smirnov met Sig. 0,200 en Shapiro-Wilk met Sig. 0,879. Er zijn 30 patiënten.',
@@ -235,8 +235,8 @@ add(12,'spreiding',why='De correlatie tussen de absolute residuen en beenkracht 
 add(13,why='Voor de gemiddelde waarde bij x̄ telt alleen de onzekerheid van de lijn zelf, s_e / √n, terwijl de losse 1 onder de wortel bij één nieuwe patiënt hoort.',
  signals='De vraag noemt de gemiddelde sprongkracht en x₀ = x̄ = 228,1. Afbeelding 9 geeft s_e = 1,25506, afbeelding 10 geeft 7,159 en 0,099, en de hint zegt dat de derde term wegvalt.',
  meaning='Bij x₀ = x̄ is x₀ − x̄ gelijk aan nul, dus de derde term valt weg. De 1 onder de wortel staat voor de afwijking van één losse patiënt, en die hoort niet bij een gemiddelde.',
- approach='Bereken eerst ŷ₀, t en s_e. Beslis dan wat de vraag zoekt: het gemiddelde zonder de 1, of één patiënt met de 1 zoals de officiële uitwerking doet.',
- answer='ŷ₀, t, s_e, de gekozen formule, de marge en beide grenzen op één decimaal. De officiële uitwerking komt op [27,1; 32,4], de letterlijke vraag naar het gemiddelde op een veel smaller interval.',
+ approach='Bereken eerst ŷ₀, t en s_e. Beslis dan wat de vraag zoekt: het gemiddelde zonder de 1, of één patiënt met de 1.',
+ answer='ŷ₀, t, s_e, de gekozen formule, de marge en beide grenzen op één decimaal. Met de 1 kom je op [27,1; 32,4], de letterlijke vraag naar het gemiddelde geeft een veel smaller interval.',
  steps=['Puntschatting uit afbeelding 10: ŷ₀ = 7,159 + 0,099 × 228,1 = 29,74.',
   't-waarde: t₀,₀₂₅[28] = 2,048, want n − 2 = 28.',
   'Spreiding: s_e = 1,25506 uit afbeelding 9. Ook √1,575 = 1,255 uit de ANOVA geeft dit getal.',
@@ -244,8 +244,8 @@ add(13,why='Voor de gemiddelde waarde bij x̄ telt alleen de onzekerheid van de 
   'Die formule hoort bij één nieuwe patiënt. Voor het gemiddelde vervalt de 1: 29,74 ± 2,048 × 1,25506 × √(1/30) = 29,74 ± 0,47.',
   'Grenzen van het gemiddelde: 29,27 en 30,21. Gewoon afgerond [29,3; 30,2], naar buiten afgerond [29,2; 30,3].',
   'Op het tentamen leverde [27,1; 32,4] de punten op. Deze oefenvraag volgt de letterlijke tekst, dus het gemiddelde.'],
- trap='De hint haalt alleen de derde term weg, de term 1/n blijft staan. Let ook op het woord gemiddelde: de officiële uitwerking gebruikt toch formule 50 met de 1, en dat wijkt af van wat de vraag letterlijk zegt.',
- wrong=['[27,1; 32,4] is wel de uitkomst van de officiële uitwerking, maar die rekent met de 1 voor één patiënt. Er is dus wel verschil: marge 2,61 tegen 0,47 voor het gemiddelde.',
+ trap='De hint haalt alleen de derde term weg, de term 1/n blijft staan. Let ook op het woord gemiddelde: formule 50 met de 1 wijkt af van wat de vraag letterlijk zegt.',
+ wrong=['[27,1; 32,4] is de uitkomst met de 1 voor één patiënt. Er is dus wel verschil: marge 2,61 tegen 0,47 voor het gemiddelde.',
   'Zonder 1/√n is de marge 2,048 × 1,25506 = 2,57. Dat is de spreiding van losse patiënten. Een gemiddelde is nauwkeuriger, dus de factor √(1/30) = 0,183 hoort erbij.',
   'Alleen de derde term valt weg. De term 1/30 blijft, dus de marge is 0,47 en niet nul. Ook de lijn zelf is immers geschat.'])
 

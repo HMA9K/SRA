@@ -50,7 +50,7 @@ add(3,why='Een foutmarge van €45.000 is zo klein tegenover de spreiding dat bi
   'Bij n = 160 is de foutmarge €1.703.607. Om die terug te brengen naar €45.000 moet de steekproef juist veel groter worden dan 160.',
   'Bij 3.402 van de 3.450 posten bespaar je maar 48 controles en houd je alleen een schatting over. Integrale controle geeft voor bijna dezelfde moeite de werkelijke waarde.'])
 
-add(4,why='De steekproef bevat meer afwijkingen dan de 30 die de uitwerking als voorwaarde noemt.',
+add(4,why='De steekproef bevat meer afwijkingen dan de 30 die de voorwaarde vraagt.',
  signals='De casus noemt 42 afwijkingen in de steekproef, en fouten van dezelfde orde van grootte ongeacht de boekwaarde.',
  meaning='De verschilschatter werkt met de gemiddelde fout. Daarvoor moeten er genoeg fouten in de steekproef zitten.',
  approach='Tel niet de steekproefomvang maar het aantal posten met een fout, en vergelijk dat met 30.',
@@ -90,8 +90,8 @@ add(6,why='De verschilschatter benut de boekwaarden, waardoor alleen de spreidin
   'Verschilschatter: de boekwaarden vangen die verschillen tussen posten op. Alleen de spreiding van de verschillen blijft over: s_e = 119,06.',
   'Verhouding: 4.969,13 / 119,06 = 41,7.',
   'N, n en t zijn gelijk, dus de foutmarge is ook 41,7 keer zo klein: 1.703.607 / 40.818 = 41,7.'],
- trap='De uitwerking zegt dat de spreiding in het algemeen kleiner is, niet altijd. Schrijf dus niet dat kleine foutbedragen dit bewijzen.',
- wrong=['Altijd gaat te ver: de uitwerking zegt in het algemeen. In deze opgave blijkt het uit de cijfers, s_e = 119,06 tegen s = 4.969,13.',
+ trap='De spreiding is in het algemeen kleiner, niet altijd. Schrijf dus niet dat kleine foutbedragen dit bewijzen.',
+ wrong=['Altijd gaat te ver: het geldt in het algemeen. In deze opgave blijkt het uit de cijfers, s_e = 119,06 tegen s = 4.969,13.',
   'Hij gebruikt er wel een: in vraag 5 is de standaardfout 31.715,85.',
   'Het is andersom. De foutmarge is evenredig met de standaardafwijking, dus een kleinere spreiding geeft een smaller interval.'])
 
@@ -207,7 +207,7 @@ add(13,why='Het logaritmische model verklaart meer dan het lineaire model en laa
   'Rij Logarithmic: Constant = 14.999,408 en b1 = −1.331,884.',
   'Vergelijking: Korting = 14.999,408 − 1.331,884 × ln(Inkomen).',
   'De toelichting drukt e ≈ 2,7218 af. Dat moet 2,71828 zijn. Op de rekenmachine gebruik je gewoon de ln-toets.'],
- trap='Schrijf ln en niet log. De uitwerking trekt daarvoor 1 punt af.',
+ trap='Schrijf ln en niet log. Daarvoor gaat 1 punt af.',
  wrong=['Power en Exponential rekenen met de logaritme van korting, dus hun R² staat op een andere schaal. Bovendien zijn 0,427 en 0,407 hier lager dan 0,535.',
   'Bij inkomen 35.000 is ln = 10,463 maar log10 = 4,544. De voorspelling springt dan van ongeveer 1.064 naar 8.947.',
   'Een hogere R² betekent dat het model meer spreiding verklaart, dus 0,578 past beter.'])
@@ -236,7 +236,7 @@ add(14,'y',why='Bij 54 waarnemingen gelden de grenzen ±2, vier waarnemingen val
   'Afbeelding 6: waarneming 25 ligt boven 2, en de waarnemingen 19, 53 en 71 liggen onder −2.',
   'Remedie: er is geen bijzondere omstandigheid of fout bekend, dus alle vier blijven gehandhaafd.'],
  trap='Controleer beide kanten. Waarneming 25 zit boven +2 en de andere drie onder −2. Met alleen het maximum mis je die drie.',
- wrong=['De uitwerking geeft bij n = 54 ≤ 100 de grens ±2. Met ±3 zou niets opvallen, want −2,447 en 2,117 liggen daarbinnen.',
+ wrong=['Bij n = 54 ≤ 100 is de grens ±2. Met ±3 zou niets opvallen, want −2,447 en 2,117 liggen daarbinnen.',
   'Een groot residu is alleen een signaal. De casus noemt geen fout of bijzondere omstandigheid, dus de waarnemingen blijven staan.',
   'Een groot residu zegt dat het model daar slecht past. Een invoerfout moet je apart aantonen.'])
 
@@ -250,7 +250,7 @@ add(15,why='Waarneming 64 overschrijdt de grens, maar is in het spreidingsdiagra
   'Afbeelding 8: waarneming 64 is de enige piek boven 0,086.',
   'Afbeelding 3: waarneming 64 is niet herkenbaar als invloedrijk punt.',
   'Remedie: waarneming 64 handhaven.'],
- trap='Stop niet bij Afbeelding 8. De uitwerking geeft ook een punt voor de beoordeling in Afbeelding 3. Een overschrijding alleen is geen reden om te verwijderen.',
+ trap='Stop niet bij Afbeelding 8. Ook de beoordeling in Afbeelding 3 levert een punt op. Een overschrijding alleen is geen reden om te verwijderen.',
  wrong=['Hier ontbreekt de factor 3. Met 0,040 zouden veel pieken in Afbeelding 8 opvallen, terwijl de grens 0,086 is.',
   'Cook’s Distance meet invloed op de lijn. Over de juistheid van de invoer zegt hij niets.',
   'Cook’s Distance zegt niets over de verdeling. Normaliteit toets je apart, met Afbeelding 10.'])
@@ -335,7 +335,7 @@ add(21,why='De dummy heeft code 1 voor vrouwen en een positieve coëfficiënt, d
   'Codering: vrouw = 1 en man = 0. Vrouw min man is dus +446,294.',
   'Gevraagd is man min vrouw: −446,294.',
   'Een man krijgt dus niet meer, maar gemiddeld ongeveer €446 minder dan een vrouw, bij gelijk inkomen en gelijke leeftijd.'],
- trap='Het woord meer in de vraag zet je op het verkeerde been. Alleen 446 noemen levert in de uitwerking 2 van de 4 punten op.',
+ trap='Het woord meer in de vraag zet je op het verkeerde been. Alleen 446 noemen levert 2 van de 4 punten op.',
  wrong=['De coëfficiënt is positief bij vrouw = 1. Vrouwen krijgen dus meer, niet mannen.',
   'Dit is een gemiddeld verschil bij gelijk inkomen en gelijke leeftijd, geen vast bedrag per persoon. Afbeelding 13 geeft een Std. Error of the Estimate van 301,192, dus losse kortingen wijken af.',
   'De coëfficiënt hoort bij Geslacht. Leeftijd heeft in Afbeelding 15 een eigen coëfficiënt: 9,490 per jaar.'])
@@ -381,4 +381,4 @@ add(23,'b',why='Dit inkomen ligt ver buiten de waargenomen gegevens, dus je weet
  trap='De vraag is eerst of je mag voorspellen, en pas daarna hoeveel. Invullen lukt altijd, maar daarmee is de uitkomst nog niet bruikbaar.',
  wrong=['Een passende leeftijd helpt niet als het inkomen buiten het bereik ligt. €100.000 ligt ruim boven €65.000.',
   'Een regressiemodel geldt voor het bereik van de gegevens waarop het is geschat. Hier geeft €100.000 zelfs een uitkomst van −702,38.',
-  'Een hoog inkomen maakt de voorspelling niet nauwkeuriger. De uitwerking noemt extrapolatie juist een onnauwkeurige schatting.'])
+  'Een hoog inkomen maakt de voorspelling niet nauwkeuriger. Extrapolatie is juist een onnauwkeurige schatting.'])

@@ -15,7 +15,7 @@ add(1,why='Zodra je meer dan één post trekt, is de teller N − n kleiner dan 
   'De teller 2.570 is kleiner dan de noemer 2.699, dus de breuk en de wortel zijn allebei kleiner dan 1.',
   'Standaardfout van het totaal zonder correctie: 2.700 × 210 / √130 = 49.729.',
   'Met correctie: 49.729 × 0,9758 = 48.526. Een kleinere standaardfout geeft een smaller interval, dus een nauwkeuriger schatting.'],
- trap='Alleen het woord nauwkeuriger levert geen punten op. De normering eist dat je ook noemt dat de factor kleiner is dan 1 of dat het interval minder breed wordt.',
+ trap='Alleen het woord nauwkeuriger levert geen punten op. Noem ook dat de factor kleiner is dan 1 of dat het interval minder breed wordt.',
  wrong=['De factor is 0,9758 en vermenigvuldigen met een getal onder 1 maakt de standaardfout juist kleiner: 48.526 in plaats van 49.729.',
   'De factor is alleen 1 als n = 1, want dan staat boven en onder de streep hetzelfde. Bij n = 130 is hij 0,9758.',
   'Het gemiddelde van €416 komt rechtstreeks uit de steekproef en blijft gelijk. De factor zit alleen in de standaardfout.'])
@@ -46,8 +46,8 @@ add(3,why='Verschillen tussen boekwaarde en werkelijke waarde zijn meestal klein
   'Redenering: verschillen zijn in het algemeen kleiner dan de waarden, dus de spreiding is ook kleiner. Dan past €71, want 71 < 210 en 332 > 210.',
   'Ter vergelijking: s = 332 geeft een standaardfout van 76.718, meer dan de 48.526 van de directe schatter. Bij s = 71 is dat 16.406.',
   'Dit blijft een verwachting. Er geldt Var(b − w) = Var(b) + Var(w) − 2 × Cov(b, w), en spreiding en samenhang van de boekwaarden b zijn niet gegeven.'],
- trap='De normering vraagt drie stappen: verschillen kleiner, spreiding dus kleiner, laagste waarde. Alleen €71 noemen levert niets op, want ongemotiveerde antwoorden krijgen nul punten.',
- wrong=['Altijd en noodzakelijk gaan te ver. De uitwerking schrijft in het algemeen, en de formule voor Var(b − w) laat toe dat s_e ook boven s_w uitkomt.',
+ trap='Noem drie stappen: verschillen kleiner, spreiding dus kleiner, laagste waarde. Alleen €71 noemen levert niets op, want ongemotiveerde antwoorden krijgen nul punten.',
+ wrong=['Altijd en noodzakelijk gaan te ver. Het geldt in het algemeen, en de formule voor Var(b − w) laat toe dat s_e ook boven s_w uitkomt.',
   'Onwaarschijnlijk is niet onmogelijk. Sluiten boekwaarden en werkelijke waarden slecht op elkaar aan, dan kan de spreiding van de verschillen boven €210 komen.',
   'Standaarddeviaties trek je niet van elkaar af. De variantie van een verschil hangt af van beide varianties en hun covariantie, en s_b is hier niet eens gegeven.'])
 
@@ -268,7 +268,7 @@ add(14,'y',why='De laagste gestandaardiseerde waarde komt net onder de grens uit
   'Conclusie: minstens één potentiële uitbijter in y.',
   'Remedie: er is niets vermeld over bijzondere situaties, dus handhaven.'],
  trap='Bij negatieve getallen is −3,216 kleiner dan −3. Kijk dus naar beide kanten en niet alleen naar het maximum.',
- wrong=['De uitwerking kiest ±3 omdat n = 746 groter is dan 100. Met ±2 gebruik je de verkeerde grens voor deze steekproef.',
+ wrong=['De grens is ±3 omdat n = 746 groter is dan 100. Met ±2 gebruik je de verkeerde grens voor deze steekproef.',
   '−3,216 ligt verder van nul dan −3, dus juist buiten de grenzen.',
   'De grens is tweezijdig: ±3. Een punt ver onder de lijn is net zo goed een afwijking als een punt ver erboven.'])
 
@@ -281,7 +281,7 @@ add(14,'invloed',why='Het grootste effect op de lijn ligt boven de grens, maar g
   'Grens: 0,001 + 3 × 0,002 = 0,007.',
   'Maximum: 0,021 > 0,007, dus er is minstens één potentieel invloedrijk punt.',
   'Remedie: in Afbeelding 2 en 5 zijn geen waarnemingen aangeduid die qua positie opvallen, dus handhaven.'],
- trap='Cook-afstand staat in de uitwerking onder invloedrijke punten, al staat er per ongeluk uitbijter in x. Noem het in je antwoord een invloedrijk punt.',
+ trap='Cook-afstand hoort bij invloedrijke punten, niet bij uitbijters in x. Noem het in je antwoord een invloedrijk punt.',
  wrong=['De vergelijking is omgedraaid: 0,021 is drie keer zo groot als 0,007.',
   'De uitbijter in x beoordeel je met de Mahalanobis-afstand. De Cook-afstand gebruik je om te zien of een punt de lijn sterk beïnvloedt.',
   'Elke waarneming heeft een Cook-afstand van 0 of hoger. Het gaat om de grens 0,007, en ook boven die grens verwijder je niet zonder reden.'])
@@ -383,7 +383,7 @@ add(20,why='De bewering gaat over een daling, dus het kritieke gebied ligt links
  trap='De opgave eist het kritieke gebied, dus alleen Sig. < 0,001 noemen is niet genoeg. Gebruik ook de eenzijdige grens −1,645 en niet ±1,960.',
  wrong=['Een daling betekent H₁: β₁ < 0. Een sterk negatieve t past juist niet bij een positieve helling.',
   '−11,223 ligt ver links van −1,645 en dus in het kritieke gebied. H₀ wordt wel verworpen.',
-  '744 hoort bij één verklarende variabele (n − 2). Bij twee is het 743. De uitwerking schrijft wel 744, maar de grens −1,645 verandert daardoor niet.'])
+  '744 hoort bij één verklarende variabele (n − 2). Bij twee is het 743. De grens −1,645 verandert daardoor niet.'])
 
 add(21,why='Model 3 bevat alleen Leeftijd en Geslacht, dus de bloeddruk uit de vraag speelt geen rol in de berekening.',
  signals='De vraag noemt drie kenmerken: 60 jaar, vrouw en bloeddruk 140 mm Hg. In Model 3 van Afbeelding 11 staan alleen Leeftijd en Geslacht.',
@@ -411,5 +411,5 @@ add(22,why='Zowel het beeld als de toets bij de groep mannen geven geen aanwijzi
   'Nuance: niet verwerpen is geen bewijs van normaliteit. Shapiro-Wilk geeft 0,010, maar die toets kies je bij deze n niet.'],
  trap='Kijk in Afbeelding 15 in de juiste kolom. Shapiro-Wilk geeft 0,010 en zou tot een andere conclusie leiden, maar bij deze n kies je Kolmogorov-Smirnov.',
  wrong=['Niet verwerpen bewijst geen normaliteit, en het histogram blijft nodig: dat is juist een van de twee gevraagde redenen.',
-  'Bij vraag 15 gebruikt de uitwerking n > 50 als grens. De n > 100 bij deze vraag is geen algemene regel, en n = 564 voldoet aan beide.',
+  'Bij vraag 15 is n > 50 de grens. De n > 100 bij deze vraag is geen algemene regel, en n = 564 voldoet aan beide.',
   'Afbeelding 14 heeft één top, en 0,098 is groter dan 0,05. Beide delen van deze uitspraak kloppen dus niet.'])

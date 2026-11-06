@@ -150,7 +150,7 @@ add(9,why='De twee soorten symbolen liggen grotendeels op dezelfde plek, dus de 
   'Er zijn dus geen twee gescheiden puntenwolken. Dat pleit tegen samengevoegde groepen.',
   'De rondjes liggen wel wat hoger en de plusjes wat lager. Daarom is ook het antwoord “mogelijk samengevoegde groepen” goed.',
   'Afbeelding 1 past hierbij: Chauffeur met Tijd heeft r = −0,117 en Sig. = 0,374, dus een klein verschil dat niet significant is.'],
- trap='De uitwerking accepteert twee standpunten. Het gaat om de motivatie uit de grafiek, een los ja of nee levert niets op.',
+ trap='Twee standpunten zijn goed. Het gaat om de motivatie uit de grafiek, een los ja of nee levert niets op.',
  wrong=['Twee namen zeggen alleen dat er twee chauffeurs zijn. Of het aparte groepen zijn blijkt uit de ligging van de punten, en die lopen door elkaar.',
   'Afbeelding 2 laat het tegendeel zien: rondjes en plusjes liggen bij dezelfde afstanden en tijden.',
   'Overlap betekent alleen dat er geen duidelijk verschil te zien is. De tijden lopen ook binnen één chauffeur sterk uiteen: bij 16 km lopen de rondjes van ongeveer 103 tot 189 minuten.'])
@@ -183,7 +183,7 @@ add(11,why='Bij deze steekproefomvang ligt de grens op ± 2, en de remedie hangt
  trap='Een waarneming buiten de grens is alleen een signaal. De remedie hangt af van de reden: zonder bijzondere omstandigheid blijft de rit staan, zoals rit 2.',
  wrong=['Bij n ≤ 100 is de grens ± 2, niet ± 3. Met ± 3 zou je 2, 22 en 58 ten onrechte overslaan, want de uitersten zijn −2,491 en 2,460.',
   'Rit 2 heeft in de casus geen bijzondere omstandigheid en blijft dus staan. Alleen bij 22 en 58 is oponthoud gemeld.',
-  'De uitwerking verwijdert 22 en 58 omdat de casus langdurig oponthoud noemt. Dat is een besluit voor deze ritten, geen vaste regel. Wil je vertragingen juist mee plannen, dan weeg je het opnieuw af.'])
+  'Je verwijdert 22 en 58 omdat de casus langdurig oponthoud noemt. Dat is een besluit voor deze ritten, geen vaste regel. Wil je vertragingen juist mee plannen, dan weeg je het opnieuw af.'])
 
 add(12,'x',why='Het maximum ligt boven de grens, en bij de gemarkeerde nummers moet je opletten omdat 58 eerder al is weggehaald.',
  signals='Afbeelding 6 heeft N = 58 en geeft bij Mahal. Distance gemiddelde 0,983, standaardafwijking 1,377 en maximum 7,195. Afbeelding 7 toont twee hoge pieken, bij 30 en 58.',
@@ -215,7 +215,7 @@ add(12,'invloed',why='Het maximum ligt boven de grens, maar de remedie hangt af 
  trap='Alleen de grens noemen is niet genoeg. De remediepunten krijg je pas met de beoordeling in Afbeelding 9 en een gemotiveerde keuze.',
  wrong=['0,168 is groter dan 0,124, niet kleiner. Er is dus wel een invloedssignaal.',
   'Cook’s Distance gaat over de invloed van één waarneming op de lijn. Normaliteit toets je apart met Afbeelding 10.',
-  'Een betere passing is geen argument. De uitwerking kijkt of de punten in Afbeelding 9 duidelijk te onderscheiden zijn.'])
+  'Een betere passing is geen argument. Het gaat erom of de punten in Afbeelding 9 duidelijk te onderscheiden zijn.'])
 
 add(13,'normaliteit',why='Bij deze steekproefomvang hoort Kolmogorov-Smirnov, en de Sig. daarvan ligt ruim boven 0,05.',
  signals='Afbeelding 10 geeft voor de Standardized Residual twee toetsen met df = 55: Kolmogorov-Smirnov met Sig. = 0,200 en Shapiro-Wilk met Sig. = 0,611. De voetnoot zegt dat 0,200 een ondergrens is.',
@@ -343,7 +343,7 @@ add(19,why='Meer variabelen verklaren wel meer, maar een eenvoudiger model met b
   'Spaarzaamheid: een model dat nauwelijks minder verklaart maar minder variabelen heeft, is overzichtelijker en beter uit te leggen aan de klant.',
   'Risico’s: met meer variabelen is de kans groter op multicollineariteit en overfitting.',
   'Voorbeeld uit dit tentamen: Chauffeur staat in Afbeelding 17 in het model, maar voegt met Sig. = 0,206 te weinig toe.'],
- trap='Schrijf niet alleen dat de uitspraak onjuist is. De uitwerking noemt hem niet per se incorrect. De punten zitten in spaarzaamheid en adjusted R².',
+ trap='Schrijf niet alleen dat de uitspraak onjuist is. Hij is niet per se incorrect. De punten zitten in spaarzaamheid en adjusted R².',
  wrong=['Dat R² niet daalt klopt, maar daaruit volgt niet dat dit model het beste is. Een iets lagere verklaring met minder variabelen kan beter zijn.',
   'Dit is overfitting: het model past dan op deze gegevens, maar niet op nieuwe ritten. Residuen van nul maken controle niet overbodig.',
   'Adjusted R² hangt juist af van het aantal variabelen. Bij R² = 0,816 met 3 variabelen en n = 55 geeft de correctie 0,805.'])

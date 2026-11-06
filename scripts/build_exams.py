@@ -1,5 +1,6 @@
 """Gemaakt met Codex. Originele SRA-opgaven en antwoorden, per bronsectie."""
 from pathlib import Path
+import unicodedata
 import exam_text_repairs
 import json, os, re, subprocess, shutil
 import pdfplumber
@@ -15,6 +16,25 @@ ANSWER = re.compile(r'(?im)^\s*' + LABEL + r'(\d+)\s*[.:()]')
 def page_text(page):
     # Some 2020 PDFs store the first capital of a heading as a separate text run.
     return re.sub(r'\bV\s*\n\s*raag\b', 'Vraag', page.extract_text() or '')
+
+
+def clean_pdf_math(page):
+    """Maak wiskundeletters uit Word-pdf's leesbaar in de tekstversie onder de pagina-afbeelding.
+
+    Sommige pdf's leveren iedere formuleletter twee keer en een verloren streep, dakje of
+    somteken als vervangteken. De afbeelding blijft de bron; dit geldt alleen de tekstversie.
+    """
+    math = [c for c in page if 0x1D400 <= ord(c) <= 0x1D7FF]
+    pairs = sum(2 for a, b in zip(page, page[1:]) if a == b and 0x1D400 <= ord(a) <= 0x1D7FF)
+    if math and pairs / len(math) > .7:
+        page = re.sub('([\U0001D400-\U0001D7FF])\\1', r'\1', page)
+    page = ''.join(unicodedata.normalize('NFKC', c) if 0x1D400 <= ord(c) <= 0x1D7FF else c for c in page)
+    page = re.sub('([Wy])\uFFFD', '\\1\u0302', page)
+    page = re.sub('([wbexd])\uFFFD', '\\1\u0304', page)
+    page = re.sub('\uFFFD\\s*(?=[ebw])', 'Σ', page)
+    page = re.sub('\uFFFD\\s*', '√', page)
+    page = page.translate({0xF072: 'ρ', 0xF0B7: '•', 0xF0A7: '•', 0xF061: 'α', 0xF0B1: '±'})
+    return page.replace('sttt=', 's_tot =')
 
 
 def pdf_pages(path):
@@ -80,6 +100,8 @@ def build():
                           answerBoundaries=record.get('antwoord_grenzen', {})))
     for exam in exams:
         exam_text_repairs.apply(exam)
+        for field in ('pageText', 'answerText'):
+            exam[field] = [clean_pdf_math(page) for page in exam[field]]
     unique = [e for e in exams if not e['duplicateOf']]
     frequencies = {topic: sum(bool(e['evidence'].get(topic)) for e in unique) for topic in analysis['frequenties']}
     assert frequencies == analysis['frequenties'], 'Actualiseer frequenties op basis van inhoudelijk verschillende tentamens.'

@@ -18,7 +18,7 @@ add(1,why='Bij bewust verhogen groeit het bedrag van de fout mee met het inkomen
  trap='Dat de inkomens te hoog zijn, is op zichzelf nog geen argument. Het gaat om de vorm van de fout: een percentage of een vast bedrag.',
  wrong=['Eén vast foutbedrag is juist de situatie van de verschilschatter. Bewust verhogen levert bij grotere inkomens bovendien meer euro’s op.',
   'De schatter gebruikt juist de samenhang tussen beide waarden. Die is hier sterk: de correlatie is 0,88, en R staat ook in de formule van s_q.',
-  'De uitwerking zegt dat de verschilschatter beter is als de absolute fout niet van het inkomen afhangt. Het foutpatroon beslist dus.'])
+  'De verschilschatter is beter als de absolute fout niet van het inkomen afhangt. Het foutpatroon beslist dus.'])
 
 add(2,why='De verhouding uit de steekproef is toegepast op het dossiertotaal, en bij een losse bovengrens van 97,5% staat de hele 2,5% aan één kant.',
  signals='Van 145 dossiers zijn het dossierinkomen en het werkelijke inkomen bekend, met s_b = 11.500, s_w = 12.600 en R = 0,88. Van alle 1.375 dossiers is het totaal 56.000.000 gegeven.',
@@ -204,7 +204,7 @@ add(10,'b',why='Eén verklarende variabele heeft een Sig. die ver boven 0,10 lig
   'Drie variabelen hebben een Sig. onder 0,10: 0,068, 0,033 en 0,000. Die hellingen zijn dus wel significant.',
   'Opnemen in het model zegt niets over significantie. Gewicht zit in het model en heeft toch Sig. = 0,533.'])
 
-add(10,'c',why='Zelfs de hoogste VIF blijft ruim onder de grens van 10 die de uitwerking gebruikt.',
+add(10,'c',why='Zelfs de hoogste VIF blijft ruim onder de grens van 10.',
  signals='Afbeelding 4 heeft een kolom VIF met 2,791, 1,173, 1,799 en 3,056. Vraag 9b gaf al aanleiding om dit na te gaan.',
  meaning='De VIF laat zien hoe sterk een verklarende variabele overlapt met de andere. Pas boven de grens is er sprake van multicollineariteit.',
  approach='Zoek de hoogste VIF in Afbeelding 4 en vergelijk die met 10.',
@@ -244,7 +244,7 @@ add(11,why='Tablet 35 gaat over beide kritieke grenzen heen, en Afbeelding 8 laa
   'Afbeelding 8: waarneming 35 ligt met 16 GB en een lage prijs ver van de andere punten, en is herkenbaar als invloedrijk punt.',
   'Conclusie: waarneming 35 verwijderen. De latere uitvoer rekent ook met 34 tablets: df2 = 32 in Afbeelding 9 en df = 34 in Afbeelding 13.'],
  trap='Noem niet alleen de grenzen. De vraag vraagt ook om de remedie, en die hangt af van wat er met waarneming 35 aan de hand is: geen fout, wel een bijzondere omstandigheid.',
- wrong=['Een waarde aanpassen alleen om onder 19,246 te komen, is geen remedie. De uitwerking stelt vast dat er geen fout in de gegevens zit en eindigt bij het invloedrijke punt op verwijderen.',
+ wrong=['Een waarde aanpassen alleen om onder 19,246 te komen, is geen remedie. Er zit geen fout in de gegevens, en bij het invloedrijke punt is de conclusie verwijderen.',
   'De conclusie verwijderen volgt pas na onderzoek: de grenzen 19,246 en 3,153, de combinatie van 16 GB en 8 GB, en Afbeelding 8. Zonder die stappen is er geen grond.',
   'Mahalanobis Distance meet de afstand in de x-waarden, Cook’s Distance de invloed op de regressie. Normaliteit toets je apart, zoals in Afbeelding 13.'])
 
@@ -259,7 +259,7 @@ add(12,why='Geen van de drie niet-lineaire modellen haalt een hogere R² of F da
   'Power en Exponential zijn door hun getransformeerde prijs geen zuivere vergelijking met Linear. Dat verandert de conclusie hier niet, want hun waarden liggen lager.'],
  trap='De vraag klinkt alsof je een niet-lineair model moet kiezen, maar het antwoord is nee. Alle vier de modellen hebben Sig. 0,000, dus Sig. helpt niet bij de keuze.',
  wrong=['De R² van Power is 0,649, dus lager dan de 0,682 van Linear. De bewering klopt al niet met Afbeelding 9.',
-  'De uitwerking kijkt wel naar F, maar bij Power en Exponential gaat F over een getransformeerde prijs. Dat verschil moet je erbij noemen. Linear blijft hier met 68,576 het hoogst.',
+  'Je mag wel naar F kijken, maar bij Power en Exponential gaat F over een getransformeerde prijs. Dat verschil moet je erbij noemen. Linear blijft hier met 68,576 het hoogst.',
   'Linear is zelf een van de modellen met opslaggeheugen, en past met R² = 0,682 juist het best.'])
 
 add(13,'a',why='De helling geeft de prijsstijging per GB, en tussen de twee tablets zit een verschil van vier GB.',
@@ -321,7 +321,7 @@ add(15,why='Elke zwarte plek volgt uit de vaste verbanden in een ANOVA-tabel, en
  signals='Afbeelding 15 geeft Mean Square Regression = 718.123,926 met df = 1, en Total = 902.604,839 met df = 30. De andere cellen zijn zwart gemaakt.',
  meaning='Sum of Squares van Regression en Residual tellen op tot Total, en hetzelfde geldt voor df. Daarmee kun je de ontbrekende waarden terugrekenen.',
  approach='Vul de tabel van boven naar beneden in: SSR, SSE, df van het residu en MSE. Bereken daarna R², F en t.',
- answer='Alle zes de uitkomsten met hun berekening. Wie rekent met SSR = 700.000 krijgt de alternatieve waarden uit de uitwerking.',
+ answer='Alle zes de uitkomsten met hun berekening. Wie rekent met SSR = 700.000 krijgt de alternatieve waarden uit de laatste stap.',
  steps=['a. SSR = MSR × df = 718.123,926 × 1 = 718.123,926.',
   'b. SSE = TotalSS − SSR = 902.604,839 − 718.123,926 = 184.480,913.',
   'b. df van het residu = 30 − 1 = 29, dus MSE = 184.480,913 / 29 = 6.361,41.',

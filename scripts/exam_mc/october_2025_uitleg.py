@@ -18,7 +18,7 @@ add(1,why='De schatting is N × w̄, de standaardfout bevat de eindigheidscorrec
   't-waarde: 95% tweezijdig met 119 vrijheidsgraden. De tabel heeft geen 119, dus neem t₀,₀₂₅[110] = 1,982.',
   'Grenzen: 57.474.000 − 1,982 × 1.251.943 = 54.992.649 en 57.474.000 + 1,982 × 1.251.943 = 59.955.351.',
   'Naar buiten afgerond op € 1.000: [€ 54.992.000; € 59.956.000].'],
- trap='Rond de grenzen niet gewoon af: 54.992.649 gaat omlaag naar 54.992.000, hoewel 54.993.000 dichterbij ligt. Let ook op de tabel: het antwoordmodel schrijft t₀,₀₁[110], maar 1,982 staat onder t₀,₀₂₅.',
+ trap='Rond de grenzen niet gewoon af: 54.992.649 gaat omlaag naar 54.992.000, hoewel 54.993.000 dichterbij ligt. Let ook op de tabel: in rij [110] staat 1,982 onder t₀,₀₂₅ en niet onder t₀,₀₁.',
  wrong=['De spreiding is geschat uit de steekproef, dus je gebruikt t en niet z. Met 1,96 wordt de foutmarge 2.453.808 in plaats van 2.481.351, en dat is te smal.',
   'Dit zijn de berekende grenzen, maar de vraag wil afronding op € 1.000. Ondergrens omlaag en bovengrens omhoog geeft 54.992.000 en 59.956.000.',
   'De directe schatter gebruikt de boekwaarde niet. Het middelpunt is N × w̄ = 57.474.000 en niet 58.420.000, de waarde die juist te hoog staat.'])
@@ -49,7 +49,7 @@ add(3,why='Met de boekwaarde hoef je alleen het verschil met de werkelijke waard
   'Daardoor is de standaardfout hier 176.452 in plaats van 1.251.943, ongeveer 7 keer zo klein.'],
  trap='Het gaat over het algemeen op, niet altijd. De winst ontstaat alleen als de verschillen minder spreiden dan de werkelijke waarden, zoals hier.',
  wrong=['Beide schatters gebruiken dezelfde correctie √((6.200 − 120) / (6.200 − 1)). Dat zie je in de standaardfouten van vraag 1.1 en 1.4.',
-  'De uitwerking gebruikt bij vraag 1.4 dezelfde t = 1,982 als bij vraag 1.1. Het verschil zit in de standaardfout, niet in t.',
+  'Vraag 1.4 gebruikt dezelfde t = 1,982 als vraag 1.1. Het verschil zit in de standaardfout, niet in t.',
   'Beide schatters werken met dezelfde 120 producttypen. De steekproef wordt bij de overstap niet groter.'])
 
 add(4,why='Het middelpunt is de boekwaarde min het opgeschaalde gemiddelde verschil, en de grenzen zijn naar buiten afgerond.',
@@ -108,9 +108,9 @@ add(7,why='Per stratum schaal je het steekproefgemiddelde op naar het hele strat
   'Stratum 3: 455 × 98.230 / 41 = 1.090.113, met een gemiddelde van 2.395,85.',
   'Stratum 4: 310 × 84.360 / 31 = 843.600, met een gemiddelde van 2.721,29.',
   'Totaal: 2.914.886 + 1.566.938 + 1.090.113 + 843.600 = 6.415.537.'],
- trap='De legenda noemt wᵢ een gemiddelde, maar kolomkop en antwoordmodel behandelen de kolom als een som. Deel daarom eerst door nᵢ.',
+ trap='De legenda noemt wᵢ een gemiddelde, maar de kolomkop behandelt de kolom als een som. Deel daarom eerst door nᵢ.',
  wrong=['340.885 is alleen de waarde van de 136 getelde posten. De populatie telt 2.615 posten, dus je moet per stratum nog opschalen.',
-  'Dan behandel je 65.820 als gemiddelde per post, zoals de legenda zegt. De kolomkop is ∑wᵢ en het antwoordmodel deelt eerst door nᵢ. Anders is het totaal ruim 30 keer te groot.',
+  'Dan behandel je 65.820 als gemiddelde per post, zoals de legenda zegt. De kolomkop is ∑wᵢ, dus deel eerst door nᵢ. Anders is het totaal ruim 30 keer te groot.',
   'Dat is 2.615 × 340.885 / 136. Zo tellen de strata mee naar hun steekproef en niet naar hun populatie: stratum 1 heeft 47% van de posten maar 21% van de steekproef.'])
 
 add(8,why='Een losse bovengrens is eenzijdig met de hele α aan één kant, de standaardfouten combineer je via de kwadraten en je rondt omhoog af.',
@@ -239,8 +239,8 @@ add(13,'cook',why='Cook’s Distance gebruikt dezelfde grensformule als Mahalano
   'Afbeelding 10: alleen waarneming 11 komt boven 0,054.',
   'Afbeelding 2 en 3: als 24 en 43 weg zijn, is waarneming 11 duidelijk als invloedrijk punt te herkennen, met age 20 en ongeveer 300 hits.',
   'Remedie: waarneming 11 verwijderen.'],
- trap='Als uitbijter blijft waarneming 11 staan, als invloedrijk punt gaat hij volgens de uitwerking weg. Dat zijn twee aparte beoordelingen, en een signaal alleen bewijst geen fout. Motiveer de keuze dus.',
- wrong=['De grens 1 staat niet in de uitwerking. Formule 45 geeft gemiddelde + 3 × standaardafwijking = 0,054, en 0,129 ligt daarboven.',
+ trap='Als uitbijter blijft waarneming 11 staan, als invloedrijk punt gaat hij weg. Dat zijn twee aparte beoordelingen, en een signaal alleen bewijst geen fout. Motiveer de keuze dus.',
+ wrong=['De grens is niet 1. Formule 45 geeft gemiddelde + 3 × standaardafwijking = 0,054, en 0,129 ligt daarboven.',
   'De grens klopt, maar 24 en 43 zijn pieken in Afbeelding 9. In Afbeelding 10 steekt alleen waarneming 11 boven 0,054 uit.',
   '13,911 is de grens voor de Mahalanobis-afstand en gaat over de x-richting. Voor Cook’s Distance geldt 0,054.'])
 
@@ -323,7 +323,7 @@ add(18,why='SPSS geeft een tweezijdige significantie, en bij een eenzijdige toet
   'Eenzijdige significantie: 0,009 / 2 = 0,0045.'],
  trap='Neem 0,009 niet zomaar over: de hypothese uit vraag 2.2 is eenzijdig. Halveren mag alleen omdat het teken van b de verwachte richting heeft.',
  wrong=['De tabel geeft de tweezijdige significantie. Voor de eenzijdige toets uit vraag 2.2 moet 0,009 nog door 2.',
-  'Bij een eenzijdige toets halveer je en verdubbel je niet. De uitwerking deelt 0,009 door 2.',
+  'Bij een eenzijdige toets halveer je en verdubbel je niet. Deel 0,009 dus door 2.',
   '1 − 0,0045 zou passen als het teken tegen de verwachting in ging. Hier is b negatief en H₁ is β < 0, dus dat geldt niet.'])
 
 add(19,why='Twee modellen verklaren duidelijk meer dan de andere twee, onderling is er nauwelijks verschil, en één van die twee heeft een extra nadeel.',
@@ -336,7 +336,7 @@ add(19,why='Twee modellen verklaren duidelijk meer dan de andere twee, onderling
   'Power transformeert de afhankelijke variabele potential. Dat kan een negatief effect hebben op de relatie met age.',
   'Het logaritmische model laat potential ongewijzigd en transformeert alleen hits. De opgave gaat daarna verder met LN_hits in Afbeelding 17 en 18.'],
  trap='Kies niet automatisch de hoogste R². De R² van Power hoort bij een getransformeerde potential en is niet rechtstreeks te vergelijken met de R² van Log.',
- wrong=['Linear heeft met 0,318 samen met Exponential de laagste R². De uitwerking kent geen voorkeur voor lineair, de keuze volgt uit de cijfers.',
+ wrong=['Linear heeft met 0,318 samen met Exponential de laagste R². Er is geen voorkeur voor lineair, de keuze volgt uit de cijfers.',
   'Exponential heeft F = 42,945, en dat is niet de grootste. Power heeft 55,616 en Log 55,125. Ook R² is met 0,318 laag.',
   'Het verschil is maar 0,002, dus er is geen overtuigende winnaar. Power heeft wel een nadeel: potential wordt getransformeerd.'])
 

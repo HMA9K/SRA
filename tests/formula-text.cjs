@@ -32,6 +32,7 @@ const numbers=fs.readFileSync(path.join(__dirname,'../data/course.js'),'utf8');
 assert.ok(numbers.includes('Afgeleid van formule ')&&numbers.includes('formula-goal'),'Formulenummers en doelen ontbreken');
 global.window={};require('../data/exams.js');
 for(const exam of window.SRAExamData.exams)for(const field of ['pageText','answerText'])(exam[field]||[]).forEach((page,index)=>page.split('\n').forEach(line=>{
+ assert.ok(!/[�-]|[\u{1D400}-\u{1D7FF}]/u.test(line),`${exam.id} ${field} p. ${index+1}: beschadigd teken`);
  if(line.includes('√'))assert.ok(!(split(line)||[line]).some(part=>typeof part==='string'&&part.includes('√')),`${exam.id} ${field} p. ${index+1}: ${line}`);
 }));
 assert.ok(split('γ = 5.000² / [1,974² × 2.130] ≈ 3,1').some(part=>part.math?.includes('<mfrac>')),'Noemer tussen vierkante haken wordt een breuk');
