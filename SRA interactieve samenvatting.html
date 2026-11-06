@@ -5785,7 +5785,6 @@ body.original-pdf-open .study-assistant-launch-wrap{display:none!important}
 .original-pdf-viewer{display:flex;flex-direction:column;min-width:0;min-height:0;height:100%;background:var(--study-surface,#fff);color:var(--study-text,#172c48)}
 .original-pdf-head{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;padding:10px;border-bottom:1px solid var(--study-line,#d9e2eb);font-size:14px}
 .original-pdf-head .btn{font-size:12px;min-height:30px;padding:5px 8px}
-.original-pdf-link{padding:6px 10px;margin:0;font-size:12px}
 .original-pdf-viewer iframe{display:block;width:100%;flex:1;min-height:240px;border:0;background:#fff}
 .original-pdf-left-viewer{position:fixed;z-index:80}
 .original-pdf-right>.original-pdf-viewer{position:absolute;inset:0}
@@ -77231,7 +77230,6 @@ function viewer(id,kind){
   const source=originalPdfs[id],file=source[kind],label=kind==='questions'?'Origineel tentamen':'Officiële uitwerking';
   const box=document.createElement('section');box.className='original-pdf-viewer';box.dataset.pdfExam=id;
   box.innerHTML='<header class="original-pdf-head"><strong>'+label+' · '+htmlEscape(source.date.split('-').reverse().join('-'))+'</strong><button type="button" class="btn" data-pdf-close="'+kind+'">'+(kind==='questions'?'Terug naar casus':'Sluiten')+'</button></header>'+
-    '<p class="original-pdf-link"><a target="_blank" rel="noopener" href="'+file.url+'">Open PDF in een nieuw tabblad</a></p>'+
     '<iframe title="'+htmlEscape(label+' '+file.title)+'" src="pdf-reader/web/viewer.html?file='+encodeURIComponent(new URL(file.url,document.baseURI).href)+'&amp;key='+encodeURIComponent(key+':'+file.sha256)+'" loading="eager"></iframe>';
   viewers.set(key,box);return box;
 }

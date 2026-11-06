@@ -6,6 +6,7 @@ const base=process.env.PDF_URL||'http://127.0.0.1:8769/';
 
  const source=new URL('bronnen/original-pdfs/20250317/opgaven.pdf',base).href;
  await page.goto(base+'pdf-reader/web/viewer.html?file='+encodeURIComponent(source));
+ assert.equal(await page.locator('#cafaOpenTab').getAttribute('target'),'_blank','Tabbladknop staat in de lezer');
  await page.waitForFunction(()=>window.CafaPdfReader?.ready);console.log('reader ready');await page.waitForFunction(()=>PDFViewerApplication.isInitialViewSet);await page.waitForTimeout(300);
  assert.equal(await page.locator('#cafa-content-width').getAttribute('aria-pressed'),'true','Default is content fit');
  await page.evaluate(()=>PDFViewerApplication.page=8);
