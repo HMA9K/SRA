@@ -122,11 +122,13 @@ function createAssistantPanel(panel,options={}){
     separator.setAttribute('aria-valuenow',String(Math.round(width)));separator.setAttribute('aria-valuetext',Math.round(width)+' procent uitwerkingbreedte');
     const short=stacked&&v.h<500;doc.body.classList.toggle('study-assistant-short',short);
     page?.classList.toggle('study-assistant-short-page',v.h<600);
-    const footer=page?.querySelector('.question-nav')||doc.querySelector('#exam-app:not([hidden]) .exam-footer');
+    const footer=page?.querySelector('.question-nav')||doc.querySelector('#exam-app:not([hidden]) .exam-footer,.mc-runner .sra-exam-footer');
     const top=safeTop(v),footerHeight=!short&&!modal?(footer?.getBoundingClientRect().height||0):0;
     const scale=win.StudyScale?.get()||1;
     const available=Math.max(100,(v.h-top+v.y-footerHeight)/scale-12);
-    layout.style.setProperty('--sa-pane-height',Math.min(modal?620:680,available)+'px');
+    // Naast de vraag vult het paneel de ruimte tot de onderbalk; 680 blijft de maat voor regels verderop in een lijst.
+    const room=(v.h-Math.max(top,layout.getBoundingClientRect().top)+v.y-footerHeight)/scale-12;
+    layout.style.setProperty('--sa-pane-height',(modal?Math.min(620,available):stacked?Math.min(680,available):Math.max(Math.min(680,available),room))+'px');
     if(page)page.style.setProperty('--sa-page-height',Math.max(160,(v.h-Math.max(top,page.getBoundingClientRect().top)+v.y)/scale-12)+'px');
     const renderedHeight=stacked?Math.min(680,available):layout.getBoundingClientRect().height;
     if(slot!==panel){
