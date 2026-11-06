@@ -77096,7 +77096,7 @@ function createAssistantPanel(panel,options={}){
     const scale=win.StudyScale?.get()||1;
     const available=Math.max(100,(v.h-top+v.y-footerHeight)/scale-12);
     // Naast de vraag vult het paneel de ruimte tot de onderbalk; 680 blijft de maat voor regels verderop in een lijst.
-    const room=(v.h-Math.max(top,layout.getBoundingClientRect().top)+v.y-footerHeight)/scale-12;
+    const room=(v.h-Math.max(top,layout.getBoundingClientRect().top)+v.y-footerHeight)/scale-2;
     layout.style.setProperty('--sa-pane-height',(modal?Math.min(620,available):stacked?Math.min(680,available):Math.max(Math.min(680,available),room))+'px');
     if(page)page.style.setProperty('--sa-page-height',Math.max(160,(v.h-Math.max(top,page.getBoundingClientRect().top)+v.y)/scale-12)+'px');
     const renderedHeight=stacked?Math.min(680,available):layout.getBoundingClientRect().height;
