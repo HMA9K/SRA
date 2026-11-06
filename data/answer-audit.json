@@ -4,14 +4,14 @@
   "uniqueQuestions": 239,
   "counts": {
     "N": 75,
-    "G": 158,
-    "B": 25,
+    "G": 157,
+    "B": 26,
     "C": 9
   },
   "uniqueCounts": {
     "N": 66,
-    "G": 140,
-    "B": 24,
+    "G": 139,
+    "B": 25,
     "C": 9
   },
   "exams": [
@@ -1604,7 +1604,7 @@
           "displayNumber": "12",
           "status": "B",
           "label": "Onjuistheid of tegenstrijdigheid in de bron",
-          "note": "Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
+          "note": "De opgave noemt dit een betrouwbaarheidsinterval, maar voor één proefpersoon is het een voorspellingsinterval. Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
           "reviewed": "2026-09-20",
           "sourcePage": 7,
           "answerPage": 3
@@ -2326,9 +2326,9 @@
         {
           "number": 15,
           "displayNumber": "15",
-          "status": "G",
-          "label": "Gecontroleerd",
-          "note": "KS-p = 0,001 bij n 177: normaliteit verwerpen op 5%; hypotheses gaan over residuen.",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "KS-p = 0,001 bij n 177: normaliteit verwerpen op 5%; hypotheses gaan over residuen. De normering noemt bij de hypothesen ‘voor vraag 8 en 9 samen’; dat moet vermoedelijk vraag 15 en 16 zijn.",
           "reviewed": "2026-09-20",
           "sourcePage": 8,
           "answerPage": 14

@@ -10,10 +10,10 @@ De numerieke hoofdresultaten zijn onafhankelijk herberekend in [de rekencontrole
 
 | Uitkomst | Alle versies | Inhoudelijk verschillend |
 |---|---:|---:|
-| G: Gecontroleerd | 158 | 140 |
+| G: Gecontroleerd | 157 | 139 |
 | N: Nuance bij het antwoord | 75 | 66 |
 | C: Correctie bij het antwoord | 9 | 9 |
-| B: Onjuistheid of tegenstrijdigheid in de bron | 25 | 24 |
+| B: Onjuistheid of tegenstrijdigheid in de bron | 26 | 25 |
 
 ## 23-03-2020
 
@@ -209,7 +209,7 @@ De numerieke hoofdresultaten zijn onafhankelijk herberekend in [de rekencontrole
 | 9 | N | Leeftijd, geslacht en bloeddruk hebben een significant bivariaat verband met hartritme. Dat maakt ze kandidaat, maar garandeert geen opname in een meervoudig model: bloeddruk valt later juist af. [Opgave p. 5](../bronnen/tentamens/20231030/opgaven.pdf#page=5); [antwoord p. 3](../bronnen/tentamens/20231030/uitwerking.pdf#page=3) |
 | 10 | G | R² 0,146 betekent 14,6% verklaarde variatie in hartritme door de enkelvoudige lijn met leeftijd. [Opgave p. 6](../bronnen/tentamens/20231030/opgaven.pdf#page=6); [antwoord p. 3](../bronnen/tentamens/20231030/uitwerking.pdf#page=3) |
 | 11 | N | Voor 55 jaar geeft de afgedrukte lijn 137,55. Invullen van 95 geeft rekenkundig 97,95, maar is extrapolatie buiten de waargenomen leeftijden. De sleutel verlangt terecht het voorbehoud bij die voorspelling. [Opgave p. 6](../bronnen/tentamens/20231030/opgaven.pdf#page=6); [antwoord p. 3](../bronnen/tentamens/20231030/uitwerking.pdf#page=3) |
-| 12 | B | Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet. [Opgave p. 7](../bronnen/tentamens/20231030/opgaven.pdf#page=7); [antwoord p. 3](../bronnen/tentamens/20231030/uitwerking.pdf#page=3) |
+| 12 | B | De opgave noemt dit een betrouwbaarheidsinterval, maar voor één proefpersoon is het een voorspellingsinterval. Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet. [Opgave p. 7](../bronnen/tentamens/20231030/opgaven.pdf#page=7); [antwoord p. 3](../bronnen/tentamens/20231030/uitwerking.pdf#page=3) |
 | 13 | G | De man/vrouwgroepen overlappen; geen duidelijk gescheiden clusters. [Opgave p. 7](../bronnen/tentamens/20231030/opgaven.pdf#page=7); [antwoord p. 3](../bronnen/tentamens/20231030/uitwerking.pdf#page=3) |
 | 14 | C | MD 6,852 > 4,800 en residu−3,216 < −3 signaleren x- en y-uitbijters. Cook 0,021 > 0,007 signaleert potentiële invloedrijke punten; de sleutel noemt dit ten onrechte opnieuw een uitbijter in x. Zonder bronfout/bijzondere oorzaak blijven de waarnemingen behouden. [Opgave p. 8](../bronnen/tentamens/20231030/opgaven.pdf#page=8); [antwoord p. 3](../bronnen/tentamens/20231030/uitwerking.pdf#page=3) |
 | 15 | G | KS p < 0,001 verwerpt normaliteit; ABSRES/leeftijd p 0,473 verwerpt constante spreiding niet. Model/transformatie aanpassen en opnieuw controleren. [Opgave p. 9](../bronnen/tentamens/20231030/opgaven.pdf#page=9); [antwoord p. 4](../bronnen/tentamens/20231030/uitwerking.pdf#page=4) |
@@ -297,7 +297,7 @@ De numerieke hoofdresultaten zijn onafhankelijk herberekend in [de rekencontrole
 | 12 | N | Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden. [Opgave p. 5](../bronnen/tentamens/20250317/opgaven.pdf#page=5); [antwoord p. 13](../bronnen/tentamens/20250317/uitwerking.pdf#page=13) |
 | 13 | G | MD-grens 0,994 + 3 × 1,610 = 5,824; maximum 10,863. Gestandaardiseerd residu 4,557 > 3; geval 57. Behoud zonder aangetoonde fout/bijzondere oorzaak. [Opgave p. 7](../bronnen/tentamens/20250317/opgaven.pdf#page=7); [antwoord p. 13](../bronnen/tentamens/20250317/uitwerking.pdf#page=13) |
 | 14 | N | Cook-grens 0,008 + 3 × 0,018 = 0,062 en maximum 0,145 signaleren invloed. De sleutel accepteert wel/niet verwijderen van 57. Een invloedssignaal alleen rechtvaardigt verwijderen niet: onderzoek de bron, motiveer de behandeling en vergelijk het model met en zonder die waarneming. [Opgave p. 7](../bronnen/tentamens/20250317/opgaven.pdf#page=7); [antwoord p. 13](../bronnen/tentamens/20250317/uitwerking.pdf#page=13) |
-| 15 | G | KS-p = 0,001 bij n 177: normaliteit verwerpen op 5%; hypotheses gaan over residuen. [Opgave p. 8](../bronnen/tentamens/20250317/opgaven.pdf#page=8); [antwoord p. 14](../bronnen/tentamens/20250317/uitwerking.pdf#page=14) |
+| 15 | B | KS-p = 0,001 bij n 177: normaliteit verwerpen op 5%; hypotheses gaan over residuen. De normering noemt bij de hypothesen ‘voor vraag 8 en 9 samen’; dat moet vermoedelijk vraag 15 en 16 zijn. [Opgave p. 8](../bronnen/tentamens/20250317/opgaven.pdf#page=8); [antwoord p. 14](../bronnen/tentamens/20250317/uitwerking.pdf#page=14) |
 | 16 | G | Correlatie ABSRES met leeftijd p < 0,001: aanwijzing voor heteroscedasticiteit. [Opgave p. 8](../bronnen/tentamens/20250317/opgaven.pdf#page=8); [antwoord p. 14](../bronnen/tentamens/20250317/uitwerking.pdf#page=14) |
 | 17 | G | Passende transformatie/modelaanpassing of gewogen regressie als remedies; daarna opnieuw diagnostiek. [Opgave p. 8](../bronnen/tentamens/20250317/opgaven.pdf#page=8); [antwoord p. 14](../bronnen/tentamens/20250317/uitwerking.pdf#page=14) |
 | 18 | N | Opnieuw zoeken naar aantoonbare bijzondere oorzaken is verdedigbaar. Verwijder geen geldige waarnemingen om de normaliteitstoets te laten slagen. Het model noemt 57 opnieuw, terwijl de vervolgtabellen n 177 in plaats van 178 tonen; uit de gegeven uitvoer blijkt niet welke waarneming al is verwijderd. [Opgave p. 8](../bronnen/tentamens/20250317/opgaven.pdf#page=8); [antwoord p. 14](../bronnen/tentamens/20250317/uitwerking.pdf#page=14) |
