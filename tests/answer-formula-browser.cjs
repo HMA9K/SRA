@@ -53,6 +53,13 @@ const base=process.env.LEARNING_URL||'http://127.0.0.1:8769/';
   assert.equal(await empty.textContent(),'2Σw','Somteken werkt in een vakje');
   await toEnd();await button('Σ');await page.keyboard.type('v');
   assert.ok((await body.innerText()).includes('Σv'),'Somteken werkt in de tekst');
+  await toEnd();await page.locator('.mc-own-work [aria-label="Speciale tekens"]').click();
+  const symbols=page.locator('.mc-own-work .answer-symbols');await symbols.waitFor();
+  assert.equal(await page.locator('.tox-dialog').count(),0,'Speciale tekens is geen pop-up');
+  await symbols.locator('[data-char="≈"]').click();await page.keyboard.type('y');
+  assert.ok((await body.innerText()).includes('≈y'),'Na een teken typ je direct door');
+  assert.equal(await symbols.isVisible(),true,'Paneel blijft open tijdens het typen');
+  await symbols.locator('.answer-symbols-close').click();await symbols.waitFor({state:'hidden'});
   for(const width of [390,320]){
    await page.setViewportSize({width,height:800});await page.waitForTimeout(100);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,'Geen zijwaarts scrollen op '+width);
