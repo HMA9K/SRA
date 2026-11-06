@@ -63,7 +63,7 @@ add(4,why='De steekproef heeft een lagere gemiddelde boekwaarde dan de populatie
   'Foutmarge: dezelfde t als in vraag 1.1, dus 1,984 × 324.178,2 = 643.170.',
   'Grenzen: 44.019.050 − 643.170 = 43.375.880 en 44.019.050 + 643.170 = 44.662.220. Naar buiten afgerond: [€43.375.000; €44.663.000].'],
  trap='Let op het teken: B − N × b̄ is positief, dus de correctie komt erbij. Vergeet √(1 − 0,98²) = 0,199 niet, anders is s_R ongeveer vijf keer te groot.',
- wrong=['Hier is 646.800 afgetrokken, zoals de drukfout in het antwoordmodel suggereert. De totale boekwaarde ligt 880.000 boven N × b̄, dus de correctie is positief.',
+ wrong=['Hier is 646.800 afgetrokken. De totale boekwaarde ligt 880.000 boven N × b̄, dus de correctie is positief.',
   'Zonder √(1 − R²) is de standaardfout 1.629.057 in plaats van 324.178,2 en de marge 3.232.048. De hoge correlatie is juist wat dit interval smal maakt.',
   'Het middelpunt 43.372.250 is alleen N × w̄. Dan gebruik je de bekende totale boekwaarde niet, terwijl de regressieschatter daar juist op steunt.'])
 
@@ -78,7 +78,7 @@ add(5,why='Elk stratum krijgt een deel van de 220 naar verhouding van N × s, du
   'Stratum 2: 133.500 / 444.600 × 220 = 66,06, dus 66.',
   'Stratum 3: 107.100 / 444.600 × 220 = 53,00, dus 53.',
   'Controle: 101 + 66 + 53 = 220.'],
- trap='De noemer is de som van N × s en niet N = 2.120. Het antwoordmodel berekent 2.120 wel en geeft er een punt voor, maar de formule gebruikt dat getal niet.',
+ trap='De noemer is de som van N × s en niet N = 2.120. Het getal 2.120 berekenen levert wel een punt op, maar de formule gebruikt dat getal niet.',
  wrong=['Dit is N / 2.120 × 220: 105,85, 92,36 en 21,79. De spreiding doet dan niet mee, terwijl s = 510 stratum 3 juist veel meer waarnemingen geeft.',
   'Alles omlaag afronden geeft samen 218. Dan ontbreken er 2 van de vastgestelde 220 artikelen.',
   'Gelijk verdelen negeert zowel N als s. Stratum 1 heeft 1.020 artikelen en stratum 3 maar 210, en toch krijgen ze hier bijna evenveel.'])
@@ -250,7 +250,7 @@ add(15,'cook',why='Ook hier is de grens gemiddelde plus drie standaardafwijkinge
   'Remedie: wel of niet verwijderen wordt allebei goed gerekend. Koppel je keuze aan de vraag of het punt in Afbeelding 2.2 te onderscheiden is.'],
  trap='Alleen zeggen dat 128 invloedrijk is, is niet genoeg. De remediepunten krijg je pas als je Afbeelding 2.2 erbij pakt en je keuze motiveert.',
  wrong=['De grens klopt, maar 0,210 ligt ver boven 0,068. Er is dus wel een invloedrijk punt.',
-  'Het antwoordmodel rekent met gemiddelde + 3 × standaardafwijking, dus met 0,068 en niet met 1. Geval 128 moet dus wel beoordeeld worden.',
+  'Reken met gemiddelde + 3 × standaardafwijking, dus met 0,068 en niet met 1. Geval 128 moet dus wel beoordeeld worden.',
   'Die gevallen komen uit de Mahalanobis-afstand, dus uit de x-richting. In Afbeelding 4.4 blijven ze onder 0,068.'])
 
 add(16,'normaal',why='De nulhypothese gaat over de residuen, en bij deze steekproefgrootte lees je de Sig af bij de toets die voor grotere steekproeven geldt.',
@@ -262,7 +262,7 @@ add(16,'normaal',why='De nulhypothese gaat over de residuen, en bij deze steekpr
   'Toetskeuze: n = 142 > 50, dus Kolmogorov-Smirnov.',
   'Afbeelding 4.5: Sig = 0,200. Het sterretje betekent dat dit een ondergrens is.',
   'Vergelijking: 0,200 > 0,05, dus H₀ niet verwerpen.'],
- trap='Noem het woord residuen, want het antwoordmodel trekt een punt af als dat ontbreekt. Niet verwerpen bewijst bovendien geen normaliteit.',
+ trap='Noem het woord residuen, want het kost een punt als dat ontbreekt. Niet verwerpen bewijst bovendien geen normaliteit.',
  wrong=['Bij n = 142 > 50 lees je Kolmogorov-Smirnov af en niet Shapiro-Wilk. H₀ niet verwerpen is ook geen bewijs voor normaliteit.',
   'De aanname gaat over de residuen en niet over price. Afbeelding 4.5 toetst ook de Standardized Residual en niet de prijs.',
   'H₀ is omgedraaid: normaliteit staat in H₀. Een Sig van 0,200 toont juist geen probleem aan.'])

@@ -128,7 +128,7 @@ add(9,why='De adviseurgroepen verschillen volgens de casus, en dat levert zowel 
   'Verschillen tussen groepen betekenen homogenere strata. Dat kan de nauwkeurigheid vergroten.',
   'Elke groep krijgt een eigen steekproef, dus je kunt per groep uitspraken doen.',
   'Zo kan de verstrekker achterhalen bij welke groep het probleem het grootst is.'],
- trap='De uitwerking geeft één punt voor de nauwkeurigheid en één punt voor het inzicht per groep. Noem dus niet twee keer hetzelfde voordeel.',
+ trap='Je krijgt één punt voor de nauwkeurigheid en één punt voor het inzicht per groep. Noem dus niet twee keer hetzelfde voordeel.',
  wrong=['Het is andersom. Per stratum heb je een eigen steekproef, dus afzonderlijke uitspraken per adviseurtype worden juist mogelijk.',
   'Bij identieke foutpatronen lijken de strata op elkaar en levert de indeling geen nauwkeurigheid op. De winst komt juist uit verschillen tussen de groepen.',
   'Binnen elk stratum blijft de trekking aselect. Anders mag je de uitkomst niet doorrekenen naar alle posten in dat stratum.'])
@@ -145,7 +145,7 @@ add(10,why='Naar rato betekent dat elk stratum hetzelfde aandeel in de steekproe
   'Rond daarom één stratum naar beneden af, bijvoorbeeld 61, 39 en 10. Een ander stratum omlaag afronden mag ook.',
   'Deze verdeling heet evenredige allocatie.'],
  trap='Tel na het afronden de aantallen op. Gewoon afronden komt hier op 111 uit en dat kost een punt.',
- wrong=['61 + 39 + 11 = 111, terwijl de steekproef 110 stuks is. Voor dit totaal trekt de uitwerking een punt af.',
+ wrong=['61 + 39 + 11 = 111, terwijl de steekproef 110 stuks is. Dit totaal kost een punt.',
   'Dat zou elk stratum ongeveer 36,67 geven. Evenredig betekent in verhouding tot Ni, dus stratum 1 met 503 krijgt veel meer dan stratum 3 met 88.',
   'Bij deze vraag geeft de casus nog geen standaardafwijkingen, alleen Ni. Evenredige allocatie kijkt uitsluitend naar de omvang van de strata.'])
 
@@ -208,7 +208,7 @@ add(14,'x',why='De grootste afstand overschrijdt de grens, de piek hoort bij é�
   'De Mahalanobis-afstand gaat over de ligging in x-richting. Normaliteit van de residuen komt pas in vraag 2.6 aan bod, met Shapiro-Wilk.',
   'Afbeelding 5 toont de piek van ongeveer 6 juist bij Singapore, boven de grens van 5,164.'])
 
-add(14,'y',why='De uitwerking toetst de afgedrukte gestandaardiseerde extremen aan de grens en die blijven daarbinnen, maar de tabel zelf klopt niet.',
+add(14,'y',why='De afgedrukte gestandaardiseerde extremen blijven binnen de grens, maar de tabel zelf klopt niet.',
  signals='Afbeelding 2 geeft bij Std. Residual −1,752 en 1,258, en bij Residual −2,01152 en 1,65040. Afbeelding 4 toont de gestandaardiseerde residuen per land.',
  meaning='Een gestandaardiseerd residu zegt hoeveel standaardafwijkingen een punt van de lijn ligt. Daardoor kun je het met een vaste grens vergelijken. Een ruw residu staat in de eenheid van de index.',
  approach='Neem de grens ±2, omdat n = 22 niet boven 100 ligt. Vergelijk daarmee alleen de regel Std. Residual. Reken daarna na of die regel past bij de ruwe residuen.',
@@ -219,7 +219,7 @@ add(14,'y',why='De uitwerking toetst de afgedrukte gestandaardiseerde extremen a
   'Controle: −2,01152 / −1,752 = 1,148 en 1,65040 / 1,258 = 1,312.',
   'Met één gemeenschappelijke standaardafwijking zouden die twee delers gelijk zijn. De tabel spreekt zichzelf dus tegen.',
   'Zonder de ruwe gegevens is niet vast te stellen welke getallen fout zijn.'],
- trap='Kijk in de juiste regel. Afbeelding 2 bevat ook Stud. Residual −3,381 en Stud. Deleted Residual −5,033, maar de uitwerking gebruikt alleen Std. Residual.',
+ trap='Kijk in de juiste regel. Afbeelding 2 bevat ook Stud. Residual −3,381 en Stud. Deleted Residual −5,033, maar gebruik alleen Std. Residual.',
  wrong=['De twee delers zijn 1,148 en 1,312, dus de tabel is niet consistent. Zonder de 22 ruwe waarnemingen kun je ook niet herleiden wat er wel moet staan.',
   '−1,752 ligt boven −2 en 1,258 ligt onder 2. Geen van beide overschrijdt de grens.',
   'De grens ±2 geldt voor gestandaardiseerde residuen. −2,01152 is een ruw residu in de eenheid van de index en lijkt daardoor ten onrechte over de grens te gaan.'])
@@ -289,7 +289,7 @@ add(17,'spreiding',why='De correlatie tussen de absolute residuen en inequality 
   '0,389 > 0,05, dus H₀ wordt niet verworpen.',
   'Er is geen remedie nodig.',
   'Let op: deze correlatie staat in afbeelding 8, niet in afbeelding 9.'],
- trap='Neem de cel met inequality, dus Sig. 0,389. De cel met socialproblems, Sig. 0,600, is niet de toets die de uitwerking gebruikt.',
+ trap='Neem de cel met inequality, dus Sig. 0,389. De cel met socialproblems, Sig. 0,600, hoort niet bij deze toets.',
  wrong=['Heteroscedasticiteit zou een Sig. onder 0,05 vragen. Bij 0,389 is er geen bewijs voor.',
   'Afbeelding 9 is de tabel Descriptive Statistics, zonder ABSRES. De correlatie staat in afbeelding 8.',
   'Niet significant betekent alleen dat H₀ blijft staan. Het bewijst niet dat de spreiding overal precies gelijk is.'])
@@ -334,7 +334,7 @@ add(20,why='Eén land wijkt ook zelf af van de lijn, en daarom is de onzekerheid
   'Onder de wortel: 1 + 1/21 + 0,01499 = 1,0626.',
   'Foutmarge: 1,729 × 0,49095 × √1,0626 = 0,875.',
   'Bovengrens: 1,693 + 0,875 = 2,568.'],
- trap='Gebruik n = 21 en niet 22, want Singapore is eruit. De formule in de uitwerking schrijft t met α/2, maar voor deze eenzijdige grens gebruik je t₀,₀₅.',
+ trap='Gebruik n = 21 en niet 22, want Singapore is eruit. Neem hier niet t met α/2, want voor deze eenzijdige grens gebruik je t₀,₀₅.',
  wrong=['Zonder de 1 krijg je √0,0626 = 0,250, een marge van 0,212 en een grens van 1,905. Dat is de grens voor het gemiddelde van zulke landen, niet voor één land.',
   '1,693 is de puntschatting. Zonder foutmarge heeft die geen 95% betrouwbaarheid.',
   '1,693 − 0,875 = 0,818 is een ondergrens. Een bovengrens krijg je door de marge op te tellen.'])
@@ -343,7 +343,7 @@ add(21,why='In de scatterplot is geen patroon te zien en de correlatie is niet s
  signals='In afbeelding 11 staat bij Inhabitants en Murders r = −0,067 met Sig. = 0,779. De andere drie variabelen hebben r = 0,840, 0,865 en 0,862 met Sig. 0,000.',
  meaning='Een correlatie dicht bij 0 met een hoge Sig. betekent: geen aantoonbaar lineair verband met Murders.',
  approach='Lees in afbeelding 11 de regel van Murders en bekijk in afbeelding 10 de onderste rij met scatterplots.',
- answer='Inhabitants, met Sig. = 0,779 > 0,05 in afbeelding 11 of het ontbreken van een patroon in afbeelding 10. De uitwerking geeft volle punten voor één van beide.',
+ answer='Inhabitants, met Sig. = 0,779 > 0,05 in afbeelding 11 of het ontbreken van een patroon in afbeelding 10. Eén van beide levert de volle punten op.',
  steps=['Afbeelding 11: Inhabitants met Murders geeft r = −0,067 en Sig. = 0,779.',
   '0,779 is groter dan 0,05, dus de correlatie is niet significant.',
   'Afbeelding 10, linksonder: de punten vormen geen stijgende of dalende lijn.',
@@ -378,7 +378,7 @@ add(23,why='De punten in die grafiek volgen geen rechte lijn maar buigen af, en 
   'Die kromme maakt deze variabele geschikt voor een transformatie. De onderzoekers nemen later de Ln van PercCityLiving.'],
  trap='Zoek de kromme in de rij van Murders. De andere plaatjes gaan over voorspellers onderling en die zijn hier niet bedoeld.',
  wrong=['Rechtsonder in afbeelding 10 buigt de puntenwolk duidelijk af: eerst steil omhoog, daarna vlakker.',
-  'Een transformatie vraagt een reden. De uitwerking wijst alleen PercCityLiving aan, omdat alleen dat plaatje een kromme laat zien.',
+  'Een transformatie vraagt een reden. Alleen PercCityLiving komt in aanmerking, omdat alleen dat plaatje een kromme laat zien.',
   'Juist een scatterplot laat de vorm van een verband zien. Zo is deze kromme ook gevonden.'])
 
 add(24,why='De afhankelijke variabele zit in het verband met elke voorspeller, dus een ingreep daarop raakt ze allemaal.',
@@ -390,7 +390,7 @@ add(24,why='De afhankelijke variabele zit in het verband met elke voorspeller, d
   'Bij een transformatie van y verandert het verband met alle voorspellers tegelijk.',
   'Een verband dat eerst recht was, kan daardoor krom worden.',
   'Onderzoek daarom per voorspeller of het verband lineair is, of dat die voorspeller ook of juist weer getransformeerd moet worden.'],
- trap='Noem de meervoudige situatie. Een algemeen verhaal over moeilijke interpretatie is niet de kern van het antwoord in de uitwerking.',
+ trap='Noem de meervoudige situatie. Een algemeen verhaal over moeilijke interpretatie is niet de kern van het antwoord.',
  wrong=['Dat geldt bij een transformatie van een voorspeller. y hoort bij alle verbanden, dus al die verbanden veranderen.',
   'Na de transformatie heb je een nieuw model. De residuen horen bij dat nieuwe model en moeten dus opnieuw bekeken worden.',
   'B geeft dan het effect op de getransformeerde y en niet meer op Murders zelf. De betekenis van de coëfficiënten verandert dus.'])

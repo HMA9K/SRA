@@ -132,6 +132,7 @@
     if (key === 'B' && regressionLessons.includes(context) && !/N, n, B/.test(formula)) return entry('B: geschatte coëfficiënt in SPSS', 'Dit is de kolom in de SPSS-tabel Coefficients met de geschatte coëfficiënten, zoals b₀ bij de constante en b₁ bij een variabele. Uit deze kolom lees je de regressievergelijking af.');
     if (key === 'b' && regressionLessons.includes(context)) return entry('b: geschatte regressiecoëfficiënt', 'De letter b staat hier voor een coëfficiënt die met de steekproef is geschat. De index geeft aan of het om de constante b₀ of het effect van een verklarende variabele gaat.');
     if (['beginnen','verschil','quotient','regressieschatter','steekproefomvang'].includes(context) && difference[key]) return difference[key];
+    if (key === 't' && context === 'diagnostiek' && /[ex]_\(?t|[ex]_t/.test(formula)) return entry('t: tijdsperiode', 'Dit is het nummer van de periode in een reeks waarnemingen. e_t is het residu van periode t en e_(t−1) dat van de periode ervoor.');
     if (key === 't' && /±/.test(formula)) return D.t;
     if (key === 't' && (['toetsen','meervoudig','validatie'].includes(context) || (context === 'tentamen' && /β|b[jⱼ]/u.test(formula)))) return testT;
     if (key === 'q' && context === 'modelbouw') return entry('q: aantal extra variabelen', 'Dit is het aantal variabelen dat je in één keer aan het model toevoegt. Bij de F-toets op dit blok deel je de toename van SSR ook door q.');
@@ -217,6 +218,9 @@
   function textMatches(text, context) {
     const matches = [];
     for (let i = 0; i < text.length;) {
+      // Afkortingen en opsommingen zijn geen symbolen: n.v.t., (b) in een lijst, stratumnaam B:
+      if (text.startsWith('n.v.t.', i)) { i += 6; continue; }
+      if ((context === 'onzekerheid' && text.startsWith('b)', i) && text[i-1] === '(') || (context === 'steekproefomvang' && text.startsWith('B:', i))) { i += 1; continue; }
       const token = aliases.find(a => {
         if (!text.startsWith(a,i)) return false;
         if (!word.test(a)) return true;

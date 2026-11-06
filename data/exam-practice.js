@@ -610,7 +610,7 @@ window.SRAExamPractice = {
         "Bij identieke foutpatronen lijken de strata op elkaar en levert de indeling geen nauwkeurigheid op. De winst komt juist uit verschillen tussen de groepen."
       ],
       "pattern": "Geef twee redenen waarom stratificatie in dit geval zinvol is.",
-      "trap": "De uitwerking geeft één punt voor de nauwkeurigheid en één punt voor het inzicht per groep. Noem dus niet twee keer hetzelfde voordeel.",
+      "trap": "Je krijgt één punt voor de nauwkeurigheid en één punt voor het inzicht per groep. Noem dus niet twee keer hetzelfde voordeel.",
       "recognition": {
         "signals": "De casus noemt drie groepen: eigen adviseurs, advieskantoor en zelfstandigen. De verstrekker vermoedt grote verschillen in fouten en denkt dat eigen adviseurs nooit de verkeerde rente toepassen.",
         "meaning": "Als groepen verschillen in aantal of soort fouten, zijn ze van binnen homogener dan de hele portefeuille. Bovendien krijg je per groep een eigen uitkomst.",
@@ -672,7 +672,7 @@ window.SRAExamPractice = {
       ],
       "optionExplanations": [
         "Naar rato betekent dat elk stratum hetzelfde aandeel in de steekproef krijgt als in de populatie, terwijl het totaal gelijk moet blijven aan de opdracht.",
-        "61 + 39 + 11 = 111, terwijl de steekproef 110 stuks is. Voor dit totaal trekt de uitwerking een punt af.",
+        "61 + 39 + 11 = 111, terwijl de steekproef 110 stuks is. Dit totaal kost een punt.",
         "Dat zou elk stratum ongeveer 36,67 geven. Evenredig betekent in verhouding tot Ni, dus stratum 1 met 503 krijgt veel meer dan stratum 3 met 88.",
         "Bij deze vraag geeft de casus nog geen standaardafwijkingen, alleen Ni. Evenredige allocatie kijkt uitsluitend naar de omvang van de strata."
       ],
@@ -981,7 +981,7 @@ window.SRAExamPractice = {
     },
     {
       "id": "exam-20200323-vraag-14-y",
-      "prompt": "Beoordeel uitbijters in y en de betrouwbaarheid van de bronuitvoer.",
+      "prompt": "Beoordeel uitbijters in y en de betrouwbaarheid van de uitvoer.",
       "originalPrompt": "Voer de analyses uit op uitbijters in x en y en invloedrijke punten om te onderzoeken of er\nsprake is van een bijzondere situatie. Geef aan welke afbeeldingen je daarvoor hebt gebruikt en\nwelke remedies noodzakelijk zijn.",
       "originalPromptHtml": "<p>Voer de analyses uit op uitbijters in x en y en invloedrijke punten om te onderzoeken of er sprake is van een bijzondere situatie. Geef aan welke afbeeldingen je daarvoor hebt gebruikt en welke remedies noodzakelijk zijn.</p>",
       "sourceVisualHtml": "",
@@ -1020,10 +1020,10 @@ window.SRAExamPractice = {
         "De twee delers zijn 1,148 en 1,312, dus de tabel is niet consistent. Zonder de 22 ruwe waarnemingen kun je ook niet herleiden wat er wel moet staan.",
         "−1,752 ligt boven −2 en 1,258 ligt onder 2. Geen van beide overschrijdt de grens.",
         "De grens ±2 geldt voor gestandaardiseerde residuen. −2,01152 is een ruw residu in de eenheid van de index en lijkt daardoor ten onrechte over de grens te gaan.",
-        "De uitwerking toetst de afgedrukte gestandaardiseerde extremen aan de grens en die blijven daarbinnen, maar de tabel zelf klopt niet."
+        "De afgedrukte gestandaardiseerde extremen blijven binnen de grens, maar de tabel zelf klopt niet."
       ],
-      "pattern": "Beoordeel uitbijters in y en de betrouwbaarheid van de bronuitvoer.",
-      "trap": "Kijk in de juiste regel. Afbeelding 2 bevat ook Stud. Residual −3,381 en Stud. Deleted Residual −5,033, maar de uitwerking gebruikt alleen Std. Residual.",
+      "pattern": "Beoordeel uitbijters in y en de betrouwbaarheid van de uitvoer.",
+      "trap": "Kijk in de juiste regel. Afbeelding 2 bevat ook Stud. Residual −3,381 en Stud. Deleted Residual −5,033, maar gebruik alleen Std. Residual.",
       "recognition": {
         "signals": "Afbeelding 2 geeft bij Std. Residual −1,752 en 1,258, en bij Residual −2,01152 en 1,65040. Afbeelding 4 toont de gestandaardiseerde residuen per land.",
         "meaning": "Een gestandaardiseerd residu zegt hoeveel standaardafwijkingen een punt van de lijn ligt. Daardoor kun je het met een vaste grens vergelijken. Een ruw residu staat in de eenheid van de index.",
@@ -1376,7 +1376,7 @@ window.SRAExamPractice = {
         "Niet significant betekent alleen dat H₀ blijft staan. Het bewijst niet dat de spreiding overal precies gelijk is."
       ],
       "pattern": "Formuleer en beoordeel de toets op homoscedasticiteit.",
-      "trap": "Neem de cel met inequality, dus Sig. 0,389. De cel met socialproblems, Sig. 0,600, is niet de toets die de uitwerking gebruikt.",
+      "trap": "Neem de cel met inequality, dus Sig. 0,389. De cel met socialproblems, Sig. 0,600, hoort niet bij deze toets.",
       "recognition": {
         "signals": "Afbeelding 8 bevat de variabele ABSRES, met r = 0,198 en Sig. = 0,389 tegenover inequality. Afbeelding 9 bevat alleen beschrijvende statistiek.",
         "meaning": "ABSRES is de absolute waarde van het residu. Als de spreiding groeit met inequality, dan hangt ABSRES samen met inequality. Dat heet heteroscedasticiteit.",
@@ -1589,7 +1589,7 @@ window.SRAExamPractice = {
         "1,693 − 0,875 = 0,818 is een ondergrens. Een bovengrens krijg je door de marge op te tellen."
       ],
       "pattern": "Bereken de bovengrens van de waarde van de variabele socialproblems (met 95%\nbetrouwbaarheid, eenzijdig) voor land A waar de rijkste 20% vijf keer zo veel vermogen heeft\nals de armste 20%.",
-      "trap": "Gebruik n = 21 en niet 22, want Singapore is eruit. De formule in de uitwerking schrijft t met α/2, maar voor deze eenzijdige grens gebruik je t₀,₀₅.",
+      "trap": "Gebruik n = 21 en niet 22, want Singapore is eruit. Neem hier niet t met α/2, want voor deze eenzijdige grens gebruik je t₀,₀₅.",
       "recognition": {
         "signals": "De vraag gaat over de waarde voor land A, dus één land, met een eenzijdige bovengrens van 95%. Nodig zijn ŷ₀ = 1,693, s_e = 0,49095, x̄ = 5,6871 en s_x = 1,25505.",
         "meaning": "Een voorspelling voor één geval is onzekerder dan een schatting van het gemiddelde. Eenzijdig 95% betekent t₀,₀₅ en niet t₀,₀₂₅.",
@@ -1664,7 +1664,7 @@ window.SRAExamPractice = {
         "signals": "In afbeelding 11 staat bij Inhabitants en Murders r = −0,067 met Sig. = 0,779. De andere drie variabelen hebben r = 0,840, 0,865 en 0,862 met Sig. 0,000.",
         "meaning": "Een correlatie dicht bij 0 met een hoge Sig. betekent: geen aantoonbaar lineair verband met Murders.",
         "approach": "Lees in afbeelding 11 de regel van Murders en bekijk in afbeelding 10 de onderste rij met scatterplots.",
-        "answer": "Inhabitants, met Sig. = 0,779 > 0,05 in afbeelding 11 of het ontbreken van een patroon in afbeelding 10. De uitwerking geeft volle punten voor één van beide."
+        "answer": "Inhabitants, met Sig. = 0,779 > 0,05 in afbeelding 11 of het ontbreken van een patroon in afbeelding 10. Eén van beide levert de volle punten op."
       },
       "guidance": {
         "title": "Meervoudige regressie: model en vergelijking",
@@ -1794,7 +1794,7 @@ window.SRAExamPractice = {
         "Die kromme maakt deze variabele geschikt voor een transformatie. De onderzoekers nemen later de Ln van PercCityLiving."
       ],
       "optionExplanations": [
-        "Een transformatie vraagt een reden. De uitwerking wijst alleen PercCityLiving aan, omdat alleen dat plaatje een kromme laat zien.",
+        "Een transformatie vraagt een reden. Alleen PercCityLiving komt in aanmerking, omdat alleen dat plaatje een kromme laat zien.",
         "Juist een scatterplot laat de vorm van een verband zien. Zo is deze kromme ook gevonden.",
         "De punten in die grafiek volgen geen rechte lijn maar buigen af, en een transformatie kan dat rechttrekken.",
         "Rechtsonder in afbeelding 10 buigt de puntenwolk duidelijk af: eerst steil omhoog, daarna vlakker."
@@ -1871,7 +1871,7 @@ window.SRAExamPractice = {
         "De afhankelijke variabele zit in het verband met elke voorspeller, dus een ingreep daarop raakt ze allemaal."
       ],
       "pattern": "Tegen welke problemen kan je aanlopen als je een transformatie uitvoert op de afhankelijke\nvariabele bij meervoudige regressie?",
-      "trap": "Noem de meervoudige situatie. Een algemeen verhaal over moeilijke interpretatie is niet de kern van het antwoord in de uitwerking.",
+      "trap": "Noem de meervoudige situatie. Een algemeen verhaal over moeilijke interpretatie is niet de kern van het antwoord.",
       "recognition": {
         "signals": "De vraag gaat over de afhankelijke variabele bij meervoudige regressie, dus over Murders met meerdere voorspellers tegelijk.",
         "meaning": "Bij meervoudige regressie kunnen de voorspellers elk een ander soort verband met y hebben. Een transformatie die het ene verband recht trekt, kan het andere krom maken.",
@@ -4128,7 +4128,7 @@ window.SRAExamPractice = {
       "optionExplanations": [
         "Van de 160 posten hadden er maar 42 een afwijking. Het aantal getrokken posten zegt op zich niets over het aantal fouten.",
         "De grens van 30 gaat alleen over het aantal fouten. Hij maakt de eisen aan de trekking niet overbodig.",
-        "De steekproef bevat meer afwijkingen dan de 30 die de uitwerking als voorwaarde noemt.",
+        "De steekproef bevat meer afwijkingen dan de 30 die de voorwaarde vraagt.",
         "42 is groter dan 30, dus de grens is juist gehaald."
       ],
       "pattern": "Geef gemotiveerd aan of de verschilschatter mag worden toegepast.",
@@ -4270,13 +4270,13 @@ window.SRAExamPractice = {
         "N, n en t zijn gelijk, dus de foutmarge is ook 41,7 keer zo klein: 1.703.607 / 40.818 = 41,7."
       ],
       "optionExplanations": [
-        "Altijd gaat te ver: de uitwerking zegt in het algemeen. In deze opgave blijkt het uit de cijfers, s_e = 119,06 tegen s = 4.969,13.",
+        "Altijd gaat te ver: het geldt in het algemeen. In deze opgave blijkt het uit de cijfers, s_e = 119,06 tegen s = 4.969,13.",
         "Hij gebruikt er wel een: in vraag 5 is de standaardfout 31.715,85.",
         "Het is andersom. De foutmarge is evenredig met de standaardafwijking, dus een kleinere spreiding geeft een smaller interval.",
         "De verschilschatter benut de boekwaarden, waardoor alleen de spreiding van de verschillen overblijft en niet die van de waarden zelf."
       ],
       "pattern": "Waarom is de onnauwkeurigheid bij de verschilschatter in het algemeen zoveel\nkleiner dan die bij de directe schatter?",
-      "trap": "De uitwerking zegt dat de spreiding in het algemeen kleiner is, niet altijd. Schrijf dus niet dat kleine foutbedragen dit bewijzen.",
+      "trap": "De spreiding is in het algemeen kleiner, niet altijd. Schrijf dus niet dat kleine foutbedragen dit bewijzen.",
       "recognition": {
         "signals": "De vraag gaat over de reden achter het grote verschil in foutmarge: €1.703.607 bij de directe schatter tegen €40.818 bij de verschilschatter.",
         "meaning": "De foutmarge is evenredig met de standaardafwijking. Bij dezelfde N, n en t bepaalt de spreiding dus de breedte.",
@@ -4841,7 +4841,7 @@ window.SRAExamPractice = {
         "Power en Exponential rekenen met de logaritme van korting, dus hun R² staat op een andere schaal. Bovendien zijn 0,427 en 0,407 hier lager dan 0,535."
       ],
       "pattern": "a. (3) Is er reden om over te gaan tot een niet lineair model?\nb. (3) Geef de vergelijking van het regressiemodel van het best passende model.",
-      "trap": "Schrijf ln en niet log. De uitwerking trekt daarvoor 1 punt af.",
+      "trap": "Schrijf ln en niet log. Daarvoor gaat 1 punt af.",
       "recognition": {
         "signals": "Afbeelding 4 zet Linear naast Logarithmic, Power en Exponential, met per model R², Constant en b1. De toelichting noemt ln(x).",
         "meaning": "R² laat zien welk deel van de spreiding elk model verklaart. Bij Logarithmic is alleen x getransformeerd, dus ŷ = b₀ + b₁ × ln(x).",
@@ -4976,7 +4976,7 @@ window.SRAExamPractice = {
       ],
       "optionExplanations": [
         "Bij 54 waarnemingen gelden de grenzen ±2, vier waarnemingen vallen daarbuiten, en er is geen reden om ze te verwijderen.",
-        "De uitwerking geeft bij n = 54 ≤ 100 de grens ±2. Met ±3 zou niets opvallen, want −2,447 en 2,117 liggen daarbinnen.",
+        "Bij n = 54 ≤ 100 is de grens ±2. Met ±3 zou niets opvallen, want −2,447 en 2,117 liggen daarbinnen.",
         "Een groot residu is alleen een signaal. De casus noemt geen fout of bijzondere omstandigheid, dus de waarnemingen blijven staan.",
         "Een groot residu zegt dat het model daar slecht past. Een invoerfout moet je apart aantonen."
       ],
@@ -5052,7 +5052,7 @@ window.SRAExamPractice = {
         "Cook’s Distance meet invloed op de lijn. Over de juistheid van de invoer zegt hij niets."
       ],
       "pattern": "Voer de analyse uit op invloedrijke punten. Benoem de relevante afbeeldingen en de\nremedies.",
-      "trap": "Stop niet bij Afbeelding 8. De uitwerking geeft ook een punt voor de beoordeling in Afbeelding 3. Een overschrijding alleen is geen reden om te verwijderen.",
+      "trap": "Stop niet bij Afbeelding 8. Ook de beoordeling in Afbeelding 3 levert een punt op. Een overschrijding alleen is geen reden om te verwijderen.",
       "recognition": {
         "signals": "Afbeelding 5 geeft voor Cook’s Distance het gemiddelde 0,017, de standaardafwijking 0,023 en het maximum 0,109. Afbeelding 8 toont de piek bij 64.",
         "meaning": "Cook’s Distance meet hoeveel één waarneming de regressielijn beïnvloedt. Boven de grens is het een potentieel invloedrijk punt.",
@@ -5479,7 +5479,7 @@ window.SRAExamPractice = {
         "Dit is een gemiddeld verschil bij gelijk inkomen en gelijke leeftijd, geen vast bedrag per persoon. Afbeelding 13 geeft een Std. Error of the Estimate van 301,192, dus losse kortingen wijken af."
       ],
       "pattern": "Hoeveel korting zal een man gemiddeld meer kunnen realiseren dan een vrouw? Ter\nherinnering: man = 0, vrouw = 1.",
-      "trap": "Het woord meer in de vraag zet je op het verkeerde been. Alleen 446 noemen levert in de uitwerking 2 van de 4 punten op.",
+      "trap": "Het woord meer in de vraag zet je op het verkeerde been. Alleen 446 noemen levert 2 van de 4 punten op.",
       "recognition": {
         "signals": "De vraag gaat ervan uit dat een man meer krijgt, maar Afbeelding 15 geeft Geslacht een coëfficiënt van +446,294 met vrouw = 1.",
         "meaning": "De coëfficiënt van een dummy is het verschil tussen code 1 en code 0, dus vrouw min man, bij gelijk inkomen en gelijke leeftijd.",
@@ -5686,7 +5686,7 @@ window.SRAExamPractice = {
       ],
       "optionExplanations": [
         "Een regressiemodel geldt voor het bereik van de gegevens waarop het is geschat. Hier geeft €100.000 zelfs een uitkomst van −702,38.",
-        "Een hoog inkomen maakt de voorspelling niet nauwkeuriger. De uitwerking noemt extrapolatie juist een onnauwkeurige schatting.",
+        "Een hoog inkomen maakt de voorspelling niet nauwkeuriger. Extrapolatie is juist een onnauwkeurige schatting.",
         "Dit inkomen ligt ver buiten de waargenomen gegevens, dus je weet niet of het verband daar nog geldt.",
         "Een passende leeftijd helpt niet als het inkomen buiten het bereik ligt. €100.000 ligt ruim boven €65.000."
       ],
@@ -5756,7 +5756,7 @@ window.SRAExamPractice = {
         "Hangt de absolute fout niet af van het inkomen, dan is de verschilschatter beter. Het patroon is dus alleen waarschijnlijk."
       ],
       "optionExplanations": [
-        "De uitwerking zegt dat de verschilschatter beter is als de absolute fout niet van het inkomen afhangt. Het foutpatroon beslist dus.",
+        "De verschilschatter is beter als de absolute fout niet van het inkomen afhangt. Het foutpatroon beslist dus.",
         "Bij bewust verhogen groeit het bedrag van de fout mee met het inkomen, en dan werkt een vaste verhouding beter dan een vast bedrag.",
         "Eén vast foutbedrag is juist de situatie van de verschilschatter. Bewust verhogen levert bij grotere inkomens bovendien meer euro’s op.",
         "De schatter gebruikt juist de samenhang tussen beide waarden. Die is hier sterk: de correlatie is 0,88, en R staat ook in de formule van s_q."
@@ -6743,7 +6743,7 @@ window.SRAExamPractice = {
         "3,056 < 10, dus er is geen sprake van multicollineariteit."
       ],
       "optionExplanations": [
-        "Zelfs de hoogste VIF blijft ruim onder de grens van 10 die de uitwerking gebruikt.",
+        "Zelfs de hoogste VIF blijft ruim onder de grens van 10.",
         "3,056 is kleiner dan 10, dus de grens wordt niet overschreden.",
         "Een VIF boven 1 wijst alleen op enige overlap. De grens is 10, en alle vier de waarden liggen daaronder.",
         "Verklaarde variatie lees je af aan R² = 0,750. De VIF gaat over de samenhang tussen de verklarende variabelen onderling."
@@ -6890,7 +6890,7 @@ window.SRAExamPractice = {
         "De conclusie verwijderen volgt pas na onderzoek: de grenzen 19,246 en 3,153, de combinatie van 16 GB en 8 GB, en Afbeelding 8. Zonder die stappen is er geen grond.",
         "Mahalanobis Distance meet de afstand in de x-waarden, Cook’s Distance de invloed op de regressie. Normaliteit toets je apart, zoals in Afbeelding 13.",
         "Tablet 35 gaat over beide kritieke grenzen heen, en Afbeelding 8 laat zien dat dit punt los van de rest ligt.",
-        "Een waarde aanpassen alleen om onder 19,246 te komen, is geen remedie. De uitwerking stelt vast dat er geen fout in de gegevens zit en eindigt bij het invloedrijke punt op verwijderen."
+        "Een waarde aanpassen alleen om onder 19,246 te komen, is geen remedie. Er zit geen fout in de gegevens, en bij het invloedrijke punt is de conclusie verwijderen."
       ],
       "pattern": "Voer de analyses uit op uitbijters in x en invloedrijke punten om te onderzoeken of er\nsprake is van een bijzondere situatie. Geef aan welke remedie eventueel moet\nworden toegepast.",
       "trap": "Noem niet alleen de grenzen. De vraag vraagt ook om de remedie, en die hangt af van wat er met waarneming 35 aan de hand is: geen fout, wel een bijzondere omstandigheid.",
@@ -6958,7 +6958,7 @@ window.SRAExamPractice = {
         "Power en Exponential zijn door hun getransformeerde prijs geen zuivere vergelijking met Linear. Dat verandert de conclusie hier niet, want hun waarden liggen lager."
       ],
       "optionExplanations": [
-        "De uitwerking kijkt wel naar F, maar bij Power en Exponential gaat F over een getransformeerde prijs. Dat verschil moet je erbij noemen. Linear blijft hier met 68,576 het hoogst.",
+        "Je mag wel naar F kijken, maar bij Power en Exponential gaat F over een getransformeerde prijs. Dat verschil moet je erbij noemen. Linear blijft hier met 68,576 het hoogst.",
         "Linear is zelf een van de modellen met opslaggeheugen, en past met R² = 0,682 juist het best.",
         "Geen van de drie niet-lineaire modellen haalt een hogere R² of F dan het lineaire model, dus een overstap levert niets op.",
         "De R² van Power is 0,649, dus lager dan de 0,682 van Linear. De bewering klopt al niet met Afbeelding 9."
@@ -7321,7 +7321,7 @@ window.SRAExamPractice = {
         "signals": "Afbeelding 15 geeft Mean Square Regression = 718.123,926 met df = 1, en Total = 902.604,839 met df = 30. De andere cellen zijn zwart gemaakt.",
         "meaning": "Sum of Squares van Regression en Residual tellen op tot Total, en hetzelfde geldt voor df. Daarmee kun je de ontbrekende waarden terugrekenen.",
         "approach": "Vul de tabel van boven naar beneden in: SSR, SSE, df van het residu en MSE. Bereken daarna R², F en t.",
-        "answer": "Alle zes de uitkomsten met hun berekening. Wie rekent met SSR = 700.000 krijgt de alternatieve waarden uit de uitwerking."
+        "answer": "Alle zes de uitkomsten met hun berekening. Wie rekent met SSR = 700.000 krijgt de alternatieve waarden uit de laatste stap."
       },
       "guidance": {
         "title": "ANOVA: verklaarde en onverklaarde variatie",
@@ -8096,7 +8096,7 @@ window.SRAExamPractice = {
         "De twee soorten symbolen liggen grotendeels op dezelfde plek, dus de grafiek laat geen twee losse groepen zien."
       ],
       "pattern": "Motiveer op basis van Afbeelding 2 of sprake zou kunnen zijn van samengevoegde groepen.",
-      "trap": "De uitwerking accepteert twee standpunten. Het gaat om de motivatie uit de grafiek, een los ja of nee levert niets op.",
+      "trap": "Twee standpunten zijn goed. Het gaat om de motivatie uit de grafiek, een los ja of nee levert niets op.",
       "recognition": {
         "signals": "Afbeelding 2 toont Tijd tegen Afstand, met rondjes voor chauffeur 0 en plusjes voor chauffeur 1. De meeste punten van beide liggen tussen ongeveer 11 en 24 km en tussen 100 en 180 minuten.",
         "meaning": "Samengevoegde groepen zie je als aparte puntenwolken, elk met een eigen ligging. Dan beschrijft één regressielijn de groepen slecht.",
@@ -8235,7 +8235,7 @@ window.SRAExamPractice = {
       "optionExplanations": [
         "Bij n ≤ 100 is de grens ± 2, niet ± 3. Met ± 3 zou je 2, 22 en 58 ten onrechte overslaan, want de uitersten zijn −2,491 en 2,460.",
         "Rit 2 heeft in de casus geen bijzondere omstandigheid en blijft dus staan. Alleen bij 22 en 58 is oponthoud gemeld.",
-        "De uitwerking verwijdert 22 en 58 omdat de casus langdurig oponthoud noemt. Dat is een besluit voor deze ritten, geen vaste regel. Wil je vertragingen juist mee plannen, dan weeg je het opnieuw af.",
+        "Je verwijdert 22 en 58 omdat de casus langdurig oponthoud noemt. Dat is een besluit voor deze ritten, geen vaste regel. Wil je vertragingen juist mee plannen, dan weeg je het opnieuw af.",
         "Bij deze steekproefomvang ligt de grens op ± 2, en de remedie hangt af van de omstandigheid die de casus per rit noemt."
       ],
       "pattern": "Voer de analyses uit op uitbijters in y. Geef aan welke afbeelding je gebruikt en welke\nremedie eventueel moet worden toegepast.",
@@ -8269,13 +8269,13 @@ window.SRAExamPractice = {
     },
     {
       "id": "exam-20230315-vraag-12-x",
-      "prompt": "Beoordeel uitbijters in x en de bronnummering.",
+      "prompt": "Beoordeel uitbijters in x en de nummering.",
       "originalPrompt": "Voer de analyses uit op uitbijters in x en invloedrijke punten. Geef aan welke afbeelding je\ngebruikt en welke remedie eventueel moet worden toegepast.",
       "originalPromptHtml": "<p>Voer de analyses uit op uitbijters in x en invloedrijke punten. Geef aan welke afbeelding je gebruikt en welke remedie eventueel moet worden toegepast.</p>",
       "sourceVisualHtml": "",
       "options": [
         "Geval 58 moet opnieuw verwijderd worden zonder de tegenstrijdige nummering te onderzoeken.",
-        "MD-grens 5,114; maximum 7,195. De grafiek noemt 30 en 58. De bron noemt 58 opnieuw na eerdere verwijdering; benoem die onduidelijkheid en onderzoek de bijzondere oorzaak.",
+        "MD-grens 5,114; maximum 7,195. De grafiek noemt 30 en 58. De opgave noemt 58 opnieuw na eerdere verwijdering; benoem die onduidelijkheid en onderzoek de bijzondere oorzaak.",
         "MDmax 7,195 ligt onder de kritieke grens 5,114.",
         "Alleen geval 2 is volgens de MD-grafiek een potentiële x-uitbijter."
       ],
@@ -8297,7 +8297,7 @@ window.SRAExamPractice = {
       ],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20230315/antwoord-12-3.jpg\" alt=\"antwoord-12 · bronpagina 3\">",
       "sourceNote": "MD-grens = 0,983 + 3 × 1,377 = 5,114: grafiek noemt 30 en 58. Cook-grens = 0,019 + 3 × 0,035 = 0,124: 2, 30 en 50. De bron noemt opnieuw 58 nadat 58 eerder is verwijderd; zonder oorspronkelijke dataset is de nummering niet te reconstrueren. Onderzoek invloedrijke punten inhoudelijk; verwijder geldige waarnemingen niet uitsluitend om de passing te verbeteren.",
-      "explanation": "MD-grens 5,114; maximum 7,195. De grafiek noemt 30 en 58. De bron noemt 58 opnieuw na eerdere verwijdering; benoem die onduidelijkheid en onderzoek de bijzondere oorzaak. MD-grens = 0,983 + 3 × 1,377 = 5,114: grafiek noemt 30 en 58. Cook-grens = 0,019 + 3 × 0,035 = 0,124: 2, 30 en 50. De bron noemt opnieuw 58 nadat 58 eerder is verwijderd; zonder oorspronkelijke dataset is de nummering niet te reconstrueren. Onderzoek invloedrijke punten inhoudelijk; verwijder geldige waarnemingen niet uitsluitend om de passing te verbeteren.",
+      "explanation": "MD-grens 5,114; maximum 7,195. De grafiek noemt 30 en 58. De opgave noemt 58 opnieuw na eerdere verwijdering; benoem die onduidelijkheid en onderzoek de bijzondere oorzaak. MD-grens = 0,983 + 3 × 1,377 = 5,114: grafiek noemt 30 en 58. Cook-grens = 0,019 + 3 × 0,035 = 0,124: 2, 30 en 50. De bron noemt opnieuw 58 nadat 58 eerder is verwijderd; zonder oorspronkelijke dataset is de nummering niet te reconstrueren. Onderzoek invloedrijke punten inhoudelijk; verwijder geldige waarnemingen niet uitsluitend om de passing te verbeteren.",
       "steps": [
         "Grens, Afbeelding 6: MDkr = 0,983 + 3 × 1,377 = 5,114.",
         "Maximum: MDmax = 7,195 > 5,114, dus er is minstens één uitbijter in x.",
@@ -8312,7 +8312,7 @@ window.SRAExamPractice = {
         "7,195 is groter dan 5,114, niet kleiner. Er is dus minstens één uitbijter in x.",
         "In Afbeelding 7 ligt waarneming 2 rond 1,9, ver onder 5,114. De pieken boven de grens horen bij 30 en 58."
       ],
-      "pattern": "Beoordeel uitbijters in x en de bronnummering.",
+      "pattern": "Beoordeel uitbijters in x en de nummering.",
       "trap": "Bereken de grens met Afbeelding 6 (N = 58), niet met Afbeelding 4 (N = 60). Daar staan andere waarden: standaardafwijking 1,478 en maximum 7,468.",
       "recognition": {
         "signals": "Afbeelding 6 heeft N = 58 en geeft bij Mahal. Distance gemiddelde 0,983, standaardafwijking 1,377 en maximum 7,195. Afbeelding 7 toont twee hoge pieken, bij 30 en 58.",
@@ -8384,7 +8384,7 @@ window.SRAExamPractice = {
         "Het maximum ligt boven de grens, maar de remedie hangt af van wat je in het spreidingsdiagram ziet en niet van een betere passing.",
         "0,168 is groter dan 0,124, niet kleiner. Er is dus wel een invloedssignaal.",
         "Cook’s Distance gaat over de invloed van één waarneming op de lijn. Normaliteit toets je apart met Afbeelding 10.",
-        "Een betere passing is geen argument. De uitwerking kijkt of de punten in Afbeelding 9 duidelijk te onderscheiden zijn."
+        "Een betere passing is geen argument. Het gaat erom of de punten in Afbeelding 9 duidelijk te onderscheiden zijn."
       ],
       "pattern": "Beoordeel potentiële invloedrijke punten en de remedie.",
       "trap": "Alleen de grens noemen is niet genoeg. De remediepunten krijg je pas met de beoordeling in Afbeelding 9 en een gemotiveerde keuze.",
@@ -9035,7 +9035,7 @@ window.SRAExamPractice = {
         "Dit is overfitting: het model past dan op deze gegevens, maar niet op nieuwe ritten. Residuen van nul maken controle niet overbodig."
       ],
       "pattern": "Geef commentaar op de volgende uitspraak “Het beste model is altijd het model met alle\nvariabelen omdat dan het meeste van de te verklaren variabele wordt verklaard.”",
-      "trap": "Schrijf niet alleen dat de uitspraak onjuist is. De uitwerking noemt hem niet per se incorrect. De punten zitten in spaarzaamheid en adjusted R².",
+      "trap": "Schrijf niet alleen dat de uitspraak onjuist is. Hij is niet per se incorrect. De punten zitten in spaarzaamheid en adjusted R².",
       "recognition": {
         "signals": "De uitspraak stelt het beste model gelijk aan het model dat het meeste verklaart, en zegt dat dit altijd geldt. Dit is een commentaarvraag zonder berekening.",
         "meaning": "Het tweede deel klopt op zich: R² daalt niet als je variabelen toevoegt. Maar een model moet ook eenvoudig en uitlegbaar zijn. Dat heet spaarzaamheid, of parsimony.",
@@ -9106,7 +9106,7 @@ window.SRAExamPractice = {
         "De factor is alleen 1 als n = 1, want dan staat boven en onder de streep hetzelfde. Bij n = 130 is hij 0,9758."
       ],
       "pattern": "Geef gemotiveerd aan of toepassing van de eindigheidscorrectie tot een nauwkeuriger schatting leidt.",
-      "trap": "Alleen het woord nauwkeuriger levert geen punten op. De normering eist dat je ook noemt dat de factor kleiner is dan 1 of dat het interval minder breed wordt.",
+      "trap": "Alleen het woord nauwkeuriger levert geen punten op. Noem ook dat de factor kleiner is dan 1 of dat het interval minder breed wordt.",
       "recognition": {
         "signals": "Een steekproef van 130 posten uit een eindige populatie van 2.700 posten. Elke post kan maar één keer in de steekproef komen.",
         "meaning": "De steekproef bevat een deel van de populatie, dus er blijft minder onbekend dan bij een oneindige populatie. Dat maakt de schatting zekerder.",
@@ -9243,13 +9243,13 @@ window.SRAExamPractice = {
         "Dit blijft een verwachting. Er geldt Var(b − w) = Var(b) + Var(w) − 2 × Cov(b, w), en spreiding en samenhang van de boekwaarden b zijn niet gegeven."
       ],
       "optionExplanations": [
-        "Altijd en noodzakelijk gaan te ver. De uitwerking schrijft in het algemeen, en de formule voor Var(b − w) laat toe dat s_e ook boven s_w uitkomt.",
+        "Altijd en noodzakelijk gaan te ver. Het geldt in het algemeen, en de formule voor Var(b − w) laat toe dat s_e ook boven s_w uitkomt.",
         "Onwaarschijnlijk is niet onmogelijk. Sluiten boekwaarden en werkelijke waarden slecht op elkaar aan, dan kan de spreiding van de verschillen boven €210 komen.",
         "Standaarddeviaties trek je niet van elkaar af. De variantie van een verschil hangt af van beide varianties en hun covariantie, en s_b is hier niet eens gegeven.",
         "Verschillen tussen boekwaarde en werkelijke waarde zijn meestal klein, maar de gegevens laten dat alleen verwachten en niet bewijzen."
       ],
       "pattern": "Welke van de twee genoemde standaarddeviaties zal dan juist zijn? Motiveer het antwoord.",
-      "trap": "De normering vraagt drie stappen: verschillen kleiner, spreiding dus kleiner, laagste waarde. Alleen €71 noemen levert niets op, want ongemotiveerde antwoorden krijgen nul punten.",
+      "trap": "Noem drie stappen: verschillen kleiner, spreiding dus kleiner, laagste waarde. Alleen €71 noemen levert niets op, want ongemotiveerde antwoorden krijgen nul punten.",
       "recognition": {
         "signals": "De directe schatter had s = €210. Nu werkt de accountant met verschillen van gemiddeld €24 per post, en de kandidaten liggen aan weerszijden van 210: €71 en €332.",
         "meaning": "De verschilschatter werkt met boekwaarde min werkelijke waarde. Een bruikbare administratie geeft kleine verschillen, en kleine verschillen spreiden minder dan de waarden zelf.",
@@ -9981,7 +9981,7 @@ window.SRAExamPractice = {
       "options": [
         "137,55 per minuut; leeftijd maakt geen verschil in de lijn.",
         "Buiten het waargenomen gebied wordt de voorspelfout automatisch nul.",
-        "Invullen van 95 geeft 97,95 per minuut, maar dit is extrapolatie buiten de waargenomen leeftijden; de sleutel verlangt dat voorbehoud.",
+        "Invullen van 95 geeft 97,95 per minuut, maar dit is extrapolatie buiten de waargenomen leeftijden; noem dat voorbehoud.",
         "97,95 per minuut is zonder voorbehoud betrouwbaar, ook buiten de waargenomen leeftijdsgrenzen."
       ],
       "correct": 2,
@@ -10001,7 +10001,7 @@ window.SRAExamPractice = {
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>a. (cid:1877)(cid:3548) = 192 – 0,99 x 55 = 137,55 (2)<br>(cid:2868)<br>b. 95 jaar ligt buiten de verzamelde gegevens en het is onwenselijk hier een schatting voor te geven<br>(2)</p>",
       "sourceNote": "Voor 55 jaar geeft de afgedrukte lijn 137,55. Invullen van 95 geeft rekenkundig 97,95, maar is extrapolatie buiten de waargenomen leeftijden. De sleutel verlangt terecht het voorbehoud bij die voorspelling.",
-      "explanation": "Invullen van 95 geeft 97,95 per minuut, maar dit is extrapolatie buiten de waargenomen leeftijden; de sleutel verlangt dat voorbehoud. Voor 55 jaar geeft de afgedrukte lijn 137,55. Invullen van 95 geeft rekenkundig 97,95, maar is extrapolatie buiten de waargenomen leeftijden. De sleutel verlangt terecht het voorbehoud bij die voorspelling.",
+      "explanation": "Invullen van 95 geeft 97,95 per minuut, maar dit is extrapolatie buiten de waargenomen leeftijden; noem dat voorbehoud. Voor 55 jaar geeft de afgedrukte lijn 137,55. Invullen van 95 geeft rekenkundig 97,95, maar is extrapolatie buiten de waargenomen leeftijden. De sleutel verlangt terecht het voorbehoud bij die voorspelling.",
       "steps": [
         "Afbeelding 2: de oudste proefpersoon is ongeveer 77 jaar.",
         "95 jaar ligt daar ongeveer 18 jaar boven, dus dit is extrapolatie.",
@@ -10294,7 +10294,7 @@ window.SRAExamPractice = {
         "Remedie: er is niets vermeld over bijzondere situaties, dus handhaven."
       ],
       "optionExplanations": [
-        "De uitwerking kiest ±3 omdat n = 746 groter is dan 100. Met ±2 gebruik je de verkeerde grens voor deze steekproef.",
+        "De grens is ±3 omdat n = 746 groter is dan 100. Met ±2 gebruik je de verkeerde grens voor deze steekproef.",
         "−3,216 ligt verder van nul dan −3, dus juist buiten de grenzen.",
         "De grens is tweezijdig: ±3. Een punt ver onder de lijn is net zo goed een afwijking als een punt ver erboven.",
         "De laagste gestandaardiseerde waarde komt net onder de grens uit, en de casus geeft geen reden om iets aan te passen."
@@ -10338,7 +10338,7 @@ window.SRAExamPractice = {
         "Cookmax 0,021 ligt onder de grens 0,007.",
         "Cook-afstand is uitsluitend een maat voor een uitbijter in x.",
         "Verwijder ieder punt met een positieve Cook-afstand.",
-        "Cook-grens 0,001 + 3 × 0,002 = 0,007; maximum 0,021 signaleert mogelijke invloed. De sleutel noemt dit foutief een x-uitbijter; zonder inhoudelijke reden handhaven."
+        "Cook-grens 0,001 + 3 × 0,002 = 0,007; maximum 0,021 signaleert mogelijke invloed. Noem dit geen x-uitbijter; zonder inhoudelijke reden handhaven."
       ],
       "correct": 3,
       "level": 3,
@@ -10356,7 +10356,7 @@ window.SRAExamPractice = {
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20231030/antwoord-14-3.jpg\" alt=\"antwoord-14 · bronpagina 3\"><img src=\"bronnen/tentamens/20231030/antwoord-14-4.jpg\" alt=\"antwoord-14 · bronpagina 4\">",
       "sourceNote": "MD 6,852 > 4,800 en residu−3,216 < −3 signaleren x- en y-uitbijters. Cook 0,021 > 0,007 signaleert potentiële invloedrijke punten; de sleutel noemt dit ten onrechte opnieuw een uitbijter in x. Zonder bronfout/bijzondere oorzaak blijven de waarnemingen behouden.",
-      "explanation": "Cook-grens 0,001 + 3 × 0,002 = 0,007; maximum 0,021 signaleert mogelijke invloed. De sleutel noemt dit foutief een x-uitbijter; zonder inhoudelijke reden handhaven. MD 6,852 > 4,800 en residu−3,216 < −3 signaleren x- en y-uitbijters. Cook 0,021 > 0,007 signaleert potentiële invloedrijke punten; de sleutel noemt dit ten onrechte opnieuw een uitbijter in x. Zonder bronfout/bijzondere oorzaak blijven de waarnemingen behouden.",
+      "explanation": "Cook-grens 0,001 + 3 × 0,002 = 0,007; maximum 0,021 signaleert mogelijke invloed. Noem dit geen x-uitbijter; zonder inhoudelijke reden handhaven. MD 6,852 > 4,800 en residu−3,216 < −3 signaleren x- en y-uitbijters. Cook 0,021 > 0,007 signaleert potentiële invloedrijke punten; de sleutel noemt dit ten onrechte opnieuw een uitbijter in x. Zonder bronfout/bijzondere oorzaak blijven de waarnemingen behouden.",
       "steps": [
         "Afbeelding 6: gemiddelde 0,001 en standaarddeviatie 0,002.",
         "Grens: 0,001 + 3 × 0,002 = 0,007.",
@@ -10370,7 +10370,7 @@ window.SRAExamPractice = {
         "Het grootste effect op de lijn ligt boven de grens, maar geen enkel punt valt in de grafieken op door een uitzonderlijke positie."
       ],
       "pattern": "Beoordeel potentiële invloedrijke punten.",
-      "trap": "Cook-afstand staat in de uitwerking onder invloedrijke punten, al staat er per ongeluk uitbijter in x. Noem het in je antwoord een invloedrijk punt.",
+      "trap": "Cook-afstand hoort bij invloedrijke punten, niet bij uitbijters in x. Noem het in je antwoord een invloedrijk punt.",
       "recognition": {
         "signals": "In Afbeelding 6 heeft de rij Cook-afstand een gemiddelde van 0,001, een standaarddeviatie van 0,002 en een maximum van 0,021.",
         "meaning": "De Cook-afstand meet hoeveel de regressielijn verandert als je één punt weglaat. Een hoge waarde wijst op een potentieel invloedrijk punt.",
@@ -10860,7 +10860,7 @@ window.SRAExamPractice = {
         "Conclusie: t ligt in het kritieke gebied en H₀ wordt verworpen. Er is een significant dalend lineair verband tussen Leeftijd en Hartritme_max. De α-fout is relevant."
       ],
       "optionExplanations": [
-        "744 hoort bij één verklarende variabele (n − 2). Bij twee is het 743. De uitwerking schrijft wel 744, maar de grens −1,645 verandert daardoor niet.",
+        "744 hoort bij één verklarende variabele (n − 2). Bij twee is het 743. De grens −1,645 verandert daardoor niet.",
         "De bewering gaat over een daling, dus het kritieke gebied ligt links, en de t-waarde ligt daar ver in.",
         "Een daling betekent H₁: β₁ < 0. Een sterk negatieve t past juist niet bij een positieve helling.",
         "−11,223 ligt ver links van −1,645 en dus in het kritieke gebied. H₀ wordt wel verworpen."
@@ -11008,7 +11008,7 @@ window.SRAExamPractice = {
       ],
       "optionExplanations": [
         "Niet verwerpen bewijst geen normaliteit, en het histogram blijft nodig: dat is juist een van de twee gevraagde redenen.",
-        "Bij vraag 15 gebruikt de uitwerking n > 50 als grens. De n > 100 bij deze vraag is geen algemene regel, en n = 564 voldoet aan beide.",
+        "Bij vraag 15 is n > 50 de grens. De n > 100 bij deze vraag is geen algemene regel, en n = 564 voldoet aan beide.",
         "Afbeelding 14 heeft één top, en 0,098 is groter dan 0,05. Beide delen van deze uitspraak kloppen dus niet.",
         "Zowel het beeld als de toets bij de groep mannen geven geen aanwijzing meer voor een afwijking van de normale verdeling."
       ],
@@ -11302,7 +11302,7 @@ window.SRAExamPractice = {
         "Stratificatie legt alleen de groepen vast. Hoeveel posten je per groep trekt, bepaalt de allocatie. Pas evenredige allocatie zoals in vraag 5 geeft een steekproef naar rato."
       ],
       "pattern": "De registeraccountant heeft, zoals gemeld, stratificatie toegepast gebaseerd op de distributiecentra.\nGeef twee redenen waarom de accountant deze keuze gemaakt zou kunnen hebben.",
-      "trap": "De uitwerking spreekt van minder variabiliteit in de populatie. Bedoeld is de spreiding binnen de strata, want de werkelijke waarden van de voorraad veranderen niet door een indeling.",
+      "trap": "Minder variabiliteit gaat over de spreiding binnen de strata, niet over de populatie, want de werkelijke waarden van de voorraad veranderen niet door een indeling.",
       "recognition": {
         "signals": "De voorraad ligt verdeeld over 5 distributiecentra, en elk centrum wordt een stratum. De vraag vraagt om twee redenen en niet om een berekening.",
         "meaning": "Elk centrum krijgt een eigen deelsteekproef. Zo is er per centrum een schatting, en telt alleen de spreiding binnen een centrum mee in de standaardfout.",
@@ -11999,7 +11999,7 @@ window.SRAExamPractice = {
       "trap": "Noem de getallen en niet alleen nee. Bedenk ook dat R² van Power en Exponential op een andere y-schaal is berekend, en dus geen zuivere maat is voor de voorspelkwaliteit op de kostenschaal.",
       "recognition": {
         "signals": "Afbeelding 3 zet vier modellen naast elkaar met R Square en F. Bij Linear staat R² = 0,943.",
-        "meaning": "Een beter model verklaart meer variatie. Daarvoor vergelijk je R². Volgens de uitwerking mag je ook de F-waarden vergelijken.",
+        "meaning": "Een beter model verklaart meer variatie. Daarvoor vergelijk je R². Je mag ook de F-waarden vergelijken.",
         "approach": "Lees R² van alle vier de modellen af en kijk of een niet lineair model boven 0,943 uitkomt.",
         "answer": "Nee, met de R²-waarden of de F-waarden uit afbeelding 3 als motivatie."
       },
@@ -12450,12 +12450,12 @@ window.SRAExamPractice = {
     },
     {
       "id": "exam-20240318-vraag-17-y",
-      "prompt": "Beoordeel de uitbijters in y en de onderlinge consistentie van de bronwaarden.",
+      "prompt": "Beoordeel de uitbijters in y en de onderlinge consistentie van de waarden.",
       "originalPrompt": "Voer de analyses uit op uitbijters.",
       "originalPromptHtml": "<p>Voer de analyses uit op uitbijters.</p>",
       "sourceVisualHtml": "",
       "options": [
-        "De bronwaarden zijn onderling consistent en sluiten elk mogelijk y-signaal uit.",
+        "De waarden zijn onderling consistent en sluiten elk mogelijk y-signaal uit.",
         "Bij n = 960 geldt de grens ±2, dus 2,991 is automatisch een te verwijderen fout.",
         "Het maximale gewone residu mag zonder delen door s_e met de grens 3 worden vergeleken.",
         "De afgedrukte Std.Residual-kolom geeft geen signaal bij ±3. Maar 3.248,623/938,0776 ≈ 3,463 wijkt daarvan af; benoem deze broninconsistentie en welke kolom je volgt."
@@ -12491,12 +12491,12 @@ window.SRAExamPractice = {
         "3.248,623 is een bedrag in dollars. Pas na delen door s_e = 938,076 krijg je een getal zonder eenheid dat je met ±3 kunt vergelijken.",
         "In de kolom Std. Residual blijven beide uitersten binnen de grenzen, maar het grootste gewone residu past niet bij die kolom."
       ],
-      "pattern": "Beoordeel de uitbijters in y en de onderlinge consistentie van de bronwaarden.",
-      "trap": "De uitwerking kijkt alleen naar de kolom Std. Residual. Wie dat ook doet, ziet niet dat het gewone residu van 3.248,623 daarmee in strijd is.",
+      "pattern": "Beoordeel de uitbijters in y en de onderlinge consistentie van de waarden.",
+      "trap": "Wie alleen naar de kolom Std. Residual kijkt, ziet niet dat het gewone residu van 3.248,623 daarmee in strijd is.",
       "recognition": {
         "signals": "Afbeelding 4: Std. Residual minimum −2,707 en maximum 2,991. In dezelfde tabel staat Residual maximum 3.248,623, en afbeelding 8 geeft s_e = 938,076.",
         "meaning": "Een gestandaardiseerd residu is het residu gedeeld door s_e. Het minimum in de tabel klopt daarmee, het maximum niet.",
-        "approach": "Gebruik zoals de uitwerking de kolom Std. Residual met de grens ±3, want n = 960 > 100. Reken daarna het maximum na en zeg welke kolom je volgt.",
+        "approach": "Gebruik de kolom Std. Residual met de grens ±3, want n = 960 > 100. Reken daarna het maximum na en zeg welke kolom je volgt.",
         "answer": "De grens ±3 bij n > 100, zmax = 2,991 en zmin = −2,707, de conclusie geen uitbijters in y, en dat 3.248,623 / 938,076 = 3,463 daarvan afwijkt."
       },
       "guidance": {
@@ -13205,7 +13205,7 @@ window.SRAExamPractice = {
         "€10.000 is de hele breedte. Met E = 10.000 kom je op n = 159,2. Dat is minder dan de 180 die je al hebt, en dan zou er geen uitbreiding nodig zijn."
       ],
       "pattern": "Met hoeveel posten moet de steekproef uitgebreid worden om de breedte van het schattingsinterval\nte beperken tot € 10.000?",
-      "trap": "De vraag is met hoeveel posten je uitbreidt, niet hoe groot de steekproef wordt. Rond n omhoog af, ook bij 520,12. De normering rekent een uitwerking met de z-waarde ook goed: met 1,96 kom je op n = 515, dus 335 posten.",
+      "trap": "De vraag is met hoeveel posten je uitbreidt, niet hoe groot de steekproef wordt. Rond n omhoog af, ook bij 520,12. Rekenen met de z-waarde is ook goed: met 1,96 kom je op n = 515, dus 335 posten.",
       "recognition": {
         "signals": "De breedte mag maximaal €10.000 zijn, en er zijn al 180 posten bekeken. De schatter blijft de regressieschatter uit vraag 1.",
         "meaning": "De breedte is twee keer de foutmarge, dus E = 5.000. De factor 1 − R² hoort in de formule, want de regressieschatter heeft minder spreiding dan de directe schatter.",
@@ -13277,7 +13277,7 @@ window.SRAExamPractice = {
         "Extra informatie maakt het interval juist smaller. De marge daalt van ongeveer 24.624 naar 9.356."
       ],
       "pattern": "Wat kun je zeggen over de breedte van het schattingsinterval als je de regressieschatter vergelijkt\nmet de directe schatter, toegepast op dezelfde data, met dezelfde steekproefomvang en dezelfde\nbetrouwbaarheid? En waardoor komt dat?",
-      "trap": "Noem zowel de richting als de oorzaak. De normering geeft 2 punten voor smaller en 2 punten voor de boekwaarden, dus alleen smaller is de helft van het antwoord.",
+      "trap": "Noem zowel de richting als de oorzaak. Smaller noemen levert 2 punten op en de boekwaarden noemen ook 2, dus alleen smaller is de helft van het antwoord.",
       "recognition": {
         "signals": "Dezelfde data, dezelfde n en dezelfde betrouwbaarheid. Het enige verschil is de schatter, en de casus geeft R = 0,925 tussen boekwaarde en werkelijke waarde.",
         "meaning": "Als n, t en s_w gelijk blijven, hangt de breedte alleen af van de standaardfout. De regressieschatter gebruikt de boekwaarden en haalt daarmee spreiding weg.",
@@ -13621,7 +13621,7 @@ window.SRAExamPractice = {
         "signals": "De casus zegt dat meer beenkracht leidt tot een grotere spronghoogte. Afbeelding 1 toont een stijgende puntenwolk van 30 patiënten.",
         "meaning": "De verwachting heeft een richting, dus je toetst eenzijdig. De parameter is de helling in het populatiemodel, niet de helling uit de steekproef.",
         "approach": "Zet wat je wilt aantonen in H₁: een positieve helling. H₀ krijgt de rest, inclusief de gelijkheid. Benoem daarna wat de parameter is.",
-        "answer": "Beide hypothesen en de omschrijving van β₁ als richtingscoëfficiënt van het populatiemodel. De normering keurt H₀: β₁ = 0 ook goed."
+        "answer": "Beide hypothesen en de omschrijving van β₁ als richtingscoëfficiënt van het populatiemodel. H₀: β₁ = 0 is ook goed."
       },
       "guidance": {
         "title": "Hypothese, toetsingsgrootheid en conclusie",
@@ -13692,7 +13692,7 @@ window.SRAExamPractice = {
         "R² is de verklaarde kwadratensom gedeeld door de totale kwadratensom, en die twee getallen staan correct in de tabel."
       ],
       "pattern": "De fysiotherapeut voert enkelvoudige regressie uit en verkrijgt afbeelding 2 t/m 11. In Afbeelding 2\nzijn een aantal waarden achterwege gelaten. Bereken R2 (op 4 decimalen nauwkeurig) en leg uit wat\ndit betekent voor de spronghoogte in het regressiemodel.\nANOVAa\nModel Sum of Squares df Mean Square F Sig.\n1 Regression 1351,262 XXXX XXXX XXXX <,001b\nResidual 4,105 XXX XXXX\nTotal 1395,367 XXXX\na. Dependent Variable: Jump height\nb. Predictors: (Constant), Leg power\nAfbeelding 2: ANOVA",
-      "trap": "Schrijf variatie, variantie of spreiding. De uitwerking keurt het woord standaardafwijking uitdrukkelijk af. Geef R² op 4 decimalen, zoals gevraagd.",
+      "trap": "Schrijf variatie, variantie of spreiding. Het woord standaardafwijking wordt afgekeurd. Geef R² op 4 decimalen, zoals gevraagd.",
       "recognition": {
         "signals": "Afbeelding 2 geeft Regression 1351,262 en Total 1395,367. Residual staat bij deze vraag als 4,105, maar bij vraag 10 als 44,105.",
         "meaning": "R² geeft het deel van de spreiding in spronghoogte dat beenkracht verklaart. De tabel telt alleen op met 44,105, dus 4,105 is een drukfout.",
@@ -13891,9 +13891,9 @@ window.SRAExamPractice = {
       ],
       "optionExplanations": [
         "Bij deze steekproefomvang geldt de grens ±2, de twee uitersten liggen daar net buiten, en de casus geeft geen reden om ze aan te passen.",
-        "De uitwerking gebruikt bij n = 30 de grens ±2. Met ±3 zou je de gevallen 14 en 22 ten onrechte missen.",
+        "Bij n = 30 is de grens ±2. Met ±3 zou je de gevallen 14 en 22 ten onrechte missen.",
         "De casus noemt geen meetfout en geen bijzondere omstandigheid. Zonder die reden is er geen grond om waarnemingen te verwijderen.",
-        "Afbeelding 10 is in de opgaven de tabel Coefficients. De uitwerking gebruikt hier een andere nummering: de residuen staan in afbeelding 5."
+        "Afbeelding 10 is in de opgaven de tabel Coefficients. De residuen staan in afbeelding 5."
       ],
       "pattern": "Beoordeel de uitbijters in y en de remedie.",
       "trap": "Stop niet bij het signaal. De remedie hoort bij het antwoord en levert een eigen punt op.",
@@ -13964,7 +13964,7 @@ window.SRAExamPractice = {
         "Het maximum van Cook’s Distance ligt boven de grens, maar de puntenwolk laat geen duidelijk invloedrijk punt zien.",
         "De vergelijking staat verkeerd om: 0,284 is groter dan 0,258, dus er is wel een signaal.",
         "De grens geeft alleen een potentieel invloedrijk punt. In afbeelding 1 is geen duidelijk invloedrijk punt te zien, dus geval 12 blijft staan.",
-        "Afbeelding 11 is in de opgaven de tabel Variables Entered/Removed. De uitwerking gebruikt een andere nummering: Cook’s Distance staat in afbeelding 6."
+        "Afbeelding 11 is in de opgaven de tabel Variables Entered/Removed. Cook’s Distance staat in afbeelding 6."
       ],
       "pattern": "Beoordeel invloedrijke punten en de remedie.",
       "trap": "De grens overschrijden is geen reden om te verwijderen. De laatste stap is de beoordeling met afbeelding 1, en ook die levert een punt op.",
@@ -14146,7 +14146,7 @@ window.SRAExamPractice = {
       "options": [
         "Het gemiddelde-interval heeft standaardfout s_e en bevat geen factor 1/√n.",
         "Bij x₀ = het gemiddelde van x is iedere onzekerheid nul.",
-        "Voor de gevraagde gemiddelde respons geldt ŷ ± t·s_e/√n: circa [29,2716;30,2102]. Gewoon afgerond [29,3;30,2]; naar buiten [29,2;30,3]. Het officiële [27,1;32,4] betreft een individu.",
+        "Voor de gevraagde gemiddelde respons geldt ŷ ± t·s_e/√n: circa [29,2716;30,2102]. Gewoon afgerond [29,3;30,2]; naar buiten [29,2;30,3]. Het interval [27,1;32,4] betreft een individu.",
         "[27,1;32,4] is het interval voor de gemiddelde respons, zonder enig verschil met een individuele voorspelling."
       ],
       "correct": 2,
@@ -14165,7 +14165,7 @@ window.SRAExamPractice = {
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p><strong>Toelichting bij de bron:</strong> Bronverschil: de vraag noemt het gemiddelde, maar het officiële antwoord berekent een individueel voorspellingsinterval en gebruikt daarom een extra 1 onder de wortel. Voor een interval van de gemiddelde respons vervalt die 1. De verwijzing naar Afbeelding 3 in het antwoordmodel betreft Afbeelding 9 in de opgaven.</p><img src=\"bronnen/tentamens/20241028/antwoord-13-5.jpg\" alt=\"antwoord-13 · bronpagina 5\">",
       "sourceNote": "De vraag vraagt het gemiddelde. Gebruik dan ŷ ± t × s_e/√n bij x 0 = x̄, zonder extra 1. Met getoonde coëfficiënten is ŷ29,7409 en het interval circa [29,2716;30,2102]. Het officiële [27,1;32,4] is een individueel voorspellingsinterval. Gewoon afronden van het gemiddelde-interval geeft [29,3;30,2]; naar buiten afronden geeft [29,2;30,3]. Afbeelding 3 in het antwoord is 9 in de opgaven.",
-      "explanation": "Voor de gevraagde gemiddelde respons geldt ŷ ± t·s_e/√n: circa [29,2716;30,2102]. Gewoon afgerond [29,3;30,2]; naar buiten [29,2;30,3]. Het officiële [27,1;32,4] betreft een individu. De vraag vraagt het gemiddelde. Gebruik dan ŷ ± t × s_e/√n bij x 0 = x̄, zonder extra 1. Met getoonde coëfficiënten is ŷ29,7409 en het interval circa [29,2716;30,2102]. Het officiële [27,1;32,4] is een individueel voorspellingsinterval. Gewoon afronden van het gemiddelde-interval geeft [29,3;30,2]; naar buiten afronden geeft [29,2;30,3]. Afbeelding 3 in het antwoord is 9 in de opgaven.",
+      "explanation": "Voor de gevraagde gemiddelde respons geldt ŷ ± t·s_e/√n: circa [29,2716;30,2102]. Gewoon afgerond [29,3;30,2]; naar buiten [29,2;30,3]. Het interval [27,1;32,4] betreft een individu. De vraag vraagt het gemiddelde. Gebruik dan ŷ ± t × s_e/√n bij x 0 = x̄, zonder extra 1. Met getoonde coëfficiënten is ŷ29,7409 en het interval circa [29,2716;30,2102]. Het officiële [27,1;32,4] is een individueel voorspellingsinterval. Gewoon afronden van het gemiddelde-interval geeft [29,3;30,2]; naar buiten afronden geeft [29,2;30,3]. Afbeelding 3 in het antwoord is 9 in de opgaven.",
       "steps": [
         "Puntschatting uit afbeelding 10: ŷ₀ = 7,159 + 0,099 × 228,1 = 29,74.",
         "t-waarde: t₀,₀₂₅[28] = 2,048, want n − 2 = 28.",
@@ -14179,15 +14179,15 @@ window.SRAExamPractice = {
         "Zonder 1/√n is de marge 2,048 × 1,25506 = 2,57. Dat is de spreiding van losse patiënten. Een gemiddelde is nauwkeuriger, dus de factor √(1/30) = 0,183 hoort erbij.",
         "Alleen de derde term valt weg. De term 1/30 blijft, dus de marge is 0,47 en niet nul. Ook de lijn zelf is immers geschat.",
         "Voor de gemiddelde waarde bij x̄ telt alleen de onzekerheid van de lijn zelf, s_e / √n, terwijl de losse 1 onder de wortel bij één nieuwe patiënt hoort.",
-        "[27,1; 32,4] is wel de uitkomst van de officiële uitwerking, maar die rekent met de 1 voor één patiënt. Er is dus wel verschil: marge 2,61 tegen 0,47 voor het gemiddelde."
+        "[27,1; 32,4] is de uitkomst met de 1 voor één patiënt. Er is dus wel verschil: marge 2,61 tegen 0,47 voor het gemiddelde."
       ],
       "pattern": "De fysiotherapeut voert enkelvoudige regressie uit en verkrijgt afbeelding 9 en 10, beantwoord de\nvraag die daaronder staat.\nAfbeelding 9: Model Summary\nAfbeelding 10: Coefficients\nBereken een schattingsinterval voor de gemiddelde sprongkracht bij een beenkracht van x = x̄ =\n0\n228,1. Rond het antwoord af op één decimaal.\nHint: Let op dat de derde term onder het wortelteken wegvalt.",
-      "trap": "De hint haalt alleen de derde term weg, de term 1/n blijft staan. Let ook op het woord gemiddelde: de officiële uitwerking gebruikt toch formule 50 met de 1, en dat wijkt af van wat de vraag letterlijk zegt.",
+      "trap": "De hint haalt alleen de derde term weg, de term 1/n blijft staan. Let ook op het woord gemiddelde: formule 50 met de 1 wijkt af van wat de vraag letterlijk zegt.",
       "recognition": {
         "signals": "De vraag noemt de gemiddelde sprongkracht en x₀ = x̄ = 228,1. Afbeelding 9 geeft s_e = 1,25506, afbeelding 10 geeft 7,159 en 0,099, en de hint zegt dat de derde term wegvalt.",
         "meaning": "Bij x₀ = x̄ is x₀ − x̄ gelijk aan nul, dus de derde term valt weg. De 1 onder de wortel staat voor de afwijking van één losse patiënt, en die hoort niet bij een gemiddelde.",
-        "approach": "Bereken eerst ŷ₀, t en s_e. Beslis dan wat de vraag zoekt: het gemiddelde zonder de 1, of één patiënt met de 1 zoals de officiële uitwerking doet.",
-        "answer": "ŷ₀, t, s_e, de gekozen formule, de marge en beide grenzen op één decimaal. De officiële uitwerking komt op [27,1; 32,4], de letterlijke vraag naar het gemiddelde op een veel smaller interval."
+        "approach": "Bereken eerst ŷ₀, t en s_e. Beslis dan wat de vraag zoekt: het gemiddelde zonder de 1, of één patiënt met de 1.",
+        "answer": "ŷ₀, t, s_e, de gekozen formule, de marge en beide grenzen op één decimaal. Met de 1 kom je op [27,1; 32,4], de letterlijke vraag naar het gemiddelde geeft een veel smaller interval."
       },
       "guidance": {
         "title": "Voorspelling en voorspellingsinterval",
@@ -14615,7 +14615,7 @@ window.SRAExamPractice = {
         "signals": "De vraag is algemeen gesteld en noemt geen getallen. De casus erboven noemt boekwaarden en verschillen bij 165 artikelen.",
         "meaning": "Het gaat om de vorm van de fouten: blijft het foutbedrag ongeveer gelijk, of groeit het mee met de boekwaarde?",
         "approach": "Vergelijk wat de schatter doet met het gedrag van de fouten. Een vast bedrag past bij de verschilschatter, een vaste verhouding bij de quotiëntschatter.",
-        "answer": "De twee situaties uit de uitwerking: de verschillen zijn redelijk constant, of ze hangen niet af van de grootte van de boekwaarde."
+        "answer": "Twee situaties: de verschillen zijn redelijk constant, of ze hangen niet af van de grootte van de boekwaarde."
       },
       "guidance": {
         "title": "Verschilschatter: teken en controledoel",
@@ -14752,7 +14752,7 @@ window.SRAExamPractice = {
       "optionExplanations": [
         "De berekening klopt, maar de vraag eist grenzen op €10.000. Die laatste stap ontbreekt: het moet €1.790.000 en €1.820.000 worden.",
         "De schatting begint bij de boekwaarde, trekt de geschatte totale fout eraf en krijgt grenzen die naar buiten zijn afgerond, zodat het interval niet smaller wordt dan berekend.",
-        "Gewoon afronden maakt 1.796.550 tot 1.800.000 en 1.811.890 tot 1.810.000. Het interval wordt dan smaller dan berekend, terwijl de uitwerking naar buiten afrondt.",
+        "Gewoon afronden maakt 1.796.550 tot 1.800.000 en 1.811.890 tot 1.810.000. Het interval wordt dan smaller dan berekend, terwijl je naar buiten moet afronden.",
         "€1.980.000 is de boekwaarde. De steekproef laat zien dat die gemiddeld €47 per artikel te hoog is, dus de puntschatting is €1.804.220."
       ],
       "pattern": "Bereken het tweezijdig schattingsinterval van de werkelijke waarde van de magazijnvoorraad.\nHanteer een betrouwbaarheid van 95%. Rond de boven- en ondergrens van het interval af op 10.000\neuro.",
@@ -14893,7 +14893,7 @@ window.SRAExamPractice = {
         "Deze methode kijkt ook naar de spreiding per stratum, en juist die gegevens staan niet in de eerste tabel."
       ],
       "pattern": "Welke andere allocatiemethode is hier mogelijk in beginsel, welke gegevens ontbreken en wat is het voordeel?",
-      "trap": "De tweede tabel bevat wel sᵢ, maar dat zijn standaardafwijkingen van de werkelijke waarden uit de steekproef. Die komen pas na de steekproef, en de uitwerking vraagt spreidingen van de boekwaarden.",
+      "trap": "De tweede tabel bevat wel sᵢ, maar dat zijn standaardafwijkingen van de werkelijke waarden uit de steekproef. Die komen pas na de steekproef, en Neyman vraagt spreidingen van de boekwaarden.",
       "recognition": {
         "signals": "De eerste tabel geeft alleen Nᵢ. De vraag zoekt de andere allocatiemethode, of die hier kan, en hoe die zich verhoudt tot evenredig.",
         "meaning": "Naast evenredige allocatie staat Neyman-allocatie op het formuleblad. Die verdeelt op grootte en spreiding van een stratum. Zonder spreidingen kun je de verdeling niet uitrekenen.",
@@ -15429,9 +15429,9 @@ window.SRAExamPractice = {
       "originalPromptHtml": "<p>Wat is het best passende model?</p>",
       "sourceVisualHtml": "",
       "options": [
-        "Alleen Logarithmic wordt geaccepteerd; Power is volgens de sleutel onjuist.",
+        "Alleen Logarithmic wordt geaccepteerd; Power is onjuist.",
         "Het lineaire model is per definitie beter omdat het geen transformatie gebruikt.",
-        "Het antwoordmodel kiest Power (R² = 0,117) en accepteert ook Logarithmic. Dit bewijst geen betere voorspelling op de oorspronkelijke euroschaal.",
+        "Power (R² = 0,117) is de keuze; ook Logarithmic wordt geaccepteerd. Dit bewijst geen betere voorspelling op de oorspronkelijke euroschaal.",
         "Power is zonder meer bewezen het beste op de euroschaal, uitsluitend omdat 0,117 groter is dan 0,103."
       ],
       "correct": 2,
@@ -15451,7 +15451,7 @@ window.SRAExamPractice = {
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Het Power model (R2 = 0,117) is het beste.<br>(ook goed rekenen: Logarithmic model omdat R2 = 0,103 niet veel verschilt)</p>",
       "sourceNote": "Het antwoordmodel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de keuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.",
-      "explanation": "Het antwoordmodel kiest Power (R² = 0,117) en accepteert ook Logarithmic. Dit bewijst geen betere voorspelling op de oorspronkelijke euroschaal. Het antwoordmodel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de keuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.",
+      "explanation": "Power (R² = 0,117) is de keuze; ook Logarithmic wordt geaccepteerd. Dit bewijst geen betere voorspelling op de oorspronkelijke euroschaal. Het antwoordmodel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de keuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.",
       "steps": [
         "Afbeelding 4, kolom R Square: Power 0,117, Logarithmic 0,103, Exponential 0,077 en Linear 0,072.",
         "De hoogste waarde is 0,117, dus kies Power.",
@@ -15459,7 +15459,7 @@ window.SRAExamPractice = {
         "Blijf voorzichtig: Power gebruikt een gelogaritmeerde y. Zijn R² is daardoor niet rechtstreeks te vergelijken met een R² op de euroschaal."
       ],
       "optionExplanations": [
-        "De uitwerking noemt Power juist als beste model, met 0,117. Logarithmic is een toegestaan alternatief, niet het enige goede antwoord.",
+        "Power is juist het beste model, met 0,117. Logarithmic is een toegestaan alternatief, niet het enige goede antwoord.",
         "Linear heeft met 0,072 de laagste R² van de vier. Geen transformatie gebruiken maakt een model niet beter.",
         "Je vergelijkt de vier modellen op R², waarbij Power het hoogst scoort en Logarithmic er zo dicht bij zit dat dat ook goed wordt gerekend.",
         "Het verschil van 0,014 is klein en de R² van Power staat op een logschaal. Daarmee is niet bewezen dat Power op de euroschaal beter voorspelt."
@@ -15495,7 +15495,7 @@ window.SRAExamPractice = {
     },
     {
       "id": "exam-20250317-vraag-12",
-      "prompt": "Volg het Power-model uit de officiële uitwerking. Welke transformaties horen daarbij?",
+      "prompt": "Volg het Power-model. Welke transformaties horen daarbij?",
       "originalPrompt": "Welke transformaties zijn uitgevoerd voor het best passende model?",
       "originalPromptHtml": "<p>Welke transformaties zijn uitgevoerd voor het best passende model?</p>",
       "sourceVisualHtml": "",
@@ -15537,7 +15537,7 @@ window.SRAExamPractice = {
         "Power is geen kwadratisch model. Er wordt gelogaritmeerd, en de macht 0,394 is een geschatte coëfficiënt.",
         "Een Power-model wordt pas een rechte lijn als je aan beide kanten van de vergelijking de logaritme neemt."
       ],
-      "pattern": "Volg het Power-model uit de officiële uitwerking. Welke transformaties horen daarbij?",
+      "pattern": "Volg het Power-model. Welke transformaties horen daarbij?",
       "trap": "De drie niet-lineaire modellen lijken op elkaar. Power transformeert x en y, Logarithmic alleen x en Exponential alleen y.",
       "recognition": {
         "signals": "De vraag volgt op vraag 11. In Afbeelding 4 staat bij Power de constante 722,141 en b1 = 0,394.",
@@ -15748,7 +15748,7 @@ window.SRAExamPractice = {
       "optionExplanations": [
         "Een vaste grens van 10 bestaat hier niet. De grens volgt uit Afbeelding 5 en is 0,062. De 10 hoort bij de VIF in vraag 23.",
         "Bijna ieder geval heeft een Cook-afstand groter dan nul. Dan zou je vrijwel alles verwijderen, terwijl de grens 0,062 is.",
-        "De grens wordt ruim overschreden, maar de uitwerking laat de keuze open om geval 57 wel of niet te verwijderen, dus de motivering telt.",
+        "De grens wordt ruim overschreden, maar de keuze om geval 57 wel of niet te verwijderen blijft open, dus de motivering telt.",
         "Dit is omgekeerd: 0,145 is groter dan 0,062. Er zijn dus wel signalen."
       ],
       "pattern": "Voer de analyse uit op invloedrijke punten. Benoem de relevante afbeeldingen en de remedies.",
@@ -15961,7 +15961,7 @@ window.SRAExamPractice = {
       "optionExplanations": [
         "Residuen zijn de uitkomst van het model en liepen hier van −1.504 tot 3.635 (Afbeelding 5). Ze op nul zetten is gegevens vervalsen, en het model blijft gelijk.",
         "Met Sig. = 0,001 los je niets op door de grens te verschuiven. De opgave legt 95% vast, en het probleem in de residuen blijft bestaan.",
-        "Leeftijd is in dit model de enige verklarende variabele. De uitwerking gaat de andere kant op: een andere variabele of meer variabelen, niet minder.",
+        "Leeftijd is in dit model de enige verklarende variabele. De remedie gaat de andere kant op: een andere variabele of meer variabelen, niet minder.",
         "De problemen zitten in het model, dus de oplossing is een ander model of een andere schatting, gevolgd door een nieuwe controle."
       ],
       "pattern": "Benoem de remedies voor problemen met niet-normaliteit en heteroscedasticiteit.",
@@ -15969,7 +15969,7 @@ window.SRAExamPractice = {
       "recognition": {
         "signals": "De vragen 15 en 16 lieten problemen zien met normaliteit en heteroscedasticiteit, in het enkelvoudige model met alleen Leeftijd.",
         "meaning": "Het model heeft één x en R² = 0,072. De remedies veranderen daarom het model of de schatting, niet de uitkomst van de toets.",
-        "approach": "Noem twee remedies uit de uitwerking die het model aanpassen en de gegevens laten zoals ze zijn.",
+        "approach": "Noem twee remedies die het model aanpassen en de gegevens laten zoals ze zijn.",
         "answer": "Twee remedies, bijvoorbeeld meervoudige regressie en WLS. Ook goed zijn een andere verklarende variabele en niet-lineaire regressie."
       },
       "guidance": {
@@ -16036,7 +16036,7 @@ window.SRAExamPractice = {
         "Een bijzondere oorzaak mag een reden zijn om een uitbijter alsnog te verwijderen, maar een gewenste toetsuitslag niet.",
         "Zonder oorzaak is er geen reden om te verwijderen. Bij vraag 13 bleef de waarneming daarom juist staan.",
         "Dan stuur je de gegevens naar de uitslag toe. Verwijderen hoort te volgen uit een fout of bijzondere oorzaak, niet uit de p-waarde.",
-        "De toets gaat juist over de residuen, dus een residu van 4,557 telt mee. De uitwerking noemt waarneming 57 als mogelijke oorzaak."
+        "De toets gaat juist over de residuen, dus een residu van 4,557 telt mee. Waarneming 57 is dus een mogelijke oorzaak."
       ],
       "pattern": "Iemand beweert dat het wellicht een goed idee zou zijn om de uitbijters in y nog eens goed onder de\nloep te nemen om te kijken of hier alsnog bijzondere oorzaken voor te vinden zijn zodat dit de\nproblemen van niet-normaliteit kan oplossen.\nVind je dat een goed plan?",
       "trap": "Het plan is alleen goed als het onderzoek eerlijk is. Zoeken naar een fout is iets anders dan zoeken naar een reden om de toets te laten slagen.",
@@ -16144,7 +16144,7 @@ window.SRAExamPractice = {
       "originalPromptHtml": "<p>Geef voor een man van 50 jaar, leidinggevende, zonder Hbo-opleiding of WO-opleiding met een beoordeling van 10 de puntschatting van zijn salaris met gebruikmaking van het meervoudige regressiemodel. Het antwoord mag worden afgerond op gehele euro’s.</p>",
       "sourceVisualHtml": "",
       "options": [
-        "€ 5.618. De ongeronde berekening is € 5.617,705; de bron rondt dit onjuist af op € 5.617.",
+        "€ 5.618. De ongeronde berekening is € 5.617,705.",
         "€ 5.617. De eerste drie decimalen mogen zonder afronding worden weggelaten.",
         "€ 3.380. De bijdrage voor Leidinggevende moet op nul staan.",
         "€ 6.628. De WO-dummy moet ondanks het ontbreken van die opleiding op één staan."
@@ -16165,7 +16165,7 @@ window.SRAExamPractice = {
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20250317/antwoord-20-14.jpg\" alt=\"antwoord-20 · bronpagina 14\">",
       "sourceNote": "De bronberekening is 739,508 + 38,495 × 50 + 71,550 × 10 + 2.237,947 = 5.617,705. Op gehele euro’s afgerond is dit €5.618, niet €5.617 zoals in het antwoordmodel.",
-      "explanation": "€ 5.618. De ongeronde berekening is € 5.617,705; de bron rondt dit onjuist af op € 5.617. De bronberekening is 739,508 + 38,495 × 50 + 71,550 × 10 + 2.237,947 = 5.617,705. Op gehele euro’s afgerond is dit €5.618, niet €5.617 zoals in het antwoordmodel.",
+      "explanation": "€ 5.618. De ongeronde berekening is € 5.617,705. De bronberekening is 739,508 + 38,495 × 50 + 71,550 × 10 + 2.237,947 = 5.617,705. Op gehele euro’s afgerond is dit €5.618, niet €5.617 zoals in het antwoordmodel.",
       "steps": [
         "Afbeelding 13: constante 739,508, Leeftijd 38,495, Beoordeling 71,550, Vrouw −273,746, HBO 644,888, WO 1.010,210 en Leidinggevende 2.237,947.",
         "Leeftijd: 38,495 × 50 = 1.924,75.",
@@ -16176,7 +16176,7 @@ window.SRAExamPractice = {
       ],
       "optionExplanations": [
         "Je vult de persoon in de regressievergelijking in, waarbij alleen de dummy Leidinggevende op 1 staat.",
-        "0,705 is meer dan een halve euro, dus gewoon afronden geeft €5.618. De uitwerking noteert wel €5.617, maar decimalen weglaten is geen afronden.",
+        "0,705 is meer dan een halve euro, dus gewoon afronden geeft €5.618. €5.617 ontstaat door de decimalen weg te laten, en dat is geen afronden.",
         "€3.380 is de uitkomst zonder 2.237,947. De man is leidinggevende, dus die dummy staat op 1.",
         "€6.628 ontstaat door ook 1.010,210 op te tellen. Hij heeft geen WO-opleiding, dus die dummy staat op 0."
       ],
@@ -16612,7 +16612,7 @@ window.SRAExamPractice = {
         "De schatting is N × w̄, de standaardfout bevat de eindigheidscorrectie en de grenzen zijn naar buiten afgerond, zodat het interval niet smaller wordt dan berekend."
       ],
       "pattern": "Bereken met behulp van de directe schatter het 95%\nbetrouwbaarheidsinterval voor de werkelijke waarde van de administratieve voorraad.\nRond je antwoord af op €1.000.",
-      "trap": "Rond de grenzen niet gewoon af: 54.992.649 gaat omlaag naar 54.992.000, hoewel 54.993.000 dichterbij ligt. Let ook op de tabel: het antwoordmodel schrijft t₀,₀₁[110], maar 1,982 staat onder t₀,₀₂₅.",
+      "trap": "Rond de grenzen niet gewoon af: 54.992.649 gaat omlaag naar 54.992.000, hoewel 54.993.000 dichterbij ligt. Let ook op de tabel: in rij [110] staat 1,982 onder t₀,₀₂₅ en niet onder t₀,₀₁.",
       "recognition": {
         "signals": "Er zijn 120 van de 6.200 producttypen geteld, met de som en de kwadratensom van de werkelijke waarden. De vraag noemt de directe schatter en 95% betrouwbaarheid.",
         "meaning": "De boekwaarde speelt bij de directe schatter geen rol. Je schaalt het steekproefgemiddelde op naar alle producttypen (MPU). De populatie is eindig, dus de eindigheidscorrectie hoort erbij.",
@@ -16751,7 +16751,7 @@ window.SRAExamPractice = {
       ],
       "optionExplanations": [
         "Beide schatters gebruiken dezelfde correctie √((6.200 − 120) / (6.200 − 1)). Dat zie je in de standaardfouten van vraag 1.1 en 1.4.",
-        "De uitwerking gebruikt bij vraag 1.4 dezelfde t = 1,982 als bij vraag 1.1. Het verschil zit in de standaardfout, niet in t.",
+        "Vraag 1.4 gebruikt dezelfde t = 1,982 als vraag 1.1. Het verschil zit in de standaardfout, niet in t.",
         "Beide schatters werken met dezelfde 120 producttypen. De steekproef wordt bij de overstap niet groter.",
         "Met de boekwaarde hoef je alleen het verschil met de werkelijke waarde te schatten, en die verschillen spreiden minder dan de waarden zelf."
       ],
@@ -17027,13 +17027,13 @@ window.SRAExamPractice = {
         "Totaal: 2.914.886 + 1.566.938 + 1.090.113 + 843.600 = 6.415.537."
       ],
       "optionExplanations": [
-        "Dan behandel je 65.820 als gemiddelde per post, zoals de legenda zegt. De kolomkop is ∑wᵢ en het antwoordmodel deelt eerst door nᵢ. Anders is het totaal ruim 30 keer te groot.",
+        "Dan behandel je 65.820 als gemiddelde per post, zoals de legenda zegt. De kolomkop is ∑wᵢ, dus deel eerst door nᵢ. Anders is het totaal ruim 30 keer te groot.",
         "Dat is 2.615 × 340.885 / 136. Zo tellen de strata mee naar hun steekproef en niet naar hun populatie: stratum 1 heeft 47% van de posten maar 21% van de steekproef.",
         "Per stratum schaal je het steekproefgemiddelde op naar het hele stratum, en de totale voorraad is de som van die vier schattingen.",
         "340.885 is alleen de waarde van de 136 getelde posten. De populatie telt 2.615 posten, dus je moet per stratum nog opschalen."
       ],
       "pattern": "Bereken de puntschatting van de totale voorraad. De kolomkop is ∑wᵢ; de legenda noemt ten onrechte een gemiddelde.",
-      "trap": "De legenda noemt wᵢ een gemiddelde, maar kolomkop en antwoordmodel behandelen de kolom als een som. Deel daarom eerst door nᵢ.",
+      "trap": "De legenda noemt wᵢ een gemiddelde, maar de kolomkop behandelt de kolom als een som. Deel daarom eerst door nᵢ.",
       "recognition": {
         "signals": "De tabel geeft per stratum Nᵢ, nᵢ, ∑wᵢ en sᵢ. De kolomkop ∑wᵢ staat voor een som, ook al noemt de legenda een gemiddelde.",
         "meaning": "Elk stratum heeft een eigen gemiddelde en een eigen omvang. Je mag de strata dus niet samenvoegen tot één groep.",
@@ -17660,10 +17660,10 @@ window.SRAExamPractice = {
         "De grens klopt, maar 24 en 43 zijn pieken in Afbeelding 9. In Afbeelding 10 steekt alleen waarneming 11 boven 0,054 uit.",
         "13,911 is de grens voor de Mahalanobis-afstand en gaat over de x-richting. Voor Cook’s Distance geldt 0,054.",
         "Cook’s Distance gebruikt dezelfde grensformule als Mahalanobis, en één waarneming steekt in de grafiek boven die grens uit.",
-        "De grens 1 staat niet in de uitwerking. Formule 45 geeft gemiddelde + 3 × standaardafwijking = 0,054, en 0,129 ligt daarboven."
+        "De grens is niet 1. Formule 45 geeft gemiddelde + 3 × standaardafwijking = 0,054, en 0,129 ligt daarboven."
       ],
       "pattern": "Beoordeel de invloedrijke punten met Cook’s Distance.",
-      "trap": "Als uitbijter blijft waarneming 11 staan, als invloedrijk punt gaat hij volgens de uitwerking weg. Dat zijn twee aparte beoordelingen, en een signaal alleen bewijst geen fout. Motiveer de keuze dus.",
+      "trap": "Als uitbijter blijft waarneming 11 staan, als invloedrijk punt gaat hij weg. Dat zijn twee aparte beoordelingen, en een signaal alleen bewijst geen fout. Motiveer de keuze dus.",
       "recognition": {
         "signals": "Afbeelding 6 geeft bij Cook’s Distance een gemiddelde van 0,009, een standaardafwijking van 0,015 en een maximum van 0,129. Afbeelding 10 toont één duidelijke piek.",
         "meaning": "Een invloedrijk punt trekt de regressielijn merkbaar naar zich toe. Cook’s Distance meet hoeveel één waarneming de lijn beïnvloedt.",
@@ -18082,7 +18082,7 @@ window.SRAExamPractice = {
         "Eenzijdige significantie: 0,009 / 2 = 0,0045."
       ],
       "optionExplanations": [
-        "Bij een eenzijdige toets halveer je en verdubbel je niet. De uitwerking deelt 0,009 door 2.",
+        "Bij een eenzijdige toets halveer je en verdubbel je niet. Deel 0,009 dus door 2.",
         "1 − 0,0045 zou passen als het teken tegen de verwachting in ging. Hier is b negatief en H₁ is β < 0, dus dat geldt niet.",
         "SPSS geeft een tweezijdige significantie, en bij een eenzijdige toets met het verwachte teken halveer je die.",
         "De tabel geeft de tweezijdige significantie. Voor de eenzijdige toets uit vraag 2.2 moet 0,009 nog door 2."
@@ -18160,7 +18160,7 @@ window.SRAExamPractice = {
         "Exponential heeft F = 42,945, en dat is niet de grootste. Power heeft 55,616 en Log 55,125. Ook R² is met 0,318 laag.",
         "Het verschil is maar 0,002, dus er is geen overtuigende winnaar. Power heeft wel een nadeel: potential wordt getransformeerd.",
         "Twee modellen verklaren duidelijk meer dan de andere twee, onderling is er nauwelijks verschil, en één van die twee heeft een extra nadeel.",
-        "Linear heeft met 0,318 samen met Exponential de laagste R². De uitwerking kent geen voorkeur voor lineair, de keuze volgt uit de cijfers."
+        "Linear heeft met 0,318 samen met Exponential de laagste R². Er is geen voorkeur voor lineair, de keuze volgt uit de cijfers."
       ],
       "pattern": "Bespreek de voor- en nadelen van de alternatieven.",
       "trap": "Kies niet automatisch de hoogste R². De R² van Power hoort bij een getransformeerde potential en is niet rechtstreeks te vergelijken met de R² van Log.",
@@ -18670,7 +18670,7 @@ window.SRAExamPractice = {
         "Zonder √(1 − R²) is de standaardfout 1.629.057 in plaats van 324.178,2 en de marge 3.232.048. De hoge correlatie is juist wat dit interval smal maakt.",
         "Het middelpunt 43.372.250 is alleen N × w̄. Dan gebruik je de bekende totale boekwaarde niet, terwijl de regressieschatter daar juist op steunt.",
         "De steekproef heeft een lagere gemiddelde boekwaarde dan de populatie, dus de correctie komt bovenop N × w̄, en de standaardfout krimpt met de factor √(1 − R²).",
-        "Hier is 646.800 afgetrokken, zoals de drukfout in het antwoordmodel suggereert. De totale boekwaarde ligt 880.000 boven N × b̄, dus de correctie is positief."
+        "Hier is 646.800 afgetrokken. De totale boekwaarde ligt 880.000 boven N × b̄, dus de correctie is positief."
       ],
       "pattern": "Bereken met behulp van de regressieschatter het 95%\nbetrouwbaarheidsinterval voor de werkelijke totale waarde van de voorraad. Rond af\nop €1.000.",
       "trap": "Let op het teken: B − N × b̄ is positief, dus de correctie komt erbij. Vergeet √(1 − 0,98²) = 0,199 niet, anders is s_R ongeveer vijf keer te groot.",
@@ -18745,7 +18745,7 @@ window.SRAExamPractice = {
         "Dit is N / 2.120 × 220: 105,85, 92,36 en 21,79. De spreiding doet dan niet mee, terwijl s = 510 stratum 3 juist veel meer waarnemingen geeft."
       ],
       "pattern": "Bepaal de omvang van de steekproef per stratum volgens de Neyman-\nallocatie.",
-      "trap": "De noemer is de som van N × s en niet N = 2.120. Het antwoordmodel berekent 2.120 wel en geeft er een punt voor, maar de formule gebruikt dat getal niet.",
+      "trap": "De noemer is de som van N × s en niet N = 2.120. Het getal 2.120 berekenen levert wel een punt op, maar de formule gebruikt dat getal niet.",
       "recognition": {
         "signals": "220 artikelen moeten over drie strata met N = 1.020, 890 en 210 en s = 200, 150 en 510. Het derde stratum is klein maar heeft veel spreiding.",
         "meaning": "Neyman verdeelt op N × s. Een klein stratum met grote spreiding kan daardoor toch veel waarnemingen krijgen.",
@@ -19332,7 +19332,7 @@ window.SRAExamPractice = {
       "options": [
         "$ 479.190,50: met het lineaire model.",
         "$ 685.062.734,55: met 5.000 zonder logaritme.",
-        "Ongeveer $ 500.314; het antwoordmodel noemt $ 500.313,50. Reken −667.785,451 + 137.146,104 × ln(5.000).",
+        "Ongeveer $ 500.314; met tussentijds afronden $ 500.313,50. Reken −667.785,451 + 137.146,104 × ln(5.000).",
         "$ −160.486: met log₁₀(5.000) in plaats van het natuurlijke logaritme."
       ],
       "correct": 2,
@@ -19354,7 +19354,7 @@ window.SRAExamPractice = {
       ],
       "officialSolutionHtml": "<p>[Formule 31] price = -667.785,451 + 137.146,104 × ln(5.000)<br>= $500.313,50 (4 punten)</p>",
       "sourceNote": "Met ln(5.000) = 8,517193 is de uitkomst $ 500.314,41. Het model geeft $ 500.313,50; dat verschil van ongeveer een dollar komt door tussentijds afronden.",
-      "explanation": "Ongeveer $ 500.314; het antwoordmodel noemt $ 500.313,50. Reken −667.785,451 + 137.146,104 × ln(5.000). Met ln(5.000) = 8,517193 is de uitkomst $ 500.314,41. Het model geeft $ 500.313,50; dat verschil van ongeveer een dollar komt door tussentijds afronden.",
+      "explanation": "Ongeveer $ 500.314; met tussentijds afronden $ 500.313,50. Reken −667.785,451 + 137.146,104 × ln(5.000). Met ln(5.000) = 8,517193 is de uitkomst $ 500.314,41. Het model geeft $ 500.313,50; dat verschil van ongeveer een dollar komt door tussentijds afronden.",
       "steps": [
         "Coëfficiënten uit Afbeelding 2.4, regel Logarithmic: −667.785,451 en 137.146,104.",
         "Logaritme: ln(5.000) = 8,517193.",
@@ -19574,7 +19574,7 @@ window.SRAExamPractice = {
       ],
       "optionExplanations": [
         "De grens klopt, maar 0,210 ligt ver boven 0,068. Er is dus wel een invloedrijk punt.",
-        "Het antwoordmodel rekent met gemiddelde + 3 × standaardafwijking, dus met 0,068 en niet met 1. Geval 128 moet dus wel beoordeeld worden.",
+        "Reken met gemiddelde + 3 × standaardafwijking, dus met 0,068 en niet met 1. Geval 128 moet dus wel beoordeeld worden.",
         "Die gevallen komen uit de Mahalanobis-afstand, dus uit de x-richting. In Afbeelding 4.4 blijven ze onder 0,068.",
         "Ook hier is de grens gemiddelde plus drie standaardafwijkingen, en één piek gaat daar ruim overheen, waarna de keuze om te verwijderen een motivatie vraagt."
       ],
@@ -19650,7 +19650,7 @@ window.SRAExamPractice = {
         "Bij n = 142 > 50 lees je Kolmogorov-Smirnov af en niet Shapiro-Wilk. H₀ niet verwerpen is ook geen bewijs voor normaliteit."
       ],
       "pattern": "Voer de analyse op normaliteit van de residuen uit.",
-      "trap": "Noem het woord residuen, want het antwoordmodel trekt een punt af als dat ontbreekt. Niet verwerpen bewijst bovendien geen normaliteit.",
+      "trap": "Noem het woord residuen, want het kost een punt als dat ontbreekt. Niet verwerpen bewijst bovendien geen normaliteit.",
       "recognition": {
         "signals": "Afbeelding 4.5 geeft voor Standardized Residual twee toetsen: Kolmogorov-Smirnov met Sig = 0,200 en Shapiro-Wilk met Sig = 0,556. De df is 142.",
         "meaning": "De aanname gaat over de residuen van het model en niet over price. Een Sig boven 0,05 betekent dat er geen bewijs tegen normaliteit is.",
