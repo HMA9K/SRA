@@ -40,11 +40,11 @@ body.exam-running .exam-answer-actions .study-inline-launch{display:inline-flex;
 .study-head h2{font-size:17px;margin:0;line-height:1.25;color:inherit}
 .study-eyebrow{font-size:10px;letter-spacing:.1em;margin:0 0 3px;opacity:.9}
 .study-assistant .study-icon-button{color:#fff;background:transparent;border-color:#ffffff6b;font-size:22px;line-height:1;min-width:32px;min-height:34px;padding:4px 6px}
-.study-assistant-layout{display:grid;grid-template-columns:minmax(0,1fr) 14px minmax(0,var(--sa-column-width,33.333333%));align-items:stretch;min-width:0;min-height:0;height:var(--sa-pane-height,680px);overflow:hidden}
+.study-assistant-layout{display:grid;grid-template-columns:minmax(0,1fr) 8px minmax(0,var(--sa-column-width,33.333333%));align-items:stretch;min-width:0;min-height:0;height:var(--sa-pane-height,680px);overflow:hidden}
 .study-assistant-primary{min-width:0;min-height:0;height:100%;overflow:auto;container-type:inline-size}
-.study-assistant-resizer{display:flex;align-items:center;justify-content:center;min-width:14px;cursor:col-resize;touch-action:none;background:var(--study-wash,#f3f6fa);border-inline:1px solid var(--study-line,#d9e2eb);color:var(--study-muted,#58677a)}
-.study-assistant-resizer>span{font-size:23px;line-height:1;display:grid;place-items:center;min-height:56px}
-.study-assistant-resizer:hover,.study-assistant-resizer:focus-visible{color:var(--study-accent,#087c66);outline:2px solid var(--study-accent,#087c66);outline-offset:-2px}
+.study-assistant-resizer{min-width:8px;cursor:col-resize;touch-action:none;border-inline:1px solid var(--study-line,#d9e2eb)}
+.study-assistant-resizer>span{display:none}
+.study-assistant-resizer:hover,.study-assistant-resizer:focus-visible,.study-assistant-layout.is-resizing>.study-assistant-resizer{background:var(--study-teal,#008577);outline:0}
 .study-assistant-layout.is-resizing{user-select:none;cursor:col-resize}
 .study-assistant-layout>[hidden]{display:none!important}
 .study-assistant-layout.is-stacked{display:flex;flex-direction:column;height:auto;overflow:visible}
@@ -148,7 +148,6 @@ body.original-pdf-open .study-assistant-launch-wrap{display:none!important}
 .original-pdf-viewer{display:flex;flex-direction:column;min-width:0;min-height:0;height:100%;background:var(--study-surface,#fff);color:var(--study-text,#172c48)}
 .original-pdf-head{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;padding:10px;border-bottom:1px solid var(--study-line,#d9e2eb);font-size:14px}
 .original-pdf-head .btn{font-size:12px;min-height:30px;padding:5px 8px}
-.original-pdf-link{padding:6px 10px;margin:0;font-size:12px}
 .original-pdf-viewer iframe{display:block;width:100%;flex:1;min-height:240px;border:0;background:#fff}
 .original-pdf-left-viewer{position:fixed;z-index:80}
 .original-pdf-right>.original-pdf-viewer{position:absolute;inset:0}
@@ -159,8 +158,6 @@ body.original-pdf-open .study-assistant-launch-wrap{display:none!important}
 .original-pdf-dashboard-pane{height:calc(100dvh - 180px);min-height:350px;border:0}
 .original-pdf-right[open]{display:block!important;height:100%;padding:0}
 .original-pdf-right>.original-pdf-viewer{height:100%}
-.original-pdf-right .original-pdf-head{background:#444159;color:#fff}
-.original-pdf-right .original-pdf-head button{color:#fff;background:transparent;border-color:#ffffff80}
 .original-pdf-missing{font-size:12px;color:var(--study-muted,#58677a)}
 body.original-pdf-open .study-assistant-launch{display:none!important}
 /* Keep both the menu opener and its entries above the persistent PDF panel. */
@@ -168,3 +165,9 @@ body.original-pdf-open :is(.learning-page-head,.cirrus-page-head,#study-returnba
 /* Op mobiel begrenzen de casusregels het vak tot 35-45dvh; dat is te laag voor de lezer met werkbalken. */
 @media(max-width:760px){.original-pdf-left{height:65dvh!important;max-height:none!important}}
 @media(max-width:859px){.original-pdf-dashboard-layout{display:flex;flex-direction:column}.original-pdf-dashboard-pane{width:100%;height:65dvh}.original-pdf-left{height:65dvh;flex:none}.original-pdf-actions{max-width:100%}.original-pdf-head{font-size:12px}}
+/* Tentamen met open zijvenster: minimale buitenrand. */
+@media(min-width:761px){body.exam-running:has(.study-assistant-layout:not(.is-stacked)) main,body.exam-running:has(.original-pdf-left) main{padding-inline:4px!important}}
+/* Dezelfde dunne schuiver als bij oefenvragen. */
+body.cirrus-mode .exam-case-resizer{background:transparent}
+body.cirrus-mode .exam-case-resizer::after{content:none}
+body.cirrus-mode .exam-case-resizer:hover,body.cirrus-mode .exam-case-resizer:focus-visible{background:var(--study-teal,#008577);outline:0}

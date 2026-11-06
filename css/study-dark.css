@@ -1439,8 +1439,7 @@ html[data-study-theme=dark] .study-assistant-intro :is(button,input):focus-visib
 html[data-study-theme=dark] .study-assistant :is(button,input,textarea,select,summary):focus-visible,html[data-study-theme=dark] .study-assistant-launch:focus-visible,html[data-study-theme=dark] .study-inline-launch:focus-visible{outline:3px solid #76572d}
 html[data-study-theme=dark] .study-head{color:#f0f7fc}
 html[data-study-theme=dark] .study-assistant .study-icon-button{color:#f0f7fc;border-color:#3b4a546b}
-html[data-study-theme=dark] .study-assistant-resizer{background:var(--study-wash,#17202b);color:var(--study-muted,#adbdc9)}
-html[data-study-theme=dark] .study-assistant-resizer:hover,html[data-study-theme=dark] .study-assistant-resizer:focus-visible{color:var(--study-accent,#8decda);outline:2px solid var(--study-accent,#2d7668)}
+html[data-study-theme=dark] .study-assistant-resizer:hover,html[data-study-theme=dark] .study-assistant-resizer:focus-visible,html[data-study-theme=dark] .study-assistant-layout.is-resizing>.study-assistant-resizer{background:var(--study-teal,#0e8174)}
 html[data-study-theme=dark] .study-send-row [data-send],html[data-study-theme=dark] .study-code-row button{color:#f0f7fc}
 html[data-study-theme=dark] .study-assistant-launch-wrap{background:#212b38;color:#f0f7fc;border:1px solid #3b4a54;box-shadow:0 5px 20px #01030433}
 html[data-study-theme=dark] .study-assistant-launch-hide:hover{background:#15212926}
@@ -1453,9 +1452,8 @@ html[data-study-theme=dark] .original-pdf-actions [aria-pressed=true]{border-col
 html[data-study-theme=dark] .original-pdf-viewer{background:var(--study-surface,#152129);color:var(--study-text,#9bb8df)}
 html[data-study-theme=dark] .original-pdf-head{border-bottom:1px solid var(--study-line,#38526b)}
 html[data-study-theme=dark] .original-pdf-viewer iframe{background:#152129}
-html[data-study-theme=dark] .original-pdf-right .original-pdf-head{background:#212b38;color:#f0f7fc}
-html[data-study-theme=dark] .original-pdf-right .original-pdf-head button{color:#f0f7fc;border-color:#3b4a5480}
 html[data-study-theme=dark] .original-pdf-missing{color:var(--study-muted,#adbdc9)}
+html[data-study-theme=dark] body.cirrus-mode .exam-case-resizer:hover,html[data-study-theme=dark] body.cirrus-mode .exam-case-resizer:focus-visible{background:var(--study-teal,#0e8174)}
 /* css/input-table-layout.css */
 html[data-study-theme=dark] .input-table-handles button{color:var(--study-ink,#adbdc9)}
 html[data-study-theme=dark] .input-table-column-grip:hover::after,html[data-study-theme=dark] .input-table-column-grip:focus-visible::after{background:#212b38}

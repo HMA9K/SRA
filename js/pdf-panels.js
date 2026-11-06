@@ -3,7 +3,7 @@
 'use strict';
 const originalPdfs=window.SRAOriginalPdfs;
 /** Layout only: reserve a right column without reading or changing study data. */
-const DEFAULT_WIDTH=100/3,KEY='sra-pdf-panel-v1',DIVIDER=14;
+const DEFAULT_WIDTH=100/3,KEY='sra-pdf-panel-v1',DIVIDER=8;
 const clamp=(value,min,max)=>Math.max(min,Math.min(max,value));
 function move(parent,node,before=null){
   const editor=parent.ownerDocument.defaultView?.CafaAnswerEditor;
@@ -117,6 +117,8 @@ function createAssistantPanel(panel,options={}){
     const metrics=panelMetrics(layout.getBoundingClientRect().width/(win.StudyScale?.get()||1),width,fraction);
     const stacked=metrics.stacked||v.w<900;
     layout.classList.toggle('is-stacked',stacked);separator.hidden=stacked;
+    // Naast een oefenvraag scrollen alleen de kolommen; de pagina staat stil, dus begin bovenaan.
+    if(!stacked&&win.scrollY&&doc.querySelector('.mc-page'))win.scrollTo({top:0,behavior:'instant'});
     doc.body.classList.toggle('study-assistant-stacked',stacked&&!modal);
     layout.style.setProperty('--sa-column-width',metrics.width+'px');
     separator.setAttribute('aria-valuenow',String(Math.round(width)));separator.setAttribute('aria-valuetext',Math.round(width)+' procent uitwerkingbreedte');
@@ -127,7 +129,7 @@ function createAssistantPanel(panel,options={}){
     const scale=win.StudyScale?.get()||1;
     const available=Math.max(100,(v.h-top+v.y-footerHeight)/scale-12);
     // Naast de vraag vult het paneel de ruimte tot de onderbalk; 680 blijft de maat voor regels verderop in een lijst.
-    const room=(v.h-Math.max(top,layout.getBoundingClientRect().top)+v.y-footerHeight)/scale-12;
+    const room=(v.h-Math.max(top,layout.getBoundingClientRect().top)+v.y-footerHeight)/scale-2;
     layout.style.setProperty('--sa-pane-height',(modal?Math.min(620,available):stacked?Math.min(680,available):Math.max(Math.min(680,available),room))+'px');
     if(page)page.style.setProperty('--sa-page-height',Math.max(160,(v.h-Math.max(top,page.getBoundingClientRect().top)+v.y)/scale-12)+'px');
     const renderedHeight=stacked?Math.min(680,available):layout.getBoundingClientRect().height;
@@ -262,7 +264,6 @@ function viewer(id,kind){
   const source=originalPdfs[id],file=source[kind],label=kind==='questions'?'Origineel tentamen':'Officiële uitwerking';
   const box=document.createElement('section');box.className='original-pdf-viewer';box.dataset.pdfExam=id;
   box.innerHTML='<header class="original-pdf-head"><strong>'+label+' · '+htmlEscape(source.date.split('-').reverse().join('-'))+'</strong><button type="button" class="btn" data-pdf-close="'+kind+'">'+(kind==='questions'?'Terug naar casus':'Sluiten')+'</button></header>'+
-    '<p class="original-pdf-link"><a target="_blank" rel="noopener" href="'+file.url+'">Open PDF in een nieuw tabblad</a></p>'+
     '<iframe title="'+htmlEscape(label+' '+file.title)+'" src="pdf-reader/web/viewer.html?file='+encodeURIComponent(new URL(file.url,document.baseURI).href)+'&amp;key='+encodeURIComponent(key+':'+file.sha256)+'" loading="eager"></iframe>';
   viewers.set(key,box);return box;
 }

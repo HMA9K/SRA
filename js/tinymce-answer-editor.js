@@ -303,7 +303,7 @@
         width: widthRatio >= 0.995 ? '100%' : Math.max(Math.min(260, width), width * widthRatio), min_height: 220, min_width: Math.min(260, width), max_width: width,
         language: 'nl', language_url: new URL('langs/nl.js', base).href,
         plugins: 'table lists charmap fullscreen',
-        toolbar: 'undo redo | blocks | bold italic underline subscript superscript | answerfrac answerroot answersum answerparen | bullist numlist | alignleft aligncenter alignright | table answersymbols | removeformat fullscreen',
+        toolbar: 'undo redo | blocks | bold italic underline subscript superscript | answerfrac answerroot answersum answerparen | bullist numlist | align | table answersymbols | removeformat fullscreen',
         toolbar_mode: 'wrap', contextmenu: 'table',
         table_toolbar: 'tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol | tablemergecells tablesplitcells tabledelete',
         table_resize_bars: true, table_sizing_mode: 'relative', table_default_attributes: {border: '1'},

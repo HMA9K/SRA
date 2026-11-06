@@ -1,7 +1,7 @@
 import {PDFViewerApplication as app,PDFViewerApplicationOptions as options} from './viewer.mjs';
 import {AnnotationEditorType,AnnotationEditorParamsType} from '../build/pdf.mjs';
 import {originalPdfs} from '../../data/exam-original-pdfs.mjs';
-import {installContentView} from './content-view.mjs?v=20260928-navigation2';
+import {installContentView} from './content-view.mjs?v=20261107-tweebalken';
 
 // All annotations stay in this browser. Published source files are never written.
 const root=new URL('../../',import.meta.url),source=new URL(new URLSearchParams(location.search).get('file')||'',location.href);
@@ -10,6 +10,9 @@ const key=entry?entry.id+':'+entry.kind+':'+entry.file.sha256:null;
 const viewKey='cafa-pdf-view-v1:'+key,status=document.getElementById('cafa-save-status');
 let revision=0,savedRevision=0,timer=null,saving=null,ready=false,storageAvailable=true,dbPromise=null;
 const report=message=>status.textContent=message;
+// Zelfde knop als zoeken: opent de PDF in de eigen lezer van de browser.
+const openTab=Object.assign(document.createElement('a'),{id:'cafaOpenTab',className:'toolbarButton',href:source.href,target:'_blank',rel:'noopener',title:'Open PDF in een nieuw tabblad'});
+openTab.setAttribute('aria-label',openTab.title);document.getElementById('viewFindButton').parentElement.after(openTab);
 const storedView=()=>{try{return localStorage.getItem(viewKey)||'';}catch{return '';}};
 function database(){
  return dbPromise??=new Promise((resolve,reject)=>{const request=indexedDB.open('learning-pdf-annotations-v1',1);
