@@ -7,7 +7,7 @@ import re
 import statistics
 from decimal import Decimal, ROUND_HALF_UP
 
-from exam_point_rules import BASE, SPLITS, TOPICS, JOINT_TOPICS, TOPIC_GROUPS, TOPIC_LESSONS, SKILLS, NOT_ASKED, PRIORITY_LEVELS, PRIORITY_PACKAGES
+from exam_point_rules import BASE, SPLITS, TOPICS, JOINT_TOPICS, TOPIC_GROUPS, TOPIC_LESSONS, TOPIC_SHORT, SKILLS, NOT_ASKED, PRIORITY_LEVELS, PRIORITY_PACKAGES
 
 ROOT = Path(__file__).resolve().parents[1]
 WORDS = {9:'Negen',10:'Tien',11:'Elf',12:'Twaalf'}
@@ -120,7 +120,7 @@ def browser_data(data):
     shown = {}
     for key, t in topics.items():
         present = [v for v in t['byExam'].values() if v]
-        shown[key] = dict(label=t['label'], lesson=TOPIC_LESSONS[key], exams=t['exams'], recentExams=t['recentExams'],
+        shown[key] = dict(label=t['label'], short=TOPIC_SHORT[key], lesson=TOPIC_LESSONS[key], exams=t['exams'], recentExams=t['recentExams'],
                           points=t['points'], mean=t['meanWhenPresent'],
                           low=min(present, default=0), high=max(present, default=0))
     packages = priority_packages(data)

@@ -17,7 +17,8 @@ assert.ok(!html.includes('BELRE3: kies')&&!html.includes('ratio-'),'Oude tekst o
 const plain=s=>s.replace(/&/g,'&amp;').replace(/'/g,'&#39;');
 for(const s of T.skills)assert.ok(html.includes(`>${plain(s.label)}</a>`),s.label);
 for(const n of T.notAsked)assert.ok(html.includes(`>${plain(n.label)}</a>`),n.label);
-assert.equal((html.match(/<h2>\d\. /g)||[]).length,6);
+assert.equal((html.match(/<h2>/g)||[]).length,6);
+assert.ok(html.length<16000,'De pagina moet compact blijven: '+html.length);
 for(const id of ['analyse-structuur','analyse-typen','analyse-onderwerpen','analyse-vaardigheden','analyse-per-tentamen','analyse-aanpak'])assert.ok(html.includes(`id="${id}"`),id);
 
 // Vier knoppen en één filter in elke weergave, via dezelfde afhandeling als op de site.
@@ -33,9 +34,9 @@ for(const [view] of V.VIEWS){
 const options={lessonHref:id=>'#les/'+id,evidence:()=>'<p>vraag</p>',progress:()=>({read:['mpu'],practice:Object.fromEntries([...new Set(Object.values(T.topics).map(t=>t.lesson))].map(id=>[id,{total:10,correct:5}])),made:new Set()})};
 const render=(view,filter='')=>{const s=V.initial();s.view=view;s.filter=filter;return V.render(T,s,options);};
 const noControls=text=>text.replace(/<select.*?<\/select>/gs,'').replace(/<details class="tv-how".*?<\/details>/s,'').replace(/<div class="tv-tabs".*?<\/div>/s,'');
-for(const t of Object.values(T.topics))for(const view of ['tabel','heatmap'])assert.ok(render(view).includes(`>${plain(t.label)}</a>`),view+' '+t.label);
+for(const t of Object.values(T.topics))for(const view of ['tabel','heatmap'])assert.ok(render(view).includes(`>${plain(t.short)}</a>`),view+' '+t.label);
 for(const p of T.packages)assert.ok(render('kaart').includes(`>${plain(p.label)}</a>`),p.label);
-for(const t of Object.values(T.topics))if(t.lesson!=='tentamen')assert.ok(render('voortgang').includes(`>${plain(t.label)}</a>`),t.label);
+for(const t of Object.values(T.topics))if(t.lesson!=='tentamen')assert.ok(render('voortgang').includes(`>${plain(t.short)}</a>`),t.label);
 // Het filter werkt in iedere weergave; prioriteit staat alleen op de kaart.
 for(const view of ['tabel','heatmap','kaart','voortgang']){
  const steek=noControls(render(view,'opgave:1')),reg=noControls(render(view,'opgave:2')),group=noControls(render(view,'group:Toetsen'));
@@ -47,12 +48,14 @@ for(const view of ['tabel','heatmap','kaart','voortgang']){
 // Tabel: past zonder scrollbalk, sorteert, en de vragen openen onder de rij.
 const table=render('tabel');assert.ok(table.includes('class="tv-fit"')&&!/tv-scroll/.test(table));
 const first=html=>html.match(/<tbody><tr><td><a[^>]*>([^<]+)/)[1];
-click({view:'tabel'});click({sort:'perExam'});assert.equal(first(views.innerHTML),T.topics['strata-schatten'].label);
-click({sort:'meanShown'});assert.equal(first(views.innerHTML),T.topics.regressieschatter.label);
+click({view:'tabel'});click({sort:'perExam'});assert.equal(first(views.innerHTML),T.topics['strata-schatten'].short);
+click({sort:'meanShown'});assert.equal(first(views.innerHTML),T.topics.regressieschatter.short);
 click({sort:'group'});assert.equal((views.innerHTML.match(/class="tv-group"/g)||[]).length,9);
 click({open:'mpu'});assert.ok(views.innerHTML.includes('class="tv-detail"'));
 // Heatmap: groepen en gemiddelde; nullen zijn leeg.
 const heat=render('heatmap');assert.equal((heat.match(/class="tv-avg"/g)||[]).length,28);assert.equal((heat.match(/class="tv-group"/g)||[]).length,9);assert.ok(!/tv-cell[^>]*>0</.test(heat));
+// Korte namen houden iedere rij op één regel.
+assert.ok(Object.values(T.topics).every(t=>t.short.length<=31));
 // Kaart: vier vakken met de doorgerekende aantallen.
 assert.deepEqual(render('kaart').match(/<h3>[^<]+/g).map(x=>x.slice(4)),['Altijd beheersen (7)','Goed oefenen (6)','Gericht oefenen (5)','Kern kennen (2)']);
 // Voortgang: leerstof, oefenvragen en tentamenvragen komen uit de bestaande opslag.
@@ -76,8 +79,8 @@ click({edit:''});click({reset:'quotient'});click({edit:''});assert.ok(!views.inn
 const pick=element('#analysis-exam');
 for(const e of D.exams){
  pick.value=e.id;pick.onchange();
- const detail=element('#analysis-exam-detail').innerHTML,part=detail.split('Punten per onderwerp')[1];
- const sum=[...part.matchAll(/<td><strong>(\d+)<\/strong><\/td>/g)].reduce((total,m)=>total+Number(m[1]),0);
+ const detail=element('#analysis-exam-detail').innerHTML;
+ const sum=[...detail.matchAll(/<td class="tv-num"><strong>(\d+)<\/strong><\/td>/g)].reduce((total,m)=>total+Number(m[1]),0);
  assert.equal(sum,100,e.id);assert.ok(!/undefined|NaN/.test(detail),e.id);
 }
 assert.ok(read('index.html').includes('js/exam-topic-views.js'));

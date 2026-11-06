@@ -371,6 +371,8 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-weight-bar>span{bac
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-weight-bar>span+span{background:#212b38}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-filter select{border:1px solid #3b4a54;background:#152129;color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis-sources{background:#1e1d26;border:1px solid #4b4360}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-facts>div{background:#152129;border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-facts span{color:#adbdc9}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-analysis a{color:#8deccc}
 /* css/mc.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .mc-home{border:1px solid #454d5e;background:#152129;color:#99c1e1}

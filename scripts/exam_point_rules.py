@@ -137,6 +137,20 @@ TOPIC_LESSONS = {
     'selectie':'modelbouw', 'validatie':'validatie', 'gezamenlijk':'tentamen',
 }
 
+# Korte namen houden iedere rij in de analyse op één regel; de volledige naam staat in de tooltip.
+TOPIC_SHORT = {
+    'mpu':'Directe schatter (MPU)', 'verschil':'Verschilschatter', 'quotient':'Quotiëntschatter',
+    'regressieschatter':'Regressieschatter', 'schatterkeuze':'Schatters vergelijken', 'omvang':'Steekproefomvang',
+    'strata-ontwerp':'Strata: grenzen, allocatie', 'strata-schatten':'Strata: totaal, interval',
+    'basis':'Gegevenstype, OLS, residuen', 'correlatie':'Correlatie', 'anova':'ANOVA en R²',
+    'coefficienten':'Coëfficiënten en dummy’s', 'toetsen':'Hypothesen en toetsen', 'groepen':'Samengevoegde groepen',
+    'tijd':'Tijdsvertraging, autocorrelatie', 'uitbijters-x':'Uitbijters in x', 'uitbijters-y':'Uitbijters in y',
+    'invloed':'Invloedrijke punten', 'normaliteit':'Normaliteit', 'hetero':'Heteroscedasticiteit',
+    'modelvergelijking':'Modelvergelijking', 'multicol':'Multicollineariteit', 'selectie':'Variabelenselectie',
+    'transformaties':'Niet-lineaire modellen', 'validatie':'Validatie (MSPR)', 'puntvoorspelling':'Puntschatting',
+    'interval':'Voorspellingsinterval', 'gezamenlijk':'Gedeelde punten',
+}
+
 # Indeling van de tentamenanalyse. Volgorde: per opgave, daarna per lesblok.
 TOPIC_GROUPS = [
  ('Opgave 1 · Steekproeven', [
@@ -212,37 +226,37 @@ PRIORITY_PACKAGES = [
 # uit opgave of normering; alleen de t- en F-tabel is over alle tentamens nagelopen.
 SKILLS = [
  dict(label='Kritieke waarde uit de t- of F-tabel', lesson='onzekerheid',
-      note='Bij bijna elk interval en elke toets staat hier een eigen punt. Kies de juiste staart en vrijheidsgraden. Staat het aantal vrijheidsgraden niet in de tabel, neem dan het naast lagere aantal; boven 200 geldt de onderste regel.',
+      note='Eigen punt bij bijna elk interval en elke toets. Kies staart en vrijheidsgraden.',
       questions={'20200323':[3,11,20],'20211101':[1,3,7,19],'20220316':[2,18],'20221031':[2,4,6,16],'20230315':[1,5,15],'20231030':[2,12,20],'20240318':[1,7,15],'20241028':[1,6,10,13],'20250317':[3,6,21],'20251028':[1,8,22],'20260323':[1,8,17]}),
  dict(label='Afronden zoals de vraag zegt', lesson='onzekerheid',
-      note='Bij intervalvragen staat vaak op welk bedrag je afrondt. De normering geeft daar een punt voor of trekt er een af. Een bovengrens rond je naar boven af, een ondergrens naar beneden.',
+      note='Bovengrens naar boven, ondergrens naar beneden.',
       questions={'20200323':[3,7,11],'20211101':[1,3,7],'20220316':[2,5],'20221031':[4,6]}),
  dict(label='Spreiding uit sommen en kwadratensommen', lesson='rekenen',
-      note='Veel casussen geven geen standaardafwijking maar een kwadratensom. Die stap levert 2 of 3 punten op voordat het interval begint.',
+      note='Levert 2 of 3 punten op vóór het interval.',
       questions={'20200323':[3],'20211101':[1],'20220316':[5],'20221031':[4]}),
  dict(label='Eindigheidscorrectie', lesson='mpu',
-      note='Hoort in de formules van de schatters. Soms gaat een hele vraag over de correctie, en weglaten kan punten kosten.',
+      note='Soms een hele vraag; weglaten kan punten kosten.',
       questions={'20211101':[3],'20231030':[1]}),
  dict(label='Voorwaarde van ten minste 30 fouten', lesson='verschil',
-      note='Controleer bij de verschil- en quotiëntschatter eerst of de steekproef genoeg fouten bevat.',
+      note='Controleer dit eerst bij verschil- en quotiëntschatter.',
       questions={'20200323':[1],'20211101':[4],'20220316':[4],'20250317':[2]}),
  dict(label='Constante en relatieve fouten', lesson='regressieschatter',
       note='Het soort fout bepaalt welke schatter past.',
       questions={'20250317':[1],'20260323':[3]}),
  dict(label='Conclusie uit een interval of grens', lesson='verschil',
-      note='Vergelijk de boekwaarde met het interval en zeg wat dat voor de jaarrekening betekent.',
+      note='Vergelijk de boekwaarde met het interval.',
       questions={'20221031':[3],'20230315':[2]}),
  dict(label='Volledig gecontroleerd stratum', lesson='stratificatie',
-      note='Een topstratum of integraal gecontroleerde categorie telt mee in het totaal, maar draagt niet bij aan de spreiding.',
+      note='Telt mee in het totaal, niet in de spreiding.',
       questions={'20241028':[5],'20250317':[5,6],'20260323':[8]}),
  dict(label='Hypothesen bij een diagnose', lesson='diagnostiek',
-      note='Ook bij normaliteit en heteroscedasticiteit vraagt de opgave of normering de nul- en alternatieve hypothese.',
+      note='Ook bij normaliteit en heteroscedasticiteit.',
       questions={'20200323':[17],'20211101':[14],'20230315':[13],'20231030':[15],'20241028':[12]}),
  dict(label='Volgorde van de diagnose', lesson='diagnostiek',
-      note='Eerst uitbijters en invloedrijke punten, daarna de aannames. Na een aanpassing beoordeel je opnieuw.',
+      note='Eerst uitbijters en invloed, daarna aannames.',
       questions={'20250317':[18],'20251028':[12,14]}),
  dict(label='Genoeg waarnemingen per variabele', lesson='modelbouw',
-      note='Vuistregel n ≥ 10k: met te weinig waarnemingen dreigt overfitting.',
+      note='Vuistregel n ≥ 10k, anders dreigt overfitting.',
       questions={'20211101':[10]}),
 ]
 
