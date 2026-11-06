@@ -1,6 +1,6 @@
 :root{--toolbar-bg-color:#f4f2f8;--toolbar-icon-bg-color:#4d4560;--toolbar-icon-hover-bg-color:#30273f;--toolbar-icon-active-bg-color:#30273f;--toolbar-icon-opacity:1;--toolbar-border-color:#ded9e7;--toolbar-box-shadow:0 1px 0 #ded9e7;--main-color:#393244;--body-bg-color:#e9eaf0;--button-hover-color:#e6e0ef;--toggled-btn-color:#392954;--toggled-btn-bg-color:#ded5ec;--toggled-hover-active-btn-color:#d4c8e5;--dropdown-btn-bg-color:#fff;--dropdown-btn-border:1px solid #ded9e7;--field-color:#393244;--field-bg-color:#fff;--field-border-color:#ded9e7;--separator-color:#ded9e7;--doorhanger-bg-color:#fff;--doorhanger-border-color:#ded9e7;--doorhanger-hover-color:#393244;--doorhanger-separator-color:#e9e5ef}
-#mainContainer{min-width:0!important;top:var(--cafa-mark-toolbar-height,36px)!important;bottom:23px!important;height:calc(100% - var(--cafa-mark-toolbar-height,36px) - 23px)!important}
-.cafa-mark-toolbar{position:absolute;inset:0 0 auto;min-height:36px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;padding:4px 8px;box-sizing:border-box;background:#f9f8fc;color:#4d4560;font:12px Arial,sans-serif;border-bottom:1px solid #e7e2ed}
+#mainContainer{min-width:0!important;top:0!important;bottom:23px!important;height:calc(100% - 23px)!important}
+.cafa-mark-toolbar{display:flex;align-items:center;color:#4d4560;font:12px Arial,sans-serif}
 .cafa-mark-toolbar button,.cafa-mark-toolbar select{font:inherit;min-height:26px;border:0;border-radius:6px;padding:3px 8px;background:transparent;color:#4d4560;cursor:pointer}
 .cafa-mark-toolbar select{background:#fff;box-shadow:inset 0 0 0 1px #ded9e7}
 .cafa-mark-toolbar button:not(:disabled):hover{background:#e6e0ef;color:#30273f}
@@ -9,8 +9,19 @@
 /* Het woord Kleur blijft de naam voor schermlezers; de keuzelijst toont zelf de kleur. */
 .cafa-mark-toolbar label{display:flex;align-items:center;font-size:0}
 .cafa-mark-toolbar select{font-size:12px}
-.cafa-mark-toolbar{gap:3px 2px;padding-inline:6px}
-.cafa-mark-toolbar button{padding-inline:6px}
+.cafa-mark-toolbar{gap:1px;padding:0}
+#toolbarContainer{height:auto!important;min-height:32px}
+#toolbarContainer #toolbarViewer{height:auto;min-height:100%;flex-wrap:wrap;row-gap:2px}
+#toolbarViewer .toolbarButton{height:28px}
+.cafa-mark-toolbar button{display:flex;align-items:center;justify-content:center;width:26px;height:26px;padding:0;font-size:0}
+.cafa-mark-toolbar button::before{content:"";width:16px;height:16px;background:currentColor;-webkit-mask:var(--cafa-icon) center/16px no-repeat;mask:var(--cafa-icon) center/16px no-repeat}
+#cafa-highlight{--cafa-icon:url(images/toolbarButton-editorHighlight.svg)}
+#cafa-highlight-delete{--cafa-icon:url(images/editor-toolbar-delete.svg)}
+#cafa-content-width{--cafa-icon:url(images/toolbarButton-contentWidth.svg)}
+#cafa-page-ends{--cafa-icon:url(images/secondaryToolbarButton-scrollVertical.svg)}
+#cafa-single-page{--cafa-icon:url(images/secondaryToolbarButton-scrollPage.svg)}
+#cafa-highlight-colour{width:30px;height:24px;padding:0;color:transparent}
+#cafa-highlight-colour option{color:#222}
 .cafa-page-nav{display:flex;align-items:center;gap:3px;margin-inline-start:6px}.cafa-page-nav[hidden]{display:none}
 .cafa-page-nav button{display:flex;align-items:center;justify-content:center;width:26px;min-height:26px;padding:0;border:0;border-radius:6px;color:#4d4560;cursor:pointer;background:#e6e0ef;box-shadow:inset 0 0 0 1px #b9abc9}
 .cafa-page-nav button:not(:disabled):hover{background:#d4c8e5;color:#30273f}
