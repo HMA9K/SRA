@@ -61,6 +61,12 @@ table.numeric tfoot td,table.numeric tfoot th{font-weight:700;border-top:2px sol
 :is(ol,#example-steps) li .math-equals{margin-inline:.4em}
 .formula-label{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 12px}
 .formula-number{font-size:.72rem;font-weight:600;letter-spacing:0;color:#0c447c;background:#fff;border:1px solid #b9c5d6;border-radius:4px;padding:0 6px;white-space:nowrap}
+/* Formule bij een rekenstap in een uitwerking: zelfde label en verwijzing als in de les. */
+.step-formula{margin:2px 0 6px;font-family:Arial,sans-serif}
+.step-formula .formula-label{justify-content:flex-start;margin-bottom:2px}
+.step-formula .math-scroll{padding:2px 3px 6px}
+.step-formula math{font-size:1.05em}
+.step-formula-text{font-size:.9em}
 .formula-goal{background:#e6f1fb;border:1px solid #bcd7ef;border-radius:8px;padding:10px 14px;margin:12px 0}
 .formula-steps{counter-reset:formula-step}
 body[data-page] .formula-steps .formula-row{position:relative;counter-increment:formula-step;padding-left:34px}

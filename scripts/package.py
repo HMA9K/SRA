@@ -89,6 +89,8 @@ payload = dict(lessons=build_content.lessons, sources=build_content.sources,
                summaries=build_content.summaries)
 (root/'data').mkdir(exist_ok=True)
 (root/'data/course.js').write_text('window.SRA = '+json.dumps(payload,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
+import step_formulas
+step_data=step_formulas.build()
 if not args.without_sources:
     (root/'bronnen').mkdir(exist_ok=True)
     for original, destination in source_paths:
@@ -113,7 +115,7 @@ for tag, name, attributes in re.findall(r'(<link rel="stylesheet" href="([^"]+)"
     # Preserve stylesheet isolation when the portable app embeds CSS inline.
     portable=portable.replace(tag,'<style'+attributes+'>\n'+path.read_text(encoding='utf-8')+'\n</style>')
 presentation_css=(root/'css/presentation.css').read_text(encoding='utf-8')
-for name in ['data/course.js','data/exams.js','data/exam-topics.js','data/mc.js','data/exam-practice.js','data/mc-exam-frequency.js','js/math.js','js/lab-layout.js','js/labs.js','js/inline-help.js','js/formula-text.js','js/terms.js','js/formula-help.js','js/navigation.js','js/exam-topic-views.js','js/exams.js','js/mc-state.js','js/mc-case-panel.js','js/mc.js','vendor/cafa2-cirrus/js/exam-engine.js','vendor/cafa2-cirrus/js/answer-editor.js','js/answer-input-tools.js','js/tinymce-answer-editor.js','data/cirrus-exams.js','data/exam-original-pdfs.js','js/cirrus.js','js/exam-study-links.js','js/calculator-input.js','js/lesson-panel.js','js/app.js','js/calculator.js','js/exam-cirrus-layout.js','js/input-table-layout.js','js/pdf-panels.js']:
+for name in ['data/course.js','data/exams.js','data/exam-topics.js','data/mc.js','data/exam-practice.js','data/step-formulas.js','data/mc-exam-frequency.js','js/math.js','js/lab-layout.js','js/labs.js','js/inline-help.js','js/formula-text.js','js/terms.js','js/formula-help.js','js/navigation.js','js/exam-topic-views.js','js/exams.js','js/mc-state.js','js/mc-case-panel.js','js/mc.js','vendor/cafa2-cirrus/js/exam-engine.js','vendor/cafa2-cirrus/js/answer-editor.js','js/answer-input-tools.js','js/tinymce-answer-editor.js','data/cirrus-exams.js','data/exam-original-pdfs.js','js/cirrus.js','js/exam-study-links.js','js/calculator-input.js','js/lesson-panel.js','js/app.js','js/calculator.js','js/exam-cirrus-layout.js','js/input-table-layout.js','js/pdf-panels.js']:
     script=(root/name).read_text(encoding='utf-8').replace('</script','<\\/script')
     portable=re.sub(r'<script defer src="'+re.escape(name)+r'(?:\?[^"<>]*)?"></script>','',portable)
     portable=portable.replace('</body>',f'<script>\n{script}\n</script>\n</body>')
@@ -151,7 +153,7 @@ for i,l in enumerate(build_content.lessons):
     for q in l['questions']:
         parts.append('<p><strong>'+e(q['prompt'])+'</strong></p><ol type="A">'+''.join('<li>'+e(o)+'</li>' for o in q['options'])+'</ol><details><summary>Antwoord en uitleg</summary><p>'+e(q['options'][q['correct']])+'.'+(' '+e(q['explanation']) if not q.get('steps') else '')+'</p>')
         if q.get('steps'):
-            parts.append('<h4>Zo werk je het uit</h4><ol>'+''.join('<li>'+e(step)+'</li>' for step in q['steps'])+'</ol>')
+            parts.append('<h4>Zo werk je het uit</h4><ol>'+''.join('<li>'+step_formulas.step_html(step_data,q['id'],i)+e(step)+'</li>' for i,step in enumerate(q['steps']))+'</ol>')
         if q.get('recognition'):
             parts.append('<h4>Patroonherkenning</h4><dl>')
             for key, label in [('signals', 'Dit herken je in de vraag'), ('meaning', 'Dit betekent het'), ('approach', 'Zo kies je de aanpak'), ('answer', 'Dit moet je antwoord bevatten')]:

@@ -10,7 +10,7 @@ AUDITED_ANSWER = r'''  function auditedAnswer(a,q){
       var body='<p>'+esc(audit.note)+'</p><p class="answer-audit-meta">Afzonderlijke broncontrole · '+esc(audit.reviewed)+' · het oorspronkelijke antwoord staat hieronder.</p>';
       note=audit.status==='G'?'<details class="answer-audit answer-audit-checked"><summary>Gecontroleerd aan de bron</summary>'+body+'</details>':'<aside class="answer-audit" role="note"><h3>'+esc(audit.label)+'</h3>'+body+'</aside>';
     }
-    return note+documentHtml(a.exam,'solution',q.solutionHtml,q.solution||'Er is nog geen antwoordmodel toegevoegd.');
+    return note+(globalThis.SRAStepFormulas?globalThis.SRAStepFormulas.exam(a.exam.id,q.id):'')+documentHtml(a.exam,'solution',q.solutionHtml,q.solution||'Er is nog geen antwoordmodel toegevoegd.');
   }
 '''
 
