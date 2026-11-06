@@ -57,6 +57,8 @@ table.numeric tfoot td,table.numeric tfoot th{font-weight:700;border-top:2px sol
  math{font-size:1em}.formula-label{color:#333}table.numeric{min-width:0}
 }
 .math-operator{font-family:Arial,sans-serif;font-weight:700}
+/* Rekenstappen: iets meer lucht rond het isgelijkteken, zodat lange regels leesbaar blijven. */
+:is(ol,#example-steps) li .math-equals{margin-inline:.4em}
 .formula-label{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 12px}
 .formula-number{font-size:.72rem;font-weight:600;letter-spacing:0;color:#0c447c;background:#fff;border:1px solid #b9c5d6;border-radius:4px;padding:0 6px;white-space:nowrap}
 .formula-goal{background:#e6f1fb;border:1px solid #bcd7ef;border-radius:8px;padding:10px 14px;margin:12px 0}

@@ -363,9 +363,9 @@ def enhance(lessons, sources):
                    'De geschatte totale fout is Nē = 3.740 × 47 = € 175.780. '
                    'De geschatte werkelijke waarde is B − Nē = 1.980.000 − 175.780 = € 1.804.220. Dit zijn twee verschillende antwoorden.',
                    'Spreiding van de fouten: gebruik alle 165 posten, ook de 165 − 43 = 122 posten met e = 0. '
-                   's²<sub>e</sub> = [395.000 − 7.755²/165]/164 = 186,0670732 euro², dus s<sub>e</sub> = € 13,6406405.',
+                   's²<sub>e</sub> = [Σe² − (Σe)²/n]/(n − 1) = [395.000 − 7.755²/165]/164 = 186,0670732 euro², dus s<sub>e</sub> = € 13,6406405.',
                    'Standaardfout en marge: '
-                   's<sub>V</sub> = 3.740 × (13,6406405/√165) × √(3.575/3.739) = € 3.883,5123. Met t = 1,975 is E = 1,975 × 3.883,5123 = € 7.669,94.',
+                   's<sub>V</sub> = N × s<sub>e</sub>/√n × √((N − n)/(N − 1)) = 3.740 × (13,6406405/√165) × √(3.575/3.739) = € 3.883,5123. Met t = 1,975 is E = 1,975 × 3.883,5123 = € 7.669,94.',
                    'Interval voor W: 1.804.220 ± 7.669,94 geeft [€ 1.796.550,06; € 1.811.889,94]. '
                    'Afronden naar buiten op € 10.000 geeft [€ 1.790.000; € 1.820.000].'])
     body += '<p class="note"><strong>Let op:</strong> de opgavecijfers zijn onderling niet helemaal consistent. Reken op het tentamen met de gegeven cijfers.</p>'
