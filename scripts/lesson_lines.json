@@ -419,7 +419,7 @@
      "heading": "De cumulatieve wortel uit een klassentabel"
     },
     {
-     "old": "Stratagrenzen bepalen vanuit de cursusopgave",
+     "old": "Stratagrenzen bepalen vanuit een klassentabel",
      "heading": "Beide methoden op dezelfde populatie"
     }
    ]
@@ -514,7 +514,7 @@
    "afterExample": true,
    "parts": [
     {
-     "old": "Van gegevens naar Coefficients: cursusopgave H9.1",
+     "old": "Van gegevens naar Coefficients: autogewichten",
      "heading": null
     },
     {

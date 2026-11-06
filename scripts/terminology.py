@@ -433,7 +433,7 @@ _add('absres', 'Absolute residuen', ['absoluut residu', 'ABSRES', 'absolute gest
      [('attentie', 5, 'Onderzoek heteroscedasticiteit'), ('spss', 20, 'ABSRES aanmaken voor de analyse')])
 _add('wls', 'Gewogen kleinste kwadraten', ['WLS', 'Weighted Least Squares', 'gewogen regressie'],
      'Regressie waarbij waarnemingen verschillende gewichten krijgen. Dit kan passen bij verschillen in spreiding. Het juiste gewicht hangt af van het probleem.',
-     'Het cursusvoorbeeld met gewicht $1/x²$ is een specifieke correctie, geen algemene keuze voor elk model.', 'diagnostiek')
+     'Het voorbeeld met gewicht $1/x²$ is een specifieke correctie, geen algemene keuze voor elk model.', 'diagnostiek')
 _add('autocorrelatie', 'Autocorrelatie', ['autocorrelaties'],
      'Samenhang tussen storingen op verschillende tijdstippen. Bij tijdreeksen kunnen residuen daardoor systematisch na elkaar bewegen.',
      'Meerdere positieve residuen achter elkaar, gevolgd door meerdere negatieve, kunnen aanleiding geven dit te onderzoeken.', 'diagnostiek')
@@ -674,7 +674,7 @@ def _book(printed, subject):
 
 _add('totale-boekwaarde', 'Totale boekwaarde', ['boekwaardetotaal', 'boektotaal', 'bekende boekwaardetotaal', 'bekend boekwaardetotaal'],
      'De som van de boekwaarden van alle posten in de populatie, geschreven als $B$. Dit bedrag staat al in de administratie; je hoeft het dus niet te schatten.',
-     'Een voorraad van 3.500 artikelen heeft in het boek een totale boekwaarde van € 7.360.817.', 'verschil', _book(209, 'B als totale boekwaarde'))
+     'Een voorraad van 3.500 artikelen heeft een totale boekwaarde van € 7.360.817.', 'verschil', _book(209, 'B als totale boekwaarde'))
 _SOMMEN = [('formules', 1, 'Formule 14: sommen voor s_q')]
 _add('som-gekwadrateerde-fouten', 'Som van de gekwadrateerde fouten', ['Σe²'],
      'Kwadrateer per post de fout $e = b − w$ en tel de uitkomsten op. Bij regressie staat $e$ voor het residu, maar de rekenstap is hetzelfde.',
@@ -693,16 +693,16 @@ _add('gemiddelde-werkelijke-waarde', 'Gemiddelde werkelijke waarde', ['gemiddeld
      'Werkelijke waarden van 90, 200 en 310 geven een gemiddelde werkelijke waarde van 600 / 3 = 200.', 'mpu', _book(205, 'gemiddelde werkelijke waarde'))
 _add('totale-werkelijke-waarde', 'Totale werkelijke waarde', ['werkelijk populatietotaal', 'werkelijke populatietotaal'],
      'De som van de juiste waarden van alle posten in de populatie, geschreven als $W$. Dit bedrag is onbekend; daarom schat je het uit de steekproef.',
-     'In het boek is het werkelijke populatietotaal alleen bekend omdat het om een oefenbestand gaat. In een echte controle ken je $W$ niet.', 'mpu', _book(205, 'totale werkelijke waarde als populatietotaal'))
+     'In een oefenbestand is het werkelijke populatietotaal bekend. In een echte controle ken je $W$ niet.', 'mpu', _book(205, 'totale werkelijke waarde als populatietotaal'))
 _add('geschatte-werkelijke-waarde', 'Geschatte werkelijke waarde', ['geschatte totale werkelijke waarde', 'geschat totaal', 'geschatte totaal'],
      'De puntschatting van de totale werkelijke waarde, geschreven als $Ŵ$. Het dakje laat zien dat dit een schatting is en niet de echte $W$.',
      'Bij $N$ = 1.000 en $w̄$ = 95 geeft de directe schatter $Ŵ$ = 1.000 × 95 = € 95.000.', 'mpu', _book(205, 'schatting van de totale werkelijke waarde'))
 _add('gemiddelde-fout', 'Gemiddeld verschil', ['gemiddelde verschil', 'gemiddelde fout', 'gemiddelde boekwaardefout', 'gemiddelde fouten'],
      'Het gemiddelde van de verschillen tussen boekwaarde en werkelijke waarde in de steekproef: $ē = {Σe}/n$, wat gelijk is aan $b̄ − w̄$. Het boek noemt dit de gemiddelde fout.',
-     'In het boek is de gemiddelde fout € 66,66 per artikel. Bij $N$ = 3.500 is de geschatte totale fout dus 3.500 × 66,66 = € 233.310.', 'verschil', _book(209, 'gemiddelde fout'))
+     'De gemiddelde fout is € 66,66 per artikel. Bij $N$ = 3.500 is de geschatte totale fout dus 3.500 × 66,66 = € 233.310.', 'verschil', _book(209, 'gemiddelde fout'))
 _add('geschatte-totale-fout', 'Geschatte totale fout', ['totale fout'],
      'Het gemiddelde verschil doorgerekend naar de hele populatie: $Ê = N × ē$. De verschilschatter trekt dit bedrag af van de totale boekwaarde.',
-     '€ 7.360.817 − € 233.310 = € 7.127.507 is de schatting van het werkelijke populatietotaal in het boek.', 'verschil', _book(209, 'geschatte totale fout'))
+     '€ 7.360.817 − € 233.310 = € 7.127.507 is de schatting van het werkelijke populatietotaal.', 'verschil', _book(209, 'geschatte totale fout'))
 _add('variantie-verschillen', 'Variantie van de verschillen', ['variantie verschillen', 'variantie van de fout', 'variantie van de fouten'],
      'De steekproefvariantie van de verschillen $e$, geschreven als $s²_e$. Zij meet hoe sterk de fouten per post uiteenlopen, niet hoe groot de fout gemiddeld is.',
      'De verschillen 1, 2 en 3 hebben $ē$ = 2 en een variantie van (1 + 0 + 1) / 2 = 1.', 'verschil', _book(209, 'spreiding van de fout'))
@@ -720,7 +720,7 @@ _add('benodigde-steekproefomvang', 'Benodigde steekproefomvang', ['benodigde ste
      'Levert de formule 94,2 op, dan is de benodigde steekproefomvang 95 posten.', 'steekproefomvang', _book(210, 'benodigde steekproefgrootte'))
 _add('cumulatieve-boekwaarde', 'Cumulatieve boekwaarde', ['cumulatieve boekwaarden'],
      'De opgetelde boekwaarde nadat je de posten van laag naar hoog hebt gesorteerd. Bij stratificatie op deze basis krijgt elk stratum ongeveer hetzelfde deel van de totale boekwaarde.',
-     'Het boek verdeelt € 7.360.817 over 5 strata: ongeveer € 1.472.163 boekwaarde per stratum.', 'stratificatie', _book(221, 'stratificatie op basis van de cumulatieve boekwaarde'))
+     'Verdeel € 7.360.817 over 5 strata: dat is ongeveer € 1.472.163 boekwaarde per stratum.', 'stratificatie', _book(221, 'stratificatie op basis van de cumulatieve boekwaarde'))
 _add('gestratificeerde-schatter', 'Gestratificeerde schatter', ['gestratificeerde schatting', 'gestratificeerde schattingen'],
      'Een schatting die je per stratum maakt en daarna optelt tot één totaal. De onnauwkeurigheid volgt uit de opgetelde variantiebijdragen van de strata.',
      'Stratum 1 geeft € 40.000 en stratum 2 € 60.000; de gestratificeerde schatting is € 100.000.', 'stratificatie', _book(230, 'gestratificeerde schatter'))
