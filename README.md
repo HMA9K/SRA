@@ -81,7 +81,7 @@ De broncode staat in [HMA9K/SRA](https://github.com/HMA9K/SRA). De bron-PDF's wo
 
 ## Bronnen en inhoudelijke keuzes
 
-De bronregistratie staat in `data/course.js` en de app. Per les zijn PDF-pagina's en waar mogelijk formulenummers genoemd. De cursusgrenzen en afrondingsafspraken volgen het onderwijsprogramma, het formuleblad en de recente uitwerkingen. Bronverschillen worden expliciet getoond (tweezijdige Sig., de individuele meervoudige t-toets, het teken van R en vraag 20 van maart 2025). Het volledige boek blijft in de oorspronkelijke projectmap.
+De bronregistratie staat in `data/course.js` en de app. Per les zijn PDF-pagina's en waar mogelijk formulenummers genoemd. De grenzen en afrondingsafspraken volgen het onderwijsprogramma, het formuleblad en de recente uitwerkingen. Bronverschillen worden expliciet getoond (tweezijdige Sig., de individuele meervoudige t-toets, het teken van R en vraag 20 van maart 2025). Het volledige boek blijft in de oorspronkelijke projectmap.
 
 
 De [afronding en dekkingsmatrix van 20 september](docs/afronding-sra-2026-09-20.md) beschrijven de inhoudelijke aanvullingen, bronafbakening en uitgevoerde controles.

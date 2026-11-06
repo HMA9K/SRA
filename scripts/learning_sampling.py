@@ -496,7 +496,7 @@ def enhance(lessons, sources):
         'Op het tentamen toets je die voorwaarde expliciet.</p>',
         [bookref('boek-h8a', 209), bookref('boek-h8b', 213),
          ref('formules', 1, 'Formule 14: resterende spreiding uit fouttotalen'),
-         ref('programma', 4, 'Huidige cursusregel voor df > 200')])
+         ref('programma', 4, 'Huidige regel voor df > 200')])
     add('quotient', 'Boekverdieping: wanneer verbetert de quotiëntschatter MPU?',
         '<p>De <strong>variatiecoëfficiënt</strong> vergelijkt spreiding met het '
         'gemiddelde: VC<sub>b</sub> = s<sub>b</sub>/b̄ en '

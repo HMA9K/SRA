@@ -470,7 +470,7 @@ def _guides(lesson: dict) -> list[dict]:
                 'Tolerance komt uit de Coefficients-uitvoer. Rᵢ² hoort bij een hulpregressie waarin xᵢ wordt verklaard uit de overige x-variabelen. VIF is het omgekeerde van tolerance; dit is niet de R² van het hoofdmodel met y.',
                 ['Lees tolerance of VIF per verklarende variabele af.',
                  'Als alleen tolerance bekend is, deel 1 door die tolerance.',
-                 'Vergelijk met de cursusvuistregel: VIF groter dan 10 is een probleemsignaal.',
+                 'Vergelijk met de vuistregel: VIF groter dan 10 is een probleemsignaal.',
                  'Onderzoek inhoudelijke overlap en schat een aangepast model opnieuw als een variabele wordt weggelaten.'],
                 _example(lesson, [0]),
                 'Correlatie van x met y is iets anders dan samenhang tussen de x-variabelen. Een automatisch selectieproces vervangt geen inhoudelijke keuze.'

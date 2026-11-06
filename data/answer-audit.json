@@ -4,14 +4,14 @@
   "uniqueQuestions": 239,
   "counts": {
     "N": 75,
-    "G": 158,
-    "B": 25,
+    "G": 157,
+    "B": 26,
     "C": 9
   },
   "uniqueCounts": {
     "N": 66,
-    "G": 140,
-    "B": 24,
+    "G": 139,
+    "B": 25,
     "C": 9
   },
   "exams": [
@@ -286,7 +286,7 @@
           "displayNumber": "3.6",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "VIF = 216,623 en 216,879 liggen ver boven cursusgrens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
+          "note": "VIF = 216,623 en 216,879 liggen ver boven grens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
           "reviewed": "2026-09-20",
           "sourcePage": 15,
           "answerPage": 8
@@ -584,7 +584,7 @@
           "displayNumber": "3.6",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "VIF = 216,623 en 216,879 liggen ver boven cursusgrens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
+          "note": "VIF = 216,623 en 216,879 liggen ver boven grens 10: sterke multicollineariteit maakt afzonderlijke coëfficiënten instabiel.",
           "reviewed": "2026-09-20",
           "sourcePage": 15,
           "answerPage": 8
@@ -652,7 +652,7 @@
           "displayNumber": "3",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "q = 0,94; totaal €1.571.680. Met cursusbenadering t = 1,282 en s_q = 208: ondergrens circa €1.549.714, naar beneden €1.549.000.",
+          "note": "q = 0,94; totaal €1.571.680. Met benadering t = 1,282 en s_q = 208: ondergrens circa €1.549.714, naar beneden €1.549.000.",
           "reviewed": "2026-09-20",
           "sourcePage": 3,
           "answerPage": 1
@@ -722,7 +722,7 @@
           "displayNumber": "10",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "Volgens de cursusvuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
+          "note": "Volgens de vuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
           "reviewed": "2026-09-20",
           "sourcePage": 5,
           "answerPage": 4
@@ -890,7 +890,7 @@
           "displayNumber": "4",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
+          "note": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een vuistregel.",
           "reviewed": "2026-09-20",
           "sourcePage": 3,
           "answerPage": 2
@@ -1010,7 +1010,7 @@
           "displayNumber": "16",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "Volgens cursuskeuze KS bij n = 54: p ≥ 0,200 > 0,05, dus normaliteit niet verwerpen. Dit bewijst niet dat de residuen exact normaal verdeeld zijn.",
+          "note": "Met KS bij n = 54: p ≥ 0,200 > 0,05, dus normaliteit niet verwerpen. Dit bewijst niet dat de residuen exact normaal verdeeld zijn.",
           "reviewed": "2026-09-20",
           "sourcePage": 10,
           "answerPage": 6
@@ -1446,7 +1446,7 @@
           "displayNumber": "17",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de cursusgrens 10: geen aanwijzing voor problematische multicollineariteit.",
+          "note": "Adjusted R² stijgt van 0,412 naar 0,805. VIFmax = 1,073 ligt onder de grens 10: geen aanwijzing voor problematische multicollineariteit.",
           "reviewed": "2026-09-20",
           "sourcePage": 12,
           "answerPage": 4
@@ -1604,7 +1604,7 @@
           "displayNumber": "12",
           "status": "B",
           "label": "Onjuistheid of tegenstrijdigheid in de bron",
-          "note": "Het individuele interval met de cursusbenadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
+          "note": "De opgave noemt dit een betrouwbaarheidsinterval, maar voor één proefpersoon is het een voorspellingsinterval. Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
           "reviewed": "2026-09-20",
           "sourcePage": 7,
           "answerPage": 3
@@ -1674,7 +1674,7 @@
           "displayNumber": "19",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "Model 3 heeft VIF = 1,002 < 10: geen probleem volgens de cursusgrens.",
+          "note": "Model 3 heeft VIF = 1,002 < 10: geen probleem volgens de grens.",
           "reviewed": "2026-09-20",
           "sourcePage": 10,
           "answerPage": 4
@@ -1704,7 +1704,7 @@
           "displayNumber": "22",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene cursusgrens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
+          "note": "Met KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
           "reviewed": "2026-09-20",
           "sourcePage": 12,
           "answerPage": 5
@@ -1852,7 +1852,7 @@
           "displayNumber": "13",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "De cursussleutel kiest het lineaire model op de getoonde hoogste R². Lineair en Logarithmic hebben dezelfde y-schaal; voor Power/Exponential is y gelogaritmeerd. R² of F over verschillende y-schalen geeft geen zuivere vergelijking van voorspelkwaliteit.",
+          "note": "Het antwoordmodel kiest het lineaire model op de getoonde hoogste R². Lineair en Logarithmic hebben dezelfde y-schaal; voor Power/Exponential is y gelogaritmeerd. R² of F over verschillende y-schalen geeft geen zuivere vergelijking van voorspelkwaliteit.",
           "reviewed": "2026-09-20",
           "sourcePage": 6,
           "answerPage": 4
@@ -1922,7 +1922,7 @@
           "displayNumber": "20",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "Model 3 heeft een maximale VIF van 1,003 < 10: geen probleem volgens de cursusgrens.",
+          "note": "Model 3 heeft een maximale VIF van 1,003 < 10: geen probleem volgens de grens.",
           "reviewed": "2026-09-20",
           "sourcePage": 9,
           "answerPage": 5
@@ -2198,7 +2198,7 @@
           "displayNumber": "2",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "43 foutposten voldoet aan de cursusgrens van minstens 30.",
+          "note": "43 foutposten voldoet aan de grens van minstens 30.",
           "reviewed": "2026-09-20",
           "sourcePage": 1,
           "answerPage": 11
@@ -2288,7 +2288,7 @@
           "displayNumber": "11",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "De cursussleutel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de cursuskeuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.",
+          "note": "Het antwoordmodel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de keuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.",
           "reviewed": "2026-09-20",
           "sourcePage": 5,
           "answerPage": 13
@@ -2326,9 +2326,9 @@
         {
           "number": 15,
           "displayNumber": "15",
-          "status": "G",
-          "label": "Gecontroleerd",
-          "note": "KS-p = 0,001 bij n 177: normaliteit verwerpen op 5%; hypotheses gaan over residuen.",
+          "status": "B",
+          "label": "Onjuistheid of tegenstrijdigheid in de bron",
+          "note": "KS-p = 0,001 bij n 177: normaliteit verwerpen op 5%; hypotheses gaan over residuen. De normering noemt bij de hypothesen ‘voor vraag 8 en 9 samen’; dat moet vermoedelijk vraag 15 en 16 zijn.",
           "reviewed": "2026-09-20",
           "sourcePage": 8,
           "answerPage": 14
@@ -2408,7 +2408,7 @@
           "displayNumber": "23",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "VIFmax 1,355 ligt onder cursusgrens 10.",
+          "note": "VIFmax 1,355 ligt onder grens 10.",
           "reviewed": "2026-09-20",
           "sourcePage": 10,
           "answerPage": 15
@@ -2418,7 +2418,7 @@
           "displayNumber": "24",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "Volgens de cursuskeuze KS bij n 200 is p 0,061 > 0,05, dus H₀ niet verwerpen. Dat bewijst normaliteit niet; Shapiro-Wilk geeft in dezelfde tabel p < 0,001. Benoem welke toets de cursus hier verlangt.",
+          "note": "Met KS bij n 200 is p 0,061 > 0,05, dus H₀ niet verwerpen. Dat bewijst normaliteit niet; Shapiro-Wilk geeft in dezelfde tabel p < 0,001. Benoem welke toets de cursus hier verlangt.",
           "reviewed": "2026-09-20",
           "sourcePage": 10,
           "answerPage": 15
@@ -2606,7 +2606,7 @@
           "displayNumber": "2.8",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de cursusgrens.",
+          "note": "Gebruik de actuele Afbeelding 15: VIF 1,328 < 10, dus geen probleem volgens de grens.",
           "reviewed": "2026-11-04",
           "sourcePage": 8,
           "answerPage": 12
@@ -2884,7 +2884,7 @@
           "displayNumber": "2.12",
           "status": "G",
           "label": "Gecontroleerd",
-          "note": "VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de cursusgrens.",
+          "note": "VIF 1,308 / 1,478 / 1,349 ligt overal onder 10: geen probleem volgens de grens.",
           "reviewed": "2026-11-04",
           "sourcePage": 7,
           "answerPage": 11

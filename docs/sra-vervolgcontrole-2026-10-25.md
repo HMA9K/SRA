@@ -45,7 +45,7 @@ Vijf modellen zijn opnieuw berekend met de variabelen uit de gepubliceerde eindt
 | Diesel | 41 | 5 | 0,817 | 2.332,58 | 0,075 |
 | Elektrisch | 40 | 5 | 0,808 | 4.014,79 | 0,609 |
 
-De les geeft per model alle B's, SE's, t's, p's, VIF's, eigen grafieken, z-residuen, Mahalanobis- en Cook-grenzen en betrokken autonummers. Heteroscedasticiteit wordt gecontroleerd met ABSRES tegen iedere opgenomen x, volgens de cursus. Dit zijn verkennende afzonderlijke toetsen. De vijf modellen hebben daarbij signalen van ongelijke residuspreiding. De drie groepsmodellen voldoen niet aan de cursusvuistregel n ≥ 10k. Er is geen automatische verwijdering van observaties of goedkeuring voor onafhankelijke voorspellingen.
+De les geeft per model alle B's, SE's, t's, p's, VIF's, eigen grafieken, z-residuen, Mahalanobis- en Cook-grenzen en betrokken autonummers. Heteroscedasticiteit wordt gecontroleerd met ABSRES tegen iedere opgenomen x, volgens de cursus. Dit zijn verkennende afzonderlijke toetsen. De vijf modellen hebben daarbij signalen van ongelijke residuspreiding. De drie groepsmodellen voldoen niet aan de vuistregel n ≥ 10k. Er is geen automatische verwijdering van observaties of goedkeuring voor onafhankelijke voorspellingen.
 
 Broncorrecties en grenzen:
 

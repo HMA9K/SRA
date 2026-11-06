@@ -252,8 +252,8 @@ def enhance(lessons):
              ['Geen leiding: dummy 0', 'Wel leiding: dummy 1'], [0,500], 'Bijdrage aan voorspelde y'),
         'Met leiding is de voorspelling 500 hoger dan zonder leiding, bij gelijke overige kenmerken. De constante en overige modeltermen komen daar nog bij.')
     add('modelbouw', 'VIF lezen: van hulpregressie naar conclusie', 'Een VIF-uitkomst',
-        bars('VIF 2,634 ligt onder de cursusgrens 10.', ['VIF uit het voorbeeld', 'Cursusgrens'], [2.634,10], 'VIF', digits=3),
-        '2,634 &lt; 10: geen overschrijding van deze cursusgrens.')
+        bars('VIF 2,634 ligt onder de grens 10.', ['VIF uit het voorbeeld', 'Grens'], [2.634,10], 'VIF', digits=3),
+        '2,634 &lt; 10: geen overschrijding van deze grens.')
     add('validatie', 'Voorspelfouten op een onafhankelijke testset uitwerken', 'MSPR =',
         bars('Trainings-MSE 1 tegenover test-MSPR 14/3, ongeveer 4,67.', ['Training: MSE', 'Test: MSPR'], [1,14/3], 'Gemiddelde kwadratische fout'),
         'Op dezelfde y-schaal is de testfout hier groter. Er is geen vaste algemene afkeurgrens.')

@@ -1598,7 +1598,7 @@ window.SRAMCData = {
             "Volgens de tabelafspraak in het SRA-onderwijsprogramma neem je de naast lagere beschikbare waarde.",
             "Van 160 en 170 is 160 de naast lagere rij. Dit is een tabelkeuze; de berekende df blijven 164."
           ],
-          "pattern": "Herken: De berekende df ontbreken, maar een lagere en hogere tabelrij zijn beschikbaar. → Betekenis: Dit is een tabelkeuze volgens de cursusafspraak, geen nieuwe df-berekening. → Aanpak: Kies de naast lagere beschikbare rij; interpoleer niet. → Gevraagd antwoord: De te gebruiken tabelrij, met behoud van de oorspronkelijk berekende df.",
+          "pattern": "Herken: De berekende df ontbreken, maar een lagere en hogere tabelrij zijn beschikbaar. → Betekenis: Dit is een tabelkeuze volgens de afspraak, geen nieuwe df-berekening. → Aanpak: Kies de naast lagere beschikbare rij; interpoleer niet. → Gevraagd antwoord: De te gebruiken tabelrij, met behoud van de oorspronkelijk berekende df.",
           "trap": "Ga niet afronden naar de dichtstbijzijnde rij of zelf interpoleren als de cursus een vaste tabelafspraak geeft.",
           "optionExplanations": [
             "Het middelen van twee tabelrijen is interpolatie. De cursus schrijft hier een rijkeuze voor, geen interpolatie.",
@@ -1669,14 +1669,14 @@ window.SRAMCData = {
           ],
           "recognition": {
             "signals": "De berekende df ontbreken, maar een lagere en hogere tabelrij zijn beschikbaar.",
-            "meaning": "Dit is een tabelkeuze volgens de cursusafspraak, geen nieuwe df-berekening.",
+            "meaning": "Dit is een tabelkeuze volgens de afspraak, geen nieuwe df-berekening.",
             "approach": "Kies de naast lagere beschikbare rij; interpoleer niet.",
             "answer": "De te gebruiken tabelrij, met behoud van de oorspronkelijk berekende df."
           },
           "level": 2,
           "guidance": {
             "title": "Schatting, marge en interval",
-            "focus": "Volgens de cursusafspraak kies je bij ontbrekende exacte vrijheidsgraden de eerst lagere beschikbare rij in de t-tabel. Bij df > 200 gebruik je echter de onderste rij van de tabel. Houd de staartkans hetzelfde.",
+            "focus": "Volgens de afspraak kies je bij ontbrekende exacte vrijheidsgraden de eerst lagere beschikbare rij in de t-tabel. Bij df > 200 gebruik je echter de onderste rij van de tabel. Houd de staartkans hetzelfde.",
             "rules": [
               "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
               "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
@@ -2243,7 +2243,7 @@ window.SRAMCData = {
             "Lees t = 1,985 af. De effectieve df blijven inhoudelijk 99; alleen voor het tabelgebruik neem je rij 95."
           ],
           "explanation": "Een tweezijdig 95%-interval gebruikt overschrijdingskans 0,025. Zoek de aangrenzende rijen in de bundel: 95 en 100. Kies de naast lagere rij 95. Lees t = 1,985 af. De effectieve df blijven inhoudelijk 99; alleen voor het tabelgebruik neem je rij 95.",
-          "pattern": "Herken: Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval? → Betekenis: Een ontbrekende exacte rij vereist de concrete cursusafspraak over tabelgebruik. → Aanpak: Bekijk daadwerkelijk welke rijen aanwezig zijn en kies de naast lagere beschikbare rij bij dezelfde staartkans. → Gevraagd antwoord: De gebruikte tabelrij en bijbehorende kritieke waarde.",
+          "pattern": "Herken: Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval? → Betekenis: Een ontbrekende exacte rij vereist de concrete afspraak over tabelgebruik. → Aanpak: Bekijk daadwerkelijk welke rijen aanwezig zijn en kies de naast lagere beschikbare rij bij dezelfde staartkans. → Gevraagd antwoord: De gebruikte tabelrij en bijbehorende kritieke waarde.",
           "trap": "Een eerder onthouden tabelwaarde vervangt het aflezen van de aangeleverde bundel niet.",
           "refs": [
             {
@@ -2262,7 +2262,7 @@ window.SRAMCData = {
           "dataOrigin": "eigen",
           "recognition": {
             "signals": "Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval?",
-            "meaning": "Een ontbrekende exacte rij vereist de concrete cursusafspraak over tabelgebruik.",
+            "meaning": "Een ontbrekende exacte rij vereist de concrete afspraak over tabelgebruik.",
             "approach": "Bekijk daadwerkelijk welke rijen aanwezig zijn en kies de naast lagere beschikbare rij bij dezelfde staartkans.",
             "answer": "De gebruikte tabelrij en bijbehorende kritieke waarde."
           },
@@ -2747,18 +2747,18 @@ window.SRAMCData = {
           "correct": 1,
           "optionExplanations": [
             "Een grotere steekproef neemt de gekozen onzekerheidsmarge niet automatisch volledig weg.",
-            "n ≥ 100 is een cursusvuistregel; extreme scheefheid kan een grotere steekproef noodzakelijk maken.",
+            "n ≥ 100 is een grenswaarde; extreme scheefheid kan een grotere steekproef noodzakelijk maken.",
             "De vuistregel garandeert geen geldige benadering bij iedere mogelijke populatieverdeling.",
             "Meer controles veranderen de verdeling van de oorspronkelijke populatie niet."
           ],
           "steps": [
             "De selectie is aselect, maar de populatie is extreem scheef.",
-            "Het boek nuanceert de cursusgrens n ≥ 100.",
+            "Het boek nuanceert de grens n ≥ 100.",
             "Beoordeel de benadering en de spreiding voordat je de intervaluitkomst gebruikt."
           ],
-          "explanation": "De selectie is aselect, maar de populatie is extreem scheef. Het boek nuanceert de cursusgrens n ≥ 100. Beoordeel de benadering en de spreiding voordat je de intervaluitkomst gebruikt.",
-          "pattern": "Herken: Een aselecte steekproef boven de cursusgrens én “extreem scheve populatie”. → Betekenis: Aselecte selectie en bruikbaarheid van de normale benadering zijn afzonderlijke voorwaarden. → Aanpak: Beoordeel of de scheefheid de benadering problematisch maakt ondanks de omvangsvuistregel. → Gevraagd antwoord: Een voorwaardelijk oordeel over het interval, geen automatische garantie door n alleen.",
-          "trap": "Een cursusvuistregel is geen garantie voor iedere verdeling.",
+          "explanation": "De selectie is aselect, maar de populatie is extreem scheef. Het boek nuanceert de grens n ≥ 100. Beoordeel de benadering en de spreiding voordat je de intervaluitkomst gebruikt.",
+          "pattern": "Herken: Een aselecte steekproef boven de grens én “extreem scheve populatie”. → Betekenis: Aselecte selectie en bruikbaarheid van de normale benadering zijn afzonderlijke voorwaarden. → Aanpak: Beoordeel of de scheefheid de benadering problematisch maakt ondanks de omvangsvuistregel. → Gevraagd antwoord: Een voorwaardelijk oordeel over het interval, geen automatische garantie door n alleen.",
+          "trap": "Een grenswaarde is geen garantie voor iedere verdeling.",
           "refs": [
             {
               "source": "formules",
@@ -2807,7 +2807,7 @@ window.SRAMCData = {
             }
           ],
           "recognition": {
-            "signals": "Een aselecte steekproef boven de cursusgrens én “extreem scheve populatie”.",
+            "signals": "Een aselecte steekproef boven de grens én “extreem scheve populatie”.",
             "meaning": "Aselecte selectie en bruikbaarheid van de normale benadering zijn afzonderlijke voorwaarden.",
             "approach": "Beoordeel of de scheefheid de benadering problematisch maakt ondanks de omvangsvuistregel.",
             "answer": "Een voorwaardelijk oordeel over het interval, geen automatische garantie door n alleen."
@@ -3357,7 +3357,7 @@ window.SRAMCData = {
             "Er zijn 200 posten gecontroleerd, maar slechts 12 daarvan bevatten een fout.",
             "12 is kleiner dan 30. De genoemde voorwaarde is dus niet vervuld, ondanks de grotere steekproefomvang."
           ],
-          "pattern": "Herken: Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten. → Betekenis: De genoemde voorwaarde gaat over fouten, niet over alle controles. → Aanpak: Vergelijk het aantal aangetroffen fouten met het cursusminimum van 30. → Gevraagd antwoord: Een oordeel of juist deze toepassingsvoorwaarde is vervuld.",
+          "pattern": "Herken: Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten. → Betekenis: De genoemde voorwaarde gaat over fouten, niet over alle controles. → Aanpak: Vergelijk het aantal aangetroffen fouten met het minimum van 30. → Gevraagd antwoord: Een oordeel of juist deze toepassingsvoorwaarde is vervuld.",
           "trap": "Maak van de voorwaarde “30 fouten” niet ongemerkt “30 waarnemingen”.",
           "optionExplanations": [
             "De genoemde voorwaarde gaat om het aantal fouten, niet om hun teken. Ook alleen positieve fouten maken 12 niet tot 30.",
@@ -3429,7 +3429,7 @@ window.SRAMCData = {
           "recognition": {
             "signals": "Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten.",
             "meaning": "De genoemde voorwaarde gaat over fouten, niet over alle controles.",
-            "approach": "Vergelijk het aantal aangetroffen fouten met het cursusminimum van 30.",
+            "approach": "Vergelijk het aantal aangetroffen fouten met het minimum van 30.",
             "answer": "Een oordeel of juist deze toepassingsvoorwaarde is vervuld."
           },
           "level": 1,
@@ -4118,7 +4118,7 @@ window.SRAMCData = {
         {
           "source": "programma",
           "page": 4,
-          "locator": "Huidige cursusregel voor df > 200"
+          "locator": "Huidige regel voor df > 200"
         }
       ],
       "questions": [
@@ -4218,7 +4218,7 @@ window.SRAMCData = {
             {
               "source": "programma",
               "page": 4,
-              "locator": "Huidige cursusregel voor df > 200"
+              "locator": "Huidige regel voor df > 200"
             }
           ],
           "recognition": {
@@ -4345,7 +4345,7 @@ window.SRAMCData = {
             {
               "source": "programma",
               "page": 4,
-              "locator": "Huidige cursusregel voor df > 200"
+              "locator": "Huidige regel voor df > 200"
             }
           ],
           "recognition": {
@@ -4472,7 +4472,7 @@ window.SRAMCData = {
             {
               "source": "programma",
               "page": 4,
-              "locator": "Huidige cursusregel voor df > 200"
+              "locator": "Huidige regel voor df > 200"
             }
           ],
           "recognition": {
@@ -4602,7 +4602,7 @@ window.SRAMCData = {
             {
               "source": "programma",
               "page": 4,
-              "locator": "Huidige cursusregel voor df > 200"
+              "locator": "Huidige regel voor df > 200"
             }
           ],
           "recognition": {
@@ -4731,7 +4731,7 @@ window.SRAMCData = {
             {
               "source": "programma",
               "page": 4,
-              "locator": "Huidige cursusregel voor df > 200"
+              "locator": "Huidige regel voor df > 200"
             }
           ],
           "recognition": {
@@ -4860,7 +4860,7 @@ window.SRAMCData = {
             {
               "source": "programma",
               "page": 4,
-              "locator": "Huidige cursusregel voor df > 200"
+              "locator": "Huidige regel voor df > 200"
             }
           ],
           "recognition": {
@@ -12185,25 +12185,25 @@ window.SRAMCData = {
       "questions": [
         {
           "id": "mc-diagnostiek-basis-1",
-          "prompt": "n = 178. Wat zijn de cursusgrenzen voor gestandaardiseerde residuen?",
+          "prompt": "n = 178. Wat zijn de grenzen voor gestandaardiseerde residuen?",
           "options": [
             "±3",
             "±1",
             "±2"
           ],
           "correct": 0,
-          "explanation": "Het formuleblad gebruikt voor mogelijke y-uitbijters grenzen voor gestandaardiseerde residuen. Bij n ≤ 100 zijn de cursusgrenzen ±2; bij n > 100 zijn ze ±3. Omdat 178 > 100 gebruik je −3 en +3. Controleer zowel het minimum als het maximum van de residuen.",
+          "explanation": "Het formuleblad gebruikt voor mogelijke y-uitbijters grenzen voor gestandaardiseerde residuen. Bij n ≤ 100 zijn de grenzen ±2; bij n > 100 zijn ze ±3. Omdat 178 > 100 gebruik je −3 en +3. Controleer zowel het minimum als het maximum van de residuen.",
           "steps": [
             "Het formuleblad gebruikt voor mogelijke y-uitbijters grenzen voor gestandaardiseerde residuen.",
-            "Bij n ≤ 100 zijn de cursusgrenzen ±2; bij n > 100 zijn ze ±3.",
+            "Bij n ≤ 100 zijn de grenzen ±2; bij n > 100 zijn ze ±3.",
             "Omdat 178 > 100 gebruik je −3 en +3. Controleer zowel het minimum als het maximum van de residuen."
           ],
-          "pattern": "Herken: n en “cursusgrenzen voor gestandaardiseerde residuen”. → Betekenis: Je zoekt de cursusregel voor opvallende residuen, afhankelijk van de omvangscategorie. → Aanpak: Vergelijk n met 100: de cursus gebruikt ±2 bij n ≤ 100 en ±3 bij n > 100. → Gevraagd antwoord: Twee residugrenzen, geen Cook-grens of toets op normaliteit.",
+          "pattern": "Herken: n en “grenzen voor gestandaardiseerde residuen”. → Betekenis: Je zoekt de regel voor opvallende residuen, afhankelijk van de omvangscategorie. → Aanpak: Vergelijk n met 100: de cursus gebruikt ±2 bij n ≤ 100 en ±3 bij n > 100. → Gevraagd antwoord: Twee residugrenzen, geen Cook-grens of toets op normaliteit.",
           "trap": "De grens signaleert een mogelijk afwijkende waarneming; zij is geen automatische verwijderregel.",
           "optionExplanations": [
             "±3 is de behandelde grens voor n > 100. Zowel grote negatieve als grote positieve residuen verdienen aandacht.",
-            "±1 is niet de cursusgrens voor deze uitbijtercontrole.",
-            "±2 hoort volgens het formuleblad bij n ≤ 100. Hier is n = 178, dus geldt de andere cursusgrens."
+            "±1 is niet de grens voor deze uitbijtercontrole.",
+            "±2 hoort volgens het formuleblad bij n ≤ 100. Hier is n = 178, dus geldt de andere grens."
           ],
           "refs": [
             {
@@ -12343,8 +12343,8 @@ window.SRAMCData = {
             }
           ],
           "recognition": {
-            "signals": "n en “cursusgrenzen voor gestandaardiseerde residuen”.",
-            "meaning": "Je zoekt de cursusregel voor opvallende residuen, afhankelijk van de omvangscategorie.",
+            "signals": "n en “grenzen voor gestandaardiseerde residuen”.",
+            "meaning": "Je zoekt de regel voor opvallende residuen, afhankelijk van de omvangscategorie.",
             "approach": "Vergelijk n met 100: de cursus gebruikt ±2 bij n ≤ 100 en ±3 bij n > 100.",
             "answer": "Twee residugrenzen, geen Cook-grens of toets op normaliteit."
           },
@@ -13125,7 +13125,7 @@ window.SRAMCData = {
         {
           "id": "mc-diagnostiek-leertoepassing-minimum-residu",
           "level": 2,
-          "prompt": "Oefenvraag. Welke waarnemingen zijn volgens de cursusgrens kandidaat-uitbijters in y?",
+          "prompt": "Oefenvraag. Welke waarnemingen zijn volgens de grens kandidaat-uitbijters in y?",
           "stimulusHtml": "<p>Het model is op 80 waarnemingen geschat. De tabel toont vier geselecteerde waarnemingen, niet alle 80.</p><div class=\"table-wrap\"><table><caption>Casewise Diagnostics</caption><thead><tr><th scope=\"col\">Waarneming</th><th scope=\"col\">Std. Residual</th></tr></thead><tbody><tr><th scope=\"row\">4</th><td>−2,60</td></tr><tr><th scope=\"row\">18</th><td>−1,10</td></tr><tr><th scope=\"row\">35</th><td>1,95</td></tr><tr><th scope=\"row\">67</th><td>2,20</td></tr></tbody></table></div>",
           "options": [
             "Geen waarnemingen, want de grens is ±3",
@@ -13142,11 +13142,11 @@ window.SRAMCData = {
           "correct": 2,
           "steps": [
             "Gebruik de omvang van het gehele model n = 80, niet het aantal weergegeven rijen.",
-            "Bij n ≤ 100 is de cursusgrens ±2: |−2,60| = 2,60 en |2,20| = 2,20 overschrijden deze grens.",
+            "Bij n ≤ 100 is de grens ±2: |−2,60| = 2,60 en |2,20| = 2,20 overschrijden deze grens.",
             "Onderzoek waarnemingen 4 en 67 inhoudelijk. De diagnose is een signaal, geen automatische verwijderopdracht."
           ],
-          "explanation": "Gebruik de omvang van het gehele model n = 80, niet het aantal weergegeven rijen. Bij n ≤ 100 is de cursusgrens ±2: |−2,60| = 2,60 en |2,20| = 2,20 overschrijden deze grens. Onderzoek waarnemingen 4 en 67 inhoudelijk. De diagnose is een signaal, geen automatische verwijderopdracht.",
-          "pattern": "Herken: Welke waarnemingen zijn volgens de cursusgrens kandidaat-uitbijters in y? → Betekenis: Een geselecteerde uitvoertabel kan zowel negatieve als positieve grote residuen bevatten. → Aanpak: Neem de modelomvang voor de grens en vergelijk de absolute waarde van ieder getoond residu met die grens. → Gevraagd antwoord: De nummers van de waarnemingen die nader onderzoek verdienen.",
+          "explanation": "Gebruik de omvang van het gehele model n = 80, niet het aantal weergegeven rijen. Bij n ≤ 100 is de grens ±2: |−2,60| = 2,60 en |2,20| = 2,20 overschrijden deze grens. Onderzoek waarnemingen 4 en 67 inhoudelijk. De diagnose is een signaal, geen automatische verwijderopdracht.",
+          "pattern": "Herken: Welke waarnemingen zijn volgens de grens kandidaat-uitbijters in y? → Betekenis: Een geselecteerde uitvoertabel kan zowel negatieve als positieve grote residuen bevatten. → Aanpak: Neem de modelomvang voor de grens en vergelijk de absolute waarde van ieder getoond residu met die grens. → Gevraagd antwoord: De nummers van de waarnemingen die nader onderzoek verdienen.",
           "trap": "Het aantal afgedrukte probleemrijen is niet de steekproefomvang van het model.",
           "refs": [
             {
@@ -13164,7 +13164,7 @@ window.SRAMCData = {
           "kind": "tabel",
           "dataOrigin": "eigen",
           "recognition": {
-            "signals": "Welke waarnemingen zijn volgens de cursusgrens kandidaat-uitbijters in y?",
+            "signals": "Welke waarnemingen zijn volgens de grens kandidaat-uitbijters in y?",
             "meaning": "Een geselecteerde uitvoertabel kan zowel negatieve als positieve grote residuen bevatten.",
             "approach": "Neem de modelomvang voor de grens en vergelijk de absolute waarde van ieder getoond residu met die grens.",
             "answer": "De nummers van de waarnemingen die nader onderzoek verdienen."
@@ -14149,7 +14149,7 @@ window.SRAMCData = {
           "id": "mc-diagnostiek-leertoepassing-residual-statistics",
           "level": 3,
           "prompt": "Oefenvraag. Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen?",
-          "stimulusHtml": "<p>Gebruik de cursusgrenzen voor uitbijters en invloedrijke punten. De afhankelijke variabele is huur per maand in euro.</p><div class=\"table-wrap\"><table><caption>Residuals Statistics: geselecteerde rijen</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">Minimum</th><th scope=\"col\">Maximum</th><th scope=\"col\">Mean</th><th scope=\"col\">Std. Deviation</th><th scope=\"col\">N</th></tr></thead><tbody><tr><th scope=\"row\">Std. Residual</th><td>−1,352</td><td>2,490</td><td>0,000</td><td>0,987</td><td>40</td></tr><tr><th scope=\"row\">Mahal. Distance</th><td>0,000</td><td>2,388</td><td>0,975</td><td>0,815</td><td>40</td></tr><tr><th scope=\"row\">Cook’s Distance</th><td>0,000</td><td>0,313</td><td>0,030</td><td>0,060</td><td>40</td></tr></tbody></table></div>",
+          "stimulusHtml": "<p>Gebruik de grenzen voor uitbijters en invloedrijke punten. De afhankelijke variabele is huur per maand in euro.</p><div class=\"table-wrap\"><table><caption>Residuals Statistics: geselecteerde rijen</caption><thead><tr><th scope=\"col\">Rij</th><th scope=\"col\">Minimum</th><th scope=\"col\">Maximum</th><th scope=\"col\">Mean</th><th scope=\"col\">Std. Deviation</th><th scope=\"col\">N</th></tr></thead><tbody><tr><th scope=\"row\">Std. Residual</th><td>−1,352</td><td>2,490</td><td>0,000</td><td>0,987</td><td>40</td></tr><tr><th scope=\"row\">Mahal. Distance</th><td>0,000</td><td>2,388</td><td>0,975</td><td>0,815</td><td>40</td></tr><tr><th scope=\"row\">Cook’s Distance</th><td>0,000</td><td>0,313</td><td>0,030</td><td>0,060</td><td>40</td></tr></tbody></table></div>",
           "options": [
             "Aanwijzing voor uitbijter(s) in y en invloed; geen MD-overschrijding",
             "Alleen een uitbijter in x, want MD_max > 2",
@@ -14158,17 +14158,17 @@ window.SRAMCData = {
           ],
           "optionExplanations": [
             "Bij n = 40 geldt |z| > 2. MD-grens = 0,975 + 3 × 0,815 = 3,420; CD-grens = 0,030 + 3 × 0,060 = 0,210. Alleen z_max en CD_max overschrijden hun grens.",
-            "Voor Mahalanobis Distance geldt hier de bijbehorende cursusgrens mean + 3 × sd. De grens ±2 hoort bij gestandaardiseerde residuen.",
+            "Voor Mahalanobis Distance geldt hier de bijbehorende grens mean + 3 × sd. De grens ±2 hoort bij gestandaardiseerde residuen.",
             "Een gemiddeld residu rond nul kan samengaan met grote individuele residuen. Onderzoek minimum en maximum.",
             "De tabel signaleert mogelijke afwijkingen. Zij geeft geen inhoudelijke rechtvaardiging voor automatisch verwijderen en identificeert ook niet zelf de rij."
           ],
           "correct": 0,
           "steps": [
-            "Met n = 40 is de cursusgrens voor gestandaardiseerde residuen ±2; 2,490 overschrijdt deze, −1,352 niet.",
+            "Met n = 40 is de grens voor gestandaardiseerde residuen ±2; 2,490 overschrijdt deze, −1,352 niet.",
             "MD_kritiek = 0,975 + 3 × 0,815 = 3,420; het maximum 2,388 blijft eronder. CD_kritiek = 0,030 + 3 × 0,060 = 0,210; 0,313 ligt erboven.",
             "Onderzoek betrokken waarnemingen in detail. Deze samenvatting toont niet of het grote residu en de grote Cook’s Distance bij dezelfde waarneming horen."
           ],
-          "explanation": "Met n = 40 is de cursusgrens voor gestandaardiseerde residuen ±2; 2,490 overschrijdt deze, −1,352 niet. MD_kritiek = 0,975 + 3 × 0,815 = 3,420; het maximum 2,388 blijft eronder. CD_kritiek = 0,030 + 3 × 0,060 = 0,210; 0,313 ligt erboven. Onderzoek betrokken waarnemingen in detail. Deze samenvatting toont niet of het grote residu en de grote Cook’s Distance bij dezelfde waarneming horen.",
+          "explanation": "Met n = 40 is de grens voor gestandaardiseerde residuen ±2; 2,490 overschrijdt deze, −1,352 niet. MD_kritiek = 0,975 + 3 × 0,815 = 3,420; het maximum 2,388 blijft eronder. CD_kritiek = 0,030 + 3 × 0,060 = 0,210; 0,313 ligt erboven. Onderzoek betrokken waarnemingen in detail. Deze samenvatting toont niet of het grote residu en de grote Cook’s Distance bij dezelfde waarneming horen.",
           "pattern": "Herken: Welke diagnose kun je uit deze samengevatte SPSS-uitvoer onderbouwen? → Betekenis: Drie verschillende diagnosematen staan in één tabel en vragen ieder een bijpassende grens. → Aanpak: Lees N, controleer beide residu-extremen en bereken afzonderlijk de grenzen voor Mahalanobis en Cook. → Gevraagd antwoord: Een onderscheiden oordeel over uitbijters in y, uitbijters in x en invloed.",
           "trap": "Maak van een samengevatte tabel geen bewijs dat verschillende maxima dezelfde waarneming betreffen.",
           "refs": [
@@ -14228,7 +14228,7 @@ window.SRAMCData = {
             "De gegeven tabel toetst de residuen. De verdeling van y zelf is niet de getoetste regressievoorwaarde.",
             "Bij n ≤ 50 kiest de cursus Shapiro-Wilk. 0,014 < 0,05 geeft bewijs tegen de normaliteitshypothese.",
             "Dit kiest de andere toets om een gunstige uitkomst te krijgen. Bovendien bewijst een grote p de aanname niet.",
-            "Verschillende toetsen kunnen verschillende gevoeligheid hebben. Volg de vooraf bepaalde cursuskeuze en interpreteer die toets."
+            "Verschillende toetsen kunnen verschillende gevoeligheid hebben. Volg de vooraf bepaalde keuze en interpreteer die toets."
           ],
           "correct": 1,
           "steps": [
@@ -14237,13 +14237,13 @@ window.SRAMCData = {
             "Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen."
           ],
           "explanation": "De modelvoorwaarde betreft de residuen. H₀: deze zijn normaal verdeeld; H₁: zij wijken daarvan af. Volgens de cursus gebruik je bij n = 40 Shapiro-Wilk. De bijbehorende Sig. is 0,014. Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen.",
-          "pattern": "Herken: Welke normaliteitsconclusie past bij de werkwijze uit de cursus en α = 0,05? → Betekenis: Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de cursuskeuze vooraf. → Aanpak: Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau. → Gevraagd antwoord: Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek.",
+          "pattern": "Herken: Welke normaliteitsconclusie past bij de werkwijze uit de cursus en α = 0,05? → Betekenis: Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de keuze vooraf. → Aanpak: Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau. → Gevraagd antwoord: Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek.",
           "trap": "Kies niet achteraf de normaliteitstoets met de prettigste p-waarde.",
           "refs": [
             {
               "source": "attentie",
               "page": 6,
-              "locator": "PDF p. 6: normaliteit en cursuskeuze"
+              "locator": "PDF p. 6: normaliteit en keuze"
             },
             {
               "source": "slides",
@@ -14256,7 +14256,7 @@ window.SRAMCData = {
           "dataOrigin": "eigen",
           "recognition": {
             "signals": "Welke normaliteitsconclusie past bij de werkwijze uit de cursus en α = 0,05?",
-            "meaning": "Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de cursuskeuze vooraf.",
+            "meaning": "Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de keuze vooraf.",
             "approach": "Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau.",
             "answer": "Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek."
           },
@@ -14271,7 +14271,7 @@ window.SRAMCData = {
               {
                 "source": "attentie",
                 "page": 6,
-                "locator": "PDF p. 6: normaliteit en cursuskeuze"
+                "locator": "PDF p. 6: normaliteit en keuze"
               },
               {
                 "source": "slides",
@@ -17650,7 +17650,7 @@ window.SRAMCData = {
           "level": 1,
           "guidance": {
             "title": "Variabelenselectie en multicollineariteit",
-            "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+            "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
             "rules": [
               "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
               "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -17955,7 +17955,7 @@ window.SRAMCData = {
         },
         {
           "id": "mc-modelbouw-toepassing-1",
-          "prompt": "Tolerance = 0,08. Welke combinatie klopt volgens de cursusgrens VIF > 10?",
+          "prompt": "Tolerance = 0,08. Welke combinatie klopt volgens de grens VIF > 10?",
           "options": [
             "VIF = 8; probleemsignaal",
             "VIF = 0,08; probleemsignaal",
@@ -17966,17 +17966,17 @@ window.SRAMCData = {
           "level": 2,
           "steps": [
             "VIF = 1/0,08 = 12,5.",
-            "Dit ligt boven de cursusgrens van 10.",
-            "Tolerance en VIF meten hetzelfde overlapprobleem vanuit tegengestelde richting. Vergelijk pas na de omzetting de VIF met de genoemde cursusgrens."
+            "Dit ligt boven de grens van 10.",
+            "Tolerance en VIF meten hetzelfde overlapprobleem vanuit tegengestelde richting. Vergelijk pas na de omzetting de VIF met de genoemde grens."
           ],
-          "explanation": "VIF = 1/0,08 = 12,5. Dit ligt boven de cursusgrens van 10. Tolerance en VIF meten hetzelfde overlapprobleem vanuit tegengestelde richting. Vergelijk pas na de omzetting de VIF met de genoemde cursusgrens.",
-          "pattern": "Herken: Tolerance en een expliciete cursusgrens VIF > 10. → Betekenis: Je moet eerst de maat omzetten en daarna het aangegeven criterium toepassen. → Aanpak: Bereken 1/tolerance en vergelijk de VIF met de cursusgrens. → Gevraagd antwoord: De VIF én een oordeel over een multicollineariteitssignaal volgens die grens.",
+          "explanation": "VIF = 1/0,08 = 12,5. Dit ligt boven de grens van 10. Tolerance en VIF meten hetzelfde overlapprobleem vanuit tegengestelde richting. Vergelijk pas na de omzetting de VIF met de genoemde grens.",
+          "pattern": "Herken: Tolerance en een expliciete grens VIF > 10. → Betekenis: Je moet eerst de maat omzetten en daarna het aangegeven criterium toepassen. → Aanpak: Bereken 1/tolerance en vergelijk de VIF met de grens. → Gevraagd antwoord: De VIF én een oordeel over een multicollineariteitssignaal volgens die grens.",
           "trap": "Een laag tolerancegetal is geen laag VIF-getal.",
           "optionExplanations": [
             "8 volgt niet uit de omgekeerde van 0,08. Bovendien zou 8 niet boven de aangegeven grens VIF > 10 liggen.",
             "0,08 is tolerance zelf. VIF is het omgekeerde en bedraagt 12,5.",
             "0,92 is 1 − 0,08, niet 1/0,08. De berekende VIF is 12,5 en ligt wel boven de grens.",
-            "VIF = 1/0,08 = 12,5 en 12,5 > 10. Dat levert volgens de genoemde cursusgrens een probleemsignaal op."
+            "VIF = 1/0,08 = 12,5 en 12,5 > 10. Dat levert volgens de genoemde grens een probleemsignaal op."
           ],
           "refs": [
             {
@@ -18071,14 +18071,14 @@ window.SRAMCData = {
             }
           ],
           "recognition": {
-            "signals": "Tolerance en een expliciete cursusgrens VIF > 10.",
+            "signals": "Tolerance en een expliciete grens VIF > 10.",
             "meaning": "Je moet eerst de maat omzetten en daarna het aangegeven criterium toepassen.",
-            "approach": "Bereken 1/tolerance en vergelijk de VIF met de cursusgrens.",
+            "approach": "Bereken 1/tolerance en vergelijk de VIF met de grens.",
             "answer": "De VIF én een oordeel over een multicollineariteitssignaal volgens die grens."
           },
           "guidance": {
             "title": "Variabelenselectie en multicollineariteit",
-            "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte cursusgrens.",
+            "focus": "Tolerance en VIF zijn elkaars omgekeerde. Een lage Tolerance betekent een hoge VIF; vergelijk met de expliciet gebruikte grens.",
             "rules": [
               "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
               "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -18456,7 +18456,7 @@ window.SRAMCData = {
         {
           "id": "mc-modelbouw-leertoepassing-vif-tolerance",
           "level": 3,
-          "prompt": "Oefenvraag. Welke modelbeoordeling volgt uit deze tabel volgens de cursusgrens?",
+          "prompt": "Oefenvraag. Welke modelbeoordeling volgt uit deze tabel volgens de grens?",
           "stimulusHtml": "<p>Het model verklaart voorraadwaarde uit omzet en activa. Beide bedragen kunnen veel gezamenlijke informatie bevatten.</p><div class=\"table-wrap\"><table><caption>Coefficients: Collinearity Statistics</caption><thead><tr><th scope=\"col\">Term</th><th scope=\"col\">Tolerance</th><th scope=\"col\">VIF</th></tr></thead><tbody><tr><th scope=\"row\">Omzet</th><td>0,080</td><td>?</td></tr><tr><th scope=\"row\">Activa</th><td>0,080</td><td>?</td></tr><tr><th scope=\"row\">Aantal vestigingen</th><td>0,500</td><td>?</td></tr></tbody></table></div>",
           "options": [
             "VIF = 0,08 voor omzet, dus er is geen probleem",
@@ -18466,38 +18466,38 @@ window.SRAMCData = {
           ],
           "optionExplanations": [
             "Tolerance en VIF zijn omgekeerden. De kleine tolerance betekent hier juist een hoge VIF.",
-            "VIF = 1/Tolerance. Voor 0,080 is dat 12,5, boven de cursusgrens 10; voor vestigingen is VIF = 2.",
-            "Tolerance ligt tussen nul en één. De cursusgrens VIF > 10 komt overeen met Tolerance < 0,10.",
+            "VIF = 1/Tolerance. Voor 0,080 is dat 12,5, boven de grens 10; voor vestigingen is VIF = 2.",
+            "Tolerance ligt tussen nul en één. De grens VIF > 10 komt overeen met Tolerance < 0,10.",
             "Multicollineariteit maakt afzonderlijke bijdragen minder precies identificeerbaar; de tabel bepaalt niet zelfstandig welke inhoudelijke variabele moet vervallen."
           ],
           "correct": 1,
           "steps": [
             "Bereken VIF per rij: 1/0,080 = 12,5; 1/0,500 = 2.",
-            "De waarden 12,5 overschrijden de cursusgrens 10 en wijzen op sterke overlap in verklarende informatie.",
+            "De waarden 12,5 overschrijden de grens 10 en wijzen op sterke overlap in verklarende informatie.",
             "Onderzoek inhoudelijke betekenis en stabiliteit van individuele effecten en beoordeel een aangepast model opnieuw. Verwijder niet blind een variabele uitsluitend op basis van één tabelcel."
           ],
-          "explanation": "Bereken VIF per rij: 1/0,080 = 12,5; 1/0,500 = 2. De waarden 12,5 overschrijden de cursusgrens 10 en wijzen op sterke overlap in verklarende informatie. Onderzoek inhoudelijke betekenis en stabiliteit van individuele effecten en beoordeel een aangepast model opnieuw. Verwijder niet blind een variabele uitsluitend op basis van één tabelcel.",
-          "pattern": "Herken: Welke modelbeoordeling volgt uit deze tabel volgens de cursusgrens? → Betekenis: Tolerance en VIF meten overlap van iedere verklarende variabele met de overige verklarende variabelen. → Aanpak: Neem de reciproke van Tolerance, vergelijk met de cursusgrens en vertaal de uitkomst naar onzekerheid van afzonderlijke effecten. → Gevraagd antwoord: Een rekenkundige VIF en een inhoudelijk begrensde multicollineariteitsdiagnose.",
+          "explanation": "Bereken VIF per rij: 1/0,080 = 12,5; 1/0,500 = 2. De waarden 12,5 overschrijden de grens 10 en wijzen op sterke overlap in verklarende informatie. Onderzoek inhoudelijke betekenis en stabiliteit van individuele effecten en beoordeel een aangepast model opnieuw. Verwijder niet blind een variabele uitsluitend op basis van één tabelcel.",
+          "pattern": "Herken: Welke modelbeoordeling volgt uit deze tabel volgens de grens? → Betekenis: Tolerance en VIF meten overlap van iedere verklarende variabele met de overige verklarende variabelen. → Aanpak: Neem de reciproke van Tolerance, vergelijk met de grens en vertaal de uitkomst naar onzekerheid van afzonderlijke effecten. → Gevraagd antwoord: Een rekenkundige VIF en een inhoudelijk begrensde multicollineariteitsdiagnose.",
           "trap": "Een goede totale fit sluit onzekere afzonderlijke coëfficiënten door overlap niet uit.",
           "refs": [
             {
               "source": "formules",
               "page": 4,
-              "locator": "Formules 59-60: VIF en cursusgrens"
+              "locator": "Formules 59-60: VIF en grens"
             }
           ],
           "practiceMode": "zelfstandig",
           "kind": "tabel",
           "dataOrigin": "eigen",
           "recognition": {
-            "signals": "Welke modelbeoordeling volgt uit deze tabel volgens de cursusgrens?",
+            "signals": "Welke modelbeoordeling volgt uit deze tabel volgens de grens?",
             "meaning": "Tolerance en VIF meten overlap van iedere verklarende variabele met de overige verklarende variabelen.",
-            "approach": "Neem de reciproke van Tolerance, vergelijk met de cursusgrens en vertaal de uitkomst naar onzekerheid van afzonderlijke effecten.",
+            "approach": "Neem de reciproke van Tolerance, vergelijk met de grens en vertaal de uitkomst naar onzekerheid van afzonderlijke effecten.",
             "answer": "Een rekenkundige VIF en een inhoudelijk begrensde multicollineariteitsdiagnose."
           },
           "guidance": {
             "title": "Variabelenselectie en multicollineariteit",
-            "focus": "Neem de reciproke van Tolerance, vergelijk met de cursusgrens en vertaal de uitkomst naar onzekerheid van afzonderlijke effecten.",
+            "focus": "Neem de reciproke van Tolerance, vergelijk met de grens en vertaal de uitkomst naar onzekerheid van afzonderlijke effecten.",
             "rules": [
               "Backward begint met alle kandidaatvariabelen; forward bouwt het model op. Na toevoegen of verwijderen wordt het model opnieuw geschat, omdat coëfficiënten en p-waarden kunnen veranderen.",
               "VIF = 1/Tolerance. De in SRA gebruikte signaleringsgrens is VIF > 10. Bij modelselectie moet je de opgegeven selectiegrens en de bijbehorende modeluitvoer volgen."
@@ -18506,7 +18506,7 @@ window.SRAMCData = {
               {
                 "source": "formules",
                 "page": 4,
-                "locator": "Formules 59-60: VIF en cursusgrens"
+                "locator": "Formules 59-60: VIF en grens"
               }
             ]
           }
@@ -18997,9 +18997,9 @@ window.SRAMCData = {
           "steps": [
             "Vertaal de opdracht eerst naar twee diagnosevragen: uitzonderlijke y-afwijkingen en samenhang van foutgrootte met x.",
             "Bewaar gestandaardiseerde residuen voor de eerste vraag en absolute residuen met x voor de tweede.",
-            "Maak de passende tabel/grafiek en beoordeel de cursusgrenzen en p-waarden. De softwarehandeling krijgt zo een inhoudelijk doel in plaats van alleen een menuvolgorde."
+            "Maak de passende tabel/grafiek en beoordeel de grenzen en p-waarden. De softwarehandeling krijgt zo een inhoudelijk doel in plaats van alleen een menuvolgorde."
           ],
-          "explanation": "Vertaal de opdracht eerst naar twee diagnosevragen: uitzonderlijke y-afwijkingen en samenhang van foutgrootte met x. Bewaar gestandaardiseerde residuen voor de eerste vraag en absolute residuen met x voor de tweede. Maak de passende tabel/grafiek en beoordeel de cursusgrenzen en p-waarden. De softwarehandeling krijgt zo een inhoudelijk doel in plaats van alleen een menuvolgorde.",
+          "explanation": "Vertaal de opdracht eerst naar twee diagnosevragen: uitzonderlijke y-afwijkingen en samenhang van foutgrootte met x. Bewaar gestandaardiseerde residuen voor de eerste vraag en absolute residuen met x voor de tweede. Maak de passende tabel/grafiek en beoordeel de grenzen en p-waarden. De softwarehandeling krijgt zo een inhoudelijk doel in plaats van alleen een menuvolgorde.",
           "pattern": "Herken: Welke uitvoer moet je bewaren om uitbijters in y én veranderende residuspreiding te onderzoeken? → Betekenis: Een SPSS-praktijkopdracht vraagt doelgerichte uitvoer die de gekozen modelvoorwaarden controleerbaar maakt. → Aanpak: Bepaal eerst de gewenste diagnose en selecteer daarna de residumaten die daarvoor nodig zijn. → Gevraagd antwoord: Een uitvoerkeuze gekoppeld aan beide te onderzoeken modelproblemen.",
           "trap": "Een succesvol uitgevoerde regressie levert niet vanzelf alle benodigde diagnose-uitvoer.",
           "refs": [
