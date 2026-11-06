@@ -1,11 +1,10 @@
 """Formulenummers van het formuleblad en het doel van ieder formuleblok.
 
 Het formuleblad (versie augustus 2024) is leidend. Een formule die er niet op staat
-krijgt geen nummer, maar een herkomst: afgeleid van een nummer of niet op het blad.
+krijgt geen eigen nummer, maar de verwijzing waarvan zij is afgeleid.
 """
 import re
 
-NOT_ON_SHEET = 'Niet op het formuleblad'
 
 
 def number(*values):
@@ -19,9 +18,9 @@ def derived(*values):
 
 # Lesnaam, formulelabel. Zelfde label in uitleg en formulepagina betekent dezelfde formule.
 NUMBERS = {
-    'beginnen': {'Gemiddelde in de steekproef': NOT_ON_SHEET, 'Puntschatting': number(3)},
-    'rekenen': {'Gemiddelde': NOT_ON_SHEET, 'Variantie': derived(1), 'Standaardafwijking': derived(1), 'Rekenen met totalen': number(1)},
-    'onzekerheid': {'Interval': derived(2), 'Marge': derived(2), 'Totale breedte': NOT_ON_SHEET},
+    'beginnen': {'Gemiddelde in de steekproef': derived(3), 'Puntschatting': number(3)},
+    'rekenen': {'Gemiddelde': derived(3), 'Variantie': derived(1), 'Standaardafwijking': derived(1), 'Rekenen met totalen': number(1)},
+    'onzekerheid': {'Interval': derived(2), 'Marge': derived(2), 'Totale breedte': derived(2)},
     'mpu': {'Puntschatting': number(3), 'Standaardfout': number(4), 'Interval': number(2)},
     'verschil': {'Verschil per post': number(6), 'Gemiddeld verschil': derived(6), 'Puntschatting': number(9),
                  'Variantie verschillen': number(7), 'Standaardfout': number(10), 'Interval': number(8)},
@@ -30,14 +29,14 @@ NUMBERS = {
     'steekproefomvang': {'Tussenstap': number(5, 11), 'Benodigde omvang': number(5, 11)},
     'stratificatie': {'Evenredig': number(26), 'Neyman': number(25), 'Totaalschatting': derived(28),
                       'Gecombineerde variantie': number(29), 'Interval': number(27)},
-    'regressielijn': {'Populatiemodel': number(30), 'Geschatte lijn': number(31), 'Residu': NOT_ON_SHEET, 'Helling': number(32),
+    'regressielijn': {'Populatiemodel': number(30), 'Geschatte lijn': number(31), 'Residu': derived(30, 31), 'Helling': number(32),
                       'Constante': number(32), 'Residuele variantie': number(34)},
-    'anova': {'Verdeling van kwadratensommen': NOT_ON_SHEET, 'Gemiddelde verklaarde kwadratensom': number(37),
+    'anova': {'Verdeling van kwadratensommen': derived(38, 51), 'Gemiddelde verklaarde kwadratensom': number(37),
               'Gemiddelde residuele kwadratensom': number(36), 'Verklaarde variatie': number(38), 'Residuele variantie': number(36),
               'Standaardfout': derived(36), 'Globale toets': number(42)},
     'toetsen': {'Toetsingsgrootheid': derived(39, 62), 'Bij H₀: βⱼ = 0': number(39, 62), 'Vrijheidsgraden': number(41),
                 'Globale F-toets': number(42, 61), 'Standaardfout van de helling': number(39), 'Correlatie toetsen': number(40),
-                'Interval voor de populatiehelling': NOT_ON_SHEET},
+                'Interval voor de populatiehelling': derived(39, 41)},
     'diagnostiek': {'Y-signaal bij n ≤ 100': number(44), 'Y-signaal bij n > 100': number(44), 'Grens voor MD': number(45), 'Grens voor CD': number(45)},
     'voorspellen': {'Puntvoorspelling': derived(31), 'Individueel voorspellingsinterval': number(50)},
     'meervoudig': {'Geschatte vergelijking': number(53), 'Gecorrigeerde verklaarde variatie': number(51)},

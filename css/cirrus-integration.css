@@ -245,3 +245,11 @@ body #calculator.calc-small .calc-controls{flex:0 1 auto;margin-top:6px;padding-
 body #calculator.calc-small .calc-keys button{height:28px;min-height:28px;padding:2px;font-size:14px}
 body #calculator.calc-small .calc-extra{margin-top:4px;padding-top:3px}
 body #calculator.calc-small .calc-window-footer{justify-content:flex-end}
+/* Formules boven het antwoordmodel: zelfde label en verwijzing als in de les. */
+body.cirrus-mode #exam-app .step-formula-list {margin:0 0 1rem;padding:.75rem 1rem;border:1px solid #c5d4e3;border-left:4px solid #0c447c;background:#f5f9fc;}
+body.cirrus-mode #exam-app .step-formula-list h3 {margin:0 0 .5rem;font-size:1rem;}
+body.cirrus-mode #exam-app .step-formula {margin:.6rem 0;}
+body.cirrus-mode #exam-app .step-formula .formula-label {display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;font:600 .75rem/1.4 Arial,sans-serif;color:#5b6684;}
+body.cirrus-mode #exam-app .step-formula .formula-number {font-size:.72rem;font-weight:600;color:#0c447c;background:#fff;border:1px solid #b9c5d6;border-radius:4px;padding:0 6px;white-space:nowrap;}
+body.cirrus-mode #exam-app .step-formula .math-scroll {max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 3px 6px;}
+body.cirrus-mode #exam-app .step-formula-text {font-size:.9em;}
