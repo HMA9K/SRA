@@ -57,7 +57,7 @@ Bij de laatste route ontbreekt ook de koppeling met toetsen: ligt nul buiten het
 
 Bij de regressieschatter is de factor √(1 − R²) correct. De les benadrukt het smallere interval, maar mist de boekwaarschuwing: bij ongeschikte foutverdelingen kan het berekende interval te smal zijn en de veronderstelde betrouwbaarheid missen. Voeg de toepassingsvoorwaarden toe aan de methodekeuze. [Boek p. 216 en 218 / PDF 234 en 236](../../Volledige%20boek%20Statistiek_voor_audit_en_controlling.pdf#page=234).
 
-Ook de grens n ≥ 100 moet een cursusvuistregel blijven. Het boek vermeldt dat extreem scheve verdelingen een grotere steekproef kunnen vereisen. De les benoemt de cursusgrens al, maar niet deze uitzondering. [Boek p. 92, voetnoot 2 / PDF 110](../../Volledige%20boek%20Statistiek_voor_audit_en_controlling.pdf#page=110).
+Ook de grens n ≥ 100 moet een vuistregel blijven. Het boek vermeldt dat extreem scheve verdelingen een grotere steekproef kunnen vereisen. De les benoemt de cursusgrens al, maar niet deze uitzondering. [Boek p. 92, voetnoot 2 / PDF 110](../../Volledige%20boek%20Statistiek_voor_audit_en_controlling.pdf#page=110).
 
 ### 5. Bij meervoudige regressie ontbreken twee concrete toepassingen
 

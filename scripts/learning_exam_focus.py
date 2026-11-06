@@ -75,7 +75,7 @@ def enhance(lessons, sources):
     body+='<p>De enkelvoudige lijn verklaart ongeveer 61,8% van de variatie in verkoopwaarde. Het gezamenlijke model heeft een hogere adjusted R² '
     body+='op dezelfde 162 auto’s. De drie groepsscores hebben verschillende y-variaties en verschillende waarnemingen als basis; '
     body+='je mag 0,919 voor benzine dus niet als bewijs gebruiken dat opsplitsen voor alle auto’s beter voorspelt. '
-    body+='Alle drie groepsmodellen blijven onder de cursusvuistregel n ≥ 10k. Dat is een waarschuwing voor overfitting, geen wiskundig bewijs dat iedere coëfficiënt onjuist is.</p>'
+    body+='Alle drie groepsmodellen blijven onder de vuistregel n ≥ 10k. Dat is een waarschuwing voor overfitting, geen wiskundig bewijs dat iedere coëfficiënt onjuist is.</p>'
     body+='<p>Een dummy voor diesel verschuift in het gezamenlijke model alleen het niveau. De hellingen blijven gelijk voor de groepen. '
     body+='Afzonderlijke modellen laten ook de hellingen verschillen. Een gezamenlijk model met passende interacties kan eveneens verschillende hellingen toestaan; '
     body+='dat is een inhoudelijke vervolgmogelijkheid, geen hier berekende of goedgekeurde verbetering.</p>'

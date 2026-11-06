@@ -323,7 +323,7 @@ def enhance(lessons, sources):
                  'De volledige tabel bevat ook andere soorten residuen. Gebruik voor deze cursusregel de rij Std. Residual.')
         + '<p><strong>Let op:</strong> 2,490 is hier geen t-toetsingsgrootheid uit Coefficients. '
         'Zoek er dus geen t-grens uit de tabellenbundel bij. Het is evenmin de ruwe afwijking in euro’s. '
-        'De standaardisering maakt afwijkingen vergelijkbaar met de cursusvuistregel.</p>',
+        'De standaardisering maakt afwijkingen vergelijkbaar met de grenzen −2 en +2.</p>',
         [ref('slides',100,'Slides, uitbijters en invloed, PDF 100–108'),ref('formules',3,'Formuleblad, formules 44–45 en 48, PDF 3')])
 
     add(L['diagnostiek'], sources, 'Tests of Normality en ABSRES: kies de juiste rij en grootheid',

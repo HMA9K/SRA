@@ -722,7 +722,7 @@
           "displayNumber": "10",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "Volgens de cursusvuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
+          "note": "Volgens de vuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
           "reviewed": "2026-09-20",
           "sourcePage": 5,
           "answerPage": 4
@@ -890,7 +890,7 @@
           "displayNumber": "4",
           "status": "N",
           "label": "Nuance bij het antwoord",
-          "note": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
+          "note": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een vuistregel.",
           "reviewed": "2026-09-20",
           "sourcePage": 3,
           "answerPage": 2

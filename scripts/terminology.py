@@ -473,7 +473,7 @@ _add('adjusted-r2', 'Adjusted R²', ['Adjusted R Square', 'adjusted R2', 'gecorr
      '$R²$ gecorrigeerd voor het aantal verklarende variabelen en de beschikbare waarnemingen. Deze maat kan dalen als een extra variabele onvoldoende toevoegt.',
      'Na toevoegen van $x_2$ stijgt $R²$ van 0,70 naar 0,71, maar adjusted $R²$ daalt van 0,68 naar 0,67. De extra verbetering is dan te klein.', 'meervoudig')
 _add('overfitting', 'Overfitting', ['overfit', 'overfitted'],
-     'Een model past zich ook aan toevalligheden in de trainingsgegevens aan en werkt daardoor op nieuwe gegevens minder goed. De cursusvuistregel $n ≥ 10k$ vervangt geen validatie.',
+     'Een model past zich ook aan toevalligheden in de trainingsgegevens aan en werkt daardoor op nieuwe gegevens minder goed. De vuistregel $n ≥ 10k$ vervangt geen validatie.',
      'Een model met veel variabelen voorspelt de trainingsgegevens goed, maar maakt grote fouten op een ongebruikte testset.', 'meervoudig')
 _add('transformatie', 'Transformatie', ['transformaties', 'transformeren', 'getransformeerd', 'getransformeerde'],
      'Een variabele met een wiskundige bewerking op een andere schaal zetten, bijvoorbeeld $ln(x)$. Hierdoor kan een krom verband beter bij een lineair geschatte vorm passen.',

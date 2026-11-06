@@ -20,13 +20,13 @@ q('onzekerheid','bovengrens',2,'Een gemiddelde is 80, de standaardfout is 2 en d
  'Alleen een bovengrens gevraagd: tel de eenzijdige marge bij de schatting op.',
  'Gebruik niet automatisch de tweezijdige t-waarde of de volledige intervalbreedte.')
 q('mpu','scheef',2,'Je hebt aselect 120 posten gekozen uit een extreem scheve populatie. Welke uitspraak is juist?',[
- ('Beoordeel of de normale benadering bruikbaar is','n ≥ 100 is een cursusvuistregel; extreme scheefheid kan een grotere steekproef noodzakelijk maken.'),
+ ('Beoordeel of de normale benadering bruikbaar is','n ≥ 100 is een grenswaarde; extreme scheefheid kan een grotere steekproef noodzakelijk maken.'),
  ('Vanaf n = 100 is ieder interval gegarandeerd geldig','De vuistregel garandeert geen geldige benadering bij iedere mogelijke populatieverdeling.'),
  ('De populatie wordt normaal verdeeld door de steekproef','Meer controles veranderen de verdeling van de oorspronkelijke populatie niet.'),
  ('De t-waarde mag altijd nul worden','Een grotere steekproef neemt de gekozen onzekerheidsmarge niet automatisch volledig weg.')],
  ['De selectie is aselect, maar de populatie is extreem scheef.','Het boek nuanceert de cursusgrens n ≥ 100.','Beoordeel de benadering en de spreiding voordat je de intervaluitkomst gebruikt.'],
  'Een omvangsgrens en extreme scheefheid samen vragen om controle van de benadering.',
- 'Een cursusvuistregel is geen garantie voor iedere verdeling.')
+ 'Een grenswaarde is geen garantie voor iedere verdeling.')
 q('regressieschatter','dekking',2,'Bij gelijk betrouwbaarheidsniveau is het berekende regressieschattingsinterval smaller dan het MPU-interval. Wat volgt daaruit?',[
  ('Meer berekende precisie, mits de voorwaarden passen','De kleinere marge is meer berekende precisie. De geldigheid blijft afhangen van selectie en foutstructuur.'),
  ('De gekozen betrouwbaarheid is automatisch hoger','Bij hetzelfde gekozen niveau stijgt de betrouwbaarheid niet door een kleinere standaardfout.'),

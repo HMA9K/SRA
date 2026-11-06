@@ -2747,7 +2747,7 @@ window.SRAMCData = {
           "correct": 1,
           "optionExplanations": [
             "Een grotere steekproef neemt de gekozen onzekerheidsmarge niet automatisch volledig weg.",
-            "n ≥ 100 is een cursusvuistregel; extreme scheefheid kan een grotere steekproef noodzakelijk maken.",
+            "n ≥ 100 is een grenswaarde; extreme scheefheid kan een grotere steekproef noodzakelijk maken.",
             "De vuistregel garandeert geen geldige benadering bij iedere mogelijke populatieverdeling.",
             "Meer controles veranderen de verdeling van de oorspronkelijke populatie niet."
           ],
@@ -2758,7 +2758,7 @@ window.SRAMCData = {
           ],
           "explanation": "De selectie is aselect, maar de populatie is extreem scheef. Het boek nuanceert de cursusgrens n ≥ 100. Beoordeel de benadering en de spreiding voordat je de intervaluitkomst gebruikt.",
           "pattern": "Herken: Een aselecte steekproef boven de cursusgrens én “extreem scheve populatie”. → Betekenis: Aselecte selectie en bruikbaarheid van de normale benadering zijn afzonderlijke voorwaarden. → Aanpak: Beoordeel of de scheefheid de benadering problematisch maakt ondanks de omvangsvuistregel. → Gevraagd antwoord: Een voorwaardelijk oordeel over het interval, geen automatische garantie door n alleen.",
-          "trap": "Een cursusvuistregel is geen garantie voor iedere verdeling.",
+          "trap": "Een grenswaarde is geen garantie voor iedere verdeling.",
           "refs": [
             {
               "source": "formules",

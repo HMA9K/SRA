@@ -2818,7 +2818,7 @@ window.SRAExamPractice = {
       "originalPromptHtml": "<p>Met één doelvariabele, 10 verklarende variabelen en 50 waarnemingen kunnen we, naast multicollineariteit, tegen een probleem aanlopen. Welk probleem is dat? Geef een cijfermatige onderbouwing.</p>",
       "sourceVisualHtml": "",
       "options": [
-        "Volgens de cursusvuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
+        "Volgens de vuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
         "50 waarnemingen bewijzen zonder nadere controle dat het model overfit is.",
         "Tien voorspellers vereisen volgens de cursusregel slechts tien waarnemingen.",
         "Meer voorspellers kunnen het risico op overfitting nooit vergroten."
@@ -2839,8 +2839,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20211101/antwoord-10-4.jpg\" alt=\"antwoord-10 · bronpagina 4\">",
-      "sourceNote": "Volgens de cursusvuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
-      "explanation": "Volgens de cursusvuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
+      "sourceNote": "Volgens de vuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
+      "explanation": "Volgens de vuistregel n ≥ 10 k zijn bij tien voorspellers circa 100 waarnemingen gewenst; 50 is te weinig voor deze regel. Dat wijst op risico op overfitting, maar bewijst niet op zichzelf dat het model werkelijk overfit.",
       "steps": [
         "Vuistregel: minstens 10 waarnemingen per verklarende variabele.",
         "Met k = 10: n ≥ 10 × 10 = 100.",
@@ -4099,7 +4099,7 @@ window.SRAExamPractice = {
       "options": [
         "Alleen het totale aantal 160 bewijst dat er minimaal 30 fouten zijn.",
         "Bij voldoende fouten zijn aselecte trekking en onafhankelijkheid overbodig.",
-        "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
+        "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een vuistregel.",
         "42 fouten zijn minder dan de cursusgrens 30."
       ],
       "correct": 2,
@@ -4117,8 +4117,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Er is sprake van 42 fouten en dus wordt voldaan aan de voorwaarde dat er minstens<br>30 fouten in de steekproef moeten voorkomen.<br>Normering (1):<br>g/f</p>",
-      "sourceNote": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
-      "explanation": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een cursusvuistregel.",
+      "sourceNote": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een vuistregel.",
+      "explanation": "42 niet-nulfouten voldoet aan de voorwaarde van minimaal 30 fouten. De onafhankelijkheid en aselecte trekking blijven eveneens vereist; 30 is hier een vuistregel.",
       "steps": [
         "Aantal fouten in de steekproef: 42 afwijkingen.",
         "Voorwaarde: minstens 30 fouten.",

@@ -78,7 +78,7 @@ def enhance(lessons,sources):
     L['toetsen']['sections'][0]['refs']=[dict(source='set-basis',page=3,locator='Hypothesen en foutkansen; uitsnede p. 3'),bookref('boek-h9b',252)]
 
     add(L['mpu'],'Wanneer een grote steekproef toch onvoldoende kan zijn',
-        '<p>n ≥ 100 is de cursusvuistregel voor de normale benadering, geen garantie voor iedere populatie. Het boek waarschuwt dat extreem scheve verdelingen een grotere steekproef kunnen vragen. Beoordeel daarom selectie, verdeling en opvallende posten voordat je het interval interpreteert.</p>',False,[bookref('boek-basis',92)])
+        '<p>n ≥ 100 is de grenswaarde voor de normale benadering, geen garantie voor iedere populatie. Het boek waarschuwt dat extreem scheve verdelingen een grotere steekproef kunnen vragen. Beoordeel daarom selectie, verdeling en opvallende posten voordat je het interval interpreteert.</p>',False,[bookref('boek-basis',92)])
     L['mpu']['refs'].append(bookref('boek-basis',92))
     add(L['regressieschatter'],'Een smaller interval moet ook geldig zijn',
         '<p>De factor √(1 − R²) verkleint de berekende standaardfout, maar maakt een ongeschikte foutverdeling niet geschikt. Het boek bespreekt dat het interval bij ongunstige foutpatronen de werkelijke waarde te vaak kan missen. Kies dus op grond van het verband en de foutstructuur, en controleer de voorwaarden. Een smaller interval is meer berekende precisie, geen hogere gekozen betrouwbaarheid.</p>',refs=[bookref('boek-h8b',216)])
