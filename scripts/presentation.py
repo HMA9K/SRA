@@ -112,7 +112,7 @@ FORMULAS = {
  ],
  'steekproefomvang': [[('Tussenstap',eq(v('γ'),frac(sq(v('E')),mul(sq(t),N,sq(s))))),('Benodigde omvang',eq(n,frac(N,add(one,v('γ')))))]],
  'stratificatie': [
-  [('Evenredig',eq(ni,mul(frac(Ni,N),n))),('Neyman',eq(ni,mul(frac(row(Ni,si),summ(group(row(Ni,si)))),n)))],
+  [('Evenredig',eq(ni,mul(frac(Ni,N),n))),('Neyman',eq(ni,mul(frac(mul(Ni,si),summ(group(mul(Ni,si)))),n)))],
   [('Totaalschatting',eq(W('tot'),add(summ(group(row(Ni,sub(wb,i)))),W('top')))),
    ('Gecombineerde variantie',eq(sq(S('tot')),summ(sq(group(stratum_se))))),
    ('Interval',eq(text('Interval'),W('tot')+op('±')+mul(t,root(sq(S('tot'))))))],
@@ -205,8 +205,8 @@ def formula_block(formulas):
     return out + '</div>'
 
 STRATIFIED_PLANNING = [
-    ('Tussenstap', eq(v('γ'), frac(sq(v('E')), mul(sq(t), summ(group(row(Ni, sq(si)))))))),
-    ('Neyman-verdeling', eq(ni, mul(frac(row(Ni, si), summ(group(row(Ni, si)))), n))),
+    ('Tussenstap', eq(v('γ'), frac(sq(v('E')), mul(sq(t), summ(group(mul(Ni,sq(si)))))))),
+    ('Neyman-verdeling', eq(ni, mul(frac(mul(Ni,si), summ(group(mul(Ni,si)))), n))),
 ]
 
 
