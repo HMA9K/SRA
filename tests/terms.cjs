@@ -115,4 +115,6 @@ for(const phrase of ['waarneming','populatie','steekproef','gemiddelde','standaa
   const matches=catalogueMatcher.find(phrase);
   assert.ok(matches.length===1&&matches[0].text===phrase,`Begrip uit de cursus mist klikbare uitleg: ${phrase}`);
 }
+const normality=createMatcher(course.terms).find('Met KS en SW; sw = 35 en ks blijven gewoon tekst.').map(match=>match.id);
+assert.deepEqual(normality,['kolmogorov-smirnov','shapiro-wilk'],'KS en SW zijn klikbaar, kleine letters niet');
 console.log(`OK: termgrenzen, langste aliassen, hoofdletters, tekstposities en ${course.terms.length} begrippen met bronnen voor alle 19 lessen.`);

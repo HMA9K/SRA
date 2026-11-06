@@ -394,10 +394,10 @@ _add('invloedrijk-punt', 'Invloedrijk punt', ['invloedrijke punten', 'invloedrij
 _add('normaliteit', 'Normaliteit', ['normaliteitsaanname', 'niet-normaliteit', 'normaliteit van de residuen'],
      'De aanname dat de relevante storingsterm normaal verdeeld is. Je onderzoekt dat via de residuen. Een niet-significante normaliteitstoets bewijst de aanname niet.',
      'Shapiro-Wilk geeft $p$ = 0,20. Bij $α$ = 0,05 verwerp je normaliteit van de residuen niet.', 'diagnostiek')
-_add('shapiro-wilk', 'Shapiro-Wilk', ['Shapiro Wilk', 'Shapiro-Wilk-toets'],
+_add('shapiro-wilk', 'Shapiro-Wilk', ['Shapiro Wilk', 'Shapiro-Wilk-toets', 'SW'],
      'Een normaliteitstoets. De SRA-werkwijze gebruikt haar voor residuen bij $n ≤ 50$. $H_0$ is normaliteit, dus een kleine $p$ geeft aanleiding om $H_0$ te verwerpen.',
      'Bij $n$ = 30 en $p$ = 0,01 is $p$ kleiner dan 0,05: je verwerpt normaliteit op niveau 0,05.', 'diagnostiek')
-_add('kolmogorov-smirnov', 'Kolmogorov-Smirnov', ['Kolmogorov Smirnov', 'Kolmogorov-Smirnov-toets'],
+_add('kolmogorov-smirnov', 'Kolmogorov-Smirnov', ['Kolmogorov Smirnov', 'Kolmogorov-Smirnov-toets', 'KS'],
      'De normaliteitstoets die de SRA-werkwijze gebruikt voor residuen bij $n > 50$. Beoordeel de $p$-waarde tegenover $α$.',
      'Bij $n$ = 59 en $p$ = 0,20 is er op niveau 0,05 onvoldoende bewijs om normaliteit te verwerpen.', 'diagnostiek',
      [('attentie', 5, 'Normaliteit van residuen'), ('spss', 19, 'Tests of Normality bij n = 59')])
