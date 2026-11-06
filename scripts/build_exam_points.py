@@ -7,7 +7,7 @@ import re
 import statistics
 from decimal import Decimal, ROUND_HALF_UP
 
-from exam_point_rules import BASE, SPLITS, TOPICS, JOINT_TOPICS, TOPIC_GROUPS, TOPIC_LESSONS, TOPIC_SHORT, SKILLS, NOT_ASKED, PRIORITY_LEVELS, PRIORITY_PACKAGES
+from exam_point_rules import BASE, SPLITS, TOPICS, JOINT_TOPICS, TOPIC_GROUPS, TOPIC_LESSONS, TOPIC_SHORT, SKILLS, PRIORITY_LEVELS, QUESTION_TYPES, PRIORITY_PACKAGES
 
 ROOT = Path(__file__).resolve().parents[1]
 WORDS = {9:'Negen',10:'Tien',11:'Elf',12:'Twaalf'}
@@ -103,6 +103,23 @@ def priority_packages(data):
     return result
 
 
+def question_types(data):
+    """Aantallen per vraagtype; een deelvraag met letter telt apart, net als in de rubricering."""
+    points = {}
+    for r in data['rows']:
+        key = (r['exam'], str(r['question']) + ('' if r['part'] == '-' else r['part']))
+        points[key] = points.get(key, 0) + r['points']
+    labels = {(exam, item.split('=')[0]): item.split('=')[1] for exam, line in QUESTION_TYPES.items() for item in line.split()}
+    assert set(labels) == set(points)
+    total, count = sum(points.values()), len(data['exams'])
+    result = []
+    for letter in 'RLITH':
+        own = [k for k, v in labels.items() if v == letter]
+        result.append(dict(id=letter, count=len(own), perExam=len(own) / count, share=100 * len(own) / len(labels),
+                           pointsShare=100 * sum(points[k] for k in own) / total))
+    return sorted(result, key=lambda t: -t['share'])
+
+
 def browser_data(data):
     """Gegevens voor de tentamenanalyse op de site; geen nieuwe telling, alleen een selectie."""
     count = len(data['exams'])
@@ -131,7 +148,7 @@ def browser_data(data):
     rows = [dict(exam=r['exam'], question=r['question'], part=r['part'], topic=r['topic'],
                  points=r['points'], sharedWith=r['sharedWith']) for r in data['rows']]
     return dict(recentCount=sum(e['id'] >= RECENT for e in data['exams']), groups=groups, topics=shown,
-                rows=rows, skills=SKILLS, notAsked=NOT_ASKED, levels=PRIORITY_LEVELS, packages=packages,
+                rows=rows, skills=SKILLS, questionTypes=question_types(data), levels=PRIORITY_LEVELS, packages=packages,
                 exams=[dict(id=e['id'], date=e['date']) for e in data['exams']], byExam={t['id']: list(t['byExam'].values()) for t in data['topics']})
 
 

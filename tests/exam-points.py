@@ -2,7 +2,7 @@
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from build_exam_points import analyze, browser_data, load_exams, package_level, priority_packages
+from build_exam_points import analyze, browser_data, load_exams, package_level, priority_packages, question_types
 from exam_point_rules import PRIORITY_PACKAGES
 
 d=analyze()
@@ -49,6 +49,11 @@ assert [g['points'] for g in b['groups']]==[35,65]
 assert abs(sum(block['mean'] for g in b['groups'] for block in g['blocks'])-100)<1e-9
 assert sorted(t for g in b['groups'] for block in g['blocks'] for t in block['topics'])==sorted(b['topics'])
 assert len(b['skills'][0]['questions'])==11  # t- en F-tabel: over alle tentamens nagelopen.
+
+# Iedere vraag en deelvraag heeft één vraagtype.
+types=question_types(d)
+assert sum(t['count'] for t in types)==265 and abs(sum(t['pointsShare'] for t in types)-100)<1e-9
+assert [t['id'] for t in types]==['R','L','I','T','H']
 
 # Prioriteit: geen enkel pakket verschuift als één tentamen wegvalt.
 packages=priority_packages(d)

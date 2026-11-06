@@ -260,15 +260,20 @@ SKILLS = [
       questions={'20211101':[10]}),
 ]
 
-# Stof uit het programma die in de onderzochte reeks niet is gevraagd. Dit is een
-# beschrijving van de reeks en geen reden om de stof over te slaan.
-NOT_ASKED = [
- dict(label='Validatie met testset en MSPR', lesson='validatie',
-      note='Staat in college 7 met de notitie validatie, maar is in deze reeks niet gevraagd.'),
- dict(label='Durbin-Watson berekenen', lesson='diagnostiek',
-      note='Autocorrelatie kwam alleen voor als analyse die bij cross-sectiegegevens niet nodig is.'),
- dict(label='Gewogen regressie uitrekenen', lesson='diagnostiek',
-      note='Kwam alleen voor als een van de genoemde remedies.'),
- dict(label='Partiële F-toets', lesson='modelbouw',
-      note='Staat in de les, maar niet in de opgaven en uitwerkingen van deze reeks.'),
-]
+# Vraagtype per vraag of deelvraag: het type waarvoor de normering de meeste punten geeft.
+# T theorie, R rekenen, I inzicht, L lezen en interpreteren, H toetsen.
+# Dezelfde soort vraag krijgt in elk tentamen hetzelfde type: type regressieanalyse en
+# modelkeuze op R² zijn I; een beslissing op significantie van een coëfficiënt is H.
+QUESTION_TYPES = {
+ '20200323': '1=I 2=R 3=R 4=T 5=I 6=R 7=R 8=T 9=I 10=R 11=R 12=I 13=I 14=L 15=H 16=R 17=L 18=R 19=R 20=R 21=L 22=L 23=L 24=T 25=T 26=L 27=I 28=H',
+ '20211101': '1=R 2=R 3=R 4=I 5=T 6=R 7=R 8=I 9=R 10=I 12=T 13=L 14=L 15=I 16=I 17=L 19=H 20=L 21=I 11a=L 11b=L 11c=T 18a=T 18b=L',
+ '20220316': '1=R 2=R 3=R 4=I 5=R 6=T 7=T 8=R 9=H 10=L 12=L 14=L 15=L 16=L 17=L 18=H 19=T 20=L 21=L 22=I 11a=L 11b=T 13a=I 13b=L 23a=R 23b=I',
+ '20221031': '1=I 2=R 3=I 4=R 5=R 6=R 7=I 11=L 12=I 14=L 16=H 8a=H 8b=H 9a=L 9b=L 9c=L 10a=L 10b=H 10c=L 10d=T 13a=R 13b=L 13c=L 15a=R 15b=R 15c=R',
+ '20230315': '1=R 2=I 3=R 4=R 5=R 6=L 8=H 9=L 10=I 11=L 12=L 13=L 14=R 15=H 16=R 18=L 19=I 7a=I 7b=T 17a=I 17b=L',
+ '20231030': '1=T 2=R 3=I 4=R 5=R 6=R 9=L 10=L 12=R 13=L 14=L 15=L 16=T 17=I 18=I 19=L 20=H 21=R 22=L 7a=R 7b=R 8a=L 8b=T 11a=R 11b=I',
+ '20240318': '1=R 2=T 3=R 4=T 5=R 6=R 7=R 9=L 10=T 11=H 12=R 13=I 15=R 17=L 18=T 19=L 20=L 21=L 22=R 23=I 24=L 8a=L 8b=R 14a=R 14b=R 16a=T 16b=T',
+ '20241028': '1=R 2=R 3=T 4=R 5=R 6=R 7=T 8=H 9=R 10=R 11=L 12=L 13=R 14=T 15=L 16=I 17=H 18=T',
+ '20250317': '1=T 2=I 3=R 5=R 6=R 7=L 8=R 9=H 10=L 11=I 12=T 13=L 14=L 15=L 16=L 17=T 18=I 19=R 20=R 21=H 22=I 23=L 24=L 25=I 4a=R 4b=T',
+ '20251028': '1=R 2=R 3=T 4=R 5=R 6=T 7=R 8=R 9=I 10=H 11=R 12=T 13=L 14=I 15=L 16=L 17=R 18=H 19=I 20=I 21=R 22=H',
+ '20260323': '1=R 2=R 3=T 4=R 5=R 6=T 7=R 8=R 9=I 10=L 11=H 12=L 13=I 14=R 15=L 16=L 18=I 19=I 20=L 21=I 17a=R 17b=I',
+}
