@@ -488,10 +488,10 @@ _add('logaritmisch-model', 'Logaritmisch model', ['logaritmische functie', 'loga
      'Een model met $ln(x)$ als verklarende grootheid en $y$ op de oorspronkelijke schaal: $ŷ = b_0 + b_1 ln(x)$.',
      'Bij $b_1$ = 2 gaat de voorspelde $y$ bij een verdubbeling van $x$ omhoog met 2 × $ln(2)$ ≈ 1,39.', 'transformaties')
 _add('exponentieel-model', 'Exponentieel model', ['exponentiële regressie', 'exponentieel'],
-     'Een model met $ln(y)$ lineair in $x$: $ln(ŷ) = b_0 + b_1 x$. Na terugtransformatie is de cursusvorm $ŷ = exp(b_0 + b_1 x)$.',
+     'Een model met $ln(y)$ lineair in $x$: $ln(ŷ) = b_0 + b_1 x$. Na terugtransformatie is de vorm $ŷ = exp(b_0 + b_1 x)$.',
      'Bij $b_1$ = 0,1 wordt de voorspelde $y$ per extra $x$ vermenigvuldigd met $exp(0,1)$ ≈ 1,105.', 'transformaties')
 _add('machtsmodel', 'Machtsmodel', ['machtsfunctie', 'machtsfuncties', 'Power', 'power-model'],
-     'Een model dat lineair wordt geschreven met $ln(y)$ en $ln(x)$: $ln(ŷ) = b_0 + b_1 ln(x)$. Op de oorspronkelijke schaal is de cursusvorm $ŷ = exp(b_0) × x^{b_1}$.',
+     'Een model dat lineair wordt geschreven met $ln(y)$ en $ln(x)$: $ln(ŷ) = b_0 + b_1 ln(x)$. Op de oorspronkelijke schaal is de vorm $ŷ = exp(b_0) × x^{b_1}$.',
      'Bij $b_1$ = 0,5 wordt de voorspelde $y$ bij een verdubbeling van $x$ vermenigvuldigd met $2^{0,5}$ = $√2$ ≈ 1,41.', 'transformaties')
 _add('terugtransformatie', 'Terugtransformatie', ['terugtransformeren', 'teruggetransformeerd'],
      'De voorspelde uitkomst terugzetten naar de oorspronkelijke schaal, volgens de gekozen modelvorm. Is $y$ gelogaritmeerd, dan is de lineaire uitkomst nog geen voorspelling in de oorspronkelijke eenheid.',

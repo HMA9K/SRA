@@ -21,7 +21,7 @@ window.SRAMCExamFrequency = {
     },
     {
       "path": "data/exams.js",
-      "sha256": "0994919dee4b8b52c60e45100fa513b76f8166ef076056108f66e62b8b830c45"
+      "sha256": "5e490f3a6fa08aaeef18807ae53bf9141299c238d5c28cbf507f8d36f7d07c57"
     },
     {
       "path": "data/mc-exam-frequency-map.json",

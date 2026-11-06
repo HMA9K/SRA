@@ -76,7 +76,7 @@ READING = {
     ),
     'diagnostiek': (
         'Een regressietoets steunt op aannames over model en gegevens. Voordat je de uitkomst gebruikt, onderzoek je of die aannames voldoende passen en of enkele waarnemingen het resultaat sterk bepalen. Elke controle vraagt om een signaal, betekenis en passende vervolgstap.',
-        'Welke signalen voor afwijkende waarnemingen of modelproblemen bevat de tentamenuitvoer van 28 oktober 2024? We vergelijken de gegeven waarden met de cursuscriteria en onderscheiden een signaal van bewijs.',
+        'Welke signalen voor afwijkende waarnemingen of modelproblemen bevat de tentamenuitvoer van 28 oktober 2024? We vergelijken de gegeven waarden met de criteria en onderscheiden een signaal van bewijs.',
         'Controleer eerst de gegevensstructuur: groepen en, bij tijdreeksen, een mogelijke vertraging. Gestandaardiseerde residuen signaleren uitbijters in y, Mahalanobis Distance uitzonderlijke x-waarden en Cook’s Distance invloed op de geschatte lijn. Vergelijk iedere maat met de bijbehorende grens en onderzoek de betreffende waarneming. Beoordeel vervolgens normaliteit, constante residuspreiding en bij tijdreeksen autocorrelatie. Een overschrijding vraagt om een verklaring en een passende reactie, niet om automatisch verwijderen. Schat na iedere onderbouwde aanpassing opnieuw en controleer de nieuwe residuen.',
         'Met een beoordeeld model kun je een voorspelling en een bijpassende onzekerheidsmarge maken. Daarvoor heb je actuele coëfficiënten, de residuele spreiding en het bereik van de basisgegevens nodig; oude modeluitvoer mag niet worden gemengd met nieuwe.',
     ),

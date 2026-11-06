@@ -104,7 +104,7 @@ basic('onzekerheid-3', [
     'De berekende vrijheidsgraden zijn 164, maar die rij is niet beschikbaar in de opgegeven tabel.',
     'Volgens de tabelafspraak in het SRA-onderwijsprogramma neem je de naast lagere beschikbare waarde.',
     'Van 160 en 170 is 160 de naast lagere rij. Dit is een tabelkeuze; de berekende df blijven 164.'
-], 'Een df ontbreekt in de tabel? Pas de cursusafspraak voor de naast lagere tabelrij toe.',
+], 'Een df ontbreekt in de tabel? Pas de afspraak voor de naast lagere tabelrij toe.',
     'Ga niet afronden naar de dichtstbijzijnde rij of zelf interpoleren als de cursus een vaste tabelafspraak geeft.', [
     '160 is de grootste beschikbare rij die lager is dan 164, en volgt daarmee de voorgeschreven SRA-tabelafspraak.',
     '170 ligt boven 164. Dat volgt niet de afspraak om de naast lagere beschikbare df te gebruiken.',

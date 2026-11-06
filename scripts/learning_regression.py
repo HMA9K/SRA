@@ -268,7 +268,7 @@ def enhance(lessons, sources):
                  'Herhaal de verkenning met de andere kandidaten, waaronder de relatieve hypotheeklast. '
                  'Geef per kandidaat aan of het patroon binnen de groepen standhoudt.',
                  'Lever de gewone en gegroepeerde grafiek plus een gemotiveerde modelkeuze op. '
-                 'Bij deze crosssectie zijn tijdsvertraging en de cursusaanpak voor autocorrelatie niet van toepassing.']),
+                 'Bij deze crosssectie zijn tijdsvertraging en de aanpak voor autocorrelatie niet van toepassing.']),
         [ref('spss',11,'SPSS-uitwerkingen, college 4, PDF 11–13'),bookref('boek-h9c',261)])
 
     add(L['diagnostiek'], sources, 'Tijdsvertraging lezen in grafieken én Correlations',
@@ -340,7 +340,7 @@ def enhance(lessons, sources):
         'om toch een gunstige conclusie te krijgen. Het sterretje bij 0,200 zegt bovendien '
         'dat deze uitvoer een ondergrens voor die p-waarde weergeeft.</p>'
         + figure('normality',110,'Tests of Normality met Shapiro-Wilk p 0,014 voor veertig gestandaardiseerde residuen en een histogram.',
-                 'Het histogram geeft een beeld; de cursusbeslissing gebruikt de toets die bij n past.')
+                 'Het histogram geeft een beeld; de beslissing gebruikt de toets die bij n past.')
         + '<h3>Waarom absolute residuen?</h3><p>Een gewoon residu kan positief of negatief zijn. '
         'Voor de spreiding telt de grootte van de afwijking, ongeacht de richting. '
         'Daarom neem je ABSRES = |e| en onderzoek je de samenhang met de verklarende variabele.</p>'

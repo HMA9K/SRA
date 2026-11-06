@@ -1,6 +1,6 @@
 """Handmatig beoordeelde vragen; volgorde is de doorlopende vraagnummering.
 
-G = in overeenstemming met brongegevens en cursusconventies.
+G = in overeenstemming met brongegevens en de afspraken uit de cursus.
 N = aanvullende uitleg/voorwaarde nodig; C = inhoudelijke correctie;
 B = tegenstrijdigheid of verwijzingsfout in de bron.
 """
@@ -17,7 +17,7 @@ REVIEW['20231030'] = [
 ('N','Leeftijd, geslacht en bloeddruk hebben een significant bivariaat verband met hartritme. Dat maakt ze kandidaat, maar garandeert geen opname in een meervoudig model: bloeddruk valt later juist af.'),
 ('G','R²0,146 betekent14,6% verklaarde variatie in hartritme door de enkelvoudige lijn met leeftijd.'),
 ('N','Voor55 jaar geeft de afgedrukte lijn137,55. Invullen van95 geeft rekenkundig97,95, maar is extrapolatie buiten de waargenomen leeftijden. De sleutel verlangt terecht het voorbehoud bij die voorspelling.'),
-('B','Het individuele interval met de cursusbenadering z1,960 is circa[93,0698;182,0302], naar buiten[93;183]. In de t-notatie staat df745, maar bij enkelvoudige regressie met n746 is df744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.'),
+('B','Het individuele interval met de benadering z1,960 is circa[93,0698;182,0302], naar buiten[93;183]. In de t-notatie staat df745, maar bij enkelvoudige regressie met n746 is df744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.'),
 ('G','De man/vrouwgroepen overlappen; geen duidelijk gescheiden clusters.'),
 ('C','MD6,852>4,800 en residu−3,216<−3 signaleren x- en y-uitbijters. Cook0,021>0,007 signaleert potentiële invloedrijke punten; de sleutel noemt dit ten onrechte opnieuw een uitbijter in x. Zonder bronfout/bijzondere oorzaak blijven de waarnemingen behouden.'),
 ('G','KS p<0,001 verwerpt normaliteit; ABSRES/leeftijd p0,473 verwerpt constante spreiding niet. Model/transformatie aanpassen en opnieuw controleren.'),
@@ -27,7 +27,7 @@ REVIEW['20231030'] = [
 ('G','Model 3 heeft VIF=1,002<10: geen probleem volgens de grens.'),
 ('B','Voor model3 zijn er twee voorspellers: df=746−2−1=743, niet744 zoals in het antwoordmodel. Met de gehanteerde z-benadering blijft de grens−1,645 en t−11,223 ligt in het kritieke gebied.'),
 ('G','189,596−0,971×60+8,081=139,417≈139,42 per minuut; bloeddruk staat niet in model3.'),
-('N','Volgens de cursuskeuze KS bij n564 is p0,098>0,05; de dubbele top is verdwenen. De algemene grens voor KS is n>50, niet n>100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p0,010.'),
+('N','Met KS bij n564 is p0,098>0,05; de dubbele top is verdwenen. De algemene grens voor KS is n>50, niet n>100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p0,010.'),
 ]
 REVIEW['20240318'] = [
 ('G','MPU: gemiddelde9278, s572, totaal44.070.500; eenzijdige t1,661 geeft ondergrens43.623.935, naar beneden43.623.000.'),
@@ -42,7 +42,7 @@ REVIEW['20240318'] = [
 ('C','Niet iedere onderlinge correlatie is problematische multicollineariteit: het gaat om sterke lineaire afhankelijkheid tussen voorspellers, die afzonderlijke coëfficiënten onzeker maakt.'),
 ('G','H0β1≤0 en H1β1>0 voor de populatiehelling van leeftijd.'),
 ('G','SSE843.027.783; df958; MSE≈879.987,247 en F≈15.706,459.'),
-('N','De cursussleutel kiest het lineaire model op de getoonde hoogste R². Lineair en Logarithmic hebben dezelfde y-schaal; voor Power/Exponential is y gelogaritmeerd. R² of F over verschillende y-schalen geeft geen zuivere vergelijking van voorspelkwaliteit.'),
+('N','Het antwoordmodel kiest het lineaire model op de getoonde hoogste R². Lineair en Logarithmic hebben dezelfde y-schaal; voor Power/Exponential is y gelogaritmeerd. R² of F over verschillende y-schalen geeft geen zuivere vergelijking van voorspelkwaliteit.'),
 ('G','Lineair−3660,428+271,158×61≈12.880; logaritmisch−27191,866+9496,388ln61≈11.847.'),
 ('B','De oorspronkelijke ANOVA geeft MSE≈879.987 en dus s_e≈938,08. Het noodgegeven MSE=938,0 in de vraag verwart variantie met standaardafwijking. Het model rekent met s_e≈938,08; de individuele grenzen afgerond naar buiten zijn[11.000;14.800].'),
 ('G','Kleinste kwadraten: som gekwadrateerde residuen minimaliseren.'),
@@ -86,7 +86,7 @@ REVIEW['20250317'] = [
 ('G','0,682²=0,465124; circa 47% verklaarde variatie.'),
 ('G','H1 voor leeftijd positief; H1 voor dummy vrouw negatief.'),
 ('G','Wel en niet leidinggevenden vormen de bedoelde samengevoegde groepen.'),
-('N','De cursussleutel kiest Power (R²=0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de cursuskeuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.'),
+('N','Het antwoordmodel kiest Power (R²=0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de keuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.'),
 ('N','Bij Power worden x en y gelogaritmeerd. Wie het bij vraag 11 eveneens toegestane Logarithmic-model kiest, transformeert alleen x; dat consequente vervolg moet onderscheiden worden.'),
 ('G','MD-grens 0,994+3×1,610=5,824; maximum10,863. Gestandaardiseerd residu4,557>3; geval57. Behoud zonder aangetoonde fout/bijzondere oorzaak.'),
 ('N','Cook-grens0,008+3×0,018=0,062 en maximum0,145 signaleren invloed. De sleutel accepteert wel/niet verwijderen van57. Een invloedssignaal alleen rechtvaardigt verwijderen niet: onderzoek de bron, motiveer de behandeling en vergelijk het model met en zonder die waarneming.'),
@@ -99,7 +99,7 @@ REVIEW['20250317'] = [
 ('G','Gebruik n200 uit de ANOVA, k6 en df193. t−2,444<−1,653: eenzijdig negatief verband voor vrouw bij gelijkblijvende overige variabelen.'),
 ('N','Beoordeling heeft p0,179 en valt bij de eerste backwardstap af. Schat daarna opnieuw; de huidige tabel bepaalt niet automatisch de volledige verdere selectie of de nieuwe coëfficiënten.'),
 ('G','VIFmax1,355 ligt onder grens10.'),
-('N','Volgens de cursuskeuze KS bij n200 is p0,061>0,05, dus H0 niet verwerpen. Dat bewijst normaliteit niet; Shapiro-Wilk geeft in dezelfde tabel p<0,001. Benoem welke toets de cursus hier verlangt.'),
+('N','Met KS bij n200 is p0,061>0,05, dus H0 niet verwerpen. Dat bewijst normaliteit niet; Shapiro-Wilk geeft in dezelfde tabel p<0,001. Benoem welke toets de cursus hier verlangt.'),
 ('N','Aanvullende inhoudelijk relevante voorspellers kunnen resterende variatie verklaren. Een betere voorspelling verandert de werkelijke salarisverschillen niet; beoordeel nieuwe modellen ook op onafhankelijke gegevens.'),
 ]
 
@@ -160,7 +160,7 @@ REVIEW['20220316'] = [
 ('B','Het logarithmische model houdt korting op dezelfde schaal en verbetert R² van 0,535 naar 0,578: korting=14.999,408−1.331,884×ln(inkomen). De opgave drukt e af als 2,7218; correct is e≈2,71828. Gebruik de ln-toets.'),
 ('G','MD-grens=0,981+3×1,208=4,605; geval 57 valt op. Bij n=54 gebruikt de cursus ±2: gevallen 19, 25, 53 en 71. Zonder aangetoonde fout of bijzondere oorzaak blijven deze waarnemingen behouden.'),
 ('N','Cook-grens=0,017+3×0,023=0,086; geval 64 overschrijdt die. Het antwoord behoudt dit punt. De grens geeft aanleiding tot onderzoek; het ontbreken van een visueel duidelijk effect alleen sluit invloed niet uit.'),
-('N','Volgens cursuskeuze KS bij n=54: p≥0,200>0,05, dus normaliteit niet verwerpen. Dit bewijst niet dat de residuen exact normaal verdeeld zijn.'),
+('N','Met KS bij n=54: p≥0,200>0,05, dus normaliteit niet verwerpen. Dit bewijst niet dat de residuen exact normaal verdeeld zijn.'),
 ('G','ABSRES tegenover ln(inkomen) geeft p=0,207>0,05: geen significant signaal voor heteroscedasticiteit in deze toets. Gebruik de getransformeerde voorspeller uit het gekozen model.'),
 ('G','H0: β1≥0, H1: β1<0; t=−8,435 met df=52 ligt onder circa −1,676. Verwerp H0: significant dalend verband; α-risico is relevant.'),
 ('G','Residuen zijn de waargenomen korting minus de door het model voorspelde korting.'),
@@ -173,7 +173,7 @@ REVIEW['20220316'] = [
 REVIEW['20211101'] = [
 ('G','Gemiddelde 842; s=385; totaal €1.271.420. Met t=1,985 en eindigheidscorrectie: naar buiten afgerond [€1.159.000;€1.383.000].'),
 ('G','Breedte maximaal €120.000 betekent E=€60.000. Cursusformule geeft n≈297,1, dus 298 totaal en 198 extra artikelen.'),
-('G','q=0,94; totaal €1.571.680. Met cursusbenadering t=1,282 en s_q=208: ondergrens circa €1.549.714, naar beneden €1.549.000.'),
+('G','q=0,94; totaal €1.571.680. Met benadering t=1,282 en s_q=208: ondergrens circa €1.549.714, naar beneden €1.549.000.'),
 ('N','Bij 130 in plaats van 275 artikelen verwacht men circa 130×33/275=15,6 fouten, minder dan de vereiste 30. Dit is een verwachting, geen garantie over de nieuwe steekproef.'),
 ('G','Kies strata met relatief homogene waarden binnen elk stratum en verschillen tussen strata, om de variantie van de schatting te verkleinen.'),
 ('G','Verschilschattingen per stratum: €6.346.000, €7.802.000 en €9.928.000; totaal €24.076.000.'),

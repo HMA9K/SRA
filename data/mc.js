@@ -1598,7 +1598,7 @@ window.SRAMCData = {
             "Volgens de tabelafspraak in het SRA-onderwijsprogramma neem je de naast lagere beschikbare waarde.",
             "Van 160 en 170 is 160 de naast lagere rij. Dit is een tabelkeuze; de berekende df blijven 164."
           ],
-          "pattern": "Herken: De berekende df ontbreken, maar een lagere en hogere tabelrij zijn beschikbaar. → Betekenis: Dit is een tabelkeuze volgens de cursusafspraak, geen nieuwe df-berekening. → Aanpak: Kies de naast lagere beschikbare rij; interpoleer niet. → Gevraagd antwoord: De te gebruiken tabelrij, met behoud van de oorspronkelijk berekende df.",
+          "pattern": "Herken: De berekende df ontbreken, maar een lagere en hogere tabelrij zijn beschikbaar. → Betekenis: Dit is een tabelkeuze volgens de afspraak, geen nieuwe df-berekening. → Aanpak: Kies de naast lagere beschikbare rij; interpoleer niet. → Gevraagd antwoord: De te gebruiken tabelrij, met behoud van de oorspronkelijk berekende df.",
           "trap": "Ga niet afronden naar de dichtstbijzijnde rij of zelf interpoleren als de cursus een vaste tabelafspraak geeft.",
           "optionExplanations": [
             "Het middelen van twee tabelrijen is interpolatie. De cursus schrijft hier een rijkeuze voor, geen interpolatie.",
@@ -1669,14 +1669,14 @@ window.SRAMCData = {
           ],
           "recognition": {
             "signals": "De berekende df ontbreken, maar een lagere en hogere tabelrij zijn beschikbaar.",
-            "meaning": "Dit is een tabelkeuze volgens de cursusafspraak, geen nieuwe df-berekening.",
+            "meaning": "Dit is een tabelkeuze volgens de afspraak, geen nieuwe df-berekening.",
             "approach": "Kies de naast lagere beschikbare rij; interpoleer niet.",
             "answer": "De te gebruiken tabelrij, met behoud van de oorspronkelijk berekende df."
           },
           "level": 2,
           "guidance": {
             "title": "Schatting, marge en interval",
-            "focus": "Volgens de cursusafspraak kies je bij ontbrekende exacte vrijheidsgraden de eerst lagere beschikbare rij in de t-tabel. Bij df > 200 gebruik je echter de onderste rij van de tabel. Houd de staartkans hetzelfde.",
+            "focus": "Volgens de afspraak kies je bij ontbrekende exacte vrijheidsgraden de eerst lagere beschikbare rij in de t-tabel. Bij df > 200 gebruik je echter de onderste rij van de tabel. Houd de staartkans hetzelfde.",
             "rules": [
               "Een interval bestaat uit een puntschatting plus en/of min een marge E. Die marge is een kritieke t-waarde maal de standaardfout van de gevraagde schatting. De totale breedte van een tweezijdig interval is 2E.",
               "Bij betrouwbaarheid 1 − α gebruik je voor twee grenzen α/2 per staart; bij één grens gebruik je α in één staart. Kies ook de juiste vrijheidsgraden en volg de gevraagde afronding."
@@ -2243,7 +2243,7 @@ window.SRAMCData = {
             "Lees t = 1,985 af. De effectieve df blijven inhoudelijk 99; alleen voor het tabelgebruik neem je rij 95."
           ],
           "explanation": "Een tweezijdig 95%-interval gebruikt overschrijdingskans 0,025. Zoek de aangrenzende rijen in de bundel: 95 en 100. Kies de naast lagere rij 95. Lees t = 1,985 af. De effectieve df blijven inhoudelijk 99; alleen voor het tabelgebruik neem je rij 95.",
-          "pattern": "Herken: Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval? → Betekenis: Een ontbrekende exacte rij vereist de concrete cursusafspraak over tabelgebruik. → Aanpak: Bekijk daadwerkelijk welke rijen aanwezig zijn en kies de naast lagere beschikbare rij bij dezelfde staartkans. → Gevraagd antwoord: De gebruikte tabelrij en bijbehorende kritieke waarde.",
+          "pattern": "Herken: Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval? → Betekenis: Een ontbrekende exacte rij vereist de concrete afspraak over tabelgebruik. → Aanpak: Bekijk daadwerkelijk welke rijen aanwezig zijn en kies de naast lagere beschikbare rij bij dezelfde staartkans. → Gevraagd antwoord: De gebruikte tabelrij en bijbehorende kritieke waarde.",
           "trap": "Een eerder onthouden tabelwaarde vervangt het aflezen van de aangeleverde bundel niet.",
           "refs": [
             {
@@ -2262,7 +2262,7 @@ window.SRAMCData = {
           "dataOrigin": "eigen",
           "recognition": {
             "signals": "Welke tabelrij en kritieke t gebruik je voor het tweezijdige 95%-interval?",
-            "meaning": "Een ontbrekende exacte rij vereist de concrete cursusafspraak over tabelgebruik.",
+            "meaning": "Een ontbrekende exacte rij vereist de concrete afspraak over tabelgebruik.",
             "approach": "Bekijk daadwerkelijk welke rijen aanwezig zijn en kies de naast lagere beschikbare rij bij dezelfde staartkans.",
             "answer": "De gebruikte tabelrij en bijbehorende kritieke waarde."
           },
@@ -3357,7 +3357,7 @@ window.SRAMCData = {
             "Er zijn 200 posten gecontroleerd, maar slechts 12 daarvan bevatten een fout.",
             "12 is kleiner dan 30. De genoemde voorwaarde is dus niet vervuld, ondanks de grotere steekproefomvang."
           ],
-          "pattern": "Herken: Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten. → Betekenis: De genoemde voorwaarde gaat over fouten, niet over alle controles. → Aanpak: Vergelijk het aantal aangetroffen fouten met het cursusminimum van 30. → Gevraagd antwoord: Een oordeel of juist deze toepassingsvoorwaarde is vervuld.",
+          "pattern": "Herken: Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten. → Betekenis: De genoemde voorwaarde gaat over fouten, niet over alle controles. → Aanpak: Vergelijk het aantal aangetroffen fouten met het minimum van 30. → Gevraagd antwoord: Een oordeel of juist deze toepassingsvoorwaarde is vervuld.",
           "trap": "Maak van de voorwaarde “30 fouten” niet ongemerkt “30 waarnemingen”.",
           "optionExplanations": [
             "De genoemde voorwaarde gaat om het aantal fouten, niet om hun teken. Ook alleen positieve fouten maken 12 niet tot 30.",
@@ -3429,7 +3429,7 @@ window.SRAMCData = {
           "recognition": {
             "signals": "Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten.",
             "meaning": "De genoemde voorwaarde gaat over fouten, niet over alle controles.",
-            "approach": "Vergelijk het aantal aangetroffen fouten met het cursusminimum van 30.",
+            "approach": "Vergelijk het aantal aangetroffen fouten met het minimum van 30.",
             "answer": "Een oordeel of juist deze toepassingsvoorwaarde is vervuld."
           },
           "level": 1,
@@ -14228,7 +14228,7 @@ window.SRAMCData = {
             "De gegeven tabel toetst de residuen. De verdeling van y zelf is niet de getoetste regressievoorwaarde.",
             "Bij n ≤ 50 kiest de cursus Shapiro-Wilk. 0,014 < 0,05 geeft bewijs tegen de normaliteitshypothese.",
             "Dit kiest de andere toets om een gunstige uitkomst te krijgen. Bovendien bewijst een grote p de aanname niet.",
-            "Verschillende toetsen kunnen verschillende gevoeligheid hebben. Volg de vooraf bepaalde cursuskeuze en interpreteer die toets."
+            "Verschillende toetsen kunnen verschillende gevoeligheid hebben. Volg de vooraf bepaalde keuze en interpreteer die toets."
           ],
           "correct": 1,
           "steps": [
@@ -14237,13 +14237,13 @@ window.SRAMCData = {
             "Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen."
           ],
           "explanation": "De modelvoorwaarde betreft de residuen. H₀: deze zijn normaal verdeeld; H₁: zij wijken daarvan af. Volgens de cursus gebruik je bij n = 40 Shapiro-Wilk. De bijbehorende Sig. is 0,014. Omdat 0,014 < 0,05 verwerp je H₀. Onderzoek bijvoorbeeld afwijkende waarnemingen en modelvorm; verwijder geldige waarnemingen niet alleen om p te verhogen.",
-          "pattern": "Herken: Welke normaliteitsconclusie past bij de werkwijze uit de cursus en α = 0,05? → Betekenis: Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de cursuskeuze vooraf. → Aanpak: Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau. → Gevraagd antwoord: Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek.",
+          "pattern": "Herken: Welke normaliteitsconclusie past bij de werkwijze uit de cursus en α = 0,05? → Betekenis: Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de keuze vooraf. → Aanpak: Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau. → Gevraagd antwoord: Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek.",
           "trap": "Kies niet achteraf de normaliteitstoets met de prettigste p-waarde.",
           "refs": [
             {
               "source": "attentie",
               "page": 6,
-              "locator": "PDF p. 6: normaliteit en cursuskeuze"
+              "locator": "PDF p. 6: normaliteit en keuze"
             },
             {
               "source": "slides",
@@ -14256,7 +14256,7 @@ window.SRAMCData = {
           "dataOrigin": "eigen",
           "recognition": {
             "signals": "Welke normaliteitsconclusie past bij de werkwijze uit de cursus en α = 0,05?",
-            "meaning": "Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de cursuskeuze vooraf.",
+            "meaning": "Twee normaliteitstoetsen staan naast elkaar, maar n stuurt de keuze vooraf.",
             "approach": "Bepaal waarop de test is uitgevoerd, kies de toets volgens n en vergelijk haar Sig. met het afgesproken significantieniveau.",
             "answer": "Een conclusie over residunormaliteit met benoeming van toets, p en vervolgonderzoek."
           },
@@ -14271,7 +14271,7 @@ window.SRAMCData = {
               {
                 "source": "attentie",
                 "page": 6,
-                "locator": "PDF p. 6: normaliteit en cursuskeuze"
+                "locator": "PDF p. 6: normaliteit en keuze"
               },
               {
                 "source": "slides",

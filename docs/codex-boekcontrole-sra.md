@@ -18,7 +18,7 @@ De 19 lessen en hun afzonderlijke formulegidsen zijn vergeleken met *Statistiek 
 
 Het [onderwijsprogramma, PDF 4-5](../bronnen/onderwijsprogramma.pdf#page=4) bepaalt de afbakening. De inverse functie uit 10.2.2 Ad 3 is uitgesloten. Hoofdstuk 3 en 5 zijn gericht gebruikt voor de benodigde voorkennis over intervallen en toetsen. Dit is geen controle van alle 498 PDF-pagina's of van alle SET-stof.
 
-Ook zijn de gekoppelde rekenfuncties en relevante begrippen nagegaan. Formulepagina's met mogelijke extractiefouten of bronverschillen zijn visueel in de oorspronkelijke PDF gecontroleerd. Het formuleblad, de attentiepunten en cursusopgaven zijn gebruikt om te bepalen of een verschil werkelijk een fout of een cursuskeuze is. Niet alle losse begripsdefinities en examenvragen zijn in deze controle afzonderlijk beoordeeld.
+Ook zijn de gekoppelde rekenfuncties en relevante begrippen nagegaan. Formulepagina's met mogelijke extractiefouten of bronverschillen zijn visueel in de oorspronkelijke PDF gecontroleerd. Het formuleblad, de attentiepunten en cursusopgaven zijn gebruikt om te bepalen of een verschil werkelijk een fout of een keuze is. Niet alle losse begripsdefinities en examenvragen zijn in deze controle afzonderlijk beoordeeld.
 
 ## Belangrijkste bevindingen
 

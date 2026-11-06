@@ -79,7 +79,7 @@ p('onzekerheid-2', '“Totale breedte” en de gevraagde marge E.',
   'Gebruik breedte = 2E en halveer de gegeven afstand tussen de grenzen.',
   'Een halve intervalbreedte in euro.')
 p('onzekerheid-3', 'De berekende df ontbreken, maar een lagere en hogere tabelrij zijn beschikbaar.',
-  'Dit is een tabelkeuze volgens de cursusafspraak, geen nieuwe df-berekening.',
+  'Dit is een tabelkeuze volgens de afspraak, geen nieuwe df-berekening.',
   'Kies de naast lagere beschikbare rij; interpoleer niet.',
   'De te gebruiken tabelrij, met behoud van de oorspronkelijk berekende df.')
 p('mc-onzekerheid-toepassing-1', '“Tweezijdig 95%” en “per staart”.',
@@ -136,7 +136,7 @@ p('verschil-1', 'Een boekwaarde, een werkelijke waarde en de letter e.',
   'Een getekend verschil: positief is overwaardering, negatief onderwaardering.')
 p('verschil-2', 'Een aantal gecontroleerde posten én een apart aantal aangetroffen fouten.',
   'De genoemde voorwaarde gaat over fouten, niet over alle controles.',
-  'Vergelijk het aantal aangetroffen fouten met het cursusminimum van 30.',
+  'Vergelijk het aantal aangetroffen fouten met het minimum van 30.',
   'Een oordeel of juist deze toepassingsvoorwaarde is vervuld.')
 p('verschil-3', '“Waarom nauwkeurig” bij de verschilschatter.',
   'De onzekerheid hangt af van de variatie in de absolute controlefouten.',

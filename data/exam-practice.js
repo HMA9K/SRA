@@ -2341,7 +2341,7 @@ window.SRAExamPractice = {
       "options": [
         "Gebruik 0,94 als foutpercentage in plaats van goedratio.",
         "Tel de foutmarge bij het centrum op voor de ondergrens.",
-        "q = 0,94; totaal €1.571.680. Met cursusbenadering t = 1,282 en s_q = 208: ondergrens circa €1.549.714, naar beneden €1.549.000.",
+        "q = 0,94; totaal €1.571.680. Met benadering t = 1,282 en s_q = 208: ondergrens circa €1.549.714, naar beneden €1.549.000.",
         "Rond de ondergrens omhoog af op €1.550.000."
       ],
       "correct": 2,
@@ -2360,8 +2360,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20211101/antwoord-3-1.jpg\" alt=\"antwoord-3 · bronpagina 1\"><img src=\"bronnen/tentamens/20211101/antwoord-3-2.jpg\" alt=\"antwoord-3 · bronpagina 2\">",
-      "sourceNote": "q = 0,94; totaal €1.571.680. Met cursusbenadering t = 1,282 en s_q = 208: ondergrens circa €1.549.714, naar beneden €1.549.000.",
-      "explanation": "q = 0,94; totaal €1.571.680. Met cursusbenadering t = 1,282 en s_q = 208: ondergrens circa €1.549.714, naar beneden €1.549.000.",
+      "sourceNote": "q = 0,94; totaal €1.571.680. Met benadering t = 1,282 en s_q = 208: ondergrens circa €1.549.714, naar beneden €1.549.000.",
+      "explanation": "q = 0,94; totaal €1.571.680. Met benadering t = 1,282 en s_q = 208: ondergrens circa €1.549.714, naar beneden €1.549.000.",
       "steps": [
         "Voorwaarde: de steekproef bevat 33 fouten, dat is minstens 30, dus de quotiëntschatter mag.",
         "Verhouding: q = 263.200 / 280.000 = 0,94.",
@@ -5087,7 +5087,7 @@ window.SRAExamPractice = {
       "originalPromptHtml": "<p>Voer de analyse uit op niet-normaliteit. Noteer de afbeeldingen en benoem de eventueel mogelijke remedies.</p>",
       "sourceVisualHtml": "",
       "options": [
-        "Volgens cursuskeuze KS bij n = 54: p ≥ 0,200 > 0,05, dus normaliteit niet verwerpen. Dit bewijst niet dat de residuen exact normaal verdeeld zijn.",
+        "Met KS bij n = 54: p ≥ 0,200 > 0,05, dus normaliteit niet verwerpen. Dit bewijst niet dat de residuen exact normaal verdeeld zijn.",
         "p ≥ 0,200 is kleiner dan 0,05.",
         "De toets bewijst dat de residuen exact normaal zijn.",
         "De normaliteitstoets gaat over de voorspeller inkomen en niet over residuen."
@@ -5107,8 +5107,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20220316/antwoord-16-6.jpg\" alt=\"antwoord-16 · bronpagina 6\">",
-      "sourceNote": "Volgens cursuskeuze KS bij n = 54: p ≥ 0,200 > 0,05, dus normaliteit niet verwerpen. Dit bewijst niet dat de residuen exact normaal verdeeld zijn.",
-      "explanation": "Volgens cursuskeuze KS bij n = 54: p ≥ 0,200 > 0,05, dus normaliteit niet verwerpen. Dit bewijst niet dat de residuen exact normaal verdeeld zijn.",
+      "sourceNote": "Met KS bij n = 54: p ≥ 0,200 > 0,05, dus normaliteit niet verwerpen. Dit bewijst niet dat de residuen exact normaal verdeeld zijn.",
+      "explanation": "Met KS bij n = 54: p ≥ 0,200 > 0,05, dus normaliteit niet verwerpen. Dit bewijst niet dat de residuen exact normaal verdeeld zijn.",
       "steps": [
         "H₀: de residuen zijn normaal verdeeld. H₁: de residuen zijn niet normaal verdeeld.",
         "n = 54 > 50, dus gebruik Kolmogorov-Smirnov.",
@@ -8637,7 +8637,7 @@ window.SRAExamPractice = {
       "options": [
         "Een positieve helling moet met een linkse eenzijdige toets worden aangetoond.",
         "Een positieve t bewijst significantie zonder vergelijking met een grens.",
-        "H₀: βafstand ≤ 0; H₁: βafstand > 0. t = 6,237 > 1,676 volgens de cursustabel, dus H₀ verwerpen.",
+        "H₀: βafstand ≤ 0; H₁: βafstand > 0. t = 6,237 > 1,676 volgens de tabel, dus H₀ verwerpen.",
         "t = 6,237 < 1,676, dus H₀ niet verwerpen."
       ],
       "correct": 2,
@@ -8656,7 +8656,7 @@ window.SRAExamPractice = {
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20230315/antwoord-15-4.jpg\" alt=\"antwoord-15 · bronpagina 4\">",
       "sourceNote": "t = 6,237 is groter dan de tabelgrens 1,676 bij circa 50 vrijheidsgraden: H₀ verwerpen ten gunste van een positieve helling.",
-      "explanation": "H₀: βafstand ≤ 0; H₁: βafstand > 0. t = 6,237 > 1,676 volgens de cursustabel, dus H₀ verwerpen. t = 6,237 is groter dan de tabelgrens 1,676 bij circa 50 vrijheidsgraden: H₀ verwerpen ten gunste van een positieve helling.",
+      "explanation": "H₀: βafstand ≤ 0; H₁: βafstand > 0. t = 6,237 > 1,676 volgens de tabel, dus H₀ verwerpen. t = 6,237 is groter dan de tabelgrens 1,676 bij circa 50 vrijheidsgraden: H₀ verwerpen ten gunste van een positieve helling.",
       "steps": [
         "H₀: β₁ ≤ 0. H₁: β₁ > 0.",
         "Toetsingsgrootheid, Afbeelding 13: t = 6,237.",
@@ -10052,7 +10052,7 @@ window.SRAExamPractice = {
       "options": [
         "Laat de extra 1 weg onder de wortel voor een individuele proefpersoon.",
         "Gebruik de variantiemaat rechtstreeks als standaardafwijking in de marge.",
-        "Het individuele interval met de cursusbenadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
+        "Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
         "[93;182], met de bovengrens naar binnen afgerond."
       ],
       "correct": 2,
@@ -10072,8 +10072,8 @@ window.SRAExamPractice = {
         "vraag-11"
       ],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20231030/antwoord-12-3.jpg\" alt=\"antwoord-12 · bronpagina 3\">",
-      "sourceNote": "Het individuele interval met de cursusbenadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
-      "explanation": "Het individuele interval met de cursusbenadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
+      "sourceNote": "Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
+      "explanation": "Het individuele interval met de benadering z 1,960 is circa [93,0698;182,0302], naar buiten [93;183]. In de t-notatie staat df 745, maar bij enkelvoudige regressie met n 746 is df 744. De gebruikte grote-df-benadering en afgeronde uitkomst veranderen hierdoor niet.",
       "steps": [
         "Uit vraag 11a: ŷ₀ = 137,55 bij x₀ = 55.",
         "Afbeelding 3: s_e = 22,678. Afbeelding 4: n = 746, x̄ = 52,88 en s_x = 9,506.",
@@ -10979,7 +10979,7 @@ window.SRAExamPractice = {
         "p = 0,098 bewijst normale residuen en maakt het histogram irrelevant.",
         "KS wordt volgens de algemene regel pas vanaf n > 100 gebruikt.",
         "De dubbele histogramtop is gebleven en p = 0,098 < 0,05.",
-        "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010."
+        "Met KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010."
       ],
       "correct": 3,
       "level": 3,
@@ -10997,8 +10997,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Ja, Afbeelding 14: de dubbele top in het histogram is verdwenen (1)<br>Afbeelding 15: n = 564 &gt; 100 dus Kolmogorov-Smirnov (0)<br>Sig = 0,098 &gt; 0,05 dus residuen niet langer afwijkend van een normale verdeling (2)<br>Pagina 5 van 5</p>",
-      "sourceNote": "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
-      "explanation": "Volgens de cursuskeuze KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
+      "sourceNote": "Met KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
+      "explanation": "Met KS bij n 564 is p 0,098 > 0,05; de dubbele top is verdwenen. De algemene grens voor KS is n > 50, niet n > 100 zoals hier geschreven. Niet verwerpen is geen bewijs van normaliteit; Shapiro-Wilk geeft hier p 0,010.",
       "steps": [
         "Reden 1: het histogram in Afbeelding 14 heeft één top. De dubbele top uit Afbeelding 13 is verdwenen.",
         "Toetskeuze: n = 564, dus Kolmogorov-Smirnov. De uitwerking schrijft hier n > 100, bij vraag 15 n > 50. Bij n = 564 komen beide op dezelfde toets uit.",
@@ -11963,7 +11963,7 @@ window.SRAExamPractice = {
         "Power is bewezen beter op de oorspronkelijke kostenschaal omdat y gelogaritmeerd is.",
         "R² en F mogen altijd rechtstreeks over verschillende y-schalen worden vergeleken.",
         "Een niet-lineair model is per definitie een verbetering, onafhankelijk van de getoonde cijfers.",
-        "De cursussleutel kiest het lineaire model op de getoonde hoogste R². Lineair en Logarithmic hebben dezelfde y-schaal; voor Power/Exponential is y gelogaritmeerd. R² of F over verschillende y-schalen geeft geen zuivere vergelijking van voorspelkwaliteit."
+        "Het antwoordmodel kiest het lineaire model op de getoonde hoogste R². Lineair en Logarithmic hebben dezelfde y-schaal; voor Power/Exponential is y gelogaritmeerd. R² of F over verschillende y-schalen geeft geen zuivere vergelijking van voorspelkwaliteit."
       ],
       "correct": 3,
       "level": 3,
@@ -11981,8 +11981,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<img src=\"bronnen/tentamens/20240318/antwoord-13-4.jpg\" alt=\"antwoord-13 · bronpagina 4\">",
-      "sourceNote": "De cursussleutel kiest het lineaire model op de getoonde hoogste R². Lineair en Logarithmic hebben dezelfde y-schaal; voor Power/Exponential is y gelogaritmeerd. R² of F over verschillende y-schalen geeft geen zuivere vergelijking van voorspelkwaliteit.",
-      "explanation": "De cursussleutel kiest het lineaire model op de getoonde hoogste R². Lineair en Logarithmic hebben dezelfde y-schaal; voor Power/Exponential is y gelogaritmeerd. R² of F over verschillende y-schalen geeft geen zuivere vergelijking van voorspelkwaliteit.",
+      "sourceNote": "Het antwoordmodel kiest het lineaire model op de getoonde hoogste R². Lineair en Logarithmic hebben dezelfde y-schaal; voor Power/Exponential is y gelogaritmeerd. R² of F over verschillende y-schalen geeft geen zuivere vergelijking van voorspelkwaliteit.",
+      "explanation": "Het antwoordmodel kiest het lineaire model op de getoonde hoogste R². Lineair en Logarithmic hebben dezelfde y-schaal; voor Power/Exponential is y gelogaritmeerd. R² of F over verschillende y-schalen geeft geen zuivere vergelijking van voorspelkwaliteit.",
       "steps": [
         "Afbeelding 3, R²: Linear 0,943, Power 0,909, Logarithmic 0,890 en Exponential 0,877.",
         "Afbeelding 3, F: Linear 15.706,459, Power 9.544,803, Logarithmic 7.735,735 en Exponential 6.856,773.",
@@ -15431,7 +15431,7 @@ window.SRAExamPractice = {
       "options": [
         "Alleen Logarithmic wordt geaccepteerd; Power is volgens de sleutel onjuist.",
         "Het lineaire model is per definitie beter omdat het geen transformatie gebruikt.",
-        "De cursussleutel kiest Power (R² = 0,117) en accepteert ook Logarithmic. Dit bewijst geen betere voorspelling op de oorspronkelijke euroschaal.",
+        "Het antwoordmodel kiest Power (R² = 0,117) en accepteert ook Logarithmic. Dit bewijst geen betere voorspelling op de oorspronkelijke euroschaal.",
         "Power is zonder meer bewezen het beste op de euroschaal, uitsluitend omdat 0,117 groter is dan 0,103."
       ],
       "correct": 2,
@@ -15450,8 +15450,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>Het Power model (R2 = 0,117) is het beste.<br>(ook goed rekenen: Logarithmic model omdat R2 = 0,103 niet veel verschilt)</p>",
-      "sourceNote": "De cursussleutel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de cursuskeuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.",
-      "explanation": "De cursussleutel kiest Power (R² = 0,117) en accepteert ook Logarithmic. Dit bewijst geen betere voorspelling op de oorspronkelijke euroschaal. De cursussleutel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de cursuskeuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.",
+      "sourceNote": "Het antwoordmodel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de keuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.",
+      "explanation": "Het antwoordmodel kiest Power (R² = 0,117) en accepteert ook Logarithmic. Dit bewijst geen betere voorspelling op de oorspronkelijke euroschaal. Het antwoordmodel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de keuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.",
       "steps": [
         "Afbeelding 4, kolom R Square: Power 0,117, Logarithmic 0,103, Exponential 0,077 en Linear 0,072.",
         "De hoogste waarde is 0,117, dus de uitwerking kiest Power.",
@@ -15517,7 +15517,7 @@ window.SRAExamPractice = {
       "sourcePage": 5,
       "sourceAnswerPage": 13,
       "caseHtml": "<p class=\"mc-case-note\">Het stuk onder ‘Nodig voor deze vraag’ hoort bij deze vraag. Gegevens uit de tekst erboven kunnen ook nodig zijn.</p><h3>Opgave 2 (65 punten)</h3><p>Een onderzoeker wil aan de hand van een steekproef onder 201 willekeurige medewerkers van een groot bedrijf kijken welke factoren het salaris beïnvloeden. In onderstaande tabel staan de verklarende variabelen weergegeven. HBO en WO geven het hoogst genoten opleidingsniveau.</p><div class=\"sra-case-table-scroll\"><table><thead><tr><th scope=\"col\">Variabele</th><th scope=\"col\">Categorie</th><th scope=\"col\">Toelichting</th></tr></thead><tbody><tr><td>HBO</td><td>Dummy</td><td>0 = nee, 1 = ja</td></tr><tr><td>WO</td><td>Dummy</td><td>0 = nee, 1 = ja</td></tr><tr><td>Vrouw</td><td>Dummy</td><td>0 = nee, 1 = ja</td></tr><tr><td>Beoordeling</td><td>Numeriek</td><td>1 = laag, 10 = hoog</td></tr><tr><td>Leeftijd</td><td>Numeriek</td><td>Jaren</td></tr><tr><td>Leidinggevende</td><td>Dummy</td><td>0 = nee, 1 = ja</td></tr></tbody></table></div><p>Houd in de gehele opgave een betrouwbaarheid aan van 95%, tenzij anders aangegeven.</p><p>Een eerste indruk geeft de correlatietabel in afbeelding 1.</p><figure class=\"sra-case-figure\"><img src=\"bronnen/tentamens/20250317/figuur-casus-2-1-3-1.jpg\" alt=\"Afbeelding 1\"></figure><p class=\"sra-case-caption\">Afbeelding 1</p><p>Besloten wordt een enkelvoudig regressiemodel uit te voeren met als verklarende variabele ‘Leeftijd’.</p><p>Het spreidingsdiagram is te zien in afbeelding 2. Er is onderscheid gemaakt tussen leidinggevende en niet leidinggevende.</p><figure class=\"sra-case-figure\"><img src=\"bronnen/tentamens/20250317/figuur-casus-2-2-4-1.jpg\" alt=\"Afbeelding 2\"></figure><p class=\"sra-case-caption\">Afbeelding 2</p><section class=\"mc-case-current\" aria-label=\"Casustekst bij deze vraag\"><p class=\"mc-case-current-label\">Nodig voor deze vraag</p><p>Voor een deel van de groep is het model verder uitgewerkt met in afbeelding 3 het spreidingsdiagram en de regressielijn.</p><figure class=\"sra-case-figure\"><img src=\"bronnen/tentamens/20250317/figuur-casus-2-3-5-1.jpg\" alt=\"Afbeelding 3\"></figure><p class=\"sra-case-caption\">Afbeelding 3</p><p>De onderzoeker overweegt of een niet lineair model nog iets beter zou kunnen passen. In afbeelding 4 worden drie niet-lineaire modellen vergeleken met het lineaire model.</p><figure class=\"sra-case-figure\"><img src=\"bronnen/tentamens/20250317/figuur-casus-2-3-5-2.jpg\" alt=\"Afbeelding 4\"></figure><p class=\"sra-case-caption\">Afbeelding 4</p></section>",
-      "prerequisitesHtml": "<details class=\"mc-prerequisites\"><summary>Eerdere uitkomsten voor deze vraag</summary><h3>Vraag 11</h3><p>Het Power model (R2 = 0,117) is het beste.<br>(ook goed rekenen: Logarithmic model omdat R2 = 0,103 niet veel verschilt)</p><p>De cursussleutel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de cursuskeuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.</p></details>",
+      "prerequisitesHtml": "<details class=\"mc-prerequisites\"><summary>Eerdere uitkomsten voor deze vraag</summary><h3>Vraag 11</h3><p>Het Power model (R2 = 0,117) is het beste.<br>(ook goed rekenen: Logarithmic model omdat R2 = 0,103 niet veel verschilt)</p><p>Het antwoordmodel kiest Power (R² = 0,117) en accepteert Logarithmic. R² bij een gelogaritmeerde y is niet rechtstreeks vergelijkbaar met R² op de oorspronkelijke salarisschaal; dit is de keuze uit de getoonde tabel, geen zelfstandig bewijs dat Power op euro-schaal het best voorspelt.</p></details>",
       "prerequisiteIds": [
         "vraag-11"
       ],
@@ -16430,7 +16430,7 @@ window.SRAExamPractice = {
       "sourceVisualHtml": "",
       "options": [
         "De toets gaat over het salaris zelf; de residuen zijn niet relevant.",
-        "Volgens de cursuskeuze KS: p = 0,061 > 0,05, dus normale residuen niet verwerpen. Dit bewijst normaliteit niet; Shapiro-Wilk geeft een ander signaal.",
+        "Met KS: p = 0,061 > 0,05, dus normale residuen niet verwerpen. Dit bewijst normaliteit niet; Shapiro-Wilk geeft een ander signaal.",
         "p = 0,061 bewijst dat de residuen exact normaal verdeeld zijn.",
         "p = 0,061 < 0,05, dus de KS-toets verwerpt normaliteit."
       ],
@@ -16450,8 +16450,8 @@ window.SRAExamPractice = {
       "prerequisitesHtml": "",
       "prerequisiteIds": [],
       "officialSolutionHtml": "<p>- niet-normaliteit<br>[Formule 46] n = 200 &gt; 50 Kolmogorov-Smirnov, Afb. 14: Sig = 0,061 &gt; 0,05 (2)<br>Ja, er is geen probleem met niet-normaliteit (1)</p>",
-      "sourceNote": "Volgens de cursuskeuze KS bij n 200 is p 0,061 > 0,05, dus H₀ niet verwerpen. Dat bewijst normaliteit niet; Shapiro-Wilk geeft in dezelfde tabel p < 0,001. Benoem welke toets de cursus hier verlangt.",
-      "explanation": "Volgens de cursuskeuze KS: p = 0,061 > 0,05, dus normale residuen niet verwerpen. Dit bewijst normaliteit niet; Shapiro-Wilk geeft een ander signaal. Volgens de cursuskeuze KS bij n 200 is p 0,061 > 0,05, dus H₀ niet verwerpen. Dat bewijst normaliteit niet; Shapiro-Wilk geeft in dezelfde tabel p < 0,001. Benoem welke toets de cursus hier verlangt.",
+      "sourceNote": "Met KS bij n 200 is p 0,061 > 0,05, dus H₀ niet verwerpen. Dat bewijst normaliteit niet; Shapiro-Wilk geeft in dezelfde tabel p < 0,001. Benoem welke toets de cursus hier verlangt.",
+      "explanation": "Met KS: p = 0,061 > 0,05, dus normale residuen niet verwerpen. Dit bewijst normaliteit niet; Shapiro-Wilk geeft een ander signaal. Met KS bij n 200 is p 0,061 > 0,05, dus H₀ niet verwerpen. Dat bewijst normaliteit niet; Shapiro-Wilk geeft in dezelfde tabel p < 0,001. Benoem welke toets de cursus hier verlangt.",
       "steps": [
         "n = 200, dus n > 50: gebruik Kolmogorov-Smirnov.",
         "Afbeelding 14: Sig. = 0,061, groter dan 0,05.",

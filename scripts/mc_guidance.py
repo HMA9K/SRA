@@ -84,7 +84,7 @@ FOCUS = {
  'onzekerheid': [
   ('basis-1 toepassing-1', 'Zet betrouwbaarheid eerst om in α. Verdeel die resterende kans alleen over twee staarten wanneer twee grenzen worden gevraagd.'),
   ('basis-2', 'Breedte loopt van ondergrens tot bovengrens; de marge E loopt van de puntschatting tot één grens.'),
-  ('basis-3', 'Volgens de cursusafspraak kies je bij ontbrekende exacte vrijheidsgraden de eerst lagere beschikbare rij in de t-tabel. Bij df > 200 gebruik je echter de onderste rij van de tabel. Houd de staartkans hetzelfde.'),
+  ('basis-3', 'Volgens de afspraak kies je bij ontbrekende exacte vrijheidsgraden de eerst lagere beschikbare rij in de t-tabel. Bij df > 200 gebruik je echter de onderste rij van de tabel. Houd de staartkans hetzelfde.'),
   ('aanvulling-bovengrens', 'Gebruik voor een bovengrens de puntschatting plus de marge en de gegeven eenzijdige kritieke waarde.'),
   ('toepassing-2', 'Werk eerst de berekening uit met ongeronde tussenwaarden. Bij naar buiten afronden gaat de ondergrens omlaag en de bovengrens omhoog op de gevraagde eenheid.'),
   ('toepassing-3', 'Bij gelijkblijvende betrouwbaarheid en spreiding vermindert een grotere geschikte steekproef de standaardfout. Afronden is geen statistische verbetering.')],
