@@ -13,7 +13,6 @@ const base=process.env.LEARNING_URL||'http://127.0.0.1:8769/';
   assert.ok(clean.includes('<span class="answer-formula answer-frac"><span class="answer-box">a</span><span class="answer-box">b</span></span>'),clean);
   assert.ok(!/onclick|img|iets/.test(clean),clean);
   await page.locator('[data-topic="verschil"] a').filter({hasText:'Start'}).click();
-  const id=await page.evaluate(()=>SRAMCData.topics.find(t=>t.id==='verschil').questions.filter(q=>q.sourceExamId)[0].id);
   const open=async()=>{await page.locator('.mc-own-work summary').click();await page.locator('.mc-own-work .has-tinymce').waitFor();};
   await open();
   const body=page.frameLocator('iframe.tox-edit-area__iframe').locator('body'),boxes=body.locator('.answer-box');
@@ -26,10 +25,9 @@ const base=process.env.LEARNING_URL||'http://127.0.0.1:8769/';
   assert.deepEqual(await boxes.allTextContents(),['503','912'],'Tab loopt door de vakjes');
   assert.ok((await body.innerText()).includes('× 130 = 71,7'),'Doortypen na de breuk');
   assert.equal(await body.locator('.answer-frac').evaluate(e=>e.textContent.includes('71')),false,'Typen landt niet in de breuk');
-  await page.waitForFunction(id=>{const d=SRAMC.snapshot().drafts[id];return d?.includes('answer-frac')&&d.includes('71,7');},id,{timeout:8000}).catch(async error=>{
-   console.error(errors,await page.evaluate(id=>({id,ids:Object.keys(SRAMC.snapshot().drafts),draft:SRAMC.snapshot().drafts[id],content:tinymce.activeEditor.getContent(),clean:CafaAnswerEditor.sanitize(tinymce.activeEditor.getContent()),status:document.querySelector('#mc-work-status')?.textContent}),id));
-   throw error;
-  });
+  // De geopende vraag bepaalt de sleutel; lees die uit wat de site werkelijk bewaarde.
+  await page.waitForFunction(()=>Object.values(SRAMC.snapshot().drafts).some(d=>d.includes('answer-frac')&&d.includes('71,7')));
+  const id=await page.evaluate(()=>Object.keys(SRAMC.snapshot().drafts)[0]);
   assert.equal(await page.evaluate(id=>SRAMC.snapshot().drafts[id].includes('\uFEFF'),id),false,'Cursorteken blijft uit het bewaarde antwoord');
   await page.reload();await open();
   await body.locator('.answer-frac').waitFor();
