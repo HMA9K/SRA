@@ -37,4 +37,14 @@ for(const exam of window.SRAExamData.exams)for(const field of ['pageText','answe
 assert.ok(split('γ = 5.000² / [1,974² × 2.130] ≈ 3,1').some(part=>part.math?.includes('<mfrac>')),'Noemer tussen vierkante haken wordt een breuk');
 const index=toMathML('t = (bⱼ − βⱼ,₀)/s_bⱼ');
 assert.ok(index?.includes('<mfrac>')&&index.includes('<mo>,</mo>')&&index.includes('<mi>b</mi><mi>j</mi>'),'Dubbele index blijft in de breuk staan');
+// Hoogte van getypte haakjes en sigma naast een blok, uit de antwoordeditor.
+const editorSource=fs.readFileSync(path.join(__dirname,'../js/tinymce-answer-editor.js'),'utf8').replace(/\r\n/g,'\n');
+const tallLevels=new Function(editorSource.match(/function tallLevels[\s\S]*?\n  }\n/)[0]+';return tallLevels;')();
+assert.deepEqual(tallLevels(['(',2,')']),[2,0,2],'Haakjes om een breuk groeien mee');
+assert.deepEqual(tallLevels(['Σ','(',3,')']),[3,3,0,3],'Sigma volgt de haakjes erachter');
+assert.deepEqual(tallLevels(['Σ',' ',2]),[2,0,0],'Sigma volgt een blok erachter');
+assert.deepEqual(tallLevels(['(','(',2,')','x',')']),[2,2,0,2,0,2],'Geneste haakjes');
+assert.deepEqual(tallLevels(['(',2]),[2,0],'Open haakje groeit alvast mee');
+assert.deepEqual(tallLevels(['(','a',')','Σ','w']),[0,0,0,0,0],'Gewone tekst blijft klein');
+assert.deepEqual(tallLevels([2,')']),[0,0],'Los sluithaakje blijft klein');
 console.log('OK: wortels en samengestelde breuken worden formules; gewone tekst blijft tekst.');
