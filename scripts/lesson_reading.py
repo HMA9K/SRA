@@ -6,6 +6,9 @@ berekeningen, voorwaarden en bronverwijzingen blijven in hun eigen blok staan.
 import html
 import re
 from presentation import inline_formulas
+from casus_data import STOCK, regression
+_LINE = regression()
+from formula_visuals import num
 
 # Per les: inhoudelijk begin, vraag bij het bestaande voorbeeld, de kern en het vervolg.
 READING = {
@@ -25,10 +28,10 @@ READING = {
         'Een interval bestaat uit een puntschatting plus en min een marge E, en E is de kritieke waarde maal de standaardfout. De betrouwbaarheid 1 − α zegt hoe vaak de methode bij herhaling raak is; bij een tweezijdig interval ligt α/2 in elke staart. Je gebruikt de t-verdeling omdat de spreiding van de populatie onbekend is en geschat wordt, met df = n − 1; ontbreekt die rij, dan neem je de naast lagere, en bij df > 200 de onderste rij van de tabel. Een breder interval ontstaat door meer spreiding, hogere betrouwbaarheid of een kleinere steekproef; de eindigheidscorrectie maakt het smaller als je een groot deel van de populatie controleert.',
         'Je hebt nu alle bouwstenen voor een schattingsinterval. De komende lessen passen ze toe op vier manieren om een populatietotaal te schatten. De eerste en eenvoudigste is de directe schatter, die alleen werkelijke waarden gebruikt.'),
     'mpu': (
-        'Je kent nu het verschil tussen een schatting en haar onzekerheid. De directe schatter gebruikt het gemiddelde van gecontroleerde werkelijke waarden om het totale bedrag te schatten. Je berekent eerst het steekproefgemiddelde, daarna de totaalschatting en het interval.',
-        'Wat is de geschatte waarde van 1.000 artikelen als de 100 gecontroleerde artikelen gemiddeld € 80 waard zijn? Met de gegeven spreiding berekenen we ook een tweezijdig 95%-interval.',
-        'De directe schatter vermenigvuldigt het gemiddelde van de gecontroleerde werkelijke waarden met het aantal posten: Ŵ = N × w̄. De standaardfout bouw je in lagen op: spreiding van de posten, gedeeld door √n, met eindigheidscorrectie en maal N. Boekwaarden spelen geen rol, waardoor de methode eenvoudig is en geen minimum aantal fouten vraagt. De keerzijde: lopen de werkelijke waarden sterk uiteen, dan wordt het interval breed, en haalt MPU de gevraagde nauwkeurigheid soms niet.',
-        'Is de boekwaarde per post bekend, dan kun je die informatie benutten om nauwkeuriger te schatten. De volgende les begint met de eenvoudigste variant: de verschilschatter, die alleen de fout per post schat en die van het bekende boektotaal aftrekt. Let daar vooral op het teken van de fout en de voorwaarde van minstens 30 fouten.'),
+        'Je kent nu het verschil tussen een schatting en haar onzekerheid. De directe schatter rekent het gemiddelde van gecontroleerde werkelijke waarden door naar een totaal, met een interval eromheen.',
+        f"Hoeveel is het magazijn van Autogroep Linderhof werkelijk waard, en blijft de marge binnen € {num(STOCK['E_required'], 0)}?",
+        'De directe schatter vermenigvuldigt het gemiddelde van de gecontroleerde werkelijke waarden met het aantal posten: Ŵ = N × w̄. De standaardfout bouw je in lagen op: spreiding van de posten, gedeeld door √n, met eindigheidscorrectie en maal N. Boekwaarden spelen geen rol, dus de methode vraagt geen minimum aantal fouten. Lopen de werkelijke waarden sterk uiteen, dan wordt het interval breed, zoals bij het magazijn van Autogroep Linderhof.',
+        'Bij Autogroep Linderhof is van elke artikelregel ook de boekwaarde bekend; daarmee kun je nauwkeuriger schatten. De volgende les begint met de verschilschatter. Let daar op het teken van de fout en de voorwaarde van minstens 30 fouten.'),
     'verschil': (
         'Als de totale boekwaarde bekend is, hoef je niet altijd het werkelijke totaal rechtstreeks op te bouwen. Je kunt ook de totale boekwaarde corrigeren voor het geschatte verschil. Eerst moet duidelijk zijn hoe je een fout definieert en of het foutpatroon bij deze methode past.',
         'Hoe corrigeer je de boekwaarde in de Elektroconsum-casus voor de gevonden fouten? We bepalen het gemiddelde verschil, de totaalschatting en het 95%-interval, met de afronding uit de opgave.',
@@ -57,10 +60,10 @@ READING = {
 
     # Regressie en meervoudige regressie (lessen 10-19).
     'regressielijn': (
-        'Bij schatten stond een populatietotaal centraal. Bij regressie onderzoek je hoe een uitkomst samenhangt met een of meer verklarende kenmerken. We beginnen met één verklarende variabele en bekijken zowel de voorspelde lijn als de afwijkingen daarvan.',
-        'Welke kosten voorspelt de lijn bij een productie van 50 en wat betekent de afwijking van de werkelijke kosten? Dit voorbeeld maakt constante, helling en residu concreet.',
-        'Een regressiemodel beschrijft een onbekend populatieverband met een storingsterm. Uit de steekproef schat je een lijn: constante plus helling maal x. De helling geeft de verandering in de voorspelde y per eenheid x; het residu is waargenomen y min voorspelde y. De kleinste-kwadratenmethode minimaliseert de som van gekwadrateerde residuen. Correlatie geeft richting en sterkte van een lineair patroon, maar bewijst geen oorzaak of significantie. Controleer steeds de eenheden en het onderzochte bereik.',
-        'Bij ANOVA vergelijken we voorspellen met de lijn met voorspellen door alleen het gemiddelde. Daarvoor heb je het verschil tussen waarneming, voorspelling en residu nodig: die drie bepalen welk deel van de variatie de lijn verklaart.',
+        'Bij schatten stond een populatietotaal centraal. Bij regressie onderzoek je hoe een uitkomst samenhangt met verklarende kenmerken. Je begint met één verklarende variabele: de voorspelde lijn en de afwijkingen daarvan.',
+        'Past de productie van juni 2008 bij de gewerkte arbeidsuren van Linderhof Components? Je berekent de lijn uit de 24 basismaanden, voorspelt juni 2008 en leest het residu.',
+        'Uit de steekproef schat je een lijn voor een onbekend populatieverband met een storingsterm: constante plus helling maal x. Het residu is waargenomen y min voorspelde y; de kleinste-kwadratenmethode minimaliseert de som van gekwadrateerde residuen. Correlatie geeft richting en sterkte van een lineair patroon, maar bewijst geen oorzaak. ' f"Bij Linderhof Components geeft de lijn ŷ = {num(_LINE['b0'], 3).replace('-', '−')} + {num(_LINE['b1'], 3)}x: per 1.000 extra arbeidsuren {num(round(_LINE['b1'], 3) * 10000, 0)} stuks meer productie, met r = {num(_LINE['r'], 3)}.",
+        'In les 11 splits je de variatie in de productie van Linderhof Components in een deel dat de lijn verklaart en een rest: de residuen. Zo vergelijk je voorspellen met de lijn met voorspellen door alleen het gemiddelde.',
     ),
     'anova': (
         'Een regressielijn sluit meestal niet precies op alle waarnemingen aan. Om de kwaliteit van de aansluiting te beschrijven, splitsen we de totale variatie in een verklaard deel en een resterend deel. De ANOVA-tabel brengt die onderdelen bij elkaar.',

@@ -71,7 +71,7 @@ def enhance(lessons, sources):
     data=json.loads((ROOT/'data/college8-analysis.json').read_text(encoding='utf8'))
     models={m['name']:m for m in data['models']}
     body='<p>De volgende tabellen zijn <strong>herberekeningen uit het Excelblad College8</strong>. '
-    body+='Het blad bevat 162 auto’s: 81 benzine, 41 diesel en 40 elektrisch. Alle gegevens zijn compleet en alle verkoopwaarden zijn positief. '
+    body+='Het blad bevat 162 auto’s: 81 benzine, 41 diesel en 40 elektrisch. '
     body+='De vijf regressies gebruiken de variabelen uit de oorspronkelijke eindtabellen, met constante. '
     body+='De gepubliceerde coëfficiënten zijn binnen hun afronding gereproduceerd. Dit is geen nieuwe SPSS-uitvoering of reconstructie van alle selectiestappen.</p>'
     body+=table('Dezelfde brondata, vijf verschillende modellen',['Model','n','k zonder constante','n − k − 1','R²','Adjusted R²','sₑ in euro','n ≥ 10k'],[
@@ -84,11 +84,10 @@ def enhance(lessons, sources):
     body+='Afzonderlijke modellen laten ook de hellingen verschillen. Een gezamenlijk model met passende interacties kan eveneens verschillende hellingen toestaan; '
     body+='dat is een inhoudelijke vervolgmogelijkheid, geen hier berekende of goedgekeurde verbetering.</p>'
     shared='<h3>Leeswijzer voor de vijf modeluitwerkingen</h3>'
-    shared+='<p>Beoordeel elk model met de residuen van <strong>datzelfde model</strong>. De modeluitwerkingen gebruiken alle waarnemingen uit de bijbehorende groep; er zijn geen auto’s verwijderd.</p>'
+    shared+='<p>Beoordeel elk model met de residuen van <strong>datzelfde model</strong>.</p>'
     shared+='<p>De voorspelling is de constante plus de som van B × kenmerk. Een dummy is 1 als de genoemde categorie geldt en anders 0. '
     shared+='Een B bij kilometerstand is euro per kilometer, bij bouwjaar euro per later bouwjaar en bij een rapportscoreschaal euro per extra scorepunt, bij gelijkblijvende andere kenmerken.</p>'
-    shared+='<p class="note"><strong>Bij modellen met meer dan 50 waarnemingen:</strong> De KS-p is een Lilliefors-benadering uit de herberekening. De SPSS-tabel kan p boven 0,200 afkappen als 0,200*. '
-    shared+='Bij het enkelvoudige model is 0,059 de Statistic; de tabel heeft Sig. 0,200*. Verwissel die kolommen niet.</p>'
+    shared+='<p class="note"><strong>Bij modellen met meer dan 50 waarnemingen:</strong> De KS-p is een Lilliefors-benadering uit de herberekening. De SPSS-tabel kan p boven 0,200 afkappen als 0,200*.</p>'
     shared+='<p>H₀: geen correlatie tussen de absolute residuen en de betreffende x. Een significante samenhang is volgens de cursus een signaal van heteroscedasticiteit. '
     shared+='Dit zijn afzonderlijke verkennende controles, zonder correctie voor meerdere toetsen. Ook een niet-significante correlatie sluit andere vormen van heteroscedasticiteit niet uit. '
     shared+='De grafiek van residuen tegen voorspelde waarde en de inhoud van de kenmerken blijven nodig.</p>'

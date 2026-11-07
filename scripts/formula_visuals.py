@@ -23,8 +23,8 @@ def table(headers, rows, caption):
             '</td>' for c in row) + '</tr>' for row in rows) + '</tbody></table>')
 
 
-def plot(title, series, xlabel, ylabel, domain=None, vertical=(), horizontal=(), segments=(), bands=(), shade=()):
-    """series=(name, [(x,y),...], color, points); all coordinates use stated axes."""
+def plot(title, series, xlabel, ylabel, domain=None, vertical=(), horizontal=(), segments=(), bands=(), shade=(), xticks=None):
+    """series=(name, [(x,y),...], color, points); all coordinates use stated axes. xticks=[(x, label)] overschrijft de asverdeling."""
     pts = [p for _, data, _, _ in series for p in data]
     pts += [p for _, low, high in bands for p in low + high]
     if not pts or any(not isfinite(float(v)) for p in pts for v in p):
@@ -40,9 +40,9 @@ def plot(title, series, xlabel, ylabel, domain=None, vertical=(), horizontal=(),
         x, y = xmin + (xmax-xmin)*i/4, ymin + (ymax-ymin)*i/4
         out.append(f'<path class="fv-gridline" d="M58 {Y(y):.2f}H334"/><text x="51" y="{Y(y)+4:.2f}" text-anchor="end">{num(y, 1)}</text>')
     discrete=xlabel in ('Postnummer','Testwaarneming','Tijdstip t')
-    xticks=sorted(set(p[0] for p in pts)) if discrete else [xmin+(xmax-xmin)*i/4 for i in range(5)]
-    for x in xticks:
-        out.append(f'<text x="{X(x):.2f}" y="200" text-anchor="middle">{num(x,0 if discrete else 1)}</text>')
+    ticks=xticks or [(x,num(x,0 if discrete else 1)) for x in (sorted(set(p[0] for p in pts)) if discrete else [xmin+(xmax-xmin)*i/4 for i in range(5)])]
+    for x,label in ticks:
+        out.append(f'<text x="{X(x):.2f}" y="200" text-anchor="middle">{escape(label)}</text>')
     for color, low, high in bands:
         path = ' '.join(f'{X(x):.2f},{Y(y):.2f}' for x, y in high + low[::-1])
         out.append(f'<polygon points="{path}" fill="{color}" fill-opacity="0.14"/>')
@@ -68,26 +68,32 @@ def plot(title, series, xlabel, ylabel, domain=None, vertical=(), horizontal=(),
 
 
 def panel(title, body, work):
-    return '<figure class="fv-panel"><figcaption>' + escape(title) + '</figcaption>' + body + '<p class="fv-work">' + work + '</p></figure>'
+    return '<figure class="fv-panel"><figcaption>' + escape(title) + '</figcaption>' + body + ('<p class="fv-work">' + work + '</p>' if work else '') + '</figure>'
 
 
 def block(key, title, panels, meaning, provenance='Didactisch rekenvoorbeeld bij de formules en voorwaarden van dit onderwerp.'):
     return ('<section class="formula-visual" data-formula-visual="' + escape(key, quote=True) + '"><h3>' + escape(title) +
-            '</h3><p class="fv-provenance">' + escape(provenance) + '</p><div class="fv-panels">' +
-            ''.join(panels) + '</div><p class="fv-meaning"><strong>Lees het beeld:</strong> ' + meaning + '</p></section>')
+            '</h3>' + ('<p class="fv-provenance">' + escape(provenance) + '</p>' if provenance else '') + '<div class="fv-panels">' +
+            ''.join(panels) + '</div>' + ('<p class="fv-meaning"><strong>Lees het beeld:</strong> ' + meaning + '</p>' if meaning else '') + '</section>')
 
 
 def curve(fn, start, stop, n=80):
     return [(start+(stop-start)*i/n, fn(start+(stop-start)*i/n)) for i in range(n+1)]
 
 
-def interval_graphic(title, midpoint, lo, hi, limits, xlabel):
+def interval_graphic(title, midpoint, lo, hi, limits, xlabel, digits=2, band=None, mark=None):
+    """band=(laag, hoog, naam): oranje strook onder het interval; mark=(waarde, naam): stippellijn met label eronder."""
     X=lambda v:30+(v-limits[0])*300/(limits[1]-limits[0])
-    out=[f'<svg class="fv-chart" viewBox="0 0 360 165" role="img" aria-label="{escape(title,quote=True)}: {num(lo)} tot {num(hi)}; puntschatting {num(midpoint)}" xmlns="http://www.w3.org/2000/svg">']
+    extra=(f'; {band[2]} {num(band[0],digits)} tot {num(band[1],digits)}' if band else '')+(f'; {mark[1]} {num(mark[0],digits)}' if mark else '')
+    out=[f'<svg class="fv-chart" viewBox="0 0 360 165" role="img" aria-label="{escape(title,quote=True)}: {num(lo,digits)} tot {num(hi,digits)}; puntschatting {num(midpoint,digits)}{escape(extra,quote=True)}" xmlns="http://www.w3.org/2000/svg">']
     out.append('<path class="fv-axis" d="M25 92H335"/>')
+    if band:
+        out.append(f'<rect x="{X(band[0]):.2f}" y="71" width="{X(band[1])-X(band[0]):.2f}" height="12" fill="{ORANGE}" fill-opacity="0.3"/>')
     out.append(f'<path d="M{X(lo):.2f} 65H{X(hi):.2f}" stroke="{GREEN}" stroke-width="3"/>')
     for value,label,color in [(lo,'Ondergrens',GREEN),(midpoint,'Puntschatting',PURPLE),(hi,'Bovengrens',GREEN)]:
-        out.append(f'<path d="M{X(value):.2f} 55V102" stroke="{color}"/><text x="{X(value):.2f}" y="{33 if value==midpoint else 123}" text-anchor="middle">{escape(label)}</text><text x="{X(value):.2f}" y="{49 if value==midpoint else 139}" text-anchor="middle">{num(value)}</text>')
+        out.append(f'<path d="M{X(value):.2f} 55V102" stroke="{color}"/><text x="{X(value):.2f}" y="{33 if value==midpoint else 123}" text-anchor="middle">{escape(label)}</text><text x="{X(value):.2f}" y="{49 if value==midpoint else 139}" text-anchor="middle">{num(value,digits)}</text>')
+    if mark:
+        out.append(f'<path d="M{X(mark[0]):.2f} 55V112" stroke="{ORANGE}" stroke-dasharray="4 3"/><text x="{X(mark[0]):.2f}" y="123" text-anchor="middle">{escape(mark[1])}</text><text x="{X(mark[0]):.2f}" y="139" text-anchor="middle">{num(mark[0],digits)}</text>')
     if limits[0]<0<limits[1]:
         out.append(f'<path d="M{X(0):.2f} 55V102" stroke="{ORANGE}" stroke-dasharray="4 3"/><text x="{X(0):.2f}" y="49" text-anchor="middle">nul</text>')
     out.append('<text x="180" y="161" text-anchor="middle">'+escape(xlabel)+'</text></svg>')
@@ -110,6 +116,27 @@ def regions(title, edges, labels):
     for i,v in enumerate(edges):
         out.append(f'<path class="fv-axis" d="M{20+80*v:.2f} 51V99"/><text x="{20+80*v:.2f}" y="{22 if i%2==0 else 42}" text-anchor="middle">{num(v,2)}</text>')
     return ''.join(out)+'<text x="180" y="173" text-anchor="middle">Durbin-Watson d</text></svg>'
+
+
+def finite_total():
+    """Lagen van de MPU-standaardfout met de magazijncasus; ook gebruikt in de les zelf."""
+    from casus_data import mpu
+    s = mpu()
+    N, n = s['N'], s['n']
+    return block('finite-total', 'De standaardfout in drie lagen', [
+        panel('Van post naar totaal', table(['Laag', 'Uitkomst'], [
+            ['Losse post: s_w', '€ ' + num(s['sd'])], [f'Gemiddelde van n posten: s_w / √{n}', '€ ' + num(s['se_mean'])],
+            [f'Totaal van N posten: N × s_w / √{n}', '€ ' + num(N * s['se_mean'], 0)],
+            ['Met eindigheidscorrectie: s_MPU', '€ ' + num(s['se'], 0)]], 'Magazijn van Autogroep Linderhof'), ''),
+        panel('Meer van de populatie gecontroleerd', plot(
+            f'Eindigheidscorrectie, magazijn gemarkeerd bij n/N ≈ {num(n / N)} en factor {num(s["correction"])}', [
+            ('Factor', curve(lambda f: sqrt((N - N * f) / (N - 1)), 0, 1), GREEN, False),
+            ('Magazijn', [(n / N, s['correction'])], ORANGE, True)],
+            'Steekproeffractie n/N', 'Correctiefactor', (0, 1, 0, 1.05)),
+            'Bij n = N is de factor nul: wie alles controleert, heeft geen steekproefonzekerheid meer.')],
+        'De factor werkt op de standaardfout, niet op het gemiddelde of de spreiding van losse posten.',
+        f'N = {num(N, 0)} en n = {n}. Uit Σw en Σw² volgt met formule 1 s_w = € {num(s["sd"])} '
+        '(stap 3 van het voorbeeld).')
 
 
 def visuals():
@@ -145,13 +172,7 @@ def visuals():
         tpanel('95% eenzijdig',1.711,False,'α = 0,05 in één staart.<br>Rij 24, kolom 0,05 → t = 1,711.')],
         'De gekleurde oppervlakte is de foutkans. De hoogte van de curve is geen p-waarde. De bestaande tabel geeft de exacte snijpunten.',
         'Tabellenbundel, tabel 13.4, PDF 12: de reeds opgenomen waarden bij 24 vrijheidsgraden.')
-    N,n,sw=1000,100,20
-    corrected=N*sw/sqrt(n)*sqrt((N-n)/(N-1))
-    add('mpu','De directe totaalschatting met haar standaardfout','finite-total','De standaardfout verschilt van de spreiding per post',[
-        panel('Van post naar totaal',table(['Stap','Uitkomst'],[['s_w','€ 20'],['s_w / √100','€ 2 per gemiddeld bedrag'],['N × s_w / √100','€ 2.000'],['Met eindigheidscorrectie','€ '+num(corrected)]],'De vier verschillende grootheden'),'De eindigheidscorrectie is √(900/999) ≈ 0,9492.'),
-        panel('Meer van de populatie gecontroleerd',plot('Eindigheidscorrectie',[('Factor',curve(lambda f:sqrt((N-N*f)/(N-1)),0,1),GREEN,False)],'Steekproeffractie n/N','Correctiefactor',(0,1,0,1.05)),'Bij n = N is de factor nul. Binnen deze steekproefformule resteert dan geen steekproefonzekerheid over het totaal.')],
-        'De factor werkt op de standaardfout, niet op het geschatte gemiddelde of de spreiding van losse posten. Andere controleonzekerheden worden er niet mee gemeten.',
-        'Uitwerking van het bestaande MPU-voorbeeld: N = 1.000, n = 100 en s_w = € 20.')
+    V.append(dict(lesson='mpu', title='De directe totaalschatting met haar standaardfout', key='finite-total', html=finite_total()))
     pairs=[(20,18),(40,38),(60,58),(80,78)]
     add('verschil','Boekwaarde corrigeren met het gemiddelde controleverschil','absolute-errors','Een vaste absolute afwijking',[
         panel('Boekwaarde tegenover werkelijke waarde',plot('Vaste euro-afwijking',[('w = b − 2',pairs,GREEN,True),('w = b',[(0,0),(90,90)],PURPLE,False)],'Boekwaarde b (€)','Werkelijke waarde w (€)',(0,90,0,90)),'Iedere werkelijke waarde ligt € 2 onder de boekwaarde.'),

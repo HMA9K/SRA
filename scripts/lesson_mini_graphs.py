@@ -5,6 +5,7 @@ from math import sqrt, gamma, pi
 import re
 from learning_transitions import chart
 from formula_visuals import num, curve
+from casus_data import PRODUCTION, month_label, mpu, predict, regression
 
 
 def svg(title, body, height=170):
@@ -28,20 +29,26 @@ def bars(title, labels, values, unit, digits=2):
     return svg(title, body, 18 + len(values)*51)
 
 
-def residuals():
-    # Punten met OLS-lijn y = 2x; som residuen en som x*residu zijn beide nul.
-    points = [(1, 3), (2, 2), (3, 7)]
-    X, Y = lambda x: 45 + 62*x, lambda y: 135 - 15*y
-    body = text(4, 16, 'Waarde y')
-    body += '<path class="transition-frame" d="M45 25V135H246"/>'
-    body += f'<path class="mini-prediction" d="M{X(0)} {Y(0)}L{X(3.2)} {Y(6.4)}"/>'
-    for x, y in points:
-        body += f'<path class="transition-line" d="M{X(x)} {Y(2*x)}V{Y(y)}"/>'
-        body += f'<circle class="transition-point" cx="{X(x)}" cy="{Y(y)}" r="4"/>'
-        body += text(X(x)+8, (Y(y)+Y(2*x))/2+4, f'{y-2*x:+d}'.replace('-', '−'))
-        body += text(X(x), 147, x, 'middle')
-    body += text(145, 166, 'Verklarende waarde x', 'middle')
-    return svg('Verticale residuen +1, −2 en +1 bij de OLS-lijn y = 2x.', body)
+def casus_residuals():
+    """De drie grootste residuen van Linderhof Components bij de geschatte lijn."""
+    m = regression()
+    picks = sorted(range(m['n']), key=lambda i: -abs(m['residuals'][i]))[:3]
+    X, Y = lambda x: 45 + (x - 48) * 201 / 9, lambda y: 135 - (y - 27) * 110 / 8
+    body = text(4, 16, 'Productie (× 10.000)') + '<path class="transition-frame" d="M45 25V135H246"/>'
+    body += f'<path class="mini-prediction" d="M{X(48):.1f} {Y(predict(m, 48)):.1f}L{X(57):.1f} {Y(predict(m, 57)):.1f}"/>'
+    labels = []
+    for i in sorted(picks, key=lambda i: PRODUCTION[i][0]):
+        (x, y), e = PRODUCTION[i], m['residuals'][i]
+        left = not labels      # het eerste punt krijgt zijn label links, zodat labels elkaar niet raken
+        label = num(e).replace('-', '−') if e < 0 else '+' + num(e)
+        labels.append(f'{month_label(i)} {label}')
+        body += f'<path class="transition-line" d="M{X(x):.1f} {Y(predict(m, x)):.1f}V{Y(y):.1f}"/>'
+        body += f'<circle class="transition-point" cx="{X(x):.1f}" cy="{Y(y):.1f}" r="4"/>'
+        body += text(round(X(x) + (-8 if left else 8), 1), round((Y(y) + Y(predict(m, x))) / 2 + 4, 1), label, 'end' if left else 'start')
+    for tick in (48, 51, 54, 57):
+        body += text(round(X(tick), 1), 147, tick, 'middle')
+    body += text(145, 166, 'Arbeidsuren (× 1.000)', 'middle')
+    return svg('Residuen bij de lijn van Linderhof Components: ' + ', '.join(labels) + '.', body)
 
 
 def allocation():
@@ -220,12 +227,14 @@ def enhance(lessons):
     add('onzekerheid', 'Van kans naar interval', 'Een steekproefgemiddelde', estimate_interval(),
         '', 'onzekerheid-interval')
 
+    stock = mpu()
+    mean, total, size = num(stock['mean']), num(stock['estimate'], 0), num(stock['N'], 0)
     add('mpu', 'Wanneer gebruik je deze schatter?', 'Het idee komt rechtstreeks',
-        svg('Van gemiddeld 100 euro per post naar 800 euro voor acht posten.',
-            text(4, 23, 'Gemiddelde: € 100 per post') + text(130, 61, '× 8 posten', 'middle')
+        svg(f'Van gemiddeld {mean} euro per artikelregel naar een geschat totaal van {total} euro voor {size} regels.',
+            text(4, 23, f'Gemiddeld € {mean} per regel') + text(130, 61, f'× {size} regels', 'middle')
             + '<path class="transition-line" d="M130 72v24m-5-5 5 5 5-5"/>'
-            + text(4, 124, 'Geschat totaal: € 800'), 136),
-        'Dezelfde vier waarden als eerder: 80, 90, 110 en 120. Het totaal blijft een schatting.')
+            + text(4, 124, f'Geschat totaal: € {total}'), 136),
+        '')
     add('verschil', 'Wat is hier een fout?', 'Het bedrag is constant',
         chart('Bij boekwaarden 100, 200 en 500 euro is de fout steeds 10 euro.', [(100,10),(200,10),(500,10)],
               'Boekwaarde (€)', 'Fout (€)', reference=0, line=True), 'De fout blijft € 10, hoe groot de post ook is.')
@@ -237,8 +246,8 @@ def enhance(lessons):
         'MPU schat € 95.000. De correctie 0,931 × € 5.000 brengt de schatting op € 99.655.')
     add('stratificatie', 'Neyman en evenredige allocatie naast elkaar uitrekenen', 'Allocatie bepaalt',
         allocation(), 'De vier groepen uit de tabel. Bij Neyman verschuiven controles naar groepen met meer spreiding.')
-    add('regressielijn', 'Hoe wordt de lijn gekozen?', 'Er zijn veel lijnen', residuals(),
-        'Elke verticale afstand is y − ŷ. De som van de kwadraten is hier 1² + (−2)² + 1² = 6.')
+    add('regressielijn', 'Hoe wordt de lijn gekozen?', 'Er zijn veel lijnen', casus_residuals(),
+        'Drie maanden van Linderhof Components met hun residu y − ŷ. OLS kiest de lijn met de kleinste Σe² over alle 24 maanden.')
     add('anova', 'Van de tabel naar betekenis', 'R² is het verklaarde', variance_share(),
         'Verklaard en resterend tellen samen op tot 100%.')
     add('toetsen', 'Toetsen en het interval voor de regressiehelling', 'Deze vormen', slope_interval(),
