@@ -24,7 +24,7 @@
   mode:{residual:'Bekijk vorm en spreiding van afwijkingen.',normal:'Vergelijk de verdeling met een normale vorm.',outlier:'Vergelijk een gestandaardiseerd residu met grenzen.',distance:'Onderzoek afwijkende x-waarden of veel invloed.',dw:'Beoordeel samenhang tussen opeenvolgende fouten.'},
   distance:{md:'Hoe ver ligt een punt van de overige x-waarden?',cd:'Hoe sterk beïnvloedt een punt de geschatte lijn?'},
   squares:{on:'Elke fout als vierkantje: samen vormen ze SSE.',off:'Alleen de verticale afstanden tot de lijn.'},
-  interval:{individu:'Formule 50: onzekerheid van de lijn plus de eigen storing van één maand.',gemiddelde:'Formule 50 zonder de eerste 1 onder de wortel.'},
+  interval:{individu:'Formule 50: onzekerheid van de lijn plus de individuele storing van één maand.',gemiddelde:'Formule 50 zonder de eerste 1 onder de wortel.'},
   criticalMode:{auto:'Laat betrouwbaarheid en n de t-waarde bepalen.',manual:'Gebruik de t-waarde die je in de tabel hebt opgezocht.'}
  };
  const choices=(id,label,options)=>`<fieldset class="field lab-choice-field"><legend>${esc(label)}</legend><input type="hidden" name="${id}" value="${esc(options[0][0])}" aria-label="${esc(label)}"><div class="lab-view-choices lab-setting-choices">${options.map(([value,title],i)=>`<button type="button" data-lab-setting="${id}" data-value="${esc(value)}" aria-pressed="${i===0}"><strong>${esc(title)}</strong><span>${esc(choiceNotes[id][value])}</span></button>`).join('')}</div><span class="lab-control-note" data-note="${id}"></span></fieldset>`;
