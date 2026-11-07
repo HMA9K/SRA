@@ -9,7 +9,7 @@
  const topicList=T=>blocksOf(T).flatMap(b=>b.topics.map(id=>Object.assign({id,group:b.title,opgave:b.opgave,perExam:T.topics[id].points/T.exams.length,meanShown:T.topics[id].mean||0},T.topics[id])));
  function matches(t,filter){if(!filter)return true;const at=filter.indexOf(':'),kind=filter.slice(0,at),value=filter.slice(at+1);return kind==='group'?t.group===value:t[kind]===Number(value);}
  const topicLink=(t,o)=>`<a href="${o.lessonHref(t.lesson)}" title="${esc(t.label)}">${esc(t.short)}</a>`;
- const inGroup=(list,b)=>list.filter(t=>t.group===b.title).sort((x,y)=>y.exams-x.exams||y.points-x.points);
+ const inGroup=(list,b)=>list.filter(t=>t.group===b.title);
  function filter(T,s){
   const option=(value,text)=>`<option value="${esc(value)}"${s.filter===value?' selected':''}>${esc(text)}</option>`;
   return `<label for="tv-toon">Toon <select id="tv-toon" data-filter>${option('','Alles')}<optgroup label="Opgave">${T.groups.map((g,i)=>option('opgave:'+(i+1),g.title)).join('')}</optgroup><optgroup label="Groep">${blocksOf(T).map(b=>option('group:'+b.title,b.title)).join('')}</optgroup></select></label>`;
