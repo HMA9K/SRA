@@ -243,7 +243,7 @@ def _guides(lesson: dict) -> list[dict]:
             'De directe schatting aanpassen met de boekwaarde',
             'Gebruik de regressieschatter wanneer de samenhang tussen boekwaarde en werkelijke waarde door een rechte lijn kan worden beschreven, zonder dat die lijn noodzakelijk door de oorsprong loopt. Het bekende boekwaardetotaal helpt de directe schatting te verbeteren.',
             _existing(slug),
-            p.legend_html(slug),
+            p.legend_html(slug, ' De factor √(1 − R²_bw) verlaagt de standaardfout ten opzichte van MPU.'),
             ['Bereken de helling b₁ = R_bw × s_w/s_b.',
              'Bereken eerst de directe totaalschatting N × w̄.',
              'Bereken B − N × b̄. Dit is het verschil tussen het bekende boekwaardetotaal en het boekwaardetotaal dat de steekproef suggereert.',
