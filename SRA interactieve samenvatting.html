@@ -3061,6 +3061,8 @@ html:has(body.cirrus-mode){--base:var(--sra-cirrus-font,14px)}
 body.cirrus-mode .skip{position:fixed;left:12px;top:-70px;padding:12px;background:#fff;z-index:100}
 body.cirrus-mode .skip:focus{top:8px}
 body.cirrus-mode .sra-cirrus-source{display:block;width:100%;height:auto;margin:8px 0 20px}
+/* Een voorpagina op ongeveer A4-leesgrootte, niet over de volle schermbreedte. */
+body.cirrus-mode .sra-cirrus-source[src*="/introductie-"]{max-width:760px;margin-inline:auto}
 body.cirrus-mode .sra-source-enlarge{display:block;max-width:100%;cursor:zoom-in}
 body.cirrus-mode .exam-info-dialog .exam-source-document{max-width:none}
 /* Dezelfde casusknop boven bij het vraagnummer en onder bij de navigatie. */
@@ -3305,6 +3307,12 @@ body.cirrus-mode #exam-app .step-formula .formula-label {display:flex;flex-wrap:
 body.cirrus-mode #exam-app .step-formula .formula-number {font-size:.72rem;font-weight:600;color:#0c447c;background:#fff;border:1px solid #b9c5d6;border-radius:4px;padding:0 6px;white-space:nowrap;}
 body.cirrus-mode #exam-app .step-formula .math-scroll {max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 3px 6px;}
 body.cirrus-mode #exam-app .step-formula-text {font-size:.9em;}
+/* Welkomstscherm: compact, zodat Toets starten zonder veel scrollen in beeld komt. */
+body.cirrus-mode .exam-paper:has(.exam-start-actions) .exam-details{margin:12px 0}
+body.cirrus-mode .exam-paper:has(.exam-start-actions) .exam-details>div{padding:7px 14px}
+body.cirrus-mode .exam-paper:has(.exam-start-actions) .exam-extra{display:inline-flex;vertical-align:top;width:min(100%,360px);margin:0 8px 8px 0;padding:9px 12px}
+body.cirrus-mode .exam-paper:has(.exam-start-actions) .exam-start-actions{margin:10px 0 16px;gap:8px}
+body.cirrus-mode .exam-paper:has(.exam-start-actions) .exam-start-actions .primary{min-height:36px}
 
 </style>
   <style data-study-style>
@@ -5817,7 +5825,7 @@ body.cirrus-mode .exam-case-resizer{background:transparent}
 body.cirrus-mode .exam-case-resizer::after{content:none}
 body.cirrus-mode .exam-case-resizer:hover,body.cirrus-mode .exam-case-resizer:focus-visible{background:var(--study-teal,#008577);outline:0}
 /* Tentamen met open zijvenster: dezelfde smalle middenkolom als bij oefenvragen. */
-@media(min-width:761px){body.cirrus-mode.exam-running:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .exam-case-layout>.exam-question-body{padding:10px 8px 8px!important}}
+@media(min-width:761px){body.cirrus-mode.exam-running:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .exam-question-body{padding:10px 8px 8px!important}}
 
 </style>
 
@@ -75752,7 +75760,7 @@ window.SRAOriginalPdfs = {
     var live=running(id);
     var restarting=restartId&&byId(restartId);
     if(restartId&&(!restarting||restarting.exam.id!==id))return missing();
-    host.innerHTML='<a class="exam-back" href="#tentamen">‹ Dashboard</a>'+head(label(exam),'Welkom. Lees eerst de informatie en kies eventueel extra tijd.')+'<div class="exam-paper">'+(exam.demo?'<p class="exam-warning">Demonstratie van de bediening, geen officieel SRA-tentamen.</p>':'<p class="notice">Je oefent met een eerder afgenomen tentamen. Datum, zaalregels en algemene uitgangspunten hieronder komen uit het originele voorblad. De oefenklok begint pas als je nu start.</p>')+(restarting?'<p class="notice">Je begint opnieuw zodra je op Toets starten klikt. De vorige poging blijft met alle antwoorden bewaard bij Voltooid.</p>':'')+introduction(exam)+(exam.durationUnconfirmed?'<label class="exam-practice-duration">Oefenduur in minuten <input type="number" min="1" max="600" value="150" data-practice-duration></label><p class="small">De bron vermeldt geen duur. Kies zelf je oefenduur, of oefen zonder tijdslimiet. 150 minuten is hier alleen een instelbare beginwaarde.</p>':'')+details(exam,false)+(live.length?'<div class="exam-banner"><div><p>Je hebt '+live.length+' lopende poging(en) van dit tentamen. Hervat een poging of start hieronder een nieuwe.</p>'+live.map(function(a){return '<p><a class="btn" href="#toets/'+a.id+'">Hervatten · '+datetime(a.startedAt)+' · '+Engine.formatTime(Engine.remainingSeconds(a))+'</a></p>';}).join('')+'</div></div>':'')+'<label class="exam-extra"><input type="checkbox" data-exam-untimed><span><strong>Oefenen zonder tijdslimiet</strong><small>Geen aftelklok en geen automatische inlevering.</small></span></label><label class="exam-extra"><input type="checkbox" data-exam-extra><span><strong>Extra tijd activeren (+30 minuten)</strong><small>Eenmalig vóór de start. Totale toetstijd: <span data-exam-total>'+exam.durationMinutes+'</span> minuten.</small></span></label><p class="small">Elke poging heeft afzonderlijke antwoorden en een afzonderlijke klok. Bij oefenen met tijd loopt de klok door bij wisselen, sluiten of verversen. Je kunt de toets pauzeren. Bij nul wordt de poging ingeleverd. Je kunt ook per vraag je antwoord controleren.</p><div class="exam-start-actions">'+btn('Toets starten','start',true,'data-exam-id="'+esc(exam.id)+'" data-exam-start-index="'+startIndex+'" data-restart-id="'+esc(restartId||'')+'" '+(!available(exam)||corrupt?'disabled':''))+(available(exam)?'':'<span class="small">'+(exam.availableFrom&&Date.parse(exam.availableFrom)>Date.now()?'Beschikbaar vanaf '+datetime(exam.availableFrom):'De starttermijn is verstreken.')+'</span>')+'</div>'+'</div>';
+    host.innerHTML='<div class="exam-paper">'+(exam.demo?'<p class="exam-warning">Demonstratie van de bediening, geen officieel SRA-tentamen.</p>':'<p class="notice">Je oefent met een eerder afgenomen tentamen. Datum, zaalregels en algemene uitgangspunten hieronder komen uit het originele voorblad. De oefenklok begint pas als je nu start.</p>')+(restarting?'<p class="notice">Je begint opnieuw zodra je op Toets starten klikt. De vorige poging blijft met alle antwoorden bewaard bij Voltooid.</p>':'')+(exam.durationUnconfirmed?'<label class="exam-practice-duration">Oefenduur in minuten <input type="number" min="1" max="600" value="150" data-practice-duration></label><p class="small">De bron vermeldt geen duur. Kies zelf je oefenduur, of oefen zonder tijdslimiet. 150 minuten is hier alleen een instelbare beginwaarde.</p>':'')+details(exam,false)+(live.length?'<div class="exam-banner"><div><p>Je hebt '+live.length+' lopende poging(en) van dit tentamen. Hervat een poging of start hieronder een nieuwe.</p>'+live.map(function(a){return '<p><a class="btn" href="#toets/'+a.id+'">Hervatten · '+datetime(a.startedAt)+' · '+Engine.formatTime(Engine.remainingSeconds(a))+'</a></p>';}).join('')+'</div></div>':'')+'<label class="exam-extra"><input type="checkbox" data-exam-untimed><span><strong>Oefenen zonder tijdslimiet</strong><small>Geen aftelklok en geen automatische inlevering.</small></span></label><label class="exam-extra"><input type="checkbox" data-exam-extra><span><strong>Extra tijd activeren (+30 minuten)</strong><small>Eenmalig vóór de start. Totale toetstijd: <span data-exam-total>'+exam.durationMinutes+'</span> minuten.</small></span></label><p class="small">Elke poging heeft afzonderlijke antwoorden en een afzonderlijke klok. Bij oefenen met tijd loopt de klok door bij wisselen, sluiten of verversen. Je kunt de toets pauzeren. Bij nul wordt de poging ingeleverd. Je kunt ook per vraag je antwoord controleren.</p><div class="exam-start-actions">'+btn('Toets starten','start',true,'data-exam-id="'+esc(exam.id)+'" data-exam-start-index="'+startIndex+'" data-restart-id="'+esc(restartId||'')+'" '+(!available(exam)||corrupt?'disabled':''))+(available(exam)?'':'<span class="small">'+(exam.availableFrom&&Date.parse(exam.availableFrom)>Date.now()?'Beschikbaar vanaf '+datetime(exam.availableFrom):'De starttermijn is verstreken.')+'</span>')+'</div>'+introduction(exam)+'</div>';
   }
   function answerFor(attempt,q) { return attempt.answers[q.id] || {}; }
   function answered(attempt,q) { return Engine.answeredCount({exam:{questions:[q]},answers:attempt.answers})>0; }
@@ -77332,7 +77340,7 @@ function mount(){
   const target=ctx.host?.querySelector('.exam-footer .actions,.mc-footer-tools,.question-nav .nav-left')||ctx.host?.querySelector('.question-nav,.exam-welcome-actions,.exam-paper .actions');
   if(target&&!target.querySelector('.original-pdf-actions'))target.append(actions(ctx.id));
   const welcome=ctx.host?.querySelector('.exam-paper');
-  if(location.hash.startsWith('#welkom/')&&welcome&&originalPdfs[ctx.id]&&!welcome.querySelector('.original-pdf-actions'))welcome.append(actions(ctx.id));
+  if(location.hash.startsWith('#welkom/')&&welcome&&originalPdfs[ctx.id]&&!welcome.querySelector('.original-pdf-actions'))(welcome.querySelector('.exam-start-actions')||welcome).append(actions(ctx.id));
   document.querySelectorAll('#exam-app a.exam-name').forEach(link=>{
     const href=link.getAttribute('href'),m=href?.match(/^#(welkom|toets|inzage)\/([^/]+)/);if(!m)return;
     const id=m[1]==='welkom'?m[2]:SRACirrus.getQuestionContext(m[2])?.exam.id;

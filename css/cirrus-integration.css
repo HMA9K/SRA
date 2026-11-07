@@ -9,6 +9,8 @@ html:has(body.cirrus-mode){--base:var(--sra-cirrus-font,14px)}
 body.cirrus-mode .skip{position:fixed;left:12px;top:-70px;padding:12px;background:#fff;z-index:100}
 body.cirrus-mode .skip:focus{top:8px}
 body.cirrus-mode .sra-cirrus-source{display:block;width:100%;height:auto;margin:8px 0 20px}
+/* Een voorpagina op ongeveer A4-leesgrootte, niet over de volle schermbreedte. */
+body.cirrus-mode .sra-cirrus-source[src*="/introductie-"]{max-width:760px;margin-inline:auto}
 body.cirrus-mode .sra-source-enlarge{display:block;max-width:100%;cursor:zoom-in}
 body.cirrus-mode .exam-info-dialog .exam-source-document{max-width:none}
 /* Dezelfde casusknop boven bij het vraagnummer en onder bij de navigatie. */
@@ -253,3 +255,9 @@ body.cirrus-mode #exam-app .step-formula .formula-label {display:flex;flex-wrap:
 body.cirrus-mode #exam-app .step-formula .formula-number {font-size:.72rem;font-weight:600;color:#0c447c;background:#fff;border:1px solid #b9c5d6;border-radius:4px;padding:0 6px;white-space:nowrap;}
 body.cirrus-mode #exam-app .step-formula .math-scroll {max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 3px 6px;}
 body.cirrus-mode #exam-app .step-formula-text {font-size:.9em;}
+/* Welkomstscherm: compact, zodat Toets starten zonder veel scrollen in beeld komt. */
+body.cirrus-mode .exam-paper:has(.exam-start-actions) .exam-details{margin:12px 0}
+body.cirrus-mode .exam-paper:has(.exam-start-actions) .exam-details>div{padding:7px 14px}
+body.cirrus-mode .exam-paper:has(.exam-start-actions) .exam-extra{display:inline-flex;vertical-align:top;width:min(100%,360px);margin:0 8px 8px 0;padding:9px 12px}
+body.cirrus-mode .exam-paper:has(.exam-start-actions) .exam-start-actions{margin:10px 0 16px;gap:8px}
+body.cirrus-mode .exam-paper:has(.exam-start-actions) .exam-start-actions .primary{min-height:36px}
