@@ -1914,7 +1914,8 @@ html:has(.mc-page){scroll-padding-top:75px;scroll-padding-bottom:145px}
 .study-assistant-layout .mc-case-panel{top:0;max-height:var(--sa-pane-height)}
 .study-assistant-layout .mc-case-panel.original-pdf-left{height:var(--sa-pane-height)}
 /* De titelbalk loopt zonder lijn over in het vraaggebied. */
-body:has(.mc-page) .learning-page-head{border-bottom:0}
+body:is(:has(.mc-page),.practice-surface) .learning-page-head{border-bottom:0}
+body.practice-surface .practice-question-frame{border-top:0}
 .mc-page .sra-exam-paper{border-top:0}
 /* Met een open zijvenster gaat de ruimte naar de panelen: een minimale buitenrand en een smallere middenkolom. */
 @media(min-width:761px){
