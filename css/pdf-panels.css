@@ -42,7 +42,7 @@ body.exam-running .exam-answer-actions .study-inline-launch{display:inline-flex;
 .study-assistant .study-icon-button{color:#fff;background:transparent;border-color:#ffffff6b;font-size:22px;line-height:1;min-width:32px;min-height:34px;padding:4px 6px}
 .study-assistant-layout{display:grid;grid-template-columns:minmax(0,1fr) 8px minmax(0,var(--sa-column-width,33.333333%));align-items:stretch;min-width:0;min-height:0;height:var(--sa-pane-height,680px);overflow:hidden}
 .study-assistant-primary{min-width:0;min-height:0;height:100%;overflow:auto;container-type:inline-size}
-.study-assistant-resizer{min-width:8px;cursor:col-resize;touch-action:none;border-inline:1px solid var(--study-line,#d9e2eb)}
+.study-assistant-resizer{min-width:8px;cursor:col-resize;touch-action:none;border-inline-end:1px solid var(--study-line,#d9e2eb)}
 .study-assistant-resizer>span{display:none}
 .study-assistant-resizer:hover,.study-assistant-resizer:focus-visible,.study-assistant-layout.is-resizing>.study-assistant-resizer{background:var(--study-teal,#008577);outline:0}
 .study-assistant-layout.is-resizing{user-select:none;cursor:col-resize}
@@ -171,3 +171,5 @@ body.original-pdf-open :is(.learning-page-head,.cirrus-page-head,#study-returnba
 body.cirrus-mode .exam-case-resizer{background:transparent}
 body.cirrus-mode .exam-case-resizer::after{content:none}
 body.cirrus-mode .exam-case-resizer:hover,body.cirrus-mode .exam-case-resizer:focus-visible{background:var(--study-teal,#008577);outline:0}
+/* Tentamen met open zijvenster: dezelfde smalle middenkolom als bij oefenvragen. */
+@media(min-width:761px){body.cirrus-mode.exam-running:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .exam-case-layout>.exam-question-body{padding:10px 8px 8px!important}}
