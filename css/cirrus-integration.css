@@ -19,7 +19,7 @@ body.cirrus-mode .exam-question-identity .btn{border:2px solid #615365;border-ra
 }
 body.cirrus-mode .exam-review-title{margin:18px 12px;font-size:1.4rem}
 /* De casus blijft naast de vraag; bediening wijzigt alleen de weergave. */
-body.cirrus-mode .exam-case-layout{display:grid;grid-template-columns:minmax(0,var(--exam-case-width,33.333333%)) 14px minmax(0,1fr);align-items:start;--exam-case-top:calc(var(--study-header-height,58px) + var(--study-return-h,46px) + 12px)}
+body.cirrus-mode .exam-case-layout{display:grid;grid-template-columns:minmax(0,var(--exam-case-width,33.333333%)) 8px minmax(0,1fr);align-items:start;--exam-case-top:calc(var(--study-header-height,58px) + var(--study-return-h,46px) + 12px)}
 body.cirrus-mode .exam-case-layout.is-case-hidden{grid-template-columns:minmax(0,1fr)}
 body.cirrus-mode.exam-running .exam-case-layout>.exam-question-body{min-width:0;padding:12px 28px 32px}
 body.cirrus-mode .exam-case-panel{position:sticky;top:var(--exam-case-top);max-height:var(--case-available-height,calc(100dvh - 370px));min-width:0;padding:18px 20px;overflow:auto;overscroll-behavior:contain;background:var(--study-surface);color:var(--study-ink);border:1px solid var(--study-line)}

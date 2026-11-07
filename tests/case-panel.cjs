@@ -62,6 +62,6 @@ assert.match(june.sections[0].caseHtml,/s<sub>q<\/sub>/);
 assert.equal((june.sections[1].caseHtml.match(/<figure/g)||[]).length,11);
 assert.doesNotMatch(source,/exam-question-context/);
 assert.match(read('scripts/integrate_cirrus.py'),/adapt_case_panel/);
-assert.match(read('css/cirrus-integration.css'),/grid-template-columns:minmax\(0,var\(--exam-case-width,33\.333333%\)\) 14px minmax\(0,1fr\)/,'De linker kolom gebruikt de casusbreedte');
+assert.match(read('css/cirrus-integration.css'),/grid-template-columns:minmax\(0,var\(--exam-case-width,33\.333333%\)\) 8px minmax\(0,1fr\)/,'De linker kolom gebruikt de casusbreedte');
 assert.match(handle.getAttribute('aria-label'),/casus links/);
 console.log('OK: case-only data, default left panel, current section for old attempts, toggle without answer changes, left-offset pointer resize, right-arrow growth, bounds, display preference restore and absent case.');

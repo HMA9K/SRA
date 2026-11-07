@@ -179,7 +179,7 @@
     if(!layout||!panel)return;
     var open=casePreferences.open,handle=layout.querySelector('.exam-case-resizer');
     layout.classList.toggle('is-case-hidden',!open);panel.hidden=!open;handle.hidden=!open;
-    layout.style.setProperty('--exam-case-width',casePreferences.width+'%');
+    layout.style.setProperty('--exam-case-width','min(calc('+casePreferences.width+'vw / var(--study-page-scale,1)),60%)');
     handle.setAttribute('aria-valuenow',Math.round(casePreferences.width));
     handle.setAttribute('aria-valuetext',Math.round(casePreferences.width)+' procent casusbreedte');
     host.querySelectorAll('[data-exam-action="section"]').forEach(function(button){
@@ -203,7 +203,7 @@
     layout.appendChild(panel);layout.appendChild(handle);layout.appendChild(body);
     panel.scrollTop=caseScrollPositions[panel.dataset.caseKey]||0;
     handle.addEventListener('pointerdown',function(e){if(e.button!==0)return;e.preventDefault();handle.focus({preventScroll:true});handle.setPointerCapture(e.pointerId);handle.dataset.dragging='true';layout.classList.add('is-resizing');});
-    handle.addEventListener('pointermove',function(e){if(handle.dataset.dragging!=='true')return;var rect=layout.getBoundingClientRect();if(rect.width)resizeCasePanel(100*(e.clientX-rect.left)/rect.width);});
+    handle.addEventListener('pointermove',function(e){if(handle.dataset.dragging!=='true')return;var rect=layout.getBoundingClientRect(),view=window.innerWidth||rect.width;if(view)resizeCasePanel(100*(e.clientX-rect.left)/view);});
     function endDrag(e){delete handle.dataset.dragging;layout.classList.remove('is-resizing');if(handle.hasPointerCapture(e.pointerId))handle.releasePointerCapture(e.pointerId);saveCasePreferences();}
     handle.addEventListener('pointerup',endDrag);handle.addEventListener('pointercancel',endDrag);
     handle.addEventListener('keydown',function(e){
