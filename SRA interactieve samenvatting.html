@@ -3061,6 +3061,8 @@ html:has(body.cirrus-mode){--base:var(--sra-cirrus-font,14px)}
 body.cirrus-mode .skip{position:fixed;left:12px;top:-70px;padding:12px;background:#fff;z-index:100}
 body.cirrus-mode .skip:focus{top:8px}
 body.cirrus-mode .sra-cirrus-source{display:block;width:100%;height:auto;margin:8px 0 20px}
+/* Een voorpagina op ongeveer A4-leesgrootte, niet over de volle schermbreedte. */
+body.cirrus-mode .sra-cirrus-source[src*="/introductie-"]{max-width:760px;margin-inline:auto}
 body.cirrus-mode .sra-source-enlarge{display:block;max-width:100%;cursor:zoom-in}
 body.cirrus-mode .exam-info-dialog .exam-source-document{max-width:none}
 /* Dezelfde casusknop boven bij het vraagnummer en onder bij de navigatie. */
