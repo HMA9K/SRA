@@ -358,7 +358,7 @@ p('mc-toetsen-toepassing-1', 'B en Std. Error uit Coefficients, met H₀: β = 0
   'Een t-toetsingsgrootheid voor deze coëfficiënt.')
 p('mc-toetsen-toepassing-2', 'H₁: β > 0, een negatieve geschatte helling en een tweezijdige p.',
   'De gevonden richting is tegengesteld aan de gevraagde stijging.',
-  'Controleer eerst het teken; voor deze eenzijdige richting hoort 1 − p_tweezijdig/2 bij de p-waarde.',
+  'Controleer eerst het teken; voor deze eenzijdige richting is de p-waarde 1 − p/2, met p de tweezijdige Sig.',
   'Een toetsbeslissing over de gevraagde stijging, niet over een willekeurig verband.')
 p('mc-toetsen-toepassing-3', 'Een significante globale F en enkele niet-significante individuele t-toetsen.',
   'F toetst alle hellingen gezamenlijk; t toetst één bijdrage gegeven de andere voorspellers.',

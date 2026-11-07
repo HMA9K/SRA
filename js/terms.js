@@ -10,7 +10,7 @@
   const WORD = /[\p{L}\p{N}\p{M}_]/u;
   const HYPHEN = /[\u2010\u2011\u2012\u2013\u2212]/u;
   const APOSTROPHE = /[\u2018\u2019\u02bc]/u;
-  const SKIP = 'script,style,noscript,template,input,textarea,select,option,optgroup,button,a,nav,code,pre,kbd,samp,math,svg,canvas,iframe,object,embed,[role="button"],[contenteditable="true"],[contenteditable=""],[contenteditable="plaintext-only"],[aria-hidden="true"],[data-no-terms],[data-sra-term],[data-formula-help],.formula-help-hint,.sr-only,.sra-term-popup';
+  const SKIP = 'script,style,noscript,template,input,textarea,select,option,optgroup,button,a,nav,code,pre,kbd,samp,math,svg,canvas,iframe,object,embed,[role="button"],[contenteditable="true"],[contenteditable=""],[contenteditable="plaintext-only"],[aria-hidden="true"],[data-no-terms],[data-sra-term],[data-formula-help],.formula-help-hint,.formula-label,.sr-only,.sra-term-popup';
   const HTML_NAMESPACE = 'http://www.w3.org/1999/xhtml';
   // Een paragraaf is het hele omkaderde inhoudsblok, inclusief de titel.
   const TERM_SCOPE = '[data-term-scope],details.section,.formula-guide-card,.example,.lesson-start,.pitfalls,.lesson-top,.lab,.learning-context';

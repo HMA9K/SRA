@@ -134,7 +134,7 @@
   $('#question-overview-open').onclick=()=>showQuestionOverview(l);
   // The sidebar and sticky lesson title identify the current reading position.
   if(i===0){const first=$('.lesson-bottom a');first.href='#leren';first.textContent='Alle lessen';}
-  wrapTables();if(l.lab)window.SRALabs.mount(l.lab,$('#onderzoek'));
+  wrapTables();window.SRALabs.enhanceTables($('#main'),l.id);if(l.lab)window.SRALabs.mount(l.lab,$('#onderzoek'));
   let step=0;const renderSteps=()=>{$('#example-steps').innerHTML=l.example.stepsHtml.slice(0,step).map(s=>`<li>${s}</li>`).join('');$('#step-placeholder').hidden=true;$('#next-step').disabled=step>=l.example.steps.length;$('#next-step').textContent=step>=l.example.steps.length?'Alle stappen geopend':`Toon stap ${step+1}`;};
   $('#next-step').onclick=()=>{step++;renderSteps();};$('#all-steps').onclick=()=>{step=l.example.steps.length;renderSteps();};$('#reset-steps').onclick=()=>{step=0;renderSteps();};
   $('#mark-read').onclick=()=>{const read=!state.read.includes(l.id);state.read=read?[...state.read,l.id]:state.read.filter(id=>id!==l.id);save();$('#mark-read').textContent=read?'✓ Gelezen · ongedaan maken':'Markeer deze les als gelezen';$('#mark-read').setAttribute('aria-pressed',String(read));renderSidebar(l.id);toast(read?'Les als gelezen opgeslagen.':'Les als ongelezen opgeslagen.');};

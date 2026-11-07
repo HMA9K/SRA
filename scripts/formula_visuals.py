@@ -143,7 +143,7 @@ def visuals():
     add('onzekerheid','De tabellenbundel gebruiken: pagina, rij, kolom en conclusie','table-tails','Eén tabel, verschillende staartkansen',[
         tpanel('95% tweezijdig',2.064,True,'α = 0,05 → 0,025 per staart.<br>Rij 24, kolom 0,025 → t = 2,064.'),
         tpanel('95% eenzijdig',1.711,False,'α = 0,05 in één staart.<br>Rij 24, kolom 0,05 → t = 1,711.')],
-        'De gekleurde oppervlakte is de foutkans. De hoogte van de curve is geen p-waarde. De bestaande tabel geeft de exacte snijpunten.',
+        'De oranje oppervlakte is de foutkans α: tweezijdig 0,025 in elke staart, eenzijdig 0,05 in één staart. Het niet gekleurde deel onder de curve is de betrouwbaarheid van 95%. De hoogte van de curve is geen p-waarde. De bestaande tabel geeft de exacte snijpunten.',
         'Tabellenbundel, tabel 13.4, PDF 12: de reeds opgenomen waarden bij 24 vrijheidsgraden.')
     N,n,sw=1000,100,20
     corrected=N*sw/sqrt(n)*sqrt((N-n)/(N-1))
@@ -204,7 +204,7 @@ def visuals():
     add('toetsen','Eén coëfficiënt toetsen met t','t-decisions','Dezelfde toetsingsgrootheid, een andere hypothese',[
         tpanel('Tweezijdig bij α = 0,05',2.064,True,'Gegeven b₁ = 0,40 en s_b₁ = 0,20: t = 2,00. Bij df = 24 valt t binnen ±2,064: H₀ niet verwerpen.',2),
         tpanel('Positief eenzijdig bij α = 0,05',1.711,False,'Dezelfde t = 2,00 ligt boven 1,711: H₀ verwerpen ten gunste van een positief verband, als deze richting vooraf is gekozen.',2)],
-        'De richting van de hypothese bepaalt het verwerpingsgebied. Kies niet achteraf eenzijdig om een gunstiger resultaat te krijgen.')
+        'De oranje staarten zijn het verwerpingsgebied; hun oppervlakte samen is α = 0,05. Valt t in een oranje staart, dan verwerp je H₀; de groene lijn toont de berekende t. De richting van de hypothese bepaalt waar dat gebied ligt. Kies niet achteraf eenzijdig om een gunstiger resultaat te krijgen.')
     fdf1,fdf2=2,24
     fdensity=lambda x:(fdf1/fdf2)**(fdf1/2)*x**(fdf1/2-1)/(gamma(fdf1/2)*gamma(fdf2/2)/gamma((fdf1+fdf2)/2))*(1+fdf1*x/fdf2)**(-(fdf1+fdf2)/2)
     fpoints=curve(fdensity,0,8,160);critical=12*(.05**(-1/12)-1)
@@ -245,7 +245,7 @@ def visuals():
     add('voorspellen','Een individueel voorspellingsinterval opbouwen','prediction-bands','De extra 1 onder de wortel maakt verschil',[
         panel('Onzekerheid over het gemiddelde',plot('Betrouwbaarheidsband voor gemiddelde y',[('ŷ = 5 + 2x',xs,GREEN,False)],'x','y',(1,10,0,32),bands=[(GREEN,meanlo,meanhi)]),'Bij x₀ = x̄ = 5,5 is de afstandsterm nul.<br>Marge = 2,306 × 2 × √0,1 ≈ 1,46.'),
         panel('Onzekerheid over één nieuwe y',plot('Individuele voorspellingsband',[('Dezelfde geschatte lijn',xs,GREEN,False)],'x','y',(1,10,0,32),bands=[(ORANGE,predlo,predhi)]),'Bij hetzelfde x₀: marge = 2,306 × 2 × √1,1 ≈ 4,84. De individuele spreiding blijft bestaan.')],
-        'Beide grafieken hebben dezelfde assen en gegeven t. Naar de randen neemt de onzekerheid over de lijn toe. De formule veronderstelt een bruikbaar model.',
+        'Het groene vlak is het 95%-interval voor de gemiddelde y bij iedere x; het oranje vlak het 95%-interval voor één nieuwe y. Beide grafieken hebben dezelfde assen en gegeven t. Beide vlakken zijn het smalst bij x̄ en worden naar de randen breder: daar neemt de onzekerheid over de lijn toe. De formule veronderstelt een bruikbaar model.',
         'Vergelijking bij enkelvoudige regressie: n = 10, x̄ = 5,5, Sxx = 82,5, s_e = 2 en gegeven t = 2,306.')
     add('meervoudig','Meerdere verklarende variabelen en dummy’s invullen','dummy-lines','Een dummy verschuift de voorspelling bij gelijke overige kenmerken',[
         panel('Twee categorieën binnen hetzelfde model',plot('Salaris bij gelijke overige kenmerken',[('Vrouw = 0',[(a,739.508+38.495*a+715.5+2237.947) for a in [20,60]],GREEN,False),('Vrouw = 1',[(a,739.508+38.495*a+715.5+2237.947-273.746) for a in [20,60]],PURPLE,False)],'Leeftijd (jaar)','Voorspeld salaris (€)',(20,60,3500,6300)),'Beoordeling = 10, leidinggevende = 1, HBO = WO = 0. Het verticale verschil blijft € 273,746.'),

@@ -108,7 +108,9 @@
     function add(){let a=mul();while(['+','-'].includes(tokens[i])){const op=tokens[i++],b=mul();a=op==='+'?a+b:a-b;}return a;}
     const result=add();if(i!==tokens.length||!Number.isFinite(result))throw Error('Deze berekening heeft geen geldige eindige uitkomst.');return result;
   }
-  const api={stats,estimate,difference,ratio,regressionEstimator,anova,predict,ols,allocate,stratified,calc,studentTCritical};
+  // Tweezijdige p-waarde van t, zoals SPSS die als Sig. toont.
+  function studentTTwoSided(t,df){finite(t,df);if(!Number.isInteger(df)||df<1)throw Error('Gebruik een positief geheel aantal vrijheidsgraden.');return regularizedBeta(df/(df+t*t),df/2,.5,logStudentBeta(df));}
+  const api={stats,estimate,difference,ratio,regressionEstimator,anova,predict,ols,allocate,stratified,calc,studentTCritical,studentTTwoSided};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   root.SRAMath=api;
 })(typeof window!=='undefined'?window:globalThis);

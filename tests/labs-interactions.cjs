@@ -90,7 +90,8 @@ class ResizeObserver {
   fire(){if(this.active)this.fn([{target:this.el}]);}
 }
 const sandbox={window:{SRAMath:M,SRALabLayout:LabLayout},ResizeObserver};
-vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../js/labs.js'),'utf8'),sandbox);
+vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(__dirname,'../data/step-formulas.js'),'utf8'),sandbox);
+vm.runInContext(fs.readFileSync(path.join(__dirname,'../js/labs.js'),'utf8'),sandbox);
 const L=sandbox.window.SRALabs;
 const html=c=>c.querySelector('.lab-result').innerHTML;
 const charts=c=>Array.from(html(c).matchAll(/<svg\b[\s\S]*?<\/svg>|<div class="variance-bar"[^>]*>[\s\S]*?<\/div>/g),m=>m[0]);
@@ -131,11 +132,11 @@ const scenarios={
   interval:{N:1200,n:200,mean:100,sd:50,t:2.5,confidence:98},
   schatter:{N:1200,n:200,mean:100,sd:50,t:2.5},
   strata:{n:150,N1:800,N2:600,s1:40,s2:50,method:'evenredig'},
-  regressie:{b0:12,b1:3},
+  regressie:{b0:12,b1:.4,squares:'off'},
   anova:{n:[50,false],k:[2,false],SSR:700,SSE:201},
   toets:{p:.2,alpha:.08,direction:'negative',sign:'negative'},
   diagnose:{strength:2},
-  voorspelling:{b0:10,b1:.15,x0:280,xbar:250,n:80,sx:45,se:2,t:2.5},
+  voorspelling:{x0:40,interval:'gemiddelde'},
   transformatie:{model:'log',b0:2,b1:.7,x:25},
   populatie:{n:10,selection:'cheap',offset:5},
   verschil:{N:4000,n:200,B:2000000,meanError:-47,sdError:30,t:2.5},
@@ -221,7 +222,7 @@ for(const [mode,fields]of Object.entries({residual:{pattern:'funnel',strength:2}
   assert.equal(result.renderCount,count+1,'Remount removes previous input handler');
   for(const [id,name,value,setup]of [
     ['regressie','b1',.123456789],['anova','SSR',1351.262],['anova','SSE',44.105],
-    ['voorspelling','x0',228.12345],['verschil','sdError',13.6406405],
+    ['voorspelling','x0',50.12345],['verschil','sdError',13.6406405],
     ['regressieschatter','mb',164500/180],['omvang','sd',82.12345],
     ['meervoudig','bAge',38.495],['meervoudig','bDummy',2237.947],
     ['toets','p',.03012345],['diagnose','maximum',4.245,{mode:'distance'}]
@@ -271,11 +272,14 @@ function intervalRatio(svg){
   const c=mount('toets'),before=charts(c)[0];change(c,'sign','negative','change',false);assert.equal(charts(c)[0],before,'Two-sided p ignores coefficient sign');
 }
 {
-  const c=mount('voorspelling'),before=charts(c)[0];change(c,'sx',60);assert.notEqual(charts(c)[0],before,'Spread changes the band away from xbar, even at selected x0=xbar');
+  // Starts at January of the production case in lesson 14: same factor and margin as the lesson text.
+  const c=mount('voorspelling');assert.match(html(c),/1,04519/);assert.match(html(c),/2,3845/);
+  const before=charts(c)[0];change(c,'interval','gemiddelde','change',false);assert.notEqual(charts(c)[0],before,'Mean interval draws a shorter interval');assert.match(html(c),/0,6935/);
+  change(c,'x0',62,'input',false);assert.match(html(c),/extrapolatie/,'Outside the observed months is flagged');
 }
 
 // Invalid edits must show an accessible error and recover after valid input.
-for(const [id,name,bad]of [['interval','n',1001],['strata','n',1001],['anova','k',29],['toets','p',2],['voorspelling','sx',0],['transformatie','x',0],['populatie','n',21],['verschil','n',1],['quotient','sumB',0],['regressieschatter','sb',0],['omvang','E',0],['meervoudig','age',-1],['modelbouw','auxR2',1],['validatie','trainMSE',-1]]){
+for(const [id,name,bad]of [['interval','n',1001],['strata','n',1001],['anova','k',29],['toets','p',2],['voorspelling','x0',0],['transformatie','x',0],['populatie','n',21],['verschil','n',1],['quotient','sumB',0],['regressieschatter','sb',0],['omvang','E',0],['meervoudig','age',-1],['modelbouw','auxR2',1],['validatie','trainMSE',-1]]){
   const c=mount(id),value=control(c,name).value;change(c,name,bad,'input',false);assert.match(html(c),/class="lab-error"[^>]*role="status"/,id+' error');change(c,name,value,'input',false);healthy(c,id+' recovered');interactions++;
 }
 {
@@ -288,9 +292,22 @@ for(const [id,name,bad]of [['interval','n',1001],['strata','n',1001],['anova','k
 }
 {
   const c=mount('regressie');c.querySelector('#lab-fit').emit('click');healthy(c,'OLS fit');
-  const fit=M.ols([1,2,3,4,5,6,7,8],[9,10,15,15,21,21,26,27]);
+  const fit=L.calculations.productionModel();
   for(const name of ['b0','b1'])assert.equal(Number(control(c,name).value),fit[name],'OLS button keeps full coefficient precision');
+  assert.match(html(c),/kleinste-kwadratenlijn/);
+  c.querySelector('#lab-mean').emit('click');healthy(c,'Mean line');assert.equal(Number(control(c,'b1').value),0);assert.match(html(c),/R² van jouw lijn/);assert.match(html(c),/width:0%/,'A flat line at the mean explains nothing');
   const before=html(c);c.clientWidth=360;c.querySelector('.lab-result').clientWidth=320;observers.at(-1).fire();assert.notEqual(html(c),before,'Responsive regression SVG is redrawn');healthy(c,'OLS resized');
+}
+{
+  // SPSS-detective above the Sig. worksheet: explanation per cell and a scored search.
+  const c=mount('toets'),host=c.querySelector('.lab-extra');assert.ok(host.querySelector('.spss-detective'),'Detective is mounted in the toets lesson');
+  const cell=key=>host.querySelector(`[data-spss-cell="${key}"]`),box=host.querySelector('.spss-explain');
+  assert.equal(host.querySelectorAll('.spss-cell').length,23);assert.equal(cell('R2').attrs['aria-label'],'R Square: ,928');assert.equal(cell('B0').attrs['aria-label'],'B (Constant): −1,108');assert.equal(cell('SIG1').attrs['aria-label'],'Sig. (arbeidsuren): ,000');
+  cell('SE').emit('click');assert.match(box.innerHTML,/1,10003/);assert.match(box.innerHTML,/formula-number[^>]*>Afgeleid van formule 36/,'Lesson formula card');assert.match(box.innerHTML,/Met de getallen uit de tabel/);
+  for(const key of ['R2','F','SEB1','T1'])assert.match((cell(key).emit('click'),box.innerHTML),/class="formula formula-typeset"/,key+' shows the lesson formula card');
+  host.querySelector('[data-spss-mode="speur"]').emit('click');const q=host.querySelector('.spss-question');assert.equal(q.hidden,false);assert.match(q.innerHTML,/Vraag 1 van 10/);
+  cell('BETA').emit('click');assert.match(q.innerHTML,/Nog niet/);cell('B1').emit('click');assert.match(q.innerHTML,/Vraag 2 van 10/);assert.match(q.innerHTML,/Score: 0/);
+  for(const key of ['R2','SE','FSIG','MSE','ADJ','DFE','BETA','MSR','B0'])cell(key).emit('click');assert.match(q.innerHTML,/9 van 10 in één keer goed/);
 }
 console.log(`OK: ${L.ids.length} labs; ${interactions} control changes; input/change sync, choice buttons, graph responses, invalid-input recovery, OLS and resizing.`);
 
