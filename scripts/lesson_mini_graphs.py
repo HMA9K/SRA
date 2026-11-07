@@ -45,7 +45,8 @@ def casus_residuals():
         body += f'<path class="transition-line" d="M{X(x):.1f} {Y(predict(m, x)):.1f}V{Y(y):.1f}"/>'
         body += f'<circle class="transition-point" cx="{X(x):.1f}" cy="{Y(y):.1f}" r="4"/>'
         body += text(round(X(x) + (-8 if left else 8), 1), round((Y(y) + Y(predict(m, x))) / 2 + 4, 1), label, 'end' if left else 'start')
-        body += text(round(X(x), 1), 147, num(x, 1), 'middle')
+    for tick in (48, 51, 54, 57):
+        body += text(round(X(tick), 1), 147, tick, 'middle')
     body += text(145, 166, 'Arbeidsuren (× 1.000)', 'middle')
     return svg('Residuen bij de lijn van Linderhof Components: ' + ', '.join(labels) + '.', body)
 
