@@ -77,4 +77,9 @@ close(calc.validation([12,13,17],pred).mspr,0);
 assert.deepEqual(pred,[12,13,17]);
 assert.throws(()=>calc.validation([1,2],[1]));
 assert.throws(()=>calc.validation([1e308],[0]));
-console.log('OK: 19 labs; planning, verschil/ratio/regressieschatter, voorspellingsbanden, VIF-grens, partiële F en MSPR.');
+// Productiecasus (boek H9, tabel 9.1): dezelfde waarden als les 14 en de SPSS-uitvoer.
+const prod=calc.productionModel();
+close(prod.xbar,48.683333333,1e-8);close(prod.sx,6.3138679,1e-6);close(prod.b1,.6098892,1e-6);close(prod.b0,-1.1081055,1e-6);
+close(prod.r2,.9275953,1e-6);close(prod.se,1.1000261,1e-6);close(prod.F,281.8478,1e-3);close(prod.t1**2,prod.F,1e-9);assert.ok(prod.p1<.0005);close(prod.p0,.5406,1e-3);
+const jan=calc.predictionBands({...calc.productionInputs(),x0:55.5});close(jan.point,32.747,1e-9);close(jan.factor,1.04519,1e-5);close(jan.margin,2.3845,1e-4);
+console.log('OK: 19 labs; productiecasus; planning, verschil/ratio/regressieschatter, voorspellingsbanden, VIF-grens, partiële F en MSPR.');
