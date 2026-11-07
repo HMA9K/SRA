@@ -82,4 +82,19 @@ const prod=calc.productionModel();
 close(prod.xbar,48.683333333,1e-8);close(prod.sx,6.3138679,1e-6);close(prod.b1,.6098892,1e-6);close(prod.b0,-1.1081055,1e-6);
 close(prod.r2,.9275953,1e-6);close(prod.se,1.1000261,1e-6);close(prod.F,281.8478,1e-3);close(prod.t1**2,prod.F,1e-9);assert.ok(prod.p1<.0005);close(prod.p0,.5406,1e-3);
 const jan=calc.predictionBands({...calc.productionInputs(),x0:55.5});close(jan.point,32.747,1e-9);close(jan.factor,1.04519,1e-5);close(jan.margin,2.3845,1e-4);
-console.log('OK: 19 labs; productiecasus; planning, verschil/ratio/regressieschatter, voorspellingsbanden, VIF-grens, partiële F en MSPR.');
+// Klikbare lestabellen: ieder bijschrift bestaat nog en de uitleg rekent met de getallen uit die tabel.
+{
+  const course={};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../data/course.js'),'utf8'),{window:course});
+  const text=h=>h.replace(/<[^>]+>/g,'').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&').trim();
+  const grid=html=>{const rows=[...html.matchAll(/<tr[\s\S]*?<\/tr>/g)].map(r=>[...r[0].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map(c=>text(c[1])));const head=rows[0],num=v=>{const t=v.replace(/[<>*]/g,'').trim().replace(/\./g,'').replace(',','.').replace(/^−/,'-');return t===''||/[a-z]/i.test(t)?NaN:Number(t);};return {head,rows:rows.slice(1).map(r=>({name:r[0],cells:r.slice(1).map((v,i)=>({td:{},col:head[i+1]||'',text:v,value:num(v)}))}))};};
+  const found={};
+  for(const [id,specs] of Object.entries(L.lessonTables)){const lesson=course.SRA.lessons.find(l=>l.id===id);const tables=lesson.sections.flatMap(s=>s.html.match(/<table[\s\S]*?<\/table>/g)||[]);
+    for(const spec of specs){const table=tables.find(t=>spec.caption.test(text((t.match(/<caption>([\s\S]*?)<\/caption>/)||['',''])[1])));assert.ok(table,id+' mist tabel '+spec.caption);const entries=spec.entries(grid(table));assert.ok(entries.length>=6,id+' '+spec.caption);found[id+'|'+spec.caption.source]=entries.map(e=>e[1].join(' '));}}
+  const all=key=>Object.entries(found).find(([k])=>k.includes(key))[1].join('\n');
+  assert.match(all('huurmodel'),/≈ 0,7950: de oppervlakte verklaart circa 79,5%/);assert.match(all('huurmodel'),/€ 56,63 per maand/);
+  assert.match(all('Uitwerking'),/≈ 60,82595/);assert.match(all('Uitwerking'),/df = n − k − 1 = 10 − 1 − 1 = 8/);
+  assert.match(all('Tests of Normality'),/0,014 < 0,05, dus H₀ verwerpen/);assert.match(all('Tests of Normality'),/n = 40 ≤ 50, dus beslis je met Shapiro-Wilk/);
+  assert.match(all('Correlations'),/≈ −0,638/);assert.match(all('Correlations'),/0,526 > 0,05: H₀ van constante spreiding niet verwerpen/);
+  assert.match(all('Coefficients'),/b_WO − b_HBO = 1\.010,210 − 644,888 = 365,322/);assert.match(all('Coefficients'),/38,495\/6,492 ≈ 5,930/);assert.match(all('Coefficients'),/df = n − k − 1 = 200 − 6 − 1 = 193/);
+}
+console.log('OK: 19 labs; productiecasus; klikbare lestabellen; planning, verschil/ratio/regressieschatter, voorspellingsbanden, VIF-grens, partiële F en MSPR.');

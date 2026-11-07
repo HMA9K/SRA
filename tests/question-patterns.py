@@ -84,7 +84,7 @@ class RecognitionRoutes(unittest.TestCase):
         self.assertIn('exp', route('mc-transformaties-toepassing-2')['approach'])
         # Tegenstrijdige toetsrichting en onbewezen oorzaken blijven beperkt.
         self.assertIn('tegengesteld', route('mc-toetsen-toepassing-2')['meaning'])
-        self.assertIn('1 − p_tweezijdig/2', route('mc-toetsen-toepassing-2')['approach'])
+        self.assertIn('1 − p/2, met p de tweezijdige Sig.', route('mc-toetsen-toepassing-2')['approach'])
         self.assertIn('geen oorzaak', route('voorspellen-3')['meaning'])
         # Een compleet diagnoseantwoord vraagt uitvoerbewijs en een vervolgstap.
         self.assertIn('tabel of afbeelding', route('tentamen-2')['approach'])

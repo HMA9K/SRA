@@ -11224,7 +11224,7 @@ window.SRAMCData = {
             "Omdat het waargenomen teken tegen de vooraf gekozen richting in gaat, is de rechtszijdige p hier 1 − 0,02/2 = 0,99. Dat levert geen bewijs voor β > 0."
           ],
           "explanation": "Het gevonden effect ligt tegengesteld aan H₁. Je mag de tweezijdige p niet zonder controle van de richting halveren om een stijging te claimen. Omdat het waargenomen teken tegen de vooraf gekozen richting in gaat, is de rechtszijdige p hier 1 − 0,02/2 = 0,99. Dat levert geen bewijs voor β > 0.",
-          "pattern": "Herken: H₁: β > 0, een negatieve geschatte helling en een tweezijdige p. → Betekenis: De gevonden richting is tegengesteld aan de gevraagde stijging. → Aanpak: Controleer eerst het teken; voor deze eenzijdige richting hoort 1 − p_tweezijdig/2 bij de p-waarde. → Gevraagd antwoord: Een toetsbeslissing over de gevraagde stijging, niet over een willekeurig verband.",
+          "pattern": "Herken: H₁: β > 0, een negatieve geschatte helling en een tweezijdige p. → Betekenis: De gevonden richting is tegengesteld aan de gevraagde stijging. → Aanpak: Controleer eerst het teken; voor deze eenzijdige richting is de p-waarde 1 − p/2, met p de tweezijdige Sig. → Gevraagd antwoord: Een toetsbeslissing over de gevraagde stijging, niet over een willekeurig verband.",
           "trap": "Een klein p-getal vertelt op zichzelf niet welke richting wordt ondersteund.",
           "optionExplanations": [
             "Geen bewijs voor een stijging is geen bewijs dat β exact nul is. De gevonden richting is zelfs negatief.",
@@ -11302,7 +11302,7 @@ window.SRAMCData = {
           "recognition": {
             "signals": "H₁: β > 0, een negatieve geschatte helling en een tweezijdige p.",
             "meaning": "De gevonden richting is tegengesteld aan de gevraagde stijging.",
-            "approach": "Controleer eerst het teken; voor deze eenzijdige richting hoort 1 − p_tweezijdig/2 bij de p-waarde.",
+            "approach": "Controleer eerst het teken; voor deze eenzijdige richting is de p-waarde 1 − p/2, met p de tweezijdige Sig.",
             "answer": "Een toetsbeslissing over de gevraagde stijging, niet over een willekeurig verband."
           },
           "guidance": {

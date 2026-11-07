@@ -198,6 +198,107 @@
    {name:'ŷ₀',points:[[v.x0,r.point]],line:false,color:'#c0392b',radius:6}
   ],{xmin:35,xmax:65,ymin:15,ymax:45,bands:[{...band('margin','#176fad1c'),name:'Lichte band: 95%-interval voor één nieuwe maand'},{...band('meanMargin','#176fad38'),name:'Donkere band: 95%-interval voor het gemiddelde'}],vertical:[m.xbar],xlabel:'Arbeidsuren x₀ (× 1.000)',ylabel:'Productie (× 10.000 stuks)',note:`Lees de vlakken van onder naar boven bij een gekozen x₀. De lichte band loopt van de ondergrens tot de bovengrens van het interval voor één nieuwe maand; de donkere band binnenin is het smallere interval voor het gemiddelde van alle maanden met die x₀. Beide banden zijn het smalst bij x̄ = ${fixed(p.xbar,3)} (stippellijn) en worden naar de randen breder. De rode streep is jouw interval. De maanden lagen tussen ${fmt(m.minX,1)} en ${fmt(m.maxX,1)}.`})+steps+explain(`Bij ${fmt(v.x0,1)} duizend arbeidsuren verwacht je ${fixed(r.point,3)} × 10.000 ≈ ${fmt(r.point*10000,0)} stuks. ${individual?'Eén nieuwe maand':'Het gemiddelde van alle maanden met deze x₀'} ligt met 95% betrouwbaarheid tussen ${fixed(low,2)} en ${fixed(high,2)}. ${outside?`Let op: x₀ ligt buiten het waargenomen bereik van ${fmt(m.minX,1)} tot ${fmt(m.maxX,1)}. Dat is extrapolatie; benoem in je antwoord dat de lijn daar niet op gegevens rust.`:'Hoe verder x₀ van x̄ ligt, hoe breder de band: een kleine fout in de helling werkt aan de uiteinden het sterkst door.'} Je gebruikt t = ${fixed(p.t,3)} bij df = n − 2 = ${p.n-2}.`)+tryThis('Schuif x₀ naar 40 en daarna naar 58. Vergelijk de marge met die bij x̄. Wissel dan naar het gemiddelde: de band wordt veel smaller, omdat de eerste 1 onder de wortel wegvalt.');
  }
+ // Uitleg bij één SPSS-getal, in de stijl van de lessen: betekenis, formulekaart, één rekenregel en een tentamenzin.
+ // entry = [naam, waarde, betekenis, sleutel van de formulekaart, rekenregel, tentamenzin]
+ function spssCard(key){const entry=key&&window.SRAStepFormulas?.formulas[key];return entry?`<div class="formula formula-typeset"><div class="formula-row"><span class="formula-label">${entry.label}<span class="formula-number" data-no-terms>${entry.source}</span></span><div class="math-scroll" tabindex="0" role="region" aria-label="Formule: ${esc(entry.label)}">${entry.html}</div></div></div>`:'';}
+ // De hele rekenregel als één formule (breuken en wortels), met platte tekst als terugval.
+ function spssMath(text){try{return window.SRAFormulaText?.toMathML(text)||subs(esc(text));}catch(_){return subs(esc(text));}}
+ function showSpss(box,[name,value,what,formula,work,exam]){
+  box.hidden=false;
+  box.innerHTML=`<h3>${esc(name)} = ${esc(value)}</h3><p>${subs(esc(what))}</p>${spssCard(formula)}${work?`<div class="spss-work"><strong>Met de getallen uit de tabel</strong><p>${spssMath(work)}</p></div>`:''}${exam?`<p><strong>Op het tentamen:</strong> ${subs(esc(exam))}</p>`:''}`;
+  window.SRAFormulaText?.annotate(box);
+  const rect=box.getBoundingClientRect?.();if(rect&&rect.top>innerHeight)box.scrollIntoView({block:'nearest',behavior:'smooth'});
+ }
+ // Klikbare lestabellen. De getallen komen uit de tabel zelf; past een bijschrift niet meer, dan blijft de tabel gewoon staan.
+ const tableNumber=text=>{const t=String(text).replace(/[<>*]/g,'').trim().replace(/\./g,'').replace(',','.').replace(/^−/,'-');return t===''||/[a-z]/i.test(t)?NaN:Number(t);};
+ const decimals=text=>(String(text).match(/,(\d+)/)||['',''])[1].length;
+ const nl=(v,d)=>minus(fixed(v,d));
+ function readTable(table){
+  const rows=[...table.querySelectorAll('tr')],head=[...rows[0].children].map(c=>c.textContent.trim());
+  return {head,rows:rows.slice(1).map(tr=>{const [first,...cells]=[...tr.children];return {name:first.textContent.trim(),cells:cells.map((td,i)=>({td,col:head[i+1]||'',text:td.textContent.trim(),value:tableNumber(td.textContent)}))};})};
+ }
+ const findCell=(grid,row,col)=>grid.rows.find(r=>row.test(r.name))?.cells.find(c=>col.test(c.col));
+ function anovaEntries(grid,ctx={}){
+  const get=(row,col)=>findCell(grid,row,col),R=/^Regression/,E=/^Residual/,T=/^Total/,SS=/^(SS|Sum of Squares)$/,DF=/^df$/,MS=/^(MS|Mean Square)$/,F=/^F$/;
+  const ssr=get(R,SS),sse=get(E,SS),sst=get(T,SS),dfr=get(R,DF),dfe=get(E,DF),dft=get(T,DF);if(![ssr,sse,sst,dfr,dfe,dft].every(c=>c&&Number.isFinite(c.value)))return [];
+  const d=decimals(sst.text),k=dfr.value,n=dft.value+1,mse=sse.value/dfe.value,msr=ssr.value/k,r2=ssr.value/sst.value,out=[];
+  const add=(cell,entry)=>{if(cell&&Number.isFinite(cell.value))out.push([cell,entry]);};
+  add(ssr,['SS Regression',ssr.text,'SSR: het deel van de totale variatie dat de lijn verklaart.','anova|Verdeling van kwadratensommen',`SSR = TotalSS − SSE = ${sst.text} − ${sse.text} = ${nl(sst.value-sse.value,d)}`,`R² = SSR/TotalSS = ${ssr.text}/${sst.text} ≈ ${nl(r2,4)}${ctx.x?`: ${ctx.x} verklaart circa ${fixed(r2*100,1)}% van de variatie in ${ctx.y}.`:'.'}`]);
+  add(sse,['SS Residual',sse.text,'SSE: de som van de gekwadrateerde residuen, de variatie die de lijn niet verklaart.','anova|Verdeling van kwadratensommen',`SSE = TotalSS − SSR = ${sst.text} − ${ssr.text} = ${nl(sst.value-ssr.value,d)}`,'Mist er een getal in de ANOVA-tabel, reken het dan terug met TotalSS = SSR + SSE.']);
+  add(sst,['SS Total',sst.text,'TotalSS: alle variatie in y rond het gemiddelde ȳ.','anova|Verdeling van kwadratensommen',`TotalSS = SSR + SSE = ${ssr.text} + ${sse.text} = ${nl(ssr.value+sse.value,d)}`,'']);
+  add(dfr,['df Regression',dfr.text,'Het aantal verklarende variabelen k. De constante telt niet mee.','',`df = k = ${k}`,'Dit is de eerste vrijheidsgraad voor de F-tabel.']);
+  add(dfe,['df Residual',dfe.text,'De vrijheidsgraden van de residuen.','toetsen|Vrijheidsgraden',`df = n − k − 1 = ${n} − ${k} − 1 = ${n-k-1}`,'Met deze df zoek je de kritieke t of F op.']);
+  add(dft,['df Total',dft.text,'n − 1. Hieruit lees je het aantal waarnemingen af.','',`n = df + 1 = ${dft.value} + 1 = ${n}`,'']);
+  add(get(R,MS),['MS Regression',get(R,MS)?.text,'MSR: de verklaarde kwadratensom per verklarende variabele.','anova|Gemiddelde verklaarde kwadratensom',`MSR = SSR/k = ${ssr.text}/${k} = ${nl(msr,d)}`,'']);
+  add(get(E,MS),['MS Residual',get(E,MS)?.text,'MSE: de residuele variantie. De wortel hiervan is sₑ.','anova|Gemiddelde residuele kwadratensom',`MSE = SSE/(n − k − 1) = ${sse.text}/${dfe.value} ≈ ${nl(mse,d)}`,`sₑ = √MSE = √${nl(mse,3)} ≈ ${ctx.unit||''}${nl(Math.sqrt(mse),2)}${ctx.per?' '+ctx.per:''}: de gebruikelijke afstand tot de lijn.`]);
+  const f=get(R,F);add(f,['F',f?.text,'De globale toetsingsgrootheid: de verklaarde variantie MSR gedeeld door de onverklaarde variantie MSE.','toetsen|Globale F-toets',`F = MSR/MSE = ${nl(msr,d)}/${nl(mse,d)} ≈ ${nl(msr/mse,d)}`,`Vergelijk F met de kritieke F bij ν₁ = ${k} en ν₂ = ${n-k-1} (formule 43).`]);
+  return out;
+ }
+ function normalityEntries(grid){
+  const get=(row,col)=>findCell(grid,row,col),KS=/^Kolmogorov/,SW=/^Shapiro/,STAT=/^Statistic/,DF=/^df/,SIG=/^Sig/,swSig=get(SW,SIG),n=get(SW,DF)?.value;if(!swSig||!Number.isFinite(n))return [];
+  const choice=n<=50?`n = ${n} ≤ 50, dus beslis je met Shapiro-Wilk (formule 46).`:`n = ${n} > 50, dus beslis je met Kolmogorov-Smirnov (formule 46).`,reject=swSig.value<.05;
+  return [
+   [get(KS,STAT),['Statistic (Kolmogorov-Smirnov)',get(KS,STAT)?.text,'De toetsingsgrootheid van Kolmogorov-Smirnov. De beslissing lees je af aan Sig., niet aan Statistic.','normaliteit','',choice]],
+   [get(SW,STAT),['Statistic (Shapiro-Wilk)',get(SW,STAT)?.text,'De toetsingsgrootheid van Shapiro-Wilk. De beslissing lees je af aan Sig., niet aan Statistic.','normaliteit','',choice]],
+   [get(KS,DF),['df (Kolmogorov-Smirnov)',get(KS,DF)?.text,'Het aantal residuen n waarop de toets rust.','normaliteit','',choice]],
+   [get(SW,DF),['df (Shapiro-Wilk)',get(SW,DF)?.text,'Het aantal residuen n waarop de toets rust.','normaliteit','',choice]],
+   [get(KS,SIG),['Sig. (Kolmogorov-Smirnov)',get(KS,SIG)?.text,'Het sterretje betekent dat SPSS hier een ondergrens van de werkelijke p-waarde toont.','normaliteit','',`${choice} Deze kolom is geen uitwijkmogelijkheid voor een gunstiger conclusie.`]],
+   [swSig,['Sig. (Shapiro-Wilk)',swSig.text,'De p-waarde van Shapiro-Wilk. H₀: de residuen zijn normaal verdeeld; H₁: de residuen zijn niet normaal verdeeld.','normaliteit','',reject?`“${swSig.text} < 0,05, dus H₀ verwerpen: de residuen zijn niet normaal verdeeld.” Relevant is het α-risico.`:`“${swSig.text} ≥ 0,05, dus H₀ niet verwerpen.” Daarmee is normaliteit niet bewezen.`]]
+  ].filter(([cell])=>cell&&Number.isFinite(cell.value));
+ }
+ function absresEntries(grid,ctx){
+  const get=(row,col)=>findCell(grid,row,col),R=/^Pearson/,P=/^Sig/,X=/^ABSRES met oppervlakte/,Y=/^ABSRES met huur/,H=/^Huur met oppervlakte/,n=ctx.n,out=[];
+  const rx=get(X,R),px=get(X,P),ry=get(Y,R),py=get(Y,P),rh=get(H,R),ph=get(H,P);
+  if(rx&&Number.isFinite(rx.value)){const r=rx.value,t=r*Math.sqrt(n-2)/Math.sqrt(1-r*r);out.push([rx,['Pearson r (ABSRES met oppervlakte)',rx.text,'De correlatie tussen de absolute residuen en de verklarende variabele. Zo onderzoek je of de spreiding van de residuen met x verandert.','toetsen|Correlatie toetsen',`t = r × √(n − 2)/√(1 − r²) = ${rx.text} × √${n-2}/√(1 − ${nl(Math.abs(r),3)}²) ≈ ${nl(t,3)}`,`Vergelijk |t| met de kritieke t bij df = n − 2 = ${n-2}, of lees Sig. af.`]]);}
+  if(px&&Number.isFinite(px.value))out.push([px,['Sig. (ABSRES met oppervlakte)',px.text,'De tweezijdige p-waarde voor H₀: ρ = 0, de cursus-H₀ van constante spreiding.','','',px.value<.05?`“${px.text} < 0,05: H₀ van constante spreiding verwerpen.” Onderzoek een andere modelvorm of WLS.`:`“${px.text} > 0,05: H₀ van constante spreiding niet verwerpen.” Dat bewijst niet dat iedere vorm van veranderende spreiding ontbreekt; bekijk ook het diagram.`]]);
+  for(const cell of [ry,py])if(cell&&Number.isFinite(cell.value))out.push([cell,[cell===ry?'Pearson r (ABSRES met huur)':'Sig. (ABSRES met huur)',cell.text,'Niet de gevraagde vergelijking: de spreidingsdiagnose kijkt naar de samenhang met de verklarende variabele x, niet met y.','','','Kies in Correlations de cel van ABSRES met de verklarende variabele.']]);
+  if(rh&&Number.isFinite(rh.value))out.push([rh,['Pearson r (huur met oppervlakte)',rh.text,'De correlatie tussen huur en oppervlakte: de hoofdrelatie van het model.','',`r² = ${rh.text}² ≈ ${nl(rh.value**2,4)}`,'Bij één verklarende variabele is r² gelijk aan R². Deze cel toetst geen constante spreiding.']]);
+  if(ph&&Number.isFinite(ph.value))out.push([ph,['Sig. (huur met oppervlakte)',ph.text,'De p-waarde van de hoofdrelatie. Die is significant, maar zegt niets over de spreiding van de residuen.','','','Schrijf p < 0,001, niet p = 0.']]);
+  return out;
+ }
+ function coefficientEntries(grid,ctx){
+  const B=/^B$/,SE=/^Std\. Error$/,T=/^t$/,P=/^Sig/,out=[],df=ctx.n-ctx.k-1;
+  const notes={
+   '(Constant)':['De constante b₀: de voorspelling als alle variabelen nul zijn. Leeftijd 0 ligt buiten de gegevens, dus dit getal heeft geen praktische betekenis.','Gebruik b₀ wel in de vergelijking.'],
+   Leeftijd:['Per jaar ouder is het voorspelde salaris € VALUE hoger, bij gelijke overige kenmerken.','“Bij een jaar hogere leeftijd verwachten we een salaris dat € VALUE hoger ligt, bij gelijke overige kenmerken.”'],
+   Beoordeling:['Per punt hogere beoordeling is het voorspelde salaris € VALUE hoger, bij gelijke overige kenmerken.','Laat Beoordeling in een voorspellingsvraag staan, ook als zij niet significant is: verwijderen vraagt een nieuw geschat model.'],
+   Vrouw:['Een dummy: 1 voor een vrouw, 0 voor een man. Voor een vrouw ligt de voorspelling € VALUE lager dan voor een man met dezelfde opgenomen kenmerken.','Zet de dummy op 1 voor een vrouw en op 0 voor een man.'],
+   HBO:['Een dummy: 1 bij HBO. De coëfficiënt vergelijkt met de referentiegroep zonder HBO of WO: € VALUE hoger, bij gelijke overige kenmerken.','HBO en WO vergelijk je allebei met dezelfde referentiegroep.'],
+   WO:['Een dummy: 1 bij WO. De coëfficiënt vergelijkt met de referentiegroep zonder HBO of WO: € VALUE hoger, bij gelijke overige kenmerken.','WO tegenover HBO is het verschil van de twee coëfficiënten, niet de coëfficiënt van WO.'],
+   Leidinggevende:['Een dummy: 1 voor een leidinggevende. De voorspelling ligt € VALUE hoger dan voor iemand zonder leidinggevende functie, bij gelijke overige kenmerken.','Tel b bij de voorspelling op als de persoon leidinggevend is.']
+  };
+  const hbo=grid.rows.find(r=>r.name==='HBO')?.cells.find(c=>B.test(c.col));
+  for(const row of grid.rows){
+   const b=row.cells.find(c=>B.test(c.col)),se=row.cells.find(c=>SE.test(c.col)),t=row.cells.find(c=>T.test(c.col)),p=row.cells.find(c=>P.test(c.col)),note=notes[row.name];
+   if(!note||!b||!se||![b,se].every(c=>Number.isFinite(c.value)))continue;
+   const value=nl(Math.abs(b.value),3).replace(/^−/,''),tWork=`t = b/s_b = ${b.text}/${se.text} ≈ ${nl(b.value/se.value,3)}`;
+   out.push([b,[`B (${row.name})`,b.text,note[0].replace('VALUE',value),'meervoudig|Geschatte vergelijking',row.name==='WO'&&hbo?`b_WO − b_HBO = ${b.text} − ${hbo.text} = ${nl(b.value-hbo.value,3)}`:'',note[1].replace('VALUE',value)]]);
+   out.push([se,[`Std. Error (${row.name})`,se.text,`De standaardfout van de coëfficiënt van ${row.name}: hoe onzeker deze schatting is.`,'toetsen|Bij H₀: βⱼ = 0',tWork,'']]);
+   if(t&&Number.isFinite(t.value))out.push([t,[`t (${row.name})`,t.text,'Hoeveel standaardfouten de coëfficiënt van nul ligt.','toetsen|Bij H₀: βⱼ = 0',tWork,row.name==='Vrouw'?`H₀: β ≥ 0, H₁: β < 0. Bij df = ${df} geeft tabelrij 190 de grens −1,653 (eenzijdig α = 0,05); ${t.text} < −1,653, dus H₀ verwerpen.`:`Vergelijk met de kritieke t bij df = n − k − 1 = ${ctx.n} − ${ctx.k} − 1 = ${df}.`]]);
+   if(p&&Number.isFinite(p.value))out.push([p,[`Sig. (${row.name})`,p.text,'De tweezijdige p-waarde voor H₀: β = 0.','','',row.name==='(Constant)'?'De toets op de constante is meestal niet de vraag.':row.name==='Vrouw'?'Voor H₁: β < 0 met een negatieve t deel je Sig. door 2: 0,015/2 = 0,0075 < 0,05, dus H₀ verwerpen.':p.value<.05?`${p.text} < 0,05: ${row.name} draagt significant bij, bij gelijke overige kenmerken.`:`${p.text} > 0,05: ${row.name} is afzonderlijk niet significant. Laat de variabele in een voorspellingsvraag wel staan.`]]);
+  }
+  return out;
+ }
+ const lessonTables={
+  anova:[{caption:/^ANOVA van het huurmodel$/,entries:g=>anovaEntries(g,{x:'de oppervlakte',y:'de huur',unit:'€ ',per:'per maand'})},{caption:/^Uitwerking: de volledig ingevulde ANOVA-tabel$/,entries:g=>anovaEntries(g)}],
+  diagnostiek:[{caption:/^Tests of Normality/,entries:normalityEntries},{caption:/^De juiste cel in Correlations/,entries:g=>absresEntries(g,{n:40})}],
+  meervoudig:[{caption:/^Coefficients, relevante kolommen/,entries:g=>coefficientEntries(g,{n:200,k:6})}]
+ };
+ function enhanceTables(root,lessonId){
+  let count=0;
+  for(const spec of lessonTables[lessonId]||[])for(const table of root.querySelectorAll('table')){
+   if(table.dataset.spssReady||!spec.caption.test(table.querySelector('caption')?.textContent.trim()||''))continue;
+   const entries=spec.entries(readTable(table));if(!entries.length)continue;
+   table.dataset.spssReady='true';table.classList.add('spss-clickable');count++;
+   const host=table.closest('.table-scroll')||table,box=document.createElement('div');
+   box.className='spss-explain spss-inline';box.hidden=true;box.setAttribute('aria-live','polite');
+   const hint=document.createElement('p');hint.className='spss-click-hint';hint.textContent='Klik op een getal in de tabel: je ziet wat het is, de formule en de berekening.';
+   host.after(hint,box);
+   entries.forEach(([cell,entry],i)=>{cell.td.classList.add('spss-click');cell.td.innerHTML=`<button type="button" class="spss-cell" data-spss-entry="${i}" aria-label="${esc(entry[0]+': '+entry[1])}">${cell.td.innerHTML}</button>`;});
+   table.addEventListener('click',event=>{const button=event.target.closest('[data-spss-entry]');if(!button)return;table.querySelectorAll('.spss-cell').forEach(b=>{b.classList.toggle('is-active',b===button);if(b===button)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current');});showSpss(box,entries[Number(button.dataset.spssEntry)][1]);});
+  }
+  return count;
+ }
  // SPSS-detective: klikbare uitvoer van de productiecasus, met uitleg of als speurtocht.
  function spssDetective(host){
   const m=productionModel(),spss=(v,d=3)=>v>=0&&v<.0005&&d===3?',000':minus(fixed(v,d)).replace(/^(−?)0(?=,)/,'$1'),p=(v,d)=>minus(fixed(v,d)),pText=v=>v<.001?'p < 0,001':'p = '+fixed(v,3);
@@ -238,11 +339,7 @@
    `</div><div class="spss-explain" aria-live="polite"><p>Klik op een getal in een tabel.</p></div></div></section>`;
   const explainBox=host.querySelector('.spss-explain'),question=host.querySelector('.spss-question');
   let mode='uitleg',index=0,score=0,missed=false;
-  // Dezelfde formulekaart als in de lessen; de invulling wordt door de gedeelde formuleweergave gezet.
-  const card=key=>{const entry=key&&window.SRAStepFormulas?.formulas[key];return entry?`<div class="formula formula-typeset"><div class="formula-row"><span class="formula-label">${entry.label}<span class="formula-number" data-no-terms>${entry.source}</span></span><div class="math-scroll" tabindex="0" role="region" aria-label="Formule: ${esc(entry.label)}">${entry.html}</div></div></div>`:'';};
-  // De hele rekenregel als één formule (breuken en wortels), met platte tekst als terugval.
-  const mathLine=text=>{try{return window.SRAFormulaText?.toMathML(text)||subs(esc(text));}catch(_){return subs(esc(text));}};
-  const show=key=>{const [name,value,what,formula,work,exam]=cells[key];explainBox.innerHTML=`<h3>${esc(name)} = ${esc(value)}</h3><p>${subs(esc(what))}</p>${card(formula)}${work?`<div class="spss-work"><strong>Met de getallen uit de tabel</strong><p>${mathLine(work)}</p></div>`:''}${exam?`<p><strong>Op het tentamen:</strong> ${subs(esc(exam))}</p>`:''}`;window.SRAFormulaText?.annotate(explainBox);const box=explainBox.getBoundingClientRect?.();if(box&&box.top>innerHeight)explainBox.scrollIntoView({block:'nearest',behavior:'smooth'});};
+  const show=key=>showSpss(explainBox,cells[key]);
   const mark=(button,state)=>{host.querySelectorAll('.spss-cell').forEach(b=>{b.classList.remove('is-active','is-right','is-wrong');b.removeAttribute('aria-current');});if(button){button.classList.add(state);if(state==='is-active')button.setAttribute('aria-current','true');}};
   const ask=()=>{question.hidden=false;question.innerHTML=index<questions.length?`<strong>Vraag ${index+1} van ${questions.length}:</strong> ${esc(questions[index][0])} <span class="spss-score">Score: ${score}</span>`:`<strong>Klaar:</strong> ${score} van ${questions.length} in één keer goed. <button type="button" class="btn small" data-spss-restart>Opnieuw</button>`;};
   host.addEventListener('click',event=>{
@@ -465,5 +562,5 @@
   observer.observe(container);
   mounts.set(container,()=>{observer.disconnect();container.removeEventListener('input',handleInput);container.removeEventListener('change',handleInput);container.removeEventListener('focusin',handleFocus);container.removeEventListener('click',handleViewClick);});
  }
- window.SRALabs={mount,ids:Object.keys(configs),calculations:{planning,partialF,validation,collinearity,predictionBands,productionModel,productionInputs}};
+ window.SRALabs={mount,enhanceTables,ids:Object.keys(configs),calculations:{planning,partialF,validation,collinearity,predictionBands,productionModel,productionInputs},lessonTables};
 })();
