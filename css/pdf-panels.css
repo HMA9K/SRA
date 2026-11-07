@@ -172,4 +172,4 @@ body.cirrus-mode .exam-case-resizer{background:transparent}
 body.cirrus-mode .exam-case-resizer::after{content:none}
 body.cirrus-mode .exam-case-resizer:hover,body.cirrus-mode .exam-case-resizer:focus-visible{background:var(--study-teal,#008577);outline:0}
 /* Tentamen met open zijvenster: dezelfde smalle middenkolom als bij oefenvragen. */
-@media(min-width:761px){body.cirrus-mode.exam-running:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .exam-case-layout>.exam-question-body{padding:10px 8px 8px!important}}
+@media(min-width:761px){body.cirrus-mode.exam-running:is(:has(.study-assistant-layout:not(.is-stacked)),:has(.original-pdf-left)) .exam-question-body{padding:10px 8px 8px!important}}
