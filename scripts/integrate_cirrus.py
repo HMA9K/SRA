@@ -84,6 +84,13 @@ s=s.replace("<span class=\"result-number\">'+(i+1)", "<span class=\"result-numbe
 s=s.replace("questionNumber(q,i)+'</span></div><div class=\"exam-position\">", "questionNumber(q,i)+'</span>'+(section?btn('Casus','section',false,'aria-haspopup=\"dialog\"'):'')+'</div><div class=\"exam-position\">")
 s=s.replace("btn('Sectie','section')", "btn('Casus','section')").replace('>Sectie</button>', '>Casus</button>').replace('<h2>SECTIE</h2>', '<h2>CASUS</h2>')
 
+# Startknop eerst, het originele voorblad daaronder: minder scrollen naar Toets starten.
+s=s.replace("'')+introduction(exam)+(exam.durationUnconfirmed", "'')+(exam.durationUnconfirmed", 1)
+s=s.replace("'De starttermijn is verstreken.')+'</span>')+'</div>'+'</div>';", "'De starttermijn is verstreken.')+'</span>')+'</div>'+introduction(exam)+'</div>';", 1)
+
+# Welkomstscherm zonder eigen kop: de paginabalk noemt het tentamen al.
+s=s.replace('host.innerHTML=\'<a class="exam-back" href="#tentamen">‹ Dashboard</a>\'+head(label(exam),\'Welkom. Lees eerst de informatie en kies eventueel extra tijd.\')+\'<div class="exam-paper">\'', 'host.innerHTML=\'<div class="exam-paper">\'', 1)
+
 from cirrus_results import adapt as adapt_results
 s = adapt_results(s)
 from cirrus_feedback import adapt as adapt_feedback

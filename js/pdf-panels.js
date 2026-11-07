@@ -345,7 +345,7 @@ function mount(){
   const target=ctx.host?.querySelector('.exam-footer .actions,.mc-footer-tools,.question-nav .nav-left')||ctx.host?.querySelector('.question-nav,.exam-welcome-actions,.exam-paper .actions');
   if(target&&!target.querySelector('.original-pdf-actions'))target.append(actions(ctx.id));
   const welcome=ctx.host?.querySelector('.exam-paper');
-  if(location.hash.startsWith('#welkom/')&&welcome&&originalPdfs[ctx.id]&&!welcome.querySelector('.original-pdf-actions'))welcome.append(actions(ctx.id));
+  if(location.hash.startsWith('#welkom/')&&welcome&&originalPdfs[ctx.id]&&!welcome.querySelector('.original-pdf-actions'))(welcome.querySelector('.exam-start-actions')||welcome).append(actions(ctx.id));
   document.querySelectorAll('#exam-app a.exam-name').forEach(link=>{
     const href=link.getAttribute('href'),m=href?.match(/^#(welkom|toets|inzage)\/([^/]+)/);if(!m)return;
     const id=m[1]==='welkom'?m[2]:SRACirrus.getQuestionContext(m[2])?.exam.id;
