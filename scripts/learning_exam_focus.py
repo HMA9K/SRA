@@ -4,7 +4,7 @@ from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 from html import escape
 from build_exam_points import analyze
-from exam_point_rules import TOPIC_LESSONS
+from exam_point_rules import TOPIC_GROUPS, TOPIC_LESSONS
 from course_completion import table
 from learning_regression import add, answer, ref
 
@@ -51,6 +51,8 @@ def enhance(lessons, sources):
     topics={t['id']:t for t in point_data['topics']}
     assert sorted(t for ids,_,_ in ROUTES.values() for t in ids)==sorted(topics)
     assert {t:lesson for lesson,(ids,_,_) in ROUTES.items() for t in ids}==TOPIC_LESSONS
+    # De tentamenanalyse toont de onderwerpen in dezelfde volgorde als de lessen.
+    assert [t for ids,_,_ in ROUTES.values() for t in ids]==[t for _,blocks in TOPIC_GROUPS for _,ids in blocks for t in ids]
     for lesson in lessons:
         ids=ROUTES[lesson['id']][0]
         body=''

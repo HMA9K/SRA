@@ -53,6 +53,9 @@ const first=html=>html.match(/<tbody><tr><td><a[^>]*>([^<]+)/)[1];
 click({view:'tabel'});click({sort:'perExam'});assert.equal(first(views.innerHTML),T.topics['strata-schatten'].short);
 click({sort:'meanShown'});assert.equal(first(views.innerHTML),T.topics.regressieschatter.short);
 click({sort:'group'});assert.equal((views.innerHTML.match(/class="tv-group"/g)||[]).length,9);
+// Standaardvolgorde is de lesvolgorde.
+const order=[...views.innerHTML.matchAll(/<tr><td><a href="#les\/([^"]+)"/g)].map(m=>m[1]),lessons=ctx.window.SRAExamTopics?Object.values(T.topics):[];
+assert.deepEqual(order.filter((id,i)=>id!==order[i-1]),['mpu','verschil','quotient','regressieschatter','steekproefomvang','stratificatie','regressielijn','anova','toetsen','diagnostiek','voorspellen','meervoudig','transformaties','modelbouw','validatie','tentamen']);
 click({open:'mpu'});assert.ok(views.innerHTML.includes('class="tv-detail"'));
 // Heatmap: groepen en gemiddelde; nullen zijn leeg.
 const heat=render('heatmap');assert.equal((heat.match(/class="tv-avg"/g)||[]).length,28);assert.equal((heat.match(/class="tv-group"/g)||[]).length,9);assert.ok(!/tv-cell[^>]*>0</.test(heat));

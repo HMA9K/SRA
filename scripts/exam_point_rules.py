@@ -151,19 +151,19 @@ TOPIC_SHORT = {
     'interval':'Voorspellingsinterval', 'gezamenlijk':'Gedeelde punten',
 }
 
-# Indeling van de tentamenanalyse. Volgorde: per opgave, daarna per lesblok.
+# Indeling van de tentamenanalyse. De volgorde is die van de lessen (ROUTES in learning_exam_focus.py).
 TOPIC_GROUPS = [
  ('Opgave 1 · Steekproeven', [
-  ('Schatters', ['mpu','verschil','quotient','regressieschatter','schatterkeuze']),
+  ('Schatters', ['mpu','schatterkeuze','verschil','quotient','regressieschatter']),
   ('Steekproefomvang', ['omvang']),
   ('Stratificatie', ['strata-ontwerp','strata-schatten']),
  ]),
  ('Opgave 2 · Regressie', [
-  ('Model opbouwen en lezen', ['basis','correlatie','anova','coefficienten']),
+  ('Regressielijn en ANOVA', ['basis','correlatie','anova']),
   ('Toetsen', ['toetsen']),
   ('Modeldiagnose', ['groepen','tijd','uitbijters-x','uitbijters-y','invloed','normaliteit','hetero']),
-  ('Modelkeuze', ['modelvergelijking','multicol','selectie','transformaties','validatie']),
   ('Voorspellen', ['puntvoorspelling','interval']),
+  ('Meervoudige regressie en modelkeuze', ['coefficienten','transformaties','modelvergelijking','multicol','selectie','validatie']),
   ('Gedeelde punten', ['gezamenlijk']),
  ]),
 ]
