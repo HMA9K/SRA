@@ -153,7 +153,7 @@ def enhance(lessons, sources):
 
     # Het rekenwerk krijgt een controleerbare tabel met eenheden.
     values = [80, 90, 110, 120]
-    body = '<p>Een opgave kan losse waarden geven of alleen sommen. Onderstaande oefentabel '
+    body = '<p>Onderstaande oefentabel '
     body += 'laat zien dat de twee variantieformules hetzelfde meten. De ene manier begint bij afwijkingen '
     body += 'van het gemiddelde; de andere gebruikt direct de kolomsommen.</p>'
     body += table('Rekenvoorbeeld: vier gecontroleerde waarden in euro',

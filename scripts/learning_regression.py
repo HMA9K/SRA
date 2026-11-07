@@ -51,11 +51,9 @@ def enhance(lessons, sources):
         lesson['formulaGuide'] = [s for s in lesson.get('formulaGuide', []) if s.get('regressionVersion') != '2026-09-25']
 
     add(L['regressielijn'], sources, 'Van controleverwachting naar regressiemodel',
-        '<p>Bij <strong>cijferbeoordeling</strong> vergelijkt de accountant een werkelijk bedrag of '
-        'aantal met een onderbouwde verwachting. In de productiecasus leveren arbeidsuren die '
-        'verwachting: bij meer gewerkte uren verwacht je meer productie. Eén vast gemiddelde voor '
-        'alle maanden houdt geen rekening met het verschil tussen drukke en rustige maanden.</p>'
-        '<p>Regressie maakt die verwachting afhankelijk van een kenmerk. Kies eerst wat je wilt '
+        '<p>In de productiecasus leveren arbeidsuren die '
+        'verwachting: bij meer gewerkte uren verwacht je meer productie.</p>'
+        '<p>Kies eerst wat je wilt '
         'beoordelen: dat is <strong>y</strong>. Kies daarna de inhoudelijk passende verklarende '
         'variabele <strong>x</strong> en noteer populatie, periode en eenheden. De lijn schat het '
         'verband; de spreiding rond de lijn laat zien hoeveel gewone afwijking je nog kunt verwachten. '
@@ -327,10 +325,9 @@ def enhance(lessons, sources):
         [ref('slides',100,'Slides, uitbijters en invloed, PDF 100–108'),ref('formules',3,'Formuleblad, formules 44–45 en 48, PDF 3')])
 
     add(L['diagnostiek'], sources, 'Tests of Normality en ABSRES: kies de juiste rij en grootheid',
-        '<p><strong>Normaliteit</strong> en <strong>homoscedasticiteit</strong> onderzoeken verschillende '
-        'eigenschappen. Normaliteit gaat over de vorm van de verdeling van de storingen, benaderd met '
-        'residuen. Homoscedasticiteit betekent dat hun spreiding niet systematisch verandert met x. '
-        'Bij dezelfde huurcasus kan de ene diagnose dus wel en de andere geen probleem aanwijzen.</p>'
+        '<p>Omdat <strong>normaliteit</strong> en <strong>homoscedasticiteit</strong> verschillende '
+        'eigenschappen onderzoeken, kan bij dezelfde huurcasus de ene diagnose wel en de andere geen '
+        'probleem aanwijzen.</p>'
         + table('Tests of Normality, huurcasus', ['Toets','Statistic','df / n','Sig.'], [
             ['Kolmogorov-Smirnov','0,103','40','0,200*'],['Shapiro-Wilk','0,928','40','0,014'],
         ])
@@ -632,8 +629,7 @@ def enhance(lessons, sources):
                    'de bijbehorende F-grens met 1 en 46 vrijheidsgraden in tabel 13.8. '
                    'Een betere fit vervangt validatie en modeldiagnoses niet.']))
         + '<p>Bij één extra variabele sluit deze tweezijdige vergelijking aan op de gekwadrateerde '
-        't-toets van die variabele in het uitgebreide model. Voor een blok van q extra variabelen '
-        'deel je de toename van SSR ook door q. Vergelijk geen model voor y met een model voor ln(y) '
+        't-toets van die variabele in het uitgebreide model. Vergelijk geen model voor y met een model voor ln(y) '
         'met deze formule.</p>',
         [ref('formules',3,'Formuleblad, adjusted R², formule 51, PDF 3'),
          ref('formules',4,'Formuleblad, partiële F, formule 63, PDF 4'),

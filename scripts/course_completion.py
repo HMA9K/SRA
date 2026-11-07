@@ -90,12 +90,8 @@ def enhance(lessons,sources):
         'Vergelijk ieder doel met de cumulatieve bedragen op bestaande klassegrenzen. Kies de dichtstbijzijnde beschikbare grenzen; je splitst geen klasse met verzonnen individuele gegevens.',
         'De bedragen € 3.405.577, € 7.496.144 en € 12.137.408 horen bij bovengrenzen € 1.600, € 3.000 en € 5.000. De laatste grens is € 10.000.'])
     boundary+=table('Cumulatieve boekwaarde: doel en gekozen grens',['Doel','Cumulatief gekozen','Bovengrens'],[['€ 3.968.032','€ 3.405.577','€ 1.600'],['€ 7.936.064','€ 7.496.144','€ 3.000'],['€ 11.904.096','€ 12.137.408','€ 5.000']])
-    boundary+='<h3>Cumulatieve wortel</h3><p>Bereken per klasse de wortel van <strong>klassebreedte × frequentie</strong> en tel deze wortels cumulatief op. Neem niet de wortel van de totale cumulatieve frequentie. Bij ongelijke klassen moet de breedte meetellen.</p>'
-    boundary+=table('Begin van de berekening',['Klasse','Breedte','Frequentie','√(breedte × frequentie)','Cumulatief'],[['0–400',400,772,'555,70','555,70'],['400–800',400,1016,'637,50','1.193,20'],['800–1.200',400,1408,'750,47','1.943,67']])
-    boundary+=steps(['Voor alle elf klassen samen is het worteltotaal 7.208,79. Doel per stratum: 7.208,79 / 4 ≈ 1.802,20.',
-        'Vergelijk cumulatieve doelen 1.802,20, 3.604,40 en 5.406,60 (1, 2 en 3 keer 1.802,20) met de beschikbare klassegrenzen.',
-        'Kies de dichtstbijzijnde bedragen: 1.943,67, 3.671,02 en 5.618,65. Dat geeft bovengrenzen € 1.200, € 2.500, € 5.000 en € 10.000.',
-        'Gebruik de nieuwe groepsomvangen 3.196, 2.329, 1.587 en 547 pas daarna voor de allocatie van 300 controles. De 54 topstratumposten komen daar apart bij.'])
+    # De wortelmethode staat al volledig uitgewerkt bij "De cumulatieve wortel uit een klassentabel"; hier alleen de uitkomst.
+    boundary+='<h3>Cumulatieve wortel</h3><p>De volledige berekening staat hierboven bij "De cumulatieve wortel uit een klassentabel". Die geeft de bovengrenzen € 1.200, € 2.500, € 5.000 en € 10.000. Gebruik de nieuwe groepsomvangen 3.196, 2.329, 1.587 en 547 pas daarna voor de allocatie van 300 controles. De 54 topstratumposten komen daar apart bij.</p>'
     boundary+='<p class="note">De twee methoden verdelen verschillende grootheden en hoeven dus niet dezelfde grenzen op te leveren.</p>'
     boundary_refs=[dict(source='opgaven',page=7,locator='H8 opgave 8a/b, PDF 7'),dict(source='uitwerkingen',page=10,locator='H8 opgave 8a/b, PDF 10–11'),bookref('boek-h8c',222)]
     add(L['stratificatie'],'Stratagrenzen bepalen vanuit een klassentabel',boundary,refs=boundary_refs)
