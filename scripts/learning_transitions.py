@@ -111,7 +111,6 @@ def spread_example(arithmetic_html, spread_html):
               ['(−20)² = (−20) × (−20) = 400'] + [f'({"+" if d > 0 else ""}{signed(d)})² = {num(d*d, 0)}' for d in DEVIATIONS[1:]], 'Samen: 1.000 euro²', 'Elke afwijking wordt met zichzelf vermenigvuldigd. Zo tellen beide kanten mee.', square)]) + (
         '<h4>4. Van kwadraten naar variantie en standaardafwijking</h4>' + spread[1] + '</p>' + root + spread[2]
         + '<p>In dit voorbeeld: steekproefvariantie = 1.000 ÷ (4 − 1) ≈ 333,33 euro²; standaardafwijking = √(1.000 ÷ 3) ≈ € 18,26. '
-        'Waarom n − 1? Rond het berekende gemiddelde tellen de afwijkingen op tot nul; na drie afwijkingen ligt de vierde vast. '
         '</p>'
         '<h4>5. Rekenvolgorde en twee verschillende sommen</h4>' + order + arithmetic[1])
 
@@ -169,8 +168,8 @@ def strata_example():
         panel('1. Deel de populatie op', strata_diagram(),
               ['Elke cirkel is één post.', 'Het getal is de boekwaarde in euro.'], 'Elke groep heet een stratum', 'Je deelt in met bekende boekwaarden, vóórdat je de werkelijke waarden controleert.'),
         panel('2. Plan binnen elke groep', strata_diagram(planned=True),
-              ['✓ = al gecontroleerd; + = extra controle.', 'Leeg = nog niet gecontroleerd.', 'A: 2; B: 2 + 1 = 3 controles.'], 'Totaal: 5; uitbreiding: 1', 'De echte berekening bepaalt welke groep uitbreiding nodig heeft en hoeveel.')],
-        'Nᵢ telt alle posten in een groep; nᵢ telt de controles. Dit schema toont alleen de indeling. Welke groep extra controles krijgt, volgt uit de variantiebijdragen; de verdeling vooraf volgens Neyman gebruikt Nᵢ × sᵢ.')
+              ['✓ = al gecontroleerd; + = extra controle.', 'Leeg = nog niet gecontroleerd.', 'A: 2; B: 2 + 1 = 3 controles.'], 'Totaal: 5; uitbreiding: 1', 'Het schema toont alleen de indeling, niet de berekening.')],
+        'Nᵢ telt alle posten in een groep; nᵢ telt de controles. Welke groep extra controles krijgt, volgt uit de variantiebijdragen; de verdeling vooraf volgens Neyman gebruikt Nᵢ × sᵢ.')
 
 
 def log_example():

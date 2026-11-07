@@ -62,8 +62,8 @@ def _mpu(lesson):
         '<li><strong>Een smal interval volgt niet automatisch uit een grote populatie.</strong></li>'
         '<li><strong>Grote spreiding geeft een breed interval.</strong> Wanneer MPU goed werkt en welke twee '
         'uitwegen je dan hebt, staat bij "Het idee" hierboven.</li>'
-        '<li><strong>De regel n ≥ 100 is geen garantie.</strong> Het interval gaat ervan uit dat het '
-        'steekproefgemiddelde ongeveer normaal verdeeld is. Daarvoor geldt deze vuistregel, maar het boek waarschuwt '
+        '<li>Het interval gaat ervan uit dat het steekproefgemiddelde ongeveer normaal verdeeld is. '
+        '<strong>De vuistregel n ≥ 100 is daarvoor geen garantie:</strong> het boek waarschuwt '
         'dat extreem scheve verdelingen een grotere steekproef kunnen vragen. Bij een voorraad met veel kleine en '
         'een paar heel grote posten kan een steekproef van 100 die grote posten missen. Kijk daarom eerst of de '
         'steekproef aselect is en of er opvallend grote posten zijn.</li></ul>')

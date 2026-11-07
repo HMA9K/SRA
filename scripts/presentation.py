@@ -157,9 +157,7 @@ LEGENDS = {
 
 # Per formuleblok wat de symbolenlijst zelf niet zegt; de plek volgt het blok waar de formule staat.
 LEGEND_NOTES = {
- 'onzekerheid':['E is de halve intervalbreedte.'],
  'mpu':['Het dakje op W betekent geschat.'],
- 'regressieschatter':['','De factor √(1 − R²_bw) verlaagt de standaardfout ten opzichte van MPU.'],
  'stratificatie':['Index i verwijst naar stratum i.','W_top is het bekende werkelijke totaal van het volledig gecontroleerde topstratum.'],
  'anova':['MSR en MSE zijn kwadratensommen gedeeld door hun vrijheidsgraden.'],
  'toetsen':['k telt de verklarende variabelen, zonder constante.'],
