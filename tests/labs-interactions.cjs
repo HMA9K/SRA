@@ -90,7 +90,8 @@ class ResizeObserver {
   fire(){if(this.active)this.fn([{target:this.el}]);}
 }
 const sandbox={window:{SRAMath:M,SRALabLayout:LabLayout},ResizeObserver};
-vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../js/labs.js'),'utf8'),sandbox);
+vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(__dirname,'../data/step-formulas.js'),'utf8'),sandbox);
+vm.runInContext(fs.readFileSync(path.join(__dirname,'../js/labs.js'),'utf8'),sandbox);
 const L=sandbox.window.SRALabs;
 const html=c=>c.querySelector('.lab-result').innerHTML;
 const charts=c=>Array.from(html(c).matchAll(/<svg\b[\s\S]*?<\/svg>|<div class="variance-bar"[^>]*>[\s\S]*?<\/div>/g),m=>m[0]);
@@ -302,7 +303,8 @@ for(const [id,name,bad]of [['interval','n',1001],['strata','n',1001],['anova','k
   const c=mount('toets'),host=c.querySelector('.lab-extra');assert.ok(host.querySelector('.spss-detective'),'Detective is mounted in the toets lesson');
   const cell=key=>host.querySelector(`[data-spss-cell="${key}"]`),box=host.querySelector('.spss-explain');
   assert.equal(host.querySelectorAll('.spss-cell').length,23);assert.equal(cell('R2').attrs['aria-label'],'R Square: ,928');assert.equal(cell('B0').attrs['aria-label'],'B (Constant): −1,108');assert.equal(cell('SIG1').attrs['aria-label'],'Sig. (arbeidsuren): ,000');
-  cell('SE').emit('click');assert.match(box.innerHTML,/1,10003/);assert.match(box.innerHTML,/formule 36/);
+  cell('SE').emit('click');assert.match(box.innerHTML,/1,10003/);assert.match(box.innerHTML,/formula-number[^>]*>Afgeleid van formule 36/,'Lesson formula card');assert.match(box.innerHTML,/Met de getallen uit de tabel/);
+  for(const key of ['R2','F','SEB1','T1'])assert.match((cell(key).emit('click'),box.innerHTML),/class="formula formula-typeset"/,key+' shows the lesson formula card');
   host.querySelector('[data-spss-mode="speur"]').emit('click');const q=host.querySelector('.spss-question');assert.equal(q.hidden,false);assert.match(q.innerHTML,/Vraag 1 van 10/);
   cell('BETA').emit('click');assert.match(q.innerHTML,/Nog niet/);cell('B1').emit('click');assert.match(q.innerHTML,/Vraag 2 van 10/);assert.match(q.innerHTML,/Score: 0/);
   for(const key of ['R2','SE','FSIG','MSE','ADJ','DFE','BETA','MSR','B0'])cell(key).emit('click');assert.match(q.innerHTML,/9 van 10 in één keer goed/);

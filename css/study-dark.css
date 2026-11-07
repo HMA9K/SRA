@@ -247,6 +247,8 @@ html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .spss-cell.is-active{bac
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .spss-cell.is-right{background:#162c20}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .spss-cell.is-wrong{background:#2c1916}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .spss-explain{border:1px solid #416256;border-left:3px solid #2d765d;background:#152129}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .chart-legend .key.area{border:1px solid #3b4a54}
+html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .spss-work{border:1px solid #366d5d;border-left:3px solid #2d765d;background:#19291f}
 /* css/terms.css */
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-term{color:#8dc2ec;text-decoration-color:#a3c2d7}
 html[data-study-theme=dark]:not(:has(body.cirrus-mode)) .sra-term:hover,html[data-study-theme=dark]:not(:has(body.cirrus-mode)) body.study-shell .sra-term:hover{color:#8dc2ec;background:#16222c}

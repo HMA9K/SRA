@@ -184,7 +184,7 @@ body[data-page="les"] #main .lab-all-results .lab-try{margin:0;padding:8px 12px}
 .spss-detective .spss-modes{max-width:460px;margin:10px 0}
 .spss-question{margin:8px 0;padding:10px 12px;border:1px solid #bfd8cf;border-radius:4px;background:#f5faf7}
 .spss-score{margin-left:8px;color:#5a6b64;font-size:.85em}
-.spss-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;align-items:start}
+.spss-layout{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,430px),1fr));gap:16px;align-items:start}
 .spss-tables{display:grid;gap:10px;min-width:0}
 .spss-table{border-collapse:collapse;width:100%;font-size:.82rem;background:#fff}
 .spss-table caption{font-weight:700;padding:6px;border:1px solid #c9cfd6;border-bottom:0;background:#fff}
@@ -201,3 +201,8 @@ body[data-page="les"] #main .lab-all-results .lab-try{margin:0;padding:8px 12px}
 .spss-explain h3{margin:0 0 6px;font-size:1rem}
 .spss-explain p{margin:6px 0}
 @media(max-width:760px){.spss-layout{grid-template-columns:1fr}.spss-explain{position:static}.spss-table{font-size:.78rem}}
+.chart-legend .key.area{width:16px;height:12px;border:1px solid #9aa3ab;border-radius:2px;vertical-align:-1px}
+.spss-explain .formula{margin:10px 0}
+.spss-work{margin:10px 0;padding:8px 12px;border:1px solid #bcded4;border-left:3px solid #008859;border-radius:4px;background:#f5faf7}
+.spss-work p{margin:4px 0 0;overflow-x:auto}
+.spss-work math{font-size:1.12em}
