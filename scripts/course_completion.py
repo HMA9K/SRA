@@ -116,12 +116,8 @@ def enhance(lessons,sources):
     se=p.sub(p.s,p.v('e')); sb1=p.sub(p.s,p.sub(p.b,p.num(1)))
     remainder=p.minus(p.num(1),p.sq(r)); df=p.minus(n,p.num(2))
     residual=formula('Formule 34: residuele variantie',p.eq(p.sq(se),p.mul(p.frac(p.minus(n,p.num(1)),df),p.group(remainder),p.sq(sy))))
-    residual+='<p>Je gebruikt deze vorm bij enkelvoudige regressie met een constante wanneer n, r en sᵧ gegeven zijn. sₑ² is de resterende variantie rond de regressielijn; sₑ = √sₑ². Vanuit een ANOVA-tabel krijg je hetzelfde met SSE/(n − 2). Het aandeel 1 − r² is niet verklaard door de lijn.</p><h3>Autogewichten</h3>'+steps([
-        'Gegevens: de tien gewichten zijn 946, 950, 965, 978, 980, 990, 1.055, 1.015, 1.055 en 1.080 kg; x loopt van 1 tot en met 10.',
-        'Spreiding en correlatie, onafgerond: sᵧ ≈ 47,46976, sₓ ≈ 3,02765 en r ≈ 0,940088. Gebruik de afgeronde r = 0,940 alleen als niet meer cijfers beschikbaar zijn.',
-        'Resterende variantie: met n = 10 is (n − 1)/(n − 2) = 9/8, dus sₑ² = 9/8 × (1 − r²) × sᵧ² ≈ 294,66212 kg² (met onafgeronde r). Neem de wortel: sₑ ≈ 17,16572 kg.',
-        'Controle: de ANOVA-tabel geeft SSE = 2.357,29697 en df = 8. SSE/df = 2.357,29697/8 = 294,66212. Beide berekeningen beschrijven dezelfde resterende spreiding.'])
-    add(L['regressielijn'],'Residuele variantie berekenen zonder ANOVA-tabel',residual,refs=[bookref('boek-h9a',246),bookref('boek-h9a',247),dict(source='opgaven',page=10,locator='H9.1: autogewichten'),dict(source='uitwerkingen',page=14,locator='H9.1: uitwerking, PDF 14–15')])
+    residual+='<p>Gebruik deze vorm als n, r en sᵧ gegeven zijn; 1 − r² is het onverklaarde deel. In les 11 zie je dezelfde sₑ² terug als SSE/(n − 2).</p>'
+    add(L['regressielijn'],'Residuele variantie berekenen zonder ANOVA-tabel',residual,refs=[bookref('boek-h9a',246),bookref('boek-h9a',247)])
     infer=formula('Formule 39: standaardfout van de helling',p.eq(sb1,p.mul(p.frac(sy,sx),p.root(p.frac(remainder,df)))))
     infer+=formula('Formule 40: correlatie toetsen',p.eq(p.t,p.frac(p.mul(r,p.root(df)),p.root(remainder))))
     infer+=formula('Interval voor de populatiehelling',p.row(p.sub(p.b,p.num(1)),p.op('±'),p.mul(p.t,sb1)))

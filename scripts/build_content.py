@@ -11,6 +11,59 @@ def book(part, printed):
     r = bookref(part, printed)
     return (r['source'], r['locator'], r['page'])
 
+def casus(case):
+    """Bronverantwoording van een doorlopende casus als (bron, vindplaats, pagina)."""
+    from casus_data import source_ref
+    r = source_ref(case)
+    return (r['source'], r['locator'], r['page'])
+
+from formula_visuals import num as _num
+from casus_data import STOCK as _STOCK
+num0, num1, num2 = (lambda v: _num(v, 0)), (lambda v: _num(v, 1)), (lambda v: _num(v, 2))
+def _december():
+    from casus_data import PRODUCTION, regression, predict
+    m = regression(); x, y = PRODUCTION[11]; yhat = round(predict(m, x), 2)
+    return y, yhat, round(y - yhat, 2)
+DEC_Y, DEC_YHAT, DEC_E = _december()
+
+def stock_example():
+    """Uitgewerkt voorbeeld van les 4: de volledige magazijncasus, getallen uit casus_data."""
+    from casus_data import STOCK as d, mpu
+    from formula_visuals import num
+    s = mpu()
+    return ('Voorbeeld: het magazijn van Autogroep Linderhof', [
+        f"Gegevens: N = {num(s['N'], 0)} artikelregels, n = {s['n']}, Σw = € {num(d['sum_w'], 0)} en Σw² = {num(d['sum_w2'], 0)} euro².",
+        f"Gemiddelde: w̄ = Σw/n = {num(d['sum_w'], 0)}/{s['n']} = € {num(s['mean'])} per artikelregel.",
+        f"Spreiding: s² = [Σw² − (Σw)²/n]/(n − 1) = [{num(d['sum_w2'], 0)} − {num(d['sum_w'], 0)}²/{s['n']}]/{s['df']} = {num(s['variance'])} euro². De wortel is s_w = € {num(s['sd'])}.",
+        f"Puntschatting: Ŵ = N × w̄ = {num(s['N'], 0)} × {num(d['sum_w'], 0)}/{s['n']} = € {num(s['estimate'], 0)}.",
+        f"Eindigheidscorrectie: √({num(s['N'] - s['n'], 0)}/{num(s['N'] - 1, 0)}) ≈ {num(s['correction'], 4)}; met N/√n = {num(s['factor'] / s['correction'], 0)} is de vaste factor {num(s['factor'])}.",
+        f"Standaardfout: s_MPU = {num(s['factor'], 4)} × {num(s['sd'], 4)} ≈ € {num(s['se'], 0)}.",
+        f"Kritieke waarde: df = {s['df']} is groter dan 200, dus tabellenbundel PDF 13, onderste rij, kolom 0,025: t = {num(s['t'], 3)}.",
+        f"Marge en interval: E = {num(s['t'], 3)} × {num(s['se'])} ≈ € {num(s['margin'])}. Met Ŵ = € {num(s['estimate'])} geeft dat {num(s['estimate'] - s['margin'])} en {num(s['estimate'] + s['margin'])}; naar buiten afgerond [€ {num(s['lower'], 0)}; € {num(s['upper'], 0)}].",
+        f"Conclusie: met 95% betrouwbaarheid ligt de werkelijke waarde van het magazijn tussen € {num(s['lower'], 0)} en € {num(s['upper'], 0)}. De marge van € {num(s['margin'], 0)} is groter dan de gewenste € {num(d['E_required'], 0)}; met {s['n']} artikelregels haalt MPU de eis niet.",
+    ], [('formules', 'Formules 1–5, PDF-pagina 1', 1), ('tabellen', 'Rij inf.; kolom 0,025', 13),
+        ('programma', 'Tabelregels: naast lagere df; bij df > 200 onderste rij', 4), casus('voorraad')])
+
+def production_example():
+    """Uitgewerkt voorbeeld van les 10: de lijn van de productiecasus, getallen uit casus_data."""
+    from casus_data import PRODUCTION, regression, predict
+    from formula_visuals import num
+    m = regression()
+    x, y = PRODUCTION[m['largest']]
+    yhat, e = predict(m, x), m['residuals'][m['largest']]
+    b0, b1 = num(m['b0'], 3).replace('-', '−'), num(m['b1'], 3)
+    return ('Voorbeeld: productie en arbeidsuren bij Linderhof Components', [
+        f"Gegevens: {m['n']} maanden (2008 en 2009); x = arbeidsuren (× 1.000), y = productie (× 10.000 stuks). Σx = {num(m['sum_x'], 1)}, Σy = {num(m['sum_y'], 1)}, Σxy = {num(m['sum_xy'])}, sₓ = {num(m['sx'], 4)} en s_y = {num(m['sy'], 4)}.",
+        f"Gemiddelden: x̄ = {num(m['sum_x'], 1)}/{m['n']} = {num(m['mean_x'], 3)} en ȳ = {num(m['sum_y'], 1)}/{m['n']} = {num(m['mean_y'], 3)}.",
+        f"Helling: de teller is Σxy − n x̄ȳ = {num(m['sum_xy'])} − {num(m['sum_x'], 1)} × {num(m['sum_y'], 1)}/{m['n']} = {num(m['numerator'])} (n x̄ȳ = Σx·Σy/n, zonder afronding); de noemer is (n − 1)sₓ² = {m['n'] - 1} × {num(m['sx'], 4)}² = {num(m['denominator'])}. Dus b₁ = {num(m['numerator'])}/{num(m['denominator'])} ≈ {num(m['b1'], 5)}.",
+        f"Constante: b₀ = ȳ − b₁x̄ = {num(m['mean_y'], 3)} − {num(m['b1'], 5)} × {num(m['mean_x'], 3)} ≈ {b0}.",
+        f"Lijn: ŷ = {b0} + {b1}x. Per 1.000 extra arbeidsuren verwacht je {b1} × 10.000 = {num(round(m['b1'], 3) * 10000, 0)} stuks meer. De constante zegt niets: x = 0 ligt ver buiten {num(m['min_x'], 1)} tot {num(m['max_x'], 1)}.",
+        f"Voorspelling: in juni 2008 is x = {num(x, 1)}, dus ŷ = {b0} + {b1} × {num(x, 1)} ≈ {num(yhat)}.",
+        f"Residu: e = y − ŷ = {num(y, 1)} − {num(yhat)} = +{num(e)}. Juni 2008 ligt ongeveer {num(round(e, 2) * 10000, 0)} stuks boven de lijn.",
+        f"Correlatie: r = b₁sₓ/s_y = {num(m['b1'], 5)} × {num(m['sx'], 4)}/{num(m['sy'], 4)} ≈ {num(m['r'], 5)} (afgerond {num(m['r'], 3)}): een sterk positief lineair verband.",
+        f"Spreiding rond de lijn: sₑ² = (n − 1)/(n − 2) × (1 − r²) × s_y² = {m['n'] - 1}/{m['n'] - 2} × (1 − {num(m['r'], 5)}²) × {num(m['sy'], 4)}² ≈ {num(m['mse'], 3)}, dus sₑ ≈ {num(m['se'], 3)}. Het residu van juni 2008 is ongeveer {num(e / m['se'], 0)} keer sₑ.",
+    ], [('formules', 'Formules 30–34, PDF-pagina 2', 2), casus('productie')])
+
 def lesson(slug, title, phase, intro, goals, sections, example, pitfalls, refs, questions, lab=None, exam=None):
     lessons.append(dict(id=slug, title=title, phase=phase, intro=intro, goals=goals,
                         # Een blok mag eigen bronnen hebben: (titel, html, [(bron, vindplaats, pagina)]).
@@ -65,12 +118,12 @@ lesson('mpu','De directe schatter (MPU)','Schatten',
  'De directe schatter rekent het gemiddelde uit je gecontroleerde posten door naar de volledige populatie. MPU staat voor Mean Per Unit: gemiddelde per eenheid.',
  ['De totale waarde en haar standaardfout berekenen','Formules 1–4 in de juiste volgorde gebruiken','Een interval in woorden toelichten'],[
  ('Wanneer gebruik je deze schatter?','<p>De directe schatter is de eenvoudigste van de vier. Je kijkt alleen naar de <strong>werkelijke waarden</strong> die je bij controle vaststelt. De boekwaarden doen niet mee: of een post te hoog of te laag geboekt stond, speelt in de formule geen rol. Je neemt het gemiddelde per gecontroleerde post en vermenigvuldigt dat met het aantal posten. Vandaar de Engelse naam <strong>Mean Per Unit</strong>: gemiddelde per eenheid.</p><p>Het idee komt rechtstreeks uit het schatten van een gemiddelde. Weet je hoe groot een gemiddelde post is, dan weet je ook ongeveer hoe groot N posten samen zijn. Alleen de onzekerheid groeit mee: een kleine fout in het gemiddelde wordt N keer zo groot in het totaal.</p><p>Het boek zegt wanneer MPU goed werkt: als de werkelijke waarden <strong>niet te veel uiteenlopen</strong>. Liggen ze ver uit elkaar, dan is s<sub>w</sub> groot en wordt het interval breed. Er zijn dan twee uitwegen. Je deelt de populatie op in groepen met weinig spreiding (stratificatie, les 9). Of je gebruikt een schatter die naar de fout per post kijkt (les 5 tot en met 7).</p>',[book('boek-h8a',203),book('boek-h8a',208)]),
- ('Van steekproef naar interval voor het totaal','<div class="formula">Ŵ<sub>MPU</sub> = N × w̄<br>s<sub>MPU</sub> = N × (s<sub>w</sub> / √n) × √((N − n)/(N − 1))<br>Interval = Ŵ<sub>MPU</sub> ± t × s<sub>MPU</sub></div><p>Lees de standaardfout van binnen naar buiten. Het boek bouwt haar in drie lagen op:</p><ol><li>s<sub>w</sub>: hoe sterk verschillen losse werkelijke waarden?</li><li>s<sub>w</sub>/√n met eindigheidscorrectie: hoe onzeker is het <em>gemiddelde</em> van n posten?</li><li>Maal N: hoe onzeker is het <em>totaal</em> van alle N posten?</li></ol><p>Vermenigvuldig ten slotte met t om de marge E te krijgen. Het boek noemt de factor N/√n × √((N − n)/(N − 1)) apart, omdat hij bij alle vier schatters terugkomt. Alleen de spreiding ervoor verschilt per schatter.</p>',[('formules','Formules 1–5, PDF-pagina 1',1),book('boek-h8a',205),book('boek-h8a',208)]),
- ('Een vaste werkvolgorde','<ol><li>Schrijf N, n, Σw, Σw² en de betrouwbaarheid op.</li><li>Bereken w̄ = Σw/n en s² met formule 1. Neem de wortel voor s<sub>w</sub>.</li><li>Bereken het totaal met formule 3 en de standaardfout met formule 4.</li><li>Zoek t met df = n − 1 en de juiste staartkans (α/2 bij tweezijdig).</li><li>Maak het interval. Rond alleen de eindgrenzen af, naar buiten.</li><li>Vergelijk de marge E met de gevraagde onnauwkeurigheid en schrijf een conclusie in woorden.</li></ol>',[('formules','Formules 1–5, PDF-pagina 1',1),('uitwerkingen','H8 opgave 1–3, PDF-pagina 4–5',4)])],
- ('Voorbeeld: een voorraad van 1.000 artikelen',['Gegeven: N = 1.000, n = 100, w̄ = € 80, s_w = € 20. 95% tweezijdig: df = 99; gebruik tabelrij 90 en t = 1,987.','Puntschatting: Ŵ = N × w̄ = 1.000 × 80 = € 80.000.','Eindigheidscorrectie: √((N − n)/(N − 1)) = √(900 / 999) ≈ 0,9492.','Standaardfout: s_MPU = N × s_w/√n × correctie = 1.000 × (20 / √100) × √(900 / 999) ≈ € 1.898,32.','Marge: E = t × s_MPU ≈ 1,987 × 1.898,31599 = € 3.771,95. Dat geeft [€ 76.228,05; € 83.771,95].'],[('formules','Formules 1–5, PDF-pagina 1',1),('tabellen','Tabel 13.4, rij 95, kolom 0,025',13)]),
+ ('Van steekproef naar interval voor het totaal','<div class="formula">Ŵ<sub>MPU</sub> = N × w̄<br>s<sub>MPU</sub> = N × (s<sub>w</sub> / √n) × √((N − n)/(N − 1))<br>Interval = Ŵ<sub>MPU</sub> ± t × s<sub>MPU</sub></div><p>Lees de standaardfout van binnen naar buiten, in de drie lagen van de tabel hieronder. Maal t geeft de marge E; de factor N/√n × √((N − n)/(N − 1)) komt bij alle vier schatters terug.</p>',[('formules','Formules 1–5, PDF-pagina 1',1),book('boek-h8a',205),book('boek-h8a',208)]),
+ ('Een vaste werkvolgorde','<ol><li>Schrijf N, n, Σw, Σw² en de betrouwbaarheid op.</li><li>Bereken w̄ = Σw/n en s² met formule 1. Neem de wortel voor s<sub>w</sub>.</li><li>Bereken het totaal met formule 3 en de standaardfout met formule 4.</li><li>Zoek t met df = n − 1 en de juiste staartkans (α/2 bij tweezijdig); bij df &gt; 200 de onderste rij (t = 1,960 bij 95%).</li><li>Maak het interval. Rond alleen de eindgrenzen af, naar buiten.</li><li>Schrijf de conclusie in woorden en vergelijk de marge E met de gevraagde onnauwkeurigheid.</li></ol>',[('formules','Formules 1–5, PDF-pagina 1',1),('uitwerkingen','H8 opgave 1–3, PDF-pagina 4–5',4)])],
+ stock_example(),
  ['Vergeet de factor N bij de standaardfout van het totaal niet.','Een smal interval volgt niet automatisch uit een grote populatie.'],
  [('formules','Formules 1–5, PDF-pagina 1',1),('slides','PDF-pagina 13–19',13),('uitwerkingen','H8 opgave 1–3, PDF-pagina 4–5',4)],[
- ('N = 2.000 en w̄ = 150. Wat is Ŵ_MPU?',['€ 300.000','€ 150','€ 13,33'],0,'2.000 × 150 = 300.000.'),
+ (f"Het magazijn telt N = {num0(_STOCK['N'])} artikelregels; stel w̄ = € 2.000. Wat is Ŵ_MPU?",['€ ' + num0(_STOCK['N'] * 2000),'€ 2.000','€ ' + num2(_STOCK['N'] / 2000)],0,f"{num0(_STOCK['N'])} × 2.000 = {num0(_STOCK['N'] * 2000)}."),
  ('Welke spreiding gebruikt MPU?',['Die van de werkelijke waarden','Die van de verschillen b − w','Alleen de boekwaarden'],0,'s_w hoort bij de werkelijke waarden.'),
  ('Wat doet de eindigheidscorrectie als n = N?',['Wordt 1','Wordt 0','Wordt N'],1,'De teller N − n wordt 0. Bij volledige controle is er geen steekproefonzekerheid meer.')],lab='schatter',exam='uitwerkingen:4:H8, opgave 1–3')
 
@@ -152,14 +205,14 @@ lesson('stratificatie','Stratificatie en allocatie','Schatten',
 lesson('regressielijn','Regressie: een lijn door gegevens','Regressie',
  'Regressie beschrijft hoe een uitkomst y samenhangt met een verklarende variabele x. De lijn voorspelt; de residuen laten zien wat de lijn mist.',
  ['Model en geschatte lijn onderscheiden','Een helling en constante interpreteren','Een residu berekenen en correlatie begrijpen'],[
- ('Een rechte lijn leren lezen', '<p>x is de verklarende variabele; y is de uitkomst die je wilt verklaren. De lijn geeft voor iedere x één verwachte y; de werkelijke waarneming kan daarvan afwijken.</p><div class="formula">Populatiemodel: y = β₀ + β₁x + ε<br>Geschatte lijn: ŷ = b₀ + b₁x<br>Residu: eᵢ = yᵢ − ŷᵢ</div><p>De Griekse letters β₀ en β₁ beschrijven het onbekende verband in de populatie. Met de steekproef schat je daarvoor b₀ en b₁. ε is de onbekende storing rond het populatieverband. Het <strong>residu</strong> e bereken je achteraf: waargenomen y min voorspelde ŷ. Een positief residu ligt boven de lijn, een negatief residu eronder.</p><p>b₀, de <strong>constante</strong>, is de voorspelling bij x = 0. b₁, de <strong>helling</strong>, geeft de verandering in de voorspelling bij één eenheid meer x. Noem de eenheden: een helling in productie per arbeidsuur betekent iets anders dan productie per werkdag. Ligt x = 0 buiten de onderzochte waarden, dan heeft de constante niet vanzelf een praktische betekenis.</p>', [('boek-h9a', 'Boek p. 238; oorspronkelijke PDF p. 256; uitsnede p. 6', 6), ('boek-h9a', 'Boek p. 240; oorspronkelijke PDF p. 258; uitsnede p. 8', 8)]),
- ('Hoe wordt de lijn gekozen?', '<p>Er zijn veel lijnen door een puntenwolk mogelijk. De <strong>kleinste-kwadratenmethode</strong>, ook OLS genoemd, kiest de lijn met de kleinste som van gekwadrateerde verticale afwijkingen. Kwadrateren voorkomt dat afwijkingen boven en onder de lijn elkaar wegstrepen. Grote afwijkingen tellen daardoor zwaar mee.</p><div class="formula">b₁ = [Σxy − nx̄ȳ] / [(n−1)s²<sub>x</sub>]<br>b₀ = ȳ − b₁x̄</div><p>Bereken eerst de gemiddelden en de spreiding van x. Vul daarna de formule voor b₁ in en bereken vervolgens b₀. De tweede formule zorgt dat de lijn door het punt met de twee gemiddelden loopt. Je hebt verschillende x-waarden nodig: zonder spreiding in x kun je geen helling bepalen.</p><p>In SPSS staan deze twee schattingen in <strong>Coefficients → Unstandardized Coefficients → B</strong>. Neem de constante en de B van x uit hetzelfde model. De kolom Beta gebruikt standaardafwijkingen als schaal en hoort niet in de vergelijking met de oorspronkelijke eenheden.</p>', [('boek-h9a', 'Boek p. 240; oorspronkelijke PDF p. 258; uitsnede p. 8', 8), ('boek-h9a', 'Boek p. 241; oorspronkelijke PDF p. 259; uitsnede p. 9', 9), ('boek-h9a', 'Boek p. 242; oorspronkelijke PDF p. 260; uitsnede p. 10', 10)]),
- ('Correlatie: richting en sterkte', '<p><strong>Correlatie</strong> vat samen hoe sterk de punten een rechte lijn volgen. Pearsons r ligt tussen −1 en 1. Het teken geeft de richting: negatief bij een dalende lijn en positief bij een stijgende lijn. Hoe dichter de absolute waarde bij 1 ligt, hoe strakker het lineaire patroon. Bij enkelvoudige regressie geldt r = b₁s_x/s_y.</p><p>r heeft geen eenheid. Daardoor verandert r niet als je dezelfde arbeidsuren in werkdagen uitdrukt, terwijl de helling wel verandert. r dicht bij nul betekent weinig <em>lineaire</em> samenhang. Een krom verband kan er nog steeds zijn. Bekijk daarom ook het spreidingsdiagram.</p><p>Een sterke samenhang bewijst geen oorzaak en is nog geen toetsbesluit. De steekproefgrootte speelt bij significantie ook mee. Bovendien kunnen groepen of een derde variabele het patroon veroorzaken. SPSS toont in Model Summary een niet-negatieve R; lees de richting uit Correlations of uit het teken van B.</p>', [('boek-h9a', 'Boek p. 243; oorspronkelijke PDF p. 261; uitsnede p. 11', 11), ('boek-h9a', 'Boek p. 244; oorspronkelijke PDF p. 262; uitsnede p. 12', 12), ('boek-h9a', 'Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14', 14)])],
- ('Voorbeeld: kosten en productie',['Lijn: voorspelde kosten = 200 + 3 × productie.','Voorspelling: vul x = 50 in: 200 + 3 × 50 = 350.','Residu: werkelijk min voorspeld. De werkelijke kosten zijn 380, dus 380 − 350 = +30.','Betekenis: bij één extra product stijgen de voorspelde kosten met 3 geldeenheden. De constante 200 is de voorspelling bij nul productie.'],[('formules','Formules 30–34, PDF-pagina 2',2)]),
- ['Een regressieresidu is y − ŷ; de controlefout in hoofdstuk 8 is b − w.','Gebruik B, niet Beta, voor de regressielijn.'],
+ ('Een rechte lijn leren lezen', '<p>De lijn geeft voor iedere x één verwachte y; de werkelijke waarneming kan daarvan afwijken.</p><div class="formula">Populatiemodel: y = β₀ + β₁x + ε<br>Geschatte lijn: ŷ = b₀ + b₁x<br>Residu: eᵢ = yᵢ − ŷᵢ</div><p>β₀ en β₁ beschrijven het onbekende verband in de populatie; met de steekproef schat je daarvoor b₀ en b₁. ε is de onbekende storing. Het <strong>residu</strong> e is waargenomen y min voorspelde ŷ: positief boven de lijn, negatief eronder.</p><p>b₀, de <strong>constante</strong>, is de voorspelling bij x = 0. b₁, de <strong>helling</strong>, is de verandering in de voorspelling bij één eenheid meer x; noem daarbij de eenheden. Ligt x = 0 buiten de onderzochte waarden, dan heeft de constante geen praktische betekenis.</p>', [('boek-h9a', 'Boek p. 238; oorspronkelijke PDF p. 256; uitsnede p. 6', 6), ('boek-h9a', 'Boek p. 240; oorspronkelijke PDF p. 258; uitsnede p. 8', 8)]),
+ ('Hoe wordt de lijn gekozen?', '<p>Er zijn veel lijnen door een puntenwolk mogelijk. De <strong>kleinste-kwadratenmethode</strong> (OLS) kiest de lijn met de kleinste som van gekwadrateerde verticale afwijkingen. Zo heffen afwijkingen boven en onder de lijn elkaar niet op, en tellen grote afwijkingen zwaar mee.</p><div class="formula">b₁ = [Σxy − nx̄ȳ] / [(n−1)s²<sub>x</sub>]<br>b₀ = ȳ − b₁x̄</div><p>Bereken eerst de gemiddelden en sₓ, dan b₁ en daarna b₀. Zo loopt de lijn door het punt met de twee gemiddelden. Zonder spreiding in x kun je geen helling bepalen.</p>', [('boek-h9a', 'Boek p. 240; oorspronkelijke PDF p. 258; uitsnede p. 8', 8), ('boek-h9a', 'Boek p. 241; oorspronkelijke PDF p. 259; uitsnede p. 9', 9), ('boek-h9a', 'Boek p. 242; oorspronkelijke PDF p. 260; uitsnede p. 10', 10)]),
+ ('Correlatie: richting en sterkte', '<p><strong>Correlatie</strong> vat samen hoe sterk de punten een rechte lijn volgen. Pearsons r ligt tussen −1 en 1. Het teken geeft de richting; hoe dichter |r| bij 1 ligt, hoe strakker het lineaire patroon. Bij enkelvoudige regressie geldt r = b₁s_x/s_y.</p><p>r heeft geen eenheid: r verandert niet als je arbeidsuren in werkdagen uitdrukt, de helling wel. r dicht bij nul betekent weinig <em>lineaire</em> samenhang; een krom verband kan er nog zijn. Bekijk dus ook het spreidingsdiagram.</p><p>Een sterke samenhang bewijst geen oorzaak; ook een derde variabele kan het patroon veroorzaken. SPSS toont in Model Summary een niet-negatieve R; de richting lees je uit het teken van B.</p>', [('boek-h9a', 'Boek p. 243; oorspronkelijke PDF p. 261; uitsnede p. 11', 11), ('boek-h9a', 'Boek p. 244; oorspronkelijke PDF p. 262; uitsnede p. 12', 12), ('boek-h9a', 'Boek p. 246; oorspronkelijke PDF p. 264; uitsnede p. 14', 14)])],
+ production_example(),
+ ['Een regressieresidu is y − ŷ; de controlefout uit les 5 is b − w.','Gebruik B, niet Beta, voor de regressielijn.'],
  [('formules','Formules 30–34, PDF-pagina 2',2),('attentie','PDF-pagina 3–4',3),('exam2024','Vraag 14, PDF-pagina 5',5)],[
  ('ŷ = 10 + 2x. Wat is de voorspelling bij x = 4?',['18','16','24'],0,'10 + 2×4 = 18.'),
- ('y = 25 en ŷ = 18. Wat is het residu?',['−7','7','43'],1,'e = y − ŷ = 7.'),
+ (f"December 2008: y = {num1(DEC_Y)} en ŷ = {num2(DEC_YHAT)}. Wat is het residu?",[num2(-DEC_E), num2(DEC_E).replace('-', '−'), num2(DEC_Y + DEC_YHAT)],1,f"e = y − ŷ = {num2(DEC_E).replace('-', '−')}."),
  ('Wat minimaliseert OLS?',['De som van de residuen','De som van de gekwadrateerde residuen','Het aantal waarnemingen'],1,'OLS kiest de coëfficiënten die Σe² minimaliseren.')],lab='regressie')
 
 lesson('anova','ANOVA en verklaarde variatie','Regressie',

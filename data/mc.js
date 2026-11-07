@@ -2346,25 +2346,25 @@ window.SRAMCData = {
       "questions": [
         {
           "id": "mc-mpu-basis-1",
-          "prompt": "N = 2.000 en w̄ = 150. Wat is Ŵ_MPU?",
+          "prompt": "Het magazijn telt N = 3.500 artikelregels; stel w̄ = € 2.000. Wat is Ŵ_MPU?",
           "options": [
-            "€ 300.000",
-            "€ 150",
-            "€ 13,33"
+            "€ 7.000.000",
+            "€ 2.000",
+            "€ 1,75"
           ],
           "correct": 0,
-          "explanation": "De directe schatter MPU gebruikt het gemiddelde van de werkelijke steekproefwaarden voor de gehele populatie. Vermenigvuldig het gemiddelde per post met het aantal populatieposten: Ŵ_MPU = Nw̄. Invullen geeft 2.000 × € 150 = € 300.000. Dit is een geschat totaal, nog zonder onzekerheidsmarge.",
+          "explanation": "MPU rekent het gemiddelde per post door naar alle posten. Vermenigvuldig dus met het aantal posten: Ŵ_MPU = Nw̄. Invullen geeft 3.500 × € 2.000 = € 7.000.000. Dit is een geschat totaal, nog zonder onzekerheidsmarge.",
           "steps": [
-            "De directe schatter MPU gebruikt het gemiddelde van de werkelijke steekproefwaarden voor de gehele populatie.",
-            "Vermenigvuldig het gemiddelde per post met het aantal populatieposten: Ŵ_MPU = Nw̄.",
-            "Invullen geeft 2.000 × € 150 = € 300.000. Dit is een geschat totaal, nog zonder onzekerheidsmarge."
+            "MPU rekent het gemiddelde per post door naar alle posten.",
+            "Vermenigvuldig dus met het aantal posten: Ŵ_MPU = Nw̄.",
+            "Invullen geeft 3.500 × € 2.000 = € 7.000.000. Dit is een geschat totaal, nog zonder onzekerheidsmarge."
           ],
           "pattern": "Herken: N en w̄, met Ŵ_MPU als gevraagde grootheid. → Betekenis: De directe schatter projecteert het werkelijke gemiddelde naar de populatie. → Aanpak: Gebruik Ŵ_MPU = Nw̄: aantal populatieposten maal bedrag per post. → Gevraagd antwoord: Een geschat werkelijk populatietotaal.",
           "trap": "Een bedrag per post is nog geen totaalbedrag voor alle posten.",
           "optionExplanations": [
-            "€ 300.000 klopt: iedere populatiepost krijgt in deze schatting het gemiddelde van € 150 mee.",
-            "€ 150 is het gemiddelde per post. Voor het populatietotaal ontbreekt de vermenigvuldiging met 2.000.",
-            "€ 13,33 ontstaat ongeveer uit 2.000/150. De directe schatter vermenigvuldigt het aantal posten met het bedrag per post."
+            "€ 7.000.000 klopt: iedere artikelregel krijgt in deze schatting het gemiddelde van € 2.000 mee.",
+            "€ 2.000 is het gemiddelde per post. Voor het totaal van het magazijn ontbreekt de vermenigvuldiging met 3.500.",
+            "€ 1,75 ontstaat uit 3.500/2.000. De directe schatter vermenigvuldigt het aantal posten met het bedrag per post."
           ],
           "refs": [
             {
@@ -2450,11 +2450,11 @@ window.SRAMCData = {
             "Die van de verschillen b − w"
           ],
           "correct": 1,
-          "explanation": "MPU schat W rechtstreeks uit de werkelijke steekproefwaarden w. De bijpassende spreidingsmaat is daarom s_w, de standaardafwijking van die werkelijke waarden. Voor de standaardfout van het totaal wordt s_w geschaald met N/√n en, indien van toepassing, de eindigheidscorrectie.",
+          "explanation": "MPU schat W uit de werkelijke waarden w. De bijpassende spreidingsmaat is dus s_w. Voor de standaardfout van het totaal schaal je s_w met N/√n en de eindigheidscorrectie.",
           "steps": [
-            "MPU schat W rechtstreeks uit de werkelijke steekproefwaarden w.",
-            "De bijpassende spreidingsmaat is daarom s_w, de standaardafwijking van die werkelijke waarden.",
-            "Voor de standaardfout van het totaal wordt s_w geschaald met N/√n en, indien van toepassing, de eindigheidscorrectie."
+            "MPU schat W uit de werkelijke waarden w.",
+            "De bijpassende spreidingsmaat is dus s_w.",
+            "Voor de standaardfout van het totaal schaal je s_w met N/√n en de eindigheidscorrectie."
           ],
           "pattern": "Herken: “Welke spreiding” in combinatie met MPU. → Betekenis: De onzekerheid moet aansluiten bij de gegevens waarop de schatter berust. → Aanpak: MPU gebruikt werkelijke waarden w; zoek dus hun standaardafwijking s_w. → Gevraagd antwoord: De bijbehorende spreidingsmaat, geen spreiding van boekwaarden of controlefouten.",
           "trap": "Kies de spreidingsmaat bij de gebruikte schatter; boekwaarden en fouten zijn andere gegevens.",
@@ -2547,11 +2547,11 @@ window.SRAMCData = {
             "Wordt 0"
           ],
           "correct": 2,
-          "explanation": "De eindigheidscorrectie is √((N − n)/(N − 1)). Als alle populatieposten zijn onderzocht, is n = N en wordt N − n = 0; de correctiefactor is dus nul. Daarmee verdwijnt de onzekerheid door steekproeftrekking. De individuele posten kunnen onderling nog wel verschillen.",
+          "explanation": "De eindigheidscorrectie is √((N − n)/(N − 1)). Bij n = N is de teller nul, dus de factor is nul. Er is dan geen steekproefonzekerheid; de posten kunnen wel onderling verschillen.",
           "steps": [
             "De eindigheidscorrectie is √((N − n)/(N − 1)).",
-            "Als alle populatieposten zijn onderzocht, is n = N en wordt N − n = 0; de correctiefactor is dus nul.",
-            "Daarmee verdwijnt de onzekerheid door steekproeftrekking. De individuele posten kunnen onderling nog wel verschillen."
+            "Bij n = N is de teller nul, dus de factor is nul.",
+            "Er is dan geen steekproefonzekerheid; de posten kunnen wel onderling verschillen."
           ],
           "pattern": "Herken: n = N bij de eindigheidscorrectie. → Betekenis: Iedere populatiepost is onderzocht: er blijft geen onzekerheid door steekproeftrekking over. → Aanpak: Vul n = N in √((N − n)/(N − 1)) in en bekijk de teller. → Gevraagd antwoord: Het gevolg voor correctiefactor en standaardfout, niet voor de spreiding tussen posten.",
           "trap": "Geen steekproefonzekerheid betekent niet dat er geen spreiding of geen mogelijke meetfout bestaat.",
@@ -8922,6 +8922,11 @@ window.SRAMCData = {
           "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
         },
         {
+          "source": "boek-h9a",
+          "page": 2,
+          "locator": "Casus Productiviteit, H9 p. 234–247, tabel 9.1, 9.4 en 9.5; bedrijfsnaam en context aangepast"
+        },
+        {
           "source": "opgaven",
           "page": 10,
           "locator": "Opgavenbundel, H9.1, PDF 10"
@@ -8952,11 +8957,11 @@ window.SRAMCData = {
             "24"
           ],
           "correct": 0,
-          "explanation": "De lijn ŷ = 10 + 2x heeft constante 10 en helling 2. Vul x = 4 in en vermenigvuldig eerst: 2 × 4 = 8. Tel de constante erbij op: ŷ = 10 + 8 = 18. Dit is de voorspelling, niet automatisch de waargenomen y.",
+          "explanation": "De lijn heeft constante 10 en helling 2. Vul x = 4 in: 2 × 4 = 8, plus de constante 10 geeft ŷ = 18. Dit is de voorspelling, niet automatisch de waargenomen y.",
           "steps": [
-            "De lijn ŷ = 10 + 2x heeft constante 10 en helling 2.",
-            "Vul x = 4 in en vermenigvuldig eerst: 2 × 4 = 8.",
-            "Tel de constante erbij op: ŷ = 10 + 8 = 18. Dit is de voorspelling, niet automatisch de waargenomen y."
+            "De lijn heeft constante 10 en helling 2.",
+            "Vul x = 4 in: 2 × 4 = 8, plus de constante 10 geeft ŷ = 18.",
+            "Dit is de voorspelling, niet automatisch de waargenomen y."
           ],
           "pattern": "Herken: Een vergelijking voor ŷ en een concrete x. → Betekenis: De vraag gaat om invullen in een geschat model. → Aanpak: Vermenigvuldig de helling met x en tel de constante erbij op. → Gevraagd antwoord: Een voorspelde y-waarde, niet het residu of de helling.",
           "trap": "De helling vermenigvuldigt x; de constante wordt daarna opgeteld.",
@@ -9017,6 +9022,11 @@ window.SRAMCData = {
               "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
             },
             {
+              "source": "boek-h9a",
+              "page": 2,
+              "locator": "Casus Productiviteit, H9 p. 234–247, tabel 9.1, 9.4 en 9.5; bedrijfsnaam en context aangepast"
+            },
+            {
               "source": "opgaven",
               "page": 10,
               "locator": "Opgavenbundel, H9.1, PDF 10"
@@ -9067,25 +9077,25 @@ window.SRAMCData = {
         },
         {
           "id": "mc-regressielijn-basis-2",
-          "prompt": "y = 25 en ŷ = 18. Wat is het residu?",
+          "prompt": "December 2008: y = 28,4 en ŷ = 30,12. Wat is het residu?",
           "options": [
-            "−7",
-            "7",
-            "43"
+            "1,72",
+            "−1,72",
+            "58,52"
           ],
           "correct": 1,
-          "explanation": "Een regressieresidu is het verschil tussen de waargenomen en de voorspelde uitkomst: e = y − ŷ. Vul de waarden in: e = 25 − 18 = 7. Het positieve teken betekent dat de waarneming 7 boven de regressielijn ligt.",
+          "explanation": "Een residu is waargenomen min voorspeld: e = y − ŷ. Voor december 2008: e = 28,4 − 30,12 = −1,72. Het negatieve teken betekent dat de productie 1,72 × 10.000 = 17.200 stuks onder de lijn ligt.",
           "steps": [
-            "Een regressieresidu is het verschil tussen de waargenomen en de voorspelde uitkomst: e = y − ŷ.",
-            "Vul de waarden in: e = 25 − 18 = 7.",
-            "Het positieve teken betekent dat de waarneming 7 boven de regressielijn ligt."
+            "Een residu is waargenomen min voorspeld: e = y − ŷ.",
+            "Voor december 2008: e = 28,4 − 30,12 = −1,72.",
+            "Het negatieve teken betekent dat de productie 1,72 × 10.000 = 17.200 stuks onder de lijn ligt."
           ],
           "pattern": "Herken: Een waargenomen y én een voorspelde ŷ; gevraagd is het residu. → Betekenis: Het residu is de verticale afwijking van de waarneming ten opzichte van de voorspelling. → Aanpak: Bereken e = y − ŷ en behoud het teken. → Gevraagd antwoord: Een getekende voorspelfout in de eenheid van y.",
           "trap": "ŷ − y draait het teken van het residu om.",
           "optionExplanations": [
-            "−7 is 18 − 25 en gebruikt de omgekeerde volgorde. Het regressieresidu is y − ŷ.",
-            "7 klopt: de werkelijke uitkomst 25 ligt 7 boven de voorspelde 18.",
-            "43 telt waarneming en voorspelling op. Het residu meet juist hun verschil."
+            "1,72 is 30,12 − 28,4 en gebruikt de omgekeerde volgorde. Het regressieresidu is y − ŷ.",
+            "−1,72 klopt: de werkelijke productie 28,4 ligt 1,72 onder de voorspelde 30,12.",
+            "58,52 telt waarneming en voorspelling op. Het residu meet juist hun verschil."
           ],
           "refs": [
             {
@@ -9137,6 +9147,11 @@ window.SRAMCData = {
               "source": "attentie",
               "page": 3,
               "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 2,
+              "locator": "Casus Productiviteit, H9 p. 234–247, tabel 9.1, 9.4 en 9.5; bedrijfsnaam en context aangepast"
             },
             {
               "source": "opgaven",
@@ -9196,11 +9211,11 @@ window.SRAMCData = {
             "De som van de gekwadrateerde residuen"
           ],
           "correct": 2,
-          "explanation": "OLS betekent gewone kleinste kwadraten: het model wordt gekozen op basis van de residuen y − ŷ. Ieder residu wordt gekwadrateerd, zodat positieve en negatieve afwijkingen elkaar niet kunnen opheffen. OLS kiest de coëfficiënten waarvoor Σe², de som van die kwadraten, het kleinst is.",
+          "explanation": "OLS staat voor gewone kleinste kwadraten. Ieder residu y − ŷ wordt gekwadrateerd, zodat afwijkingen elkaar niet opheffen. Het kiest de coëfficiënten waarvoor Σe², de som van die kwadraten, het kleinst is.",
           "steps": [
-            "OLS betekent gewone kleinste kwadraten: het model wordt gekozen op basis van de residuen y − ŷ.",
-            "Ieder residu wordt gekwadrateerd, zodat positieve en negatieve afwijkingen elkaar niet kunnen opheffen.",
-            "OLS kiest de coëfficiënten waarvoor Σe², de som van die kwadraten, het kleinst is."
+            "OLS staat voor gewone kleinste kwadraten.",
+            "Ieder residu y − ŷ wordt gekwadrateerd, zodat afwijkingen elkaar niet opheffen.",
+            "Het kiest de coëfficiënten waarvoor Σe², de som van die kwadraten, het kleinst is."
           ],
           "pattern": "Herken: Het werkwoord “minimaliseert” bij OLS. → Betekenis: De kleinste-kwadratenmethode kiest coëfficiënten via een foutcriterium. → Aanpak: Koppel OLS aan kwadraten van residuen en de som daarvan. → Gevraagd antwoord: Het te minimaliseren criterium, niet de gewone som van getekende residuen.",
           "trap": "Een residusom van nul kan toch grote afzonderlijke fouten bevatten.",
@@ -9259,6 +9274,11 @@ window.SRAMCData = {
               "source": "attentie",
               "page": 3,
               "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 2,
+              "locator": "Casus Productiviteit, H9 p. 234–247, tabel 9.1, 9.4 en 9.5; bedrijfsnaam en context aangepast"
             },
             {
               "source": "opgaven",
@@ -9384,6 +9404,11 @@ window.SRAMCData = {
               "source": "attentie",
               "page": 3,
               "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 2,
+              "locator": "Casus Productiviteit, H9 p. 234–247, tabel 9.1, 9.4 en 9.5; bedrijfsnaam en context aangepast"
             },
             {
               "source": "opgaven",
@@ -9568,6 +9593,11 @@ window.SRAMCData = {
               "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
             },
             {
+              "source": "boek-h9a",
+              "page": 2,
+              "locator": "Casus Productiviteit, H9 p. 234–247, tabel 9.1, 9.4 en 9.5; bedrijfsnaam en context aangepast"
+            },
+            {
               "source": "opgaven",
               "page": 10,
               "locator": "Opgavenbundel, H9.1, PDF 10"
@@ -9692,6 +9722,11 @@ window.SRAMCData = {
               "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
             },
             {
+              "source": "boek-h9a",
+              "page": 2,
+              "locator": "Casus Productiviteit, H9 p. 234–247, tabel 9.1, 9.4 en 9.5; bedrijfsnaam en context aangepast"
+            },
+            {
               "source": "opgaven",
               "page": 10,
               "locator": "Opgavenbundel, H9.1, PDF 10"
@@ -9814,6 +9849,11 @@ window.SRAMCData = {
               "source": "attentie",
               "page": 3,
               "locator": "Attentiepunten, PDF 3: doel en regressiemodel"
+            },
+            {
+              "source": "boek-h9a",
+              "page": 2,
+              "locator": "Casus Productiviteit, H9 p. 234–247, tabel 9.1, 9.4 en 9.5; bedrijfsnaam en context aangepast"
             },
             {
               "source": "opgaven",

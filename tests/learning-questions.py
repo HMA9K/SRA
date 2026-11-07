@@ -56,8 +56,13 @@ class LearningApplications(unittest.TestCase):
         baseline = json.loads(raw[raw.index('{'):].rstrip(';\n'))
         old = [q for t in baseline['topics'] for q in t['questions'] if '-leertoepassing-' not in q['id']]
         self.assertEqual(len(old),134)
+        # Bewust omgezet naar de casus: zelfde id, aantal opties en juiste index, dus opgeslagen antwoorden blijven gelden.
+        casus = {'mc-mpu-basis-1', 'mc-regressielijn-basis-2'}
         for previous in old:
             current = self.all[previous['id']]
+            if previous['id'] in casus:
+                self.assertEqual((previous['correct'], len(previous['options'])), (current['correct'], len(current['options'])))
+                continue
             for field in ['id','options','correct','optionExplanations']:
                 expected = previous[field]
                 if field == 'optionExplanations' and previous['id'] == 'mc-stratificatie-toepassing-1':

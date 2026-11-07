@@ -228,6 +228,7 @@ body[data-page="les"] #main .question-feedback li,.question-feedback li{margin:3
 .exam-average-note{display:block;font-weight:400;font-size:.9em;line-height:1.4}
 /* Uitleg en kleine figuur blijven bij elkaar; smalle schermen lezen van boven naar beneden. */
 .mini-explanation{display:flex;flex-wrap:wrap;align-items:flex-start;gap:8px 20px;margin:12px 0;min-width:0}
+.steps .mini-explanation{margin:0}
 .mini-copy{flex:1 1 330px;min-width:0}
 .mini-copy>p{margin:0}
 .mini-explanation>figure{flex:0 1 260px;min-width:0;max-width:260px;margin:0}

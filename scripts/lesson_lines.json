@@ -469,7 +469,7 @@
  "regressielijn": [
   {
    "title": "Wanneer je een verwachting laat afhangen van x",
-   "intro": "Bij cijferbeoordeling vergelijk je een werkelijk bedrag of aantal met een onderbouwde verwachting. Regressie kies je wanneer die verwachting afhangt van een kenmerk, zoals arbeidsuren, omdat één vast gemiddelde geen rekening houdt met drukke en rustige maanden.",
+   "intro": "Bij cijferbeoordeling vergelijk je een werkelijk aantal met een verwachting. Regressie kies je wanneer die verwachting afhangt van een kenmerk, zoals arbeidsuren: één vast gemiddelde houdt geen rekening met drukke en rustige maanden.",
    "afterExample": false,
    "parts": [
     {
@@ -480,7 +480,7 @@
   },
   {
    "title": "Het idee: voor iedere x één verwachte y",
-   "intro": "Nu je y en x hebt gekozen, bekijk je wat de lijn zegt. Je leert model en geschatte lijn uit elkaar te houden en de constante, de helling en het residu in woorden te lezen.",
+   "intro": "Nu je y en x hebt gekozen, lees je wat de lijn zegt: model, constante, helling en residu.",
    "afterExample": false,
    "parts": [
     {
@@ -491,7 +491,7 @@
   },
   {
    "title": "Zo bereken je de lijn en de spreiding eromheen",
-   "intro": "Je weet nu wat b_0 en b_1 betekenen; hier zie je hoe je ze berekent. Daarna meet je met r hoe strak de punten de lijn volgen en met s_e hoeveel spreiding rond de lijn overblijft.",
+   "intro": "Hier bereken je b_0 en b_1 uit de sommen van de gegevens. Daarna meet je met r hoe strak de punten de lijn volgen en met s_e hoeveel spreiding overblijft.",
    "afterExample": false,
    "parts": [
     {
@@ -510,12 +510,12 @@
   },
   {
    "title": "Zo pak je een vraag over de lijn aan: van gegevens naar Coefficients",
-   "intro": "Na het voorbeeld doorloop je de hele route met de autogewichten. Je gebruikt dit wanneer een vraag gegevens of SPSS-uitvoer geeft en je de lijn, een voorspelling of een residu moet bepalen.",
+   "intro": "Eerst zie je de lijn van Linderhof Components terug in SPSS. Daarna doorloop je de route zelf met de autogewichten, zoals in een tentamenvraag met gegevens of SPSS-uitvoer.",
    "afterExample": true,
    "parts": [
     {
      "old": "Van gegevens naar Coefficients: autogewichten",
-     "heading": null
+     "heading": "Zelf de route doorlopen: tien autogewichten"
     },
     {
      "old": "SPSS-praktijk college 3: de handberekening terugvinden",
@@ -525,7 +525,7 @@
   },
   {
    "title": "Zelf oefenen met lijn, residu en correlatie",
-   "intro": "Je hebt de lijn nu gelezen, berekend en in SPSS teruggevonden. Met de oefenvarianten controleer je of je dat ook zelf kunt.",
+   "intro": "Oefen nu zelf met lijn, residu en correlatie.",
    "afterExample": true,
    "parts": [
     {

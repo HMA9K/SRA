@@ -4,7 +4,7 @@ Pas toe na course_completion.enhance. Bestaande les- en vraag-ID's blijven gelij
 Numerieke voorbeelden worden uit de vermelde invoer berekend; tussenwaarden
 worden alleen voor weergave afgerond. Oefeningen zijn herkenbaar gelabeld.
 """
-from math import ceil, sqrt
+from math import ceil, floor, sqrt
 from course_completion import bookref
 from presentation import formula_block, STRATIFIED_PLANNING
 
@@ -273,36 +273,16 @@ def enhance(lessons, sources):
         [bookref('boek-h8a', 207), bookref('boek-h8b', 212),
          bookref('boek-h8b', 216), bookref('boek-h8b', 219)])
 
-    # Corrigeer aantoonbare bestaande tabelkeuze in het MPU-voorbeeld.
-    L['mpu']['example']['steps'] = [
-        'Gegevens: N = 1.000, n = 100, w̄ = € 80, s_w = € 20.',
-        'Kritieke waarde: tweezijdig 95% en df = 99, dus tabellenbundel PDF 13, rij 95, kolom 0,025: t = 1,985.',
-        'Puntschatting: reken het gemiddelde door naar alle artikelen: Ŵ = N × w̄ = 1.000 × 80 = € 80.000.',
-        'Eindigheidscorrectie: √((N − n)/(N − 1)) = √(900/999) ≈ 0,9492. De 100 al gecontroleerde posten verkleinen de resterende onzekerheid.',
-        'Standaardfout: s_MPU = N × s_w/√n × correctie = 1.000 × (20/√100) × √(900/999) ≈ € 1.898,32.',
-        'Marge: E = t × s_MPU = 1,985 × 1.898,31599 ≈ € 3.768,16.',
-        'Dat geeft [€ 76.231,84; € 83.768,16].']
-    # Ook de formulegids bevat een kopie van het oude voorbeeld.
-    for guide in L['mpu']['formulaGuide']:
-        for old, new in [('tabelrij 90 en t = 1,987', 'tabelrij 95 en t = 1,985'),
-                         ('1,987 × 1.898,31599', '1,985 × 1.898,31599'),
-                         ('3.771,95', '3.768,16'), ('76.228,05', '76.231,84'), ('83.771,95', '83.768,16')]:
-            guide['html'] = guide['html'].replace(old, new)
-
     extend('mpu', 'Wanneer gebruik je deze schatter?',
         '<p>Een paar zeer grote posten tussen veel kleine kunnen s<sub>w</sub> sterk vergroten. '
         'Kies een alternatief dan op basis van populatie en foutpatroon, niet alleen omdat het '
         'berekende interval smaller uitvalt.</p>',
         [bookref('boek-h8a', 203), bookref('boek-h8b', 217)])
     result = mpu(5230, 180, 398000, 5378400500)
-    body = '<p>Een voorraad bestaat uit 5.230 artikelen. Daarvan zijn er 180 gecontroleerd. De kwadratensom is in euro²; '
-    body += 'deze is dus niet de som van de waarden nogmaals in euro.</p>'
-    body += table('Gegevens van de voorraadcontrole', ['Gegeven', 'Waarde', 'Functie in de berekening'], [
-        ['N', '5.230', 'Van gemiddelde naar populatietotaal'],
-        ['n', '180', 'Gemiddelde, spreiding, standaardfout en vrijheidsgraden'],
-        ['Σw', '€ 398.000', 'Totaal van de gecontroleerde werkelijke waarden'],
-        ['Σw²', '5.378.400.500 euro²', 'Berekening van de steekproefvariantie'],
-        ['Betrouwbaarheid', '95%, tweezijdig', 'Kolom 0,025 van de t-tabel'],
+    body = '<p>Een voorraad bestaat uit 5.230 artikelen. Daarvan zijn er 180 gecontroleerd. De kwadratensom is in euro², niet in euro.</p>'
+    body += table('Gegevens van de voorraadcontrole', ['Gegeven', 'Waarde'], [
+        ['N', '5.230'], ['n', '180'], ['Σw', '€ 398.000'], ['Σw²', '5.378.400.500 euro²'],
+        ['Betrouwbaarheid', '95%, tweezijdig'],
     ])
     body += steps(['Gemiddelde en totaal: w̄ = Σw/n = 398.000/180 = € 2.211,1111; Ŵ = N × w̄ = 5.230 × 398.000/180 = ' + money(result['estimate']) + '.',
                    'Spreiding: s² = [Σw² − (Σw)²/n]/(n − 1) = [5.378.400.500 − 398.000²/180]/179 = ' + number(result['variance'])
@@ -312,19 +292,15 @@ def enhance(lessons, sources):
                    'Kritieke waarde: df = 179, dus tabellenbundel PDF 13, rij 170, kolom 0,025 geeft t = 1,974.',
                    'Marge en interval: E = t × s<sub>MPU</sub> = 1,974 × 1.920.451,20 = ' + money(1.974*result['se']) + '. Dat geeft ['
                    + money(result['estimate']-1.974*result['se']) + '; '
-                   + money(result['estimate']+1.974*result['se']) + '].'])
-    body += '<p class="note">Reken met de gegeven sommen onafgerond door: tussentijds afronden '
-    body += 'verandert de marge. '
-    body += 'De marge is groot doordat de afzonderlijke voorraadwaarden sterk uiteenlopen.</p>'
-    body += exercise('<p>Gebruik dezelfde gegevens. De accountant mag een totale intervalbreedte '
-                     'van € 2.000.000 accepteren. Voldoet deze controle? Noem twee inhoudelijke '
-                     'vervolgstappen en motiveer welke aanvullende informatie daarvoor nodig is.</p>',
-                     '<p>Nee: de toegestane marge E is € 1.000.000, terwijl de berekende marge '
-                     'ongeveer € 3.790.971 is. Optie 1 is een grotere aselecte steekproef, te plannen '
-                     'met s²<sub>w</sub>. Optie 2 is een passende hulpvariabeleschatter of stratificatie. '
-                     'Daarvoor onderzoek je het verband met boekwaarden, het foutpatroon of de '
-                     'groepsindeling. Het alleen verhogen van het betrouwbaarheidsniveau vergroot '
-                     'de marge juist.</p>')
+                   + money(result['estimate']+1.974*result['se']) + ']. Naar buiten afgerond: met 95% betrouwbaarheid ligt de werkelijke waarde tussen '
+                   + money(floor(result['estimate']-1.974*result['se']), 0) + ' en ' + money(ceil(result['estimate']+1.974*result['se']), 0) + '.'])
+    body += '<p class="note">Reken onafgerond door. De marge is groot doordat de voorraadwaarden sterk uiteenlopen.</p>'
+    body += exercise('<p>Neem de voorraad van 5.230 artikelen uit het tentamenvoorbeeld. Is een totale intervalbreedte '
+                     'van € 2.000.000 gehaald? Noem twee vervolgstappen en de informatie die je daarvoor nodig hebt.</p>',
+                     '<p>Nee: toegestaan is E = € 1.000.000, berekend is ongeveer € 3.790.971. '
+                     'Vervolgstappen: een grotere aselecte steekproef, gepland met s²<sub>w</sub>, of een '
+                     'hulpvariabeleschatter of stratificatie, waarvoor je boekwaarden, foutpatroon of groepsindeling '
+                     'onderzoekt. Een hogere betrouwbaarheid vergroot de marge juist.</p>')
     add('mpu', 'Van samenvattingstabel naar een volledig voorraadinterval', body,
         [ref('slides', 18, 'PDF 18-19: voorraadcontrole MPU'), ref('formules', 1, 'Formules 1-4'),
          ref('tabellen', 13, 'Tabel 13.4, rij 170, kolom 0,025')])

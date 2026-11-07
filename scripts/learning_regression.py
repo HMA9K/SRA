@@ -6,6 +6,8 @@ zijn als zodanig benoemd. Deze module doet geen I/O en wijzigt geen examenvragen
 """
 from html import escape
 from course_completion import bookref, table, steps
+from casus_data import MONTHS, PRODUCTION, source_ref
+from formula_visuals import block, num, panel, table as fv_table
 
 
 def ref(source, page, locator):
@@ -50,71 +52,52 @@ def enhance(lessons, sources):
         lesson['sections'] = [s for s in lesson['sections'] if s.get('regressionVersion') != '2026-09-25']
         lesson['formulaGuide'] = [s for s in lesson.get('formulaGuide', []) if s.get('regressionVersion') != '2026-09-25']
 
+    june_x, june_y = PRODUCTION[5]
+    months = fv_table(['Maand', 'x 2008', 'y 2008', 'x 2009', 'y 2009'],
+                      [[MONTHS[i]] + [num(v, 1) for v in PRODUCTION[i] + PRODUCTION[i + 12]] for i in range(12)],
+                      'x = arbeidsuren (× 1.000), y = productie (× 10.000 stuks)')
     add(L['regressielijn'], sources, 'Van controleverwachting naar regressiemodel',
-        '<p>In de productiecasus leveren arbeidsuren die '
-        'verwachting: bij meer gewerkte uren verwacht je meer productie.</p>'
-        '<p>Kies eerst wat je wilt '
-        'beoordelen: dat is <strong>y</strong>. Kies daarna de inhoudelijk passende verklarende '
-        'variabele <strong>x</strong> en noteer populatie, periode en eenheden. De lijn schat het '
-        'verband; de spreiding rond de lijn laat zien hoeveel gewone afwijking je nog kunt verwachten. '
-        'Beide zijn nodig om een nieuwe maand te beoordelen. Controleer dus ook de gegevens waarop '
-        'de verwachting berust.</p>'
-        + table('Welke vraag stelt de accountant?', ['Vraag', 'Passende aanpak', 'Reden'], [
-            ['Wat is het totale werkelijke bedrag van een populatie?', 'Een schatter voor een populatietotaal, zoals MPU of de verschilschatter.',
-             'Je trekt een steekproef en extrapoleert naar een populatietotaal.'],
-            ['Past een nieuwe productie bij het aantal arbeidsuren?', 'Regressie met een individueel voorspellingsinterval.',
-             'Je voorspelt y bij een gegeven x en beoordeelt de afwijking.'],
-            ['Is een getekende stijgende lijn ook statistisch aantoonbaar?', 'Een t-toets op de populatiehelling.',
-             'De steekproeflijn kan ook door toevalsvariatie stijgen.'],
-        ])
-        + '<p>De regressieschatter uit hoofdstuk 8 en de regressieanalyse uit hoofdstuk 9 gebruiken allebei '
-        'samenhang. Hun eindvraag verschilt. De eerste schat een totaal met bekende hulpinformatie; '
-        'de tweede beschrijft of voorspelt een uitkomst gegeven verklarende variabelen.</p>',
-        [bookref('boek-h9a',233), bookref('boek-h9a',237), ref('attentie',3,'Attentiepunten, PDF 3: doel en regressiemodel')], first=True)
+        '<p>Linderhof Components maakt onderdelen voor Volkswagen en Audi. Bij de cijferbeoordeling van de '
+        'jaarrekening wil de accountant weten of de gemelde productie per maand past bij de gewerkte arbeidsuren; '
+        'meer uren zouden moeten samengaan met meer productie. 2008 en 2009 vormen de basisperiode.</p>'
+        + block('casus-maanden', 'De gegevens van de basisperiode', [panel(
+            f'{len(PRODUCTION)} maanden arbeidsuren en productie', months,
+            f'Juni 2008: {num(june_x, 1)} × 1.000 = {num(june_x * 1000, 0)} arbeidsuren en '
+            f'{num(june_y, 1)} × 10.000 = {num(june_y * 10000, 0)} stuks.')],
+            'y is wat de accountant beoordeelt (productie), x is waarvan de verwachting afhangt (arbeidsuren).', '')
+        + '<p>De lijn schat het verband; de spreiding rond de lijn laat zien hoeveel gewone afwijking je nog '
+        'kunt verwachten. Beide heb je nodig om een maand uit het controlejaar te beoordelen.</p>'
+        + '<p>Bij schatten (les 4 tot en met 9) zocht je een populatietotaal; hier voorspel je y bij een gegeven x '
+        'en beoordeel je de afwijking. Ook de regressieschatter uit les 7 gebruikt samenhang, maar schat een totaal '
+        'met bekende hulpinformatie.</p>',
+        [bookref('boek-h9a',233), bookref('boek-h9a',237), ref('attentie',3,'Attentiepunten, PDF 3: doel en regressiemodel'),
+         source_ref('productie')], first=True)
 
-    car_rows = [[i, w] for i, w in enumerate([946,950,965,978,980,990,1055,1015,1055,1080],1)]
+    car_rows = [[i, num(w, 0)] for i, w in enumerate([946,950,965,978,980,990,1055,1015,1055,1080],1)]
     add(L['regressielijn'], sources, 'Van gegevens naar Coefficients: autogewichten',
-        '<p>Deze casus bevat tien autogewichten. x is het gecodeerde bouwjaar 1 tot en met 10; '
-        'y is het gewicht in kg. De codering is onderdeel van het model: vul niet ongemerkt een volledig '
-        'kalenderjaar in een vergelijking in die op x = 1, …, 10 is geschat.</p>'
+        '<p>x is het gecodeerde bouwjaar 1 tot en met 10, y het gewicht in kg. Vul dus geen kalenderjaar in.</p>'
         + table('Gegevens autogewichten', ['x: gecodeerd bouwjaar', 'y: gewicht in kg'], car_rows)
         + '<p>Gemiddelden zijn x̄ = 5,5 en ȳ = 1.001,4. Met deze waarnemingen volgt '
         'b₁ = 14,73939 en b₀ = 920,33333.</p>'
-        + table('Kern van de SPSS-uitvoer, afgerond', ['Uitvoer', 'Waarde', 'Betekenis'], [
-            ['Coefficients: B (Constant)', '920,333', 'Voorspeld gewicht bij gecodeerd jaar 0; beoordeel of dat binnen het relevante bereik ligt.'],
-            ['Coefficients: B voor x', '14,739', 'Per jaar neemt het voorspelde gewicht met circa 14,74 kg toe.'],
-            ['Model Summary: R Square', '0,884', 'Circa 88,4% van de waargenomen variatie in gewicht wordt lineair verklaard.'],
-            ['Model Summary: Std. Error of the Estimate', '17,166', 'Resterende spreiding rond de lijn, in kg.'],
-        ])
         + answer('Bereken de voorspelling en het residu voor x = 7, y = 1.055. Waarom is dit residu '
                  'geen bewijs van een fout in het gewicht?',
                  steps(['Voorspelling: vul x = 7 in: ŷ = 920,33333 + 14,73939 × 7 ≈ 1.023,51 kg.',
                         'Residu: e = y − ŷ = 1.055 − 1.023,51 ≈ +31,49 kg. Het gewicht ligt boven de lijn.',
-                        'Geen bewijs van een fout: een regressielijn voorspelt niet elke waarneming exact. De afwijking moet worden '
-                        'beoordeeld met de resterende spreiding, relevante diagnoses en inhoudelijke informatie.',
-                        'Het getal +31,49 is een residu in kg, geen p-waarde en geen standaardfout.']))
-        + '<p class="note">Gebruik in je berekening zoveel mogelijk ongeronde tussenuitkomsten.</p>',
+                        'Geen bewijs van een fout: vergelijk het residu met sₑ. Met 9/8 × (1 − 0,940088²) × 47,46976² '
+                        'is sₑ ≈ 17,166 kg, de Std. Error of the Estimate in SPSS.']))
+,
         [ref('opgaven',10,'Opgavenbundel, H9.1, PDF 10'),ref('uitwerkingen',14,'Uitwerkingenbundel, H9.1, PDF 14–15'),
          ref('spss',9,'SPSS-uitwerkingen, college 3, PDF 9')])
 
     add(L['regressielijn'], sources, 'SPSS-praktijk college 3: de handberekening terugvinden',
-        '<p><strong>Doel:</strong> verbinden wat je zelf berekent met de software-uitvoer. '
-        'Gebruik het tabblad College3 van de aangeleverde SRA-dataset.</p>'
-        + steps(['Open de Excelgegevens via <strong>File → Open → Data</strong>; kies het tabblad College3. '
-                 'Controleer in Variable View of x en Gewicht als kwantitatieve variabelen (Scale) worden behandeld.',
-                 'Maak via <strong>Graphs → Chart Builder → Scatter/Dot → Simple Scatter</strong> '
-                 'een diagram met x horizontaal en Gewicht verticaal. Bekijk richting, kromming en opvallende punten vóór het rekenen.',
-                 'Vraag eventueel via <strong>Analyze → Descriptive Statistics → Descriptives</strong> de '
-                 'gemiddelden, sommen en standaardafwijkingen op. Vergelijk die met de gegevens uit de handopgave.',
-                 'Kies <strong>Analyze → Regression → Linear</strong>: Dependent = Gewicht, Independent = x. '
-                 'Vraag onder Statistics <strong>Estimates</strong> en <strong>Model fit</strong> op.',
-                 'Lees B uit Coefficients voor de vergelijking. Verbind vervolgens Model Summary en ANOVA: '
-                 'R² = SSR/TotalSS en Std. Error of the Estimate = √MSE.',
-                 'Dubbelklik op de grafiek en kies <strong>Elements → Fit Line at Total</strong> om de geschatte '
-                 'lijn zichtbaar te maken. Controleer de schaal en het label met de vergelijking.'])
-        + '<p><strong>Op te leveren:</strong> één diagram, de vergelijking met eenheden, de interpretatie '
-        'van de helling en één zelf berekend residu. Daarmee controleer je of je de uitvoer begrijpt; '
-        'alleen screenshots van menu’s leveren dat inzicht niet.</p>',
+        steps(['Open het tabblad College3 via <strong>File → Open → Data</strong> en zet x en Gewicht in '
+                 'Variable View op Scale.',
+                 'Maak via <strong>Graphs → Chart Builder → Scatter/Dot → Simple Scatter</strong> een diagram; '
+                 'bekijk richting, kromming en opvallende punten.',
+                 'Kies <strong>Analyze → Regression → Linear</strong> met Dependent = Gewicht en Independent = x, '
+                 'en lees B uit Coefficients. Model Summary en ANOVA koppel je in les 11.',
+                 'Voeg via <strong>Elements → Fit Line at Total</strong> de lijn toe aan de grafiek.'])
+,
         [ref('spss',5,'SPSS-uitwerkingen, college 3, PDF 5–10')])
 
     add(L['anova'], sources, 'ANOVA vergelijkt de lijn met voorspellen door het gemiddelde',

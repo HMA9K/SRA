@@ -111,19 +111,19 @@ basic('onzekerheid-3', [
     'Het middelen van twee tabelrijen is interpolatie. De cursus schrijft hier een rijkeuze voor, geen interpolatie.'
 ])
 basic('mpu-1', [
-    'De directe schatter MPU gebruikt het gemiddelde van de werkelijke steekproefwaarden voor de gehele populatie.',
-    'Vermenigvuldig het gemiddelde per post met het aantal populatieposten: Ŵ_MPU = Nw̄.',
-    'Invullen geeft 2.000 × € 150 = € 300.000. Dit is een geschat totaal, nog zonder onzekerheidsmarge.'
+    'MPU rekent het gemiddelde per post door naar alle posten.',
+    'Vermenigvuldig dus met het aantal posten: Ŵ_MPU = Nw̄.',
+    'Invullen geeft 3.500 × € 2.000 = € 7.000.000. Dit is een geschat totaal, nog zonder onzekerheidsmarge.'
 ], 'Werkelijk gemiddelde per post en populatieomvang gegeven: totaal schatten met N × gemiddelde.',
     'Een bedrag per post is nog geen totaalbedrag voor alle posten.', [
-    '€ 300.000 klopt: iedere populatiepost krijgt in deze schatting het gemiddelde van € 150 mee.',
-    '€ 150 is het gemiddelde per post. Voor het populatietotaal ontbreekt de vermenigvuldiging met 2.000.',
-    '€ 13,33 ontstaat ongeveer uit 2.000/150. De directe schatter vermenigvuldigt het aantal posten met het bedrag per post.'
+    '€ 7.000.000 klopt: iedere artikelregel krijgt in deze schatting het gemiddelde van € 2.000 mee.',
+    '€ 2.000 is het gemiddelde per post. Voor het totaal van het magazijn ontbreekt de vermenigvuldiging met 3.500.',
+    '€ 1,75 ontstaat uit 3.500/2.000. De directe schatter vermenigvuldigt het aantal posten met het bedrag per post.'
 ])
 basic('mpu-2', [
-    'MPU schat W rechtstreeks uit de werkelijke steekproefwaarden w.',
-    'De bijpassende spreidingsmaat is daarom s_w, de standaardafwijking van die werkelijke waarden.',
-    'Voor de standaardfout van het totaal wordt s_w geschaald met N/√n en, indien van toepassing, de eindigheidscorrectie.'
+    'MPU schat W uit de werkelijke waarden w.',
+    'De bijpassende spreidingsmaat is dus s_w.',
+    'Voor de standaardfout van het totaal schaal je s_w met N/√n en de eindigheidscorrectie.'
 ], 'Kijk waarop de schatter is gebaseerd: MPU op w, verschilschatter op e = b − w.',
     'Kies de spreidingsmaat bij de gebruikte schatter; boekwaarden en fouten zijn andere gegevens.', [
     'MPU gebruikt de werkelijke waarden. De standaardafwijking s_w beschrijft de spreiding die in zijn standaardfout nodig is.',
@@ -132,8 +132,8 @@ basic('mpu-2', [
 ])
 basic('mpu-3', [
     'De eindigheidscorrectie is √((N − n)/(N − 1)).',
-    'Als alle populatieposten zijn onderzocht, is n = N en wordt N − n = 0; de correctiefactor is dus nul.',
-    'Daarmee verdwijnt de onzekerheid door steekproeftrekking. De individuele posten kunnen onderling nog wel verschillen.'
+    'Bij n = N is de teller nul, dus de factor is nul.',
+    'Er is dan geen steekproefonzekerheid; de posten kunnen wel onderling verschillen.'
 ], 'Alle posten onderzocht, dus n = N? De steekproefstandaardfout wordt nul.',
     'Geen steekproefonzekerheid betekent niet dat er geen spreiding of geen mogelijke meetfout bestaat.', [
     'Een factor 1 zou de standaardfout ongewijzigd laten. Bij integrale controle is juist geen onzekerheid door steekproeftrekking over.',
@@ -291,9 +291,9 @@ basic('stratificatie-3', [
     'Er is geen onbekende steekproefvariantie van dit totaal: alle elementen zijn onderzocht, zodat deze component nul is.'
 ])
 basic('regressielijn-1', [
-    'De lijn ŷ = 10 + 2x heeft constante 10 en helling 2.',
-    'Vul x = 4 in en vermenigvuldig eerst: 2 × 4 = 8.',
-    'Tel de constante erbij op: ŷ = 10 + 8 = 18. Dit is de voorspelling, niet automatisch de waargenomen y.'
+    'De lijn heeft constante 10 en helling 2.',
+    'Vul x = 4 in: 2 × 4 = 8, plus de constante 10 geeft ŷ = 18.',
+    'Dit is de voorspelling, niet automatisch de waargenomen y.'
 ], 'Bij een voorspelling alle waarden in de lijn invullen en de constante één keer meenemen.',
     'De helling vermenigvuldigt x; de constante wordt daarna opgeteld.', [
     '18 volgt rechtstreeks uit 10 + 2 × 4 = 10 + 8.',
@@ -301,19 +301,19 @@ basic('regressielijn-1', [
     '24 volgt niet uit 10 + 2 × 4. De bijdrage van x is 8 en met de constante 10 wordt de voorspelling 18.'
 ])
 basic('regressielijn-2', [
-    'Een regressieresidu is het verschil tussen de waargenomen en de voorspelde uitkomst: e = y − ŷ.',
-    'Vul de waarden in: e = 25 − 18 = 7.',
-    'Het positieve teken betekent dat de waarneming 7 boven de regressielijn ligt.'
+    'Een residu is waargenomen min voorspeld: e = y − ŷ.',
+    'Voor december 2008: e = 28,4 − 30,12 = −1,72.',
+    'Het negatieve teken betekent dat de productie 1,72 × 10.000 = 17.200 stuks onder de lijn ligt.'
 ], 'Waarneming én voorspelling gegeven? Voor het residu trek je voorspeld af van waargenomen.',
     'ŷ − y draait het teken van het residu om.', [
-    '−7 is 18 − 25 en gebruikt de omgekeerde volgorde. Het regressieresidu is y − ŷ.',
-    '7 klopt: de werkelijke uitkomst 25 ligt 7 boven de voorspelde 18.',
-    '43 telt waarneming en voorspelling op. Het residu meet juist hun verschil.'
+    '1,72 is 30,12 − 28,4 en gebruikt de omgekeerde volgorde. Het regressieresidu is y − ŷ.',
+    '−1,72 klopt: de werkelijke productie 28,4 ligt 1,72 onder de voorspelde 30,12.',
+    '58,52 telt waarneming en voorspelling op. Het residu meet juist hun verschil.'
 ])
 basic('regressielijn-3', [
-    'OLS betekent gewone kleinste kwadraten: het model wordt gekozen op basis van de residuen y − ŷ.',
-    'Ieder residu wordt gekwadrateerd, zodat positieve en negatieve afwijkingen elkaar niet kunnen opheffen.',
-    'OLS kiest de coëfficiënten waarvoor Σe², de som van die kwadraten, het kleinst is.'
+    'OLS staat voor gewone kleinste kwadraten.',
+    'Ieder residu y − ŷ wordt gekwadrateerd, zodat afwijkingen elkaar niet opheffen.',
+    'Het kiest de coëfficiënten waarvoor Σe², de som van die kwadraten, het kleinst is.'
 ], '“Kleinste kwadraten” verwijst naar kwadraten van voorspellingsafwijkingen.',
     'Een residusom van nul kan toch grote afzonderlijke fouten bevatten.', [
     'De gewone som laat positieve en negatieve residuen wegvallen. Die som beoordeelt daarom niet de totale grootte van de afwijkingen.',

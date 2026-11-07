@@ -9,6 +9,8 @@ the source's normality analysis, not to a separate examination requirement.
 """
 
 from presentation import plain_text, rich_text
+from casus_data import regression
+from formula_visuals import num
 
 _REFS = {
     'beginnen': [('slides', 12, 'Inleiding schatten, PDF-pagina 12 tot en met 15')],
@@ -232,13 +234,19 @@ _add('neyman', 'Neyman-allocatie', ['Neyman', 'Neyman allocatie'],
      'De controles verdelen naar grootte én spreiding van de strata: $n_i = {N_i s_i}/{Σ(N_i s_i)} × n$. Een grotere groep of een groep met meer spreiding krijgt meer controles. Dit geldt bij gelijke kosten per controle.',
      'Twee strata van elk 500 posten hebben spreiding 10 en 30. $N_i s_i$ is dan 5.000 en 15.000, samen 20.000. Van 100 controles gaan er 5.000 / 20.000 × 100 = 25 naar stratum 1 en 75 naar stratum 2.', 'stratificatie')
 
-# Regressie en de ANOVA-tabel.
+# Regressie en de ANOVA-tabel. De voorbeelden gebruiken de productiecasus uit casus_data.
+_LINE = regression()
+_B0, _B1 = num(_LINE['b0'], 3).replace('-', '−'), num(_LINE['b1'], 3)
+_Y50 = num(round(_LINE['b0'], 3) + round(_LINE['b1'], 3) * 50)
+_Y50_STUKS = num(round(round(_LINE['b0'], 3) + round(_LINE['b1'], 3) * 50, 2) * 10000, 0)
+_SLOPE_STUKS = num(round(_LINE['b1'], 3) * 10000, 0)
+_XMIN, _XMAX = num(_LINE['min_x'], 1), num(_LINE['max_x'], 1)
 _add('regressie', 'Regressie', ['regressieanalyse', 'regressiemodel', 'regressiemodellen'],
      'Een model dat beschrijft hoe een uitkomst $y$ samenhangt met één of meer verklarende variabelen. Je kunt er voorspellingen mee maken, maar het toont op zichzelf geen oorzaak en gevolg aan.',
-     'Je schat $ŷ = 200 + 3x$, met $x$ het aantal geproduceerde stuks en $y$ de kosten in euro’s. Bij 100 stuks voorspelt het model 200 + 3 × 100 = € 500 aan kosten.', 'regressielijn')
+     f'Linderhof Components schat $ŷ = {_B0} + {_B1}x$, met $x$ de arbeidsuren (× 1.000) en $y$ de productie (× 10.000 stuks). Bij $x$ = 50 voorspelt het model {_B0} + {_B1} × 50 = {_Y50}, dus ongeveer {_Y50_STUKS} stuks.', 'regressielijn')
 _add('enkelvoudige-regressie', 'Enkelvoudige regressie', ['enkelvoudig regressiemodel', 'enkelvoudige lineaire regressie'],
      'Regressie met precies één verklarende variabele. Bij een rechte lijn is de geschatte vergelijking $ŷ = b_0 + b_1 x$.',
-     'Je voorspelt kosten alleen uit het aantal geproduceerde artikelen: $ŷ = 200 + 3x$. Er is één $x$-variabele, dus dit is enkelvoudig.', 'regressielijn')
+     f'Je voorspelt de productie alleen uit de arbeidsuren: $ŷ = {_B0} + {_B1}x$. Er is één $x$-variabele, dus dit is enkelvoudig.', 'regressielijn')
 _add('afhankelijke-variabele', 'Afhankelijke variabele', ['afhankelijke variabelen', 'te verklaren variabele', 'uitkomstvariabele', 'Dependent Variable'],
      'De uitkomst $y$ die je wilt beschrijven of voorspellen. Een regressiemodel heeft één afhankelijke variabele, ook als er meerdere verklarende variabelen zijn.',
      'Je onderzoekt of salaris samenhangt met leeftijd en opleiding. Salaris is de afhankelijke variabele, want dat wil je verklaren.', 'regressielijn')
@@ -247,13 +255,13 @@ _add('verklarende-variabele', 'Verklarende variabele', ['verklarende variabelen'
      'In een model voor salaris zijn leeftijd en opleiding verklarende variabelen. Ze helpen het salaris voorspellen, maar dat bewijst niet dat ze het salaris veroorzaken.', 'regressielijn')
 _add('coefficient', 'Regressiecoëfficiënt', ['regressiecoëfficiënten', 'coëfficiënt', 'coëfficiënten'],
      'Een getal in de regressievergelijking, zoals de constante of een helling. De letter $b$ staat voor de geschatte waarde uit de gegevens, $β$ voor de onbekende waarde in de populatie.',
-     'In $ŷ = 200 + 3x$ zijn 200 (dat is $b_0$) en 3 (dat is $b_1$) de geschatte coëfficiënten.', 'regressielijn')
+     f'In $ŷ = {_B0} + {_B1}x$ zijn {_B0} (dat is $b_0$) en {_B1} (dat is $b_1$) de geschatte coëfficiënten.', 'regressielijn')
 _add('constante', 'Constante', ['intercept', 'Constant'],
      'De voorspelde $y$ als alle verklarende variabelen nul zijn, geschreven als $b_0$. Ligt nul buiten het onderzochte gebied, dan heeft deze waarde niet vanzelf een praktische betekenis.',
-     'In $ŷ = 200 + 3x$, met $x$ het aantal stuks, zijn 200 de voorspelde kosten bij 0 stuks. In een model voor salaris op leeftijd zegt leeftijd 0 juist niets.', 'regressielijn')
+     f'In $ŷ = {_B0} + {_B1}x$, met $x$ de arbeidsuren, is {_B0} de voorspelde productie bij 0 arbeidsuren. Zo’n maand ligt ver buiten de onderzochte {_XMIN} tot {_XMAX}, dus deze waarde zegt hier niets.', 'regressielijn')
 _add('helling', 'Richtingscoëfficiënt', ['richtingscoëfficiënten', 'helling', 'hellingscoëfficiënt', 'hellingscoëfficiënten', 'slope'],
      'Hoeveel de voorspelde $y$ verandert als $x$ één eenheid groter wordt, geschreven als $b_1$. Bij meervoudige regressie geldt dat als de andere opgenomen variabelen gelijk blijven.',
-     'Bij $ŷ = 200 + 3x$ is de voorspelling bij $x$ = 50 gelijk aan 350 en bij $x$ = 51 gelijk aan 353. Eén extra $x$ geeft dus 3 meer.', 'regressielijn')
+     f'Bij $ŷ = {_B0} + {_B1}x$ stijgt de voorspelde productie met {_B1} per extra eenheid $x$: 1.000 arbeidsuren meer geeft {_B1} × 10.000 = {_SLOPE_STUKS} stuks meer.', 'regressielijn')
 _add('storingsterm', 'Storingsterm', ['storingstermen', 'storing', 'epsilon'],
      'Het deel van $y$ dat het populatiemodel niet verklaart, geschreven als $ε$. Je kunt de storing niet direct waarnemen. Na het schatten bereken je residuen als benadering.',
      'Twee werknemers met dezelfde opgenomen kenmerken verdienen toch verschillend. Dat verschil, dat het model niet vangt, valt onder de storingsterm.', 'regressielijn')
